@@ -1,0 +1,7 @@
+node_modules/
+.next/
+.vitest/
+.data/
+.env*
+!.env.example
+*.tsbuildinfo
