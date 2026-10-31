@@ -1,0 +1,17 @@
+# One DSD isolated database bootstrap
+
+bootstrap.sql is a credential-free, one-time transactional bootstrap for private pac_dsd and pac_dsd_auth schemas. It refuses to run if either namespace exists. It preserves the original pac and pac_auth schemas and does not copy their work, account, session or publication records.
+
+Use a privileged database migration connection to apply this file as a single transaction. Never use the disabled legacy db:migrate or db:provision-runtime commands. The manifest records the original migration hashes and the transformed source hashes. Exact namespace and role identifiers are replaced; business IDs remain unchanged. Historical public digest compatibility migrations 0026/0048 are replaced with private wrappers, and obsolete 0061 is superseded by its later corrective migration.
+
+After provisioning, assign independent strong passwords to pac_dsd_app_runtime, pac_dsd_owner_writer, pac_dsd_contributor_runtime and pac_dsd_authentication_broker outside this repository. Configure the four application database URLs for those roles. Configure a distinct owner key and rate-limit secret, the One DSD public origin and Railway trusted proxy. Keep existing agency application credentials unchanged.
+
+Verify both directions: each division role must be denied USAGE and data access in pac and pac_auth; each original agency role must be denied access in pac_dsd and pac_dsd_auth. The authentication broker has access only to the three private authentication functions, not the private data schema. Neither private schema is a Data API schema. Confirm public content remains complete from the static source before enabling any reviewed publication overlay. Public-resource editing initialization is separate from this empty private-store bootstrap.
+
+initialize-current-public-resources.sql is a separate one-time transaction copying exactly67 public resource definitions from the current validated static source. It refuses existing publications. No operational records are included. Use scripts/content/export-reviewed-static-resources.cjs to verify the source before initialization. Do not treat the copy as a new independent factual/accessibility review. The bootstrap additionally aligns the private resource validator with the current program_reference authority and ISOdate contract.
+
+The current generated bootstrap includes forward migration 0067 for bounded ASK speech/transcription scopes and restricted internal identity-helper execution. Historical migration sources are unchanged. For an existing private schema, apply 0067_pac_dsd_ask_voice_limits_and_internal_helpers.sql through a privileged migration connection instead of rerunning bootstrap.sql. The standalone forward file references only pac_dsd; the canonical db/migrations/0067 file references pac for the agency migration history. Both preserve existing limits and explicit ACLs.
+
+Forward migration 0068 admits only the four approved ADSA/CLAS resources and their existing PDF page ranges to operational receipts. Fresh bootstrap includes it; existing private schemas apply 0068_pac_dsd_engagement_pdf_receipts.sql after 0067. This does not change roles, permissions, or privacy exclusions.
+
+Forward migration 0069 admits the registered bounded Jev decision tool to operational receipts. Fresh bootstrap includes it; existing private schemas apply 0069_pac_dsd_jev_audit_receipts.sql after 0068. This does not change roles, permissions, or privacy exclusions.

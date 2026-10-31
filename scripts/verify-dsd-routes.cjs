@@ -1,0 +1,6 @@
+const fs=require('fs');const ts=require('typescript');
+const data={};new Function('exports',ts.transpileModule(fs.readFileSync('lib/program/dsd-logic-model.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText)(data);
+const routes=[...new Set(['/', '/program/model','/program/reflection','/ask', '/learn?browse=all', ...data.logicStages.map(s=>'/program/'+s.slug),...data.logicStages.flatMap(s=>s.resources.map(r=>r.href))])];
+const results=[];let index=0;
+async function worker(){while(index<routes.length){const route=routes[index++];const start=Date.now();try{const response=await fetch('http://127.0.0.1:8770'+route,{signal:AbortSignal.timeout(120000)});const html=await response.text();const title=html.match(/<title>(.*?)<\/title>/)?.[1];const ok=response.ok && html.includes('One DSD') && !html.includes('id="__next_error__"');results.push({route,status:response.status,title,ok,ms:Date.now()-start});console.log(JSON.stringify(results.at(-1)));}catch(error){results.push({route,ok:false,error:String(error)});console.log(JSON.stringify(results.at(-1)));}}}
+Promise.all([worker(),worker(),worker()]).then(()=>{fs.writeFileSync('evidence/dsd-logic-model/route-check.json',JSON.stringify({base:'http://127.0.0.1:8770',results},null,2));process.exitCode=results.some(r=>!r.ok)?1:0;});

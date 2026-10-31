@@ -1,0 +1,23 @@
+.equity-decisions-study{max-width:1120px;margin:auto;padding:36px 24px 70px;color:#183247}
+.equity-decisions-study>nav,.equity-decisions-study section>nav{display:flex;flex-wrap:wrap;gap:16px}
+.equity-decisions-study header{margin:30px 0;padding:36px;background:#eef4f8;border-left:5px solid #008eaa}
+.equity-decisions-study h1{color:#003865;font-size:clamp(30px,4vw,48px);line-height:1.15}
+.equity-decisions-eyebrow{font-size:12px;letter-spacing:.1em;font-weight:700}
+.equity-decisions-lede{font-size:22px;line-height:1.5}
+.equity-decisions-study section{margin:32px 0;scroll-margin-top:24px}
+.equity-decisions-study p{max-width:78ch;line-height:1.75}
+.equity-decisions-study h2,.equity-decisions-study h3{color:#003865;line-height:1.3}
+.equity-decisions-study .equity-decisions-primary,.equity-decisions-study button{display:inline-block;padding:12px 18px;background:#003865;color:#fff;border:2px solid #003865;border-radius:5px;font:inherit;font-weight:600;cursor:pointer;margin:6px 8px 6px 0;text-decoration:none}
+.equity-decisions-path{padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.equity-decisions-path li{padding:24px;border:1px solid #bacbd7;border-radius:8px}
+.equity-decisions-path h2{font-size:22px;margin:10px 0}
+.equity-decisions-study video{width:100%;height:auto;aspect-ratio:16/9;background:#003865}
+.equity-decisions-study fieldset{border:1px solid #bacbd7;border-radius:6px;padding:20px}
+.equity-decisions-study legend{font-size:20px;font-weight:700;padding:0 8px}
+.equity-decisions-study fieldset label{display:flex;gap:12px;padding:14px 8px;line-height:1.6;align-items:flex-start;cursor:pointer}
+.equity-decisions-study input[type=radio]{margin-top:7px;min-width:20px;min-height:20px}
+.equity-decisions-feedback:has(p){padding:20px;background:#eef4f8;border-left:4px solid #008eaa;margin-top:20px}
+.equity-decisions-study textarea{display:block;width:100%;max-width:800px;box-sizing:border-box;font:inherit;padding:14px;border:1px solid #7893a5;border-radius:4px;margin:8px 0}
+.equity-decisions-study :is(a,button,input,textarea):focus-visible{outline:3px solid #b88000;outline-offset:4px}
+@media(max-width:700px){.equity-decisions-study{padding:24px 16px}.equity-decisions-study header{padding:24px}.equity-decisions-path{grid-template-columns:1fr}.equity-decisions-study button{max-width:100%;white-space:normal}}
+@media print{.equity-decisions-study video,.equity-decisions-study button,.equity-decisions-study>nav{display:none}.equity-decisions-study header{padding:12px}.equity-decisions-study{max-width:none;padding:0}.equity-decisions-path{display:block}.equity-decisions-path li{break-inside:avoid}}

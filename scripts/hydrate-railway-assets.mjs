@@ -1,0 +1,23 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+const root=process.cwd();
+const assets=JSON.parse(await fs.readFile(path.join(root,'config/railway-asset-manifest.json'),'utf8'));
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+let next=0,downloaded=0;
+async function worker(){while(next<assets.length){const asset=assets[next++];
+  const target=path.resolve(root,asset.path);
+  const url=new URL(asset.url);
+  const publicAsset=target.startsWith(path.resolve(root,'public')+path.sep)&&url.origin==='https://people-access-culture.up.railway.app';
+  const modelAsset=asset.path==='models/bge-small-en-v1.5/onnx/model_quantized.onnx'&&url.href==='https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/ea104dacec62c0de699686887e3f920caeb4f3e3/onnx/model_quantized.onnx';
+  if(!publicAsset&&!modelAsset)throw new Error('Unapproved asset destination or origin');
+  const current=await fs.readFile(target).catch(()=>null);
+  if(current&&sha(current)===asset.sha256)continue;
+  const response=await fetch(url,{signal:AbortSignal.timeout(90000)});
+  if(!response.ok)throw new Error(`Asset HTTP ${response.status}: ${asset.path}`);
+  const bytes=Buffer.from(await response.arrayBuffer());
+  if(bytes.length!==asset.bytes||sha(bytes)!==asset.sha256)throw new Error('Asset checksum mismatch: '+asset.path);
+  await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,bytes);downloaded++;
+}}
+await Promise.all(Array.from({length:4},worker));
+console.log(`Verified ${assets.length} shared release assets; restored ${downloaded}.`);

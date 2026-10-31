@@ -1,0 +1,25 @@
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../../',import.meta.url));
+const targetUrl='https://one-dhs-dsd-web-production.up.railway.app/consultant';
+const secretArg=process.argv.indexOf('--secrets-file');
+const secretFile=secretArg>=0?path.resolve(process.argv[secretArg+1]??''):path.join(root,'.data/supabase-activation/secrets.json');
+if(!process.argv.includes('--create-private-owner-access')){console.log(JSON.stringify({mode:'plan',action:'Create a private local HTML access card using the existing owner credential. No key printed; no network requests; no automatic sign-in.',output:'LocalAppData/OneDSD/PrivateAccess/owner-access.html (outside OneDrive and release source)' ,uploadExclusion:'The .data directory must be excluded by both Git and Railway.'},null,2));process.exit(0);}
+for(const file of ['.gitignore','.railwayignore']){const text=readFileSync(path.join(root,file),'utf8');if(!/(?:^|\n)\/?\.data\/?(?:\r?\n|$)/.test(text))throw new Error('Private owner access requires an explicit .data upload exclusion in '+file);}
+const folder=path.join(root,'.data/supabase-activation');const secrets=JSON.parse(readFileSync(secretFile,'utf8'));
+if(typeof secrets.ownerKey!=='string'||secrets.ownerKey.length<32)throw new Error('Private owner credential is unavailable.');
+const escape=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+const privateFolder=process.platform==='win32'&&process.env.LOCALAPPDATA?path.join(process.env.LOCALAPPDATA,'OneDSD','PrivateAccess'):folder;
+const target=path.join(privateFolder,'owner-access.html');if(existsSync(target)&&!process.argv.includes('--replace-existing'))throw new Error('Private access card already exists; use --replace-existing only when updating the owner credential.');
+const html=`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'; img-src 'none'"><title>Private One DHS owner access</title><style>body{font:18px/1.6 system-ui,sans-serif;color:#153246;background:#edf0f3;max-width:44rem;margin:3rem auto;padding:2rem}main{background:white;padding:2rem;border-radius:12px}h1{font-size:1.8rem;line-height:1.2}label{display:block;font-weight:600}input{box-sizing:border-box;width:100%;padding:.7rem;font:16px monospace;margin:.6rem 0}button,a{font:inherit}button{padding:.5rem 1rem;margin-right:.5rem}a{color:#064b78}small{display:block;margin-top:1.5rem}</style><main><h1>One DHS owner access</h1><p>Keep this file private. It contains your editing access key.</p><ol><li>Copy the access key below.</li><li><a href="${targetUrl}" target="_blank" rel="noopener noreferrer">Open the Consultant Workspace</a>.</li><li>Paste the key into the workspace access field.</li></ol><label for="key">Owner access key</label><input id="key" type="password" readonly autocomplete="off" spellcheck="false" value="${escape(secrets.ownerKey)}"><button id="copy" type="button">Copy key</button><button id="show" type="button">Show key</button><p id="status" role="status" aria-live="polite"></p><small>This file does not send the key anywhere. Do not email it, upload it, or share it with staff. The key is entered only on the One DHS application. Ask for a replacement if this file or the key is shared accidentally.</small></main><script>const field=document.getElementById('key'),status=document.getElementById('status');document.getElementById('show').onclick=()=>{field.type=field.type==='password'?'text':'password';document.getElementById('show').textContent=field.type==='password'?'Show key':'Hide key'};document.getElementById('copy').onclick=async()=>{try{await navigator.clipboard.writeText(field.value);status.textContent='Copied. Open the Consultant Workspace and paste the key.'}catch{field.type='text';field.focus();field.select();status.textContent='Select the key and press Control+C to copy it.'}};</script></html>`;
+mkdirSync(privateFolder,{recursive:true});
+// Create an empty file first, apply private ACL, then write the credential.
+writeFileSync(target,'',{mode:0o600});
+if(process.platform==='win32'){
+ const account=spawnSync('whoami',[],{encoding:'utf8',windowsHide:true});if(account.status!==0)throw new Error('Unable to identify local file owner.');
+ const acl=spawnSync('icacls',[target,'/inheritance:r','/grant:r',account.stdout.trim()+':F'],{encoding:'utf8',windowsHide:true});if(acl.status!==0)throw new Error('Unable to secure private file permissions; credential was not written.');
+}
+writeFileSync(target,html,{mode:0o600});
+console.log(JSON.stringify({created:true,privateFile:target,keyPrinted:false,networkRequests:false,uploadExcluded:true,access:'Local operating-system user only; key hidden until explicitly revealed or copied.'},null,2));

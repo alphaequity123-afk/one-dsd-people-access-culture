@@ -1,0 +1,22 @@
+/* Full community research set. Builds on the community-editorial reading styles. */
+.community-editorial .community-research-disclosure>summary{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;padding-left:26px}
+/* A flex summary loses the browser's disclosure triangle, so this draws the open and closed state. */
+.community-editorial .community-research-disclosure>summary::before{content:"";position:absolute;left:6px;top:16px;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg)}
+.community-editorial .community-research-disclosure[open]>summary::before{top:13px;transform:rotate(45deg)}
+.community-editorial .community-research-disclosure>summary>:is(h3,h4){display:inline;margin:0;font-size:19px;line-height:1.4;font-weight:600;color:#254b63}
+.community-editorial .community-research-disclosure>summary>span{font-size:15px;font-weight:400;color:#426174}
+.community-editorial .community-research-story{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;align-items:start}
+.community-editorial .community-research-figure{margin:0 0 22px;max-width:480px}
+.community-editorial .community-research-figure img{display:block;width:100%;height:auto;background:#f2eee5}
+.community-editorial .community-research-figure figcaption{margin-top:10px;font-size:13px;line-height:1.55;color:#405d6c;overflow-wrap:anywhere}
+.community-editorial .community-research-label{margin:0 0 6px;font-size:15px;font-weight:600;color:#274d65}
+.community-editorial .community-research-connect{background:#faf6ed;border-left:3px solid #bdac89;padding:16px 20px;margin:22px 0}
+.community-editorial .community-research-connect p:last-child{margin-bottom:0}
+.community-editorial .community-research-sources{font-size:15px;line-height:1.65}
+.community-editorial .community-research-list{list-style:none;padding:0;margin:0 0 18px}
+.community-editorial .community-research-list>li{padding:14px 0;border-bottom:1px solid #dce3e6}
+.community-editorial .community-research-list p{margin:4px 0}
+.community-editorial .community-research-entry-name{font-weight:600}
+.community-editorial .community-research-meta{font-size:14px;color:#426174}
+@media(max-width:640px){.community-editorial .community-research-story{grid-template-columns:1fr;gap:12px}.community-editorial .community-research-story .community-research-figure{max-width:220px}}
+@media print{.community-editorial .community-research-disclosure>div{display:block}}

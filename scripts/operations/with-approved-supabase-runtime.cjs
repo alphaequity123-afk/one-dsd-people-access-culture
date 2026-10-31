@@ -1,0 +1,6 @@
+const fs=require('node:fs'),path=require('node:path'),{spawnSync}=require('node:child_process');
+const allowed=new Set(['scripts/db/seed-dsd-reviewed-baselines.mjs','scripts/operations/check-supabase-consultation-contract.mjs','scripts/operations/check-supabase-owner-boundary.mjs']);
+const script=process.argv[2];if(!allowed.has(script))throw Error('Unapproved operational script');
+const s=JSON.parse(fs.readFileSync('.data/supabase-activation/secrets.json'));
+function u(role,password){const direct=script==='scripts/db/seed-dsd-reviewed-baselines.mjs';const x=new URL(direct?'postgresql://db.htdefyecztafxkvfbrlo.supabase.co:5432/postgres':'postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres');x.username=role+(direct?'':'.htdefyecztafxkvfbrlo');x.password=password;return x.href;}
+const child=spawnSync(process.execPath,[path.resolve(script),...process.argv.slice(3)],{env:{...process.env,PAC_RUNTIME_DATABASE_URL:u('pac_app_runtime',s.runtimePassword),PAC_RUNTIME_DATABASE_SSL:'require',PAC_OWNER_DATABASE_URL:u('pac_owner_writer',s.ownerPassword),PAC_OWNER_DATABASE_SSL:'require',PAC_DEDICATED_DSD_DATABASE:'yes'},stdio:'inherit',windowsHide:true});process.exitCode=child.status??1;
