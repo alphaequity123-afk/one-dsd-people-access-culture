@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One DSD HCBS Equity Policy Review</title>
+<style>
+:root{
+  --ink:#1C2630; --slate:#5B6B7A; --line:#D5DCE2; --paper:#F4F7F9; --white:#FFFFFF;
+  --mn:#003865; --lake:#2A7F9E; --lake-soft:#E3F0F5; --gold:#9A6B12; --gold-soft:#FBF3E3;
+  --moss:#52677B; --moss-soft:#E9EEF3; --clay:#675747; --clay-soft:#F1ECE4; --both:#6B5B95; --both-soft:#ECE7F5;
+  --rail:248px; --coach:300px;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+a{color:var(--lake)}
+button{font:inherit}
+.skip{position:absolute;left:-999px;top:0;background:var(--mn);color:#fff;padding:.5rem 1rem}
+.skip:focus{left:0;z-index:50}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* header */
+.top{background:var(--mn);color:#fff;padding:.75rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.top h1{font-size:1.1rem;font-weight:600;margin:0;letter-spacing:.01em}
+.top .sub{font-size:.85rem;opacity:.85}
+.top .actions{margin-left:auto;display:flex;gap:.5rem;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:4px;padding:.45rem .8rem;cursor:pointer}
+.btn:hover{background:var(--lake-soft)}
+.btn.primary{background:var(--lake);border-color:var(--lake);color:#fff}
+.btn.primary:hover{background:#226a84}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.small{padding:.25rem .55rem;font-size:.85rem}
+.btn.danger{color:var(--clay);border-color:var(--clay)}
+
+/* layout */
+.shell{display:grid;grid-template-columns:var(--rail) minmax(0,1fr) var(--coach);min-height:calc(100vh - 56px)}
+.rail{background:#fff;border-right:1px solid var(--line);padding:1rem 0;position:sticky;top:0;height:calc(100vh - 56px);overflow:auto}
+.rail nav button{display:flex;gap:.6rem;align-items:flex-start;width:100%;text-align:left;background:none;border:0;border-left:4px solid transparent;padding:.55rem 1rem .55rem .9rem;color:var(--ink);cursor:pointer;line-height:1.3}
+.rail nav button:hover{background:var(--paper)}
+.rail nav button[aria-current="step"]{border-left-color:var(--mn);background:var(--paper);font-weight:600}
+.rail .num{flex:0 0 1.6rem;height:1.6rem;border-radius:50%;border:1.5px solid var(--line);font-size:.8rem;display:grid;place-items:center;color:var(--slate)}
+.rail nav button[aria-current="step"] .num{border-color:var(--mn);color:var(--mn)}
+.rail .num.done{background:var(--moss);border-color:var(--moss);color:#fff}
+.rail .num.part{border-color:var(--gold);color:var(--gold)}
+.rail .lbl small{display:block;color:var(--slate);font-weight:400;font-size:.78rem}
+.rail .meter{margin:1rem 1rem 0;font-size:.8rem;color:var(--slate)}
+.rail .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:.3rem}
+.rail .bar i{display:block;height:100%;background:var(--moss);width:0;transition:width .3s}
+.rail .mode{margin:.75rem 1rem;padding:.6rem .75rem;background:var(--gold-soft);border-left:3px solid var(--gold);font-size:.82rem}
+.rail .mode strong{display:block}
+
+.main{padding:1.5rem 2rem 4rem;max-width:calc(72ch + 4rem)}
+.main.wide{max-width:1040px}
+.main.wide .lead{max-width:72ch}
+.main h2{font-size:1.65rem;font-weight:600;margin:0 0 .25rem;line-height:1.2}
+.main .lead{color:var(--slate);margin:0 0 1.5rem;max-width:62ch}
+.q{margin:0 0 1.4rem}
+.q label,.q .qt{display:block;font-weight:600;margin-bottom:.3rem}
+.q .help{color:var(--slate);font-size:.9rem;margin:0 0 .45rem}
+.q textarea,.q input[type=text],.q input[type=date],.q select{width:100%;border:1px solid var(--line);border-radius:4px;padding:.55rem .65rem;font:inherit;background:#fff;color:var(--ink)}
+.q textarea{min-height:5.5rem;resize:vertical}
+.q textarea:focus,.q input:focus,.q select:focus{border-color:var(--lake);outline:3px solid var(--lake-soft)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chips label{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--line);border-radius:999px;padding:.3rem .7rem;background:#fff;cursor:pointer;font-weight:400;margin:0}
+.chips label:has(input:checked){border-color:var(--mn);background:var(--lake-soft)}
+.chips input{margin:0}
+.radio label{display:flex;gap:.5rem;align-items:flex-start;font-weight:400;padding:.4rem .6rem;border:1px solid var(--line);border-radius:4px;background:#fff;margin:0 0 .4rem;cursor:pointer}
+.radio label:has(input:checked){border-color:var(--mn);background:var(--lake-soft)}
+.radio input{margin-top:.3rem}
+.note{border-left:3px solid var(--lake);background:var(--lake-soft);padding:.6rem .8rem;margin:1rem 0;font-size:.92rem}
+.note.req{border-color:var(--gold);background:var(--gold-soft)}
+.note.ok{border-color:var(--moss);background:var(--moss-soft)}
+.note.warn{border-color:var(--clay);background:var(--clay-soft)}
+.pager{display:flex;justify-content:space-between;margin-top:2rem;gap:1rem}
+.example{border:1px dashed var(--line);border-radius:4px;padding:.6rem .8rem;font-size:.9rem;color:var(--slate);background:#fff}
+.example summary{cursor:pointer;color:var(--ink);font-weight:600}
+.example p{margin:.4rem 0 0}
+
+/* affected communities grid */
+.grid{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.grid table{width:100%;border-collapse:collapse;font-size:.9rem}
+.grid th{background:var(--mn);color:#fff;text-align:left;padding:.5rem .6rem;font-weight:600}
+.grid td{padding:.45rem .4rem;border-top:1px solid var(--line);vertical-align:top}
+.grid td input,.grid td select,.grid td textarea{width:100%;border:1px solid var(--line);border-radius:3px;padding:.35rem .45rem;font:inherit;background:#fff}
+.grid td textarea{min-height:2.6rem;resize:vertical}
+.grid tr[data-eff="benefit"] td:first-child{box-shadow:inset 5px 0 0 var(--moss)}
+.grid tr[data-eff="burden"] td:first-child{box-shadow:inset 5px 0 0 var(--clay)}
+.grid tr[data-eff="both"] td:first-child{box-shadow:inset 5px 0 0 var(--both)}
+.grid tr[data-eff="unknown"] td:first-child{box-shadow:inset 5px 0 0 var(--gold)}
+.grid tr[data-eff=""] td:first-child{box-shadow:inset 5px 0 0 var(--line)}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.82rem;color:var(--slate);margin:.5rem 0 1rem}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;vertical-align:-1px;margin-right:.3rem}
+.gridfoot{display:flex;gap:.5rem;padding:.5rem;border-top:1px solid var(--line);background:var(--paper)}
+.summary-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1rem 0}
+.summary-strip div{padding:.5rem .6rem;border-radius:4px;font-size:.85rem}
+.summary-strip strong{display:block;font-size:1.3rem;line-height:1.1}
+.s-benefit{background:var(--moss-soft);color:var(--moss)}
+.s-burden{background:var(--clay-soft);color:var(--clay)}
+.s-both{background:var(--both-soft);color:var(--both)}
+.s-unknown{background:var(--gold-soft);color:var(--gold)}
+
+/* recommendations list */
+.recs .rec{border:1px solid var(--line);border-radius:4px;padding:.6rem .7rem;margin-bottom:.6rem;background:#fff}
+.recs .rec .row{grid-template-columns:2fr 1fr 1fr}
+.recs .rec textarea{min-height:3rem}
+
+/* alignment check */
+.align{display:grid;grid-template-columns:1fr;gap:.4rem}
+.align label{display:grid;grid-template-columns:auto 1fr;gap:.6rem;align-items:start;border:1px solid var(--line);border-radius:4px;padding:.5rem .6rem;background:#fff;font-weight:400;margin:0;cursor:pointer}
+.align label:has(input:checked){border-color:var(--mn);background:var(--lake-soft)}
+.align label small{display:block;color:var(--slate)}
+
+/* coach */
+.coach{background:#fff;border-left:1px solid var(--line);padding:1.25rem 1.1rem;position:sticky;top:0;height:calc(100vh - 56px);overflow:auto;font-size:.9rem}
+.coach h3{font-size:.95rem;margin:1.2rem 0 .4rem;color:var(--mn)}
+.coach h3:first-child{margin-top:0}
+.coach ul{padding-left:1.1rem;margin:.3rem 0}
+.coach li{margin-bottom:.35rem}
+.coach .anchor{background:var(--paper);border-left:3px solid var(--mn);padding:.5rem .7rem;font-size:.86rem}
+.coach .strong-weak{display:grid;gap:.4rem}
+.coach .strong-weak div{padding:.45rem .6rem;border-radius:4px;font-size:.85rem}
+.coach .sw-strong{background:var(--moss-soft)}
+.coach .sw-weak{background:var(--clay-soft)}
+.coach .tabs{display:flex;gap:.3rem;margin-bottom:.8rem}
+.coach .tabs button{flex:1;border:1px solid var(--line);background:#fff;padding:.35rem;border-radius:4px;cursor:pointer;font-size:.85rem}
+.coach .tabs button[aria-selected="true"]{background:var(--mn);color:#fff;border-color:var(--mn)}
+.coach .rsec{display:none}
+.coach .rsec.on{display:block}
+.coach .walkex p{margin:.35rem 0;font-size:.85rem}
+.coach .walkex ol{padding-left:1.1rem;font-size:.85rem}
+.coach .glossary dt{font-weight:600;margin-top:.5rem}
+.coach .glossary dd{margin:0;color:var(--slate)}
+
+/* record / output */
+.record{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.5rem 1.75rem;font-size:.95rem}
+.record h2{font-size:1.4rem;margin:0 0 .2rem}
+.record h3{font-size:1.05rem;margin:1.3rem 0 .4rem;border-bottom:1px solid var(--line);padding-bottom:.2rem;color:var(--mn)}
+.record table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.4rem 0}
+.record th,.record td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+.record th{background:var(--paper)}
+.record .meta{color:var(--slate);font-size:.88rem;margin:0 0 .8rem}
+.record .verdict{display:inline-block;padding:.25rem .6rem;border-radius:4px;font-weight:600;margin:.3rem 0}
+.v-proceed{background:var(--moss-soft);color:var(--moss)}
+.v-changes{background:var(--gold-soft);color:var(--gold)}
+.v-redesign{background:var(--both-soft);color:var(--both)}
+.v-stop{background:var(--clay-soft);color:var(--clay)}
+.record .empty{color:var(--clay);font-style:italic}
+.outbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.rubric{display:grid;gap:.4rem;margin:1rem 0}
+.rubric div{display:grid;grid-template-columns:1.4rem 1fr;gap:.5rem;align-items:start;padding:.45rem .6rem;border:1px solid var(--line);border-radius:4px;background:#fff;font-size:.9rem}
+.rubric .ok{color:var(--moss);font-weight:700}
+.rubric .no{color:var(--clay);font-weight:700}
+.toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:.5rem 1rem;border-radius:4px;opacity:0;transition:opacity .25s;pointer-events:none;font-size:.9rem}
+.toast.show{opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+@media (max-width:1180px){
+  .shell{grid-template-columns:var(--rail) minmax(0,1fr)}
+  .coach{display:none}
+  .coach.open{display:block;position:fixed;right:0;top:56px;width:min(92vw,360px);z-index:40;box-shadow:-6px 0 24px rgba(0,0,0,.15);height:calc(100vh - 56px)}
+  .coachbtn{display:inline-flex}
+}
+.coachbtn{display:none}
+@media (max-width:760px){
+  .shell{grid-template-columns:1fr}
+  .rail{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:.5rem}
+  .rail nav{display:flex;overflow:auto;gap:.2rem}
+  .rail nav button{width:auto;border-left:0;border-bottom:3px solid transparent;white-space:nowrap}
+  .rail nav button[aria-current="step"]{border-bottom-color:var(--mn)}
+  .rail .lbl small{display:none}
+  .rail .meter,.rail .mode{display:none}
+  .main{padding:1rem}
+  .row,.recs .rec .row{grid-template-columns:1fr}
+  .summary-strip{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{
+  .top,.rail,.coach,.pager,.outbar,.toast,.coachbtn{display:none!important}
+  .shell{display:block}
+  .main{max-width:none;padding:0}
+  body{background:#fff}
+  .record{border:0;padding:0}
+  .main > *:not(.printonly){display:none}
+  .printonly{display:block!important}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link rel="stylesheet" href="/program-chrome.css"><link rel="stylesheet" href="/internal-standalone.css">
+</head>
+<body data-page-purpose="tools" class="dsd-program-chrome"><a href="#main" class="skip-link">Skip to main content</a>
+<header class="dsd-header">
+<div class="dsd-shell dsd-brand-row">
+<a href="/" class="dsd-brand" aria-label="One DSD People, Access and Culture home"><img src="/images/dhs-logo.png" width="319" height="68" alt="Minnesota Department of Human Services"><span><strong>One DSD</strong><span>People, Access and Culture</span></span></a>
+<div class="dsd-utilities"><a href="/program/model">Connect learning with work</a><a href="/ask">Common questions</a><a href="/my-work">My work</a><button type="button" id="dsd-menu" aria-controls="dsd-navigation" aria-expanded="false" class="dsd-menu">Menu</button></div>
+</div>
+<nav id="dsd-navigation" aria-label="Program" class="dsd-nav"><div class="dsd-shell"><a href="/learn">Learn</a><a href="/program/resources" aria-current="location">Apply a tool</a><a href="/support">Get support</a><a href="/one-dsd">DSD programs</a><a href="/about">About the program</a><a class="dsd-mobile-utility" href="/ask">Common questions</a><a class="dsd-mobile-utility" href="/my-work">My work</a></div></nav>
+<div class="dsd-shell dsd-breadcrumb"><a href="/program/resources">Tools and resources</a></div>
+</header>
+<a class="skip" href="#main">Skip to the worksheet</a>
+<section class="top">
+  <div>
+    <h1>One DSD HCBS Equity Policy Review</h1>
+    <div class="sub">Disability Services Division · HCBS waivers, self-direction, providers and workforce, access and assessment, through the DHS Equity Policy</div>
+  </div>
+  <nav aria-label="Review navigation"><a style="color:white" href="/equity-review" target="_top">All equity reviews</a> · <a style="color:white" href="/one-dsd/planning" target="_top">Policy and planning</a></nav><div class="actions">
+    <button class="btn ghost small" id="btnNew">New analysis</button>
+    <button class="btn ghost small" id="btnOpen">Open draft (.json)</button>
+    <input type="file" id="fileOpen" accept=".json,application/json" class="sr" aria-label="Open a saved draft">
+    <button class="btn ghost small" id="btnSave">Save draft (.json)</button>
+    <button class="btn ghost small" id="btnExample">Load example</button>
+    <button class="btn ghost small coachbtn" id="btnCoach" aria-expanded="false" aria-controls="coach">Coach and resources</button>
+  </div>
+<p id="draftStatus" role="status" aria-live="polite" style="margin:.5rem 1rem">Your draft stays in this browser. It is not submitted or shared. Avoid personal or confidential information; downloaded drafts are unencrypted.</p><button class="btn small" id="btnClearLocal">Clear browser draft</button></section>
+
+<div class="shell">
+  <aside class="rail" aria-label="Analysis steps">
+    <nav id="nav"></nav>
+    <div class="meter" id="meter"><span id="meterText">0 of 11 steps complete</span><div class="bar"><i id="meterBar"></i></div></div>
+    <div class="mode" id="modeBox" hidden><strong id="modeTitle"></strong><span id="modeText"></span></div>
+  </aside>
+
+  <main class="main" id="main" tabindex="-1">
+    <div id="stepHost"></div>
+    <div class="pager" id="pager">
+      <button class="btn" id="btnPrev">Previous step</button>
+      <button class="btn primary" id="btnNext">Next step</button>
+    </div>
+    <section class="printonly" id="printHost" style="display:none"></section>
+  </main>
+
+  <aside class="coach" id="coach" aria-label="Coach and resources">
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" id="tabCoach" data-tab="coachPane">Coach</button>
+      <button role="tab" aria-selected="false" id="tabWalk" data-tab="walkPane">Walkthrough</button>
+      <button role="tab" aria-selected="false" id="tabRes" data-tab="resPane">Resources</button>
+    </div>
+    <div id="coachPane" class="rsec on" role="tabpanel"></div>
+    <div id="walkPane" class="rsec" role="tabpanel"></div>
+    <div id="resPane" class="rsec" role="tabpanel"></div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ---------------- HCBS content ---------------- */
+const TYPES = {
+  waiver:{label:"Waiver amendment or renewal (CADI, DD, BI, CAC; 1915(c))",hint:"Waiver amendments change what is covered, who qualifies, how much, and how lead agencies and providers operate. Federal approval is required; equity analysis must precede the CMS submission, not follow it."},
+  spa:{label:"State plan amendment or federal authority change (CFSS, 1915(k), 1915(i))",hint:"State plan changes affect everyone in the eligibility group statewide and cannot be waitlisted. Analyze who is newly in, newly out, and who moves between programs."},
+  bulletin:{label:"Bulletin, CBSM manual page or provider guidance",hint:"Guidance changes practice in every county and Tribal lead agency the day it posts. The equity question is how differently it will be read and applied."},
+  rate:{label:"Rate methodology, budget or DWRS change",hint:"Rate and budget changes land unevenly by region, provider type and service. Model who gains and loses before the number is final."},
+  licensing:{label:"245D licensing, standards or compliance change",hint:"Compliance requirements fall hardest on small and culturally specific providers. Separate what protects people from what only adds paperwork."},
+  assessment:{label:"MnCHOICES, assessment, eligibility or support planning change",hint:"Assessment design determines who gets what. Check cultural validity, language access, and whether the tool produces different results for similar need across groups."},
+  leadagency:{label:"Lead agency role, process or oversight change",hint:"87 counties and Tribal Nations implement with different capacity, caseloads and discretion. Design for the least-resourced lead agency, not the average."},
+  selfdirect:{label:"Self-direction change (CDCS, CFSS, consumer support grant)",hint:"Self-direction shifts administrative burden to participants and their workers. Analyze budget adequacy, worker pay, FMS access and who can realistically self-direct."},
+  system:{label:"System or technology change (MMIS, MnCHOICES, EVV, portals, WMS)",hint:"IT funding and modernization is a named toolkit use. Digital-only paths exclude; plan the non-digital route and who staffs it."},
+  olmstead:{label:"Olmstead, housing, employment or transition initiative",hint:"Tie the analysis to Olmstead Plan goals and measures; include people in facilities and on waiting lists who are not yet in the data."},
+  legislative:{label:"Legislative proposal (agency-initiated)",hint:"Legislative proposals are a named toolkit use. Route the proposal through the authorized legislative process; this record supports it."},
+  bill:{label:"Bill analysis (HF / SF or draft language)",hint:"Produces an equity section for the standard bill analysis, which remains the official product of its process."},
+  contract:{label:"RFP, grant, contract or procurement",hint:"Confirm permissible equity language with ADSA procurement and legal. Design for small and culturally specific applicants."},
+  other:{label:"Other DSD decision with lasting effect",hint:"The policy names 'additional opportunities to embed equity, as identified.'"}
+};
+
+const LINES = [
+ "CADI waiver","DD waiver","BI waiver","CAC waiver","Waiver Reimagine (individual budgets, two-waiver model)",
+ "CDCS","CFSS","Consumer support grant","245D licensing and standards","DSP rates and DWRS","Provider enrollment (MPSE) and capacity",
+ "MnCHOICES assessment and support planning","Lead agency operations (county and Tribal)","Olmstead Plan and transition","Housing (HSS, housing access)","Employment (EFS, employment first)","Positive supports and rights","Case management"
+];
+
+const DEFAULT_GROUPS = [
+  "People with intellectual and developmental disabilities",
+  "People with brain injury",
+  "People with physical disabilities",
+  "People with complex medical needs or chronic conditions (CAC)",
+  "People with mental health conditions served on CADI",
+  "Children and families using waivers or CSG",
+  "Older adults with disabilities (65+) on disability waivers",
+  "Deaf, DeafBlind and hard-of-hearing people",
+  "Blind and low-vision people",
+  "American Indian people and Tribal Nations (including Tribal lead agencies)",
+  "Communities of color and multiracial people",
+  "People with limited English proficiency or who use interpreters",
+  "LGBTQIA2S+ people",
+  "Veterans",
+  "People in rural and Greater Minnesota",
+  "People in facilities, hospitals or corrections seeking transition (Olmstead)",
+  "People on waiting lists or not yet connected to services",
+  "People experiencing homelessness or housing instability",
+  "Family caregivers, guardians and support planners",
+  "Self-directed participants and their support workers",
+  "Direct support professionals and provider workforce",
+  "Small and culturally specific providers",
+  "County lead agency staff and case managers",
+  "Tribal lead agency staff and case managers"
+];
+
+const STEPS = [
+ {id:"s0",title:"Set up and triage",short:"Service line, instrument, decision-maker, review track",
+  coach:{anchor:"DHS Equity Policy, Procedures: a formal equity analysis is required for actions with prolonged or long-term impact scheduled for approval at supervisor level or above. For waiver amendments, state plan changes, bulletins, rate methodologies and manual changes, examine impact and the actual review requirements. Confirm analysis or scan guidance with the responsible office and the toolkit user guide.",
+   prompts:["Which service lines does this touch, including the ones affected indirectly (a CADI change moves people onto or off DD; a rate change moves providers between services)?","What is the instrument: waiver amendment, SPA, bulletin, CBSM page, rate table, legislative language? Each has its own approval path and calendar.","Who signs, and what is the federal date (CMS submission, effective date, public notice period)?"],
+   strong:"Instrument, service lines, decision-maker, state date and federal date are named; the review track follows from impact and approval level.",weak:"'Policy update' with no instrument named; CMS deadline used as the reason to skip analysis.",
+   pitfalls:["Analyzing only the primary waiver and missing people who move between programs.","Starting the analysis after the public notice is drafted, when the design is already fixed."]}},
+ {id:"s1",title:"Describe the action and outcomes",short:"Problem, proposal, federal constraint, state choice",
+  coach:{anchor:"Toolkit Criterion 1: what is proposed and what are the desired outcomes. The policy's purpose is reducing disparities and improving access to human services. HCBS analysis adds one discipline: separate what federal law or CMS requires from what Minnesota chose.",
+   prompts:["What does CMS, 42 CFR 441 (HCBS settings), the 1915(c) technical guide, or EVV actually require? Cite it. Everything else is a state design choice and is open to equity analysis.","What problem is this solving for people who use services, as distinct from a problem for the agency, the budget or the audit finding?","What would a person on this waiver, in Beltrami County and in Hennepin, notice a year later?"],
+   strong:"The federal floor is cited; the state choices above the floor are listed; outcomes are stated for people with a disaggregated measure.",weak:"'Required by CMS' covering the whole proposal; outcomes stated as compliance or budget neutrality.",
+   pitfalls:["Treating a CMS informal comment as a mandate.","Writing outcomes for lead agencies ('consistent implementation') and none for the people they serve."]}},
+ {id:"s2",title:"Who is affected",short:"Disability populations, communities, lead agencies, providers, workforce",
+  coach:{anchor:"Policy definition of communities experiencing inequities: communities of color, multiracial people, American Indians, veterans, LGBTQIA2S+ people, people with disabilities. In HCBS, 'people with disabilities' is not one group; the grid breaks it apart by disability, communication need, program and setting, and adds the lead agencies, providers and workers who deliver the service.",
+   prompts:["Which disability populations are affected differently (IDD, brain injury, physical, complex medical, mental health, Deaf/DeafBlind, blind)? What about people with more than one?","Who implements this: county staff, Tribal lead agency staff, case managers, FMS providers, 245D providers, DSPs, self-directed workers? What changes in their work?","Who is not in the data because they are on a waiting list, in a facility, or never got through MnCHOICES?"],
+   strong:"Each disability population, each named community and each delivery role has a row; burdens are specific and tied to evidence or engagement; intersections are added (a Deaf Somali-speaking adult on CADI in Greater Minnesota).",weak:"One row, 'waiver participants', marked 'benefit'.",
+   pitfalls:["Forgetting Tribal lead agencies have different authority, funding streams and caseloads from counties.","Counting the DSP workforce as a cost line rather than as people affected."]}},
+ {id:"s3",title:"Data and evidence",short:"What MMIS, MnCHOICES, licensing and people's accounts show",
+  coach:{anchor:"Toolkit Criterion 3: data sources, disaggregation, what the data reveals about disparities and need. DSD holds more disaggregated data than most divisions; the gap is usually in asking for it early and in pairing it with what people say.",
+   prompts:["What do MMIS claims, waiver enrollment and WMS, MnCHOICES assessments, DWRS rate data, 245D licensing and enrollment (MPSE), appeals and the Olmstead quality-of-life survey show, cut by race, ethnicity, Tribal affiliation, disability, language, county or Tribal lead agency, provider type and region?","Where is the denominator? Waiting lists, people assessed but not opened, and people in facilities are usually missing.","What do NCI-IDD, DSD advisory councils, listening sessions, Ombudsman reports and Consult requests add?"],
+   strong:"Sources named; disaggregation by community and by lead agency and provider type; findings stated plainly; gaps logged with an owner and a date.",weak:"'No data' when DSD holds it; statewide averages that hide county and regional differences.",
+   pitfalls:["Reading low utilization as low need.","Comparing counties without adjusting for Tribal lead agency differences and rural provider scarcity."]}},
+ {id:"s4",title:"Engagement",short:"People who use services, families, Tribal Nations, lead agencies, providers",
+  coach:{anchor:"Policy objective: authentic, meaningful and ongoing community engagement during formation. Toolkit Criterion 2 asks about the 11 Tribal Nations and Tribal Liaisons. Executive Order 19-24 governs Tribal consultation; for waivers, Tribal notice is also a federal public-notice requirement. 42 CFR 441.304 requires public input on waiver amendments.",
+   prompts:["Did people who use the service, self-directed workers, and culturally specific providers shape the options, or were they shown a draft?","Was Tribal consultation routed formally, and separately from the county lead agency conversation?","Did lead agencies with the least capacity get heard, or only the ones who attend every call?"],
+   strong:"Engagement is dated and happened while options were open; participants described by role and community; what changed is traceable; a you-said-we-did summary is planned for people, lead agencies and providers.",weak:"A 30-day public comment period and an eList notice counted as engagement.",
+   pitfalls:["Treating a county association's position as the view of people who use services.","Letting the CMS public-notice period substitute for consultation."]}},
+ {id:"s5",title:"Impacts and root causes",short:"Benefits, burdens, mechanism, disparity effect",
+  coach:{anchor:"Policy analysis questions: nature of the impact, whether the item reduces disparities, positive and negative effects, and 'if negative, adjust the proposal.' In HCBS the mechanism is usually a design choice: a budget formula, an assessment item, a documentation step, a provider standard, a timeline, a technology.",
+   prompts:["For each burden: is the mechanism the federal floor or a state choice? If a state choice, what is the alternative?","How does this interact with other rules: EVV, settings rule, 245D, DWRS bands, rate exceptions, waiver caps, waiting lists?","Does this reduce, hold or widen the gaps DSD already knows about: service authorization levels by race, self-direction uptake, culturally specific provider share, rural access, transition rates?"],
+   strong:"Burdens traced to specific design choices; interactions with adjacent rules named; disparity effect judged with the numbers from Step 3.",weak:"Impacts restated from Step 2 without mechanism; 'federal requirement' used to close the discussion.",
+   pitfalls:["Averaging a modest benefit for many against a severe loss for a few.","Missing the second-order effect on providers who then exit, which lands on people as lost access."]}},
+ {id:"s6",title:"Lead agencies, providers and workforce",short:"County and Tribal variation, provider capacity, DSPs",
+  coach:{anchor:"DSD's decisions are delivered by 87 counties, Tribal Nations and thousands of providers. The Equity Outcome Map names unclear roles and thin accountability as barriers; the ADSA deck names retention and procurement gaps. An analysis that stops at the state office line is incomplete.",
+   prompts:["How will the smallest county and a Tribal lead agency implement this? What discretion does the instrument leave, and how will different readings produce different outcomes for similar people?","Where is provider capacity thin: Greater Minnesota, culturally specific providers, interpreters, DSPs? What does this do to them and to their ability to serve?","What does this do to DSP pay, hours, training burden and turnover? To self-directed workers?","What support, timeline and funding do lead agencies and providers get, and is it equal across them?"],
+   strong:"Implementation is modeled for the least-resourced lead agency and provider; discretion points are listed with guidance planned; capacity gaps by region and provider type are named with mitigations; workforce effects are quantified.",weak:"'Lead agencies will implement per the bulletin.'",
+   pitfalls:["Assuming county and Tribal lead agencies have the same authority and funding.","Treating provider exit as a market event rather than as an access loss for identifiable people."]}},
+ {id:"s7",title:"Access, communication and settings",short:"Plain language, Deaf and blind access, LEP, digital, HCBS settings",
+  coach:{anchor:"Toolkit Criterion 4 and the policy's CLAS objective. ADA Title II, Section 504 and 508, WCAG 2.1 AA, the HCBS settings rule (42 CFR 441.301(c)(4)) and person-centered planning requirements all apply. Policy definition of access: the timely ability to use resources and services.",
+   prompts:["Walk the path of someone with an intellectual disability, a Deaf person, a DeafBlind person, a blind person, and a person who reads Hmong or Somali and not English. Where does the notice, the form, the portal, the assessment or the appeal break?","Is the digital route (EVV app, portal, e-signature, video assessment) the only route? What is the non-digital route, who staffs it, and is it equally timely?","Does the change affect choice of setting, community integration, privacy or autonomy under the settings rule?"],
+   strong:"Each access dimension has a named standard, a provision, a budget and an owner; plain-language and translated versions are planned and tested with people who use them; the non-digital route is equal in time.",weak:"'Materials will be made accessible.'",
+   pitfalls:["Planning interpreters without checking contracts, dialects and rural availability.","Writing a plain-language summary after the policy, instead of designing the policy to be explainable."]}},
+ {id:"s8",title:"Alternatives, mitigation and routing",short:"Options above the federal floor; formal paths",
+  coach:{anchor:"The policy expects employees to adjust the proposal to achieve a more equitable outcome. Civil rights, Tribal consultation and labor relations run through their own paths. In HCBS, add CMS approval, Olmstead, licensing, MnCHOICES and lead-agency communication paths.",
+   prompts:["Name at least two alternatives above the federal floor, including 'do less' and a phased or targeted option. What does each do to the burdens in Steps 5, 6 and 7?","What mitigations are specific, funded and owned: rate exceptions, transition periods, technical assistance, grants to culturally specific providers, interpreter contracts, lead agency training?","Which formal paths does this trigger, and have they been contacted before the decision date?"],
+   strong:"Alternatives compared on the same equity criteria; mitigations owned and funded; routing listed with status and dates.",weak:"One option; mitigation is 'training and a bulletin.'",
+   pitfalls:["Discovering the Tribal consultation requirement after the CMS submission date is set.","Mitigation that depends on lead agency or provider resources the state does not fund."]}},
+ {id:"s9",title:"Implementation and accountability",short:"Rollout, measures by lead agency and community, review, sustainability",
+  coach:{anchor:"Toolkit Criteria 5, 6 and 7: monitoring, resources, implementation and accountability. Policy analysis question 4: can it be sustainably successful? Waiver quality assurance and CMS performance measures already exist; connect equity measures to them so they are reported, not just promised.",
+   prompts:["What are the first three implementation steps, with owners, and what reaches lead agencies and providers before the effective date?","Which measures will be disaggregated by community, disability, county or Tribal lead agency, provider type and region, and when is the first review?","What is written into the waiver, the manual, contract language or the performance plan so this outlives its sponsor?"],
+   strong:"Dated milestones; disaggregated measures tied to existing waiver QA and the Outcome Map metrics; review date set; equity provisions funded; results shared back with people, lead agencies and providers.",weak:"'Ongoing monitoring' with no metric or audience.",
+   pitfalls:["Measuring outputs (bulletin issued, trainings held) instead of whether the gap moved.","Reporting to CMS and leadership but never back to the communities engaged."]}},
+ {id:"s10",title:"Recommendation and record",short:"Verdict, owned recommendations, alignment, output",
+  coach:{anchor:"Toolkit: summarize key equity considerations and provide actionable recommendations. Policy: communicate how equity impacts were reviewed and what resulted. Share the record with the ADSA Equity Director and the DSD Equity Team; attach it to the waiver amendment, bulletin or rate package.",
+   prompts:["One paragraph a commissioner or CMS staff could read in sixty seconds: what, who, so what, recommended action.","Every recommendation names an owner, a date and a measure.","Which policy objectives and ADSA goals does this advance, and which does it strain?"],
+   strong:"A clear verdict with reasons; three to six owned recommendations; the record travels with the instrument; a plan to tell affected people, lead agencies and providers what happened.",weak:"'Equity considerations were reviewed.'",
+   pitfalls:["Softening 'redesign' to 'proceed with changes' because the federal date is close.","Filing the record without attaching it to the package that goes for approval."]}}
+];
+
+const OBJECTIVES = [
+ {id:"toolkit",label:"Use of the Equity Analysis Toolkit",sub:"Required analysis or scan applied before approval"},
+ {id:"committee",label:"Equity Committee",sub:"Administration or area Equity Committee involved in decisions, processes and actions"},
+ {id:"workforce",label:"Workforce development",sub:"Mentorship, sponsorship, reclassification, career ladders, work-out-of-class"},
+ {id:"contracts",label:"Contracts and procurement",sub:"Equitable access to money and resources provided by DHS"},
+ {id:"engagement",label:"Community engagement and inclusion",sub:"Authentic, meaningful, ongoing, during formation"},
+ {id:"clas",label:"National CLAS Standards",sub:"Culturally and linguistically appropriate services in everyday work"}
+];
+const GOALS = [
+ {id:"g1",label:"1 Eliminate Disparities",sub:"Examine a specific barrier and its causes before a decision is settled"},
+ {id:"g2",label:"2 Community Engagement",sub:"Make affected perspectives influential while alternatives are open"},
+ {id:"g3",label:"3 Hiring and Retention",sub:"Access to entry, belonging, growth and staying"},
+ {id:"g4",label:"4 Learning and Development",sub:"Connect understanding to rehearsal, support and application"},
+ {id:"g5",label:"5 Contracts and Procurement",sub:"Barriers across the contract cycle"},
+ {id:"g6",label:"6 Communication and Accessibility",sub:"Information and participation usable, understandable, responsive"}
+];
+const ROUTES = [
+ {id:"ed",label:"ADSA Equity Director (advice; approved analysis per policy)"},
+ {id:"team",label:"DSD Equity Team / ADSA Equity Committee"},
+ {id:"tribal",label:"Tribal consultation (EO 19-24; DHS Tribal Liaison; Tribal lead agencies)"},
+ {id:"cms",label:"Federal relations / Medicaid policy (CMS waiver or SPA approval, public notice)"},
+ {id:"olmstead",label:"Olmstead Implementation Office (plan goals and measures)"},
+ {id:"lead",label:"Lead agency communication (county and Tribal; MACSSA, AMC, Tribal partners)"},
+ {id:"licensing",label:"DHS Licensing (245D) and provider standards"},
+ {id:"mnchoices",label:"MnCHOICES / assessment and support planning team"},
+ {id:"eoad",label:"Equal Opportunity and Access Division (civil rights, Title VI, ADA, LEP)"},
+ {id:"access",label:"Accessibility coordinator and language access (508, WCAG, translation, interpreters)"},
+ {id:"labor",label:"Labor relations / HR (DSP and self-directed worker effects; bargaining)"},
+ {id:"legal",label:"Legal, rules, legislative or government relations"},
+ {id:"privacy",label:"Data privacy / records (MGDPA, HIPAA)"},
+ {id:"it",label:"MNIT / systems (MMIS, MnCHOICES, EVV, portals)"},
+ {id:"procure",label:"ADSA procurement and contracts (grants, RFPs, FMS, vendors)"},
+ {id:"ombud",label:"Ombudsman for Mental Health and Developmental Disabilities; advisory councils"}
+];
+
+const RESOURCES = `
+<h3>What the DHS Equity Policy requires</h3>
+<div class="anchor">All employees analyze actions (policies, proposals, practices, procedures, rules, budgets, decisions) through an equity lens, use the Equity Analysis Toolkit, complete annual equity learning and sign the annual commitment. A formal analysis is required for actions with prolonged or long-term impact that need approval at supervisor level or above; it must accompany the action.</div>
+<h3>HCBS instruments and where equity analysis fits</h3>
+<ul><li><strong>Waiver amendment or renewal:</strong> before public notice and Tribal notice; attach to the CMS package narrative.</li><li><strong>State plan amendment (CFSS, 1915(k)/(i)):</strong> before the SPA is drafted; everyone in the group is affected.</li><li><strong>Bulletin or CBSM page:</strong> before drafting; design the guidance so it is applied the same way across lead agencies.</li><li><strong>Rate or DWRS change:</strong> before the number is final; model by region and provider type.</li><li><strong>245D standard:</strong> before drafting; separate protection from paperwork.</li><li><strong>MnCHOICES change:</strong> before the item or algorithm changes; test for different results on similar need.</li><li><strong>Legislative proposal or bill:</strong> as soon as referred; update each stage.</li></ul>
+<h3>Federal floor versus state choice</h3>
+<div class="anchor">Cite the federal requirement (42 CFR 441 subparts G and K; 1915(c) technical guide; EVV under the 21st Century Cures Act; HCBS settings rule 42 CFR 441.301(c)(4); person-centered planning 441.301(c)(1)–(3)). Everything above the floor is a Minnesota design choice and is open to analysis and alternatives.</div>
+<h3>DSD data to ask for early</h3>
+<ul><li>MMIS claims and service authorizations by waiver, service, county or Tribal lead agency, provider type, race, ethnicity, language, age</li><li>Waiver enrollment, waiting lists and WMS; MnCHOICES assessments and support plans; appeals</li><li>DWRS rate data; rate exceptions; CDCS and CFSS budgets and utilization</li><li>245D licensing and enrollment (MPSE) by region and provider size; culturally specific provider share</li><li>DSP workforce data (DWRS cost reports, Direct Care and Treatment, DEED)</li><li>Olmstead quality-of-life survey; NCI-IDD; Ombudsman and advisory council reports</li><li>Enterprise extracts through the ADSA Equity Director; Minnesota Communities briefs in the program</li></ul>
+<h3>Six policy objectives</h3>
+<ul><li>Equity Analysis Toolkit in use</li><li>Equity Committee in each administration or area</li><li>Workforce development opportunities</li><li>Contracts and procurement reviewed through an equity lens</li><li>Authentic, ongoing community engagement during formation</li><li>National CLAS Standards in everyday work</li></ul>
+<h3>Six ADSA Implementation Plan goals</h3>
+<ul><li>1 Eliminate Disparities</li><li>2 Community Engagement</li><li>3 Hiring and Retention</li><li>4 Learning and Development</li><li>5 Contracts and Procurement</li><li>6 Communication and Accessibility</li></ul>
+<h3>Legal authorities</h3>
+<ul><li>Minn. Stat. 256.041 (CECLC); 256B.49, 256B.092, 256B.0911, 256B.85, 256B.4914, 245D</li><li>Executive Orders 19-24 (Tribal consultation), 15-2, 19-01, 21-13</li><li>Olmstead v. L.C.; Minnesota Olmstead Plan</li><li>ADA Titles I and II; Sections 504 and 508; Title VI; LEP guidance 68 Fed. Reg. 47311</li><li>Minnesota Human Rights Act, Minn. Stat. 363A</li></ul>
+<h3>Where to go</h3>
+<ul>
+<li><a href="/equity-policy" target="_blank" rel="noopener">DHS Equity Policy page and toolkit companion (One DSD)</a></li>
+<li><a href="/practice" target="_blank" rel="noopener">Guided practice and Toolkit Studio</a></li>
+<li><a href="/minnesota-communities" target="_blank" rel="noopener">Minnesota Communities</a></li>
+<li><a href="/support/right-person" target="_blank" rel="noopener">Find the right person or office</a></li>
+<li><a href="https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf" target="_blank" rel="noopener">DHS Equity Policy (PDF)</a></li>
+<li><a href="https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf" target="_blank" rel="noopener">State of Minnesota Equity Analysis Toolkit quick guide</a></li>
+<li><a href="https://mn.gov/olmstead/" target="_blank" rel="noopener">Minnesota Olmstead Plan</a></li>
+<li><a href="https://disabilityhubmn.org/" target="_blank" rel="noopener">Disability Hub MN</a></li>
+</ul>
+<h3>Working definitions (DHS Equity Policy)</h3>
+<dl class="glossary">
+<dt>Equity</dt><dd>The proactive and ongoing reinforcement of actions that redistribute power by enhancing access, opportunities and outcomes.</dd>
+<dt>Disparity</dt><dd>A group systematically faring worse than another for reasons not due to the group's needs, eligibility or preferences.</dd>
+<dt>Access</dt><dd>The timely ability to use resources and services to achieve the best outcomes.</dd>
+<dt>Equity scan</dt><dd>Used only when the action already went through a formal analysis and those results were integrated.</dd>
+<dt>Lead agency</dt><dd>The county or Tribal Nation that assesses, authorizes and case-manages HCBS on the state's behalf.</dd>
+</dl>
+<h3>Privacy</h3>
+<div class="anchor">Keep case, medical, personnel, complaint and identifying details out of this tool. Nothing is sent anywhere or stored on this computer unless you save a draft.</div>
+`;
+
+/* ---------------- walkthrough: plain-language steps and a worked example ---------------- */
+const SCENARIO_TITLE="Remote support service added to the DD and CADI waivers";
+const SCENARIO_INTRO="Follow one practical example through the steps. DSD proposes a waiver amendment that adds a new remote support service (sensors, two-way video, on-call staff) to the DD and CADI waivers, and lets lead agencies reduce in-person staffing authorizations where remote support is approved. The effective date is targeted for July 1, 2027 and CMS submission for March 1, 2027. The policy lead is a DSD program specialist. Names, places and figures are provided for practice; they do not describe an actual proposal or finding.";
+
+const WALK = [
+ {do:["Type what you are analyzing in one plain sentence. If a family member could not understand it, rewrite it.","Choose the instrument. If more than one applies (a waiver amendment that also needs a bulletin), choose the one that goes for approval first; the others are follow-up actions.","Tick every service line the change touches, including the ones it touches sideways. If people or providers will move between programs, those programs count.","Fill in the unit, the person leading the analysis, the team (by role), the person who will sign, and the dates: the state decision date and the federal or system date.","Answer the three triage questions. The tool tells you whether a formal equity analysis or an equity scan is required. Do not argue with the calendar; argue with the Equity Director if you think the track is wrong.","Save a draft now and after each step. Nothing is kept on the computer unless you save."],
+  example:{"meta.title":"Add a remote support service to the DD and CADI waivers and allow reduced in-person staffing where remote support is approved","meta.type":"waiver","meta.lines":["DD waiver","CADI waiver","Waiver Reimagine (individual budgets, two-waiver model)","245D licensing and standards","DSP rates and DWRS","Provider enrollment (MPSE) and capacity","Lead agency operations (county and Tribal)","Case management"],"meta.unit":"DSD Waiver Policy and Operations","meta.analyst":"Program specialist, waiver policy (analysis lead)","meta.team":"Waiver policy specialist; residential services policy lead; data analyst; a county case management supervisor; a Tribal lead agency representative; two self-advocates from the DD and CADI advisory councils; a 245D provider from Greater Minnesota; Equity and Inclusion Operations Consultant (facilitator)","meta.decider":"DSD Director, with ADSA Assistant Commissioner sign-off","meta.decideBy":"2027-02-05","meta.fedDate":"2027-03-01","meta.duration":"prolonged","meta.approval":"ac","meta.prior":"no"},
+  watch:["If the review track says 'formal analysis', tell the decision-maker today so the February date can hold.","'We already did community engagement last year' is not a prior formal analysis."]},
+ {do:["Write the problem for people, not for the agency. 'CMS encourages technology' is not a problem. 'People wait months for overnight staff' is.","Describe what actually changes: the service, the rule, the money, the step.","Cite the federal floor. Look it up; do not guess. Then list what Minnesota chose above that floor. Those choices are what you will compare alternatives against later.","Write outcomes as what would be true for people a year later, with a number you can count and a story you would expect to hear."],
+  example:{"s1.problem":"People on the DD and CADI waivers who want to live with less staff presence, and people who cannot find overnight or awake staff at all, wait months or accept more supervision than they want. Provider staffing shortages are worst in Greater Minnesota. Some lead agencies have no option to authorize technology-based support, so the choice depends on where a person lives.","s1.proposal":"Add 'remote support' as a covered service on the DD and CADI waivers: sensors, two-way audio and video, and an on-call responder within a set response time, delivered by a 245D-licensed provider. Allow the lead agency to reduce in-person staffing hours in the support plan where the person chooses remote support and the assessment supports it. New provider standard, new rate line, new CBSM page, new WMS service code.","s1.federal":"42 CFR 441.301(c)(4) (HCBS settings: privacy, choice, community integration) and 441.301(c)(1)–(3) (person-centered planning, including informed choice and the person's consent to any monitoring). The 1915(c) technical guide requires a defined service, provider qualifications and a quality strategy. Nothing in federal rule requires remote support to be offered, requires staffing reductions, or sets the response time.","s1.choice":"Whether to add the service at all; the response time standard; whether staffing can be reduced and by how much; the consent and revocation process; who can be the responder; whether broadband and equipment are covered; the rate; whether remote support is available on BI and CAC; the transition rules for people already in staffed settings; what guidance lead agencies get.","s1.outcomes":"By July 2028, at least 400 people statewide use remote support by choice, with uptake in Greater Minnesota and among American Indian, Black and Hmong participants at or above the statewide rate. No person's in-person hours are reduced without documented informed choice in their language and format. Response-time performance is the same in rural and metro counties. No increase in appeals or in reported harm events among people using the service.","s1.measure":"Count: uptake by region, race, language and lead agency; staffing-reduction authorizations with and without documented choice; response times; appeals; incident reports. Story: a person in a rural county says they chose remote support, understood it, and can turn it off; a case manager in a small county says they knew how to authorize it."},
+  watch:["If the federal floor paragraph is empty, Step 8 will have nothing to work with.","Outcomes written as 'implement by July 1' are tasks, not outcomes."]},
+ {do:["Go down the grid row by row. For each group ask: does this help them, hurt them, both, or do we not know? Pick one. 'Unknown' is honest and becomes work in Step 3.","Write how, in a sentence. 'Burden' with no 'how' is a guess.","Add rows for the intersections that matter here. Remove rows that truly do not apply.","Mark whether each group has been heard yet. 'No' is a plan for Step 4, not a problem."],
+  example:{groups:[
+   ["People with intellectual and developmental disabilities","both","High","Benefit: more independence and privacy for people who want less staff presence. Burden: risk that reduced staffing is authorized because it is cheaper, not chosen; consent process may not be understandable; some people cannot operate or tolerate devices.","DD waiver utilization by service; advisory council input 2026; NCI-IDD privacy and choice items","Planned"],
+   ["People with brain injury","unknown","","Service not proposed for BI; people on BI with similar needs will see neighbors get an option they cannot. Unknown whether that is a problem or a next phase.","None yet","No"],
+   ["People with physical disabilities","benefit","Moderate","Overnight sensor and video response may replace awake staff for people who need help only occasionally at night.","CADI overnight staffing authorizations","Planned"],
+   ["People with complex medical needs or chronic conditions (CAC)","none","","Not covered on CAC in this amendment.","","No"],
+   ["People with mental health conditions served on CADI","both","Moderate","Benefit: less intrusive support. Burden: monitoring may feel like surveillance; crisis response by video may not be safe for some.","CADI diagnosis mix; crisis service data","Planned"],
+   ["Children and families using waivers or CSG","unknown","","Service is adult-focused; effect on youth in family homes not analyzed.","None yet","No"],
+   ["Older adults with disabilities (65+) on disability waivers","both","Moderate","Falls detection benefit; device literacy and consent capacity concerns.","Age distribution on DD and CADI","No"],
+   ["Deaf, DeafBlind and hard-of-hearing people","burden","High","Audio-first response does not work; video response requires ASL-fluent responders; sensor alerts must be visual or tactile. No provider has this capacity today.","Deaf services consult; zero ASL-capable remote providers in MPSE","Planned"],
+   ["Blind and low-vision people","burden","Moderate","Device setup and app interfaces are not accessible; consent materials are PDFs.","Accessibility coordinator review","No"],
+   ["American Indian people and Tribal Nations (including Tribal lead agencies)","both","High","Benefit where staff are unavailable on reservations. Burden: broadband gaps; cultural concerns about in-home cameras; Tribal lead agencies have no authority language in the draft.","Broadband coverage by reservation; Tribal lead agency caseload data","Planned"],
+   ["Communities of color and multiracial people","unknown","","Historic pattern: lower authorization levels for similar need. Unknown whether reduced staffing would be applied more often.","Authorization levels by race (FY2026 extract pending)","No"],
+   ["People with limited English proficiency or who use interpreters","burden","High","Consent, device instructions and responder calls are English-only in the draft; interpreter access on a 24/7 response line is unplanned.","Language data on DD and CADI; interpreter contract scope","No"],
+   ["LGBTQIA2S+ people","unknown","","Privacy of in-home video is a particular concern; no engagement yet.","None yet","No"],
+   ["Veterans","none","","No specific effect identified.","","No"],
+   ["People in rural and Greater Minnesota","both","High","Largest potential benefit (staff shortages) and largest barriers (broadband, response-time distance, provider absence).","Broadband map; provider counts by county; staffing shortage reports","Planned"],
+   ["People in facilities, hospitals or corrections seeking transition (Olmstead)","benefit","Moderate","Remote support could make community placement feasible sooner where staffing is the barrier.","Olmstead transition waiting list","No"],
+   ["People on waiting lists or not yet connected to services","unknown","","Could shorten waits for staffed settings by freeing staff; not modeled.","Waiting list by county","No"],
+   ["People experiencing homelessness or housing instability","none","","Service requires a stable home; not applicable but note the exclusion.","","No"],
+   ["Family caregivers, guardians and support planners","both","Moderate","Benefit: relief and safety information. Burden: guardians may consent on a person's behalf without the person's real agreement; families may be pressured to accept reduced staffing.","Guardianship rates on DD waiver","Planned"],
+   ["Self-directed participants and their support workers","unknown","","CDCS participants cannot purchase remote support under the draft; workers' hours could fall if lead agencies apply reductions.","CDCS utilization","No"],
+   ["Direct support professionals and provider workforce","both","High","Benefit: night shifts become on-call; fewer vacancies. Burden: fewer hours for some DSPs; responder role has no training standard or wage line yet.","DWRS cost report staffing; provider survey","Planned"],
+   ["Small and culturally specific providers","burden","High","Technology capital cost, 24/7 responder staffing and new 245D standard favor large providers; culturally specific providers may lose clients to remote vendors.","MPSE provider size data; culturally specific provider list","Planned"],
+   ["County lead agency staff and case managers","both","Moderate","New option to authorize; new consent documentation; discretion on staffing reductions with no guidance in the draft.","Case management caseload data","Planned"],
+   ["Tribal lead agency staff and case managers","burden","High","Draft does not address Tribal lead agency authorization; no funding for additional work; consultation not yet scheduled.","Tribal lead agency enrollment counts","No"],
+   ["Deaf adults on CADI in Greater Minnesota","burden","High","Combination of no ASL-capable responders and no rural providers means the service is unavailable in practice while staffing could still be reduced.","Cross-tab pending","No"]]},
+  watch:["Nine unknowns is normal at this stage. Each one is now a data request or an engagement task.","If every row says 'benefit', someone is being polite."]},
+ {do:["List what data you used. Ask the DSD data team and the ADSA Equity Director early; extracts take weeks.","Say how you cut the data: by race, language, disability, county or Tribal lead agency, region, provider type. Say what you could not cut.","Write what the numbers show in plain sentences with the figures in them. Then add what people have told you that the numbers cannot show.","Turn every unknown from Step 2 into a line here: what is needed, who will get it, by when."],
+  example:{"s3.sources":"MMIS authorizations and claims for DD and CADI residential and in-home staffing services, FY2024–FY2026; WMS enrollment by lead agency; MnCHOICES assessment bands; MPSE provider enrollment by county and size; DWRS cost report staffing and vacancy data; DEED broadband map; DD and CADI advisory council notes (2026); Ombudsman reports on monitoring complaints; NCI-IDD Minnesota privacy and choice items; Olmstead transition list; two listening sessions (one rural, one Deaf community) held September 2026.","s3.disagg":"Authorizations by race, ethnicity, primary language, age, waiver, lead agency and region. Could not disaggregate by Tribal affiliation reliably (field incomplete in MMIS) or by Deaf/hard-of-hearing status (not captured). Provider data by county and size; cultural specificity by self-report only.","s3.findings":"About 3,100 people on DD and CADI have overnight staffing in their plan; 41% of those in Greater Minnesota had at least one unfilled shift in the last quarter versus 17% in the metro. People whose assessments used an interpreter have in-person staffing authorizations 18% lower than others in the same band. Black and American Indian participants are 1.6 times more likely to be in a 24-hour staffed setting at the same band. Zero enrolled providers offer a remote responder with ASL capacity. Nine of the 11 reservations have broadband coverage below 60% of households. Listening sessions: rural families want the option; Deaf participants fear being pushed into it; self-advocates asked who can see the video and who can turn it off.","s3.gaps":"Authorization levels by race crossed with staffing reductions: data team extract by 2026-11-15 (owner: data analyst). Tribal affiliation: ask Tribal lead agencies for counts under data agreement by 2026-11-30 (owner: analysis lead with Tribal Liaison). Deaf/HoH prevalence on waivers: estimate from Deaf services and MnCHOICES communication items by 2026-11-30 (owner: data analyst). BI and CAC effect: decision whether to include in phase two by 2026-12-15 (owner: waiver policy lead). CDCS purchase question: policy decision by 2026-12-15 (owner: self-direction lead)."},
+  watch:["'Zero providers' is a finding, not an absence of data.","Statewide averages hid the interpreter gap until the data was cut by language."]},
+ {do:["Describe who you engaged by community and role. Never names.","Say how and when. 'Before the options were fixed' and 'after the draft was written' are different answers and the record should show which.","Decide the Tribal consultation status and route it through the Tribal Liaison. It is not the same as a county call.","List internal partners. Then write what changed because of what you heard. If nothing changed, say why and how you told people."],
+  example:{"s4.who":"Self-advocates from the DD and CADI advisory councils; Deaf and DeafBlind participants through a Deaf services partner; rural families through two Greater Minnesota listening sessions; 245D providers of three sizes; DSPs through a provider workforce group; county case managers through MACSSA; Tribal lead agency staff from two nations (informal, pre-consultation); Olmstead Implementation Office.","s4.how":"Two listening sessions (one with ASL and CART), one advisory council session on options A/B/C, one provider forum, one case manager forum, an online survey in English, Spanish, Hmong and Somali with plain-language and screen-reader-tested versions.","s4.when":"Listening sessions and the options session happened in September and October 2026, before the amendment language was drafted. Provider and case manager forums will repeat after the draft in January 2027.","s4.tribal":"planned","s4.internal":"ADSA Equity Director; DSD Equity Team; DHS Tribal Liaison; DHS Licensing (245D); MnCHOICES team; accessibility coordinator and language access; Deaf and Hard of Hearing Services Division; Olmstead Implementation Office; federal relations; MNIT (WMS code).","s4.changed":"Three changes so far. Consent must be given by the person in their language and format, with a right to turn the system off at any time without losing in-person hours for 90 days (from self-advocates and Deaf participants). Staffing reductions cannot be initiated by the lead agency; only the person or their chosen representative can request them (from advisory councils and families). Rural response time standard will be set by region with a provider-reported measure (from Greater Minnesota families). Not changed yet: BI and CAC inclusion, pending data; CDCS purchase, pending policy decision. Both will be reported back with the reason.","s4.continue":"You-said-we-did summary in plain language, ASL video and four languages by December 15, 2026, posted and sent to every participant and lead agency. Advisory councils review the draft amendment in January. Quarterly check-ins with Deaf services and Tribal lead agencies through the first year. Public and Tribal notice period is in addition to this, not instead of it."},
+  watch:["Formal Tribal consultation has a date in Step 8 routing; the informal conversations here do not satisfy it.","The CMS public notice period is a federal minimum; it is not engagement."]},
+ {do:["List the benefits and who gets them. Then the burdens, how severe, and roughly how many people.","For each burden, name the mechanism: the specific rule, formula, step, standard or technology that causes it. Then say whether that mechanism is federal floor or state choice.","Say how this interacts with the rules around it.","Imagine it going wrong. Who would it go wrong for first, and what would you see in month three?","Judge the net effect on the gaps you already know about: reduce, hold, widen, or cannot tell."],
+  example:{"s5.benefits":"People who want less staff presence gain privacy and independence (likely 300–500 in year one). People in Greater Minnesota with unfilled shifts gain a reliable overnight option. People on the Olmstead transition list whose barrier is staffing may move sooner. DSPs gain on-call roles that may stabilize vacancies. Lead agencies gain an option they currently lack.","s5.burdens":"Deaf, DeafBlind, blind, LEP and some IDD participants may be unable to use the service as designed yet could still face staffing reductions (estimated 400–700 people at risk). Communities with historically lower authorizations risk being steered toward the cheaper option. Small and culturally specific providers face capital and 24/7 staffing costs they cannot meet (an estimated 60 providers serving 1,100 people). Tribal lead agencies receive new work with no authority language or funding. Self-directed participants are excluded from the option.","s5.causes":"Mechanism 1: the draft allows lead agencies to initiate staffing reductions (state choice; now changed to person-initiated). Mechanism 2: provider standard requires 24/7 in-house responders and owned equipment (state choice; could allow shared responder networks and leased equipment). Mechanism 3: consent and instructions in English PDF only (state choice; accessibility and CLAS obligations apply). Mechanism 4: response-time standard set statewide (state choice; could be regional with a measured floor). Mechanism 5: no Tribal lead agency language (state choice). Mechanism 6: service limited to DD and CADI provider-delivered (state choice). Federal floor contributes only the requirement that monitoring be consented to in the person-centered plan.","s5.interact":"HCBS settings rule: cameras in private space require consent and privacy protections. 245D: new service standard and incident reporting. DWRS: new rate line and interaction with existing residential rates when hours drop. Waiver Reimagine budgets: remote support must be costed inside the individual budget bands or people with low bands cannot afford it. EVV: not applicable to this service but responder visits may be. Case management limits: new consent and review work with no added case management time.","s5.unintended":"Month three risks: a provider markets remote support to lead agencies as a cost saving and reductions rise fastest in counties with the tightest budgets; a Deaf participant's sensor alert goes to an audio-only responder; a guardian consents and the person did not; a rural response time of 90 minutes is recorded as 'met' because the standard was never set; two culturally specific providers close their residential programs.","s5.disparity":"widen"},
+  watch:["'Widen' is the honest answer for the draft as written; Step 8 exists to change it.","Count the people behind each burden; 'some providers' becomes 'about 60 providers serving 1,100 people' when you look."]},
+ {do:["Describe how the smallest county and a Tribal lead agency would actually do this with the staff and systems they have.","Find every place the instrument leaves judgment to a lead agency. For each, say what guidance and examples will keep readings consistent.","Describe provider capacity by region and type: who can deliver this, who cannot, who might leave, and who loses access if they do.","Describe what happens to DSPs and self-directed workers: pay, hours, training, turnover. Use numbers where you have them.","Say what support, time and money implementers get, and whether it is the same for all of them."],
+  example:{"s6.lead":"A county with two case managers covering all waiver participants would receive a new service to explain, a new consent process to document and a new review at each annual meeting, with no added case management hours. Tribal lead agencies in the two nations consulted informally operate under separate agreements that do not mention this service; two have fewer than 50 waiver participants and one case manager. Distance to the nearest provider with responder capacity exceeds 60 miles for 14 counties and 7 reservations.","s6.discretion":"Discretion points in the draft: 'where the assessment supports' reduced staffing; 'reasonable response time'; what counts as 'informed choice'; whether a guardian's consent is sufficient; whether equipment is covered. Guidance planned: a CBSM page with three worked examples (person requests reduction; guardian requests and person objects; sensor-only with no video); a consent checklist in plain language and ASL; a regional response-time table; a decision that equipment is covered under the service rate. Training for case managers before the effective date, with a Tribal lead agency session delivered separately.","s6.capacity":"Metro: four large providers ready to deliver in year one. Greater Minnesota: one provider in the northwest, none in the southwest and none on reservations. Culturally specific providers: none have responder capacity; 60 serve about 1,100 people in residential settings and report that technology costs and 24/7 staffing are out of reach. Exit risk: if residential hours fall by 20% without a shared-responder option, up to 12 small providers report they would close a program, affecting roughly 150 people who would then have less choice, not more.","s6.workforce":"About 2,400 DSPs work overnight shifts on DD and CADI. A 15% shift to on-call would reduce scheduled hours for an estimated 350 DSPs, concentrated in metro large providers, while rural vacancies (currently 41% unfilled shifts) would fall. The responder role has no DWRS wage line; providers propose paying it below the DSP median, which would make the role hard to fill and would lower overall DSP pay. Self-directed workers are unaffected in the draft because CDCS cannot buy the service.","s6.support":"Draft provides none. Planned mitigations: a two-year start-up grant program weighted to Greater Minnesota and culturally specific providers; a shared responder network contract so small providers can offer the service without 24/7 in-house staff; case manager training with a Tribal-specific session; added case management time coded for consent and review in year one; Tribal lead agency agreement amendment with funding; a provider technical assistance line."},
+  watch:["A county with two case managers is the design case, not the exception.","If the mitigation depends on a lead agency's own budget, it is not a mitigation."]},
+ {do:["Walk the path of each person named in the coach panel through the notice, the consent, the device, the responder call and the appeal. Write where it breaks.","For disability access, language, non-digital routes and settings, write the standard, the provision, the budget and the owner. If one of those four is missing, the item is not done.","Check the settings rule: does the change touch choice of setting, privacy, autonomy or the person-centered plan? Say how."],
+  example:{"s7.barriers":"Consent and instructions are English PDFs; responder line is audio-first and English-only; app interfaces are not screen-reader tested; sensor alerts are audible only; equipment setup assumes a smartphone and home broadband; the appeal notice does not explain how to keep in-person hours while appealing.","s7.disability":"ADA Title II, Section 504 and 508, WCAG 2.1 AA. Provisions: plain-language consent tested with six self-advocates (owner: waiver policy; budget: existing plain-language contract; by 2027-01-31); ASL and tactile interpreting for consent and reviews through the Deaf services contract (owner: DHHSD liaison; budget line added to amendment fiscal note); visual and tactile alert devices required in the provider standard (owner: 245D standard author); screen-reader-tested app as a provider qualification with a 12-month compliance window (owner: accessibility coordinator); braille and large-print consent on request within five days.","s7.language":"Consent, instructions and the you-said-we-did summary translated into Spanish, Hmong, Somali, Oromo and Vietnamese (the languages of 92% of LEP participants on DD and CADI), dialect-checked by community members, published with the English version (owner: language access; budget: $38,000 in fiscal note). Responder line must provide interpreter access within four minutes through the state interpreter contract; rural availability confirmed with the vendor by 2027-01-15 (owner: provider standard author). CLAS Standards 5 through 8 applied; cultural review of in-home camera concerns with Tribal and Somali community members.","s7.digital":"Non-digital route: sensor-only and phone-line options that do not require a smartphone or broadband, covered at the same rate; equipment and connectivity included in the service so no participant pays; in-person consent meetings available in every lead agency; mail and phone appeal routes stated on every notice. Equal timeliness: same five-day setup standard for all routes (owner: waiver policy).","s7.settings":"Cameras and sensors are monitoring in a private residence under 42 CFR 441.301(c)(4); consent must be recorded in the person-centered plan with the specific devices, locations, who can view, retention period and the right to revoke. Choice of setting is protected by the rule that reductions are person-initiated and reversible for 90 days. Community integration is expected to improve for people in rural areas who can move to less staffed settings.","s7.clas":"Hours: consent meetings available evenings and weekends on request. Location: home or lead agency office. Trusted messengers: self-advocacy organizations, Deaf services partner and Tribal health programs will present the option in their own sessions, funded through engagement contract."},
+  watch:["Four parts to every provision: standard, provision, budget, owner.","'Sensor-only' is the non-digital route for most people; it has to cost the same."]},
+ {do:["Write at least two alternatives above the federal floor, including 'do less' and a phased or targeted option. Compare them on the burdens from Steps 5, 6 and 7, cost, feasibility and whether CMS would approve.","List the mitigations for burdens that remain under your preferred option. Each one: specific, funded, owned, dated.","Tick every formal path the action triggers, then write the status and dates. Contact them before the decision date, not after."],
+  example:{"s8.alternatives":"A. Amendment as drafted: lead-agency-initiated reductions, in-house responder standard, statewide response time, English materials. Cheapest to administer; widens disparities; CMS approvable; highest harm risk. B. Amendment with person-initiated reductions, shared responder network, regional response standard, full access provisions, Tribal lead agency language, start-up grants (preferred): adds about $4.1 million over two years; removes mechanisms 1 through 5; CMS approvable; some lead agencies will say it is complex. C. Phase one as a pilot in eight lead agencies (four rural, two Tribal, two metro) with no staffing reductions permitted, then statewide in 2028 after review: lowest risk; delays benefit for rural families by a year; CMS approvable as a limited-geography service. D. Do less: add remote support only as an add-on with no staffing reductions ever: removes the steering risk entirely; loses the budget case that funds the start-up grants. Recommended: B, with C's eight-agency structure used as a six-month early-adopter wave before statewide launch.","s8.mitigation":"Start-up grants weighted to Greater Minnesota and culturally specific providers, $2.4 million, owner: DSD grants manager, RFP by 2027-05-01. Shared responder network contract, $900,000 per year, owner: ADSA procurement, award by 2027-06-15. Responder wage line in DWRS at the DSP median, owner: rates unit, in rate table by 2027-04-01. Case management time for consent and annual review in year one, owner: case management policy, bulletin by 2027-06-01. Tribal lead agency agreement amendment with funding, owner: Tribal Liaison and waiver policy, by 2027-05-15. BI and CAC inclusion decision for phase two, owner: waiver policy lead, by 2027-09-30. CDCS purchase option, owner: self-direction lead, policy decision by 2027-09-30. Disparity watch: quarterly report of staffing reductions by race, language and lead agency with a stop rule if any group's reduction rate exceeds 1.3 times the statewide rate, owner: data analyst.","s8.routes":["ed","team","tribal","cms","olmstead","lead","licensing","mnchoices","eoad","access","labor","privacy","it","procure","ombud"],"s8.routeNotes":"Equity Director: briefed 2026-10-20, reviewing this record by 2026-12-01. DSD Equity Team: session 2026-11-12. Tribal consultation: formal consultation requested through Tribal Liaison for January 2027, before public notice; Tribal notice will follow federal rule in February. Federal relations: pre-submission call with CMS scheduled 2026-12-08. Olmstead: alignment memo 2026-11-30. Lead agency communication: MACSSA policy committee 2026-12-10; Tribal lead agencies separately in January. Licensing: 245D standard drafting with licensing by 2027-01-15. MnCHOICES: consent fields in support plan by 2027-03-01. EOAD: LEP and ADA review of consent process by 2027-01-31. Accessibility: app qualification standard by 2027-01-31. Labor relations: DSP hour effects reviewed with HR by 2026-12-15. Data privacy: video retention and viewing rules through data practices review by 2027-01-15. MNIT: WMS service code by 2027-02-01. Procurement: responder network RFP scoping started. Ombudsman: briefed 2026-11-05; monitoring complaint data agreement in place."},
+  watch:["Option A is still on the list so the decision-maker can see what was rejected and why.","Every mitigation has a dollar figure or an owner; most have both."]},
+ {do:["List the first implementation steps with owners, especially what reaches lead agencies and providers before the effective date.","Date the milestones. Set the first review date and how often after that.","Name the money and the people. Say what equity learning implementers have or need.","Write the measures, disaggregated the same way as Step 3, tied to the waiver quality strategy and the Outcome Map metrics.","Say how results get back to leadership, the Equity Director, the Equity Team and the people you engaged.","Say what is written into the waiver, the manual, contract language or the performance plan so this survives a change of sponsor."],
+  example:{"s9.steps":"1. Finalize amendment language with person-initiated reductions, access provisions and Tribal lead agency section (waiver policy lead, 2027-01-31). 2. Tribal consultation and public notice (Tribal Liaison and waiver policy, January–February 2027). 3. CMS submission (federal relations, 2027-03-01). 4. CBSM page, consent checklist, three worked examples, translations and ASL video (waiver policy, language access, accessibility; 2027-05-15). 5. Case manager training, county and Tribal sessions (case management policy, May–June 2027). 6. 245D standard and provider technical assistance line (licensing, 2027-06-01). 7. Start-up grant RFP and responder network award (grants, procurement; May–June 2027). 8. Early-adopter wave in eight lead agencies (2027-07-01), statewide (2028-01-01).","s9.milestones":"Amendment final 2027-01-31; consultation complete 2027-02-20; CMS submitted 2027-03-01; materials and translations published 2027-05-15; training complete 2027-06-30; CMS approval expected 2027-06-15; early-adopter wave 2027-07-01; first quarterly equity report 2027-10-31; statewide 2028-01-01; year-one review 2028-07-31.","s9.resources":"Fiscal note includes $2.4 million start-up grants, $900,000 per year shared responder network, $38,000 translations and ASL, $120,000 Deaf and tactile interpreting capacity, $60,000 plain-language testing and trusted-messenger sessions, year-one case management time, Tribal lead agency agreement funding. Equipment and connectivity are inside the service rate so participants pay nothing.","s9.personnel":"Waiver policy team, rates unit, licensing, case management policy, language access and accessibility staff, grants and procurement, data analyst, Tribal Liaison. All implementers complete the Equity Analysis Toolkit training; case managers receive the consent and informed-choice module; responder staff standard includes disability and cultural competence training and ASL access procedures.","s9.metrics":"Uptake by region, race, ethnicity, language, age, waiver and lead agency against the statewide rate. Staffing reduction requests and approvals by the same cuts, with the 1.3 stop rule. Share of consents documented in the person's language and format (target 100%). Response-time performance by region (target: regional floor met 95%). Revocations within 90 days and whether in-person hours were restored. Appeals, incident reports and Ombudsman complaints by community. Provider participation by size, region and cultural specificity; provider exits. DSP scheduled hours and responder wage levels. Olmstead transitions where remote support was the enabling service. All tied to the waiver quality strategy performance measures and reported in the Outcome Map metric categories.","s9.review":"First equity review 2027-10-31 (one quarter after early-adopter launch); quarterly through 2028; year-one full review 2028-07-31 with advisory councils, Deaf services, Tribal lead agencies and providers in the room; stop rule checked every quarter.","s9.accountability":"Quarterly equity report to the DSD Director, ADSA Equity Director and DSD Equity Team; included in the DSD status report to ADSA; summary in plain language, ASL and four languages posted and sent to every engagement participant, lead agency and provider; findings brought to the advisory councils; CMS quality reporting includes the disaggregated measures.","s9.sustain":"The person-initiated rule, consent requirements and access provisions are written into the waiver amendment and the 245D standard, not only the bulletin. The stop rule and disaggregated measures are in the waiver quality strategy. The responder network and grants are in contracts with equity terms. The quarterly report is in the DSD Equity Team charter and the waiver policy lead's performance plan."},
+  watch:["The stop rule is the single most protective sentence in the plan; make sure it survives editing.","Reporting goes back to the people engaged, not only up."]},
+ {do:["Choose the verdict. Proceed, proceed with changes, redesign, or do not proceed. If the team disagrees, say so in the summary and let the decision-maker decide.","Write one paragraph a commissioner could read in a minute: what, who, so what, recommended action.","Write three to six recommendations. Each has an owner, a date and a measure. Those are the action items the record carries.","Tick the policy objectives and ADSA goals this advances.","Say how and to whom the results go. Then run the quality check; fix anything marked with a dash before you print.","Print or save as PDF for the approval package; copy as text for the amendment narrative; save the draft (.json) so the next review starts from here."],
+  example:{"s10.verdict":"changes","s10.summary":"Adding remote support to the DD and CADI waivers can give several hundred people more privacy and independence and relieve staffing shortages that are worst in Greater Minnesota. As drafted, it would widen existing disparities: lead agencies could initiate staffing reductions, and the people least able to use the service as designed (Deaf, DeafBlind, blind, LEP and some IDD participants) and the communities with historically lower authorizations would be most exposed; small and culturally specific providers and Tribal lead agencies would bear costs with no support. The analysis team recommends proceeding with the amendment in the revised form: reductions only at the person's request and reversible for 90 days, a shared responder network and start-up grants, regional response standards, full language and disability access provisions, Tribal lead agency authority and funding, and a quarterly disparity stop rule. With those changes the net effect on disparities is expected to be neutral in year one and positive thereafter, and the amendment remains approvable by CMS on the current timeline.","s10.recs":[["Revise the amendment so staffing reductions are person-initiated, reversible for 90 days, and documented in the person's language and format before any change","Waiver policy lead","2027-01-31","100% of reductions with documented informed choice; revocation restores hours within 10 days"],["Fund and award a shared responder network and start-up grants weighted to Greater Minnesota and culturally specific providers","DSD grants manager; ADSA procurement","2027-06-15","Provider participation by region and cultural specificity at or above the share of people served; no net loss of residential capacity in year one"],["Set the responder wage line at the DSP median and review DSP scheduled-hour effects with HR before the effective date","Rates unit; HR/labor relations","2027-04-01","Responder vacancy rate below the overnight DSP vacancy rate; DSP median pay unchanged or higher"],["Complete formal Tribal consultation before public notice and amend Tribal lead agency agreements with funding","Tribal Liaison; waiver policy lead","2027-02-20","Consultation record attached to CMS package; every Tribal lead agency has authority language and funding"],["Publish consent, instructions and the you-said-we-did summary in plain language, ASL and five languages at the same time as the English versions, and require screen-reader-tested apps and visual or tactile alerts in the provider standard","Language access; accessibility coordinator; 245D standard author","2027-05-15","Translated and accessible versions published same day; zero English-only consents recorded"],["Adopt the quarterly disparity report and the 1.3 stop rule in the waiver quality strategy; decide BI, CAC and CDCS inclusion for phase two by September 2027","Data analyst; waiver policy lead; self-direction lead","2027-09-30","Quarterly report delivered on time; stop rule applied if triggered; phase two decision documented with its own analysis"]],"s10.objectives":["toolkit","committee","workforce","contracts","engagement","clas"],"s10.goals":["g1","g2","g3","g4","g5","g6"],"s10.communicate":"This record goes to the DSD Director and ADSA Assistant Commissioner with the amendment package, to the ADSA Equity Director for the approved analysis, and to the DSD Equity Team. The summary paragraph goes into the CMS amendment narrative. The you-said-we-did summary goes to every engagement participant, advisory council, lead agency and provider in plain language, ASL and five languages by December 15, 2026, with a second update after CMS approval."},
+  watch:["The verdict is 'proceed with changes', not 'proceed', because the draft as written would widen disparities.","Six recommendations, six owners, six dates, six measures. That is what a record that travels looks like."]}
+];
+
+const WALK_MORE = [
+ {title:"Shorter scenario: a 245D documentation change",text:"DHS Licensing proposes that 245D providers record a daily progress note for every person served, within 24 hours, in the provider's electronic record. Instrument: licensing standard. Service lines: 245D, DSP rates, provider enrollment. Federal floor: none; this is a state choice. In Step 2, small and culturally specific providers and DSPs are marked burden, high; people served are marked unknown, because better notes could improve care or could take staff time away from them. Step 3 finds that 30% of small providers have no electronic record and that DSP documentation time already averages 40 minutes per shift. Step 6 shows the smallest providers would need software and training with no funding, and that 24 hours is unworkable for a weekend on-call structure. Step 8 compares: as drafted; a 72-hour window with paper allowed and a grant for software; a note only when something changes. Verdict: redesign. The protection (knowing what happened to a person) is kept; the paperwork that only large providers can absorb is removed."},
+ {title:"Shorter scenario: a bill analysis",text:"HF 1842 would set a statewide wage floor for DSPs funded through a DWRS adjustment. Instrument: bill analysis. In Step 0 the analyst records the file number, author and committee stage; the review track is formal analysis. Step 1 separates the federal floor (none) from state choices (the floor amount, whether it covers self-directed workers, the phase-in). Step 2 marks DSPs benefit, high; self-directed participants and workers unknown (the bill is silent); small providers both (higher wages, higher costs); people served benefit if vacancies fall. Step 3 uses DWRS cost reports to show rural wages are 11% below metro and that culturally specific providers pay closest to the floor already. Step 6 notes that rate adjustments reach providers months after the wage obligation. Step 8 recommends an amendment covering self-directed workers and a provider cash-flow bridge. Step 10's bill button copies an equity section: position 'support with amendments', communities benefited and burdened, evidence, Tribal consultation status, recommended amendments and fiscal notes for equity provisions, ready to paste into the standard bill analysis."}
+];
+
+function loadExample(){
+  S=blank();S.sample=true;
+  WALK.forEach(w=>{const ex=w.example;for(const k in ex){
+    if(k==="groups"){S.groups=ex.groups.map(r=>({name:r[0],eff:r[1],sev:r[2],how:r[3],evidence:r[4],engaged:r[5]}));continue;}
+    if(k==="s10.recs"){S.s10.recs=ex[k].map(r=>({text:r[0],owner:r[1],by:r[2],measure:r[3]}));continue;}
+    set(k,Array.isArray(ex[k])?ex[k].slice():ex[k]);
+  }});
+  S.meta.date=new Date().toISOString().slice(0,10);
+  cur=0;render();toast("Example loaded: "+SCENARIO_TITLE);
+}
+function renderWalk(){
+  const w=WALK[cur];const ex=w.example;
+  const fieldsHtml=[];
+  for(const k in ex){
+    if(k==="groups"){fieldsHtml.push(`<p><strong>Grid:</strong> ${ex.groups.length} rows filled; the Deaf, LEP, Tribal lead agency and culturally specific provider rows are marked burden, high. Load the example to see all of them.</p>`);continue;}
+    if(k==="s10.recs"){fieldsHtml.push(`<p><strong>Recommendations:</strong></p><ol>${ex[k].map(r=>`<li>${esc(r[0])} <em>(${esc(r[1])}, ${esc(r[2])})</em></li>`).join("")}</ol>`);continue;}
+    const el=document.querySelector(`[data-path="${k}"]`);
+    let label=k;
+    if(el){const q=el.closest(".q");const l=q?.querySelector("label,legend,.qt");if(l)label=l.textContent;}
+    else if(k==="meta.lines")label="Service lines touched";
+    let val=ex[k];
+    if(Array.isArray(val))val=val.map(x=>ROUTES.find(r=>r.id===x)?.label||OBJECTIVES.find(o=>o.id===x)?.label||GOALS.find(g=>g.id===x)?.label||x).join("; ");
+    if(k==="meta.type")val=TYPES[val].label;
+    fieldsHtml.push(`<p><strong>${esc(label)}:</strong> ${nl(String(val))}</p>`);
+  }
+  return `<h3>How to do this step</h3><ol>${w.do.map(d=>`<li>${d}</li>`).join("")}</ol>
+  <h3>The example at this step</h3><p class="anchor">${cur===0?SCENARIO_INTRO:`Scenario: ${SCENARIO_TITLE}.`}</p>
+  <div class="walkex">${fieldsHtml.join("")}</div>
+  <h3>Watch for</h3><ul>${w.watch.map(x=>`<li>${x}</li>`).join("")}</ul>
+  <p><button class="btn small" id="btnLoadEx">Load the example into the tool</button></p>
+  ${cur===STEPS.length-1?`<h3>Two shorter scenarios</h3>${WALK_MORE.map(m=>`<p><strong>${m.title}.</strong> ${m.text}</p>`).join("")}`:""}`;
+}
+
+</script>
+<script>
+/* ---------------- state ---------------- */
+function blank(){
+  return {
+    version:1, toolKind:"hcbs", sample:false, savedAt:null,
+    meta:{title:"",type:"",lines:[],bill:"",author:"",unit:"",analyst:"",date:new Date().toISOString().slice(0,10),decider:"",decideBy:"",fedDate:"",approval:"",duration:"",prior:"",team:"",unchanged:"",priorCitation:""},
+    s1:{problem:"",proposal:"",federal:"",choice:"",outcomes:"",measure:""},
+    groups:DEFAULT_GROUPS.map(n=>({name:n,eff:"",sev:"",how:"",evidence:"",engaged:""})),
+    s3:{sources:"",disagg:"",findings:"",gaps:""},
+    s4:{who:"",how:"",when:"",tribal:"",internal:"",changed:"",continue:""},
+    s5:{benefits:"",burdens:"",causes:"",interact:"",unintended:"",disparity:""},
+    s6:{lead:"",discretion:"",capacity:"",workforce:"",support:""},
+    s7:{barriers:"",disability:"",language:"",digital:"",settings:"",clas:""},
+    s8:{alternatives:"",mitigation:"",routes:[],routeNotes:""},
+    s9:{steps:"",milestones:"",resources:"",personnel:"",metrics:"",review:"",accountability:"",sustain:""},
+    s10:{verdict:"",summary:"",recs:[{text:"",owner:"",by:"",measure:""}],objectives:[],goals:[],communicate:""}
+  };
+}
+let S = blank();
+let cur = 0;
+
+/* ---------------- helpers ---------------- */
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const nl = s=>esc(s).replace(/\n/g,"<br>");
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200);}
+function filled(v){return typeof v==="string"?v.trim().length>0:Array.isArray(v)?v.length>0:!!v;}
+
+/* track logic per DHS Equity Policy procedures */
+function track(){
+  const m=S.meta;
+  if(!m.type||!m.duration||!m.approval) return null;
+  if(m.prior==="yes" && m.unchanged==="yes" && filled(m.priorCitation)) return {key:"scan",title:"Equity scan may be sufficient",text:"A prior formal analysis exists and its results were integrated. Use the scan to confirm nothing material changed; if it did, run the full analysis."};
+  const lasting = m.duration==="prolonged";
+  const approval = m.approval!=="none";
+  if(lasting && approval) return {key:"full",title:"Formal equity analysis required",text:"Lasting impact and approval at supervisor level or above. The completed analysis must accompany the action when it goes for approval."};
+  if(["waiver","spa","bulletin","rate","licensing","assessment","leadagency","selfdirect","system","olmstead","legislative","bill","contract"].includes(m.type)) return {key:"full",title:"Formal equity analysis expected",text:"This action type is a named use of the toolkit. Use the full review to examine the effects and confirm any required policy review paths."};
+  return {key:"scan",title:"Equity scan likely sufficient",text:"Based on the selected answers, a lighter review may be useful. Confirm any remaining uncertainties and required review paths. Complete the steps at a lighter depth and keep the record; if the scope grows, upgrade to a full analysis."};
+}
+
+/* ---------------- field builders ---------------- */
+function ta(path,label,help,ph){
+  const v=get(path);
+  return `<div class="q"><label for="${path}">${label}</label>${help?`<p class="help" id="${path}-help">${help}</p>`:""}<textarea id="${path}" aria-describedby="${path}-help" data-path="${path}" placeholder="${esc(ph||"")}">${esc(v)}</textarea></div>`;
+}
+function tx(path,label,help,type="text"){
+  return `<div class="q"><label for="${path}">${label}</label>${help?`<p class="help" id="${path}-help">${help}</p>`:""}<input type="${type}" id="${path}" aria-describedby="${path}-help" data-path="${path}" value="${esc(get(path))}"></div>`;
+}
+function sel(path,label,help,opts){
+  return `<div class="q"><label for="${path}">${label}</label>${help?`<p class="help" id="${path}-help">${help}</p>`:""}<select id="${path}" aria-describedby="${path}-help" data-path="${path}"><option value="">Choose…</option>${opts.map(o=>`<option value="${o[0]}" ${get(path)===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></div>`;
+}
+function radios(path,label,help,opts){
+  return `<fieldset class="q radio" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">${label}</legend>${help?`<p class="help" id="${path}-help">${help}</p>`:""}${opts.map(o=>`<label><input type="radio" name="${path}" aria-describedby="${path}-help" data-path="${path}" value="${o[0]}" ${get(path)===o[0]?"checked":""}><span>${o[1]}</span></label>`).join("")}</fieldset>`;
+}
+function get(path){return path.split(".").reduce((o,k)=>o?.[k],S)??"";}
+function set(path,val){const ks=path.split(".");let o=S;for(let i=0;i<ks.length-1;i++)o=o[ks[i]];o[ks.at(-1)]=val;}
+
+/* ---------------- step renderers ---------------- */
+const R = {
+ s0(){
+  const t=track();
+  return `<h2>Set up and triage</h2><p class="lead">Name the decision and who is responsible for it. Use the questions to suggest a review approach, and confirm policy requirements with the responsible office. New to the tool? Open the Walkthrough tab on the right; it follows you step by step with a worked example.</p>
+  ${tx("meta.title","What is being analyzed?","One line, in plain words. Example: 'Change to the CDCS budget methodology for FY2028'.")}
+  ${sel("meta.type","Type of action","",Object.entries(TYPES).map(([k,v])=>[k,v.label]))}
+  ${S.meta.type?`<div class="note">${TYPES[S.meta.type].hint}</div>`:""}
+  <fieldset class="q" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">Service lines touched</legend><p class="help">Include the ones affected indirectly: people and providers move between waivers, and rate changes move providers between services.</p><div class="chips">${LINES.map(l=>`<label><input type="checkbox" data-arr="meta.lines" value="${esc(l)}" ${S.meta.lines.includes(l)?"checked":""}>${esc(l)}</label>`).join("")}</div></fieldset>
+  ${["legislative","bill"].includes(S.meta.type)?`<div class="row">${tx("meta.bill","Bill or proposal number and stage","HF/SF number, session, committee stage; or 'agency proposal, pre-session'.")}${tx("meta.author","Author or sponsoring office","")}</div>`:""}
+  ${["waiver","spa","rate","system"].includes(S.meta.type)?tx("meta.fedDate","Federal or system date","CMS submission date, public and Tribal notice window, requested effective date, or system release date.","date"):""}
+  <div class="row">${tx("meta.unit","DHS unit or team responsible","")}${tx("meta.analyst","Analyst or facilitator","Name or role of the person leading this analysis.")}</div>
+  <div class="row">${tx("meta.decider","Accountable decision-maker","The person authorized to approve or change the action.")}${tx("meta.decideBy","Decision date","When the action goes for approval.","date")}</div>
+  ${tx("meta.team","Who is on the analysis team?","The toolkit asks for a thoughtfully assembled team that reflects the people affected. List roles, not personal details.")}
+  ${radios("meta.duration","How long will the effects last?","",[["prolonged","Prolonged or long-term (a policy, rule, budget, contract, service design or anything that outlives the project)"],["short","Short-lived and reversible (a one-time event, a pilot with a fixed end and no lasting rule)"]])}
+  ${radios("meta.approval","Highest approval level this needs","",[["supervisor","Supervisor or manager"],["director","Director or division director"],["ac","Assistant or deputy commissioner"],["commissioner","Commissioner or legislature"],["none","No approval beyond the team"]])}
+  ${radios("meta.prior","Has this action already been through a formal equity analysis whose results were integrated?","",[["no","No, or not sure"],["yes","Yes, and I can attach or cite it"]])}
+  ${radios("meta.unchanged","If a prior review exists, has anything material changed?","Consider the people affected, proposal, evidence and unresolved concerns.",[["yes","No material changes identified"],["no","Changed or not yet determined"]])}${tx("meta.priorCitation","Prior review reference","Title, date or location; do not enter confidential information.")} ${t?`<div class="note ${t.key==="full"?"req":"ok"}"><strong>${t.title}.</strong> ${t.text}</div>`:`<div class="note">Answer the questions above to see a suggested review approach. Confirm policy requirements with the responsible office.</div>`}
+  <details class="example"><summary>Worked example</summary><p><em>What:</em> Waiver Reimagine individual budget methodology for the two-waiver model. <em>Type:</em> waiver amendment. <em>Lines:</em> CADI, DD, BI, CAC, Waiver Reimagine, CDCS, lead agency operations. <em>Decider:</em> DSD Director with ADSA Assistant Commissioner, 2027-04-30; CMS submission 2027-06-01. <em>Duration:</em> prolonged. <em>Approval:</em> assistant commissioner. <em>Prior analysis:</em> no → formal equity analysis required, before public and Tribal notice.</p></details>`;
+ },
+ s1(){
+  return `<h2>Describe the action and outcomes</h2><p class="lead">State the problem, the proposal and the results you intend, in terms of the people affected.</p>
+  ${ta("s1.problem","What problem does this address, and for whom?","Name the barrier or disparity. If the driver is a federal rule, audit finding or budget target, say so and still describe who is affected.","Example: Authorized budgets for people with similar MnCHOICES scores vary by lead agency by up to 30%, and are lowest for people whose assessments used an interpreter.")}
+  ${ta("s1.proposal","What is proposed?","Describe what changes in the actual work: the rule, the form, the money, the step, the system.","")}
+  <div class="row">${ta("s1.federal","What federal law or CMS actually requires","Cite it: 42 CFR 441, the 1915(c) technical guide, EVV, the settings rule, a CMS approval condition. If nothing, say so.","Example: 42 CFR 441.301(c)(4) requires settings that support community integration; it does not prescribe the budget formula.")}${ta("s1.choice","What Minnesota chose above that floor","Each choice here is open to analysis and alternatives in Step 8.","Example: the budget bands, the assessment items that drive them, the transition period and the exception process are state choices.")}</div>
+  ${ta("s1.outcomes","What outcomes do you intend?","Write them as changes in people's lives or work, not as organizational tasks.","Example: Service authorization levels for people with similar assessed need do not differ by race, language or lead agency; self-direction uptake rises in Greater Minnesota.")}
+  ${ta("s1.measure","How will you know it worked?","A number and a story: what you will count, and what you would expect to hear from the people affected.","")}`;
+ },
+ s2(){
+  const counts={benefit:0,burden:0,both:0,unknown:0};
+  S.groups.forEach(g=>{if(counts[g.eff]!==undefined)counts[g.eff]++;});
+  return `<h2>Who is affected</h2><p class="lead">In HCBS, "people with disabilities" is not one group. The grid separates disability populations, the communities the policy names, people missing from the data, and the lead agencies, providers and workers who deliver the service. Remove rows that do not apply; add intersections.</p>
+  <div class="legend"><span><i style="background:var(--moss)"></i>Benefit</span><span><i style="background:var(--clay)"></i>Burden</span><span><i style="background:var(--both)"></i>Both</span><span><i style="background:var(--gold)"></i>Unknown</span></div>
+  <div class="grid"><table><thead><tr><th style="width:22%">Community or group</th><th style="width:11%">Effect</th><th style="width:10%">Severity</th><th style="width:27%">How they are affected</th><th style="width:17%">Evidence</th><th style="width:10%">Engaged?</th><th style="width:3%"><span class="sr">Remove</span></th></tr></thead><tbody>
+  ${S.groups.map((g,i)=>`<tr data-eff="${g.eff}">
+    <td><input aria-label="Group name: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="name" value="${esc(g.name)}"></td>
+    <td><select aria-label="Effect: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="eff"><option value="">—</option><option value="benefit" ${g.eff==="benefit"?"selected":""}>Benefit</option><option value="burden" ${g.eff==="burden"?"selected":""}>Burden</option><option value="both" ${g.eff==="both"?"selected":""}>Both</option><option value="unknown" ${g.eff==="unknown"?"selected":""}>Unknown</option><option value="none" ${g.eff==="none"?"selected":""}>Not affected</option></select></td>
+    <td><select aria-label="Severity: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="sev"><option value="">—</option><option ${g.sev==="Low"?"selected":""}>Low</option><option ${g.sev==="Moderate"?"selected":""}>Moderate</option><option ${g.sev==="High"?"selected":""}>High</option></select></td>
+    <td><textarea aria-label="How affected: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="how">${esc(g.how)}</textarea></td>
+    <td><textarea aria-label="Evidence: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="evidence" placeholder="data, accounts, or 'none yet'">${esc(g.evidence)}</textarea></td>
+    <td><select aria-label="Engaged: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="engaged"><option value="">—</option><option ${g.engaged==="Yes"?"selected":""}>Yes</option><option ${g.engaged==="Planned"?"selected":""}>Planned</option><option ${g.engaged==="No"?"selected":""}>No</option></select></td>
+    <td><button class="btn small danger" data-del="${i}" aria-label="Remove row ${esc(g.name)}">×</button></td></tr>`).join("")}
+  </tbody></table><div class="gridfoot"><button class="btn small" id="addGroup">Add a group</button><span style="color:var(--slate);font-size:.85rem;align-self:center">Add intersections and specific populations (for example, Deaf adults on CADI in Greater Minnesota; Hmong-speaking families using CDCS; DSPs employed by culturally specific providers).</span></div></div>
+  <div class="summary-strip"><div class="s-benefit"><strong>${counts.benefit}</strong>benefit</div><div class="s-burden"><strong>${counts.burden}</strong>burden</div><div class="s-both"><strong>${counts.both}</strong>both</div><div class="s-unknown"><strong>${counts.unknown}</strong>unknown</div></div>
+  ${counts.unknown>0?`<div class="note req">${counts.unknown} group${counts.unknown>1?"s":""} marked unknown. Carry each into Step 3 as a data or engagement task.</div>`:""}`;
+ },
+ s3(){
+  return `<h2>Data and evidence</h2><p class="lead">Use what DSD holds, what the enterprise holds, and what people have said. Name the gaps honestly.</p>
+  ${ta("s3.sources","Data sources used","MMIS claims and authorizations, waiver enrollment and WMS, waiting lists, MnCHOICES, DWRS and rate exceptions, CDCS/CFSS budgets, 245D and MPSE enrollment, DSP workforce data, appeals, Olmstead quality-of-life survey, NCI-IDD, advisory councils, enterprise extracts through the ADSA Equity Director.","")}
+  ${ta("s3.disagg","How the data was disaggregated","By race, ethnicity, Tribal affiliation, disability type, language, county or Tribal lead agency, region, provider type and size, program, age, gender, veteran status. Say what could not be disaggregated and why.","")}
+  ${ta("s3.findings","What the data and people's accounts show","State the disparity or need in plain terms with the numbers. Pair quantitative findings with qualitative ones.","Example: Median authorized budget for people with a given MnCHOICES band is 22% lower in the six lowest-capacity counties; CDCS uptake among Black and American Indian participants is half the statewide rate; listening sessions cite FMS paperwork and worker pay.")}
+  ${ta("s3.gaps","Gaps and follow-up","For each unknown in Step 2 or missing source here: what is needed, who will get it, by when.","")}`;
+ },
+ s4(){
+  return `<h2>Engagement</h2><p class="lead">The policy asks for authentic, meaningful and ongoing engagement during formation. Record who was heard, how, and what changed because of it.</p>
+  ${ta("s4.who","Who was engaged","Describe communities and roles, not individuals. Compare against the burdened groups in Step 2.","")}
+  <div class="row">${ta("s4.how","How","Listening sessions, DSD advisory councils, self-advocacy and family organizations, culturally specific providers, lead agency forums (county and Tribal separately), DSP and self-directed worker input, CECLC, DSD Equity Team.")}${ta("s4.when","When, relative to the decision","Before options were set? During drafting? After the language was final?")}</div>
+  ${radios("s4.tribal","Tribal consultation","Executive Order 19-24, and for waivers the federal Tribal notice requirement. Government-to-government, separate from community engagement and from the county lead agency conversation. Route it through the DHS Tribal Liaison.",[["yes","Completed or underway through the formal process"],["planned","Required and planned; date set"],["na","Not applicable after checking with the Tribal Liaison"],["unsure","Not yet determined"]])}
+  ${ta("s4.internal","Internal partners engaged","Equity Director, DSD Equity Team, HR, accessibility coordinator, EOAD, affirmative action officer, county and Tribal partners, other divisions.","")}
+  ${ta("s4.changed","What changed because of engagement","Be specific. If nothing changed, explain why and how that was communicated back.","")}
+  ${ta("s4.continue","How engagement continues through implementation","Including the you-said-we-did summary: who will receive it and when.","")}`;
+ },
+ s5(){
+  return `<h2>Impacts and root causes</h2><p class="lead">Trace each benefit and burden to the design choice that produces it. Causes you can name are causes you can change.</p>
+  ${ta("s5.benefits","Benefits, and for whom","","")}
+  ${ta("s5.burdens","Burdens, and for whom","Draw from the grid in Step 2. Say how severe and how many.","")}
+  ${ta("s5.causes","Root causes of the burdens","The mechanism, and whether it is the federal floor or a state choice: budget formula, assessment item, documentation step, provider standard, timeline, technology, lead agency discretion, rate band, waiver cap.","Example: The budget formula weights an assessment item that under-scores support needs for people whose assessment used an interpreter; CMS does not prescribe the weighting, so this is a state choice.")}
+  ${ta("s5.unintended","Possible unintended effects","Who would this go wrong for first? What would you see in month three?","")}
+  ${ta("s5.interact","Interaction with adjacent rules","EVV, settings rule, 245D, DWRS bands, rate exceptions, waiver caps, waiting lists, case management limits.","")}
+  ${radios("s5.disparity","Net effect on disparities","",[["reduce","Reduces an identified disparity"],["neutral","Holds disparities steady"],["widen","Risks widening a disparity"],["unknown","Cannot tell yet"]])}`;
+ },
+ s6(){
+  return `<h2>Lead agencies, providers and workforce</h2><p class="lead">Design for the least-resourced county, a Tribal lead agency, a small culturally specific provider and the DSP on the night shift. If it works for them, it works.</p>
+  ${ta("s6.lead","County and Tribal lead agency variation","How will the smallest county and a Tribal lead agency implement this? Differences in authority, funding, caseload, staffing, systems and distance. Name the lead agencies most affected.","")}
+  ${ta("s6.discretion","Discretion points and how they will be guided","Where the instrument leaves judgment to lead agency staff, and how different readings would produce different outcomes for similar people. Guidance, examples and training planned.","")}
+  ${ta("s6.capacity","Provider capacity by region and type","Greater Minnesota, culturally specific providers, interpreters, FMS, 245D providers by size. What this does to them and to their ability to serve; risk of exit and who loses access.","")}
+  ${ta("s6.workforce","Workforce effects","DSP pay, hours, training burden, turnover; self-directed workers; case manager workload. Quantify where you can.","")}
+  ${ta("s6.support","Support, timeline and funding for implementers","Technical assistance, transition periods, grants, rate exceptions; whether support is equal across lead agencies and providers.","")}`;
+ },
+ s7(){
+  return `<h2>Access, communication and settings</h2><p class="lead">Walk the path of someone with an intellectual disability, a Deaf or DeafBlind person, a blind person, and a person who reads Hmong or Somali. Name the standard, the provision, the budget and the owner for each dimension.</p>
+  ${ta("s7.barriers","Barriers to access by group","Physical, sensory, cognitive, language, digital, cultural, financial, geographic, time.","")}
+  ${ta("s7.disability","Accessibility for people with disabilities","ADA Title II, 504 and 508, WCAG 2.1 AA, plain language tested with people with IDD, ASL and tactile interpreting, braille and large print, accommodation route and who staffs it.","")}
+  ${ta("s7.language","Language and cultural inclusiveness","Languages identified in Step 2; translation and interpretation plan, budget and testing; CLAS Standards applied; cultural review by community.","")}
+  ${ta("s7.digital","Non-digital and in-person routes","EVV app, portal, e-signature, video assessment: what is the alternative, who provides it, and is it equally timely?","")}
+  ${ta("s7.settings","HCBS settings, choice and person-centered planning","Effect on choice of setting, community integration, privacy, autonomy and the person-centered plan under 42 CFR 441.301(c).","")}
+  ${ta("s7.clas","Other access provisions","Hours, locations, transportation, childcare, cost, trusted messengers.","")}`;
+ },
+ s8(){
+  return `<h2>Alternatives, mitigation and routing</h2><p class="lead">Compare real options on the same equity criteria, fund the mitigations, and send the action down every formal path it triggers.</p>
+  ${ta("s8.alternatives","Alternatives considered","At least two above the federal floor, including 'do less', a phased option and a targeted option. For each: effect on the burdens in Steps 5, 6 and 7, cost, feasibility, federal approvability.","Example: (A) Formula as drafted. (B) Formula with an interpreter-use adjustment and a 12-month hold-harmless. (C) Phase in by lead agency readiness with technical assistance first. B addresses the under-scoring directly; C protects the lowest-capacity counties but delays the benefit.")}
+  ${ta("s8.mitigation","Mitigations for remaining burdens","Rate exceptions, transition periods, hold-harmless, technical assistance, grants to culturally specific providers, interpreter contracts, lead agency training: specific, funded, owned, dated.","")}
+  <fieldset class="q" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">Formal paths this action triggers</legend><p class="help">The toolkit does not replace these. Mark each one that applies; record status in the notes.</p><div class="chips">${ROUTES.map(r=>`<label><input type="checkbox" data-arr="s8.routes" value="${r.id}" ${S.s8.routes.includes(r.id)?"checked":""}>${r.label}</label>`).join("")}</div></fieldset>
+  ${ta("s8.routeNotes","Routing status and dates","Who was contacted, when, and what they require before the decision date.","")}`;
+ },
+ s9(){
+  return `<h2>Implementation and accountability</h2><p class="lead">Make the equity provisions survive contact with the calendar and with leadership change.</p>
+  ${ta("s9.steps","Implementation steps","The first steps, each with an owner, including what reaches lead agencies and providers before the effective date.","")}
+  <div class="row">${ta("s9.milestones","Milestones and deliverables","Dated.")}${ta("s9.review","First review date and cadence","When results are examined and by whom.")}</div>
+  <div class="row">${ta("s9.resources","Resources for equitable implementation","Funding for translation, accessibility, engagement, outreach, staffing; dedicated funds for the disparities identified.")}${ta("s9.personnel","Personnel and their preparation","Who implements and oversees; what equity learning they have or need.")}</div>
+  ${ta("s9.metrics","Measures of success","Disaggregated by community, disability, lead agency, provider type and region; tied to existing waiver QA and CMS performance measures and the Outcome Map metrics. Outcomes, not only outputs.","")}
+  ${ta("s9.accountability","Accountability and communication","How results reach leadership, the ADSA Equity Director, the DSD Equity Team and the communities engaged.","")}
+  ${ta("s9.sustain","Sustainability","What is written into the waiver, the CBSM, contract or grant language, the performance plan or the QA cycle so this continues without its sponsor.","")}`;
+ },
+ s10(){
+  const t=track();
+  return `<h2>Recommendation and record</h2><p class="lead">Decide, recommend with owners, check alignment, and produce the record that travels with the action.</p>
+  ${radios("s10.verdict","Recommendation",`${t?`Review track: ${t.title}.`:""}`,[["proceed","Proceed as proposed"],["changes","Proceed with the changes and mitigations below"],["redesign","Redesign before approval; burdens outweigh benefits for identified groups"],["stop","Do not proceed"]])}
+  ${ta("s10.summary","Summary of equity findings","One paragraph a commissioner can read in sixty seconds: what, who, so what, recommended action.","")}
+  <div class="q"><span class="qt">Recommendations</span><p class="help">Each with an owner, a date and a measure. These become the action items in the record.</p><div class="recs" id="recs">${S.s10.recs.map((r,i)=>`<div class="rec"><textarea aria-label="Recommendation ${i+1}" data-r="${i}" data-k="text" placeholder="Recommendation ${i+1}">${esc(r.text)}</textarea><div class="row" style="margin-top:.4rem"><input aria-label="Owner" data-r="${i}" data-k="owner" placeholder="Owner (role)" value="${esc(r.owner)}"><input aria-label="By when" data-r="${i}" data-k="by" placeholder="By when" value="${esc(r.by)}"><input aria-label="Measure" data-r="${i}" data-k="measure" placeholder="Measure" value="${esc(r.measure)}"></div><div style="margin-top:.3rem;text-align:right"><button class="btn small danger" data-delrec="${i}">Remove</button></div></div>`).join("")}</div><button class="btn small" id="addRec">Add a recommendation</button></div>
+  <fieldset class="q" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">DHS Equity Policy objectives this action advances</legend><div class="align">${OBJECTIVES.map(o=>`<label><input type="checkbox" data-arr="s10.objectives" value="${o.id}" ${S.s10.objectives.includes(o.id)?"checked":""}><span>${o.label}<small>${o.sub}</small></span></label>`).join("")}</div></fieldset>
+  <fieldset class="q" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">ADSA Implementation Plan goals this action advances</legend><div class="align">${GOALS.map(o=>`<label><input type="checkbox" data-arr="s10.goals" value="${o.id}" ${S.s10.goals.includes(o.id)?"checked":""}><span>${o.label}<small>${o.sub}</small></span></label>`).join("")}</div></fieldset>
+  ${ta("s10.communicate","How and to whom the results will be communicated","The policy expects employees to communicate how equity impacts were reviewed and what resulted. Include the ADSA Equity Director, the DSD Equity Team, the decision-maker and the people engaged.","")}
+  <h3 style="margin-top:2rem">Quality check</h3><p class="help">A self-review before the record goes to the decision-maker. Each item links to the step that fixes it.</p>${rubric()}
+  <h3 style="margin-top:2rem">Produce the record</h3>
+  <div class="outbar"><button class="btn primary" id="btnPrint">Print or save as PDF</button><button class="btn" id="btnMd">Copy record as text</button>${["legislative","bill"].includes(S.meta.type)?`<button class="btn" id="btnBill">Copy equity section for the bill analysis</button>`:""}<button class="btn" id="btnSave2">Save draft (.json)</button></div>
+  <div class="record" id="recordPreview">${record()}</div>`;
+ }
+};
+
+/* ---------------- rubric ---------------- */
+function rubricItems(){
+  const g=S.groups;
+  return [
+   [filled(S.meta.decider)&&filled(S.meta.decideBy),"Decision-maker and decision date are named",0],
+   [!!track(),"Review track determined from impact and approval level",0],
+   [filled(S.s1.outcomes)&&filled(S.s1.measure),"Outcomes stated for people affected, with a measure",1],
+   [g.length>0&&g.every(x=>filled(x.name)&&x.eff&&x.eff!=="unknown"),"Every listed group assessed, with no unresolved unknown effects",2],
+   [g.some(x=>x.eff&&x.eff!=="none")&&g.filter(x=>x.eff&&x.eff!=="none").every(x=>filled(x.how)&&filled(x.evidence)),"Every affected group has an effect description and evidence reference",2],
+   [filled(S.s3.sources)&&filled(S.s3.findings),"Data sources and findings recorded",3],
+   [filled(S.s3.gaps)||!g.some(x=>x.eff==="unknown"),"Unknowns carried into data follow-up",3],
+   [filled(S.s4.who)&&filled(S.s4.changed),"Engagement described and its influence on the proposal stated",4],
+   [S.s4.tribal&&S.s4.tribal!=="unsure","Tribal consultation status determined",4],
+   [filled(S.s1.federal)&&filled(S.s1.choice),"Federal floor cited and state design choices listed",1],
+   [S.meta.lines.length>0,"Service lines identified",0],
+   [filled(S.s5.causes)&&filled(S.s5.disparity),"Root causes named and disparity effect judged",5],
+   [filled(S.s6.lead)&&filled(S.s6.capacity),"Lead agency variation and provider capacity analyzed",6],
+   [filled(S.s6.workforce),"Workforce effects described",6],
+   [filled(S.s7.disability)&&filled(S.s7.language),"Disability access and language provisions specified",7],
+   [filled(S.s8.alternatives),"Alternative comparison recorded; confirm that it covers at least two options",8],
+   [S.s8.routes.length>0,"Formal routing paths identified",8],
+   [filled(S.s9.metrics)&&filled(S.s9.review),"Disaggregated measures and a review date set",9],
+   [filled(S.s9.resources),"Resources for equitable implementation identified",9],
+   [filled(S.s10.verdict)&&filled(S.s10.summary),"Verdict and summary written",10],
+   [S.s10.recs.some(r=>filled(r.text)&&filled(r.owner)&&filled(r.by)&&filled(r.measure)),"At least one recommendation has an owner, date and measure",10],
+   [filled(S.s10.communicate),"Communication of results planned",10]
+  ];
+}
+function rubric(){
+  return `<p class="help">These checks show what has been recorded. They do not establish the quality of the evidence or policy compliance.</p><div class="rubric">${rubricItems().map(([ok,txt,st])=>`<div><span class="${ok?"ok":"no"}" aria-hidden="true">${ok?"✓":"–"}</span><span>${txt}${ok?"":` <a href="#" data-go="${st}">(go to step ${st})</a>`}</span></div>`).join("")}</div>`;
+}
+
+/* ---------------- step completeness ---------------- */
+function stepState(i){
+  const items=rubricItems().filter(r=>r[2]===i);
+  const n=items.filter(r=>r[0]).length;
+  return n===items.length?"done":n>0?"part":"";
+}
+
+/* ---------------- record (HTML) ---------------- */
+function v(s){return filled(s)?nl(s):`<span class="empty">Not recorded</span>`;}
+function record(){
+  const m=S.meta,t=track();
+  const vcls={proceed:"v-proceed",changes:"v-changes",redesign:"v-redesign",stop:"v-stop"}[S.s10.verdict]||"";
+  const vlab={proceed:"Proceed as proposed",changes:"Proceed with changes and mitigations",redesign:"Redesign before approval",stop:"Do not proceed"}[S.s10.verdict]||"No recommendation recorded";
+  const groups=S.groups.filter(g=>g.eff&&g.eff!=="none");
+  return `${S.sample?"<p><strong>Practice example — illustrative figures, dates and recommendations.</strong></p>":""}<h2>Equity Analysis Record: ${esc(m.title)||"<span class='empty'>Untitled</span>"}</h2>
+  <p class="meta">${esc(TYPES[m.type]?.label||"Type not set")}${m.bill?` · ${esc(m.bill)}`:""}${m.author?` · ${esc(m.author)}`:""}<br>Service lines: ${m.lines.length?esc(m.lines.join("; ")):"—"}${m.fedDate?` · Federal/system date: ${esc(m.fedDate)}`:""}<br>Unit: ${esc(m.unit)||"—"} · Analyst: ${esc(m.analyst)||"—"} · Team: ${esc(m.team)||"—"}<br>Decision-maker: ${esc(m.decider)||"—"} · Decision date: ${esc(m.decideBy)||"—"} · Analysis date: ${esc(m.date)}<br>Review track: ${t?esc(t.title):"—"}</p>
+  <span class="verdict ${vcls}">${vlab}</span>
+  <h3>Summary of equity findings</h3><p>${v(S.s10.summary)}</p>
+  <h3>Recommendations</h3><table><tr><th>#</th><th>Recommendation</th><th>Owner</th><th>By</th><th>Measure</th></tr>${S.s10.recs.filter(r=>filled(r.text)).map((r,i)=>`<tr><td>${i+1}</td><td>${nl(r.text)}</td><td>${esc(r.owner)}</td><td>${esc(r.by)}</td><td>${esc(r.measure)}</td></tr>`).join("")||`<tr><td colspan="5" class="empty">None recorded</td></tr>`}</table>
+  <h3>1. The action and intended outcomes</h3><p><strong>Problem:</strong> ${v(S.s1.problem)}</p><p><strong>Proposal:</strong> ${v(S.s1.proposal)}</p><p><strong>Federal floor:</strong> ${v(S.s1.federal)}</p><p><strong>State design choices:</strong> ${v(S.s1.choice)}</p><p><strong>Intended outcomes:</strong> ${v(S.s1.outcomes)}</p><p><strong>Measure of success:</strong> ${v(S.s1.measure)}</p>
+  <h3>2. Who is affected</h3><table><tr><th>Group</th><th>Effect</th><th>Severity</th><th>How</th><th>Evidence</th><th>Engaged</th></tr>${groups.map(g=>`<tr><td>${esc(g.name)}</td><td>${esc(g.eff)}</td><td>${esc(g.sev)}</td><td>${nl(g.how)}</td><td>${nl(g.evidence)}</td><td>${esc(g.engaged)}</td></tr>`).join("")||`<tr><td colspan="6" class="empty">No groups assessed</td></tr>`}</table>
+  <h3>3. Data and evidence</h3><p><strong>Sources:</strong> ${v(S.s3.sources)}</p><p><strong>Disaggregation:</strong> ${v(S.s3.disagg)}</p><p><strong>Findings:</strong> ${v(S.s3.findings)}</p><p><strong>Gaps and follow-up:</strong> ${v(S.s3.gaps)}</p>
+  <h3>4. Engagement</h3><p><strong>Who:</strong> ${v(S.s4.who)}</p><p><strong>How and when:</strong> ${v(S.s4.how)} ${nl(S.s4.when)}</p><p><strong>Tribal consultation:</strong> ${esc({yes:"Completed or underway",planned:"Required and planned",na:"Not applicable (confirmed)",unsure:"Not yet determined"}[S.s4.tribal]||"Not recorded")}</p><p><strong>Internal partners:</strong> ${v(S.s4.internal)}</p><p><strong>What changed:</strong> ${v(S.s4.changed)}</p><p><strong>Ongoing engagement:</strong> ${v(S.s4.continue)}</p>
+  <h3>5. Impacts and root causes</h3><p><strong>Benefits:</strong> ${v(S.s5.benefits)}</p><p><strong>Burdens:</strong> ${v(S.s5.burdens)}</p><p><strong>Root causes:</strong> ${v(S.s5.causes)}</p><p><strong>Interaction with adjacent rules:</strong> ${v(S.s5.interact)}</p><p><strong>Unintended effects:</strong> ${v(S.s5.unintended)}</p><p><strong>Net effect on disparities:</strong> ${esc({reduce:"Reduces",neutral:"Neutral",widen:"Risks widening",unknown:"Unknown"}[S.s5.disparity]||"Not recorded")}</p>
+  <h3>6. Lead agencies, providers and workforce</h3><p><strong>Lead agency variation:</strong> ${v(S.s6.lead)}</p><p><strong>Discretion and guidance:</strong> ${v(S.s6.discretion)}</p><p><strong>Provider capacity:</strong> ${v(S.s6.capacity)}</p><p><strong>Workforce effects:</strong> ${v(S.s6.workforce)}</p><p><strong>Support for implementers:</strong> ${v(S.s6.support)}</p>
+  <h3>7. Access, communication and settings</h3><p><strong>Barriers:</strong> ${v(S.s7.barriers)}</p><p><strong>Disability access:</strong> ${v(S.s7.disability)}</p><p><strong>Language and culture:</strong> ${v(S.s7.language)}</p><p><strong>Non-digital routes:</strong> ${v(S.s7.digital)}</p><p><strong>Settings and person-centered planning:</strong> ${v(S.s7.settings)}</p><p><strong>Other provisions:</strong> ${v(S.s7.clas)}</p>
+  <h3>8. Alternatives, mitigation and routing</h3><p><strong>Alternatives:</strong> ${v(S.s8.alternatives)}</p><p><strong>Mitigations:</strong> ${v(S.s8.mitigation)}</p><p><strong>Formal paths:</strong> ${S.s8.routes.length?S.s8.routes.map(id=>esc(ROUTES.find(r=>r.id===id)?.label)).join("; "):"<span class='empty'>None identified</span>"}</p><p><strong>Routing status:</strong> ${v(S.s8.routeNotes)}</p>
+  <h3>9. Implementation and accountability</h3><p><strong>Steps:</strong> ${v(S.s9.steps)}</p><p><strong>Milestones:</strong> ${v(S.s9.milestones)}</p><p><strong>Resources:</strong> ${v(S.s9.resources)}</p><p><strong>Personnel:</strong> ${v(S.s9.personnel)}</p><p><strong>Measures:</strong> ${v(S.s9.metrics)}</p><p><strong>Review:</strong> ${v(S.s9.review)}</p><p><strong>Accountability and communication:</strong> ${v(S.s9.accountability)}</p><p><strong>Sustainability:</strong> ${v(S.s9.sustain)}</p>
+  <h3>10. Alignment</h3><p><strong>DHS Equity Policy objectives:</strong> ${S.s10.objectives.length?S.s10.objectives.map(id=>esc(OBJECTIVES.find(o=>o.id===id)?.label)).join("; "):"<span class='empty'>None marked</span>"}</p><p><strong>ADSA goals:</strong> ${S.s10.goals.length?S.s10.goals.map(id=>esc(GOALS.find(o=>o.id===id)?.label)).join("; "):"<span class='empty'>None marked</span>"}</p><p><strong>Communication of results:</strong> ${v(S.s10.communicate)}</p>
+  <p class="meta" style="margin-top:1.5rem">Prepared with the One DSD HCBS Equity Policy Review, consistent with the DHS Equity Policy and the State of Minnesota Equity Analysis Toolkit. This record supports, and does not replace, the official toolkit, required approvals, civil rights review, Tribal consultation or labor relations processes.</p>`;
+}
+
+/* ---------------- record (plain text / markdown) ---------------- */
+function md(){
+  const m=S.meta,t=track();
+  const L=[]; if(S.sample)L.push("PRACTICE EXAMPLE — illustrative figures and recommendations, not an actual policy review.","");
+  const p=(h,s)=>{L.push(`**${h}:** ${s&&s.trim()?s.trim():"Not recorded"}`);L.push("");};
+  L.push(`# Equity Analysis Record: ${m.title||"Untitled"}`);
+  L.push(`${TYPES[m.type]?.label||"Type not set"}${m.bill?" · "+m.bill:""}${m.author?" · "+m.author:""}`);
+  L.push(`Service lines: ${m.lines.join("; ")||"—"}${m.fedDate?" · Federal/system date: "+m.fedDate:""}`);
+  L.push(`Unit: ${m.unit||"—"} · Analyst: ${m.analyst||"—"} · Team: ${m.team||"—"}`);
+  L.push(`Decision-maker: ${m.decider||"—"} · Decision date: ${m.decideBy||"—"} · Analysis date: ${m.date}`);
+  L.push(`Review track: ${t?t.title:"—"}`);L.push("");
+  L.push(`## Recommendation: ${{proceed:"Proceed as proposed",changes:"Proceed with changes and mitigations",redesign:"Redesign before approval",stop:"Do not proceed"}[S.s10.verdict]||"Not recorded"}`);L.push("");
+  p("Summary of equity findings",S.s10.summary);
+  L.push("## Recommendations");S.s10.recs.filter(r=>r.text.trim()).forEach((r,i)=>L.push(`${i+1}. ${r.text.trim()} — Owner: ${r.owner||"—"}; By: ${r.by||"—"}; Measure: ${r.measure||"—"}`));L.push("");
+  L.push("## 1. The action and intended outcomes");p("Problem",S.s1.problem);p("Proposal",S.s1.proposal);p("Federal floor",S.s1.federal);p("State design choices",S.s1.choice);p("Intended outcomes",S.s1.outcomes);p("Measure of success",S.s1.measure);
+  L.push("## 2. Who is affected");L.push("| Group | Effect | Severity | How | Evidence | Engaged |");L.push("|---|---|---|---|---|---|");
+  S.groups.filter(g=>g.eff&&g.eff!=="none").forEach(g=>L.push(`| ${g.name} | ${g.eff} | ${g.sev} | ${g.how.replace(/\n/g," ")} | ${g.evidence.replace(/\n/g," ")} | ${g.engaged} |`));L.push("");
+  L.push("## 3. Data and evidence");p("Sources",S.s3.sources);p("Disaggregation",S.s3.disagg);p("Findings",S.s3.findings);p("Gaps and follow-up",S.s3.gaps);
+  L.push("## 4. Engagement");p("Who",S.s4.who);p("How",S.s4.how);p("When",S.s4.when);p("Tribal consultation",{yes:"Completed or underway",planned:"Required and planned",na:"Not applicable (confirmed)",unsure:"Not yet determined"}[S.s4.tribal]||"");p("Internal partners",S.s4.internal);p("What changed",S.s4.changed);p("Ongoing engagement",S.s4.continue);
+  L.push("## 5. Impacts and root causes");p("Benefits",S.s5.benefits);p("Burdens",S.s5.burdens);p("Root causes",S.s5.causes);p("Interaction with adjacent rules",S.s5.interact);p("Unintended effects",S.s5.unintended);p("Net effect on disparities",{reduce:"Reduces",neutral:"Neutral",widen:"Risks widening",unknown:"Unknown"}[S.s5.disparity]||"");
+  L.push("## 6. Lead agencies, providers and workforce");p("Lead agency variation",S.s6.lead);p("Discretion and guidance",S.s6.discretion);p("Provider capacity",S.s6.capacity);p("Workforce effects",S.s6.workforce);p("Support for implementers",S.s6.support);
+  L.push("## 7. Access, communication and settings");p("Barriers",S.s7.barriers);p("Disability access",S.s7.disability);p("Language and culture",S.s7.language);p("Non-digital routes",S.s7.digital);p("Settings and person-centered planning",S.s7.settings);p("Other provisions",S.s7.clas);
+  L.push("## 8. Alternatives, mitigation and routing");p("Alternatives",S.s8.alternatives);p("Mitigations",S.s8.mitigation);p("Formal paths",S.s8.routes.map(id=>ROUTES.find(r=>r.id===id)?.label).join("; "));p("Routing status",S.s8.routeNotes);
+  L.push("## 9. Implementation and accountability");p("Steps",S.s9.steps);p("Milestones",S.s9.milestones);p("Resources",S.s9.resources);p("Personnel",S.s9.personnel);p("Measures",S.s9.metrics);p("Review",S.s9.review);p("Accountability and communication",S.s9.accountability);p("Sustainability",S.s9.sustain);
+  L.push("## 10. Alignment");p("DHS Equity Policy objectives",S.s10.objectives.map(id=>OBJECTIVES.find(o=>o.id===id)?.label).join("; "));p("ADSA goals",S.s10.goals.map(id=>GOALS.find(o=>o.id===id)?.label).join("; "));p("Communication of results",S.s10.communicate);
+  L.push("_Prepared with the One DSD HCBS Equity Policy Review, consistent with the DHS Equity Policy and the State of Minnesota Equity Analysis Toolkit. Supports, and does not replace, the official toolkit, required approvals, civil rights review, Tribal consultation or labor relations processes._");
+  return L.join("\n");
+}
+function billSection(){
+  const m=S.meta;
+  const burdened=S.groups.filter(g=>g.eff==="burden"||g.eff==="both");
+  const benefit=S.groups.filter(g=>g.eff==="benefit"||g.eff==="both");
+  const rec={proceed:"Proceed as proposed",changes:"Proceed with changes",redesign:"Significant concerns; recommend redrafting",stop:"Do not proceed"}[S.s10.verdict]||"Recommendation not yet recorded";
+  return [
+   `EQUITY IMPACT (DHS Equity Policy analysis)${S.sample?" — PRACTICE EXAMPLE":""}`,
+   `Bill: ${m.bill||"—"} ${m.author?"· Author: "+m.author:""} · Analyzed by: ${m.unit||"DSD"} · ${m.date}`,
+   ``,
+   `Equity review recommendation (not an official legislative position): ${rec}`,
+   ``,
+   `Summary: ${S.s10.summary.trim()||"[summary]"}`,
+   ``,
+   `Communities benefited: ${benefit.map(g=>g.name).join("; ")||"[none identified]"}`,
+   `Communities burdened: ${burdened.map(g=>`${g.name}${g.sev?" ("+g.sev.toLowerCase()+")":""}`).join("; ")||"[none identified]"}`,
+   `Net effect on disparities: ${{reduce:"Reduces an identified disparity",neutral:"Neutral",widen:"Risks widening a disparity",unknown:"Unknown; data gap noted"}[S.s5.disparity]||"[not assessed]"}`,
+   ``,
+   `Evidence: ${S.s3.findings.trim()||"[findings]"}`,
+   ``,
+   `Engagement: ${S.s4.who.trim()||"[who]"}${S.s4.changed.trim()?" Result: "+S.s4.changed.trim():""}`,
+   `Tribal consultation: ${{yes:"Completed or underway",planned:"Required and planned",na:"Not applicable (confirmed with Tribal Liaison)",unsure:"Not yet determined"}[S.s4.tribal]||"[status]"}`,
+   ``,
+   `Access and CLAS: ${S.s7.disability.trim()||"[disability access]"} ${S.s7.language.trim()}`,
+   ``,
+   `Recommended amendments or mitigations:`,
+   ...S.s10.recs.filter(r=>r.text.trim()).map((r,i)=>`  ${i+1}. ${r.text.trim()}${r.owner?" (owner: "+r.owner+")":""}`),
+   ``,
+   `Federal floor vs state choice: ${S.s1.federal.trim()||"[federal]"} / ${S.s1.choice.trim()||"[state choices]"}`,
+   `Lead agency and provider implementation: ${S.s6.lead.trim()||"[lead agency variation]"} ${S.s6.capacity.trim()}`,
+   ``,
+   `Fiscal and implementation notes for equity provisions: ${S.s9.resources.trim()||"[resources]"}`,
+   ``,
+   `Formal reviews triggered: ${S.s8.routes.map(id=>ROUTES.find(r=>r.id===id)?.label).join("; ")||"[none identified]"}`,
+   ``,
+   `DHS Equity Policy objectives engaged: ${S.s10.objectives.map(id=>OBJECTIVES.find(o=>o.id===id)?.label).join("; ")||"—"}`,
+   `ADSA goals engaged: ${S.s10.goals.map(id=>GOALS.find(o=>o.id===id)?.label).join("; ")||"—"}`
+  ].join("\n");
+}
+
+/* ---------------- rendering ---------------- */
+function renderNav(){
+  $("#nav").innerHTML=STEPS.map((s,i)=>`<button type="button" data-step="${i}" ${i===cur?'aria-current="step"':""}><span class="num ${stepState(i)}">${i}</span><span class="lbl">${s.title}<small>${s.short}</small></span></button>`).join("");
+  const done=STEPS.filter((_,i)=>stepState(i)==="done").length;
+  $("#meterText").textContent=`${done} of ${STEPS.length} steps complete`;
+  $("#meterBar").style.width=(done/STEPS.length*100)+"%";
+  const t=track();const box=$("#modeBox");
+  if(t){box.hidden=false;$("#modeTitle").textContent=t.title;$("#modeText").textContent=S.meta.title?S.meta.title:"";}else box.hidden=true;
+}
+function renderCoach(){
+  const c=STEPS[cur].coach;
+  $("#coachPane").innerHTML=`<h3>What the policy says</h3><div class="anchor">${c.anchor}</div><h3>Questions to ask</h3><ul>${c.prompts.map(p=>`<li>${p}</li>`).join("")}</ul><h3>What strong looks like</h3><div class="strong-weak"><div class="sw-strong"><strong>Strong:</strong> ${c.strong}</div><div class="sw-weak"><strong>Weak:</strong> ${c.weak}</div></div><h3>Common pitfalls</h3><ul>${c.pitfalls.map(p=>`<li>${p}</li>`).join("")}</ul>`;
+  if(!$("#resPane").innerHTML)$("#resPane").innerHTML=RESOURCES;
+  $("#walkPane").innerHTML=renderWalk();
+}
+function render(focus=true){
+  const active=document.activeElement;const activePath=active?.dataset.path;const activeGroup=active?.dataset.g;const activeKey=active?.dataset.k;
+  $("#stepHost").innerHTML=R[STEPS[cur].id]();
+  $("#main").classList.toggle("wide",cur===2||cur===10);
+  renderNav();renderCoach();
+  $("#btnPrev").disabled=cur===0;
+  $("#btnNext").textContent=cur===STEPS.length-1?"Back to start":"Next step";
+  if(!focus){const controls=[...document.querySelectorAll("[data-path],[data-g]")];controls.find(el=>activePath?el.dataset.path===activePath&&(!active.value||el.type!=="radio"||el.value===active.value):activeGroup!==undefined&&el.dataset.g===activeGroup&&el.dataset.k===activeKey)?.focus();}
+  if(focus){$("#main").focus({preventScroll:true});window.scrollTo({top:0});}
+}
+function go(i){cur=Math.max(0,Math.min(STEPS.length-1,i));render();}
+
+/* ---------------- events ---------------- */
+document.addEventListener("input",e=>{
+  const el=e.target;
+  if(el.dataset.path){ if(el.type==="radio"){if(el.checked)set(el.dataset.path,el.value);} else set(el.dataset.path,el.value);
+    if(["meta.type","meta.duration","meta.approval","meta.prior","meta.unchanged","meta.priorCitation"].includes(el.dataset.path)) render(false);
+    else if( cur===10&&!el.closest(".record")) refreshS9();
+    else renderNav();
+  }
+  if(el.dataset.g!==undefined){S.groups[+el.dataset.g][el.dataset.k]=el.value; if(el.dataset.k==="eff"){render(false);} else renderNav();}
+  if(el.dataset.r!==undefined){S.s10.recs[+el.dataset.r][el.dataset.k]=el.value; refreshS9();}
+  if(el.dataset.arr){const arr=get(el.dataset.arr);const i=arr.indexOf(el.value);if(el.checked&&i<0)arr.push(el.value);if(!el.checked&&i>=0)arr.splice(i,1); if( cur===10)refreshS9(); else renderNav();}
+});
+function refreshS9(){ $("#recordPreview").innerHTML=record(); const rb=$("#stepHost .rubric"); if(rb){rb.outerHTML=rubric();} renderNav(); }
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button, a[data-go]");
+  if(!b)return;
+  if(b.dataset.step!==undefined)go(+b.dataset.step);
+  if(b.dataset.go!==undefined){e.preventDefault();go(+b.dataset.go);}
+  if(b.id==="btnPrev")go(cur-1);
+  if(b.id==="btnNext")go(cur===STEPS.length-1?0:cur+1);
+  if(b.id==="addGroup"){S.groups.push({name:"",eff:"",sev:"",how:"",evidence:"",engaged:""});render(false);$("#stepHost tbody tr:last-child input")?.focus();}
+  if(b.dataset.del!==undefined){S.groups.splice(+b.dataset.del,1);render(false);}
+  if(b.id==="addRec"){S.s10.recs.push({text:"",owner:"",by:"",measure:""});render(false);}
+  if(b.dataset.delrec!==undefined){S.s10.recs.splice(+b.dataset.delrec,1);if(!S.s10.recs.length)S.s10.recs.push({text:"",owner:"",by:"",measure:""});render(false);}
+  if(b.id==="btnSave"||b.id==="btnSave2")saveJson();
+  if(b.id==="btnExample"||b.id==="btnLoadEx"){if(confirm("Load the worked example? This replaces whatever is in the tool now.")){loadExample();}}
+  if(b.id==="btnOpen")$("#fileOpen").click();
+  if(b.id==="btnNew"){if(confirm("Start a new analysis? Unsaved work in this one will be lost.")){S=blank();cur=0;render();}}
+  if(b.id==="btnPrint"){$("#printHost").innerHTML=record();window.print();}
+  if(b.id==="btnMd")copy(md(),"Record copied as text");
+  if(b.id==="btnBill")copy(billSection(),"Equity section copied");
+  if(b.id==="btnCoach"){const c=$("#coach");const open=c.classList.toggle("open");b.setAttribute("aria-expanded",open);}
+  if(b.dataset.tab){document.querySelectorAll(".coach .tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));document.querySelectorAll(".coach .rsec").forEach(x=>x.classList.toggle("on",x.id===b.dataset.tab));}
+});
+async function copy(text,msg){try{await navigator.clipboard.writeText(text);toast(msg);}catch{const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();toast(msg);}}
+function saveJson(){
+  S.savedAt=new Date().toISOString();lastDownloaded=JSON.stringify(S);persistDraft();
+  const name=(S.meta.title||"equity-analysis").replace(/[^\w\- ]+/g,"").trim().replace(/\s+/g,"-").slice(0,60)||"equity-analysis";
+  const blob=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`${name}-${S.meta.date}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  toast("Draft saved to your downloads");
+}
+
+const DRAFT_KEY="one-dsd-review-"+blank().toolKind;
+let lastDownloaded="";
+function validateDraft(d){
+ if(!d||d.version!==1||d.toolKind!==blank().toolKind)throw Error("wrong tool");
+ const template=blank();
+ function check(v,t,depth=0){
+  if(depth>8)throw Error("depth");
+  if(Array.isArray(t)){if(!Array.isArray(v)||v.length>100)throw Error("array");for(const x of v)check(x,t[0]??"",depth+1);return;}
+  if(t!==null&&typeof t==="object"){if(!v||Array.isArray(v)||typeof v!=="object")throw Error("object");for(const k of Object.keys(t)){if(!Object.hasOwn(v,k))throw Error("missing field");check(v[k],t[k],depth+1);}for(const k of Object.keys(v)){if(!Object.hasOwn(t,k))throw Error("unknown field");}return;}
+  if(t===null){if(v!==null&&typeof v!=="string")throw Error("date");return;}
+  if(typeof v!==typeof t||(typeof v==="string"&&v.length>30000))throw Error("value");
+ }
+ check(d,template);
+ if(d.meta.type&&!Object.hasOwn(TYPES,d.meta.type))throw Error("action");
+ const enumValue=(value,allowed)=>{if(!["",...allowed].includes(value))throw Error("selection");};
+ enumValue(d.meta.duration,["prolonged","short"]);enumValue(d.meta.approval,["supervisor","director","ac","commissioner","none"]);enumValue(d.meta.prior,["yes","no"]);enumValue(d.meta.unchanged,["yes","no"]);enumValue(d.s4.tribal,["yes","planned","na","unsure"]);enumValue(d.s5.disparity,["reduce","neutral","widen","unknown"]);
+ for(const g of d.groups){enumValue(g.eff,["benefit","burden","both","unknown","none"]);enumValue(g.sev,["Low","Moderate","High"]);enumValue(g.engaged,["Yes","Planned","No"]);}
+ const result=d[d.toolKind==="hcbs"?"s10":"s9"];enumValue(result.verdict,["proceed","changes","redesign","stop"]);
+ const enumArray=(values,allowed)=>{if(new Set(values).size!==values.length||values.some(v=>!allowed.includes(v)))throw Error("selection list");};
+ enumArray(result.objectives,OBJECTIVES.map(x=>x.id));enumArray(result.goals,GOALS.map(x=>x.id));enumArray(d[d.toolKind==="hcbs"?"s8":"s7"].routes,ROUTES.map(x=>x.id));if(d.toolKind==="hcbs")enumArray(d.meta.lines,LINES);
+ return d;
+}
+let unrecoveredBrowserDraft=false;
+function persistDraft(){if(unrecoveredBrowserDraft){$("#draftStatus").textContent="An earlier browser draft could not be recovered and has been preserved. Download your current notes; clear the browser draft only when you are ready to replace it.";return;}try{localStorage.setItem(DRAFT_KEY,JSON.stringify(S));$("#draftStatus").textContent="Draft saved in this browser only. Not submitted or shared. Avoid personal or confidential information.";}catch{$("#draftStatus").textContent="Browser saving is unavailable. Download your draft to keep your work.";}}
+function restoreDraft(){try{const raw=localStorage.getItem(DRAFT_KEY);if(raw&&raw.length>2000000)throw Error("draft too large");if(raw){const d=validateDraft(JSON.parse(raw));S=d;$("#draftStatus").textContent="Your previous browser draft was recovered. It has not been submitted or shared.";}}catch{unrecoveredBrowserDraft=true;$("#draftStatus").textContent="The earlier browser draft could not be recovered and has been preserved. Download current notes before leaving; clear the earlier draft only when you are ready to replace it.";}}
+document.addEventListener("input",()=>persistDraft());
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.id==="btnClearLocal"){if(confirm("Clear the draft saved in this browser? Download it first if you want to keep it.")){try{localStorage.removeItem(DRAFT_KEY);if(localStorage.getItem(DRAFT_KEY)!==null)throw Error("not cleared");}catch{$("#draftStatus").textContent="This browser could not clear the saved draft. Your current work and earlier saved draft are unchanged. Please try again.";return;}unrecoveredBrowserDraft=false;S=blank();cur=0;render();$("#draftStatus").textContent="Browser draft cleared.";}return;}if(b.id==="btnNew"||b.id==="btnExample"||b.id==="btnLoadEx"||b.id==="addGroup"||b.id==="addRec"||b.dataset.del!==undefined||b.dataset.delrec!==undefined)persistDraft();});
+$("#fileOpen").addEventListener("change",async e=>{
+ const f=e.target.files[0];if(!f)return;
+ try{if(f.size>2000000)throw Error("size");const candidate=validateDraft(JSON.parse(await f.text()));if(!confirm("Replace the current draft with this file? Download the current draft first if you want to keep it."))return;S=candidate;cur=0;render();persistDraft();toast("Draft opened");}catch{toast("This draft could not be opened. Your current work is unchanged.");}finally{e.target.value="";}
+});
+document.querySelectorAll(".tabs button").forEach((tab,i)=>{tab.setAttribute("aria-controls",tab.dataset.tab);tab.tabIndex=i? -1:0;$("#"+tab.dataset.tab).setAttribute("aria-labelledby",tab.id);tab.addEventListener("click",()=>document.querySelectorAll(".tabs button").forEach(x=>x.tabIndex=x===tab?0:-1));tab.addEventListener("keydown",e=>{const tabs=[...document.querySelectorAll(".tabs button")];let n=tabs.indexOf(tab);if(e.key==="ArrowRight")n=(n+1)%tabs.length;else if(e.key==="ArrowLeft")n=(n+tabs.length-1)%tabs.length;else if(e.key==="Home")n=0;else if(e.key==="End")n=tabs.length-1;else return;e.preventDefault();tabs[n].click();tabs[n].focus();});});
+window.addEventListener("beforeunload",e=>{try{if(localStorage.getItem(DRAFT_KEY)===JSON.stringify(S))return;}catch{}if(JSON.stringify(S)!==JSON.stringify(blank())&&JSON.stringify(S)!==lastDownloaded){e.preventDefault();e.returnValue="";}});
+restoreDraft();
+render(false);
+</script>
+<footer class="dsd-footer"><div class="dsd-shell"><div><strong>One DSD People, Access and Culture</strong><p>Developed within the Disability Services Division</p></div><nav aria-label="Support and program information"><a href="/site-map">Site Map</a><a href="/operationalizing-equity">Operationalizing Equity</a><a href="/program-foundation">Constitution</a><a href="/about">About</a><a href="/program/model">Explore the program</a><a href="/support">Support</a><a href="/orientation">Getting started</a><a href="/user-guide">User guide</a></nav><details><summary>Participation and privacy</summary><p>Participation in this program is voluntary. Keep private client, case, health, and personnel information out of questions and learning notes. This resource does not replace official DHS systems, policies, or required training.</p></details></div><p class="program-ownership" style="font-size:0.875rem;line-height:1.5;color:#334155;background:#fff;padding:16px 24px;margin:0">Property of Gary Banks</p></footer><script id="one-dhs-program-menu">const menu=document.getElementById('dsd-menu'),nav=document.getElementById('dsd-navigation');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';nav.classList.toggle('is-open',open);menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});menu.closest('header').addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';menu.focus();}});</script></body>
+</html>

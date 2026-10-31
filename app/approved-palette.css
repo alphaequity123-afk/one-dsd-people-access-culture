@@ -1,0 +1,176 @@
+/* Approved One DSD body palette. The government header, welcome artwork,
+   home introduction and photographs retain their existing presentation. */
+body.dsd-calm main {
+  --pac-navy: #003865;
+  --pac-action: #005ea8;
+  --pac-action-hover: #004578;
+  --pac-gold: #e5ad24;
+  --pac-ink: #183247;
+  --pac-secondary: #45576a;
+  --pac-border: #adb9c4;
+  --pac-field: #66798a;
+  --pac-white: #ffffff;
+  --blue: var(--pac-action);
+  --blue-dark: var(--pac-navy);
+  --blue-mid: var(--pac-action);
+  --gray-900: var(--pac-ink);
+  --gray-800: var(--pac-ink);
+  --gray-700: var(--pac-ink);
+  --gray-600: var(--pac-secondary);
+  --gray-200: var(--pac-border);
+  --gray-50: var(--pac-white);
+  --green-soft: var(--pac-white);
+  --text: var(--pac-ink);
+  --muted: var(--pac-secondary);
+  --line: var(--pac-border);
+  color: var(--pac-ink);
+}
+
+/* Reading surfaces use white; warm emphasis is confined to meaningful accents. */
+body.dsd-calm main :is(.page-intro, .page-intro[data-dsd-tone],
+  .panel, .reading-panel, .card, .dsd-resource-list article, .dsd-reading-note,
+  .dsd-model-note, .dsd-guide-example, .dsd-work-card, .dsd-empty-state,
+  .dsd-planner-list, .dsd-planner-status, .dsd-planner-confirm,
+  .development-grid > li, .development-practice, .development-resource,
+  .development-logic, .brief-spotlight, .community-program-band) {
+  background: var(--pac-white);
+  background-image: none;
+  border-color: var(--pac-border);
+}
+body.dsd-calm main :is(.dsd-stage[data-dsd-stage] > .dsd-page-heading) {
+  --dsd-area-fill: var(--pac-white);
+  --dsd-area-note: var(--pac-white);
+  --dsd-area-accent: var(--pac-action);
+  background: var(--pac-white);
+  border-color: var(--pac-border);
+  border-top-color: var(--pac-gold);
+}
+body.dsd-calm main :is(.dsd-reading-note, .dsd-model-note, .dsd-guide-example,
+  .development-practice, .brief-spotlight) { border-left: 4px solid var(--pac-gold); }
+body.dsd-calm main .dsd-work-card { border-top-color: var(--pac-action); }
+body.dsd-calm main .dsd-work-card + .dsd-work-card { border-top-color: var(--pac-gold); }
+body.dsd-calm main .dsd-resource-list article { border-left-color: var(--pac-action); }
+body.dsd-calm main .dsd-resource-actions { background: var(--pac-white); border-color: var(--pac-border); }
+/* Existing inline surface utilities in staff pages share the approved white base. */
+body.dsd-calm main :is(.bg-green-soft, .bg-gray-50, .bg-slate-50,
+  [class*="bg-[#faf7f1]"], [class*="bg-[#faf3e8]"], [class*="bg-[#f2edf7]"],
+  [class*="bg-[#eef2f5]"], [class*="bg-[#e9f2f7]"], [class*="bg-[#f7f5ef]"]) {
+  background-color: var(--pac-white);
+  border-color: var(--pac-border);
+}
+body.dsd-calm main .notice:not(.notice--warn):not(.notice--stop) {
+  background: var(--pac-white);
+  color: var(--pac-secondary);
+  border-color: var(--pac-border);
+  border-left: 4px solid var(--pac-gold);
+}
+body.dsd-calm main :is(h1, h2, h3, h4) { color: var(--pac-navy); }
+body.dsd-calm main :is(.text-muted, .dsd-lede, .dsd-eyebrow, .dsd-guide-purpose,
+  .dsd-resource-list p, .dsd-resource-number, .dsd-reading-note p,
+  .dsd-planner-privacy, .dsd-planner-help, .dsd-planner-eyebrow,
+  .dsd-planner-download-status, .dsd-work-card p:not(.dsd-eyebrow)) { color: var(--pac-secondary); }
+
+/* Links remain recognizable; semantic warnings and success messages retain
+   their own colors rather than being recolored as navigation. */
+body.dsd-calm main a[href]:where(:not(.btn):not(.button):not(.dsd-primary-link):not(.text-white)):not([aria-current="page"]) {
+  color: var(--pac-action);
+}
+body.dsd-calm main a[href]:hover { text-decoration-thickness: 2px; }
+body.dsd-calm main :is(h1,h2,h3,h4) > a[href] { color: var(--pac-navy); }
+body.dsd-calm main :is(.btn--primary, .btn--secondary, .button,
+  .dsd-primary-link, .dsd-planner-list > button,
+  .dsd-planner-actions > button:first-child, .dsd-reflection-form button:first-child,
+  a.text-white) {
+  background: var(--pac-action);
+  border-color: var(--pac-action);
+  color: var(--pac-white);
+}
+body.dsd-calm main :is(.btn--primary, .btn--secondary, .button,
+  .dsd-primary-link, .dsd-planner-list > button,
+  .dsd-planner-actions > button:first-child, .dsd-reflection-form button:first-child,
+  a.text-white):hover {
+  background: var(--pac-action-hover);
+  border-color: var(--pac-action-hover);
+  color: var(--pac-white);
+}
+body.dsd-calm main .btn--light {
+  background: var(--pac-white);
+  border-color: var(--pac-field);
+  color: var(--pac-action);
+}
+body.dsd-calm main .btn:disabled {
+  background: #f0f3f6; border-color: var(--pac-border);
+  color: var(--pac-secondary);
+}
+body.dsd-calm main :is(input:not([type=checkbox]):not([type=radio]), textarea, select) {
+  background: var(--pac-white);
+  border-color: var(--pac-field);
+  color: var(--pac-ink);
+}
+body.dsd-calm main :is(input,textarea)::placeholder { color: var(--pac-secondary); opacity: 1; }
+body.dsd-calm main :is(a[href], button, summary, input, select, textarea):focus-visible {
+  outline: 3px solid var(--pac-action);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--pac-white);
+}
+body.dsd-calm main :is(a[aria-current="page"], button[aria-pressed="true"]) {
+  background: var(--pac-action);
+  border-color: var(--pac-action);
+  color: var(--pac-white);
+}
+
+/* Approved landing layout and pale-yellow feature stay intact. */
+body.dsd-calm main .dsd-home .dsd-featured article {
+  border-color: var(--pac-border) !important;
+  border-top-color: var(--pac-action) !important;
+}
+body.dsd-calm main .dsd-home .dsd-featured article:first-child {
+  background: #fff5da !important;
+  border-top-color: var(--pac-gold) !important;
+}
+body.dsd-calm main .dsd-home .entry-grid > a { border-color: var(--pac-border); }
+body.dsd-calm main .dsd-home .entry-grid > article {
+  border-color: var(--pac-border); border-top-color: var(--pac-gold);
+}
+body.dsd-calm main .dsd-home .entry-grid > a:first-child { border-top-color: var(--pac-gold); }
+body.dsd-calm main .dsd-home .entry-grid > a:nth-child(2) { border-top-color: var(--pac-action); }
+body.dsd-calm main .dsd-home .entry-grid > a:nth-child(3) { border-top-color: #176b65; }
+body.dsd-calm main .dsd-home .dsd-program-grid article {
+  border-color: var(--pac-border) !important;
+  border-top-color: var(--pac-action) !important;
+}
+body.dsd-calm main .dsd-home .dsd-program-grid a {
+  color: var(--pac-action) !important;
+}
+body.dsd-calm main .dsd-home .dsd-featured h2 a { color: var(--pac-navy) !important; }
+body.dsd-calm main .dsd-home .entry-grid > a { color: var(--pac-navy) !important; }
+body.dsd-calm main .dsd-home .entry-link { color: var(--pac-action); }
+body.dsd-calm main .dsd-home .dsd-guide-grid article {
+  background: var(--pac-white); border-color: var(--pac-border);
+  border-top: 4px solid var(--pac-gold);
+}
+
+/* Preserve the entire existing home introduction, including its typography,
+   color and spacing. No photo sizing or object-fit rules are introduced. */
+body.dsd-calm main .dsd-home .dsd-welcome h1 { color: #183247; }
+body.dsd-calm main .dsd-home .dsd-welcome .dsd-eyebrow { color: #4c606d; }
+body.dsd-calm main .dsd-home .dsd-welcome .dsd-home-actions a { color: #003865; }
+
+body.dsd-calm .dsd-footer {
+  background: #ffffff; color: #45576a; border-top-color: #003865;
+}
+body.dsd-calm .dsd-footer a { color: #005ea8; }
+
+@media (forced-colors: active) {
+  body.dsd-calm main :is(a[href],button,summary,input,select,textarea):focus-visible {
+    outline-color: Highlight; box-shadow: none;
+  }
+  body.dsd-calm main :is(a[aria-current="page"],button[aria-pressed="true"]) {
+    border-color: Highlight;
+  }
+}
+@media print {
+  body.dsd-calm main :is(.btn,.button,.dsd-primary-link,a.text-white) {
+    background: #ffffff; color: #183247; border-color: #66798a;
+  }
+}

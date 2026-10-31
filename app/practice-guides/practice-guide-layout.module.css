@@ -1,0 +1,10 @@
+.guide { min-width: 0; }
+.resources { border-top: 1px solid var(--pac-border, #adb9c4); padding-top: 1.5rem; }
+.resources h2 { font-size: 1.5rem; margin: 0 0 1rem; }
+.guide :global(.dsd-guide-steps) { margin-top: 0; }
+.guide :global(.dsd-guide-resources) { margin-top: 1rem; }
+.guide :global(.dsd-guide-resources) li { padding: 1rem 0; }
+@media (max-width: 640px) {
+  .guide :global(.dsd-guide-example) { padding: 1rem; }
+  .guide :global(.dsd-guide-steps) li { gap: .75rem; }
+}

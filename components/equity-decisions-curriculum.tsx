@@ -1,0 +1,136 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import data from '@/lib/content/equity-everyday-decisions.json';
+import { hasReadyMedia, validCompleted, workbookText, type Curriculum, type Resource } from '@/lib/content/equity-decisions-model';
+import './equity-decisions-curriculum.css';
+
+const curriculum = data as unknown as Curriculum;
+const base = '/learn/equity-toolkit/curriculum';
+const progressKey = 'one-dsd-equity-everyday-learning-progress-v1';
+
+function download(name: string, text: string) {
+  const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = name;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function ResourceList({ resources }: { resources: Resource[] }) {
+  if (!resources.length) return null;
+  return <ul>{resources.map(resource => <li key={`${resource.href}-${resource.title}`}>
+    <a href={resource.href}>{resource.title}</a>{resource.description && <p>{resource.description}</p>}
+  </li>)}</ul>;
+}
+
+export default function EquityDecisionsCurriculum({ lessonId }: { lessonId?: string }) {
+  const [completed, setCompleted] = useState<string[]>([]);
+  const [answer, setAnswer] = useState<number | null>(null);
+  const [notes, setNotes] = useState('');
+  const [storageMessage, setStorageMessage] = useState('');
+  const video = useRef<HTMLVideoElement>(null);
+  const index = curriculum.modules.findIndex(module => module.id === lessonId);
+  const lesson = curriculum.modules[index];
+
+  useEffect(() => {
+    try {
+      setCompleted(validCompleted(JSON.parse(localStorage.getItem(progressKey) || '[]'), curriculum.modules));
+    } catch {
+      setStorageMessage('Progress cannot be remembered in this browser. You can still use every lesson.');
+    }
+  }, []);
+
+  function complete() {
+    if (!lesson) return;
+    const next = [...new Set([...completed, lesson.id])];
+    setCompleted(next);
+    try {
+      localStorage.setItem(progressKey, JSON.stringify(next));
+      setStorageMessage('Marked complete on this browser.');
+    } catch {
+      setStorageMessage('Marked complete for this visit. This browser could not remember your progress.');
+    }
+  }
+  const downloadCompanion = () => download('equity-decisions-working-notes.txt', workbookText(curriculum));
+
+  return <div className="equity-decisions-study">
+    <nav aria-label="Equity learning">
+      <a href="/learn/equity-toolkit">Equity Analysis Toolkit</a>
+      {lesson && <a href={base}>Learning overview</a>}
+    </nav>
+    <header>
+      <p className="equity-decisions-eyebrow">SELF-DIRECTED LEARNING</p>
+      <h1>{lesson ? lesson.title : curriculum.title}</h1>
+      <p className="equity-decisions-lede">{lesson ? lesson.deliverable : 'Follow one decision from the first question through a practical next step and a plan to learn what happened.'}</p>
+    </header>
+    {!lesson ? <>
+      <section aria-labelledby="start">
+        <h2 id="start">A connected path at your own pace</h2>
+        <p>Use a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a visible transcript, an individual decision to practice, and a prompt for your own work.</p>
+        <p>Participation in this learning is voluntary. You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes.</p>
+        <p>The learning supports your work. Follow applicable policy and review requirements, and consult the responsible people or offices when a decision needs their approval. A quick check does not replace a full analysis when one is required.</p>
+        <a className="equity-decisions-primary text-white" href={`${base}/01`}>Start the learning</a>{' '}
+        <button type="button" onClick={downloadCompanion}>Download the companion working notes</button>
+      </section>
+      <ol className="equity-decisions-path">{curriculum.modules.map(module => <li key={module.id}>
+        <a href={`${base}/${module.id}`}><span>Part {Number(module.id)}</span><h2>{module.title}</h2></a>
+        <p>{module.deliverable}</p>
+        {hasReadyMedia(module) && <p>Video: about {Math.ceil(module.durationSeconds! / 60)} minutes, plus time for your own practice.</p>}
+        {completed.includes(module.id) && <p>Marked complete on this browser.</p>}
+      </li>)}</ol>
+      <section><h2>Use this learning with the tools</h2>
+        <p>Start with the decision and use the resources that fit your work. Check current requirements and carry open questions to the responsible office.</p>
+        <ResourceList resources={curriculum.sources || []}/>
+      </section>
+    </> : <>
+      <p>Part {index + 1} of {curriculum.modules.length}{hasReadyMedia(lesson) ? ` · Video: about ${Math.ceil(lesson.durationSeconds! / 60)} minutes` : ''}</p>
+      {hasReadyMedia(lesson) && <section aria-labelledby="watch">
+        <h2 id="watch">Watch and work through the lesson</h2>
+        <video ref={video} onPlay={event => document.querySelectorAll<HTMLMediaElement>('audio,video').forEach(other => { if (other !== event.currentTarget) other.pause(); })} controls preload="metadata" playsInline poster={lesson.poster} aria-label={lesson.title}>
+          <source src={lesson.video} type="video/mp4"/>
+          <track kind="captions" src={lesson.captions} srcLang="en" label="English" default/>
+          Your browser cannot play this video. The full transcript is below.
+        </video>
+        <p>Pause when you want time to think or use the activity below. Playback does not begin automatically.</p>
+        <a href={lesson.video}>Open the video</a> · <a href={lesson.captions}>Download captions</a>
+        <details><summary>Go to a chapter</summary><ol>{lesson.chapters!.map(chapter => <li key={chapter.title}>
+          <button type="button" onClick={() => { if (video.current) { video.current.currentTime = chapter.start; video.current.focus(); } }}>{chapter.title}</button>
+        </li>)}</ol></details>
+      </section>}
+      <section><h2>{lesson.example.title}</h2><p>{lesson.example.situation}</p>
+        <details><summary>Work through the example</summary><p>{lesson.example.response}</p><p>{lesson.example.reason}</p></details>
+      </section>
+      <section aria-labelledby="practice"><h2 id="practice">Try a decision</h2>
+        <fieldset><legend>{lesson.practice.question}</legend>{lesson.practice.options.map((option, number) => <label key={number}>
+          <input type="radio" name="decision" checked={answer === number} onChange={() => setAnswer(number)}/><span>{option.text}</span>
+        </label>)}</fieldset>
+        <div className="equity-decisions-feedback" aria-live="polite">{answer !== null && <>
+          <h3>Think it through</h3><p>{lesson.practice.options[answer].feedback}</p><p>You can choose another response and compare the reasoning.</p>
+        </>}</div>
+      </section>
+      <section aria-labelledby="apply"><h2 id="apply">Bring it into your work</h2>
+        {lesson.practice.artifact && <p><strong>Take forward:</strong> {lesson.practice.artifact}</p>}
+        <p>{lesson.practice.reflection}</p>
+        <label htmlFor="reflection">Optional private working note</label>
+        <textarea id="reflection" rows={6} value={notes} onChange={event => setNotes(event.target.value)} aria-describedby="note-privacy"/>
+        <p id="note-privacy">This note is not sent or automatically saved. Download it if you want to keep a copy. Do not include names, case details, health or personnel information, or other confidential information.</p>
+        <button type="button" onClick={() => download(`equity-decisions-part-${lesson.id}-notes.txt`, `${lesson.title}\n\n${lesson.practice.reflection}\n\n${notes}`)}>Download my note</button>{' '}
+        <button type="button" onClick={downloadCompanion}>Download the full working-notes companion</button>
+      </section>
+      {lesson.resources && lesson.resources.length > 0 && <section><h2>Resources for this part</h2><ResourceList resources={lesson.resources}/></section>}
+      <section aria-labelledby="transcript"><h2 id="transcript">Read the full lesson</h2>{lesson.sections.map(section => <section key={section.title}>
+        <h3>{section.title}</h3>{section.paragraphs.map((paragraph, number) => <p key={number}>{paragraph}</p>)}
+      </section>)}</section>
+      <section><h2>Your next step</h2>
+        <button type="button" onClick={complete}>{completed.includes(lesson.id) ? 'Marked complete' : 'Mark this lesson complete'}</button>
+        <p role="status">{storageMessage}</p><nav aria-label="Lesson sequence">
+          {index > 0 && <a href={`${base}/${curriculum.modules[index - 1].id}`}>Previous: {curriculum.modules[index - 1].title}</a>}
+          {index < curriculum.modules.length - 1 ? <a href={`${base}/${curriculum.modules[index + 1].id}`}>Next: {curriculum.modules[index + 1].title}</a> : <a href={base}>Return to the learning overview</a>}
+        </nav>
+      </section>
+      {curriculum.sources && curriculum.sources.length > 0 && <section><h2>Sources and further guidance</h2><ResourceList resources={curriculum.sources}/></section>}
+    </>}
+  </div>;
+}

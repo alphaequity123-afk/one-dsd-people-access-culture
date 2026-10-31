@@ -1,0 +1,3 @@
+# One DSD People, Access and Culture
+
+This repository contains the source from the Railway release deployed October 31, 2026. It does not include the full media and model assets, live database, environment secrets, or complete handoff tools. The full local handoff contains those non-secret build materials. Consult db/standalone/README.md for database setup and config/railway-release-assets.json for asset requirements. Before hosting elsewhere, configure the environment, set PAC_PUBLIC_ORIGIN, and adapt scripts/verify-clone-agent-pilot.mjs for the new service and domain without removing its checks.

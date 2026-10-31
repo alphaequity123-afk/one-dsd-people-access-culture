@@ -1,0 +1,24 @@
+.page{background:#fff;color:#183247}.body{padding-top:2rem;padding-bottom:4rem}.body section{margin-top:3.5rem;scroll-margin-top:8rem}.body h2{font-size:clamp(1.7rem,3vw,2.2rem);line-height:1.2;margin:.5rem 0 1rem}.body h3{font-size:1.25rem;line-height:1.35;margin:0 0 .75rem}.body p,.body li{line-height:1.65}.body a{color:#003865;text-decoration:underline;text-underline-offset:4px}.body a:focus-visible{outline:3px solid #e6b958;outline-offset:4px}.navigation{display:flex;gap:.8rem 1.5rem;flex-wrap:wrap;border-block:1px solid var(--pac-border, #adb9c4);padding:1.3rem 0;margin-top:1.5rem}.kicker{color:var(--pac-secondary, #45576a);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.intro{max-width:50rem;color:var(--pac-secondary, #45576a)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-top:1.75rem}.card{border:1px solid var(--pac-border, #adb9c4);border-top:4px solid var(--pac-gold, #e5ad24);border-radius:4px;padding:1.6rem;scroll-margin-top:8rem}.number{display:block;font-size:.8rem;letter-spacing:.1em;color:var(--pac-secondary, #45576a);margin-bottom:.6rem}.question{border-left:3px solid var(--pac-gold, #e5ad24);padding-left:1rem;margin:1.25rem 0}.question h4{font-size:.9rem;margin:0;font-weight:700}.question p{margin:.3rem 0}.links{list-style:none;padding:0;margin:1rem 0 0}.links li{margin:.5rem 0}.responsibilities{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}.responsibilities article{border-top:2px solid #003865;padding-top:1rem}.responsibilities ul,.people ul{padding-left:1.2rem}.responsibilities li,.people li{margin:.75rem 0}.people{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;border-block:1px solid var(--pac-border, #adb9c4);padding-block:2rem}.people .links{padding:0}.engagement{max-width:50rem;padding-left:1.25rem}.engagement li{margin:.8rem 0}.contacts{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 2rem}.contacts li{padding:.9rem 0;border-bottom:1px solid var(--pac-border, #adb9c4)}.priorities{display:grid;grid-template-columns:1fr 1fr;gap:2rem}.priorities article{border-top:1px solid var(--pac-border, #adb9c4);padding-top:1.3rem}.priorityQuestion{border-left:3px solid var(--pac-gold, #e5ad24);padding-left:1rem}.source{border-top:1px solid var(--pac-border, #adb9c4);margin-top:3rem;padding-top:1.5rem;font-size:.9rem;color:var(--pac-secondary, #45576a)}.body a,.body li{overflow-wrap:anywhere}@media(max-width:760px){.grid,.responsibilities,.people,.contacts,.priorities{grid-template-columns:1fr}.card{padding:1.25rem}.people{gap:1.5rem}.body section{margin-top:2.5rem}}
+/* Keep the directory overview compact while leaving every service detail available. */
+.navigation a { display: inline-block; padding-block: .25rem; text-underline-offset: 4px; font-weight: 600; }
+.body > section:first-of-type { margin-top: 2rem; }
+.grid { align-items: start; gap: 1.25rem; }
+.card { padding: 1.35rem; min-width: 0; }
+.card > p { margin-bottom: 1.15rem; }
+.cardDetails { border-top: 1px solid var(--pac-border, #adb9c4); margin-top: 1rem; }
+.cardDetails summary { padding-block: 1rem .1rem; cursor: pointer; font-weight: 600; color: var(--pac-action, #005ea8); line-height: 1.5; }
+.cardDetails[open] summary { padding-bottom: .25rem; }
+.cardDetails summary:focus-visible { outline: 3px solid var(--pac-action, #005ea8); outline-offset: 4px; }
+.cardDetails .question { margin-top: 1rem; }
+@media (max-width: 760px) {
+  .page > :global(.page-intro) > :global(.wrap), .page .body { padding-inline: 0; }
+  .navigation { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem 1rem; padding-block: 1rem; }
+  .navigation a { font-size: .95rem; line-height: 1.45; }
+  .card { padding: 1rem; }
+  .grid { gap: 1rem; }
+  .cardDetails summary { padding-top: .9rem; }
+}
+@media print {
+  .cardDetails > :not(summary) { display: block; }
+  .card { break-inside: avoid; }
+}

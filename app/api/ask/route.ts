@@ -1,0 +1,96 @@
+import type { NextRequest } from "next/server";
+import { DEFAULT_PRODUCT_CONTEXT } from "@/lib/product/federation";
+import { staffWriteClosedResponse } from "@/lib/product/staff-lock";
+import { NextResponse } from "next/server";
+import { z } from "zod";
+import { cloneAgentsEnabled } from "@/lib/intelligence/clone/config";
+import { readBoundedJson } from "@/lib/http/request";
+import { isSameOriginMutation } from "@/lib/auth/mutation";
+import { consumeRequestLimit, rateLimitHeaders } from "@/lib/security/rate-limit";
+import { ask, paused } from "@/lib/intelligence/orchestrator";
+import { toStaffAskResult } from "@/lib/intelligence/agents/ask";
+import { PracticeArtifactSchema } from "@/lib/content/practice-artifact";
+import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
+
+export const maxDuration = 180;
+export const runtime = "nodejs";
+const Input = z.object({
+  question: z.string().trim().min(1).max(4000),
+  responseMode: z.enum(["text", "spoken"]).optional(),
+  mode: z.enum(["question", "review"]).optional(),
+  pathId: z.string().regex(/^[a-z0-9-]{1,80}$/).optional(),
+  contextPreference: z.enum(["one_dhs", "one_dsd"]).optional(),
+  researchMode: z.enum(["auto", "program_only", "web_results", "current_web", "deep_research"]).optional(),
+  history: z.array(z.object({ question: z.string().max(1000), answer: z.string().max(2500) }).strict()).max(4).optional(),
+  priorArtifact: PracticeArtifactSchema.optional(),
+}).strict();
+const json = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: { "cache-control": "no-store" } });
+const KEEP_ALIVE_MS = 10_000;
+
+/**
+ * An answer can take over 30 seconds, and some networks cut a silent connection at about that point.
+ * Spaces are valid before JSON, so sending them keeps the connection open and the body still parses.
+ * The status is sent first, so a failure at this stage is reported as { error } in the body.
+ */
+function patientJson(work: () => Promise<unknown>) {
+  const encoder = new TextEncoder();
+  let open = true;
+  const stream = new ReadableStream<Uint8Array>({
+    start(controller) {
+      const send = (text: string) => {
+        if (!open) return;
+        try { controller.enqueue(encoder.encode(text)); } catch { open = false; }
+      };
+      send(" ");
+      const beat = setInterval(() => send(" "), KEEP_ALIVE_MS);
+      void work().then(body => {
+        clearInterval(beat);
+        send(JSON.stringify(body));
+        if (open) { open = false; controller.close(); }
+      });
+    },
+    cancel() { open = false; },
+  });
+  return new Response(stream, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store, no-transform", "x-accel-buffering": "no" } });
+}
+
+/** Owner-authorized clone pilot; the other deployments remain browse-only. */
+export async function POST(request: NextRequest) {
+  if (!cloneAgentsEnabled()) return staffWriteClosedResponse();
+  if (!isSameOriginMutation(request)) return json({ error: "Please use Ask from its page on this site." }, 403);
+  if (await paused()) return json({ error: "Ask is paused for now. You can still browse resources." }, 503);
+  const body = await readBoundedJson(request, 32_000);
+  if (!body.ok) return json({ error: body.message }, body.status);
+  const input = Input.safeParse(body.value);
+  if (!input.success) return json({ error: "Please shorten your question or start a new conversation." }, 400);
+  const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 30, windowSeconds: 600 });
+  if (!limit.allowed) return NextResponse.json({ error: "Please wait a moment before asking another question." }, { status: 429, headers: rateLimitHeaders(limit) });
+  const db = openLedger();
+  let id: string | null;
+  try {
+    id = admitRun(db);
+  } catch (error) {
+    db.close();
+    console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
+    return json({ error: "Ask could not finish this answer. Please try again later, or browse the Library." }, 503);
+  }
+  if (!id) {
+    db.close();
+    return json({ error: "Ask has reached its limit for now. You can browse resources, or try again a little later." }, 429);
+  }
+  const runId = id;
+  return patientJson(async () => {
+    try {
+      const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: "auto", cloneRunId: runId }, "staff", runId);
+      if (await paused()) { finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
+      if (result.kind === "refusal") { finishRun(db, runId, "refused"); return toStaffAskResult(result); }
+      const answer = result.answer;
+      finishRun(db, runId, answer.degraded ? "needs_review" : "completed");
+      return toStaffAskResult(result);
+    } catch (error) {
+      console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
+      finishRun(db, runId, "failed");
+      return { error: "Ask could not finish this answer. Please try again later, or browse the Library." };
+    } finally { db.close(); }
+  });
+}

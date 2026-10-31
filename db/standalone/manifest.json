@@ -1,0 +1,364 @@
+{
+  "schema": "pac_dsd",
+  "roles": {
+    "pac_app_runtime": "pac_dsd_app_runtime",
+    "pac_owner_writer": "pac_dsd_owner_writer",
+    "pac_contributor_runtime": "pac_dsd_contributor_runtime",
+    "pac_authentication_broker": "pac_dsd_authentication_broker"
+  },
+  "migrations": [
+    {
+      "name": "0001_pac_content_foundation.sql",
+      "sourceHash": "ff4e3cdd00c193544f7008000efa78049cf082c68260599a02859c5097902c0d",
+      "transformedHash": "a2ffafb3d994545204d5159a4791ae293a0e6319974c604c2abd52a0ecc16ff6"
+    },
+    {
+      "name": "0002_pac_runtime_store.sql",
+      "sourceHash": "d77309ae6a10118c3a8bdaede95eb65d10b446535445287ed046a35885456be5",
+      "transformedHash": "9802017dc4907811994ad32b96c23b1b44be811f7d23e009e88627fc9debab9d"
+    },
+    {
+      "name": "0003_pac_private_source_objects.sql",
+      "sourceHash": "439bb36c39310b4cff3133c42639b87c93c47ec1360f1fa862b086d798ab1ca9",
+      "transformedHash": "6c10230de61db054b84379958f72a0a3ae9742b5a0c5c9e44ae91ec335351e21"
+    },
+    {
+      "name": "0004_pac_scoped_staff_publications.sql",
+      "sourceHash": "0fea988865e7d13ab3522c813eaefe35f389a24fd2d491a5fa4b3379ae94ce6b",
+      "transformedHash": "aa5362d84a5c427e933df0d620489289149c71cb4fdee9afe0755c0f9aa25778"
+    },
+    {
+      "name": "0005_pac_owner_resource_drafts.sql",
+      "sourceHash": "ae4f61d7c53ead33cedc8981918af99bd085017a7e6a53f8ef2d8e98e0bf49f3",
+      "transformedHash": "da870f7318d1a4c624b54ff83eabfe07aad03fb273bbc8bc4298d97fed285361"
+    },
+    {
+      "name": "0006_pac_owner_resource_release.sql",
+      "sourceHash": "cb8561eeafb7da175e2c11639fe9cc52481fcf4a7250c744114f20d12ff68ffd",
+      "transformedHash": "9837ffa0549f876a247bce9cb0ba5dbabd539fdd60b0a7d39aab155f50355871"
+    },
+    {
+      "name": "0007_pac_home_footer_content.sql",
+      "sourceHash": "f26b0c9e10016baed67d4b861f692a7636cb93de11b33b0c76fde3b309f5a100",
+      "transformedHash": "4dbb61cb50f574a4e8c08645205b76340b39ad4728338ac351de47bf4e218abf"
+    },
+    {
+      "name": "0008_pac_owner_resource_release.sql",
+      "sourceHash": "e11ae49a4dcea56756caf5bc2e81176990a6cd7c8bd4bc5ed50a92680653afff",
+      "transformedHash": "1b3849b4ceabebdf2831cbd63dedf5123c80533575f1384561dc7da273043a9d"
+    },
+    {
+      "name": "0009_pac_data_trust_foundation.sql",
+      "sourceHash": "d13bd8147e28438a0db0ba13c9182ad5c1ce99d81c7aa225d2b4b7425b136a30",
+      "transformedHash": "8be3760b51f570ad9b4fbcb5a1a3615a2217b64c29ec917973c3ae9efaf5cb4a"
+    },
+    {
+      "name": "0010_pac_trusted_resource_release.sql",
+      "sourceHash": "db0ed03464752d8ff035dbcb9a3e600170fbad2d764b31f46a19a4b06ed8b87d",
+      "transformedHash": "5a20f2e23a275ea2aeeec4b3975d4ea89cff0b115ec2d5c3f2d2cad732cc11e6"
+    },
+    {
+      "name": "0011_pac_consultation_atomic_cas.sql",
+      "sourceHash": "5a7c6aeec505af3b16ed07d6dc5c04446f8a7d7f7467ee19789e1f047911f833",
+      "transformedHash": "06313143e65225c0326f82eb27f4893c731b2a02cb94dda40560dc62cce6c725"
+    },
+    {
+      "name": "0012_pac_no_surveillance_contracts.sql",
+      "sourceHash": "5ce1657be7970b539d971f97e48baaf5d6da3de985a4eb331139612fd486fbcd",
+      "transformedHash": "81ac997754490e6a2181a3837cda233de5460ff2a0bf2e465502a5569a230755"
+    },
+    {
+      "name": "0013_pac_security_housekeeping.sql",
+      "sourceHash": "a77b2a4abd6f719662b2900ec0df60c96f0f85fff642fd84e2969949bf0c1fa2",
+      "transformedHash": "c2a2e690667b3d68f7b8d501310985680f0eb43331171212887f9efca0f8df66"
+    },
+    {
+      "name": "0014_pac_consultation_persistence_contract.sql",
+      "sourceHash": "9cc43319bf247e7273054d09f2f6e3972551dfbfc223bdbac820b909d3db5f48",
+      "transformedHash": "33a3d28fb581e5e3eae4ab17c6f7600f5389cbc773418eda47ef4c741fb97be6"
+    },
+    {
+      "name": "0015_pac_terminal_consultation_cleanup.sql",
+      "sourceHash": "12f190290b6575945de9cd484462f85f840c5375c7dd746f28f52d4b43581e82",
+      "transformedHash": "776cf8c8badd7c9f6b3302dde838d5c9c1d76be8d2432fa4450ac8fe04219266"
+    },
+    {
+      "name": "0016_pac_trusted_home_footer_release.sql",
+      "sourceHash": "61a2b61e7b20dd4d9f27c374dce0a64376ede571d1e3ddda9885cb564eeb5a41",
+      "transformedHash": "34aa7863471c81955d22d0db6eb46d4b996c11a44c7d2a380c81498b218381ad"
+    },
+    {
+      "name": "0018_pac_editable_surfaces.sql",
+      "sourceHash": "15ba145c983dcd7714b272f2a8006d2bf64759b3c54637ec18a5e6c0bce685f3",
+      "transformedHash": "24bc95f76fa1650afdb5f20f81c3f4b0ae417d7705f53df877832edfe142dec8"
+    },
+    {
+      "name": "0019_pac_corpus_inventory_and_relationships.sql",
+      "sourceHash": "4593183882509ebd911d085ae56e4b198523a15f4c93e64918bd25be8cf465b4",
+      "transformedHash": "b3d67c963ca1533e831118ba3950d908d832ee4110df01570b46fc9e3574455c"
+    },
+    {
+      "name": "0020_pac_unpublished_resource_authoring.sql",
+      "sourceHash": "1e37708bc86f70bb82a9e00ff4045bc7fb01fbaafa593716552a7efded9004a3",
+      "transformedHash": "1e14ad0cc920ac8c7ce70ff994a994a6df1a23536b8afa3f7469e281b38e151e"
+    },
+    {
+      "name": "0021_pac_optional_home_note.sql",
+      "sourceHash": "9ea33ea5cd0d98183ebcb17880ed7e51edd6af181d7239092496fb495a2052a6",
+      "transformedHash": "f83879653d62752d578b33b0fa2ec35d3a9f913f3f5574b00d1a93d9c6981e2b"
+    },
+    {
+      "name": "0022_pac_equity_toolkit_surface.sql",
+      "sourceHash": "f46e3bc1359f34b4c8017a3287133e87992d9dd15dedeec877bf0bd21b9f2384",
+      "transformedHash": "058c1ddf7f28507e76dd2d2af432a95ae1a9fe3ed55fd0c249fea64eda03a303"
+    },
+    {
+      "name": "0023_pac_surface_review_chronology.sql",
+      "sourceHash": "538c86078850194730fdfd4c82f4fa4bd3b46698bf13f499692c3544fe5b6729",
+      "transformedHash": "40835964a492758077a93e6284854e8cfea9cb6d93b3d3b9075f304a1c9606a9"
+    },
+    {
+      "name": "0024_pac_historical_author_wording.sql",
+      "sourceHash": "7453b74913c311de3cbccde710b5ed89aa4ffc6a76e5f6eb1f2add0331c6787b",
+      "transformedHash": "a0858a262c0706fbd13997c66910fc2aaa3fbab074e97d063c0b1ffbc21217bd"
+    },
+    {
+      "name": "0025_pac_page_review_clock.sql",
+      "sourceHash": "12fa62f266d56f5c9e7261b71a175ded60ef1c2e209ef34c4d7a13b4ee1cc920",
+      "transformedHash": "3e78f3d367d9cce7779070083854a1ef9b338a59c83d6e2658e83a35bda9a38c"
+    },
+    {
+      "name": "0027_pac_owner_release_legacy_archive.sql",
+      "sourceHash": "6dc2b24bc56a0904ff83c2f189450d202c7e81e08ca262f439f318fe4ecb38a1",
+      "transformedHash": "ab82d5ba7d63abaa74c3ffa26f32dd15b983eab6e114bf37f86e6f64847d5f4f"
+    },
+    {
+      "name": "0028_pac_runtime_pool_capacity.sql",
+      "sourceHash": "a4e4720f458550841f2a705e07cff9d6e9ddb07135307633d109c92ed96a80e1",
+      "transformedHash": "249777eb6fb2039434bf962660e1d5e5337ddf8333fbe4166d578a1990ebcc66"
+    },
+    {
+      "name": "0029_pac_openai_research.sql",
+      "sourceHash": "54772df9606e66e6ae7811470f6408d435b3591562997d90d266c149b2ebd50a",
+      "transformedHash": "bf97647cd5f94325b284513cfcfea5283bf1bf984ebaf83c6b2ef610b03501aa"
+    },
+    {
+      "name": "0030_pac_ask_response_records.sql",
+      "sourceHash": "13ca2734cb09b7ca4c7a989175ed3078a863bf8d240fb58e11e3264617aca739",
+      "transformedHash": "d95472556ccd57a53657c7ae7b81222ca9a830bfac906190b5e5b186d1234f2c"
+    },
+    {
+      "name": "0031_pac_owner_approved_surface_saves.sql",
+      "sourceHash": "6e419e32c4402cdc0508af5ee9c38a9ad8095862649a94e379e0ed1727ea1e7a",
+      "transformedHash": "3885b3c906573e62a89a0e93bd08b5691fa9dcde32d2c97c9117281a740c332c"
+    },
+    {
+      "name": "0032_pac_owner_approved_page_copy_saves.sql",
+      "sourceHash": "71baf9e4cb3dd8361fdaf83498744c2480409047c0bb947120c9ea361e528349",
+      "transformedHash": "ee1b5b8e3f13e6f33ceac9acf0c8da0ad429863ce54f6b5c19e54f4097f3c93e"
+    },
+    {
+      "name": "0033_pac_owner_approved_domain_resources.sql",
+      "sourceHash": "5c679380d4c3414f7e0d59a065894f539b02807bda32bd7aab5236d3b4277b2b",
+      "transformedHash": "999b2350fbdc567484822d094b5ee73fa699bfcc1c352a6c9e353dd5f2eb4cb2"
+    },
+    {
+      "name": "0034_pac_domain_tool_resource_receipts.sql",
+      "sourceHash": "7dbf08005f29bf7d164b62c7a4882ec2d0ba57caf725703cc2b9d07c8ffa7a1d",
+      "transformedHash": "60f0c625534309e24c6d7af97545af483fc460c62c509195c796127d4c3bf7ee"
+    },
+    {
+      "name": "0035_pac_negative_scoring_guidance.sql",
+      "sourceHash": "4ed21ee79139dd8f10605d256bb3eec1fd72374965026949c73b5b8c0bbe7899",
+      "transformedHash": "8d566153abd1ae2f6632ed9b3223e4549b1e6da5f4404872adf88593e5dda27d"
+    },
+    {
+      "name": "0036_pac_structured_course_publications.sql",
+      "sourceHash": "9d96b74a9092b478342fcac9fb8079292b3c00968f8bb89bafde0879163a6fda",
+      "transformedHash": "5cf36873cf81c51f2318da4973939ab328234ce08542221631b1b10d8825f085"
+    },
+    {
+      "name": "0037_pac_course_schema_parameter.sql",
+      "sourceHash": "c30b6249c8e6d22bffb380bb619362a752140dc48e80b339b07a3afb203c4c23",
+      "transformedHash": "fb450a8a5ef15dda4a44420b677999e42ecf937ec0a79058725d672ca9316547"
+    },
+    {
+      "name": "0038_pac_course_validation_receipts.sql",
+      "sourceHash": "f57d88160e5b49703c8d96896b04722b8a519a4c82779f7910826abac7e8633d",
+      "transformedHash": "e8fe692309d86b6989b18eac8e005848cb6cceb2df8f449a4768a5a4c608d04c"
+    },
+    {
+      "name": "0039_pac_program_work_records.sql",
+      "sourceHash": "796acd15447e1ac0cf396f37c78378c44684b3a3862b5c16a8c9c5f5559cb5f8",
+      "transformedHash": "2f5874cad321eb6a06b587bdd2e722893aa6d9436d5c7971410c96162879d654"
+    },
+    {
+      "name": "0040_pac_program_event_lifecycle.sql",
+      "sourceHash": "dd70181c5afbaed1decd93a447487a188affac5430ce17df1dd5082a16f0964d",
+      "transformedHash": "a01d2e0be884619128468754eb2c867aad83c946a45ecc1283f57d8a4336ba8c"
+    },
+    {
+      "name": "0041_pac_ask_practice_artifact.sql",
+      "sourceHash": "5e0030a29739aaf9d60f6d7676416ee2187b7fafcaff3b304f3add86e0dbf593",
+      "transformedHash": "ae448611b841737e7a49e64ab73bd1691576714ddd704f98e7ef28841d1ec0f7"
+    },
+    {
+      "name": "0042_pac_named_contributor_identity.sql",
+      "sourceHash": "6e1252fa3e1b1b0e341ffb7ed25ff00cf3a8d61db5f121f04d7d8ae62dfd01d2",
+      "transformedHash": "5b753c4e375240b207ce4d2b5002ad64cf68982b1dcf395fb973f6a62c08f5e2"
+    },
+    {
+      "name": "0043_pac_contributor_authentication_boundary.sql",
+      "sourceHash": "a2518cb6291523ce9ef6a86772264b38d5a9899fe8b9094280eaed076c34b9e2",
+      "transformedHash": "1df2406044c1e875ec46d9e3c9762d8febf74402fd45de693b3b540616406d47"
+    },
+    {
+      "name": "0044_pac_named_identity_corrections_and_current_activation.sql",
+      "sourceHash": "df50329d7af7732af1a2d140ff257ebe032edfa11c2dd300cb726e0ba08825aa",
+      "transformedHash": "8074d744f91a0bf95637420f75d2c2fd674b9bdb41c588c0b876acd710f7cc2c"
+    },
+    {
+      "name": "0045_pac_contributor_resource_workflow.sql",
+      "sourceHash": "d4c1d07db3094f3ef2ad3133269929545546b79572a3a4e9b53d6042a1238ae3",
+      "transformedHash": "012f40adbdf47a39bc9a1fc0b5dda8691cf4d4157ca93b7414e4a8774d8d8c60"
+    },
+    {
+      "name": "0046_pac_ask_deletion_and_restore_preparation.sql",
+      "sourceHash": "7e36bb1f529f8a74569ebd9cb24bd3e2e732ca224b9f3e5f7c3c21fe2eede282",
+      "transformedHash": "bb8039cdc14d20f7090faebcfa664010e26a1a0bf16be80ce4e71ed96b57e423"
+    },
+    {
+      "name": "0047_pac_ask_evidence_claims.sql",
+      "sourceHash": "6e4e41b2f201334ab916c34d04d6748b37d7b5b48d822cfb51f9bb3922940349",
+      "transformedHash": "408c2d2620a0b0c67859839429ff0a97e0368d3df7ecea39d989e8ac1a7db240"
+    },
+    {
+      "name": "0049_pac_page_text_overrides.sql",
+      "sourceHash": "e1cf1d292de31778aaa29d899b557c6c25d65a5f5d62097449dab643b5c9962f",
+      "transformedHash": "52ee6f0a7ffa4389ecdba45a1a4e66c11c04d270f33b2b7b04a5c5297d7bf0e6"
+    },
+    {
+      "name": "0050_pac_consultant_override_clear_and_delete.sql",
+      "sourceHash": "7bc264448ce034f6cbf070ef29087a4b3891cf1e4f0a128bd1098acc316d0da3",
+      "transformedHash": "4484b92843069c4089604805800285a407f703b3da4225141798715e52e0995f"
+    },
+    {
+      "name": "0051_pac_consultant_media_and_new_resources.sql",
+      "sourceHash": "457f79c1583e1921e8a2a2ff479aef4b429b689476853cfdf37597e3d33e348a",
+      "transformedHash": "172a450b71a701446a0ca13f3cdf93cae08d973a0e06259f5ee1e390b8e1a4db"
+    },
+    {
+      "name": "0052_pac_page_image_overrides_skip_missing.sql",
+      "sourceHash": "7f8f4f145f75c1971a389600e1c9717f156aefe850b245250b948dd3c62542aa",
+      "transformedHash": "0305e6144aaf55f03f25283ab5353aab3a959979468da27b51ece28315cbe33a"
+    },
+    {
+      "name": "0053_pac_resource_media_audio.sql",
+      "sourceHash": "cc72bc907687d960e7ef92bfe9c9e42d3671a45be07dc80533071a7f34f427d2",
+      "transformedHash": "e8f455262807187afca2e2a634fff655e41ce8f6e6cb9cec8e7c9f7c1650260c"
+    },
+    {
+      "name": "0054_pac_resource_media_script.sql",
+      "sourceHash": "5229f979c67a92de905765507af7f08327ec3383a780d85c4b2ff5556db64b52",
+      "transformedHash": "c4ee2b8fdc5aa18f18b459aa16554bf181c89ad4840f115b96402d3aa0d8a827"
+    },
+    {
+      "name": "0056_pac_equity_analysis_records.sql",
+      "sourceHash": "87b4149bc458ffbbc732612ad3aa0d53f82d35902693b40d096b61a56515ec1f",
+      "transformedHash": "f1fd648661514254500e59a3c24590e9eb97a6e9f2eed5af4357856a3de6f2bb"
+    },
+    {
+      "name": "0057_pac_read_surface_publications.sql",
+      "sourceHash": "b3fc43d3ba00e17b149b7796cfbac5540101484f0da847bf42af333fc9b69133",
+      "transformedHash": "e3e3b036d034161de6423ba0fe0ca805b8eea469838da3bb4b29bd9564179441"
+    },
+    {
+      "name": "0058_pac_optional_home_headline_line.sql",
+      "sourceHash": "26d7b09cd13f3b840582455a6de130d2851fa298661201c302201712516546b2",
+      "transformedHash": "c2b2f616ccfa626b210fdb1561bccaa45cd6354ce60094febccbe8864f9d1000"
+    },
+    {
+      "name": "0060_pac_static_resource_overlay.sql",
+      "sourceHash": "e1a7f6e15a001f9cbf987652a2d6cea9776e98757f48d70e18378056c215682f",
+      "transformedHash": "5e77b8166e72301f69d9cdd13d15afbf388b5fed3cd528737d0cf5f4b45e537f"
+    },
+    {
+      "name": "0062_pac_consultation_program_reference_authority.sql",
+      "sourceHash": "23f70d91e243cc0b555b56c746537bae022b32ab66a73ea6ab0e2234e34a97cb",
+      "transformedHash": "c8e7fe7b9a6083f507689cff29c472c1b96ba8c3f1870c6935e58a5dd64715de"
+    },
+    {
+      "name": "0063_pac_owner_immediate_resource_saves.sql",
+      "sourceHash": "24d76745902873aeed6431c2983925af5150af558b1f1868f9cc7dbf7af87df8",
+      "transformedHash": "d8f875470fb63371bdfe4e245b704d6f2f4097a0f947e1a25e3f5fd2f3f7cd7c"
+    },
+    {
+      "name": "0063_pac_owner_page_text_history.sql",
+      "sourceHash": "eaa9e395f73611986603624ac6eda4555c1a0201706a6fb685c95ffbe89767f5",
+      "transformedHash": "0aba619ccb2e33df8c9a2e205e72de6ce8f36aee4e5c630a528ab7149edcf2a3"
+    },
+    {
+      "name": "0064_pac_course_lesson_objectives_contract.sql",
+      "sourceHash": "b5a4c3ec9ad41c957be226e3aa78f9523f2053c989e22361ca9a21a274d4e70d",
+      "transformedHash": "773f194b92ea3c9ed9e71b63e71f8222ac08d7c97990bc997d5d4e518e788176"
+    },
+    {
+      "name": "0065_pac_withdrawn_resource_history_flag.sql",
+      "sourceHash": "e1529cd0b2fc1a412ec296a60de32caf5e878fa62b6ed0bec8a16cd470db4b98",
+      "transformedHash": "a2afaa5911a33a8a68bec574dee13f36757bdddc99832bcdb71a11b7adc4a8a3"
+    },
+    {
+      "name": "0066_pac_unified_operational_work.sql",
+      "sourceHash": "230767c32d9eb2d128fdaf6f6441153acfc400ef0c7b369b72d666b6843c1054",
+      "transformedHash": "96b0536004843b669b9f9584e55bc40fded15e41b4c45071b5fc76ae23e14197"
+    },
+    {
+      "name": "20261005220104_pac_review_resource_receipts.sql",
+      "sourceHash": "1092169bc68a236674362a6df95a86d85e8b176d023ca0524adf6eb29bc36648",
+      "transformedHash": "e5faed668562191c991c789748526871e0c47e4c0feb16b7ce820806d2d724b7"
+    },
+    {
+      "name": "0067_pac_ask_voice_limits_and_internal_helpers.sql",
+      "sourceHash": "f53d508fb0ef8f27af172dcc21b86b366e93b134408de38f58993e35f1e2f948",
+      "transformedHash": "7cf3c5d976f3cdbd0e1879979bf67d157b126401b9c2ee471d07fb98f28f5bca"
+    },
+    {
+      "name": "0068_pac_engagement_pdf_receipts.sql",
+      "sourceHash": "0af160ffadaf8b74f691b529b52f98f562390edc6368434f35cbf27b8709d68d",
+      "transformedHash": "1ef4279bf3988042bc0e5c7be5010837113a11e9697b4492d3ad968613c27e66"
+    },
+    {
+      "name": "0069_pac_jev_audit_receipts.sql",
+      "sourceHash": "9a4a0b256de25ebd1c64bc24b19e90d6b73c8be076e5aa54c9e9cf47bda77729",
+      "transformedHash": "6f6c83c2c26034328c5f7d60a5be4d095a8ae39712adff9508c872b4f71d7484"
+    }
+  ],
+  "totalBytes": 1486812,
+  "existingPacUntouched": true,
+  "bootstrapSha256": "fdc169c51f500f1a7ae94740883eb350766c5e9844d99dd456e4e7c51fb37076",
+  "publicSeedSha256": "cb791218fcf449fc4475cb9d89cb55d864201d8bbd7ea8ff27ddd74371a70078",
+  "forwardMigration": {
+    "file": "0067_pac_dsd_ask_voice_limits_and_internal_helpers.sql",
+    "sha256": "7cf3c5d976f3cdbd0e1879979bf67d157b126401b9c2ee471d07fb98f28f5bca",
+    "appliesOnlyTo": "pac_dsd",
+    "liveFixesAlreadyAppliedThroughSupabaseHistory": true
+  },
+  "forwardMigrations": [
+    {
+      "file": "0067_pac_dsd_ask_voice_limits_and_internal_helpers.sql",
+      "sha256": "7cf3c5d976f3cdbd0e1879979bf67d157b126401b9c2ee471d07fb98f28f5bca",
+      "appliesOnlyTo": "pac_dsd",
+      "liveFixesAlreadyAppliedThroughSupabaseHistory": true
+    },
+    {
+      "file": "0068_pac_dsd_engagement_pdf_receipts.sql",
+      "sha256": "1ef4279bf3988042bc0e5c7be5010837113a11e9697b4492d3ad968613c27e66",
+      "appliesOnlyTo": "pac_dsd"
+    },
+    {
+      "file": "0069_pac_dsd_jev_audit_receipts.sql",
+      "sha256": "6f6c83c2c26034328c5f7d60a5be4d095a8ae39712adff9508c872b4f71d7484",
+      "appliesOnlyTo": "pac_dsd"
+    }
+  ]
+}

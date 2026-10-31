@@ -1,0 +1,7 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..');
+const stage=JSON.parse(fs.readFileSync(path.join(root,'evidence/railway-release-20261004/stage-manifest.json')));
+const candidates=stage.entries.filter(e=>e.path.startsWith('public/')&&!e.path.startsWith('public/media/preview/')&&e.bytes>100000).sort((a,b)=>b.bytes-a.bytes);
+const matched=[],unmatched=[];let index=0,total=0;
+async function worker(){while(index<candidates.length&&total<230000000){const entry=candidates[index++];const url='https://people-access-culture.up.railway.app/'+entry.path.slice(7);try{const r=await fetch(url,{signal:AbortSignal.timeout(45000)});if(!r.ok){await r.body?.cancel();unmatched.push({path:entry.path,status:r.status});continue;}const bytes=Buffer.from(await r.arrayBuffer());const sha=crypto.createHash('sha256').update(bytes).digest('hex');if(sha===entry.sha256){matched.push({...entry,url});total+=entry.bytes;}else unmatched.push({path:entry.path,reason:'different bytes'});}catch(e){unmatched.push({path:entry.path,error:e.message});}}}
+(async()=>{await Promise.all(Array.from({length:4},worker));fs.writeFileSync(path.join(root,'evidence/railway-release-20261004/shared-assets.json'),JSON.stringify({matched,unmatched,bytes:total},null,2));console.log(JSON.stringify({matched:matched.length,bytes:total,unmatched:unmatched.length}));})();

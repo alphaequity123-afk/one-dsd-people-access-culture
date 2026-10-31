@@ -1,0 +1,41 @@
+const fs=require('fs'),path=require('path'),ts=require('typescript'),assert=require('assert/strict'),Module=require('module');
+const root=path.resolve(__dirname,'../..'),resolve=Module._resolveFilename;
+Module._resolveFilename=function(n,p,...args){if(n.startsWith('@/'))n=path.join(root,n.slice(2));return resolve.call(this,n,p,...args)};
+for(const ext of ['.ts','.tsx'])require.extensions[ext]=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText,f);
+async function main(){
+const {emptyCrosswalk,readRequirementsCrosswalk,requirementsSummary,REQUIREMENT_FIELDS}=require(path.join(root,'lib/content/requirements-crosswalk.ts'));
+const work=emptyCrosswalk();work.title='Accessible service review';work.revision='3';
+for(const field of REQUIREMENT_FIELDS)work.entries[0][field.id]=field.id+' specific reference and unresolved review';
+work.entries[0].status='Review reported';
+assert.deepEqual(readRequirementsCrosswalk(JSON.stringify(work)),work);
+const summary=requirementsSummary(work);for(const field of REQUIREMENT_FIELDS)assert.ok(summary.includes(work.entries[0][field.id]));
+assert.match(summary,/does not certify compliance/);assert.match(summary,/does not send or submit/);
+const unsupported=[null,[],{...work,format:'other'},{...work,entries:[]},{...work,entries:[work.entries[0],work.entries[0]]},{...work,entries:[{...work.entries[0],status:'Approved'}]},{...work,entries:[{...work.entries[0],source:42}]},{...work,entries:[{...work.entries[0],source:'x'.repeat(4001)}]}];
+for(const bad of unsupported)assert.throws(()=>readRequirementsCrosswalk(JSON.stringify(bad)));
+assert.throws(()=>readRequirementsCrosswalk('{bad'),/current notes are unchanged/);
+assert.throws(()=>readRequirementsCrosswalk(' '.repeat(600001)));
+const pending=structuredClone(work);pending.entries[0].review='';assert.match(requirementsSummary(pending),/Review evidence is missing/);
+pending.entries[0].status='Does not apply—reason recorded';pending.entries[0].applicability='';assert.match(requirementsSummary(pending),/reason for non-applicability is missing/);
+const {JSDOM}=require('jsdom');const dom=new JSDOM('<!doctype html><html><body></body></html>',{url:'http://localhost:8895'});
+global.window=dom.window;global.document=dom.window.document;global.navigator=dom.window.navigator;global.HTMLElement=dom.window.HTMLElement;global.requestAnimationFrame=fn=>fn();global.IS_REACT_ACT_ENVIRONMENT=true;
+const React=require('react'),{render,fireEvent,act,waitFor,cleanup}=require('@testing-library/react');
+const {RequirementsCrosswalkWorksheet}=require(path.join(root,'components/requirements-crosswalk.tsx'));
+const view=render(React.createElement(RequirementsCrosswalkWorksheet));
+fireEvent.change(view.getByLabelText('Name of the work'),{target:{value:'Keep these notes'}});
+fireEvent.change(view.getByLabelText('Governing source and version'),{target:{value:'Existing source'}});
+const fileInput=view.container.querySelector('input[type=file]');
+async function upload(raw){await act(async()=>fireEvent.change(fileInput,{target:{files:[{size:raw.length,text:async()=>raw}]}}));}
+await upload('{invalid');await waitFor(()=>assert.match(view.getByRole('status').textContent,/current notes are unchanged/));
+assert.equal(view.getByLabelText('Name of the work').value,'Keep these notes');assert.equal(view.getByLabelText('Governing source and version').value,'Existing source');
+await upload(JSON.stringify(work));assert.equal(view.getByLabelText('Name of the work').value,'Keep these notes');
+fireEvent.click(view.getByText('Keep current notes'));assert.equal(view.getByLabelText('Name of the work').value,'Keep these notes');
+await upload(JSON.stringify(work));fireEvent.click(view.getByText('Replace current notes with this file'));
+assert.equal(view.getByLabelText('Name of the work').value,work.title);for(const field of REQUIREMENT_FIELDS)assert.equal(view.getByLabelText(field.label).value,work.entries[0][field.id]);
+global.URL.createObjectURL=()=>{throw Error('download unavailable')};
+fireEvent.click(view.getByText('Save editable working file'));const fallback=view.getByLabelText('Complete working file');assert.deepEqual(readRequirementsCrosswalk(fallback.value),work);
+fireEvent.click(view.getByText('Download review summary'));assert.equal(view.getByLabelText('Complete review summary').value,summary);
+cleanup();
+const receipt={passed:true,checks:['All six work fields and title/revision round-trip','Malformed/duplicate/invalid status/oversize imports rejected','Current notes preserved until explicit replace','Cancel preserves notes','Actual visible field restoration','Editable and summary export fallback preserves complete content','No approval or completion inferred; reported review without evidence flagged'],boundary:'Isolated browser component and parser test; no agency data, external submission or deployment.'};
+fs.writeFileSync(path.join(root,'../program-foundation/whole-program-review/Requirements Crosswalk Checks.json'),JSON.stringify(receipt,null,2));console.log('PASS requirements crosswalk actual import/replace/cancel/export fallback and source/evidence/authority boundaries.');
+}
+main().catch(e=>{console.error(e);process.exitCode=1});
