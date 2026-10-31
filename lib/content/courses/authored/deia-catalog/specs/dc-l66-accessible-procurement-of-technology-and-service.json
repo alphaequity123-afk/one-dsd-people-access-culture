@@ -1,0 +1,977 @@
+{
+  "id": "dc-l66-accessible-procurement-of-technology-and-service",
+  "topicId": "L66",
+  "subtitle": "When buying technology and services, make accessibility part of the purchase itself, the evidence you gather, the result that is delivered and the service that continues afterward.",
+  "scope": "For DHS leaders planning technology, digital content or development services with procurement and accessibility colleagues. Suggested comparison and review routines are learning tools, not new solicitation criteria or delegated purchasing authority. Formal awards, contract changes and exceptions stay in the authorized agency process.",
+  "introTranscript": "A purchase can shape access for years. Follow a team considering a reporting service: identify the tasks people need to complete, ask for useful accessibility evidence, interpret an Accessibility Conformance Report and plan a demonstration. Then consider what needs checking after delivery. Bring these questions to the technical, procurement and approval staff responsible for the decision.",
+  "lessons": [
+    {
+      "title": "Define the work before selecting the product",
+      "summary": "Describe who must use the purchase, the tasks it must support and the evidence needed before a preferred solution narrows the discussion.",
+      "objective": "Identify staff and public tasks affected by a proposed digital purchase.",
+      "objectives": [
+        "Identify staff and public tasks affected by a proposed digital purchase.",
+        "Distinguish an essential work result from a familiar product feature.",
+        "Assign early access questions to procurement, accessibility and product owners through actual agency roles."
+      ],
+      "takeaways": [
+        "Start with the work result rather than a favorite vendor.",
+        "Include every necessary interface and connected deliverable.",
+        "Plan the evidence and review with the responsible colleagues early."
+      ],
+      "statement": "The purchase is not only a product. It becomes a way people do required work and receive services.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "A shared task description gives purchasing and accessibility colleagues a practical basis for review."
+      },
+      "intro": {
+        "heading": "Make access part of the need",
+        "body": "A practice DHS reporting team wants a faster dashboard. The manager has seen a vendor demonstration and is ready to buy. Before selection, the team needs to describe its work: analysts enter data, supervisors review results, administrators manage accounts and staff read exported reports. A public summary may also be part of the deliverable. If the team names only the colorful dashboard, the staff interface, setup controls and reports can disappear from the review.\n\nMNIT’s procurement guidance calls for considering accessibility early, whether using a competitive solicitation or an existing contract. For digital deliverables, purchasers notify vendors of the requirements and provide the relevant materials. Minnesota’s current standard provides the technical basis, including WCAG 2.1 A and AA and qualified Section 508. Procurement staff can help identify the authorized purchasing route and how requirements enter the actual solicitation or contract.\n\nDefine the necessary result without assuming there is only one acceptable method. “Staff can review and export the required information” describes work; “everyone must use this particular animated control” describes a design preference. A requirement may legitimately be specific, but it needs the proper business and agency basis. An early discussion with people who understand the task and access barriers can reveal overlooked needs before the team commits to a method. Do not ask participants to disclose diagnoses or certify a product.\n\nConsider implementation and maintenance too. Will the agency configure the tool, create content inside it or depend on the vendor for fixes? A product that can display accessible material may still permit authors to produce inaccessible outputs. A service that supplies documents needs clear expectations for those final documents.\n\nThe leader’s role is to bring the task, users, expected deliverables and known barriers to the responsible colleagues. This course’s practice planning worksheet does not authorize an award or create unpublished evaluation criteria. It helps the authorized team make accessibility part of the purchase rather than a late obstacle after the preferred vendor has already been selected."
+      },
+      "inThisLesson": [
+        "Map the actual work and people using it.",
+        "Include administration, content and exports.",
+        "Separate needs from product preferences.",
+        "Plan the proper purchasing and review route."
+      ],
+      "keyStatement": "A clear task description prevents necessary access from disappearing behind a preferred feature.",
+      "flashcards": [
+        {
+          "front": "Digital deliverable",
+          "back": "The information or technology the agency acquires, including applications, websites, documents, videos or digital training. The relevant access requirements concern the deliverable people will use."
+        },
+        {
+          "front": "Work result",
+          "back": "The necessary outcome of a task, such as understanding a report or completing a form. It is distinct from a preferred visual design or customary method."
+        },
+        {
+          "front": "Product owner",
+          "back": "The responsible owner through the real agency process. They coordinate requirements, implementation and continuing issues without replacing technical, legal or procurement authority."
+        },
+        {
+          "front": "Connected interface",
+          "back": "A related part needed for the task, such as an administrator screen or exported report. An accessible front page does not establish access to every connected function."
+        }
+      ],
+      "accordion": {
+        "heading": "Questions before the shortlist",
+        "items": [
+          {
+            "title": "Who must complete which tasks?",
+            "body": "Identify staff, administrators and any public users. Describe meaningful actions and outputs, not demographic guesses about ability. A required internal task is still an access concern. Include the occasional but necessary action, such as correcting an error or managing an account."
+          },
+          {
+            "title": "What else arrives with the tool?",
+            "body": "Look for training, user documentation, forms and generated documents. A usable interface can still produce a report people cannot navigate. The purchase should make the necessary deliverables visible so evidence and review cover more than the main screen."
+          },
+          {
+            "title": "Who owns the next decision?",
+            "body": "Use actual agency roles for purchasing, technical review, disability access and product ownership. A manager can identify the issue and coordinate preparation; that does not make them the contracting officer or authorize them to waive the standard."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare the need and the method",
+        "tabs": [
+          {
+            "label": "A genuine task need",
+            "body": "The analyst needs to identify the measure, source and period and export an understandable report. That gives the review a practical purpose and can be examined with different products or configurations."
+          },
+          {
+            "label": "A familiar method",
+            "body": "The team prefers a particular gesture or visual layout. Ask whether it is required for the work result or simply familiar. Treat the preference honestly while keeping the result accessible through the applicable requirements."
+          },
+          {
+            "label": "A connected responsibility",
+            "body": "The agency may configure the product, maintain templates or supply support. Identify these responsibilities early because vendor evidence about an unconfigured product may not describe the final agency experience."
+          }
+        ]
+      },
+      "check": {
+        "question": "A leader wants to select a dashboard after a polished demonstration. What should happen before the authorized purchase decision?",
+        "correct": "Define the required tasks and connected deliverables, and plan accessibility evidence and review with procurement and accessibility colleagues.",
+        "wrong": [
+          "Assume a polished demonstration proves accessibility.",
+          "Wait to discuss access until staff start using the purchased system.",
+          "Require staff to disclose disabilities before including access in the purchase."
+        ],
+        "feedbackCorrect": "Yes. This puts accessibility into the need and the authorized purchasing process. It avoids treating a favorite product or a disclosure list as the basis for access.",
+        "feedbackIncorrect": "Appearance and later complaints are incomplete ways to plan a purchase. The agency can define accessible requirements and tasks without asking people for medical information."
+      },
+      "sorting": {
+        "heading": "Classify the planning statement",
+        "categories": [
+          "Task or deliverable need",
+          "Responsible process question",
+          "Unsupported shortcut"
+        ],
+        "items": [
+          {
+            "text": "Analysts must understand the exported report.",
+            "category": "Task or deliverable need"
+          },
+          {
+            "text": "Administrators must manage accounts in the delivered system.",
+            "category": "Task or deliverable need"
+          },
+          {
+            "text": "Which agency role can approve the purchase and contract terms?",
+            "category": "Responsible process question"
+          },
+          {
+            "text": "Which review methods will address the actual interfaces?",
+            "category": "Responsible process question"
+          },
+          {
+            "text": "A modern dashboard cannot have access barriers.",
+            "category": "Unsupported shortcut"
+          },
+          {
+            "text": "No employee has disclosed a disability, so access can wait.",
+            "category": "Unsupported shortcut"
+          }
+        ]
+      },
+      "next": "Next, match the evidence request to whether the agency is buying an existing product or commissioning a service.",
+      "scenario": {
+        "context": "A DHS team lists only “buy a dashboard.” The proposed purchase also includes a vendor-created training video, administrator controls and monthly report exports.",
+        "prompt": "What should the leader request?",
+        "options": [
+          "Keep the description short by excluding the connected parts.",
+          "Add the necessary tasks and deliverables to the authorized requirements and evidence discussion before selection.",
+          "Let the vendor choose the agency’s requirements without review."
+        ],
+        "responses": [
+          "A short label can hide functions that determine whether people can use the service. Clarity means naming necessary parts, not omitting them.",
+          "This gives the responsible team a complete enough view to plan evidence, review and the contract. It does not itself decide the award.",
+          "The vendor can explain its product, but the agency’s needs and authorized decisions belong in the agency process."
+        ],
+        "recommended": 1
+      },
+      "transfer": "For a practice purchase, list the user tasks, administrator tasks, required outputs and responsible review roles before naming a preferred product.",
+      "move": {
+        "control": "You can define the real need and connect the right colleagues.",
+        "failure": "The favorite product becomes the requirement before access is considered.",
+        "next": "Bring tasks, deliverables and review questions into the authorized purchasing preparation."
+      }
+    },
+    {
+      "title": "Ask for evidence suited to the purchase",
+      "summary": "An existing product, a configured solution and a custom service need different evidence. A report about past work cannot certify a future deliverable.",
+      "objective": "Distinguish an ACR for an existing product from evidence about a future development service.",
+      "objectives": [
+        "Distinguish an ACR for an existing product from evidence about a future development service.",
+        "Identify missing product version, interface or documentation coverage in a vendor response.",
+        "Explain how vendor process information complements rather than replaces deliverable evidence."
+      ],
+      "takeaways": [
+        "Ask for evidence about the exact product and relevant interfaces.",
+        "Use service capability evidence without treating past work as the future result.",
+        "Vendor support practices and technical findings answer different questions."
+      ],
+      "statement": "The right evidence matches the actual purchase, its version and the work the agency expects to receive.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "A report needs a clear product and scope before its findings can guide a purchase."
+      },
+      "intro": {
+        "heading": "Match the request to what exists and what will change",
+        "body": "The DHS team receives an Accessibility Conformance Report for a vendor’s standard product. The agency also plans substantial customization and a new training package. The existing report is relevant, but it does not establish that future changes and new content will meet the requirements. Separate what already exists from what the vendor will configure, develop or deliver later.\n\nA VPAT is a reporting template. A completed report for a product is commonly called an Accessibility Conformance Report, or ACR. It is evidence to examine, not a certification seal. MNIT’s current procurement page describes requesting ACRs and narrative answers about vendor support for accessibility for products, including nonstandard technology. It also states that multiple interfaces, such as administrator and end-user functions, and support documentation or training should be addressed. Use the current solicitation instructions about report format and required sections.\n\nFor configuration or development services, MNIT describes different evidence: an ACR for comparable prior work or the product to be configured, relevant notes about planned improvement, and answers about accessibility practices. Professional and technical services can call for the appropriate narrative information and the Policy Driven Adoption for Accessibility worksheet under the guidance. Follow the actual procurement requirements; do not turn this course into a one-size-fits-all request for every service.\n\nThe report’s date and product version matter. A general company report or one covering a much older product may not describe the current offer. Ask what changed and how those changes were evaluated. MNIT notes that in most cases product ACRs should not be more than two years old; the responsible purchasing team should use the actual requirement and product context, not treat an age threshold as proof of quality.\n\nVendor practices matter as well: who tests, how problems are tracked, what developers know and how updates are checked. That information can show capacity to sustain access, but it does not prove a particular screen or document meets the standard. Keep the two kinds of evidence connected and distinct, and identify the delivery review needed for work that does not yet exist."
+      },
+      "inThisLesson": [
+        "Separate existing products from future deliverables.",
+        "Request relevant version and interface coverage.",
+        "Examine narrative process information.",
+        "Plan evidence for configuration and development."
+      ],
+      "keyStatement": "Past work and product reports inform the choice; the delivered result still needs verification.",
+      "flashcards": [
+        {
+          "front": "VPAT",
+          "back": "A template used to report a product’s accessibility. The existence of a form or its name is not certification of the product."
+        },
+        {
+          "front": "ACR",
+          "back": "An Accessibility Conformance Report: a completed report about a product and stated scope. Examine its version, methods and explanations rather than treating receipt as acceptance."
+        },
+        {
+          "front": "Narrative evidence",
+          "back": "Vendor explanations of how they support accessibility in development, testing and maintenance. This helps assess capability but does not replace findings about the actual deliverable."
+        },
+        {
+          "front": "Future deliverable",
+          "back": "Work not yet completed, such as custom development, new content or configuration. Evidence about past work informs the review; it cannot certify that future work in advance."
+        }
+      ],
+      "accordion": {
+        "heading": "Clarify the response",
+        "items": [
+          {
+            "title": "The report covers the wrong version",
+            "body": "Ask which version is being offered, what changed and what evidence addresses those changes. Do not quietly assume the old report still describes every current function. The responsible staff can determine what updated documentation or testing is needed."
+          },
+          {
+            "title": "The administrator interface is missing",
+            "body": "Staff may need administrator functions to operate the service. Make that scope visible along with support documentation and training. A report limited to end-user screens should be labeled as such, not extended to parts it did not examine."
+          },
+          {
+            "title": "The service is not built yet",
+            "body": "Ask for relevant capability and prior-work evidence, plus a clear plan for the new deliverable’s requirements and review. An ACR for an unrelated past product should not be presented as the future service’s conformance result."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Different evidence serves different purposes",
+        "tabs": [
+          {
+            "label": "Existing product report",
+            "body": "Describes the reported product and scope at a point in time. Compare it with the offered version, interfaces and planned use. Missing explanations or changed functions require follow-up."
+          },
+          {
+            "label": "Comparable past work",
+            "body": "Shows something about the vendor’s prior capability. Examine how comparable it really is and what the evidence establishes. The agency still needs requirements and review for the new deliverable."
+          },
+          {
+            "label": "Vendor process",
+            "body": "Describes support for accessibility across the company or project. Useful for questions about sustaining work and correcting issues, but a strong process statement does not replace actual testing of the service."
+          }
+        ]
+      },
+      "check": {
+        "question": "A vendor submits an ACR for a standard product but will substantially customize it for DHS. What does the ACR establish?",
+        "correct": "It provides evidence about the reported product and scope; the configured and customized delivered result still needs the appropriate verification.",
+        "wrong": [
+          "It certifies every future customization automatically.",
+          "It makes a contract review unnecessary.",
+          "It is meaningless because no existing product evidence can ever help."
+        ],
+        "feedbackCorrect": "Yes. Keep the useful evidence and its limits. Ask what changes, how accessibility will be addressed and what review will verify the delivered experience.",
+        "feedbackIncorrect": "An ACR provides useful evidence within its reported product and scope; it does not certify every future customization. It also does not remove the need for appropriate contract review, including responsibilities for the configured and delivered result. Dismissing all existing evidence would lose useful context. Keep the evidence and its limits, then identify what the customization and delivery review must verify."
+      },
+      "sorting": {
+        "heading": "Identify the evidence role",
+        "categories": [
+          "Existing-product evidence",
+          "Service capability evidence",
+          "Unresolved deliverable"
+        ],
+        "items": [
+          {
+            "text": "An ACR naming the offered product and current version.",
+            "category": "Existing-product evidence"
+          },
+          {
+            "text": "An explanation of accessibility testing in the vendor’s development process.",
+            "category": "Service capability evidence"
+          },
+          {
+            "text": "A new agency-specific form that has not been built.",
+            "category": "Unresolved deliverable"
+          },
+          {
+            "text": "Reported findings about the product’s administrator interface.",
+            "category": "Existing-product evidence"
+          },
+          {
+            "text": "A comparable past deliverable with documented review.",
+            "category": "Service capability evidence"
+          },
+          {
+            "text": "A future report export not covered by the current ACR.",
+            "category": "Unresolved deliverable"
+          }
+        ]
+      },
+      "next": "Next, read the report’s claims and explanations without converting them into a certificate or a simplistic score.",
+      "scenario": {
+        "context": "A practice vendor offers custom online training. It supplies a report for a different client’s older course and says this proves the new DHS course will be accessible.",
+        "prompt": "What should the agency team do?",
+        "options": [
+          "Accept the older course report as certification of the future course.",
+          "Reject all prior-work evidence without reading it.",
+          "Use relevant prior-work evidence to examine capability, and require an authorized plan and delivery verification for the actual DHS course."
+        ],
+        "responses": [
+          "The future content and functions do not yet have a verified result. A past report cannot establish them in advance.",
+          "Comparable work can help assess capability. The issue is its scope and relevance, not that all past evidence is useless.",
+          "This uses evidence for the question it can answer while preserving the review needed for the future deliverable. Follow the actual solicitation and contract requirements."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Write a sample evidence request distinguishing the existing product, planned changes, supporting content and verification needed at delivery.",
+      "move": {
+        "control": "You can make the evidence request fit the purchase.",
+        "failure": "A past report is treated as proof of a future configured service.",
+        "next": "Ask what exists, what changes and how the final result will be checked."
+      }
+    },
+    {
+      "title": "Read the report for the real task",
+      "summary": "Conformance levels need explanations, relevant scope and appropriate follow-up. Counting “supports” entries can hide a blocked essential task.",
+      "objective": "Interpret reported conformance levels without treating an ACR as a certification.",
+      "objectives": [
+        "Interpret reported conformance levels without treating an ACR as a certification.",
+        "Identify an explanation that needs specific follow-up.",
+        "Connect a reported limitation to the task, responsible evaluation and current uncertainty."
+      ],
+      "takeaways": [
+        "A conformance level needs an informative explanation.",
+        "A limitation’s task effect matters; a percentage alone can conceal it.",
+        "Missing or contradictory evidence stays unresolved until reviewed."
+      ],
+      "statement": "The useful question is not how many favorable words appear. It is what people can do in the actual service and what remains unsupported.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Read the explanations with the task beside them, not as a list of reassuring labels."
+      },
+      "intro": {
+        "heading": "Move from a label to evidence",
+        "body": "The practice reporting product’s ACR contains many entries marked Supports. One entry notes that the final export control cannot be operated without a mouse. If report export is necessary to the agency task, a high proportion of favorable entries does not make that barrier irrelevant. Read the actual explanations and connect them to the intended work. Do not create an unofficial average that substitutes for the authorized evaluation method.\n\nACRs commonly use Supports, Partially Supports, Does Not Support and Not Applicable. The meanings are reporting conventions, not a simple certification system. A reported Supports entry should be examined for what feature or method addresses the criterion. A limitation should identify the relevant function and problem. A Not Applicable conclusion needs a reason that fits the product and criterion. A blank or unexplained entry is missing evidence, not a favorable result.\n\nLook at the evaluation methods. Was the actual product tested, and were all relevant interfaces included? Does the narrative describe observation, tools and manual review, or merely repeat the criterion? Technical staff can assess the connection between the reported finding and the state requirement. Leaders can help by identifying the task and asking useful questions without making unsupported technical judgments.\n\nA workaround also needs examination. It may provide a route for some users or an interim response, but it does not automatically resolve the reported limitation, establish conformance or meet a person’s specific need. Ask what the alternative requires, whether it works in the agency configuration and what verification supports the claim. A promise to repair in a later release remains future work.\n\nDocument the important unresolved questions and send them through the authorized purchasing and accessibility process. Procurement fairness matters: use the actual published criteria, instructions and permitted clarification process rather than inventing a new scoring rule after seeing the offers. An honest evidence note can inform the decision while leaving technical evaluation and award authority with the people responsible for them."
+      },
+      "inThisLesson": [
+        "Read conformance levels with explanations.",
+        "Connect a limitation to the required task.",
+        "Question missing evidence and unverified alternatives.",
+        "Use authorized evaluation and clarification routes."
+      ],
+      "keyStatement": "A favorable count cannot erase a specific barrier in a required task.",
+      "flashcards": [
+        {
+          "front": "Supports",
+          "back": "A reported conformance level with a specific meaning in the reporting format. Read the explanation and methods; the label alone is not an agency acceptance decision."
+        },
+        {
+          "front": "Partially Supports",
+          "back": "A reported limitation exists for some functionality. Identify the affected functions and task consequences rather than treating the phrase as either a full pass or a total product verdict."
+        },
+        {
+          "front": "Not Applicable",
+          "back": "A reported conclusion that the criterion is not relevant in the stated context. Examine the reasoning; it is not permission to omit an inconvenient requirement."
+        },
+        {
+          "front": "Unresolved evidence",
+          "back": "Information not yet sufficient to answer the review question. Missing explanations and unverified promises belong here, not in a pass count."
+        }
+      ],
+      "accordion": {
+        "heading": "Questions worth asking",
+        "items": [
+          {
+            "title": "“What exactly is supported?”",
+            "body": "Ask about the relevant feature, method and product version. A copied criterion does not explain how the product meets it. The person checking it needs enough information to examine the claim and choose suitable verification."
+          },
+          {
+            "title": "“What happens in our task?”",
+            "body": "Connect the limitation to the actual work. A control used only occasionally can still be necessary. Do not declare the effect negligible because the function is not on the opening screen or because many other entries are favorable."
+          },
+          {
+            "title": "“How was the alternative verified?”",
+            "body": "Ask whether the proposed route works in the agency’s actual environment and whether it addresses the applicable requirement and current need. A verbal reassurance or future promise is not the same as observed effectiveness."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Keep these conclusions separate",
+        "tabs": [
+          {
+            "label": "Reported claim",
+            "body": "The vendor states a conformance level and explanation. This is evidence to review. It should not be described as independent testing if the vendor supplied it without such testing."
+          },
+          {
+            "label": "Task effect",
+            "body": "The limitation may block an essential export, administrator action or public form step. Describe the effect specifically and seek appropriate evaluation instead of assigning an invented all-purpose risk score."
+          },
+          {
+            "label": "Authorized decision",
+            "body": "The purchasing team evaluates the evidence using its actual requirements and rules. A leader’s learning exercise does not change scoring criteria, waive a requirement or authorize an award."
+          }
+        ]
+      },
+      "check": {
+        "question": "An ACR has many Supports entries but reports a keyboard barrier in a required export step. What is the sound response?",
+        "correct": "Examine the barrier’s task effect and supporting evidence through the authorized review instead of approving from a favorable-entry percentage.",
+        "wrong": [
+          "Approve because most entries are positive.",
+          "Automatically disqualify every product with any limitation without using the actual procurement requirements.",
+          "Change the scoring system after receiving offers so this product wins."
+        ],
+        "feedbackCorrect": "Yes. The specific barrier matters and the actual process governs the decision. This avoids an unsupported percentage pass while keeping authority and procurement fairness intact.",
+        "feedbackIncorrect": "A count is not a substitute for the task and criteria. Neither an invented automatic rule nor a late scoring change is appropriate; use the authorized evaluation and clarification route."
+      },
+      "sorting": {
+        "heading": "Read the evidence accurately",
+        "categories": [
+          "Reported evidence to examine",
+          "Unresolved question",
+          "Unsupported decision shortcut"
+        ],
+        "items": [
+          {
+            "text": "The report identifies a mouse-only export control in the offered version.",
+            "category": "Reported evidence to examine"
+          },
+          {
+            "text": "The claimed alternative has not been tested in the agency configuration.",
+            "category": "Unresolved question"
+          },
+          {
+            "text": "Ninety percent Supports means the tool is automatically accepted.",
+            "category": "Unsupported decision shortcut"
+          },
+          {
+            "text": "The report names its tested interfaces and methods.",
+            "category": "Reported evidence to examine"
+          },
+          {
+            "text": "An entry has no explanation of how the feature meets the criterion.",
+            "category": "Unresolved question"
+          },
+          {
+            "text": "The team can silently change the published scoring rules.",
+            "category": "Unsupported decision shortcut"
+          }
+        ]
+      },
+      "next": "Next, design an informative demonstration that checks real work without confusing a quick test with a complete assessment.",
+      "scenario": {
+        "context": "A practice evaluator notices that a vendor marked every criterion Supports but supplied only copied criterion text in the explanations. The manager wants to count the entries as complete proof.",
+        "prompt": "What should the team do?",
+        "options": [
+          "Count every label as a verified pass.",
+          "Identify the insufficient explanations, use the authorized clarification process and seek appropriate verification of the actual tasks.",
+          "Tell staff with disabilities to test every criterion before the agency proceeds."
+        ],
+        "responses": [
+          "The labels lack the evidence needed to understand and examine them. Receipt of a report is not proof of complete conformance.",
+          "This preserves fairness and turns the uncertainty into review work. The explanation, methods and actual deliverable need evidence.",
+          "Users can inform the review voluntarily, but the agency should not shift technical certification or every repair onto them. Use qualified review and protect personal information."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Read a practice ACR entry and write three parts: the reported claim, its possible task effect and the evidence or authorized clarification still needed.",
+      "move": {
+        "control": "You can keep task effects and missing evidence visible.",
+        "failure": "A count of favorable labels becomes an unsupported acceptance decision.",
+        "next": "Record the important limitation and use the actual evaluation process to resolve it."
+      }
+    },
+    {
+      "title": "Make demonstrations reveal the actual work",
+      "summary": "A planned task, clear methods and documented limits provide more useful evidence than a vendor’s best-looking path.",
+      "objective": "Plan an accessibility demonstration with meaningful tasks and relevant states.",
+      "objectives": [
+        "Plan an accessibility demonstration with meaningful tasks and relevant states.",
+        "Distinguish a successful demonstrated task from full product conformance.",
+        "Record observations without guessing a user’s ability or changing procurement criteria informally."
+      ],
+      "takeaways": [
+        "Specify relevant demonstrations through the authorized procurement process.",
+        "Include keyboard operation and applicable enlargement checks with the actual task.",
+        "Record the tested version, observations and limits."
+      ],
+      "statement": "A useful demonstration examines whether the work can be done, including errors and outputs, rather than only how smoothly a presenter moves through it.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "A demonstration should make barriers and uncertainty visible, not stage a single perfect path."
+      },
+      "intro": {
+        "heading": "Prepare a task that can teach the review something",
+        "body": "The DHS team invites a vendor to demonstrate its reporting service. The presenter uses a mouse quickly, avoids errors and displays a completed sample report. That shows a selected path, not necessarily the access needed for the actual agency task. Prepare demonstration expectations through the authorized purchasing process so vendors know what evidence to provide and evaluation remains fair.\n\nMNIT’s current guidance says that when procurement includes a demonstration, it should include keyboard operation and magnification to 200 and 400 percent, with assistive-technology use as an optional demonstration element. The appropriate staff interpret the results under the relevant requirements. An enlargement check does not mean every type of content must behave identically; some criteria have defined limits and exceptions. Record the observed task rather than giving a blanket technical verdict from one attempt.\n\nInclude meaningful states: entry, navigation, error feedback, correction, submission and the exported result where relevant. A task may require an administrator to assign access or an author to create a document. These functions belong in the plan if necessary to the purchase. For a service not yet built, a comparable demonstration can inform capability but still does not verify the future deliverable.\n\nUse non-identifying test information. Do not enter real recipient records or ask employees to disclose medical information in a learning demonstration. People with disabilities can contribute valuable perspectives with voluntary, supported participation; they do not become responsible for certifying the whole product.\n\nWrite what was tested, in which version and environment, with which method and what happened. A failed demonstration may identify a barrier or a question requiring further investigation. A successful one establishes evidence within its scope. Neither should be stretched into a conclusion the methods cannot support. Pair the observations with the ACR, appropriate technical assessment and the authorized evaluation. This makes the demonstration useful rather than merely impressive."
+      },
+      "inThisLesson": [
+        "Set relevant expectations before the demonstration.",
+        "Observe complete tasks and important states.",
+        "Use safe practice test material.",
+        "Record results and limits precisely."
+      ],
+      "keyStatement": "A planned demonstration provides scoped evidence; it is not a universal accessibility certificate.",
+      "flashcards": [
+        {
+          "front": "Demonstrated task",
+          "back": "The actual sequence examined in the session. Describe it with the version, environment and method so readers know what the observation covers."
+        },
+        {
+          "front": "Keyboard operation",
+          "back": "Operating relevant functions without requiring a mouse. A demonstration can reveal a barrier, but one successful path does not establish every criterion or all product functions."
+        },
+        {
+          "front": "Magnification check",
+          "back": "Examining content and interaction when enlarged. Record the observed result and have appropriate staff interpret the applicable requirements and defined limits."
+        },
+        {
+          "front": "Representative test material",
+          "back": "Practice or appropriately non-identifying data that allows the task to be examined without exposing real personal records. It should exercise the relevant function."
+        }
+      ],
+      "accordion": {
+        "heading": "Build a useful demonstration plan",
+        "items": [
+          {
+            "title": "Start with a required result",
+            "body": "Ask for a task staff or the public actually need to complete. Identify the relevant setup, input, correction and output. A decorative feature may be interesting but should not distract from a blocked required step."
+          },
+          {
+            "title": "Include a recoverable error",
+            "body": "For a form or reporting workflow, ask how a person identifies and corrects an error. An accessible start is insufficient if error feedback or return navigation blocks completion. Plan the request through the proper process rather than improvising a new undisclosed evaluation rule."
+          },
+          {
+            "title": "Record the condition",
+            "body": "Note the offered version, configuration and method. A vendor demonstration on a different environment may not reflect the agency’s eventual setup. Preserve that limit and plan the actual delivery verification rather than silently transferring the result."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Use the result in its proper scope",
+        "tabs": [
+          {
+            "label": "A barrier observed",
+            "body": "The keyboard cannot reach Export in the demonstrated version. This is a specific useful observation. Send it for the appropriate assessment and clarification; do not guess the developer’s motive or the person’s capability."
+          },
+          {
+            "label": "A task completed",
+            "body": "The presenter completed the listed task using the stated method. Useful evidence within that path. Other criteria, states and connected functions may remain untested."
+          },
+          {
+            "label": "A test not performed",
+            "body": "The administrator flow or final document was not available. Mark it unresolved and assign the appropriate next review. Not demonstrated is not the same as either a pass or a proven failure."
+          }
+        ]
+      },
+      "check": {
+        "question": "The vendor successfully demonstrates one task using a keyboard. What can the team accurately say?",
+        "correct": "The demonstrated task succeeded under the recorded conditions; other requirements and functions still need the appropriate evidence and evaluation.",
+        "wrong": [
+          "The whole product meets every accessibility criterion.",
+          "Every future configuration and update is permanently approved.",
+          "The success has no value because demonstrations never provide evidence."
+        ],
+        "feedbackCorrect": "Yes. Retain the meaningful result and its limits. Combine it with other evidence and the actual evaluation process instead of turning one task into a total verdict.",
+        "feedbackIncorrect": "Avoid exaggerating or dismissing scoped evidence. The observation matters, but it cannot establish every untested requirement, configuration or future change."
+      },
+      "sorting": {
+        "heading": "How should the result be recorded?",
+        "categories": [
+          "Observed result",
+          "Untested part",
+          "Unsupported inference"
+        ],
+        "items": [
+          {
+            "text": "The recorded keyboard path reached all controls in this task.",
+            "category": "Observed result"
+          },
+          {
+            "text": "The administrator interface was not available in the demonstration.",
+            "category": "Untested part"
+          },
+          {
+            "text": "Every criterion passed because the presenter finished quickly.",
+            "category": "Unsupported inference"
+          },
+          {
+            "text": "At the recorded enlargement, a required field disappeared from this tested screen.",
+            "category": "Observed result"
+          },
+          {
+            "text": "The agency-specific report template has not yet been configured.",
+            "category": "Untested part"
+          },
+          {
+            "text": "No future review is needed after one successful demonstration.",
+            "category": "Unsupported inference"
+          }
+        ]
+      },
+      "next": "Next, connect the evidence to the actual contract and delivered result through the authorized roles.",
+      "scenario": {
+        "context": "A practice vendor’s demonstration uses ideal sample data. When asked to correct an error using the planned keyboard task, the presenter says the error flow is not ready. The manager proposes recording it as a pass anyway.",
+        "prompt": "What should the team do?",
+        "options": [
+          "Mark the unavailable error flow as unresolved, retain the observations that were actually made and use the proper process for follow-up.",
+          "Record a pass because the vendor promises it will work.",
+          "Add an unpublished automatic rejection rule during the session."
+        ],
+        "responses": [
+          "This accurately separates tested results from missing evidence and keeps the evaluation within the authorized process. The promise remains future work.",
+          "A promise is not an observed result. The unavailable state needs appropriate evidence, clarification or delivery verification.",
+          "The agency must use its actual procurement requirements and permitted process. A learning demonstration does not authorize new scoring rules after offers arrive."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Draft a practice demonstration plan with one complete task, an error state, a connected output, the requested methods and the limits to record.",
+      "move": {
+        "control": "You can plan a meaningful evidence discussion.",
+        "failure": "A smooth vendor path substitutes for the actual work.",
+        "next": "Specify relevant demonstrations through the authorized route and record what was and was not observed."
+      }
+    },
+    {
+      "title": "Connect requirements to delivery and acceptance",
+      "summary": "The contract, final content and actual configuration need clear expectations and review. Leaders coordinate evidence without making unauthorized contract decisions.",
+      "objective": "Identify deliverables and verification questions that need to enter the authorized contract discussion.",
+      "objectives": [
+        "Identify deliverables and verification questions that need to enter the authorized contract discussion.",
+        "Explain why an ACR does not replace acceptance testing upon delivery.",
+        "Distinguish an unresolved delivery issue from an authorized acceptance, payment or contract decision."
+      ],
+      "takeaways": [
+        "Clarify accessible deliverables through the real contract process.",
+        "Verify the version and configuration people will receive.",
+        "Only authorized roles decide acceptance, payment and contractual remedies."
+      ],
+      "statement": "The result that matters is the delivered service and information. A promise, report or signed contract does not by itself prove that result.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "A delivery review should follow the requirement into the actual tool, documents and training."
+      },
+      "intro": {
+        "heading": "Plan the verification before delivery arrives",
+        "body": "The practice vendor delivers the reporting service. Its standard interface was examined earlier, but the agency configuration changes navigation and its final report documents have no usable structure. The team needs an acceptance review tied to the actual requirements and delivered scope. MNIT’s procurement guidance explicitly states that an ACR does not replace acceptance testing upon delivery or other accessibility verification.\n\nContract language and deliverable expectations belong in the authorized procurement and legal process. Leaders can identify what needs attention: the applicable standard, relevant interfaces, required documents and media, testing evidence, correction responsibilities and how changed versions will be handled. Do not sign new terms or promise a remedy simply because a course example suggests a useful question. The contract and actual authority govern the decision.\n\nFor final digital documents, MNIT provides specific expectations for Word, PDF and Excel. Its procurement guidance says to include the expectations when deliverables contain digital documents. The guidance addresses structure, meaningful links, appropriate alternatives, contrast and other format details. A visually tidy file or a passed automatic checker alone should not be stretched into a claim about every requirement or the entire task. The final delivered format needs the appropriate review.\n\nPlan how a finding will be handled. Record the requirement, delivered version, task, evidence and proposed correction. If a barrier remains, involve the responsible accessibility and procurement staff about the actual options, including any applicable formal exception route. A leader should not quietly waive a requirement, withhold payment or accept a substitute beyond their authority. Nor should the issue disappear because an invoice arrived.\n\nKeep the person’s current access need visible through its separate proper process while the product question is resolved. A temporary support arrangement may help, but does not automatically satisfy the contract or certify the product. An honest delivery note distinguishes what is verified, what is pending and who must make the next authorized decision."
+      },
+      "inThisLesson": [
+        "Identify required final deliverables.",
+        "Plan verification in the actual configuration.",
+        "Document a delivery finding clearly.",
+        "Respect acceptance and contract authority."
+      ],
+      "keyStatement": "Acceptance is an authorized decision supported by the actual requirements and delivery evidence.",
+      "flashcards": [
+        {
+          "front": "Acceptance testing",
+          "back": "Review of the delivered result against the relevant requirements through the authorized process. It is not replaced by receipt of a vendor ACR."
+        },
+        {
+          "front": "Delivered configuration",
+          "back": "The tool and settings people will actually use. Configuration can affect functions and access, so evidence about a different setup may be incomplete."
+        },
+        {
+          "front": "Document expectations",
+          "back": "MNIT’s accessible-document guidance for final Word, PDF and Excel deliverables. Use it through the actual contract and review process, not as a substitute for a full standard evaluation."
+        },
+        {
+          "front": "Contract authority",
+          "back": "The authority assigned through the real agency process to make or change contract, acceptance, payment or remedy decisions. A learning worksheet does not delegate it."
+        }
+      ],
+      "accordion": {
+        "heading": "Prepare the delivery discussion",
+        "items": [
+          {
+            "title": "Name all final content",
+            "body": "The purchase may include user instructions, a recorded orientation and report templates in addition to software. Include the necessary deliverables in the authorized requirements and review plan. An accessible interface does not cure an inaccessible required guide."
+          },
+          {
+            "title": "Keep the evidence traceable",
+            "body": "Link a finding to the relevant requirement, product version and tested task. A generic “not accessible” note may be hard to resolve, while an unsupported “fully compliant” note hides the limit. Clear evidence gives the responsible decision maker something usable."
+          },
+          {
+            "title": "Handle the unresolved part properly",
+            "body": "Bring a remaining barrier to the authorized roles with its task effect and relevant evidence. The next step may involve correction, further evaluation or a formal decision. Do not assume one outcome or take contract action beyond the leader’s assigned authority."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Separate three delivery facts",
+        "tabs": [
+          {
+            "label": "Verified result",
+            "body": "The described task or deliverable was checked under stated conditions and the finding supports closure of that issue. Keep the review’s scope visible; closure of one issue is not necessarily complete conformance."
+          },
+          {
+            "label": "Remaining issue",
+            "body": "A document or control still presents a barrier or lacks sufficient evidence. Record it as unresolved with a responsible next step instead of disguising it under an overall approval label."
+          },
+          {
+            "label": "Authorized decision",
+            "body": "The appropriate agency role decides how delivery, acceptance and contract obligations are handled. Learning examples can prepare questions but cannot supply procurement authority, legal conclusions or remedies."
+          }
+        ]
+      },
+      "check": {
+        "question": "The delivered agency configuration differs from the product covered by an earlier ACR. What should occur before claiming the delivery is accessible?",
+        "correct": "Appropriate verification of the actual delivered configuration and connected content, followed by the authorized decision process.",
+        "wrong": [
+          "Automatic acceptance because an ACR was received earlier.",
+          "A unilateral payment decision by any staff member taking this course.",
+          "An informal waiver whenever the invoice has already arrived."
+        ],
+        "feedbackCorrect": "Yes. The earlier evidence remains relevant within its scope, but the actual delivered result needs verification and the appropriate decision authority.",
+        "feedbackIncorrect": "An earlier report, invoice or course completion does not establish the final result or delegate contract powers. Keep evidence and authority connected without merging them."
+      },
+      "sorting": {
+        "heading": "Which part of delivery is this?",
+        "categories": [
+          "Evidence for review",
+          "Authorized decision",
+          "Unsupported action"
+        ],
+        "items": [
+          {
+            "text": "A tested final report has an incorrect reading sequence.",
+            "category": "Evidence for review"
+          },
+          {
+            "text": "The delivered configuration and tested task are identified.",
+            "category": "Evidence for review"
+          },
+          {
+            "text": "The responsible contracting role determines the applicable acceptance process.",
+            "category": "Authorized decision"
+          },
+          {
+            "text": "The authorized team considers the contract’s actual correction provisions.",
+            "category": "Authorized decision"
+          },
+          {
+            "text": "Any learner can change the contract after finishing this course.",
+            "category": "Unsupported action"
+          },
+          {
+            "text": "An invoice automatically overrides known access requirements.",
+            "category": "Unsupported action"
+          }
+        ]
+      },
+      "next": "The final lesson follows the purchase into updates, continuing support and honest reporting.",
+      "scenario": {
+        "context": "A practice vendor delivers unstructured final documents. The leader remembers a course example and tells the vendor payment will be stopped immediately, without consulting the responsible procurement role or contract.",
+        "prompt": "What should the leader do?",
+        "options": [
+          "Continue acting unilaterally because the barrier is real.",
+          "Document the final-document findings and involve the authorized accessibility and procurement roles to determine the actual contract response and current access support.",
+          "Ignore the documents because the software interface looks good."
+        ],
+        "responses": [
+          "A real concern does not expand the leader’s contract authority. Evidence should support the proper decision process rather than an improvised remedy.",
+          "This makes the barrier actionable while respecting the contract and agency roles. Separate the product correction from the current person’s access response.",
+          "The required documents are part of the service experience and the relevant deliverables. A usable screen does not establish access to them."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Draft a practice delivery note separating verified functions, an unresolved document issue and the next decision needed from the authorized agency role.",
+      "move": {
+        "control": "You can make delivery evidence clear and timely.",
+        "failure": "An ACR or invoice is treated as the acceptance result.",
+        "next": "Review the actual delivered task and route any contract decision through its proper authority."
+      }
+    },
+    {
+      "title": "Maintain access through updates and renewal",
+      "summary": "The agency needs a continuing owner, a barrier route and evidence about changes. Purchasing access once is not a permanent guarantee.",
+      "objective": "Plan ownership and relevant change review after delivery.",
+      "objectives": [
+        "Plan ownership and relevant change review after delivery.",
+        "Distinguish verified repair from an unfulfilled vendor promise.",
+        "Prepare a renewal discussion using task effects, current evidence and authorized exception processes."
+      ],
+      "takeaways": [
+        "Updates and new content can change access.",
+        "Keep current support, product repair and exception decisions distinct.",
+        "Use actual evidence when maintaining or renewing the service."
+      ],
+      "statement": "A purchase becomes reliable when someone owns the continuing work and the team checks what changed for users.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Maintenance preserves the task result as the product and the agency’s use evolve."
+      },
+      "intro": {
+        "heading": "Follow the purchase into actual use",
+        "body": "The practice reporting service works in the reviewed tasks at delivery. A later update changes the export control and adds a new training recording. A previous ACR and acceptance note do not prove that these changes remain accessible. Identify who monitors relevant updates, who can request evidence and who will arrange review of changed tasks and content through the actual agency process.\n\nA useful maintenance plan names the product owner, vendor contact through the contract, technical review route and way people report barriers. It should fit the service’s risk, use and authorized procedures rather than imposing a universal course schedule. Staff should not need to diagnose a criterion or disclose a disability to report that a required action cannot be completed. Technical investigation and an individual’s appropriate access response can proceed with the right information and confidentiality.\n\nTrack promises honestly. A vendor may say a fix is planned, released or installed. These are different from a verified result in the agency’s environment. Record the version and retest the relevant task and connected functions before treating the issue as resolved. If current evidence is missing, describe it as missing; do not infer that no complaint means there is no barrier.\n\nFor a renewal or major change, bring the current tasks, known barriers, product evidence and vendor performance to procurement and accessibility colleagues. An existing contract does not make access irrelevant. The state standard provides documented exception and exemption categories where applicable; a single source or ordinary schedule alone does not authorize a waiver. Follow the actual contract and authorized decision process rather than promising an automatic replacement or continuation.\n\nUse appropriately non-identifying patterns to improve the agency’s purchasing practice. Repeated inaccessible exports may suggest a gap in deliverable expectations or review, but examine the actual evidence before attributing the cause. The lesson’s optional maintenance note supports this reflection. It is not a policy determination or a substitute for current service, employment or legal duties."
+      },
+      "inThisLesson": [
+        "Assign continuing ownership through actual roles.",
+        "Review relevant updates and new content.",
+        "Verify promised repairs in the used environment.",
+        "Bring evidence to renewal and exception questions."
+      ],
+      "keyStatement": "A promise becomes a result only when the delivered change is appropriately verified.",
+      "flashcards": [
+        {
+          "front": "Maintenance owner",
+          "back": "The responsible person or unit through the agency process that coordinates continuing issues, changes and review. The role does not replace procurement or specialist authority."
+        },
+        {
+          "front": "Promised repair",
+          "back": "A future commitment or reported change. It remains distinct from evidence that the task now works in the agency’s actual environment."
+        },
+        {
+          "front": "Relevant change",
+          "back": "A new function, interface, configuration or content change that may affect access. Review its impact through the appropriate methods rather than treating a past pass as permanent."
+        },
+        {
+          "front": "Renewal evidence",
+          "back": "Current information about tasks, barriers, product versions and performance used in the authorized renewal discussion. Familiarity or a past approval alone is incomplete evidence."
+        }
+      ],
+      "accordion": {
+        "heading": "Keep the service accountable",
+        "items": [
+          {
+            "title": "Make the reporting route usable",
+            "body": "People need a clear way to report a blocked task and receive the appropriate response. Explain what practical information helps without demanding a diagnosis or a full technical audit. The owner can route product findings and current access needs to their respective processes."
+          },
+          {
+            "title": "Review the change, not only the release note",
+            "body": "A vendor’s note may describe a fix, but the actual deployment or configuration can differ. Check the relevant task and maintain the evidence. If a new issue appears, record it rather than using the older report to dismiss the concern."
+          },
+          {
+            "title": "Use renewal as an evidence conversation",
+            "body": "Discuss the current product, known issues and meaningful options with authorized colleagues. Do not silently continue a barrier because the tool is familiar or assert that every limitation forces the same outcome. The requirements, contract and actual evidence govern the decision."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Read the repair status honestly",
+        "tabs": [
+          {
+            "label": "Planned",
+            "body": "The vendor describes future work. Keep the expected step visible without labeling it complete or giving an unsupported guarantee that the next version will resolve the task."
+          },
+          {
+            "label": "Delivered",
+            "body": "The change is available or installed. Confirm which version and environment. Delivery matters, but the task still needs the appropriate verification before its barrier is closed."
+          },
+          {
+            "label": "Verified",
+            "body": "The relevant result was checked in the actual context with stated methods. Record the finding and scope. A verified issue does not automatically certify unrelated tasks or every later update."
+          }
+        ]
+      },
+      "check": {
+        "question": "A vendor release note says a keyboard barrier is fixed, but the agency has not checked the installed version. What should the status say?",
+        "correct": "The repair is reported or delivered as applicable, but effectiveness in the agency task remains unverified and needs the assigned check.",
+        "wrong": [
+          "The issue is fully resolved because release notes are conformance certificates.",
+          "The vendor is necessarily dishonest because verification is pending.",
+          "No updates ever need review after initial acceptance."
+        ],
+        "feedbackCorrect": "Yes. This distinguishes the vendor’s report from the agency’s verified task result. It keeps progress visible without making an unsupported accusation or pass.",
+        "feedbackIncorrect": "A release note reports a repair; it is not a conformance certificate or proof that the installed version works in the required task. Pending verification does not establish a dishonest motive. Initial acceptance also cannot establish the accessibility of every later update, so relevant changes need the assigned review. State what is reported or delivered and what effectiveness check remains."
+      },
+      "sorting": {
+        "heading": "Sort the continuing-work note",
+        "categories": [
+          "Future or reported change",
+          "Verified scoped result",
+          "Unsupported permanence"
+        ],
+        "items": [
+          {
+            "text": "The vendor plans to address the issue in a later release.",
+            "category": "Future or reported change"
+          },
+          {
+            "text": "The relevant installed-version task was retested and documented.",
+            "category": "Verified scoped result"
+          },
+          {
+            "text": "Initial acceptance means every later update is accessible.",
+            "category": "Unsupported permanence"
+          },
+          {
+            "text": "The release note describes a repair not yet checked by the agency.",
+            "category": "Future or reported change"
+          },
+          {
+            "text": "The new training captions were reviewed in the delivered recording.",
+            "category": "Verified scoped result"
+          },
+          {
+            "text": "No complaints prove that every user has effective access.",
+            "category": "Unsupported permanence"
+          }
+        ]
+      },
+      "next": "Use the job aid to prepare a practice purchase from need through maintenance. Apply the real agency process to any actual purchasing work.",
+      "scenario": {
+        "context": "A practice unit is renewing a service. It has a three-year-old ACR, several unresolved export findings and a vendor promise of a future fix. The manager wants the report to say there are no barriers because no recent complaints arrived.",
+        "prompt": "What is the sound response?",
+        "options": [
+          "Treat the silence as proof of complete access.",
+          "Invent an immediate cancellation requirement without reviewing the contract.",
+          "Present the current evidence and gaps, verify the relevant version and route the renewal, current support and any exception question through their authorized processes."
+        ],
+        "responses": [
+          "A lack of complaints does not resolve documented issues or missing evidence. People may encounter barriers without reporting them through this route.",
+          "A learning example does not establish a universal contract remedy. Use the actual authority, requirements and terms.",
+          "This gives the responsible team an honest basis for a decision and follow-through. Keep future promises separate from delivered and verified results."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Prepare a practice maintenance and renewal note naming the owner, current product version, known barrier, current support route, vendor commitment and evidence needed for closure.",
+      "move": {
+        "control": "You can preserve ownership and an honest status after purchase.",
+        "failure": "A past ACR or quiet complaint log becomes a permanent guarantee.",
+        "next": "Review meaningful changes, verify repairs and bring current evidence to the authorized renewal discussion."
+      }
+    }
+  ],
+  "jobAid": {
+    "subtitle": "Prepare an accessible digital purchase with the responsible agency team",
+    "remember": [
+      "Define the actual tasks before selecting a favorite product.",
+      "An ACR is evidence, not certification or acceptance testing.",
+      "Include administrators, documentation, training and generated outputs when necessary.",
+      "Use authorized procurement criteria, contract authority and exception processes."
+    ],
+    "sections": [
+      {
+        "heading": "Before selection",
+        "items": [
+          "Describe the necessary work result, users and connected deliverables.",
+          "Identify procurement, accessibility and product-owner roles through the actual agency process.",
+          "Ask for the relevant product report, service capability and vendor support information."
+        ]
+      },
+      {
+        "heading": "Review the evidence",
+        "items": [
+          "Check product version, methods, interface scope and informative explanations.",
+          "Connect reported limitations to required tasks without inventing a percentage pass.",
+          "Specify useful demonstrations and record observations, unavailable parts and limits."
+        ]
+      },
+      {
+        "heading": "Delivery and continuing use",
+        "items": [
+          "Arrange appropriate verification of the delivered configuration and final content.",
+          "Route acceptance, payment, contract changes and remedies to authorized roles.",
+          "Keep current access responses separate from product repair and exception decisions.",
+          "Assign continuing ownership, review relevant updates and verify promised repairs."
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "MNIT procurement for accessible IT products and services",
+      "href": "https://mn.gov/mnit/about-mnit/accessibility/it-procurement.jsp",
+      "note": "Current state guidance on product and service evidence, demonstrations, all interfaces, documents and acceptance testing."
+    },
+    {
+      "title": "Minnesota State Digital Accessibility Standard, version 4",
+      "href": "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
+      "note": "Current adopted requirements, coverage and documented exception/exemption conditions."
+    },
+    {
+      "title": "MNIT expectations for accessible documents",
+      "href": "https://mn.gov/mnit/about-mnit/accessibility/expectations-documents.jsp",
+      "note": "Updated May 2024; expectations for final vendor Word, PDF and Excel documents."
+    },
+    {
+      "title": "MNIT accessibility policies and standards",
+      "href": "https://mn.gov/mnit/government/policies/accessibility/",
+      "note": "Official current standard and exception-process information."
+    },
+    {
+      "title": "ITI: VPAT and Accessibility Conformance Reports",
+      "href": "https://www.itic.org/policy/accessibility/vpat",
+      "note": "The template author explains that a completed VPAT is an ACR and that there is no VPAT certification or ITI approval of completed reports."
+    },
+    {
+      "title": "GSA: request accessibility information from vendors and contractors",
+      "href": "https://www.section508.gov/buy/request-accessibility-information/",
+      "note": "Federal procurement guidance offered here as additional evidence-planning practice. It does not establish Minnesota procurement rules or authority."
+    }
+  ]
+}

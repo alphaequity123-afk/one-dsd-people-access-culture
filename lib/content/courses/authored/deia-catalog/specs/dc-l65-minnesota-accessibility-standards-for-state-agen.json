@@ -1,0 +1,977 @@
+{
+  "id": "dc-l65-minnesota-accessibility-standards-for-state-agen",
+  "topicId": "L65",
+  "subtitle": "Learn to apply Minnesota’s digital accessibility standard for state agencies to the information and tools your team creates, changes and buys.",
+  "scope": "For DHS leaders overseeing digital information, internal work tools or public services. This course explains the state standard and practical review responsibilities. It does not replace a complete technical evaluation, an accommodation process or an authorized exception decision.",
+  "introTranscript": "Accessibility belongs in ordinary agency work: a staff document, an online service, a training recording and a purchased tool. Minnesota’s digital accessibility standard gives that work a common foundation. Across six lessons, you will identify the scope, understand the adopted requirements, ask useful review questions and recognize when a formal process is needed. The examples are practice. Suggested planning routines help teams act on the standard; they do not create new DHS policy or promise that completing a short check proves compliance. Work at your own pace and use the linked primary sources when a specific requirement needs closer examination.",
+  "lessons": [
+    {
+      "title": "Include the work people use inside and outside the agency",
+      "summary": "The state standard concerns digital information and tools for staff as well as people using public services.",
+      "objective": "Identify internal and external digital work that belongs in an accessibility inventory.",
+      "objectives": [
+        "Identify internal and external digital work that belongs in an accessibility inventory.",
+        "Explain why a free tool or contracted public website is not automatically outside the standard.",
+        "Recognize when the date and history of a product need specialist review."
+      ],
+      "takeaways": [
+        "The standard is not limited to the public website.",
+        "Cost and location alone do not determine coverage.",
+        "Use the product’s history and current work to identify the applicable requirements."
+      ],
+      "statement": "A person experiences the document or tool they must use. An internal label does not remove an access barrier.",
+      "image": {
+        "src": "/images/covers/stock-people-13.jpg",
+        "caption": "A shared document can shape participation as much as a public webpage."
+      },
+      "intro": {
+        "heading": "Start with the information and the task",
+        "body": "A practice DHS unit prepares an internal orientation document and selects a free scheduling tool. The manager assumes accessibility applies only to material on the public website. That misses the state standard’s purpose: improving access to information technology for government employees and end users. Internal staff tools and content can matter just as much as public pages. A new employee who cannot read the orientation document has encountered a real work barrier.\n\nThe standard concerns information and communication technology, including electronic documents, software, web applications, websites, videos and several types of equipment. Executive branch agencies and their staff apply it when creating, modifying or procuring relevant technology and content for internal or external use. Software available without cost is included in the stated applicability. A free download does not become accessible simply because it bypasses a purchase invoice.\n\nRead the timing carefully. Version 4 is effective July 1, 2024 and applies to technology procured, developed, substantially modified or substantially enhanced under its applicability terms. Work after 2010 can remain covered by earlier standard versions. The standard excludes procurement or development processes initiated before September 1, 2010, but that statement is not permission to ignore other laws or a present access need. Changes and other responsibilities may matter. Ask the appropriate accessibility staff to examine a product’s history when it is unclear.\n\nExternal websites provided under state contract must comply with the state standard. External pages outside the state’s editorial control are distinguished in the standard. Do not label a contracted service as independent merely because a vendor hosts it. For planning, list the real task, content, owner, contract or development history and any known barrier. This inventory does not decide an exception. It makes the right review possible and prevents a necessary staff or service step from being overlooked."
+      },
+      "inThisLesson": [
+        "Inventory internal and external work.",
+        "Include free software and contracted services.",
+        "Check the relevant product history.",
+        "Separate a planning question from a coverage decision."
+      ],
+      "keyStatement": "Include the tools and information people need, then verify the requirements that apply.",
+      "flashcards": [
+        {
+          "front": "Information and communication technology",
+          "back": "Technology and related content used to create, receive, store or communicate electronic information. Documents and videos are part of the subject, not merely large computer systems."
+        },
+        {
+          "front": "Internal use",
+          "back": "Use by agency employees. The state standard includes relevant work for internal as well as external use; an internal audience is not an automatic exemption."
+        },
+        {
+          "front": "Editorial control",
+          "back": "The ability to control the content of an external page. A link to an independent outside page is different from a website supplied under a state contract."
+        },
+        {
+          "front": "Product history",
+          "back": "When procurement or development began and what has changed. This history helps the appropriate staff identify the applicable state standard; age alone does not settle every duty."
+        }
+      ],
+      "accordion": {
+        "heading": "Items that are easy to miss",
+        "items": [
+          {
+            "title": "A shared staff template",
+            "body": "A template copied across the unit can spread a barrier repeatedly. Include it in the inventory, identify its owner and ask how staff receive and complete it. Repairing the template can prevent the same problem in many later documents."
+          },
+          {
+            "title": "A no-cost service",
+            "body": "A free tool may still be procured or adopted for agency work. Review its functions, access evidence and the applicable approval process. Zero price does not establish coverage, privacy suitability or accessibility."
+          },
+          {
+            "title": "A linked service",
+            "body": "A front page may lead to a vendor form or downloadable file needed to finish the task. Determine who controls and provides those steps. A task inventory is stronger than a list of only the pages your team edits."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Use the correct distinction",
+        "tabs": [
+          {
+            "label": "Public and internal",
+            "body": "Both can be within the state standard. Public-service and employment duties may also apply through different processes. Do not force every access question through one route simply because the technology is similar."
+          },
+          {
+            "label": "New and existing",
+            "body": "New work and substantial changes need the applicable current review. Existing technology may be covered by earlier versions and other obligations. Describe what you know rather than assuming that everything old is exempt or that every item has the same history."
+          },
+          {
+            "label": "Controlled and independent",
+            "body": "The standard distinguishes contracted external websites from external pages outside state editorial control. Verify the arrangement instead of deciding from the web address, company logo or the fact that a page is linked."
+          }
+        ]
+      },
+      "check": {
+        "question": "A manager selects a new free tool for required internal scheduling and says the state standard only covers public websites. What is the sound response?",
+        "correct": "Include the tool in the agency’s applicable review; internal use and no cost do not automatically remove it from the state standard.",
+        "wrong": [
+          "Exclude the tool because no money changed hands.",
+          "Exclude it because staff are not members of the public.",
+          "Assume every external link is a contracted state website."
+        ],
+        "feedbackCorrect": "Yes. The standard’s scope includes relevant internal work and no-cost software. The actual tool and adoption process still need the responsible review.",
+        "feedbackIncorrect": "Price, audience and address are incomplete shortcuts. Identify the technology, how the agency uses it and the relevant history or arrangement before deciding the requirements."
+      },
+      "sorting": {
+        "heading": "Sort the inventory note",
+        "categories": [
+          "Include in the review",
+          "Verify the history or arrangement",
+          "Unsupported shortcut"
+        ],
+        "items": [
+          {
+            "text": "A newly developed staff orientation document.",
+            "category": "Include in the review"
+          },
+          {
+            "text": "A free application selected for agency work.",
+            "category": "Include in the review"
+          },
+          {
+            "text": "The vendor website’s contract and editorial responsibilities are unclear.",
+            "category": "Verify the history or arrangement"
+          },
+          {
+            "text": "The system’s development began long ago and has since changed.",
+            "category": "Verify the history or arrangement"
+          },
+          {
+            "text": "Internal material never needs accessible design.",
+            "category": "Unsupported shortcut"
+          },
+          {
+            "text": "No-cost software cannot be covered by the standard.",
+            "category": "Unsupported shortcut"
+          }
+        ]
+      },
+      "next": "Next, distinguish the adopted state requirements from newer recommendations and general impressions of accessibility.",
+      "scenario": {
+        "context": "A DHS team is replacing a shared staff form. The lead finds a much older form and proposes copying it unchanged, saying that old forms are exempt. The new form will be used by every new employee.",
+        "prompt": "What should the leader do?",
+        "options": [
+          "Copy it without review because the original document is old.",
+          "Identify the new work, include it in the relevant accessibility review and ask appropriate staff about any history question instead of assuming a blanket exemption.",
+          "Remove the form from orientation without arranging another way to complete its purpose."
+        ],
+        "responses": [
+          "The new work and actual applicability need attention. An old source does not automatically exempt a newly created or changed deliverable.",
+          "This identifies the work people will use and brings the coverage question to the proper review. Other duties and current access needs are not settled by age alone.",
+          "Removing a step without understanding its purpose can create a different service or work problem. Review the task and make the necessary information accessible."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Create a practice inventory of one public page, one internal document and one work tool. State the task, owner and history or arrangement that needs checking.",
+      "move": {
+        "control": "You can make overlooked work visible.",
+        "failure": "Only public pages or paid tools enter the review.",
+        "next": "Include the actual staff and public tasks, then verify uncertain coverage with the responsible staff."
+      }
+    },
+    {
+      "title": "Know which requirements Minnesota adopted",
+      "summary": "The state standard adopts WCAG 2.1 A and AA and Section 508 with stated qualifications. General familiarity is not a complete evaluation.",
+      "objective": "State the WCAG version and levels adopted in the current Minnesota standard.",
+      "objectives": [
+        "State the WCAG version and levels adopted in the current Minnesota standard.",
+        "Explain why the standard is not an unqualified copy of Section 508.",
+        "Distinguish a technical conformance finding from a useful but limited first check."
+      ],
+      "takeaways": [
+        "Version 4 adopts WCAG 2.1 Levels A and AA with its stated qualification.",
+        "Section 508 is adopted with specific state qualifications.",
+        "A pleasant appearance or automated score does not establish complete conformance."
+      ],
+      "statement": "Use the actual adopted standard. “Accessible enough” and “the newest guideline” do not answer the same question.",
+      "image": {
+        "src": "/images/covers/stock-people-13.jpg",
+        "caption": "A standard gives the team a shared basis for evidence, not a substitute for examining the task."
+      },
+      "intro": {
+        "heading": "Be accurate without becoming the technical evaluator",
+        "body": "A practice project note says the new application meets Minnesota’s standard because it follows Section 508 and has a modern design. The note is too broad. The state standard version 4 adopts WCAG 2.1 Levels A and AA and Section 508 with stated qualifications. A leader needs to name that basis accurately and ask for evidence appropriate to the application. They do not need to memorize every success criterion or personally conduct the full technical assessment.\n\nWCAG organizes requirements around whether people can perceive information, operate the interface, understand it and use it with compatible technologies. Its success criteria are specific, and conformance includes all applicable criteria at the claimed level. At Level AA, Level A requirements matter too. A few successful checks do not prove every criterion has been met. A good contrast ratio, for example, does not answer whether the person can complete a form with a keyboard or understand an error.\n\nThe state standard includes qualifications to Section 508 and exempts WCAG 2.1 criterion 4.1.1 on parsing in anticipation of WCAG 2.2. It does not state that all WCAG 2.2 requirements have thereby become the adopted standard. Among its Section 508 qualifications, the legacy ICT provision E202.2 does not apply, and there are specific changes involving agency communications, speaker focus and definitions affected by state law or policy. Specialists should use the exact standard rather than a general claim that every federal provision is adopted unchanged.\n\nNewer guidance can still help a team improve its work. Label it accurately as an additional design choice or applicable agency requirement, rather than silently changing the statewide adoption. For a review, ask which version, levels and state qualifications were used; which parts and states of the tool were examined; and what remains unresolved. An honest, limited report is more useful than a broad assurance that cannot be supported."
+      },
+      "inThisLesson": [
+        "Name the adopted version and levels.",
+        "Understand why qualifications matter.",
+        "Distinguish criteria from general impressions.",
+        "Ask for the scope of a conformance review."
+      ],
+      "keyStatement": "The evidence should match the standard and the scope of the claim.",
+      "flashcards": [
+        {
+          "front": "WCAG",
+          "back": "Web Content Accessibility Guidelines. Minnesota version 4 adopts version 2.1 Levels A and AA with its stated qualification; a newer published version is not automatically the state adoption."
+        },
+        {
+          "front": "Success criterion",
+          "back": "A specific requirement used to evaluate accessibility. Passing one criterion does not imply the other applicable criteria have passed."
+        },
+        {
+          "front": "Conformance",
+          "back": "Meeting the relevant standard’s requirements for the stated scope and level. A broad conformance claim requires more evidence than a quick first check."
+        },
+        {
+          "front": "Qualified adoption",
+          "back": "Adoption with stated changes or limits. Minnesota’s Section 508 adoption must be read with those state qualifications rather than treated as an unchanged federal text."
+        }
+      ],
+      "accordion": {
+        "heading": "Questions that improve a review note",
+        "items": [
+          {
+            "title": "Which standard was used?",
+            "body": "Ask for the actual version, level and state qualifications. If the report simply says “ADA compliant” or “508,” clarify what technical work was performed. A broad label can hide different standards or a narrow test."
+          },
+          {
+            "title": "What did the review cover?",
+            "body": "An application can have public screens, staff functions, documents and error states. A review of the welcome screen does not establish the rest. The report should identify the tested product version and relevant tasks so later readers know its limits."
+          },
+          {
+            "title": "What is still unknown?",
+            "body": "Unexamined criteria, missing vendor evidence or an unfinished manual test belong in the report as unresolved. Do not convert missing information into a pass. Assign the remaining work to someone with the appropriate skill and authority."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Three different statements",
+        "tabs": [
+          {
+            "label": "Adopted requirement",
+            "body": "“The review uses Minnesota version 4, including WCAG 2.1 A and AA and qualified Section 508.” This identifies the basis; evidence is still needed to show the particular product meets it."
+          },
+          {
+            "label": "Additional improvement",
+            "body": "“The design also uses a newer recommended feature.” That may improve access, but it should be distinguished from the adoption and any other applicable requirement. Do not portray a recommendation as a statewide mandate without support."
+          },
+          {
+            "label": "Limited observation",
+            "body": "“The first check found that these controls can be reached by keyboard.” This is useful evidence about the checked task. It does not establish all WCAG requirements or the entire application’s accessibility."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which statement accurately describes Minnesota’s current digital standard?",
+        "correct": "It adopts WCAG 2.1 Levels A and AA and Section 508 with stated state qualifications; staff must use the actual text.",
+        "wrong": [
+          "It adopts every WCAG 2.2 requirement because parsing is exempt.",
+          "It adopts Section 508 unchanged, so state qualifications can be ignored.",
+          "A modern appearance automatically meets its technical requirements."
+        ],
+        "feedbackCorrect": "Yes. This identifies both the adopted basis and its qualifications. The product still needs a review suited to its scope; the name of a standard is not the result of that review.",
+        "feedbackIncorrect": "Do not infer a whole new adoption from one qualification. Visual polish and shorthand federal labels do not replace the actual state text or the evidence for a conformance claim."
+      },
+      "sorting": {
+        "heading": "What kind of claim is it?",
+        "categories": [
+          "Accurate basis",
+          "Limited evidence",
+          "Unsupported assurance"
+        ],
+        "items": [
+          {
+            "text": "Version 4 uses WCAG 2.1 A and AA with its stated qualification.",
+            "category": "Accurate basis"
+          },
+          {
+            "text": "The report tested keyboard access in the listed tasks only.",
+            "category": "Limited evidence"
+          },
+          {
+            "text": "One automated score proves complete accessibility.",
+            "category": "Unsupported assurance"
+          },
+          {
+            "text": "Section 508 must be read with the state qualifications.",
+            "category": "Accurate basis"
+          },
+          {
+            "text": "The checked heading structure is clear on these two documents.",
+            "category": "Limited evidence"
+          },
+          {
+            "text": "Every WCAG 2.2 criterion is automatically a Minnesota requirement.",
+            "category": "Unsupported assurance"
+          }
+        ]
+      },
+      "next": "Next, examine how ordinary content decisions can either support or block access.",
+      "scenario": {
+        "context": "A practice leader receives a dashboard saying “100% accessible.” The only supporting evidence is an automated scan of the welcome page, and the report does not name the adopted standard.",
+        "prompt": "What should the leader ask?",
+        "options": [
+          "Keep the label because high scores are reassuring.",
+          "Ask the designer to use a brighter color palette and call the issue resolved.",
+          "Clarify the standard, tested scope and manual evaluation still needed, and replace the broad claim with the evidence actually available."
+        ],
+        "responses": [
+          "The score has a limited scope. Reassurance cannot substitute for evidence about the tasks and requirements not tested.",
+          "Visual style can matter, but changing a palette does not address an unsupported conformance claim or the untested functions.",
+          "This preserves the useful scan result while making its limits clear. The next review can address the remaining requirements instead of starting from an inaccurate assurance."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Rewrite a practice “fully accessible” claim into a precise note stating the standard, tested scope and unresolved work.",
+      "move": {
+        "control": "You can ask for accurate claims and a clear review scope.",
+        "failure": "A slogan or score is repeated as proof of complete compliance.",
+        "next": "Name the basis, retain the supported observations and assign the untested parts."
+      }
+    },
+    {
+      "title": "Build accessibility into everyday content",
+      "summary": "Document structure, meaningful alternatives and usable media are ordinary content responsibilities, not finishing touches.",
+      "objective": "Identify a document’s structure and alternative-text needs from its purpose.",
+      "objectives": [
+        "Identify a document’s structure and alternative-text needs from its purpose.",
+        "Distinguish a decorative image from an image carrying necessary information.",
+        "Plan a usable video or form review rather than relying on one automatic feature."
+      ],
+      "takeaways": [
+        "Use meaningful structure so people can navigate information.",
+        "Alternatives should preserve purpose, not merely describe appearance.",
+        "Automatic features need review and do not cover every access requirement."
+      ],
+      "statement": "A clear-looking document can still be difficult to navigate or use. Structure and meaning must travel with the content.",
+      "image": {
+        "src": "/images/covers/stock-people-13.jpg",
+        "caption": "Information should remain useful when it is read, heard, enlarged or navigated in a different way."
+      },
+      "intro": {
+        "heading": "Make the content carry its meaning",
+        "body": "A practice DSD orientation handout uses large bold text to look like headings and a picture of a chart to show application steps. Visually, it seems organized. But visual size alone may not identify headings to assistive technology, and a chart image may contain the only explanation of the sequence. The author should use the document’s heading structure and provide the chart’s necessary information in an accessible form. The purpose is navigation and understanding, not simply passing a formatting checklist.\n\nWCAG’s information-and-relationships and meaningful-sequence requirements help explain why structure matters. The technical method differs by format, so use the relevant agency authoring guidance and review the final document, not only the draft. A well-structured source can still be damaged by conversion or export. Tables need an understandable relationship between headers and data; using a complex table merely to position text can make that relationship confusing.\n\nText alternatives depend on purpose. A decorative image should not burden a screen-reader user with irrelevant detail. An informative image needs an alternative that conveys its necessary meaning. A chart may require more than a brief label: the trend, important figures or relationships need an accessible explanation or data presentation appropriate to the task. Do not make a person infer essential information from color alone.\n\nMedia and forms require their own attention. Automatic captions can contain errors in names, numbers or specialized terms. Check them, and consider the other applicable media requirements, including access to important visual information. A form needs understandable labels, instructions, errors and a usable path to completion. A transcript does not automatically meet every video requirement, and a field’s visible placeholder is not automatically an adequate label.\n\nAs a leader, give authors a usable template, review time and a clear route for questions. Do not require each person to invent a method. Accessibility is easier to maintain when content choices are supported before the final deadline rather than added under pressure after publication."
+      },
+      "inThisLesson": [
+        "Use structure that travels with the file.",
+        "Match alternatives to the content’s purpose.",
+        "Review captions and essential visual information.",
+        "Check labels, errors and the completed task."
+      ],
+      "keyStatement": "Preserve the meaning and relationships people need, not merely the visual arrangement.",
+      "flashcards": [
+        {
+          "front": "Document structure",
+          "back": "The headings, lists, tables and reading sequence that identify how information relates. Visual bolding alone may not create this structure."
+        },
+        {
+          "front": "Text alternative",
+          "back": "Accessible text serving the purpose of non-text content. Its content depends on whether the image informs, acts as a control or is purely decorative."
+        },
+        {
+          "front": "Caption review",
+          "back": "Checking that captions accurately represent relevant speech and sounds. An automatic caption feature is a starting point, not proof of accurate access."
+        },
+        {
+          "front": "Task completion",
+          "back": "Whether the person can understand and finish the actual activity, including instructions, inputs, errors and confirmation rather than only reading an introduction."
+        }
+      ],
+      "accordion": {
+        "heading": "A useful content conversation",
+        "items": [
+          {
+            "title": "Ask what the chart means",
+            "body": "What decision or understanding does the chart support? Preserve the relevant values, relationships and conclusion in an accessible alternative. Writing only “chart” identifies the object but does not convey its information. Avoid making an unsupported claim about the data in the alternative."
+          },
+          {
+            "title": "Review the exported file",
+            "body": "A source document may contain headings while the exported file has a different reading order or lost structure. Test the version people will actually receive. Keep a source that can be maintained, and give assigned accessibility staff time to check conversion problems."
+          },
+          {
+            "title": "Give media the right review",
+            "body": "Check captions for accuracy and consider whether important visual actions or text need another accessible presentation. Ask qualified accessibility staff about the applicable media criteria. A single feature cannot be assumed to answer all audio and visual access questions."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Choose according to purpose",
+        "tabs": [
+          {
+            "label": "Decorative image",
+            "body": "If the image provides no necessary information and has no function, the implementation should let assistive technology ignore it. Adding an elaborate irrelevant description can make the experience harder rather than more accessible."
+          },
+          {
+            "label": "Informative chart",
+            "body": "Preserve the information needed for the task. A short alternative may identify the chart while a nearby accessible explanation or table gives necessary detail. The appropriate approach depends on the content and applicable criteria."
+          },
+          {
+            "label": "Form control",
+            "body": "The person needs to understand the action and how to complete it. A control’s accessible name should describe its purpose. Check instructions and error feedback in the actual interaction, not only the initial screen."
+          }
+        ]
+      },
+      "check": {
+        "question": "An orientation video has automatic captions. What is the strongest next step?",
+        "correct": "Review their accuracy and the video’s other applicable media requirements, including access to necessary visual information.",
+        "wrong": [
+          "Declare the entire video accessible because captions exist.",
+          "Remove all visual examples regardless of their purpose.",
+          "Replace the video with an image of its script and assume that resolves access."
+        ],
+        "feedbackCorrect": "Yes. Captions can contain errors, and other media requirements may apply. The review should preserve the teaching purpose while checking the actual information people need.",
+        "feedbackIncorrect": "A feature’s existence does not prove accuracy or full coverage. Removing teaching or substituting another inaccessible format is not an evidence-based review of the content."
+      },
+      "sorting": {
+        "heading": "Match the action to the need",
+        "categories": [
+          "Structure and navigation",
+          "Alternative meaning",
+          "Review an interaction or media feature"
+        ],
+        "items": [
+          {
+            "text": "Use actual heading styles to organize a document.",
+            "category": "Structure and navigation"
+          },
+          {
+            "text": "Check the final file’s reading sequence after export.",
+            "category": "Structure and navigation"
+          },
+          {
+            "text": "Provide the important chart information in an accessible form.",
+            "category": "Alternative meaning"
+          },
+          {
+            "text": "Implement a purely decorative image so it can be ignored.",
+            "category": "Alternative meaning"
+          },
+          {
+            "text": "Check specialized terms and numbers in automatic captions.",
+            "category": "Review an interaction or media feature"
+          },
+          {
+            "text": "Test whether form errors identify what needs correction.",
+            "category": "Review an interaction or media feature"
+          }
+        ]
+      },
+      "next": "Next, make a first review useful without confusing it with a full technical evaluation.",
+      "scenario": {
+        "context": "In this example, a team publishes a picture of an application workflow. The only alternative text says “workflow chart.” The chart contains deadlines and required actions not stated anywhere else.",
+        "prompt": "What should the leader request?",
+        "options": [
+          "A description of the picture’s colors only.",
+          "An accessible presentation of the required actions, sequence and deadlines, with a review of the final content.",
+          "No alternative because staff can ask someone else to read it."
+        ],
+        "responses": [
+          "Colors alone do not convey the required information. The alternative should serve the chart’s actual purpose.",
+          "This preserves the necessary meaning rather than only identifying the object. Check that the accessible version has the same current information and remains maintainable.",
+          "Depending on someone else to interpret necessary content is not an adequate default. Examine the applicable requirements and provide effective access through the responsible process."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Choose a practice handout containing one heading, one chart and one form field. Explain what each needs to remain meaningful when visual presentation is not available.",
+      "move": {
+        "control": "You can provide templates and review time for content authors.",
+        "failure": "Formatting is checked only for visual polish.",
+        "next": "Review meaning, structure and the final delivered format before reusing the material."
+      }
+    },
+    {
+      "title": "Use checks as evidence, not as a blanket pass",
+      "summary": "A first review can reveal barriers. Complete evaluation requires an appropriate scope and several forms of evidence.",
+      "objective": "Explain the limits of automated and preliminary checks.",
+      "objectives": [
+        "Explain the limits of automated and preliminary checks.",
+        "Write a reproducible barrier description with the task and observed result.",
+        "Plan a review that includes relevant states, connected steps and manual evaluation."
+      ],
+      "takeaways": [
+        "Initial checks are valuable but incomplete.",
+        "Describe what happened and what was actually tested.",
+        "Use appropriate specialist evaluation for a broader conformance claim."
+      ],
+      "statement": "A useful finding tells another person how to see the barrier and what it affects. A score alone cannot do that.",
+      "image": {
+        "src": "/images/covers/stock-people-13.jpg",
+        "caption": "Review evidence should follow the task into errors, confirmation and connected documents."
+      },
+      "intro": {
+        "heading": "Build a clear picture from several kinds of evidence",
+        "body": "A practice DHS project passes an automated scan, but a staff member cannot reach the final submit control with a keyboard. Both facts can be true. Automated tools identify certain patterns; they do not establish every requirement or every task result. W3C’s Easy Checks guidance is explicit that a first review is not a complete evaluation. A leader can use these checks to identify problems and organize more thorough review without overstating what they prove.\n\nStart with representative tasks and important states. For a form, examine the beginning, data entry, error feedback, return to earlier steps, submission and confirmation. Include the documents and contracted steps needed to finish. If only the home screen was tested, the note should say so. A review’s sample, product version and methods affect how far its findings can be interpreted.\n\nManual checks and appropriate assistive-technology testing complement automated results. A keyboard path may reveal an unreachable control or a trap. Text enlargement may expose missing content or controls. Qualified accessibility staff can connect the observed barrier to the applicable criteria and test other aspects that a casual inspection cannot establish. Feedback from people with disabilities can inform the real experience, but asking one employee to try a tool does not make that employee responsible for certifying it. Participation should be voluntary and supported, without asking for a diagnosis.\n\nRecord findings in reproducible terms: the task, product or file version, steps taken, expected result, observed result and who will investigate. Avoid guessing the person’s ability or the developer’s motive. The note can also identify a current support need, but a workaround does not automatically close the underlying barrier.\n\nWhen the team repairs an issue, repeat the relevant task and check that connected functions still work. Keep the finding open until the evidence supports closure through the appropriate process. An accurate unresolved item is more useful than a premature pass that causes the next person to encounter the same obstacle."
+      },
+      "inThisLesson": [
+        "Separate initial checks from full evaluation.",
+        "Include task states and connected steps.",
+        "Describe a reproducible barrier.",
+        "Confirm the result after a repair."
+      ],
+      "keyStatement": "State the method and scope, and treat untested requirements as unknown.",
+      "flashcards": [
+        {
+          "front": "Automated check",
+          "back": "A tool-based check that can identify some issues. Its result does not establish every criterion, state or human-use question."
+        },
+        {
+          "front": "Manual evaluation",
+          "back": "An appropriate person examines aspects that need human judgment or interaction. The method and scope should be recorded along with findings."
+        },
+        {
+          "front": "Reproducible finding",
+          "back": "A description a colleague can use to repeat the task and observe the barrier. It explains what happened rather than labeling a person as the problem."
+        },
+        {
+          "front": "Retest",
+          "back": "A focused check after a change to confirm the repair and relevant connected behavior. A completed development ticket alone is not evidence of the task result."
+        }
+      ],
+      "accordion": {
+        "heading": "Make the finding actionable",
+        "items": [
+          {
+            "title": "Describe the actual task",
+            "body": "“The person cannot complete the form” is a useful start but lacks detail. Record the relevant steps, field or control and the observed result in the tested version. Avoid putting unnecessary personal or medical details in a technical issue record."
+          },
+          {
+            "title": "Keep scope visible",
+            "body": "A sample of pages may be reasonable for a planned evaluation, but it must not be silently presented as every page and state. Ask accessibility staff what the methods can establish and what additional work is needed before the claimed result can be supported."
+          },
+          {
+            "title": "Close with evidence",
+            "body": "A developer may report that code changed, while the submitted file or deployed tool still has the barrier. Retest the delivered version and the relevant path. Capture the result and any remaining issue rather than using an administrative closure as a substitute for access."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Evidence can answer different questions",
+        "tabs": [
+          {
+            "label": "An automated result",
+            "body": "Useful for the checks the tool actually performs. It can guide attention and repeated testing, but does not cover all human judgment, assistive-technology interaction or the meaning of content."
+          },
+          {
+            "label": "A user’s experience",
+            "body": "Useful for understanding a barrier in actual use. Respect the person’s report and arrange current support. It does not require them to diagnose the technical criterion or disclose medical details."
+          },
+          {
+            "label": "A planned evaluation",
+            "body": "Useful for a broader assessment when its scope, standard, methods and limitations are clear. The responsible accessibility staff should explain the basis for the conclusion, including unresolved findings and any excluded functions."
+          }
+        ]
+      },
+      "check": {
+        "question": "A form passes an automated scan, but the final submit control cannot be reached by keyboard in a checked task. What should the record say?",
+        "correct": "Document the keyboard barrier and the limited scan result, then arrange the appropriate repair and evaluation.",
+        "wrong": [
+          "Ignore the barrier because the automated score is higher-quality evidence.",
+          "Declare the entire system inaccessible without recording scope or testing anything else.",
+          "Ask the reporting employee to certify all criteria before acting."
+        ],
+        "feedbackCorrect": "Yes. Both observations belong in their proper scope. The specific barrier needs action; the scan does not erase it or establish full conformance.",
+        "feedbackIncorrect": "Do not replace evidence with a score or an unsupported total verdict. A staff member can report a barrier without becoming the agency’s technical certifier."
+      },
+      "sorting": {
+        "heading": "Classify the review note",
+        "categories": [
+          "Useful evidence",
+          "Unresolved question",
+          "Overstated conclusion"
+        ],
+        "items": [
+          {
+            "text": "Keyboard testing in the stated version could not reach Submit.",
+            "category": "Useful evidence"
+          },
+          {
+            "text": "The connected document has not yet been examined.",
+            "category": "Unresolved question"
+          },
+          {
+            "text": "The automated score proves all criteria have passed.",
+            "category": "Overstated conclusion"
+          },
+          {
+            "text": "Retesting confirmed the corrected error announcement in the described task.",
+            "category": "Useful evidence"
+          },
+          {
+            "text": "Assistive-technology review is still pending for the new control.",
+            "category": "Unresolved question"
+          },
+          {
+            "text": "One employee’s successful try proves access for every user.",
+            "category": "Overstated conclusion"
+          }
+        ]
+      },
+      "next": "Next, distinguish a barrier report from an authorized exception and keep current access needs visible.",
+      "scenario": {
+        "context": "A practice project team fixes a keyboard issue and closes the ticket immediately. The review was performed on a local test version, while staff still use the older deployed version.",
+        "prompt": "What should the leader ask?",
+        "options": [
+          "Leave the ticket closed because the code change is complete.",
+          "Ask the employee who reported it to disclose a diagnosis.",
+          "Verify the delivered version, retest the relevant task and record whether the barrier is actually resolved for users."
+        ],
+        "responses": [
+          "A code change and a deployed result are different. The closure should be supported by evidence from the version people use.",
+          "The task problem can be investigated without collecting a medical history. Focus on the tool and responsible review.",
+          "This connects the repair to actual access and avoids a premature pass. If deployment or another issue is pending, state that accurately and assign follow-through."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Draft a practice finding with the task, tested version, steps, observed result, review limit and responsible next action.",
+      "move": {
+        "control": "You can require clear evidence and appropriate review.",
+        "failure": "A score or closed ticket becomes a blanket assurance.",
+        "next": "Describe the result precisely and retest the delivered task before claiming resolution."
+      }
+    },
+    {
+      "title": "Use the formal exception process without losing the person",
+      "summary": "An exception or exemption has specific conditions and documentation. An informal deadline or vendor claim does not supply that authority.",
+      "objective": "Distinguish a formal exception from an informal acceptance of a barrier.",
+      "objectives": [
+        "Distinguish a formal exception from an informal acceptance of a barrier.",
+        "Explain why single source and urgency are not automatic blanket waivers.",
+        "Identify current support and follow-through that remain necessary when a barrier cannot yet be resolved."
+      ],
+      "takeaways": [
+        "The state standard lists specific exceptions and exemptions with documentation.",
+        "Single source alone is not grounds for an exception.",
+        "An exception is not proof that the product became accessible or that other duties disappeared."
+      ],
+      "statement": "A documented decision must describe the real barrier and the proper authority. It must not turn missing access into a reassuring label.",
+      "image": {
+        "src": "/images/covers/stock-people-13.jpg",
+        "caption": "A deadline needs a plan and a responsible decision; it does not supply an exception by itself."
+      },
+      "intro": {
+        "heading": "Keep approval, accessibility and current support distinct",
+        "body": "A DHS team needs a specialized reporting product. The vendor says its tool is the only available option and that accessibility can be addressed next year. The manager wants to mark it exempt because the schedule is tight. The state standard does not make a single-source acquisition, vendor promise or ordinary project deadline an automatic exception. The responsible agency process must examine the facts and the applicable category.\n\nAppendix A distinguishes exceptions from exemptions. Undue burden involves significant difficulty or expense as determined and documented by the funding agency, including relevant technical feasibility. Best Meets concerns the stated circumstances where marketplace options present barriers and a product is necessary for business reasons. Fundamental alteration has its own meaning. These are not terms a course participant should casually apply to an inconvenient repair. MNIT directs agencies to involve their Digital Accessibility Coordinators and follow the documented exception process when the relevant situation arises.\n\nThe standard also explains that single source by itself is not grounds for an exception. Where its stated conditions are met, an inaccessible single-source product may involve the documented undue-burden route. Emergency purchases have a specific statutory meaning tied to threats affecting public health, welfare, safety, government functioning or property. Their accessibility exemption is not permanent; the owner must make reasonable efforts after the emergency and include accessibility to the extent possible during the purchase. An ordinary late project is not automatically such an emergency.\n\nRead other categories narrowly. A contractor’s incidental internal office equipment is distinguished from a deliverable or tool staff or citizens must use. Infrastructure hardware does not exempt the front-end software used to manage it. Alternative-location provisions do not cancel separate employment accommodation duties. Ask the appropriate staff rather than generalizing a heading.\n\nIf compliance cannot be achieved, the standard assigns filing an exception and providing reasonable accommodation to the system or content owner. Keep current access needs, other applicable laws and the repair plan visible through their proper processes. A signed exception records a decision about the barrier; it does not certify that the barrier vanished."
+      },
+      "inThisLesson": [
+        "Recognize documented categories and authority.",
+        "Question informal waiver shortcuts.",
+        "Read narrow exemptions in context.",
+        "Keep current support and remaining work visible."
+      ],
+      "keyStatement": "Use the authorized process, describe the barrier honestly and retain the responsibilities that still apply.",
+      "flashcards": [
+        {
+          "front": "Exception",
+          "back": "A reason not to apply the state standard in a particular situation, considered with the required documentation and agency process. It is not an informal project preference."
+        },
+        {
+          "front": "Exemption",
+          "back": "A category where the standard does not apply under its terms and required documentation. Other duties or narrower limits can still matter."
+        },
+        {
+          "front": "Single source",
+          "back": "An acquisition determined to have only one available supplier after the required search. The state standard says this alone is not grounds for an accessibility exception."
+        },
+        {
+          "front": "Current access response",
+          "back": "Action through the appropriate process to address the person’s present need. It is distinct from a technical repair plan and from an exception record."
+        }
+      ],
+      "accordion": {
+        "heading": "Shortcuts that need correction",
+        "items": [
+          {
+            "title": "“The vendor is the only option”",
+            "body": "That claim needs the proper procurement facts and accessibility review. Even an actual single-source determination does not by itself establish an exception. Document the barriers and use the authorized route rather than accepting the vendor’s statement as the decision."
+          },
+          {
+            "title": "“The deadline makes it an emergency”",
+            "body": "The emergency category has a specific legal basis; a busy schedule does not automatically meet it. If an authorized emergency purchase occurs, the standard describes continuing reasonable efforts after the emergency. Do not treat the category as permanent approval of all barriers."
+          },
+          {
+            "title": "“The hardware is exempt”",
+            "body": "Infrastructure hardware and front-end management software are distinguished. The person may interact with a covered interface even when the underlying non-end-user device fits a category. Have appropriate staff assess the actual item rather than applying the hardware heading to an entire service."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Different work remains after a decision",
+        "tabs": [
+          {
+            "label": "Exception record",
+            "body": "Documents the authorized decision, evidence and applicable category. A broad “approved” label should not be interpreted as a test result showing that the product conforms. Keep the scope clear."
+          },
+          {
+            "label": "Repair and monitoring",
+            "body": "Identify which barriers can be addressed, responsible owners and how changes will be checked. A future vendor promise is unresolved work until the delivered result is verified. Use the authorized plan rather than inventing a course deadline."
+          },
+          {
+            "label": "Person’s access",
+            "body": "Address the present work or service need through the proper disability access process. A plan to improve the product later does not automatically answer the current need, and one workaround does not erase other applicable obligations."
+          }
+        ]
+      },
+      "check": {
+        "question": "A vendor claims to be the only supplier. Does that fact alone authorize an accessibility exception under the state standard?",
+        "correct": "No. Single source alone is not grounds for an exception; use the documented applicable agency process and evidence.",
+        "wrong": [
+          "Yes. Every single-source product is permanently exempt.",
+          "Yes. A vendor’s promise to repair someday is equivalent to conformance.",
+          "No exception is possible under any circumstance, so formal review is unnecessary."
+        ],
+        "feedbackCorrect": "Yes. The standard lists specific categories and explains the single-source limit. The correct response is proper review, not an automatic waiver or an assumption that no route exists.",
+        "feedbackIncorrect": "Neither a supplier claim nor a future promise establishes authority or current access. Read the actual category, documentation and responsible process; do not replace them with a blanket answer."
+      },
+      "sorting": {
+        "heading": "Which response is this?",
+        "categories": [
+          "Use the documented process",
+          "Keep the remaining duty visible",
+          "Unsupported waiver"
+        ],
+        "items": [
+          {
+            "text": "Involve the Digital Accessibility Coordinator about the actual product barriers.",
+            "category": "Use the documented process"
+          },
+          {
+            "text": "Describe the evidence for the applicable exception category.",
+            "category": "Use the documented process"
+          },
+          {
+            "text": "Arrange the appropriate response to a person’s current access need.",
+            "category": "Keep the remaining duty visible"
+          },
+          {
+            "text": "Recheck a promised repair in the delivered version.",
+            "category": "Keep the remaining duty visible"
+          },
+          {
+            "text": "Declare every vendor-hosted tool exempt because it is external.",
+            "category": "Unsupported waiver"
+          },
+          {
+            "text": "Call an ordinary late project an emergency without the required basis.",
+            "category": "Unsupported waiver"
+          }
+        ]
+      },
+      "next": "The final lesson brings these decisions into a maintainable work routine and an honest progress report.",
+      "scenario": {
+        "context": "In this example, a manager proposes labeling a staff application “accessible” because an exception was approved for known barriers. A colleague notes that several tasks still fail and a staff access response is pending.",
+        "prompt": "What should the report say?",
+        "options": [
+          "Separate the approved exception from the unresolved barriers and pending access response, with responsible follow-through.",
+          "Report complete accessibility because approval and conformance mean the same thing.",
+          "Remove the staff concern so the report stays positive."
+        ],
+        "responses": [
+          "This states what the evidence actually shows. The approval, barrier and current response are distinct facts and should not be merged into a reassuring label.",
+          "An exception decision does not mean the product became accessible. Conformance needs appropriate evidence about the actual requirements and product.",
+          "Removing the concern would conceal unfinished work. Protect confidentiality while keeping the need and responsible next step visible."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Write a practice decision note with three separate parts: the authorized exception question, known product barriers and the current access response that needs follow-through.",
+      "move": {
+        "control": "You can keep the facts and authority clear.",
+        "failure": "An informal deadline or approval label becomes a blanket accessibility claim.",
+        "next": "Use the documented route and state what remains to be resolved for the product and the person."
+      }
+    },
+    {
+      "title": "Keep the standard working after the first release",
+      "summary": "Ownership, reusable practices and honest follow-up help accessibility survive updates, new content and changes in the work.",
+      "objective": "Assign practical responsibilities across content, technology and product ownership without inventing agency authority.",
+      "objectives": [
+        "Assign practical responsibilities across content, technology and product ownership without inventing agency authority.",
+        "Distinguish output measures from evidence of usable task access.",
+        "Plan a proportionate follow-up when a document, tool or requirement changes."
+      ],
+      "takeaways": [
+        "A named owner and a review route prevent work from disappearing between teams.",
+        "A count of checks or purchases does not show whether a task is usable.",
+        "Updates and new content need appropriate ongoing review."
+      ],
+      "statement": "Accessibility lasts when the work can be maintained, people can raise barriers and the team checks the actual result.",
+      "image": {
+        "src": "/images/covers/stock-people-13.jpg",
+        "caption": "A clear ownership note helps the next person maintain the accessible result."
+      },
+      "intro": {
+        "heading": "Make follow-through ordinary and evidence based",
+        "body": "A practice DHS unit completes an accessibility review of its orientation materials. Three months later, another employee adds a scanned attachment and a new form. The original report is still accurate about the earlier version, but it does not prove that the changed materials remain accessible. A maintainable process needs an owner, a way to identify meaningful changes and an appropriate review of what people now use.\n\nThe state standard assigns agencies and their staff responsibilities when they create, modify or procure information and technology. A leader can organize those responsibilities without inventing a new position or making every employee a technical auditor. Content authors need practical templates and guidance. Product owners need a route to review, repair and formal exception questions. Technical accessibility staff need a defined scope and sufficient time. People using the information need a clear way to report a barrier and obtain the appropriate response. Follow the real agency roles and approval process.\n\nUse measures honestly. The number of staff trained, files reviewed or issues closed describes activity. It does not alone establish conformance or meaningful access. A task result, verified repair and appropriately scoped evaluation provide different evidence. Missing review evidence is unknown, not a pass. An exception count should not be presented as a count of accessible products.\n\nLearn from recurring findings using appropriate non-identifying information. If several documents lose structure during export, repair the source workflow or template rather than blaming one author or asking an employee with a disability to correct every file. If a vendor update changes a control, arrange review of the affected task and relevant connected behavior. A current personal access need still follows its proper response process.\n\nFor this course’s optional exercise, choose a practice item and write a small maintenance plan: owner, change that prompts review, person checking it, evidence for closure and route for barriers. This plan supports implementation but does not replace legal duties, agency records rules or a complete evaluation. The goal is a reliable habit that preserves access as the work changes."
+      },
+      "inThisLesson": [
+        "Assign responsibilities using actual agency roles.",
+        "Keep version and change context in review evidence.",
+        "Interpret activity measures honestly.",
+        "Plan maintenance and a usable barrier route."
+      ],
+      "keyStatement": "A past review is evidence about its scope and version, not a permanent pass for every later change.",
+      "flashcards": [
+        {
+          "front": "Content owner",
+          "back": "The person or unit responsible for maintaining the information through the actual agency process. Ownership includes keeping review and correction routes clear, not personally performing every technical test."
+        },
+        {
+          "front": "Change review",
+          "back": "Appropriate examination of new or altered content, functions or connected tasks. The needed scope depends on the change and applicable requirements, not a single universal course schedule."
+        },
+        {
+          "front": "Activity measure",
+          "back": "A count of work performed, such as files reviewed or staff trained. It describes effort; it does not by itself demonstrate access or conformance."
+        },
+        {
+          "front": "Outcome evidence",
+          "back": "Evidence about the task or result people experience, such as a verified repair or scoped evaluation. Keep its method, context and limits visible."
+        }
+      ],
+      "accordion": {
+        "heading": "Maintain the conditions for good work",
+        "items": [
+          {
+            "title": "Give authors a reusable start",
+            "body": "An accessible template and relevant guidance reduce repeated barriers, but the final content still needs review. The template should have an owner and be updated when a recurring issue appears. Copying an old inaccessible example is not a substitute for a maintained resource."
+          },
+          {
+            "title": "Protect the review route",
+            "body": "Accessibility staff need the actual version, important tasks and known concerns. Include review time in planned changes instead of asking for a last-minute assurance. When review is incomplete, communicate that openly and use the proper decision process."
+          },
+          {
+            "title": "Respond to the reported barrier",
+            "body": "Listen to the task problem, arrange appropriate support and route the technical issue to its owner. The person should not have to prove a full standard violation or disclose medical details to report an access barrier. Keep the response and product repair linked but distinct."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "What does the progress measure show?",
+        "tabs": [
+          {
+            "label": "Training completed",
+            "body": "Evidence that a learning activity occurred. It may support better practice, but does not prove each resulting document is accessible or satisfy every separate agency training-credit rule. Check the work result through its proper review."
+          },
+          {
+            "label": "Issues closed",
+            "body": "Evidence of an administrative status. Ask whether closure includes verified repair in the delivered product and whether unresolved issues are still visible. A closed ticket without a retest can hide a remaining barrier."
+          },
+          {
+            "label": "Tasks verified",
+            "body": "Evidence about the specific tested tasks, version and methods. Useful for understanding access, but keep the scope clear. Do not turn a sample result into a permanent pass for new content or every user experience."
+          }
+        ]
+      },
+      "check": {
+        "question": "A unit reports that all staff completed a course and therefore every document is compliant. What is the accurate interpretation?",
+        "correct": "Training is activity evidence; document conformance and usable task access still require the appropriate review.",
+        "wrong": [
+          "Training automatically establishes that every later document meets every criterion.",
+          "No learning can improve practice, so the training has no value.",
+          "Only the number of files matters, regardless of their review results."
+        ],
+        "feedbackCorrect": "Yes. Learning can support better work without proving every output. Keep the activity measure and the evidence about actual documents distinct so the report is useful.",
+        "feedbackIncorrect": "Avoid both overstating and dismissing learning. The course count tells you what happened in learning; the documents and tasks need their own evidence and follow-through."
+      },
+      "sorting": {
+        "heading": "Interpret the maintenance evidence",
+        "categories": [
+          "Activity recorded",
+          "Task or review evidence",
+          "Unresolved work"
+        ],
+        "items": [
+          {
+            "text": "Twenty staff completed a relevant learning activity.",
+            "category": "Activity recorded"
+          },
+          {
+            "text": "The delivered form was retested in the described keyboard task.",
+            "category": "Task or review evidence"
+          },
+          {
+            "text": "The new attachment has not yet been reviewed.",
+            "category": "Unresolved work"
+          },
+          {
+            "text": "The unit logged ten completed content reviews.",
+            "category": "Activity recorded"
+          },
+          {
+            "text": "The evaluation identifies its standard, version, methods and findings.",
+            "category": "Task or review evidence"
+          },
+          {
+            "text": "A vendor’s promised repair has not been delivered or verified.",
+            "category": "Unresolved work"
+          }
+        ]
+      },
+      "next": "Use the job aid for a small practice work item. Related courses examine public web duties, procurement and individual accommodation in more detail.",
+      "scenario": {
+        "context": "A practice unit notices repeated inaccessible exports from its orientation template. One employee who reported the barrier is asked to fix all the files while the template owner keeps using the old source.",
+        "prompt": "What is the stronger leadership response?",
+        "options": [
+          "Keep the arrangement because the reporting employee knows the problem best.",
+          "Make every file unofficial so the standard no longer matters.",
+          "Assign the source-workflow repair to the responsible owner, provide appropriate review and respond to the current access need without shifting certification or repair responsibility to the reporting employee."
+        ],
+        "responses": [
+          "Reporting a barrier does not make the person responsible for every repair. Respect their experience while assigning the actual work through the agency process.",
+          "An unofficial label does not remove actual work needs or determine coverage. Review the content and applicable requirements.",
+          "This addresses the repeated cause in the production process while preserving the person’s access response. Verify the corrected exports and maintain the source for future authors."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Prepare a practice maintenance note naming the item, owner, change that triggers review, evidence needed for closure and route for a reported barrier.",
+      "move": {
+        "control": "You can make ownership and evidence part of normal work.",
+        "failure": "A past approval or training count becomes a permanent accessibility pass.",
+        "next": "Maintain the source, review meaningful changes and report both verified results and unfinished work honestly."
+      }
+    }
+  ],
+  "jobAid": {
+    "subtitle": "A practical leader’s review of Minnesota digital accessibility work",
+    "remember": [
+      "Use the actual state standard and its qualifications.",
+      "Internal content and no-cost tools can be within scope.",
+      "Initial checks identify barriers but do not establish complete conformance.",
+      "Formal exception decisions, current support and product repair are distinct."
+    ],
+    "sections": [
+      {
+        "heading": "Identify the work",
+        "items": [
+          "Describe the staff or public task and all necessary connected steps.",
+          "Identify the content or product owner, relevant history and vendor arrangement.",
+          "Use appropriate accessibility staff to resolve coverage questions instead of relying on price, audience or age alone."
+        ]
+      },
+      {
+        "heading": "Ask for useful evidence",
+        "items": [
+          "Name Minnesota version 4, WCAG 2.1 A and AA and qualified Section 508 as applicable.",
+          "Record the tested version, methods, tasks, findings and limits.",
+          "Preserve meaning, structure and usable interaction in the final delivered format."
+        ]
+      },
+      {
+        "heading": "Follow through",
+        "items": [
+          "Use the documented exception process when needed; do not create an informal waiver.",
+          "Respond to a person’s current access need through the proper process.",
+          "Retest repairs, maintain reusable sources and review meaningful changes.",
+          "Separate activity counts from verified access and keep missing evidence visible."
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Minnesota State Digital Accessibility Standard, version 4",
+      "href": "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
+      "note": "Effective July 1, 2024. Coverage, WCAG 2.1 A and AA, qualified Section 508 requirements, roles, exceptions and exemptions."
+    },
+    {
+      "title": "MNIT accessibility policies and standards",
+      "href": "https://mn.gov/mnit/government/policies/accessibility/",
+      "note": "Official access to the current standard and information about the formal exception process."
+    },
+    {
+      "title": "Minnesota Statutes §16E.03",
+      "href": "https://www.revisor.mn.gov/statutes/cite/16E.03",
+      "note": "State technology accessibility standard responsibilities, including subdivision 9."
+    },
+    {
+      "title": "Minnesota Statutes §16E.015",
+      "href": "https://www.revisor.mn.gov/statutes/cite/16E.015",
+      "note": "Definitions including accessibility, infrastructure hardware and undue burden."
+    },
+    {
+      "title": "Web Content Accessibility Guidelines 2.1",
+      "href": "https://www.w3.org/TR/WCAG21/",
+      "note": "The technical criteria and conformance requirements adopted by the state standard with its stated qualification."
+    },
+    {
+      "title": "W3C Easy Checks: a first review of web accessibility",
+      "href": "https://www.w3.org/WAI/test-evaluate/preliminary/",
+      "note": "Initial checks can identify barriers but are not a complete accessibility evaluation."
+    }
+  ]
+}
