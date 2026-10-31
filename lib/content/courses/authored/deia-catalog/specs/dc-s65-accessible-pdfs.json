@@ -1,0 +1,1034 @@
+{
+  "id": "dc-s65-accessible-pdfs",
+  "topicId": "S65",
+  "subtitle": "Keep a PDF’s meaning, structure and task information intact, then describe what your accessibility review actually found, honestly and clearly.",
+  "scope": "Learning is voluntary. The course uses complete practice document information for private learning; it does not certify a real PDF, authorize publication, decide an exception, relax security or replace actual accessibility, equity, records, content or assistance responsibilities. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA.",
+  "introTranscript": "Follow Soren and Mara as they review a PDF: its source, sections, visual information, links and review results. Then consider Lysa and Emil’s different ideas about preserving a record and leaving room for shared thinking. Use these examples to practice clear explanations and thoughtful questions at your own pace.",
+  "lessons": [
+    {
+      "title": "Begin with the document’s purpose and source",
+      "summary": "A PDF should let the reader use its actual information. Start with the source and the intended task rather than treating a familiar file extension as evidence of access.",
+      "objective": "Identify the task in the practice PDF.",
+      "objectives": [
+        "Identify the task in the practice PDF.",
+        "Distinguish an image of text from usable text and further document review.",
+        "Choose a source-first preparation proposal without claiming complete accessibility."
+      ],
+      "takeaways": [
+        "The purpose identifies what readers need to do.",
+        "A readable-looking page may still be an image of text.",
+        "Source preparation and output review are separate parts of the work."
+      ],
+      "statement": "Examine what the reader needs to understand, not just how the page looks.",
+      "image": {
+        "src": "/images/covers/stock-people-09.jpg",
+        "caption": "Three people sit at a white table with two laptops and open notebooks beside a whiteboard."
+      },
+      "intro": {
+        "heading": "Which explanation can the reader actually use?",
+        "body": "Soren, a practice DHS staff member, is preparing a PDF called Discussing a draft question. The document explains an optional practice conversation, what the draft question asks and what remains open for discussion. It is not an application, an eligibility notice or a record of actual service decisions. Mara wants to locate the question and read the explanation that follows it. All information in this course is invented, so you can examine the complete practice without uploading a real file or obtaining anyone’s personal information.\n\nSoren has a word-processing source and a scanned image of an earlier paper draft. Both look recognizable on screen. That appearance does not tell him whether a reading tool receives actual text, whether a heading can be located or whether the words appear in a meaningful sequence. A PDF file extension names a format; it does not settle those questions. The first useful distinction is the task: Mara needs the explanation of the question, including its limits, rather than a picture of the paper or a promise of service approval.\n\nMNIT’s PDF guidance recommends beginning with an accessible source and examining the converted document. It also distinguishes a scan from true text. Text recognition can be part of work on a scan, but the practice should not assume that a recognition step has preserved every word or relationship. For example, if the draft says that participation is optional, omitting that word changes the invitation’s meaning. Comparing the proposed output with the actual source is a content question as well as a technical one.\n\nIn this example, the editable source gives Soren a starting place to propose clear section headings and an accurate introductory explanation. It does not give him authority to change a real approved notice, ignore an actual document owner or use an unapproved service with sensitive material. Preparation happens within the actual work arrangements when a real document is involved. The course supplies an original practice document, not a shortcut around those arrangements.\n\nMinnesota’s adopted digital accessibility standard has its own coverage, requirements and owner responsibilities. The selected practices in these lessons are useful ways to examine a PDF; completing them does not certify all applicable requirements or approve an exception. An initial successful text check would leave structure, reading order, images, links and the particular reader’s task to examine.\n\nPrivately describe Mara’s task and choose a reasonable starting point from the two supplied versions. Explain why the source can help and what still needs checking in the output. You do not need Acrobat, a live document or a public demonstration to make that distinction. The next lesson follows the question and its explanation through the document’s actual structure."
+      },
+      "inThisLesson": [
+        "Mara’s reading task",
+        "Editable source and scanned image",
+        "Words and their actual meaning",
+        "Preparation and further review"
+      ],
+      "keyStatement": "A file can look familiar without supplying the information in a usable form.",
+      "flashcards": [
+        {
+          "front": "Source document",
+          "back": "The original editable information used to prepare the PDF."
+        },
+        {
+          "front": "Scanned image",
+          "back": "A picture of a page that may not contain usable text."
+        },
+        {
+          "front": "Text recognition",
+          "back": "A way to recognize words in a scan, with accuracy and structure still to review."
+        },
+        {
+          "front": "Task review",
+          "back": "Examination of what the reader can find and understand in the actual output."
+        },
+        {
+          "front": "Selected practice",
+          "back": "A learning activity that does not certify the whole document."
+        }
+      ],
+      "accordion": {
+        "heading": "Choose a useful starting point",
+        "items": [
+          {
+            "title": "Locate the actual information",
+            "body": "Mara needs the question and its explanation, not merely confirmation that the file opens. Identifying those contents lets Soren compare what the source says with what the output presents. If the explanation disappears, the file can still open successfully while the intended task remains unsupported."
+          },
+          {
+            "title": "Use the available source thoughtfully",
+            "body": "The editable source makes it possible to organize the original explanation before conversion. That opportunity is different from a guarantee about the result. Soren should examine the converted file rather than treating the source’s appearance, a saved filename or a preferred export option as evidence from the output."
+          },
+          {
+            "title": "Examine a scan’s meaning",
+            "body": "Recognizing words may make text available, but the actual wording still matters. Dropping optional from the practice invitation would create a different instruction. A complete review considers content accuracy and structure together; it does not decide that successful recognition proves every relationship or reading method."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three preparation choices",
+        "tabs": [
+          {
+            "label": "Keep only the picture",
+            "body": "The paper scan preserves an appearance Soren recognizes, but Mara’s task depends on using the words and their relationships. Without further examination, the scan offers no evidence about that experience. Familiarity with the visual page cannot answer whether its explanation is available to the reading method."
+          },
+          {
+            "label": "Prepare the source and examine the output",
+            "body": "Soren proposes clear organization in the editable source, then checks the resulting PDF against the task and original meaning. This keeps preparation connected to evidence from the converted document. It remains a proposal for the full example, not permission to alter an approved real notice."
+          },
+          {
+            "label": "Approve from the filename",
+            "body": "Renaming the file Accessible discussion would describe an unverified result. Mara would receive a confident label without evidence about the information. A more accurate name identifies the contents, while the review account states what has been examined and what remains open."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which starting proposal fits the practice task?",
+        "correct": "Use the editable source to prepare accurate information, then examine the resulting PDF and its reading task.",
+        "wrong": [
+          "Declare the scan accessible because it looks like the paper draft.",
+          "Treat recognized words as proof that every relationship is correct.",
+          "Certify the document after adding accessible to its filename."
+        ],
+        "feedbackCorrect": "The proposal uses the available source while retaining the need to examine the output.",
+        "feedbackIncorrect": "The scan’s appearance does not establish usable text. Recognition alone does not verify relationships or exact meaning. A filename supplies a label, not evidence of complete accessibility."
+      },
+      "sorting": {
+        "heading": "Separate the starting information from the proposed work and unsupported results",
+        "categories": [
+          "Supplied information",
+          "Reasonable proposal",
+          "Unsupported result"
+        ],
+        "items": [
+          {
+            "text": "Mara wants to read the draft question and its explanation.",
+            "category": "Supplied information"
+          },
+          {
+            "text": "Soren has an editable source and a scanned paper draft.",
+            "category": "Supplied information"
+          },
+          {
+            "text": "Compare the resulting wording with the original invitation.",
+            "category": "Reasonable proposal"
+          },
+          {
+            "text": "Examine the actual output after preparing its source.",
+            "category": "Reasonable proposal"
+          },
+          {
+            "text": "A PDF extension certifies all access methods.",
+            "category": "Unsupported result"
+          },
+          {
+            "text": "A recognized word proves the document’s full structure is correct.",
+            "category": "Unsupported result"
+          }
+        ]
+      },
+      "next": "Follow the question and its explanation through the PDF’s structure and sequence.",
+      "scenario": {
+        "context": "Soren proposes sending only the scan because its page looks identical to the original paper.",
+        "prompt": "What should he examine before treating that appearance as useful task evidence?",
+        "options": [
+          "Whether the filename sounds professional.",
+          "Whether the output supplies the actual text and relationships needed to read the explanation.",
+          "Whether Mara will disclose a diagnosis."
+        ],
+        "responses": [
+          "A professional name cannot establish the reading experience.",
+          "This connects the actual information to the declared task.",
+          "Personal medical information is not needed to identify this document-preparation question."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Privately describe the reading task and a source-first preparation proposal for the full example.",
+      "move": {
+        "control": "You can distinguish familiar appearance from evidence about usable information.",
+        "failure": "A file extension, image or label substitutes for examining the contents.",
+        "next": "Use the example at your own pace; a live PDF or another person’s disclosure is not required."
+      }
+    },
+    {
+      "title": "Keep the question connected to its explanation",
+      "summary": "Document structure should preserve how the parts belong together. Examine section headings and reading sequence instead of assuming that a visual arrangement communicates the same relationships.",
+      "objective": "Identify the question-and-explanation relationship in the practice page.",
+      "objectives": [
+        "Identify the question-and-explanation relationship in the practice page.",
+        "Choose a logical reading sequence for its two sections.",
+        "Distinguish a proposed structural repair from proof of every reading method."
+      ],
+      "takeaways": [
+        "Headings identify the actual sections.",
+        "Reading sequence should preserve the content’s meaning.",
+        "A visible title or a tag alone is not complete task evidence."
+      ],
+      "statement": "The reader should receive the explanation in the context that gives it meaning.",
+      "image": {
+        "src": "/images/covers/stock-people-09.jpg",
+        "caption": "Three people sit at a white table with two laptops and open notebooks beside a whiteboard."
+      },
+      "intro": {
+        "heading": "Two columns, one connected explanation",
+        "body": "Soren’s practice draft has two sections. The left section is headed The draft question and contains the question, What would make this explanation easier to use? The right section is headed What remains open and states that the explanation is being discussed, no real service determination is included and participation in the practice is optional. Mara wants to move from the question to that account of its limits. Those section contents are the whole practice example; no actual PDF has been tested here.\n\nImagine that the output presents the first line from the left column, then the first line from the right, then the second line from the left. The page may look organized while the reading sequence interleaves two distinct thoughts. The problem is not Mara’s familiarity with the subject. The proposed arrangement has not preserved the question followed by its explanation. Soren can identify the intended sequence before changing tools or asking someone else to compensate for it.\n\nW3C’s PDF techniques explain how meaningful sequence and heading identification can be examined in tagged documents. These are examples of ways to meet applicable requirements, not separate requirements that every author must use exactly as illustrated. A tag is part of the document’s structural information. Merely seeing that some tags exist does not settle whether the right text has the right relationship or whether the sequence supports the task. Current authoring and review tools should be used within their actual capabilities.\n\nFor this example, a reasonable proposed sequence is the heading The draft question, its complete question, then What remains open and its complete explanation. The proposal follows the actual content rather than a universal rule that every two-column page must be removed. A simpler layout may help during preparation, but the actual output still needs examination. If a heading is only enlarged text without meaningful identification in the output, a reader using heading navigation may not receive the same section distinction.\n\nThe content itself must remain accurate during repair. Changing What remains open to Approved services would introduce a decision the example does not contain. Moving the explanation cannot authorize a substantive rewrite or publication of a real file. Actual owner, editorial and technical arrangements remain in place for actual work.\n\nPrivately describe the intended sequence and a method of checking it in a suitable output. You can reason from the supplied sections without installing software or demonstrating your own reading method. Recognize the limit: a written proposal explains what to examine; it does not establish that an untested file already presents the sections correctly. The next lesson considers a different kind of meaning, where a person interprets a document’s status through individually learned expectations."
+      },
+      "inThisLesson": [
+        "The two supplied sections",
+        "Meaningful heading identification",
+        "Question followed by its limits",
+        "Proposed repair and output evidence"
+      ],
+      "keyStatement": "Structure should preserve the relationship between the question and its explanation.",
+      "flashcards": [
+        {
+          "front": "Section heading",
+          "back": "A meaningful label identifying a distinct part of the information."
+        },
+        {
+          "front": "Reading sequence",
+          "back": "The order in which content is presented to the reading method."
+        },
+        {
+          "front": "Tag",
+          "back": "Structural information that still needs to fit the actual content."
+        },
+        {
+          "front": "Interleaving",
+          "back": "Mixing parts of separate sections so their original relationship becomes unclear."
+        },
+        {
+          "front": "Untested proposal",
+          "back": "A described improvement that has not yet been demonstrated in the output."
+        }
+      ],
+      "accordion": {
+        "heading": "Examine the relationship, not just the presence of a feature",
+        "items": [
+          {
+            "title": "Identify the complete section",
+            "body": "The draft question belongs with its own heading before the account of what remains open. Reading alternating lines can interrupt both thoughts. Soren should examine the complete sections as units of meaning rather than assume that matching visual columns or an existing tag tree proves their relationship is intact."
+          },
+          {
+            "title": "Check heading identification",
+            "body": "Enlarged text may make a title stand out visually without giving heading navigation the same distinction. The intended section labels should describe the actual content and be examined in the output’s structure. A correctly named heading helps with location; it does not verify every sentence, link or access method."
+          },
+          {
+            "title": "Retain the substantive limits",
+            "body": "A structural repair should not silently replace a practice explanation with a service determination. The title What remains open communicates an important limit. Keeping that limit in the intended sequence preserves accuracy while review addresses the separate question of how the content reaches the reader."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare evidence about the same two sections",
+        "tabs": [
+          {
+            "label": "The page looks balanced",
+            "body": "Even spacing and two clear columns can produce a pleasing page without showing the actual reading sequence. Soren still needs to examine whether the complete question arrives before its limits. An appearance observation is useful context, but it cannot substitute for examining the relevant method."
+          },
+          {
+            "label": "The structure fits the explanation",
+            "body": "The proposed sequence preserves each complete section and the relationship between them. Heading identification also reflects the actual labels. This offers a specific repair target and review task. Only examination of the actual output can show whether that proposal has been implemented successfully."
+          },
+          {
+            "label": "Any existing tag is enough",
+            "body": "A tag can exist without identifying the right section or presenting the content in the intended order. Treating presence as complete proof leaves the actual relationship unexamined. Soren should inspect the meaning represented by the structure rather than count tags or rename the document."
+          }
+        ]
+      },
+      "check": {
+        "question": "What should the proposed reading sequence preserve?",
+        "correct": "The complete draft question followed by the complete explanation of what remains open.",
+        "wrong": [
+          "Alternating lines from both columns because they occupy the same visual row.",
+          "An Approved services heading even though no determination is included.",
+          "Any tag order without examining the actual content."
+        ],
+        "feedbackCorrect": "This retains the two distinct sections and their relationship without adding a service result.",
+        "feedbackIncorrect": "Alternating lines can mix separate thoughts. Approved services invents a determination. An existing tag order is not proof that the actual question and explanation remain connected."
+      },
+      "sorting": {
+        "heading": "Separate the content relationship from a proposal and unsupported proof",
+        "categories": [
+          "Content relationship",
+          "Proposed examination",
+          "Unsupported proof"
+        ],
+        "items": [
+          {
+            "text": "The second section explains the first question’s limits.",
+            "category": "Content relationship"
+          },
+          {
+            "text": "The practice invitation says participation is optional.",
+            "category": "Content relationship"
+          },
+          {
+            "text": "Examine complete sections in the output’s reading sequence.",
+            "category": "Proposed examination"
+          },
+          {
+            "text": "Check whether section labels are identified as headings.",
+            "category": "Proposed examination"
+          },
+          {
+            "text": "Balanced columns prove every reading method works.",
+            "category": "Unsupported proof"
+          },
+          {
+            "text": "Any existing tag establishes correct section meaning.",
+            "category": "Unsupported proof"
+          }
+        ]
+      },
+      "next": "Consider how personally learned expectations can affect the meaning of a draft label.",
+      "scenario": {
+        "context": "The output alternates lines from The draft question and What remains open. Soren wants to preserve the original explanation.",
+        "prompt": "Which proposal follows that task?",
+        "options": [
+          "Read the complete question, then its complete limits, and examine the corresponding structure in the output.",
+          "Change the second heading to Approved services.",
+          "Declare the arrangement correct because the page looks balanced."
+        ],
+        "responses": [
+          "This preserves the actual relationship and identifies what needs verification.",
+          "The proposed heading invents a decision.",
+          "Visual balance does not resolve the interleaved meaning."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately describe the two sections’ intended sequence and one way to examine that sequence.",
+      "move": {
+        "control": "You can connect structural choices to the actual information relationship.",
+        "failure": "A visible feature or tag count substitutes for examining meaning and sequence.",
+        "next": "Use the supplied sections; no live document, software purchase or personal demonstration is required."
+      }
+    },
+    {
+      "title": "Understand what a draft label means to another person",
+      "summary": "People may bring different learned meanings to an apparently familiar document. A chosen explanation can widen understanding and change the invitation without profiling a group or certifying the file.",
+      "objective": "Describe the two individually meanings the people describe of a written draft.",
+      "objectives": [
+        "Describe the two individually meanings the people describe of a written draft.",
+        "Explain how those meanings change the initial interpretation.",
+        "Choose a response that clarifies status and preserves voluntary participation."
+      ],
+      "takeaways": [
+        "Personal meanings need their actual context.",
+        "Understanding can change interpretation and response.",
+        "Clarifying an invitation does not certify its technical structure."
+      ],
+      "statement": "Make room for another meaning while retaining an accurate account of the document.",
+      "image": {
+        "src": "/images/covers/stock-people-09.jpg",
+        "caption": "Three people sit at a white table with two laptops and open notebooks beside a whiteboard."
+      },
+      "intro": {
+        "heading": "A lasting record or an invitation to think together?",
+        "body": "Consider a separate conversation outside Soren’s work. Lysa and Emil are friends planning an optional neighborhood reading conversation. Lysa has prepared a written draft of the invitation. She explains that, in the family storytelling gatherings where she learned to prepare written accounts, a document honored what people had already agreed to preserve. Writing carried responsibility for faithful remembrance. When she sees a polished draft, her initial expectation is that its main choices have already been settled.\n\nEmil offers a different chosen account. In a small community printmaking group where he learned to invite collaborators, putting a tentative account on paper made it easier for others to notice omissions and propose a direction. A written draft meant that the invitation was open enough to think with, not that everyone had agreed. He initially assumes that polishing the appearance will communicate care while the word draft already makes the open status clear. These are the meanings the two people in the example choose to explain, not characteristics attributed to a nationality, age, disability or entire community.\n\nAt first, Lysa reads Emil’s polished invitation as a record awaiting acknowledgment, while Emil reads her silence about changes as possible agreement. Neither interpretation is established by the other’s actual account. On hearing Lysa’s explanation, Emil sees how visible polish and his familiar draft label could leave the opening for contribution unclear. Lysa, in turn, recognizes that putting words on paper can be a deliberate offer of shared thinking rather than a claim to have settled everyone’s views.\n\nTheir wider understanding produces a specific changed response. They propose an opening that identifies which details are proposed, which parts invite discussion and that joining or offering a suggestion is optional. They choose to ask whether that distinction makes sense rather than presume that an absence of reply means approval. The story does not supply a later reader’s answer, so it ends with the proposed clarification and an open question. It does not show that every recipient participates or that the friends share every interpretation.\n\nThe Council of Europe’s discussion of intercultural competence helps distinguish individually learned, context-dependent meanings from fixed group profiles. Here the learning includes recognizing one’s own interpretive starting point and considering another person’s account. The useful action is not just changing a heading: it is changing the invitation after understanding why another reading is plausible. Private insight into that contrast is also worthwhile, even if you do not use it in a workplace document.\n\nReturning to Soren’s fiction, an accurate explanation of the PDF’s draft status can support the reader’s understanding. That content distinction is separate from whether the output preserves its text, headings and sequence. Neither the friends’ account nor a clarified sentence certifies a PDF. Reflect privately on the two meanings or use a wholly practice comparison of your own. You do not need to describe your identity, assess a personal orientation or ask another person for their history."
+      },
+      "inThisLesson": [
+        "Lysa’s learned meaning of remembrance",
+        "Emil’s learned meaning of shared thinking",
+        "A wider interpretation and changed invitation",
+        "Private understanding and technical boundaries"
+      ],
+      "keyStatement": "A chosen personal account can widen the meaning of a familiar document without becoming a group rule.",
+      "flashcards": [
+        {
+          "front": "Personal meaning",
+          "back": "An individual’s chosen explanation of how a practice became meaningful in a particular context."
+        },
+        {
+          "front": "Initial interpretation",
+          "back": "The first reading that can be reconsidered when another account becomes available."
+        },
+        {
+          "front": "Changed response",
+          "back": "A concrete action informed by the wider understanding, such as clarifying proposed and open details."
+        },
+        {
+          "front": "Open result",
+          "back": "An answer or effect that the example does not supply."
+        },
+        {
+          "front": "Private insight",
+          "back": "Understanding that can be valuable without disclosure or workplace proof."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect meaning to the changed response",
+        "items": [
+          {
+            "title": "Understand Lysa’s account",
+            "body": "Lysa learned that writing could honor a shared account already agreed upon. Her reading of polish therefore involves responsibility for remembrance, not a dislike of participation. Recognizing this meaning changes Emil’s interpretation of the encounter. It does not authorize him to assign the same expectation to Lysa’s relatives or anyone who resembles her."
+          },
+          {
+            "title": "Understand Emil’s account",
+            "body": "Emil learned to use a tentative written account as a way for collaborators to think together. His invitation is meant to leave room for influence. Lysa can understand that intention while still noticing that the reader needs a clearer status explanation. Understanding an intention does not establish that it was communicated successfully."
+          },
+          {
+            "title": "Change the invitation after understanding",
+            "body": "The new opening distinguishes proposed details from open questions and makes contribution optional. That response follows the specific meaning contrast rather than a generic request to be more polite. No reply is supplied, so the result remains unconfirmed; the meaningful progress is the wider interpretation and proposed invitation."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three responses to the same difference",
+        "tabs": [
+          {
+            "label": "Assume silence means agreement",
+            "body": "Emil’s initial interpretation becomes a conclusion without Lysa’s account or a supplied answer. This closes the very influence he intended to invite. After learning the remembrance meaning, he has a reason to clarify what is open rather than treat quiet as approval or lack of interest."
+          },
+          {
+            "label": "Remove writing altogether",
+            "body": "This treats the two meanings as impossible to reconcile and gives up the possibility of a shared account. The example supports a more precise change: identify proposed details and the opportunity to contribute. A document can remain useful while its status is made clearer, subject to actual reading review."
+          },
+          {
+            "label": "Clarify status and choice",
+            "body": "The friends retain writing while explaining what it does in this conversation. Their response reflects both faithful representation and room for shared thinking. The proposed opening does not require a biography or public response, and it does not establish technical accessibility or a later reader’s agreement."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which response follows the supplied meaning contrast?",
+        "correct": "Clarify proposed details, open questions and optional contribution without treating an absent reply as agreement.",
+        "wrong": [
+          "Assign the remembrance meaning to everyone in Lysa’s community.",
+          "Treat Emil’s intention as proof that every recipient understands the draft.",
+          "Certify the PDF after adding the new invitation sentence."
+        ],
+        "feedbackCorrect": "This response is informed by both individual accounts and keeps the later result open.",
+        "feedbackIncorrect": "A chosen personal account does not define an entire community. Intended openness does not prove received meaning. A clarified sentence does not verify PDF structure or every reading method."
+      },
+      "sorting": {
+        "heading": "Separate chosen meaning from informed response and unsupported conclusions",
+        "categories": [
+          "Chosen personal meaning",
+          "Informed response",
+          "Unsupported conclusion"
+        ],
+        "items": [
+          {
+            "text": "Lysa learned writing as responsibility for a shared account already agreed upon.",
+            "category": "Chosen personal meaning"
+          },
+          {
+            "text": "Emil learned a tentative written account as room for joint thinking.",
+            "category": "Chosen personal meaning"
+          },
+          {
+            "text": "Distinguish proposed details from open questions in the invitation.",
+            "category": "Informed response"
+          },
+          {
+            "text": "Leave an absent answer unconfirmed rather than call it approval.",
+            "category": "Informed response"
+          },
+          {
+            "text": "All relatives of Lysa interpret polish the same way.",
+            "category": "Unsupported conclusion"
+          },
+          {
+            "text": "The new sentence certifies the document’s technical accessibility.",
+            "category": "Unsupported conclusion"
+          }
+        ]
+      },
+      "next": "Retain the meaning of visuals and links in the PDF itself.",
+      "scenario": {
+        "context": "Emil now understands why Lysa read a polished draft as more settled than he intended. No later recipient’s answer is supplied.",
+        "prompt": "Which next response reflects that wider understanding?",
+        "options": [
+          "Record that everyone approved because the invitation was polished.",
+          "Ask Lysa to disclose her whole family history before changing anything.",
+          "Explain proposed details and open questions, retain optional participation and leave later responses unknown."
+        ],
+        "responses": [
+          "Polish and silence do not supply approval.",
+          "Her chosen account is enough for this reflection; compelled history is not the task.",
+          "This changes the invitation in response to the meaning contrast without inventing a later outcome."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately explain how each meaning changed the encounter and propose an informed invitation sentence.",
+      "move": {
+        "control": "You can connect individually learned meaning to a wider interpretation and changed response.",
+        "failure": "A group profile, assumed agreement or technical certification replaces the actual encounter.",
+        "next": "Private reflection on the full example is valid; no identity disclosure, personal assessment or workplace product is required."
+      }
+    },
+    {
+      "title": "Preserve the meaning of a visual and its related link",
+      "summary": "A useful description should communicate the visual’s actual purpose. A link should identify its destination accurately without turning a practice resource into an invented service route.",
+      "objective": "Identify the meaning conveyed by the practice two-step visual.",
+      "objectives": [
+        "Identify the meaning conveyed by the practice two-step visual.",
+        "Choose an accurate text description and link label.",
+        "Distinguish content meaning from complete output and destination verification."
+      ],
+      "takeaways": [
+        "Descriptions should retain the visual’s task information.",
+        "Link labels should match the actual destination.",
+        "Meaningful wording still needs review in the output."
+      ],
+      "statement": "Keep the actual explanation available instead of substituting an impression.",
+      "image": {
+        "src": "/images/covers/stock-people-09.jpg",
+        "caption": "Three people sit at a white table with two laptops and open notebooks beside a whiteboard."
+      },
+      "intro": {
+        "heading": "What does the reader need from the picture?",
+        "body": "Soren’s practice PDF includes a simple two-step visual. The first box says Read the draft question. An arrow leads to a second box saying Consider what remains open. That is all the visual communicates. It does not show a service application, a required appointment or an eligibility result. Mara needs the sequence expressed by those boxes to remain available when the visual appearance is not the way she receives the information.\n\nAn accurate description could explain that the visual moves from reading the draft question to considering what remains open. Saying Nice diagram describes a reaction rather than the actual sequence. Saying Complete the required application invents an instruction absent from the visual. The distinction is about representing the purpose and meaning that the document actually supplies. W3C’s PDF image technique illustrates one way to associate a text alternative with meaningful visual content; it is an example technique, not a new agency rule prescribing one particular tool.\n\nThe nearby PDF link is intended to open a practice page called Practice discussion example. That page is described only as an additional original practice explanation. A label such as Apply for services would falsely advertise an application destination. A label such as Click here gives less information about where the link goes. In this course, you can propose a label reflecting the supplied destination. No actual page or hyperlink is implemented, tested or provided as a public service contact.\n\nMeaningful text and functional access are connected but different review questions. After proposing a useful description and label, a real author would still need to examine whether the output presents the description appropriately, whether the intended link is present and whether relevant navigation works in the actual method. The practice visual has no form fields, so a successful link check would not demonstrate form completion. The activity does not ask you to alter a live PDF or remove actual security, sharing or records controls.\n\nDHS content guidance emphasizes audience, task, accurate labels and clear information. In this example, that helps Soren avoid turning an educational draft into a promise of services. Technical review should preserve the same substantive boundary. A valid-looking address cannot prove that a destination remains current, and a description cannot create information the visual never contained.\n\nPrivately write a text description for the two boxes and propose a label for the supplied practice destination. Explain one content question and one output question still needing examination. You may use the full example without uploading a document or installing software. The next lesson considers the review account, where omitted checks and manual questions must not be mistaken for completed work."
+      },
+      "inThisLesson": [
+        "The visual’s actual two-step meaning",
+        "Accurate text descriptions",
+        "The supplied practice destination",
+        "Content and output review questions"
+      ],
+      "keyStatement": "Describe the information the visual conveys and label the destination the link actually serves.",
+      "flashcards": [
+        {
+          "front": "Text description",
+          "back": "An account of the visual’s meaningful information in its document context."
+        },
+        {
+          "front": "Destination",
+          "back": "The place a link is intended to open, which the label should describe accurately."
+        },
+        {
+          "front": "Content question",
+          "back": "Whether the explanation preserves the supplied meaning."
+        },
+        {
+          "front": "Output question",
+          "back": "Whether the actual file presents or operates the feature in the relevant method."
+        },
+        {
+          "front": "Unsupported route",
+          "back": "A service contact or application path that the practice has not supplied."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect description and destination to the actual task",
+        "items": [
+          {
+            "title": "Retain the sequence rather than an opinion",
+            "body": "Mara needs to know the move from the question to what remains open. Nice diagram does not supply that relationship. A concise description can communicate the two steps without listing every border or adding an application requirement. The description’s usefulness comes from its purpose in this particular document."
+          },
+          {
+            "title": "Name the supplied destination",
+            "body": "Practice discussion example identifies the resource described in the example. Apply for services would advertise a different kind of destination and could mislead the reader even if the link functioned. Accuracy is therefore part of access to useful information, rather than a separate polish step after technical review."
+          },
+          {
+            "title": "Examine the output after choosing words",
+            "body": "A good proposed description and label leave implementation questions open. Does the actual reading method receive the description where its context is clear? Does relevant navigation reach the intended link? The practice provides questions to investigate, not a tested file or evidence that every access method succeeds."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three explanations of the visual and link",
+        "tabs": [
+          {
+            "label": "Praise replaces information",
+            "body": "Nice diagram and Click here may sound conversational, but they do not identify the two-step meaning or the practice destination. The reader must infer what matters. Soren can provide a more informative account without making the wording longer than the task requires or inventing a service promise."
+          },
+          {
+            "label": "Meaning and destination are represented",
+            "body": "The description retains the move from reading the question to considering open matters. The link identifies the additional practice example. These are accurate content proposals. In a real output, their presentation, association and relevant navigation still need examination rather than being presumed from the written wording."
+          },
+          {
+            "label": "An application route is invented",
+            "body": "Required application and Apply for services introduce an obligation and destination the document does not supply. A technically operating link would not cure that false account. Preserve the actual educational purpose and use real authorized service arrangements when actual service assistance is at issue."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which description fits the supplied visual and destination?",
+        "correct": "Describe the move from reading the draft question to considering what remains open, and label the link Practice discussion example.",
+        "wrong": [
+          "Use Nice diagram as the whole explanation and assume its meaning is obvious.",
+          "Label the practice link Apply for services even though no application is supplied.",
+          "Treat a proposed description as proof that all navigation already works."
+        ],
+        "feedbackCorrect": "The proposal retains both the visual’s actual sequence and the supplied destination without claiming an untested result.",
+        "feedbackIncorrect": "Praise does not communicate the sequence. An application label invents a destination. Proposed wording is not evidence from actual navigation or every reading method."
+      },
+      "sorting": {
+        "heading": "Separate supplied meaning from content proposals and unsupported promises",
+        "categories": [
+          "Supplied meaning",
+          "Accurate content proposal",
+          "Unsupported promise"
+        ],
+        "items": [
+          {
+            "text": "The boxes move from reading the draft question to considering open matters.",
+            "category": "Supplied meaning"
+          },
+          {
+            "text": "The link is intended for a practice discussion example.",
+            "category": "Supplied meaning"
+          },
+          {
+            "text": "Describe the sequence without adding an eligibility result.",
+            "category": "Accurate content proposal"
+          },
+          {
+            "text": "Use a link label identifying the additional practice resource.",
+            "category": "Accurate content proposal"
+          },
+          {
+            "text": "The PDF contains a real service application.",
+            "category": "Unsupported promise"
+          },
+          {
+            "text": "A proposed label proves every output method operates the link.",
+            "category": "Unsupported promise"
+          }
+        ]
+      },
+      "next": "Read the review account without turning skipped or manual checks into completed work.",
+      "scenario": {
+        "context": "The two-box visual explains a practice sequence. Soren proposes labeling the related practice link Apply for services.",
+        "prompt": "What should he change?",
+        "options": [
+          "Use a label describing the actual practice destination and keep the two-step explanation accurate.",
+          "Leave the application label because it sounds useful.",
+          "Declare the file fully accessible because it contains a link."
+        ],
+        "responses": [
+          "This preserves the supplied purpose without inventing a public service route.",
+          "An apparently useful label cannot authorize a false destination.",
+          "A link’s presence is not full content, navigation or accessibility evidence."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately write an accurate visual description, destination label and one separate output-review question.",
+      "move": {
+        "control": "You can preserve task meaning without inventing a service promise or untested result.",
+        "failure": "Praise, a false destination or a feature’s presence substitutes for actual information.",
+        "next": "Use the supplied visual and practice destination; no real service link or uploaded file is needed."
+      }
+    },
+    {
+      "title": "Read the review result without filling its gaps",
+      "summary": "An automated check reports particular findings. A skipped item or a question requiring manual examination is not evidence that the work is complete.",
+      "objective": "Distinguish the three supplied review statuses.",
+      "objectives": [
+        "Distinguish the three supplied review statuses.",
+        "Choose a follow-up matched to a skipped or manual question.",
+        "Describe the review’s limits without turning an unknown result into a pass."
+      ],
+      "takeaways": [
+        "A selected automated result covers its stated check.",
+        "A skipped check supplies no result for that check.",
+        "Manual examination needs actual evidence."
+      ],
+      "statement": "State what was examined and what remains open.",
+      "image": {
+        "src": "/images/covers/stock-people-09.jpg",
+        "caption": "Three people sit at a white table with two laptops and open notebooks beside a whiteboard."
+      },
+      "intro": {
+        "heading": "A shorter report is not a stronger review",
+        "body": "The practice PDF review account lists three items. Text presence has a selected automated result recorded as passed. Reading sequence needs manual examination. Link navigation was skipped. Use the description in this lesson to explore the issue; it is not a report generated from an actual file. It does not supply a later manual finding or navigation result. Soren wants to understand what the account can support before saying that Mara’s whole task is working.\n\nThe text-presence result concerns that selected check. It is not evidence that the entire question and explanation are accurate, that their sequence fits the task or that the link works. The manual status identifies an examination that automation has not settled. The skipped status identifies work not checked in that run. Those are different information states, even though both leave a question open.\n\nAdobe’s current review guidance distinguishes selected automatic findings, skipped checks and items needing manual review. It also explains that skipping a rule changes the report rather than repairing the document. The lesson uses that limited distinction; it does not reproduce the software manual or present a checker as a complete interpretation of Minnesota’s adopted standard. Actual interfaces and review arrangements depend on the tools and work involved.\n\nFor this practice, the useful follow-up is to examine the intended complete-section sequence and the relevant link navigation rather than rename both items passed. The earlier lessons explain what to look for: the question should remain connected to its account of limits, and the link should reach the intended practice destination through relevant navigation. The review should record the actual observation, the method and remaining limitations. It must not invent a completed test simply because Soren knows what a good result would look like.\n\nChanging the report to hide an unresolved item would make the account less accurate. It would not provide a better reading experience. Likewise, a passed selected check is not meaningless; it should be retained for what it actually examined. Reliable follow-through depends on keeping both positive evidence and open questions visible rather than accepting everything or dismissing the entire account.\n\nIn actual work, unresolved access needs and required responsibilities retain their appropriate timely arrangements. Completing this optional exercise is not a prerequisite for assistance or a basis to grant oneself an exception. Soren’s fiction includes no actual assistance request or release decision. Privately identify one supported result and two different follow-up questions. You do not need to run software or provide a report from a real document to interpret this supplied account honestly. The final lesson combines content, task feedback and remaining questions into an accurate closing explanation."
+      },
+      "inThisLesson": [
+        "The selected text-presence result",
+        "The manual sequence question",
+        "The skipped navigation check",
+        "Evidence and honest follow-up"
+      ],
+      "keyStatement": "Unknown, skipped and manually unexamined results cannot be renamed completed work.",
+      "flashcards": [
+        {
+          "front": "Selected result",
+          "back": "A finding from the particular check that was included in the run."
+        },
+        {
+          "front": "Skipped item",
+          "back": "A check not performed in the supplied run."
+        },
+        {
+          "front": "Manual examination",
+          "back": "Human review needed to examine a question automation has not settled."
+        },
+        {
+          "front": "Repair evidence",
+          "back": "Actual observations after a change, rather than a changed report label."
+        },
+        {
+          "front": "Review limit",
+          "back": "What the supplied account cannot establish about the document or task."
+        }
+      ],
+      "accordion": {
+        "heading": "Match the information state to the next examination",
+        "items": [
+          {
+            "title": "Retain the selected result’s scope",
+            "body": "Text presence is a useful supplied result for that particular check. Soren can retain it without enlarging it into complete wording, sequence or navigation proof. The follow-up account becomes more informative when it names that scope rather than using passed as a general adjective for the entire PDF."
+          },
+          {
+            "title": "Investigate the manual question",
+            "body": "The sequence question needs examination of the complete sections in the relevant reading method or structural review. Knowing the desired order is useful preparation but not a completed observation. Record what an actual examination shows and keep any method limitations clear instead of silently converting the status into a pass."
+          },
+          {
+            "title": "Do not confuse skipping with repair",
+            "body": "The navigation check was not performed. Removing its line or skipping it again provides no evidence that the link reaches the practice destination. A relevant examination can answer a different question from tidying the report. Its actual result, including any unresolved issue, belongs in the follow-up account."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three accounts of the same review",
+        "tabs": [
+          {
+            "label": "All items are called passed",
+            "body": "This turns two open questions into results without examination. Soren loses the distinction between automation’s selected finding, a manual task and a skipped item. Mara would receive a stronger assurance than the account supports, while the actual reading sequence and navigation could remain unexamined."
+          },
+          {
+            "label": "The entire account is discarded",
+            "body": "A limited result is not the same as no useful information. Text presence has a supplied selected finding, while the other questions remain open in different ways. Keeping those distinctions helps choose relevant follow-up rather than restarting blindly or treating every observation as equally uninformative."
+          },
+          {
+            "label": "Findings and open questions remain distinct",
+            "body": "Soren retains the selected text result, identifies the manual sequence examination and notes that navigation was skipped. This creates a useful next-work account without claiming completion. Any real follow-up must use actual evidence; the course’s proposed examination is not a report from a tested file."
+          }
+        ]
+      },
+      "check": {
+        "question": "What is the most accurate account of the supplied review?",
+        "correct": "The selected text-presence check passed; sequence needs manual examination and navigation was skipped, so their results remain open.",
+        "wrong": [
+          "All questions passed because one selected item passed.",
+          "The skipped navigation check proves the link works without further review.",
+          "Removing the manual question from the report repairs the sequence."
+        ],
+        "feedbackCorrect": "This keeps the selected result and the two distinct open states accurate.",
+        "feedbackIncorrect": "One selected result cannot answer every question. A skipped check supplies no navigation finding. Removing a report item changes the account, not the document’s sequence or the reader’s experience."
+      },
+      "sorting": {
+        "heading": "Separate the review’s supplied evidence from open work and unsupported closure",
+        "categories": [
+          "Supplied review evidence",
+          "Open examination",
+          "Unsupported closure"
+        ],
+        "items": [
+          {
+            "text": "The selected text-presence check is recorded as passed.",
+            "category": "Supplied review evidence"
+          },
+          {
+            "text": "The navigation check was skipped in this run.",
+            "category": "Supplied review evidence"
+          },
+          {
+            "text": "Examine the complete-section reading sequence manually.",
+            "category": "Open examination"
+          },
+          {
+            "text": "Check relevant navigation to the intended practice destination.",
+            "category": "Open examination"
+          },
+          {
+            "text": "The skipped item establishes successful navigation.",
+            "category": "Unsupported closure"
+          },
+          {
+            "text": "Removing a manual item repairs the PDF.",
+            "category": "Unsupported closure"
+          }
+        ]
+      },
+      "next": "Combine the selected result with actual task feedback and honest remaining questions.",
+      "scenario": {
+        "context": "Soren wants a shorter report and proposes removing both the manual sequence question and skipped navigation item.",
+        "prompt": "Which response preserves useful review evidence?",
+        "options": [
+          "Accept the shorter report as proof the file is complete.",
+          "Retain the selected result and open questions, then plan relevant actual examinations.",
+          "Discard the selected result because any open question makes all evidence worthless."
+        ],
+        "responses": [
+          "A shorter account is not repair evidence.",
+          "This preserves what is known and identifies what has not been established.",
+          "Limited positive evidence can remain useful without becoming full proof."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Privately describe the selected result and the separate follow-up for each open item.",
+      "move": {
+        "control": "You can distinguish evidence from an unexamined or skipped question.",
+        "failure": "A label change or missing report line becomes a substitute for actual review.",
+        "next": "Reason from the full example; no real report or public completion proof is required."
+      }
+    },
+    {
+      "title": "Close with an accurate task account",
+      "summary": "A useful closing explanation connects the actual observations, remaining questions and appropriate next work. It does not turn selected improvements or a few readers’ responses into universal access or service outcomes.",
+      "objective": "Describe the three supplied reader responses accurately.",
+      "objectives": [
+        "Describe the three supplied reader responses accurately.",
+        "Distinguish document-task evidence from unconfirmed outcomes.",
+        "Choose an appropriate follow-up account that keeps learning and actual duties separate."
+      ],
+      "takeaways": [
+        "Each response concerns a particular task.",
+        "An unknown response remains unknown.",
+        "Actual requirements and assistance remain separate from optional practice."
+      ],
+      "statement": "Describe meaningful progress without claiming an outcome the evidence does not supply.",
+      "image": {
+        "src": "/images/covers/stock-people-09.jpg",
+        "caption": "Three people sit at a white table with two laptops and open notebooks beside a whiteboard."
+      },
+      "intro": {
+        "heading": "What does the closing evidence actually show?",
+        "body": "The example closes with three chosen practice-reader responses to a proposed revised explanation. Reader A says the section headings helped locate the draft question. Reader B says the explanation made optional participation clear. No answer is supplied from Reader C about the link navigation. These are the complete invented responses. They are not actual user research, demographic findings, staff performance data or tests of a published PDF. The example supplies neither Reader C’s reason nor a later result.\n\nSoren can connect A’s response to location and B’s to the meaning of the invitation. Both are useful within their described tasks. They do not establish every reading method, full conformance with the applicable standard, service access or equitable outcomes for an entire population. C’s missing answer cannot show that the navigation succeeded, failed or was unimportant. A candid account can retain the two positive responses and the unresolved question at the same time.\n\nThe next-work proposal can identify the specific link task to examine and the methods appropriate to the actual document. It should also keep the source and output relationship clear. A later change to the source may require a new examination of the resulting file rather than an assumption that an earlier useful feature survived every revision. This is a reason to make the record of observations understandable, not an invented recurring schedule or a promise that every file must follow this example’s exact workflow.\n\nActual Minnesota accessibility requirements, editorial authority, records arrangements and assistance responsibilities remain applicable to actual work. This optional exercise does not authorize publication, relax security or decide an exception. DHS Equity Policy also retains its actual daily responsibilities and qualifying formal analysis procedures. A short reflection or this selected PDF review is not a substitute for the required toolkit analysis or scan, or the relevant customized tool developed in consultation with an equity director, when the policy’s formal procedure applies.\n\nWithin One DSD, the Equity and Inclusion Operations Consultant leads the program and provides guidance, knowledge and feedback. Staff remain responsible for their own work and can use support as helpful. Nothing in this course sends every PDF through a mandatory consultant review or makes another person’s approval a gate to learning. Questions about a real document should follow the actual owner and relevant review arrangements rather than an invented new committee.\n\nPrivate personal insight remains part of the learning. Lysa and Emil’s encounter can help you notice how your own familiar reading of a polished document might leave another meaning out. You can recognize that insight without publishing a biography or producing workplace proof. Privately write a closing account of A, B and C, name a relevant next examination and explain one conclusion the example cannot establish. You may also reflect on the meaning contrast without sharing it. Learning is voluntary, and"
+      },
+      "inThisLesson": [
+        "The two supplied task responses",
+        "The unanswered navigation question",
+        "Appropriate actual follow-up",
+        "Private learning and separate requirements"
+      ],
+      "keyStatement": "Keep useful observations, open questions and actual responsibilities in the same accurate account.",
+      "flashcards": [
+        {
+          "front": "Location response",
+          "back": "Reader A’s specific observation about finding the draft question."
+        },
+        {
+          "front": "Meaning response",
+          "back": "Reader B’s specific observation about understanding optional participation."
+        },
+        {
+          "front": "Unanswered task",
+          "back": "Reader C’s navigation response is not supplied and cannot be inferred."
+        },
+        {
+          "front": "Actual follow-up",
+          "back": "Relevant work using the actual document, method, owner and applicable responsibilities."
+        },
+        {
+          "front": "Private learning",
+          "back": "Personal understanding that does not require disclosure or a live-work product."
+        }
+      ],
+      "accordion": {
+        "heading": "Keep the closing account useful and proportionate",
+        "items": [
+          {
+            "title": "Connect each observation to its task",
+            "body": "A describes locating information; B describes the invitation’s meaning. Naming those tasks keeps the feedback useful instead of flattening both into the file is accessible. The example does not identify every method or later outcome. A precise account can recognize progress while retaining the questions that the responses never addressed."
+          },
+          {
+            "title": "Leave the unanswered question open",
+            "body": "No response from C means the navigation answer is missing. It does not establish an absence of difficulty, a failure, refusal or approval. Soren can identify a relevant examination and await actual evidence without inventing the missing person’s motive or requiring a private disclosure to fill the gap."
+          },
+          {
+            "title": "Retain responsibility without adding a learning gate",
+            "body": "Actual work keeps its applicable requirements and authorized review arrangements. The course can support thinking about a PDF without certifying it or replacing formal equity analysis. Staff can seek consultant guidance while owning their work. You can work through the example privately; you do not need to edit a real PDF or share a personal story."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three ways to describe progress",
+        "tabs": [
+          {
+            "label": "Universal success is declared",
+            "body": "Two chosen task responses become a claim that everyone can use every feature and that service outcomes have improved. The account loses the scope of the observations and C’s unanswered navigation question. Useful progress does not need that expansion to be recognized; describe the actual tasks instead."
+          },
+          {
+            "label": "Missing feedback becomes a motive",
+            "body": "Soren records that C did not care about the link or refused to participate. The example supplies neither explanation. Such an account would replace an information gap with a judgment about a person. Retain the unanswered task and use appropriate actual follow-up without forcing identity or medical disclosure."
+          },
+          {
+            "label": "Progress and uncertainty stay visible",
+            "body": "The closing explanation records A’s location response, B’s meaning response and C’s unanswered navigation task. It proposes relevant examination while retaining actual owner and duty arrangements. This supports follow-through and private learning without claiming a certified file, service result or population-level change."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which closing account matches the full example?",
+        "correct": "A described easier location, B understood optional participation and C’s navigation answer remains unknown; further actual review retains applicable responsibilities.",
+        "wrong": [
+          "Every reading method is certified because two readers gave useful responses.",
+          "C’s missing answer proves there was no navigation difficulty.",
+          "The course reflection fulfills every required formal equity analysis."
+        ],
+        "feedbackCorrect": "This recognizes the specific positive observations while preserving the unanswered task and actual responsibilities.",
+        "feedbackIncorrect": "Two limited responses cannot certify every method. Missing feedback establishes neither successful navigation nor absence of concern. Optional reflection does not fulfill the qualifying formal policy procedure by itself."
+      },
+      "sorting": {
+        "heading": "Separate task evidence from appropriate next work and unsupported outcomes",
+        "categories": [
+          "Supplied task evidence",
+          "Appropriate next work",
+          "Unsupported outcome"
+        ],
+        "items": [
+          {
+            "text": "A says the headings helped locate the draft question.",
+            "category": "Supplied task evidence"
+          },
+          {
+            "text": "B says optional participation was clear.",
+            "category": "Supplied task evidence"
+          },
+          {
+            "text": "Identify relevant examination of the unanswered navigation task.",
+            "category": "Appropriate next work"
+          },
+          {
+            "text": "Retain actual owner, accessibility and qualifying formal analysis arrangements.",
+            "category": "Appropriate next work"
+          },
+          {
+            "text": "C’s missing answer proves the link succeeds.",
+            "category": "Unsupported outcome"
+          },
+          {
+            "text": "Two responses certify all service and population outcomes.",
+            "category": "Unsupported outcome"
+          }
+        ]
+      },
+      "next": "Use the job aid for private reflection or an appropriately authorized document review.",
+      "scenario": {
+        "context": "A and B supplied specific positive responses; C’s link-navigation answer is missing. Soren is preparing the closing account.",
+        "prompt": "Which explanation should he choose?",
+        "options": [
+          "Everyone can now use the PDF, and all service outcomes improved.",
+          "C’s silence proves that the link needed no review.",
+          "Describe the two specific responses, keep navigation unconfirmed and identify relevant next examination within actual arrangements."
+        ],
+        "responses": [
+          "The example cannot establish universal access or service outcomes.",
+          "An absent answer supplies no navigation finding.",
+          "This preserves useful progress, the open task and the actual boundaries of the work."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately write a closing account of the three responses and one relevant next examination, or reflect on the personal meaning contrast.",
+      "move": {
+        "control": "You can recognize progress without filling gaps or replacing actual requirements with optional practice.",
+        "failure": "Specific responses become universal outcomes, or missing feedback becomes assurance or a personal judgment.",
+        "next": "The full example and unrecorded private reflection are valid; no live PDF, public proof or other person’s disclosure is required."
+      }
+    }
+  ],
+  "jobAid": {
+    "title": "Examine a PDF with its purpose and evidence in view",
+    "subtitle": "Preserve the information, inspect the output and describe what is known and still open.",
+    "sections": [
+      {
+        "heading": "Identify purpose and source",
+        "items": [
+          "Name the actual reader task. A scan, file extension or familiar visual appearance does not establish usable information. Use the available editable source thoughtfully and examine the converted output.",
+          "Keep the original meaning accurate. Recognized words, a stronger filename or an attractive layout must not invent an obligation, service result or completed review. Actual owner and approved work arrangements remain."
+        ]
+      },
+      {
+        "heading": "Preserve section relationships",
+        "items": [
+          "Identify complete sections and the sequence that preserves their meaning. In the example, the draft question precedes its explanation of what remains open. Examine heading identification and reading order rather than assume any tag or visual column proves the relationship.",
+          "W3C techniques illustrate ways to meet applicable requirements; they are not a new mandatory software recipe. A written repair proposal is not evidence from an actual output."
+        ]
+      },
+      {
+        "heading": "Retain visual and link meaning",
+        "items": [
+          "A text description should represent the visual’s actual purpose. The practice boxes move from reading the question to considering what remains open; they do not introduce an application or eligibility result.",
+          "A link label should describe the supplied destination. Relevant output presentation and navigation still need examination; a proposed label is not a tested public service route."
+        ]
+      },
+      {
+        "heading": "Read the review account honestly",
+        "items": [
+          "Retain the scope of a selected automated result. A skipped question was not examined in that run; a manual question needs actual review. Removing a line or changing its status is not repair evidence.",
+          "Identify actual observations, methods and remaining questions after relevant follow-up. Do not invent a pass because you can describe the desired result."
+        ]
+      },
+      {
+        "heading": "Understand personal meanings",
+        "items": [
+          "Lysa’s chosen remembrance meaning and Emil’s shared-thinking meaning widen their interpretation of a written draft. They propose a clearer account of proposed and open details while keeping contribution optional.",
+          "These accounts are individual and contextual, not rules for whole communities. Private understanding is worthwhile on its own. You can keep your reflection private."
+        ]
+      },
+      {
+        "heading": "Close with appropriate responsibility",
+        "items": [
+          "Describe A’s location response and B’s meaning response accurately. C’s missing navigation answer is unknown; it establishes neither success, failure, motive nor absence of concern.",
+          "Actual accessibility, assistance, content, records and release arrangements remain. When DHS Equity Policy’s qualifying formal procedure applies, this selected review or reflection does not substitute for the required analysis/scan or relevant equity-director-consulted customized tool.",
+          "The Equity and Inclusion Operations Consultant leads the program and provides guidance, knowledge and feedback. Staff own their work and can use support without a new mandatory consultant gate for every PDF. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA."
+        ]
+      }
+    ],
+    "remember": [
+      "Learning is voluntary.",
+      "Selected PDF practices and chosen task feedback are useful evidence within their scope, not complete technical certification or population/service outcomes.",
+      "Use the full example or a suitable authorized draft; no real file upload, software purchase, identity disclosure or public completion proof is required."
+    ]
+  },
+  "sources": [
+    {
+      "title": "MNIT: Accessible PDF documents",
+      "href": "https://mn.gov/mnit/about-mnit/accessibility/electronic-documents/pdf.jsp",
+      "note": "Actual source-first preparation, scan-versus-text and output reading-order review guidance supports the selected practice; not a complete certification checklist."
+    },
+    {
+      "title": "Adobe: Create and verify PDF accessibility",
+      "href": "https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html",
+      "note": "Current selected review-result distinctions and manual examination context; skipping a check is not repairing the document. Tool capabilities and actual applicable standards remain distinct."
+    },
+    {
+      "title": "W3C: PDF3, correct tab and reading order",
+      "href": "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF3",
+      "note": "Informative example technique supports examining meaningful sequence and relevant navigation, not a new agency-specific workflow mandate."
+    },
+    {
+      "title": "W3C: PDF9, heading identification",
+      "href": "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF9",
+      "note": "Informative technique illustrates meaningful PDF heading identification rather than treating visual enlargement or any existing tag as complete proof."
+    },
+    {
+      "title": "W3C: PDF1, text alternatives for images",
+      "href": "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF1",
+      "note": "Informative image technique supports preserving the visual’s actual task meaning; the original two-box example is not an implemented PDF or tested output."
+    },
+    {
+      "title": "Minnesota State Digital Accessibility Standard",
+      "href": "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
+      "note": "Actual adopted requirements, applicability, owner roles and exceptions remain separate from selected optional learning practices."
+    },
+    {
+      "title": "DHS: Content and writing guidelines",
+      "href": "https://mn.gov/dhs/digital-showcase/content-guidelines/",
+      "note": "Actual audience, task, accuracy, organization and link-label guidance supports the original explanations without inventing a service destination."
+    },
+    {
+      "title": "Council of Europe: Developing intercultural competence through education",
+      "href": "https://rm.coe.int/16808ce258",
+      "note": "Individual and context-dependent cultural meanings, self/other understanding and response inform the original Lysa/Emil encounter; no identity profile or personal assessment is made."
+    },
+    {
+      "title": "DHS Equity Policy",
+      "href": "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+      "note": "Actual daily equity responsibilities and qualifying formal analysis or scan/customized-tool procedures remain distinct from optional PDF practice."
+    }
+  ]
+}

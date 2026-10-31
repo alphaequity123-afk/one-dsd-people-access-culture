@@ -1,0 +1,1029 @@
+{
+  "id": "dc-s67-color-contrast-and-visual-design",
+  "topicId": "S67",
+  "subtitle": "Make sure text, visual cues and color meanings stay useful for readers by relying on specific evidence and making clear design decisions about color and contrast.",
+  "scope": "Learning is voluntary. Complete invented measurements and chosen task accounts support learning; this course does not implement a control, certify output, approve publication, create an exception or replace actual accessibility, assistance, privacy, editorial or formal equity responsibilities. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA.",
+  "introTranscript": "Follow Fara and Oswin through a text-background comparison, discussed/open question labels, an active field’s identifying outline and a five-entry review. Tilda and Marek’s separate original remembrance encounter explores visible warmth and room for chosen memories, changing the invitation’s proposed message while retaining readability. Use the complete practice numbers and accounts at your own pace. A selected measurement, a meaningful proposal, an actual task response and missing information remain distinct; no software, live edit or personal disclosure is required.",
+  "lessons": [
+    {
+      "title": "Examine the text against its actual background",
+      "summary": "A color preference and a contrast measurement answer different questions. Identify the text, its background and its actual size before judging the supplied result.",
+      "objective": "Identify the relevant text and background in the practice card.",
+      "objectives": [
+        "Identify the relevant text and background in the practice card.",
+        "Compare the supplied unrounded ratio with the applicable text threshold.",
+        "Distinguish a selected contrast result from complete accessibility evidence."
+      ],
+      "takeaways": [
+        "Contrast concerns a particular foreground and background.",
+        "Text size affects which threshold applies.",
+        "A selected passing result does not describe an entire page."
+      ],
+      "statement": "Use the actual text and background rather than the palette’s reputation.",
+      "image": {
+        "src": "/images/covers/stock-people-11.jpg",
+        "caption": "Two people shake hands while a third person stands between them outside a building."
+      },
+      "intro": {
+        "heading": "What does the supplied measurement tell Fara?",
+        "body": "In this example, Fara and Oswin are DHS colleagues preparing an optional practice card about discussing an open question. The card contains the sentence Choose one question to discuss in regular 16-point text. The exercise supplies an unrounded contrast ratio of 4.499:1 between that text color and its solid background. A second proposed combination has a supplied ratio of 5.2:1. These are complete invented measurements for the exercise, not results from the live application or a measurement you must perform on your own device.\n\nContrast describes the difference in lightness between particular colors. A palette can feel calm, bright or professional without providing enough contrast for a particular use. The relationship matters: the same text color can have a different result on another background. Oswin should examine the sentence against the background on which it actually appears rather than assume that every use of a familiar color will read equally well.\n\nWCAG 2.1’s text-contrast criterion sets a minimum of 4.5:1 for ordinary text, with a lower 3:1 threshold for large-scale text and specified exceptions. Large-scale text includes at least 18-point regular text or at least 14-point bold text. The supplied 16-point regular sentence is not within that large-text category. Calling it a heading does not change its actual size or weight. The criterion and its definitions matter more than the label an author gives it.\n\nThe unrounded 4.499 result is below 4.5. Displaying it as 4.5 after rounding does not make it meet that threshold. The supplied 5.2 result is above the relevant threshold for this particular text-background pair. That comparison identifies a fitting candidate for further review; it does not establish that every sentence, link, image, control or state in the card has been examined. No implementation or publication is claimed in this example.\n\nMinnesota’s adopted digital accessibility standard identifies the applicable WCAG levels and qualified Section 508 requirements, along with its actual scope, responsibilities and exceptions. The course’s selected text practice does not replace that full standard or decide an actual exception. Aesthetic choice can continue within the work’s real requirements: improving contrast does not require every page to abandon visual character or use one fixed color combination.\n\nPrivately compare the two supplied ratios for the exact sentence. Explain why the first cannot be made sufficient by rounding and what the second does not prove. You can practice with the complete account without installing a tool, changing a live page or disclosing a visual impairment. The next lesson looks at meaning conveyed through color, where sufficient contrast alone may still leave an important distinction unexplained."
+      },
+      "inThisLesson": [
+        "The supplied text and solid background",
+        "Actual size rather than a heading label",
+        "Unrounded thresholds",
+        "Selected measurement and wider review"
+      ],
+      "keyStatement": "A measured pair can answer a contrast question without answering every design question.",
+      "flashcards": [
+        {
+          "front": "Contrast pair",
+          "back": "The actual text color and background against which it is presented."
+        },
+        {
+          "front": "Supplied result",
+          "back": "An invented exercise measurement, not a claim about the live application."
+        },
+        {
+          "front": "Large-scale text",
+          "back": "A defined size and weight category, not any sentence called a heading."
+        },
+        {
+          "front": "Unrounded comparison",
+          "back": "Use the actual ratio when comparing it with a minimum threshold."
+        },
+        {
+          "front": "Selected evidence",
+          "back": "A result limited to the examined pair and conditions."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect the result to its actual use",
+        "items": [
+          {
+            "title": "Keep the pair together",
+            "body": "Fara’s supplied measurement describes the sentence on one solid background. Moving that same text onto a different panel can change the contrast. Retain both parts of the comparison so a passing result for one card is not borrowed to approve another appearance without examination."
+          },
+          {
+            "title": "Use the actual text category",
+            "body": "Regular 16-point text remains ordinary text in this exercise even if the author calls it a prominent heading. The relevant threshold follows the defined size and weight, not the author’s intent to make it important. This prevents a design label from silently relaxing the contrast question."
+          },
+          {
+            "title": "Retain the measurement’s precision",
+            "body": "The first unrounded ratio is just below the relevant minimum. A rounded display can make it look equal while losing that distinction. Fara can choose the stronger supplied candidate and keep its exact scope without claiming that one number proves the entire card is accessible."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three ways to judge the card",
+        "tabs": [
+          {
+            "label": "The palette feels professional",
+            "body": "Oswin likes the restrained colors, but that preference does not determine the sentence’s contrast. The measured relationship can reveal a problem in a visually coherent palette. Preserve the aesthetic purpose while examining the actual pair rather than treating familiarity or an official-looking arrangement as evidence."
+          },
+          {
+            "label": "The exact text pair is examined",
+            "body": "The 16-point regular sentence uses the ordinary-text threshold. Its 4.499 ratio falls below that threshold; the supplied 5.2 candidate exceeds it. This gives Fara a specific content-design finding and a candidate to examine, not a complete result for controls, images, changing states or the whole output."
+          },
+          {
+            "label": "The rounded result is accepted",
+            "body": "A display rounded to 4.5 hides that the first value is below the minimum. Oswin would make a stronger claim than the underlying number supports. The exercise keeps the unrounded result available so the learner can identify the distinction without a real color tool or mathematical derivation."
+          }
+        ]
+      },
+      "check": {
+        "question": "What is the accurate account of the supplied 16-point regular sentence?",
+        "correct": "The unrounded 4.499 ratio is below the 4.5 minimum; the supplied 5.2 pair exceeds that selected threshold.",
+        "wrong": [
+          "Rounding 4.499 to 4.5 establishes that the first pair meets the minimum.",
+          "Calling the sentence a heading automatically makes the large-text threshold apply.",
+          "The stronger supplied pair certifies every part of the card."
+        ],
+        "feedbackCorrect": "This uses the actual size and unrounded values while retaining the limited scope of the result.",
+        "feedbackIncorrect": "Rounding hides a below-minimum value rather than changing it. A heading label does not establish the defined large-text size or weight. A selected passing pair does not examine the whole card, its controls or every presentation."
+      },
+      "sorting": {
+        "heading": "Separate supplied conditions from accurate findings and unsupported conclusions",
+        "categories": [
+          "Supplied condition",
+          "Accurate finding",
+          "Unsupported conclusion"
+        ],
+        "items": [
+          {
+            "text": "The sentence is regular 16-point text.",
+            "category": "Supplied condition"
+          },
+          {
+            "text": "The first unrounded ratio is 4.499:1.",
+            "category": "Supplied condition"
+          },
+          {
+            "text": "The first pair is below the relevant ordinary-text minimum.",
+            "category": "Accurate finding"
+          },
+          {
+            "text": "The stronger supplied pair answers only the selected contrast question.",
+            "category": "Accurate finding"
+          },
+          {
+            "text": "A heading label alone lowers the threshold.",
+            "category": "Unsupported conclusion"
+          },
+          {
+            "text": "One passing pair certifies the full output.",
+            "category": "Unsupported conclusion"
+          }
+        ]
+      },
+      "next": "Examine a meaningful distinction currently communicated only by color.",
+      "scenario": {
+        "context": "Oswin wants to accept the first text pair because a rounded display shows 4.5 and the sentence is called a heading.",
+        "prompt": "Which response follows the supplied evidence?",
+        "options": [
+          "Use the unrounded value and actual 16-point regular size before making the contrast finding.",
+          "Accept the rounded display because it looks equal to the minimum.",
+          "Treat the heading label as proof that every other part of the card is accessible."
+        ],
+        "responses": [
+          "This keeps precision and actual presentation together.",
+          "The underlying value remains below the threshold despite its rounded display.",
+          "A label establishes neither the large-text category nor complete accessibility."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately compare the two supplied pairs and state one finding and one question the numbers leave open.",
+      "move": {
+        "control": "You can explain why actual presentation and unrounded values matter.",
+        "failure": "Preference, rounding or a heading label replaces the actual comparison.",
+        "next": "Use the complete practice conditions; no software installation or live edit is required."
+      }
+    },
+    {
+      "title": "Keep the meaning available beyond color",
+      "summary": "Color can support a design without carrying its entire message. Make an important distinction understandable when a reader cannot identify the assigned hues.",
+      "objective": "Identify the missing meaning in the practice two-color status key.",
+      "objectives": [
+        "Identify the missing meaning in the practice two-color status key.",
+        "Choose visible wording that preserves the actual distinction.",
+        "Distinguish a meaning cue from unrelated contrast and operation questions."
+      ],
+      "takeaways": [
+        "Color can remain part of a useful design.",
+        "Meaning should not depend only on identifying an assigned hue.",
+        "A visible explanation needs to describe the actual status."
+      ],
+      "statement": "Let readers identify the message without guessing the color’s assigned meaning.",
+      "image": {
+        "src": "/images/covers/stock-people-11.jpg",
+        "caption": "Two people shake hands while a third person stands between them outside a building."
+      },
+      "intro": {
+        "heading": "Can Oswin identify which question remains open?",
+        "body": "The practice card lists two discussion questions. Fara colors the first navy and the second tan. A key says navy means Discussed and tan means Open question, but the question rows themselves carry no status words or other visible distinction. The exercise asks Oswin to identify which question remains open. The example does not supply a real service determination, a required response date or any completed staff work.\n\nWCAG’s use-of-color criterion addresses reliance on color as the only visual way to convey information, identify an action, request a response or distinguish an element. Color may still contribute to the design. The issue is whether an important message requires the reader to distinguish a particular hue. Here the question is not which shade is more attractive; it is whether the row’s actual status is available without identifying navy or tan.\n\nFara can propose visible status text in each row: Discussed beside the first question and Open question beside the second. This supplies the actual distinction directly. A pattern or shape could also be useful when its meaning is understandable in context, but adding an unexplained star would merely replace one guessing task with another. The proposed wording should remain readable and appropriately associated with the question in the actual output.\n\nDiscussed is not the same as Approved, resolved or completed. A status label can be visually clear and factually wrong if it changes the meaning. Fara’s original information says only that one question was discussed and the other remains open. The course does not authorize renaming those states as service decisions, or require the learner to invent what happened during the discussion. Accurate content and distinguishable visual presentation need to work together.\n\nContrast and color meaning remain related but distinct questions. Two colors can each contrast sufficiently with their backgrounds while their assigned meanings remain difficult to identify. Adding status text addresses that specific message, but it does not show that the text itself has sufficient contrast, that a screen reader receives the relationship correctly or that an interactive control operates. Actual work should examine those relevant questions rather than infer them from one improvement.\n\nPrivately rewrite the two rows using their supplied statuses. Explain how the words preserve the task without adding a stronger result. You can use the example without simulating a visual condition or requiring another person to reveal one. The next lesson explores how different learned meanings attached to visual choices can widen understanding while the practical requirement to keep information readable remains in place."
+      },
+      "inThisLesson": [
+        "The assigned color meanings",
+        "Visible status wording",
+        "Discussed versus approved",
+        "Meaning, contrast and actual output"
+      ],
+      "keyStatement": "An additional visible cue should explain the actual message rather than merely add another symbol.",
+      "flashcards": [
+        {
+          "front": "Color meaning",
+          "back": "An assigned relationship between a hue and information such as a status."
+        },
+        {
+          "front": "Visible alternative",
+          "back": "Another visible way to identify the supplied distinction."
+        },
+        {
+          "front": "Actual status",
+          "back": "What the source says happened, without adding a decision or outcome."
+        },
+        {
+          "front": "Unexplained symbol",
+          "back": "A new mark whose meaning the reader still has to guess."
+        },
+        {
+          "front": "Separate review questions",
+          "back": "Meaning, text contrast, relationships and operation are not interchangeable findings."
+        }
+      ],
+      "accordion": {
+        "heading": "Make the distinction useful and accurate",
+        "items": [
+          {
+            "title": "Put the status with the question",
+            "body": "The row is where Oswin needs to identify what remains open. Visible words attached to each question reduce dependence on identifying the key’s colors. The proposal can retain navy and tan as supporting design while carrying the information through readable, relevant wording."
+          },
+          {
+            "title": "Preserve the supplied status",
+            "body": "Discussed records a limited event. Calling the same row Approved would invent a decision and could change what Oswin thinks to do next. A clearer-looking label is useful only when it preserves the actual information; readability should not come at the expense of accuracy."
+          },
+          {
+            "title": "Keep the other questions open",
+            "body": "Visible status words address the color-only message in this exercise. Their contrast and actual relationship to each row still need examination when real output exists. Do not turn a content proposal into evidence of screen-reader behavior, successful interaction or full compliance without examining those conditions."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three possible status cues",
+        "tabs": [
+          {
+            "label": "Only the assigned colors appear",
+            "body": "The key still asks Oswin to identify each hue in the rows before he can understand the status. A stronger contrast result against the background does not by itself identify what the colors stand for. The design needs an additional useful distinction rather than an assumption about every reader’s color perception."
+          },
+          {
+            "label": "Accurate words appear with each row",
+            "body": "Discussed and Open question carry the supplied meaning directly while allowing the palette to remain. The words should be readable and correctly associated with the questions in the actual output. This is a content-design proposal that can be evaluated, not evidence that a real discussion resolved anything."
+          },
+          {
+            "label": "A stronger result is invented",
+            "body": "Approved may seem shorter or more decisive than Discussed, but the example supplies no approval. The proposed label would make a false claim even if it were highly visible. Preserve the source’s actual state rather than improve appearance by changing the reader’s understanding of what happened."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which proposal preserves the supplied distinction without depending only on hue?",
+        "correct": "Add Discussed and Open question visibly beside their respective questions while retaining the colors if useful.",
+        "wrong": [
+          "Use more saturated colors and assume their assigned meanings are then understood.",
+          "Replace Discussed with Approved because it looks decisive.",
+          "Add an unexplained star and claim the whole output has been tested."
+        ],
+        "feedbackCorrect": "This provides the actual status in words without inventing a decision or erasing visual choice.",
+        "feedbackIncorrect": "More saturation does not explain an assigned status to someone who cannot identify the hue. Approved invents a decision absent from the source. An unexplained star can leave another guessing task and supplies no test of the output."
+      },
+      "sorting": {
+        "heading": "Separate actual meaning from fitting cues and unsupported additions",
+        "categories": [
+          "Actual meaning",
+          "Fitting visible cue",
+          "Unsupported addition"
+        ],
+        "items": [
+          {
+            "text": "One question has been discussed.",
+            "category": "Actual meaning"
+          },
+          {
+            "text": "The other question remains open.",
+            "category": "Actual meaning"
+          },
+          {
+            "text": "Put Open question beside the corresponding row.",
+            "category": "Fitting visible cue"
+          },
+          {
+            "text": "Retain accurate words even if supporting colors remain.",
+            "category": "Fitting visible cue"
+          },
+          {
+            "text": "The discussion proves a service approval.",
+            "category": "Unsupported addition"
+          },
+          {
+            "text": "A more saturated hue proves everyone understands its assigned status.",
+            "category": "Unsupported addition"
+          }
+        ]
+      },
+      "next": "Consider how a chosen account can change your interpretation of a visual preference.",
+      "scenario": {
+        "context": "Fara wants to improve the two-color key. The first question was discussed; the second remains open.",
+        "prompt": "Which proposal fits that account?",
+        "options": [
+          "Label the first Approved because the word has more authority.",
+          "Add the actual status words visibly to their rows and examine their presentation in the real output if used.",
+          "Keep color as the sole cue because both shades fit a professional palette."
+        ],
+        "responses": [
+          "The source supplies discussion, not approval.",
+          "This retains meaning and identifies what remains to examine.",
+          "A palette’s style does not resolve a color-only status message."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Privately write the two status rows and explain one stronger conclusion the labels must not imply.",
+      "move": {
+        "control": "You can preserve an actual distinction beyond its assigned colors.",
+        "failure": "A hue, unexplained symbol or invented decision carries the message.",
+        "next": "Use the supplied statuses; no real participant data or live page is needed."
+      }
+    },
+    {
+      "title": "Explore learned meanings without giving up readability",
+      "summary": "A chosen account can reveal why a visual choice feels welcoming or respectful to another person. Understanding that meaning can change the response while actual information and readability remain important.",
+      "objective": "Compare Tilda and Marek’s individually meanings the people describe of visual restraint.",
+      "objectives": [
+        "Compare Tilda and Marek’s individually meanings the people describe of visual restraint.",
+        "Identify how their accounts widen an initial interpretation.",
+        "Choose a changed response that retains meaning and readable information."
+      ],
+      "takeaways": [
+        "A visual preference may connect to learned meanings.",
+        "A chosen account does not predict every person’s response.",
+        "Understanding a meaning does not waive readability requirements."
+      ],
+      "statement": "Ask what the visual choice expresses before assigning a motive to the person.",
+      "image": {
+        "src": "/images/covers/stock-people-11.jpg",
+        "caption": "Two people shake hands while a third person stands between them outside a building."
+      },
+      "intro": {
+        "heading": "What does a quiet invitation mean to Marek?",
+        "body": "Away from the practice DHS practice, Tilda and Marek help prepare a voluntary gathering to remember a shared friend. Tilda describes growing up around family celebrations where vivid banners and conspicuous invitations showed that people were being openly welcomed. In that setting, visual energy helped express shared affection. When she sees Marek’s restrained invitation, she initially interprets the quiet appearance as reluctance to include others. This is her interpretation, not a fact established about Marek’s intent.\n\nMarek chooses to explain a different learned meaning. In his family’s remembrance gatherings, restrained presentation was a way of giving people room to bring memories without directing how they should feel. He associates a quiet invitation with respect for that space. He does not ask Tilda to agree that quiet colors always mean respect, or claim that everyone in a named community uses the same visual practice. The supplied account concerns his own learned meaning in this particular situation.\n\nTilda can now hold more than one interpretation. A restrained visual choice might express thoughtful regard rather than reluctance. Marek can also understand that Tilda’s wish for visible warmth is connected to welcoming participation, not necessarily a wish to overpower someone’s grief. Their common wish to welcome people does not erase the different ways they have learned to express it. Understanding the difference has value even before an invitation is changed.\n\nTheir response changes in the full example. Tilda asks how the invitation can communicate both an explicit welcome and room for people to choose what to share. Marek proposes keeping a restrained palette while adding clear words that say people may attend and share a memory if they wish. They agree to examine whether the wording remains easy to read against its actual background. No later attendance, comfort or emotional outcome is supplied; the agreed proposal is the demonstrated response, not proof of its effects.\n\nThis is intercultural learning through individually supplied meaning, perspective and behavior. Council of Europe guidance describes contextual cultural affiliations, understanding another perspective and responding through an encounter. It does not authorize a profile of Tilda or Marek’s personal assessment position. Neither person must disclose a family history for a real document to receive readable design. Their chosen accounts help this example, while a declined account would leave a question rather than justify an invented story.\n\nReturn to Fara’s card without copying the gathering’s symbolism onto staff. A color can have an intended expression and still require actual contrast, meaningful labels and applicable review. Privately examine how you might initially interpret restraint or visual energy, then widen that interpretation using the supplied accounts. You can keep the reflection unrecorded. The next lesson considers non-text cues that a reader needs to identify an active control, where the actual visual function matters more than a general preference for light or dark design."
+      },
+      "inThisLesson": [
+        "Tilda’s learned expression of welcome",
+        "Marek’s learned respect for space",
+        "A wider interpretation and changed invitation",
+        "Private understanding and readability"
+      ],
+      "keyStatement": "Retain both the person’s chosen meaning and the reader’s need for actual information.",
+      "flashcards": [
+        {
+          "front": "Chosen meaning",
+          "back": "The contextual meaning a person elects to explain, not a story inferred from identity."
+        },
+        {
+          "front": "Initial interpretation",
+          "back": "Tilda’s reading of restraint as reluctance, which the account does not establish as Marek’s intent."
+        },
+        {
+          "front": "Wider perspective",
+          "back": "Quiet appearance can express regard for personal space in Marek’s supplied experience."
+        },
+        {
+          "front": "Changed response",
+          "back": "Explicit welcome and chosen sharing are proposed alongside readable presentation."
+        },
+        {
+          "front": "Intrinsic insight",
+          "back": "Understanding can be valuable without a live edit, public proof or assessment label."
+        }
+      ],
+      "accordion": {
+        "heading": "Follow the meaning into a different response",
+        "items": [
+          {
+            "title": "Recognize the original interpretation",
+            "body": "Tilda links visible energy with welcome through her own learned experience. That explains why the quiet invitation surprises her, but it does not prove Marek is excluding people. Naming the interpretation leaves room to hear a different account rather than turn an unfamiliar visual practice into a character judgment."
+          },
+          {
+            "title": "Keep the contrast between meanings",
+            "body": "Marek’s restraint expresses room for personal memories; Tilda’s brightness expresses an open welcome. Their shared purpose is real within the example, but the meanings are not identical. Keeping both in view permits an invitation that explicitly welcomes attendance without demanding a particular emotional response or universal visual symbolism."
+          },
+          {
+            "title": "Describe the changed proposal accurately",
+            "body": "The pair proposes restrained colors, clear welcoming words and chosen sharing. They still need to examine actual readability. The supplied story ends with that proposal; it does not establish attendance or comfort. Understanding and response are demonstrated without manufacturing a later success or requiring a learner to produce a live invitation."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three interpretations of the quiet design",
+        "tabs": [
+          {
+            "label": "Reluctance is assumed",
+            "body": "Tilda’s first interpretation turns an unfamiliar expression into an inferred motive. Her own experience makes the interpretation understandable, but it remains incomplete. Marek’s chosen account supplies another meaning that can change how she asks about the invitation rather than require her to deny her own experience of welcome."
+          },
+          {
+            "label": "Different meanings are understood",
+            "body": "The pair identifies welcome through visible energy and respect through room for chosen memories. They change the invitation’s proposed message while retaining readability as an actual question. This is a perspective-to-response shift, not an agreement that every quiet design is accessible or every bright design is inappropriate."
+          },
+          {
+            "label": "One meaning becomes a rule for everyone",
+            "body": "Declaring that respectful people must use restrained colors would erase Tilda’s account and invent a universal cultural rule. It would also confuse a meaning with measured contrast. Use individual context to understand this encounter without applying a personal story to colleagues, communities or every future design."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which account follows the complete encounter?",
+        "correct": "The chosen meanings widen the pair’s interpretations and lead to explicit welcome with room for chosen sharing, while readability and later effects remain to examine.",
+        "wrong": [
+          "Marek’s quiet colors prove he does not want people to attend.",
+          "Tilda’s family experience establishes what all welcoming designs must look like.",
+          "Understanding Marek’s meaning removes the need to consider readable text."
+        ],
+        "feedbackCorrect": "This preserves distinct learned meanings, the demonstrated changed proposal and the open questions.",
+        "feedbackIncorrect": "Marek’s motive cannot be inferred from restraint. Tilda’s individual account does not establish a universal visual rule. Understanding a meaning does not make text readable or replace the actual requirements that apply to real work."
+      },
+      "sorting": {
+        "heading": "Separate meanings the people describe from changed responses and invented claims",
+        "categories": [
+          "Supplied individual meaning",
+          "Changed response",
+          "Invented claim"
+        ],
+        "items": [
+          {
+            "text": "Tilda associates vivid invitations with openly expressed welcome.",
+            "category": "Supplied individual meaning"
+          },
+          {
+            "text": "Marek associates restraint with room for chosen memories.",
+            "category": "Supplied individual meaning"
+          },
+          {
+            "text": "Ask how explicit welcome and chosen sharing can appear together.",
+            "category": "Changed response"
+          },
+          {
+            "text": "Keep readability as an actual question for the proposed invitation.",
+            "category": "Changed response"
+          },
+          {
+            "text": "All people with Marek’s affiliations prefer quiet design.",
+            "category": "Invented claim"
+          },
+          {
+            "text": "The proposal proves later comfort and attendance.",
+            "category": "Invented claim"
+          }
+        ]
+      },
+      "next": "Identify the visual cue a reader needs to recognize an active control.",
+      "scenario": {
+        "context": "Tilda hears Marek’s chosen account of restraint as respect for space at a remembrance gathering.",
+        "prompt": "Which response reflects the wider understanding?",
+        "options": [
+          "Keep the original motive judgment because her own welcome meaning is familiar.",
+          "Declare restraint a universal rule and stop considering readability.",
+          "Ask how the invitation can offer explicit welcome and chosen sharing while retaining a readable presentation."
+        ],
+        "responses": [
+          "Familiarity does not settle Marek’s intent after a different account is supplied.",
+          "A contextual meaning is not a universal rule or an accessibility exception.",
+          "This changes the response through the two meanings without inventing an outcome."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately name the initial interpretation, the different learned meaning and one response the encounter changes.",
+      "move": {
+        "control": "You can hold distinct contextual meanings without assigning a motive or a group profile.",
+        "failure": "An unfamiliar preference becomes a motive, a universal rule or a reason to ignore readability.",
+        "next": "Use the complete chosen accounts; personal disclosure, a live invitation and public proof are not required."
+      }
+    },
+    {
+      "title": "Examine visual cues needed to identify controls",
+      "summary": "Not every border or decorative shape serves the same function. Identify the non-text information that is actually needed to recognize a control or understand its state, then examine it against its adjacent colors.",
+      "objective": "Identify the required visual cue in the practice active answer field.",
+      "objectives": [
+        "Identify the required visual cue in the practice active answer field.",
+        "Compare its supplied ratio with the relevant non-text threshold.",
+        "Distinguish meaningful cues from decoration and separately reviewed text."
+      ],
+      "takeaways": [
+        "The cue’s actual function matters.",
+        "Required non-text cues are examined against adjacent colors.",
+        "A control’s text and other questions retain their own review."
+      ],
+      "statement": "Examine the visual information that makes the actual control recognizable.",
+      "image": {
+        "src": "/images/covers/stock-people-11.jpg",
+        "caption": "Two people shake hands while a third person stands between them outside a building."
+      },
+      "intro": {
+        "heading": "What tells Oswin where an answer can be entered?",
+        "body": "Fara’s optional practice card now includes a practice active answer field. The supplied account says that the field has no visible content or other visual way to identify it as a control; its outline alone indicates where the answer can be entered. The outline has a supplied contrast ratio of 2.8:1 against its adjacent background. A proposed outline has a supplied ratio of 3.4:1. These are invented selected measurements, and no actual control is implemented or tested by this course.\n\nWCAG 2.1’s non-text contrast criterion concerns visual information needed to identify controls and their states, and parts of graphics needed to understand content. Its minimum is 3:1 against adjacent colors, with specified exceptions. The outline in this exercise is needed to identify an active field, so the supplied 2.8 result is below the relevant minimum and the supplied 3.4 candidate exceeds it. Calling the line a subtle design detail does not change its supplied function.\n\nThis does not mean every visible border on every page must meet the same requirement. W3C’s explanation distinguishes a boundary needed to identify a control from a border that is unnecessary because other visible content already identifies it. Decorative lines that carry no required information have a different role. The learner should ask what the visual cue actually enables rather than measure every ornamental edge and declare any faint line a barrier or any dark line a complete solution.\n\nText within or near a control has its own contrast question. A 3.4 non-text result does not automatically establish sufficient ordinary-text contrast. Nor does the result establish keyboard operation, an appropriate name for assistive technology, the clarity of the question or the correctness of any answer. Fara can describe the cue-specific finding while keeping these relevant output questions open. A control may need several kinds of evidence to support a wider conclusion.\n\nThe criterion includes an exception for inactive controls and for certain unmodified presentation determined by the user agent. Those are actual scope distinctions, not permission to rename an active control inactive merely to avoid examining it. The exercise explicitly says this field is active and its outline is the only supplied visual identifier. No staff member is asked to hide a required action, disable a real task or file an agency exception through this practice.\n\nPrivately explain the outline’s supplied function and compare the two values. Name a decorative detail that would require understanding its role before making the same claim, and one text or operation question the outline result cannot answer. You can learn from the complete account without using a mouse, keyboard or particular software. The next lesson joins selected measurements with the actual message and changing presentation so a small collection of passing results does not become a claim about an entire design."
+      },
+      "inThisLesson": [
+        "The field’s supplied active function",
+        "The needed outline and adjacent background",
+        "Required cues versus decorative boundaries",
+        "Text and operation questions remain separate"
+      ],
+      "keyStatement": "The non-text result applies to the needed cue, not every appearance or function of the control.",
+      "flashcards": [
+        {
+          "front": "Required cue",
+          "back": "Visual information needed to identify a control, state or meaningful part of a graphic."
+        },
+        {
+          "front": "Adjacent color",
+          "back": "The neighboring color relevant to the cue’s actual presentation."
+        },
+        {
+          "front": "Decorative boundary",
+          "back": "An edge that carries no needed information in the supplied context."
+        },
+        {
+          "front": "Active field",
+          "back": "The example explicitly says the field is available for entering an answer."
+        },
+        {
+          "front": "Selected candidate",
+          "back": "A proposed cue that needs actual implementation and wider review when used in real work."
+        }
+      ],
+      "accordion": {
+        "heading": "Keep function and measurement together",
+        "items": [
+          {
+            "title": "Identify why the outline matters",
+            "body": "The complete account says the outline is the only visual way to identify the field. Its function makes the contrast question relevant. The label subtle does not remove that function. Fara can describe the below-minimum cue without assuming that every pale line elsewhere has the same purpose."
+          },
+          {
+            "title": "Examine the actual adjacent colors",
+            "body": "The supplied ratios compare the outline with the background next to it. A different neighboring panel or actual presentation could require another examination. Keep the cue and its relevant surroundings in the account rather than approve every use of a proposed outline color from one selected result."
+          },
+          {
+            "title": "Separate cue evidence from wider operation",
+            "body": "The proposed 3.4 result addresses the needed outline, not the field’s text, name or operation. Oswin could recognize a field yet still encounter another issue. Retaining these questions makes the report useful for actual review without inventing a complete tested control or requiring live work from the learner."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three claims about the outline",
+        "tabs": [
+          {
+            "label": "A decorative role is assumed",
+            "body": "Calling the line decoration would contradict the supplied fact that it alone identifies the active field. If a different real boundary is purely ornamental, its role needs its own account. Examine what the cue enables rather than apply a convenient category or a universal rule about all borders."
+          },
+          {
+            "label": "The needed cue is examined",
+            "body": "The supplied 2.8 result is below the relevant 3:1 non-text minimum; the 3.4 candidate exceeds it. This supports a cue-specific finding for this active field’s outline. It remains distinct from ordinary text, operation, actual implementation and a claim about the whole optional practice card."
+          },
+          {
+            "label": "Inactive status is invented",
+            "body": "The field is explicitly active in the example. Describing it as inactive would change the task merely to avoid the applicable question. Actual exceptions retain their real conditions; the course supplies neither a new exception nor authority to disable a real action or conceal an unresolved cue."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which finding matches the active field and supplied outline ratios?",
+        "correct": "The needed 2.8 outline is below the relevant 3:1 minimum; the 3.4 candidate addresses that selected cue, with other questions still open.",
+        "wrong": [
+          "The outline is automatically decoration because it is thin.",
+          "The 3.4 result establishes sufficient contrast for all ordinary text and successful keyboard operation.",
+          "The active field can be called inactive to avoid examining its outline."
+        ],
+        "feedbackCorrect": "This retains the field’s actual function and the limited scope of the measurement.",
+        "feedbackIncorrect": "Thin appearance does not remove the outline’s supplied identifying role. A non-text cue result does not establish ordinary-text contrast or operation. Renaming an explicitly active field inactive invents a condition rather than applying an actual exception."
+      },
+      "sorting": {
+        "heading": "Separate supplied function from accurate findings and unsupported scope",
+        "categories": [
+          "Supplied function",
+          "Accurate selected finding",
+          "Unsupported scope"
+        ],
+        "items": [
+          {
+            "text": "The outline alone identifies the active field visually.",
+            "category": "Supplied function"
+          },
+          {
+            "text": "The outline is compared with its adjacent background.",
+            "category": "Supplied function"
+          },
+          {
+            "text": "The supplied 2.8 value is below the relevant non-text minimum.",
+            "category": "Accurate selected finding"
+          },
+          {
+            "text": "The stronger candidate leaves operation and text questions open.",
+            "category": "Accurate selected finding"
+          },
+          {
+            "text": "Every decorative border has exactly the same identifying function.",
+            "category": "Unsupported scope"
+          },
+          {
+            "text": "The candidate proves the control works through every method.",
+            "category": "Unsupported scope"
+          }
+        ]
+      },
+      "next": "Keep selected measurements, actual meaning and unexamined presentation separate.",
+      "scenario": {
+        "context": "Fara is told that the field’s outline is its only visual identifier. Its supplied ratio is 2.8.",
+        "prompt": "What should her account preserve?",
+        "options": [
+          "The outline’s actual identifying role, below-minimum selected result and need to examine the proposed candidate in context.",
+          "The assumption that all thin lines are decoration and need no inquiry.",
+          "A claim that calling the field inactive settles its actual operation."
+        ],
+        "responses": [
+          "This follows the supplied conditions without a whole-control assurance.",
+          "A thin line can still carry needed information; role must be established.",
+          "Changing a label does not change the explicitly active condition."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately explain which cue is needed and one wider question its ratio cannot answer.",
+      "move": {
+        "control": "You can connect the non-text finding to an actual identifying function.",
+        "failure": "A decorative label, invented inactive state or whole-control assurance replaces the supplied scope.",
+        "next": "Use the complete practice measurements; no software or live interaction is required."
+      }
+    },
+    {
+      "title": "Keep a review specific as the design changes",
+      "summary": "A selected measurement, a meaning proposal and an unexamined appearance are different kinds of information. Describe each accurately instead of treating a few passing results as the full design’s result.",
+      "objective": "Classify the five supplied review entries by their actual evidence.",
+      "objectives": [
+        "Classify the five supplied review entries by their actual evidence.",
+        "Identify why a changed background needs its own examination.",
+        "Choose a clear account that preserves an unresolved item."
+      ],
+      "takeaways": [
+        "Keep the measured use and conditions in the account.",
+        "Changed presentation can change the contrast question.",
+        "Unexamined information is not a passing or failing result."
+      ],
+      "statement": "Describe what was examined and retain what is still unknown.",
+      "image": {
+        "src": "/images/covers/stock-people-11.jpg",
+        "caption": "Two people shake hands while a third person stands between them outside a building."
+      },
+      "intro": {
+        "heading": "What belongs in Fara’s short review account?",
+        "body": "The complete practice review contains five entries. Entry one records the supplied 5.2 text ratio for the regular 16-point sentence on its solid background. Entry two records the supplied 3.4 outline ratio for the active field whose outline identifies it visually. Entry three records proposed visible Discussed and Open question labels. Entry four describes a new gradient background behind a copy of the sentence, but supplies no measurement of that appearance. Entry five records the below-minimum 4.499 text pair retained only as a comparison example, not as an approved design. These entries do not supply a finished page or publication decision.\n\nThe first two entries support specific selected contrast findings. They answer different questions and use different relevant thresholds. Entry three is a proposal about meaning; no measurement or actual output response is supplied for its wording. Entry four is unexamined. Entry five remains below the ordinary-text threshold under its original conditions. Counting the entries as five successful checks would erase these differences and overstate what the example provides.\n\nA gradient makes the background vary across the area. Fara cannot borrow the solid-background ratio to describe every place behind the copied sentence. W3C’s contrast explanations focus on the colors relevant to the actual presentation, rather than a single reassuring palette name. The right account identifies the changed background and the need to examine the relevant appearance. This course does not prescribe a universal measurement menu, treat a screenshot’s appearance as the entire result or supply a ratio that was never given.\n\nThe open status-label proposal also needs an accurate description. It is intended to retain the actual discussed/open distinction beyond color. That purpose is valuable, but a proposed sentence is not evidence that it appears with the right row, remains readable or is available through relevant methods. Staff can state a fitting proposal and its review questions together. Unknown does not mean that a colleague refused help or that a page is definitely broken.\n\nActual design work retains its applicable technical standard, editorial responsibilities, information arrangements and approval processes. Learning from this account does not authorize releasing a changed page or deciding an exception. DHS’s writing guidance supports a clear account of purpose and useful task information; it does not say that five exercise entries satisfy every formal review. Qualifying formal DHS equity analysis retains its actual toolkit or relevant customized-tool requirements.\n\nPrivately summarize the five entries in a few clear sentences. Distinguish the selected measured findings, proposed labels, unexamined gradient and original below-minimum comparison. State what the person responsible would need next without inventing that it has already happened. You can use the supplied account without collecting anyone’s personal data or accessing a real design. The final lesson adds three chosen task responses, where specific evidence about a reader’s experience remains different from a numerical contrast result."
+      },
+      "inThisLesson": [
+        "Five supplied review entries",
+        "Measurements and meaning proposals",
+        "The changed gradient background",
+        "Unknown presentation and actual responsibilities"
+      ],
+      "keyStatement": "A specific review account can preserve useful findings without turning open questions into results.",
+      "flashcards": [
+        {
+          "front": "Measured entry",
+          "back": "A supplied ratio for a stated pair and presentation."
+        },
+        {
+          "front": "Meaning proposal",
+          "back": "Suggested labels intended to communicate an actual distinction."
+        },
+        {
+          "front": "Changed condition",
+          "back": "A different background or presentation that needs its own relevant examination."
+        },
+        {
+          "front": "Unexamined entry",
+          "back": "An item for which the example supplies no relevant result."
+        },
+        {
+          "front": "Review account",
+          "back": "Clear findings and open questions, not a certificate or publication authorization."
+        }
+      ],
+      "accordion": {
+        "heading": "Retain the distinctions in the five-entry account",
+        "items": [
+          {
+            "title": "Do not count different evidence as one outcome",
+            "body": "The two selected ratios, proposed labels, gradient question and retained below-minimum example are not five successful checks. They have different meanings. A reader needs those distinctions to understand what can support a proposal and what remains to examine, rather than an impressive total with its categories erased."
+          },
+          {
+            "title": "Identify the changed background",
+            "body": "The copied sentence sits over varying colors rather than its original solid background. The old pair’s number cannot describe every relevant appearance without examination. Name this condition so the next inquiry follows the actual design, not a reassuring result attached to a different use."
+          },
+          {
+            "title": "Keep unknown free of a motive claim",
+            "body": "The label proposal and gradient lack relevant output evidence in the account. That absence does not show refusal, success or failure. Fara can state what is not supplied and identify an appropriate next examination without converting a missing result into an evaluation of a colleague or an invented page finding."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three short review summaries",
+        "tabs": [
+          {
+            "label": "Five successful checks are reported",
+            "body": "The count combines unlike entries and mislabels the below-minimum comparison and unexamined gradient. A total can be numerically simple but semantically false. Keep the evidence categories visible so a reader can distinguish actual supplied findings from proposals and absent results."
+          },
+          {
+            "label": "Specific findings and questions are reported",
+            "body": "The 5.2 text pair and 3.4 identifying outline have selected supplied results. Status wording is proposed, the gradient remains unexamined and the original 4.499 text pair is below its threshold. This account supports useful next questions without inventing a full output or approval."
+          },
+          {
+            "label": "Missing evidence becomes failure",
+            "body": "Declaring the gradient failed would manufacture a result; declaring the labels understood would do the same in the other direction. Missing information should prompt the appropriate inquiry. It cannot establish a technical value, successful task, motive or complete decision that the example never supplies."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which short account matches the five entries?",
+        "correct": "Two selected ratios meet their relevant thresholds; labels are proposed, the gradient is unexamined and the retained 4.499 pair remains below its threshold.",
+        "wrong": [
+          "All five entries are successful checks because they appear in the same review list.",
+          "The old solid-background ratio automatically applies across the new gradient.",
+          "An unexamined entry establishes a colleague’s refusal and a failed design."
+        ],
+        "feedbackCorrect": "This preserves the evidence categories and the actual conditions of each supplied entry.",
+        "feedbackIncorrect": "A shared list does not turn proposals, a missing result and a below-minimum comparison into successes. A changed background needs relevant examination rather than a borrowed number. Missing evidence establishes neither motive nor a failure value."
+      },
+      "sorting": {
+        "heading": "Separate selected measurements from proposals and unexamined information",
+        "categories": [
+          "Supplied measured finding",
+          "Meaning proposal",
+          "Unexamined presentation"
+        ],
+        "items": [
+          {
+            "text": "The 5.2 text pair exceeds its relevant threshold under the supplied solid-background conditions.",
+            "category": "Supplied measured finding"
+          },
+          {
+            "text": "The retained 4.499 comparison is below the ordinary-text minimum.",
+            "category": "Supplied measured finding"
+          },
+          {
+            "text": "Put Discussed beside its actual question.",
+            "category": "Meaning proposal"
+          },
+          {
+            "text": "Put Open question beside the corresponding row.",
+            "category": "Meaning proposal"
+          },
+          {
+            "text": "No ratio is supplied for the new gradient appearance.",
+            "category": "Unexamined presentation"
+          },
+          {
+            "text": "No actual output response is supplied for the status-label presentation.",
+            "category": "Unexamined presentation"
+          }
+        ]
+      },
+      "next": "Separate the measured findings from the three supplied task responses.",
+      "scenario": {
+        "context": "Fara copies the sentence onto a gradient and is asked to reuse the original solid-background number as its result.",
+        "prompt": "Which account is supported?",
+        "options": [
+          "The old result now proves every part of the gradient appearance.",
+          "The background has changed; the example supplies no relevant result for that appearance.",
+          "The missing measurement proves a deliberate refusal by the author."
+        ],
+        "responses": [
+          "The measured conditions differ, so the original number cannot automatically describe the new use.",
+          "This identifies the actual open question without inventing a ratio or failure.",
+          "No motive is supplied by an absent measurement."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Privately write a short account retaining the five entries’ actual evidence and one appropriate next question.",
+      "move": {
+        "control": "You can distinguish selected findings, proposals and unexamined presentation.",
+        "failure": "A count, borrowed ratio or motive claim erases the entries’ different meanings.",
+        "next": "Use the complete practice list; no data collection, live release or exception decision is required."
+      }
+    },
+    {
+      "title": "Describe reader feedback without overstating the result",
+      "summary": "A contrast result and a chosen task response can both inform review, but they answer different questions. Preserve what each response shows and leave missing information open.",
+      "objective": "Classify A, B and C’s supplied task information accurately.",
+      "objectives": [
+        "Classify A, B and C’s supplied task information accurately.",
+        "Distinguish selected reader feedback from complete conformance or population findings.",
+        "Choose a follow-up account that respects actual responsibilities and private learning."
+      ],
+      "takeaways": [
+        "Specific feedback supports a specific task finding.",
+        "A missing answer supplies no success, failure or motive.",
+        "Learning can be useful without a live design change."
+      ],
+      "statement": "Keep the numbers, the actual responses and the unanswered question distinct.",
+      "image": {
+        "src": "/images/covers/stock-people-11.jpg",
+        "caption": "Two people shake hands while a third person stands between them outside a building."
+      },
+      "intro": {
+        "heading": "What do the three chosen responses show?",
+        "body": "The full example ends with three voluntarily supplied task accounts. A reads Choose one question to discuss from the proposed solid-background card and repeats that instruction accurately. B identifies which of the two questions remains open when the proposed visible status words appear beside them. C is asked about identifying the active answer field, but no response is supplied. No medical information, named employee record or real user sample is included. The account does not supply a completed technical review or a later publication.\n\nA’s response is specific evidence about the supplied reading task. It is not a measurement of every text pair or proof that all people can read the design. B’s response supports the supplied status-identification task in the version with visible words. It does not show that the discussion resolved the question or that a service was approved. C’s missing answer leaves that task’s response unknown; the absence cannot be counted as success, failure, unwillingness or a visual condition.\n\nThe selected ratios remain useful without replacing these distinctions. A supplied text-background result addresses that pair’s contrast. A chosen task response concerns what was done in its specific account. Neither one alone establishes full WCAG conformance, every reader’s experience or every relevant assistive-technology interaction. A report can describe both kinds of evidence and their limits without making the findings unhelpful or promising that the next design will work for everyone.\n\nIn actual work, follow-up should use the real task, relevant methods, responsibilities and information arrangements. A practice review does not grant publication authority, approve a technical exception or replace assistance someone currently needs. Minnesota’s standard retains its actual owner responsibilities and scope. Qualifying formal equity analysis under DHS policy retains its actual procedures. Staff should not ask someone to disclose a disability simply to make a short visual-design exercise appear complete.\n\nThe Equity and Inclusion Operations Consultant leads the program and provides guidance, knowledge and feedback. Staff own their work and can use support to develop their capability; this course creates no mandatory consultant review for every sentence or color choice. Learning is voluntary. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA.\n\nYou can also close with an intrinsic learning gain. Tilda’s understanding of Marek’s chosen remembrance meaning widened her interpretation of restraint and changed the proposal toward explicit welcome with room for personal choice. That understanding has value on its own. You can keep your reflection private. Privately explain one selected contrast finding, one supplied task response and one open question. Choose a next inquiry for the example or keep the reflection unrecorded; the course does not require real work or turn your learning into a personal ranking."
+      },
+      "inThisLesson": [
+        "A’s reading response",
+        "B’s status-identification response",
+        "C’s unanswered field question",
+        "Honest follow-up and private learning"
+      ],
+      "keyStatement": "Specific evidence remains useful when its limits are stated clearly.",
+      "flashcards": [
+        {
+          "front": "A’s account",
+          "back": "The instruction was read and repeated accurately in the supplied task."
+        },
+        {
+          "front": "B’s account",
+          "back": "The open question was identified with the proposed visible status words."
+        },
+        {
+          "front": "C’s account",
+          "back": "No response is supplied, so the task result remains unknown."
+        },
+        {
+          "front": "Different evidence",
+          "back": "A measured pair and a reader’s supplied task response answer related but different questions."
+        },
+        {
+          "front": "Private learning",
+          "back": "Meaningful understanding need not produce a live redesign or public proof."
+        }
+      ],
+      "accordion": {
+        "heading": "Return what the closing account actually shows",
+        "items": [
+          {
+            "title": "Preserve A and B’s specific tasks",
+            "body": "A repeats an instruction; B identifies the open question. These are meaningful chosen responses in the example. Describe them directly rather than generalize to every reader, every color combination or a resolved discussion. Their usefulness does not depend on a stronger conclusion than the account supports."
+          },
+          {
+            "title": "Leave C’s missing response open",
+            "body": "No answer is supplied to the field-identification question. The correct account is unknown, not failed or passed. Follow-up can identify a relevant question through actual arrangements without assigning a motive, visual condition or ability to someone who has not supplied that information."
+          },
+          {
+            "title": "Keep the learning gain alongside actual responsibilities",
+            "body": "Tilda’s changed interpretation and proposal are demonstrated in the earlier encounter. Private insight is valuable on its own. In real design work, applicable standards, assistance, formal equity procedures and publication arrangements still matter; optional completion does not certify the output or move those duties onto another learner."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three closing conclusions",
+        "tabs": [
+          {
+            "label": "Everyone can use the design",
+            "body": "The supplied A and B accounts cannot establish universal experience, complete conformance or a service outcome. The course gives specific responses and selected ratios only. A professional account keeps these findings useful while stating which broader evidence, output and actual conditions have not been supplied."
+          },
+          {
+            "label": "The actual findings are returned",
+            "body": "A’s instruction response and B’s status identification are retained alongside the selected contrast results. C remains unknown, and the gradient and actual output still need relevant examination if used. This describes progress and next questions without certifying a page or requiring a live project to make the learning worthwhile."
+          },
+          {
+            "label": "No answer is turned into failure",
+            "body": "C’s absence supplies no failed task or refusal. Making that claim would obscure rather than explain the next question. The honest response is to keep the information missing and identify appropriate follow-up without demanding a medical disclosure or converting a voluntary exercise into personnel evaluation."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which closing account follows the supplied information?",
+        "correct": "A’s reading and B’s status responses are specific evidence; C remains unknown, and the selected ratios do not certify complete output or universal experience.",
+        "wrong": [
+          "Two chosen responses prove all readers can use every part of the design.",
+          "C’s missing answer establishes a failed field-identification task and deliberate refusal.",
+          "A live redesign and public proof are required before private understanding has value."
+        ],
+        "feedbackCorrect": "This preserves each supplied task, the missing response and the limited role of the selected measurements.",
+        "feedbackIncorrect": "Two chosen accounts cannot establish every reader’s experience or full conformance. C’s absence supplies neither failure nor motive. Intrinsic private understanding is valuable without a live redesign or public proof; actual work responsibilities remain separate."
+      },
+      "sorting": {
+        "heading": "Separate supplied feedback from open questions and appropriate learning",
+        "categories": [
+          "Supplied task feedback",
+          "Open question",
+          "Appropriate learning"
+        ],
+        "items": [
+          {
+            "text": "A repeats the proposed instruction accurately.",
+            "category": "Supplied task feedback"
+          },
+          {
+            "text": "B identifies the open question beside its visible status.",
+            "category": "Supplied task feedback"
+          },
+          {
+            "text": "C’s field-identification response is not supplied.",
+            "category": "Open question"
+          },
+          {
+            "text": "The actual gradient appearance lacks a relevant ratio in this example.",
+            "category": "Open question"
+          },
+          {
+            "text": "Privately explain how a chosen meaning changed an initial interpretation.",
+            "category": "Appropriate learning"
+          },
+          {
+            "text": "Identify a relevant next inquiry without inventing a result or requiring disclosure.",
+            "category": "Appropriate learning"
+          }
+        ]
+      },
+      "next": "Use the job aid to keep purpose, selected evidence and open questions clear.",
+      "scenario": {
+        "context": "A and B supply specific task responses; C’s answer is missing. Fara wants a useful closing summary.",
+        "prompt": "Which conclusion preserves the account?",
+        "options": [
+          "The full design is certified and every future reader will succeed.",
+          "C deliberately refused, so the answer field has failed.",
+          "Return A and B’s specific responses, leave C unknown and keep selected measurements distinct from complete output review."
+        ],
+        "responses": [
+          "The supplied scope does not support universal experience or complete certification.",
+          "Receiving no answer establishes neither motive nor a failure finding.",
+          "This supports useful follow-up without adding outcomes or changing the voluntary learning scope."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately write one selected finding, one actual task response and one open question; optionally name a personal understanding you gained.",
+      "move": {
+        "control": "You can return specific evidence and value private learning without making a stronger outcome claim.",
+        "failure": "Missing information becomes failure, selected evidence becomes certification or learning becomes a compulsory live project.",
+        "next": "Use the full example or an unrecorded reflection. You can keep your reflection private."
+      }
+    }
+  ],
+  "jobAid": {
+    "title": "Keep visual information readable and meaningful",
+    "subtitle": "Connect selected measurements to purpose, retain actual status and describe what remains open.",
+    "sections": [
+      {
+        "heading": "Identify the actual text pair",
+        "items": [
+          "Retain text size and weight, foreground and background with the supplied measurement. In the example, regular 16-point text uses the ordinary-text minimum; calling it a heading does not change its actual category.",
+          "The unrounded 4.499 text ratio is below 4.5; displaying a rounded value does not change that finding. The supplied 5.2 pair exceeds that selected threshold but does not certify every appearance or function."
+        ]
+      },
+      {
+        "heading": "Keep meaning available beyond hue",
+        "items": [
+          "The practice rows mean Discussed and Open question. Visible accurate words can carry that distinction while supporting colors remain. An unexplained symbol can create another guessing task.",
+          "Discussed is not Approved. Do not make a clearer visual cue factually stronger than its source; examine its actual readability and relationship to the corresponding question."
+        ]
+      },
+      {
+        "heading": "Understand contextual meanings",
+        "items": [
+          "Tilda’s learned visible-warmth meaning and Marek’s learned room-for-memories meaning widen the initial motive interpretation. The changed invitation proposes explicit welcome and chosen sharing with readable presentation still to examine.",
+          "These are chosen individual accounts, not group profiles, universal symbolism or assessment positions. No later attendance or comfort is supplied. Private insight has value on its own. You can keep your reflection private."
+        ]
+      },
+      {
+        "heading": "Examine required visual cues",
+        "items": [
+          "In the full example the active field’s outline is its only visual identifier. The supplied 2.8 ratio is below the relevant 3:1 non-text minimum; the 3.4 candidate exceeds that selected threshold.",
+          "Not every ornamental edge has the same role. Actual scope and exceptions require their own conditions; an active field cannot be renamed inactive to avoid inquiry. The outline’s result does not settle ordinary text, accessible naming or operation."
+        ]
+      },
+      {
+        "heading": "Keep the five review entries distinct",
+        "items": [
+          "Two selected above-threshold pair results, proposed status wording, an unexamined gradient and the retained below-minimum text comparison are different information. They are not five successful checks.",
+          "The solid-background number cannot automatically describe the copied sentence over a gradient. Identify the actual changed presentation and relevant next examination rather than borrow a result or assign a motive to missing evidence."
+        ]
+      },
+      {
+        "heading": "Return findings and open questions",
+        "items": [
+          "A’s instruction response and B’s status identification are specific supplied feedback. C’s field-identification response remains unknown; missing information establishes neither a failure nor deliberate refusal.",
+          "Actual accessibility, assistance, editorial, privacy, information and publication arrangements retain their responsibilities. Qualifying formal DHS equity analysis retains its actual toolkit/customized-tool procedures; optional practice supplies no exception or full output certification.",
+          "The Equity and Inclusion Operations Consultant leads the program and provides guidance, knowledge and feedback; staff own their work and can use support without a new mandatory review gate for every design choice. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA."
+        ]
+      }
+    ],
+    "remember": [
+      "Learning is voluntary.",
+      "A color preference, a selected contrast result and a reader’s supplied task response answer different questions. Keep each finding’s actual conditions clear.",
+      "Use the full example or an unrecorded reflection. Software installation, medical disclosure, a live change and public proof are not required."
+    ]
+  },
+  "sources": [
+    {
+      "title": "WCAG 2.1: Use of color, text contrast and non-text contrast",
+      "href": "https://www.w3.org/TR/WCAG21/",
+      "note": "Actual criteria 1.4.1, 1.4.3 and 1.4.11, defined large-scale text and conformance scope distinguish selected color and cue questions from full output results."
+    },
+    {
+      "title": "W3C: Understanding contrast minimum",
+      "href": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html",
+      "note": "Actual text-size categories, unrounded thresholds and actual presentation support the original supplied pair comparison; explanatory guidance is not a new agency-specific method."
+    },
+    {
+      "title": "W3C: Understanding use of color",
+      "href": "https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html",
+      "note": "Actual meaning beyond hue supports visible discussed/open labels while keeping text contrast, implementation and other access questions distinct."
+    },
+    {
+      "title": "W3C: Understanding non-text contrast",
+      "href": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html",
+      "note": "Actual needed-control/state and meaningful-graphic scope, adjacent colors, boundary distinctions and specified exceptions support the original active-outline exercise without claiming every decorative edge has the same role."
+    },
+    {
+      "title": "Minnesota State Digital Accessibility Standard",
+      "href": "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
+      "note": "Actual adopted standards, applicability, owner responsibilities and exceptions remain distinct from selected optional practice and cannot be certified or waived by course completion."
+    },
+    {
+      "title": "DHS: Content and writing guidelines",
+      "href": "https://mn.gov/dhs/digital-showcase/content-guidelines/",
+      "note": "Actual purpose, audience, accurate status, clear task instructions and maintenance support the original labels and review accounts without authorizing a release."
+    },
+    {
+      "title": "Council of Europe: Developing intercultural competence through education",
+      "href": "https://rm.coe.int/16808ce258",
+      "note": "Individual/contextual learned meanings, self/other understanding and response inform the original Tilda/Marek encounter without universal symbolism, group prediction or personal assessment."
+    },
+    {
+      "title": "DHS Equity Policy",
+      "href": "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+      "note": "Actual daily equity work and qualifying formal analysis toolkit or relevant customized-tool procedures remain separate from the optional visual-design exercises."
+    }
+  ]
+}

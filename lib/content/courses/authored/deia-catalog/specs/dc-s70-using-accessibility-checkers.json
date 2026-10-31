@@ -1,0 +1,1029 @@
+{
+  "id": "dc-s70-using-accessibility-checkers",
+  "topicId": "S70",
+  "subtitle": "Accessibility checkers are a starting point. Use their automated findings to guide a careful review of your content and to identify the checks that remain unfinished.",
+  "scope": "Learning is voluntary. The course supplies original practice Word and PDF report excerpts; no actual file or tool is tested. Applicable accessibility, information, assistance, publication and agency responsibilities remain. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA.",
+  "introTranscript": "An accessibility checker can help you find an issue, but it cannot answer every question about a document. Examine a finding, consider what helpful alternative text needs to explain and compare completed, manual and skipped checks. Practice deciding what to examine next while leaving room for the reader’s experience.",
+  "lessons": [
+    {
+      "title": "Read a checker finding as a question about content",
+      "summary": "A checker can identify possible problems under its rules. Connect the result to the actual file and content instead of treating the report as a complete decision about accessibility.",
+      "objective": "Identify the scope of the supplied checker finding.",
+      "objectives": [
+        "Identify the scope of the supplied checker finding.",
+        "Distinguish a detected rule issue from a complete accessibility result.",
+        "Choose a fitting first examination without assigning a motive to the author."
+      ],
+      "takeaways": [
+        "The report concerns a particular file and rule.",
+        "A useful finding still needs content examination.",
+        "A checker is not the adopted standard or a release decision."
+      ],
+      "statement": "Use the finding to locate a specific question rather than end the review.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Four people stand together while one holds a printed document."
+      },
+      "intro": {
+        "heading": "What does the missing-alternative-text finding tell Mira?",
+        "body": "In this example, Mira and Adeel are DHS colleagues examining an optional practice note. The invented Word note explains two stages: Read the draft question, then choose a point to discuss. A diagram shows those two labeled boxes joined by a forward arrow. The complete supplied checker report contains a finding that the diagram lacks alternative text. This is an instructional condition, not a tool run on a real DHS document or a result from the One DSD application.\n\nThe finding identifies a useful place to look. Mira can examine the diagram’s purpose and how its information is otherwise available in the note. The boxes and sequence carry meaning; they are not simply a border added for appearance. The finding does not itself write an accurate explanation or tell Mira what a person understood. A tool can detect a missing element while the author still needs to consider the content it should convey.\n\nMicrosoft describes its Accessibility Checker as applying rules to identify possible issues and offering explanation and suggestions. It also identifies limits and findings that need contextual examination. Different applications and versions have their own capabilities. The course does not promise that the learner’s account shows the same menu or that every available checker examines the same file types or criteria.\n\nMira should retain the source file and the report’s actual scope. A result from this invented Word note is not a result for a later PDF, a website or the entire program. The relevant adopted standard and full content review remain different from the tool’s selected rule set. It is not accurate to say the standard is whatever the software happened to check or to call a proposed correction a publication approval.\n\nThe finding also supplies no motive. A missing alternative may reflect an unfinished draft or another circumstance, but this account does not establish why it is missing. Adeel can address the content question without diagnosing carelessness, disability knowledge or intent. That keeps the review useful to the task and avoids turning a specific omission into a judgment of the person.\n\nPrivately state what the finding identifies and what it leaves unanswered. You can use only the full example without installing software, uploading a file or providing an actual author’s work. The next lesson examines why putting any words into an alternative-text field would not necessarily preserve the diagram’s meaning."
+      },
+      "inThisLesson": [
+        "The invented Word note and rule finding",
+        "The meaningful two-stage diagram",
+        "Tool scope and applicable requirements",
+        "Content inquiry without motive claims"
+      ],
+      "keyStatement": "A detected omission locates a content question; it does not answer every accessibility question.",
+      "flashcards": [
+        {
+          "front": "Supplied report",
+          "back": "The diagram lacks alternative text in the invented Word note."
+        },
+        {
+          "front": "Diagram purpose",
+          "back": "Two labeled stages joined by a forward arrow communicate a sequence."
+        },
+        {
+          "front": "Rule scope",
+          "back": "A checker evaluates selected conditions, not every use or requirement."
+        },
+        {
+          "front": "File scope",
+          "back": "The supplied Word finding does not describe a later PDF or website."
+        },
+        {
+          "front": "Author motive",
+          "back": "The report gives no evidence of why the alternative is absent."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect the report with its actual object",
+        "items": [
+          {
+            "title": "Identify the meaningful content",
+            "body": "The boxes name a task and a next step. Mira can examine how the sequence is communicated instead of adding text merely to remove a flag. Knowing the object’s purpose helps distinguish an informative diagram from decorative formatting and keeps the proposed alternative tied to the note’s actual task."
+          },
+          {
+            "title": "Keep the file and rule together",
+            "body": "The finding comes from the supplied Word note and a selected rule. It cannot be borrowed to describe an exported file or another application. Keeping those conditions with the report lets Adeel understand what was examined and what still requires evidence rather than infer a complete result from a familiar tool name."
+          },
+          {
+            "title": "Use the explanation without diagnosing the author",
+            "body": "The report can guide Mira to a missing content element. It does not explain the author’s intention, awareness or character. Addressing the omission through its actual purpose gives a constructive next inquiry and avoids making a person defend a motive that the exercise never supplies."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three interpretations of the report",
+        "tabs": [
+          {
+            "label": "A specific omission is located",
+            "body": "This interpretation connects the finding to the diagram and the note. It gives Mira a useful examination task while retaining meaning, structure and other access questions. The detected issue is neither dismissed nor enlarged into a complete judgment about the author or program."
+          },
+          {
+            "label": "The entire note is inaccessible",
+            "body": "The supplied finding does not evaluate every part or every user task. It identifies an important omission that needs attention, but a whole-file conclusion requires its fitting scope and evidence. Adeel can act on the actual issue without inventing results for unrelated content or people."
+          },
+          {
+            "label": "The checker is the standard",
+            "body": "Software rules and adopted requirements are not identical. A checker can support examining some conditions while leaving others to different methods. Treating its report as the entire standard would let the selected tool’s coverage decide what matters and conceal the actual responsibilities of content and output review."
+          }
+        ]
+      },
+      "check": {
+        "question": "What does the supplied report establish?",
+        "correct": "The invented diagram lacks alternative text; its meaningful content and other relevant questions still need examination.",
+        "wrong": [
+          "The tool has certified every part of the note once this flag appears.",
+          "The report establishes the author deliberately excluded readers.",
+          "The Word result automatically evaluates every later PDF and website."
+        ],
+        "feedbackCorrect": "This locates the actual omission without inventing broader results, motive or another file’s status.",
+        "feedbackIncorrect": "A detected issue is not whole-file certification. No intent is supplied by the flag. Another output or format needs its own relevant examination rather than inheriting the Word report."
+      },
+      "sorting": {
+        "heading": "Separate the supplied finding, fitting inquiry and unsupported conclusion",
+        "categories": [
+          "Supplied finding",
+          "Fitting inquiry",
+          "Unsupported conclusion"
+        ],
+        "items": [
+          {
+            "text": "The invented diagram has no alternative text.",
+            "category": "Supplied finding"
+          },
+          {
+            "text": "The report concerns the supplied Word note.",
+            "category": "Supplied finding"
+          },
+          {
+            "text": "Examine what the two stages and arrow communicate.",
+            "category": "Fitting inquiry"
+          },
+          {
+            "text": "Retain the actual file and rule scope with the account.",
+            "category": "Fitting inquiry"
+          },
+          {
+            "text": "The flag establishes the author’s intent.",
+            "category": "Unsupported conclusion"
+          },
+          {
+            "text": "The checker’s rules are the entire adopted standard.",
+            "category": "Unsupported conclusion"
+          }
+        ]
+      },
+      "next": "Examine a proposed alternative for whether it preserves the actual diagram meaning.",
+      "scenario": {
+        "context": "Adeel sees the missing-alternative-text finding and wants to write that the author intentionally excluded readers. The example supplies no author motive.",
+        "prompt": "What should Mira choose?",
+        "options": [
+          "Examine the diagram’s purpose and the specific omission while retaining the report’s scope.",
+          "Treat deliberate exclusion as established by the tool result.",
+          "Assume the report covers all later formats and delivery routes."
+        ],
+        "responses": [
+          "This addresses the actual content question without assigning a motive or unsupported wider result.",
+          "A missing element does not establish intention.",
+          "The supplied file and rule do not evaluate every other format or route."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately explain a finding’s actual object, scope and useful next examination.",
+      "move": {
+        "control": "Use the report to locate and understand a content question.",
+        "failure": "A selected flag becomes a person’s motive or a complete standard.",
+        "next": "Use the supplied report at your own pace. You can keep your reflection private."
+      }
+    },
+    {
+      "title": "Check whether a proposed correction preserves meaning",
+      "summary": "Adding text can remove a detected omission while still leaving the important information unexplained. Examine purpose and accuracy before treating the proposed correction as complete.",
+      "objective": "Identify the sequence carried by the supplied diagram.",
+      "objectives": [
+        "Identify the sequence carried by the supplied diagram.",
+        "Compare a vague field entry with a meaning-preserving proposal.",
+        "Distinguish a proposed correction from a verified output and reader result."
+      ],
+      "takeaways": [
+        "A nonempty field can still omit relevant meaning.",
+        "Purpose and sequence guide the explanation.",
+        "The proposal and its actual result remain distinct."
+      ],
+      "statement": "Address the reason for the finding rather than only its visible flag.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Four people stand together while one holds a printed document."
+      },
+      "intro": {
+        "heading": "Would the word diagram explain the two stages?",
+        "body": "Adeel proposes entering diagram as the missing alternative text. The field would then contain a word, but the content question would remain. The original diagram carries Read the draft question followed by Choose a point to discuss. The label diagram identifies the object’s form without telling a reader what the object communicates. Mira can recognize that distinction without assuming exactly how a particular checker will classify the entry.\n\nThe exercise offers a second proposal: Read the draft question, then choose a point to discuss. This carries the labels and forward sequence in the supplied diagram. It does not add an approval, a deadline or a requirement to submit personal experience. The proposal should be considered alongside the surrounding note so the information is available meaningfully without unnecessary repetition or a contradictory instruction.\n\nWCAG’s non-text-content principle connects an alternative to an equivalent purpose, with actual conditions and exceptions. That is broader than filling a field with a convenient name. Microsoft also asks authors to review suggested generated text for accuracy and context. Neither a human-entered phrase nor automatically suggested words are a substitute for examining whether the supplied content and task are preserved.\n\nMira should not mark the informative diagram decorative simply because that would remove the reported issue. In this example the labels and arrow communicate the sequence. If all relevant information were meaningfully carried elsewhere and the remaining object had only a decorative role, that would be a different content condition to examine. The course does not turn every visual into an obligatory long description or permit an author to relabel meaningful content to avoid its purpose.\n\nNo revised tool run or reader response is supplied at this point. The second proposal is more fitting to the diagram’s meaning, but it has not become evidence of implementation, full document review or task understanding. A useful account can state what the proposal preserves and what still needs examination rather than predict that a flag will disappear and every reader will succeed.\n\nPrivately compare the two entries and explain the information the first omits. You can practice with the complete supplied content, without creating an actual alternative-text field or disclosing an access need. The next lesson examines another kind of gap: a meaningful status distinction carried only by color even when a tool has not reported it."
+      },
+      "inThisLesson": [
+        "The labels and forward sequence",
+        "A vague nonempty field",
+        "A fitting proposed explanation",
+        "Implementation and understanding still open"
+      ],
+      "keyStatement": "A field can be filled while the content’s purpose remains unexplained.",
+      "flashcards": [
+        {
+          "front": "Vague proposal",
+          "back": "Diagram describes the form but omits the two labels and sequence."
+        },
+        {
+          "front": "Fitting proposal",
+          "back": "Read the draft question, then choose a point to discuss preserves the supplied meaning."
+        },
+        {
+          "front": "Equivalent purpose",
+          "back": "The content alternative should convey the relevant message under its actual conditions."
+        },
+        {
+          "front": "Decorative classification",
+          "back": "A role to examine from content, not a shortcut for meaningful information."
+        },
+        {
+          "front": "Unknown result",
+          "back": "No rerun, implemented field or reader response is supplied yet."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect correction with the actual message",
+        "items": [
+          {
+            "title": "Read beyond the field’s existence",
+            "body": "The word diagram can make a field nonempty without giving the reader the task sequence. Mira can use the finding’s reason to examine what must be communicated rather than treat a possible change in tool status as the purpose of the review. The proposed words should fit the content, not only the report."
+          },
+          {
+            "title": "Retain accurate sequence",
+            "body": "The second proposal carries the two stages and their forward relationship. It does not transform a discussion choice into approval or require a deadline the diagram never supplied. Preserving the actual task keeps the alternative useful while leaving the surrounding note and delivery to their appropriate examination."
+          },
+          {
+            "title": "Examine role rather than evade it",
+            "body": "In this example the diagram is informative. Relabeling it decorative would suppress a question instead of address the meaning. Actual redundant or ornamental content can have a different role, but that requires examining what information remains available rather than choosing the classification that produces fewer flags."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three correction proposals",
+        "tabs": [
+          {
+            "label": "Enter diagram",
+            "body": "The word identifies a visual form but not its useful labels or sequence. The author could see a completed field and feel the task is finished, while the relevant meaning is still absent. Mira should examine what the entry tells the reader rather than assume that nonempty is the same as sufficient."
+          },
+          {
+            "label": "Convey the actual two stages",
+            "body": "This proposal names the supplied labels and the forward relationship. It is a fitting content change to consider with the surrounding note. No tool rerun or reader response is supplied, so Mira can describe the improved proposal without declaring implemented success or complete document accessibility."
+          },
+          {
+            "label": "Mark it decorative to remove the issue",
+            "body": "This misclassifies the supplied informative object. Its content cannot be discarded merely to change a report. A different truly ornamental or redundant object could have another role, but the exercise gives important task information and no basis for suppressing it through a convenient label."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which proposed response addresses the supplied diagram’s meaning?",
+        "correct": "Convey the two labeled stages and forward sequence accurately, while retaining the surrounding content and output questions.",
+        "wrong": [
+          "Enter diagram and assume a nonempty field settles meaning.",
+          "Mark the informative object decorative solely to remove the issue.",
+          "Add a mandatory approval deadline that the diagram does not contain."
+        ],
+        "feedbackCorrect": "This preserves the actual task without using field existence or misclassification as a shortcut.",
+        "feedbackIncorrect": "A form label omits the sequence. Decorative classification cannot erase meaningful content merely to reduce findings. A new approval deadline changes the message rather than explains it."
+      },
+      "sorting": {
+        "heading": "Separate supplied meaning, fitting proposal and misleading correction",
+        "categories": [
+          "Supplied meaning",
+          "Fitting proposal",
+          "Misleading correction"
+        ],
+        "items": [
+          {
+            "text": "Read the draft question is the first stage.",
+            "category": "Supplied meaning"
+          },
+          {
+            "text": "Choose a point to discuss follows that stage.",
+            "category": "Supplied meaning"
+          },
+          {
+            "text": "Retain the labels and forward sequence in the explanation.",
+            "category": "Fitting proposal"
+          },
+          {
+            "text": "Consider the alternative alongside the surrounding note.",
+            "category": "Fitting proposal"
+          },
+          {
+            "text": "A nonempty field automatically supplies meaningful content.",
+            "category": "Misleading correction"
+          },
+          {
+            "text": "Add an approval deadline absent from the diagram.",
+            "category": "Misleading correction"
+          }
+        ]
+      },
+      "next": "Examine a meaningful distinction that is not reported by the supplied checker account.",
+      "scenario": {
+        "context": "Adeel wants to enter diagram and move on. Mira knows the object’s two labels and arrow carry the note’s task sequence. No revised run or reader result is supplied.",
+        "prompt": "Which response addresses the reason for the finding?",
+        "options": [
+          "Accept any nonempty entry as complete meaning.",
+          "Propose the accurate labels and sequence, then retain actual implementation and review questions.",
+          "Remove the informative role solely to reduce flags."
+        ],
+        "responses": [
+          "Field existence does not explain the task.",
+          "This preserves content and keeps the proposal distinct from completed evidence.",
+          "The supplied meaningful object cannot be relabeled simply to hide a finding."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Use the supplied diagram to explain a correction’s purpose rather than optimize an issue count.",
+      "move": {
+        "control": "Preserve accurate content through a fitting correction.",
+        "failure": "A field or classification changes while the meaningful task remains unavailable.",
+        "next": "Privately compare the proposals using only the example; no real file, disclosed need or implemented change is required."
+      }
+    },
+    {
+      "title": "Examine information a scan has not reported",
+      "summary": "A report can be useful while leaving a meaningful condition unexamined. Inspect the content and task instead of interpreting silence in the findings list as proof that nothing remains.",
+      "objective": "Identify the color-only status distinction in the full example.",
+      "objectives": [
+        "Identify the color-only status distinction in the full example.",
+        "Distinguish an unreported issue from a verified absence of barriers.",
+        "Choose an accurate status-label proposal without strengthening the source meaning."
+      ],
+      "takeaways": [
+        "An unreported condition still needs relevant examination.",
+        "Meaning should not depend on hue alone.",
+        "Clearer labels must retain the actual status."
+      ],
+      "statement": "No reported finding is not the same as an examined result.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Four people stand together while one holds a printed document."
+      },
+      "intro": {
+        "heading": "What do blue and orange mean in the note?",
+        "body": "Another part of the complete invented note contains two discussion points. The Timing point appears in blue and means Reviewed. The Wording point appears in orange and means Open question. The only explanation of those statuses is a color key. The supplied checker account does not report this distinction. That silence does not show that a person can obtain the statuses without identifying hue.\n\nMicrosoft identifies information conveyed only through color as a limitation to consider beyond its checker findings. WCAG’s use-of-color criterion also concerns visual meaning that cannot rely on color alone. Mira can apply the concept to the supplied content: identify the actual status words and consider a fitting way to make them available beyond the two colors. No actual palette measurement, tool run or viewer response is supplied.\n\nThe proposal might include Reviewed and Open question visibly with their corresponding points. It preserves the source meanings without requiring all color to be removed. Changing Reviewed to Approved would be inaccurate: the example supplies review, not approval. Adding an unexplained shape could create another guessing task, while accurate words connect the distinction directly to its content.\n\nThis selected meaning question differs from text contrast, navigation, document structure and other requirements. A correct status proposal does not establish that every appearance is readable or that the final note has been reviewed. Relevant manual inspection complements the report; it does not require every learner to claim expertise in all assistive technology or acquire actual personal data to complete this exercise.\n\nPrivately describe the two statuses and a fitting proposed label. Explain what the checker’s unreported condition does not prove. You can retain the full example or private reflection without changing a live document. The next lesson considers how two people’s chosen learned meanings of comments can change the way a review conversation proceeds."
+      },
+      "inThisLesson": [
+        "The two supplied hue-only statuses",
+        "The unreported condition",
+        "Accurate visible status proposal",
+        "Meaning versus wider access checks"
+      ],
+      "keyStatement": "A clearer cue should preserve the status rather than make it stronger.",
+      "flashcards": [
+        {
+          "front": "Blue meaning",
+          "back": "Reviewed for the Timing point in this example."
+        },
+        {
+          "front": "Orange meaning",
+          "back": "Open question for the Wording point in this example."
+        },
+        {
+          "front": "Unreported condition",
+          "back": "The supplied scan says nothing about this distinction; it is not a passing manual check."
+        },
+        {
+          "front": "Accurate proposal",
+          "back": "Name the status with its corresponding point while retaining any appropriate supporting color."
+        },
+        {
+          "front": "Different claim",
+          "back": "Reviewed does not mean Approved."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect manual inspection to the actual task",
+        "items": [
+          {
+            "title": "Ask what the cue carries",
+            "body": "The two hues carry a status, not merely a decorative preference. Mira can identify that meaning and how it could remain available without recognizing hue. This examination fits the note rather than assumes every colored object has the same role or requires all visual variation to disappear."
+          },
+          {
+            "title": "Keep the report’s silence limited",
+            "body": "The checker account does not report the color-only distinction. Adeel should not transform that absence into evidence of a successful meaning check. It is a relevant next examination, with no basis to diagnose the author or claim a real participant failed."
+          },
+          {
+            "title": "Retain accurate status",
+            "body": "Reviewed is one stage of consideration; approval is a different decision. Mira’s label proposal should make the existing information clearer without claiming a stronger action. Accessibility and factual accuracy work together here: a readable but untrue status would not preserve the note’s actual task."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three responses to an unreported condition",
+        "tabs": [
+          {
+            "label": "Treat the findings list as complete",
+            "body": "This would leave the hue-only status unquestioned because it did not appear in the supplied report. The absence reflects report scope, not a documented task result. Mira can retain the report’s useful finding and add the specific content examination rather than choose between blind trust and rejecting the tool."
+          },
+          {
+            "label": "Add accurate status words",
+            "body": "Reviewed and Open question convey the two meanings the people describe with their corresponding points. The proposal can retain supporting color while removing sole reliance on hue. Implementation, contrast and wider document questions remain; clear wording is a fitting proposal rather than full certification."
+          },
+          {
+            "label": "Rename Reviewed as Approved",
+            "body": "The stronger label would misstate the source. Adeel could make the cue easy to notice while changing what the point means. Preserve the actual status and any relevant authority question instead of treating a design improvement as permission to report a decision that never occurred."
+          }
+        ]
+      },
+      "check": {
+        "question": "What follows from the supplied unreported color-only status?",
+        "correct": "Examine the meaning and consider accurate labels beyond hue, without claiming the report already verified it.",
+        "wrong": [
+          "The absence of a finding proves every status is available to every reader.",
+          "Rename Reviewed as Approved because it is easier to understand.",
+          "Remove all colors because every use of color is prohibited."
+        ],
+        "feedbackCorrect": "This examines the relevant information and preserves its actual meaning while retaining other checks.",
+        "feedbackIncorrect": "No reported finding is not a supplied task result. Approval is stronger than review. The criterion does not require eliminating every supporting color; it concerns sole reliance on color for the relevant visual meaning."
+      },
+      "sorting": {
+        "heading": "Separate supplied meaning, fitting examination and unsupported claim",
+        "categories": [
+          "Supplied meaning",
+          "Fitting examination",
+          "Unsupported claim"
+        ],
+        "items": [
+          {
+            "text": "Blue means Reviewed for Timing.",
+            "category": "Supplied meaning"
+          },
+          {
+            "text": "Orange means Open question for Wording.",
+            "category": "Supplied meaning"
+          },
+          {
+            "text": "Consider accurate status words with each point.",
+            "category": "Fitting examination"
+          },
+          {
+            "text": "Retain the separate contrast and structure questions.",
+            "category": "Fitting examination"
+          },
+          {
+            "text": "No scan finding proves universal status access.",
+            "category": "Unsupported claim"
+          },
+          {
+            "text": "Reviewed establishes approval.",
+            "category": "Unsupported claim"
+          }
+        ]
+      },
+      "next": "Examine the learned meanings of comments in a review conversation.",
+      "scenario": {
+        "context": "The scan does not report the hue-only statuses. Adeel proposes calling the blue point Approved, while the source says Reviewed.",
+        "prompt": "Which response preserves meaning?",
+        "options": [
+          "Treat scan silence as a verified status result.",
+          "Replace the source status with approval.",
+          "Consider accurate Reviewed and Open question labels and retain implementation and wider checks."
+        ],
+        "responses": [
+          "The report’s silence is not a supplied examination result.",
+          "That creates a decision the source does not provide.",
+          "This addresses the meaning question without removing every color or inventing a stronger status."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately identify an unreported content condition and a proposal that retains its source meaning.",
+      "move": {
+        "control": "Complement the tool with a fitting content examination.",
+        "failure": "Scan silence becomes certainty or clearer design becomes an inaccurate decision claim.",
+        "next": "Use the supplied statuses or unrecorded reflection; no actual document change or participant data is required."
+      }
+    },
+    {
+      "title": "Learn what a comment can mean in a review",
+      "summary": "Two chosen personal accounts can widen the interpretation of a marked-up draft. Understanding the meaning can change how a colleague responds without establishing technical correctness or approval.",
+      "objective": "Identify the individual learned meanings supplied by Hana and Ellis.",
+      "objectives": [
+        "Identify the individual learned meanings supplied by Hana and Ellis.",
+        "Explain how their accounts challenge the first motive labels.",
+        "Choose a changed review response that distinguishes inquiry from resolution."
+      ],
+      "takeaways": [
+        "A comment can carry different learned meanings.",
+        "An individual account is not a group prediction.",
+        "Wider understanding can change a response while the actual issue remains."
+      ],
+      "statement": "Ask about the meaning of the comment rather than assume disrespect or avoidance.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Four people stand together while one holds a printed document."
+      },
+      "intro": {
+        "heading": "Why does one friend welcome a margin question while the other prefers a clean page?",
+        "body": "Consider Hana and Ellis, two friends who choose to discuss reviewing a personal reading draft. Hana describes sharing books in a household where a margin question was learned as care: it showed that a reader stayed with a difficult idea and wanted to understand it together. Ellis describes exchanging formal letters where returning a clean page with a separate explanation was learned as respect: it protected the writer’s chosen presentation rather than mark it as the reader’s property.\n\nHana initially interprets Ellis’s clean page as avoidance of difficult questions. Ellis initially interprets Hana’s margin note as disregard for the writer. Their chosen accounts widen those labels. A margin question can express sustained attention, and a clean page with separate explanation can express care for authorship. These meanings belong to the supplied individual experiences; they are not traits assigned to a household, cultural group, profession or every letter writer.\n\nThey propose a different review exchange. Ask how the writer would like to receive a question, keep the question’s content identifiable and explain whether it is open or answered. That changes the response from assigning a deficient motive to making an actual inquiry. It does not require erasing all comments, accepting every proposed change or demanding a biography before someone can ask about a draft.\n\nMira can use the distinction when returning the checker finding. She can describe the diagram’s content question and ask about the appropriate review route rather than assume that a comment proves criticism or that a clean page means the issue has disappeared. Wider meaning does not determine whether the proposed alternative is accurate or create document-release authority. The content and actual technical checks retain their separate role.\n\nThe Council of Europe’s discussion connects contextual meanings with wider self-and-other understanding and responses to particular encounters. The friends’ chosen accounts give that learning a personal setting. No formal assessment or individual developmental position is inferred. A learner can value private understanding even if no real review conversation or document changes.\n\nPrivately compare the two initial labels with the meanings the people describe and identify the changed exchange. You may keep the reflection unrecorded or use only the example. The next lesson examines report statuses that also need careful interpretation: failed, skipped and requiring manual examination are not interchangeable."
+      },
+      "inThisLesson": [
+        "Hana’s margin-question care meaning",
+        "Ellis’s clean-page respect meaning",
+        "A wider interpretation",
+        "An identifiable question and chosen review route"
+      ],
+      "keyStatement": "A chosen meaning can change how a question is received without resolving the question itself.",
+      "flashcards": [
+        {
+          "front": "Hana’s meaning",
+          "back": "A margin question can express staying with an idea and understanding together in her chosen account."
+        },
+        {
+          "front": "Ellis’s meaning",
+          "back": "A clean page with separate explanation can express respect for authorship in his chosen account."
+        },
+        {
+          "front": "First labels",
+          "back": "Avoidance and disregard are the initial motive interpretations."
+        },
+        {
+          "front": "Changed exchange",
+          "back": "Ask about receiving the question and keep its content and open status clear."
+        },
+        {
+          "front": "Separate task",
+          "back": "Personal understanding does not establish technical accuracy or approval."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect wider meaning to a fitting response",
+        "items": [
+          {
+            "title": "Reconsider the clean-page label",
+            "body": "Hana hears that Ellis’s chosen practice includes a separate explanation, not absence of inquiry. She can stop treating a clean page as automatic avoidance and ask where the actual question is being raised. The account does not predict every clean page or supply a person’s willingness beyond the specific fiction."
+          },
+          {
+            "title": "Reconsider the margin-note label",
+            "body": "Ellis hears that Hana’s note expresses attention to a difficult idea rather than assumed ownership of the writer’s page. He can ask what is unclear without assigning disregard. That understanding does not make every comment useful; its actual content, accuracy and effect still deserve consideration."
+          },
+          {
+            "title": "Change the receiving route",
+            "body": "The proposed exchange asks how to receive a specific question and preserves whether it remains open. It connects meaning to a different response without requiring a personal story or a real document change. Mira can learn from it while retaining the checker issue’s actual purpose and technical examination."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three review approaches",
+        "tabs": [
+          {
+            "label": "Keep the motive labels",
+            "body": "Avoidance and disregard would end the exchange before the chosen accounts can inform it. They are not established by the page’s appearance. The friends can ask about the actual question and its meaning rather than use a formatting preference as evidence of a deficient person."
+          },
+          {
+            "label": "Hear the individual meanings",
+            "body": "The two accounts explain why the friends associate comments and clean pages with different forms of care. Those contextual meanings support wider understanding, not an assessment or a universal community profile. They do not tell Mira whether her alternative-text proposal actually conveys the diagram."
+          },
+          {
+            "label": "Receive the question through a clear route",
+            "body": "The changed proposal identifies the question and asks about its fitting delivery while retaining open or answered status. It responds to the personal meanings and protects the content task. No later approval, technical result or writer agreement is supplied; the learning can remain private and useful."
+          }
+        ]
+      },
+      "check": {
+        "question": "What learning follows from Hana’s and Ellis’s chosen accounts?",
+        "correct": "They can reconsider the deficient-motive labels and propose a clear way to receive and retain the actual question.",
+        "wrong": [
+          "Every clean page shows avoidance of review.",
+          "Every margin note is respectful and technically correct.",
+          "The friends’ presentation preferences establish their developmental orientations."
+        ],
+        "feedbackCorrect": "This uses contextual meaning to change a response while preserving the actual question and its limits.",
+        "feedbackIncorrect": "A page’s appearance does not establish every motive. A margin note still needs actual content examination. The preferences are not a formal assessment or a basis for personal orientation placement."
+      },
+      "sorting": {
+        "heading": "Separate chosen meaning, changed proposal and unsupported inference",
+        "categories": [
+          "Chosen meaning",
+          "Changed proposal",
+          "Unsupported inference"
+        ],
+        "items": [
+          {
+            "text": "Hana links margin questions with shared understanding.",
+            "category": "Chosen meaning"
+          },
+          {
+            "text": "Ellis links clean presentation and separate explanation with authorship respect.",
+            "category": "Chosen meaning"
+          },
+          {
+            "text": "Ask how the writer would like to receive the specific question.",
+            "category": "Changed proposal"
+          },
+          {
+            "text": "Retain the question’s open or answered status.",
+            "category": "Changed proposal"
+          },
+          {
+            "text": "Every clean page proves avoidance.",
+            "category": "Unsupported inference"
+          },
+          {
+            "text": "A chosen presentation preference diagnoses an orientation.",
+            "category": "Unsupported inference"
+          }
+        ]
+      },
+      "next": "Interpret uncompleted report statuses without turning them into passing results.",
+      "scenario": {
+        "context": "Hana and Ellis have heard the two chosen meanings. They want an exchange that actually changes the first response without inventing a later outcome.",
+        "prompt": "Which proposal uses the learning?",
+        "options": [
+          "Ask about receiving the specific question and retain its content and open status.",
+          "Treat a clean page as proof that there is no question.",
+          "Require a personal history before the writer can receive feedback."
+        ],
+        "responses": [
+          "This connects wider understanding with a fitting changed response and preserves the task.",
+          "The actual question can exist outside page markings.",
+          "No compelled biography is needed to ask or receive a review question."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately explain how a contextual meaning changes the receiving response without claiming the issue is resolved.",
+      "move": {
+        "control": "Retain meaning, content and status as different parts of the exchange.",
+        "failure": "A formatting preference becomes a group profile, personal assessment or technical result.",
+        "next": "Use the complete encounter or unrecorded reflection; personal insight has value on its own. You can keep your reflection private."
+      }
+    },
+    {
+      "title": "Keep skipped and manual checks honest",
+      "summary": "A report status explains what happened to a selected check. Skipped and requiring manual examination are not passing results, and a passed rule does not describe every part of a file.",
+      "objective": "Distinguish the four supplied PDF report statuses.",
+      "objectives": [
+        "Distinguish the four supplied PDF report statuses.",
+        "Explain why skipped and manual checks cannot be reported as passed.",
+        "Choose a fitting next examination without changing evidence to improve the report’s appearance."
+      ],
+      "takeaways": [
+        "Unperformed checks are not completed results.",
+        "Manual status names work still to examine.",
+        "A passed rule retains its actual scope."
+      ],
+      "statement": "Retain the status’s meaning rather than make the report look complete.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Four people stand together while one holds a printed document."
+      },
+      "intro": {
+        "heading": "What happened to the four selected checks?",
+        "body": "The next part of the exercise supplies a separate original PDF report excerpt. Tagged PDF is marked Passed. Figure alternative text is marked Failed. Reading order is marked Needs Manual Check. Color contrast is marked Skipped By User. These are four complete invented rule statuses for this exercise, not a scan of a real PDF or a statement about the earlier Word note’s output.\n\nAdobe distinguishes a rule that passed from one that failed, was not selected or could not be checked automatically. In the supplied excerpt, the skipped contrast check provides no completed contrast result. The reading-order status identifies a need for relevant manual examination; it does not prove either a correct sequence or a failed reader task. Mira can retain those limits without inventing the actual examination’s outcome.\n\nThe passed tagged-PDF rule also has its scope. It does not establish that every tag or sequence is meaningful, the alternative text is accurate or the entire file meets the applicable requirements. Conversely, the failed figure alternative identifies a specific condition to inspect rather than prove that every reader cannot use any part of the document. The four entries should not be averaged into a general accessibility score or rewritten as all checks complete.\n\nMira should not skip a failed rule solely to change the report from failed to skipped or mark a manual item complete without doing its appropriate examination. A real review needs the applicable standard, actual content, fitting methods and documented conditions. Software explains checks; it does not create an exception or authorize relaxing information security, publication or agency approval arrangements.\n\nDHS accessibility guidance connects automated findings with manual and assistive-technology examination. It supports a considered testing approach rather than a compulsory installation for this learner or a single universal recipe. The actual file, intended task and relevant requirements guide the next inquiry. A checker result from one format cannot silently substitute for the report on another.\n\nPrivately summarize the four supplied entries and identify what remains unexamined. You can use only the original excerpt without running Acrobat, marking any item complete or submitting an actual file. The final lesson examines a revised Word finding while retaining the separate PDF excerpt and other content questions."
+      },
+      "inThisLesson": [
+        "Four invented PDF statuses",
+        "Unselected contrast and manual order",
+        "The limited passed rule",
+        "Appropriate next examination"
+      ],
+      "keyStatement": "Not checked, needs examination and passed are different evidence.",
+      "flashcards": [
+        {
+          "front": "Passed",
+          "back": "The selected tagged-PDF rule passed in the supplied excerpt; whole-file quality is not established."
+        },
+        {
+          "front": "Failed",
+          "back": "The figure alternative-text rule did not pass in the supplied excerpt and needs fitting examination."
+        },
+        {
+          "front": "Needs Manual Check",
+          "back": "The automatic feature could not settle the reading-order item."
+        },
+        {
+          "front": "Skipped By User",
+          "back": "The contrast rule was not selected for that check; no contrast result is supplied."
+        },
+        {
+          "front": "Separate file",
+          "back": "The PDF excerpt does not become the earlier Word note’s report or a combined score."
+        }
+      ],
+      "accordion": {
+        "heading": "Interpret the actual status",
+        "items": [
+          {
+            "title": "Retain the unselected rule",
+            "body": "Skipped By User describes a check not performed under the report’s options. It is not a failed measurement or a passing contrast result. Adeel can identify the relevant remaining question rather than count the entry as success or assume that the missing figure is zero."
+          },
+          {
+            "title": "Examine the manual item",
+            "body": "Needs Manual Check identifies work the automatic feature could not complete. Mira needs a fitting way to examine the actual sequence and relevant conditions before reporting a result. Merely changing a status would alter the account without supplying the evidence the original report lacked."
+          },
+          {
+            "title": "Keep the passed rule limited",
+            "body": "The tagged-PDF entry is one rule result. It does not answer the failed figure alternative or the manual sequence question. Recognizing the local progress while retaining other entries is more accurate than demanding every report be entirely successful or treating one passed item as whole-file certification."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three report-account choices",
+        "tabs": [
+          {
+            "label": "Report all four as passed",
+            "body": "This changes the supplied evidence. The failed, manual and skipped entries have distinct meanings that do not disappear because the author wants a clean report. A useful account should preserve each actual result and remaining question rather than create an appearance of completed review."
+          },
+          {
+            "label": "Report each entry’s actual meaning",
+            "body": "This account recognizes the selected passed rule, the specific failed item and the two kinds of uncompleted examination. It gives the next person checking it usable information. It does not adjudicate full conformance or individual task results that the excerpt never supplies."
+          },
+          {
+            "label": "Skip the failed rule to remove the failure",
+            "body": "Changing the selected options may change what a report shows without changing the underlying content. That is not a repair or evidence of accessibility. Mira can address the actual object and applicable requirements rather than use report configuration to hide an unresolved question."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which account fits the supplied PDF excerpt?",
+        "correct": "One selected rule passed, one failed, one needs manual examination and one was not checked; full-file results are not established.",
+        "wrong": [
+          "All four passed because they appear in a completed report.",
+          "The skipped rule has a measured contrast value of zero.",
+          "Changing a failed item to skipped repairs the actual content."
+        ],
+        "feedbackCorrect": "This preserves the distinct statuses and their limited evidence rather than inventing missing measurements or repairs.",
+        "feedbackIncorrect": "A completed report can contain uncompleted checks. No contrast value is supplied for the skipped rule. A configuration change does not correct the figure’s content or establish a result."
+      },
+      "sorting": {
+        "heading": "Separate supplied rule result, uncompleted examination and unsupported claim",
+        "categories": [
+          "Supplied rule result",
+          "Uncompleted examination",
+          "Unsupported claim"
+        ],
+        "items": [
+          {
+            "text": "Tagged PDF is marked Passed.",
+            "category": "Supplied rule result"
+          },
+          {
+            "text": "Figure alternative text is marked Failed.",
+            "category": "Supplied rule result"
+          },
+          {
+            "text": "Reading order needs manual examination.",
+            "category": "Uncompleted examination"
+          },
+          {
+            "text": "Contrast was not selected for the check.",
+            "category": "Uncompleted examination"
+          },
+          {
+            "text": "All four entries certify the complete PDF.",
+            "category": "Unsupported claim"
+          },
+          {
+            "text": "Skipping a failure repairs its content.",
+            "category": "Unsupported claim"
+          }
+        ]
+      },
+      "next": "Read a revised Word finding while retaining the separate output and manual questions.",
+      "scenario": {
+        "context": "Adeel wants to count the supplied manual and skipped entries as passed to finish the PDF account. No further examination is supplied.",
+        "prompt": "Which response preserves the evidence?",
+        "options": [
+          "Count the uncompleted entries as success.",
+          "Retain the four distinct statuses and identify relevant remaining examination through the actual requirements.",
+          "Skip the failed rule and call the content repaired."
+        ],
+        "responses": [
+          "The excerpt supplies neither manual completion nor a contrast result.",
+          "This is accurate and useful without claiming whole-file conformance or inventing an outcome.",
+          "Changing what was selected does not repair the content or create a result."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Privately translate the four statuses into an accurate account of what is known and what remains to examine.",
+      "move": {
+        "control": "Keep performed and unperformed checks distinct.",
+        "failure": "A status edit substitutes for actual examination or repair.",
+        "next": "Use the complete report excerpt without software, a real file or a live certification claim."
+      }
+    },
+    {
+      "title": "Rerun the relevant version and return its limits",
+      "summary": "A changed checker report can show specific progress without settling every content, format and task question. Keep versions and methods clear when returning the result.",
+      "objective": "Identify the specific change in the supplied revised Word account.",
+      "objectives": [
+        "Identify the specific change in the supplied revised Word account.",
+        "Distinguish that result from manual content and separate PDF questions.",
+        "Choose a useful next account without turning missing results into success or failure."
+      ],
+      "takeaways": [
+        "A revised result concerns its actual version and method.",
+        "Manual and separate-output questions remain.",
+        "Useful learning does not require a live certification project."
+      ],
+      "statement": "Describe the change precisely and keep the unexamined questions visible.",
+      "image": {
+        "src": "/images/covers/stock-people-01.jpg",
+        "caption": "Four people stand together while one holds a printed document."
+      },
+      "intro": {
+        "heading": "What does the revised Word account now show?",
+        "body": "The complete revised Word account says Mira’s proposed two-stage explanation has been entered and the missing-alternative-text finding is no longer reported in the supplied rerun. This is an invented instructional result for the changed Word note, not an actual software execution by the learner. It shows a specific change in the selected report. It does not establish that every meaningful condition has been examined or that a real reader has used the note successfully.\n\nThe manual content question remains important. The explanation should preserve the actual labels and sequence alongside the surrounding note. The hue-only statuses need their fitting examination and accurate label proposal. The separate PDF excerpt retains its passed, failed, manual and skipped entries; the Word rerun does not resolve them. No revised PDF or participant task response is supplied. Those outcomes remain unknown rather than success, failure or zero.\n\nA useful account can state The revised practice Word run no longer reports the missing alternative. Its actual task meaning and other relevant conditions still need examination, and the separate PDF account has not been replaced. That is clearer than All accessibility issues are fixed or Nothing useful happened. It recognizes specific progress while leaving the appropriate follow-through visible.\n\nActual work should retain the file and version, method, findings and relevant conditions so the next person checking it knows what a result describes. Changes to content, conversion or delivery may create another output requiring its own fitting examination. The tool’s recommendations support work but do not replace the adopted standard, full review, individual assistance or actual agency authority. A lower issue count is not a percentage of accessibility or proof of a causal improvement for a population.\n\nThe Equity and Inclusion Operations Consultant leads the program and provides guidance, knowledge and feedback. Staff own their work and can use that support without a new mandatory consultant gate for every correction. Actual daily DHS equity responsibilities and qualifying formal-analysis procedures remain. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA rather than addressed through this general file-review course.\n\nLearning is voluntary. You may finish with the full example, a suitable draft or private reflection. No installation, uploaded workplace file, disclosed access need, live certification or public reflection is required. The useful learning is a more accurate way to connect a tool, the content it points to and the evidence still needed."
+      },
+      "inThisLesson": [
+        "The changed invented Word report",
+        "Manual meaning and status questions",
+        "The separate PDF excerpt",
+        "Specific account and private learning"
+      ],
+      "keyStatement": "A finding can disappear from a selected rerun without every question being answered.",
+      "flashcards": [
+        {
+          "front": "Supplied progress",
+          "back": "The revised Word account no longer reports the missing alternative."
+        },
+        {
+          "front": "Content question",
+          "back": "Preserve the actual labels and sequence with the surrounding note."
+        },
+        {
+          "front": "Separate output",
+          "back": "The PDF report retains its own entries; the Word rerun does not replace them."
+        },
+        {
+          "front": "Missing result",
+          "back": "No revised PDF or participant task response is supplied."
+        },
+        {
+          "front": "Useful return",
+          "back": "State the precise progress, conditions and relevant next examination rather than a whole-file score."
+        }
+      ],
+      "accordion": {
+        "heading": "Keep the return connected to its evidence",
+        "items": [
+          {
+            "title": "Recognize the selected change",
+            "body": "The supplied rerun gives a specific report difference for a revised Word version. Mira can retain that progress without denying its value. It is not evidence that every condition has passed, every reader understood or the exported file inherited the same properties."
+          },
+          {
+            "title": "Retain the remaining methods",
+            "body": "The diagram’s actual meaning and hue-only statuses need relevant content examination, while the PDF retains different rule statuses. Naming those questions helps the next person checking it fit the response instead of rerun an unrelated tool or assume the same result applies across all versions and formats."
+          },
+          {
+            "title": "Value the learning separately",
+            "body": "A learner can understand scope, meaning and missing evidence through the example without making a live document accessible or certifying it. Actual work keeps its responsibilities. Neither private reflection nor a course completion record supplies technical approval or a reason to omit relevant checks."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three final accounts",
+        "tabs": [
+          {
+            "label": "Everything is fixed",
+            "body": "This turns one changed finding into a complete result and hides the manual and PDF questions. The report improvement is useful but narrower. Mira should preserve its actual version and method so a reader is not reassured about content or delivery that was never examined."
+          },
+          {
+            "label": "No progress can be recognized",
+            "body": "This erases a supplied change because other questions remain. A specific finding can be addressed while the overall review is incomplete. A useful return can recognize the local change and identify what still needs evidence rather than demand a whole-success or whole-failure label."
+          },
+          {
+            "label": "Specific progress with next examination",
+            "body": "This account states the Word rerun result and retains the content, hue-only status and separate PDF questions. It supports a fitting follow-through without inventing a reader outcome, score or release decision. The learner can retain that understanding privately without collecting an actual person’s work."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which return fits the complete invented record?",
+        "correct": "The revised Word run no longer reports the missing alternative, while actual meaning, other conditions and the separate PDF outcomes remain to examine.",
+        "wrong": [
+          "The absent flag certifies every version and format.",
+          "The missing revised PDF result is a measured failure of zero.",
+          "No meaningful learning occurred because the learner did not run software."
+        ],
+        "feedbackCorrect": "This recognizes the specific change and preserves evidence scope, missing information and useful private learning.",
+        "feedbackIncorrect": "One rule result does not certify every output. An unsupplied result is not zero or a failure. Understanding the distinction through complete fiction is meaningful learning without a live software project."
+      },
+      "sorting": {
+        "heading": "Separate supplied progress, open information and unsupported closing claim",
+        "categories": [
+          "Supplied progress",
+          "Open information",
+          "Unsupported closing claim"
+        ],
+        "items": [
+          {
+            "text": "The revised Word report no longer lists the missing alternative.",
+            "category": "Supplied progress"
+          },
+          {
+            "text": "The account identifies that changed Word version.",
+            "category": "Supplied progress"
+          },
+          {
+            "text": "The revised PDF outcome is not supplied.",
+            "category": "Open information"
+          },
+          {
+            "text": "Participant task understanding is not supplied.",
+            "category": "Open information"
+          },
+          {
+            "text": "One absent flag certifies all formats.",
+            "category": "Unsupported closing claim"
+          },
+          {
+            "text": "A lower issue count is a percentage of accessibility.",
+            "category": "Unsupported closing claim"
+          }
+        ]
+      },
+      "next": "Use the evidence distinctions privately or carry a fitted question into suitable work through its actual responsibilities.",
+      "scenario": {
+        "context": "Mira is returning the revised Word account. She knows the one report change but has no revised PDF or participant response.",
+        "prompt": "Which account should she choose?",
+        "options": [
+          "Every output is fully certified.",
+          "No progress occurred because wider questions remain.",
+          "State the selected Word progress and retain the relevant manual and separate-output questions."
+        ],
+        "responses": [
+          "The selected change does not establish complete review or all formats.",
+          "The supplied report difference is useful even while other work remains.",
+          "This recognizes actual progress and preserves the conditions and next examination without inventing outcomes."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately write or consider a specific account of version, method, findings and unexamined questions.",
+      "move": {
+        "control": "Use the tool as part of evidence-based content review.",
+        "failure": "An issue count becomes a whole-accessibility score or optional learning becomes a mandatory live project.",
+        "next": "Explore the example or reflect privately, at your own pace."
+      }
+    }
+  ],
+  "jobAid": {
+    "title": "Connect checker findings with a careful review",
+    "subtitle": "Keep the file, rule, content, method and unfinished questions visible.",
+    "sections": [
+      {
+        "heading": "Locate the specific finding",
+        "items": [
+          "The original Word note shows two stages: Read the draft question, then choose a point to discuss. Its missing-alternative-text finding identifies a content question; it supplies no actual learner task result.",
+          "Fit the examination to the actual file, application and relevant requirements. A checker is a method with capabilities and limits, not the adopted standard or a release decision."
+        ]
+      },
+      {
+        "heading": "Preserve the diagram’s purpose",
+        "items": [
+          "A nonempty label such as diagram is not an explanation of the meaningful stages and sequence. Examine the alternative in its content context rather than adding words solely to clear the report.",
+          "The intended explanation remains a proposal until entered and examined as appropriate. Do not claim that generated text, a nonempty field or the removal of one finding establishes complete meaning."
+        ]
+      },
+      {
+        "heading": "Examine what the report did not answer",
+        "items": [
+          "The two status points are Reviewed and Open question. Blue and orange alone are not the intended status words; preserve meaningful labels without silently changing Reviewed to Approved.",
+          "The absence of a reported color condition is not evidence that it meets the relevant requirements. Color, contrast, structure and content have distinct inquiries; no actual ratio or full review is supplied."
+        ]
+      },
+      {
+        "heading": "Learn from the personal meanings",
+        "items": [
+          "Hana’s chosen shared-book account connects a margin question with sustained care. Ellis’s chosen formal-letter account connects a clean page and separate explanation with respect for authorship. These accounts widen the initial motive labels.",
+          "Ask how the question can be delivered while retaining its content and open status. A private change in understanding can be valuable without a group profile, assessment, actual shared document or required disclosure."
+        ]
+      },
+      {
+        "heading": "Retain four different PDF statuses",
+        "items": [
+          "Tagged PDF Passed is a limited selected-rule result. Figure alternative text Failed identifies a specific condition to inspect. Reading order Needs Manual Check identifies examination still needed; Color contrast Skipped By User supplies no completed contrast result.",
+          "Do not turn skipped or manual status into a passed result, skip a failed rule to improve appearances, average the entries into a general accessibility score or substitute this separate PDF report for the Word account. Actual security and approval arrangements remain."
+        ]
+      },
+      {
+        "heading": "Give an accurate account of the next work",
+        "items": [
+          "The invented revised Word report no longer flags missing alternative text after fitting text is entered. That is a selected-rule change; complete content, color, manual and reader outcomes remain open, and no revised PDF result is supplied.",
+          "Record the actual version, method, finding and limit in appropriate real work. Missing evidence is not zero, success, a motive or permission to release.",
+          "The Equity and Inclusion Operations Consultant leads the program and provides guidance, knowledge and feedback. Staff own their work and can seek support without a new universal consultant gate. Actual DHS formal analysis remains; Native American- and Tribal-specific matters are referred to the appropriate office within ADSA."
+        ]
+      }
+    ],
+    "remember": [
+      "Learning is voluntary.",
+      "A finding, a revised finding, a meaningful alternative and a reader’s experience are different evidence. Preserve their actual conditions.",
+      "Explore the example or reflect privately, at your own pace."
+    ]
+  },
+  "sources": [
+    {
+      "title": "Microsoft: Rules for the Accessibility Checker",
+      "href": "https://support.microsoft.com/en-us/accessibility/office-accessibility/rules-for-the-accessibility-checker",
+      "note": "Explains rule findings, application scope and contextual limitations. The original exercise distinguishes a missing element from a fitting explanation rather than treating a clear report as complete accessibility evidence."
+    },
+    {
+      "title": "DHS Accessibility University: Testing and tools",
+      "href": "https://accessibilityuniversity.dhs.state.mn.us/TestandTools",
+      "note": "Connects automated examination with relevant manual and assistive-technology methods. The course uses that distinction without requiring a particular installation or making one method a universal proof."
+    },
+    {
+      "title": "Adobe: Create and verify PDF accessibility",
+      "href": "https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html",
+      "note": "Explains rule statuses and the need for appropriate examination. Passed, failed, skipped and requiring manual attention have different meanings; the supplied four-rule excerpt does not certify the whole PDF."
+    },
+    {
+      "title": "WCAG 2.1: Non-text content and use of color",
+      "href": "https://www.w3.org/TR/WCAG21/",
+      "note": "Provides requirements for relevant alternatives and information conveyed through color. A specific diagram description and meaningful visible status words still need their fitting context and separate checks."
+    },
+    {
+      "title": "Minnesota State Digital Accessibility Standard",
+      "href": "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
+      "note": "Sets adopted digital requirements, responsibilities and scope. A software finding does not create an exception or authorize publication."
+    },
+    {
+      "title": "DHS: Content and writing guidelines",
+      "href": "https://mn.gov/dhs/digital-showcase/content-guidelines/",
+      "note": "Supports clear purpose, task information and accurate status. Report changes, intended improvements and unknown reader results remain different statements."
+    },
+    {
+      "title": "Council of Europe: Developing intercultural competence through education",
+      "href": "https://rm.coe.int/16808ce258",
+      "note": "Supports learning from contextual meanings and changing a response. Hana’s and Ellis’s chosen explanations are individual accounts rather than group traits, required disclosure or a personal assessment."
+    },
+    {
+      "title": "DHS Equity Policy",
+      "href": "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+      "note": "Sets daily equity responsibilities and qualifying formal-analysis procedures. Optional checker practice does not replace an applicable toolkit or relevant customized-tool process."
+    }
+  ]
+}

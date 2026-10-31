@@ -1,0 +1,994 @@
+{
+  "id": "dc-s64-accessible-excel-workbooks",
+  "topicId": "S64",
+  "subtitle": "Help readers find their way among sheets in Excel workbooks, understand counts and examine charts, and avoid treating missing information as if it were a result.",
+  "scope": "Learning is voluntary. This course uses complete practice workbook information for private learning; it does not certify an actual file, authorize real data collection or replace actual accessibility, equity, content, records or decision responsibilities. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA.",
+  "introTranscript": "A workbook should help people understand its purpose, relationships and missing information. Follow Devon and Pia as they examine sheet names, headers, zero and unknown counts, chart explanations and task results. Miri and Otis bring different ideas about careful checking and leaving room for uncertainty. Practice asking about those meanings while making the workbook clearer.",
+  "lessons": [
+    {
+      "title": "Help readers find the right worksheet",
+      "summary": "A workbook’s purpose and sheet names help a reader locate information. The first explanation should identify the task without promising an unsupported result.",
+      "objective": "Identify the task in the practice workbook.",
+      "objectives": [
+        "Identify the task in the practice workbook.",
+        "Choose descriptive sheet names and an accurate opening explanation.",
+        "Distinguish navigation features from complete accessibility review."
+      ],
+      "takeaways": [
+        "Names should describe the actual contents.",
+        "An opening explanation gives the workbook a purpose.",
+        "A useful navigation feature is not full conformance proof."
+      ],
+      "statement": "Make the location and purpose of the information understandable.",
+      "image": {
+        "src": "/images/covers/stock-people-08.jpg",
+        "caption": "People sit on both sides of a meeting table with laptops and papers while a standing person points at a whiteboard."
+      },
+      "intro": {
+        "heading": "Which sheet holds the topic counts?",
+        "body": "Devon, a practice DHS staff member, prepares an Excel workbook for an optional discussion about improving three draft explanations. The workbook has two sheets called Sheet 1 and Sheet 2. The first contains the purpose and limits of the exercise. The second contains three practice topic rows. Pia wants to find those rows and distinguish a supplied count from information that has not been supplied. No actual file, individuals, service applications or DHS operating results are included in this practice.\n\nThe task is not to admire the workbook or guess a sheet’s contents from its position. It is to locate the declared topic information and understand its meaning. A sheet name such as Topic counts distinguishes the rows from a sheet named Purpose and limits. These names follow the information actually present. Calling the sheet Approved services would introduce an outcome the example does not supply, even if the new name sounded more decisive.\n\nMNIT’s Excel guidance and current Microsoft guidance identify worksheet names, an opening explanation and table structure as useful starting features. A title or overview near the beginning can help orient the reader. For this practice, the opening can explain that the workbook contains invented counts about draft-topic notes, not service delivery or demographic findings. It can also identify the sheet with the rows and explain that one count remains unknown. This is information about using the particular workbook, not a new agency procedure.\n\nDevon should examine which sheets actually contain information before removing a sheet. A sheet that appears blank might need investigation in real work, and changing an approved workbook still requires the appropriate owner arrangements. The example supplies a two-sheet structure, not permission to delete a real archive, formula sheet or required record. Descriptive names and an accurate explanation can be proposed without inventing authority over a live document.\n\nA navigation improvement does not examine every table, visual, formula or access method. The Minnesota digital accessibility standard retains its actual coverage and adopted requirements, with applicable owner responsibilities. This course offers selected workbook practices rather than a certification checklist. A helpful sheet name alone does not establish that Pia can interpret the counts, that every reading method receives the content or that a later export preserves it.\n\nPrivately propose names for the two practice sheets and a short opening sentence. Identify the task the names support and a conclusion they cannot establish. You may use this complete an example without Excel, a live workbook or a colleague’s disability disclosure. The next lesson considers the relationships within the topic rows, where a number can lose its meaning when its header or row identity is unclear."
+      },
+      "inThisLesson": [
+        "The workbook’s declared task",
+        "Descriptive sheet names",
+        "An accurate opening explanation",
+        "Navigation and further review"
+      ],
+      "keyStatement": "A meaningful sheet name helps identify information; it does not approve a service or certify the workbook.",
+      "flashcards": [
+        {
+          "front": "Workbook purpose",
+          "back": "What the supplied workbook explains and what the reader is trying to do."
+        },
+        {
+          "front": "Sheet name",
+          "back": "A descriptive label that identifies the actual contents of a worksheet."
+        },
+        {
+          "front": "Opening explanation",
+          "back": "An accurate account of the workbook’s purpose, location and important limits."
+        },
+        {
+          "front": "Further review",
+          "back": "Examination of other content, methods and actual requirements beyond a useful first feature."
+        }
+      ],
+      "accordion": {
+        "heading": "Connect navigation to the information",
+        "items": [
+          {
+            "title": "Describe the actual location",
+            "body": "Pia is looking for topic counts, so Topic counts offers a distinction Sheet 2 does not. The name should represent the sheet’s real contents. A stronger-sounding service label would be misleading because the example includes neither eligibility decisions nor approved services. Navigation and accuracy belong together."
+          },
+          {
+            "title": "Explain what the workbook contains",
+            "body": "The opening can identify the invented exercise and the unknown count before readers interpret the rows. This gives the figures a context instead of leaving the reader to guess their purpose. A title cannot turn practice information into an agency result, and an overview cannot replace examining the actual rows."
+          },
+          {
+            "title": "Keep document changes within the actual role",
+            "body": "A proposal to rename a practice sheet does not authorize deleting a real sheet or changing an approved workbook. First determine its contents and dependencies, then use the actual owner and review arrangements. The learning activity can remain private and complete without a live edit or proof from another person."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three ways to orient the reader",
+        "tabs": [
+          {
+            "label": "Position is the only clue",
+            "body": "Devon tells Pia that the relevant rows are on the second tab, but the workbook retains generic names. This depends on a positional clue that can change and says little about the contents. A descriptive name can give a more useful distinction while the actual sequence still needs examination."
+          },
+          {
+            "label": "The title promises a result",
+            "body": "Approved services sounds clear but falsely describes practice notes as determinations. Pia could receive a more confident and less accurate impression. Identify the actual topic counts and their limits rather than trading vague navigation for an unsupported approval or outcome statement."
+          },
+          {
+            "label": "Purpose and names support the task",
+            "body": "The opening explains the invented exercise, and the two sheets identify purpose versus topic counts. Pia has a relevant way to locate the rows. This is a proposed navigation improvement; actual interpretation, reading methods and all applicable requirements still need their appropriate review."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which proposal fits Pia’s task?",
+        "correct": "Use descriptive sheet names and an opening explanation identifying the invented topic counts and their limits.",
+        "wrong": [
+          "Rename the rows Approved services because the title sounds decisive.",
+          "Assume Sheet 2 will always be the right location for every later version.",
+          "Certify the whole workbook after changing one sheet name."
+        ],
+        "feedbackCorrect": "This proposal connects the location and purpose to the actual task without introducing an outcome.",
+        "feedbackIncorrect": "Approved services invents a determination. A fixed position does not describe the contents or establish every later version. One navigation change cannot certify all workbook features or methods."
+      },
+      "sorting": {
+        "heading": "Separate accurate orientation from unsupported conclusions",
+        "categories": [
+          "Relevant proposal",
+          "Supplied information",
+          "Unsupported conclusion"
+        ],
+        "items": [
+          {
+            "text": "Name the row sheet Topic counts.",
+            "category": "Relevant proposal"
+          },
+          {
+            "text": "Explain that the exercise contains practice notes and an unknown count.",
+            "category": "Relevant proposal"
+          },
+          {
+            "text": "The two initial names are Sheet 1 and Sheet 2.",
+            "category": "Supplied information"
+          },
+          {
+            "text": "Pia wants to find and interpret the topic rows.",
+            "category": "Supplied information"
+          },
+          {
+            "text": "All three topics have approved services.",
+            "category": "Unsupported conclusion"
+          },
+          {
+            "text": "A new sheet name certifies all reading methods.",
+            "category": "Unsupported conclusion"
+          }
+        ]
+      },
+      "next": "Examine how a header gives each row entry its meaning.",
+      "scenario": {
+        "context": "Devon proposes Approved services as the sheet name even though the exercise contains only practice draft-topic notes.",
+        "prompt": "Which response preserves the task and accuracy?",
+        "options": [
+          "Accept the title because it sounds professional.",
+          "Use a name describing the actual topic counts and retain the supplied limits.",
+          "Ask Pia for a diagnosis before considering any label."
+        ],
+        "responses": [
+          "Professional tone cannot authorize a false determination.",
+          "This identifies the supplied information without inventing a service result.",
+          "Medical information does not answer the sheet-name question."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Privately propose two descriptive sheet names and an accurate opening sentence for the example.",
+      "move": {
+        "control": "You can connect the workbook’s purpose and names to its reader’s task.",
+        "failure": "A generic location or invented outcome substitutes for an accurate explanation.",
+        "next": "Use the full example; no live workbook, software installation or personal disclosure is required."
+      }
+    },
+    {
+      "title": "Preserve row and column relationships",
+      "summary": "Simple structure and meaningful headers help entries retain their context. A merged visual arrangement can obscure which topic and measure a value belongs to.",
+      "objective": "Identify the row and column meaning in the three-topic table.",
+      "objectives": [
+        "Identify the row and column meaning in the three-topic table.",
+        "Choose a simple structure preserving each entry’s context.",
+        "Separate a layout preference from the reader’s actual navigation task."
+      ],
+      "takeaways": [
+        "Headers should identify the actual measure.",
+        "A row entry needs its topic and column context.",
+        "Visual spacing is different from a meaningful data structure."
+      ],
+      "statement": "Keep the value connected to the topic and measure it describes.",
+      "image": {
+        "src": "/images/covers/stock-people-08.jpg",
+        "caption": "People sit on both sides of a meeting table with laptops and papers while a standing person points at a whiteboard."
+      },
+      "intro": {
+        "heading": "A number is not its own explanation",
+        "body": "The practice Topic counts sheet contains three rows: Location has 3 supplied notes, Sequence has 0 supplied notes and Timing has no supplied count. The measure is Number of notes supplied for this draft-topic exercise. These are invented entries, not staff performance measures or service outcomes. The table’s purpose is to let a reader identify the count and information status for a particular topic. The word supplied matters because it does not claim that every possible note has been collected.\n\nSuppose the sheet uses a large merged visual heading, several blank columns for spacing and a column called Results without identifying what was counted. A reader reaching the value 3 must still know its topic and measure. Being able to perceive the number does not provide those relationships. Devon can examine the table’s actual headers and row structure instead of declaring that the number is self-explanatory or that Pia lacks subject knowledge.\n\nCurrent Microsoft Excel guidance recommends simple data tables, header information and avoiding merged or split cells within the table. MNIT guidance also emphasizes row and column headings and using layout tools instead of empty rows or columns for decorative spacing. The older MNIT Quick Card contains some advice that differs from current Microsoft guidance. Use the guidance appropriate to the actual content and version; this practice proposes a simple unmerged data table rather than treating every historic layout suggestion as a universal rule.\n\nA straightforward practice structure uses Topic and Number of supplied notes as headers, with a separate Information status field explaining whether the count is supplied. Each topic has its own row. The table has no hidden denominator, individual identifier or actual approval status. The value 0 in Sequence remains a supplied zero; Timing remains unknown. The next lesson examines those distinctions more closely instead of making an empty numeric space carry every possible meaning.\n\nIn real work, examine whether the actual table relationships and reading methods preserve the meaning. A header name should be useful and accurate, not merely short. Changes to a formula-dependent or approved workbook require the actual document arrangements. A neatly colored rectangle does not determine that its headers are correctly identified to the tools a reader uses, and the practice contains no actual file examination to certify.\n\nPrivately describe what the entry 3 refers to and propose headers supporting that interpretation. Explain why a blank spacer column or merged data field could complicate the supplied task. You may learn from the three rows without conducting a live accessibility test or asking Pia to identify an impairment. The useful question is whether the content keeps its relationships available, not whether every reader uses the same method."
+      },
+      "inThisLesson": [
+        "The three-topic table",
+        "Headers and row context",
+        "Simple data structure",
+        "Actual methods and document arrangements"
+      ],
+      "keyStatement": "An entry retains meaning through its topic, measure and information status.",
+      "flashcards": [
+        {
+          "front": "Column header",
+          "back": "A label identifying the meaning of the entries below it."
+        },
+        {
+          "front": "Row context",
+          "back": "The topic or item an entry belongs to within the table."
+        },
+        {
+          "front": "Simple data table",
+          "back": "A structure preserving clear rows and columns without confusing merged data relationships."
+        },
+        {
+          "front": "Visual spacing",
+          "back": "An appearance choice that should not substitute for the data’s structure."
+        }
+      ],
+      "accordion": {
+        "heading": "Examine what an entry depends on",
+        "items": [
+          {
+            "title": "Name the counted item",
+            "body": "Results does not identify what 3 counts. Number of supplied notes explains the invented measure and avoids implying a service result. The row label Location supplies the topic. Together they make the value interpretable; neither a color nor a larger font can supply an omitted measure."
+          },
+          {
+            "title": "Preserve a clear row relationship",
+            "body": "Giving each topic its own row helps a reader associate a value with that topic. A merged field across several topics can blur which entry belongs where. Review the actual relationships rather than assuming a visually attractive layout produces meaningful navigation through every method."
+          },
+          {
+            "title": "Use layout without breaking the data",
+            "body": "Decorative blank columns can separate a value from its context. Alignment and sizing can serve appearance while the actual data remains a simple table. Any live change still needs appropriate review, especially where formulas or approved content depend on the existing structure. The example authorizes no real deletion."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three arrangements of the counts",
+        "tabs": [
+          {
+            "label": "One merged data field",
+            "body": "The three topic counts are placed in a merged field because it looks compact. Pia must infer which number belongs to which topic. Compactness does not replace row context. A clear topic-by-topic structure can preserve the relationship without claiming that every remaining workbook feature has passed review."
+          },
+          {
+            "label": "A vague header is retained",
+            "body": "Results leaves the counted item unstated. A reader might reasonably wonder whether it means notes, approvals or completions. The example supplies notes only. Use an accurate header and keep the information status visible rather than expecting a visual table style to settle the substantive meaning."
+          },
+          {
+            "label": "The relationship is explicit",
+            "body": "Topic and Number of supplied notes identify what the entries refer to, with information status handled separately. The practice’s simple structure supports the declared task. Review actual header identification and navigation when a real workbook is involved; a written proposal is not evidence from every reading method."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which structure preserves the supplied meaning?",
+        "correct": "A simple table with a row for each topic, an accurate count header and a separate explanation of information status.",
+        "wrong": [
+          "Merge the three data rows so the reader must infer each topic’s value.",
+          "Keep Results as the only header because the color already explains the measure.",
+          "Interpret every number as an approved service because the rows appear complete."
+        ],
+        "feedbackCorrect": "This keeps topic, counted item and status connected without adding an outcome.",
+        "feedbackIncorrect": "Merged relationships leave the topic-value association unclear. Color cannot define an omitted measure. The presence of rows does not turn note counts into actual service determinations."
+      },
+      "sorting": {
+        "heading": "Separate data context from appearance and unsupported inference",
+        "categories": [
+          "Meaningful data context",
+          "Appearance proposal",
+          "Unsupported inference"
+        ],
+        "items": [
+          {
+            "text": "Location identifies the topic of the count 3.",
+            "category": "Meaningful data context"
+          },
+          {
+            "text": "Number of supplied notes identifies what the value counts.",
+            "category": "Meaningful data context"
+          },
+          {
+            "text": "Resize a column to fit its text.",
+            "category": "Appearance proposal"
+          },
+          {
+            "text": "Choose a restrained readable table style.",
+            "category": "Appearance proposal"
+          },
+          {
+            "text": "Results always means service approval.",
+            "category": "Unsupported inference"
+          },
+          {
+            "text": "Merged data rows preserve every reading method automatically.",
+            "category": "Unsupported inference"
+          }
+        ]
+      },
+      "next": "Distinguish a supplied zero from a missing count before summarizing the workbook.",
+      "scenario": {
+        "context": "The header Results sits above 3 in the Location row, without identifying what was counted.",
+        "prompt": "What should Devon clarify?",
+        "options": [
+          "Only which color Pia prefers.",
+          "That any number is automatically self-explanatory.",
+          "The counted item and its relationship to the topic row."
+        ],
+        "responses": [
+          "A preference cannot define the measure.",
+          "A number alone does not state what it counts.",
+          "This follows the actual information relationship."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately describe the row and column meaning of Location’s 3 and propose fitting headers.",
+      "move": {
+        "control": "You can preserve the relationship among topic, measure and entry.",
+        "failure": "Visual layout is treated as a substitute for the actual data relationship.",
+        "next": "Use the supplied three rows; no live formulas or private records are needed."
+      }
+    },
+    {
+      "title": "Keep zero and missing information distinct",
+      "summary": "A recorded zero and an unknown count make different claims. A readable status explanation should preserve that distinction before any total or chart is interpreted.",
+      "objective": "Distinguish the supplied zero from the missing Timing count.",
+      "objectives": [
+        "Distinguish the supplied zero from the missing Timing count.",
+        "Explain what the two known counts can and cannot establish.",
+        "Choose a clear information-status account without fabricating a number."
+      ],
+      "takeaways": [
+        "Zero is a supplied value in this example.",
+        "An unknown count is not a recorded zero.",
+        "A partial total must remain tied to its known entries."
+      ],
+      "statement": "Make the information status understandable without changing the evidence.",
+      "image": {
+        "src": "/images/covers/stock-people-08.jpg",
+        "caption": "People sit on both sides of a meeting table with laptops and papers while a standing person points at a whiteboard."
+      },
+      "intro": {
+        "heading": "What does an empty count mean?",
+        "body": "The three invented topic rows remain Location: 3 supplied notes, Sequence: 0 supplied notes and Timing: no supplied count. The example explicitly declares Sequence’s zero. It does not say that nobody has a question about Sequence, that the draft is complete or that staff have no concerns. The measure is notes supplied for this exercise. Timing has no count, which means this account does not establish its number. Missing information is not reassuring evidence and is not proof of a problem’s size.\n\nPia sees an empty Timing count and asks what it means. Filling it with 0 would make the worksheet appear complete, but it would change the evidence. The question is how to make the information status clear while preserving the unknown. A separate status explanation can state Count not supplied. This avoids asking the reader to infer meaning from a blank space and avoids putting a fabricated number into the numeric account.\n\nMNIT and Microsoft guidance recommend making the meaning of blank data cells understandable. That does not authorize inventing a value. In an actual calculation workbook, the arrangement of numeric values and status text also needs examination so that formulas and actual reading methods handle the content appropriately. This practice teaches the distinction and a proposed status explanation; it does not prescribe one formula or assert that every function handles text and blanks in the same way.\n\nThe known counts 3 and 0 sum to 3 for those two supplied entries. A statement that the count across all three topics is 3 is not established because Timing remains unknown. Nor is a percentage of all notes across the three topics available from this account. Devon can label the known subtotal accurately and retain the unsupplied count rather than allowing a polished total cell to create an apparently complete result.\n\nIf the count is later supplied through the actual evidence arrangements, its status and related summaries can be examined again. A new number should have its real context, not merely be inserted to remove a visible gap. In actual DHS work, authorized handling, appropriate disclosure and content review remain applicable. This practice table contains no individual data and grants no permission to collect personal characteristics or release a real workbook.\n\nPrivately explain why the supplied zero and unknown count differ. Give an accurate sentence about the known subtotal and what it leaves open. This reasoning can be learned without editing a real formula or producing evidence about Pia’s reading method. The next lesson explores why people can attach different learned meanings to an unfinished account, while keeping those meanings separate from a duty to describe evidence accurately."
+      },
+      "inThisLesson": [
+        "A supplied zero",
+        "An unknown count",
+        "The known subtotal and its limit",
+        "A clear status explanation"
+      ],
+      "keyStatement": "An understandable status explanation should not turn missing evidence into zero.",
+      "flashcards": [
+        {
+          "front": "Recorded zero",
+          "back": "The example supplies a count of 0 for the defined note measure; it is not proof of every wider conclusion."
+        },
+        {
+          "front": "Unknown count",
+          "back": "The account does not supply the number, so it cannot establish a numeric value."
+        },
+        {
+          "front": "Known subtotal",
+          "back": "The sum of the supplied entries, with those entries and its limit identified."
+        },
+        {
+          "front": "Status explanation",
+          "back": "Wording that states whether a count is supplied without fabricating its value."
+        }
+      ],
+      "accordion": {
+        "heading": "Preserve the distinction before summarizing",
+        "items": [
+          {
+            "title": "Respect the supplied zero",
+            "body": "Sequence’s 0 is part of the full example. It means zero notes supplied for that exercise, not zero concerns or perfect understanding. Keep the declared measure visible so that a reader does not turn a narrow count into a wider conclusion about staff or services."
+          },
+          {
+            "title": "Make the unknown understandable",
+            "body": "Timing’s blank numeric space gives Pia no count. An accurate status explanation can say Count not supplied rather than silently substitute 0. This addresses the task while retaining uncertainty. In a real workbook, examine the explanation’s location and interaction with calculations and reading methods, not just its visual presence."
+          },
+          {
+            "title": "Name the subtotal’s actual scope",
+            "body": "The known entries 3 and 0 total 3. Calling that the known subtotal is different from reporting a complete three-topic total. A chart or prominent cell can make the partial account seem final unless its scope remains clear. The example supplies no number for Timing or basis for a complete proportion."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three treatments of the missing count",
+        "tabs": [
+          {
+            "label": "Zero is inserted for neatness",
+            "body": "Devon enters 0 for Timing to remove the empty space. The sheet becomes more uniform while its claim becomes less accurate. There is no supplied evidence for that value. A readable status can preserve the unknown without pretending that every topic has a known count."
+          },
+          {
+            "label": "Blankness must explain itself",
+            "body": "Devon leaves the space unexplained and expects Pia to infer what it means. The same blank could represent different conditions in another workbook. Explain this particular information status accurately, with appropriate review of numeric calculations, instead of treating every empty cell as an obvious message."
+          },
+          {
+            "label": "The account remains explicit",
+            "body": "Timing is identified as Count not supplied, and the subtotal is limited to Location and Sequence. The evidence stays intact while its meaning becomes more understandable. This is a relevant content proposal, not an actual examination of every formula, access method or disclosure requirement."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which statement accurately describes the full example?",
+        "correct": "The two supplied counts sum to 3, while the Timing count and complete three-topic total remain unknown.",
+        "wrong": [
+          "All three topics total 3 because every missing count means 0.",
+          "Sequence’s 0 proves nobody has any concern about that draft.",
+          "Timing’s unknown count proves it has the greatest number of notes."
+        ],
+        "feedbackCorrect": "The statement follows the known entries and retains the missing value.",
+        "feedbackIncorrect": "Substituting 0 fabricates a Timing count. A narrow supplied-note count does not establish all concerns or understanding. An unknown value also cannot be ranked as the largest; its size remains unestablished."
+      },
+      "sorting": {
+        "heading": "Separate supplied counts, missing information and unsupported inference",
+        "categories": [
+          "Supplied count",
+          "Missing information",
+          "Unsupported inference"
+        ],
+        "items": [
+          {
+            "text": "Location has 3 supplied notes.",
+            "category": "Supplied count"
+          },
+          {
+            "text": "Sequence has 0 supplied notes.",
+            "category": "Supplied count"
+          },
+          {
+            "text": "Timing’s count is not supplied.",
+            "category": "Missing information"
+          },
+          {
+            "text": "A complete three-topic total is not established.",
+            "category": "Missing information"
+          },
+          {
+            "text": "An empty count automatically equals 0.",
+            "category": "Unsupported inference"
+          },
+          {
+            "text": "Sequence has no possible concern from anyone.",
+            "category": "Unsupported inference"
+          }
+        ]
+      },
+      "next": "Consider the personal meanings attached to an unfinished account without changing its evidence.",
+      "scenario": {
+        "context": "Devon wants to enter 0 for Timing solely to make the table look finished.",
+        "prompt": "What should Pia recommend?",
+        "options": [
+          "Keep the count unknown, explain its status and limit any subtotal to known entries.",
+          "Insert 0 because a tidy table establishes accuracy.",
+          "Rank Timing as the biggest problem because its count is absent."
+        ],
+        "responses": [
+          "This makes the status understandable without inventing evidence.",
+          "Uniform appearance does not establish a missing count.",
+          "Unknown size cannot establish a ranking."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately explain the supplied zero, unknown count and known subtotal in three accurate sentences.",
+      "move": {
+        "control": "You can make missing information visible without fabricating a numeric result.",
+        "failure": "Neatness or a blank space creates an unsupported value or wider conclusion.",
+        "next": "Use the three complete invented entries; no live data collection or formula edit is needed."
+      }
+    },
+    {
+      "title": "Understand the meaning of a preliminary account",
+      "summary": "People may have learned different meanings for careful numbers and visible uncertainty. Chosen explanations can widen interpretation and change a conversation without altering the evidence.",
+      "objective": "Describe Miri’s and Otis’s individually supplied learned meanings.",
+      "objectives": [
+        "Describe Miri’s and Otis’s individually supplied learned meanings.",
+        "Explain how clarification changes their response to preliminary figures.",
+        "Preserve evidence accuracy and private reflection without assigning cultural types."
+      ],
+      "takeaways": [
+        "An unfinished account can carry a learned meaning.",
+        "Chosen individual explanations are not universal group rules.",
+        "A wider interpretation can change the response without changing an unknown value."
+      ],
+      "statement": "Understand the person’s meaning while keeping the information accurate.",
+      "image": {
+        "src": "/images/covers/stock-people-08.jpg",
+        "caption": "People sit on both sides of a meeting table with laptops and papers while a standing person points at a whiteboard."
+      },
+      "intro": {
+        "heading": "Care for shared effort and room to contribute",
+        "body": "A separate personal conversation concerns Miri and Otis preparing a preliminary count of materials for a neighborhood repair afternoon. Miri wants every entry checked before showing the account. Otis wants to share known entries alongside clear unknowns so others can offer information. Miri initially hears this as exposing the gathering to careless figures. Otis initially hears the closed account as saying other people have no useful knowledge to contribute. These interpretations are supplied for the example, not inferred from either person’s identity.\n\nMiri voluntarily explains a learned meaning from a family craft-sharing practice. Accurate accounts of shared materials expressed respect for the work others had contributed. Presenting an unchecked value as settled could feel like disregarding that labor. Otis chooses to describe a different learned meaning from a neighborhood meal-planning practice. Showing what the organizer did not yet know invited people’s knowledge and expressed that planning belonged to more than one person. For him, visible uncertainty could express openness rather than neglect.\n\nThe Council of Europe describes cultural resources as internally varied, personalized and sensitive to context. Miri’s and Otis’s accounts help explain this encounter without establishing how all families, neighborhoods or craftspeople think. Each can widen the initial interpretation. Miri can recognize an invitation to contribute in Otis’s proposal, and Otis can recognize care for shared effort in Miri’s request to distinguish verified entries. Neither has to surrender the value they care about.\n\nTheir changed response is to share a clearly preliminary account, identify which entries are checked and invite information about the unknowns. They agree not to label guesses as verified. This preserves both care for the contributors’ work and room for their knowledge. It does not establish that any particular contributor will reply or that the unknowns will become known. Their personal understanding can be meaningful even if no additional count arrives.\n\nThis encounter does not authorize changing Devon’s practice Timing count to 0 or deciding actual agency disclosure. Its contribution is a wider way of understanding a conversation about preliminary information. When the idea is considered in a work context, actual content, authority, privacy and evidence arrangements remain. An invitation to contribute cannot override a requirement or expose information a person is not authorized to share.\n\nPrivately describe what each person’s chosen meaning adds to your interpretation. Explain how their new response differs from merely insisting that both care about the same thing. You may keep the reflection unrecorded, use the example alone or decline to connect it to personal experience. No cultural biography, assessment, group profile or public demonstration is needed. The following lesson returns to the workbook and asks whether a chart preserves the information and the uncertainty its readers need."
+      },
+      "inThisLesson": [
+        "Two initial interpretations",
+        "Individually supplied learned meanings",
+        "A meaning-informed changed response",
+        "Private understanding and accurate evidence"
+      ],
+      "keyStatement": "A wider interpretation can preserve both respect for effort and room for knowledge without inventing a result.",
+      "flashcards": [
+        {
+          "front": "Learned meaning",
+          "back": "The significance a person chooses to explain from experience, rather than a trait inferred from identity."
+        },
+        {
+          "front": "Wider interpretation",
+          "back": "Considering another supplied meaning alongside one’s initial reading of an encounter."
+        },
+        {
+          "front": "Changed response",
+          "back": "A behavior that reflects the new understanding, such as marking checked entries while inviting information."
+        },
+        {
+          "front": "Private learning",
+          "back": "Personal understanding that can remain unrecorded and need not become a live work product."
+        }
+      ],
+      "accordion": {
+        "heading": "Follow the meaning-to-response change",
+        "items": [
+          {
+            "title": "Hear Miri’s reason",
+            "body": "Miri connects checked entries with care for shared labor. The reason gives Otis another interpretation beyond an unwillingness to hear others. It is her chosen account, not a rule about every family or craft-sharing group. Understanding it does not require approval of invented figures or identity classification."
+          },
+          {
+            "title": "Hear Otis’s reason",
+            "body": "Otis connects visible unknowns with an invitation to contribute knowledge. Miri can hear participation in his proposal rather than only carelessness. His meaning does not turn an unverified entry into a fact or guarantee that others will contribute; it changes what she can consider about this encounter."
+          },
+          {
+            "title": "Change the conversation and retain accuracy",
+            "body": "Their preliminary account identifies checked entries and unknowns, then invites relevant information. This differs from reassurance that everyone cares or a demand that one person abandon their reason. It preserves evidence accuracy while making the invitation meaningful; actual workplace release arrangements would still apply separately."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three interpretations of the preliminary account",
+        "tabs": [
+          {
+            "label": "Difference becomes a personal defect",
+            "body": "Calling Miri controlling or Otis careless makes an initial interpretation into a judgment. Their chosen accounts give more specific reasons: regard for shared effort and openness to knowledge. Examine those reasons without claiming that every action is acceptable or that personal meaning replaces actual information requirements."
+          },
+          {
+            "label": "Shared care erases the distinction",
+            "body": "Saying both care about the gathering can acknowledge common ground but leaves the particular meanings unexplored. Checked entries and visible unknowns express different concerns in their accounts. A useful response can attend to both rather than assuming the same caring intention makes the original conversation fully understood."
+          },
+          {
+            "label": "Understanding changes the response",
+            "body": "The preliminary account marks checked entries and invites information on unknowns. This responds to both meanings the people describe instead of requiring a winner. It still does not establish contribution, satisfaction or final counts. A private wider interpretation is valid learning even when the eventual practical result remains unknown."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which response reflects the supplied learning?",
+        "correct": "Share a clearly preliminary account with checked entries and unknowns identified, and invite relevant information without claiming it will arrive.",
+        "wrong": [
+          "Classify everyone from Miri’s family as unwilling to share preliminary information.",
+          "Treat every unverified number as accurate because Otis values participation.",
+          "Say both care and leave the conflicting meanings unexplored."
+        ],
+        "feedbackCorrect": "The changed response follows both individual meanings while retaining accurate status and unknown results.",
+        "feedbackIncorrect": "Miri’s chosen account is not a family profile. Participation cannot make an unsupported number true. Common care may matter, but alone it does not explore why checked entries and visible unknowns carry different meanings here."
+      },
+      "sorting": {
+        "heading": "Separate meanings the people describe, changed response and unsupported conclusions",
+        "categories": [
+          "Supplied personal meaning",
+          "Changed response",
+          "Unsupported conclusion"
+        ],
+        "items": [
+          {
+            "text": "Miri connects checked entries with respect for contributed work.",
+            "category": "Supplied personal meaning"
+          },
+          {
+            "text": "Otis connects visible unknowns with room for others’ knowledge.",
+            "category": "Supplied personal meaning"
+          },
+          {
+            "text": "Identify which preliminary entries have been checked.",
+            "category": "Changed response"
+          },
+          {
+            "text": "Invite relevant information while keeping unknowns explicit.",
+            "category": "Changed response"
+          },
+          {
+            "text": "Every family sharing crafts has Miri’s exact meaning.",
+            "category": "Unsupported conclusion"
+          },
+          {
+            "text": "All invited contributors will supply a missing count.",
+            "category": "Unsupported conclusion"
+          }
+        ]
+      },
+      "next": "Check whether a chart carries the actual known and unknown information accurately.",
+      "scenario": {
+        "context": "Miri now hears participation in Otis’s proposal, and Otis now hears care for shared work in Miri’s request.",
+        "prompt": "Which next response fits that wider understanding?",
+        "options": [
+          "Declare every entry verified so the account looks shared.",
+          "Mark checked entries and unknowns in a preliminary account, then invite relevant information.",
+          "Rank their personal cultural orientations from the discussion."
+        ],
+        "responses": [
+          "Shared planning cannot establish unverified entries.",
+          "This changes the response while preserving both meanings and evidence limits.",
+          "The encounter provides no assessment or basis for ranking people."
+        ],
+        "recommended": 1
+      },
+      "transfer": "Privately explain the two meanings and one way their changed response attends to both.",
+      "move": {
+        "control": "You can widen interpretation through a person’s chosen explanation and connect it to a response.",
+        "failure": "A common intention, cultural profile or invented result replaces the particular meanings.",
+        "next": "Use the full example; personal disclosure, live work and public proof are not required."
+      }
+    },
+    {
+      "title": "Make a chart’s meaning available accurately",
+      "summary": "A chart should identify its measure and retain unknown information. A nearby explanation and underlying table help readers examine the account rather than infer an outcome from appearance.",
+      "objective": "Describe the known entries and missing Timing value in the practice chart proposal.",
+      "objectives": [
+        "Describe the known entries and missing Timing value in the practice chart proposal.",
+        "Choose labels and an explanation preserving the measure and uncertainty.",
+        "Distinguish a chart description from complete review of the workbook and reading method."
+      ],
+      "takeaways": [
+        "A chart must retain the actual information status.",
+        "Its labels and explanation should preserve the measure.",
+        "A visual’s presence or description does not certify the whole workbook."
+      ],
+      "statement": "Explain the chart’s information and uncertainty without relying only on its appearance.",
+      "image": {
+        "src": "/images/covers/stock-people-08.jpg",
+        "caption": "People sit on both sides of a meeting table with laptops and papers while a standing person points at a whiteboard."
+      },
+      "intro": {
+        "heading": "A missing bar is not a recorded zero",
+        "body": "Devon proposes a bar chart showing Location: 3 and Sequence: 0 supplied notes. The Timing count is unknown. A colleague suggests a third bar at 0 for Timing so that all topics have matching positions. This would make the chart appear complete by inventing a value. The workbook’s purpose remains reading the supplied practice note information, not establishing which topic has the best service outcome or the fewest real concerns.\n\nThe chart’s meaningful explanation can say that Location has 3 supplied notes and Sequence has 0, while Timing has no supplied count and cannot be given a numeric result. Its title should identify the invented note measure, and any displayed axes or labels should preserve that meaning. A bar’s height does not communicate the counted item by itself. Color can distinguish a visual series, but should not become the only way to identify information or status.\n\nMNIT’s Excel guidance recommends keeping table data with visuals. The Quick Card emphasizes descriptions in nearby worksheet cells; current Microsoft guidance also addresses visual descriptions and clear chart elements. The useful task is to make the actual information available in the workbook and examine how its intended reading methods receive it. Do not assume one description field behaves identically in every version or that an automatically generated phrase is accurate because it exists.\n\nFor this practice, the underlying topic table remains available, with the unknown Timing count explicitly identified. A nearby text explanation gives the same known entries and limit. If a chart is retained, it must not silently place Timing at 0 or imply that the two known topics are the complete account. The explanation should not say no problems were found: notes supplied is a different measure, and unknown information provides no such finding.\n\nActual chart and workbook review includes the relevant reading method, labels, contrast, structure and accurate substantive meaning. The Minnesota standard keeps its real coverage and responsibilities. This lesson does not perform a file examination, establish that a particular description is received by every method or authorize releasing real data. A change to the worksheet or exported document needs appropriate review of that actual version and purpose.\n\nPrivately propose a chart title and an accurate text explanation using only the three supplied topics. Explain why an unknown value cannot become a 0-height bar just to complete the visual. You may choose to focus on the readable table and account rather than assume a chart is always necessary. The next lesson connects the feature review, task evidence and what the team can honestly conclude. It does not treat this example as a live test."
+      },
+      "inThisLesson": [
+        "The known entries and unknown value",
+        "Chart title and information labels",
+        "Underlying table and nearby explanation",
+        "Actual method and version review"
+      ],
+      "keyStatement": "An unknown value cannot become a numeric bar simply to complete a visual pattern.",
+      "flashcards": [
+        {
+          "front": "Chart measure",
+          "back": "The item counted or represented, identified accurately in the chart’s context."
+        },
+        {
+          "front": "Unknown value",
+          "back": "An entry whose number is not supplied; it cannot be represented as a known 0."
+        },
+        {
+          "front": "Nearby explanation",
+          "back": "An account of the meaningful visual information placed in the worksheet for actual reading-method review."
+        },
+        {
+          "front": "Underlying table",
+          "back": "The relevant entries and information statuses retained as data, not replaced by appearance alone."
+        }
+      ],
+      "accordion": {
+        "heading": "Follow the chart back to its evidence",
+        "items": [
+          {
+            "title": "Keep the unknown visible",
+            "body": "Location and Sequence have known counts; Timing does not. Adding Timing at 0 changes an unknown into an asserted value. The chart can be considered with a clear missing-information account, or the readable table can carry the task. Neither choice permits fabricating a third count to create symmetry."
+          },
+          {
+            "title": "Describe the measure and its limit",
+            "body": "A title identifying invented supplied-note counts distinguishes the bars from service outcomes. The explanation should retain 3, 0 and the unknown status accurately. A phrase such as no problems would introduce a different finding. Good visual labels and an appealing chart cannot make that unsupplied conclusion true."
+          },
+          {
+            "title": "Examine how the information is received",
+            "body": "Keep the table and an accurate nearby account available, then review the actual visual-description features and intended reading methods. A text field’s existence does not establish that every version or export conveys it. The task includes the information and uncertainty, not merely whether some description has been added."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three chart explanations",
+        "tabs": [
+          {
+            "label": "A third numeric bar fills the gap",
+            "body": "Timing is placed at 0 solely because the chart has three topics. The resulting picture asserts a count the account does not provide. Visual consistency is not evidence. Preserve the unknown explicitly instead of letting the chart make a missing-data claim that the underlying table correctly leaves open."
+          },
+          {
+            "label": "Appearance replaces information",
+            "body": "Two colored bars is an inventory of shapes, not the supplied note account. It omits the topics, counts and unknown Timing value. A useful explanation should convey the task information accurately, with labels beyond color alone and the underlying data available. A more detailed but invented conclusion would also fail."
+          },
+          {
+            "label": "Evidence and uncertainty remain available",
+            "body": "The chart title identifies the note measure, the table retains each topic’s status and the nearby account states known counts and the unknown value. This supports a fitting review proposal. Actual method, version, contrast and other required features still need examination; the lesson supplies no live conformance finding."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which account fits the proposed chart?",
+        "correct": "Location has 3 and Sequence has 0 supplied practice notes; Timing’s count is unknown, and these are not service outcomes.",
+        "wrong": [
+          "All three topics have known counts because a third bar can be drawn.",
+          "A 0-height Timing bar proves no Timing concerns exist.",
+          "Two colored bars completely explain the chart’s purpose and limits."
+        ],
+        "feedbackCorrect": "This retains the actual measure, known entries and missing value.",
+        "feedbackIncorrect": "Drawing a bar cannot establish a count. An invented 0 also cannot prove the absence of concerns. Shape and color names alone omit the topics, note measure and unknown information the task requires."
+      },
+      "sorting": {
+        "heading": "Separate chart evidence, useful explanation and invented result",
+        "categories": [
+          "Supplied chart evidence",
+          "Useful explanation proposal",
+          "Invented result"
+        ],
+        "items": [
+          {
+            "text": "Location’s supplied note count is 3.",
+            "category": "Supplied chart evidence"
+          },
+          {
+            "text": "Sequence’s supplied note count is 0.",
+            "category": "Supplied chart evidence"
+          },
+          {
+            "text": "Identify Timing as an unknown count.",
+            "category": "Useful explanation proposal"
+          },
+          {
+            "text": "Keep the underlying table and accurate nearby account available.",
+            "category": "Useful explanation proposal"
+          },
+          {
+            "text": "Timing is 0 because a third bar looks complete.",
+            "category": "Invented result"
+          },
+          {
+            "text": "The note chart proves every service concern is resolved.",
+            "category": "Invented result"
+          }
+        ]
+      },
+      "next": "Review the whole task and keep actual feature evidence separate from the practice closing.",
+      "scenario": {
+        "context": "A colleague describes the chart as proving no Timing concerns because its missing count is displayed at 0.",
+        "prompt": "What should Devon clarify?",
+        "options": [
+          "The invented 0 is useful because every chart needs symmetry.",
+          "The chart certifies every workbook feature.",
+          "Timing’s count is unknown, and supplied notes are not a measure of all concerns."
+        ],
+        "responses": [
+          "Symmetry cannot supply a missing value.",
+          "A chart description is not full workbook certification.",
+          "This corrects both the missing-count claim and the wider unsupported inference."
+        ],
+        "recommended": 2
+      },
+      "transfer": "Privately write an accurate chart title and an explanation retaining the known counts and unknown Timing value.",
+      "move": {
+        "control": "You can preserve the chart’s information and uncertainty through a meaningful account.",
+        "failure": "Visual completeness, shape names or color substitute for accurate evidence.",
+        "next": "Use the supplied three topics; no chart creation, actual records or colleague test is required."
+      }
+    },
+    {
+      "title": "Review the task and describe the ending honestly",
+      "summary": "Automated findings, manual examination and a particular reader’s account answer different questions. The ending should retain useful changes and missing evidence without claiming universal access.",
+      "objective": "Distinguish automated feature findings from actual task review.",
+      "objectives": [
+        "Distinguish automated feature findings from actual task review.",
+        "Describe the complete A/B/C practice closing without filling its gap.",
+        "Choose a proportionate continuation preserving voluntary learning and actual responsibilities."
+      ],
+      "takeaways": [
+        "A checker assists review rather than certifies every feature.",
+        "Task evidence belongs to its actual version and account.",
+        "No response leaves information missing."
+      ],
+      "statement": "Keep the improved explanation, actual review and unknown result distinct.",
+      "image": {
+        "src": "/images/covers/stock-people-08.jpg",
+        "caption": "People sit on both sides of a meeting table with laptops and papers while a standing person points at a whiteboard."
+      },
+      "intro": {
+        "heading": "What has this practice actually shown?",
+        "body": "The complete invented ending contains three reader accounts. Reader A finds Topic counts using the new sheet names. Reader B accurately distinguishes Sequence’s supplied 0 from Timing’s unknown count using the status explanation. No account is supplied for Reader C’s interpretation of the proposed chart. These are the entire closing facts. They are not a live Excel examination, a representative sample or evidence that all real DHS readers can use a workbook.\n\nThe proposed changes are relevant: names identify the contents, headers preserve the measure, unknown information remains explicit and the chart account does not manufacture a result. A and B describe particular task responses within the example. C’s missing account cannot become success or failure. The practice can identify a useful next review question about the chart without assuming why that response is absent or what method C uses.\n\nMicrosoft’s Accessibility Checker identifies possible issues and has stated limitations; MNIT’s Excel Quick Card calls for manual checks alongside it. An automated report of no flagged issues would not establish the accuracy of the note measure, a truthful unknown count or every actual task result. Review the actual workbook’s content, relationships and relevant methods. An accurate explanation and a checked formula are different questions, and neither automatically certifies the entire file.\n\nIn real work, retain the actual version, intended task and observed findings when describing a review. Do not carry a result from a source workbook over to every export, revision or delivery arrangement without appropriate examination. Actual access, content, owner decisions and authorized information handling remain. A real unmet need should follow its timely appropriate agency process, not wait for optional course completion or a perfect test account.\n\nThe separate Miri/Otis encounter also has a valid result: each can understand checked entries and visible unknowns through the other person’s chosen meaning, and their preliminary account preserves both. That personal insight is not an accessibility score, a workplace performance assessment or evidence that all contributors are satisfied. It can remain private and meaningful without a public metric or live work product.\n\nYou may finish by explaining one task improvement and one question still open. Use the full example or a suitable privately chosen example within your actual role. Learning is voluntary, and completion does not count toward DHS-required training credits without an express exception from management, a director or DHS leadership. Actual DHS Equity Policy responsibilities, including qualifying formal toolkit analysis or equity-director-consulted customized tools, remain separate. The Equity and Inclusion Operations Consultant leads the program and supports guidance, knowledge and feedback while staff carry their own work. Native American- and Tribal-specific matters are referred to the appropriate office within ADSA."
+      },
+      "inThisLesson": [
+        "Automated findings and manual examination",
+        "The complete A/B/C closing",
+        "Version and actual task context",
+        "Private understanding and real responsibilities"
+      ],
+      "keyStatement": "A relevant change and two supplied task accounts do not establish every reader or later version.",
+      "flashcards": [
+        {
+          "front": "Automated finding",
+          "back": "A tool’s result against its rules, not complete evidence of every content or task question."
+        },
+        {
+          "front": "Manual examination",
+          "back": "Review of actual meaning, relationships and relevant reading methods beyond automated findings alone."
+        },
+        {
+          "front": "Particular task account",
+          "back": "What a specified reader reports doing with the stated information in its context."
+        },
+        {
+          "front": "Missing response",
+          "back": "No account is supplied; neither success nor failure is established."
+        }
+      ],
+      "accordion": {
+        "heading": "Describe what changed and what remains open",
+        "items": [
+          {
+            "title": "Retain A and B accurately",
+            "body": "A locates the topic sheet, and B distinguishes 0 from unknown. These are relevant task accounts in the full example. They support a modest statement about those responses, not every reading method, future version or actual service population. Keep the declared task and evidence attached when explaining their contribution."
+          },
+          {
+            "title": "Keep C’s missing account open",
+            "body": "The example does not say how C interpreted the chart. That absence cannot prove the chart succeeded, failed or caused a particular response. It can identify a fitting question for a later actual review. No learner needs to obtain C’s identity, medical information or live test to finish this private learning activity."
+          },
+          {
+            "title": "Use review evidence in its own scope",
+            "body": "A checker, manual examination and reader account contribute different information. Examine their actual findings and limits instead of turning one result into a universal certificate. A later revision or export may require its own review, and actual assistance or formal duties cannot be postponed for optional practice."
+          }
+        ]
+      },
+      "tabs": {
+        "heading": "Compare three endings for the workbook practice",
+        "tabs": [
+          {
+            "label": "No flags becomes universal proof",
+            "body": "A proposed report of no checker flags is treated as showing every feature and reader works. The tool examines its rules, not every accuracy or task issue. Pair actual findings with appropriate manual and task review rather than replace the missing chart account or later-version questions with an automated result."
+          },
+          {
+            "label": "Silence becomes a result",
+            "body": "C’s missing response is described as satisfaction or failure. Neither claim follows from the supplied ending. Retain A and B’s specific accounts and state that C’s interpretation remains unknown. A proportionate next question can be useful without guessing a motive, ability or outcome from absent information."
+          },
+          {
+            "label": "The ending stays accurate",
+            "body": "Names and status explanations are improved in the example; A and B supply specific task accounts, and C’s chart interpretation is unknown. Personal Miri/Otis understanding remains distinct. This account identifies useful learning and further review without forcing a live project, assigning a score or claiming that actual duties are fulfilled."
+          }
+        ]
+      },
+      "check": {
+        "question": "Which closing statement fits all supplied evidence?",
+        "correct": "A finds the topic sheet, B distinguishes the supplied zero from unknown, and C’s chart interpretation remains unknown; actual review and responsibilities remain separate.",
+        "wrong": [
+          "All real readers succeed because A and B do.",
+          "C’s absent response proves the chart is clear and reassuring.",
+          "A no-flags report would make manual and task review unnecessary."
+        ],
+        "feedbackCorrect": "The closing retains the specific supplied accounts and the missing chart result.",
+        "feedbackIncorrect": "Two practice responses do not establish all real readers. Absent information cannot prove clarity or satisfaction. Automated rules have limits, and actual meaning, relationships and relevant task review remain necessary."
+      },
+      "sorting": {
+        "heading": "Separate closing evidence, open information and unsupported closure",
+        "categories": [
+          "Supplied closing evidence",
+          "Open information",
+          "Unsupported closure"
+        ],
+        "items": [
+          {
+            "text": "A finds Topic counts using the new sheet names.",
+            "category": "Supplied closing evidence"
+          },
+          {
+            "text": "B distinguishes Sequence’s 0 from Timing’s unknown count.",
+            "category": "Supplied closing evidence"
+          },
+          {
+            "text": "C’s chart interpretation is not supplied.",
+            "category": "Open information"
+          },
+          {
+            "text": "A later actual version’s task result is not established.",
+            "category": "Open information"
+          },
+          {
+            "text": "All DHS readers now have guaranteed access.",
+            "category": "Unsupported closure"
+          },
+          {
+            "text": "Completing this optional course fulfills every formal equity analysis.",
+            "category": "Unsupported closure"
+          }
+        ]
+      },
+      "next": "Retain one useful explanation and one open question for private learning or an appropriate actual opportunity.",
+      "scenario": {
+        "context": "The ending records A and B’s task accounts, but no account for C’s chart interpretation.",
+        "prompt": "What should the learner say?",
+        "options": [
+          "The two supplied accounts are useful, while C’s interpretation and actual broader review remain open.",
+          "C’s silence proves satisfaction.",
+          "Every later workbook version is certified by the example."
+        ],
+        "responses": [
+          "This accurately retains the contribution and its limits.",
+          "No response cannot establish satisfaction.",
+          "Practice accounts do not certify later actual versions."
+        ],
+        "recommended": 0
+      },
+      "transfer": "Privately explain one improvement and one open task question, using the full example if you prefer.",
+      "move": {
+        "control": "You can describe useful learning, actual evidence and remaining questions without inventing closure.",
+        "failure": "A checker result or absent response becomes a universal access or outcome claim.",
+        "next": "You can reflect privately without using a live workbook or sharing personal records."
+      }
+    }
+  ],
+  "jobAid": {
+    "title": "Read an Excel workbook with its purpose and evidence in view",
+    "subtitle": "Locate the information, retain row relationships and describe missing values honestly.",
+    "sections": [
+      {
+        "heading": "Locate the task information",
+        "items": [
+          "Identify what the workbook actually explains and where its information belongs. Descriptive sheet names and an opening account should match the contents.",
+          "A sheet name or title must not invent an approval, service outcome or actual contact absent from the information. A useful feature is not a complete review."
+        ]
+      },
+      {
+        "heading": "Preserve the data relationships",
+        "items": [
+          "Use clear topic and measure headers and examine how actual rows and columns retain those relationships. Proposed simple data structure is not live file certification.",
+          "Keep a supplied zero distinct from an unknown count. In the example, Location has 3, Sequence has 0 and Timing has no count. Known subtotal 3 is not an established complete total.",
+          "A clear status explanation should not fabricate a numeric entry. Actual calculations and reading methods require appropriate review of the real arrangement."
+        ]
+      },
+      {
+        "heading": "Examine chart meaning and review evidence",
+        "items": [
+          "Keep underlying data and an accurate nearby account available. Chart labels and descriptions should retain the measure and unknown information without relying only on color or shape names.",
+          "Do not draw Timing at 0 just to complete the visual. Review actual description features, reading methods, edition and later outputs rather than making a universal feature claim.",
+          "Automated findings, manual examination and reader accounts answer different questions. In the complete closing, A finds the sheet, B distinguishes 0 from unknown and C’s chart interpretation remains unknown."
+        ]
+      },
+      {
+        "heading": "Retain personal understanding and actual responsibilities",
+        "items": [
+          "Miri’s checked entries express care for contributed effort; Otis’s visible unknowns make room for others’ knowledge. Their new preliminary account marks checked entries and invites information without guaranteed replies.",
+          "These chosen individual meanings do not predict a group, fill an unknown count or authorize real information release. Learning through private reflection is valid without a live workbook or biography.",
+          "The Equity and Inclusion Operations Consultant leads the program and provides guidance, knowledge and feedback while staff carry their own work. Actual standards, assistance, owner processes and qualifying formal equity duties remain."
+        ]
+      }
+    ],
+    "remember": [
+      "Learning is voluntary; required-training credit needs an express exception from management, a director or DHS leadership.",
+      "Do not turn an unknown value into zero or absent feedback into satisfaction.",
+      "Actual duties and appropriate response to a real access need do not wait for optional course completion.",
+      "Native American- and Tribal-specific matters are referred to the appropriate office within ADSA."
+    ]
+  },
+  "sources": [
+    {
+      "title": "MNIT: Accessible Excel spreadsheets",
+      "href": "https://mn.gov/mnit/about-mnit/accessibility/electronic-documents/excel.jsp",
+      "note": "Selected workbook practices for understandable empty-cell status, layout, table data with visuals and clear content boundaries; not full conformance certification."
+    },
+    {
+      "title": "MNIT: Microsoft Excel Accessibility Quick Card",
+      "href": "https://mn.gov/mnit/assets/MicrosoftExcelQuickCard_tcm38-294079.pdf",
+      "note": "Two-page guidance on names, structure, headings, nearby descriptions, links, contrast and manual checks. Some version-specific statements differ from current Microsoft guidance; the course does not universalize its alt-text or merged-title statements."
+    },
+    {
+      "title": "Microsoft: Accessibility best practices with Excel spreadsheets",
+      "href": "https://support.microsoft.com/en-us/accessibility/excel/accessibility-best-practices-with-excel-spreadsheets",
+      "note": "Current Windows sections on names, simple tables and headers, descriptions, links, visual meaning and relevant reading-method review; interfaces and capabilities depend on the actual edition and content."
+    },
+    {
+      "title": "Microsoft: Rules for the Accessibility Checker",
+      "href": "https://support.microsoft.com/en-us/accessibility/office-accessibility/rules-for-the-accessibility-checker",
+      "note": "Actual rules and limitations distinguish a tool result from complete manual, accuracy and task review."
+    },
+    {
+      "title": "Minnesota State Digital Accessibility Standard",
+      "href": "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
+      "note": "Actual scope, adoption and owner responsibilities remain; selected workbook techniques are not the complete standard or an exception decision."
+    },
+    {
+      "title": "DHS: Content and writing guidelines",
+      "href": "https://mn.gov/dhs/digital-showcase/content-guidelines/",
+      "note": "Actual audience, task, accuracy, organization and clear-label guidance supports original workbook explanations without authorizing a service result."
+    },
+    {
+      "title": "Council of Europe: Developing intercultural competence through education",
+      "href": "https://rm.coe.int/16808ce258",
+      "note": "Personally learned, internally varied cultural meanings and contextual self/other understanding support the original private encounter; no group prediction or assessment placement."
+    },
+    {
+      "title": "DHS Equity Policy",
+      "href": "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+      "note": "Actual daily equity work and qualifying formal toolkit analysis/scan or relevant equity-director-consulted customized tool remain separate from optional learning."
+    }
+  ]
+}
