@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One DSD Quarterly Report</title>
+<style>
+:root{--ink:#1C2630;--slate:#5B6B7A;--line:#D5DCE2;--paper:#F4F7F9;--mn:#003865;--lake:#2A7F9E;--lake-soft:#E3F0F5;--gold:#65553D;--gold-soft:#EFE9DF;--moss:#334D64;--moss-soft:#E8EDF2;--clay:#564B3E;--clay-soft:#F0ECE5;--both:#6B5B95}
+*{box-sizing:border-box}html{font-size:15px}
+body{margin:0;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.45}
+.top{background:var(--mn);color:#fff;padding:.7rem 1.25rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;position:sticky;top:0;z-index:5}
+.top h1{font-size:1.05rem;margin:0;font-weight:600}.top .sub{font-size:.82rem;opacity:.85}
+.top select{padding:.35rem .5rem;border-radius:4px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;font:inherit}
+.top select option{color:var(--ink)}
+.top .actions{margin-left:auto;display:flex;gap:.4rem;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:4px;padding:.4rem .7rem;cursor:pointer;font:inherit}
+.btn:hover{background:var(--lake-soft)}.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.primary{background:var(--lake);border-color:var(--lake);color:#fff}.btn.small{padding:.25rem .5rem;font-size:.85rem}
+:focus-visible{outline:3px solid var(--mn);outline-offset:2px}.top :focus-visible{outline-color:#fff}.chart-data{overflow-x:auto}.storage-note{padding:.7rem 1.25rem;background:#E8EDF2;color:var(--ink)}
+.views{display:flex;gap:.3rem;background:#fff;border-bottom:1px solid var(--line);padding:.5rem 1.25rem;position:sticky;top:52px;z-index:4;flex-wrap:wrap}
+.views button{border:1px solid var(--line);background:#fff;padding:.4rem .8rem;border-radius:4px;cursor:pointer;font:inherit}
+.views button[aria-selected=true]{background:var(--mn);color:#fff;border-color:var(--mn)}
+.wrap{max-width:1240px;margin:0 auto;padding:1.25rem}
+.view{display:none}.view.on{display:block}
+h2{font-size:1.35rem;margin:1.4rem 0 .6rem;font-weight:600}h2:first-child{margin-top:0}
+h3{font-size:1rem;margin:0 0 .5rem;color:var(--mn)}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1rem 1.1rem;margin-bottom:1rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin-bottom:1rem}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:6px;padding:.7rem .9rem}
+.kpi .l{font-size:.8rem;color:var(--slate)}.kpi .v{font-size:1.7rem;font-weight:600;line-height:1.1;margin:.15rem 0}.kpi .d{font-size:.78rem;color:var(--slate)}
+.kpi svg{width:100%;height:28px;margin-top:.3rem}
+.rag{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-size:.78rem;font-weight:600}
+.rag.g{background:var(--moss-soft);color:var(--moss)}.rag.y{background:var(--gold-soft);color:var(--gold)}.rag.r{background:var(--clay-soft);color:var(--clay)}.rag.n{background:var(--paper);color:var(--slate)}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:.45rem .5rem;border-top:1px solid var(--line);vertical-align:top}th{background:var(--paper);border-top:0;font-weight:600}
+.stage{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
+.stage .s{flex:1;min-width:120px;padding:.5rem .6rem;border:1px solid var(--line);border-radius:4px;background:#fff;font-size:.85rem}
+.stage .s.cur{border-color:var(--mn);background:var(--lake-soft);font-weight:600}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:.3rem 0}.bar i{display:block;height:100%;background:var(--moss)}
+.chart{width:100%;height:190px}
+.chart text{font-size:11px;fill:var(--slate)}
+ul.plain{padding-left:1.1rem;margin:.3rem 0}ul.plain li{margin-bottom:.3rem}
+.flag{border-left:3px solid var(--clay);background:var(--clay-soft);padding:.5rem .7rem;margin:.4rem 0;font-size:.9rem}
+.flag.ok{border-color:var(--moss);background:var(--moss-soft)}
+.note{border-left:3px solid var(--lake);background:var(--lake-soft);padding:.5rem .7rem;font-size:.88rem;margin:.6rem 0}
+.sample{display:inline-block;background:var(--gold-soft);color:var(--gold);padding:.15rem .5rem;border-radius:4px;font-size:.78rem;font-weight:600;margin-left:.5rem}
+.empty{color:var(--slate);font-style:italic}
+/* editor */
+.editor{display:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:1rem 1.1rem;margin-bottom:1rem}
+.editor.on{display:block}
+.editor h3{margin-top:1rem}
+.f{display:grid;grid-template-columns:260px 1fr;gap:.5rem .8rem;align-items:start;margin-bottom:.45rem;font-size:.9rem}
+.f label{color:var(--ink);padding-top:.3rem}
+.f input,.f select,.f textarea{width:100%;border:1px solid var(--line);border-radius:4px;padding:.4rem .5rem;font:inherit}
+.f textarea{min-height:3.2rem;resize:vertical}
+.f small{display:block;color:var(--slate);font-size:.78rem}
+.goalrow{display:grid;grid-template-columns:200px 100px 1fr 1fr;gap:.5rem;margin-bottom:.4rem;align-items:start}
+.goalrow input,.goalrow select,.goalrow textarea{width:100%;border:1px solid var(--line);border-radius:4px;padding:.35rem .45rem;font:inherit}
+.chk{display:grid;grid-template-columns:1fr 1fr;gap:.3rem}.chk label{display:flex;gap:.4rem;align-items:flex-start;font-size:.88rem;border:1px solid var(--line);border-radius:4px;padding:.35rem .5rem;background:#fff}
+.toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:.5rem 1rem;border-radius:4px;opacity:0;transition:opacity .25s;pointer-events:none}.toast.show{opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr}.f{grid-template-columns:1fr}.goalrow{grid-template-columns:1fr 1fr}.views{top:auto;position:static}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{.top,.views,.editor,.toast{display:none!important}.view{display:none!important}.view.on{display:block!important}.storage-note{display:none!important}body{background:#fff}.card,.kpi{break-inside:avoid}}
+</style>
+<link rel="stylesheet" href="/program-chrome.css"><link rel="stylesheet" href="/internal-standalone.css">
+</head>
+<body data-page-purpose="tools" class="dsd-program-chrome"><a href="#main" class="skip-link">Skip to main content</a>
+<header class="dsd-header">
+<div class="dsd-shell dsd-brand-row">
+<a href="/" class="dsd-brand" aria-label="One DSD People, Access and Culture home"><img src="/images/dhs-logo.png" width="319" height="68" alt="Minnesota Department of Human Services"><span><strong>One DSD</strong><span>People, Access and Culture</span></span></a>
+<div class="dsd-utilities"><a href="/program/model">Connect learning with work</a><a href="/ask">Common questions</a><a href="/my-work">My work</a><button type="button" id="dsd-menu" aria-controls="dsd-navigation" aria-expanded="false" class="dsd-menu">Menu</button></div>
+</div>
+<nav id="dsd-navigation" aria-label="Program" class="dsd-nav"><div class="dsd-shell"><a href="/learn">Learn</a><a href="/program/resources" aria-current="location">Apply a tool</a><a href="/support">Get support</a><a href="/one-dsd">DSD programs</a><a href="/about">About the program</a><a class="dsd-mobile-utility" href="/ask">Common questions</a><a class="dsd-mobile-utility" href="/my-work">My work</a></div></nav>
+<div class="dsd-shell dsd-breadcrumb"><a href="/program/resources">Tools and resources</a></div>
+</header>
+<section class="top">
+  <div><h1>One DSD Quarterly Report</h1><div class="sub">Disability Services Division · totals only; no one is named or scored</div></div>
+  <label class="sr" for="qsel">Quarter</label><select id="qsel"></select>
+  <a class="btn ghost small" href="/one-dsd/planning" target="_top">Planning and reporting</a><a class="btn ghost small" href="/equity-review" target="_top">Equity review</a><div class="actions">
+    <button class="btn ghost small" id="btnEdit" aria-expanded="false">Add or change this quarter's numbers</button>
+    <button class="btn ghost small" id="btnAddQ">Add a quarter</button>
+    <button class="btn ghost small" id="btnOpen">Open saved report</button><input type="file" id="fileOpen" accept=".json" class="sr" aria-label="Open a saved report">
+    <button class="btn ghost small" id="btnSave">Save report</button>
+    <button class="btn ghost small" id="btnPrint">Print this view</button><button class="btn ghost small" id="btnDemo" aria-pressed="false">View examples</button><button class="btn ghost small" id="btnRecover">Recover previous save</button>
+  </div>
+</section><main id="main" tabindex="-1">
+<p class="storage-note" id="storageNotice" role="status">This report saves automatically in this browser. Save a report file for a separate backup. Enter aggregate information only; leave out names, case details and personnel information.</p><nav class="views" role="tablist" aria-label="Report views">
+  <button role="tab" aria-selected="true" data-view="lead" id="tab-lead" aria-controls="v-lead" tabindex="0">For leaders</button>
+  <button role="tab" aria-selected="false" data-view="team" id="tab-team" aria-controls="v-team" tabindex="-1">For the One DSD Team</button>
+  <button role="tab" aria-selected="false" data-view="cons" id="tab-cons" aria-controls="v-cons" tabindex="-1">Owners and support</button>
+  <button role="tab" aria-selected="false" data-view="pillars" id="tab-pillars" aria-controls="v-pillars" tabindex="-1">All numbers over time</button>
+</nav>
+<div class="wrap">
+  <div class="editor" id="editor"></div>
+  <section class="view on" id="v-lead" role="tabpanel" aria-labelledby="tab-lead" tabindex="0"></section>
+  <section class="view" id="v-team" role="tabpanel" aria-labelledby="tab-team" tabindex="0"></section>
+  <section class="view" id="v-cons" role="tabpanel" aria-labelledby="tab-cons" tabindex="0"></section>
+  <section class="view" id="v-pillars" role="tabpanel" aria-labelledby="tab-pillars" tabindex="0"></section>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+/* ---------------- definitions ---------------- */
+const GOALS=["1 Eliminate Disparities","2 Community Engagement","3 Hiring and Retention","4 Learning and Development","5 Contracts and Procurement","6 Communication and Accessibility"];
+const GATES=[
+ ["Program leadership and implementation responsibilities are clear","Leaders' group and One DSD Team formed and meeting","List of all DSD equity work complete","Starting numbers on equity and access in place","Basic learning available and assigned","Quarterly report in use; one full report delivered","Communication plan working","DSD action plan reviewed with accountable owners","Equity review rule in effect; units do their own reviews"],
+ ["Equity expectations in performance plans where adopted","Mentoring and leadership learning running","Hands-on learning available and used","Expanded report and warning signs working","Advisory group and way to pay community members in place","Equity and access checks part of contracts, policy and planning","Every unit does its own equity reviews routinely"],
+ ["Equity part of planning and performance","Long-term staff, data and budget in place, with owners and backups named","Key numbers improved, and we can show it","Public summary shared","Next plan agreed"]
+];
+/* measures: key, label, domain, unit, direction (up good / down good), view */
+const MEASURES=[
+ ["unitsUsing","DSD units that used the program","Program health","%","up"],
+ ["usedInWork","People who say they used something in their work","Program health","%","up"],
+ ["decisionsChanged","Decisions changed because of an equity review","Program health","count","up"],
+ ["helpFinished","Requests for help finished","Program health","%","up"],
+ ["firstReply","Typical time to first reply to a help request (working days)","Program health","days","down"],
+ ["contentCurrent","Pages and resources current and passing accessibility checks","Program health","%","up"],
+ ["analysesShare","Key decisions that had an equity review","Goal 1: Eliminate Disparities","%","up"],
+ ["disparity","Gap for the top priority service measure (1.0 means no gap)","Goal 1: Eliminate Disparities","ratio","down"],
+ ["inputBefore","Significant decisions with community input before they were final","Goal 2: Community Engagement","%","up"],
+ ["recsActed","Community suggestions acted on or answered","Goal 2: Community Engagement","%","up"],
+ ["retentionGap","Gap between groups in who stays one year","Goal 3: Hiring and Retention","pp","down"],
+ ["offerGap","Gap between groups in offers that become hires","Goal 3: Hiring and Retention","pp","down"],
+ ["applied60","People who used what they learned 60 days later","Goal 4: Learning and Development","%","up"],
+ ["ableReview","Staff who feel able to do an equity review on their own","Goal 4: Learning and Development","%","up"],
+ ["contractsReviewed","Larger contracts and grants that had an equity review","Goal 5: Contracts and Procurement","%","up"],
+ ["awardsShare","Awards to culturally specific, small, Tribal and Greater Minnesota organizations","Goal 5: Contracts and Procurement","%","up"],
+ ["materialsStd","Public materials that are plain and accessible","Goal 6: Communication and Accessibility","%","up"],
+ ["interpTimely","Interpreter and translation requests met on time","Goal 6: Communication and Accessibility","%","up"],
+ ["ownersNamed","Goals and areas of work with an accountable owner","Leadership","%","up"],
+ ["belonging","Belonging and trust score (survey, 0 to 100)","Workplace culture","index","up"],
+ ["belongingGap","Gap between groups in belonging and trust","Workplace culture","pp","down"]
+];
+const DOMAINS=[...new Set(MEASURES.map(m=>m[2]))];
+const THRESH={disparityRatio:1.3,declineQuarters:2,belongingDrop:5,retentionGap:5,belongingGap:10};
+
+/* ---------------- data ---------------- */
+function blankQ(label,stage){return {label,stage,sample:false,evidence:"",
+  status:{overall:"",headline:"",wins:"",risks:"",decisions:"",nextQuarter:""},
+  goals:GOALS.map(g=>({rag:"",progress:"",next:""})),
+  gates:[],measures:{},
+  team:{members:"",openHours:"",reviews:"",ysd:"",asks:"",voice:""},
+  cons:{capacity:"",platform:"",consults:"",learning:"",data:"",risks:"",plan:""}};}
+function sampleData(){
+  const q1=blankQ("Current quarter",0);q1.sample=true;q1.evidence="Sample figures for practice only. These numbers and narrative descriptions are invented; they have no operational source, numerator, denominator or survey sample and must not be reported as evidence.";
+  q1.status={overall:"y",headline:"Leaders named owners for most goals and areas of work, and settled three of four open questions. The One DSD Team is formed, with members who have lived experience of disability. The program was checked and two broken downloads were fixed. The equity review rule is written but not yet in effect.",wins:"Team formed sooner than planned: 11 of 12 seats filled, 5 members with lived experience of disability.\nEvery core part of the program passed its check.\nThe ADSA Equity Director agreed to send numbers every quarter.",risks:"We still have not decided how long to keep records of help requests.\nGoals 3 and 5 do not have a lead with time set aside yet, so questions about them are going to the consultant.",decisions:"Decide how long records are kept.\nName leads for Goals 3 and 5 and set aside time for them.\nConfirm consultant program leadership and shared implementation responsibilities.",nextQuarter:"The equity review rule takes effect. First practice sessions. Start the list of all DSD equity work. Check our public materials for barriers."};
+  q1.goals=[{rag:"y",progress:"Record of reviews started; 4 practice reviews done.",next:"Rule in effect; 10 reviews."},{rag:"g",progress:"Team formed; started writing a standard for asking people for input.",next:"Standard drafted; Tribal steps confirmed."},{rag:"y",progress:"No goal lead yet; Human Resources contact named.",next:"Goal lead named; review 20 job descriptions."},{rag:"g",progress:"Basic learning assigned to all staff; 48% finished.",next:"80% finished; supervisor learning group planned."},{rag:"n",progress:"Not started; no goal lead yet.",next:"Goal lead named; confirm what equity wording contracts can include."},{rag:"y",progress:"Program passed its access check; public materials not checked yet.",next:"Check started; list of fixes started."}];
+  q1.gates=[1,4];
+  q1.measures={unitsUsing:75,usedInWork:41,decisionsChanged:1,helpFinished:67,firstReply:2,contentCurrent:92,analysesShare:30,disparity:null,inputBefore:null,recsActed:null,retentionGap:7,offerGap:null,applied60:null,ableReview:null,contractsReviewed:null,awardsShare:null,materialsStd:null,interpTimely:null,ownersNamed:80,belonging:null,belongingGap:null};
+  q1.team={members:"12 seats, 11 filled. 5 members have lived experience of disability. 6 of 8 units are represented.",openHours:"2 Open Hours, 14 staff came. Most common questions: how the Team reviews decisions, and whether help requests are private.",reviews:"Reviewed 2 drafts (the wording we use to answer help requests, and the staff survey). Both were changed because of the Team's input.",ysd:"First \"you said, we did\" is ready to share next quarter: staff asked to know the Team's purpose before the survey, so we shared it first.",asks:"Put in writing what the Team's role is when it reviews decisions.\nPay for interpreters and captions at Open Hours.",voice:"Staff are curious but careful. The most common question is whether the Team really has a say or is just listening."};
+  q1.cons={capacity:"Leads named for Goals 1, 2, 4 and 6, each with about four hours a week set aside. Goals 3 and 5 have no lead yet. Upkeep, support and data contacts named; accessibility and records contacts still open.",platform:"Upkeep contact checked all core pages. 2 downloads fixed. 1 lesson needs rewriting so screen readers can use it.",consults:"Support contact: 9 requests for help, 6 finished, 3 waiting on the person who owns the policy. Most answered within 2 working days.",learning:"14 coaching sessions: helped 4 goal leads plan their first steps, showed two units how to use the equity review tools, helped the One DSD Team set up its first meeting, and connected the Goal 2 lead with the Tribal Liaison.",data:"Data contact asked DHS for numbers on services by race and language; expected next quarter. DSD staff numbers available. No staff survey results yet.",risks:"Two goals without leads.\nRecords question not decided.\nAccessibility contact not named.",plan:"Coach the new Goal 3 and 5 leads when named. Sit in on the first practice sessions if invited. Help the Team plan the staff survey."};
+  const q2=blankQ("Example follow-up quarter",0);q2.sample=true;q2.evidence="Sample figures for practice only. These numbers and narrative descriptions are invented; they have no operational source, numerator, denominator or survey sample and must not be reported as evidence.";
+  q2.status={overall:"g",headline:"The equity review rule is in effect. Twelve reviews were done, three led by staff. The list of DSD equity work has 41 items. The check of public materials found 23 barriers, and 9 are fixed. Leaders decided how long records are kept.",wins:"The review rule started halfway through the quarter; since then, 7 in 10 key decisions had a review.\nThe list of equity work showed three groups doing the same thing; they now work together.\nFirst disability services review finished before a guidance document went out.",risks:"DHS numbers are late, so the service gap is not measured yet.\nWe still do not know what equity wording contracts can include.\nThe gap between groups in who stays has been 6 to 7 points for two quarters.",decisions:"Approve the standard for asking people for input, including paying them.\nName the accessibility contact (still open).",nextQuarter:"First full quarterly report, staff survey, supervisor learning group, and a standard for interpreters and translation."};
+  q2.goals=[{rag:"g",progress:"12 reviews; 70% of key decisions had one; record up to date.",next:"90% of key decisions; first staff-led practice sessions."},{rag:"y",progress:"Input standard drafted; Tribal steps confirmed with the DHS Tribal Liaison.",next:"Standard approved; first \"you said, we did\" shared."},{rag:"y",progress:"20 job descriptions reviewed; 6 changed. The retention gap between groups is 6 points; the Goal 3 lead and Human Resources are reviewing stay conversation themes.",next:"Plan training for hiring managers; propose action on retention."},{rag:"g",progress:"Basic learning 81% finished; supervisor learning group planned.",next:"Supervisor group starts."},{rag:"r",progress:"No answer on contract wording; our contracts contact changed.",next:"Meet with ADSA contracts staff and legal."},{rag:"y",progress:"Check done: 23 barriers found, 9 fixed; interpreter standard drafted.",next:"Standard approved; 60% of barriers fixed."}];
+  q2.gates=[0,1,4,8];
+  q2.measures={unitsUsing:100,usedInWork:48,decisionsChanged:5,helpFinished:93,firstReply:1.5,contentCurrent:96,analysesShare:70,disparity:null,inputBefore:50,recsActed:33,retentionGap:6,offerGap:4,applied60:null,ableReview:null,contractsReviewed:null,awardsShare:null,materialsStd:35,interpTimely:null,ownersNamed:100,belonging:null,belongingGap:null};
+  q2.team={members:"All 12 seats filled. 6 members have lived experience of disability. Every unit is represented.",openHours:"3 Open Hours, 31 staff came. Topics: the equity review rule, why people stay, Amplify Equity.",reviews:"Reviewed 5 decisions; 4 were changed (consent wording, two forms, a meeting format). One reached the Team after it was already decided; we noted that as a problem to fix.",ysd:"First \"you said, we did\" shared with all staff: 3 items, 2 done, 1 we could not do, with the reason.",asks:"Send decisions to the Team while they can still change.\nGive the Team a seat at the leaders' quarterly review.",voice:"Trust grew when staff saw the Team change a decision. Staff in two units still are not sure how to bring something to the Team."};
+  q2.cons={capacity:"All six goals have a lead with time set aside. Accessibility and records contacts named. Leaders checked owners' time at their monthly review; Goal 6 lead asked for two more hours a week and got them.",platform:"Upkeep contact's quarterly check: 4 pages updated, 1 lesson rewritten for screen readers, all downloads work.",consults:"Support contact: 14 requests for help, 13 finished, usually answered in about a day and a half. 3 passed to the people who own the policy.",learning:"22 coaching sessions: helped units through their first equity reviews, coached the new Goal 3 and Goal 5 leads, helped the Team write its first \"you said, we did\", and shared one unit's review method with two others.",data:"Data contact: staff numbers and help-request numbers complete. DHS service numbers one quarter late. Staff survey next quarter.",risks:"Contracts goal is still behind.\nDHS numbers are late.\nSome decisions reach the Team too late.",plan:"Coach goal leads as they write their first full quarterly updates. Help leaders read the survey results. Connect the Goal 5 lead with ADSA contracts staff."};
+  return {version:1,programme:"One DSD People, Access and Culture",quarters:[q1,q2],thresholds:{...THRESH}};
+}
+const STORE_KEY="one-dsd-quarterly-report-v2", BACKUP_KEY=STORE_KEY+"-previous";
+let D={version:2,programme:"One DSD People, Access and Culture",quarters:[blankQ("Current quarter",0)],thresholds:{...THRESH}};
+let qi=0,view="lead",demo=false,realReport=null,storageAvailable=true;
+function validateReport(raw){
+  if(!raw||typeof raw!=="object"||Array.isArray(raw)||!Array.isArray(raw.quarters)||raw.quarters.length<1||raw.quarters.length>40)throw Error("Choose a report containing 1 to 40 quarters.");
+  const text=(v,max=4000)=>{if(typeof v!=="string"||v.length>max)throw Error("A report text field is invalid or too long.");return v;};
+  const finite=(v,min,max)=>{if(typeof v!=="number"||!Number.isFinite(v)||v<min||v>max)throw Error("A report number is outside its allowed range.");return v;};
+  const fields=(v,keys)=>{if(!v||typeof v!=="object"||Array.isArray(v))throw Error("A report section is missing.");return Object.fromEntries(keys.map(k=>[k,text(v[k]??"")]));};
+  const quarters=raw.quarters.map(q=>{
+    if(!q||typeof q!=="object"||typeof q.sample!=="boolean"||!Number.isInteger(q.stage))throw Error("A quarter is invalid.");
+    const stage=finite(q.stage,0,2),out=blankQ(text(q.label,80),stage);out.sample=q.sample;
+    if(!out.label.trim())throw Error("Every quarter needs a name.");
+    out.evidence=q.evidence===undefined?"":text(q.evidence);
+    out.status=fields(q.status,["overall","headline","wins","risks","decisions","nextQuarter"]);
+    if(!["","g","y","r","n"].includes(out.status.overall))throw Error("A report status is invalid.");
+    if(!Array.isArray(q.goals)||q.goals.length!==6)throw Error("A report must contain six goals.");
+    out.goals=q.goals.map(g=>{const x=fields(g,["rag","progress","next"]);if(!["","g","y","r","n"].includes(x.rag))throw Error("A goal status is invalid.");return x;});
+    if(!Array.isArray(q.gates)||q.gates.some(v=>!Number.isInteger(v)||v<0||v>=GATES[stage].length)||new Set(q.gates).size!==q.gates.length)throw Error("A checkpoint is invalid.");out.gates=[...q.gates];
+    if(!q.measures||typeof q.measures!=="object"||Array.isArray(q.measures))throw Error("Report measures are missing.");
+    for(const [key,, ,unit] of MEASURES){const value=q.measures[key];if(value==null||value===""){out.measures[key]=null;continue;}out.measures[key]=finite(value,unit==="ratio"?0.00001:0,["%","pp","index"].includes(unit)?100:1000000);if(unit==="count"&&!Number.isInteger(value))throw Error("Counts must be whole numbers.");}
+    out.team=fields(q.team,["members","openHours","reviews","ysd","asks","voice"]);out.cons=fields(q.cons,["capacity","platform","consults","learning","data","risks","plan"]);return out;
+  });
+  if(new Set(quarters.map(q=>q.label)).size!==quarters.length)throw Error("Quarter names must be distinct.");
+  if(quarters.some(q=>q.sample)!==quarters.every(q=>q.sample))throw Error("Examples and real reporting must be kept in separate files.");
+  const thresholds={...THRESH};for(const k of Object.keys(THRESH)){if(raw.thresholds?.[k]!==undefined)thresholds[k]=finite(raw.thresholds[k],k==="disparityRatio"?0.00001:1,k==="declineQuarters"?12:100);}
+  if(!Number.isInteger(thresholds.declineQuarters))throw Error("Trend thresholds must be whole quarters.");
+  return {version:2,programme:"One DSD People, Access and Culture",quarters,thresholds};
+}
+function persist(){if(demo)return;try{const checked=validateReport(D);const prior=localStorage.getItem(STORE_KEY);if(prior)localStorage.setItem(BACKUP_KEY,prior);localStorage.setItem(STORE_KEY,JSON.stringify(checked));storageAvailable=true;document.querySelector("#storageNotice").textContent="This report saves automatically in this browser. Save a report file for a separate backup. Enter aggregate information only; leave out names, case details and personnel information.";}catch(error){storageAvailable=false;document.querySelector("#storageNotice").textContent="Changes are not saved automatically: "+error.message+" Use Save report to keep a separate copy.";}}
+try{const saved=localStorage.getItem(STORE_KEY);if(saved){const restored=validateReport(JSON.parse(saved));if(restored.quarters.some(q=>q.sample))throw Error("Example data cannot be restored as a real report.");D=restored;qi=D.quarters.length-1;}}catch(error){storageAvailable=false;document.querySelector("#storageNotice").textContent="The browser save could not be restored. Open a saved report file or recover the previous save.";}
+
+const $=s=>document.querySelector(s);const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));const nl=s=>esc(s).replace(/\n/g,"<br>");
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200);}
+const Q=()=>D.quarters[qi];const prevQ=()=>D.quarters[qi-1];
+function lines(s){return String(s||"").split("\n").map(x=>x.trim()).filter(Boolean);}
+function ul(s){const l=lines(s);return l.length?`<ul class="plain">${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<span class="empty">Nothing recorded</span>`;}
+function ragLabel(r){return {g:"On track",y:"Keep an eye on",r:"Off track",n:"Not started"}[r]||"No status yet";}
+function rag(r){return `<span class="rag ${r||'n'}">${ragLabel(r)}</span>`;}
+function fmt(v,unit){if(v===null||v===undefined||v===""||typeof v!=="number"||!Number.isFinite(v))return "—";if(unit==="%")return v+"%";if(unit==="pp")return v+" points";if(unit==="ratio")return Number(v).toFixed(2);if(unit==="days")return v+" days";return v;}
+
+/* ---------------- charts (inline svg) ---------------- */
+function spark(vals){const v=vals.map(x=>x==null?null:+x);const n=v.length;if(n<2||v.every(x=>x==null))return "";const vs=v.filter(x=>x!=null);const mn=Math.min(...vs),mx=Math.max(...vs);const W=120,H=28;const pts=v.map((x,i)=>x==null?null:[i/(n-1)*W,H-3-(mx===mn?H/2:(x-mn)/(mx-mn)*(H-6))]).filter(Boolean);return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="#2A7F9E" stroke-width="2" points="${pts.map(p=>p.join(",")).join(" ")}"/></svg>`;}
+function barChart(key,label,unit,dir){
+  const qs=D.quarters;const vals=qs.map(q=>q.measures[key]);const vs=vals.filter(x=>x!=null&&x!=="").map(Number);
+  const W=520,H=190,L=36,B=36,T=12;const mx=vs.length?Math.max(...vs,unit==="%"?100:0,unit==="ratio"?1.5:0):1;
+  const bw=Math.min(60,(W-L-10)/qs.length*0.6);const step=(W-L-10)/qs.length;
+  let s=`<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)} by quarter: ${esc(qs.map((q,i)=>q.label+" "+fmt(vals[i],unit)).join("; "))}">`;
+  s+=`<line x1="${L}" y1="${H-B}" x2="${W-6}" y2="${H-B}" stroke="#D5DCE2"/>`;
+  [0,0.5,1].forEach(t=>{const y=H-B-(t*(H-B-T));s+=`<text x="${L-6}" y="${y+4}" text-anchor="end">${unit==="ratio"?(mx*t).toFixed(1):Math.round(mx*t)}</text><line x1="${L}" y1="${y}" x2="${W-6}" y2="${y}" stroke="#F0F3F5"/>`;});
+  qs.forEach((q,i)=>{const v=vals[i];const x=L+i*step+(step-bw)/2;const lab=q.label.replace("Year ","Y").replace(" · Quarter ","Q");s+=`<text x="${x+bw/2}" y="${H-B+16}" text-anchor="middle">${esc(lab)}</text>`;if(v==null||v==="")return;const h=mx?(+v/mx)*(H-B-T):0;const good=dir==="down"?(+v<= (unit==="ratio"?D.thresholds.disparityRatio:Infinity)):true;s+=`<rect x="${x}" y="${H-B-h}" width="${bw}" height="${h}" rx="2" fill="${i===qi?'#003865':'#2A7F9E'}" opacity="${i===qi?1:.55}"/><text x="${x+bw/2}" y="${H-B-h-4}" text-anchor="middle" style="fill:#1C2630;font-weight:600">${fmt(v,unit)}</text>`;});
+  return s+"</svg>"+`<details class="chart-data"><summary>Read the chart values</summary><table><caption>${esc(label)}</caption><thead><tr><th scope="col">Quarter</th><th scope="col">Value</th></tr></thead><tbody>${qs.map((q,i)=>`<tr><th scope="row">${esc(q.label)}</th><td>${fmt(vals[i],unit)}</td></tr>`).join("")}</tbody></table></details>`;
+}
+
+/* ---------------- early warning ---------------- */
+function warnings(){
+  const q=Q(),out=[];const th=D.thresholds;const m=q.measures;
+  const has=k=>m[k]!=null&&m[k]!=="";
+  const series=k=>D.quarters.slice(0,qi+1).map(x=>x.measures[k]);
+  const downRun=(k,goodUp=true)=>{const v=series(k);let n=0;for(let i=v.length-1;i>0;i--){const a=v[i],b=v[i-1];if(a==null||b==null||a===""||b==="")break;if(goodUp?+a<+b:+a>+b)n++;else break;}return n;};
+  const aboveRun=(k,level)=>{const v=series(k);let n=0;for(let i=v.length-1;i>=0;i--){if(v[i]!=null&&v[i]!==""&&+v[i]>=level)n++;else break;}return n;};
+  if(has("ownersNamed")&&+m.ownersNamed<100)out.push(`${100-+m.ownersNamed}% of goals and areas of work do not have a named owner yet. The consultant and responsible leaders should clarify implementation responsibilities.`);
+  if(has("analysesShare")&&+m.analysesShare<100)out.push(`${100-+m.analysesShare}% of key decisions went ahead without an equity review. Leaders should look at each one and decide whether to reopen it.`);
+  if(has("disparity")&&+m.disparity>=th.disparityRatio)out.push(`The top priority service gap is ${fmt(m.disparity,"ratio")}, which reaches the warning level of ${th.disparityRatio}. The Goal 1 lead and the program owner should look at causes and propose a fix.`);
+  else if(downRun("disparity",false)>=th.declineQuarters)out.push(`The top priority service gap has grown ${downRun("disparity",false)} quarters in a row.`);
+  if(downRun("inputBefore")>=th.declineQuarters)out.push(`Community input before decisions has gone down ${downRun("inputBefore")} quarters in a row. The Goal 2 lead should plan input with decision owners.`);
+  if(aboveRun("retentionGap",th.retentionGap)>=th.declineQuarters)out.push(`The gap between groups in who stays has been ${th.retentionGap} points or more for ${aboveRun("retentionGap",th.retentionGap)} quarters in a row. The Goal 3 lead and Human Resources should review stay and exit themes and propose action.`);
+  if(downRun("applied60")>=th.declineQuarters)out.push(`Fewer people are using what they learned, ${downRun("applied60")} quarters in a row. The Goal 4 lead should change the learning design.`);
+  if(has("contractsReviewed")&&+m.contractsReviewed<100)out.push(`${100-+m.contractsReviewed}% of larger contracts and grants went out without an equity review. The Goal 5 lead should review the process.`);
+  if(downRun("materialsStd")>=th.declineQuarters)out.push(`The share of public materials that are plain and accessible has gone down ${downRun("materialsStd")} quarters in a row.`);
+  if(downRun("interpTimely")>=th.declineQuarters)out.push(`On-time interpreters and translation have gone down ${downRun("interpTimely")} quarters in a row. The Goal 6 lead should set a fix.`);
+  if(prevQ()&&has("belonging")&&prevQ().measures.belonging!=null&&prevQ().measures.belonging!==""&&(+prevQ().measures.belonging-+m.belonging)>=th.belongingDrop)out.push(`The belonging and trust score dropped ${(+prevQ().measures.belonging-+m.belonging).toFixed(0)} points, more than the warning level of ${th.belongingDrop}. The One DSD Team and leaders should hold listening sessions.`);
+  if(has("belongingGap")&&+m.belongingGap>=th.belongingGap)out.push(`The gap between groups in belonging and trust is ${m.belongingGap} points, at or above the warning level of ${th.belongingGap}.`);
+  return out;
+}
+
+/* ---------------- views ---------------- */
+function kpiCard(key){const m=MEASURES.find(x=>x[0]===key);const vals=D.quarters.map(q=>q.measures[key]);const v=vals[qi];const p=qi>0?vals[qi-1]:null;let d="";if(v!=null&&v!==""&&p!=null&&p!==""){const diff=+v-+p;d=(diff>0?"+":"")+(m[3]==="ratio"?diff.toFixed(2):Math.round(diff*10)/10)+" vs last quarter";}return `<div class="kpi"><div class="l">${esc(m[1])}</div><div class="v">${fmt(v,m[3])}</div><div class="d">${d||"&nbsp;"}</div>${spark(vals.slice(0,qi+1))}</div>`;}
+function gateBlock(){return "";}
+const GOALKEYS=[["analysesShare","disparity"],["inputBefore","recsActed"],["retentionGap","offerGap"],["applied60","ableReview"],["contractsReviewed","awardsShare"],["materialsStd","interpTimely"]];
+function goalNums(i){const q=Q();return GOALKEYS[i].map(k=>{const m=MEASURES.find(x=>x[0]===k);return `<div style="font-size:.82rem"><span style="color:var(--slate)">${m[1]}:</span> <strong>${fmt(q.measures[k],m[3])}</strong></div>`;}).join("");}
+function goalsTable(){const q=Q();return `<div class="card"><h3>The six ADSA equity goals</h3><table><tr><th style="width:22%">Goal</th><th style="width:11%">Status</th><th style="width:25%">Headline numbers</th><th>This quarter</th><th>Next quarter</th></tr>${GOALS.map((g,i)=>`<tr><td>${g}</td><td>${rag(q.goals[i].rag)}</td><td>${goalNums(i)}</td><td>${nl(q.goals[i].progress)||'<span class="empty">—</span>'}</td><td>${nl(q.goals[i].next)||'<span class="empty">—</span>'}</td></tr>`).join("")}</table></div>`;}
+function warnBlock(){const w=warnings();return `<div class="card"><h3>Warning signs</h3>${w.length?w.map(x=>`<div class="flag">${esc(x)}</div>`).join(""):`<div class="flag ok">${MEASURES.every(x=>Q().measures[x[0]]!=null&&Q().measures[x[0]]!=="")?"No warning triggered for the recorded measures.":"Information is incomplete. Available measures do not trigger a warning; missing measures cannot be assessed."}</div>`}<p>${MEASURES.filter(x=>Q().measures[x[0]]==null||Q().measures[x[0]]==="").length} of 21 measures are unavailable. A warning is a reason to examine the evidence, not a determination about performance.</p><div style="font-size:.8rem;color:var(--slate);margin-top:.4rem">We raise a warning when: any goal or area has no named owner; any key decision or larger contract skips an equity review; the top service gap reaches ${D.thresholds.disparityRatio} or grows ${D.thresholds.declineQuarters} quarters in a row; community input, learning use, accessible materials or on-time interpreters go down ${D.thresholds.declineQuarters} quarters in a row; the retention gap stays at ${D.thresholds.retentionGap} points or more; the belonging score drops ${D.thresholds.belongingDrop} points; or the belonging gap reaches ${D.thresholds.belongingGap} points. These are starting thresholds for discussion, not policy requirements. Changes apply to this report file; retain an earlier export when recording a threshold change.</div></div>`;}
+function sampleTag(){return Q().sample?`<span class="sample">Made-up example numbers</span>`:"";}
+function evidenceBlock(){return `<div class="card"><h3>Sources and how to read these figures</h3><p>${nl(Q().evidence)||'<span class="empty">Sources and calculation details have not been recorded for this quarter. Treat the figures as unverified until their basis is documented.</span>'}</p></div>`;}
+function renderLead(){const q=Q();return `<h2>For leaders · ${esc(q.label)} ${sampleTag()}</h2>
+<div class="card"><h3>How things are going ${rag(q.status.overall)}</h3><p style="margin:.3rem 0">${nl(q.status.headline)||'<span class="empty">No summary yet</span>'}</p></div>
+<div class="kpis">${["ownersNamed","analysesShare","decisionsChanged","usedInWork","belonging","disparity"].map(kpiCard).join("")}</div>
+<div class="grid3"><div class="card"><h3>What went well</h3>${ul(q.status.wins)}</div><div class="card"><h3>What could get in the way</h3>${ul(q.status.risks)}</div><div class="card" style="border-color:var(--gold)"><h3>Decisions leaders need to make</h3>${ul(q.status.decisions)}</div></div>
+${warnBlock()}${goalsTable()}${gateBlock()}
+<div class="card"><h3>Coming up next quarter</h3><p style="margin:.3rem 0">${nl(q.status.nextQuarter)||'<span class="empty">—</span>'}</p></div>
+<div class="note">The consultant and responsible leaders can agree whether a reviewed summary should be shared with the ADSA Equity Director. This workspace does not send reports. Enter aggregate information only, and check the notes before sharing to remove identifying details. Each goal lead and named contact sends their own update and numbers, the One DSD Team writes its own section, the consultant leads the program and assembles the report, and leaders review decisions within their responsibilities.</div>`;}
+function renderTeam(){const q=Q();return `<h2>For the One DSD Team · ${esc(q.label)} ${sampleTag()}</h2>
+<div class="kpis">${["inputBefore","recsActed","decisionsChanged","ableReview","belonging","belongingGap"].map(kpiCard).join("")}</div>
+<div class="grid2"><div class="card"><h3>The Team this quarter</h3><p>${nl(q.team.members)||'<span class="empty">—</span>'}</p><h3 style="margin-top:.8rem">Open Hours</h3><p>${nl(q.team.openHours)||'<span class="empty">—</span>'}</p></div>
+<div class="card"><h3>Decisions the Team reviewed, and what changed</h3><p>${nl(q.team.reviews)||'<span class="empty">—</span>'}</p></div></div>
+<div class="grid2"><div class="card"><h3>You said, we did</h3><p>${nl(q.team.ysd)||'<span class="empty">—</span>'}</p></div><div class="card"><h3>What staff are saying (overall, no names)</h3><p>${nl(q.team.voice)||'<span class="empty">—</span>'}</p></div></div>
+<div class="card" style="border-color:var(--gold)"><h3>What the Team asks leaders to do</h3>${ul(q.team.asks)}</div>
+<div class="card"><h3>Goals the Team leads on (2 and 4)</h3><table><tr><th style="width:22%">Goal</th><th style="width:11%">Status</th><th style="width:25%">Headline numbers</th><th>This quarter</th><th>Next quarter</th></tr>${[1,3].map(i=>`<tr><td>${GOALS[i]}</td><td>${rag(q.goals[i].rag)}</td><td>${goalNums(i)}</td><td>${nl(q.goals[i].progress)}</td><td>${nl(q.goals[i].next)}</td></tr>`).join("")}</table></div>
+<div class="note">The Team writes this section and shares it with all staff along with the "you said, we did" summary. Members are counted, never named.</div>`;}
+function renderCons(){const q=Q();return `<h2>Owners and support · ${esc(q.label)} ${sampleTag()}</h2><div class="note">The people who own each goal and area of work do the work and report on it here. The Equity and Inclusion Operations Consultant leads One DSD People, Access and Culture. People responsible for decisions, services and areas of work implement improvements and report their progress; the consultant guides, coaches and connects that work.</div>
+<div class="kpis">${["ownersNamed","unitsUsing","usedInWork","helpFinished","firstReply","contentCurrent"].map(kpiCard).join("")}</div>
+<div class="grid2"><div class="card"><h3>Owners: who owns each goal and area, and do they have time?</h3><p>${nl(q.cons.capacity)||'<span class="empty">—</span>'}</p></div><div class="card"><h3>Keeping the program running (from the upkeep and accessibility contacts)</h3><p>${nl(q.cons.platform)||'<span class="empty">—</span>'}</p></div></div>
+<div class="grid2"><div class="card"><h3>Requests for help (from the support contact)</h3><p>${nl(q.cons.consults)||'<span class="empty">—</span>'}</p></div><div class="card"><h3>Coaching and support the consultant gave</h3><p>${nl(q.cons.learning)||'<span class="empty">—</span>'}</p></div></div>
+<div class="grid2"><div class="card"><h3>Numbers and starting points (from the data contact)</h3><p>${nl(q.cons.data)||'<span class="empty">—</span>'}</p></div><div class="card"><h3>Risks and things we depend on</h3>${ul(q.cons.risks)}</div></div>
+<div class="card"><h3>Support planned for next quarter</h3><p>${nl(q.cons.plan)||'<span class="empty">—</span>'}</p></div>
+${gateBlock()}
+<div class="card"><h3>All numbers this quarter</h3><table><tr><th>What we count</th><th>Area</th><th>This quarter</th><th>Last quarter</th></tr>${MEASURES.map(m=>`<tr><td>${m[1]}</td><td>${m[2]}</td><td>${fmt(q.measures[m[0]],m[3])}</td><td>${prevQ()?fmt(prevQ().measures[m[0]],m[3]):"—"}</td></tr>`).join("")}</table></div>`;}
+function renderPillars(){return `<h2>All numbers over time ${sampleTag()}</h2><div class="note">These are the headline numbers from the One DSD data and metrics framework: program health, two for each ADSA goal, leadership and workplace culture. The full set of measures is in the framework and is reviewed yearly. Each chart shows one number, quarter by quarter. The dark bar is the quarter you selected. A blank means we did not have that number yet.</div>`+DOMAINS.map(d=>`<h3 style="margin-top:1.2rem">${d}</h3><div class="grid2">${MEASURES.filter(m=>m[2]===d).map(m=>`<div class="card"><h3 style="font-size:.9rem">${m[1]}</h3>${barChart(m[0],m[1],m[3],m[4])}</div>`).join("")}</div>`).join("");}
+
+/* ---------------- editor ---------------- */
+function fld(path,label,type="textarea",small=""){const v=get(path);return `<div class="f"><label for="${path}">${label}${small?`<small>${small}</small>`:""}</label>${type==="textarea"?`<textarea id="${path}" data-path="${path}">${esc(v)}</textarea>`:type==="rag"?`<select id="${path}" data-path="${path}"><option value="">No status yet</option><option value="g" ${v==="g"?"selected":""}>On track</option><option value="y" ${v==="y"?"selected":""}>Keep an eye on</option><option value="r" ${v==="r"?"selected":""}>Off track</option><option value="n" ${v==="n"?"selected":""}>Not started</option></select>`:`<input id="${path}" data-path="${path}" type="${type}" value="${esc(v)}">`}</div>`;}
+function get(p){return p.split(".").reduce((o,k)=>o?.[k],Q())??"";}
+function set(p,v){const ks=p.split(".");let o=Q();for(let i=0;i<ks.length-1;i++)o=o[ks[i]];o[ks.at(-1)]=v;}
+function renderEditor(){const q=Q();const g=GATES[q.stage]||[];return `<h3 style="margin-top:0">Numbers and notes for ${esc(q.label)}</h3><div class="note">Put each item on its own line in the lists. If you do not have a number yet, leave it blank; it will show as a dash, not a zero.</div>
+<div class="f"><label for="qlabel">Quarter name</label><input id="qlabel" data-q="label" value="${esc(q.label)}"></div>
+<p>${demo?"Example mode: these figures are sample data for practice and cannot be relabeled as actual findings.":"Real report: enter verified aggregate figures. Leave unavailable measures blank."}</p>
+<h3>For leaders</h3>${fld("status.overall","How things are going","rag")}${fld("status.headline","Short summary (three or four sentences)")}${fld("status.wins","What went well")}${fld("status.risks","What could get in the way")}${fld("status.decisions","Decisions leaders need to make")}${fld("status.nextQuarter","Coming up next quarter")}
+<h3>The six ADSA equity goals</h3>${GOALS.map((gl,i)=>`<div class="goalrow"><div style="padding-top:.35rem">${gl}</div><select data-goal="${i}" data-k="rag" aria-label="${gl} status"><option value="">No status yet</option><option value="g" ${q.goals[i].rag==="g"?"selected":""}>On track</option><option value="y" ${q.goals[i].rag==="y"?"selected":""}>Keep an eye on</option><option value="r" ${q.goals[i].rag==="r"?"selected":""}>Off track</option><option value="n" ${q.goals[i].rag==="n"?"selected":""}>Not started</option></select><textarea data-goal="${i}" data-k="progress" aria-label="${gl} this quarter" placeholder="This quarter">${esc(q.goals[i].progress)}</textarea><textarea data-goal="${i}" data-k="next" aria-label="${gl} next quarter" placeholder="Next quarter">${esc(q.goals[i].next)}</textarea></div>`).join("")}
+<h3>Sources and calculations</h3>${fld("evidence","Evidence for this quarter","textarea","For each measure, record its aggregate source, reporting period, calculation method, numerator and denominator where relevant, sample or response size, comparison groups, and known gaps or limits. Do not enter names or identifiable records.")}<h3>Numbers (totals only)</h3>${MEASURES.map(m=>`<div class="f"><label for="m_${m[0]}">${m[1]}<small>${m[2]} · ${m[3]}</small></label><input id="m_${m[0]}" data-m="${m[0]}" type="number" min="${m[3]==="ratio"?0.00001:0}" max="${["%","pp","index"].includes(m[3])?100:1000000}" step="${m[3]==="count"?1:"any"}" value="${q.measures[m[0]]??""}"></div>`).join("")}
+<h3>For the One DSD Team</h3>${fld("team.members","The Team this quarter (how many members, which units, lived experience; no names)")}${fld("team.openHours","Open Hours")}${fld("team.reviews","Decisions the Team reviewed, and what changed")}${fld("team.ysd","You said, we did")}${fld("team.voice","What staff are saying (overall, no names)")}${fld("team.asks","What the Team asks leaders to do")}
+<h3>Owners and support</h3>${fld("cons.capacity","Owners: who owns each goal and area, and do they have time?","textarea","Leaders or goal leads fill this in")}${fld("cons.platform","Keeping the program running","textarea","Upkeep and accessibility contacts fill this in")}${fld("cons.consults","Requests for help","textarea","Support contact fills this in")}${fld("cons.learning","Coaching and support the consultant gave","textarea","Consultant fills this in")}${fld("cons.data","Numbers and starting points","textarea","Data contact fills this in")}${fld("cons.risks","Risks and things we depend on")}${fld("cons.plan","Support planned for next quarter","textarea","Consultant fills this in")}
+<h3>Warning levels for this report</h3><div class="f"><label for="t1">Top priority service gap</label><input id="t1" data-t="disparityRatio" type="number" step="0.05" value="${D.thresholds.disparityRatio}"></div><div class="f"><label for="t2">Quarters in a row going down</label><input id="t2" data-t="declineQuarters" type="number" value="${D.thresholds.declineQuarters}"></div><div class="f"><label for="t3">Drop in belonging score (points)</label><input id="t3" data-t="belongingDrop" type="number" value="${D.thresholds.belongingDrop}"></div><div class="f"><label for="t4">Retention gap between groups (points)</label><input id="t4" data-t="retentionGap" type="number" value="${D.thresholds.retentionGap}"></div><div class="f"><label for="t5">Belonging gap between groups (points)</label><input id="t5" data-t="belongingGap" type="number" value="${D.thresholds.belongingGap}"></div>
+<p><button class="btn primary" id="btnDone">Done</button> <button class="btn" id="btnDelQ">Delete this quarter</button></p>`;}
+
+/* ---------------- render ---------------- */
+function render(){
+  if(demo)document.querySelector("#storageNotice").textContent="Example mode: all figures and descriptions are provided for practice. Changes here do not affect or save over your real report.";
+  const sel=$("#qsel");sel.innerHTML=D.quarters.map((q,i)=>`<option value="${i}" ${i===qi?"selected":""}>${esc(q.label)}</option>`).join("");
+  $("#v-lead").innerHTML=renderLead()+evidenceBlock();$("#v-team").innerHTML=renderTeam()+evidenceBlock();$("#v-cons").innerHTML=renderCons()+evidenceBlock();$("#v-pillars").innerHTML=renderPillars()+evidenceBlock();
+  document.querySelectorAll(".view").forEach(v=>v.classList.toggle("on",v.id==="v-"+view));
+  document.querySelectorAll(".views button").forEach(b=>{b.setAttribute("aria-selected",b.dataset.view===view);b.tabIndex=b.dataset.view===view?0:-1;});document.querySelectorAll(".view").forEach(p=>p.hidden=p.id!=="v-"+view);
+  if($("#editor").classList.contains("on"))$("#editor").innerHTML=renderEditor();
+}
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.view){view=b.dataset.view;render();}
+  if(b.id==="btnEdit"){const ed=$("#editor");const on=ed.classList.toggle("on");b.setAttribute("aria-expanded",on);if(on){ed.innerHTML=renderEditor();ed.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});document.querySelector("#qlabel").focus();}}
+  if(b.id==="btnDone"){$("#editor").classList.remove("on");$("#btnEdit").setAttribute("aria-expanded","false");render();persist();toast(demo?"Example updated; real report unchanged":storageAvailable?"Quarter saved in this browser":"Use Save report to keep your changes");document.querySelector("#btnEdit").focus();}
+  if(b.id==="btnDemo"){if(!demo){persist();realReport=structuredClone(D);D=sampleData();demo=true;}else{D=realReport;demo=false;realReport=null;}qi=D.quarters.length-1;b.setAttribute("aria-pressed",demo);b.textContent=demo?"Return to real report":"View examples";render();toast(demo?"Examples are separate from your report":"Real report restored");}
+  if(b.id==="btnRecover"){if(demo){toast("Return to the real report first");return;}try{const prior=localStorage.getItem(BACKUP_KEY);if(!prior)throw Error("No previous browser save is available.");const candidate=validateReport(JSON.parse(prior));if(candidate.quarters.some(q=>q.sample))throw Error("Examples cannot replace a real report.");if(!confirm("Replace this report with the previous browser save?"))return;D=candidate;qi=D.quarters.length-1;persist();render();toast("Previous save recovered");}catch(error){toast(error.message);}}
+  if(b.id==="btnAddQ"){if(D.quarters.length>=40){toast("This file holds up to 40 quarters. Start a separate report file for later periods.");return;}if(demo){toast("Return to the real report to add a quarter");return;}const last=D.quarters[D.quarters.length-1];const m=/Year (\d+) · Quarter (\d+)/.exec(last.label);let y=1,qn=1,st=0;if(m){y=+m[1];qn=+m[2]+1;if(qn>4){qn=1;y++;}st=Math.min(2,y-1);}const nq=blankQ(`Year ${y} · Quarter ${qn}`,st);D.quarters.push(nq);qi=D.quarters.length-1;$("#editor").classList.add("on");$("#btnEdit").setAttribute("aria-expanded","true");render();persist();toast("Quarter added");document.querySelector("#qlabel").focus();}
+  if(b.id==="btnDelQ"){if(D.quarters.length>1&&confirm("Delete this quarter's data?")){D.quarters.splice(qi,1);qi=Math.max(0,qi-1);$("#editor").classList.remove("on");persist();render();}}
+  if(b.id==="btnSave"){let checked;try{checked=validateReport(D);}catch(error){toast(error.message);return;}const blob=new Blob([JSON.stringify(checked,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=demo?"one-dsd-quarterly-examples.json":"one-dsd-quarterly-report.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast("Report download requested. Check your browser downloads.");}
+  if(b.id==="btnOpen")$("#fileOpen").click();
+  if(b.id==="btnPrint")window.print();
+});
+document.addEventListener("input",e=>{const el=e.target;
+  if(el.dataset.path)set(el.dataset.path,el.value);
+  if(el.dataset.q){if(el.dataset.q==="stage")Q().stage=+el.value;else if(el.dataset.q==="sample")Q().sample=el.value==="true";else Q().label=el.value;}
+  if(el.dataset.goal!==undefined)Q().goals[+el.dataset.goal][el.dataset.k]=el.value;
+  if(el.dataset.gate!==undefined){const i=+el.dataset.gate;const g=Q().gates;const k=g.indexOf(i);if(el.checked&&k<0)g.push(i);if(!el.checked&&k>=0)g.splice(k,1);}
+  if(el.dataset.m){if(!el.checkValidity())return;Q().measures[el.dataset.m]=el.value===""?null:+el.value;}
+  if(el.dataset.t){const n=+el.value;if(!Number.isFinite(n)||n<=0||n>100||(el.dataset.t==="declineQuarters"&&(!Number.isInteger(n)||n>12)))return;D.thresholds[el.dataset.t]=n;}
+  if(el.dataset.q==="stage"){Q().gates=[];$("#editor").innerHTML=renderEditor();}persist();
+});
+$("#qsel").addEventListener("change",e=>{qi=+e.target.value;render();});
+$("#fileOpen").addEventListener("change",async e=>{const f=e.target.files[0];if(!f)return;try{if(f.size>2000000)throw Error("Report files must be smaller than 2 MB.");const candidate=validateReport(JSON.parse(await f.text()));if(!confirm("Open this report in place of the current view? Export your current report first if you need a separate copy."))return;const examples=candidate.quarters.every(q=>q.sample);if(examples){if(!demo)realReport=structuredClone(D);demo=true;}else{demo=false;realReport=null;}D=candidate;qi=D.quarters.length-1;$("#btnDemo").setAttribute("aria-pressed",demo);$("#btnDemo").textContent=demo?"Return to real report":"View examples";persist();render();toast(examples?"Example file opened; real report unchanged":"Report opened and saved in this browser");}catch(error){toast("Report not opened: "+error.message);}finally{e.target.value="";}});
+document.querySelector(".views").addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;const buttons=[...document.querySelectorAll(".views button")];const current=buttons.indexOf(document.activeElement);if(current<0)return;e.preventDefault();const i=e.key==="Home"?0:e.key==="End"?buttons.length-1:(current+(e.key==="ArrowRight"?1:-1)+buttons.length)%buttons.length;view=buttons[i].dataset.view;render();buttons[i].focus();});
+
+render();
+</script>
+</main><footer class="dsd-footer"><div class="dsd-shell"><div><strong>One DSD People, Access and Culture</strong><p>Developed within the Disability Services Division</p></div><nav aria-label="Support and program information"><a href="/site-map">Site Map</a><a href="/operationalizing-equity">Operationalizing Equity</a><a href="/program-foundation">Constitution</a><a href="/about">About</a><a href="/program/model">Explore the program</a><a href="/support">Support</a><a href="/orientation">Getting started</a><a href="/user-guide">User guide</a></nav><details><summary>Participation and privacy</summary><p>Participation in this program is voluntary. Keep private client, case, health, and personnel information out of questions and learning notes. This resource does not replace official DHS systems, policies, or required training.</p></details></div><p class="program-ownership" style="font-size:0.875rem;line-height:1.5;color:#334155;background:#fff;padding:16px 24px;margin:0">Property of Gary Banks</p></footer><script id="one-dhs-program-menu">const menu=document.getElementById('dsd-menu'),nav=document.getElementById('dsd-navigation');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';nav.classList.toggle('is-open',open);menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});menu.closest('header').addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';menu.focus();}});</script></body>
+</html>
