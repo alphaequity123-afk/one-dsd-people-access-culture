@@ -11,3 +11,8 @@
 *.onnx filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 config/reviewed-public-assets/blobs/*.bin filter=lfs diff=lfs merge=lfs -text
+
+# Release assets are checksum-addressed; preserve original bytes on every OS.
+public/** -text
+models/** -text
+config/standalone-public-overrides/files/** -text
