@@ -1,0 +1,623 @@
+{
+  "number": "A11",
+  "title": "Accessible Technology and Learning from the Start",
+  "level": "Advanced",
+  "audience": "Staff creating, reviewing, or selecting digital services and learning; supervisors and managers examining access across service delivery and the employee life cycle.",
+  "sources": [
+    {
+      "title": "One DSD: Inclusive Policy, Procurement and Technology",
+      "url": "/courses/di-inclusive-policy-procurement-technology"
+    },
+    {
+      "title": "One DSD: Accessible Content and Digital Learning Design",
+      "url": "/courses/di-accessible-content-and-digital-learning"
+    },
+    {
+      "title": "MNIT: Procurement for accessible IT products and services",
+      "url": "https://mn.gov/mnit/about-mnit/accessibility/it-procurement.jsp"
+    },
+    {
+      "title": "W3C: Involving users in evaluating web accessibility",
+      "url": "https://www.w3.org/WAI/test-evaluate/involving-users/"
+    }
+  ],
+  "filename": "courses/One DSD - A11 - Accessible Technology and Learning from the Start.pptx",
+  "slides": [
+    {
+      "number": 1,
+      "originalPhysical": 1,
+      "image": "build/A11/renders/slide-001.png",
+      "hidden": false,
+      "text": "One DSD People, Access and Culture\nAccessible Technology and Learning from the Start\nBuild usable participation into the tasks, evidence, and continuing use of digital services and learning.\nAdvanced self-directed learning",
+      "narration": "A digital tool becomes part of how people obtain a service, learn a responsibility, or show what they know. Its design can open those opportunities or quietly narrow them. This course follows DSD examples from selection through daily use. You will examine actual tasks, compare different kinds of evidence, and develop a clearer accessibility question. The aim is useful judgment about a whole experience, with attention to people whose difficulties may never appear in the usual completion figures.",
+      "links": []
+    },
+    {
+      "number": 2,
+      "originalPhysical": 2,
+      "image": "build/A11/renders/slide-002.png",
+      "hidden": false,
+      "text": "The attractive demonstration\nA service tool looks clear in a vendor demonstration. The presenter uses a mouse and completes every step without an error.\n\nWhat have you learned about a person who needs keyboard access, enlargement, or a way to correct a mistake? The demonstration leaves those questions open.",
+      "narration": "An attractive demonstration can show something valuable without answering the whole question. You have seen one person complete a selected route under favorable conditions. That is different from knowing whether the intended users can enter information, understand an error, recover their work, and finish. Consider which parts of the actual service remain unseen. If those parts are repeatedly left out of selection, the organization can purchase the same exclusion in different forms while believing that it has improved convenience.",
+      "links": []
+    },
+    {
+      "number": 3,
+      "originalPhysical": 3,
+      "image": "build/A11/renders/slide-003.png",
+      "hidden": false,
+      "text": "Access belongs to the task\nAccessibility concerns whether people can perceive, understand, and operate what the task requires.\n\nA usable welcome page does not establish a usable application, confirmation, or report. Describe the complete task before deciding which evidence is sufficient.",
+      "narration": "Start with the work rather than the appearance of the product. A person seeking information may need to locate a service explanation, compare options, send a question, and understand the answer. An employee may need to read a learning activity, make a choice, receive feedback, and return later. Each step has a purpose. Access questions become more precise when they follow those purposes, instead of treating a working opening screen as evidence that the entire experience is available.",
+      "links": []
+    },
+    {
+      "number": 4,
+      "originalPhysical": 4,
+      "image": "build/A11/renders/slide-004.png",
+      "hidden": false,
+      "text": "Worked example: submitting a question\nOption A shows that a question can be submitted with a mouse.\n\nOption B also examines keyboard entry, error recovery, and the confirmation message.\n\nB supplies evidence about more of the task. It still needs review against the actual requirements and intended use.",
+      "narration": "These two options do not represent competing commitments to access. They represent different scopes of evidence. Option A establishes a limited working route. Option B examines additional ways the same task may fail, including what happens after submission. The better inquiry asks whether the evidence covers the task that people actually need. A test can reveal a specific barrier without establishing that every other feature works. Keeping that distinction visible makes a finding useful rather than falsely reassuring.",
+      "links": []
+    },
+    {
+      "number": 5,
+      "originalPhysical": 19,
+      "image": "build/A11/renders/slide-005.png",
+      "hidden": false,
+      "text": "The final control\nIn a DSD service demonstration, the opening page works with a keyboard, but the final submission control requires a mouse. What is the strongest next response?\nA. Treat the usable opening page as sufficient evidence for the service.\nB. Record the final-step barrier and ask the appropriate reviewers to examine a usable submission route.\nC. Conclude that every intended user will abandon the application.\nIn Slide Show view, select a response to explore its effects.",
+      "narration": "The welcome page and the final control belong to one service task, but the evidence about them differs. The opening works in the examined route; the final step does not. Your response should preserve that useful distinction. A person can be welcomed and still be unable to complete the application. If this review pattern repeats, inaccessible final steps may become an ordinary feature of service access. The practice case does not establish how many people encounter the barrier or whether another current route is available. Those questions belong beside a precise finding and a practical alternative.",
+      "links": [
+        {
+          "name": "Answer 1",
+          "text": "A. Treat the usable opening page as sufficient evidence for the service.",
+          "bounds": [
+            108.0,
+            331.0,
+            1084.0,
+            86.0
+          ],
+          "target": 6
+        },
+        {
+          "name": "Answer 2",
+          "text": "B. Record the final-step barrier and ask the appropriate reviewers to examine a usable submission route.",
+          "bounds": [
+            108.0,
+            426.0,
+            1084.0,
+            86.0
+          ],
+          "target": 7
+        },
+        {
+          "name": "Answer 3",
+          "text": "C. Conclude that every intended user will abandon the application.",
+          "bounds": [
+            108.0,
+            521.0,
+            1084.0,
+            86.0
+          ],
+          "target": 8
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "originalPhysical": 20,
+      "image": "build/A11/renders/slide-006.png",
+      "hidden": true,
+      "text": "Consider the possible effects\nThe opening page does not complete the task. Repeatedly accepting partial evidence can preserve a gate at submission. Examine the final control and possible alternatives; the number of affected users is unknown.\n\nWhich unexamined step could change the meaning of a successful demonstration?\nContinue learning\nTry another response",
+      "narration": "A successful entrance is encouraging, but it answers only the entrance question. Treating it as sufficient can leave the actual submission gate in place and repeat the same exclusion across later purchases. A better response examines the complete task and keeps helpful routes available. The observed evidence does not establish the experiences of every intended user.",
+      "links": [
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 9
+        },
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 5
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "originalPhysical": 21,
+      "image": "build/A11/renders/slide-007.png",
+      "hidden": true,
+      "text": "Why this response helps\nThis identifies the observed gate and connects it to the task. A repeated final-step barrier may prevent participation. Seek a usable route through the appropriate review and keep the affected population and later effects unknown.\n\nWhich unexamined step could change the meaning of a successful demonstration?\nTry another response\nContinue learning",
+      "narration": "The response names a specific barrier rather than labeling the entire tool. That makes it possible to examine a correction within the actual responsibilities for review. Repeated barriers at submission can narrow participation even when earlier pages work well. Keep the limitation visible: this demonstration identifies a problem, not the number of affected people or their eventual decisions.",
+      "links": [
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 5
+        },
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 9
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "originalPhysical": 22,
+      "image": "build/A11/renders/slide-008.png",
+      "hidden": true,
+      "text": "Consider the possible effects\nOne observed barrier does not establish every person’s response. An unsupported claim can weaken useful findings. Describe the stopped task, consider a usable alternative, and investigate actual experience before estimating effects.\n\nWhich unexamined step could change the meaning of a successful demonstration?\nTry another response\nContinue learning",
+      "narration": "This conclusion runs beyond the evidence. Some users may operate the control or use another available route, while others may encounter the barrier described. A sweeping claim can distract from an actionable observation. Identify the final control, explain its possible effect, and examine alternatives. Actual participation, available help, and the extent of the barrier still need inquiry.",
+      "links": [
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 5
+        },
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 9
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "originalPhysical": 5,
+      "image": "build/A11/renders/slide-009.png",
+      "hidden": false,
+      "text": "The tool and the content work together\nA usable learning platform can still contain an unstructured document or a recording without usable captions.\n\nExamine the platform, the agency’s configuration, and the learning material. One accessible component cannot make an inaccessible step disappear.",
+      "narration": "Think about an onboarding lesson that opens correctly but ends with an image containing the essential instructions. A person may enter the course and still be unable to obtain the information. The platform and the content are separate parts of one experience. If the organization reviews only the platform, each new lesson can reproduce the same difficulty. A stronger approach considers what staff will publish and how learners will use it, while preserving help for anyone encountering a barrier now.",
+      "links": []
+    },
+    {
+      "number": 10,
+      "originalPhysical": 6,
+      "image": "build/A11/renders/slide-010.png",
+      "hidden": false,
+      "text": "A report is evidence to examine\nAn Accessibility Conformance Report describes a product against identified criteria. Read its explanations for the tasks you need.\n\nMNIT states that these reports do not replace acceptance testing or other accessibility verification. A favorable label is not the whole review.",
+      "narration": "A report may help you identify what was examined, what version was involved, and where limitations remain. Its value comes from the details, not simply from the presence of the document. In a learning purchase, a report on the standard product may not cover a new agency configuration or the lessons added later. Examine that difference through the appropriate purchasing and accessibility responsibilities. The report can guide further questions without being treated as a promise about every future use.",
+      "links": []
+    },
+    {
+      "number": 11,
+      "originalPhysical": 7,
+      "image": "build/A11/renders/slide-011.png",
+      "hidden": false,
+      "text": "Describe a demonstration that can teach you\nAsk the appropriate purchasing colleagues how actual tasks can be examined fairly within the purchasing process.\n\nA useful task includes finding information, making an entry, encountering an error, and finishing. State what was examined and what remains outside the demonstration.",
+      "narration": "The purpose of a demonstration is to learn about the proposed work. Asking someone to perform a real task can reveal more than watching a prepared success. Yet the examination must fit the actual purchasing process and be fair to the participants. Staff who know the service can explain which steps matter, while the responsible reviewers interpret the evidence. This collaboration helps prevent a familiar presentation style from becoming the measure of whether a tool will work for everyone.",
+      "links": []
+    },
+    {
+      "number": 12,
+      "originalPhysical": 8,
+      "image": "build/A11/renders/slide-012.png",
+      "hidden": false,
+      "text": "Combine lived use and specialist review\nPeople using assistive technology can reveal barriers in real tasks. Specialist review examines requirements and problems beyond one person’s experience.\n\nNeither source speaks for every user. Describe the methods and the range of experiences included.",
+      "narration": "A user may show exactly where a confirmation becomes confusing, while a specialist may identify a structural issue across several screens. These contributions answer related questions from different perspectives. Combining them can make the inquiry more informative without making a small examination representative of everyone. Ask what each contribution establishes and what remains unexamined. A person should be invited for their experience with the task, rather than expected to certify a product or speak for a whole disability community.",
+      "links": []
+    },
+    {
+      "number": 13,
+      "originalPhysical": 9,
+      "image": "build/A11/renders/slide-013.png",
+      "hidden": false,
+      "text": "An equivalent learning opportunity\nA lesson asks learners to sort examples by dragging cards. That action is not the learning objective.\n\nAn alternative that lets learners choose categories and receive the same meaningful feedback can preserve the subject. Examine whether both routes support comparable learning.",
+      "narration": "Separating the subject from the interaction makes a practical alternative possible. If the objective is recognizing different kinds of barriers, dragging is only one way to answer. A keyboard-operable choice could examine the same distinction and provide equally useful feedback. The alternative still needs to work and teach the intended concept. A repeated requirement to use one interaction method can make learning access depend on a device or ability that the subject itself never required.",
+      "links": []
+    },
+    {
+      "number": 14,
+      "originalPhysical": 23,
+      "image": "build/A11/renders/slide-014.png",
+      "hidden": false,
+      "text": "The sorting lesson\nAn onboarding course accepts answers only by dragging cards. A learner can read the material but cannot operate that activity. The subject is recognizing service barriers. Which option preserves the learning purpose?\nA. Provide an operable category-choice activity with the same concepts and meaningful feedback, then examine its use.\nB. Mark the learner complete without offering another way to examine the subject.\nC. Treat the interaction difficulty as evidence that the learner cannot perform the job.\nIn Slide Show view, select a response to explore its effects.",
+      "narration": "This case follows access into the employee life cycle. The learner has entered the course and obtained the information, but cannot take part in the activity used to examine it. Recognizing barriers does not require dragging cards. An alternative should preserve the substantive question and feedback rather than replace learning with an administrative completion entry. If later assignments rely on preparation that this activity prevented, the barrier may influence opportunity beyond the course. That possibility is not a finding about this person’s performance. The new route and the learner’s experience still need examination.",
+      "links": [
+        {
+          "name": "Answer 1",
+          "text": "A. Provide an operable category-choice activity with the same concepts and meaningful feedback, then examine its use.",
+          "bounds": [
+            108.0,
+            331.0,
+            1084.0,
+            86.0
+          ],
+          "target": 15
+        },
+        {
+          "name": "Answer 2",
+          "text": "B. Mark the learner complete without offering another way to examine the subject.",
+          "bounds": [
+            108.0,
+            426.0,
+            1084.0,
+            86.0
+          ],
+          "target": 16
+        },
+        {
+          "name": "Answer 3",
+          "text": "C. Treat the interaction difficulty as evidence that the learner cannot perform the job.",
+          "bounds": [
+            108.0,
+            521.0,
+            1084.0,
+            86.0
+          ],
+          "target": 17
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "originalPhysical": 24,
+      "image": "build/A11/renders/slide-015.png",
+      "hidden": true,
+      "text": "Why this response helps\nThe alternative separates the learning purpose from dragging. Repeated unusable activities can restrict development opportunities. Examine the new route and retain support; comparable learning and later effects still need evidence.\n\nWhich interaction requirement serves the subject, and which merely controls the route?\nTry another response\nContinue learning",
+      "narration": "An operable category choice can examine the same concept without making dragging a prerequisite. The alternative should be reviewed for usability and the quality of its feedback. Repeated exclusion from learning may restrict later preparation and opportunity, so the response addresses more than a completion figure. It does not establish that learning occurred or that every barrier has been removed.",
+      "links": [
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 14
+        },
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 18
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "originalPhysical": 25,
+      "image": "build/A11/renders/slide-016.png",
+      "hidden": true,
+      "text": "Consider the possible effects\nA completion entry does not provide the missing opportunity. Repeating this response can leave employees without useful preparation. Offer a usable activity with substantive feedback; do not infer what the learner already understands.\n\nWhich interaction requirement serves the subject, and which merely controls the route?\nContinue learning\nTry another response",
+      "narration": "Marking completion may make a report look resolved while leaving the learning opportunity unavailable. Repeated use of that response can normalize separate records for employees who cannot use the activity. A better alternative offers an operable way to examine the subject. The case does not establish the learner’s prior knowledge, later performance, or preference for a particular route.",
+      "links": [
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 18
+        },
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 14
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "originalPhysical": 26,
+      "image": "build/A11/renders/slide-017.png",
+      "hidden": true,
+      "text": "Consider the possible effects\nA device interaction is not evidence of job ability. Repeating that inference can carry an access barrier into workplace judgments. Examine a usable learning route and actual job evidence; the employee’s capability is not established here.\n\nWhich interaction requirement serves the subject, and which merely controls the route?\nTry another response\nContinue learning",
+      "narration": "The observation concerns an interaction barrier, not an inability to carry out the job. Passing that interpretation into performance or development decisions could reproduce the access problem as an opportunity gap. Use task-relevant evidence and provide usable learning. The person should not have to disclose private information to explain why a particular interaction method is unsuitable.",
+      "links": [
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 14
+        },
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 18
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "originalPhysical": 10,
+      "image": "build/A11/renders/slide-018.png",
+      "hidden": false,
+      "text": "Follow access through employee development\nExamine recruitment information, onboarding, routine learning, development assignments, and advancement activities.\n\nIf the same digital barrier follows a person through these stages, a small design choice can repeatedly restrict opportunity. A completion record cannot explain every missing attempt.",
+      "narration": "An inaccessible course can affect more than that day’s learning. The employee may miss a later task that assumes familiarity with the material, and that missing experience may influence another opportunity. Follow the sequence carefully rather than concluding that a single barrier caused an entire career pattern. Ask where the route became unusable and what later decisions relied on it. Improving the route and revisiting an affected opportunity are different questions, both worth considering within actual responsibilities.",
+      "links": []
+    },
+    {
+      "number": 19,
+      "originalPhysical": 11,
+      "image": "build/A11/renders/slide-019.png",
+      "hidden": false,
+      "text": "Recovery is part of the experience\nA person makes an error or loses a connection. Can they understand what happened, recover an entry, and continue?\n\nRepeated loss of work can place a greater burden on people using slower routes. Examine the recovery task rather than interpreting repeated attempts as lack of skill.",
+      "narration": "People do not use services under demonstration conditions. They pause, return, change an answer, and sometimes lose a connection. A task that works only on the first uninterrupted attempt may be difficult to use in ordinary life. Look at the error message and the steps required to recover. The cause may involve several components, so avoid assigning blame from one observation. What matters for the service inquiry is whether the person has a workable way to continue.",
+      "links": []
+    },
+    {
+      "number": 20,
+      "originalPhysical": 12,
+      "image": "build/A11/renders/slide-020.png",
+      "hidden": false,
+      "text": "Culture briefs prepare questions\nA brief may help you consider language, meaning, or trusted ways of obtaining information. It does not predict a person’s technology preferences.\n\nAsk intended users what they need for this task. Cultural curiosity and accessibility inquiry can inform one another without becoming a profile.",
+      "narration": "Someone may prefer a written explanation because they want time to consider it, because an interpreter is involved, or for a reason you have not considered. A culture brief can widen the questions you prepare, but it cannot select the answer for that person. Keep the invitation specific and optional. Ask what helps them understand and respond to the task, without requiring personal disclosure. This makes engagement informative while protecting the person’s right to describe their own experience.",
+      "links": []
+    },
+    {
+      "number": 21,
+      "originalPhysical": 13,
+      "image": "build/A11/renders/slide-021.png",
+      "hidden": false,
+      "text": "Compare the continuing burden\nCompare the usable task, available help, recurring barriers, and practical demands of each option.\n\nA workaround may provide immediate help yet create continuing dependence. Record that tradeoff instead of counting the workaround as a complete correction.",
+      "narration": "Suppose an employee can obtain a report only by asking a colleague to export it. The colleague’s help may be important today. Over time, the arrangement can limit independence, delay work, and place another demand on both people. A better comparison recognizes those burdens alongside any proposed correction. Do not withdraw useful help while a change is examined. The question is how to preserve participation now and reduce the need for the same workaround in future work.",
+      "links": []
+    },
+    {
+      "number": 22,
+      "originalPhysical": 14,
+      "image": "build/A11/renders/slide-022.png",
+      "hidden": false,
+      "text": "Community input at the right stage\nInvite people to examine tasks while the relevant design choices can still change. Explain the purpose and what happens to their input.\n\nA positive response to a welcome screen cannot establish access to later steps. Ask about the actual journey, with usable ways to contribute.",
+      "narration": "Community engagement is most useful when people can influence a question that remains open. If the only invitation concerns a finished welcome page, the service may miss the steps where a person needs help most. Explain what can change and what cannot, and provide an accessible way to examine the task. Different accounts may reveal different barriers rather than a single shared preference. A return explanation should make the use of those accounts visible without exposing private details.",
+      "links": []
+    },
+    {
+      "number": 23,
+      "originalPhysical": 27,
+      "image": "build/A11/renders/slide-023.png",
+      "hidden": false,
+      "text": "One reassuring account\nA community participant says the revised welcome screen is clear. Staff propose describing the whole service as accessible. Later application and confirmation steps were not examined. What should the account support?\nA. A claim that the complete service works for everyone.\nB. A decision to disregard the participant because the inquiry was limited.\nC. A scoped finding about the welcome screen and an invitation to examine later tasks alongside specialist review.\nIn Slide Show view, select a response to explore its effects.",
+      "narration": "Community participation can teach the design review something specific without answering every question. This person has described the welcome screen. Their account deserves attention, and its limited scope should remain clear. A culture brief may help staff prepare respectful questions, but it cannot convert one account into a shared community preference. The later tasks require their own examination. Repeated claims of complete access based on a small welcome review could leave service barriers untouched. A better response values the contribution, widens the inquiry, and combines experience with the relevant specialist review.",
+      "links": [
+        {
+          "name": "Answer 1",
+          "text": "A. A claim that the complete service works for everyone.",
+          "bounds": [
+            108.0,
+            331.0,
+            1084.0,
+            86.0
+          ],
+          "target": 24
+        },
+        {
+          "name": "Answer 2",
+          "text": "B. A decision to disregard the participant because the inquiry was limited.",
+          "bounds": [
+            108.0,
+            426.0,
+            1084.0,
+            86.0
+          ],
+          "target": 25
+        },
+        {
+          "name": "Answer 3",
+          "text": "C. A scoped finding about the welcome screen and an invitation to examine later tasks alongside specialist review.",
+          "bounds": [
+            108.0,
+            521.0,
+            1084.0,
+            86.0
+          ],
+          "target": 26
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "originalPhysical": 28,
+      "image": "build/A11/renders/slide-024.png",
+      "hidden": true,
+      "text": "Consider the possible effects\nA limited account cannot establish the whole journey. Repeating that leap can hide later gates. Retain the welcome finding and examine other tasks with varied users and appropriate reviewers; complete access remains unestablished.\n\nHow would you describe this useful account without extending it beyond its scope?\nTry another response\nContinue learning",
+      "narration": "The conclusion extends a useful account into an unsupported claim. The person did not examine the later application or confirmation and does not represent every intended user. Repeating that leap can preserve barriers behind an apparently welcoming entrance. A better statement identifies the reviewed screen and the unanswered tasks. Complete service access needs further evidence rather than a reassuring label.",
+      "links": [
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 23
+        },
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 27
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "originalPhysical": 29,
+      "image": "build/A11/renders/slide-025.png",
+      "hidden": true,
+      "text": "Consider the possible effects\nLimited evidence can still be useful. Dismissing it can narrow whose knowledge informs design. Keep its scope, ask about later tasks, and combine it with appropriate review; one account does not represent a whole community.\n\nHow would you describe this useful account without extending it beyond its scope?\nTry another response\nContinue learning",
+      "narration": "The account is limited, not worthless. Disregarding it can make community participation feel unconnected to the decisions it was intended to inform. Keep what the person actually described and explain how it helps. Further task examination and specialist review can add different evidence. Neither this account nor the absence of later information establishes whether the complete service works.",
+      "links": [
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 23
+        },
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 27
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "originalPhysical": 30,
+      "image": "build/A11/renders/slide-026.png",
+      "hidden": true,
+      "text": "Why this response helps\nThe account remains useful within its scope. Examining later tasks can reveal repeated barriers a welcome review misses. Combine varied user experience with appropriate review; the complete service and all user experiences are still unknown.\n\nHow would you describe this useful account without extending it beyond its scope?\nContinue learning\nTry another response",
+      "narration": "This response preserves the contribution and its boundaries. It asks about the unexamined tasks and combines evidence rather than requiring one participant to certify the service. That approach can help reveal recurring barriers while respecting differences among users. The next inquiry still needs usable participation, relevant methods, and a clear statement of what was and was not examined.",
+      "links": [
+        {
+          "name": "Continue learning",
+          "text": "Continue learning",
+          "bounds": [
+            680.0,
+            609.0,
+            512.0,
+            46.0
+          ],
+          "target": 27
+        },
+        {
+          "name": "Try another response",
+          "text": "Try another response",
+          "bounds": [
+            88.0,
+            609.0,
+            480.0,
+            46.0
+          ],
+          "target": 23
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "originalPhysical": 15,
+      "image": "build/A11/renders/slide-027.png",
+      "hidden": false,
+      "text": "Selection is only one point in time\nLater configuration, content, and updates can change the experience. Earlier evidence applies to the version and scope examined.\n\nKeep access questions connected to delivery and continuing use through the responsibilities already in place. A previous success does not settle a changed task.",
+      "narration": "A tool can work in the reviewed configuration and later become harder to use when a control changes or a new document is added. This does not make the earlier review useless; it defines its scope. A sustained approach asks which relevant changes need another examination and how users can report a difficulty. That work should follow the actual organizational arrangements. The learning task is recognizing that access belongs to an evolving service, rather than to a single approval moment.",
+      "links": []
+    },
+    {
+      "number": 28,
+      "originalPhysical": 16,
+      "image": "build/A11/renders/slide-028.png",
+      "hidden": false,
+      "text": "Rewrite the requirement\nTry replacing “the tool should be easy to use” with a task-specific statement about entering, correcting, submitting, and understanding a response.\n\nWhich evidence would let the appropriate reviewer examine that statement? Keep the requirement useful without inventing a purchasing rule.",
+      "narration": "Take a moment to draft a more precise statement in your own words. You might describe the task, the needed interaction routes, and how the result becomes understandable. Then ask what kind of demonstration or review would supply relevant evidence. This reflection helps translate a broad commitment into something that can be examined. Your draft is a contribution to the appropriate review, not a new rule you can impose independently or a finding that the existing tool has failed.",
+      "links": []
+    },
+    {
+      "number": 29,
+      "originalPhysical": 17,
+      "image": "build/A11/renders/slide-029.png",
+      "hidden": false,
+      "text": "Write a supported finding\nDescribe the task, observed barrier, possible consequence, and proposed response. Name the version, method, and remaining questions.\n\n“Keyboard submission stopped at the final control” is more useful than “the whole system excludes everyone.” Precision helps others act on the evidence.",
+      "narration": "A precise finding gives another person something they can examine. It identifies where the task stopped and why that step matters, while keeping the scope of the observation intact. You can explain a possible repeated effect without claiming an outcome that was never measured. For example, the barrier may prevent some users from completing submissions, but one examination does not establish how many. The recommendation becomes stronger when it connects a specific problem to a feasible next question or correction.",
+      "links": []
+    },
+    {
+      "number": 30,
+      "originalPhysical": 18,
+      "image": "build/A11/renders/slide-030.png",
+      "hidden": false,
+      "text": "Notice whose attempts become visible\nCompletion figures show completed routes, not every person who wanted to begin. A barrier before entry can leave no attempt in the record.\n\nExamine reporting access and user accounts alongside the figures. Missing information should remain visible as a limitation.",
+      "narration": "A clean report can coexist with an unusable entrance. If people cannot begin, their experience may never become an incomplete record. That possibility is a reason to widen inquiry, not to invent a hidden number. Ask how the system records attempts, where help is available, and what intended users have described. Repeated reliance on successful completions alone can conceal the same barrier. Better evidence connects recorded activity with the experience of trying to participate in the first place.",
+      "links": []
+    },
+    {
+      "number": 31,
+      "originalPhysical": 31,
+      "image": "build/A11/renders/slide-031.png",
+      "hidden": false,
+      "text": "Keep access connected to the work\nDefine the whole task, examine evidence within its scope, and keep participation available while changes are considered.\n\nA sustained approach prevents the same barrier from becoming a routine condition of service or learning. The next finding still needs evidence from actual use.",
+      "narration": "You have examined access as part of a service and learning experience rather than an extra feature. The central habit is to follow the actual task, ask what each source of evidence establishes, and keep unknowns visible. A better design can widen opportunity without guaranteeing every intended result. Return to one task in your own work and consider which step deserves a closer look. That focused inquiry can support a practical improvement while respecting the people and responsibilities already involved.",
+      "links": []
+    }
+  ],
+  "curriculum": false,
+  "outcomes": [
+    "Describe an access need as part of the intended task rather than an optional feature.",
+    "Compare evidence of usable access with a vendor or author’s general assurance.",
+    "Identify how a selection or design decision affects later access and support.",
+    "Prepare a proposed requirement and a way to examine its use with affected people."
+  ],
+  "family": "Disability and access"
+}
