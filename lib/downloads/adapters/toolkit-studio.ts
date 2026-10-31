@@ -1,0 +1,76 @@
+import { TOOLKIT_CARDS, TOOLKIT_INSIGHT_CHROME, TOOLKIT_STEPS, TOOLKIT_WHY } from "@/lib/content/toolkit-studio";
+import type { StaffProgramScope } from "@/lib/content/staff-publications";
+import { bullets, callout, compactSections, numbered, paragraph, section, type ResourceDocument } from "../model";
+import { kicker, programName } from "./shared";
+
+export function toolkitStudioDocument(id: string, scope: StaffProgramScope): ResourceDocument | null {
+  const attribution = programName(scope);
+  const kick = kicker(scope, "Toolkit Studio");
+  if (id === "insights-checklist") {
+    return {
+      kicker: kick,
+      title: "Toolkit Studio insights checklist",
+      subtitle: "What the toolkit is for — naming systems and disparity risk, not labeling people.",
+      meta: [{ label: "Use", value: "Browse and download only. Fill this in offline." }],
+      sections: compactSections([
+        section("Insight vs checkbox", [
+          paragraph("Insight = design change, involvement path, honest gap, or owner + revisit date. “We considered equity” is a checkbox."),
+          bullets([...TOOLKIT_INSIGHT_CHROME]),
+        ]),
+        section("Companion practice questions", [numbered(TOOLKIT_STEPS.map((step) => `${step.title}`))]),
+        section("Choose the appropriate review", [paragraph(TOOLKIT_WHY.beats.find((beat) => beat.title === "Choose the appropriate review")!.body)]),
+      ]),
+      attribution,
+    };
+  }
+  if (id === "one-pager") {
+    return {
+      kicker: kick,
+      title: "Equity Analysis Toolkit — companion practice questions and scan",
+      subtitle: TOOLKIT_WHY.authority,
+      meta: [],
+      sections: compactSections([
+        section("Before the eight steps", [paragraph("Name the work, owner, lock date, and whether this is a scan or a full analysis. Do not number this as Step 1.")]),
+        section("Companion practice sequence", [
+          numbered(TOOLKIT_STEPS.map((step) => step.title)),
+          callout("Check required reporting and consultation processes throughout the work. Alignment is Step 7. Sustainability is Step 8."),
+        ]),
+        section("Equity scan", [paragraph("Use current official guidance to determine the required review. A short timeline alone does not establish that a scan is sufficient. Complete required documentation through the official process.")]),
+      ]),
+      attribution,
+    };
+  }
+  if (id === "blank-worksheet") {
+    return {
+      kicker: kick,
+      title: "Toolkit Studio blank worksheet",
+      subtitle: "Offline fields mapped to the companion practice questions. Do not send this form to the program.",
+      meta: [],
+      sections: compactSections([
+        section("Before the eight steps", [bullets(["Work name", "Owner", "Lock date", "Scan or full analysis"])]),
+        section(
+          "Steps 1–8",
+          TOOLKIT_STEPS.map((step) => paragraph([{ text: `${step.number}. ${step.title}`, bold: true }, { text: " — write the walked answer offline." }])),
+        ),
+        section("Required reporting and consultation reviewed", [bullets(["Language access", "Disability communication access", "Equity Director / committee", "Tribal / Office of Indian Policy if Nation-impacted", "Equal Opportunity and Access if triggered", "Labor relations if required"])]),
+        section("Sources", [paragraph("Label each source Official / Guidance / Outside source.")]),
+      ]),
+      attribution,
+    };
+  }
+  if (id === "guardrails") {
+    return {
+      kicker: kick,
+      title: "Toolkit Studio guardrails",
+      subtitle: "Cross-cultural guardrails for walked decisions.",
+      meta: [],
+      sections: compactSections([
+        section("Name the process", [bullets([...TOOLKIT_INSIGHT_CHROME])]),
+        section("Featured work moments", [bullets(TOOLKIT_CARDS.map((card) => `${card.title}: ${card.downloadBlurb}`))]),
+        section("Do not", [bullets(["Explain people by culture.", "Treat briefs as individual instructions.", "Treat required reporting or consultation as an optional learning activity.", "Submit typed notes to this program."])]),
+      ]),
+      attribution,
+    };
+  }
+  return null;
+}
