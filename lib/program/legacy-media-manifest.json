@@ -1,0 +1,2203 @@
+{
+  "standing": "Historical portable edition media mapped to current files; not new course approval or a replacement for approved voices.",
+  "summary": {
+    "images": 227,
+    "audio": 47,
+    "byDisposition": {
+      "matched-identity-different-encoding": 272,
+      "added-missing-identity": 2
+    }
+  },
+  "resources": [
+    {
+      "identity": "images/ci/african-american/office.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/ci/african-american/office.jpg",
+      "donorSha256": "d1bd684e07dc971bcbbec9061650c36b2390776c264984f6e1977b2794cce4c3",
+      "targetSha256": "0bd3fe938e19f7c09b3e9c95c11f7057a811302620fcb27285af975f364e5648"
+    },
+    {
+      "identity": "images/ci/hmong/orchestra.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/ci/hmong/orchestra.jpg",
+      "donorSha256": "2469ed92ad4c644418beb52aee85b1403eb8599635101d4b5e1e7d32ca76e9b7",
+      "targetSha256": "26e3a58abc5e9071efc5d5f8557a3a264766a0568f81a24453d3f61ce7172a42"
+    },
+    {
+      "identity": "images/course-61/cover-huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-61/cover-huddle.jpg",
+      "donorSha256": "ccc7773f3079b25ee7dd5462b2d8679064b741cca7a7d4601b3d67b30a994523",
+      "targetSha256": "e86749ebac11fe1ccadd02ad8f1887c45ee1c2550e3293caefc9cf48ec55f933"
+    },
+    {
+      "identity": "images/course-61/empty-chairs.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-61/empty-chairs.jpg",
+      "donorSha256": "db42209140e30c40443de9d98dc56ad472f09444ef63c90db526a48a1f3d85fb",
+      "targetSha256": "c1778faee13ecb603324a5926fd5cf2ec8188cd7658159203f185bfb4651c033"
+    },
+    {
+      "identity": "images/course-61/listening.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-61/listening.jpg",
+      "donorSha256": "b699d5f0661612ad0b0f1caa23638a16f4fcc93fb26e7f923f929fa230b2021e",
+      "targetSha256": "93e9022faf33aa5bb9cfd4b38b4c473c0016e01f2b03a6f8f09cf5b664a9ff9a"
+    },
+    {
+      "identity": "images/course-61/memo-wall.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-61/memo-wall.jpg",
+      "donorSha256": "27b849c62397d60304ffafc43dcfcd952586269722c166b56b7c85e755c55fb3",
+      "targetSha256": "39efd117c8b50df7fe0b16f33b94914d420df9114c7a3d7fdfa7c21aeaa85dc1"
+    },
+    {
+      "identity": "images/course-61/repair-huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-61/repair-huddle.jpg",
+      "donorSha256": "a7209a9a00bf3238f69885e5227197ee1e7b1c94c8a2f4463fe8d5a2960fc736",
+      "targetSha256": "93857339c578c671372dc8a905423ddb93326119c5fefd3084490e364be99a5d"
+    },
+    {
+      "identity": "images/course-61/service-counter.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-61/service-counter.jpg",
+      "donorSha256": "a85eaa38ee40901a47d6331beb0aa516bb61cebca60914119d9058774a3d534f",
+      "targetSha256": "c96961631c3bf2cfeafcd911aac219af8205df12e8e495474e813dec65a3c5b0"
+    },
+    {
+      "identity": "images/course-9/building-access.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-9/building-access.jpg",
+      "donorSha256": "996f9d9dd4a3242e7048e8ba329378c9127b53ac3f23f25297a83966204dc7db",
+      "targetSha256": "e71f8e76e9786b761ca3aced65c60f634a8cd15ac0606d668fac9580bf5b7ec4"
+    },
+    {
+      "identity": "images/course-9/cover-meeting.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-9/cover-meeting.jpg",
+      "donorSha256": "1f49758ea7ba81e6e34bcfdfac845566cfa05746978ec1ee38463d426b018ff9",
+      "targetSha256": "1488da04d948c9eb41f313c9c7ce4038bc1a9c366e01839d0deea114abbb6689"
+    },
+    {
+      "identity": "images/course-9/hallway-pace.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-9/hallway-pace.jpg",
+      "donorSha256": "ec0943ac7bd5bdffc65d82e7bb99233383934a69d666dddecb7aa800385976dd",
+      "targetSha256": "0643d7492ae9a88ed86fd91ea06fbaf17d984c94805db3fb0b9746a4cb8b2ea5"
+    },
+    {
+      "identity": "images/course-9/huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-9/huddle.jpg",
+      "donorSha256": "1145c4fa105befb94c072bd8efa517817d3a0ee2aeb535a7d941d46a197832b7",
+      "targetSha256": "b2d8056b949c6b7e92bbdc85f2f3bae4007985c53ddf9601abacfd2ccf8ceb43"
+    },
+    {
+      "identity": "images/course-9/service-counter.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-9/service-counter.jpg",
+      "donorSha256": "c6196ba85ddc63084cd62cd6f0fd0290029308b31456d6babc81f143477f2615",
+      "targetSha256": "ad6bba64d6333809c7f25f206996f727784663b9a45a0aa84e1298fad7050471"
+    },
+    {
+      "identity": "images/course-9/table-prepared.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-9/table-prepared.jpg",
+      "donorSha256": "288bd0366d1703f30bcc169fc29f5348f461290c238621b9010fa3a1e1cc6fc8",
+      "targetSha256": "7fe269e236afa6e684f30b7fd467889ed794f14cf6abd1d12d73b76d5659b2e6"
+    },
+    {
+      "identity": "images/course-acc/cover-listen.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-acc/cover-listen.jpg",
+      "donorSha256": "243cb87184ca63d7c027625a1f667b98b7230c1e5f45736cb404191b74de226f",
+      "targetSha256": "1b34ff71d2c56660c0c59e755aad3aac2cc6fdc0fa2c141dc14ba1c0dae2dd8b"
+    },
+    {
+      "identity": "images/course-acc/desk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-acc/desk.jpg",
+      "donorSha256": "0b8e2e61d7d6c0ac8d335139174cb2568ecf116b7770a620090f0aa7c9de7088",
+      "targetSha256": "b7a14876eec69b10575257603cdc3a02d5edb7d04c75bf226aa9d963c89050af"
+    },
+    {
+      "identity": "images/course-ar/table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ar/table.jpg",
+      "donorSha256": "a59212561ef68f00f79f8c2979bc29eedd28aed12606e4ef2c4f48fbe6a56a30",
+      "targetSha256": "d1a9ed068a3e5ccb06874b9c921b8b4706c3dec0eff37bfd4fca2151ffdb4df6"
+    },
+    {
+      "identity": "images/course-bi/clinic-wait.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-bi/clinic-wait.jpg",
+      "donorSha256": "c43d12a45f7d38c7399ba17b6fcb86a8b285b9bdc76c2f987a939bc4da605767",
+      "targetSha256": "0e37b7d3d0f37bb6a470215d614cde388a69bde0fef232cc431c5a81f9381274"
+    },
+    {
+      "identity": "images/course-bi/cover-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-bi/cover-table.jpg",
+      "donorSha256": "f58d7065bd89ad868b8ed886f79e65b6facb00155a54fd43518a3c48bede90a4",
+      "targetSha256": "c5549d9769ee9321fc2f6d04aad8d5aeafc8e3ed12f7c8294c36e23b011d54c0"
+    },
+    {
+      "identity": "images/course-bi/empty-room.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-bi/empty-room.jpg",
+      "donorSha256": "f74c56b651f5179d779058a43d2ddcdfebb30a1e6232c17a0c5d93ae42e26152",
+      "targetSha256": "bb4fd780e0cabc32680d1d1ed12ac75a2ffadf9437f86af8f707af9795f77396"
+    },
+    {
+      "identity": "images/course-bi/listening.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-bi/listening.jpg",
+      "donorSha256": "f3e7a7c1dc60da6a8dc1349dc64189ae5c10b4fb8e36bb514db18829feb46957",
+      "targetSha256": "99d369a9c730de8238dcb288512813852c5973cac0908fc88de4ec94bb1a612d"
+    },
+    {
+      "identity": "images/course-bi/plan-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-bi/plan-table.jpg",
+      "donorSha256": "319991cdc5a24d5c6b98013031391d19d2cf06c2f1ad0e18c2ca9a255eaff21e",
+      "targetSha256": "dd01b3596d26494ec82751b8a8fde79707f866c5cc3057cedae1b4ecbea64210"
+    },
+    {
+      "identity": "images/course-bi/sidewalk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-bi/sidewalk.jpg",
+      "donorSha256": "861814e1817a60bfdd7c5dfdb8112e3eed1fb20587af5da4f7b59ff29e59ad2f",
+      "targetSha256": "edf6492bf0b635e8405570e0c8dc7999f05544db5b46d1e7335ed5eb3b432d22"
+    },
+    {
+      "identity": "images/course-cb/cover-broker.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-cb/cover-broker.jpg",
+      "donorSha256": "89c5402fa84e70c455c737fce27a0d7edbbb4cab9b8906c10365d4d0d871d670",
+      "targetSha256": "5bbafaa89127f0541d980c0abc0932587bfafc77d34c98be856d39f2f4140ccf"
+    },
+    {
+      "identity": "images/course-cf/cover-conflict.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-cf/cover-conflict.jpg",
+      "donorSha256": "a0ebc57338c1197a41fdc197159c0a2f979a9f9752b4673ca46977d6b1e4a996",
+      "targetSha256": "9d8b1977aa33947eb18bca316e28104a71b382c3ec1d13168ca5d9537441cabf"
+    },
+    {
+      "identity": "images/course-ch/cover-desk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ch/cover-desk.jpg",
+      "donorSha256": "42d85fe52c8b9a6a8f46c61bfff7c5d5e8155ce8126a50652f06529e8a74173d",
+      "targetSha256": "1fb570b5db5b51582ab805f58855edf20b1e64fd639ebfd02f0b0ad17e5acb2f"
+    },
+    {
+      "identity": "images/course-ch/desk2.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ch/desk2.jpg",
+      "donorSha256": "0b8e2e61d7d6c0ac8d335139174cb2568ecf116b7770a620090f0aa7c9de7088",
+      "targetSha256": "b7a14876eec69b10575257603cdc3a02d5edb7d04c75bf226aa9d963c89050af"
+    },
+    {
+      "identity": "images/course-ci/cover-incident.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ci/cover-incident.jpg",
+      "donorSha256": "acf98616db6024c45dabddfe872d841bdc84cb7145d6ac3e4d31263b3efe7924",
+      "targetSha256": "cb48943a3d53b87a5c532ed87f1f167a224995d89992ce9241bf785711b85572"
+    },
+    {
+      "identity": "images/course-cs/cover-styles.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-cs/cover-styles.jpg",
+      "donorSha256": "61bcee00adb338c711c5f07fd670deae0d638f2c640867a672ee851f69ad8114",
+      "targetSha256": "74cd340d714baa26c1bd76062e70092c5d97b71f0e927039dfed270b0b21c101"
+    },
+    {
+      "identity": "images/course-cu/cover-lead.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-cu/cover-lead.jpg",
+      "donorSha256": "3f5a347ecd5854be5a6099054baf679b962076df088ae8a68c82f24d120b9500",
+      "targetSha256": "ac6273a8d6e73e8db89cf1a01bbbf9e36e59f0e7c597944ecd2c2c09cf398df8"
+    },
+    {
+      "identity": "images/course-cu/team.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-cu/team.jpg",
+      "donorSha256": "81b7cd8b90940d4857cea97ef3a202ec483189e9587be15a827acfff9a2844e2",
+      "targetSha256": "6a3a61f845079b92b6f32ca542373b15a5c36c02483f335f7d5b5e73862ac402"
+    },
+    {
+      "identity": "images/course-dl/cover-compound.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-dl/cover-compound.jpg",
+      "donorSha256": "dd9f4c830ac1d36ae0827616728471f8223b32e48a5c2daf5e52492dbd142e4d",
+      "targetSha256": "1b668685cac6e85c0aa67f239ebf464c82c3038519faf477e27dbf680459f387"
+    },
+    {
+      "identity": "images/course-ea/cover-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ea/cover-table.jpg",
+      "donorSha256": "5700c6957fdc7a83e19b26ad40d43df3ead122d17cd560f2a3e64be24e528d5d",
+      "targetSha256": "6613eb7e8988ef9608cb931d5038b18007a06a769b6902fd4ea548c6c862609f"
+    },
+    {
+      "identity": "images/course-ea/data-desk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ea/data-desk.jpg",
+      "donorSha256": "216090e6111ad2667dcb1e9fee6280de68dbaf3c16514f44a2738abf4c7f3ff3",
+      "targetSha256": "5d27e24ba3a2934e6c1378f30d1f08e8d091cf47b2fb04501c40d9d8ca52786d"
+    },
+    {
+      "identity": "images/course-ea/empty-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ea/empty-table.jpg",
+      "donorSha256": "e4f84995c5d91024727d097e34afaf059885af7d4f39ef680241f114a5235125",
+      "targetSha256": "5ec33543e8cda1791faf73825761b0434928ff3903694a4a41484001d33d65a9"
+    },
+    {
+      "identity": "images/course-ea/engagement.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ea/engagement.jpg",
+      "donorSha256": "e3d350a79fea8738e8b206b74faa2d7777b5580af2193e9be58ecf695b880e4f",
+      "targetSha256": "3be82d8d854206393209f45900b05d9ecc7bb96b539ef44075e95f87869fa014"
+    },
+    {
+      "identity": "images/course-ea/huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ea/huddle.jpg",
+      "donorSha256": "e162a1a00d504cef5432a31b54ac7184d4d17433c8d44bc7f91f2664bb884648",
+      "targetSha256": "d1860d0875d90b30aeb4591016294d944920bc91d0aa0290b30bb0e28a345ba4"
+    },
+    {
+      "identity": "images/course-ea/worksheet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ea/worksheet.jpg",
+      "donorSha256": "ca284278160e83d78ddaf35384b24fee2f56aca36b12b46c6dc6d14fe50b1d25",
+      "targetSha256": "8dfb79d69b9549c25d3bd7a18d79babf9a516bd136a84917e6ad184f30092a25"
+    },
+    {
+      "identity": "images/course-ef/benefits-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ef/benefits-table.jpg",
+      "donorSha256": "03edf0396ee10d4926c0d7e07f2f86cb79aa67bf620ad48dfff1a011ffacc5ad",
+      "targetSha256": "d2b62a5465c6dc86dd7a585bc95647e67ff6bf4e084e4633f983da4f4368c094"
+    },
+    {
+      "identity": "images/course-ef/cover-grocery.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ef/cover-grocery.jpg",
+      "donorSha256": "33c38ffaf99222c8b36f63fc6e6e5aece2d376835e586a36fc7c630da25cba6f",
+      "targetSha256": "51e77912803851bb880c02a5254cfacb400d075e5040fbfe170986d0d6a33cd4"
+    },
+    {
+      "identity": "images/course-ef/empty-day-room.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ef/empty-day-room.jpg",
+      "donorSha256": "1cba3152f6052fa33c26c0dc644452a8313cb500212a329c57a91bbabf302af5",
+      "targetSha256": "dd19686e6ef5c8adb90723b393af15d91e77a41b9aa8d3c3e0b14b3ebca0a911"
+    },
+    {
+      "identity": "images/course-ef/job-huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ef/job-huddle.jpg",
+      "donorSha256": "7bedeefcceb409ddcc45c9472d206395a348e7e408a2ec6bf5335fb566ebcbc2",
+      "targetSha256": "ab373214d4f060931dd40e6eae15a6a181fc7d54eeac928bb4eba1120c1db6d2"
+    },
+    {
+      "identity": "images/course-ef/listening.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ef/listening.jpg",
+      "donorSha256": "318c7cc2599c89ddb8ce49c2d21054dd221b185217138b3a12ecbcd81dfc1512",
+      "targetSha256": "fc52bc9e203f8a7222c5142cfd9a8d32670bea1129606e9d71fefdbd0480d99d"
+    },
+    {
+      "identity": "images/course-ef/planning-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ef/planning-table.jpg",
+      "donorSha256": "9143f410b8c8b8b65b0472733f640beca8376fb13073fcce4f12d1168348bede",
+      "targetSha256": "438925dd81ff0ef225ef65f36213c0c21ed312a8fb75004583234f32f8ae2fe4"
+    },
+    {
+      "identity": "images/course-ei/cover-system.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ei/cover-system.jpg",
+      "donorSha256": "7c36fb9e934d9286f5ee92f1748ebaf89fad4690a95e13fe6a8bdd1d342b218f",
+      "targetSha256": "798724939208c9e3243be882b953d37fc1531920a13d61326062cdaa5981a159"
+    },
+    {
+      "identity": "images/course-ei/packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ei/packet.jpg",
+      "donorSha256": "b1f7667aa470c54c6c44935ce80af7fd9c6ce5c763c9c351602b2fcc3d57344c",
+      "targetSha256": "349c47ac422fda93eca72b5d7db7d8bee79c4ada3eeb51e5006f0a19242e7251"
+    },
+    {
+      "identity": "images/course-el/cover-lead.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-el/cover-lead.jpg",
+      "donorSha256": "cdfccce592ff16918497726a20d859095bc6ab0e03c772af7e3dfba1ea3e8eec",
+      "targetSha256": "300cd47030859e3d71b439547a2eac1206ed1b08fe6ed701dbe728d138c4394c"
+    },
+    {
+      "identity": "images/course-el/huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-el/huddle.jpg",
+      "donorSha256": "7f2dd582f8859b5551edb74da87f2ef0123ba56fd2c0d9b93e73acf4fdabf5b7",
+      "targetSha256": "dfb52af3a38f1a19dc28871574cb48313313906bcd86dc9ce5ebbfac32522f89"
+    },
+    {
+      "identity": "images/course-eo/cover-packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-eo/cover-packet.jpg",
+      "donorSha256": "03afe994979bb23abec97ed71bd2d666dc470d7908a230105728ad1c4ac89d41",
+      "targetSha256": "37eb5f20deef63d7a4b60e85f626d3abfb03c60b11b1c0527cef8be9f336bef3"
+    },
+    {
+      "identity": "images/course-fg/cover-room.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-fg/cover-room.jpg",
+      "donorSha256": "cccaec3fe82321d50046deff0fc4028205cfdbc7c96f250989071395ecb4cde0",
+      "targetSha256": "dc6443d8af3af7e782aac8eb50185b5d333f89a39b5762568c5a0f2af6779414"
+    },
+    {
+      "identity": "images/course-fn/couch-paper.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-fn/couch-paper.jpg",
+      "donorSha256": "e75401d89974f0c8c1f92a3dd4a6ba425f4b2f186b76d445cb5be983221813f0",
+      "targetSha256": "3330c56e4ce449ad06a35a0083ce17ffb19e87e816ed9c088f5fba82ce751d76"
+    },
+    {
+      "identity": "images/course-fn/cover-kitchen.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-fn/cover-kitchen.jpg",
+      "donorSha256": "992b006fc467d8507b489e9c4c621706236e3d15a00e4842e7ef8f5793288097",
+      "targetSha256": "d04f7bde042c1b4ee3e3b06788e7c1e52d40eb97fabdf46886bb375c95a45c96"
+    },
+    {
+      "identity": "images/course-fn/empty-kitchen.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-fn/empty-kitchen.jpg",
+      "donorSha256": "2bb8a7eb1b27cd27e75679d4179b7dd264cccacecb96a6c0907ab7e6177a2bc1",
+      "targetSha256": "bbefc9ad5cc9cf0086702173d404f2a6a74adb9445e6a1bb2df1da1247f62458"
+    },
+    {
+      "identity": "images/course-fn/listening.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-fn/listening.jpg",
+      "donorSha256": "1bdede397383f618a5feb3a6a1c5d4c14d27c978a377baf90c69766639f7a13a",
+      "targetSha256": "bd098b5dfdd219a71e48a3b37dc16bda80cc67fab119321421e6a440e8e9d34d"
+    },
+    {
+      "identity": "images/course-fn/plan-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-fn/plan-table.jpg",
+      "donorSha256": "b4b2fedcbaef097d5c3712b1eb6e76e0ff9109ed78cc78a5d0046e60ab6d1a4d",
+      "targetSha256": "c3c10c6e901d69d4670e5c2c11b825cc3417a319ea5bb1a93b730b487b989498"
+    },
+    {
+      "identity": "images/course-fn/sidewalk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-fn/sidewalk.jpg",
+      "donorSha256": "b63bde57f0c81d3ba587ddb57960139efcd20794ab26e95bdd7c455b2db3bb44",
+      "targetSha256": "84232fb08b76472758d9f5fb2c3394717b0dce3c5f4ba1286dc949a0a2a55a44"
+    },
+    {
+      "identity": "images/course-hu/cover-humility.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-hu/cover-humility.jpg",
+      "donorSha256": "8f5620c12bb0b03d1ec3e8914434f8cf27bb37f10b806c55ade31a11f7fdf6c6",
+      "targetSha256": "9d47e2b0c827ebfca44610db68f6c8f5cafd5c91407bc7f908c1294601c8951f"
+    },
+    {
+      "identity": "images/course-hw/clinic-wait.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-hw/clinic-wait.jpg",
+      "donorSha256": "2163ee39363c098c4abb847874226940d527f7cb8a882f13d8ea659f9b6377d2",
+      "targetSha256": "46b88388c954cbccd3e685d10bfdd673483c716853ca0032c8730111ca4bf1e3"
+    },
+    {
+      "identity": "images/course-hw/cover-kitchen.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-hw/cover-kitchen.jpg",
+      "donorSha256": "6f1cca26b2b7b38ae76979ce58e61551ae97b3c40c85eac77ab76dd714148ae3",
+      "targetSha256": "14d00a9f12c1c67faebe92426baf41e8f0fa3f465ee6b7d7ff4d2f15609b8d66"
+    },
+    {
+      "identity": "images/course-hw/listening.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-hw/listening.jpg",
+      "donorSha256": "3311f147051e09469a9913aa41e7d0a904516447fdb6b22d02859fb3df40dbfd",
+      "targetSha256": "367947baf285784c20b2c833f341e082e6db30b9aa9d5af09473e5561730d83b"
+    },
+    {
+      "identity": "images/course-hw/locked-door.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-hw/locked-door.jpg",
+      "donorSha256": "be226c95234730783db38dbbffd7a65e7977861c97ce30478b9a4b5156d5a6f9",
+      "targetSha256": "68b870b8873044f6a841845f6b8c6ec78a7adb5f5ca22edd8b338a29592ab7a4"
+    },
+    {
+      "identity": "images/course-hw/park-walk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-hw/park-walk.jpg",
+      "donorSha256": "fb9424f79c4a3a2622ba4972bf801230c8de76a033b423849a2cc20df5dba069",
+      "targetSha256": "ee1f4555c2259fe539759747717c0ef6c52fea55c8ecac2a0f836e90460e5dcf"
+    },
+    {
+      "identity": "images/course-hw/plan-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-hw/plan-table.jpg",
+      "donorSha256": "168da85eb8813f028249cad81d0772409b9308a705cbfedfed65298e81b4c6e0",
+      "targetSha256": "45605f3208bbb8710c7d8d6819ce49a25f95c3c1c41c0402653563f254211651"
+    },
+    {
+      "identity": "images/course-ic/cover-map.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ic/cover-map.jpg",
+      "donorSha256": "cf581ac1bb2a496b2d996f38d82394fe06dbd4401564dfd8881962f85a66f707",
+      "targetSha256": "f356a55a329905f7a7cbf3a87b2db335c20af8dd9e6c16524aed8ac037f903ef"
+    },
+    {
+      "identity": "images/course-jd/cover-posting.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-jd/cover-posting.jpg",
+      "donorSha256": "9b40f38c3fdd6ab5afb311c348b7d0ef809f70eebea7da60d431165876c8e050",
+      "targetSha256": "f6e3fd0dc0cc9e8e49d7ed339d780c5e1d3657286ca3edffb874f8796a9f4f7b"
+    },
+    {
+      "identity": "images/course-jd/packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-jd/packet.jpg",
+      "donorSha256": "b1f7667aa470c54c6c44935ce80af7fd9c6ce5c763c9c351602b2fcc3d57344c",
+      "targetSha256": "349c47ac422fda93eca72b5d7db7d8bee79c4ada3eeb51e5006f0a19242e7251"
+    },
+    {
+      "identity": "images/course-la/cover-counter.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-la/cover-counter.jpg",
+      "donorSha256": "b39e99db087a3159a069a75bb0445b78ef2affc0851b969849d78faac8afd5a2",
+      "targetSha256": "d5d78e5daad5a401f740207e89f7d41cd8d5dab853e15e0b90246b0748e069d1"
+    },
+    {
+      "identity": "images/course-lc/cover-floor.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lc/cover-floor.jpg",
+      "donorSha256": "d3db1bc40e1bb81337a7a0729957b4e7e8458ec7b0127b061d5c0087eaf80625",
+      "targetSha256": "dd8a8a38443517077a90bcc4a3b8d04c8070269c14952de827f3cc9ecbd198b8"
+    },
+    {
+      "identity": "images/course-lc/packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lc/packet.jpg",
+      "donorSha256": "b1f7667aa470c54c6c44935ce80af7fd9c6ce5c763c9c351602b2fcc3d57344c",
+      "targetSha256": "349c47ac422fda93eca72b5d7db7d8bee79c4ada3eeb51e5006f0a19242e7251"
+    },
+    {
+      "identity": "images/course-lg/closed-door.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lg/closed-door.jpg",
+      "donorSha256": "06f215e293887706bb4496099815c5160d2f7baf391494f21cd2dd4deb31a2e1",
+      "targetSha256": "0e51aa3920a4cd99ecba8910600d6865bbdaded6dcc7bd40ba653e9db48a2a74"
+    },
+    {
+      "identity": "images/course-lg/cover-living.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lg/cover-living.jpg",
+      "donorSha256": "d780800b7e4b15c7604b2b8a23aec71e13d60d85be416f8a0529f19a9ba7ccf2",
+      "targetSha256": "cf75fcba9f1b4b572e1fbf1a54eb4ee8c620f6fa2e82678d8942e7f7f70dc7aa"
+    },
+    {
+      "identity": "images/course-lg/front-desk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lg/front-desk.jpg",
+      "donorSha256": "ac2023720ee9b601884c67e272df866cf43573522120dcc8f26fa4624158cdf8",
+      "targetSha256": "a75ea5b420b732d075c42c4dd46a437e285626c28c83b3216ad8061fcbd138fb"
+    },
+    {
+      "identity": "images/course-lg/listening.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lg/listening.jpg",
+      "donorSha256": "3ff9808ac31c8584e5d738aff43f0782048a39b6c027887fcd8998b6354ce32a",
+      "targetSha256": "6faf33d709f1eba30d3eb8aa9d447cd5cb481c012ec17beba76df02bd095e41d"
+    },
+    {
+      "identity": "images/course-lg/park-walk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lg/park-walk.jpg",
+      "donorSha256": "03a07c42937e413a46859fdddcd1d157cb645f53f7a23a0ffeb5c0ce5c2aa2a5",
+      "targetSha256": "602cfb330389d111a3f24492d7ef2c721145543f59f9e108dd87195160b6c936"
+    },
+    {
+      "identity": "images/course-lg/plan-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lg/plan-table.jpg",
+      "donorSha256": "518d46a93a809bb22a9e1166000c81d26a2154b612a832147bd5ca473802d0b5",
+      "targetSha256": "88cba63b26fac5fe0d1277689c95f73a6b0279865d594e1e7d894d582e18b759"
+    },
+    {
+      "identity": "images/course-lp/cover-plan.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-lp/cover-plan.jpg",
+      "donorSha256": "2c7f6abb5eae3b22df05c0507a1d93a3121ce236d2e2f076d76df9273fca828d",
+      "targetSha256": "6792115cc164339721a49322221fb6d40ddfbfa3f773444d567114ae510a2bb6"
+    },
+    {
+      "identity": "images/course-min/continuum.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-min/continuum.png",
+      "donorSha256": "ab4f9f7c166b858f14ff43dbb127cafa93be06ca918ed118e9c3a3e2ac5be48b",
+      "targetSha256": "0d86e61cbdd6b9ac6a9b590ae602a9a6f78f204fe5c68e65dacac2b0b751c8b3"
+    },
+    {
+      "identity": "images/course-min/cover-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-min/cover-table.jpg",
+      "donorSha256": "25c1a86b2f01b8b2b19841ece8fff6b0ad5d44a7d6164f041860549ea72f991f",
+      "targetSha256": "924561be4501725e680f9448b053283cd27e907b12f1b96ea8f9f48a12f5f08d"
+    },
+    {
+      "identity": "images/course-min/data-desk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-min/data-desk.jpg",
+      "donorSha256": "0f7ffd46a821532c0c41c2a6a880422b00dde63e43ebac263e288b7aa0f2b7a7",
+      "targetSha256": "414af488717630019f0040bf8fe2f220b86f909e5e34395b41aa362cc1440de7"
+    },
+    {
+      "identity": "images/course-min/empty-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-min/empty-table.jpg",
+      "donorSha256": "81712cfd72529a684f7be43d97672a0ce23859380fde231d70e5452e1f733c20",
+      "targetSha256": "0c0eb1c7c92f9c12689a6f1d3f651be95c7a08d09c0dfa13002f1548777fe02d"
+    },
+    {
+      "identity": "images/course-min/form-huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-min/form-huddle.jpg",
+      "donorSha256": "3325c03054e0b539e21820865cd6bb084bf0ef3d95503170a9641a1537a2423e",
+      "targetSha256": "50f362c1cd1da18b69156c8de0e86d9cda5e78f0040cf3eb86c08586f8bcde82"
+    },
+    {
+      "identity": "images/course-min/front-desk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-min/front-desk.jpg",
+      "donorSha256": "721dab30aac5648bf45d8a51344070d149f7fed46d58fbc72167ef6617439614",
+      "targetSha256": "af1a69f9068872cd4db8733834ae3e73e365bcc48e767cc31b4e573486ba283c"
+    },
+    {
+      "identity": "images/course-min/sidewalk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-min/sidewalk.jpg",
+      "donorSha256": "27f008388dc20e62c65a28fa71c1a68911de835e8f91699b289c3817c0206d4a",
+      "targetSha256": "fe9f0cbf8c3e07c9bdfe76d436535c0e6eeb7da7dd5e8a6dccbcc7221edd453d"
+    },
+    {
+      "identity": "images/course-mn/chart-cp.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-mn/chart-cp.png",
+      "donorSha256": "e2502116258f241588f06e99808688f1822f718f4287eb66b1fd3dc49ac08da3",
+      "targetSha256": "3a71e3b04ee106e9a084b54ae92184e40f4e481c5890220e257f4a107929fb33"
+    },
+    {
+      "identity": "images/course-mn/chart-ooh.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-mn/chart-ooh.png",
+      "donorSha256": "8bd091f5de61df06967820dcb00084013fb8f0903b0481c60370c0bfa70f376b",
+      "targetSha256": "9189f839bfc4421e3a4a2e861d23c1835e3feba36f040677d909f3dd5e812bef"
+    },
+    {
+      "identity": "images/course-mn/cover-wait.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-mn/cover-wait.jpg",
+      "donorSha256": "8c7503a0c3fa05d6d7157c725fe21a49fbec384020cba078da324c6f0a808def",
+      "targetSha256": "c350ef43bc0758834a2549a50420cf07fbfb34823b1a4e9d0bd94ed847ee012b"
+    },
+    {
+      "identity": "images/course-mn/greater.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-mn/greater.jpg",
+      "donorSha256": "4a3b9cb5018367db2649d640a7712edbc619aedec0e520591152b53a0b2fb06d",
+      "targetSha256": "c6038031cf62e1bf65b45f3b3a066d4ba2e6ea3356e4026b37357f7a1bde668b"
+    },
+    {
+      "identity": "images/course-mn/packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-mn/packet.jpg",
+      "donorSha256": "b1f7667aa470c54c6c44935ce80af7fd9c6ce5c763c9c351602b2fcc3d57344c",
+      "targetSha256": "349c47ac422fda93eca72b5d7db7d8bee79c4ada3eeb51e5006f0a19242e7251"
+    },
+    {
+      "identity": "images/course-mo/cover-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-mo/cover-table.jpg",
+      "donorSha256": "632f3b7f52d7d8243d69f4c1566966ca787aa4a436b232c3ed681c072b3152b2",
+      "targetSha256": "a16d9d8e55202820425fd32390935c178e375611b93f22f08dd74acb2e54de44"
+    },
+    {
+      "identity": "images/course-ms/cover-walk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ms/cover-walk.jpg",
+      "donorSha256": "ba0e3132a907f2847c6aa10955e80ccee814aec86706607e85834a9d54d84e94",
+      "targetSha256": "d107fd9e9ebfdf73de3ef7b12a841beb629eb54a509ca9328fc2798743ac48b3"
+    },
+    {
+      "identity": "images/course-nd/aac-couch.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-nd/aac-couch.jpg",
+      "donorSha256": "d6735b5138b667b1aa21e6016362957aca46d658653ab77fa01c1d5a8434ba13",
+      "targetSha256": "be24b83b6e2af2e47725c17d3a26dd3fa28da65f56510720189ec48ae99a605c"
+    },
+    {
+      "identity": "images/course-nd/cover-meeting.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-nd/cover-meeting.jpg",
+      "donorSha256": "cfdd71fc2d3ce4bf242868bd1b7b04dd2dbe2ce4d2d12682f29c0b34d58a4c58",
+      "targetSha256": "7a7030308cc964c9185f12d960064d69c72addf3e983ccecb719c4700b1fd769"
+    },
+    {
+      "identity": "images/course-nd/listening.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-nd/listening.jpg",
+      "donorSha256": "2734cf47154ba44597e451ffb2d68a1fd34d46459d126c3ef7f9c45f2de0cf32",
+      "targetSha256": "08f92950dc8bcb66f8083d220f8044607fa7363f735a79d4602fb96b05a55286"
+    },
+    {
+      "identity": "images/course-nd/office-noise.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-nd/office-noise.jpg",
+      "donorSha256": "2bcd78c48f4036dda1fc792f02a435a3062759f875c228c7d2c73e5e266e4fce",
+      "targetSha256": "951b9cde0eb6819aedf44cee2b57e37b25c839dc910aede3e5b8f45c94521865"
+    },
+    {
+      "identity": "images/course-nd/plan-table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-nd/plan-table.jpg",
+      "donorSha256": "56647d680e310c5aa3cd4782c7afe8bbb03a2915313ef8f89444d9cd887672ac",
+      "targetSha256": "b4d18a1d9ca1ac9c50ab68f137c22d8c3ea5da93acdd33b779b2032064698c42"
+    },
+    {
+      "identity": "images/course-nd/quiet-room.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-nd/quiet-room.jpg",
+      "donorSha256": "a336c82d5096c04361c20d30ffb38763989fbd61438798ecaf530a128a3d3e12",
+      "targetSha256": "2c1d460d575ca193e70d6c7a5c9573492f39306777daddfb5d18e2d81752f198"
+    },
+    {
+      "identity": "images/course-on/cover-desk.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-on/cover-desk.jpg",
+      "donorSha256": "034cdd5a6fe1daebeac094a6b1d177279ac24d708887b90ab49d471d9d6fc519",
+      "targetSha256": "aff52e4320e650102b6e34eb4376b2b8a9354157a9f9568f07b22457e2c9ecfe"
+    },
+    {
+      "identity": "images/course-out/cover-numbers.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-out/cover-numbers.jpg",
+      "donorSha256": "2a2d69d6066fff602db1c50e99e78e95a406be0441122d12d2f7676b9fc82e24",
+      "targetSha256": "c55e886b0d18ac770e085c9136cc58702b0c2908e9cb0a558487e1bea32ea0e7"
+    },
+    {
+      "identity": "images/course-out/huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-out/huddle.jpg",
+      "donorSha256": "7f2dd582f8859b5551edb74da87f2ef0123ba56fd2c0d9b93e73acf4fdabf5b7",
+      "targetSha256": "dfb52af3a38f1a19dc28871574cb48313313906bcd86dc9ce5ebbfac32522f89"
+    },
+    {
+      "identity": "images/course-out/packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-out/packet.jpg",
+      "donorSha256": "b1f7667aa470c54c6c44935ce80af7fd9c6ce5c763c9c351602b2fcc3d57344c",
+      "targetSha256": "349c47ac422fda93eca72b5d7db7d8bee79c4ada3eeb51e5006f0a19242e7251"
+    },
+    {
+      "identity": "images/course-pd/cover-1to1.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-pd/cover-1to1.jpg",
+      "donorSha256": "fd16293fee5def27cf0fdb7abb95f1cc9fa2c3d7b77e38aea859e6f585e8b006",
+      "targetSha256": "ecf9d30a013205d6139e7fa82c274bb873a14673cf2c5261ffb93186e36d259c"
+    },
+    {
+      "identity": "images/course-pl/cover-plain.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-pl/cover-plain.jpg",
+      "donorSha256": "38e3e9b96c6cf92bac8a33053b6ed1682938c0f64d47e6b59a1c7ca67e69b195",
+      "targetSha256": "0ab441acf4cc015763c9544ffc85b38b6c0f44a6f904af7279c05bc5711652b9"
+    },
+    {
+      "identity": "images/course-rec/chart-maternal.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/chart-maternal.png",
+      "donorSha256": "c13393fd04f00e2493fd0d83866167a888a8ae837570ee0a72bc4617b1d0cdf3",
+      "targetSha256": "7a8ab9c39eb394dfdd72c905a79b8f37b5d664cd8475e05b4d0f6ea740646983"
+    },
+    {
+      "identity": "images/course-rec/chart-mn-ooh.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/chart-mn-ooh.png",
+      "donorSha256": "8bd091f5de61df06967820dcb00084013fb8f0903b0481c60370c0bfa70f376b",
+      "targetSha256": "9189f839bfc4421e3a4a2e861d23c1835e3feba36f040677d909f3dd5e812bef"
+    },
+    {
+      "identity": "images/course-rec/chart-prison.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/chart-prison.png",
+      "donorSha256": "205098d2d80518d867c7d02542517f5c3499f478f9d694dde5f4d212568029f3",
+      "targetSha256": "1af60f557d39c03d0563573caed411a2ad4ec5c1716382e4f958c356fcecbe8b"
+    },
+    {
+      "identity": "images/course-rec/chart-wealth.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/chart-wealth.png",
+      "donorSha256": "30bb2ad977f390b4adcdcd8e3ed2a606feb9d7a839d5d7e07d6fba84278b5284",
+      "targetSha256": "7be0338e8ad9003d925175189d7d0b0da54a37ea41c7ecfdaaba70ada77e1547"
+    },
+    {
+      "identity": "images/course-rec/clinic.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/clinic.jpg",
+      "donorSha256": "0877f03cfb2138cc1fb611642545e60267a82e56e1202786e3f9f96232f88ef2",
+      "targetSha256": "89271f1aadbc05f23b87639804eb07b7abb018f232d52ff5fbb6b506114627e8"
+    },
+    {
+      "identity": "images/course-rec/cover-study.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/cover-study.jpg",
+      "donorSha256": "9a45bd5f3b4a2401a2374cc670dfba3143808189d0cdabc9fc1a354132637884",
+      "targetSha256": "e710534b1caf1c336069abad3dba1d230eea19f0a96a59cfabae7929a90f5d99"
+    },
+    {
+      "identity": "images/course-rec/hearing.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/hearing.jpg",
+      "donorSha256": "ff0b24d3a9b8777bfb97b5569546202045b3b52e4aade63a1408fe1f5c0281e2",
+      "targetSha256": "32bebcc2d37fa2c5ff4e447614e356fb8f4c6ed9386238b9882c6a02d51c4b6d"
+    },
+    {
+      "identity": "images/course-rec/huddle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/huddle.jpg",
+      "donorSha256": "7f2dd582f8859b5551edb74da87f2ef0123ba56fd2c0d9b93e73acf4fdabf5b7",
+      "targetSha256": "dfb52af3a38f1a19dc28871574cb48313313906bcd86dc9ce5ebbfac32522f89"
+    },
+    {
+      "identity": "images/course-rec/papers.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/papers.jpg",
+      "donorSha256": "22d5ad445169b83158b6a15010557caf4fb8bf87416d953d25864d6944ec6bca",
+      "targetSha256": "cf54c4d0b39e1d14d18619bbbc6af1ce90eccd836f0e53224be2077f7bbb7400"
+    },
+    {
+      "identity": "images/course-rec/street.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-rec/street.jpg",
+      "donorSha256": "5a7cada5941318fd90d3319f6af6b67a08d413ed8b3ab36ea2b6a8a19586cb0e",
+      "targetSha256": "9aedd3bb2275e0ab80c9f61392ac8e394a59aed66e4401a33d3c2fc8786078b5"
+    },
+    {
+      "identity": "images/course-se/cover-stay.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-se/cover-stay.jpg",
+      "donorSha256": "0c8b1f750132360d4217a58e81d998490d81a0c51d9f704cda15fff080579a4e",
+      "targetSha256": "f013118013514893db5061dd0348553b86f723ce7f7a8100b61739777a342651"
+    },
+    {
+      "identity": "images/course-sh/cover-form.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-sh/cover-form.jpg",
+      "donorSha256": "0bf957ff1992589b8f27da916d4016e396d45fc934e09711492f13a6506230d6",
+      "targetSha256": "a7aa7e3eb4d27a1b2aab9aed248380d95bf99a5ed50030263285b00b84ed6970"
+    },
+    {
+      "identity": "images/course-sh/table.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-sh/table.jpg",
+      "donorSha256": "25c1a86b2f01b8b2b19841ece8fff6b0ad5d44a7d6164f041860549ea72f991f",
+      "targetSha256": "924561be4501725e680f9448b053283cd27e907b12f1b96ea8f9f48a12f5f08d"
+    },
+    {
+      "identity": "images/course-sm/cover-cedar.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-sm/cover-cedar.jpg",
+      "donorSha256": "ef955ccd1e52ffd82c08af536e1113bbd83292c6264359fed6af40e18e52af06",
+      "targetSha256": "739c7f83ed3e0b43169ed092ae6404199d3a8797e5cdf1adf6263adcceaaf12a"
+    },
+    {
+      "identity": "images/course-sm/iceberg.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-sm/iceberg.png",
+      "donorSha256": "9086db91e0a3e100c7ff8b36264af71c34bd015c562ecc43d5fc4440d469d168",
+      "targetSha256": "b1b40e8d894a8cc9c8420746c9fb33f2dcfe098b0bd23499c85c36b9a052ad98"
+    },
+    {
+      "identity": "images/course-sm/packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-sm/packet.jpg",
+      "donorSha256": "b1f7667aa470c54c6c44935ce80af7fd9c6ce5c763c9c351602b2fcc3d57344c",
+      "targetSha256": "349c47ac422fda93eca72b5d7db7d8bee79c4ada3eeb51e5006f0a19242e7251"
+    },
+    {
+      "identity": "images/course-so/cover-outreach.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-so/cover-outreach.jpg",
+      "donorSha256": "48165c7d75a50cf60ca0c93b2f701ba3dbe7260c50b9001930abc5cee3aa1510",
+      "targetSha256": "4b51bd7747de040e9bb6f4b7d27455ab20582ae2fe75ad8c14bf83a9856dda14"
+    },
+    {
+      "identity": "images/course-ss/cover-panel.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-ss/cover-panel.jpg",
+      "donorSha256": "39b6cc263bc740e300349962288b4871d88c32764c80d64b721bcd570f2b904e",
+      "targetSha256": "b06e1375e175e09cf00511710a63b3e0ce89e86e4ad8ceb2310b4e210ba33d46"
+    },
+    {
+      "identity": "images/course-tm/cover-team.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-tm/cover-team.jpg",
+      "donorSha256": "81b7cd8b90940d4857cea97ef3a202ec483189e9587be15a827acfff9a2844e2",
+      "targetSha256": "6a3a61f845079b92b6f32ca542373b15a5c36c02483f335f7d5b5e73862ac402"
+    },
+    {
+      "identity": "images/course-tm/packet.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-tm/packet.jpg",
+      "donorSha256": "b1f7667aa470c54c6c44935ce80af7fd9c6ce5c763c9c351602b2fcc3d57344c",
+      "targetSha256": "349c47ac422fda93eca72b5d7db7d8bee79c4ada3eeb51e5006f0a19242e7251"
+    },
+    {
+      "identity": "images/course-vs/cover-survey.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-vs/cover-survey.jpg",
+      "donorSha256": "ce507a71cec71cffba1f27c9ce655d3719c1f0b1a1fca85d9cac5b0bf656c58b",
+      "targetSha256": "bf0cb8ef7537aff25f7e5abf960a3ee8dcad6e5f3e72003391ab278bd43bc1c2"
+    },
+    {
+      "identity": "images/course-wi/cover-interpreter.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/course-wi/cover-interpreter.jpg",
+      "donorSha256": "4e84ce385e2db632627ccc058215f2a7502edabb8ce54be77d33936ced8ec577",
+      "targetSha256": "bc42b7e4821be3d3bb12a601e525c18cb3952cde973fa945a350a5b6a4e3b764"
+    },
+    {
+      "identity": "images/covers/acceptance-in-dhs-work.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/acceptance-in-dhs-work.jpg",
+      "donorSha256": "254e59e736f8b9e10c19b31a989bb65c5c33bf4e1489f9bb2b530cd36f4c3101",
+      "targetSha256": "b833476788d30d66054fa403d3c11917d2c3c02d09d54bf96bbb92bff6ad2750"
+    },
+    {
+      "identity": "images/covers/accessibility-leadership.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/accessibility-leadership.jpg",
+      "donorSha256": "1d16321208559a628710de7420521d6920c0efa8ff0bc23a497065ab9f4930b4",
+      "targetSha256": "94f1679b0caf08fa0dabfb228a10ff36414de14f2ee3a4961fb58efce6384f21"
+    },
+    {
+      "identity": "images/covers/anti-racism-resource.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/anti-racism-resource.jpg",
+      "donorSha256": "a59212561ef68f00f79f8c2979bc29eedd28aed12606e4ef2c4f48fbe6a56a30",
+      "targetSha256": "d1a9ed068a3e5ccb06874b9c921b8b4706c3dec0eff37bfd4fca2151ffdb4df6"
+    },
+    {
+      "identity": "images/covers/brain-injury.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/brain-injury.jpg",
+      "donorSha256": "3a75f0b2183924c7a91c4302b284615ec0473d6e4484520a15f111160beb6177",
+      "targetSha256": "a420f806aa9c15e8eba4255d666a7bd00b6d0aa5fe3547f0084769b1a8a93e3f"
+    },
+    {
+      "identity": "images/covers/change-management.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/change-management.jpg",
+      "donorSha256": "abc9adacfbdef5ed0284c2b27aed7d0eeb6288f62990eef74a673cd97015fc8f",
+      "targetSha256": "f9732722fa7c61b18dc50fdd2c8cadd55fa2bc3325c01ace23a204af933de4d2"
+    },
+    {
+      "identity": "images/covers/conflict-at-work.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/conflict-at-work.jpg",
+      "donorSha256": "133c1c780693e8d5b45a20905e713c8ab39cb73c24d274959cb560dddee9815b",
+      "targetSha256": "3b2f407a05df4f41647a89428be2192a867ffacacd2cc831078da3e0aa78fb5d"
+    },
+    {
+      "identity": "images/covers/cq-afghan-minnesota.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/cq-afghan-minnesota.webp",
+      "donorSha256": "3e60b48f7a16174d7593fbe32191941dda6bc877e05dd89ab7a490a63bca1dab",
+      "targetSha256": "3ed7b2daa268df2ba41066909e2911308b032638c718fe2fa52382fe6bcd67e0"
+    },
+    {
+      "identity": "images/covers/cq-cluster-frameworks-foundations.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/cq-cluster-frameworks-foundations.webp",
+      "donorSha256": "cba30bc7f56a00bfcb64b6375801098f30bc41c9c02298cc46651cf2ed92c304",
+      "targetSha256": "60b16132cf762f280ba3bf77ecb2b6d56cc9b941b7ba90deccccacd63932e2f0"
+    },
+    {
+      "identity": "images/covers/cq-eritrean-minnesota.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/cq-eritrean-minnesota.webp",
+      "donorSha256": "decfe609e2f608d6ebc79d0707c31f1fe3ac23900b2e1540307f879ba5fb623b",
+      "targetSha256": "397de9f746227b66cc49902571e6dac595125d875166a59fd1082ef5cef99763"
+    },
+    {
+      "identity": "images/covers/cq-leading-multicultural-teams.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/cq-leading-multicultural-teams.webp",
+      "donorSha256": "66be00d2fa53b4e22762156d2c5748cc54d2d7bb1b743ff87a3088c0124b0758",
+      "targetSha256": "04026dcf62e7c86f901508a8ddd7cd59c705bab83a45adbe0cd332ad0bbaad1a"
+    },
+    {
+      "identity": "images/covers/cq-sudanese-south-sudanese-minnesota.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/cq-sudanese-south-sudanese-minnesota.webp",
+      "donorSha256": "9150fd6494e48ead6b6a1ac4efab24bb3d458fcce54f98d8ad5fc21cf3aa4c67",
+      "targetSha256": "eb2d56b59caa4d949c5df570475e668408009f590bebf7fd28f849a7e8a06054"
+    },
+    {
+      "identity": "images/covers/cq-tibetan-minnesota.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/cq-tibetan-minnesota.webp",
+      "donorSha256": "f64e18db0cf55c68102a3182beccc994d2c13a2fdbfe457be88d1db4e51b0e2a",
+      "targetSha256": "b4f3fc32fd1338b51e7efc5803288a2b48ee03b24cdfdbe801100dc38b226f87"
+    },
+    {
+      "identity": "images/covers/critical-incidents.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/critical-incidents.jpg",
+      "donorSha256": "04f6ca2a8f1cf18540ce1c74c85be308707a1772a22e38dc1fbb9e21f20b8e9f",
+      "targetSha256": "a44ac1172248d2ef398f9e59a0c6b1084481b7d71fde8e9f6c5e26de2c317b34"
+    },
+    {
+      "identity": "images/covers/cultural-broker-role.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/cultural-broker-role.jpg",
+      "donorSha256": "c6bc269a2c2ee2a5a3477ea6b5140da2c86c423f125686450d68de9ea4541b36",
+      "targetSha256": "9bdcbf9e1f7a495de56e569d1b8c494b973e729038388fe4e140c821e57091cd"
+    },
+    {
+      "identity": "images/covers/culture-without-theater.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/culture-without-theater.jpg",
+      "donorSha256": "c0fc4c3817360f68bdb97f50f6f57f5c6f95858ca938f566e4ead9e53516f868",
+      "targetSha256": "96342ae1d4876c062afdbd32a0818f2deca2b26cfa42385094807e1f4cb7aca9"
+    },
+    {
+      "identity": "images/covers/disability-and-language.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/disability-and-language.jpg",
+      "donorSha256": "04cf27a8df13150338c85aa299b72ca4bae2c30a4741283593ee631f986d16da",
+      "targetSha256": "07c7500020247cc95fe7509939b566b99bae0680f591060b19cc2ba90965f89b"
+    },
+    {
+      "identity": "images/covers/dsd-aging-and-health-access.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-aging-and-health-access.jpg",
+      "donorSha256": "ed36f01266e613ff436180263faa1c693b3c2b407d6fdf5fab5fb2a7d10b01a5",
+      "targetSha256": "c1dfc361674a31dadb4fabfabb75ac5319eddb06e7b38eac0acda8b060eede13"
+    },
+    {
+      "identity": "images/covers/dsd-benefits-and-assets.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-benefits-and-assets.jpg",
+      "donorSha256": "ed957fb78dc45ba8b69474df80484861ccb6b15deaf003f80614dbd8dd5770ac",
+      "targetSha256": "07c975191a89bbdfd16fab1bb8bb470fff218399b4e9102a13866136f6c8fc15"
+    },
+    {
+      "identity": "images/covers/dsd-brain-injury-practice.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-brain-injury-practice.jpg",
+      "donorSha256": "3a75f0b2183924c7a91c4302b284615ec0473d6e4484520a15f111160beb6177",
+      "targetSha256": "a420f806aa9c15e8eba4255d666a7bd00b6d0aa5fe3547f0084769b1a8a93e3f"
+    },
+    {
+      "identity": "images/covers/dsd-co-occurring-substance-use.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-co-occurring-substance-use.webp",
+      "donorSha256": "fbc0b874f24588b5671a79c249be0ab50dda04759907da5a922ee4b2ce330cb8",
+      "targetSha256": "d7770e287f2143808dacfc92122b4b53d18ab402b11e3c9ced2af4d911e85018"
+    },
+    {
+      "identity": "images/covers/dsd-coaching-direct-support.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-coaching-direct-support.jpg",
+      "donorSha256": "6fdcef843e654ef7c3b588780d0c446012362b6c17c736d2cf6435fd7db4fcf4",
+      "targetSha256": "054af0d821487e089bdd3e4bc6cfd6451cadc4a1ff00e3b825f0994ec0f41c5c"
+    },
+    {
+      "identity": "images/covers/dsd-communication-methods.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-communication-methods.jpg",
+      "donorSha256": "c40c8dae936fc8a6878ef4c835e8908a09c67dfb5afe7b3ae893e86dde9dbf80",
+      "targetSha256": "9567478e3ebc62e13e2eb25a515329d3f9e4d1b425cedb13ffbc5f6f20ef6fe7"
+    },
+    {
+      "identity": "images/covers/dsd-community-mapping.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-community-mapping.jpg",
+      "donorSha256": "a9dd1f1c3f78fc03ce1a4f4eb025ba096438a89c9071beab9e8b760e7e6fe409",
+      "targetSha256": "be00f79a395a065226e1faea90325530aa2f4cbc103dfeb9538190f7bc562e78"
+    },
+    {
+      "identity": "images/covers/dsd-customized-employment.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-customized-employment.jpg",
+      "donorSha256": "e0052480bc4e9d2b06ecfec13dfbfc54b766dd4a23966b338f4e1f0ba1ff3f68",
+      "targetSha256": "8cb3082e932ceb9958a95b95b3728d42e75b35b26836f016cfebfea9faed1ab9"
+    },
+    {
+      "identity": "images/covers/dsd-early-adversity-resilience.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-early-adversity-resilience.jpg",
+      "donorSha256": "187bc18e2c56da86a4b59f7b14e880f896ae82d92de44c7a473bc53e52bb53d7",
+      "targetSha256": "1255c94a3837b5035efcf7081296ac1d40c94fdb0786198910b49635726a0bfa"
+    },
+    {
+      "identity": "images/covers/dsd-executive-function.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-executive-function.jpg",
+      "donorSha256": "2757bc45382e290c3fd8223e91ad4327c5901057f3f6f103fb4055f71fbc24fd",
+      "targetSha256": "87694b0a407d351e3416fc76a5bd122d0e8456cf5873899bc587a283e4bbd279"
+    },
+    {
+      "identity": "images/covers/dsd-housing-instability.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-housing-instability.webp",
+      "donorSha256": "87921894cde3ce360c4ed6201fe8aaa4d1e6c7d083385673f6b1c6af512d8ab2",
+      "targetSha256": "ee78e7995c26bb971cc6361168fac458553d40407649bcc9bf8a683b5e067db1"
+    },
+    {
+      "identity": "images/covers/dsd-justice-involvement-reentry.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-justice-involvement-reentry.webp",
+      "donorSha256": "37461bcb90c3ef6276f91e0f0f23346b1082c714fa1aeacac4e49544aa3fa937",
+      "targetSha256": "6cb2a9fe79fb081fd76acbf295e9a6f4afd08eca8f8027c55b9210ba8a532d26"
+    },
+    {
+      "identity": "images/covers/dsd-leading-system-change.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-leading-system-change.webp",
+      "donorSha256": "c2a607efb43fbe6d25b2b7c9c59841fe9104e214db5a7639ca4c840e14200fd0",
+      "targetSha256": "c6aae61569fc602a24ccd28fd36c53cb7a8f83fb27e5bf2a5e4e31bd5f323721"
+    },
+    {
+      "identity": "images/covers/dsd-mental-health-psychiatric-disability.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-mental-health-psychiatric-disability.webp",
+      "donorSha256": "cfbb3db6d54d78367b5f6d56b15f01c4170ad149241b2cb8903c545927357a4e",
+      "targetSha256": "08fcdc45c4f95b0d1a631479c9c516951e88a164e1b19662caff3ecdc047709b"
+    },
+    {
+      "identity": "images/covers/dsd-minnesota-service-system.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-minnesota-service-system.jpg",
+      "donorSha256": "576b5ad10ecd129bea782ecae280a4febb7f8836580a147c6ddb0184a0eed09f",
+      "targetSha256": "3eb4d0ab9ee8b905b51481556cb6527d31a62514d46ac9445fdf2626e13ae6dc"
+    },
+    {
+      "identity": "images/covers/dsd-personal-outcomes.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-personal-outcomes.jpg",
+      "donorSha256": "28c7591fa917038c9a20cc32c52edd9711bb40ca702869e208ccb495e5c1bf64",
+      "targetSha256": "cf9822328758de98b0ef0e82174d5fc579cc52e133e39e092cc1252acd377dfc"
+    },
+    {
+      "identity": "images/covers/dsd-positive-supports.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-positive-supports.webp",
+      "donorSha256": "cc7f05da5dd8bafc99ea55e5c218100fed24192c259ff784fc6467b91aa21912",
+      "targetSha256": "4e5469c25288fbcfc0a7fb55ea7c52eba28ea79080a50fb2a4d24a1aef373ab2"
+    },
+    {
+      "identity": "images/covers/dsd-self-direction.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-self-direction.jpg",
+      "donorSha256": "2b99253e489953638d86f81a7c0274055b9a62e9aad624c24cfe6b1c18c8045c",
+      "targetSha256": "7c120f8632341863e8d93a19dac1bf3a02473a6f1d293556c0e2ad0e14d69566"
+    },
+    {
+      "identity": "images/covers/dsd-service-coordination.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/dsd-service-coordination.jpg",
+      "donorSha256": "99b10f726f030fbbc296a76fc91ee49b4efa70d10ff3433bc87c70f5f40fb0ee",
+      "targetSha256": "45cc766412bc9262b2ffa2d9d931007592c439b90df0d7190421b6423957d9b4"
+    },
+    {
+      "identity": "images/covers/employee-life-cycle.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/employee-life-cycle.jpg",
+      "donorSha256": "2992fa065119f781d3a012c89d06953dac181221efdf753bd0e3ee892d091171",
+      "targetSha256": "51e3485ebaf400cc503a8ab8ffb5ed0dbc86af557d64bffdbee79daf93890f18"
+    },
+    {
+      "identity": "images/covers/employment-first.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/employment-first.jpg",
+      "donorSha256": "e0052480bc4e9d2b06ecfec13dfbfc54b766dd4a23966b338f4e1f0ba1ff3f68",
+      "targetSha256": "8cb3082e932ceb9958a95b95b3728d42e75b35b26836f016cfebfea9faed1ab9"
+    },
+    {
+      "identity": "images/covers/equal-opportunity-employment.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/equal-opportunity-employment.jpg",
+      "donorSha256": "b6a054493151d17dda44ccf99946de5863439bf170ee4a9fa5f1c83aa27c6582",
+      "targetSha256": "63f0503c49c587d6c3c1dc723f836ecd3b7fcf6c6e7b1d22b331882a190c9079"
+    },
+    {
+      "identity": "images/covers/equity-analysis-toolkit.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/equity-analysis-toolkit.jpg",
+      "donorSha256": "3780d3d622e45dc0869c50498b5abb1cf30ef6adc5106e78ca6320a783e68651",
+      "targetSha256": "f8af36a970eaf3be6d01f80d1fc9d762c54b3c064a50cced24922ed79af48043"
+    },
+    {
+      "identity": "images/covers/equity-centered-leadership.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/equity-centered-leadership.jpg",
+      "donorSha256": "5d2884cc3cdb00cd5f9a64962bb6f10f8751a6671375315ac76d5e3584752323",
+      "targetSha256": "e28f38ba48d46765708d85f1d63c64af6b352e7870d9d61b0c71284118a764dd"
+    },
+    {
+      "identity": "images/covers/equity-champion-workflow.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/equity-champion-workflow.jpg",
+      "donorSha256": "19f0f997ea093597741323b72089e501cf3735b8290ffd9ea0cadb7ca4f1c7db",
+      "targetSha256": "dbc05850ca234c402a0ba83c93db6a62a2cc0e02ee7335cf6ec903f69324d0f2"
+    },
+    {
+      "identity": "images/covers/equity-inclusion-leadership-systems.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/equity-inclusion-leadership-systems.jpg",
+      "donorSha256": "f88e961c6b2a108cc0982fa64e5a84fd94e34a34b7fdae763034a7f0500a3b48",
+      "targetSha256": "b2dd384404606bee7389a3fba8492bb8855e869bb79b1e3a1d38641fb4e16617"
+    },
+    {
+      "identity": "images/covers/facilitators-guide.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/facilitators-guide.jpg",
+      "donorSha256": "f45ef075efa7d8e21e02fc6dc99d3a38ad9ba5286d912f073373e6188e138578",
+      "targetSha256": "5821dbdbf5d69731f74b9dfb6dabe1dcbef4e1841c40cf9199bf991f20b821b1"
+    },
+    {
+      "identity": "images/covers/family-natural-supports.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/family-natural-supports.jpg",
+      "donorSha256": "a9dd1f1c3f78fc03ce1a4f4eb025ba096438a89c9071beab9e8b760e7e6fe409",
+      "targetSha256": "be00f79a395a065226e1faea90325530aa2f4cbc103dfeb9538190f7bc562e78"
+    },
+    {
+      "identity": "images/covers/from-noticing-to-shifting.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/from-noticing-to-shifting.jpg",
+      "donorSha256": "1685b20be6d0598bac26b3e39939094e3ebd0e88e992de06039f6479316cccdb",
+      "targetSha256": "cfbb1df50c584bd912df842b318b0c329113968ad737134abbd7c813653af275"
+    },
+    {
+      "identity": "images/covers/gc-accommodation-transitions.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-accommodation-transitions.webp",
+      "donorSha256": "52490b8901663caec09742245c30cc2849b14848cc4b66bc246cb0108e069431",
+      "targetSha256": "67a5b978e8fa4777e103e46159aeff0dca6f7a3c2de959774b5b60f0618b8aa2"
+    },
+    {
+      "identity": "images/covers/gc-age-inclusion.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-age-inclusion.webp",
+      "donorSha256": "8448fbdc0cd30717ce82f2fed65b061212656ce3f494efec016b01fc6fcc0a67",
+      "targetSha256": "04add86e95b3ff4425b65dc7ba00e96d9b25bd43b9354b5c6504299f2afedecb"
+    },
+    {
+      "identity": "images/covers/gc-automated-decisions.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-automated-decisions.webp",
+      "donorSha256": "cae3cd184d715c395c2e1a23b07af14a33fb42e9215dba1fcd56c4499f06d601",
+      "targetSha256": "f25916ecd9e445a131392b836b62b029aa4cffb06d3c39ccc22bfb584808ccd3"
+    },
+    {
+      "identity": "images/covers/gc-career-pathways-succession.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-career-pathways-succession.webp",
+      "donorSha256": "01056c9b6733145bf56b783146bbafe782a07634fe4470f1af0483b715f7861b",
+      "targetSha256": "ca05f3d150c513763e62e00fc07d79d4976d604884bcb931aa48d12491f70b08"
+    },
+    {
+      "identity": "images/covers/gc-deaf-minnesota.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-deaf-minnesota.webp",
+      "donorSha256": "be0c0f31538e004f58e6ef3ba427e509f662d3398145bb306ccb6df39fe65d0c",
+      "targetSha256": "5c0b230f204aeb3fc6ec414ef8ec18d546f78ced55284d1728ace027fa2d0cb4"
+    },
+    {
+      "identity": "images/covers/gc-employee-resource-groups.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-employee-resource-groups.webp",
+      "donorSha256": "b01d38ff59d2b69d0e85a08fdb082f57d0414f55dbadc7c5571186ced2b1258a",
+      "targetSha256": "8d898042d90a86735740c27a983f13961ac4e4bccd62f0e10c6a8f5cf87a243c"
+    },
+    {
+      "identity": "images/covers/gc-equity-committee-roles.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-equity-committee-roles.webp",
+      "donorSha256": "4b08758193bb45fffd3d43a10ff7e1ba43d5d229639c2f0513cce7e73c28aaeb",
+      "targetSha256": "689f6eee44d125d99af005c979f9bd7da28e44292177cf8a500534b3367cfe92"
+    },
+    {
+      "identity": "images/covers/gc-faith-in-minnesota.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-faith-in-minnesota.webp",
+      "donorSha256": "79239e0fd199ed4bc623176ac46000f1ba4c1859c328a3270366ae894074e171",
+      "targetSha256": "43e364d275b308132016e4b4918f027fcac238b8b1aefaedced6329fb5edc4bd"
+    },
+    {
+      "identity": "images/covers/gc-new-supervisor-inclusive-leadership.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-new-supervisor-inclusive-leadership.webp",
+      "donorSha256": "3086d8995ee028c30344498438abbecc88a890bee124b358d047da0f1f6f294d",
+      "targetSha256": "8eb49809c97d6b88316060b620a3ae57bc3eabc886e273f190e448e8b0d07664"
+    },
+    {
+      "identity": "images/covers/gc-remote-hybrid-equity.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-remote-hybrid-equity.webp",
+      "donorSha256": "715e18cc37e6f66ddd6851ca21d769eef9afa260f5af0ed5420be1245e058861",
+      "targetSha256": "92ed130e7c758d4360ba384490db23591fa6f080e50e3db6ccf152658e11d841"
+    },
+    {
+      "identity": "images/covers/gc-respectful-workplace.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-respectful-workplace.webp",
+      "donorSha256": "13029189ff1f856d17c723e311770d3743dd764495106be5185eb01e1c4bec27",
+      "targetSha256": "1ef745a8db481f72101d5a17b39e6dfc10bc1e7583e85c4f41e0d0e31af8146c"
+    },
+    {
+      "identity": "images/covers/gc-structural-racism.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-structural-racism.webp",
+      "donorSha256": "3b2152dad6d3c5e67193d00f56c9c660da666303d9f0c874a7397dcb6fd99168",
+      "targetSha256": "b9f457a89bc6c76456b8f28fdddc0375e8f22575a02858e0e881db121a436fb4"
+    },
+    {
+      "identity": "images/covers/gc-sustaining-the-work.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-sustaining-the-work.webp",
+      "donorSha256": "3adb8f30f578f3075df264a39ce5be35846452f5b0a4d12bd41ad154511db818",
+      "targetSha256": "314fc059b5c54bc9d286ac4910b1f306e24226bc124ecabc2248b584b1352e48"
+    },
+    {
+      "identity": "images/covers/gc-using-community-briefs.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/gc-using-community-briefs.webp",
+      "donorSha256": "6c89dec047c804530d1e14e08f59cf06f25c51a9f3ede90b8201062c734b4979",
+      "targetSha256": "3ea0235c53e3812c26a85d2e915e4e9dd069d9fc66b2fea6f67c2411d09c2e62"
+    },
+    {
+      "identity": "images/covers/health-wellness-safety.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/health-wellness-safety.jpg",
+      "donorSha256": "ed36f01266e613ff436180263faa1c693b3c2b407d6fdf5fab5fb2a7d10b01a5",
+      "targetSha256": "c1dfc361674a31dadb4fabfabb75ac5319eddb06e7b38eac0acda8b060eede13"
+    },
+    {
+      "identity": "images/covers/humility-vs-checklist.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/humility-vs-checklist.jpg",
+      "donorSha256": "37db2033329137005072b7b1ab031052dfb75d0a3b3f227af445c287c67dd729",
+      "targetSha256": "53c2e1b50b284eec04912e35a9906b64dfbf363b213e4960f9eccc869545a788"
+    },
+    {
+      "identity": "images/covers/idi-acceptance.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/idi-acceptance.webp",
+      "donorSha256": "eb9a546abe39173e79a09d48bcc3d3013cdfcc2178d0c87cbd51c2fb3447b006",
+      "targetSha256": "c4db237bb7ce4a782b8bcf402fdecfcd116c8baf9c056392907c2738036ba3b0"
+    },
+    {
+      "identity": "images/covers/idi-minimization.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/idi-minimization.webp",
+      "donorSha256": "3421aaf0d1069877f3731e944d670fb7b2a2474f742e1c5ef55120e3d8cd669a",
+      "targetSha256": "9dcbccf8d22936807706b86b4e6a952e7f28589121d5be2c8837aef4b4dc0e59"
+    },
+    {
+      "identity": "images/covers/intercultural-competence-no-score.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/intercultural-competence-no-score.jpg",
+      "donorSha256": "524e5f833d78e2d6b1a911edc04ea471889556d4b423d120d441f7f3e0c90267",
+      "targetSha256": "5dcbbb98456d0769294d234080882664de5e77c3f36d337f0fdc9da0b234b955"
+    },
+    {
+      "identity": "images/covers/intercultural-conflict-styles.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/intercultural-conflict-styles.jpg",
+      "donorSha256": "314455cae9d0783a75ed1143f616632e81463186dd39648ee3b075532978a842",
+      "targetSha256": "ed3808af9493d4e8746a9f3d5250f6f8eb32f451caf743fd6f44b56ceb9db9c5"
+    },
+    {
+      "identity": "images/covers/ipe-capstone-intercultural-practice.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/ipe-capstone-intercultural-practice.webp",
+      "donorSha256": "153ec6d221d4a640579309c1f9002d941985b20ab6c27006fca9331df3b23def",
+      "targetSha256": "75ac526b0b0e570e3859ea4c30132d910bba286ef6762ea64b0e5208f8996f87"
+    },
+    {
+      "identity": "images/covers/job-design-posting.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/job-design-posting.jpg",
+      "donorSha256": "26fa372a5d7a5b8d97af8d7987b9aad4204b6bb0bdd427e963a955866db287f0",
+      "targetSha256": "253eae5391b4b110cccce8a75d75cb8ff4a685790e189495f32fee72fe62670a"
+    },
+    {
+      "identity": "images/covers/language-access-design.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/language-access-design.jpg",
+      "donorSha256": "b125671630df8089770cb5c03ccdf0e12d831b426f7522640826f4def1dbe4f8",
+      "targetSha256": "5c4a6bc3e77b78c7bceb483d10402b5db7d73ea3d2293dc387de1c670e98095d"
+    },
+    {
+      "identity": "images/covers/language-access-plan.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/language-access-plan.jpg",
+      "donorSha256": "d0de2b7e3c65106cd4a6d5da499169494f3bedc74504eca71764b8f1ddfde068",
+      "targetSha256": "35f3f8835198305ff257c87a5e613eefdf36d4a745b35f0cfbebe2a3b62cd7a8"
+    },
+    {
+      "identity": "images/covers/lgbtq-inclusion.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/lgbtq-inclusion.jpg",
+      "donorSha256": "ec90de777eab6b173aac26c1f4a16d57ae83a54035e3f1285f36c71c010f0eeb",
+      "targetSha256": "9cddb83a635c035ae1d801e23a89982f8fc692b93160ef8d2ddb9ca5c4255982"
+    },
+    {
+      "identity": "images/covers/mentorship-sponsorship.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/mentorship-sponsorship.jpg",
+      "donorSha256": "a1bc586626c64859fa47d7adfc0a5cf04eaa330d436904d34c7c3395beee173f",
+      "targetSha256": "88e878b7d385a2db3472a3f0f4634421fb386fecc76710a0222ca00bfa109ccd"
+    },
+    {
+      "identity": "images/covers/minimization-in-dhs-work.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/minimization-in-dhs-work.jpg",
+      "donorSha256": "abb99febf1067a1275b78d9ebfe2b849eba9b747b1539fd4cc67a31db636c6c2",
+      "targetSha256": "e3b0ac4ee54677efdfebc813c65c7ed3736c51da8994835a6e6f2ede7510fe23"
+    },
+    {
+      "identity": "images/covers/minnesota-human-services.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/minnesota-human-services.jpg",
+      "donorSha256": "576b5ad10ecd129bea782ecae280a4febb7f8836580a147c6ddb0184a0eed09f",
+      "targetSha256": "3eb4d0ab9ee8b905b51481556cb6527d31a62514d46ac9445fdf2626e13ae6dc"
+    },
+    {
+      "identity": "images/covers/mobility-acting-promotion.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/mobility-acting-promotion.jpg",
+      "donorSha256": "e862d573db4f88b3931547abe78da1e989b314f991142a0ff0f5e20f9b399350",
+      "targetSha256": "b2bbda5472bba16a829ce6b5ce9122e72cc32e411c055de0bed870b05c99cd53"
+    },
+    {
+      "identity": "images/covers/neurodiversity.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/neurodiversity.jpg",
+      "donorSha256": "2757bc45382e290c3fd8223e91ad4327c5901057f3f6f103fb4055f71fbc24fd",
+      "targetSha256": "87694b0a407d351e3416fc76a5bd122d0e8456cf5873899bc587a283e4bbd279"
+    },
+    {
+      "identity": "images/covers/onboarding-90-days.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/onboarding-90-days.jpg",
+      "donorSha256": "ac7152735832d44d18bc2638869f3317ecbf221b1b01e7a744aa4760ac0c94a4",
+      "targetSha256": "d181e25aee3bb14db126e7ff510cacb4faeaa0ec17599814d1e5e82087c8876d"
+    },
+    {
+      "identity": "images/covers/outcomes-not-intentions.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/outcomes-not-intentions.jpg",
+      "donorSha256": "28c7591fa917038c9a20cc32c52edd9711bb40ca702869e208ccb495e5c1bf64",
+      "targetSha256": "cf9822328758de98b0ef0e82174d5fc579cc52e133e39e092cc1252acd377dfc"
+    },
+    {
+      "identity": "images/covers/performance-development.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/performance-development.jpg",
+      "donorSha256": "019fe7f2fcb14cf627c10132bd8b304a33ae8d2b26c69df18a9d4f9055f67275",
+      "targetSha256": "b72880c6103b7b698459d1395c3cc3b27665ea274fb8837e7e69679c1d1cfc59"
+    },
+    {
+      "identity": "images/covers/pi-equitable-oversight-design.webp",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/pi-equitable-oversight-design.webp",
+      "donorSha256": "f484fc267cda4e48ac68eb1ca12f073664c773d922cfd1483a18056055d2bd4c",
+      "targetSha256": "af7a90f0f4aadf723870226adce3d0c03b814d0104859bba96987e8b878ff4f3"
+    },
+    {
+      "identity": "images/covers/plain-language.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/plain-language.jpg",
+      "donorSha256": "b82a83244f3557a5f0899eed5a4267cdd5c0a4b66c1ddb71f8d35ff9d741b03a",
+      "targetSha256": "8082c55169094346dae57535444e358e9b374a6c1d342cfcf6dbf7e02a0a3da3"
+    },
+    {
+      "identity": "images/covers/screening-selection.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/screening-selection.jpg",
+      "donorSha256": "1f9a65b87e1ca3d5fdcc4da30a5f2cb99c3532aa446bd4734fe5a6300b50e667",
+      "targetSha256": "2e5ad2ffa4176f83d6b970ba723d7beb6a437f12a66665293c1fed064c14074c"
+    },
+    {
+      "identity": "images/covers/somali-minnesota-brief.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/somali-minnesota-brief.jpg",
+      "donorSha256": "97f5a108349ac5028e8e75bd1e49fb80ebfacc6086da03d8f8e7ff1c40de573e",
+      "targetSha256": "ccf3fb9e0b69c32cea44fd3ac0e9795eb5c1a72f5f3c6658e2b97fd7206b72c9"
+    },
+    {
+      "identity": "images/covers/sourcing-outreach.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/sourcing-outreach.jpg",
+      "donorSha256": "56859004cbc1900972e22587f228f1c13115762f9cad2f883ee02bef370f7b00",
+      "targetSha256": "3d8886e97f1c522d826a56ddf7da755d9d277cd52be408b35bf38dae25e86b83"
+    },
+    {
+      "identity": "images/covers/stay-exit-interviews.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stay-exit-interviews.jpg",
+      "donorSha256": "e34985040e97f5e349716d9fdbafffd32ad633554d5a0e414ecdef1301ffad7c",
+      "targetSha256": "bf11d9c59094213b86f145f88fc531149fa004bbd41daf4dadc29c5f228f63e0"
+    },
+    {
+      "identity": "images/covers/stock-people-01.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-01.jpg",
+      "donorSha256": "ab3b58017dd5f818a3a36b202d1a795bac85c8657fabf2e21a00eafc8d6f313c",
+      "targetSha256": "251aa48c56fd0b0271ef07e7686265a819d6f215d7e018d4feb2f631e2f299ac"
+    },
+    {
+      "identity": "images/covers/stock-people-02.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-02.jpg",
+      "donorSha256": "99b10f726f030fbbc296a76fc91ee49b4efa70d10ff3433bc87c70f5f40fb0ee",
+      "targetSha256": "45cc766412bc9262b2ffa2d9d931007592c439b90df0d7190421b6423957d9b4"
+    },
+    {
+      "identity": "images/covers/stock-people-03.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-03.jpg",
+      "donorSha256": "dbd9b9f458d2aff14f3cd6a6da0a9d8083c89643213aa9848dc91c612ddd319a",
+      "targetSha256": "580264bd042b8070f25a283dc13613d5633d632a6d5254d2d752e2d2c40caeb4"
+    },
+    {
+      "identity": "images/covers/stock-people-04.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-04.jpg",
+      "donorSha256": "09b4e5c6cbadd39a0d41f98fc7e0e1db460a2352c69427e4f5bf8095e5c629e0",
+      "targetSha256": "e4db9bfa73f24a89084843615f4416e25e5468c191a119f22889835e4e875493"
+    },
+    {
+      "identity": "images/covers/stock-people-05.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-05.jpg",
+      "donorSha256": "2b99253e489953638d86f81a7c0274055b9a62e9aad624c24cfe6b1c18c8045c",
+      "targetSha256": "7c120f8632341863e8d93a19dac1bf3a02473a6f1d293556c0e2ad0e14d69566"
+    },
+    {
+      "identity": "images/covers/stock-people-06.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-06.jpg",
+      "donorSha256": "792aebc72455feb8720ba7b046b3ce83234f1d632fa93c528b24527bab0dd561",
+      "targetSha256": "e11ecf3857e9859d94ab48883bbde101f6f63d5b2f1f0810d312727337e62c99"
+    },
+    {
+      "identity": "images/covers/stock-people-07.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-07.jpg",
+      "donorSha256": "ed957fb78dc45ba8b69474df80484861ccb6b15deaf003f80614dbd8dd5770ac",
+      "targetSha256": "07c975191a89bbdfd16fab1bb8bb470fff218399b4e9102a13866136f6c8fc15"
+    },
+    {
+      "identity": "images/covers/stock-people-08.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-08.jpg",
+      "donorSha256": "de391879d59f726b02e372c20d2215bb667883f8d619b1d4a637e14fed41a308",
+      "targetSha256": "6171aaa3027ae185e07c5749d9228f7f6e2707eb5c3d096c0c41c250725ecd32"
+    },
+    {
+      "identity": "images/covers/stock-people-09.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-09.jpg",
+      "donorSha256": "6fdcef843e654ef7c3b588780d0c446012362b6c17c736d2cf6435fd7db4fcf4",
+      "targetSha256": "054af0d821487e089bdd3e4bc6cfd6451cadc4a1ff00e3b825f0994ec0f41c5c"
+    },
+    {
+      "identity": "images/covers/stock-people-10.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-10.jpg",
+      "donorSha256": "84a263f540484ccf9d691ad0e9fa9ce927386f94cd28ac3c167e024f516fee8e",
+      "targetSha256": "776ba728a2cc22fba5c3f0c0f21427b6b69714844f0c138470cbc15f413d8fd8"
+    },
+    {
+      "identity": "images/covers/stock-people-11.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-11.jpg",
+      "donorSha256": "187bc18e2c56da86a4b59f7b14e880f896ae82d92de44c7a473bc53e52bb53d7",
+      "targetSha256": "1255c94a3837b5035efcf7081296ac1d40c94fdb0786198910b49635726a0bfa"
+    },
+    {
+      "identity": "images/covers/stock-people-12.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-12.jpg",
+      "donorSha256": "33c4afaa094fadeba16ac5d6e66a553d74d3d994cb89d65a011a7cce24e9b4e5",
+      "targetSha256": "33cc8b5d24796d56dcf81bdf549f73dd76e12ffc95e309cb0fef4e7d512de4d2"
+    },
+    {
+      "identity": "images/covers/stock-people-13.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/stock-people-13.jpg",
+      "donorSha256": "1bab2b87ec32cdd02186331ef918df9be48f4eca84269ec03361ff6074cd23ce",
+      "targetSha256": "7c1202629c6466b066ee8062f95361fc356687cefb55085c901992fdfafd0114"
+    },
+    {
+      "identity": "images/covers/teams-in-minimization.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/teams-in-minimization.jpg",
+      "donorSha256": "48d3d752d82dcd92f78a4e27b26e4023d769962fbb55cae10a313b2ddafc9929",
+      "targetSha256": "a06cd3411b4b1d320f786733bd2c063a62647a3383bb259d5365195682936741"
+    },
+    {
+      "identity": "images/covers/the-record.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/the-record.jpg",
+      "donorSha256": "4ec9c8c0e7a57f6efff78f1d5845ca06962c665fe0929749b287faa2684e7384",
+      "targetSha256": "70d7a92e3facc9247922c79c9cc0dd867bec2bcf9c6fe22e6cb22565549978f6"
+    },
+    {
+      "identity": "images/covers/viewpoint-wellbeing-surveys.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/viewpoint-wellbeing-surveys.jpg",
+      "donorSha256": "b4d1eb1bbcc241c6616e5d18dbc54fe11301865c76447ed5bf66dbc4746d8e8d",
+      "targetSha256": "23c56e666658a0786d79575a7433676da2752337a318120f2f56c9e4923994eb"
+    },
+    {
+      "identity": "images/covers/white-supremacy-culture-workplace.png",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/white-supremacy-culture-workplace.png",
+      "donorSha256": "eeba6b61433bfcee7ada39d1a21ff7e66958f00b3f2420de0c58ae92da69e14d",
+      "targetSha256": "42955f7f7a54aabf333a1b2a5df79f7d4f2add48c123627dbd46d0610e3e0b7b"
+    },
+    {
+      "identity": "images/covers/working-with-interpreter.jpg",
+      "kind": "images",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/images/covers/working-with-interpreter.jpg",
+      "donorSha256": "c40c8dae936fc8a6878ef4c835e8908a09c67dfb5afe7b3ae893e86dde9dbf80",
+      "targetSha256": "9567478e3ebc62e13e2eb25a515329d3f9e4d1b425cedb13ffbc5f6f20ef6fe7"
+    },
+    {
+      "identity": "media/inclusive-hiring.png",
+      "kind": "images",
+      "disposition": "added-missing-identity",
+      "href": "/legacy-one-dhs-media/media/inclusive-hiring.webp",
+      "donorSha256": "712f4eb970e1c264b6d6e06d2a5ca7204e90bb61eca589cf65d76611d2f28df5"
+    },
+    {
+      "identity": "audio/anti-racism-public-service.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/audio/anti-racism-public-service.mp3",
+      "donorSha256": "19a340586eeb02900cdce4cbd5e85699e14421ac3a8b0667eb184270a049d36a",
+      "targetSha256": "7a1e68094050b32d585fd24a06753161615d07f0fd7814a673bd6e9d27af8fcd"
+    },
+    {
+      "identity": "audio/dhs-equity-policy-and-toolkit.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/audio/dhs-equity-policy-and-toolkit.mp3",
+      "donorSha256": "988772bb19349f9db1b3ecd111592f13cd6436a9d4acf3a726836a6bd33f42bd",
+      "targetSha256": "ab4e89b74fbc3f6b3e9eb3fb556d4e38ad6a00750bf7989a8f8bd999416b8605"
+    },
+    {
+      "identity": "media/course-61-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-61-intro-am.mp3",
+      "donorSha256": "809542be2b60849952b0347d467bfb9bdf2eaf62a5e1ca01d617ab9a6e2746af",
+      "targetSha256": "622d267d3852e14d7327bd74103665f9a0a16eea2b8307afb0e040aa0d1ef01f"
+    },
+    {
+      "identity": "media/course-9-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-9-intro-am.mp3",
+      "donorSha256": "15157ec9385bac2e513e5a2cddfaf44a63a5d528647032a918cc49052af58c14",
+      "targetSha256": "a0f523d5b4c4d24c1c29aaf2364079794eaac559cffb6744d717edb19d99c3a0"
+    },
+    {
+      "identity": "media/course-acc-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-acc-intro-am.mp3",
+      "donorSha256": "886ea50bb2d584b057f4f66f1f677c3db1588de795f7c72fd13e62367896e906",
+      "targetSha256": "64808750bdb11291676d11174a6e374cbc41f60bc948fe56ed805b6604d22e4e"
+    },
+    {
+      "identity": "media/course-bi-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-bi-intro-am.mp3",
+      "donorSha256": "4d2616fe62b021868f4db97478ded93bbd684555af1c88c16bd9acc7d042f681",
+      "targetSha256": "a95992b2344b37990198c6e6de5b0941eadbdb5a96881febb40f8646c1a6125d"
+    },
+    {
+      "identity": "media/course-cb-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-cb-intro-am.mp3",
+      "donorSha256": "225a563436e9826cd6962253121e6d3df3c81e763634e73d81ff4bd6b8c5e4d4",
+      "targetSha256": "057cd1f5c181d3d1201f450fbd9e8a89011271b0b96c8278ad1dfd2a57ddd8a8"
+    },
+    {
+      "identity": "media/course-cf-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-cf-intro-am.mp3",
+      "donorSha256": "b3c6a6e5a43013a8a2cf85d2e8d8d26446524d8f4b80f2f129fb0951611064b8",
+      "targetSha256": "1af18c9b95cfbcf8952af2e76dcb90d373e5831547c6ccbdb144c83396c38505"
+    },
+    {
+      "identity": "media/course-ch-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ch-intro-am.mp3",
+      "donorSha256": "d3961f2c73b65de8f475c0ac0facf92449ffb53628960fcf9201da17d18923b1",
+      "targetSha256": "28ede0532bd554a23b97598b117c9f844787d07c3b38a44c48a1c5a8638919f3"
+    },
+    {
+      "identity": "media/course-ci-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ci-intro-am.mp3",
+      "donorSha256": "1ef4e47215265f082211a971e1a91bfc4590ee2d760032113df94b4251c54b40",
+      "targetSha256": "97d4c192af879e90f4fb703c702656535c350cb52dab95322e5ba99341c28e68"
+    },
+    {
+      "identity": "media/course-cs-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-cs-intro-am.mp3",
+      "donorSha256": "79e54624490ebdd4d5dc29346b137505757a14d6fb271f3ed91280ffe46a52b5",
+      "targetSha256": "17ef8fcbb973f62e9f9fb1ae14be7276703a49004eb36228b1a3da00664061fa"
+    },
+    {
+      "identity": "media/course-cu-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-cu-intro-am.mp3",
+      "donorSha256": "b7514245611dc1ab7549d1dd3079bbd604ace215a21762ba73a0d24cd38264b2",
+      "targetSha256": "fc689e9a6527d7c04534eb6b81a72c57a2dded509d11a9621a2f239219e61224"
+    },
+    {
+      "identity": "media/course-dl-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-dl-intro-am.mp3",
+      "donorSha256": "643bb1a7d4d8a10acd1ab3d1cbc9f4dd557d989c193f0ca10cbcbc32de399105",
+      "targetSha256": "613fd041a5a3adde4e35e6bfdebb3c5ec3179d1f8731fee10675efe41b665dea"
+    },
+    {
+      "identity": "media/course-ea-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ea-intro-am.mp3",
+      "donorSha256": "fc23cb7b3dcdd40f4f7aabecb3d245db9249ed4999b8216258600486aa20b54f",
+      "targetSha256": "15adeb6b15e54a09e18a2225b9455fc3782c779fb9e0a49f08b9833ffa3adc6f"
+    },
+    {
+      "identity": "media/course-ef-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ef-intro-am.mp3",
+      "donorSha256": "5c6c39af6685b838bc982639b28e35a81a66c8b4fd4a4b57e0809838f5b08eb2",
+      "targetSha256": "0bb8653bf4b0ef218024d402a064a731558b84e2e8afbbd2b31a8005aca18828"
+    },
+    {
+      "identity": "media/course-ei-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ei-intro-am.mp3",
+      "donorSha256": "456fd538e6e42a6529907c7c678c09c2545b3590c55df2b8a2d210a072a3ac18",
+      "targetSha256": "6cd386d62c35c345a712584700b7f370776664f359f3ea303ec648d073dcfdc6"
+    },
+    {
+      "identity": "media/course-el-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-el-intro-am.mp3",
+      "donorSha256": "a756a8e15e90a9ae294f24ae2177bc3b2c8b1b0c837375fe5def9c6be8df2184",
+      "targetSha256": "9bcf0ca5c8e1067fd7691613c8fe44e085d43a0ea3915bdd2cc5c3bc4a981115"
+    },
+    {
+      "identity": "media/course-eo-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-eo-intro-am.mp3",
+      "donorSha256": "666c55ec662ba8e9cfcc651304e32e0ff1da7b1f803a9903025ef791e676aabf",
+      "targetSha256": "a3c5821b538f52ba88d226898ff5238b74b86334262ebb2e6d9e342e0908cd9e"
+    },
+    {
+      "identity": "media/course-fg-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-fg-intro-am.mp3",
+      "donorSha256": "a98a4dd6b2c53c5cad0d30dc6152e64774359e55d89d9a77e10b0f1e0871d9b2",
+      "targetSha256": "4be065bd2cab85c62a5115c7416590152e54877c333b8019b65164099f94e40c"
+    },
+    {
+      "identity": "media/course-fn-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-fn-intro-am.mp3",
+      "donorSha256": "5cf2a040b45115cc329a9812811cf9f2f6031a1081804d9336f8512bc6f93170",
+      "targetSha256": "1e0964a378fbb36623bd87f717d45e81757b3825c01c7c44e2c5c085d40b295c"
+    },
+    {
+      "identity": "media/course-hu-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-hu-intro-am.mp3",
+      "donorSha256": "8ed48230902c2150b3e0dc38e4cf18f1e7153e5f26a9ab6f0a28eac7888d1468",
+      "targetSha256": "840acbc68763458e4809219b9c8de257148be67cfe23e75daf11d6b13b723a9e"
+    },
+    {
+      "identity": "media/course-hw-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-hw-intro-am.mp3",
+      "donorSha256": "2154b50ac278bd9f2fa7255c53304f1b62721158f45d6f1975d7eb35c9926ede",
+      "targetSha256": "8ea3706dd23184efaa081aa12a407170356cdc2e8a56d0aa7b4804108ea67864"
+    },
+    {
+      "identity": "media/course-ic-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ic-intro-am.mp3",
+      "donorSha256": "eacc25cb46173b6ecf6f93d7f2beca1d58df36d3537614e44f405e0e74a50889",
+      "targetSha256": "d282010484e998e60d8e3b9e849b1b08de3f9712448ec02f188de342156dbd9c"
+    },
+    {
+      "identity": "media/course-jd-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-jd-intro-am.mp3",
+      "donorSha256": "2e9d90745a66fcacee43985c363cd901a29d14382f561d1a794351f1824c2379",
+      "targetSha256": "d497c0ca70d3c976f55345e77635f203461ebe7f978008bdc80e5e98dce9d692"
+    },
+    {
+      "identity": "media/course-la-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-la-intro-am.mp3",
+      "donorSha256": "4133aeeb071f6b6665ff290d2576932ff3b4fbbe5ea906d563f649d250db3471",
+      "targetSha256": "040746bd35ea38f27002ad03fc8d0dde75c76518f43bccde72907bcd290d1da4"
+    },
+    {
+      "identity": "media/course-lc-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-lc-intro-am.mp3",
+      "donorSha256": "a975f0520d95d1eee41533319c5663bec5629ab625efd4ee86aecd7d4dcefcf9",
+      "targetSha256": "e27621c9393da87422aadf789a775e3cb5a3a87736c4d56f2e8e722f2a36cc69"
+    },
+    {
+      "identity": "media/course-lg-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-lg-intro-am.mp3",
+      "donorSha256": "de8f6615bdf62137f2a0f0bacc8bfa8e855650a55eac20a2e8b8e3864ff33e97",
+      "targetSha256": "390858d3b57337db0c67c49d6712c6981b3cf69950d02dd14cb59d714d0a66b2"
+    },
+    {
+      "identity": "media/course-lp-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-lp-intro-am.mp3",
+      "donorSha256": "5b8784eac2fbcb9a17d99ccfb7ab82378fa8e49a7ff3eb6f904ed108f4f248c9",
+      "targetSha256": "83efb1581e57d5868178840ee1caae9198cf7a0bedecac5f6b021746caeb8dd3"
+    },
+    {
+      "identity": "media/course-min-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-min-intro-am.mp3",
+      "donorSha256": "74f0e54a5dfceb491d6491873be2ddd4fd864622b4c6a147cb0618fb8100b507",
+      "targetSha256": "3e07bdc62c8f6ac35825887486419eb4998fab139f3616cd609280cdf01b8f9d"
+    },
+    {
+      "identity": "media/course-mn-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-mn-intro-am.mp3",
+      "donorSha256": "e0aa594a81c8af43dce6097966f8f32e86f54555d7950cb3ad852505e58e33db",
+      "targetSha256": "30ac77c4af3a2eaa38156a72b97c468b1b28c1242a5e74e49b1c6ec9f3946c84"
+    },
+    {
+      "identity": "media/course-mo-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-mo-intro-am.mp3",
+      "donorSha256": "2cfae30a0552c0d82acc8b51cb3bc7bff21e29ab865392dba1de22685d7bc9c6",
+      "targetSha256": "165e5adfe57e6d570da03972c1c6a12e012cf46cb9d56ee9ff7dadc9a9055dc6"
+    },
+    {
+      "identity": "media/course-ms-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ms-intro-am.mp3",
+      "donorSha256": "734015719a26a6c084ad59d5a2eba980819d52924dbb6790d3fdc70c0e0508d7",
+      "targetSha256": "11b006cedbf672bcac60f2f82bfdad2e8209f0d93876d16967d628b5dfb3bbc5"
+    },
+    {
+      "identity": "media/course-nd-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-nd-intro-am.mp3",
+      "donorSha256": "e8b8c9b66f516b5b54bcbf1733b6661e6287b194949ea924f27415781f81a5a1",
+      "targetSha256": "9b45d765409671ebb9fb9f89043608eacbfc3046c9dae9566e10fc251b591d71"
+    },
+    {
+      "identity": "media/course-on-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-on-intro-am.mp3",
+      "donorSha256": "c92af100a1dfc1f3b1d581d2751f4215ca5e997ceadf89c4b91e83e4e07dbaf0",
+      "targetSha256": "77a51af3365425bcb178d67c1e10054ca6932ac0c3fae49da20c8b8d6a4a1b5c"
+    },
+    {
+      "identity": "media/course-out-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-out-intro-am.mp3",
+      "donorSha256": "34208d251a4cfd901071e3f5bc5971cb00273aa2968ccf7f86f0bd4b4357b622",
+      "targetSha256": "c757b52882515eeb19d3fe12e03f571a605cf55f6949941b09087bc99bdb97b1"
+    },
+    {
+      "identity": "media/course-pd-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-pd-intro-am.mp3",
+      "donorSha256": "935ea9b97745659f8882b8b6b947078ac43fc11db8e7c801f402099b60523989",
+      "targetSha256": "767bab1d552b5e9ce89741caff356b3dc0324467103dfe5bc5657b75e074244e"
+    },
+    {
+      "identity": "media/course-pl-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-pl-intro-am.mp3",
+      "donorSha256": "3ad7d80b63c4da7d7b9efa8ea210b520917e94cfbd2207567017eb8c911dc250",
+      "targetSha256": "f62230dc67af6b1ff3a95edd8287829cc96d35402f94fa2dbdb6de989755cf20"
+    },
+    {
+      "identity": "media/course-rec-intro-gary.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-rec-intro-gary.mp3",
+      "donorSha256": "bcc0d79c961abb7924ae3c07a9c0885247fddd1a015c5a11804554447128fce2",
+      "targetSha256": "e1fa25729e463b037129b4d6f69e00503c10afeb4bdb6e48f311e1aa192569c2"
+    },
+    {
+      "identity": "media/course-se-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-se-intro-am.mp3",
+      "donorSha256": "4ee8a119b2fb3a3258dced9cbd8e7a7e6315a4451d7e6c9b4e0ab6f50d9edd52",
+      "targetSha256": "628f28bb9cfed54c97309bd5f6abdf1edd39f5bfe2bfc4f35931787f7120e2fe"
+    },
+    {
+      "identity": "media/course-sh-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-sh-intro-am.mp3",
+      "donorSha256": "2763af8a9362fa92a7a15f2db2e593aae415f2cb1e0a3c7f15c59b38551a76c4",
+      "targetSha256": "d3fab75e5f2bf47d612861f5265c482ffdb701b57e396e7ee8800f805d51f900"
+    },
+    {
+      "identity": "media/course-sm-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-sm-intro-am.mp3",
+      "donorSha256": "d924e5a76855656caea476086afc8569d4d0f7cc94294980d6513b159e229081",
+      "targetSha256": "9a314886b91cfbb7ca1ad965c7dbfefa281394a4c3844bfdcf8fedb9c77cd915"
+    },
+    {
+      "identity": "media/course-so-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-so-intro-am.mp3",
+      "donorSha256": "21c93817e7cbd5bafff303f915aa663062d609758deda6af1adf2971425df88f",
+      "targetSha256": "f92db7fc7c83c0ea52fa44863ee3ccd03811c8b6cb4781367c42555759eb291b"
+    },
+    {
+      "identity": "media/course-ss-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-ss-intro-am.mp3",
+      "donorSha256": "c89dfcd64ae5746add00c3bbb8364e37ca06a57d2968a753df260c86e3c8d225",
+      "targetSha256": "ec7a852e86ac969cbffc8fb5f54113476a959b592bbcbcbefb53cdede8301332"
+    },
+    {
+      "identity": "media/course-tm-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-tm-intro-am.mp3",
+      "donorSha256": "6d37620c59adcf9e7dffbae710cfe8ddce74a27e1defc3e55ee3e0edd261f680",
+      "targetSha256": "b3bf1ed75743d634e7a3c268b180f042354832fabcc1bf09680460fbe583eeb4"
+    },
+    {
+      "identity": "media/course-vs-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-vs-intro-am.mp3",
+      "donorSha256": "17e325d05097339b11383ddfde32624dd58db30b6f05fdccf46e61d0aee35c15",
+      "targetSha256": "efcc840b85a8b0c8bd675a8d0c3a980401d90f4a8227306aa72ef5447aaa5c08"
+    },
+    {
+      "identity": "media/course-wi-intro-am.mp3",
+      "kind": "audio",
+      "disposition": "matched-identity-different-encoding",
+      "href": "/media/course-wi-intro-am.mp3",
+      "donorSha256": "7f9564032950a6b8064831c39a27d5bf5fa0d0b3976871f1fb04ef72bf1dac75",
+      "targetSha256": "862a5500cea07b39fc356bcdd88c41b89853b217f2988531f99c2cac51a99ce5"
+    },
+    {
+      "identity": "media/resource-read-aloud.mp3",
+      "kind": "audio",
+      "disposition": "added-missing-identity",
+      "href": "/legacy-one-dhs-media/media/resource-read-aloud.ogg",
+      "donorSha256": "f70887532b00ac01f9386e065a962a6afbcfb0939c8869c75ec66dbecaa1d312"
+    }
+  ]
+}
