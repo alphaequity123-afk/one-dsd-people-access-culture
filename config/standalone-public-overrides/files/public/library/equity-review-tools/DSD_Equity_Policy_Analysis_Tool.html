@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One DSD Equity Policy Review</title>
+<style>
+:root{
+  --ink:#1C2630; --slate:#5B6B7A; --line:#D5DCE2; --paper:#F4F7F9; --white:#FFFFFF;
+  --mn:#003865; --lake:#2A7F9E; --lake-soft:#E3F0F5; --gold:#9A6B12; --gold-soft:#FBF3E3;
+  --moss:#52677B; --moss-soft:#E9EEF3; --clay:#675747; --clay-soft:#F1ECE4; --both:#6B5B95; --both-soft:#ECE7F5;
+  --rail:248px; --coach:300px;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+a{color:var(--lake)}
+button{font:inherit}
+.skip{position:absolute;left:-999px;top:0;background:var(--mn);color:#fff;padding:.5rem 1rem}
+.skip:focus{left:0;z-index:50}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* header */
+.top{background:var(--mn);color:#fff;padding:.75rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.top h1{font-size:1.1rem;font-weight:600;margin:0;letter-spacing:.01em}
+.top .sub{font-size:.85rem;opacity:.85}
+.top .actions{margin-left:auto;display:flex;gap:.5rem;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:4px;padding:.45rem .8rem;cursor:pointer}
+.btn:hover{background:var(--lake-soft)}
+.btn.primary{background:var(--lake);border-color:var(--lake);color:#fff}
+.btn.primary:hover{background:#226a84}
+.btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.small{padding:.25rem .55rem;font-size:.85rem}
+.btn.danger{color:var(--clay);border-color:var(--clay)}
+
+/* layout */
+.shell{display:grid;grid-template-columns:var(--rail) minmax(0,1fr) var(--coach);min-height:calc(100vh - 56px)}
+.rail{background:#fff;border-right:1px solid var(--line);padding:1rem 0;position:sticky;top:0;height:calc(100vh - 56px);overflow:auto}
+.rail nav button{display:flex;gap:.6rem;align-items:flex-start;width:100%;text-align:left;background:none;border:0;border-left:4px solid transparent;padding:.55rem 1rem .55rem .9rem;color:var(--ink);cursor:pointer;line-height:1.3}
+.rail nav button:hover{background:var(--paper)}
+.rail nav button[aria-current="step"]{border-left-color:var(--mn);background:var(--paper);font-weight:600}
+.rail .num{flex:0 0 1.6rem;height:1.6rem;border-radius:50%;border:1.5px solid var(--line);font-size:.8rem;display:grid;place-items:center;color:var(--slate)}
+.rail nav button[aria-current="step"] .num{border-color:var(--mn);color:var(--mn)}
+.rail .num.done{background:var(--moss);border-color:var(--moss);color:#fff}
+.rail .num.part{border-color:var(--gold);color:var(--gold)}
+.rail .lbl small{display:block;color:var(--slate);font-weight:400;font-size:.78rem}
+.rail .meter{margin:1rem 1rem 0;font-size:.8rem;color:var(--slate)}
+.rail .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:.3rem}
+.rail .bar i{display:block;height:100%;background:var(--moss);width:0;transition:width .3s}
+.rail .mode{margin:.75rem 1rem;padding:.6rem .75rem;background:var(--gold-soft);border-left:3px solid var(--gold);font-size:.82rem}
+.rail .mode strong{display:block}
+
+.main{padding:1.5rem 2rem 4rem;max-width:calc(72ch + 4rem)}
+.main.wide{max-width:1040px}
+.main.wide .lead{max-width:72ch}
+.main h2{font-size:1.65rem;font-weight:600;margin:0 0 .25rem;line-height:1.2}
+.main .lead{color:var(--slate);margin:0 0 1.5rem;max-width:62ch}
+.q{margin:0 0 1.4rem}
+.q label,.q .qt{display:block;font-weight:600;margin-bottom:.3rem}
+.q .help{color:var(--slate);font-size:.9rem;margin:0 0 .45rem}
+.q textarea,.q input[type=text],.q input[type=date],.q select{width:100%;border:1px solid var(--line);border-radius:4px;padding:.55rem .65rem;font:inherit;background:#fff;color:var(--ink)}
+.q textarea{min-height:5.5rem;resize:vertical}
+.q textarea:focus,.q input:focus,.q select:focus{border-color:var(--lake);outline:3px solid var(--lake-soft)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chips label{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--line);border-radius:999px;padding:.3rem .7rem;background:#fff;cursor:pointer;font-weight:400;margin:0}
+.chips label:has(input:checked){border-color:var(--mn);background:var(--lake-soft)}
+.chips input{margin:0}
+.radio label{display:flex;gap:.5rem;align-items:flex-start;font-weight:400;padding:.4rem .6rem;border:1px solid var(--line);border-radius:4px;background:#fff;margin:0 0 .4rem;cursor:pointer}
+.radio label:has(input:checked){border-color:var(--mn);background:var(--lake-soft)}
+.radio input{margin-top:.3rem}
+.note{border-left:3px solid var(--lake);background:var(--lake-soft);padding:.6rem .8rem;margin:1rem 0;font-size:.92rem}
+.note.req{border-color:var(--gold);background:var(--gold-soft)}
+.note.ok{border-color:var(--moss);background:var(--moss-soft)}
+.note.warn{border-color:var(--clay);background:var(--clay-soft)}
+.pager{display:flex;justify-content:space-between;margin-top:2rem;gap:1rem}
+.example{border:1px dashed var(--line);border-radius:4px;padding:.6rem .8rem;font-size:.9rem;color:var(--slate);background:#fff}
+.example summary{cursor:pointer;color:var(--ink);font-weight:600}
+.example p{margin:.4rem 0 0}
+
+/* affected communities grid */
+.grid{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff}
+.grid table{width:100%;border-collapse:collapse;font-size:.9rem}
+.grid th{background:var(--mn);color:#fff;text-align:left;padding:.5rem .6rem;font-weight:600}
+.grid td{padding:.45rem .4rem;border-top:1px solid var(--line);vertical-align:top}
+.grid td input,.grid td select,.grid td textarea{width:100%;border:1px solid var(--line);border-radius:3px;padding:.35rem .45rem;font:inherit;background:#fff}
+.grid td textarea{min-height:2.6rem;resize:vertical}
+.grid tr[data-eff="benefit"] td:first-child{box-shadow:inset 5px 0 0 var(--moss)}
+.grid tr[data-eff="burden"] td:first-child{box-shadow:inset 5px 0 0 var(--clay)}
+.grid tr[data-eff="both"] td:first-child{box-shadow:inset 5px 0 0 var(--both)}
+.grid tr[data-eff="unknown"] td:first-child{box-shadow:inset 5px 0 0 var(--gold)}
+.grid tr[data-eff=""] td:first-child{box-shadow:inset 5px 0 0 var(--line)}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.82rem;color:var(--slate);margin:.5rem 0 1rem}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;vertical-align:-1px;margin-right:.3rem}
+.gridfoot{display:flex;gap:.5rem;padding:.5rem;border-top:1px solid var(--line);background:var(--paper)}
+.summary-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:1rem 0}
+.summary-strip div{padding:.5rem .6rem;border-radius:4px;font-size:.85rem}
+.summary-strip strong{display:block;font-size:1.3rem;line-height:1.1}
+.s-benefit{background:var(--moss-soft);color:var(--moss)}
+.s-burden{background:var(--clay-soft);color:var(--clay)}
+.s-both{background:var(--both-soft);color:var(--both)}
+.s-unknown{background:var(--gold-soft);color:var(--gold)}
+
+/* recommendations list */
+.recs .rec{border:1px solid var(--line);border-radius:4px;padding:.6rem .7rem;margin-bottom:.6rem;background:#fff}
+.recs .rec .row{grid-template-columns:2fr 1fr 1fr}
+.recs .rec textarea{min-height:3rem}
+
+/* alignment check */
+.align{display:grid;grid-template-columns:1fr;gap:.4rem}
+.align label{display:grid;grid-template-columns:auto 1fr;gap:.6rem;align-items:start;border:1px solid var(--line);border-radius:4px;padding:.5rem .6rem;background:#fff;font-weight:400;margin:0;cursor:pointer}
+.align label:has(input:checked){border-color:var(--mn);background:var(--lake-soft)}
+.align label small{display:block;color:var(--slate)}
+
+/* coach */
+.coach{background:#fff;border-left:1px solid var(--line);padding:1.25rem 1.1rem;position:sticky;top:0;height:calc(100vh - 56px);overflow:auto;font-size:.9rem}
+.coach h3{font-size:.95rem;margin:1.2rem 0 .4rem;color:var(--mn)}
+.coach h3:first-child{margin-top:0}
+.coach ul{padding-left:1.1rem;margin:.3rem 0}
+.coach li{margin-bottom:.35rem}
+.coach .anchor{background:var(--paper);border-left:3px solid var(--mn);padding:.5rem .7rem;font-size:.86rem}
+.coach .strong-weak{display:grid;gap:.4rem}
+.coach .strong-weak div{padding:.45rem .6rem;border-radius:4px;font-size:.85rem}
+.coach .sw-strong{background:var(--moss-soft)}
+.coach .sw-weak{background:var(--clay-soft)}
+.coach .tabs{display:flex;gap:.3rem;margin-bottom:.8rem}
+.coach .tabs button{flex:1;border:1px solid var(--line);background:#fff;padding:.35rem;border-radius:4px;cursor:pointer;font-size:.85rem}
+.coach .tabs button[aria-selected="true"]{background:var(--mn);color:#fff;border-color:var(--mn)}
+.coach .rsec{display:none}
+.coach .rsec.on{display:block}
+.coach .glossary dt{font-weight:600;margin-top:.5rem}
+.coach .glossary dd{margin:0;color:var(--slate)}
+
+/* record / output */
+.record{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.5rem 1.75rem;font-size:.95rem}
+.record h2{font-size:1.4rem;margin:0 0 .2rem}
+.record h3{font-size:1.05rem;margin:1.3rem 0 .4rem;border-bottom:1px solid var(--line);padding-bottom:.2rem;color:var(--mn)}
+.record table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.4rem 0}
+.record th,.record td{border:1px solid var(--line);padding:.35rem .5rem;text-align:left;vertical-align:top}
+.record th{background:var(--paper)}
+.record .meta{color:var(--slate);font-size:.88rem;margin:0 0 .8rem}
+.record .verdict{display:inline-block;padding:.25rem .6rem;border-radius:4px;font-weight:600;margin:.3rem 0}
+.v-proceed{background:var(--moss-soft);color:var(--moss)}
+.v-changes{background:var(--gold-soft);color:var(--gold)}
+.v-redesign{background:var(--both-soft);color:var(--both)}
+.v-stop{background:var(--clay-soft);color:var(--clay)}
+.record .empty{color:var(--clay);font-style:italic}
+.outbar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.rubric{display:grid;gap:.4rem;margin:1rem 0}
+.rubric div{display:grid;grid-template-columns:1.4rem 1fr;gap:.5rem;align-items:start;padding:.45rem .6rem;border:1px solid var(--line);border-radius:4px;background:#fff;font-size:.9rem}
+.rubric .ok{color:var(--moss);font-weight:700}
+.rubric .no{color:var(--clay);font-weight:700}
+.toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:.5rem 1rem;border-radius:4px;opacity:0;transition:opacity .25s;pointer-events:none;font-size:.9rem}
+.toast.show{opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+@media (max-width:1180px){
+  .shell{grid-template-columns:var(--rail) minmax(0,1fr)}
+  .coach{display:none}
+  .coach.open{display:block;position:fixed;right:0;top:56px;width:min(92vw,360px);z-index:40;box-shadow:-6px 0 24px rgba(0,0,0,.15);height:calc(100vh - 56px)}
+  .coachbtn{display:inline-flex}
+}
+.coachbtn{display:none}
+@media (max-width:760px){
+  .shell{grid-template-columns:1fr}
+  .rail{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:.5rem}
+  .rail nav{display:flex;overflow:auto;gap:.2rem}
+  .rail nav button{width:auto;border-left:0;border-bottom:3px solid transparent;white-space:nowrap}
+  .rail nav button[aria-current="step"]{border-bottom-color:var(--mn)}
+  .rail .lbl small{display:none}
+  .rail .meter,.rail .mode{display:none}
+  .main{padding:1rem}
+  .row,.recs .rec .row{grid-template-columns:1fr}
+  .summary-strip{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{
+  .top,.rail,.coach,.pager,.outbar,.toast,.coachbtn{display:none!important}
+  .shell{display:block}
+  .main{max-width:none;padding:0}
+  body{background:#fff}
+  .record{border:0;padding:0}
+  .main > *:not(.printonly){display:none}
+  .printonly{display:block!important}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+<link rel="stylesheet" href="/program-chrome.css"><link rel="stylesheet" href="/internal-standalone.css">
+</head>
+<body data-page-purpose="tools" class="dsd-program-chrome"><a href="#main" class="skip-link">Skip to main content</a>
+<header class="dsd-header">
+<div class="dsd-shell dsd-brand-row">
+<a href="/" class="dsd-brand" aria-label="One DSD People, Access and Culture home"><img src="/images/dhs-logo.png" width="319" height="68" alt="Minnesota Department of Human Services"><span><strong>One DSD</strong><span>People, Access and Culture</span></span></a>
+<div class="dsd-utilities"><a href="/program/model">Connect learning with work</a><a href="/ask">Common questions</a><a href="/my-work">My work</a><button type="button" id="dsd-menu" aria-controls="dsd-navigation" aria-expanded="false" class="dsd-menu">Menu</button></div>
+</div>
+<nav id="dsd-navigation" aria-label="Program" class="dsd-nav"><div class="dsd-shell"><a href="/learn">Learn</a><a href="/program/resources" aria-current="location">Apply a tool</a><a href="/support">Get support</a><a href="/one-dsd">DSD programs</a><a href="/about">About the program</a><a class="dsd-mobile-utility" href="/ask">Common questions</a><a class="dsd-mobile-utility" href="/my-work">My work</a></div></nav>
+<div class="dsd-shell dsd-breadcrumb"><a href="/program/resources">Tools and resources</a></div>
+</header>
+<a class="skip" href="#main">Skip to the worksheet</a>
+<section class="top">
+  <div>
+    <h1>One DSD Equity Policy Review</h1>
+    <div class="sub">Disability Services Division · analyze a policy, procedure, legislative proposal, bill, budget or service change through the DHS Equity Policy</div>
+  </div>
+  <nav aria-label="Review navigation"><a style="color:white" href="/equity-review" target="_top">All equity reviews</a> · <a style="color:white" href="/one-dsd/planning" target="_top">Policy and planning</a></nav><div class="actions">
+    <button class="btn ghost small" id="btnNew">New analysis</button>
+    <button class="btn ghost small" id="btnOpen">Open draft (.json)</button>
+    <input type="file" id="fileOpen" accept=".json,application/json" class="sr" aria-label="Open a saved draft">
+    <button class="btn ghost small" id="btnSave">Save draft (.json)</button>
+    <button class="btn ghost small coachbtn" id="btnCoach" aria-expanded="false" aria-controls="coach">Coach and resources</button>
+  </div>
+<p id="draftStatus" role="status" aria-live="polite" style="margin:.5rem 1rem">Your draft stays in this browser. It is not submitted or shared. Avoid personal or confidential information; downloaded drafts are unencrypted.</p><button class="btn small" id="btnClearLocal">Clear browser draft</button></section>
+
+<div class="shell">
+  <aside class="rail" aria-label="Analysis steps">
+    <nav id="nav"></nav>
+    <div class="meter" id="meter"><span id="meterText">0 of 9 steps complete</span><div class="bar"><i id="meterBar"></i></div></div>
+    <div class="mode" id="modeBox" hidden><strong id="modeTitle"></strong><span id="modeText"></span></div>
+  </aside>
+
+  <main class="main" id="main" tabindex="-1">
+    <div id="stepHost"></div>
+    <div class="pager" id="pager">
+      <button class="btn" id="btnPrev">Previous step</button>
+      <button class="btn primary" id="btnNext">Next step</button>
+    </div>
+    <section class="printonly" id="printHost" style="display:none"></section>
+  </main>
+
+  <aside class="coach" id="coach" aria-label="Coach and resources">
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" id="tabCoach" data-tab="coachPane">Coach</button>
+      <button role="tab" aria-selected="false" id="tabRes" data-tab="resPane">Resources</button>
+    </div>
+    <div id="coachPane" class="rsec on" role="tabpanel"></div>
+    <div id="resPane" class="rsec" role="tabpanel"></div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ---------------- content ---------------- */
+const TYPES = {
+  policy:{label:"DHS or division policy (new or revised)",hint:"Policy development and revisions are a named use of the Equity Analysis Toolkit."},
+  procedure:{label:"Procedure, manual, form or business process",hint:"Administrative or division policies and procedures are a named toolkit use."},
+  legislative:{label:"Legislative proposal (agency-initiated)",hint:"Legislative proposals are a named toolkit use. Route the proposal itself through the authorized legislative process; this record supports it."},
+  bill:{label:"Bill analysis (HF / SF or draft language)",hint:"Produces an equity section you can paste into the standard bill analysis. The bill analysis remains the official product of its process."},
+  budget:{label:"Budget, fiscal note or funding change",hint:"Agencywide and administration or area budgets are a named toolkit use."},
+  service:{label:"Program or service delivery change",hint:"Service delivery and special projects are named toolkit uses."},
+  contract:{label:"RFP, grant, contract or procurement",hint:"Request for proposal processes, contracting and procurement are named toolkit uses. Confirm permissible equity language with ADSA procurement and legal."},
+  other:{label:"Other decision with lasting effect",hint:"The policy names 'additional opportunities to embed equity, as identified.'"}
+};
+
+const DEFAULT_GROUPS = [
+  "Communities of color and multiracial people",
+  "American Indian people and Tribal Nations",
+  "People with disabilities (including the people DSD serves)",
+  "LGBTQIA2S+ people",
+  "Veterans",
+  "People with limited English proficiency or who use interpreters",
+  "People in rural and Greater Minnesota",
+  "Direct support and provider workforce",
+  "DSD staff and workforce"
+];
+
+const STEPS = [
+ {id:"s0",title:"Set up and triage",short:"What is being decided and which review is required",
+  coach:{anchor:"DHS Equity Policy, Procedures: 'A formal equity analysis is required for all actions that have prolonged and/or long-term impact scheduled for approval by a supervisor, manager, director, assistant or deputy commissioner, or commissioner.' An equity scan is appropriate only when a formal analysis was already completed and its results integrated.",
+   prompts:["Name the decision in one sentence a community member would understand.","Who signs this? That person is the accountable decision-maker, not the analyst.","If this is a bill, record the file number, author and the stage (introduced, committee, conference)."],
+   strong:"Decision, decision-maker, date and review track are all named before any analysis starts.",weak:"'We'll see what the analysis says' with no owner or date; a short timeline used as the reason to skip a full analysis.",
+   pitfalls:["Treating 'we don't have time' as a reason for a scan. The policy ties the track to impact and approval level, not to the calendar.","Leaving the decision-maker blank. Every recommendation in Step 9 needs a person authorized to act on it."]}},
+ {id:"s1",title:"Describe the action and outcomes",short:"Problem, proposal, intended results",
+  coach:{anchor:"Toolkit Criterion 1 (Impact assessment): What is the proposed policy/program/initiative? What are the desired outcomes? The policy's purpose is 'reducing disparities and inequitable outcomes, and improving access.'",
+   prompts:["What problem is this solving, and whose problem is it?","What would be true for people a year after this takes effect?","How would you know it worked, in a number and in a story?"],
+   strong:"Outcomes are stated for the people affected, in measurable terms, and the problem statement names a disparity or barrier.",weak:"Outcomes describe the organization ('compliance', 'efficiency') with no reference to who is better off.",
+   pitfalls:["Describing the mechanism instead of the result ('we will update the manual').","Assuming the problem is the same for every community."]}},
+ {id:"s2",title:"Who is affected",short:"Communities, benefits and burdens",
+  coach:{anchor:"Policy definition, 'Communities experiencing inequities': communities of color, multiracial individuals, American Indians, veterans, LGBTQIA2S+ individuals, and individuals with disabilities. Policy question: 'What groups are impacted? What is the nature of the impact?'",
+   prompts:["Who is most likely to be reached? Who is most likely to be missed?","Where do identities overlap (a Hmong elder who uses a waiver; a Black direct support worker in a rural county)?","Mark 'unknown' when you do not know. An honest unknown is a data task in Step 3, not a failure."],
+   strong:"Each policy-named community has an entry; burdens are specific (what changes for them, how severely) and tied to evidence or engagement.",weak:"'All Minnesotans benefit equally' or a single row marked 'none'.",
+   pitfalls:["Listing groups without saying how they are affected.","Forgetting the workforce. Many DSD decisions land on direct support professionals and county staff before they reach people served."]}},
+ {id:"s3",title:"Data and evidence",short:"What the numbers and accounts show",
+  coach:{anchor:"Toolkit Criterion 3 (Data and evidence): What data sources were used? How was the data disaggregated by race, gender, disability status, income? What did the data reveal about current disparities and needs?",
+   prompts:["What DSD-held data exists (waiver enrollment, service authorizations, appeals, complaints, workforce)?","Can it be disaggregated by race, ethnicity, disability, language, geography, age?","What do people's accounts (listening sessions, complaints, Consult requests) add that the numbers cannot?"],
+   strong:"Sources are named, disaggregation is attempted, findings are stated plainly, and gaps are logged as follow-up with an owner.",weak:"'No data available' with no attempt to use proxies, enterprise data through the ADSA Equity Director, or qualitative accounts.",
+   pitfalls:["Reading an absence of complaints as an absence of harm.","Using statewide averages that hide county or community differences."]}},
+ {id:"s4",title:"Engagement",short:"Who was heard and how it changed the proposal",
+  coach:{anchor:"Policy objective: 'Authentic, meaningful and ongoing community engagement and inclusion during the formation of new or recurring policies, practices, procedures.' Toolkit Criterion 2 asks whether the 11 Tribal Nations, urban Native populations or Tribal Liaisons were notified and engaged. Executive Order 19-24 governs Tribal consultation; route it formally.",
+   prompts:["Were people engaged while alternatives were still open, or after the decision was drafted?","What did they say, and what changed because of it? If nothing changed, say why.","Did you reach the people most burdened in Step 2, or the people easiest to reach?"],
+   strong:"Engagement is dated, the participants are described (not named), the influence on the proposal is traceable, and a you-said-we-did summary is planned.",weak:"'Stakeholders were informed' or an advisory group consulted after the language was final.",
+   pitfalls:["Counting a notice as engagement.","Treating Tribal consultation as community engagement. It is government-to-government and has its own formal path."]}},
+ {id:"s5",title:"Impacts and root causes",short:"Benefits, burdens, unintended effects",
+  coach:{anchor:"Policy question: 'Are there potential positive or negative impacts on the identified groups? Explain those impacts. If negative, please adjust the proposal to achieve a more equitable outcome.'",
+   prompts:["For each burden in Step 2, what is the mechanism (eligibility rule, documentation, timeline, cost, technology, location, language)?","What would this look like if it went wrong? Who would it go wrong for first?","Does this reduce a disparity, hold it steady, or widen it?"],
+   strong:"Burdens are traced to specific design choices that can be changed, and the disparity effect is stated (reduce / neutral / widen) with a reason.",weak:"Impacts restated from Step 2 without causes; negative impacts noted but not carried into Step 7.",
+   pitfalls:["Stopping at 'this is required by federal rule'. Requirements constrain the what; the how is usually still open.","Averaging a large benefit for many against a severe burden for a few."]}},
+ {id:"s6",title:"Access, accessibility and CLAS",short:"Can people actually use it",
+  coach:{anchor:"Toolkit Criterion 4 (Access and accessibility) and the policy objective to incorporate National CLAS Standards 'as part of everyday work responsibilities.' Policy definition of access: 'the timely ability to use resources and services to achieve the best outcomes.'",
+   prompts:["Walk the path of someone who is blind, Deaf, has an intellectual disability, or reads at a fifth-grade level. Where does it break?","What languages do the people in Step 2 use? Is translation planned, funded and tested?","Is the digital path the only path? What is the non-digital route and who staffs it?"],
+   strong:"Each access dimension (physical, sensory, cognitive, language, digital, cultural) has a named provision or a documented gap with an owner.",weak:"'Materials will be accessible' with no named standard (WCAG 2.1 AA, Section 508, plain language) or budget.",
+   pitfalls:["Treating accessibility as a communications task at the end rather than a design input at the start.","Assuming interpreter availability without checking contracts and timelines."]}},
+ {id:"s7",title:"Alternatives, mitigation and routing",short:"What could change and who must be in the room",
+  coach:{anchor:"The policy expects employees to 'adjust the proposal to achieve a more equitable outcome.' It also routes civil rights, Tribal consultation and labor relations through their formal paths; the toolkit does not replace them.",
+   prompts:["Name at least two alternatives, including 'do nothing' and 'do less'. What does each do to the burdens in Step 5?","For each remaining burden, what mitigation is realistic and who pays for it?","Which formal paths does this trigger: Tribal consultation, EOAD civil rights review, labor relations, accessibility, legal, data privacy?"],
+   strong:"Alternatives are compared on the same equity criteria; mitigations are specific, funded and owned; required routing is listed with status.",weak:"The original proposal is the only option; mitigation is 'training' with no detail.",
+   pitfalls:["Presenting the preferred option as the only feasible one.","Discovering a required consultation after the decision date."]}},
+ {id:"s8",title:"Implementation and accountability",short:"Steps, resources, measures, sustainability",
+  coach:{anchor:"Toolkit Criteria 5, 6 and 7: monitoring and evaluation, resources, implementation and accountability. Policy question: 'Can the policy or budget idea be sustainably successful? Discuss ongoing funding, implementation strategies and performance measures/accountability mechanisms.'",
+   prompts:["What are the first three implementation steps and who owns each?","What will you measure, disaggregated how, and when is the first review?","If the sponsor leaves, what keeps this going?"],
+   strong:"Milestones are dated, measures are disaggregated, a review date is set, funding for equity provisions is identified, and results will be shared with affected people.",weak:"'Ongoing monitoring' with no metric, date or audience.",
+   pitfalls:["Measuring outputs (trainings held) instead of outcomes (disparity changed).","Planning communication to leadership but not back to the communities engaged."]}},
+ {id:"s9",title:"Recommendation and record",short:"Decision, recommendations, alignment, output",
+  coach:{anchor:"Toolkit: 'Summarize the key equity considerations identified' and 'provide actionable recommendations.' Policy: employees 'will communicate how equity impacts are reviewed and the impact of the results.' Share the record with the ADSA Equity Director and the DSD Equity Team.",
+   prompts:["One paragraph a commissioner could read in 60 seconds: what, who, so what, recommended action.","Every recommendation names an owner, a date and a measure.","Which DHS Equity Policy objectives and ADSA goals does this advance? Which does it strain?"],
+   strong:"A clear verdict with reasons, three to six owned recommendations, and a plan to tell affected people what happened.",weak:"'Equity considerations were reviewed' with no verdict and no owners.",
+   pitfalls:["Softening a 'redesign' into 'proceed with changes' to avoid a hard conversation.","Filing the record without sending it anywhere."]}}
+];
+
+const OBJECTIVES = [
+ {id:"toolkit",label:"Use of the Equity Analysis Toolkit",sub:"Required analysis or scan applied before approval"},
+ {id:"committee",label:"Equity Committee",sub:"Administration or area Equity Committee involved in decisions, processes and actions"},
+ {id:"workforce",label:"Workforce development",sub:"Mentorship, sponsorship, reclassification, career ladders, work-out-of-class"},
+ {id:"contracts",label:"Contracts and procurement",sub:"Equitable access to money and resources provided by DHS"},
+ {id:"engagement",label:"Community engagement and inclusion",sub:"Authentic, meaningful, ongoing, during formation"},
+ {id:"clas",label:"National CLAS Standards",sub:"Culturally and linguistically appropriate services in everyday work"}
+];
+const GOALS = [
+ {id:"g1",label:"1 Eliminate Disparities",sub:"Examine a specific barrier and its causes before a decision is settled"},
+ {id:"g2",label:"2 Community Engagement",sub:"Make affected perspectives influential while alternatives are open"},
+ {id:"g3",label:"3 Hiring and Retention",sub:"Access to entry, belonging, growth and staying"},
+ {id:"g4",label:"4 Learning and Development",sub:"Connect understanding to rehearsal, support and application"},
+ {id:"g5",label:"5 Contracts and Procurement",sub:"Barriers across the contract cycle"},
+ {id:"g6",label:"6 Communication and Accessibility",sub:"Information and participation usable, understandable, responsive"}
+];
+const ROUTES = [
+ {id:"ed",label:"ADSA Equity Director (advice on the analysis; approved analysis per policy)"},
+ {id:"team",label:"DSD Equity Team / ADSA Equity Committee"},
+ {id:"tribal",label:"Tribal consultation (Executive Order 19-24; DHS Tribal Liaison)"},
+ {id:"eoad",label:"Equal Opportunity and Access Division (civil rights, Title VI, ADA, LEP)"},
+ {id:"access",label:"Accessibility coordinator (Section 508, WCAG, accessible documents)"},
+ {id:"labor",label:"Labor relations / HR (workforce effects, bargaining obligations)"},
+ {id:"legal",label:"Legal, legislative or government relations (bills, rules, statute)"},
+ {id:"privacy",label:"Data privacy / records (MGDPA, data practices)"},
+ {id:"procure",label:"ADSA procurement and contracts"}
+];
+
+const RESOURCES = `
+<h3>What the DHS Equity Policy requires</h3>
+<div class="anchor">All employees analyze actions (policies, proposals, practices, procedures, rules, budgets, decisions) through an equity lens, use the Equity Analysis Toolkit, complete annual equity learning, and sign the annual commitment. A formal analysis is required for actions with prolonged or long-term impact that need approval at supervisor level or above. The analysis or scan must accompany the action.</div>
+<h3>Named uses of the toolkit</h3>
+<ul><li>Policy development and revisions; legislative proposals</li><li>Budgets; strategic planning; leadership decision-making (administration and division)</li><li>Division policies and procedures; special projects; learning and development</li><li>IT funding and modernization; recruitment, hiring, onboarding, retention</li><li>Community and partner engagement; RFPs, contracting, procurement</li><li>Business impact analyses; service delivery</li></ul>
+<h3>Six policy objectives</h3>
+<ul><li>Equity Analysis Toolkit in use</li><li>Equity Committee in each administration or area, led or supported by the Equity Director</li><li>Workforce development opportunities</li><li>Contracts and procurement reviewed through an equity lens</li><li>Authentic, ongoing community engagement during formation</li><li>National CLAS Standards in everyday work</li></ul>
+<h3>Six ADSA Implementation Plan goals</h3>
+<ul><li>1 Eliminate Disparities</li><li>2 Community Engagement</li><li>3 Hiring and Retention</li><li>4 Learning and Development</li><li>5 Contracts and Procurement</li><li>6 Communication and Accessibility</li></ul>
+<h3>Legal authorities the policy cites</h3>
+<ul><li>Minn. Stat. 256.041 (CECLC)</li><li>Executive Orders 19-24 (Tribal consultation), 15-2, 19-01, 21-13</li><li>Title VI and Title VII, Civil Rights Act of 1964</li><li>ADA Titles I and II; Sections 504 and 508, Rehabilitation Act</li><li>LEP guidance, 68 Fed. Reg. 47311</li><li>Minnesota Human Rights Act, Minn. Stat. 363A; Minn. Stat. 43A (affirmative action)</li></ul>
+<h3>Where to go in the program</h3>
+<ul>
+<li><a href="/equity-policy" target="_blank" rel="noopener">DHS Equity Policy page and toolkit companion</a></li>
+<li><a href="/practice" target="_blank" rel="noopener">Guided practice and Toolkit Studio</a></li>
+<li><a href="/library" target="_blank" rel="noopener">Library (Operational equity review canvas, question banks, job aids)</a></li>
+<li><a href="/minnesota-communities" target="_blank" rel="noopener">Minnesota Communities</a></li>
+<li><a href="/support/right-person" target="_blank" rel="noopener">Find the right person or office</a></li>
+<li><a href="https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf" target="_blank" rel="noopener">DHS Equity Policy (official PDF)</a></li>
+<li><a href="https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf" target="_blank" rel="noopener">State of Minnesota Equity Analysis Toolkit quick guide</a></li>
+</ul>
+<h3>Working definitions (DHS Equity Policy)</h3>
+<dl class="glossary">
+<dt>Equity</dt><dd>The proactive and ongoing reinforcement of actions that redistribute power by enhancing access, opportunities and outcomes.</dd>
+<dt>Equity lens</dt><dd>A deliberate, continuous analysis of systemic and structural inequities; a process for analyzing power and the differential impacts of ideas, policies or structures.</dd>
+<dt>Disparity</dt><dd>A group systematically faring worse than another for reasons not due to the group's needs, eligibility or preferences.</dd>
+<dt>Access</dt><dd>The timely ability to use resources and services to achieve the best outcomes.</dd>
+<dt>Engagement</dt><dd>Collaboration and inclusion in which entities build ongoing relationships to apply a collective vision to complex problems.</dd>
+<dt>Equity scan</dt><dd>Used only when the action already went through a formal analysis and those results were integrated.</dd>
+</dl>
+<h3>Privacy</h3>
+<div class="anchor">Keep case, medical, personnel, complaint and identifying details out of this tool. Nothing is sent anywhere or stored on this computer unless you save a draft; use Save draft to keep your work.</div>
+`;
+</script>
+<script>
+/* ---------------- state ---------------- */
+function blank(){
+  return {
+    version:1, toolKind:"general", sample:false, savedAt:null,
+    meta:{title:"",type:"",bill:"",author:"",unit:"",analyst:"",date:new Date().toISOString().slice(0,10),decider:"",decideBy:"",approval:"",duration:"",prior:"",team:"",unchanged:"",priorCitation:""},
+    s1:{problem:"",proposal:"",outcomes:"",measure:""},
+    groups:DEFAULT_GROUPS.map(n=>({name:n,eff:"",sev:"",how:"",evidence:"",engaged:""})),
+    s3:{sources:"",disagg:"",findings:"",gaps:""},
+    s4:{who:"",how:"",when:"",tribal:"",internal:"",changed:"",continue:""},
+    s5:{benefits:"",burdens:"",causes:"",unintended:"",disparity:""},
+    s6:{barriers:"",disability:"",language:"",digital:"",clas:""},
+    s7:{alternatives:"",mitigation:"",routes:[],routeNotes:""},
+    s8:{steps:"",milestones:"",resources:"",personnel:"",metrics:"",review:"",accountability:"",sustain:""},
+    s9:{verdict:"",summary:"",recs:[{text:"",owner:"",by:"",measure:""}],objectives:[],goals:[],communicate:""}
+  };
+}
+let S = blank();
+let cur = 0;
+
+/* ---------------- helpers ---------------- */
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const nl = s=>esc(s).replace(/\n/g,"<br>");
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200);}
+function filled(v){return typeof v==="string"?v.trim().length>0:Array.isArray(v)?v.length>0:!!v;}
+
+/* track logic per DHS Equity Policy procedures */
+function track(){
+  const m=S.meta;
+  if(!m.type||!m.duration||!m.approval) return null;
+  if(m.prior==="yes" && m.unchanged==="yes" && filled(m.priorCitation)) return {key:"scan",title:"Equity scan may be sufficient",text:"A prior formal analysis exists and its results were integrated. Use the scan to confirm nothing material changed; if it did, run the full analysis."};
+  const lasting = m.duration==="prolonged";
+  const approval = m.approval!=="none";
+  if(lasting && approval) return {key:"full",title:"Formal equity analysis required",text:"Lasting impact and approval at supervisor level or above. The completed analysis must accompany the action when it goes for approval."};
+  if(["legislative","bill","budget","contract","policy"].includes(m.type)) return {key:"full",title:"Formal equity analysis expected",text:"This action type is a named use of the toolkit. Use the full review to examine the effects and confirm any required policy review paths."};
+  return {key:"scan",title:"Equity scan likely sufficient",text:"Based on the selected answers, a lighter review may be useful. Confirm any remaining uncertainties and required review paths. Complete the steps at a lighter depth and keep the record; if the scope grows, upgrade to a full analysis."};
+}
+
+/* ---------------- field builders ---------------- */
+function ta(path,label,help,ph){
+  const v=get(path);
+  return `<div class="q"><label for="${path}">${label}</label>${help?`<p class="help" id="${path}-help">${help}</p>`:""}<textarea id="${path}" aria-describedby="${path}-help" data-path="${path}" placeholder="${esc(ph||"")}">${esc(v)}</textarea></div>`;
+}
+function tx(path,label,help,type="text"){
+  return `<div class="q"><label for="${path}">${label}</label>${help?`<p class="help" id="${path}-help">${help}</p>`:""}<input type="${type}" id="${path}" aria-describedby="${path}-help" data-path="${path}" value="${esc(get(path))}"></div>`;
+}
+function sel(path,label,help,opts){
+  return `<div class="q"><label for="${path}">${label}</label>${help?`<p class="help" id="${path}-help">${help}</p>`:""}<select id="${path}" aria-describedby="${path}-help" data-path="${path}"><option value="">Choose…</option>${opts.map(o=>`<option value="${o[0]}" ${get(path)===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></div>`;
+}
+function radios(path,label,help,opts){
+  return `<fieldset class="q radio" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">${label}</legend>${help?`<p class="help" id="${path}-help">${help}</p>`:""}${opts.map(o=>`<label><input type="radio" name="${path}" aria-describedby="${path}-help" data-path="${path}" value="${o[0]}" ${get(path)===o[0]?"checked":""}><span>${o[1]}</span></label>`).join("")}</fieldset>`;
+}
+function get(path){return path.split(".").reduce((o,k)=>o?.[k],S)??"";}
+function set(path,val){const ks=path.split(".");let o=S;for(let i=0;i<ks.length-1;i++)o=o[ks[i]];o[ks.at(-1)]=val;}
+
+/* ---------------- step renderers ---------------- */
+const R = {
+ s0(){
+  const t=track();
+  return `<h2>Set up and triage</h2><p class="lead">Name the decision and who is responsible for it. Use the questions to suggest a review approach, and confirm policy requirements with the responsible office.</p>
+  ${tx("meta.title","What is being analyzed?","One line, in plain words. Example: 'Change to the CDCS budget methodology for FY2028'.")}
+  ${sel("meta.type","Type of action","",Object.entries(TYPES).map(([k,v])=>[k,v.label]))}
+  ${S.meta.type?`<div class="note">${TYPES[S.meta.type].hint}</div>`:""}
+  ${["legislative","bill"].includes(S.meta.type)?`<div class="row">${tx("meta.bill","Bill or proposal number and stage","HF/SF number, session, committee stage; or 'agency proposal, pre-session'.")}${tx("meta.author","Author or sponsoring office","")}</div>`:""}
+  <div class="row">${tx("meta.unit","DHS unit or team responsible","")}${tx("meta.analyst","Analyst or facilitator","Name or role of the person leading this analysis.")}</div>
+  <div class="row">${tx("meta.decider","Accountable decision-maker","The person authorized to approve or change the action.")}${tx("meta.decideBy","Decision date","When the action goes for approval.","date")}</div>
+  ${tx("meta.team","Who is on the analysis team?","The toolkit asks for a thoughtfully assembled team that reflects the people affected. List roles, not personal details.")}
+  ${radios("meta.duration","How long will the effects last?","",[["prolonged","Prolonged or long-term (a policy, rule, budget, contract, service design or anything that outlives the project)"],["short","Short-lived and reversible (a one-time event, a pilot with a fixed end and no lasting rule)"]])}
+  ${radios("meta.approval","Highest approval level this needs","",[["supervisor","Supervisor or manager"],["director","Director or division director"],["ac","Assistant or deputy commissioner"],["commissioner","Commissioner or legislature"],["none","No approval beyond the team"]])}
+  ${radios("meta.prior","Has this action already been through a formal equity analysis whose results were integrated?","",[["no","No, or not sure"],["yes","Yes, and I can attach or cite it"]])}
+  ${radios("meta.unchanged","If a prior review exists, has anything material changed?","Consider the people affected, proposal, evidence and unresolved concerns.",[["yes","No material changes identified"],["no","Changed or not yet determined"]])}${tx("meta.priorCitation","Prior review reference","Title, date or location; do not enter confidential information.")} ${t?`<div class="note ${t.key==="full"?"req":"ok"}"><strong>${t.title}.</strong> ${t.text}</div>`:`<div class="note">Answer the questions above to see a suggested review approach. Confirm policy requirements with the responsible office.</div>`}
+  <details class="example"><summary>Worked example</summary><p><em>What:</em> Revise the DSD provider enrollment procedure to require electronic signature. <em>Type:</em> procedure. <em>Decider:</em> DSD Director, approval 2027-03-15. <em>Duration:</em> prolonged. <em>Approval:</em> director. <em>Prior analysis:</em> no → formal equity analysis required.</p></details>`;
+ },
+ s1(){
+  return `<h2>Describe the action and outcomes</h2><p class="lead">State the problem, the proposal and the results you intend, in terms of the people affected.</p>
+  ${ta("s1.problem","What problem does this address, and for whom?","Name the barrier or disparity. If the driver is a federal rule, audit finding or budget target, say so and still describe who is affected.","Example: Paper enrollment takes 6–9 weeks; small and culturally specific providers in Greater Minnesota drop out of the process at twice the rate of large metro agencies.")}
+  ${ta("s1.proposal","What is proposed?","Describe what changes in the actual work: the rule, the form, the money, the step, the system.","")}
+  ${ta("s1.outcomes","What outcomes do you intend?","Write them as changes in people's lives or work, not as organizational tasks.","Example: Enrollment completed within 3 weeks for 90% of applicants, with no gap between provider types or regions.")}
+  ${ta("s1.measure","How will you know it worked?","A number and a story: what you will count, and what you would expect to hear from the people affected.","")}`;
+ },
+ s2(){
+  const counts={benefit:0,burden:0,both:0,unknown:0};
+  S.groups.forEach(g=>{if(counts[g.eff]!==undefined)counts[g.eff]++;});
+  return `<h2>Who is affected</h2><p class="lead">The policy names communities experiencing inequities; DSD adds the people and workforce it touches most. For each, decide whether the action benefits them, burdens them, both, or you do not yet know.</p>
+  <div class="legend"><span><i style="background:var(--moss)"></i>Benefit</span><span><i style="background:var(--clay)"></i>Burden</span><span><i style="background:var(--both)"></i>Both</span><span><i style="background:var(--gold)"></i>Unknown</span></div>
+  <div class="grid"><table><thead><tr><th style="width:22%">Community or group</th><th style="width:11%">Effect</th><th style="width:10%">Severity</th><th style="width:27%">How they are affected</th><th style="width:17%">Evidence</th><th style="width:10%">Engaged?</th><th style="width:3%"><span class="sr">Remove</span></th></tr></thead><tbody>
+  ${S.groups.map((g,i)=>`<tr data-eff="${g.eff}">
+    <td><input aria-label="Group name: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="name" value="${esc(g.name)}"></td>
+    <td><select aria-label="Effect: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="eff"><option value="">—</option><option value="benefit" ${g.eff==="benefit"?"selected":""}>Benefit</option><option value="burden" ${g.eff==="burden"?"selected":""}>Burden</option><option value="both" ${g.eff==="both"?"selected":""}>Both</option><option value="unknown" ${g.eff==="unknown"?"selected":""}>Unknown</option><option value="none" ${g.eff==="none"?"selected":""}>Not affected</option></select></td>
+    <td><select aria-label="Severity: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="sev"><option value="">—</option><option ${g.sev==="Low"?"selected":""}>Low</option><option ${g.sev==="Moderate"?"selected":""}>Moderate</option><option ${g.sev==="High"?"selected":""}>High</option></select></td>
+    <td><textarea aria-label="How affected: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="how">${esc(g.how)}</textarea></td>
+    <td><textarea aria-label="Evidence: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="evidence" placeholder="data, accounts, or 'none yet'">${esc(g.evidence)}</textarea></td>
+    <td><select aria-label="Engaged: ${esc(g.name||"unnamed group")}" data-g="${i}" data-k="engaged"><option value="">—</option><option ${g.engaged==="Yes"?"selected":""}>Yes</option><option ${g.engaged==="Planned"?"selected":""}>Planned</option><option ${g.engaged==="No"?"selected":""}>No</option></select></td>
+    <td><button class="btn small danger" data-del="${i}" aria-label="Remove row ${esc(g.name)}">×</button></td></tr>`).join("")}
+  </tbody></table><div class="gridfoot"><button class="btn small" id="addGroup">Add a group</button><span style="color:var(--slate);font-size:.85rem;align-self:center">Add intersecting groups or specific populations (for example, people using the CADI waiver in Tribal nations; Somali-speaking families; county case managers).</span></div></div>
+  <div class="summary-strip"><div class="s-benefit"><strong>${counts.benefit}</strong>benefit</div><div class="s-burden"><strong>${counts.burden}</strong>burden</div><div class="s-both"><strong>${counts.both}</strong>both</div><div class="s-unknown"><strong>${counts.unknown}</strong>unknown</div></div>
+  ${counts.unknown>0?`<div class="note req">${counts.unknown} group${counts.unknown>1?"s":""} marked unknown. Carry each into Step 3 as a data or engagement task.</div>`:""}`;
+ },
+ s3(){
+  return `<h2>Data and evidence</h2><p class="lead">Use what DSD holds, what the enterprise holds, and what people have said. Name the gaps honestly.</p>
+  ${ta("s3.sources","Data sources used","DSD-held data (enrollment, authorizations, appeals, complaints, provider capacity, workforce), MMIS or enterprise extracts through the ADSA Equity Director, Census and county data, research, Minnesota Communities briefs.","")}
+  ${ta("s3.disagg","How the data was disaggregated","By race, ethnicity, Tribal affiliation, disability type, language, geography, age, income, gender, veteran status. Say what could not be disaggregated and why.","")}
+  ${ta("s3.findings","What the data and people's accounts show","State the disparity or need in plain terms with the numbers. Pair quantitative findings with qualitative ones.","Example: 38% of culturally specific providers withdrew before completing enrollment, compared with 14% overall (FY2026). Listening session participants cited scanner access and English-only instructions.")}
+  ${ta("s3.gaps","Gaps and follow-up","For each unknown in Step 2 or missing source here: what is needed, who will get it, by when.","")}`;
+ },
+ s4(){
+  return `<h2>Engagement</h2><p class="lead">The policy asks for authentic, meaningful and ongoing engagement during formation. Record who was heard, how, and what changed because of it.</p>
+  ${ta("s4.who","Who was engaged","Describe communities and roles, not individuals. Compare against the burdened groups in Step 2.","")}
+  <div class="row">${ta("s4.how","How","Listening sessions, advisory councils, surveys, shared design, provider forums, CECLC, DSD Equity Team, community organizations.")}${ta("s4.when","When, relative to the decision","Before options were set? During drafting? After the language was final?")}</div>
+  ${radios("s4.tribal","Tribal consultation","Executive Order 19-24. This is government-to-government and separate from community engagement. Route it through the DHS Tribal Liaison.",[["yes","Completed or underway through the formal process"],["planned","Required and planned; date set"],["na","Not applicable after checking with the Tribal Liaison"],["unsure","Not yet determined"]])}
+  ${ta("s4.internal","Internal partners engaged","Equity Director, DSD Equity Team, HR, accessibility coordinator, EOAD, affirmative action officer, county and Tribal partners, other divisions.","")}
+  ${ta("s4.changed","What changed because of engagement","Be specific. If nothing changed, explain why and how that was communicated back.","")}
+  ${ta("s4.continue","How engagement continues through implementation","Including the you-said-we-did summary: who will receive it and when.","")}`;
+ },
+ s5(){
+  return `<h2>Impacts and root causes</h2><p class="lead">Trace each benefit and burden to the design choice that produces it. Causes you can name are causes you can change.</p>
+  ${ta("s5.benefits","Benefits, and for whom","","")}
+  ${ta("s5.burdens","Burdens, and for whom","Draw from the grid in Step 2. Say how severe and how many.","")}
+  ${ta("s5.causes","Root causes of the burdens","The mechanism: eligibility rule, documentation, timeline, cost, technology, location, language, discretion, history.","Example: Electronic signature assumes a device, broadband and a verified email; the rule itself does not require electronic submission, so the barrier is a design choice.")}
+  ${ta("s5.unintended","Possible unintended effects","Who would this go wrong for first? What would you see in month three?","")}
+  ${radios("s5.disparity","Net effect on disparities","",[["reduce","Reduces an identified disparity"],["neutral","Holds disparities steady"],["widen","Risks widening a disparity"],["unknown","Cannot tell yet"]])}`;
+ },
+ s6(){
+  return `<h2>Access, accessibility and CLAS</h2><p class="lead">Walk the path of the people least likely to be served well. Name the standard, the provision and the owner for each dimension.</p>
+  ${ta("s6.barriers","Barriers to access by group","Physical, sensory, cognitive, language, digital, cultural, financial, geographic, time.","")}
+  ${ta("s6.disability","Accessibility for people with disabilities","ADA Title II, Section 504 and 508, WCAG 2.1 AA, plain language, alternative formats, accommodation route and who staffs it.","")}
+  ${ta("s6.language","Language and cultural inclusiveness","Languages identified in Step 2; translation and interpretation plan, budget and testing; CLAS Standards applied; cultural review by community.","")}
+  ${ta("s6.digital","Non-digital and in-person routes","If the main path is digital, what is the alternative, who provides it, and is it equally timely?","")}
+  ${ta("s6.clas","Other access provisions","Hours, locations, transportation, childcare, cost, trusted messengers.","")}`;
+ },
+ s7(){
+  return `<h2>Alternatives, mitigation and routing</h2><p class="lead">Compare real options on the same equity criteria, fund the mitigations, and send the action down every formal path it triggers.</p>
+  ${ta("s7.alternatives","Alternatives considered","At least two, including 'do nothing' and 'do less'. For each: effect on the burdens in Step 5, cost, feasibility.","Example: (A) Electronic signature only. (B) Electronic signature with a staffed in-person and mail option. (C) Keep paper, add a status portal. B removes the device barrier at modest cost; C does not shorten the timeline.")}
+  ${ta("s7.mitigation","Mitigations for remaining burdens","Specific, funded, owned, dated. 'Training' alone is not a mitigation.","")}
+  <fieldset class="q" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">Formal paths this action triggers</legend><p class="help">The toolkit does not replace these. Mark each one that applies; record status in the notes.</p><div class="chips">${ROUTES.map(r=>`<label><input type="checkbox" data-arr="s7.routes" value="${r.id}" ${S.s7.routes.includes(r.id)?"checked":""}>${r.label}</label>`).join("")}</div></fieldset>
+  ${ta("s7.routeNotes","Routing status and dates","Who was contacted, when, and what they require before the decision date.","")}`;
+ },
+ s8(){
+  return `<h2>Implementation and accountability</h2><p class="lead">Make the equity provisions survive contact with the calendar and with leadership change.</p>
+  ${ta("s8.steps","Implementation steps","The first steps, each with an owner.","")}
+  <div class="row">${ta("s8.milestones","Milestones and deliverables","Dated.")}${ta("s8.review","First review date and cadence","When results are examined and by whom.")}</div>
+  <div class="row">${ta("s8.resources","Resources for equitable implementation","Funding for translation, accessibility, engagement, outreach, staffing; dedicated funds for the disparities identified.")}${ta("s8.personnel","Personnel and their preparation","Who implements and oversees; what equity learning they have or need.")}</div>
+  ${ta("s8.metrics","Measures of success","Disaggregated the same way as Step 3 so you can see whether the gap closed. Outcomes, not only outputs.","")}
+  ${ta("s8.accountability","Accountability and communication","How results reach leadership, the ADSA Equity Director, the DSD Equity Team and the communities engaged.","")}
+  ${ta("s8.sustain","Sustainability","What is written into structure, cadence, job expectations or contract language so this continues without its sponsor.","")}`;
+ },
+ s9(){
+  const t=track();
+  return `<h2>Recommendation and record</h2><p class="lead">Decide, recommend with owners, check alignment, and produce the record that travels with the action.</p>
+  ${radios("s9.verdict","Recommendation",`${t?`Review track: ${t.title}.`:""}`,[["proceed","Proceed as proposed"],["changes","Proceed with the changes and mitigations below"],["redesign","Redesign before approval; burdens outweigh benefits for identified groups"],["stop","Do not proceed"]])}
+  ${ta("s9.summary","Summary of equity findings","One paragraph a commissioner can read in sixty seconds: what, who, so what, recommended action.","")}
+  <div class="q"><span class="qt">Recommendations</span><p class="help">Each with an owner, a date and a measure. These become the action items in the record.</p><div class="recs" id="recs">${S.s9.recs.map((r,i)=>`<div class="rec"><textarea aria-label="Recommendation ${i+1}" data-r="${i}" data-k="text" placeholder="Recommendation ${i+1}">${esc(r.text)}</textarea><div class="row" style="margin-top:.4rem"><input aria-label="Owner" data-r="${i}" data-k="owner" placeholder="Owner (role)" value="${esc(r.owner)}"><input aria-label="By when" data-r="${i}" data-k="by" placeholder="By when" value="${esc(r.by)}"><input aria-label="Measure" data-r="${i}" data-k="measure" placeholder="Measure" value="${esc(r.measure)}"></div><div style="margin-top:.3rem;text-align:right"><button class="btn small danger" data-delrec="${i}">Remove</button></div></div>`).join("")}</div><button class="btn small" id="addRec">Add a recommendation</button></div>
+  <fieldset class="q" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">DHS Equity Policy objectives this action advances</legend><div class="align">${OBJECTIVES.map(o=>`<label><input type="checkbox" data-arr="s9.objectives" value="${o.id}" ${S.s9.objectives.includes(o.id)?"checked":""}><span>${o.label}<small>${o.sub}</small></span></label>`).join("")}</div></fieldset>
+  <fieldset class="q" style="border:0;padding:0;margin:0 0 1.4rem"><legend class="qt">ADSA Implementation Plan goals this action advances</legend><div class="align">${GOALS.map(o=>`<label><input type="checkbox" data-arr="s9.goals" value="${o.id}" ${S.s9.goals.includes(o.id)?"checked":""}><span>${o.label}<small>${o.sub}</small></span></label>`).join("")}</div></fieldset>
+  ${ta("s9.communicate","How and to whom the results will be communicated","The policy expects employees to communicate how equity impacts were reviewed and what resulted. Include the ADSA Equity Director, the DSD Equity Team, the decision-maker and the people engaged.","")}
+  <h3 style="margin-top:2rem">Quality check</h3><p class="help">A self-review before the record goes to the decision-maker. Each item links to the step that fixes it.</p>${rubric()}
+  <h3 style="margin-top:2rem">Produce the record</h3>
+  <div class="outbar"><button class="btn primary" id="btnPrint">Print or save as PDF</button><button class="btn" id="btnMd">Copy record as text</button>${["legislative","bill"].includes(S.meta.type)?`<button class="btn" id="btnBill">Copy equity section for the bill analysis</button>`:""}<button class="btn" id="btnSave2">Save draft (.json)</button></div>
+  <div class="record" id="recordPreview">${record()}</div>`;
+ }
+};
+
+/* ---------------- rubric ---------------- */
+function rubricItems(){
+  const g=S.groups;
+  return [
+   [filled(S.meta.decider)&&filled(S.meta.decideBy),"Decision-maker and decision date are named",0],
+   [!!track(),"Review track determined from impact and approval level",0],
+   [filled(S.s1.outcomes)&&filled(S.s1.measure),"Outcomes stated for people affected, with a measure",1],
+   [g.length>0&&g.every(x=>filled(x.name)&&x.eff&&x.eff!=="unknown"),"Every listed group assessed, with no unresolved unknown effects",2],
+   [g.some(x=>x.eff&&x.eff!=="none")&&g.filter(x=>x.eff&&x.eff!=="none").every(x=>filled(x.how)&&filled(x.evidence)),"Every affected group has an effect description and evidence reference",2],
+   [filled(S.s3.sources)&&filled(S.s3.findings),"Data sources and findings recorded",3],
+   [filled(S.s3.gaps)||!g.some(x=>x.eff==="unknown"),"Unknowns carried into data follow-up",3],
+   [filled(S.s4.who)&&filled(S.s4.changed),"Engagement described and its influence on the proposal stated",4],
+   [S.s4.tribal&&S.s4.tribal!=="unsure","Tribal consultation status determined",4],
+   [filled(S.s5.causes)&&filled(S.s5.disparity),"Root causes named and disparity effect judged",5],
+   [filled(S.s6.disability)&&filled(S.s6.language),"Disability access and language provisions specified",6],
+   [filled(S.s7.alternatives),"Alternative comparison recorded; confirm that it covers at least two options",7],
+   [S.s7.routes.length>0,"Formal routing paths identified",7],
+   [filled(S.s8.metrics)&&filled(S.s8.review),"Disaggregated measures and a review date set",8],
+   [filled(S.s8.resources),"Resources for equitable implementation identified",8],
+   [filled(S.s9.verdict)&&filled(S.s9.summary),"Verdict and summary written",9],
+   [S.s9.recs.some(r=>filled(r.text)&&filled(r.owner)&&filled(r.by)&&filled(r.measure)),"At least one recommendation has an owner, date and measure",9],
+   [filled(S.s9.communicate),"Communication of results planned",9]
+  ];
+}
+function rubric(){
+  return `<p class="help">These checks show what has been recorded. They do not establish the quality of the evidence or policy compliance.</p><div class="rubric">${rubricItems().map(([ok,txt,st])=>`<div><span class="${ok?"ok":"no"}" aria-hidden="true">${ok?"✓":"–"}</span><span>${txt}${ok?"":` <a href="#" data-go="${st}">(go to step ${st})</a>`}</span></div>`).join("")}</div>`;
+}
+
+/* ---------------- step completeness ---------------- */
+function stepState(i){
+  const items=rubricItems().filter(r=>r[2]===i);
+  const n=items.filter(r=>r[0]).length;
+  return n===items.length?"done":n>0?"part":"";
+}
+
+/* ---------------- record (HTML) ---------------- */
+function v(s){return filled(s)?nl(s):`<span class="empty">Not recorded</span>`;}
+function record(){
+  const m=S.meta,t=track();
+  const vcls={proceed:"v-proceed",changes:"v-changes",redesign:"v-redesign",stop:"v-stop"}[S.s9.verdict]||"";
+  const vlab={proceed:"Proceed as proposed",changes:"Proceed with changes and mitigations",redesign:"Redesign before approval",stop:"Do not proceed"}[S.s9.verdict]||"No recommendation recorded";
+  const groups=S.groups.filter(g=>g.eff&&g.eff!=="none");
+  return `${S.sample?"<p><strong>Practice example — illustrative figures, dates and recommendations.</strong></p>":""}<h2>Equity Analysis Record: ${esc(m.title)||"<span class='empty'>Untitled</span>"}</h2>
+  <p class="meta">${esc(TYPES[m.type]?.label||"Type not set")}${m.bill?` · ${esc(m.bill)}`:""}${m.author?` · ${esc(m.author)}`:""}<br>Unit: ${esc(m.unit)||"—"} · Analyst: ${esc(m.analyst)||"—"} · Team: ${esc(m.team)||"—"}<br>Decision-maker: ${esc(m.decider)||"—"} · Decision date: ${esc(m.decideBy)||"—"} · Analysis date: ${esc(m.date)}<br>Review track: ${t?esc(t.title):"—"}</p>
+  <span class="verdict ${vcls}">${vlab}</span>
+  <h3>Summary of equity findings</h3><p>${v(S.s9.summary)}</p>
+  <h3>Recommendations</h3><table><tr><th>#</th><th>Recommendation</th><th>Owner</th><th>By</th><th>Measure</th></tr>${S.s9.recs.filter(r=>filled(r.text)).map((r,i)=>`<tr><td>${i+1}</td><td>${nl(r.text)}</td><td>${esc(r.owner)}</td><td>${esc(r.by)}</td><td>${esc(r.measure)}</td></tr>`).join("")||`<tr><td colspan="5" class="empty">None recorded</td></tr>`}</table>
+  <h3>1. The action and intended outcomes</h3><p><strong>Problem:</strong> ${v(S.s1.problem)}</p><p><strong>Proposal:</strong> ${v(S.s1.proposal)}</p><p><strong>Intended outcomes:</strong> ${v(S.s1.outcomes)}</p><p><strong>Measure of success:</strong> ${v(S.s1.measure)}</p>
+  <h3>2. Who is affected</h3><table><tr><th>Group</th><th>Effect</th><th>Severity</th><th>How</th><th>Evidence</th><th>Engaged</th></tr>${groups.map(g=>`<tr><td>${esc(g.name)}</td><td>${esc(g.eff)}</td><td>${esc(g.sev)}</td><td>${nl(g.how)}</td><td>${nl(g.evidence)}</td><td>${esc(g.engaged)}</td></tr>`).join("")||`<tr><td colspan="6" class="empty">No groups assessed</td></tr>`}</table>
+  <h3>3. Data and evidence</h3><p><strong>Sources:</strong> ${v(S.s3.sources)}</p><p><strong>Disaggregation:</strong> ${v(S.s3.disagg)}</p><p><strong>Findings:</strong> ${v(S.s3.findings)}</p><p><strong>Gaps and follow-up:</strong> ${v(S.s3.gaps)}</p>
+  <h3>4. Engagement</h3><p><strong>Who:</strong> ${v(S.s4.who)}</p><p><strong>How and when:</strong> ${v(S.s4.how)} ${nl(S.s4.when)}</p><p><strong>Tribal consultation:</strong> ${esc({yes:"Completed or underway",planned:"Required and planned",na:"Not applicable (confirmed)",unsure:"Not yet determined"}[S.s4.tribal]||"Not recorded")}</p><p><strong>Internal partners:</strong> ${v(S.s4.internal)}</p><p><strong>What changed:</strong> ${v(S.s4.changed)}</p><p><strong>Ongoing engagement:</strong> ${v(S.s4.continue)}</p>
+  <h3>5. Impacts and root causes</h3><p><strong>Benefits:</strong> ${v(S.s5.benefits)}</p><p><strong>Burdens:</strong> ${v(S.s5.burdens)}</p><p><strong>Root causes:</strong> ${v(S.s5.causes)}</p><p><strong>Unintended effects:</strong> ${v(S.s5.unintended)}</p><p><strong>Net effect on disparities:</strong> ${esc({reduce:"Reduces",neutral:"Neutral",widen:"Risks widening",unknown:"Unknown"}[S.s5.disparity]||"Not recorded")}</p>
+  <h3>6. Access, accessibility and CLAS</h3><p><strong>Barriers:</strong> ${v(S.s6.barriers)}</p><p><strong>Disability access:</strong> ${v(S.s6.disability)}</p><p><strong>Language and culture:</strong> ${v(S.s6.language)}</p><p><strong>Non-digital routes:</strong> ${v(S.s6.digital)}</p><p><strong>Other provisions:</strong> ${v(S.s6.clas)}</p>
+  <h3>7. Alternatives, mitigation and routing</h3><p><strong>Alternatives:</strong> ${v(S.s7.alternatives)}</p><p><strong>Mitigations:</strong> ${v(S.s7.mitigation)}</p><p><strong>Formal paths:</strong> ${S.s7.routes.length?S.s7.routes.map(id=>esc(ROUTES.find(r=>r.id===id)?.label)).join("; "):"<span class='empty'>None identified</span>"}</p><p><strong>Routing status:</strong> ${v(S.s7.routeNotes)}</p>
+  <h3>8. Implementation and accountability</h3><p><strong>Steps:</strong> ${v(S.s8.steps)}</p><p><strong>Milestones:</strong> ${v(S.s8.milestones)}</p><p><strong>Resources:</strong> ${v(S.s8.resources)}</p><p><strong>Personnel:</strong> ${v(S.s8.personnel)}</p><p><strong>Measures:</strong> ${v(S.s8.metrics)}</p><p><strong>Review:</strong> ${v(S.s8.review)}</p><p><strong>Accountability and communication:</strong> ${v(S.s8.accountability)}</p><p><strong>Sustainability:</strong> ${v(S.s8.sustain)}</p>
+  <h3>9. Alignment</h3><p><strong>DHS Equity Policy objectives:</strong> ${S.s9.objectives.length?S.s9.objectives.map(id=>esc(OBJECTIVES.find(o=>o.id===id)?.label)).join("; "):"<span class='empty'>None marked</span>"}</p><p><strong>ADSA goals:</strong> ${S.s9.goals.length?S.s9.goals.map(id=>esc(GOALS.find(o=>o.id===id)?.label)).join("; "):"<span class='empty'>None marked</span>"}</p><p><strong>Communication of results:</strong> ${v(S.s9.communicate)}</p>
+  <p class="meta" style="margin-top:1.5rem">Prepared with the One DSD Equity Policy Review, consistent with the DHS Equity Policy and the State of Minnesota Equity Analysis Toolkit. This record supports, and does not replace, the official toolkit, required approvals, civil rights review, Tribal consultation or labor relations processes.</p>`;
+}
+
+/* ---------------- record (plain text / markdown) ---------------- */
+function md(){
+  const m=S.meta,t=track();
+  const L=[]; if(S.sample)L.push("PRACTICE EXAMPLE — illustrative figures and recommendations, not an actual policy review.","");
+  const p=(h,s)=>{L.push(`**${h}:** ${s&&s.trim()?s.trim():"Not recorded"}`);L.push("");};
+  L.push(`# Equity Analysis Record: ${m.title||"Untitled"}`);
+  L.push(`${TYPES[m.type]?.label||"Type not set"}${m.bill?" · "+m.bill:""}${m.author?" · "+m.author:""}`);
+  L.push(`Unit: ${m.unit||"—"} · Analyst: ${m.analyst||"—"} · Team: ${m.team||"—"}`);
+  L.push(`Decision-maker: ${m.decider||"—"} · Decision date: ${m.decideBy||"—"} · Analysis date: ${m.date}`);
+  L.push(`Review track: ${t?t.title:"—"}`);L.push("");
+  L.push(`## Recommendation: ${{proceed:"Proceed as proposed",changes:"Proceed with changes and mitigations",redesign:"Redesign before approval",stop:"Do not proceed"}[S.s9.verdict]||"Not recorded"}`);L.push("");
+  p("Summary of equity findings",S.s9.summary);
+  L.push("## Recommendations");S.s9.recs.filter(r=>r.text.trim()).forEach((r,i)=>L.push(`${i+1}. ${r.text.trim()} — Owner: ${r.owner||"—"}; By: ${r.by||"—"}; Measure: ${r.measure||"—"}`));L.push("");
+  L.push("## 1. The action and intended outcomes");p("Problem",S.s1.problem);p("Proposal",S.s1.proposal);p("Intended outcomes",S.s1.outcomes);p("Measure of success",S.s1.measure);
+  L.push("## 2. Who is affected");L.push("| Group | Effect | Severity | How | Evidence | Engaged |");L.push("|---|---|---|---|---|---|");
+  S.groups.filter(g=>g.eff&&g.eff!=="none").forEach(g=>L.push(`| ${g.name} | ${g.eff} | ${g.sev} | ${g.how.replace(/\n/g," ")} | ${g.evidence.replace(/\n/g," ")} | ${g.engaged} |`));L.push("");
+  L.push("## 3. Data and evidence");p("Sources",S.s3.sources);p("Disaggregation",S.s3.disagg);p("Findings",S.s3.findings);p("Gaps and follow-up",S.s3.gaps);
+  L.push("## 4. Engagement");p("Who",S.s4.who);p("How",S.s4.how);p("When",S.s4.when);p("Tribal consultation",{yes:"Completed or underway",planned:"Required and planned",na:"Not applicable (confirmed)",unsure:"Not yet determined"}[S.s4.tribal]||"");p("Internal partners",S.s4.internal);p("What changed",S.s4.changed);p("Ongoing engagement",S.s4.continue);
+  L.push("## 5. Impacts and root causes");p("Benefits",S.s5.benefits);p("Burdens",S.s5.burdens);p("Root causes",S.s5.causes);p("Unintended effects",S.s5.unintended);p("Net effect on disparities",{reduce:"Reduces",neutral:"Neutral",widen:"Risks widening",unknown:"Unknown"}[S.s5.disparity]||"");
+  L.push("## 6. Access, accessibility and CLAS");p("Barriers",S.s6.barriers);p("Disability access",S.s6.disability);p("Language and culture",S.s6.language);p("Non-digital routes",S.s6.digital);p("Other provisions",S.s6.clas);
+  L.push("## 7. Alternatives, mitigation and routing");p("Alternatives",S.s7.alternatives);p("Mitigations",S.s7.mitigation);p("Formal paths",S.s7.routes.map(id=>ROUTES.find(r=>r.id===id)?.label).join("; "));p("Routing status",S.s7.routeNotes);
+  L.push("## 8. Implementation and accountability");p("Steps",S.s8.steps);p("Milestones",S.s8.milestones);p("Resources",S.s8.resources);p("Personnel",S.s8.personnel);p("Measures",S.s8.metrics);p("Review",S.s8.review);p("Accountability and communication",S.s8.accountability);p("Sustainability",S.s8.sustain);
+  L.push("## 9. Alignment");p("DHS Equity Policy objectives",S.s9.objectives.map(id=>OBJECTIVES.find(o=>o.id===id)?.label).join("; "));p("ADSA goals",S.s9.goals.map(id=>GOALS.find(o=>o.id===id)?.label).join("; "));p("Communication of results",S.s9.communicate);
+  L.push("_Prepared with the One DSD Equity Policy Review, consistent with the DHS Equity Policy and the State of Minnesota Equity Analysis Toolkit. Supports, and does not replace, the official toolkit, required approvals, civil rights review, Tribal consultation or labor relations processes._");
+  return L.join("\n");
+}
+function billSection(){
+  const m=S.meta;
+  const burdened=S.groups.filter(g=>g.eff==="burden"||g.eff==="both");
+  const benefit=S.groups.filter(g=>g.eff==="benefit"||g.eff==="both");
+  const rec={proceed:"Proceed as proposed",changes:"Proceed with changes",redesign:"Significant concerns; recommend redrafting",stop:"Do not proceed"}[S.s9.verdict]||"Recommendation not yet recorded";
+  return [
+   `EQUITY IMPACT (DHS Equity Policy analysis)${S.sample?" — PRACTICE EXAMPLE":""}`,
+   `Bill: ${m.bill||"—"} ${m.author?"· Author: "+m.author:""} · Analyzed by: ${m.unit||"DSD"} · ${m.date}`,
+   ``,
+   `Equity review recommendation (not an official legislative position): ${rec}`,
+   ``,
+   `Summary: ${S.s9.summary.trim()||"[summary]"}`,
+   ``,
+   `Communities benefited: ${benefit.map(g=>g.name).join("; ")||"[none identified]"}`,
+   `Communities burdened: ${burdened.map(g=>`${g.name}${g.sev?" ("+g.sev.toLowerCase()+")":""}`).join("; ")||"[none identified]"}`,
+   `Net effect on disparities: ${{reduce:"Reduces an identified disparity",neutral:"Neutral",widen:"Risks widening a disparity",unknown:"Unknown; data gap noted"}[S.s5.disparity]||"[not assessed]"}`,
+   ``,
+   `Evidence: ${S.s3.findings.trim()||"[findings]"}`,
+   ``,
+   `Engagement: ${S.s4.who.trim()||"[who]"}${S.s4.changed.trim()?" Result: "+S.s4.changed.trim():""}`,
+   `Tribal consultation: ${{yes:"Completed or underway",planned:"Required and planned",na:"Not applicable (confirmed with Tribal Liaison)",unsure:"Not yet determined"}[S.s4.tribal]||"[status]"}`,
+   ``,
+   `Access and CLAS: ${S.s6.disability.trim()||"[disability access]"} ${S.s6.language.trim()}`,
+   ``,
+   `Recommended amendments or mitigations:`,
+   ...S.s9.recs.filter(r=>r.text.trim()).map((r,i)=>`  ${i+1}. ${r.text.trim()}${r.owner?" (owner: "+r.owner+")":""}`),
+   ``,
+   `Fiscal and implementation notes for equity provisions: ${S.s8.resources.trim()||"[resources]"}`,
+   ``,
+   `Formal reviews triggered: ${S.s7.routes.map(id=>ROUTES.find(r=>r.id===id)?.label).join("; ")||"[none identified]"}`,
+   ``,
+   `DHS Equity Policy objectives engaged: ${S.s9.objectives.map(id=>OBJECTIVES.find(o=>o.id===id)?.label).join("; ")||"—"}`,
+   `ADSA goals engaged: ${S.s9.goals.map(id=>GOALS.find(o=>o.id===id)?.label).join("; ")||"—"}`
+  ].join("\n");
+}
+
+/* ---------------- rendering ---------------- */
+function renderNav(){
+  $("#nav").innerHTML=STEPS.map((s,i)=>`<button type="button" data-step="${i}" ${i===cur?'aria-current="step"':""}><span class="num ${stepState(i)}">${i}</span><span class="lbl">${s.title}<small>${s.short}</small></span></button>`).join("");
+  const done=STEPS.filter((_,i)=>stepState(i)==="done").length;
+  $("#meterText").textContent=`${done} of ${STEPS.length} steps complete`;
+  $("#meterBar").style.width=(done/STEPS.length*100)+"%";
+  const t=track();const box=$("#modeBox");
+  if(t){box.hidden=false;$("#modeTitle").textContent=t.title;$("#modeText").textContent=S.meta.title?S.meta.title:"";}else box.hidden=true;
+}
+function renderCoach(){
+  const c=STEPS[cur].coach;
+  $("#coachPane").innerHTML=`<h3>What the policy says</h3><div class="anchor">${c.anchor}</div><h3>Questions to ask</h3><ul>${c.prompts.map(p=>`<li>${p}</li>`).join("")}</ul><h3>What strong looks like</h3><div class="strong-weak"><div class="sw-strong"><strong>Strong:</strong> ${c.strong}</div><div class="sw-weak"><strong>Weak:</strong> ${c.weak}</div></div><h3>Common pitfalls</h3><ul>${c.pitfalls.map(p=>`<li>${p}</li>`).join("")}</ul>`;
+  if(!$("#resPane").innerHTML)$("#resPane").innerHTML=RESOURCES;
+}
+function render(focus=true){
+  const active=document.activeElement;const activePath=active?.dataset.path;const activeGroup=active?.dataset.g;const activeKey=active?.dataset.k;
+  $("#stepHost").innerHTML=R[STEPS[cur].id]();
+  $("#main").classList.toggle("wide",cur===2||cur===9);
+  renderNav();renderCoach();
+  $("#btnPrev").disabled=cur===0;
+  $("#btnNext").textContent=cur===STEPS.length-1?"Back to start":"Next step";
+  if(!focus){const controls=[...document.querySelectorAll("[data-path],[data-g]")];controls.find(el=>activePath?el.dataset.path===activePath&&(!active.value||el.type!=="radio"||el.value===active.value):activeGroup!==undefined&&el.dataset.g===activeGroup&&el.dataset.k===activeKey)?.focus();}
+  if(focus){$("#main").focus({preventScroll:true});window.scrollTo({top:0});}
+}
+function go(i){cur=Math.max(0,Math.min(STEPS.length-1,i));render();}
+
+/* ---------------- events ---------------- */
+document.addEventListener("input",e=>{
+  const el=e.target;
+  if(el.dataset.path){ if(el.type==="radio"){if(el.checked)set(el.dataset.path,el.value);} else set(el.dataset.path,el.value);
+    if(["meta.type","meta.duration","meta.approval","meta.prior","meta.unchanged","meta.priorCitation"].includes(el.dataset.path)) render(false);
+    else if(cur===9&&!el.closest(".record")) refreshS9();
+    else renderNav();
+  }
+  if(el.dataset.g!==undefined){S.groups[+el.dataset.g][el.dataset.k]=el.value; if(el.dataset.k==="eff"){render(false);} else renderNav();}
+  if(el.dataset.r!==undefined){S.s9.recs[+el.dataset.r][el.dataset.k]=el.value; refreshS9();}
+  if(el.dataset.arr){const arr=get(el.dataset.arr);const i=arr.indexOf(el.value);if(el.checked&&i<0)arr.push(el.value);if(!el.checked&&i>=0)arr.splice(i,1); if(cur===9)refreshS9(); else renderNav();}
+});
+function refreshS9(){ $("#recordPreview").innerHTML=record(); const rb=$("#stepHost .rubric"); if(rb){rb.outerHTML=rubric();} renderNav(); }
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button, a[data-go]");
+  if(!b)return;
+  if(b.dataset.step!==undefined)go(+b.dataset.step);
+  if(b.dataset.go!==undefined){e.preventDefault();go(+b.dataset.go);}
+  if(b.id==="btnPrev")go(cur-1);
+  if(b.id==="btnNext")go(cur===STEPS.length-1?0:cur+1);
+  if(b.id==="addGroup"){S.groups.push({name:"",eff:"",sev:"",how:"",evidence:"",engaged:""});render(false);$("#stepHost tbody tr:last-child input")?.focus();}
+  if(b.dataset.del!==undefined){S.groups.splice(+b.dataset.del,1);render(false);}
+  if(b.id==="addRec"){S.s9.recs.push({text:"",owner:"",by:"",measure:""});render(false);}
+  if(b.dataset.delrec!==undefined){S.s9.recs.splice(+b.dataset.delrec,1);if(!S.s9.recs.length)S.s9.recs.push({text:"",owner:"",by:"",measure:""});render(false);}
+  if(b.id==="btnSave"||b.id==="btnSave2")saveJson();
+  if(b.id==="btnOpen")$("#fileOpen").click();
+  if(b.id==="btnNew"){if(confirm("Start a new analysis? Unsaved work in this one will be lost.")){S=blank();cur=0;render();}}
+  if(b.id==="btnPrint"){$("#printHost").innerHTML=record();window.print();}
+  if(b.id==="btnMd")copy(md(),"Record copied as text");
+  if(b.id==="btnBill")copy(billSection(),"Equity section copied");
+  if(b.id==="btnCoach"){const c=$("#coach");const open=c.classList.toggle("open");b.setAttribute("aria-expanded",open);}
+  if(b.dataset.tab){document.querySelectorAll(".coach .tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));document.querySelectorAll(".coach .rsec").forEach(x=>x.classList.toggle("on",x.id===b.dataset.tab));}
+});
+async function copy(text,msg){try{await navigator.clipboard.writeText(text);toast(msg);}catch{const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();toast(msg);}}
+function saveJson(){
+  S.savedAt=new Date().toISOString();lastDownloaded=JSON.stringify(S);persistDraft();
+  const name=(S.meta.title||"equity-analysis").replace(/[^\w\- ]+/g,"").trim().replace(/\s+/g,"-").slice(0,60)||"equity-analysis";
+  const blob=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`${name}-${S.meta.date}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  toast("Draft saved to your downloads");
+}
+
+const DRAFT_KEY="one-dsd-review-"+blank().toolKind;
+let lastDownloaded="";
+function validateDraft(d){
+ if(!d||d.version!==1||d.toolKind!==blank().toolKind)throw Error("wrong tool");
+ const template=blank();
+ function check(v,t,depth=0){
+  if(depth>8)throw Error("depth");
+  if(Array.isArray(t)){if(!Array.isArray(v)||v.length>100)throw Error("array");for(const x of v)check(x,t[0]??"",depth+1);return;}
+  if(t!==null&&typeof t==="object"){if(!v||Array.isArray(v)||typeof v!=="object")throw Error("object");for(const k of Object.keys(t)){if(!Object.hasOwn(v,k))throw Error("missing field");check(v[k],t[k],depth+1);}for(const k of Object.keys(v)){if(!Object.hasOwn(t,k))throw Error("unknown field");}return;}
+  if(t===null){if(v!==null&&typeof v!=="string")throw Error("date");return;}
+  if(typeof v!==typeof t||(typeof v==="string"&&v.length>30000))throw Error("value");
+ }
+ check(d,template);
+ if(d.meta.type&&!Object.hasOwn(TYPES,d.meta.type))throw Error("action");
+ const enumValue=(value,allowed)=>{if(!["",...allowed].includes(value))throw Error("selection");};
+ enumValue(d.meta.duration,["prolonged","short"]);enumValue(d.meta.approval,["supervisor","director","ac","commissioner","none"]);enumValue(d.meta.prior,["yes","no"]);enumValue(d.meta.unchanged,["yes","no"]);enumValue(d.s4.tribal,["yes","planned","na","unsure"]);enumValue(d.s5.disparity,["reduce","neutral","widen","unknown"]);
+ for(const g of d.groups){enumValue(g.eff,["benefit","burden","both","unknown","none"]);enumValue(g.sev,["Low","Moderate","High"]);enumValue(g.engaged,["Yes","Planned","No"]);}
+ const result=d[d.toolKind==="hcbs"?"s10":"s9"];enumValue(result.verdict,["proceed","changes","redesign","stop"]);
+ const enumArray=(values,allowed)=>{if(new Set(values).size!==values.length||values.some(v=>!allowed.includes(v)))throw Error("selection list");};
+ enumArray(result.objectives,OBJECTIVES.map(x=>x.id));enumArray(result.goals,GOALS.map(x=>x.id));enumArray(d[d.toolKind==="hcbs"?"s8":"s7"].routes,ROUTES.map(x=>x.id));if(d.toolKind==="hcbs")enumArray(d.meta.lines,LINES);
+ return d;
+}
+let unrecoveredBrowserDraft=false;
+function persistDraft(){if(unrecoveredBrowserDraft){$("#draftStatus").textContent="An earlier browser draft could not be recovered and has been preserved. Download your current notes; clear the browser draft only when you are ready to replace it.";return;}try{localStorage.setItem(DRAFT_KEY,JSON.stringify(S));$("#draftStatus").textContent="Draft saved in this browser only. Not submitted or shared. Avoid personal or confidential information.";}catch{$("#draftStatus").textContent="Browser saving is unavailable. Download your draft to keep your work.";}}
+function restoreDraft(){try{const raw=localStorage.getItem(DRAFT_KEY);if(raw&&raw.length>2000000)throw Error("draft too large");if(raw){const d=validateDraft(JSON.parse(raw));S=d;$("#draftStatus").textContent="Your previous browser draft was recovered. It has not been submitted or shared.";}}catch{unrecoveredBrowserDraft=true;$("#draftStatus").textContent="The earlier browser draft could not be recovered and has been preserved. Download current notes before leaving; clear the earlier draft only when you are ready to replace it.";}}
+document.addEventListener("input",()=>persistDraft());
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.id==="btnClearLocal"){if(confirm("Clear the draft saved in this browser? Download it first if you want to keep it.")){try{localStorage.removeItem(DRAFT_KEY);if(localStorage.getItem(DRAFT_KEY)!==null)throw Error("not cleared");}catch{$("#draftStatus").textContent="This browser could not clear the saved draft. Your current work and earlier saved draft are unchanged. Please try again.";return;}unrecoveredBrowserDraft=false;S=blank();cur=0;render();$("#draftStatus").textContent="Browser draft cleared.";}return;}if(b.id==="btnNew"||b.id==="btnExample"||b.id==="btnLoadEx"||b.id==="addGroup"||b.id==="addRec"||b.dataset.del!==undefined||b.dataset.delrec!==undefined)persistDraft();});
+$("#fileOpen").addEventListener("change",async e=>{
+ const f=e.target.files[0];if(!f)return;
+ try{if(f.size>2000000)throw Error("size");const candidate=validateDraft(JSON.parse(await f.text()));if(!confirm("Replace the current draft with this file? Download the current draft first if you want to keep it."))return;S=candidate;cur=0;render();persistDraft();toast("Draft opened");}catch{toast("This draft could not be opened. Your current work is unchanged.");}finally{e.target.value="";}
+});
+document.querySelectorAll(".tabs button").forEach((tab,i)=>{tab.setAttribute("aria-controls",tab.dataset.tab);tab.tabIndex=i? -1:0;$("#"+tab.dataset.tab).setAttribute("aria-labelledby",tab.id);tab.addEventListener("click",()=>document.querySelectorAll(".tabs button").forEach(x=>x.tabIndex=x===tab?0:-1));tab.addEventListener("keydown",e=>{const tabs=[...document.querySelectorAll(".tabs button")];let n=tabs.indexOf(tab);if(e.key==="ArrowRight")n=(n+1)%tabs.length;else if(e.key==="ArrowLeft")n=(n+tabs.length-1)%tabs.length;else if(e.key==="Home")n=0;else if(e.key==="End")n=tabs.length-1;else return;e.preventDefault();tabs[n].click();tabs[n].focus();});});
+window.addEventListener("beforeunload",e=>{try{if(localStorage.getItem(DRAFT_KEY)===JSON.stringify(S))return;}catch{}if(JSON.stringify(S)!==JSON.stringify(blank())&&JSON.stringify(S)!==lastDownloaded){e.preventDefault();e.returnValue="";}});
+restoreDraft();
+render(false);
+</script>
+<footer class="dsd-footer"><div class="dsd-shell"><div><strong>One DSD People, Access and Culture</strong><p>Developed within the Disability Services Division</p></div><nav aria-label="Support and program information"><a href="/site-map">Site Map</a><a href="/operationalizing-equity">Operationalizing Equity</a><a href="/program-foundation">Constitution</a><a href="/about">About</a><a href="/program/model">Explore the program</a><a href="/support">Support</a><a href="/orientation">Getting started</a><a href="/user-guide">User guide</a></nav><details><summary>Participation and privacy</summary><p>Participation in this program is voluntary. Keep private client, case, health, and personnel information out of questions and learning notes. This resource does not replace official DHS systems, policies, or required training.</p></details></div><p class="program-ownership" style="font-size:0.875rem;line-height:1.5;color:#334155;background:#fff;padding:16px 24px;margin:0">Property of Gary Banks</p></footer><script id="one-dhs-program-menu">const menu=document.getElementById('dsd-menu'),nav=document.getElementById('dsd-navigation');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';nav.classList.toggle('is-open',open);menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});menu.closest('header').addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';menu.focus();}});</script></body>
+</html>

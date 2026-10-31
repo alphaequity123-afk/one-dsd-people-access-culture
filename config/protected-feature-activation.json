@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "features": {
+    "dsd_consultation": {
+      "evidence_id": "dsd-operational-activation-20261005",
+      "approval_state": "approved",
+      "policy_version": "dsd-consultation-20261005",
+      "retention_days": null,
+      "requirements": {
+        "approved_policy": {
+          "state": "verified",
+          "evidence_id": "owner:two-calendar-years-20261005"
+        },
+        "deletion_process": {
+          "state": "verified",
+          "evidence_id": "db:synthetic-terminal-retention-20261005"
+        },
+        "correction_process": {
+          "state": "verified",
+          "evidence_id": "db:consultation-cas-20261005"
+        },
+        "backup_process": {
+          "state": "verified",
+          "evidence_id": "provider:daily-physical-backups-20261005"
+        },
+        "restore_process": {
+          "state": "verified",
+          "evidence_id": "db:isolated-encrypted-recovery-20261005"
+        },
+        "recovery_process": {
+          "state": "verified",
+          "evidence_id": "operations:owner-recovery-procedure-20261005"
+        },
+        "incident_process": {
+          "state": "verified",
+          "evidence_id": "test:intake-pause-tracking-preserved-20261005"
+        },
+        "delivery_process": {
+          "state": "verified",
+          "evidence_id": "test:private-screen-receipt-owner-queue-20261005"
+        }
+      },
+      "activation_rule": "Owner-approved operating evidence is recorded before deployment; live submission, restart, delivery, and scheduled cleanup receipts must be verified before rollout is reported complete.",
+      "retention_calendar_years": 2
+    }
+  }
+}
