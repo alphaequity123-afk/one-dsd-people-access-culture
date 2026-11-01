@@ -4,6 +4,22 @@
   "package_manager": "npm@11.9.0",
   "settings": [
     {
+      "name": "PAC_GEFFEN_PUBLIC_MEDIA_ROOT",
+      "class": "configuration",
+      "surface": "public_read_aloud_media",
+      "example": false,
+      "required_when": "optional absolute path to a dedicated publisher-controlled public media directory; never use a private data directory"
+    },
+    {
+      "name": "PAC_GEFFEN_UPLOAD_ENABLED",
+      "class": "configuration",
+      "surface": "public_read_aloud_media",
+      "example": false,
+      "allowed": ["true", "false"],
+      "default": "false",
+      "required_when": "explicitly enable owner-authorized publication to a dedicated public-only Geffen media volume"
+    },
+    {
       "name": "PAC_OWNER_DATABASE_URL",
       "class": "server_secret",
       "surface": "private_owner_editing",
