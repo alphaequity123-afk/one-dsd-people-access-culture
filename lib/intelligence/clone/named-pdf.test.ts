@@ -108,10 +108,17 @@ describe("named original PDF grounding", () => {
     expect(result.answer.sources[0].href).toBe("/documents/engagement/clas-implementation-checklist.pdf#page=8");
     expect(result.answer.evidenceClaims).toHaveLength(1);
   }, 20000);
-  it.each([" Only use sources from this application; do not search the web.", " Use internal sources only."])("does not initiate outside research for explicit local-only wording: %s", async (preference) => {
+  it.each([" Only use sources from this application; do not search the web.", " Use internal sources only.", " Using only this application, answer the question.", " Using this program alone, answer the question."])("does not initiate outside research for explicit local-only wording: %s", async (preference) => {
     f.plan.mockResolvedValue({ route: "resources", evidence: "research" });
     await askConcierge({ question: question + preference, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.research).not.toHaveBeenCalled();
+  }, 20000);
+  it("honors the exact video question without starting public research", async () => {
+    f.plan.mockResolvedValue({ route: "resources", evidence: "research" });
+    const result = await askConcierge({ question: "Using only this application, what example does the democratic leadership video give?", contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
+    expect(f.research).not.toHaveBeenCalled();
+    expect(result.kind).toBe("answer");
+    if (result.kind === "answer") expect(result.answer.publicResearch).toBeUndefined();
   }, 20000);
   it("keeps external source URLs and prior outside answers out of the writer payload for explicit program-only requests", async () => {
     let payload: any;

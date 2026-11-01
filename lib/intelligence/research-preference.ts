@@ -2,7 +2,19 @@
  * automatic; asking for internal material only must not send it to web research. */
 export function asksForProgramSourcesOnly(question: string): boolean {
   const text = question.toLowerCase().replace(/[’‘]/g, "'");
-  return /\b(?:only|just|exclusively)\s+(?:use|search|consult|cite|look|rely|retrieve)\b.{0,55}\b(?:this (?:app|application|site|program)|(?:internal|program|application) (?:sources|content|materials|documents))\b/.test(text)
+  // An explicit request to go beyond the application is not an internal-only
+  // constraint, even if it mentions the words "use only" along the way.
+  if (/\b(?:do not|don't|never|must not|should not|not)\s+(?:use|using|rely on|relying on|search|searching|consult|consulting)\s+(?:only|just|solely|exclusively)\b/.test(text)
+    || /\bnot\s+only\s+(?:use|using|search|consult)\b/.test(text)
+    || /\b(?:also|additionally|and|plus)\s+(?:please\s+)?(?:search|use|consult|include|consider|check)\s+(?:the\s+)?(?:web|internet|online|external|outside)\b/.test(text)
+    || /\b(?:include|use|consult|search|consider)\s+(?:the\s+)?(?:web|internet|online|external|outside)\b.{0,30}\b(?:too|also|as well)\b/.test(text)) return false;
+  return /\b(?:using|use|searching|search|consulting|consult|citing|cite|relying on|rely on|based (?:solely |only |exclusively )?on)\s+(?:(?:only|just|solely|exclusively)\s+)?(?:(?:this|the)\s+)?(?:app|application|site|program)\s+(?:only|alone|exclusively)\b/.test(text)
+    || /\b(?:using|use|searching|search|consulting|consult|citing|cite|relying on|rely on|based\s+on)\s+(?:only|just|solely|exclusively)\s+(?:(?:this|the)\s+)(?:app|application|site|program)\b/.test(text)
+    || /\b(?:based|drawing)\s+(?:only|solely|exclusively)\s+on\s+(?:(?:this|the)\s+)(?:app|application|site|program)\b/.test(text)
+    || /\b(?:from|within|inside|in)\s+(?:only|just|solely|exclusively)\s+(?:(?:this|the)\s+)(?:app|application|site|program)\b/.test(text)
+    || /\b(?:from|within|inside|in)\s+(?:(?:this|the)\s+)(?:app|application|site|program)\s+(?:only|alone|exclusively)\b/.test(text)
+    || /\b(?:using|use|search|consult|cite)\s+(?:only|just|solely|exclusively)\s+(?:the\s+)?(?:information|sources|content|materials|documents)\s+(?:from|in|on|within)\s+(?:(?:this|the)\s+)?(?:app|application|site|program)\b/.test(text)
+    || /\b(?:only|just|exclusively)\s+(?:use|search|consult|cite|look|rely|retrieve)\b.{0,55}\b(?:this (?:app|application|site|program)|(?:internal|program|application) (?:sources|content|materials|documents))\b/.test(text)
     || /\b(?:only|exclusively)\s+(?:the\s+)?(?:internal|program|application)\s+(?:sources|content|materials|documents|information)\b/.test(text)
     || /\b(?:only|exclusively)\s+(?:the\s+)?(?:information|sources|content|materials|documents)\s+(?:from|in|on|within)\s+(?:this\s+)?(?:app|application|site|program)\b/.test(text)
     || /\b(?:use|search|consult)\b.{0,20}\b(?:only|exclusively)\b.{0,35}\b(?:internal|program|application|site|app)\b/.test(text)
