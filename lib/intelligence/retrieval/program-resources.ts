@@ -11,7 +11,7 @@ import { loadStaffContentSnapshot, type StaffProgramScope } from "@/lib/content/
 import { MEASUREMENT_RESOURCE_ID } from "@/lib/content/measurement-practice";
 import type { Doc } from "./search";
 import { searchDocs, tokens } from "./search";
-import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curriculumDocs, waterCourseDocs } from "./brain-content";
+import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curriculumDocs, selfDirectedCurriculumDocs, waterCourseDocs } from "./brain-content";
 import { publishedPodcastReadings } from "./podcast-reading";
 import { developmentModel, journeyHref } from "@/lib/program/development";
 import equityGoals from "@/lib/program/equity-goals.json";
@@ -19,6 +19,8 @@ import { CULTURAL_INTELLIGENCE_SURFACE_ID } from "@/lib/content/cultural-intelli
 import { dynamicPublicRouteDocs } from "./dynamic-public-route-docs";
 import { practicePathSearchValues } from "./public-practice-path-search";
 import { publicRouteDocs } from "./public-route-docs";
+import { publicCourseMediaDocs } from "./public-course-media-docs";
+import { publicExplainerMediaDocs } from "./public-explainer-media-docs";
 import { publicPracticeDocs } from "./public-practice-docs";
 import { culturalIntelligenceSearchValues, leadershipLearningDocs, learningNavigationDocs, publishedLeadershipVideoDocs, themeCollectionDocs, programFrameworkDocs, additionalPublicRouteDocs } from "./public-learning-docs";
 
@@ -59,6 +61,9 @@ const currentIndexes = new Map<StaffProgramScope, { key: string; index: ProgramI
 export async function indexedProgramResources(scope: StaffProgramScope): Promise<ProgramIndex> {
   const definitions = programResourceDefinitions();
   const sourcePublications = await loadPublishedEditableSurfaces(definitions.map(d => d.surfaceId), scope);
+  // The practice shell has a parameterized route and is intentionally absent
+  // from destination documents, but its publication still gates path media.
+  const pathShellPublications = await loadPublishedEditableSurfaces(["practice.path-shell"], scope);
   const editorialFingerprint = createHash("sha256").update(JSON.stringify(historicalEditorialData)).digest("hex");
   const publications = sourcePublications.map(row => {
     const reviewed = withReviewedHistoricalSurface(row.surfaceId, row.values);
@@ -77,14 +82,14 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   const podcastReadings = publishedPodcastReadings(publications);
   const measurementAvailable = publications.some(row => row.surfaceId === "practice.measurement")
     && (await loadStaffContentSnapshot({ scope })).items.some(item => item.id === MEASUREMENT_RESOURCE_ID);
-  const publishedIds = new Set(publications.map(p => p.surfaceId));
+  const publishedIds = new Set([...publications, ...pathShellPublications].map(p => p.surfaceId));
   // Published public video transcripts can change on the volume between app
   // deployments. Read their current verified manifest state before cache reuse.
   const leadershipVideos = await publishedLeadershipVideoDocs(scope, publishedIds);
   // Always check current scoped publications first. Reuse text processing only while
   // the same immutable revisions remain published; withdrawals change this key.
   const key = publications.map(p => `${p.surfaceId}:${p.source}:${p.sourceScope}:${p.revisionId}`).sort().join("|") + "|measurement-source:" + measurementAvailable + "|podcast-readings:" + [...podcastReadings.values()].map(reading => reading.fingerprint).sort().join("|") + "|development:" + createHash("sha256").update(JSON.stringify(developmentModel)).digest("hex");
-  const scopedKey = key + "|reviewed-editorial:" + editorialFingerprint + "|rendered-publications:" + publications.map(row => `${row.surfaceId}:${row.renderedFingerprint}`).sort().join("|") + "|equity-goals:" + createHash("sha256").update(JSON.stringify(equityGoals)).digest("hex") + "|leadership-videos:" + createHash("sha256").update(JSON.stringify(leadershipVideos)).digest("hex");
+  const scopedKey = key + "|path-shell:" + createHash("sha256").update(JSON.stringify(pathShellPublications)).digest("hex") + "|reviewed-editorial:" + editorialFingerprint + "|rendered-publications:" + publications.map(row => `${row.surfaceId}:${row.renderedFingerprint}`).sort().join("|") + "|equity-goals:" + createHash("sha256").update(JSON.stringify(equityGoals)).digest("hex") + "|leadership-videos:" + createHash("sha256").update(JSON.stringify(leadershipVideos)).digest("hex");
   const cached = currentIndexes.get(scope);
   if (cached?.key === scopedKey) return cached.index;
   const grouped = new Map<string, typeof publications>();
@@ -165,7 +170,17 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   const communityDocs = destinations.filter(d => d.kind === "brief");
   // Everything readable on the site belongs in the search. A failure here is visible and leaves the rest working.
   try {
-    destinations.push(...communityResearchDocs(scope, communityDocs), ...communityProfileDocs(scope, communityDocs), ...culturalCalendarDocs(scope, communityDocs), ...waterCourseDocs(scope), ...curriculumDocs(scope, publishedIds));
+    const currentCourses = publications.flatMap(row => {
+      if (!row.surfaceId.startsWith("course.")) return [];
+      const pack = row.values.pack as CoursePack;
+      if (!pack?.course || !Array.isArray(pack.course.lessons)) return [];
+      return [{ id: pack.course.id, title: pack.course.title, lessons: pack.course.lessons.map(lesson => ({ id: lesson.id, blockCount: lesson.blocks.length, hasScenario: Boolean(lesson.scenario) })) }];
+    });
+    const activeSelfDirected = new Set(selfDirectedCurriculumDocs(scope).flatMap(doc => {
+      const id = new URL(doc.href, "https://local.invalid").searchParams.get("course");
+      return id ? [id] : [];
+    }));
+    destinations.push(...communityResearchDocs(scope, communityDocs), ...communityProfileDocs(scope, communityDocs), ...culturalCalendarDocs(scope, communityDocs), ...waterCourseDocs(scope), ...curriculumDocs(scope, publishedIds), ...publicCourseMediaDocs(scope, currentCourses, activeSelfDirected), ...publicExplainerMediaDocs(scope, publishedIds));
   } catch (error) {
     console.error("ask_brain_content_unavailable", error instanceof Error ? error.message : "unknown");
   }

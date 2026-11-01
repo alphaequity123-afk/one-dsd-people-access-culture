@@ -1,6 +1,7 @@
 import { contentEvidence, type EvidenceRevision, type SourceEvidence } from "@/lib/content/ask-evidence";
 /** Current-publication keyword retrieval and citation projection. Semantic inference is loaded on the server. */
 import { staffCorpus } from "@/lib/content/staff-corpus";
+import { SUPERVISOR_COURSE_PLACEMENT, supervisorJobAidId } from "@/lib/content/supervisor-job-aids";
 import { BRIEFS } from "@/lib/content/briefs";
 import { briefVisibilityKey, briefVisibleToStaff } from "@/lib/content/brief-visibility";
 import { AUTHORITY, type AskIntent, type AuthorityLabel, type ContentItem } from "@/lib/content/types";
@@ -90,6 +91,17 @@ export type Doc = {
   graphRelated?: string[];
 };
 
+// Supervisor job aids are authored from their course pack and carry an explicit
+// public course link. Only project that source-backed association; the graph
+// itself only connects it when the course is present in the current public docs.
+const SUPERVISOR_JOB_AID_COURSES = new Map(
+  Object.keys(SUPERVISOR_COURSE_PLACEMENT).map(courseId => [supervisorJobAidId(courseId), `/courses/${courseId}`]),
+);
+function relatedPublishedCourse(item: ContentItem): string[] | undefined {
+  const course = item.type === "job_aid" ? SUPERVISOR_JOB_AID_COURSES.get(item.id) : undefined;
+  return course && item.nextActions?.some(action => action.href === course) ? [course] : undefined;
+}
+
 let DOCS: Doc[] | null = null;
 let DOCS_VISIBILITY_KEY: string | null = null;
 
@@ -112,6 +124,7 @@ export function indexedDocs(): Doc[] {
     text: [c.title, c.summary, c.whyItMatters ?? "", ...c.body, c.tags.join(" ")].join(" "),
     tags: c.tags,
     intents: c.intents,
+    graphRelated: relatedPublishedCourse(c),
   }));
   const briefs: Doc[] = BRIEFS.filter(briefVisibleToStaff).map((b) => ({
     kind: "brief",
@@ -160,6 +173,7 @@ export function docsFromStaffContent(snapshot: { source: "static" | "postgres"; 
     text: [c.title, c.summary, c.whyItMatters ?? "", ...c.body, c.tags.join(" ")].join(" "),
     tags: c.tags,
     intents: c.intents,
+    graphRelated: relatedPublishedCourse(c),
   }));
   if (snapshot.source === "postgres") return content;
 

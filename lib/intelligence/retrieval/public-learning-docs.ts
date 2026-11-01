@@ -256,7 +256,7 @@ export function additionalPublicRouteDocs(scope: StaffProgramScope, publishedSur
     ["/one-dsd"], "Public DSD division overview");
   const guide = make("public-site-user-guide", "How to use this site", "/user-guide", "Find useful learning and practical resources, explore at your own pace, and bring them into work.",
     "Begin from a question or task. Explore courses, community perspectives and source references; use an appropriate tool or guided practice. A community brief provides context, not a prediction about an individual. Protect private information in notes and Ask questions.",
-    ["/one-dsd/programs", "/one-dsd/team", "/one-dsd/amplify"], "Public user guide overview");
+    ["/one-dsd/programs", "/one-dsd/team", "/one-dsd/amplify", "/my-view"], "Public user guide overview");
   const docs = [model, toolkit, clas, privacy, presentation, readings, notice, planning, reflection, groups, division, guide];
   if (publishedSurfaces.has("equity-toolkit.home")) docs.push(make("public-adsa-equity-goals", "ADSA six goals and work plan", "/learn/equity-toolkit/goals",
     "ADSA goals and program companion guidance; they are not a requirement for all DHS offices to choose three goals.",

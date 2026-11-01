@@ -1,10 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const clips = [
-  { file: "first-contact-dead-end", version: "891577709c23", title: "When support comes after the barrier", transcript: "Imagine calling for help and hearing a message you cannot understand. The voicemail asks you to leave your name, number, and reason for calling, but language support is only offered after someone calls you back. The person needs help getting through the very first step. As you listen, consider what your team could put in place before that call arrives." },
-  { file: "first-contact-supported", version: "9c85ba2adaa6", title: "Connect support with the first contact", transcript: "Now consider a first contact designed around the caller’s needs. The person can request language support and reach a staff member with qualified interpretation. The worker says: I can help with the next step. Let’s confirm the language support you requested and the best way to contact you. What would you like us to clarify before we continue? Behind that conversation, the team needs a tested way to connect the caller, the right staffing, and reliable follow-up." },
-];
+import { FIRST_CONTACT_CLIPS as clips } from "./dsd-first-contact-data";
 
 function Clip({ file, version, title, transcript }: typeof clips[number]) {
   const [failed, setFailed] = useState(false);
