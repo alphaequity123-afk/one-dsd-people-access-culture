@@ -7,7 +7,7 @@ const destination = path.resolve(root, '../one-dsd-railway-release-20261004');
 if (fs.existsSync(destination)) throw new Error('Release directory already exists; inspect before replacing.');
 const exclusions = ignore().add(fs.readFileSync(path.join(root, '.gitignore'), 'utf8'));
 const roots = ['app','components','config','data','lib','models','public','types'];
-const files = ['package.json','package-lock.json','next.config.ts','tsconfig.json','postcss.config.mjs','proxy.ts','.npmrc','.node-version','.nvmrc','next-env.d.ts','railway.json','.railwayignore','scripts/hydrate-railway-assets.mjs','evidence/local-audit-2026-09-07/owner-content-approval.json'];
+const files = ['package.json','package-lock.json','next.config.ts','tsconfig.json','postcss.config.mjs','proxy.ts','.npmrc','.node-version','.nvmrc','next-env.d.ts','.railwayignore','scripts/hydrate-railway-assets.mjs','scripts/verify-clone-agent-pilot.mjs','evidence/local-audit-2026-09-07/owner-content-approval.json'];
 const entries=[];
 function copy(relative) {
   if (exclusions.ignores(relative) && relative !== 'next-env.d.ts') return;

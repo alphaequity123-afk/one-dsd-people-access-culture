@@ -37,10 +37,22 @@ The build runs asset restoration and verification scripts before Next.js compila
 1. Provision the target host and an isolated database. Follow `db/standalone/README.md`, including its prerequisites, transactional bootstrap, dedicated roles, and separation checks. The legacy database migration/provision commands are explicitly disallowed by that README. This repository does not contain the live database's records.
 2. Configure independent credentials in the host's secret manager. Use `config/environment-contract.json` as the complete environment contract. The example here is deliberately a minimal local-preview template, not a complete production configuration.
 3. Configure the new HTTPS `PAC_PUBLIC_ORIGIN`, the appropriate runtime/content stores, and the dedicated database role URLs. Enable AI, research, protected workspaces, and scheduling only after their required secrets and activation evidence are provisioned.
-4. Deliberately adapt `scripts/verify-clone-agent-pilot.mjs` to the new authorized service, origin, storage mode, and durable volume. Preserve its checks. It currently recognizes specific existing Railway services. `railway.json` runs that gate before starting the application.
+4. Deliberately adapt `scripts/verify-clone-agent-pilot.mjs` to the new authorized service, origin, storage mode, and durable volume. Preserve its checks. It currently recognizes specific existing Railway services. Configure the host to run this gate before starting the application, and stop startup if the gate fails.
 5. Review and satisfy production verification, health checks, access boundaries, database permissions, and relevant live feature tests before declaring the new host ready. `npm run build` succeeding alone does not validate production operation.
 
-For a new Railway deployment, the current configuration uses the build command in `railway.json`, startup gate followed by `npm run start -- --hostname 0.0.0.0`, health check `/`, and a durable `.data` mount checked by the startup gate. Do not reuse another service's identifiers or secrets without deliberately reviewing the target.
+For a new Railway service, set the following service settings explicitly. They are held in the current Railway service settings, not in a repository config file. Configure a durable volume at `/app/.data` and update the startup gate deliberately for the new service; do not reuse another service's identifiers or secrets without review.
+
+| Setting | Required value |
+| --- | --- |
+| Builder | `RAILPACK` |
+| Build command | `npm run build -- --webpack` |
+| Start command | `node scripts/verify-clone-agent-pilot.mjs && npm run start -- --hostname 0.0.0.0` |
+| Health check path | `/` |
+| Health check timeout | `300` seconds |
+| Restart policy | `ON_FAILURE` |
+| Maximum restart retries | `5` |
+
+The `&&` in the start command is essential: it prevents the application from starting if the gate fails. Confirm these settings in the target service and in the resulting deployment details, then run the production checks above. Railway's legacy `railway.json` and `railway.toml` configuration files are deprecated; the application does not rely on them.
 
 ## Supplemental materials
 
