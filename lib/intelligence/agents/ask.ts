@@ -7,6 +7,7 @@ import { brainContext, expandThroughGraph, fitWriterPrompt } from "../retrieval/
 import { asksForProgramSourcesOnly } from "../research-preference";
 import { EvidenceClaimsSchema, type EvidenceClaim, type SourceEvidence } from "@/lib/content/ask-evidence";
 import { citationEvidenceFromDocs, validateEvidenceClaims } from "../retrieval/evidence";
+import { videoScenarioEvidenceHits } from "../retrieval/video-transcript-evidence";
 import { canonicalizeGeneratedEvidenceClaims, GeneratedEvidenceClaimsSchema } from "../retrieval/generated-evidence";
 import { operationalEquityContext } from "@/lib/program/equity";
 import { TRAINING_CREDIT_NOTICE, trainingCreditContext } from "@/lib/program/learning-credit";
@@ -403,7 +404,10 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (availableDocs.some(doc => doc.type === "curriculum" && /^\/learning\/self-directed\/index\.html\?course=[FIA]\d{2}$/.test(doc.href))) publicDirectory.push({ label: "Open the self-directed courses", href: "/learning/self-directed/index.html" });
   const allowedDestinations = new Map(publicDirectory.map(link => [link.href, link]));
   let generatedResourceLinks: AskAnswer["nextActions"] = [];
-  const sources = await runTool(ctx, "citation.attach", async () => citationEvidenceFromDocs([...merged, ...connected], await staffDocs()), { contentIds: [...merged, ...connected].map((m) => m.id) });
+  const sources = await runTool(ctx, "citation.attach", async () => {
+    const docs = await staffDocs();
+    return citationEvidenceFromDocs(videoScenarioEvidenceHits([...merged, ...connected], docs, retrievalQuestion), docs);
+  }, { contentIds: [...merged, ...connected].map((m) => m.id) });
   let answerSources = sources;
   let evidenceClaims: EvidenceClaim[] = [];
   let evidenceRejected = false;
