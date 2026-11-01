@@ -1,5 +1,6 @@
 import { engagementPdfDocs } from "./engagement-pdf-docs";
 import { citationEvidenceFromDocs } from "./evidence";
+import { publicResourceMediaDocs } from "./public-resource-media";
 import "server-only";
 
 import {
@@ -19,7 +20,8 @@ import type { AskIntent } from "@/lib/content/types";
 
 export async function indexedStaffDocs(scope?: StaffProgramScope): Promise<Doc[]> {
   const snapshot = await loadStaffContentSnapshot({ scope });
-  return [...docsFromStaffContent(snapshot), ...engagementPdfDocs(snapshot.items)];
+  const media = await publicResourceMediaDocs(snapshot.items, snapshot.requestedScope);
+  return [...docsFromStaffContent(snapshot), ...engagementPdfDocs(snapshot.items), ...media];
 }
 
 export async function corpusSearchAsync(

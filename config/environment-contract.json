@@ -162,6 +162,15 @@
       "default": "static"
     },
     {
+      "name": "PAC_PUBLIC_RESOURCE_MEDIA_INDEX",
+      "class": "configuration",
+      "surface": "public_resource_media_search",
+      "example": false,
+      "allowed": ["off", "on"],
+      "default": "off",
+      "required_when": "only after standalone migration 0070 and restricted-role verification; indexes approved model-context audio scripts with a fresh publication check"
+    },
+    {
       "name": "PAC_STATIC_RESOURCE_EDITING",
       "class": "configuration",
       "surface": "staff_publication_overlay",

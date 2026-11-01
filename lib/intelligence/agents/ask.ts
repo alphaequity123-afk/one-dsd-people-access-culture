@@ -8,6 +8,7 @@ import { asksForProgramSourcesOnly } from "../research-preference";
 import { EvidenceClaimsSchema, type EvidenceClaim, type SourceEvidence } from "@/lib/content/ask-evidence";
 import { citationEvidenceFromDocs, validateEvidenceClaims } from "../retrieval/evidence";
 import { videoScenarioEvidenceHits } from "../retrieval/video-transcript-evidence";
+import { PUBLIC_RESOURCE_MEDIA_TYPE, publicResourceMediaStillCurrent } from "../retrieval/public-resource-media";
 import { canonicalizeGeneratedEvidenceClaims, GeneratedEvidenceClaimsSchema } from "../retrieval/generated-evidence";
 import { operationalEquityContext } from "@/lib/program/equity";
 import { TRAINING_CREDIT_NOTICE, trainingCreditContext } from "@/lib/program/learning-credit";
@@ -786,6 +787,20 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       answerSources = []; evidenceClaims = []; practiceArtifact = undefined;
       nextActions.push({ label: "Find the right person", href: "/support/right-person" });
     }
+  }
+
+  // A public recording can be edited or withdrawn while the model is writing.
+  // Recheck every dynamic media document the request saw, even if the model did
+  // not cite it. If that check fails, discard the answer and all derived text.
+  const seenMedia = availableDocs.filter(doc => doc.type === PUBLIC_RESOURCE_MEDIA_TYPE);
+  if (seenMedia.length) {
+    let current = false;
+    try { current = publicResourceMediaStillCurrent(seenMedia, await indexedStaffDocs(scope)); } catch { /* fail closed */ }
+    if (!current) return { kind: "answer", answer: {
+      context, intent: primary, shortAnswer: "The source material changed or could not be checked while I was preparing this answer. Please try again.",
+      whyItMatters: "", sources: [], limits: ["The answer was withheld because its current public sources could not be verified."],
+      nextActions: [], grounding: "none", degraded: true, generative: false, failureCode: "public_media_currentness_failed",
+    } };
   }
 
   const pathSuggestion = path ? { id: path.id, title: path.title, why: `This question connects with the "${path.staffLabel}" path. It covers ${path.steps.map((s) => s.title).slice(0, 4).join(", ")} and ends with a review checklist.` } : undefined;
