@@ -89,7 +89,10 @@ for (const { file, body } of clientFiles) {
   }
 }
 for (const name of referenced) {
-  if (forbiddenClientSettings.has(name)) {
+  // Some secret names are deliberately listed both as server settings and as
+  // forbidden in client modules. Allow their server-side use; the client scan
+  // above still rejects them. Public-prefixed secrets remain forbidden here.
+  if (forbiddenClientSettings.has(name) && (name.startsWith("NEXT_PUBLIC_") || !allowed.has(name))) {
     fail(`Source code references forbidden client setting ${name}.`);
   }
   if (!allowed.has(name)) {

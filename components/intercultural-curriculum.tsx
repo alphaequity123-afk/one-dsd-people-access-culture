@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 
 import { useEffect, useState } from 'react';
 import InterculturalLessonVideo, { type LessonMedia } from './intercultural-lesson-video';
@@ -47,9 +48,13 @@ export default function InterculturalCurriculum({ lessonId, communities, resourc
   useEffect(() => {
     try {
       const saved: unknown = JSON.parse(localStorage.getItem(progressKey) || '[]');
+      // Restore browser-only progress after hydration, not during server rendering.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (Array.isArray(saved)) setCompleted(saved.filter((id): id is string => typeof id === 'string' && modules.some(m => m.id === id)));
     } catch { setStorageMessage('Progress cannot be remembered in this browser. You can still use every lesson.'); }
   }, [modules]);
+  // A different lesson must never inherit the previous lesson's private notes or answer.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setAnswer(null); setNotes(''); }, [lessonId]);
   function complete() {
     if (!lesson) return;
@@ -60,7 +65,7 @@ export default function InterculturalCurriculum({ lessonId, communities, resourc
 
   return <div className="intercultural-study">
     
-    <nav aria-label="Intercultural learning"><a href="/learn/intercultural">Intercultural learning</a>{lesson && <a href={base}>Curriculum overview</a>}</nav>
+    <nav aria-label="Intercultural learning"><Link prefetch={false} href="/learn/intercultural">Intercultural learning</Link>{lesson && <a href={base}>Curriculum overview</a>}</nav>
     <header><p className="intercultural-eyebrow">SELF-DIRECTED LEARNING</p><h1>{lesson ? lesson.title : curriculum.title}</h1><p>Bring curiosity, care and practical questions to the work in front of you.</p></header>
     {!lesson ? <>
       <section><h2>A connected path, at your own pace</h2><p>Follow one work example through seven parts, from noticing an assumption to listening and learning from a change. Choose the parts and resources that support your work.</p><p>This learning is voluntary and individual. You can pause, revisit a section, and keep reflections to yourself. Leave names, case details and other private information out of learning notes.</p><a className="intercultural-primary" href={`${base}/01`}>Start the curriculum</a> <button type="button" onClick={() => download('Intercultural-working-notes.txt', companion(modules))}>Download working notes</button></section>

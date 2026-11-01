@@ -30,7 +30,7 @@ describe("generated evidence coordinate resolution", () => {
     expect(validateEvidenceClaims(canonical, [source], [doc])).toEqual(canonical);
   });
   it.each(["unknown-id", "altered-quote", "mismatched-excerpt-text", "invalid-number", "extra-field"])("rejects %s instead of silently normalizing it", change => {
-    const claim: any = fullClaim();
+    const claim = fullClaim() as ReturnType<typeof fullClaim> & { references: { approved?: boolean }[] };
     if (change === "unknown-id") claim.references[0].evidenceId = "0".repeat(64);
     if (change === "altered-quote") claim.text = claim.references[0].quote = doc.text.replace("childcare", "housing");
     if (change === "mismatched-excerpt-text") claim.text = "An invented quotation.";

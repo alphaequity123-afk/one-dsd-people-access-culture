@@ -40,6 +40,8 @@ export function DecisionWorkspace({ values, scope = "one-dhs" }: { values?: Edit
       const task = query.get("task");
       const next = loaded.notes;
       if (!requestedPlan && task && (DECISION_TASKS as readonly string[]).includes(task)) next.task = task;
+      // Restore this browser's selected plan after hydration, before allowing saves.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setNotes(next);
       setPlanId(loaded.planId);
       setExpectedRaw(loaded.raw);

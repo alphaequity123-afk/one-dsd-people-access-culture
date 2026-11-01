@@ -43,6 +43,8 @@ export const PRIVATE_BROWSER_STORAGE_KEYS: readonly PrivateBrowserStorageKey[] =
     { area: "local" as const, key: BROWSER_STORAGE_KEYS.pathArtifactSource(path.id), purpose: "path_notes" as const },
     { area: "local" as const, key: BROWSER_STORAGE_KEYS.pathProgress(path.id), purpose: "path_progress" as const },
   ]),
+  // "Keep my place" on the suggested paths for supervisors and managers.
+  ...["first-year", "experienced", "managers-of-managers", "senior-leaders"].map(path => ({ area: "local" as const, key: BROWSER_STORAGE_KEYS.pathProgress(`leading-${path}`), purpose: "path_progress" as const })),
 ];
 
 // Course IDs and lesson IDs share the CoursePackSchema slug grammar. Register

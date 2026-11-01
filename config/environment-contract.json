@@ -969,6 +969,98 @@
       "surface": "clone_persistent_volume",
       "example": false,
       "required_when": "provided by Railway for the clone pilot"
+    },
+    {
+      "name": "PAC_OWNER_DATABASE_SSL",
+      "class": "configuration",
+      "surface": "private_owner_editing",
+      "example": false,
+      "allowed": ["require", "disable", "true", "false", "on", "off"],
+      "required_when": "owner database transport requires an explicit SSL mode"
+    },
+    {
+      "name": "PAC_GEFFEN_WORKER_KEY",
+      "class": "server_secret",
+      "surface": "voice_worker",
+      "example": false,
+      "required_when": "the Geffen voice worker is enabled"
+    },
+    {
+      "name": "OPENROUTER_API_KEY",
+      "class": "server_secret",
+      "surface": "ai_provider",
+      "example": false,
+      "required_when": "an OpenRouter provider is enabled"
+    },
+    {
+      "name": "PAC_OPENROUTER_MODEL",
+      "class": "configuration",
+      "surface": "ai_provider",
+      "example": false,
+      "required_when": "an OpenRouter model override is selected"
+    },
+    {
+      "name": "BRAIN_REPORT",
+      "class": "test_control",
+      "surface": "retrieval_test",
+      "example": false,
+      "required_when": "writing an optional local retrieval report"
+    },
+    {
+      "name": "SERIES_ASSET_ENDPOINT",
+      "class": "configuration",
+      "surface": "release_asset_transport",
+      "example": false,
+      "required_when": "restoring approved media from the configured asset store"
+    },
+    {
+      "name": "SERIES_ASSET_BUCKET",
+      "class": "configuration",
+      "surface": "release_asset_transport",
+      "example": false,
+      "required_when": "restoring approved media from the configured asset store"
+    },
+    {
+      "name": "SERIES_ASSET_REGION",
+      "class": "configuration",
+      "surface": "release_asset_transport",
+      "example": false,
+      "required_when": "restoring approved media from the configured asset store"
+    },
+    {
+      "name": "SERIES_ASSET_ACCESS_KEY_ID",
+      "class": "server_secret",
+      "surface": "release_asset_transport",
+      "example": false,
+      "required_when": "authenticating to the approved asset store"
+    },
+    {
+      "name": "SERIES_ASSET_SECRET_ACCESS_KEY",
+      "class": "server_secret",
+      "surface": "release_asset_transport",
+      "example": false,
+      "required_when": "authenticating to the approved asset store"
+    },
+    {
+      "name": "NODE_TLS_REJECT_UNAUTHORIZED",
+      "class": "runtime_config",
+      "surface": "release_asset_transport",
+      "example": false,
+      "required_when": "checked to reject disabled TLS verification during media restoration"
+    },
+    {
+      "name": "COLLECTIONS_CSV",
+      "class": "configuration",
+      "surface": "local_content_import",
+      "example": false,
+      "required_when": "overriding the collections source file for local import"
+    },
+    {
+      "name": "SM_COURSE_SOURCE",
+      "class": "configuration",
+      "surface": "local_content_import",
+      "example": false,
+      "required_when": "overriding the supervisor course source directory for local import"
     }
   ],
   "forbidden_client_settings": [

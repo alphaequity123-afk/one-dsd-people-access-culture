@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable @typescript-eslint/no-require-imports -- This isolated export process uses CommonJS loader hooks to validate the TypeScript registry without a build. */
 
 // Read-only export of the exact application definitions approved for publication.
 // This helper never rewrites an applied migration or stores credentials.

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CALENDAR_TITLES, publishedCalendar, type CalendarDate, type CalendarEntry } from "@/lib/content/cultural-calendar";
+import { calendarMonthHref, CALENDAR_ICS_PATH, dateCovers, dateStateKind, dateStateText, entryAnchor, validDay } from "@/lib/content/culture-calendar-grid";
 import { ResearchInline } from "@/components/research-markdown";
 import "@/components/community-editorial.css";
 import "@/components/community-research-sections.css";
 
-export const metadata: Metadata = { title: "Cultural calendar (Minnesota Communities)" };
+export const metadata: Metadata = { title: "One DSD Culture Calendar (Minnesota Communities)" };
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const KINDS: Record<string, string> = { religious: "Religious", "community festival": "Community festival", national: "National", cultural: "Cultural", remembrance: "Remembrance", heritage: "Heritage" };
@@ -16,12 +17,11 @@ function formatDate(value: string) {
 }
 
 function dateState(entry: CalendarEntry, date: CalendarDate) {
-  if (entry.dateCertainty.startsWith("moon")) return "Depends on the moon or on an announcement, so it may shift. Confirm before planning.";
-  return date.confirmed ? "Date confirmed by a source." : "Expected date, not yet confirmed. Check with the organizer before planning.";
+  return dateStateText(dateStateKind(entry.dateCertainty, date.confirmed));
 }
 
-function Entry({ entry, date }: { entry: CalendarEntry; date?: CalendarDate }) {
-  return <details className="community-research-disclosure">
+function Entry({ entry, date, open }: { entry: CalendarEntry; date?: CalendarDate; open: boolean }) {
+  return <details id={entryAnchor(entry.id)} className="community-research-disclosure" open={open}>
     <summary>
       <h3>{entry.name}</h3>
       <span>
@@ -43,7 +43,7 @@ function Entry({ entry, date }: { entry: CalendarEntry; date?: CalendarDate }) {
   </details>;
 }
 
-export default async function CulturalCalendarPage({ searchParams }: { searchParams: Promise<{ year?: string; month?: string; community?: string; kind?: string }> }) {
+export default async function CulturalCalendarPage({ searchParams }: { searchParams: Promise<{ year?: string; month?: string; community?: string; kind?: string; entry?: string; day?: string }> }) {
   const params = await searchParams;
   const entries = await publishedCalendar();
   const [thisYear, thisMonth] = new Date().toLocaleDateString("en-CA", { timeZone: "America/Chicago" }).split("-").map(Number);
@@ -54,14 +54,17 @@ export default async function CulturalCalendarPage({ searchParams }: { searchPar
   const community = communityIds.includes(params.community ?? "") ? params.community! : "";
   const kind = params.kind && KINDS[params.kind] ? params.kind : "";
   const filtered = entries.filter(entry => (!community || entry.communities.includes(community)) && (!kind || entry.kind === kind));
-  const dated = filtered.flatMap(entry => entry.dates.filter(date => date.year === year && date.date).map(date => ({ entry, date })))
-    .filter(({ date }) => month === "all" || Number(date.date!.slice(5, 7)) === month)
+  const day = validDay(year, month, params.day);
+  const openEntry = entries.some(entry => entry.id === params.entry) ? params.entry : undefined;
+  const dated = filtered.flatMap(entry => entry.dates.filter(date => day ? dateCovers(date, day) : date.year === year && date.date).map(date => ({ entry, date })))
+    .filter(({ date }) => day || month === "all" || Number(date.date!.slice(5, 7)) === month)
     .sort((a, b) => a.date.date!.localeCompare(b.date.date!) || a.entry.name.localeCompare(b.entry.name));
   const undated = filtered.filter(entry => !entry.dates.some(date => date.year === year && date.date));
+  const backToMonth = `${calendarMonthHref({ year, month: month === "all" ? 1 : month })}${community ? `&community=${encodeURIComponent(community)}` : ""}${kind ? `&kind=${encodeURIComponent(kind)}` : ""}`;
   const byMonth = MONTHS.map((name, index) => ({ name, items: dated.filter(({ date }) => Number(date.date!.slice(5, 7)) === index + 1) })).filter(group => group.items.length);
   return <div className="community-editorial"><div className="community-index-layout community-research">
     <p className="community-eyebrow"><Link href="/minnesota-communities">Minnesota Communities</Link></p>
-    <h1>Cultural calendar</h1>
+    <h1>One DSD Culture Calendar</h1>
     <p className="community-opening">Observances, festivals and remembrances across Minnesota&apos;s communities, for planning meetings, deadlines and outreach with care.</p>
     <p>A date on this calendar does not tell you whether a particular person observes it. Ask people what they need, and check any date that matters with the organizer or community.</p>
     <form method="get" className="calendar-filters">
@@ -71,9 +74,10 @@ export default async function CulturalCalendarPage({ searchParams }: { searchPar
       <label>Type<select name="kind" defaultValue={kind}><option value="">All types</option>{Object.entries(KINDS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
       <button type="submit" className="btn">Show dates</button>
     </form>
-    <p><a href="/minnesota-communities/calendar/cultural-calendar.ics">Download confirmed dates for your own calendar</a></p>
-    {byMonth.map(group => <section key={group.name} className="calendar-month"><h2>{group.name} {year}</h2>{group.items.map(({ entry, date }) => <Entry key={`${entry.id}-${date.date}`} entry={entry} date={date} />)}</section>)}
-    {!byMonth.length ? <p>No dates match these choices. Try another month, or choose all months.</p> : null}
-    {undated.length && (community || month === "all") ? <section className="calendar-month"><h2>Date not set for {year}</h2><p>These recur, but no date for this year is available yet.</p>{undated.map(entry => <Entry key={entry.id} entry={entry} />)}</section> : null}
+    <p><a href={CALENDAR_ICS_PATH}>Download confirmed dates for your own calendar</a></p>
+    {day ? <section className="calendar-month"><h2>{formatDate(day)}</h2><p><Link href={backToMonth}>Back to all of {MONTHS[Number(day.slice(5, 7)) - 1]} {year}</Link></p>{dated.map(({ entry, date }) => <Entry key={`${entry.id}-${date.date}`} entry={entry} date={date} open={entry.id === openEntry} />)}{!dated.length ? <p>No dates match these choices on this day.</p> : null}</section> : null}
+    {!day ? byMonth.map(group => <section key={group.name} className="calendar-month"><h2>{group.name} {year}</h2>{group.items.map(({ entry, date }) => <Entry key={`${entry.id}-${date.date}`} entry={entry} date={date} open={entry.id === openEntry} />)}</section>) : null}
+    {!day && !byMonth.length ? <p>No dates match these choices. Try another month, or choose all months.</p> : null}
+    {!day && undated.length && (community || month === "all") ? <section className="calendar-month"><h2>Date not set for {year}</h2><p>These recur, but no date for this year is available yet.</p>{undated.map(entry => <Entry key={entry.id} entry={entry} open={entry.id === openEntry} />)}</section> : null}
   </div></div>;
 }

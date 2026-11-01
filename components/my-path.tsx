@@ -65,6 +65,8 @@ export function MyPath() {
   const [message, setMessage] = useState("");
   const fileInput = useRef<HTMLInputElement>(null);
 
+  // Personal progress exists only in browser storage, so read it after hydration.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setState(read()); setWork(savedWork()); }, []);
 
   function update(next: PathState) {

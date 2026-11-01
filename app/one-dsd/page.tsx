@@ -70,7 +70,7 @@ export default async function OneDsdPage() {
       <div className="wrap max-w-6xl space-y-12 py-10">
         <OneDsdContextPanel />
         <section className="border-t border-line pt-5" aria-labelledby="division-programs-title">
-          <p className="kicker">The division's work</p>
+          <p className="kicker">The division&apos;s work</p>
           <h2 id="division-programs-title" className="text-2xl font-extrabold">DSD programs, services, and priorities</h2>
           <p>Explore the eight service areas, division responsibilities, people and partners, contacts, and implementation priorities. Connect each area to practical equity tools and guidance.</p>
           <Link href="/one-dsd/programs">Explore DSD programs and services →</Link>

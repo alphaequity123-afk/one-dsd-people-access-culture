@@ -22,7 +22,6 @@ export function waitForVoiceJob(signal: AbortSignal, milliseconds: number): Prom
   if (!duration) return Promise.resolve(false);
   return new Promise(resolve => {
     let settled = false;
-    let timer: ReturnType<typeof setTimeout> | undefined;
     const finish = (ready: boolean) => {
       if (settled) return;
       settled = true;
@@ -34,9 +33,9 @@ export function waitForVoiceJob(signal: AbortSignal, milliseconds: number): Prom
     };
     const wake = () => { if (available()) finish(true); };
     const abort = () => finish(false);
+    const timer = setTimeout(() => finish(false), duration);
     waiters.add(wake);
     signal.addEventListener("abort", abort, { once: true });
-    timer = setTimeout(() => finish(false), duration);
     if (signal.aborted) abort(); else wake();
   });
 }

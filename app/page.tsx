@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CultureCalendarSection } from "@/components/culture-calendar-section";
+import calendarStyles from "@/components/culture-calendar.module.css";
 import styles from "./welcome.module.css";
 
 export default function WelcomePage() {
@@ -12,6 +14,7 @@ export default function WelcomePage() {
     <div className={styles.entry}>
       <Link className={styles.enter} href="/home">Enter One DSD <span aria-hidden="true">→</span></Link>
     </div>
+    <div className={calendarStyles.welcomeSlot}><CultureCalendarSection /></div>
     <p style={{ textAlign: "center", fontSize: "0.875rem", color: "#334155", padding: "0 20px 20px", margin: 0 }}>Property of Gary Banks</p>
   </section>;
 }

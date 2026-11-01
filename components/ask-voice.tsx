@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { observeVoiceActivity, recordVoiceTurnTiming, voiceAvailabilityNotice, voiceCaptureAction, type VoiceActivity, type VoiceAvailability, type VoiceHealth, type VoiceTurnTiming } from "@/lib/voice/turn";
 
 /** Each voice turn goes through the same Ask route as a typed question. */
@@ -24,7 +24,8 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
   const audioUrl = useRef<string | null>(null);
   const abort = useRef<AbortController | null>(null);
   const callbacks = useRef({ onDictation, onQuestion });
-  callbacks.current = { onDictation, onQuestion };
+  // Keep asynchronous recorder callbacks current after each committed render.
+  useLayoutEffect(() => { callbacks.current = { onDictation, onQuestion }; }, [onDictation, onQuestion]);
 
   function releaseMicrophone() {
     if (timer.current) clearInterval(timer.current);
@@ -143,6 +144,8 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
       const recorder = new MediaRecorder(media, type ? { mimeType: type } : undefined);
       capture.current = recorder;
       const chunks: Blob[] = [];
+      // The recorder is started by an event, after microphone permission resolves, never during render.
+      // eslint-disable-next-line react-hooks/purity
       const began = performance.now();
       let activity: VoiceActivity = { beganAt: began, lastSpeechAt: began, heardSpeech: false };
       recorder.ondataavailable = event => { if (event.data.size) chunks.push(event.data); };

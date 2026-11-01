@@ -1,0 +1,49 @@
+/* Rules are written as .root .x so they hold against the app's body.dsd-calm main rules. */
+.root { box-sizing: border-box; width: 100%; margin-block: 32px 0; padding: 20px; background: #fff; border: 1px solid #c6cfd3; border-radius: 4px; color: #1b2a35; font-size: 16px; line-height: 1.4; text-align: left; }
+.root *, .root *::before, .root *::after { box-sizing: border-box; }
+.root .title { margin: 0 0 4px; color: #003865; font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 600; line-height: 1.2; letter-spacing: normal; }
+.root .note { margin: 0 0 14px; max-width: none; font-size: 0.9375rem; }
+.root .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; margin-bottom: 10px; }
+.root .controls { display: flex; flex-wrap: wrap; gap: 6px; }
+.root .month { flex: 1 1 200px; margin: 0; color: #003865; font-size: 1.3rem; font-weight: 600; text-align: center; }
+.root .control { min-height: 44px; min-width: 44px; padding: 6px 12px; border: 1px solid #003865; border-radius: 4px; background: #fff; color: #003865; font: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer; }
+.root .control:hover { background: #e8eef3; }
+.root .control[aria-disabled="true"] { border-style: dashed; border-color: #5d6b75; background: #f2f4f6; color: #4d5a64; cursor: not-allowed; }
+.root .bounds { margin: 0 0 10px; max-width: none; font-size: 0.9375rem; font-weight: 600; }
+
+.root .grid { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.root .grid th { padding: 6px 4px; border: 1px solid #c6cfd3; background: #eef2f5; color: #003865; font-size: 0.875rem; font-weight: 600; text-align: center; }
+.root .grid td { height: 112px; padding: 4px; border: 1px solid #c6cfd3; vertical-align: top; overflow: hidden; }
+.root .grid td.blank { background: #f6f7f8; }
+.root .grid td.today { outline: 3px solid #003865; outline-offset: -3px; background: #f1f6fa; }
+.root .dayHead { display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 2px; }
+.root .dayNumber { font-size: 0.875rem; font-weight: 600; }
+.root .todayTag { display: inline-block; padding: 0 4px; border-radius: 3px; background: #003865; color: #fff; font-size: 0.75rem; font-weight: 700; }
+.root .entries { margin: 0; padding: 0; list-style: none; }
+.root .entries li { margin: 0 0 2px; padding: 0; }
+.root .entry { display: flex; align-items: flex-start; gap: 3px; min-height: 24px; padding: 2px 1px; font-size: 0.8125rem; line-height: 1.25; }
+.root .entryName { display: -webkit-box; flex: 1 1 auto; min-width: 0; overflow: hidden; overflow-wrap: anywhere; hyphens: auto; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; }
+.root .marker { flex: none; font-size: 0.8125rem; font-weight: 700; text-decoration: none; }
+.root .more { display: inline-block; min-height: 24px; padding: 2px 1px; font-size: 0.8125rem; font-weight: 600; }
+
+.root .dayList { display: none; margin: 0; padding: 0; list-style: none; }
+.root .dayList > li { margin: 0; padding: 10px 8px; border-top: 1px solid #c6cfd3; }
+.root .dayList > li.today { outline: 3px solid #003865; outline-offset: -3px; background: #f1f6fa; }
+.root .dayListHead { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 4px; color: #003865; font-size: 1rem; font-weight: 600; }
+
+.root .legend { margin: 12px 0 0; max-width: none; font-size: 0.875rem; }
+.root .links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 10px 0 0; max-width: none; font-size: 0.9375rem; font-weight: 600; }
+
+.srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+/* Space for the calendar on the welcome page, whose own layout is edge to edge. */
+.welcomeSlot { width: min(1160px, calc(100% - 32px)); margin: 0 auto 24px; }
+
+@media (max-width: 700px) {
+  .root { padding: 14px 12px; }
+  .root .grid { display: none; }
+  .root .dayList { display: block; }
+  .root .month { order: -1; flex-basis: 100%; }
+  .root .entry, .root .more { min-height: 32px; font-size: 0.9375rem; }
+  .root .entryName { -webkit-line-clamp: unset; line-clamp: unset; }
+}

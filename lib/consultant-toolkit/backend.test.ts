@@ -1,3 +1,4 @@
+// @vitest-environment node
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { randomBytes } from "node:crypto";
 import { toolkitRequestSchema, type ToolkitCase, type ToolkitResponse } from "./schema";

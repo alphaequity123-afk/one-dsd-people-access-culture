@@ -632,6 +632,32 @@
         "rule": "Remove the exact .data directory after validation; no program archival role is assigned."
       }
     },
+    "owner_page_edit_file": {
+      "retention": {
+        "rule": "Keep while the owner wants the wording shown. The file holds the current edits and the last 500 save and undo entries; the 40 most recent previous versions are kept as backups and older ones are removed on save."
+      },
+      "deletion": {
+        "rule": "The owner removes an edit with Undo. Removing the exact .data/page-edits folder removes all edits and backups, and every page then shows its original wording."
+      },
+      "correction": {
+        "rule": "Edit again or Undo from the page. Copying a backup over the current file restores an earlier version."
+      },
+      "backup": {
+        "rule": "Timestamped previous versions in .data/page-edits/backups on the same volume. These protect against a mistaken save, not against loss of the volume."
+      },
+      "restore": {
+        "rule": "Copy a chosen backup over .data/page-edits/page-edits.json. The application reads the new file on the next request."
+      },
+      "incident": {
+        "rule": "If the file cannot be read, pages show their original wording, the owner is told, and saving is refused until the file is repaired or restored, so nothing is overwritten."
+      },
+      "recovery": {
+        "rule": "Restore the newest readable backup. Nothing else depends on this file, so losing it returns pages to their original wording."
+      },
+      "end_of_program": {
+        "rule": "Remove the exact .data/page-edits folder when the application is retired."
+      }
+    },
     "volatile_test_only": {
       "retention": {
         "rule": "Process lifetime only."
@@ -1869,6 +1895,24 @@
     }
   ],
   "file_store_records": [
+    {
+      "id": "file_store.owner_page_edits",
+      "physical_members": [
+        ".data/page-edits/page-edits.json",
+        ".data/page-edits/backups/page-edits-*.json"
+      ],
+      "profile": "owner_page_edit_file",
+      "sensitivity_classes": [
+        "S2"
+      ],
+      "participation_classes": [
+        "not_interactive"
+      ],
+      "official_record": false,
+      "purpose": "The owner's in-place text and link address edits for any page, applied on top of the page as rendered, with a log of saves and undos. Used in production on the persistent volume, and does not depend on the database.",
+      "status": "defined",
+      "source": "lib/content/page-edits-store.ts and app/api/page-edits/route.ts"
+    },
     {
       "id": "file_store.work_object_json",
       "physical_members": [

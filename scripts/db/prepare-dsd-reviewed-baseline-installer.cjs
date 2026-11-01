@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports -- Setup-only exact-source export. */
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
