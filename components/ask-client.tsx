@@ -250,7 +250,10 @@ function citedAnswer(text: string, sources: Array<{ title: string; url: string }
   });
 }
 
-function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext, copy, context }: { context: ProductContextId; answer: StaffAskAnswer; onPrepareConsult: (a: StaffAskAnswer) => void; intakeEnabled: boolean; dsdContext: boolean; copy: EditableSurfaceValues }) {
+export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext, copy, context }: { context: ProductContextId; answer: StaffAskAnswer; onPrepareConsult: (a: StaffAskAnswer) => void; intakeEnabled: boolean; dsdContext: boolean; copy: EditableSurfaceValues }) {
+  // Keep every evidence record for claim references, while listing each
+  // destination once in the separate program-reading navigation.
+  const programSources = [...new Map(answer.sources.map(source => [source.href, source])).values()];
   const grouped = (answer.questions ?? []).reduce<Record<string, string[]>>((acc, q) => {
     (acc[q.categoryLabel] ||= []).push(q.text);
     return acc;
@@ -329,10 +332,10 @@ function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext, copy,
         </div>)}
       </details> : null}
 
-      {answer.sources.length ? <details className="mt-2" open>
-        <summary>{copyText(copy, answer.evidenceClaims?.length ? "programSourcesLabel" : "relatedReadingLabel") || "Related program reading"} ({answer.sources.length})</summary>
+      {programSources.length ? <details className="mt-2" open>
+        <summary>{copyText(copy, answer.evidenceClaims?.length ? "programSourcesLabel" : "relatedReadingLabel") || "Related program reading"} ({programSources.length})</summary>
         <ul className="list-disc pl-6">
-            {answer.sources.map((s) => (
+            {programSources.map((s) => (
               <li key={s.href}>
                 <Link href={s.href}>{s.title}</Link>{" "}
                 {s.authorityLabel ? <span className="label-pill label-pill--authority" aria-label={`${s.authorityLabel}. ${s.authorityDescription}`}>
