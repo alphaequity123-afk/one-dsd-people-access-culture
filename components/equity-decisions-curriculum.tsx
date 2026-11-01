@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 
 import { useEffect, useRef, useState } from 'react';
 import data from '@/lib/content/equity-everyday-decisions.json';
@@ -36,6 +37,8 @@ export default function EquityDecisionsCurriculum({ lessonId }: { lessonId?: str
 
   useEffect(() => {
     try {
+      // Progress is browser-only and must be restored after server hydration.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCompleted(validCompleted(JSON.parse(localStorage.getItem(progressKey) || '[]'), curriculum.modules));
     } catch {
       setStorageMessage('Progress cannot be remembered in this browser. You can still use every lesson.');
@@ -57,7 +60,7 @@ export default function EquityDecisionsCurriculum({ lessonId }: { lessonId?: str
 
   return <div className="equity-decisions-study">
     <nav aria-label="Equity learning">
-      <a href="/learn/equity-toolkit">Equity Analysis Toolkit</a>
+      <Link prefetch={false} href="/learn/equity-toolkit">Equity Analysis Toolkit</Link>
       {lesson && <a href={base}>Learning overview</a>}
     </nav>
     <header>

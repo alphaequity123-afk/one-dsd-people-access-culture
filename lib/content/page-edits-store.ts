@@ -168,7 +168,16 @@ function valuesOnly(edits: Record<string, StoredPageEdit> | undefined): Record<s
   return values;
 }
 
-export type PageEditListEntry = StoredPageEdit & { key: string; scope: "page" | "site" };
+export type PageEditListEntry = StoredPageEdit & { key: string; scope: "page" | "site"; publicOriginPath?: string };
+
+// This non-page key keeps provenance inside the existing v1 store shape, so older
+// releases can still read the file after a rollback. It cannot be requested as a page.
+const SITE_ORIGINS_PATH = "*published-site-origins";
+
+function siteOrigin(store: PageEditStore, key: string, edit: StoredPageEdit): string | undefined {
+  const origin = Object.hasOwn(store.pages, SITE_ORIGINS_PATH) ? store.pages[SITE_ORIGINS_PATH][key] : undefined;
+  return origin && origin.updatedAt === edit.updatedAt && !pagePathIsOwnerOnly(origin.value) ? origin.value : undefined;
+}
 
 export type PageEditsView = {
   page: Record<string, string>;
@@ -186,11 +195,14 @@ export async function readPageEdits(pagePath: string, options: { owner: boolean 
   const pageEdits = Object.hasOwn(store.pages, pagePath) ? store.pages[pagePath] : undefined;
   const siteEdits = Object.hasOwn(store.pages, SITE_WIDE_PATH) ? store.pages[SITE_WIDE_PATH] : undefined;
   const hidden = pagePathIsOwnerOnly(pagePath) && !options.owner;
-  const view: PageEditsView = { page: hidden ? {} : valuesOnly(pageEdits), site: valuesOnly(siteEdits) };
+  const publicSiteEdits = options.owner ? siteEdits : Object.fromEntries(
+    Object.entries(siteEdits ?? {}).filter(([key, edit]) => siteOrigin(store, key, edit)),
+  );
+  const view: PageEditsView = { page: hidden ? {} : valuesOnly(pageEdits), site: valuesOnly(publicSiteEdits) };
   if (options.owner) {
     view.entries = [
       ...Object.entries(pageEdits ?? {}).map(([key, edit]) => ({ ...edit, key, scope: "page" as const })),
-      ...Object.entries(siteEdits ?? {}).map(([key, edit]) => ({ ...edit, key, scope: "site" as const })),
+      ...Object.entries(siteEdits ?? {}).map(([key, edit]) => ({ ...edit, key, scope: "site" as const, publicOriginPath: siteOrigin(store, key, edit) })),
     ];
   }
   return view;
@@ -220,6 +232,13 @@ export function savePageEdit(input: SavePageEditInput, nowDate = new Date()): Pr
     }
     entries[key] = { kind: input.kind, original: input.original, value: input.value, occurrence, updatedAt: now };
     pages[target] = entries;
+    if (input.scope === "site") {
+      const origins = { ...(Object.hasOwn(pages, SITE_ORIGINS_PATH) ? pages[SITE_ORIGINS_PATH] : {}) };
+      if (pagePathIsOwnerOnly(input.path)) delete origins[key];
+      else origins[key] = { kind: "text", original: key, value: input.path, occurrence: 0, updatedAt: now };
+      if (Object.keys(origins).length) pages[SITE_ORIGINS_PATH] = origins;
+      else delete pages[SITE_ORIGINS_PATH];
+    }
     if (input.scope === "site" && Object.hasOwn(pages, input.path)) {
       // A page-only edit of this same text would otherwise keep hiding the every-page edit here.
       const pageKey = pageEditKey(input.kind, input.original, input.occurrence);
@@ -248,6 +267,12 @@ export function undoPageEdit(input: { path: string; key: string; scope: "page" |
     delete remaining[input.key];
     if (Object.keys(remaining).length) pages[target] = remaining;
     else delete pages[target];
+    if (input.scope === "site" && Object.hasOwn(pages, SITE_ORIGINS_PATH)) {
+      const origins = { ...pages[SITE_ORIGINS_PATH] };
+      delete origins[input.key];
+      if (Object.keys(origins).length) pages[SITE_ORIGINS_PATH] = origins;
+      else delete pages[SITE_ORIGINS_PATH];
+    }
     await writeStore({ ...store, updatedAt: now, pages, log: withLog(store, { at: now, action: "undo", path: input.path, key: input.key }) }, now);
     return true;
   });

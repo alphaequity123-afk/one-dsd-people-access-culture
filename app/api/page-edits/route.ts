@@ -9,6 +9,7 @@ import {
   isPageEditKey,
   linkAddressIsAllowed,
   normalizePagePath,
+  pagePathIsOwnerOnly,
   PAGE_EDIT_LIMITS,
   pageEditKey,
 } from "@/lib/content/page-edit-keys";
@@ -80,6 +81,9 @@ export async function POST(request: NextRequest) {
   const parsed = WriteSchema.safeParse(body.value);
   const pagePath = parsed.success ? normalizePagePath(parsed.data.path) : null;
   if (!parsed.success || !pagePath) return refuse(400, "Check the change and try again.");
+  if (parsed.data.action === "save" && parsed.data.scope === "site" && pagePathIsOwnerOnly(pagePath)) {
+    return refuse(403, "To publish an every-page change, open a public page and save it there.");
+  }
 
   try {
     if (parsed.data.action === "undo") {

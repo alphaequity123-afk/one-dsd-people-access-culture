@@ -191,7 +191,7 @@ describe("editing", () => {
   let root: Root;
   let latest: PageEditsResponse | null;
 
-  async function mountControls(data: PageEditsResponse = emptyResponse) {
+  async function mountControls(data: PageEditsResponse = emptyResponse, path = "/about") {
     const container = document.createElement("div");
     document.body.appendChild(container);
     engine = createPageEditEngine(document, () => undefined);
@@ -199,7 +199,7 @@ describe("editing", () => {
     latest = null;
     const render = (current: PageEditsResponse) => root.render(
       <PageEditControls
-        path="/about"
+        path={path}
         engine={engine}
         data={current}
         onChange={(next) => {
@@ -350,6 +350,37 @@ describe("editing", () => {
     await act(async () => { buttonNamed("Save").click(); });
     const init = (fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1];
     expect(JSON.parse(init.body as string)).toMatchObject({ kind: "text", value: "Start", scope: "site" });
+  });
+
+  it("lets the owner deliberately republish an older site-wide edit from a public page", async () => {
+    const key = pageEditKey("text", "Home", 0);
+    const data: PageEditsResponse = { ...emptyResponse, site: { [key]: "Start" }, entries: [{ key, scope: "site", kind: "text", original: "Home", value: "Start", updatedAt: "x" }] };
+    const fetchMock = vi.fn(async () => jsonResponse(emptyResponse));
+    vi.stubGlobal("fetch", fetchMock);
+    await mountControls(data);
+    await act(async () => { buttonNamed("Edits on this page (1)").click(); });
+    expect(document.querySelector("[data-pac-page-edit-ui] li")!.textContent).toContain("visible only to the owner");
+    await turnOn();
+    await chooseParagraph("nav");
+    expect((document.querySelector("[role=dialog] input[type=checkbox]") as HTMLInputElement).checked).toBe(true);
+    await act(async () => { buttonNamed("Save").click(); });
+    const init = (fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1];
+    expect(JSON.parse(init.body as string)).toMatchObject({ path: "/about", kind: "text", original: "Home", value: "Start", scope: "site" });
+  });
+
+  it("does not offer site-wide publication on a private page", async () => {
+    const fetchMock = vi.fn(async () => jsonResponse(emptyResponse));
+    vi.stubGlobal("fetch", fetchMock);
+    await mountControls(emptyResponse, "/one-dsd/team/workspace");
+    await turnOn();
+    await chooseParagraph("nav");
+    expect(document.querySelector("[role=dialog] input[type=checkbox]")).toBeNull();
+    expect(document.querySelector("[role=dialog]")!.textContent).toContain("visible only to the signed-in owner");
+    await act(async () => { typeInto(document.querySelector("textarea")!, "Private navigation"); });
+    await act(async () => { buttonNamed("Save").click(); });
+    const init = (fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1];
+    expect(JSON.parse(init.body as string)).toMatchObject({ path: "/one-dsd/team/workspace", scope: "page" });
+    expect(document.querySelector("[role=status]")!.textContent).toContain("Only the signed-in owner");
   });
 
   it("keeps the panel open and reports the problem when a save fails", async () => {

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports -- Isolated client storage and document contract checks. */
 const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');

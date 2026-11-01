@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports -- Read-only content export using the existing TypeScript exporter pattern. */
 const fs = require('node:fs');
 const path = require('node:path');
 const ts = require('typescript');

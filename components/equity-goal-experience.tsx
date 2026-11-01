@@ -67,12 +67,16 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       blocked = true;
       problem = "Your saved plan could not be opened. It has not been replaced. You can prepare and download a new plan here, or clear the saved draft to start saving again.";
     }
+    // Restore the browser-only draft before enabling the persistence effect.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSelected(nextSelected); setDrafts(nextDrafts); setBlockedDraft(blocked); setSaveProblem(problem); setLoadedKey(draftKey);
   }, [draftKey]);
   React.useEffect(() => {
     if (loadedKey !== draftKey || blockedDraft) return;
     try {
       window.localStorage.setItem(draftKey, JSON.stringify({ version: 1, selected, drafts }));
+      // Reflect the result of synchronizing the draft to browser storage.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSaveProblem("");
     } catch {
       setSaveProblem("This device could not save your latest changes. Keep this page open and download your plan before leaving.");

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useState, useSyncExternalStore, type ReactNode } from "react";
 import {
   boundsNote, CALENDAR_ICS_PATH, calendarDayHref, calendarEntryHref, calendarMonthHref, capDay, chicagoToday, clampMonth, DATE_MARKERS, dateStateText,
   dayEntries, isoDate, monthLabel, monthOf, monthWeeks, MONTH_NAMES, navControls, WEEKDAY_NAMES, withinBounds,
@@ -49,7 +49,7 @@ export function CultureCalendar({ entries, initialToday }: { entries: CompactEnt
   const todayMonth = monthOf(today);
   const view = selected ?? clampMonth(todayMonth);
   const { year, month } = view;
-  const days = useMemo(() => dayEntries(entries, { year, month }), [entries, year, month]);
+  const days = dayEntries(entries, view);
   const controls = navControls(view);
   const note = boundsNote(view);
   const todayAvailable = withinBounds(todayMonth);

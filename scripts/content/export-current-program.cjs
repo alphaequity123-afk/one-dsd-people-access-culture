@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable @typescript-eslint/no-require-imports -- This standalone export uses CommonJS TypeScript loader hooks, matching the existing read-only registry exporters. */
 // Read-only export; never use --sync-migration for an applied migration.
 const fs = require('node:fs');
 if (!process.execArgv.includes('--conditions=react-server')) { process.stdout.write(require('node:child_process').execFileSync(process.execPath,['--conditions=react-server',__filename],{encoding:'utf8',maxBuffer:50000000,windowsHide:true})); process.exit(0); }

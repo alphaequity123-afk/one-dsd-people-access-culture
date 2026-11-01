@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable @typescript-eslint/no-require-imports -- This standalone registry export installs CommonJS TypeScript loader hooks without a build. */
 
 const fs = require("node:fs");
 const Module = require("node:module");

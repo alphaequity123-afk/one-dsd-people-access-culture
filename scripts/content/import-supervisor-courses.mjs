@@ -17,7 +17,7 @@ import { CoursePackSchema } from "../../lib/content/courses/contract.ts";
 const root = fileURLToPath(new URL("../../", import.meta.url));
 const args = process.argv.slice(2);
 const check = args.includes("--check");
-const sourceDir = args.find(arg => !arg.startsWith("--")) ?? process.env.SM_COURSE_SOURCE ?? "C:/Users/garyb/OneDrive/Desktop/One DSD Equity Program (11)/output/supervisor-curriculum";
+const sourceDir = args.find(arg => !arg.startsWith("--")) ?? process.env.SM_COURSE_SOURCE ?? fileURLToPath(new URL("../../handoff/supervisor-curriculum/", import.meta.url));
 const outDir = path.join(root, "lib/content/courses/authored/supervisor-manager");
 
 const OWNER = "One DHS / One DSD — People, Access and Culture";
@@ -656,7 +656,7 @@ if (check) {
   let stale = 0;
   for (const { id, pack } of packs) {
     const target = path.join(outDir, `${id}.json`);
-    if (!existsSync(target) || readFileSync(target, "utf8") !== stable(pack)) { console.log(`Out of date: ${id}`); stale += 1; }
+    if (!existsSync(target) || readFileSync(target, "utf8").replace(/\r\n/g, "\n") !== stable(pack)) { console.log(`Out of date: ${id}`); stale += 1; }
   }
   if (stale) process.exit(1);
   console.log("All 19 packs match the source files.");

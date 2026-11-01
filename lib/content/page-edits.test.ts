@@ -12,6 +12,7 @@ import {
   isPageEditKey,
   linkAddressIsAllowed,
   normalizePagePath,
+  pagePathIsOwnerOnly,
   PAGE_EDIT_LIMITS,
   pageEditKey,
 } from "./page-edit-keys";
@@ -142,6 +143,52 @@ describe("the store", () => {
     const key = await savePageEdit(saveInput({ path: "/consultant/queue" }));
     expect((await readPageEdits("/consultant/queue", { owner: false })).page).toEqual({});
     expect((await readPageEdits("/consultant/queue", { owner: true })).page).toEqual({ [key]: "New wording" });
+  });
+
+  it("keeps protected, personal, unknown and encoded paths private by default", async () => {
+    for (const privatePath of ["/one-dsd/team/workspace", "/contribute/resources", "/my-work/plan", "/program/reflection", "/ask", "/a-new-page", "/%63onsultant/queue"]) {
+      expect(pagePathIsOwnerOnly(privatePath)).toBe(true);
+      const key = await savePageEdit(saveInput({ path: privatePath, value: `Private: ${privatePath}` }));
+      expect((await readPageEdits(privatePath, { owner: false })).page).toEqual({});
+      expect((await readPageEdits(privatePath, { owner: true })).page).toEqual({ [key]: `Private: ${privatePath}` });
+    }
+    for (const publicPath of ["/", "/home", "/about", "/leading", "/learn/collections", "/courses/sm-first-week", "/resources/ja-sm-first-week"]) {
+      expect(pagePathIsOwnerOnly(publicPath)).toBe(false);
+    }
+  });
+
+  it("publishes edits on the verified public organization, reading, podcast, guide and program pages", async () => {
+    const publicPaths = [
+      "/administrations", "/administrations/adsa", "/administrations/adsa/divisions/dsd", "/areas/workforce",
+      "/learn/readings/caste", "/podcasts/example", "/practice-guides/inclusive-meetings", "/one-dsd/planning",
+      "/program/what-informs", "/program/practice", "/program/resources", "/program/progress", "/program/impact",
+    ];
+    for (const publicPath of publicPaths) {
+      expect(pagePathIsOwnerOnly(publicPath)).toBe(false);
+      const key = await savePageEdit(saveInput({ path: publicPath, value: `Public: ${publicPath}` }));
+      expect((await readPageEdits(publicPath, { owner: false })).page).toEqual({ [key]: `Public: ${publicPath}` });
+    }
+    for (const privatePath of ["/program/reflection", "/my-work", "/my-work/plan", "/ask", "/contribute", "/one-dsd/team/workspace", "/paths/example", "/practice/example"]) {
+      expect(pagePathIsOwnerOnly(privatePath)).toBe(true);
+    }
+  });
+
+  it("retains but does not publish legacy site-wide edits with unknown origin until re-saved on a public page", async () => {
+    const key = await savePageEdit(saveInput({ path: "/consultant/queue", scope: "site", value: "Unverified legacy value" }));
+    const before = readFileSync(storeFile(), "utf8");
+    expect((await readPageEdits("/home", { owner: false })).site).toEqual({});
+    expect((await readPageEdits("/consultant/queue", { owner: true })).site).toEqual({ [key]: "Unverified legacy value" });
+    expect(readFileSync(storeFile(), "utf8")).toBe(before);
+    await savePageEdit(saveInput({ path: "/home", scope: "site", value: "Unverified legacy value" }));
+    expect((await readPageEdits("/home", { owner: false })).site).toEqual({ [key]: "Unverified legacy value" });
+    // The file remains readable by the previous strict v1 schema after a rollback.
+    const saved = JSON.parse(readFileSync(storeFile(), "utf8"));
+    for (const entries of Object.values(saved.pages) as Array<Record<string, Record<string, unknown>>>) {
+      for (const entry of Object.values(entries)) expect(Object.keys(entry).sort()).toEqual(["kind", "occurrence", "original", "updatedAt", "value"]);
+    }
+    expect((await readPageEdits("*published-site-origins", { owner: false })).page).toEqual({});
+    await undoPageEdit({ path: "/home", scope: "site", key });
+    expect(JSON.parse(readFileSync(storeFile(), "utf8")).pages["*published-site-origins"]).toBeUndefined();
   });
 
   it("applies every-page edits on every path and clears a page-only edit they replace", async () => {
@@ -292,6 +339,21 @@ describe("who can write", () => {
     const undone = await write({ action: "undo", path: "/about", key: body.key, scope: "page" }, { owner: true });
     expect((await undone.json()).removed).toBe(true);
     expect((await (await read("/about")).json()).page).toEqual({});
+  });
+
+  it("does not expose private page replacements through the anonymous route", async () => {
+    const privatePath = "/one-dsd/team/workspace";
+    const saved = await write({ ...saveBody, path: privatePath, value: "Private working note" }, { owner: true });
+    expect(saved.status).toBe(200);
+    expect((await (await read(privatePath)).json()).page).toEqual({});
+    expect(Object.values((await (await read(privatePath, true)).json()).page)).toContain("Private working note");
+  });
+
+  it("refuses site-wide publication from an owner-only path while permitting page-only saving", async () => {
+    const privatePath = "/consultant/queue";
+    expect((await write({ ...saveBody, path: privatePath, scope: "site" }, { owner: true })).status).toBe(403);
+    expect(existsSync(storeFile())).toBe(false);
+    expect((await write({ ...saveBody, path: privatePath, scope: "page" }, { owner: true })).status).toBe(200);
   });
 });
 

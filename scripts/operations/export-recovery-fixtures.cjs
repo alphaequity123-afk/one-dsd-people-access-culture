@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 // Isolated read-only loader: produces synthetic records using application validators.
 const fs=require('node:fs'),Module=require('node:module'),path=require('node:path'),ts=require('typescript');
 const root=path.resolve(__dirname,'../..'),resolve=Module._resolveFilename;

@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const args = process.argv.slice(2);
 const check = args.includes("--check");
-const csvPath = args.find(arg => !arg.startsWith("--")) ?? process.env.COLLECTIONS_CSV ?? "C:/Users/garyb/OneDrive/Desktop/One DSD Equity Program (11)/output/supervisor-curriculum/collections-placement.csv";
+const csvPath = args.find(arg => !arg.startsWith("--")) ?? process.env.COLLECTIONS_CSV ?? fileURLToPath(new URL("../../handoff/supervisor-curriculum/collections-placement.csv", import.meta.url));
 const target = fileURLToPath(new URL("../../lib/content/collections-data.json", import.meta.url));
 
 const STAFF = [
@@ -131,7 +131,7 @@ if (data.counts.questions !== 89) throw new Error(`Expected 89 questions, built 
 
 const output = `${JSON.stringify(data, null, 1)}\n`;
 if (check) {
-  if (!existsSync(target) || readFileSync(target, "utf8") !== output) { console.log("collections-data.json does not match the CSV."); process.exit(1); }
+  if (!existsSync(target) || readFileSync(target, "utf8").replace(/\r\n/g, "\n") !== output) { console.log("collections-data.json does not match the CSV."); process.exit(1); }
   console.log("collections-data.json matches the CSV.");
 } else {
   writeFileSync(target, output);

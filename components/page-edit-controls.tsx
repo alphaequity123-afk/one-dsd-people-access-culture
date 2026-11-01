@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
 import type { LinkRun, PageEditEngine, TextRun } from "@/lib/content/page-edit-dom";
 import { writeRun } from "@/lib/content/page-edit-dom";
-import { cleanReplacementText, comparableText, linkAddressIsAllowed, PAGE_EDIT_LIMITS } from "@/lib/content/page-edit-keys";
+import { cleanReplacementText, comparableText, linkAddressIsAllowed, pagePathIsOwnerOnly, PAGE_EDIT_LIMITS } from "@/lib/content/page-edit-keys";
 
 /** The owner's controls for editing any page in place. Loaded only for a signed-in owner. */
 export type PageEditEntry = {
@@ -13,6 +13,7 @@ export type PageEditEntry = {
   original: string;
   value: string;
   updatedAt: string;
+  publicOriginPath?: string;
 };
 
 export type PageEditsResponse = {
@@ -120,6 +121,7 @@ export function PageEditControls({ path, engine, data, onChange }: PageEditContr
 
   const entries = data.entries ?? [];
   const degraded = data.degraded === true;
+  const ownerOnlyPage = pagePathIsOwnerOnly(path);
 
   const clearTargets = useCallback(() => {
     for (const { element, addedTabIndex } of tagged.current) {
@@ -180,11 +182,11 @@ export function PageEditControls({ path, engine, data, onChange }: PageEditContr
     // Header and footer wording repeats on every page, so that is the starting choice for it.
     const inChrome = run ? !run.inMain : link ? !link.inMain : false;
     const savedOnPageOnly = (run && Object.hasOwn(engine.edits().page, run.key)) || (link && Object.hasOwn(engine.edits().page, link.key));
-    setEveryPage(inChrome && !savedOnPageOnly);
+    setEveryPage(inChrome && !savedOnPageOnly && !ownerOnlyPage);
     setProblem("");
     setStatus("");
     (run?.parent ?? link?.element)?.setAttribute(ACTIVE, "true");
-  }, [engine]);
+  }, [engine, ownerOnlyPage]);
 
   // Move focus into the editor when it opens or moves to another piece of wording.
   useEffect(() => {
@@ -311,7 +313,8 @@ export function PageEditControls({ path, engine, data, onChange }: PageEditContr
         const cleaned = cleanReplacementText(textValue);
         if (!cleaned) throw new Error("Text cannot be empty. Use Undo to bring back the original.");
         const showing = engine.edits().page[run.key] ?? (run.inMain ? undefined : engine.edits().site[run.siteKey]) ?? run.original;
-        if (comparableText(cleaned) !== comparableText(showing) || (everyPage && !Object.hasOwn(engine.edits().site, run.siteKey))) {
+        const unpublished = everyPage && entries.some(entry => entry.scope === "site" && entry.key === run.siteKey && !entry.publicOriginPath);
+        if (comparableText(cleaned) !== comparableText(showing) || (everyPage && !Object.hasOwn(engine.edits().site, run.siteKey)) || unpublished) {
           latest = await send({ action: "save", path, kind: "text", original: comparableText(run.original), occurrence: run.occurrence, value: cleaned, scope });
         }
       }
@@ -319,12 +322,13 @@ export function PageEditControls({ path, engine, data, onChange }: PageEditContr
         const address = linkValue.trim();
         if (!linkAddressIsAllowed(address)) throw new Error("Use a local path starting with /, an anchor starting with #, or an address starting with https://.");
         const showing = engine.edits().page[link.key] ?? (link.inMain ? undefined : engine.edits().site[link.siteKey]) ?? link.original;
-        if (address !== showing) {
+        const unpublished = everyPage && entries.some(entry => entry.scope === "site" && entry.key === link.siteKey && !entry.publicOriginPath);
+        if (address !== showing || unpublished) {
           latest = await send({ action: "save", path, kind: "link", original: link.original.trim(), occurrence: link.occurrence, value: address, scope });
         }
       }
       if (latest) onChange(latest);
-      closeSelection(latest ? (everyPage ? "Saved. It now shows on every page for everyone." : "Saved. It now shows on this page for everyone.") : "Nothing changed.");
+      closeSelection(latest ? (everyPage ? "Saved. It now shows on every page for everyone." : ownerOnlyPage ? "Saved. Only the signed-in owner can see this page edit." : "Saved. It now shows on this page for everyone.") : "Nothing changed.");
     } catch (error) {
       if (latest) onChange(latest);
       setProblem(error instanceof Error ? error.message : "The change could not be saved.");
@@ -369,7 +373,7 @@ export function PageEditControls({ path, engine, data, onChange }: PageEditContr
   };
 
   const selectionTarget = selection?.run ?? selection?.link ?? null;
-  const showScopeChoice = Boolean(selectionTarget && !selectionTarget.inMain);
+  const showScopeChoice = Boolean(selectionTarget && !selectionTarget.inMain && !ownerOnlyPage);
 
   return (
     <div data-pac-page-edit-ui="true" role="region" aria-label="Page editing" style={shell}>
@@ -439,6 +443,7 @@ export function PageEditControls({ path, engine, data, onChange }: PageEditContr
               <span>Change this on every page. It is part of the header or footer, which every page shows.</span>
             </label>
           ) : null}
+          {ownerOnlyPage ? <p>Edits on this page are visible only to the signed-in owner. To change the header or footer for everyone, open a public page.</p> : null}
           <div style={row}>
             <button type="button" style={primary} disabled={busy || degraded} onClick={() => void save()}>{busy ? "Saving…" : "Save"}</button>
             <button type="button" style={secondary} disabled={busy} onClick={() => closeSelection("Change discarded.")}>Cancel</button>
@@ -465,6 +470,7 @@ export function PageEditControls({ path, engine, data, onChange }: PageEditContr
                     <p style={{ margin: "0 0 2px" }}><strong>{entry.kind === "link" ? "Link address" : "Text"}{entry.scope === "site" ? ", every page" : ""}</strong></p>
                     <p style={{ margin: "0 0 2px", overflowWrap: "anywhere" }}>Was: {shorten(entry.original)}</p>
                     <p style={{ margin: "0 0 4px", overflowWrap: "anywhere" }}>Now: {shorten(entry.value)}</p>
+                    {entry.scope === "site" && !entry.publicOriginPath ? <p style={{ margin: "0 0 4px", color: "#7a271a" }}>This older every-page edit is visible only to the owner. To publish it again, open a public page, select the wording, and save it as an every-page change.</p> : null}
                     {missing ? (
                       <p style={{ margin: "0 0 4px", color: "#7a271a" }}>
                         {entry.scope === "site"

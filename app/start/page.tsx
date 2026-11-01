@@ -24,7 +24,7 @@ export default async function StartPage() {
       <div className="wrap space-y-6 py-8">
         <ProgramContextNote />
         <p className="max-w-3xl leading-7">Most people arrive here with a real question: a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone. Start there. If you would like context first, <Link href="/one-dsd/programs">DSD programs and services</Link> shows the work the division does and the people it serves.</p>
-        <noscript><p>This helper needs JavaScript. You can still <a href="/support/directory">use the support directory</a> or <a href="/library">browse the Library</a>.</p></noscript>
+        <noscript><p>This helper needs JavaScript. You can still <a href="/support/directory">use the support directory</a> or <Link prefetch={false} href="/library">browse the Library</Link>.</p></noscript>
         <StartClient copy={copy} />
         <DevelopmentPathways compact />
         <NewToDsd />

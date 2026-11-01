@@ -1,3 +1,4 @@
+// @vitest-environment node
 import { describe,expect,it } from "vitest";
 import { getQuestions, TOOLKIT_VERSION } from "./instrument";
 import { toolkitReportBlocks,toolkitReportWord,toolkitReportPdf } from "./report";

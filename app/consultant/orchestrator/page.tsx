@@ -33,7 +33,7 @@ export default async function OrchestratorPage() {
           <p>Ask carries no allowance and no permission ceiling: every question is answered in full, with public research when the question calls for it. Each request is still recorded here so you can see what ran. These records are counts of requests, not verified billed-dollar totals.</p>
           <p>Daily content and accessibility review: {process.env.PAC_CLONE_DAILY_REVIEW === "on" ? "enabled while this service is running; a durable daily claim prevents repeats after restarts" : "off"}. Review findings and proposed changes below. Stop program reviews also stops Ask and the daily agent review.</p>
           <p><a className="underline" href="/consultant/program">Review specialist work, record your assessment, and track follow-through</a></p>
-          <h3 className="font-bold">This month's operational outcomes</h3>
+          <h3 className="font-bold">This month&apos;s operational outcomes</h3>
           <ul>{summary.map(row => <li key={row.status}>{row.status.replaceAll("_", " ")}: {row.count}; Jev requests: {row.jev_calls}</li>)}</ul>
           <p>The target is 95% of eligible routine work completed correctly without intervention. These counts measure operational completion only. They do not establish correctness, developmental change, or achievement of the 95% target. Review a sample of answers with staff before expanding the pilot.</p>
         </section> : null}

@@ -46,6 +46,8 @@ For a new Railway deployment, the current configuration uses the build command i
 
 The release and build-session scripts are historical evidence. Some contain original machine paths, obsolete archive checksums, or commands targeting the existing live Railway service. Inspect and adapt copies before use; do not run them as generic setup commands. The research package preserves its own Git history and should be extracted outside this application's repository when restoring it as a separate checkout.
 
+The `supervisor-curriculum/` folder contains the source Markdown, placement CSV and supporting plans for the 19 supervisor courses. The repository's `scripts/content/import-supervisor-courses.mjs` and `scripts/content/build-collections-data.mjs` use these files by default; each also accepts an explicit path or its documented environment-variable override. Run either with `--check` to compare without rewriting generated content.
+
 The historical handoff note predates the successful hotfix 3 deployment. Its claim that hotfix 3 is not live is outdated. Validation results from the new download should be read from the verification record supplied with this handoff, rather than inferred from the old note.
 
 ### Included supplemental archives

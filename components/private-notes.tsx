@@ -7,6 +7,8 @@ export function PrivateNotes({ storageKey }: { storageKey: string }) {
   const id = useId();
   const [value, setValue] = useState("");
   useEffect(() => {
+    // Restore the selected browser-only note after hydration or a storage-key change.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     try { setValue(window.localStorage.getItem(storageKey) ?? ""); } catch { /* Notes simply start empty. */ }
   }, [storageKey]);
   return <div className="research-notes">

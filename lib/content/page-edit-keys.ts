@@ -35,9 +35,50 @@ export function normalizePagePath(value: unknown): string | null {
   return trimmed;
 }
 
-/** Owner-only pages: edits saved there are never sent to anyone who is not the signed-in owner. */
+/**
+ * Page edits can include text selected from a rendered page, including private workspace data.
+ * Only explicitly reviewed public content surfaces may publish page edits to anonymous readers.
+ * New and unrecognized routes are private until they are deliberately added here.
+ */
+const PUBLIC_EDIT_PAGES = new Set([
+  "/", "/home", "/about", "/administrations", "/administrations/adsa/divisions/dsd",
+  "/areas", "/audio-library", "/courses", "/domains",
+  "/employee-resource-groups", "/equity-framework", "/equity-policy", "/equity-review",
+  "/guided-start", "/learn", "/learn/clas", "/learn/clas/curriculum", "/learn/collaboration",
+  "/learn/community-connections", "/learn/cultural-intelligence", "/learn/diversity",
+  "/learn/emotions-and-values", "/learn/engagement-resources", "/learn/equity-in-practice",
+  "/learn/equity-toolkit", "/learn/equity-toolkit/curriculum", "/learn/intercultural",
+  "/learn/intercultural/curriculum", "/learn/readings", "/learn/readings/pathways",
+  "/learn/self-directed", "/learn/sources", "/learn/tribal-referral", "/learn/water-we-swim-in",
+  "/learn/water-we-swim-in/essay", "/learn/collections", "/leading", "/leading/how-this-works",
+  "/leading/paths", "/library", "/minnesota-communities", "/minnesota-communities/calendar",
+  "/one-dsd", "/one-dsd/amplify", "/one-dsd/amplify/co-leads", "/one-dsd/amplify/gatherings",
+  "/one-dsd/amplify/ideas", "/one-dsd/amplify/materials", "/one-dsd/amplify/mentoring",
+  "/one-dsd/amplify/well-being", "/one-dsd/evidence", "/one-dsd/evidence/dhs-landscape",
+  "/one-dsd/evidence/minnesota-government", "/one-dsd/leadership", "/one-dsd/planning", "/one-dsd/programs",
+  "/one-dsd/team", "/operationalizing-equity", "/paths", "/practice", "/practice/clas",
+  "/practice/measurement", "/practice/requirements", "/program-foundation",
+  "/program-foundation/legacy-resources", "/program/implementation", "/program/model",
+  "/resources", "/site-map", "/start", "/support", "/support/directory", "/support/right-person",
+  "/understanding-dhs", "/user-guide",
+]);
+
+const PUBLIC_EDIT_PATTERNS = [
+  /^\/(?:courses|library|resources)\/[a-z0-9-]+(?:\/[a-z0-9-]+)?$/,
+  /^\/(?:administrations|areas|podcasts|practice-guides)\/[a-z0-9-]+$/,
+  /^\/leading\/(?:paths\/)?[a-z0-9-]+$/,
+  /^\/learn\/collections\/[a-z0-9-]+$/,
+  /^\/learn\/readings\/[a-z0-9-]+$/,
+  /^\/learn\/(?:clas|intercultural|equity-toolkit)\/curriculum\/[a-z0-9-]+$/,
+  /^\/minnesota-communities\/[a-z0-9-]+$/,
+  /^\/one-dsd\/(?:programs|scenarios)\/[a-z0-9-]+$/,
+  /^\/program\/(?:what-informs|practice|resources|progress|impact)$/,
+];
+
+/** Returns true for private, personal, unrecognized, or ambiguously encoded pages. */
 export function pagePathIsOwnerOnly(path: string): boolean {
-  return path === "/consultant" || path.startsWith("/consultant/");
+  if (normalizePagePath(path) !== path || path.includes("%")) return true;
+  return !PUBLIC_EDIT_PAGES.has(path) && !PUBLIC_EDIT_PATTERNS.some(pattern => pattern.test(path));
 }
 
 /** The form of a text used for matching: spacing differences from markup never break an edit. */
