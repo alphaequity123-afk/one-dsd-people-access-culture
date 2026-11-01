@@ -15,6 +15,7 @@ import { requestedProductContext } from "@/lib/product/request-context";
 import { prepareEditableSurface, type PreparedEditableSurface } from "@/components/editable-surface";
 import { fallbackEditableSurface } from "@/lib/content/editable-surfaces";
 import { UniversalEditor } from "@/components/universal-editor";
+import { PageEditOverlay } from "@/components/page-edit-overlay";
 import { editingModeFromCookies } from "@/lib/auth/request";
 import { ChromeGate } from "@/components/chrome-gate";
 import { NavigationStatus } from "@/components/navigation-status";
@@ -115,6 +116,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <ShareProgramNotice />
           </ChromeGate>
         </ProgramContextProvider>
+        <PageEditOverlay />
       </body>
     </html>
   );

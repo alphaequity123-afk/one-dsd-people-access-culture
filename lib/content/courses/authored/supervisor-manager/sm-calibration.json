@@ -1,0 +1,795 @@
+{
+ "course": {
+  "id": "sm-calibration",
+  "indexNumber": 2415,
+  "seriesLabel": "For supervisors and managers",
+  "title": "Consistency Across Ratings, Discipline and Pay",
+  "subtitle": "How managers can compare how standards get applied across supervisors, before decisions are final, without quotas and without moving individuals to fix the numbers.",
+  "scope": "",
+  "treatment": "5 lessons, each with explanation, a practice situation, a knowledge check and a plan to try, plus a one-page job aid.",
+  "duration": "64 minutes across 5 lessons",
+  "author": "One DHS / One DSD — People, Access and Culture",
+  "coverImage": "/images/covers/di-governance-resourcing.webp",
+  "coverAlt": "Colleagues review unlabeled planning and budget materials at a table.",
+  "kind": "course",
+  "contentType": "practice",
+  "learning": {
+   "objectives": [
+    "Explain why equal standards can still lead to unequal results at the step after a decision.",
+    "Run a joint review of ratings using criteria and evidence.",
+    "Compare discipline decisions for consistency while respecting contracts and private data.",
+    "Find where your area has discretion over pay and advancement, and make it reviewable.",
+    "Respond to a pattern by reviewing the process, not by changing an individual's result."
+   ],
+   "evidence": [
+    "Compare the responses to the practice situation in each lesson.",
+    "Answer the knowledge check in each lesson.",
+    "Use the job aid with a decision you choose."
+   ],
+   "appliedNextStep": "Before your next review cycle, ask Human Resources what your area may compare across supervisors and who may see it. Then book one 60-minute joint review of ratings before they become final."
+  },
+  "governance": {
+   "contentOwner": "One DHS / One DSD — People, Access and Culture",
+   "reviewers": [
+    "Equity and Inclusion Operations Consultant"
+   ],
+   "evidenceDate": "October 2026",
+   "lastReviewed": "October 31, 2026",
+   "nextReview": "At the agreed review point and whenever an update trigger occurs",
+   "updateTriggers": [
+    "Updated research, law, or official guidance",
+    "Reader or reviewer feedback about accuracy, accessibility, or an example"
+   ],
+   "relatedDoor": "Use the responsible agency office for formal employment, accommodation, civil-rights, labor or eligibility decisions. This course supports learning rather than making those determinations.",
+   "toolkitQuestion": "Who is affected by this decision, and what would I need to learn from them before it is final?",
+   "status": "reviewed"
+  },
+  "lessons": [
+   {
+    "id": "sm-calibration-1",
+    "number": 1,
+    "title": "Where consistency breaks",
+    "summary": "Fairness problems often show up after the rating, at the handoff to what follows. This lesson explains what calibration is and what it is not.",
+    "minutes": 12,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "What the research reports",
+      "body": "<p>A manager can do a careful job on ratings and still end up with unfair results. Research on one large organization's personnel records found that gender, race and nationality gaps in salary growth persisted among employees with the same performance ratings. The problem was in the handoff, where a rating turned into money. A later before-and-after study at one company, covering almost 9,000 employees, reported that reward gaps shrank after the company added accountability and transparency to the process. It had no control group, so read it as promising, not proof.</p><p>Other work warns against easy answers. In three experiments with 445 people with managerial experience, participants favored men in bonuses when the organization was described as a meritocracy. Believing the system is fair can make people check it less. Panel research on US firms suggests that some rules limiting discretion can provoke the very problem they target. A reasonable reading, which has not been tested, is that rules imposed from above invite workarounds, while decisions that managers know someone will look at tend to stay closer to the criteria.</p><p>None of this research shows that calibration will reduce disparities in your division. It does give a reason to look at how decisions get made.</p>"
+     },
+     {
+      "type": "tabs",
+      "heading": "What calibration is and is not",
+      "tabs": [
+       {
+        "label": "It is",
+        "body": "<p>Managers and supervisors meeting before decisions are final. Each person explains how a standard was applied, using evidence. Colleagues ask questions. People can change their own decisions for reasons tied to the work.</p>"
+       },
+       {
+        "label": "It is not",
+        "body": "<p>A forced curve, where some share of people must get each rating. A quota. A meeting where people are discussed by race, disability or other group. A way for a senior manager to get a preferred outcome. A substitute for a supervisor's knowledge of the work.</p>"
+       },
+       {
+        "label": "Why it fits a public agency",
+        "body": "<p>Decisions affect people's careers and can be challenged. A process with stated criteria and reasons helps supervisors explain their decisions honestly. It also helps a good employee whose supervisor rates hard, or whose work is less visible.</p>"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "body": "<p>Ask this about every decision: would the reason still make sense if the person were someone else?</p>"
+     },
+     {
+      "type": "statement",
+      "body": "<p>This course is general information as of October 2026, not legal advice. Your contract, your Human Resources office and labor relations control how this applies.</p>"
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Set the purpose out loud",
+      "control": "<p>You control what the meeting is for. If you say the goal is a good distribution, people will defend numbers. If you say the goal is that standards mean the same thing across units, they will talk about evidence.</p>",
+      "failure": "<p>A calibration meeting becomes a place where the loudest manager's people rise and the quietest manager's people fall. Then supervisors learn to argue, not to document.</p>",
+      "next": "<p>Write one sentence stating the purpose and read it at the start of each session.</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-calibration-1-check-1",
+      "question": "What did research using one large organization's personnel records report about equal ratings?",
+      "options": [
+       {
+        "text": "Equal ratings always lead to equal pay growth.",
+        "correct": false
+       },
+       {
+        "text": "Gaps in salary growth persisted among employees with equal ratings.",
+        "correct": true
+       },
+       {
+        "text": "Ratings have no connection to pay at any employer.",
+        "correct": false
+       },
+       {
+        "text": "Gaps disappeared once ratings were made public.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. That is why the step after the rating deserves its own review. Remember, this is one organization and an observational study.</p>",
+      "feedbackIncorrect": "<p>The key finding is that a fair-looking rating does not settle what happens next. Look for the answer about the gaps that remained.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Describe what research reports about the step from rating to reward.",
+     "objectives": [
+      "Describe what research reports about the step from rating to reward.",
+      "Define calibration in behavior terms.",
+      "Say what calibration must never become."
+     ],
+     "takeaways": [
+      "Equal ratings do not guarantee equal consequences.",
+      "Reviewable decisions tend to work better than either unchecked judgment or rigid rules.",
+      "Calibration compares reasons. It does not sort people into groups or force a curve."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>You manage three supervisors of policy and consultant teams. One rates nearly everyone at the top. One rarely gives the highest rating. Your director suggests fixing this by requiring that no more than a set share of staff can receive the top rating.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Apply the limit, since it is simple and it treats the three units the same.</p>",
+       "response": "<p>It looks equal but it does not test whether the ratings are right. A strong team would be penalized and a weak rating could be protected. It also says nothing about evidence.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Propose a joint review first. Ask each supervisor to bring the criteria and evidence behind a few ratings at each level, and talk about what each level means. Ask Human Resources what the rules permit.</p>",
+       "response": "<p>This addresses the real issue, which is that the words mean different things to different supervisors. Afterward, you can decide whether anything further is needed.</p>",
+       "recommended": true
+      },
+      {
+       "label": "<p>Tell the strict supervisor to loosen up and the generous one to tighten up.</p>",
+       "response": "<p>You would be correcting a number, not a meaning. You also do not yet know which is closer to the standard. They might both be right about their teams.</p>",
+       "recommended": false
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Think of the next time a rating, a write-up or a recommendation in your area will feed into something else. Finish this plan: \"If ____ is coming up, then before it becomes final I will ask ____ to explain the reason to a colleague, and I will ask ____.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-calibration-2",
+    "number": 2,
+    "title": "A joint review of ratings",
+    "summary": "A step-by-step way to compare ratings on criteria and evidence.",
+    "minutes": 14,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "Why side-by-side review",
+      "body": "<p>In laboratory work, people who evaluated candidates jointly, side by side, leaned more on performance and less on stereotypes than people who evaluated candidates one at a time. This was an artificial setting, not a state agency. It still fits common sense. When you must explain why one person's report earned a higher level than another's, you have to say what you saw. Other research, in a university setting, found that changing the rating scale itself changed a gender gap in ratings in male-dominated fields. So the form matters, too. If your form is fixed by contract or policy, ask about what you can change, such as the anchors or examples you use.</p>"
+     },
+     {
+      "type": "list",
+      "heading": "Steps for a 60-minute session",
+      "items": [
+       "5 minutes: State the purpose. Say what stays in the room, and that decisions stay with the people responsible for them.",
+       "10 minutes: Pick one criterion, such as \"quality of analysis\". Each person says what the top, the middle and the concerning level look like, using work examples and no names.",
+       "30 minutes: Go through a set of ratings, side by side. Each supervisor gives the rating and two or three pieces of evidence. Others ask the questions below.",
+       "10 minutes: Each supervisor says whether they will change anything, and why. Nobody changes a rating for them.",
+       "5 minutes: Note what about the process needs fixing, without names."
+      ]
+     },
+     {
+      "type": "accordion",
+      "heading": "Questions to ask in the room",
+      "items": [
+       {
+        "title": "About the evidence",
+        "body": "<p>What did you see, and when? Is this from the whole year or the last month? What did this person actually produce? Who else saw the work?</p>"
+       },
+       {
+        "title": "About the words",
+        "body": "<p>What does \"strategic\" mean here? Would we use \"abrasive\" for anyone else who did the same thing? Are we describing work or style? Does the style change the result?</p>"
+       },
+       {
+        "title": "About the opportunity",
+        "body": "<p>Did this person have the same chance to show this? Who got the high-profile work this year? Did a schedule, a leave or an accommodation affect how much you saw of their work, as opposed to its quality?</p>"
+       },
+       {
+        "title": "About the same treatment",
+        "body": "<p>Have we rated someone else differently for the same thing? If so, what explains it?</p>"
+       }
+      ]
+     },
+     {
+      "type": "text",
+      "heading": "Things to keep out of the room",
+      "body": "<p>Do not raise a person's diagnosis, medical history, religion, family or other personal matters. If an accommodation or a leave is relevant, ask only whether the expectations were adjusted correctly, and talk to the ADA coordinator or Human Resources outside the meeting. Do not bring up active complaints. Under Minn. R. 1205.0400, private data is limited to people whose work assignments reasonably require access, so check with Human Resources who may take part. Do not bring in anything from this app. It holds no one's results, and the app promises that no course score or result goes into a review.</p>"
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Rule out the halo in your own head",
+      "control": "<p>You control the order of speaking. If you speak first, everyone's answer moves toward yours.</p>",
+      "failure": "<p>A senior manager says, \"That one's a star,\" and evidence stops being offered.</p>",
+      "next": "<p>Speak last, and only ask questions for the first half of the session.</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-calibration-2-check-1",
+      "question": "Who should see private details about employees in a calibration session?",
+      "options": [
+       {
+        "text": "Anyone who manages in the division.",
+        "correct": false
+       },
+       {
+        "text": "Only people whose work assignments reasonably require access.",
+        "correct": true
+       },
+       {
+        "text": "All supervisors, so that everyone learns.",
+        "correct": false
+       },
+       {
+        "text": "Anyone the chair invites.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. That is the limit set in Minn. R. 1205.0400. Ask Human Resources how it applies to your session.</p>",
+      "feedbackIncorrect": "<p>Private personnel data has a specific limit under Minnesota rules. Look for the option tied to work assignments.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Prepare the evidence a supervisor brings to a joint review.",
+     "objectives": [
+      "Prepare the evidence a supervisor brings to a joint review.",
+      "Lead a discussion that tests meaning and evidence.",
+      "Keep private information to those who need it."
+     ],
+     "takeaways": [
+      "Settle what the levels mean before talking about anyone.",
+      "Review people side by side on the same work criteria.",
+      "Only those whose work requires access should see private personnel data."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>In a joint review, a supervisor proposes a middle rating for a consultant, writing \"strong analysis, but lacks presence with leadership\". Another supervisor gives a top rating to a consultant who speaks often at leadership meetings, and whose written work you remember as about the same quality. You chair the meeting.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Say nothing, because you don't want to embarrass the supervisor in front of the others.</p>",
+       "response": "<p>Then the meeting has no purpose. You can ask questions without embarrassing anyone. The same question should go to both supervisors.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Ask whether these two consultants belong to different groups, since that may explain the difference.</p>",
+       "response": "<p>Bringing group membership into an individual's rating is the wrong move. It does not help you assess the work and it raises its own legal and ethical problems. Stick with work evidence.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Ask both supervisors the same questions: What work result did \"presence\" or speaking up change? Did both consultants have the same chance to brief leaders? What in the written work supports each rating? Then let each supervisor decide.</p>",
+       "response": "<p>This tests the standard for both people. It may show that presence affects real results, or that one person never had the chance. Either way the record improves.</p>",
+       "recommended": true
+      },
+      {
+       "label": "<p>Tell the first supervisor to raise the rating to match.</p>",
+       "response": "<p>You don't know yet which rating is right, and you may be taking over a decision that is not yours. Ask first.</p>",
+       "recommended": false
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Think of your next review cycle. Finish this plan: \"If ratings are due by ____, then I will hold a joint review by ____, and we will first agree on what ____ looks like at each level.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-calibration-3",
+    "number": 3,
+    "title": "Comparing discipline",
+    "summary": "How to check that similar conduct gets similar treatment, and what can legitimately differ.",
+    "minutes": 13,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "Why this matters, as of October 2026",
+      "body": "<p>Employees notice how discipline lands. One city's employee survey even asked whether supervisors held all staff to the same disciplinary standards. <em>Ames</em> (2025) means that any employee, from any group, can bring a Title VII claim under the same standard. The plaintiff in that case worked for a state youth-services agency. And Policy 1436 says people who knowingly allow or tolerate harassment or discrimination can be disciplined, up to discharge, so a pattern of looking away is not a neutral choice either.</p><p>Some federal guidance for executives stresses taking swift action on deficiencies. Speed has its place. But a fast decision that is out of line with earlier ones, or that skipped the contract, can do more harm than a slower one.</p>"
+     },
+     {
+      "type": "list",
+      "heading": "Facts that can make two cases truly different",
+      "items": [
+       "What exactly happened, and how serious it was.",
+       "What the person had been told before, and when.",
+       "Previous corrective steps, as the contract allows them to be used.",
+       "The person's role and what the role requires.",
+       "Which contract or plan applies."
+      ]
+     },
+     {
+      "type": "list",
+      "heading": "Things that should not make a difference",
+      "items": [
+       "How much the supervisor likes the person, or how well they know them.",
+       "Whether the person is good at speaking up for themselves.",
+       "Whether the person has raised a concern, asked for an accommodation or taken leave.",
+       "The person's race, sex, disability, religion, national origin or any other protected trait.",
+       "Who else happens to be watching."
+      ]
+     },
+     {
+      "type": "text",
+      "heading": "Contract and record notes",
+      "body": "<p>Under MAPE 2025-2027, Article 8, section 8, oral reprimands and investigations without discipline stay out of the personnel file. Do not assume the same for AFSCME, MMA or Managerial Plan employees. Check those terms yourself, or ask labor relations. Records of past decisions may be private, so ask labor relations or Human Resources to do the comparison, or to tell you what you can see. They may also know about earlier cases across the agency that you do not.</p>"
+     },
+     {
+      "type": "accordion",
+      "heading": "Mirror-image questions",
+      "items": [
+       {
+        "title": "Swap the person",
+        "body": "<p>If the same conduct came from someone with a different background, a longer tenure, or a closer relationship with you, what would you do?</p>"
+       },
+       {
+        "title": "Swap the direction",
+        "body": "<p>If you are hesitating because of how a decision might look for a group, ask whether you would hesitate if the groups were reversed. Hold back or go ahead for reasons tied to the conduct and the record.</p>"
+       },
+       {
+        "title": "Swap the supervisor",
+        "body": "<p>If a colleague brought you these facts, what would you advise? Would you think the response was too much or too little?</p>"
+       }
+      ]
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Be the one who asks for the comparison",
+      "control": "<p>You see across supervisors in ways they do not. You can ask labor relations how similar conduct has been treated.</p>",
+      "failure": "<p>Each supervisor decides alone in good faith, and the division ends up with very different responses to the same conduct.</p>",
+      "next": "<p>Before any supervisor under you starts formal corrective action, ask, \"How have similar situations been handled? Has labor relations looked at it?\"</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-calibration-3-check-1",
+      "question": "Which of these may properly make two discipline decisions different?",
+      "options": [
+       {
+        "text": "One employee recently filed a complaint.",
+        "correct": false
+       },
+       {
+        "text": "One employee had been told about the problem before, and the other had not.",
+        "correct": true
+       },
+       {
+        "text": "The supervisor knows one employee better.",
+        "correct": false
+       },
+       {
+        "text": "One employee is better at defending themselves.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. Prior notice is a real difference tied to the facts, subject to what the contract allows.</p>",
+      "feedbackIncorrect": "<p>Look for the difference that is tied to the conduct and the record. A recent complaint is a reason for more care, not a reason for harsher treatment.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Identify facts that may properly make two cases different.",
+     "objectives": [
+      "Identify facts that may properly make two cases different.",
+      "Bring in labor relations before comparing or deciding.",
+      "Use mirror-image questions to test consistency."
+     ],
+     "takeaways": [
+      "Same conduct, same response, unless you can state a real difference.",
+      "Contracts differ. Do not apply one contract's terms to another's employees.",
+      "Speed and consistency can pull against each other. Check before you act."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>Two supervisors who report to you have staff who missed the same kind of deadline on a waiver review. One supervisor wants to issue a written reprimand. The other had a quiet conversation with their staff member a few months ago and nothing else happened. The employee facing the reprimand filed a complaint about a coworker last month.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Let the written reprimand go ahead, because each supervisor runs their own team.</p>",
+       "response": "<p>Supervisors do decide, but you can see the inconsistency, and the recent complaint raises a retaliation question. Saying nothing leaves both risks in place.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Pause the reprimand and bring in labor relations. Ask both supervisors for the facts: what each employee had been told, how serious each miss was and what the contracts say. Check that the timing has nothing to do with the complaint.</p>",
+       "response": "<p>This tests for real differences, and it uses the people who know the contracts. It may turn out that the reprimand is justified. If so, there will be a sound record of why.</p>",
+       "recommended": true
+      },
+      {
+       "label": "<p>Cancel the reprimand so that nobody can claim retaliation.</p>",
+       "response": "<p>Raising a concern does not protect a person from all discipline. Cancelling by reflex can be unfair to others and teach the wrong lesson. Get the facts.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Issue a written reprimand to the other employee, too, so the two are the same.</p>",
+       "response": "<p>Matching punishments after the fact, without looking at the facts or the contract, doesn't produce consistency. It could create a second problem.</p>",
+       "recommended": false
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Find your labor relations contact and the contract for each team under you. Finish this plan: \"If a supervisor tells me they want to start corrective action, then that same day I will ask ____ and call ____.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-calibration-4",
+    "number": 4,
+    "title": "Pay and advancement",
+    "summary": "Pay in state government runs on set rules, but judgment still enters at certain points. This lesson helps you find those points and make them reviewable.",
+    "minutes": 12,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "Find your discretion first",
+      "body": "<p>This course cannot tell you how much discretion you have over pay. That depends on your contract or plan, the classification system and Human Resources. Ask them, specifically: where do managers or supervisors recommend, request or decide something that affects pay or level? The frontline supervisor competencies from the University of Minnesota list making salary and promotion recommendations as a supervisory task, so even where rules set the pay range, somebody's judgment may be starting the process.</p><p>Think about the steps that lead toward pay and advancement, including recommendations for reclassification or promotion, who gets acting roles, who gets stretch work that later counts as experience, and who gets nominated for training. Commentary reads <em>Muldrow</em> as arguably reaching limits on training and development. The EEOC treats those as terms or privileges of employment. So these choices deserve the same criteria and short record as a formal decision.</p><p>Minnesota added a pay history provision to the Human Rights Act in 2023, at Minn. Stat. 363A.08, subd. 8. Ask Human Resources how it applies before you discuss a candidate's past pay.</p>"
+     },
+     {
+      "type": "tabs",
+      "heading": "What pay transparency research reports",
+      "tabs": [
+       {
+        "label": "Benefits",
+        "body": "<p>Studies of Danish reporting rules and Canadian public salary disclosure report narrower gender gaps. These are strong designs, but they are from other settings.</p>"
+       },
+       {
+        "label": "Costs",
+        "body": "<p>The Danish study found productivity fell and the narrowing came mainly from slowing men's wage growth. A study of US academics found that transparency reduced the link between pay and individual performance. A review warns that coworkers comparing pay can have counterproductive results.</p>"
+       },
+       {
+        "label": "What it means for you",
+        "body": "<p>Whether to adopt more transparency is an organization-level decision. Ask Human Resources what pay information is already public. What you can do now is explain clearly how pay and advancement work and how people can move, and offer that explanation to all.</p>"
+       }
+      ]
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Make every recommendation answer one question",
+      "control": "<p>You control what a recommendation has to contain before you pass it on.</p>",
+      "failure": "<p>Recommendations move upward because of a supervisor's enthusiasm. People with quieter supervisors stay put, whatever their work looks like.</p>",
+      "next": "<p>Ask every supervisor who recommends someone: \"What's the standard, what's the evidence, and who else meets it?\"</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-calibration-4-check-1",
+      "question": "What is the most accurate summary of the research on pay transparency?",
+      "options": [
+       {
+        "text": "It narrows gaps at no cost.",
+        "correct": false
+       },
+       {
+        "text": "It always harms productivity, so avoid it.",
+        "correct": false
+       },
+       {
+        "text": "It has narrowed gaps in several studies, and some studies report costs such as weaker links between pay and performance.",
+        "correct": true
+       },
+       {
+        "text": "It has never been studied in a rigorous way.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. It is an organization-level decision with real trade-offs.</p>",
+      "feedbackIncorrect": "<p>Look for the answer that contains both the benefit and the cost.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Find out where your area has discretion over pay and advancement.",
+     "objectives": [
+      "Find out where your area has discretion over pay and advancement.",
+      "State criteria for recommendations and nominations.",
+      "Describe what is known about pay transparency, including trade-offs."
+     ],
+     "takeaways": [
+      "You may have less control over pay than private-sector advice assumes. Ask where you do have it.",
+      "Recommendations, acting roles and development access are all decisions to check.",
+      "Transparency research shows both benefits and costs."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>An acting manager position opens for six months. A supervisor wants to name a staff member who has been their informal deputy for years. You know acting experience often helps people in later hiring. Nobody else was told the role was available.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Approve it. The role needs to be filled quickly, and the staff member is well qualified.</p>",
+       "response": "<p>They may be well qualified. But the acting role is also a step toward advancement, and nobody else had a chance. Speed is a real need, not a reason to skip criteria altogether.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Ask Human Resources what the rules are for acting roles. State the criteria briefly, tell the eligible group about it, and ask the supervisor to make a short written choice against those criteria, on a short timeline.</p>",
+       "response": "<p>This keeps things moving, and it opens the opportunity. The informal deputy can still be chosen, on the merits. The record then explains why.</p>",
+       "recommended": true
+      },
+      {
+       "label": "<p>Choose someone from an underrepresented group for the role to help with representation.</p>",
+       "response": "<p>Choosing a person because of their group can expose the decision to a Title VII claim, and under <em>Ames</em> anyone passed over can bring one under the same standard. Open the process and use job criteria instead.</p>",
+       "recommended": false
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Make a short list of the points in your area where someone's judgment affects pay or level. If you don't know, ask. Finish this plan: \"If an acting role, reclassification or recommendation comes up, then I will ask for ____ before I approve or forward it.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-calibration-5",
+    "number": 5,
+    "title": "When you see a pattern",
+    "summary": "What to do when the review shows a difference across groups or units. Review the process. Do not move people around.",
+    "minutes": 13,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "The firm line",
+      "body": "<p>Sometimes a manager looks across ratings or discipline and sees a difference. It might be by unit, by supervisor, by job type or, where the data are large enough and handled properly, by group. It would be natural to want to fix it right away. Here is the line this course asks you to hold: a difference is a reason to review the process. It is not a reason to change any one person's outcome. Raising or lowering someone's rating because of their group would treat that person differently because of a protected trait, and <em>Ames</em> means this applies to every employee.</p><p>Reviewing the process means asking questions such as: were criteria clear, were they applied the same way, did people have the same access to the work that gets rated, and did someone check? If you find an error in an individual case, correct it because it is an error, and record the work reason. Reading Patterns and Reviewing Process goes further, including the small-group floor of 10 respondents, how to protect people in small groups and what to do when the numbers are too small to mean much.</p>"
+     },
+     {
+      "type": "list",
+      "heading": "Next steps after you see a difference",
+      "items": [
+       "Check the numbers. Small units swing widely. One person can change a result.",
+       "Ask Human Resources what data you may see and how it can be shared. Do not build your own list of who is in which group.",
+       "Go back to the steps: criteria, evidence, opportunity, who reviewed it, what followed.",
+       "Pick one thing to change in the process, and change it for everyone.",
+       "Set a date to look again.",
+       "Tell people what you changed in the process. Do not imply that the problem is now solved. Lab work suggests that fairness signals can make people less willing to see real problems."
+      ]
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Hold the meeting even when things look fine",
+      "control": "<p>You control whether review is routine or happens only when someone is worried.</p>",
+      "failure": "<p>Calibration is called only after a complaint. Everyone then treats it as an investigation, and nobody speaks freely.</p>",
+      "next": "<p>Schedule the joint review on the calendar for every cycle and keep it, even when the cycle seems quiet.</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-calibration-5-check-1",
+      "question": "A pattern appears across a large section. What does it support?",
+      "options": [
+       {
+        "text": "Changing the ratings of some individuals in the affected group.",
+        "correct": false
+       },
+       {
+        "text": "Concluding that a specific supervisor discriminated.",
+        "correct": false
+       },
+       {
+        "text": "Reviewing criteria, access to work and how decisions were checked.",
+        "correct": true
+       },
+       {
+        "text": "Assigning fewer top ratings to other groups.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. A pattern prompts a process review.</p>",
+      "feedbackIncorrect": "<p>Look for the answer about process. A pattern alone does not tell you what any individual deserves or what any supervisor intended.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Separate a process review from a decision about an individual.",
+     "objectives": [
+      "Separate a process review from a decision about an individual.",
+      "Choose the next step after seeing a difference.",
+      "Keep calibration honest over time."
+     ],
+     "takeaways": [
+      "A pattern tells you where to look. It does not tell you what any one person deserves.",
+      "Never change a person's rating or discipline to adjust a group's numbers.",
+      "Say what you are unsure of, and come back to it."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>After a joint review, a Human Resources partner tells you that across your section, which is large enough to meet the reporting floor, one group of staff received top ratings noticeably less often. Another manager says: \"Easy. Let's look at who's close to the line in that group and move a few up.\"</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Move a few people up, as long as each one is arguably close.</p>",
+       "response": "<p>Those moves would be made because of group membership, whatever the paperwork says. This creates a real risk to everyone involved, including the people moved up. It also leaves the cause in place.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Treat the difference as meaningless, because no individual rating looked wrong.</p>",
+       "response": "<p>Individual ratings can each look fine while something upstream, such as who gets visible work, is shaping them. A difference doesn't prove a problem, but it deserves a look.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Say no to moving individuals. Review the process with Human Resources: who received visible work, how criteria were defined, which supervisors wrote how much evidence. Change what you find for everyone, and look again next cycle.</p>",
+       "response": "<p>This takes the pattern seriously and stays within the line. If the process review finds a true error in a person's rating, correct it as an error, with the work reason recorded.</p>",
+       "recommended": true
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Think about the next time someone in your section points to a difference in the numbers. Finish this plan: \"If someone suggests adjusting individuals to fix a difference, then I will say ____, and the first process question I will ask is ____.\"</p>",
+     "options": []
+    }
+   }
+  ]
+ },
+ "jobAid": {
+  "title": "Calibration on one page",
+  "subtitle": "Compare reasons, not people's groups",
+  "use": {
+   "purpose": "Help managers check that ratings, discipline and pay-related decisions apply the same standards across supervisors, before they become final.",
+   "remember": [
+    "Calibration compares evidence against criteria. It is not a curve or a quota.",
+    "Supervisors keep their own decisions. They can change them for work reasons.",
+    "Keep private data to those whose work requires it.",
+    "A pattern prompts a process review. Do not move individuals to fix numbers."
+   ],
+   "doNext": "Book one 60-minute joint review before your next cycle becomes final. Speak last."
+  },
+  "sections": [
+   {
+    "heading": "Before the session",
+    "items": [
+     "Ask Human Resources who may take part and what can be shared.",
+     "Choose the criterion and define what each level looks like.",
+     "Have supervisors bring two or three pieces of evidence for each rating."
+    ]
+   },
+   {
+    "heading": "Questions in the room",
+    "items": [
+     "What did you see, and when?",
+     "Would we use this word for anyone who did the same thing?",
+     "Did this person have the same chance to show this?",
+     "If two cases differ, what real fact explains it?"
+    ]
+   },
+   {
+    "heading": "Discipline",
+    "items": [
+     "Call labor relations before starting. Check the contract that applies.",
+     "Compare conduct, prior notice, seriousness and role.",
+     "Check that timing has nothing to do with a report, an accommodation or a leave."
+    ]
+   },
+   {
+    "heading": "Pay and advancement",
+    "items": [
+     "Ask where your area has discretion.",
+     "For each recommendation or acting role, ask: what's the standard, what's the evidence, and who else meets it?",
+     "Tell all eligible people about openings."
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "title": "Castilla 2008, American Journal of Sociology",
+   "href": "https://doi.org/10.1086/588738",
+   "note": "Salary growth gaps among employees with equal ratings. Panel data from one organization, read at abstract level."
+  },
+  {
+   "title": "Castilla 2015, Organization Science",
+   "href": "https://doi.org/10.1287/orsc.2014.0950",
+   "note": "Reward gaps shrank after accountability and transparency procedures at one company. Before-and-after design with no control group."
+  },
+  {
+   "title": "Castilla and Benard 2010",
+   "href": "https://doi.org/10.2189/asqu.2010.55.4.543",
+   "note": "Meritocracy framing and bonuses, in three lab experiments."
+  },
+  {
+   "title": "Dobbin, Schrage and Kalev 2015",
+   "href": "https://doi.org/10.1177/0003122415596416",
+   "note": "Some reforms limiting discretion may activate the problem they target. Panel data."
+  },
+  {
+   "title": "Bohnet, van Geen and Bazerman, Management Science",
+   "href": "https://doi.org/10.1287/mnsc.2015.2186",
+   "note": "Joint evaluation shifted decisions toward performance. Lab study, applied here by reasoned extension."
+  },
+  {
+   "title": "Rivera and Tilcsik 2019",
+   "href": "https://doi.org/10.1177/0003122419833601",
+   "note": "Rating scale design and gender gaps, in a university setting."
+  },
+  {
+   "title": "Ames v. Ohio Department of Youth Services (2025)",
+   "href": "https://www.supremecourt.gov/opinions/24pdf/23-1039_c0n2.pdf",
+   "note": "One Title VII standard for all employees."
+  },
+  {
+   "title": "Muldrow v. City of St. Louis (2024)",
+   "href": "https://www.law.cornell.edu/supremecourt/text/22-193",
+   "note": "\"Some harm\" standard for a transfer."
+  },
+  {
+   "title": "ABA Labor Law magazine, Summer 2024",
+   "href": "https://www.americanbar.org/groups/labor_law/resources/magazine/2024-summer/private-affirmative-action",
+   "note": "Commentary on how far Muldrow may reach. Secondary."
+  },
+  {
+   "title": "EEOC, What You Should Know About DEI-Related Discrimination at Work",
+   "href": "https://www.eeoc.gov/wysk/what-you-should-know-about-dei-related-discrimination-work",
+   "note": "Agency position on training and development as terms of employment. Not law."
+  },
+  {
+   "title": "Minn. R. 1205.0400",
+   "href": "https://www.revisor.mn.gov/rules/1205.0400/",
+   "note": "Access to private data limited by work assignment."
+  },
+  {
+   "title": "Minn. Stat. 13.43",
+   "href": "https://www.revisor.mn.gov/statutes/cite/13.43",
+   "note": "Public and private personnel data."
+  },
+  {
+   "title": "MMB HR/LR Policy 1436",
+   "href": "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+   "note": "Discipline for knowingly allowing or tolerating harassment or discrimination."
+  },
+  {
+   "title": "MAPE 2025-2027 contract",
+   "href": "https://mape.org/sites/default/files/files/MAPE-2025-2027-Contract_1.pdf",
+   "note": "Article 8, section 8, and appraisal provisions. Applies only to MAPE-represented employees."
+  },
+  {
+   "title": "National Frontline Supervisor Competencies, 2013",
+   "href": "https://www.ancor.org/sites/default/files/national_frontline_supervisor_comp.pdf",
+   "note": "Salary and promotion recommendations as a supervisory task. Written for supervisors of direct support staff."
+  },
+  {
+   "title": "OPM SES hiring memo, May 2025",
+   "href": "https://www.opm.gov/chcoc/transmittals/2025/OPM%20SES%20Hiring%20Memo%205-29-2025%20FINAL.pdf",
+   "note": "Federal framework language on swift action, used as a contrast."
+  },
+  {
+   "title": "Seattle RSJI 2012 employee survey",
+   "href": "https://www.seattle.gov/Documents/Departments/RSJI/RSJI-2012-Employee-Survey-PWRPT-PRESENTATION-Final.pdf",
+   "note": "Example of a survey item on consistent disciplinary standards. Figures not used."
+  },
+  {
+   "title": "Minn. Laws 2023 c. 52",
+   "href": "https://www.revisor.mn.gov/laws/2023/0/Session+Law/Chapter/52/",
+   "note": "Added the pay history provision at Minn. Stat. 363A.08, subd. 8."
+  },
+  {
+   "title": "Bennedsen et al. 2022",
+   "href": "https://doi.org/10.1111/jofi.13136",
+   "note": "Danish gender-disaggregated pay reporting. Quasi-experimental."
+  },
+  {
+   "title": "Baker et al. 2023",
+   "href": "https://doi.org/10.1257/app.20210141",
+   "note": "Canadian public-sector salary disclosure. Quasi-experimental."
+  },
+  {
+   "title": "Obloj and Zenger 2022",
+   "href": "https://doi.org/10.1038/s41562-022-01288-9",
+   "note": "Transparency and the pay-performance link among US academics."
+  },
+  {
+   "title": "Cullen 2024",
+   "href": "https://doi.org/10.1257/jep.38.1.153",
+   "note": "Review of pay transparency, including counterproductive comparison."
+  },
+  {
+   "title": "Kaiser et al. 2013",
+   "href": "https://doi.org/10.1037/a0030838",
+   "note": "Diversity structures and false assurance of fairness, in lab experiments."
+  }
+ ]
+}

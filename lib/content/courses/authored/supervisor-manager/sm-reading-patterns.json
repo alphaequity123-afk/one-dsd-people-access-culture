@@ -1,0 +1,901 @@
+{
+ "course": {
+  "id": "sm-reading-patterns",
+  "indexNumber": 2416,
+  "seriesLabel": "For supervisors and managers",
+  "title": "Reading Patterns and Reviewing Process",
+  "subtitle": "How to read workforce and service patterns honestly, protect people in small groups, and treat a pattern as a reason to review process, not a decision about any individual.",
+  "scope": "",
+  "treatment": "5 lessons, each with explanation, a practice situation, a knowledge check and a plan to try, plus a one-page job aid.",
+  "duration": "64 minutes across 5 lessons",
+  "author": "One DHS / One DSD — People, Access and Culture",
+  "coverImage": "/images/covers/stock-people-03.jpg",
+  "coverAlt": "A presenter points to a whiteboard chart while two colleagues discuss it at a table.",
+  "kind": "course",
+  "contentType": "practice",
+  "learning": {
+   "objectives": [
+    "Explain what a pattern can and cannot tell you.",
+    "Apply a floor of 10 respondents, and protect small groups from identification by subtraction.",
+    "Turn a pattern into specific questions about process.",
+    "Keep a pattern from becoming a decision about an individual, in any direction.",
+    "Report results honestly, including nulls and limits."
+   ],
+   "evidence": [
+    "Compare the responses to the practice situation in each lesson.",
+    "Answer the knowledge check in each lesson.",
+    "Use the job aid with a decision you choose."
+   ],
+   "appliedNextStep": "Pick one report you already receive. Before your next meeting about it, check its group sizes and write down the process questions it raises, with no individual's name attached to any of them."
+  },
+  "governance": {
+   "contentOwner": "One DHS / One DSD — People, Access and Culture",
+   "reviewers": [
+    "Equity and Inclusion Operations Consultant"
+   ],
+   "evidenceDate": "October 2026",
+   "lastReviewed": "October 31, 2026",
+   "nextReview": "At the agreed review point and whenever an update trigger occurs",
+   "updateTriggers": [
+    "Updated research, law, or official guidance",
+    "Reader or reviewer feedback about accuracy, accessibility, or an example"
+   ],
+   "relatedDoor": "Use the responsible agency office for formal employment, accommodation, civil-rights, labor or eligibility decisions. This course supports learning rather than making those determinations.",
+   "toolkitQuestion": "Who is affected by this decision, and what would I need to learn from them before it is final?",
+   "status": "reviewed"
+  },
+  "lessons": [
+   {
+    "id": "sm-reading-patterns-1",
+    "number": 1,
+    "title": "A pattern prompts a review",
+    "summary": "A pattern tells you where to look. This lesson sets out the central rule and the current legal setting.",
+    "minutes": 12,
+    "blocks": [
+     {
+      "type": "statement",
+      "body": "<p>A pattern prompts a review of process. It never decides anything about an individual.</p>"
+     },
+     {
+      "type": "text",
+      "heading": "Why this rule",
+      "body": "<p>Say your report shows that Black staff in your section are promoted less often, or that families who speak a language other than English wait longer for a waiver assessment. Those are serious things to see. Use direct words for what the data show, and take them seriously. But the data do not tell you why it is happening, and they do not tell you what any single employee or family should get.</p><p>That gives you two ways to go wrong. You can dismiss the pattern because no one meant any harm. Or you can jump from the pattern to someone's individual outcome, by promoting, rating or serving a person differently because of their group. The first leaves a barrier in place. The second treats a person differently because of a protected trait. Review of process avoids both. You look for the rule, step or habit that is producing the difference, and you change it for everyone.</p>"
+     },
+     {
+      "type": "tabs",
+      "heading": "The legal setting, as of October 2026",
+      "tabs": [
+       {
+        "label": "What changed",
+        "body": "<p>Federal agencies have largely stepped back from disparate impact in enforcement. Executive Order 14281 (April 2025) sets a policy of eliminating that liability to the extent possible. DOJ reportedly rescinded its Title VI disparate-impact provisions in December 2025. HHS removed its provisions effective July 24, 2026, and says it will not pursue Title VI disparate-impact liability against funding recipients. A June 2026 Justice Department legal opinion is reported to conclude that the EEOC's Title VII disparate-impact framework is unconstitutional. It is reported to bind federal agencies, not courts.</p>"
+       },
+       {
+        "label": "What remains",
+        "body": "<p>Title VII's disparate-impact provision is still in the statute, and private suits remain possible. The Minnesota Human Rights Act still prohibits a system of employment that unreasonably excludes applicants. How Minnesota courts apply that language now was not verified for this course. Ask your legal staff if you have a specific question.</p>"
+       },
+       {
+        "label": "What this means for you",
+        "body": "<p>Do not teach \"disparate impact is dead\". Do not teach \"it's enforced as before\". Looking at service and workforce outcomes is not barred by these changes. What changed is that a disparity alone does not show federal Title VI liability. Your reason to look is that you want your programs to work for everyone they serve.</p>"
+       }
+      ]
+     },
+     {
+      "type": "accordion",
+      "heading": "Three kinds of explanation",
+      "items": [
+       {
+        "title": "Noise",
+        "body": "<p>Small numbers swing widely. One hire, one departure or one bad quarter can make a difference look large. Check the size of the groups first.</p>"
+       },
+       {
+        "title": "Who came in and when",
+        "body": "<p>The group may differ in tenure, job type, location or which unit they work in. That may explain part of a difference. It does not end the question. Ask how people came to be in those jobs and places.</p>"
+       },
+       {
+        "title": "Process",
+        "body": "<p>A neutral step can produce an unequal result. A form that is only online. A posting that travels only through networks. A rule about schedule that some people can't meet. These are the ones you can fix.</p>"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "body": "<p>This course is general information as of October 2026, not legal advice.</p>"
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Say the sentence first",
+      "control": "<p>You control how a data conversation starts.</p>",
+      "failure": "<p>A report lands, and within ten minutes people are either defending themselves or proposing to fix individual cases.</p>",
+      "next": "<p>Open your next data discussion with this: \"This tells us where to look. It doesn't tell us about any one person. What in our process might be producing this?\"</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-reading-patterns-1-check-1",
+      "question": "Which statement is most accurate as of October 2026?",
+      "options": [
+       {
+        "text": "Disparate impact liability no longer exists anywhere in US law.",
+        "correct": false
+       },
+       {
+        "text": "Federal enforcement has largely stepped back, HHS removed its Title VI provisions, and Title VII's provision and Minnesota's statutory language remain.",
+        "correct": true
+       },
+       {
+        "text": "Federal agencies enforce disparate impact just as they did in 2020.",
+        "correct": false
+       },
+       {
+        "text": "It is unlawful to look at service outcomes by group.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. That is the balanced description. Avoid both of the extremes.</p>",
+      "feedbackIncorrect": "<p>Look for the answer that records the federal change and what still remains. These rules are moving, so check the date on anything you read.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "State the central rule of this course.",
+     "objectives": [
+      "State the central rule of this course.",
+      "Describe the status of disparate impact as of October 2026 without overstating it either way.",
+      "Distinguish three kinds of explanation for a pattern."
+     ],
+     "takeaways": [
+      "A pattern prompts a review of process. It is not a decision about an individual.",
+      "Disparate impact is neither dead nor enforced as before.",
+      "Disparity data remain useful for finding neutral rules and access barriers."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>A division report shows that people whose primary language is not English take longer on average to get from first contact to an assessment in one waiver program. The group is large enough to report. A manager proposes moving those families to the front of the line for the next quarter.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Agree, because it would fix the number quickly.</p>",
+       "response": "<p>It treats families differently by language or national origin, it doesn't address the cause, and it would make other people wait. When it ends, the gap may come back.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Map the steps from first contact to assessment, and find where the time goes. Look at interpreter scheduling, translated materials and how people are reached. Fix those steps, and look again.</p>",
+       "response": "<p>This looks for the cause. If interpreter booking takes two weeks, you can change that for everybody who needs an interpreter, and the change will last.</p>",
+       "recommended": true
+      },
+      {
+       "label": "<p>Note that the law no longer requires attention to disparate impact, and take no action.</p>",
+       "response": "<p>A change in federal enforcement does not make the delay acceptable, and it says nothing about what your program owes the people it serves. The question of what is delaying these families remains.</p>",
+       "recommended": false
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Think of the next meeting where someone will share numbers by group. Finish this plan: \"If that report shows a difference, then I will start by saying ____, and I will ask ____ before anyone suggests a fix.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-reading-patterns-2",
+    "number": 2,
+    "title": "Small groups and the floor of 10",
+    "summary": "How to protect people when numbers are small, including from identification by subtraction.",
+    "minutes": 14,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "The floor",
+      "body": "<p>A sensible rule is a floor of 10 respondents for any staff-facing result. The federal employee survey uses the same convention, reporting work unit results only when 10 or more employees take part. Some survey vendors use 5, and practitioners describe a range of 5 to 10, depending on how sensitive the content is. Ten is a defensible public-sector convention. It is not a proven safe number. For identity cross-tabs, such as race by unit, or disability by job type, go higher. Report identity results at the division level or above. If a group is too small even there, use a different way of listening, which people opt into and consent to.</p>"
+     },
+     {
+      "type": "text",
+      "heading": "This limits what you can say about one supervisor",
+      "body": "<p>Many teams have fewer than 10 people. So this floor rules out individual supervisor scores from team surveys in many cases, and that has to be said openly. It limits what anyone can claim about one supervisor from survey results. There's a real trade-off here. One of the strongest findings about supervisor behavior came from feedback based on 7 to 9 workers' reports per supervisor, in a safety setting. That is below this floor. If someone proposes this kind of feedback, understand that a small team's answers can often be traced to a person, and that this app does not offer it.</p>"
+     },
+     {
+      "type": "tabs",
+      "heading": "Identification by subtraction",
+      "tabs": [
+       {
+        "label": "A made-up example",
+        "body": "<p>A section report shows 23 respondents in total. A filter that excludes one unit shows 15 respondents. So that unit has 8, which is under the floor, even though no one ever displayed it. If the two reports also show how many said \"yes\", you can now work out that unit's answer.</p>"
+       },
+       {
+        "label": "Complementary suppression",
+        "body": "<p>When you hide a small group, also hide the next-smallest group, or combine them, so nobody can recover the hidden number by subtracting. A vendor's published guidance describes this approach. Apply it across filters too.</p>"
+       },
+       {
+        "label": "Over time and across exports",
+        "body": "<p>Compare this quarter with last. If one person joined or left a small group, the change in results may show how that person answered. Apply the same rule to exports, filters and repeated reports. A spreadsheet that someone can sort is a filter.</p>"
+       }
+      ]
+     },
+     {
+      "type": "accordion",
+      "heading": "When a group is under the floor",
+      "items": [
+       {
+        "title": "Pool across time or units",
+        "body": "<p>Combine several periods or several units, as long as the combined result can't be taken apart by subtraction.</p>"
+       },
+       {
+        "title": "Move up a level",
+        "body": "<p>Report at the section or division level, instead of the team.</p>"
+       },
+       {
+        "title": "Report that you can't report",
+        "body": "<p>Say: \"This group is too small to report. Here's what we are doing about the process anyway.\" You don't need a number to fix a form that does not work with a screen reader.</p>"
+       },
+       {
+        "title": "Ask a different way",
+        "body": "<p>Offer optional, voluntary listening with consent, run by someone who does not supervise the people taking part. No one should be pressed to speak for a group, or to identify themselves.</p>"
+       },
+       {
+        "title": "What not to do",
+        "body": "<p>Do not lower the floor. Do not guess who is in a small group from names or appearances. Do not ask a person from a small group to confirm what the numbers mean.</p>"
+       }
+      ]
+     },
+     {
+      "type": "text",
+      "heading": "Other small numbers",
+      "body": "<p>Administrative data have small cells, too. Think about accommodation counts in a small unit, or the number of families in a small county using a particular waiver service with an interpreter. These are not survey respondents, but one person can still be recognized. As a working rule, handle them with the same care, and ask your data practices contact what rules apply. Under Minnesota rules, access to private personnel data is limited to people whose work assignments reasonably require it. Small numbers also move a lot from chance alone. Don't read a change in a small group as a trend.</p>"
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Be the person who asks \"how many?\"",
+      "control": "<p>You control whether anyone in the room asks about group size before discussing the result.</p>",
+      "failure": "<p>Someone shows a striking chart by unit. People start guessing who is in the small bar, and a person's privacy is gone.</p>",
+      "next": "<p>Before any chart goes up in your meeting, ask how many people each bar represents, and whether anyone could be recognized.</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-reading-patterns-2-check-1",
+      "question": "A report hides a unit with 6 respondents, but it shows the section total and the totals for all other units. What is the problem?",
+      "options": [
+       {
+        "text": "There is no problem, since the number was hidden.",
+        "correct": false
+       },
+       {
+        "text": "Anyone can work out the hidden unit's result by subtraction.",
+        "correct": true
+       },
+       {
+        "text": "The floor should be lowered to 5.",
+        "correct": false
+       },
+       {
+        "text": "The report should add names so that people can check it.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. That is why complementary suppression hides or combines the next-smallest group too.</p>",
+      "feedbackIncorrect": "<p>Think about what a reader could calculate from the numbers that are shown. Hiding one cell doesn't help if the others reveal it.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Apply a floor of 10 respondents to any staff-facing result.",
+     "objectives": [
+      "Apply a floor of 10 respondents to any staff-facing result.",
+      "Explain complementary suppression and why subtraction matters.",
+      "Choose a sound alternative when a group is under the floor."
+     ],
+     "takeaways": [
+      "No staff-facing result goes out for fewer than 10 respondents, and identity cross-tabs need more.",
+      "Hiding one number is not enough if someone can find it by subtraction.",
+      "Do not lower the floor to get an answer. Pool, move up a level or ask in another way."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>You receive a climate survey report by team. One supervisor's team has 7 respondents. A director asks you for that team's results by race, since a staff member there has seemed unhappy. The survey tool will produce the report if you ask for an override.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Run the report for the director only, and keep it confidential.</p>",
+       "response": "<p>Seven respondents is under the floor, and race within that team would identify people. Keeping it confidential doesn't fix that. People answered on the promise that this would not be done.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Run it, but round the numbers and remove the race labels.</p>",
+       "response": "<p>In a team of 7, the people involved can still be worked out. It only looks like protection.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Decline the override and explain the floor. Offer section-level results that meet the floor. If someone is having a problem, the route is to talk with that person's supervisor and Human Resources about the concern directly. Look for process questions you can ask of that team without any data.</p>",
+       "response": "<p>This keeps the promise made to respondents and addresses what the director is really worried about. A survey cut was never the right tool for one person's situation.</p>",
+       "recommended": true
+      },
+      {
+       "label": "<p>Ask the supervisor which staff seemed unhappy so that you can look at their answers.</p>",
+       "response": "<p>This is worse. It would go straight toward identifying individual respondents, and it could look like retaliation against people who gave honest answers.</p>",
+       "recommended": false
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Find one report that you see or send that breaks results out by team or group. Finish this plan: \"If a group in that report has fewer than 10 respondents, then I will ____, and I will ask ____ to check whether it can be found by subtraction.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-reading-patterns-3",
+    "number": 3,
+    "title": "From pattern to process questions",
+    "summary": "How to trace a pattern back through the steps that produced it, and what research says about fixes.",
+    "minutes": 13,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "Walk the steps",
+      "body": "<p>Every pattern comes out of a sequence of steps. For promotion, that could be: who heard about the job, who applied, who was screened in, who was interviewed, how they were scored, who was chosen, and what the person did before all that to get ready. For a waiver service, it could be: how people find out, who makes first contact, what language it happens in, how long a step takes, what paper is needed, who helps, and what happens to those who drop out. Look for the step where the numbers start to separate.</p>"
+     },
+     {
+      "type": "list",
+      "heading": "Three questions for each step",
+      "items": [
+       "Criteria stated: Were the criteria known and written down before this step, and did the people going through it know them?",
+       "Record kept: Is there a short record of what was decided and why?",
+       "Who reviewed: Did anyone other than the decision maker look at it?"
+      ]
+     },
+     {
+      "type": "accordion",
+      "heading": "Workforce examples",
+      "items": [
+       {
+        "title": "Promotion rates differ",
+        "body": "<p>Who gets visible work and face time before a posting? One study at a financial firm linked more face-to-face time with a manager to higher promotion rates. How do people hear about acting roles? Who is encouraged to apply? How structured are interviews?</p>"
+       },
+       {
+        "title": "Exits differ",
+        "body": "<p>Who gets regular one-to-ones? What do stay and exit conversations show? Is one unit losing people more than others? Evidence links supervisors to retention better than most other equity topics, though no randomized study was found that trains supervisors and measures retention by race, gender or disability.</p>"
+       },
+       {
+        "title": "Discipline or ratings differ",
+        "body": "<p>Are the same standards applied? Who gets informal warnings, and who gets formal steps first? See Consistency Across Ratings, Discipline and Pay.</p>"
+       },
+       {
+        "title": "Accommodation takes longer in some units",
+        "body": "<p>Where does a request wait? Do supervisors know the first step? This is a process question, with no need to discuss anyone's medical details.</p>"
+       }
+      ]
+     },
+     {
+      "type": "accordion",
+      "heading": "Service examples",
+      "items": [
+       {
+        "title": "Language",
+        "body": "<p>Are interpreter scheduling, translated notices and phone systems adding time? As of October 2026, federal language-access guidance has been weakening, while Title VI and Section 1557 remain statutes. Teach language access as a duty about service quality and access to programs, and ask your legal staff about specifics.</p>"
+       },
+       {
+        "title": "Geography",
+        "body": "<p>Do people in greater Minnesota have fewer providers, longer travel or less access to broadband? A digital form may work well for some areas and not for others.</p>"
+       },
+       {
+        "title": "Disability access",
+        "body": "<p>Can people with different disabilities use the forms, the portal and the meetings? Check with the people who use them. Don't rely only on a compliance check.</p>"
+       },
+       {
+        "title": "Tribal Nations",
+        "body": "<p>Questions that involve Tribal governments or Tribal members go to ADSA and the Tribal liaison. This course does not cover them.</p>"
+       }
+      ]
+     },
+     {
+      "type": "text",
+      "heading": "Fixes can backfire",
+      "body": "<p>Be modest about what will work. Structured interviews have good support. But formal written job tests for managers were followed by declines for several groups in one set of panel findings. In a shortlisting exercise with Australian public servants, identified minority candidates were more likely to be shortlisted than de-identified ones. So blind review, in that setting, would have hurt. A supervisor course in one study helped some employees and harmed others, with an average near zero. Check what you are doing now before importing a best practice, watch for different effects on different groups where the floor permits it, and set a date to look again.</p>"
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Change one step, for everyone",
+      "control": "<p>You control which step gets changed and whether anyone checks on it.</p>",
+      "failure": "<p>A pattern brings on a burst of activity, with five new initiatives. Nobody knows which one mattered, and nobody looks again.</p>",
+      "next": "<p>Choose one step. Change it for everyone who goes through it. Put a date on the calendar to look again.</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-reading-patterns-3-check-1",
+      "question": "You want to check a step in a process. Which three questions does this course use?",
+      "options": [
+       {
+        "text": "Who made the decision, what's their background, and do they have bias?",
+        "correct": false
+       },
+       {
+        "text": "Were criteria stated, was a record kept, and who reviewed it?",
+        "correct": true
+       },
+       {
+        "text": "How many people of each group were chosen, who complained, and what's the target?",
+        "correct": false
+       },
+       {
+        "text": "Was it fast, was it cheap, and did anyone object?",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. These apply to any step, and they don't need information about who anyone is.</p>",
+      "feedbackIncorrect": "<p>Look for the questions about the process itself, not about the people going through it.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Map a decision or service into steps.",
+     "objectives": [
+      "Map a decision or service into steps.",
+      "Ask useful questions at each step.",
+      "Pick one process change, and set a date to check it."
+     ],
+     "takeaways": [
+      "Walk through the steps before proposing a fix.",
+      "Ask three things of every step: criteria stated, record kept, who reviewed.",
+      "Fixes can backfire. Check your local baseline and look again later."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>Across your large section, internal applicants from one group apply for lead roles at much lower rates than others, although they are hired at about the same rate when they do apply. A colleague proposes that supervisors should personally urge members of this group to apply.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Have supervisors do what the colleague proposes, since encouragement seems harmless.</p>",
+       "response": "<p>Encouragement is good. Offering it based on someone's group is a problem. The EEOC treats access to development and opportunity as a term of employment, and others would not get the same encouragement.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Look at how people learn about lead roles and who gets ready for them. Have every supervisor talk with every team member about what they want next, share every posting the same way, and open up any informal preparation to all.</p>",
+       "response": "<p>You'd be fixing the step where the numbers separate, and it applies to everyone. It may help people in that group more, because it removes a barrier. That is what a process fix does.</p>",
+       "recommended": true
+      },
+      {
+       "label": "<p>Do nothing, because hiring rates are equal once people apply.</p>",
+       "response": "<p>Equal hiring rates are good news about one step. The difference starts earlier. The numbers are telling you where to look.</p>",
+       "recommended": false
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Pick one pattern you've already noticed in your area, even a rough one. Finish this plan: \"If I walk through the steps of ____, then I will ask at each step whether criteria were stated, a record was kept and someone reviewed it, and I will start by asking ____ for the data.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-reading-patterns-4",
+    "number": 4,
+    "title": "Keeping it away from individuals",
+    "summary": "How a pattern can slide into a decision about a person, and how to stop it, in either direction.",
+    "minutes": 12,
+    "blocks": [
+     {
+      "type": "tabs",
+      "heading": "How the slide happens",
+      "tabs": [
+       {
+        "label": "Helping",
+        "body": "<p>\"This group is behind. Let's get this person on the next assignment.\" The motive is good. The decision is still based on group membership.</p>"
+       },
+       {
+        "label": "Protecting",
+        "body": "<p>\"The numbers look bad for that group. Let's hold off on disciplining this person.\" Conduct should be judged on conduct, by the same standard for everyone.</p>"
+       },
+       {
+        "label": "Blaming",
+        "body": "<p>\"The numbers are worst in that supervisor's team, so that supervisor is the problem.\" A team under 10 can't support the claim, and even a large team's numbers only tell you where to look.</p>"
+       },
+       {
+        "label": "Hunting",
+        "body": "<p>\"Who answered that way?\" Trying to find out who gave a survey answer can break the survey's promise and may look like retaliation.</p>"
+       },
+       {
+        "label": "Avoiding",
+        "body": "<p>\"We can't do anything about this, because it might look like favoritism.\" This is a slide, too. You can always review a process.</p>"
+       }
+      ]
+     },
+     {
+      "type": "accordion",
+      "heading": "Mirror-image questions",
+      "items": [
+       {
+        "title": "Reverse the groups",
+        "body": "<p>If the numbers were the other way around, would you make the same proposal? <em>Ames</em> (2025) sets one Title VII standard, so a change that would be wrong in one direction is wrong in the other.</p>"
+       },
+       {
+        "title": "Reverse the person",
+        "body": "<p>If the person benefiting were someone else, would you still say that the decision was based on the work?</p>"
+       },
+       {
+        "title": "Say it out loud",
+        "body": "<p>Could you explain this decision to the person affected and to the person passed over, using only reasons about the work? If not, stop.</p>"
+       }
+      ]
+     },
+     {
+      "type": "text",
+      "heading": "If you are concerned about one supervisor",
+      "body": "<p>A pattern doesn't prove that a supervisor did anything. But you may have other reasons for concern, such as a report from staff or something you saw yourself. If so, the pattern isn't what you act on. Reports of harassment or discrimination go immediately to Human Resources or the Affirmative Action Officer under Policies 1436 and 1329. Performance concerns go through the normal route, with Human Resources and labor relations.</p>"
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Name the slide",
+      "control": "<p>You control whether people in the room hear the line drawn.</p>",
+      "failure": "<p>A name comes up in a data discussion, and nobody stops it. People learn that the data are used to go after someone, and they stop answering surveys honestly.</p>",
+      "next": "<p>When a name comes up, say, \"That's a person. Let's come back to the process. If you've got a concern about someone, let's talk about the right route after this.\"</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-reading-patterns-4-check-1",
+      "question": "A survey shows low scores in one supervisor's team of 12. What's the right use of this result?",
+      "options": [
+       {
+        "text": "Tell the supervisor's manager to put it in the supervisor's review.",
+        "correct": false
+       },
+       {
+        "text": "Ask who gave the low scores so you can follow up with them.",
+        "correct": false
+       },
+       {
+        "text": "Treat it as a prompt to ask about the team's process and support, knowing it doesn't prove anything about the supervisor or any one person.",
+        "correct": true
+       },
+       {
+        "text": "Ignore it, since 12 is a small number.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. Twelve meets the floor, so it can be read, with care. It is a prompt, not a verdict.</p>",
+      "feedbackIncorrect": "<p>Look for the answer that uses the result without aiming it at a person, and without hunting for respondents.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Recognize when a discussion has moved from process to a person.",
+     "objectives": [
+      "Recognize when a discussion has moved from process to a person.",
+      "Apply mirror-image questions.",
+      "Protect survey respondents and those who raise concerns."
+     ],
+     "takeaways": [
+      "Any move from a pattern to a named person is a stop sign.",
+      "The rule runs in every direction. <em>Ames</em> means one standard for all.",
+      "A pattern can't show that a particular supervisor discriminated. If you have a concern, use the proper route."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>At a management meeting, an analyst shows that white men in your division have received fewer stretch assignments in the past year than other staff. The numbers are large enough to report. A manager says that the fix is simple: give the next two stretch assignments to white men on her team. Another manager says the numbers don't matter since the division has more important equity work to do.</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Support the first manager, since the numbers show a gap.</p>",
+       "response": "<p>This picks people for assignments because of their race and sex. It is the same mistake it would be with any other group, and <em>Ames</em> makes the standard the same.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Support the second manager, because the numbers concern a group that is doing well overall.</p>",
+       "response": "<p>Dismissing a pattern because of which group it affects is also a mistake. Assignments are terms of work for everyone, and the same process review applies.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Say you'd handle this just as you would any other pattern. Look at how stretch assignments get made: are there criteria, who hears about them, what gets recorded? Change the process for everybody, and check again.</p>",
+       "response": "<p>This treats everyone by one standard. It may also reveal something useful about how assignments work for all staff, including groups that have fared worse in other measures.</p>",
+       "recommended": true
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Think of the colleague most likely to bring up a name during a data conversation. Finish this plan: \"If a name comes up when we are looking at a pattern, then I will say ____, and I will move us to the question ____.\"</p>",
+     "options": []
+    }
+   },
+   {
+    "id": "sm-reading-patterns-5",
+    "number": 5,
+    "title": "Reporting what you find, including nothing",
+    "summary": "What to measure, what not to count as success, and how to report without false reassurance.",
+    "minutes": 13,
+    "blocks": [
+     {
+      "type": "text",
+      "heading": "What does not count",
+      "body": "<p>Studies report that reactions to training reflect features of the course, and don't relate to delayed knowledge. Self-assessed knowledge tracks motivation and satisfaction more than learning. So completion numbers and happy surveys can look great whether or not anything has changed. This app keeps none of those about any person anyway: no team view, no scores, and progress stays in the reader's browser. Any measure about decisions or team experience lives outside the app, in the systems your organization already runs, in aggregate.</p>"
+     },
+     {
+      "type": "list",
+      "heading": "Measures closer to what matters",
+      "items": [
+       "Accommodation time, from request to response, for the unit or the division.",
+       "Grievance themes, in aggregate.",
+       "Who gets assignments, promotions and acting roles, in aggregate, above the floor.",
+       "Exits, and what stay and exit conversations show.",
+       "Team-level climate items, above the floor.",
+       "Service measures, such as time to assessment, appeals and language access, reported above the size where people could be recognized."
+      ]
+     },
+     {
+      "type": "accordion",
+      "heading": "How to report honestly",
+      "items": [
+       {
+        "title": "Commit first",
+        "body": "<p>Write down what you'll look at, for what period and what would count as change, before you see results. It's harder to fool yourself that way.</p>"
+       },
+       {
+        "title": "Be honest about what size can show",
+        "body": "<p>Even very large studies have struggled. A trial with 92 academic departments couldn't reach conventional significance on hiring, and a police training trial of 14,741 officers found insufficient evidence of change in disparities. DSD alone will not be able to prove effects on equity outcomes. Treat administrative data as monitoring.</p>"
+       },
+       {
+        "title": "Report nulls",
+        "body": "<p>If nothing changed, say that. If you can't tell, say that. This curriculum makes no claim that it will reduce disparities, and neither should your report.</p>"
+       },
+       {
+        "title": "Avoid false reassurance",
+        "body": "<p>Lab experiments found that the presence of diversity structures led people to see an organization as fairer, even with clear evidence of unfairness, and to react more harshly to people raising concerns. Don't say \"we're done\". Say what you changed, and what you're still watching.</p>"
+       },
+       {
+        "title": "Look under the average",
+        "body": "<p>An average near zero can hide benefit for some and harm for others. Where the floor permits, look at subgroups. Where it doesn't, say so.</p>"
+       }
+      ]
+     },
+     {
+      "type": "leaderMove",
+      "heading": "Report the disappointing number first",
+      "control": "<p>You control the order in your report.</p>",
+      "failure": "<p>The summary leads with attendance and satisfaction, and the outcome that did not move is on page nine.</p>",
+      "next": "<p>In your next report, put the measure you committed to at the top, whether it moved or not.</p>"
+     },
+     {
+      "type": "knowledgeCheck",
+      "id": "sm-reading-patterns-5-check-1",
+      "question": "Which is the strongest reason not to report course completion as evidence of progress?",
+      "options": [
+       {
+        "text": "Completion numbers are always false.",
+        "correct": false
+       },
+       {
+        "text": "A count of completions tells you nothing about whether decisions or outcomes changed, and this app doesn't collect them about individuals.",
+        "correct": true
+       },
+       {
+        "text": "People who complete courses usually get worse at their jobs.",
+        "correct": false
+       },
+       {
+        "text": "The law prohibits reporting it.",
+        "correct": false
+       }
+      ],
+      "feedbackCorrect": "<p>Right. This is why measures need to be tied to decisions and team experience.</p>",
+      "feedbackIncorrect": "<p>Look for the answer about what completion can and cannot show. It's not false or harmful. It's just not evidence of change.</p>"
+     }
+    ],
+    "learning": {
+     "objective": "Separate operational counts from evidence of change.",
+     "objectives": [
+      "Separate operational counts from evidence of change.",
+      "Commit to measures before you see the results.",
+      "Report nulls and limits plainly."
+     ],
+     "takeaways": [
+      "Completion, satisfaction and confidence are not evidence of change.",
+      "Decide what you will look at before you look.",
+      "Saying \"we don't know yet\" is a finding. Don't imply the problem is fixed."
+     ],
+     "evidence": "",
+     "appliedNextStep": ""
+    },
+    "scenario": {
+     "context": "<p>A year after a process change to how lead roles are posted, your section's numbers show no clear difference in who applies. You've also got good news: more people say they trust the process, and many supervisors attended sessions on it. Your director wants a report that \"shows the progress.\"</p>",
+     "prompt": "What do you do next?",
+     "options": [
+      {
+       "label": "<p>Lead with trust and attendance, and leave out the application numbers.</p>",
+       "response": "<p>That might look good, but it hides what you set out to check. Attendance isn't a result, and leaving out the main measure is misleading.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Report that the change failed and recommend dropping it.</p>",
+       "response": "<p>One year in a small population may be too little to tell. \"No clear difference\" doesn't show that it failed. Be careful about what the numbers can support.</p>",
+       "recommended": false
+      },
+      {
+       "label": "<p>Report the measure you committed to, and say plainly it hasn't clearly moved. Say what the group size can and can't show. Mention trust as a separate item. Propose what to look at next and when.</p>",
+       "response": "<p>This is honest, and it keeps the work credible. Your director gets something they can stand behind, and people who hear it learn that bad news can be reported.</p>",
+       "recommended": true
+      }
+     ]
+    },
+    "transfer": {
+     "prompt": "<p>Think of the next report you will write or sign about equity or access in your area. Finish this plan: \"If I prepare that report, then I'll write down by ____ what we'll look at and what would count as change, and I will report ____ even if it hasn't moved.\"</p>",
+     "options": []
+    }
+   }
+  ]
+ },
+ "jobAid": {
+  "title": "Reading a pattern",
+  "subtitle": "Where to look, and how to keep it away from individuals",
+  "use": {
+   "purpose": "Help managers read workforce and service patterns accurately, protect people in small groups and act on process.",
+   "remember": [
+    "A pattern prompts a review of process. It is not a decision about an individual.",
+    "The floor is 10 respondents for any staff-facing result, and higher for identity cross-tabs.",
+    "Disparate impact is neither dead nor enforced as before, as of October 2026.",
+    "The same rule applies in every direction."
+   ],
+   "doNext": "Take one report you already receive. Check its group sizes and write three process questions before your next meeting."
+  },
+  "sections": [
+   {
+    "heading": "Before you read it",
+    "items": [
+     "How many people are in each group?",
+     "Could anyone be recognized?",
+     "Could a hidden number be found by subtraction, across filters, exports or time?"
+    ]
+   },
+   {
+    "heading": "While you read it",
+    "items": [
+     "Could this be noise? Who came in, and when? Which step in the process?",
+     "At each step: criteria stated, record kept, who reviewed?",
+     "If a name comes up, go back to the process."
+    ]
+   },
+   {
+    "heading": "Do not",
+    "items": [
+     "Move an individual to fix a number.",
+     "Hunt for who answered a survey.",
+     "Lower the floor to get an answer.",
+     "Ask someone to speak for a group.",
+     "Report completion as progress."
+    ]
+   },
+   {
+    "heading": "After",
+    "items": [
+     "Change one step for everyone.",
+     "Set a date to look again.",
+     "Report what you committed to, including nulls.",
+     "Route concerns about a person through Human Resources, the Affirmative Action Officer or labor relations."
+    ]
+   }
+  ]
+ },
+ "sources": [
+  {
+   "title": "HHS Title VI rule, effective July 24, 2026",
+   "href": "https://public-inspection.federalregister.gov/2026-15000.pdf",
+   "note": "Removal of disparate-impact provisions from HHS regulations and HHS's stated enforcement position. Also quotes EO 14281."
+  },
+  {
+   "title": "Dorsey, December 2025 alert on the DOJ rule",
+   "href": "https://www.dorsey.com/newsresources/publications/client-alerts/2025/12/disparate-impact-liability",
+   "note": "Secondary report of DOJ's rescission."
+  },
+  {
+   "title": "Brownstein on the OLC opinion",
+   "href": "https://www.bhfs.com/insight/doj-opines-that-eeocs-title-vii-disparate-impact-framework-is-unconstitutional/",
+   "note": "Secondary report that the June 2026 opinion binds federal agencies, not courts."
+  },
+  {
+   "title": "Minn. Stat. 363A.08",
+   "href": "https://www.revisor.mn.gov/statutes/cite/363A.08",
+   "note": "Language on systems of employment that unreasonably exclude. Current case law was not verified."
+  },
+  {
+   "title": "OPM 2024 FEVS memo",
+   "href": "https://www.opm.gov/chcoc/transmittals/2024/2024%20OPM%20FEVS%20Memo%204-26-2024_0.pdf",
+   "note": "Reporting floor of 10 respondents, seen through a search rendering."
+  },
+  {
+   "title": "2024 FEVS technical report",
+   "href": "https://www.opm.gov/fevs/reports/technical-reports/technical-report/technical-report/2024/2024-technical-report.pdf",
+   "note": "Masking and collapse rules in the public data file."
+  },
+  {
+   "title": "Viva Glint, Ask the Experts, June 2024",
+   "href": "https://adoption.microsoft.com/files/viva/glint/ask-the-experts/Viva-Glint-Ask-the-Experts-series-Jun112024.pdf",
+   "note": "Vendor description of hiding the next-smallest group to prevent subtraction."
+  },
+  {
+   "title": "CultureMonkey, anonymity thresholds",
+   "href": "https://www.culturemonkey.io/employee-engagement/anonymity-thresholds-in-employee-surveys/",
+   "note": "Practitioner range of 5 to 10."
+  },
+  {
+   "title": "Zohar and Polachek 2014",
+   "href": "https://doi.org/10.1037/a0034096",
+   "note": "Feedback from 7 to 9 workers per supervisor, in a randomized trial on safety."
+  },
+  {
+   "title": "Minn. R. 1205.0400",
+   "href": "https://www.revisor.mn.gov/rules/1205.0400/",
+   "note": "Access to private data limited by work assignment."
+  },
+  {
+   "title": "Minn. Stat. 13.43",
+   "href": "https://www.revisor.mn.gov/statutes/cite/13.43",
+   "note": "Public and private personnel data."
+  },
+  {
+   "title": "Ames v. Ohio Department of Youth Services (2025)",
+   "href": "https://www.supremecourt.gov/opinions/24pdf/23-1039_c0n2.pdf",
+   "note": "One Title VII standard for all employees."
+  },
+  {
+   "title": "EEOC, What You Should Know About DEI-Related Discrimination at Work",
+   "href": "https://www.eeoc.gov/wysk/what-you-should-know-about-dei-related-discrimination-work",
+   "note": "Agency position on access to opportunity. Not law."
+  },
+  {
+   "title": "Cullen and Perez-Truglia 2023",
+   "href": "https://doi.org/10.1257/aer.20210863",
+   "note": "Face time with managers and promotion rates at one institution."
+  },
+  {
+   "title": "Hoffman and Tadelis 2021",
+   "href": "https://doi.org/10.1086/711409",
+   "note": "Supervisors and retention, quasi-experimental, at one firm."
+  },
+  {
+   "title": "Sackett et al. 2022",
+   "href": "https://doi.org/10.1037/apl0000994",
+   "note": "Structured interviews ranked highly."
+  },
+  {
+   "title": "Commentary on Sackett et al., Journal of Occupational and Organizational Psychology 2025",
+   "href": "https://doi.org/10.1111/joop.70048",
+   "note": "Notes that the paper has drawn significant criticism."
+  },
+  {
+   "title": "Dobbin and Kalev, HBR 2016",
+   "href": "https://hbr.org/2016/07/why-diversity-programs-fail",
+   "note": "Panel association between written job tests for managers and later declines. Page extract only."
+  },
+  {
+   "title": "Australian BETA 2017 study",
+   "href": "https://www.pmc.gov.au/sites/default/files/2025-06/unconscious-bias.pdf",
+   "note": "Shortlisting exercise with public servants."
+  },
+  {
+   "title": "Hammer et al. 2011",
+   "href": "https://doi.org/10.1037/a0020927",
+   "note": "A supervisor course that helped some employees and harmed others."
+  },
+  {
+   "title": "CRS IF13076 on language access",
+   "href": "https://www.congress.gov/crs_external_products/IF/HTML/IF13076.html",
+   "note": "Revocation of EO 13166. Secondary, search excerpt."
+  },
+  {
+   "title": "Sitzmann et al. 2008",
+   "href": "https://iro.uiowa.edu/esploro/outputs/journalArticle/A-review-and-meta-analysis-of-the/9984371260702771",
+   "note": "Reactions reflect course features and don't relate to delayed knowledge."
+  },
+  {
+   "title": "Sitzmann et al. 2010",
+   "href": "https://iro.uiowa.edu/esploro/outputs/journalArticle/Self-Assessment-of-Knowledge-A-Cognitive-Learning/9984371090802771",
+   "note": "Self-assessed knowledge tracks motivation and satisfaction more than learning."
+  },
+  {
+   "title": "Devine et al. 2017",
+   "href": "https://doi.org/10.1016/j.jesp.2017.07.002",
+   "note": "Limits of power with 92 departments."
+  },
+  {
+   "title": "Kaiser et al. 2013",
+   "href": "https://doi.org/10.1037/a0030838",
+   "note": "Diversity structures and false assurance, in lab experiments."
+  }
+ ]
+}

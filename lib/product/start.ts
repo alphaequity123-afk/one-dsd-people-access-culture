@@ -128,6 +128,8 @@ export type StartRecommendation = Readonly<{
   heading: string;
   guidance: string;
   nextStepLabel: string;
+  /** A space made for this role, offered beside the recommended area of work. */
+  roleSpace?: Readonly<{ href: string; label: string }>;
 }>;
 
 const ROLE_IDS = new Set<string>(START_ROLES.map((role) => role.id));
@@ -216,5 +218,6 @@ export function buildStartRecommendation(input: StartIntake): StartRecommendatio
     heading: `Start with ${workArea.label}.`,
     guidance: `${role.guidance} ${urgency.guidance}`,
     nextStepLabel: "Explore this area of work",
+    ...(validation.value.role === "supervisor_or_manager" ? { roleSpace: { href: "/leading", label: "For supervisors and managers" } } : {}),
   });
 }

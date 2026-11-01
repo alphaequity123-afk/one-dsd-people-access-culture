@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CultureCalendarSection } from "@/components/culture-calendar-section";
 import { HomeTaskFinder } from "@/components/home-task-finder";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
 import "./task-home.css";
@@ -12,6 +13,7 @@ export default async function HomePage() {
       <div className="dsd-welcome-copy"><p>Make equity part of the work and the workplace.</p><p>Find learning, guidance and tools to apply equity in the work and workplace of the Disability Services Division. Connect service delivery, policy, community knowledge and employee experience within Minnesota DHS.</p><div className="dsd-home-actions"><Link href="/one-dsd/programs">Explore DSD programs and services <span aria-hidden="true">→</span></Link><Link href="#start-here">Find a resource for your work <span aria-hidden="true">↓</span></Link></div></div>
     </section>
     <div className="dsd-shell"><Image className="dsd-home-photo" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 760px) calc(100vw - 36px), (max-width: 1224px) calc(100vw - 64px), 1160px" /></div>
+    <div className="dsd-shell"><CultureCalendarSection /></div>
 <div className="od">
   <div className="start" id="start-here"><div className="w">
     <h2>Find a resource for your work</h2>
@@ -39,7 +41,7 @@ export default async function HomePage() {
   <div className="blk"><div className="w">
     <h2 className="sh">Explore DSD and the program</h2><p className="sd">How equity connects to the Division's services and the program behind this site.</p>
     <div className="links">
-      <Link href="/one-dsd/programs">DSD programs and services</Link><Link href="/one-dsd/amplify">Amplify Equity</Link><Link href="/one-dsd/planning">Planning and progress</Link><Link href="/start">Getting started</Link>
+      <Link href="/one-dsd/programs">DSD programs and services</Link><Link href="/one-dsd/amplify">Amplify Equity</Link><Link href="/one-dsd/planning">Planning and progress</Link><Link href="/start">Getting started</Link><Link href="/leading">For supervisors and managers</Link>
       <Link href="/program/model">How the program works</Link><Link href="/program-foundation">Program charter</Link><Link href="/equity-policy">DHS equity policy</Link><Link href="/program/impact">Long-term impact</Link>
     </div>
   </div></div>

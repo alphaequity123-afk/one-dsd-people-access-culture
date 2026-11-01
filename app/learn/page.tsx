@@ -117,6 +117,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
         {!filtered ? <section className={styles.section} aria-labelledby="series-title">
           <h2 id="series-title">Course series</h2>
           <ul className={styles.pathList}>
+            <li><Link href="/learn/collections">Collections</Link><p>All the learning on eight shelves named by subject, each opening with where to start. Supervisors and managers can start from <Link href="/leading">the decision in front of them</Link>.</p></li>
             {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Cultural Intelligence collection</Link><p>Connect community context and intercultural learning with decisions in everyday work.</p></li>}
             <li><Link href="/learn/self-directed">One DSD Self-Directed Learning Series</Link><p>Seventy-two courses built around real service and workplace situations, with reflection and practice. Choose Foundation, Intermediate, or Advanced, and download editable slides to use with a team. Includes <Link href="/learn/self-directed?curriculum=policy">Equity in Policy and Legislative Practice</Link>.</p></li>
             <li><Link href="/learn/water-we-swim-in">The Water We Swim In</Link><p>Six short modules on Minnesota&apos;s mainstream culture: its strengths, its blind spots, and how it shapes our work.</p></li>

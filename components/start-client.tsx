@@ -130,7 +130,8 @@ export function StartClient({ copy }: { copy: EditableSurfaceValues }) {
               {recommendedArea?.tasks.map((item) => <li key={item}>{item}</li>)}
             </ul>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link href={`/areas#${recommendation.workArea.id}`} className="btn btn--primary">
+              {recommendation.roleSpace ? <Link href={recommendation.roleSpace.href} className="btn btn--primary">{recommendation.roleSpace.label}</Link> : null}
+              <Link href={`/areas#${recommendation.workArea.id}`} className={recommendation.roleSpace ? "btn btn--secondary" : "btn btn--primary"}>
                 {textValue(copy, "areaLinkLabel")}
               </Link>
               <Link href="/practice" className="btn btn--secondary">

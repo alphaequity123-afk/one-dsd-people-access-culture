@@ -49,7 +49,7 @@ export default async function MyWorkPage() {
         {scope === "dsd" ? <section className="rounded-xl border border-line bg-white p-6" aria-labelledby="goal-work-plan-title">
           <h2 id="goal-work-plan-title" className="text-2xl font-bold">Connect your work to the six equity goals</h2>
           <p className="my-3">If you supervise or manage, you can choose three of the six ADSA equity goals as planning priorities, name the actions and support each one needs, and download a work plan for review. All six goals stay in view; choosing priorities does not set aside any policy responsibility.</p>
-          <Link className="btn btn--primary" href="/learn/equity-toolkit/goals#equity-work-plan">Prepare your three-goal work plan</Link>
+          <p className="flex flex-wrap gap-3"><Link className="btn btn--primary" href="/learn/equity-toolkit/goals#equity-work-plan">Prepare your three-goal work plan</Link><Link className="btn btn--light" href="/leading">For supervisors and managers</Link></p>
         </section> : null}
         <StaffWorkBrowse scope={scope} />
         <ParticipationNotice surface="my_work" />

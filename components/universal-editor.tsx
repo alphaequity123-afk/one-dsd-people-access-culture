@@ -698,7 +698,7 @@ function PageEditor({ owner, pathname }: { owner: boolean; pathname: string }) {
         ) : (
           <>
             <button type="button" className="btn btn--primary" onClick={start} disabled={!loaded || busy || dialog !== null} aria-disabled={!loaded || undefined}>
-              {loadState === "loading" ? "Loading saved wording…" : "Edit this page"}
+              {loadState === "loading" ? "Loading saved wording…" : "Edit wording and images"}
             </button>
             {loaded && hasSaved ? <button type="button" className="btn" onClick={() => void revertAll()} disabled={busy || dialog !== null}>Revert page</button> : null}
             {loaded ? <button type="button" className="btn" onClick={() => void restoreLastSave()} disabled={busy || dialog !== null}>Bring back earlier wording</button> : null}
