@@ -25,7 +25,7 @@ describe("knowledge graph brain", () => {
     if (process.env.BRAIN_REPORT) writeFileSync(process.env.BRAIN_REPORT, JSON.stringify({ documents: docs.length, documentsByType: byType, graphNodes: kinds, graphEdges: edges, notAttached: missing.map(doc => doc.id), withoutText: noText, nodesWithNoConnection: isolated.length, nodesWithNoConnectionSample: isolated.slice(0, 40).map(node => node.id) }, null, 2));
     expect(missing).toEqual([]);
     expect(noText).toEqual([]);
-    expect(byType.reading).toBe(306);
+    expect(byType.reading).toBe(304);
     expect(byType.community_research).toBeGreaterThan(1500);
     expect(byType.curriculum).toBeGreaterThan(50);
     expect(edges.about_community).toBeGreaterThan(1500);
@@ -33,7 +33,7 @@ describe("knowledge graph brain", () => {
 
   it("expands from a book to connected work, and from a community page to its research", async () => {
     const docs = await allDocs();
-    const book = searchDocs("Leading with Cultural Intelligence Livermore", docs, { limit: 1 });
+    const book = searchDocs("The Cultural Intelligence Difference", docs, { limit: 1 });
     expect(expandThroughGraph(book, docs, "cultural intelligence").length).toBeGreaterThan(0);
     const page = docs.filter(doc => doc.type === "community_brief" && doc.href.endsWith("/hmong"));
     const hit = { kind: "brief" as const, id: page[0].id, title: page[0].title, href: page[0].href, authority: page[0].authority, authorityLabel: "", type: page[0].type, status: "approved", reviewDate: "", scope: "dsd", excerpt: "", score: 1 };

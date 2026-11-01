@@ -494,11 +494,6 @@ const pack: CoursePack = {
   },
   "sources": [
     {
-      "title": "Livermore, D. (2024). Leading with cultural intelligence: The real secret to success (3rd ed.). HarperCollins Leadership.",
-      "href": "https://www.harpercollinsleadership.com/9781400247448/leading-with-cultural-intelligence-3rd-edition",
-      "note": "Anchoring work on cultural intelligence, including the caution to hold cultural tendencies loosely and find out from the individual. He keeps those tendencies as a starting point. These applications go further: a group fact can only produce a question to ask or a change to make in a system, and asking the person remains the rule. The scenarios and any application to disability or public service are these applications’ own and are not attributed to Livermore."
-    },
-    {
       "title": "Livermore, D. (2013). Expand your borders: Discover ten cultural clusters. Cultural Intelligence Center.",
       "href": "https://culturalq.com/wp-content/uploads/2016/06/Sample_EYB.pdf",
       "note": "Publisher’s sample of a short regional overview that an earlier version of this course was organized around. Its profiles and tables are not reproduced here. The practical cases and questions are original teaching material."

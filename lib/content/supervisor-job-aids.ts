@@ -68,7 +68,7 @@ export function supervisorJobAid(pack: CoursePack): ContentItem {
     body: jobAidBody(pack),
     nextActions: [
       { label: `Take the course: ${course.title}`, href: `/courses/${course.id}` },
-      { label: "For supervisors and managers", href: "/leading" },
+      { label: "For leaders, supervisors, managers, and directors", href: "/leading" },
     ],
     tags: [...courseplacement.tags],
     intents: [...courseplacement.intents],

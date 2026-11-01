@@ -1,11 +1,20 @@
 import { describe, expect, it } from "vitest";
 import { assertAuditEventPersistence } from "@/lib/trust/work-object-contract";
-import { indexedProgramResources } from "./program-resources";
+import { indexedProgramResources, publicProjectionAuditId } from "./program-resources";
 import { indexedStaffDocs } from "./staff-search";
 
 const event = (id: string) => ({ trace_id: "f5ba7d21-9571-41e7-839f-75b13e09ba01", span_id: "0123abcd", at: "2026-10-31T00:00:00.000Z", agent_id: "system", agent_version: "0.1.0", tool_name: "citation.attach", autonomy_level_used: "A0", permission_mode: "always", dry_run: false, content_ids_touched: [id], allowlist_hit: true, ok: true });
 
 describe("Ask audit records", () => {
+  it("uses deterministic opaque asset IDs without widening audit privacy rules", () => {
+    const mapped = publicProjectionAuditId("public-work-area-workforce_equity");
+    expect(mapped).toMatch(/^asset-[a-f0-9]{32}$/);
+    expect(publicProjectionAuditId("public-work-area-workforce_equity")).toBe(mapped);
+    expect(publicProjectionAuditId("public-work-area-culture_trust_repair")).not.toBe(mapped);
+    expect(() => assertAuditEventPersistence(event(mapped))).not.toThrow();
+    expect(() => assertAuditEventPersistence(event("employee123-equity"))).toThrow();
+    expect(() => assertAuditEventPersistence(event(publicProjectionAuditId("public-employee123-equity")))).toThrow();
+  });
   it("accept every document Ask can touch", async () => {
     const docs = [...await indexedStaffDocs("dsd"), ...(await indexedProgramResources("dsd")).destinations];
     const rejected = Array.from(new Set(docs.map(doc => doc.id))).filter(id => { try { assertAuditEventPersistence(event(id)); return false; } catch { return true; } });

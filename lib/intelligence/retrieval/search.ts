@@ -22,6 +22,8 @@ export function tokens(text: string): string[] {
 }
 
 function stem(w: string): string {
+  // These forms describe the same leadership concept in natural questions.
+  if (/^(?:leader|leaders|leadership)$/.test(w)) return "leadership";
   if (/^accessib(?:le|ility|ilities)$/.test(w)) return "accessible";
   return w
     .replace(/(ies)$/, "y")
@@ -84,6 +86,8 @@ export type Doc = {
   intents: AskIntent[];
   /** Internal pages this document cites, used as connections in the knowledge graph. */
   graphLinks?: string[];
+  /** Explicit program-navigation or related-resource links, distinct from citations. */
+  graphRelated?: string[];
 };
 
 let DOCS: Doc[] | null = null;

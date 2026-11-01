@@ -15,6 +15,12 @@ import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curr
 import { publishedPodcastReadings } from "./podcast-reading";
 import { developmentModel, journeyHref } from "@/lib/program/development";
 import equityGoals from "@/lib/program/equity-goals.json";
+import { CULTURAL_INTELLIGENCE_SURFACE_ID } from "@/lib/content/cultural-intelligence-hub";
+import { dynamicPublicRouteDocs } from "./dynamic-public-route-docs";
+import { practicePathSearchValues } from "./public-practice-path-search";
+import { publicRouteDocs } from "./public-route-docs";
+import { publicPracticeDocs } from "./public-practice-docs";
+import { culturalIntelligenceSearchValues, leadershipLearningDocs, learningNavigationDocs, publishedLeadershipVideoDocs, themeCollectionDocs, programFrameworkDocs, additionalPublicRouteDocs } from "./public-learning-docs";
 
 /** Public page definitions only. No owner workspace, draft, intake, or source archive. */
 export function programResourceDefinitions() {
@@ -25,6 +31,8 @@ export function programResourceDefinitions() {
   return [...EDITABLE_SURFACE_REGISTRY, ...readings].filter(definition =>
     definition.route.startsWith("/") && !definition.route.includes("[") &&
     !definition.route.startsWith("/consultant") &&
+    !definition.route.startsWith("/contribute") &&
+    !["/support/request", "/support/track"].includes(definition.route) &&
     !["site.header", "site.context", "ask.page"].includes(definition.surfaceId));
 }
 
@@ -36,6 +44,15 @@ function visibleText(value: unknown): string {
   return "";
 }
 
+/** Stable opaque IDs for newer public projections. The durable audit schema
+ * already permits asset IDs; no audit allowlist or privacy filter is widened. */
+export function publicProjectionAuditId(id: string): string {
+  // Never conceal a profile-like ID behind a hash; the existing audit boundary rejects it.
+  if (/(?:employee|worker|personnel)[-_]?\d{1,12}.*(?:belief|ideolog|equity|readiness|bias|inclusion|participation|engagement)|(?:belief|ideolog|equity|readiness|bias|inclusion|participation|engagement).*(?:employee|worker|personnel)[-_]?\d{1,12}/i.test(id)) return id;
+  if (!/^(?:program-learning-|program-charter-|program-model-stage-|program-action-|leadership-|collection-|collections-|staff-collection-|operationalizing-|toolkit-example-|public-|learning-lesson-)/.test(id)) return id;
+  return `asset-${createHash("sha256").update(`public-projection:${id}`).digest("hex").slice(0, 32)}`;
+}
+
 type ProgramIndex = { communityDocs: Doc[]; destinations: Doc[] };
 const currentIndexes = new Map<StaffProgramScope, { key: string; index: ProgramIndex }>();
 
@@ -44,7 +61,13 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   const sourcePublications = await loadPublishedEditableSurfaces(definitions.map(d => d.surfaceId), scope);
   const editorialFingerprint = createHash("sha256").update(JSON.stringify(historicalEditorialData)).digest("hex");
   const publications = sourcePublications.map(row => {
-    const values = withReviewedHistoricalSurface(row.surfaceId, row.values);
+    const reviewed = withReviewedHistoricalSurface(row.surfaceId, row.values);
+    // The public page hides retired fields and replaces old book-centered copy.
+    // Search must index exactly that visible projection, not the stored legacy
+    // publication, which remains preserved for owner/editor compatibility.
+    const values = row.surfaceId === CULTURAL_INTELLIGENCE_SURFACE_ID
+      ? culturalIntelligenceSearchValues(reviewed)
+      : practicePathSearchValues(row.surfaceId, reviewed) ?? reviewed;
     const evidence = [{ sourceId: row.surfaceId, revisionId: row.revisionId, payloadHash: createHash("sha256").update(JSON.stringify(row.document)).digest("hex"), scope: row.sourceScope }];
     // Keep the stored source revision and separately identify the exact authored presentation.
     // No stored publication is rewritten or presented as the sole source of revised wording.
@@ -54,13 +77,16 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   const podcastReadings = publishedPodcastReadings(publications);
   const measurementAvailable = publications.some(row => row.surfaceId === "practice.measurement")
     && (await loadStaffContentSnapshot({ scope })).items.some(item => item.id === MEASUREMENT_RESOURCE_ID);
+  const publishedIds = new Set(publications.map(p => p.surfaceId));
+  // Published public video transcripts can change on the volume between app
+  // deployments. Read their current verified manifest state before cache reuse.
+  const leadershipVideos = await publishedLeadershipVideoDocs(scope, publishedIds);
   // Always check current scoped publications first. Reuse text processing only while
   // the same immutable revisions remain published; withdrawals change this key.
   const key = publications.map(p => `${p.surfaceId}:${p.source}:${p.sourceScope}:${p.revisionId}`).sort().join("|") + "|measurement-source:" + measurementAvailable + "|podcast-readings:" + [...podcastReadings.values()].map(reading => reading.fingerprint).sort().join("|") + "|development:" + createHash("sha256").update(JSON.stringify(developmentModel)).digest("hex");
-  const scopedKey = key + "|reviewed-editorial:" + editorialFingerprint + "|rendered-publications:" + publications.map(row => `${row.surfaceId}:${row.renderedFingerprint}`).sort().join("|") + "|equity-goals:" + createHash("sha256").update(JSON.stringify(equityGoals)).digest("hex");
+  const scopedKey = key + "|reviewed-editorial:" + editorialFingerprint + "|rendered-publications:" + publications.map(row => `${row.surfaceId}:${row.renderedFingerprint}`).sort().join("|") + "|equity-goals:" + createHash("sha256").update(JSON.stringify(equityGoals)).digest("hex") + "|leadership-videos:" + createHash("sha256").update(JSON.stringify(leadershipVideos)).digest("hex");
   const cached = currentIndexes.get(scope);
   if (cached?.key === scopedKey) return cached.index;
-  const publishedIds = new Set(publications.map(p => p.surfaceId));
   const grouped = new Map<string, typeof publications>();
   for (const publication of publications) {
     const definition = getEditableSurfaceDefinition(publication.surfaceId)!;
@@ -92,6 +118,7 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
       title, href, authority: coursePack ? "learning" : community ? "community_brief" : "practice_note", type: community ? "community_brief" : "program_destination",
       status: "approved", reviewDate: "", scope: scope === "dsd" ? "dsd" : "agencywide",
       evidenceRevisions: [...rows.flatMap(row => row.editorialEvidence), ...readingSupport.map(reading => reading.evidence)],
+      graphRelated: href.startsWith("/one-dsd/programs/") || href.startsWith("/one-dsd/scenarios/") ? ["/one-dsd"] : ["/one-dsd/amplify/ideas", "/one-dsd/amplify/materials", "/one-dsd/amplify/gatherings", "/one-dsd/amplify/co-leads"].includes(href) ? ["/one-dsd/amplify"] : href === "/learn/sources" || href === "/my-work/explore" ? ["/learn"] : /^\/areas\/[^/]+$/.test(href) ? ["/areas"] : [],
       summary: [summary, ...readingSupport.map(reading => reading.summary)].join(" "), text: [`${title} ${text}`, goalSupport, ...readingSupport.map(reading => reading.text)].join("\n"), tags: [title, href.replaceAll("/", " "), ...readingSupport.flatMap(reading => reading.tags)], intents: community ? ["intercultural", "access_barriers"] : [],
     };
   });
@@ -113,10 +140,15 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
     type: "program_destination", status: "approved", reviewDate: "",
     scope: scope === "dsd" ? "dsd" : "agencywide", summary: journey.summary,
     text: [journey.title, journey.summary, journey.question, journey.assumption, journey.practice, journey.application, journey.reflection, journey.social].join("\n"),
-    tags: ["guided pathway", "equity in practice", ...journey.themes], intents: ["practice_method" as const, "next_actions" as const],
+    graphRelated: ["/learn/paths"], tags: ["guided pathway", "equity in practice", ...journey.themes], intents: ["practice_method" as const, "next_actions" as const],
     // Code-defined content has no stored revision; the payload hash pins the exact journey text.
     evidenceRevisions: [{ sourceId: `program-development-${journey.id}`, revisionId: null, payloadHash: createHash("sha256").update(JSON.stringify(journey)).digest("hex"), scope }],
   })));
+  destinations.push({ kind: "content", id: "program-learning-paths-hub", title: "Learning paths", href: "/learn/paths",
+    authority: "learning", type: "learning_navigation", status: "approved", reviewDate: "", scope: scope === "dsd" ? "dsd" : "agencywide",
+    summary: developmentModel.direction, text: [developmentModel.direction, ...developmentModel.journeys.map(journey => `${journey.title}: ${journey.question}`)].join("\n"),
+    tags: ["learning", "guided pathway"], intents: [], graphRelated: developmentModel.journeys.map(journey => journeyHref(journey.id)),
+    evidenceRevisions: [{ sourceId: "program-learning-paths-hub", revisionId: null, payloadHash: createHash("sha256").update(JSON.stringify(developmentModel.journeys)).digest("hex"), scope }] });
   // The reading collection: published books whose notes connect to the program's work. Code-defined, no participant data.
   destinations.push(...readingCollection.map(book => ({
     kind: "content" as const, id: `program-reading-${book.id}`,
@@ -127,14 +159,17 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
     tags: ["book", "reading notes", ...book.themes], intents: [],
     evidenceRevisions: [{ sourceId: `program-reading-${book.id}`, revisionId: null, payloadHash: createHash("sha256").update(JSON.stringify(book)).digest("hex"), scope }],
   })));
+  // Public code-defined additions are indexed only while their parent surface
+  // is published. Theme descriptions are public and context links are gated.
+  destinations.push(...leadershipLearningDocs(scope, publishedIds), ...leadershipVideos, ...themeCollectionDocs(scope, publishedIds), ...learningNavigationDocs(scope, publishedIds), ...programFrameworkDocs(scope), ...publicPracticeDocs(scope), ...publicRouteDocs(scope), ...additionalPublicRouteDocs(scope, publishedIds), ...dynamicPublicRouteDocs(scope, publications));
   const communityDocs = destinations.filter(d => d.kind === "brief");
   // Everything readable on the site belongs in the search. A failure here is visible and leaves the rest working.
   try {
-    destinations.push(...communityResearchDocs(scope, communityDocs), ...communityProfileDocs(scope, communityDocs), ...culturalCalendarDocs(scope, communityDocs), ...waterCourseDocs(scope), ...curriculumDocs(scope));
+    destinations.push(...communityResearchDocs(scope, communityDocs), ...communityProfileDocs(scope, communityDocs), ...culturalCalendarDocs(scope, communityDocs), ...waterCourseDocs(scope), ...curriculumDocs(scope, publishedIds));
   } catch (error) {
     console.error("ask_brain_content_unavailable", error instanceof Error ? error.message : "unknown");
   }
-  const index = { communityDocs, destinations };
+  const index = { communityDocs, destinations: destinations.map(doc => ({ ...doc, id: publicProjectionAuditId(doc.id) })) };
   currentIndexes.set(scope, { key: scopedKey, index });
   return index;
 }
@@ -155,3 +190,4 @@ export function programResourceLinks(question: string, docs: Doc[], limit = 5): 
   });
   return ranked.slice(0, limit).map(hit => ({ label: `Open ${hit.title}`, href: hit.href }));
 }
+

@@ -108,6 +108,46 @@ describe("named original PDF grounding", () => {
     expect(result.answer.sources[0].href).toBe("/documents/engagement/clas-implementation-checklist.pdf#page=8");
     expect(result.answer.evidenceClaims).toHaveLength(1);
   }, 20000);
+  it.each([" Only use sources from this application; do not search the web.", " Use internal sources only."])("does not initiate outside research for explicit local-only wording: %s", async (preference) => {
+    f.plan.mockResolvedValue({ route: "resources", evidence: "research" });
+    await askConcierge({ question: question + preference, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
+    expect(f.research).not.toHaveBeenCalled();
+  }, 20000);
+  it("keeps external source URLs and prior outside answers out of the writer payload for explicit program-only requests", async () => {
+    let payload: any;
+    let writerSystem = "";
+    f.complete.mockImplementation(async (request: { user: string; system: string }) => {
+      payload = JSON.parse(request.user);
+      writerSystem = request.system;
+      return { parsed: { shortAnswer: "Use the available application guidance.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [] } };
+    });
+    const result = await askConcierge({ question: "What does DHS say about language access? Use internal sources only.", contextPreference: "one_dsd", history: [{ question: "What about language access?", answer: "Outside answer: https://outside.example/secret" }] }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
+    expect(f.complete).toHaveBeenCalledOnce();
+    expect(f.research).not.toHaveBeenCalled();
+    expect(writerSystem).toMatch(/use only the supplied application sources/i);
+    expect(writerSystem).not.toMatch(/use your general knowledge and reasoning/i);
+    expect(writerSystem).not.toMatch(/give a useful general explanation/i);
+    expect(payload.answerPreference).toMatch(/only the supplied application sources/i);
+    expect(payload.answerPreference).toMatch(/insufficient/i);
+    expect(payload.organization.entries).toEqual([]);
+    expect(payload.programSources.every((source: { href: string }) => /^\/(?!\/)/.test(source.href))).toBe(true);
+    expect((payload.programKnowledge ?? []).every((source: { href: string }) => /^\/(?!\/)/.test(source.href))).toBe(true);
+    expect(JSON.stringify(payload.conversation)).not.toContain("outside.example");
+    expect(payload.operationalizingEquity).toBeUndefined();
+    if (result.kind !== "answer") throw Error("Expected an answer");
+    expect(result.answer.sources.every(source => /^\/(?!\/)/.test(source.href))).toBe(true);
+  }, 20000);
+  it("retains source-backed organizational context for an ordinary question", async () => {
+    let payload: any;
+    f.complete.mockImplementation(async (request: { user: string }) => {
+      payload = JSON.parse(request.user);
+      return { parsed: { shortAnswer: "Check the current source.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [] } };
+    });
+    await askConcierge({ question: "What does DHS say about language access?", contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
+    expect(f.complete).toHaveBeenCalledOnce();
+    expect(payload.organization.entries.length).toBeGreaterThan(0);
+    expect(payload.organization.entries.some((entry: { sources: Array<{ url: string }> }) => entry.sources.some(source => /^https?:/.test(source.url)))).toBe(true);
+  }, 20000);
   it.each([" Search external research too.", " Compare this guide with external sources.", " What has changed in current guidance?"])("retains explicit outside or current research: %s", async extra => {
     await askConcierge({ question: question + extra, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.research).toHaveBeenCalledOnce();

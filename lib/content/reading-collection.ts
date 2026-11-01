@@ -1,6 +1,30 @@
 import records from './reading-collection.json';
 
-export type Reading = typeof records[number];
+type ReadingLink = { label: string; href: string; dsdOnly?: boolean };
+type ChapterGuide = {
+  part: string;
+  chapter: string;
+  title: string;
+  pages: string;
+  about: string;
+  ideas: string[];
+  ours: string;
+  usedIn: ReadingLink[];
+  discuss: string[];
+  related?: ReadingLink;
+};
+
+// The shared reader supports optional enhanced editions even when no current
+// catalog entry uses them. Do not infer their existence from a particular book.
+export type Reading = typeof records[number] & {
+  citation?: string;
+  cover?: { src: string; alt: string; width: number; height: number; credit: string };
+  bookLinks?: ReadingLink[];
+  bookAccess?: string;
+  trademarkNote?: string;
+  chapterGuideIntro?: string;
+  chapterGuide?: ChapterGuide[];
+};
 export const readings: Reading[] = records;
 export const readingSections = [
   'Foundations of equity practice', 'Workplace inclusion and leadership',

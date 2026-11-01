@@ -3,7 +3,7 @@ import { contentGraphForDocs, type GraphEdgeType } from "@/lib/content/knowledge
 import { AUTHORITY } from "@/lib/content/types";
 import { scoreDoc, tokens, type Doc, type SearchHit } from "./search";
 
-const EDGE_WEIGHT: Partial<Record<GraphEdgeType, number>> = { curated_reading: 5, suggested_reading: 5, informs: 4, about_community: 3, cites: 3, practice_link: 2, part_of: 2 };
+const EDGE_WEIGHT: Partial<Record<GraphEdgeType, number>> = { curated_reading: 5, suggested_reading: 5, informs: 4, about_community: 3, cites: 3, practice_link: 2, part_of: 2, related: 1.5 };
 export const BRAIN_LIMITS = { connected: 6, totalChars: 24_000, leadChars: 4000, connectedChars: 1500 };
 
 /** Follow the graph one step from the best matches, ranked by connection strength and fit with the question. */

@@ -24,7 +24,7 @@ export default async function HomePage() {
   <div className="blk"><div className="w">
     <h2 className="sh">Find what you need</h2><p className="sd">Everything on the site, organized by what you&apos;re doing.</p>
     <div className="topics">
-      <div className="topic"><div className="bar"></div><div className="in"><h3>Learn</h3><p>Build your understanding.</p><ul><li><Link href="/learn">Browse learning</Link></li>{culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Explore Cultural Intelligence</Link></li>}<li><Link href="/operationalizing-equity">Operationalizing equity</Link></li><li><Link href="/learn/collaboration">Work better across teams</Link></li><li><Link href="/library">Resource library</Link></li></ul></div></div>
+      <div className="topic"><div className="bar"></div><div className="in"><h3>Learn</h3><p>Build your understanding.</p><ul><li><Link href="/learn">Browse learning</Link></li>{culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Explore Cultural Intelligence</Link></li>}<li><Link href="/operationalizing-equity">Operationalizing equity</Link></li><li><Link href="/learn/collaboration">Work better across teams</Link></li><li><Link href="/collections">Themes and collections</Link></li><li><Link href="/library">Resource library</Link></li></ul></div></div>
       <div className="topic"><div className="bar"></div><div className="in"><h3>Apply a tool</h3><p>Work through a real decision.</p><ul><li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li><li><Link href="/equity-review">Review a policy or service change</Link></li><li><Link href="/practice/gp-3">Prepare for community engagement</Link></li><li><Link href="/one-dsd#scenarios">DSD scenarios</Link></li></ul></div></div>
       <div className="topic"><div className="bar"></div><div className="in"><h3>Get support</h3><p>Guidance, people and answers.</p><ul><li><Link href="/support/right-person">Find the right person or office</Link></li><li><Link href="/ask">Ask</Link></li><li><Link href="/one-dsd/team">One DSD Team</Link></li><li><Link href="/user-guide">How to use this site</Link></li></ul></div></div>
     </div>
@@ -41,7 +41,7 @@ export default async function HomePage() {
   <div className="blk"><div className="w">
     <h2 className="sh">Explore DSD and the program</h2><p className="sd">How equity connects to the Division&apos;s services and the program behind this site.</p>
     <div className="links">
-      <Link href="/one-dsd/programs">DSD programs and services</Link><Link href="/one-dsd/amplify">Amplify Equity</Link><Link href="/one-dsd/planning">Planning and progress</Link><Link href="/start">Getting started</Link><Link href="/leading">For supervisors and managers</Link>
+      <Link href="/one-dsd/programs">DSD programs and services</Link><Link href="/one-dsd/amplify">Amplify Equity</Link><Link href="/one-dsd/planning">Planning and progress</Link><Link href="/start">Getting started</Link><Link href="/leading">For leaders, supervisors, managers, and directors</Link>
       <Link href="/program/model">How the program works</Link><Link href="/program-foundation">Program charter</Link><Link href="/equity-policy">DHS equity policy</Link><Link href="/program/impact">Long-term impact</Link>
     </div>
   </div></div>

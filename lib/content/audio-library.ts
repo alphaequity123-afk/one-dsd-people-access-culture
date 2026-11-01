@@ -49,3 +49,10 @@ export function listAudioLibraryShelves(): AudioLibraryShelf[] {
 export function countAudioLibraryEntries(shelves: readonly AudioLibraryShelf[]): number {
   return shelves.reduce((total, shelf) => total + shelf.entries.length, 0);
 }
+
+/** A shared player must respect the same podcast publication gate as its full page. */
+export function filterAudioShelvesByPublication(shelves: readonly AudioLibraryShelf[], availablePodcastIds: ReadonlySet<string>): AudioLibraryShelf[] {
+  return shelves.map(shelf => ({ ...shelf, entries: shelf.entries.filter(entry =>
+    !entry.id.startsWith("podcast/") || availablePodcastIds.has(entry.id.slice("podcast/".length)),
+  ) })).filter(shelf => shelf.entries.length > 0);
+}

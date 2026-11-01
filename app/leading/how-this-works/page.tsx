@@ -7,7 +7,7 @@ import styles from "@/components/collections.module.css";
 
 export const metadata: Metadata = {
   title: `How this works | ${LEADING_LABEL}`,
-  description: "What is and is not recorded in the supervisor and manager space, and where your progress and questions go.",
+  description: "What is and is not recorded in the leadership space, and where your progress and questions go.",
 };
 
 export default function LeadingHowThisWorksPage() {
@@ -35,7 +35,7 @@ export default function LeadingHowThisWorksPage() {
       <h2>What happens to a question in Ask</h2>
       <ul>
         <li>Questions typed into Ask go to outside services so that it can answer.</li>
-        <li>The program owner keeps a copy of your questions and the answers, to review and improve the service. Supervisors do not receive them.</li>
+        <li>The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.</li>
         <li>Please do not type anyone&apos;s name, case, health or personnel details. Ask general questions.</li>
       </ul>
       <h2>What this does not replace</h2>
@@ -47,8 +47,8 @@ export default function LeadingHowThisWorksPage() {
       <h2>The one exception to voluntary use</h2>
       <p>{TRAINING_CREDIT_NOTICE}</p>
       <p>The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status, so it is marked &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; wherever it is listed here. This app does not assign it or report on who has taken it. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
-      <h2>Courses that have not been reviewed</h2>
-      <p>The newer courses for supervisors and managers are drafts that no person has reviewed yet. Each one says so on its page, and says who should review it where that is known.</p>
+      <h2>Using the learning</h2>
+      <p>Use these courses as guidance for your work, alongside current policy and the people and offices responsible for a decision.</p>
       <h2>Tribal and Native American learning</h2>
       <p>This space does not offer Tribal curriculum. One DSD refers Native American and Tribal-specific learning, questions and engagement to ADSA and the responsible Tribal liaison. <Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link>.</p>
     </div>

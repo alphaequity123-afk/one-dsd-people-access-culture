@@ -19,13 +19,18 @@ const get = href => {
   return source;
 };
 const coverage = organization.sourceOrganizationCoverage(external);
-assert.equal(external.length, 940);
-assert.equal(new Set(external.map(source => source.sourceId)).size, 940);
-assert.equal(coverage.categorized, 940, JSON.stringify(coverage.uncategorizedIds));
+// The register grows as the published curriculum adds independently cited
+// sources. Keep an integrity floor, while checking every current source rather
+// than freezing the total at an older snapshot.
+assert.ok(external.length >= 940, 'Unexpected loss of the established external-source inventory.');
+assert.equal(new Set(external.map(source => source.sourceId)).size, external.length);
+assert.equal(coverage.categorized, external.length, JSON.stringify(coverage.uncategorizedIds));
 assert.deepEqual(coverage.uncategorizedIds, []);
-assert.equal(external.filter(source => organization.matchesSourceTheme(source, '')).length, 940);
+assert.equal(external.filter(source => organization.matchesSourceTheme(source, '')).length, external.length);
 const themes = new Set(RESOURCE_THEMES.map(theme => theme.id));
 for (const source of external) {
+  assert.ok(source.title && /^https?:\/\//i.test(source.href), source.sourceId);
+  assert.ok(Array.isArray(source.citations) && source.citations.length > 0, source.sourceId);
   const decision = organization.sourceOrganizationDecision(source);
   assert.ok(decision.themes.every(theme => themes.has(theme)), source.sourceId);
   assert.equal(new Set(decision.themes).size, decision.themes.length);

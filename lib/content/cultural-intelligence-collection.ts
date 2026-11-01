@@ -1,6 +1,4 @@
 import "server-only";
-import { existsSync } from "node:fs";
-import path from "node:path";
 import { notFound } from "next/navigation";
 import { publishedCourses, courseHref } from "@/lib/content/courses/published";
 import {
@@ -10,7 +8,6 @@ import {
   FACILITATION_ROUTES,
   LEADER_AREA_GROUPS,
   LEADER_COURSE_IDS,
-  LIVERMORE_COVER,
   OWN_CULTURE_COMMUNITY_IDS,
   TEAM_FACILITATION_ROUTE,
 } from "@/lib/content/cultural-intelligence-hub";
@@ -151,7 +148,7 @@ export async function culturalIntelligenceCollection() {
     ownCulture,
     courseGroups: [
       { id: "community-guides", title: "Community guides", intro: "Background on a community, to help you ask better questions. A guide does not describe any individual.", courses: guides },
-      { id: "capabilities", title: "Cultural intelligence capabilities", intro: "The four capabilities in depth, and how to use cultural frameworks responsibly.", courses: capabilities },
+      { id: "capabilities", title: "Cultural understanding and practice", intro: "Explore cultural understanding, implicit bias and ways to use frameworks responsibly.", courses: capabilities },
     ].filter(group => group.courses.length > 0),
     frameworks,
     leader: { courses: leaderCourses, groups: leaderLinks, divisionRoute: scope === "dsd" },
@@ -159,6 +156,5 @@ export async function culturalIntelligenceCollection() {
     resources,
     journeyResources,
     interculturalAvailable,
-    coverAvailable: existsSync(path.join(process.cwd(), "public", LIVERMORE_COVER.publicPath)),
   };
 }

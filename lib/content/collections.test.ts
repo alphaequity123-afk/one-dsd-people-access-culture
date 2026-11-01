@@ -152,7 +152,7 @@ describe("navigation", () => {
     expect(PAGE_AREAS.programs.links.map(([, href]) => href)).toContain("/one-dsd/leadership");
     for (const [, href] of PAGE_AREAS.leading.links) expect(destinationExists(href), href).toBe(true);
     const header = readFileSync(path.join(root, "components/dsd-program-header.tsx"), "utf8");
-    expect(header).toContain(">For supervisors and managers</Link>");
+    expect(header).toContain(">For leaders, supervisors, managers, and directors</Link>");
   });
   it("sends the supervisor or manager role to the space, and no other role", () => {
     const intake = (role: string) => ({ contextPreference: "one_dsd", task: "workforce_equity", urgency: "exploratory", role }) as Parameters<typeof buildStartRecommendation>[0];
@@ -169,6 +169,6 @@ describe("the promises on these pages", () => {
   });
   it("states plainly what is and is not recorded", () => {
     const page = readFileSync(path.join(root, "app/leading/how-this-works/page.tsx"), "utf8");
-    for (const words of ["no team view, no assignments and no scores", "Your progress stays in your browser", "Nothing is sent to a supervisor or employer", "go to outside services", "program owner keeps a copy", "does not replace training the state requires", "TRAINING_CREDIT_NOTICE", "required of all staff of the Minnesota Department of Human Services"]) expect(page).toContain(words);
+    for (const words of ["no team view, no assignments and no scores", "Your progress stays in your browser", "Nothing is sent to a supervisor or employer", "go to outside services", "does not intentionally save a question-and-answer copy", "earlier versions may have retained separate records", "does not replace training the state requires", "TRAINING_CREDIT_NOTICE", "required of all staff of the Minnesota Department of Human Services"]) expect(page).toContain(words);
   });
 });

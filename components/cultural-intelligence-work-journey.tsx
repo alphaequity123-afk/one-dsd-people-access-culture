@@ -6,30 +6,29 @@ import { useId, useState } from "react";
 /** Only supply links resolved as available in the caller's requested scope. */
 export type JourneyResource = { title: string; href: string };
 
-/** `book` says what comes from Livermore and what these applications add; never credit him with the addition. */
-type Step = { id: string; title: string; question: string; guidance: string; practices: string[]; book: string; resourceIds: string[] };
+type Step = { id: string; title: string; question: string; guidance: string; practices: string[]; resourceIds: string[] };
 type Start = "work" | "community";
 type Path = "service" | "workplace";
 
 const ownCulture: Step = {
   id: "own-culture", title: "Begin with your own culture",
   question: "What do your background, your profession and this agency treat as normal, and what might that lead you to notice, expect or take for granted?",
-  guidance: "This comes first on every path, whatever your background. Everyone works from inside a culture, including people whose culture is treated as the default, and DHS, DSD and each profession have cultures of their own. Starting here is a well-argued foundation, not a proven cause of better work, and the book offers no proof of it either. Ask what you may be missing and stay open to correction.",
+  guidance: "This comes first on every path, whatever your background. Everyone works from inside a culture, including people whose culture is treated as the default, and DHS, DSD and each profession have cultures of their own. Starting here is a well-argued foundation, not a proven cause of better work, and completing a course alone does not prove better outcomes. Ask what you may be missing and stay open to correction.",
   practices: [
-    "Name the worlds you belong to: family, faith, profession, interests, and the DHS, DSD, county or provider world you work in, along with disability or Deaf communities if those are yours. Livermore calls these figured worlds, and uses the idea because \"culture\" so often shrinks to race and nation.",
+    "Name the worlds you belong to: family, faith, profession, interests, and the DHS, DSD, county or provider world you work in, along with disability or Deaf communities if those are yours.",
     "For a few days, watch for your own culture in small talk, in advertising and in how you plan your day. It is the hardest culture to see.",
     "Catch the moment when pressure leads you to assume others want what you want. Intake, a deadline and a crisis are the usual places.",
     "Privately, name which worlds you find hardest to work with, including ages, professions and beliefs. Fear and prejudice can be named and worked through. Nobody needs to see this.",
     "If you lead people, ask newcomers what you have stopped noticing. Being told to speak openly and directly is itself one culture's habit.",
   ],
-  book: "From Livermore, ch. 1 (about pp. 3-4), ch. 2 (about p. 42), ch. 3 (about pp. 53-55), ch. 4 (about pp. 75-78) and ch. 8 (about pp. 186-87). The agency, county, provider, disability and Deaf worlds are these applications' addition.",
+
   resourceIds: ["/minnesota-communities/american", "/minnesota-communities/minnesota", "/minnesota-communities/european-american", "/learn/intercultural/curriculum"],
 };
 
 const drive = (path: Path): Step => ({
   id: "drive", title: "Check what is driving you",
   question: "Do you want to do this, why does it matter here, and how confident do you feel?",
-  guidance: "Livermore argues that training often fails because nobody checked whether people wanted it or saw the point. Energy rises and falls, so look at yours before you plan. Pick the source that could help today: interest in the work itself, what it brings to your team and the mission, or confidence that you can do it. Someone else may need a different one.",
+  guidance: "Consider what matters to you and the people affected before you plan. Energy and confidence can change over time. Pick the source that could help today: interest in the work itself, what it brings to your team and the mission, or confidence that you can do it. Someone else may need a different one.",
   practices: [
     path === "service"
       ? "Say in one sentence why the cultural side of this notice, meeting or plan matters to the people it reaches."
@@ -39,7 +38,7 @@ const drive = (path: Path): Step => ({
     "Recover on purpose. Time with what is familiar is fine, and rest gets you back to the work. The risk comes when rest turns into avoiding anything unfamiliar.",
     "If you lead people, ask how to move the load, especially from staff of color and disabled staff, and not only how one person can cope with it.",
   ],
-  book: "From Livermore, ch. 3 (CQ Drive), about pp. 50-58 and 62-63. His case of a chief diversity officer whose energy fell is one story, not evidence that training works. He plans for her coping; moving the load is these applications' addition.",
+
   resourceIds: ["/learn/intercultural/curriculum", "/areas/culture-trust"],
 });
 
@@ -50,9 +49,9 @@ const context: Step = {
   practices: [
     "Ask how past harm shapes the way people see this agency today, including harm by institutions that served disabled people. You may be meeting that history when you walk in.",
     "Ask what is happening in the wider world that could reach this work, such as immigration policy, a war or prices. Treat it as a prompt to ask, never as an assumption about how a person is affected.",
-    "Remember that knowledge on its own can make things worse. Facts without the other capabilities can breed overconfidence and stereotypes.",
+    "Remember that facts alone can lead to overconfidence and stereotypes. Listen and check what matters to the person.",
   ],
-  book: "From Livermore, ch. 2 (about pp. 28-29), ch. 4 (about pp. 85-87) and ch. 5 (about pp. 123-24). Past harm by disability institutions is these applications' addition. He is not a source on any community here.",
+
   resourceIds: ["/minnesota-communities", "/learn/intercultural/curriculum"],
 };
 
@@ -60,8 +59,8 @@ const otherExplanations = (path: Path): Step => ({
   id: "other-explanations", title: "Look beyond one explanation",
   question: "Can you name more than one explanation for this: schedule, transport, cost, an agency rule? What does our own system assume?",
   guidance: path === "service"
-    ? "Ask this alongside what you learned about culture, not instead of it. A missed appointment can involve a shift change, a bus route and a family's way of deciding, all at once. Check what you can act on, and name anything the service itself is asking of people. Livermore treats several explanations, not more facts, as the mark of real knowledge."
-    : "Ask this alongside what you know about culture, not instead of it. Someone quiet in a meeting may also be new, on a different shift, working through an interpreter or watching how speaking up has gone for others. Ask what the job design, the meeting format and the rules assume about how people work. Livermore treats several explanations, not more facts, as the mark of real knowledge.",
+    ? "Ask this alongside what you learned about culture, not instead of it. A missed appointment can involve a shift change, a bus route and a family's way of deciding, all at once. Check what you can act on, and name anything the service itself is asking of people. Consider more than one possible explanation and ask the people involved."
+    : "Ask this alongside what you know about culture, not instead of it. Someone quiet in a meeting may also be new, on a different shift, working through an interpreter or watching how speaking up has gone for others. Ask what the job design, the meeting format and the rules assume about how people work. Consider more than one possible explanation and ask the people involved.",
   practices: [
     "Sort each explanation. Is it something most people would do anywhere? Something learned in a shared culture? Something about this one person? Then keep going. Is it what the system does: shifts, transport, cost, rules? Is it disability or access?",
     "Sorting gives you something to ask or something to change. It does not tell you what is true of a person, so ask them.",
@@ -69,16 +68,14 @@ const otherExplanations = (path: Path): Step => ({
       ? "Look at any deadline or no-show rule. Does it treat other uses of time as laziness? Check the shift, the bus, the cost and the rule first."
       : "Silence can mean many things: thinking, habit, what everyone already knows, fear of being judged, or a different idea of what speaking up means. Make room for quiet reflection and for lively debate.",
   ],
-  book: path === "service"
-    ? "From Livermore, ch. 2 (about p. 29), ch. 4 (about pp. 74-75 and 95) and ch. 5 (about pp. 115 and 120-24). He sorts into universal, cultural and personal. The system question and the disability or access question are these applications' addition."
-    : "From Livermore, ch. 2 (about p. 29), ch. 4 (about pp. 74-75 and 95), ch. 7 (about p. 160) and ch. 8 (about pp. 190-91). He sorts into universal, cultural and personal. The system question and the disability or access question are these applications' addition.",
+
   resourceIds: path === "service" ? ["/learn/equity-toolkit/curriculum", "/library/ja-access-checks"] : ["/practice/gp-4", "/areas/culture-trust"],
 });
 
 const adapt = (path: Path): Step => ({
   id: "adapt", title: "Decide who adapts, and how",
   question: "Here, do you adapt, hold your ground or work out something new, and who has been doing the adapting so far?",
-  guidance: "Start with who always does the adapting. Livermore observes that it is expected more of women than men, gay than straight people, and Black than White people. These applications add a rule he does not give: the institution and people with more power adapt first, and people served adapt least.",
+  guidance: "Start with who always does the adapting. Consider who has the power to change the process. The institution and people with more power should take responsibility for making participation accessible.",
   practices: [
     "Adapt when it moves you toward the goal and crosses no line. Keep the value and change how, when and where. Do not imitate; heavy copying reads as insincere.",
     path === "service"
@@ -91,14 +88,14 @@ const adapt = (path: Path): Step => ({
       ? "Adapt the process before the manners. A changed deadline, form, appointment rule or interpreter schedule says more than careful etiquette, and an agency apology does not replace changing the practice."
       : "Adapt the process before the manners. A changed meeting time, deadline, agenda notice or leave rule says more than careful etiquette, and an apology does not replace changing the practice.",
   ],
-  book: "From Livermore, ch. 1 (about pp. 20-22), ch. 7 (CQ Action, about pp. 165-69) and ch. 8 (about pp. 183-88). He asks how firm the rules are, whether adapting compromises you, what reaches the goal and whether keeping a difference helps. The rule on who adapts first, and rights as lines that do not move, are these applications' addition.",
+
   resourceIds: path === "service" ? ["/learn/equity-toolkit", "/practice/clas"] : ["/practice/gp-4", "/areas/culture-trust"],
 });
 
 const plan = (path: Path): Step => ({
   id: "plan", title: "Plan, notice, check",
   question: "What is the hard moment most likely to be, and if it comes, what will you do?",
-  guidance: "Habits that work on autopilot stop working when the setting changes, Livermore says, so he asks you to plan before, notice during and check after. Put your plan into two or three if-then sentences. This page has nowhere to type them and stores nothing; keep names and case details out of any notes of your own.",
+  guidance: "Plan before, notice what happens during the interaction, and check afterward what worked. Put your plan into two or three if-then sentences. This page has nowhere to type them and stores nothing; keep names and case details out of any notes of your own.",
   practices: path === "service"
     ? [
       "If a relative answers first, then I will thank them, turn back to the person in the way they communicate, and offer time alone.",
@@ -114,7 +111,7 @@ const plan = (path: Path): Step => ({
       "Before you go in, ask what you might be assuming about them, what they might be assuming about you, and what in the team could explain this. Keep it to your assumptions and the setting. Do not guess at their life.",
       "During the conversation, notice before you respond, and breathe. If the person shows you your plan is wrong, drop it. Asking at the start how they would like to use the time can save you the trouble.",
     ],
-  book: "From Livermore, ch. 6 (CQ Strategy), about pp. 128-43. He once planned a relationship-first dinner in Manila and gave up the idea when his host kept returning to cost (about pp. 141-42). The if-then sentences and their examples are these applications' own way of writing his planning step.",
+
   resourceIds: path === "service" ? ["/learn/intercultural/curriculum", "/library/ja-access-checks"] : ["/courses/dc-i30-culturally-intelligent-leadership", "/learn/intercultural/curriculum"],
 });
 
@@ -122,7 +119,7 @@ const followThrough = (guidance: string, practices: string[], resourceIds: strin
   id: "reflection", title: "Reflect and follow through",
   question: "What will you try, who can take the next step, and how will you know whether it helped?",
   guidance, practices,
-  book: "From Livermore, ch. 6 (about pp. 140-43 and 145) and ch. 8 (about pp. 196-97). Saying it back in any way a person communicates, and judging success by what the people affected say, are these applications' addition. The book's own measures are self-report and colleague ratings.",
+
   resourceIds,
 });
 
@@ -146,7 +143,7 @@ const serviceSteps: Step[] = [
       "Your power over services filters what reaches you. If an answer may be shaped by that, change how and by whom the question is asked: more time, several ways to answer, a chance to say it again later. Never conclude that the person cannot say.",
       "Be clear about which decisions are yours, which need input and which you cannot make. The person's own decisions are theirs.",
     ],
-    book: "From Livermore, ch. 1 (about pp. 9-11), ch. 2 (about p. 46), ch. 6 (about pp. 130-32) and ch. 8 (about pp. 194-95). He accepts group tendencies as a possible starting point (ch. 5, about p. 124), and here we part from him: asking stays the rule. A worker's power over services is these applications' addition.",
+
     resourceIds: ["/courses/ipe-04-person-centered-systems", "/library/tool-lifecourse"],
   },
   context,
@@ -158,7 +155,7 @@ const serviceSteps: Step[] = [
     practices: [
       "Before you read silence, eye contact, flat affect, pacing or a speech difference as cultural, consider disability and access.",
     ],
-    book: "The book is close to silent on disability, so this step is these applications' own.",
+
     resourceIds: ["/courses/dc-l14-disability-justice-and-intersectionality", "/courses/ipe-04-person-centered-systems"],
   },
   {
@@ -171,18 +168,18 @@ const serviceSteps: Step[] = [
       "\"Do you follow?\" does not check anything. Build in a way to see what actually landed.",
       "Send information early, say what you need from people, and offer several ways to respond.",
     ],
-    book: "Drawn from Livermore, chs. 1 and 2 (about pp. 15 and 46), ch. 7 (about pp. 157-58) and ch. 8 (about pp. 187-88 and 191-92). The book says nothing on accessibility, so linking these to access is these applications' own reading.",
+
     resourceIds: ["/practice/clas", "/library/ja-access-checks"],
   },
   {
     id: "participation", title: "Include the people affected",
     question: "Whose perspective is needed while there is still an opportunity to shape the work?",
-    guidance: "Explain the purpose and what can be influenced. Ask about a useful and accessible way to participate, and follow the appropriate process for the situation. Observe the existing direction for Native American individuals, communities and Tribal Nations; none of the book's input practices is a model for that relationship.",
+    guidance: "Explain the purpose and what can be influenced. Ask about a useful and accessible way to participate, and follow the appropriate process for the situation. Observe the existing direction for Native American individuals, communities and Tribal Nations.",
     practices: [
       "Say what the input will do. Is it to hear reactions, or to shape the decision? Whose view will count for more?",
       "Assume the picture reaching you is partial. People hold back for many reasons, including the power an agency has over them.",
     ],
-    book: "From Livermore, ch. 2 (about p. 46) and ch. 8 (about p. 195). He writes about team input. Power over agendas and money is these applications' addition.",
+
     resourceIds: ["/learn/community-connections"],
   },
   {
@@ -190,11 +187,11 @@ const serviceSteps: Step[] = [
     question: "What is being decided, who might be affected differently, and what level of review applies?",
     guidance: "Check current DHS policy and the Equity Analysis Toolkit user guide, and consult the responsible office or your equity director about what applies. The Toolkit supports the required process. The decision workspace can help you prepare; use the required official process for review and documentation. A brief learning check does not replace a required review. Compare options and identify what you still need to learn. Leaders can bring the same questions to policy, program and resource decisions.",
     practices: [
-      "The less familiar the setting, the slower you should be to settle on a judgment. Livermore's view, which he does not tie to a study, is that gut feeling gets less reliable as the context shifts.",
+      "The less familiar the setting, the slower you should be to settle on a judgment. Pause and consider what information may be missing.",
       "Compare your plan with what you would usually do, and ask someone who knows the setting to read it.",
       "Separate what you can decide alone, what needs input, and what is not yours to decide.",
     ],
-    book: "From Livermore, ch. 2 (about p. 30), ch. 6 (about pp. 139 and 146) and ch. 8 (about pp. 194-95). The Toolkit stays the required process; the book only adds questions.",
+
     resourceIds: ["/learn/equity-toolkit", "/learn/equity-toolkit/practice", "/learn/equity-toolkit/curriculum"],
   },
   {
@@ -204,7 +201,7 @@ const serviceSteps: Step[] = [
     practices: [
       "Ask whose picture of a good life is shaping the plan, and whether there is more than one way to get there. Paid work and living alone are one picture among several.",
     ],
-    book: "The book does not cover supports or disability services, so this step is these applications' own.",
+
     resourceIds: ["/library/tool-lifecourse"],
   },
   adapt("service"),
@@ -227,7 +224,7 @@ const workplaceSteps: Step[] = [
       "Learn from what people choose to tell you, then check it against other sources. Knowing facts about a faith or a background matters less than noticing whether a difference affects whether someone feels safe at work.",
       "Your position filters what reaches you. Assume the picture is partial, and offer more than one way to tell you.",
     ],
-    book: "From Livermore, ch. 2 (about p. 46), ch. 4 (about p. 79) and ch. 8 (about pp. 190-91). Not making any colleague the informant for a group is these applications' addition.",
+
     resourceIds: ["/areas/culture-trust", "/practice/gp-4"],
   },
   {
@@ -237,7 +234,7 @@ const workplaceSteps: Step[] = [
     practices: [
       "Ask how past harm shapes the way people see this agency and its promises, including harm by institutions that served disabled people.",
       "Ask what is happening in the wider world that could reach this team, such as immigration policy, a war or prices. Treat it as a prompt to ask, never as an assumption about how a colleague is affected.",
-      "Remember that knowledge on its own can make things worse. Facts without the other capabilities can breed overconfidence and stereotypes.",
+      "Remember that facts alone can lead to overconfidence and stereotypes. Listen and check what matters to the person.",
     ],
   },
   otherExplanations("workplace"),
@@ -248,20 +245,20 @@ const workplaceSteps: Step[] = [
     practices: [
       "Before you read silence, eye contact, flat affect, pacing or a speech difference as cultural, or as a performance problem, consider disability and access.",
     ],
-    book: "The book is close to silent on disability, so this step is these applications' own.",
+
     resourceIds: ["/courses/dc-l14-disability-justice-and-intersectionality", "/courses/dc-l62-reasonable-accommodation-the-supervisor-s-role"],
   },
   {
     id: "hiring", title: "Hiring",
     question: "What does this role actually require, and which of your criteria are habit or a picture of who has done it before?",
-    guidance: "Test what the work requires, plan accessible outreach and structured interviews, and look at results with your Human Resources partner. Never use the IDI or a CQ result in hiring. No capability, score, dimension or cluster belongs in selection criteria, interview or reference questions, or promotion decisions.",
+    guidance: "Test what the work requires, plan accessible outreach and structured interviews, and look at results with your Human Resources partner. Do not use intercultural assessment results to rank applicants or make hiring and promotion decisions.",
     practices: [
       "When you hear poor fit, ask what was actually observed. It may only mean someone works differently from the people already here.",
       "Do not score eye contact, presence or how much feeling someone shows. Each reads differently with culture and also with autism, blindness, Deaf communication or anxiety. Test what the work requires.",
       "Saying people do not apply leaves the process off the hook. Look at the hiring system, at why people leave, and at who is left out of information and decisions once they join.",
       "Ask Human Resources which rules apply to anonymous résumé screening, diverse panels, pay gap checks and floating holidays, and build accommodation into each stage.",
     ],
-    book: "From Livermore, ch. 4 (about p. 76), ch. 5 (about pp. 118-20), ch. 7 (about pp. 159-60) and ch. 9 (about pp. 206-7 and 215). His eye-contact story gives only a cultural reading. The disability reading and accommodation at each stage are these applications' addition. He also advises assessing CQ in hiring (ch. 7, about p. 172; ch. 9, about pp. 208-9). These applications do not: the book offers no validity evidence for it, and it could disadvantage disabled and Deaf candidates.",
+
     resourceIds: ["/practice/gp-6", "/courses/dc-l53-reducing-bias-in-hiring-and-selection", "/areas/workforce"],
   },
   {
@@ -274,7 +271,7 @@ const workplaceSteps: Step[] = [
       "Requests, apologies and praise can carry different meanings. Most published leadership advice also carries one culture's habits, so filter it, including this.",
       "Check your own form and your own eye. Does the appraisal favor self-direction? Are you marking down someone who leaves early for family, or whose pace reflects a disability?",
     ],
-    book: "From Livermore, ch. 1 (about pp. 18-23), ch. 2 (about pp. 30-33), ch. 5 (about pp. 99-100 and 115) and ch. 7 (about pp. 152-56). Rights and safety as fixed values, and disability and pacing, are these applications' addition. He would also take team norms into performance reviews (ch. 8, about pp. 188-89). These applications do not: norms stay with the team, and ordinary job duties stay with supervisors and Human Resources under their own rules.",
+
     resourceIds: ["/courses/dc-i30-culturally-intelligent-leadership", "/courses/dc-l58-fair-and-bias-aware-performance-reviews"],
   },
   {
@@ -286,7 +283,7 @@ const workplaceSteps: Step[] = [
       "A move between a county, a provider and the state is a cultural move too. Help people read the new setting, and accept that leaving can be a fair choice.",
       "Ask why people leave, and who is left out of information and decisions after they join.",
     ],
-    book: "From Livermore, ch. 3 (about pp. 58-63), ch. 7 (about pp. 148-52 and 170) and ch. 9 (about pp. 206-7). County, provider and state moves, and event access, are these applications' addition.",
+
     resourceIds: ["/courses/dc-l57-equitable-access-to-stretch-assignments-and-prom", "/courses/dc-l59-mentoring-and-sponsorship-across-difference"],
   },
   {
@@ -300,7 +297,7 @@ const workplaceSteps: Step[] = [
       "Allow no jokes aimed at any group, including disabled people.",
       "Notice who carries the extra work: the stories, the training, being the person everyone comes to. Ask whether the same people are always the ones adapting.",
     ],
-    book: "From Livermore, ch. 1 (about pp. 15-17), ch. 2 (about p. 46), ch. 3 (about pp. 50-53), ch. 4 (about pp. 82-85), ch. 7 (about pp. 165-69 and 172) and ch. 8 (about pp. 178-83 and 188). Applying his point about words to disability language is these applications' addition. He leaves disability out of his line on jokes; adding it is these applications' choice.",
+
     resourceIds: ["/practice/gp-4", "/areas/culture-trust"],
   },
   adapt("workplace"),
@@ -343,7 +340,7 @@ export function CulturalIntelligenceWorkJourney({ resources, title = "Connect le
     <h3 id={`${instanceId}-title`} className="text-2xl font-semibold">{title}</h3>
     <p>Choose what the work is about and where to begin. This optional guide brings your own culture, the people affected and relevant tools into the same work question. Nothing you choose here is saved; if you leave or reload the page, choose again.</p>
     <p>Use what you learn in everyday conversations and choices, and work directly with the people and communities affected by a decision. Learning and community briefs do not replace that engagement, or the everyday work of a welcoming, inclusive workplace.</p>
-    <p>Many practices here come from David Livermore&apos;s <cite>Leading with Cultural Intelligence</cite> and its four capabilities, CQ® Drive, Knowledge, Strategy and Action. Each step says what comes from the book and what these applications add.</p>
+
     <fieldset className="space-y-2">
       <legend className="font-semibold">What is the work about?</legend>
       <label className="flex items-start gap-3"><input type="radio" name={`${instanceId}-path`} checked={path === "service"} onChange={() => { setPath("service"); setStepIndex(0); }} /> <span>Services, programs and the people we serve</span></label>
@@ -361,13 +358,13 @@ export function CulturalIntelligenceWorkJourney({ resources, title = "Connect le
       <p className="font-semibold">{current.question}</p>
       <p>{current.guidance}</p>
       <div><p className="font-semibold">Try this</p><ul className="mt-2 list-disc space-y-2 pl-5">{current.practices.map(practice => <li key={practice}>{practice}</li>)}</ul></div>
-      <p className="text-sm">{current.book}</p>
+
       {links.length > 0 && <div><p className="font-semibold">Explore a relevant resource</p><ul className="mt-2 space-y-2">{links.map(resource => <li key={resource.href}><Link className="underline" href={resource.href}>{resource.title}</Link></li>)}</ul></div>}
       <div className="flex flex-wrap gap-3">
         <button type="button" className="rounded-lg border border-line px-4 py-2" disabled={stepIndex === 0} onClick={() => setStepIndex(index => index - 1)}>Previous</button>
         <button type="button" className="rounded-lg border border-line px-4 py-2" disabled={stepIndex === orderedSteps.length - 1} onClick={() => setStepIndex(index => index + 1)}>Next</button>
       </div>
     </div>}
-    <p className="text-sm">David Livermore, <cite>Leading with Cultural Intelligence: The Real Secret to Success</cite>, 3rd edition. HarperCollins Leadership, 2024. Pages are approximate. CQ® is a registered trademark of Cultural Intelligence Center, LLC. These applications are not affiliated with Cultural Intelligence Center, LLC, or with David Livermore. They do not use the licensed CQ scale or show CQ scores.</p>
+
   </section>;
 }

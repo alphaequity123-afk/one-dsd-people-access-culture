@@ -4,6 +4,7 @@ import { cloneAgentsEnabled } from "../clone/config";
 import { CONSULTATION_REQUESTS_REMOVED } from "@/lib/program/retired-features";
 import { planWithJev, reviewWithJev, SPECIALIST_GUIDANCE } from "../clone/jev";
 import { brainContext, expandThroughGraph, fitWriterPrompt } from "../retrieval/brain";
+import { asksForProgramSourcesOnly } from "../research-preference";
 import { EvidenceClaimsSchema, type EvidenceClaim, type SourceEvidence } from "@/lib/content/ask-evidence";
 import { citationEvidenceFromDocs, validateEvidenceClaims } from "../retrieval/evidence";
 import { canonicalizeGeneratedEvidenceClaims, GeneratedEvidenceClaimsSchema } from "../retrieval/generated-evidence";
@@ -268,6 +269,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const startedAt = Date.now();
   const question = (input.question ?? "").trim();
   const context = resolveProductContext(input.contextPreference);
+  const explicitProgramOnly = asksForProgramSourcesOnly(question);
 
   // By the owner's rule, Ask answers every general question. Private details are the one
   // exception, and they stop here before any provider or research call can receive them.
@@ -307,7 +309,10 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let loadedDocs: Doc[] | undefined;
   const scope = context === "one_dsd" ? "dsd" : "one-dhs";
   const program = await indexedProgramResources(scope);
-  const organization = organizationalBrief(retrievalQuestion);
+  const organizationMatch = organizationalBrief(retrievalQuestion);
+  // A user who asks for only application sources must not receive outside URLs
+  // or source-derived organizational summaries as independent evidence.
+  const organization = explicitProgramOnly ? { ...organizationMatch, entries: [] } : organizationMatch;
   const organizationLinks = organization.entries.slice(0, 2).map(entry => ({ label: "Understanding DHS: " + entry.title, href: DHS_REFERENCE_PATH + "#" + dhsTopicAnchor(entry.id) }));
   if (/understanding\s+dhs/i.test(retrievalQuestion)) organizationLinks.unshift({label:"Understanding DHS",href:DHS_REFERENCE_PATH});
   const organizationIndex = organizationalDocs().filter(doc => organization.entries.some(entry => entry.id === doc.id));
@@ -315,7 +320,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     ...organizationIndex,
     ...(await indexedStaffDocs(scope)).filter(doc => doc.kind !== "brief"),
     ...program.destinations,
-  ]);
+  ].filter(doc => !explicitProgramOnly || /^\/(?!\/)/.test(doc.href)));
   let hits: SearchHit[] = [];
   try {
     hits = await runTool(ctx, "corpus.semantic_retrieve", async () =>
@@ -330,7 +335,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     searchDocs(retrievalQuestion, await staffDocs(), { limit: 5, intents: all }),
   );
   const queryTerms = new Set(tokens(retrievalQuestion));
-  const availableDocs = [...await staffDocs(), ...program.destinations];
+  // staffDocs already includes current public program destinations. Appending
+  // them again duplicates context and graph work without adding evidence.
+  const availableDocs = await staffDocs();
   const learningJourney = getLearningJourneyContext(availableDocs);
 
   const namedResources = availableDocs.filter(doc => {
@@ -387,11 +394,13 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // The directory is long, and only its first part reaches the answer, so the entries closest to the question come first.
   const directoryOrder = new Map(searchDocs(retrievalQuestion, availableDocs, { limit: 80 }).map((hit, index) => [hit.id, index]));
   const contextIds = new Set([...merged, ...connected].map(hit => hit.id));
-  const publicDirectory = Array.from(new Map(availableDocs.filter(doc => !["course_lesson", "community_research", "curriculum"].includes(doc.type) || (doc.type === "course_lesson" && contextIds.has(doc.id)))
+  const publicDirectory = Array.from(new Map(availableDocs.filter(doc => !["course_lesson", "community_research", "curriculum"].includes(doc.type)
+    || (doc.type === "course_lesson" && contextIds.has(doc.id))
+    || (doc.type === "curriculum" && /^\/learning\/self-directed\/index\.html\?course=[FIA]\d{2}$/.test(doc.href)))
     .sort((a, b) => Number(contextIds.has(b.id)) - Number(contextIds.has(a.id)) || (directoryOrder.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (directoryOrder.get(b.id) ?? Number.MAX_SAFE_INTEGER))
     .map(doc => [doc.href, { label: "Open " + doc.title.slice(0, 240), href: doc.href }])).values());
   publicDirectory.push(...organizationLinks, ...(learningJourney?.sections ?? []));
-  if (availableDocs.some(doc => doc.type === "curriculum" && doc.href === "/learning/self-directed/index.html")) publicDirectory.push({ label: "Open the self-directed courses", href: "/learning/self-directed/index.html" });
+  if (availableDocs.some(doc => doc.type === "curriculum" && /^\/learning\/self-directed\/index\.html\?course=[FIA]\d{2}$/.test(doc.href))) publicDirectory.push({ label: "Open the self-directed courses", href: "/learning/self-directed/index.html" });
   const allowedDestinations = new Map(publicDirectory.map(link => [link.href, link]));
   let generatedResourceLinks: AskAnswer["nextActions"] = [];
   const sources = await runTool(ctx, "citation.attach", async () => citationEvidenceFromDocs([...merged, ...connected], await staffDocs()), { contentIds: [...merged, ...connected].map((m) => m.id) });
@@ -403,12 +412,13 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // With no relevant internal evidence, automatic research is already required
   // regardless of the routing decision. Overlap those independent governed calls;
   // retain the same research admission and final answer review.
+  const requestedMode = explicitProgramOnly
+    ? "program_only" : cloneAgentsEnabled() ? "auto" : input.researchMode ?? (input.mode === "review" ? "program_only" : "auto");
   const [jevPlan, requiredResearch] = await Promise.all([
     cloneAgentsEnabled() ? planWithJev(question, merged.map(hit => ({ title: hit.title, excerpt: hit.excerpt.slice(0, 1200) })), ctx, input.cloneRunId) : null,
-    cloneAgentsEnabled() && !merged.length ? governedResearch(question, "current_web", false, ctx) : undefined,
+    cloneAgentsEnabled() && requestedMode !== "program_only" && !merged.length ? governedResearch(question, "current_web", false, ctx) : undefined,
   ]);
   const specialistReview = jevPlan?.route === "accessibility" ? await a11yScan({ text: question, artifactType: "document" }, { ...ctx, agent: getAgent("a11y_reviewer") }) : undefined;
-  const requestedMode = cloneAgentsEnabled() ? "auto" : input.researchMode ?? (input.mode === "review" ? "program_only" : "auto");
   const sufficientNamedPdf = namedPageHits.length > 0 && jevPlan?.evidence === "sufficient";
   const shouldPrepareResearchAnswer =
     requestedMode === "current_web" ||
@@ -557,8 +567,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let failureDetail: string | undefined;
   if (binding.generative && !pureResearchAnswer && Date.now() - startedAt < (cloneAgentsEnabled() ? 100_000 : 55_000)) {
     try {
-      const writerSystem = systemPrompt(input.responseMode) + (jevPlan ? "\nSpecialist focus: " + SPECIALIST_GUIDANCE[jevPlan.route] : "");
-      const writerPrompt = (directory: typeof publicDirectory, knowledge: typeof brain.context, research: typeof publicResearch) => userPrompt(question, sources, directory, research, history, input.researchMode, input.mode, path ? program.destinations.find(doc => doc.href === "/practice/" + path!.id) : undefined, organization, learningJourney, artifactContext, specialistReview, knowledge);
+      const writerSystem = systemPrompt(input.responseMode, explicitProgramOnly) + (jevPlan ? "\nSpecialist focus: " + SPECIALIST_GUIDANCE[jevPlan.route] : "");
+      const writerPrompt = (directory: typeof publicDirectory, knowledge: typeof brain.context, research: typeof publicResearch) => userPrompt(question, sources, directory, research, explicitProgramOnly ? history.map(turn => ({ ...turn, answer: "" })) : history, requestedMode, input.mode, path ? program.destinations.find(doc => doc.href === "/practice/" + path!.id) : undefined, organization, learningJourney, artifactContext, specialistReview, knowledge);
       const writerUser = cloneAgentsEnabled()
         ? fitWriterPrompt(writerSystem, publicDirectory, brain.context, publicResearch, writerPrompt)
         : { user: writerPrompt(publicDirectory, brain.context, publicResearch), step: 0 };
@@ -952,7 +962,7 @@ function asksAboutThisAssistant(question: string): boolean {
   return new RegExp("^(?:are you|is (?:ask|this (?:assistant|chatbot|system|app|application))) " + identity + "(?: or " + identity + ")?$", "i").test(text);
 }
 
-function systemPrompt(responseMode: AskResponseMode = "text"): string {
+function systemPrompt(responseMode: AskResponseMode = "text", explicitProgramOnly = false): string {
   const instructions = [
     "Answer questions for people using " + PROGRAM.staffBrand + ". Help with any subject: explanations, science, mathematics, technology, history, writing, planning, program resources, and follow-up questions.",
     "A question does not have to match program documents. Use your general knowledge and reasoning when appropriate. Never refuse merely because the topic is outside this program or the supplied sources.",
@@ -979,6 +989,14 @@ function systemPrompt(responseMode: AskResponseMode = "text"): string {
     "Return evidenceClaims when using a program source: each has kind (source_excerpt or inference), text, and references (evidenceId, start, end, quote). Copy the complete supplied evidence.excerpt and evidenceId unchanged into each reference. Do not shorten or rewrite the quote or calculate new offsets. The start and end must be copied with their matching quote. External publicResearch sources have URLs rather than program evidence IDs: cite their supplied URLs in the answer and never create evidenceClaims for them. Leave evidenceClaims empty when only publicResearch supports the answer. A source_excerpt has one reference and text exactly equal to that quote. Put paraphrases, recommendations, and interpretations under inference, with their exact basis passages; do not label them as proven facts. These checks establish reference integrity, not factual truth or semantic entailment. Never invent a reference or infer a conflict from the question alone. If no suitable source supports the question, give a useful general explanation with evidenceClaims empty. Do not present general prose as quoted source evidence. sourceIds can suggest related reading but never establish support for a claim.",
     "Return shortAnswer (the complete answer, with the detail the question needs), whyItMatters (brief useful context, or an empty string when unnecessary), limits (only relevant limitations; an empty list is fine), and resourceHrefs (up to eight exact URLs from the supplied public program directory that help with this question, including paraphrased or multilingual requests; use an empty list when none is useful).",
   ];
+  if (explicitProgramOnly) {
+    instructions[1] = "For this explicit source restriction, use only the supplied application sources and program knowledge. Do not add unsupported general facts or rely on outside sources. If the supplied material is insufficient, say so.";
+    instructions[2] = "Answer the actual question directly using only the supplied application material. Preserve the user's requested format where the material supports it; do not invent missing details.";
+    instructions[3] = "programKnowledge contains available application material. Synthesize it with the supplied program sources; do not use outside research or infer facts absent from those materials.";
+    const evidenceIndex = instructions.findIndex(instruction => instruction.startsWith("Return evidenceClaims when using a program source:"));
+    if (evidenceIndex >= 0) instructions[evidenceIndex] = instructions[evidenceIndex].replace("If no suitable source supports the question, give a useful general explanation with evidenceClaims empty.", "If no suitable source supports the question, say that the application material is insufficient and leave evidenceClaims empty.");
+    instructions.push("The user's explicit application-sources-only restriction governs this answer. Safety referrals remain appropriate, but do not use unsupported outside facts as evidence.");
+  }
   if (responseMode === "spoken") instructions.push(
     "For spoken questions, give the same complete answer in sentences that are easy to follow by ear, leading with the main point. Honor all explicitly requested details, examples, numbered items, steps, comparisons, formats, code, worksheets, practice drafts, and longer explanations. Informational how-to questions request guidance, not an unsolicited worksheet; wording such as 'How can I make a meeting more accessible?' does not request a practiceDraft. Omit practiceDraft unless the user explicitly asks for a draft, template, worksheet, or other concrete output, or is continuing an existing draft. Do not turn an ordinary question into a lesson. Retain evidenceClaims, citations, relevant uncertainty, and all program boundaries. Do not replace an answer with a teaser.",
   );
@@ -1017,11 +1035,13 @@ function userPrompt(
     },
     practiceDraft,
     specialistReview,
-    operationalizingEquity: operationalEquityContext(question),
+    operationalizingEquity: asksForProgramSourcesOnly(question) ? undefined : operationalEquityContext(question),
     learningJourney,
     learningParticipation: trainingCreditContext(),
     conversation: history,
-    answerPreference: mode === "program_only" ? "Answer without a public web search; general knowledge is allowed." : "Answer the question using the most suitable available knowledge and evidence.",
+    answerPreference: asksForProgramSourcesOnly(question)
+      ? "Use only the supplied application sources and program knowledge. Do not rely on outside sources or unsupported general knowledge. If the supplied material is insufficient, say so."
+      : mode === "program_only" ? "Answer without a public web search; general knowledge is allowed." : "Answer the question using the most suitable available knowledge and evidence.",
     programSources: sources.map(source => ({
       id: source.id, title: source.title, authority: source.authorityLabel,
       excerpt: source.evidence?.excerpt.quote ?? source.excerpt, href: source.href, evidence: source.evidence,

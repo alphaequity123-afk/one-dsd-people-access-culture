@@ -18,45 +18,40 @@ import { loadStaffContentSnapshot } from "@/lib/content/staff-publications";
 import { loadPublishedEditableSurfaces } from "@/lib/content/editable-surfaces";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
-import { LIVERMORE_COVER } from "@/lib/content/cultural-intelligence-hub";
-import Image from "next/image";
-import { existsSync } from "node:fs";
-import path from "node:path";
 
 type Props = { params: Promise<{ id: string }>; searchParams?: Promise<WorkOriginInput> };
-// "text" and "source" report the book. "applied" is these applications' own work and is never attributed to Livermore.
-const CULTURAL_WORK_PROMPTS: Record<string, { prompt: string; practices: readonly { text: string; source: string; applied: string }[] }> = {
+const CULTURAL_WORK_PROMPTS: Record<string, { prompt: string; practices: readonly { text: string; applied: string }[] }> = {
   workforce: {
     prompt: "Consider who can access hiring, development and recognition, and how your own assumptions might shape those opportunities.",
     practices: [
-      { text: "Before saying people do not apply, look at the hiring system. When people leave, ask whether they were left out of information, decisions or informal time.", source: "Chapter 9, about pp. 206-7", applied: "Human Resources confirms which rules apply, and accommodations stay in the conversation." },
-      { text: "Audit everyday routines such as dress code wording, bereavement leave and who counts as family, holidays and meeting times.", source: "Chapter 9, about pp. 214-16", applied: "Ask who each routine was written for, and who has to ask for an exception." },
-      { text: "Invest early in midlevel managers, who lead most of the workforce and carry out policies they had little part in making.", source: "Chapter 9, about pp. 219-20", applied: "Give supervisors time and support before new expectations reach their teams." },
+      { text: "Before saying people do not apply, look at the hiring system. When people leave, ask whether they were left out of information, decisions or informal time.", applied: "Human Resources confirms which rules apply, and accommodations stay in the conversation." },
+      { text: "Audit everyday routines such as dress code wording, bereavement leave and who counts as family, holidays and meeting times.", applied: "Ask who each routine was written for, and who has to ask for an exception." },
+      { text: "Invest early in midlevel managers, who lead most of the workforce and carry out policies they had little part in making.", applied: "Give supervisors time and support before new expectations reach their teams." },
     ],
   },
   "culture-trust": {
     prompt: "Consider how people experience feedback, belonging and speaking up. Ask what would make participation accessible rather than assuming what works for everyone.",
     practices: [
-      { text: "Agree on team norms and write the behaviors people could see for each one. One standard can have several routes: everyone can contribute by speaking, writing before or after, or talking one to one.", source: "Chapter 8, about pp. 183-89", applied: "AAC, an interpreter and a chosen supporter are on the list from the start. Sharing how you like to work is voluntary, no one is asked to disclose a disability, and check-ins on norms stay with the team." },
-      { text: "Send the agenda early, say what input you need, and offer several ways to give it. Ask what you are missing, in place of asking whether anything is missing.", source: "Chapter 8, about pp. 181-82 and 191-92", applied: "This also helps interpreters, people using screen readers, people who need more time and staff on shifts." },
-      { text: "Check whether the same people are always the ones adapting.", source: "Chapter 8, about p. 188", applied: "Ask the same of agency procedures that face the people served." },
+      { text: "Agree on team norms and write the behaviors people could see for each one. One standard can have several routes: everyone can contribute by speaking, writing before or after, or talking one to one.", applied: "AAC, an interpreter and a chosen supporter are on the list from the start. Sharing how you like to work is voluntary, no one is asked to disclose a disability, and check-ins on norms stay with the team." },
+      { text: "Send the agenda early, say what input you need, and offer several ways to give it. Ask what you are missing, in place of asking whether anything is missing.", applied: "This also helps interpreters, people using screen readers, people who need more time and staff on shifts." },
+      { text: "Check whether the same people are always the ones adapting.", applied: "Ask the same of agency procedures that face the people served." },
     ],
   },
   "leadership-systems": {
     prompt: "Consider how your perspective shapes program and resource decisions as well as workforce culture, and whose experience can help improve those choices.",
     practices: [
-      { text: "Tie this work to the mission and a named problem: what is the goal, what stands in the way, and how does culture bear on that? Write the work into plans and measures.", source: "Chapter 9, about pp. 200-204, with plans and measures at about pp. 203-4", applied: "Any measures are for the organization and its services, never a score on a person." },
-      { text: "Sort decisions by size, and tell people what they may decide alone, when they need input and what they cannot decide.", source: "Chapter 8, about pp. 194-95", applied: "A person's own decisions about their life and services are theirs, and the agency does not sort them this way." },
-      { text: "Invest early in midlevel managers, and coach senior leaders, who get little honest feedback.", source: "Chapter 8, about p. 197; chapter 9, about pp. 213 and 219-20", applied: "Senior leaders begin with their own culture." },
+      { text: "Tie this work to the mission and a named problem: what is the goal, what stands in the way, and how does culture bear on that? Write the work into plans and measures.", applied: "Any measures are for the organization and its services, never a score on a person." },
+      { text: "Sort decisions by size, and tell people what they may decide alone, when they need input and what they cannot decide.", applied: "A person's own decisions about their life and services are theirs, and the agency does not sort them this way." },
+      { text: "Invest early in midlevel managers, and coach senior leaders, who get little honest feedback.", applied: "Senior leaders begin with their own culture." },
     ],
   },
   "policy-program-service": {
     prompt: "Consider what a policy, form, budget or service assumes about the people it reaches, and who can still change it.",
     practices: [
-      { text: "Before asking for input, say whether it will shape the decision or only gauge opinion, and whose views will count more. Afterward, say what was decided.", source: "Chapter 8, about pp. 195-97", applied: "Label community engagement by the power people really have over the result. Tribal Nations are governments, so this is no model for that relationship; that work goes through the Office of Indian Affairs and DHS Tribal offices." },
-      { text: "Give advance notice and more than one way to respond.", source: "Chapter 8, about pp. 191-92", applied: "Plan interpreters, accessible formats, plain language and timing that works for people on shifts." },
-      { text: "Audit routines and policies, because gaps leave managers improvising.", source: "Chapter 9, about pp. 214-16", applied: "Look at forms, appointment and no-show rules, interpreter scheduling, and who counts as a contact or natural support. This adds questions to the Equity Analysis Toolkit and does not replace it." },
-      { text: "Separate the common standard from how it is practiced locally.", source: "Chapter 9, about pp. 216-17", applied: "Statewide duties can leave room for county and lead agency practice, and rights do not vary." },
+      { text: "Before asking for input, say whether it will shape the decision or only gauge opinion, and whose views will count more. Afterward, say what was decided.", applied: "Label community engagement by the power people really have over the result. Tribal Nations are governments, so this is no model for that relationship; that work goes through the Office of Indian Affairs and DHS Tribal offices." },
+      { text: "Give advance notice and more than one way to respond.", applied: "Plan interpreters, accessible formats, plain language and timing that works for people on shifts." },
+      { text: "Audit routines and policies, because gaps leave managers improvising.", applied: "Look at forms, appointment and no-show rules, interpreter scheduling, and who counts as a contact or natural support. This adds questions to the Equity Analysis Toolkit and does not replace it." },
+      { text: "Separate the common standard from how it is practiced locally.", applied: "Statewide duties can leave room for county and lead agency practice, and rights do not vary." },
     ],
   },
 };
@@ -92,7 +87,6 @@ export default async function DomainPage({ params, searchParams }: Props) {
   const tools = domain.toolIds.flatMap(id => content.has(id) ? [content.get(id)!] : []);
   let culturalIntelligenceAvailable = false;
   const culturalPrompt = CULTURAL_WORK_PROMPTS[source.id];
-  const coverAvailable = existsSync(path.join(process.cwd(), "public", LIVERMORE_COVER.publicPath));
   if (culturalPrompt && surface.available) {
     try {
       // Check the published area without an owner override as well as the target
@@ -109,7 +103,7 @@ export default async function DomainPage({ params, searchParams }: Props) {
     <div className={`wrap space-y-8 py-8 ${styles.domainBody}`}>
       <Link href="/areas">{stringValue(copy,"backLabel")}</Link>
       <WorkOriginLinks origin={origin} domainAvailable={surface.available} />
-      {culturalIntelligenceAvailable && <section className="rounded-xl border border-line p-6" aria-labelledby="cultural-work-connection"><h2 id="cultural-work-connection" className="text-xl font-semibold">Connect cultural understanding with this work</h2><p className="my-3 leading-7">{culturalPrompt.prompt}</p><h3 className="mt-5 text-lg font-semibold">Practices for leaders</h3><ul className="mt-2 list-disc space-y-3 pl-6 leading-7">{culturalPrompt.practices.map(practice => <li key={practice.text}>{practice.text} ({practice.source}.) <strong>Applied here:</strong> {practice.applied}</li>)}</ul><p className="mt-4 leading-7">CQ® is the short name for cultural intelligence in the book these practices come from. Here it stays out of hiring, promotion, ratings and performance reviews, and so does the IDI. The book advises using it in hiring and reviews; these applications do not.</p><div className="mt-4 flex items-start gap-4">{coverAvailable && <Image src={LIVERMORE_COVER.publicPath} width={1590} height={2400} alt={LIVERMORE_COVER.alt} sizes="4rem" className="h-auto w-16 shrink-0" />}<div className="text-sm leading-6"><p>David Livermore, <cite>Leading with Cultural Intelligence: The Real Secret to Success</cite>, 3rd edition (HarperCollins Leadership, 2024). &quot;Applied here&quot; marks what these applications add, which is not his.</p><p className="mt-2">CQ is a registered trademark of Cultural Intelligence Center, LLC. These applications are not affiliated with Cultural Intelligence Center, LLC, or with David Livermore. They do not use the licensed CQ scale or show CQ scores.</p></div></div><p className="mt-4"><Link className="font-semibold underline" href="/learn/cultural-intelligence">Explore Cultural Intelligence and community context</Link></p></section>}
+      {culturalIntelligenceAvailable && <section className="rounded-xl border border-line p-6" aria-labelledby="cultural-work-connection"><h2 id="cultural-work-connection" className="text-xl font-semibold">Connect cultural understanding with this work</h2><p className="my-3 leading-7">{culturalPrompt.prompt}</p><h3 className="mt-5 text-lg font-semibold">Practices for leaders</h3><ul className="mt-2 list-disc space-y-3 pl-6 leading-7">{culturalPrompt.practices.map(practice => <li key={practice.text}>{practice.text} <strong>In DSD work:</strong> {practice.applied}</li>)}</ul><p className="mt-4 leading-7">Keep cultural learning and the Intercultural Development Inventory separate from hiring, promotion, ratings and performance reviews. Decisions follow the responsible work processes.</p><p className="mt-4"><Link className="font-semibold underline" href="/learn/cultural-intelligence">Explore Cultural Intelligence and community context</Link></p></section>}
       {source.id === "leadership-systems" && <section className="rounded-xl bg-[#faf3e8] p-6"><h2 className="text-2xl font-semibold">Equity leadership and growth in DSD</h2><p className="my-4 leading-7">Find a starting point as an aspiring or current leader. Build a development map and connect equity learning with DSD practice, feedback, and succession.</p><Link href="/one-dsd/leadership">Explore the One DSD leadership experience →</Link></section>}
       <div className={styles.goalTags}>{domain.goals.map(goal => <span key={goal}>{goal}</span>)}</div>
       <section aria-labelledby="work-tasks-title"><h2 id="work-tasks-title" className="text-3xl font-extrabold">{stringValue(copy,"tasksTitle")}</h2><div className="mt-6 space-y-8">{domain.tasks.map(task => {

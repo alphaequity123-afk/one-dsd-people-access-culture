@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/ui";
 import { ResourceFormatLinks } from "@/components/resource-format-links";
-import { countAudioLibraryEntries, listAudioLibraryShelves } from "@/lib/content/audio-library";
+import { countAudioLibraryEntries, filterAudioShelvesByPublication, listAudioLibraryShelves } from "@/lib/content/audio-library";
 import { audioThemeLabels, filterAudioShelves, podcastMatchesTheme } from "@/lib/content/audio-organization";
 import { selfDirectedItems } from "@/lib/content/self-directed";
 import { listCourseListening } from "@/lib/content/course-listening";
@@ -22,11 +22,12 @@ export default async function AudioLibraryPage({ searchParams }: { searchParams?
   const selectedTheme = RESOURCE_THEMES.find(theme => theme.id === query.theme);
   const scope = await requestedContentScope();
   const courses = await publishedCourses(scope);
-  const allShelves = listAudioLibraryShelves();
+  // Full podcast players live here only; other pages link to them.
+  const podcastSurfaces = await Promise.all(PODCASTS.map(podcast => prepareEditableSurface(podcast.surfaceId, { scope, includeOwner: false })));
+  const availablePodcastIds = new Set(PODCASTS.flatMap((podcast, index) => podcastSurfaces[index].available ? [podcast.id] : []));
+  const allShelves = filterAudioShelvesByPublication(listAudioLibraryShelves(), availablePodcastIds);
   const shelves = filterAudioShelves(allShelves, selectedTheme?.id);
   const count = countAudioLibraryEntries(shelves);
-  // Full podcast players live here only; other pages link to them.
-  const podcastSurfaces = await Promise.all(PODCASTS.map(podcast => prepareEditableSurface(podcast.surfaceId, { scope })));
   const podcasts = PODCASTS.flatMap((podcast, index) => podcastSurfaces[index].available && podcastMatchesTheme(podcast.id, selectedTheme?.id) ? [{ podcast, surface: podcastSurfaces[index] }] : []);
   const courseListening = listCourseListening(courses.map(({ pack }) => pack), selfDirectedItems()).filter(course => !selectedTheme || course.themes.includes(selectedTheme.id));
   return <>

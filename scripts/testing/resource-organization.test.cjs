@@ -14,11 +14,14 @@ const memberships = require(path.join(root, 'lib/content/courses/theme-membershi
 const plan = require(path.join(root, 'lib/content/courses/authored/deia-catalog/plan.json'));
 const item = (id, type = 'learning_module', tags = []) => ({ id, type, tags });
 
-assert.equal(rows.length, 760, 'The reviewed public cohort is an inventory of resources, not image or download files.');
-assert.equal(new Set(rows.map(row => row.id)).size, 760);
+// Two former fixture entries now redirect to the general catalog and no longer
+// have course definitions. Keep the reviewed public cohort current, without
+// inventing theme assignments for withdrawn or absent courses.
+assert.equal(rows.length, 758, 'The reviewed public cohort is an inventory of resources, not image or download files.');
+assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
 const cohort = rows.map(row => item(row.id, row.type));
 assert.deepEqual(organization.resourceOrganizationCoverage(cohort), {
-  total: 760, categorized: 760, uncategorizedIds: [], learningWithoutLevelIds: [],
+  total: 758, categorized: 758, uncategorizedIds: [], learningWithoutLevelIds: [],
 }, 'All observed public resources must remain findable in at least one theme.');
 const allowed = new Set(organization.RESOURCE_THEMES.map(theme => theme.id));
 assert.equal(allowed.size, 8);
@@ -97,4 +100,4 @@ assert.deepEqual(organization.resourceThemeIds(item('practice-guide-inclusive-me
 assert.deepEqual(organization.resourceThemeIds(item('practice-guide-review-a-change', 'practice_note')), ['evidence']);
 assert.equal(organization.resourceLearningLevel(item('practice-guide-review-a-change', 'practice_note')), null);
 
-console.log('PASS: 760 published resources remain classified; cross-catalog levels, legacy themes, future metadata, and direct-use tools verified.');
+console.log('PASS: 758 reviewed cohort resources remain classified; cross-catalog levels, legacy themes, future metadata, and direct-use tools verified.');

@@ -6,17 +6,20 @@ import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { researchPlainText } from "@/lib/content/research-markdown";
 import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_ESSAY, WATER_MODULES } from "@/lib/content/water-we-swim-in";
 import type { Doc } from "./search";
+import clasCurriculum from "@/lib/content/clas-curriculum.json";
+import equityCurriculum from "@/lib/content/equity-everyday-decisions.json";
+import interculturalCurriculum from "@/lib/content/intercultural-curriculum.json";
 
 /**
  * Content that staff can read but pages hold outside the publication registry: community research,
  * the self-directed curriculum and recorded lesson transcripts. Everything here is already public on this site.
  */
 const SELF_DIRECTED_HREF = "/learning/self-directed/index.html";
-const TRANSCRIPT_COLLECTIONS: Array<{ folder: string; title: string; href: string }> = [
-  { folder: "clas-curriculum", title: "CLAS curriculum", href: "/learn/clas" },
-  { folder: "equity-everyday-decisions", title: "Equity in everyday decisions", href: "/learn/equity-in-practice" },
-  { folder: "intercultural-curriculum", title: "Intercultural understanding in everyday work", href: "/learn/intercultural/curriculum" },
-];
+const TRANSCRIPT_COLLECTIONS = [
+  { folder: "clas-curriculum", title: "CLAS curriculum", href: "/learn/clas/curriculum", modules: clasCurriculum.modules },
+  { folder: "equity-everyday-decisions", title: "Equity in everyday decisions", href: "/learn/equity-toolkit/curriculum", requiredSurface: "equity-toolkit.home", modules: equityCurriculum.modules },
+  { folder: "intercultural-curriculum", title: "Intercultural understanding in everyday work", href: "/learn/intercultural/curriculum", requiredSurface: "learn.intercultural", modules: interculturalCurriculum.modules },
+] as const;
 
 const hash = (value: unknown) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 const flat = (value: unknown): string => typeof value === "string" ? value
@@ -25,7 +28,7 @@ const flat = (value: unknown): string => typeof value === "string" ? value
 const hrefsIn = (value: unknown): string[] => Array.isArray(value) ? value.flatMap(hrefsIn)
   : value && typeof value === "object" ? Object.entries(value).flatMap(([key, child]) => (key === "url" || key === "href") && typeof child === "string" && child.startsWith("/") ? [child] : hrefsIn(child)) : [];
 
-function doc(scope: StaffProgramScope, fields: Pick<Doc, "kind" | "id" | "title" | "href" | "authority" | "type" | "summary" | "text" | "tags" | "intents"> & { graphLinks?: string[]; payload: unknown }): Doc {
+function doc(scope: StaffProgramScope, fields: Pick<Doc, "kind" | "id" | "title" | "href" | "authority" | "type" | "summary" | "text" | "tags" | "intents"> & { graphLinks?: string[]; graphRelated?: string[]; payload: unknown }): Doc {
   const { payload, ...rest } = fields;
   return { ...rest, status: "approved", reviewDate: "", scope: scope === "dsd" ? "dsd" : "agencywide",
     evidenceRevisions: [{ sourceId: fields.id, revisionId: null, payloadHash: hash(payload), scope }] };
@@ -113,7 +116,8 @@ export function culturalCalendarDocs(scope: StaffProgramScope, publishedCommunit
     return doc(scope, {
       kind: "content", id: `calendar-${entry.id.normalize("NFKD").replace(/[^a-z0-9-]/g, "")}`, title: `Cultural calendar: ${entry.name}`, href: `/minnesota-communities/calendar?month=all&community=${entry.communities.find(id => published.has(id))}`,
       authority: "community_brief", type: "cultural_calendar", summary: entry.capsule, text,
-      tags: ["cultural calendar", "observance", ...communities], intents: ["intercultural"], payload: entry,
+      tags: ["cultural calendar", "observance", ...communities], intents: ["intercultural"],
+      graphRelated: entry.communities.filter(id => published.has(id)).map(id => `/minnesota-communities/${id}`), payload: entry,
     });
   });
 }
@@ -123,37 +127,76 @@ export function waterCourseDocs(scope: StaffProgramScope): Doc[] {
   const out: Doc[] = [];
   const add = (key: string, title: string, href: string, text: string) => out.push(doc(scope, {
     kind: "content", id: `water-${key}`, title, href, authority: "learning", type: "curriculum", summary: text.slice(0, 360), text,
-    tags: ["The Water We Swim In", "Minnesota culture"], intents: ["intercultural"], payload: text,
+    tags: ["The Water We Swim In", "Minnesota culture"], intents: ["intercultural"], graphRelated: [WATER_COURSE_HREF], payload: text,
   }));
+  out.push(doc(scope, { kind: "content", id: "water-course-hub", title: WATER_COURSE_TITLE, href: WATER_COURSE_HREF,
+    authority: "learning", type: "learning_navigation", summary: "A learning course about Minnesota culture and reflection.",
+    text: [WATER_COURSE_TITLE, ...WATER_MODULES.map(module => module.title)].join("\n"), tags: ["Minnesota culture", "learning"], intents: ["intercultural"],
+    graphRelated: WATER_MODULES.map(module => `${WATER_COURSE_HREF}/${module.slug}`), payload: WATER_MODULES.map(module => ({slug: module.slug, title: module.title})) }));
   WATER_MODULES.forEach(module => passages(module.body).forEach((text, index) => add(`${module.slug}-${index}`, `${WATER_COURSE_TITLE}: ${module.title}`, `${WATER_COURSE_HREF}/${module.slug}`, text)));
   WATER_ESSAY.sections.forEach(section => passages(section.body).forEach((text, index) => add(`essay-${section.id}-${index}`, `${WATER_COURSE_TITLE} essay: ${section.heading}`, `${WATER_COURSE_HREF}/essay`, text)));
   return out;
 }
 
-export function curriculumDocs(scope: StaffProgramScope): Doc[] {
+/** Only the course files selected by the public player are current. Old hashed
+ * data files can remain alongside them and must not become searchable. */
+export function selfDirectedCurriculumDocs(scope: StaffProgramScope, root = path.join(process.cwd(), "public", "learning", "self-directed")): Doc[] {
+  const player = path.join(root, "index.html");
+  if (!existsSync(player)) return [];
+  const metadata = readFileSync(player, "utf8").match(/<script\b[^>]*\bid=["']course-data["'][^>]*>([\s\S]*?)<\/script>/i)?.[1];
+  if (!metadata) return [];
+  let courses: unknown;
+  try { courses = JSON.parse(metadata); } catch { return []; }
+  if (!Array.isArray(courses)) return [];
   const out: Doc[] = [];
-  const data = path.join(process.cwd(), "public", "learning", "self-directed", "data");
-  if (existsSync(data)) for (const name of readdirSync(data).filter(file => file.endsWith(".json"))) {
-    const course = JSON.parse(readFileSync(path.join(data, name), "utf8")) as { number?: string; title?: string; audience?: string; outcomes?: unknown; slides?: Array<{ text?: string; narration?: string; hidden?: boolean }>; sources?: unknown };
-    if (!course.title || !Array.isArray(course.slides)) continue;
+  const seen = new Set<string>();
+  for (const item of courses) {
+    if (!item || typeof item !== "object") continue;
+    const { number, dataFile } = item as { number?: unknown; dataFile?: unknown };
+    if (typeof number !== "string" || !/^[FIA](?:0[1-9]|1[0-9]|2[0-4])$/.test(number) || seen.has(number)
+      || typeof dataFile !== "string" || !new RegExp(`^data/${number}-[a-f0-9]{12}\\.json$`).test(dataFile)) continue;
+    seen.add(number);
+    const file = path.join(root, dataFile);
+    if (!existsSync(file)) continue;
+    let course: { number?: string; title?: string; audience?: string; outcomes?: unknown; slides?: Array<{ text?: string; narration?: string; hidden?: boolean }>; sources?: unknown };
+    try { course = JSON.parse(readFileSync(file, "utf8")); } catch { continue; }
+    if (course.number !== number || !course.title || !Array.isArray(course.slides)) continue;
     const text = [course.title, flat(course.outcomes), ...course.slides.filter(slide => !slide.hidden).flatMap(slide => [slide.text ?? "", slide.narration ?? ""])].filter(Boolean).join("\n");
     out.push(doc(scope, {
-      kind: "content", id: `curriculum-${name.replace(/\.json$/, "")}`, title: course.title, href: SELF_DIRECTED_HREF,
+      kind: "content", id: `curriculum-${path.basename(dataFile, ".json")}`, title: course.title, href: `${SELF_DIRECTED_HREF}?course=${number}`,
       authority: "learning", type: "curriculum", summary: course.audience ? `Self-directed course for ${course.audience}` : course.title, text,
-      tags: ["self-directed course", course.number ?? ""].filter(Boolean), intents: [], graphLinks: hrefsIn(course.sources), payload: course,
+      tags: ["self-directed course", number], intents: [], graphLinks: hrefsIn(course.sources), payload: course,
     }));
   }
+  return out;
+}
+
+export function curriculumDocs(scope: StaffProgramScope, publishedSurfaces: ReadonlySet<string>): Doc[] {
+  const out: Doc[] = [];
+  out.push(...selfDirectedCurriculumDocs(scope));
   for (const collection of TRANSCRIPT_COLLECTIONS) {
+    if ("requiredSurface" in collection && !publishedSurfaces.has(collection.requiredSurface)) continue;
+    out.push(doc(scope, { kind: "content", id: `curriculum-hub-${collection.folder}`, title: collection.title, href: collection.href,
+      authority: "learning", type: "learning_navigation", summary: `Explore the ${collection.title} lessons.`,
+      text: collection.modules.map(module => module.title).join("\n"), tags: ["curriculum", collection.title], intents: [],
+      graphRelated: collection.modules.map(module => `${collection.href}/${module.id}`), payload: collection.modules.map(module => ({id: module.id, title: module.title})) }));
+    for (const lessonModule of collection.modules) {
+      const text = flat(lessonModule);
+      out.push(doc(scope, { kind: "content", id: `learning-lesson-${collection.folder}-${lessonModule.id}`, title: `${collection.title}: ${lessonModule.title}`,
+        href: `${collection.href}/${lessonModule.id}`, authority: "learning", type: "learning_lesson", summary: lessonModule.title, text,
+        tags: ["curriculum", collection.title], intents: [], graphRelated: [collection.href], payload: lessonModule }));
+    }
     const root = path.join(process.cwd(), "public", "learning", collection.folder);
     if (!existsSync(root)) continue;
     for (const lesson of readdirSync(root, { withFileTypes: true }).filter(entry => entry.isDirectory())) {
+      if (!collection.modules.some(module => module.id === lesson.name)) continue;
       const file = path.join(root, lesson.name, "transcript.txt");
       if (!existsSync(file)) continue;
       const text = readFileSync(file, "utf8");
       out.push(doc(scope, {
-        kind: "content", id: `curriculum-${collection.folder}-${lesson.name}`, title: `${collection.title}: lesson ${Number(lesson.name)}`, href: collection.href,
+        kind: "content", id: `curriculum-${collection.folder}-${lesson.name}`, title: `${collection.title}: lesson ${Number(lesson.name)} transcript`, href: `${collection.href}/${lesson.name}`,
         authority: "learning", type: "curriculum", summary: text.slice(0, 360), text,
-        tags: ["lesson transcript", collection.title], intents: [], payload: text,
+        tags: ["lesson transcript", collection.title], intents: [], graphRelated: [`${collection.href}/${lesson.name}`], payload: text,
       }));
     }
   }

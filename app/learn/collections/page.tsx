@@ -24,6 +24,11 @@ export default async function CollectionsPage() {
       <h1>Collections</h1>
       <p className={base.lede}>All the learning, on eight shelves named by subject. Each one opens with where to start.</p>
     </header>
+    <aside className={styles.requiredNote} aria-labelledby="all-format-collections-title">
+      <h2 id="all-format-collections-title">Explore all formats by theme</h2>
+      <p>Find related learning, tools, sources, readings and available listening together, then return to the course shelves below whenever you need them.</p>
+      <p><Link href="/collections">Explore themes across the program →</Link></p>
+    </aside>
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
       <h2 id="required-course-title">One course is required</h2>
       <p><CollectionItemLink id={REQUIRED_COURSE_ID} published={published} /></p>

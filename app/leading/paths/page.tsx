@@ -6,7 +6,7 @@ import styles from "@/components/collections.module.css";
 
 export const metadata: Metadata = {
   title: `Suggested paths | ${LEADING_LABEL}`,
-  description: "Four optional paths for supervisors and managers. Nobody is enrolled, and progress stays in your browser.",
+  description: "Four optional paths for leaders, supervisors, managers, and directors. Nobody is enrolled, and progress stays in your browser.",
 };
 
 export default function LeadingPathsPage() {

@@ -15,7 +15,7 @@ import { GRADUATION_PATHS } from "./paths";
 import { communityDesignEntries } from "./community-design";
 
 export type GraphNodeKind = "resource" | "reading" | "path" | "brief" | "theme" | "level" | "series" | "lesson" | "curriculum" | "community_research" | "document";
-export type GraphEdgeType = "theme" | "level" | "series" | "curated_reading" | "suggested_reading" | "informs" | "practice_link" | "part_of" | "about_community" | "cites";
+export type GraphEdgeType = "theme" | "level" | "series" | "curated_reading" | "suggested_reading" | "informs" | "practice_link" | "part_of" | "about_community" | "cites" | "related";
 export type GraphNode = { id: string; kind: GraphNodeKind; title: string; href: string | null };
 export type GraphEdge = { from: string; to: string; type: GraphEdgeType; weight: number; why?: string; practice?: string };
 export type RelatedItem = { id: string; kind: GraphNodeKind; title: string; href: string; score: number; why: string; practice?: string };
@@ -108,10 +108,13 @@ export function knowledgeGraph(): KnowledgeGraph {
   return g;
 }
 
-type GraphDoc = { id: string; href: string; title: string; type: string; kind: string; graphLinks?: string[] };
+type GraphDoc = { id: string; href: string; title: string; type: string; kind: string; graphLinks?: string[]; graphRelated?: string[] };
 
 function nodeIdForHref(href: string): string | null {
+  const selfDirected = href.match(/^\/learning\/self-directed\/index\.html\?course=([FIA](?:0[1-9]|1[0-9]|2[0-4]))$/);
+  if (selfDirected) return `self-directed-${selfDirected[1]}`;
   const clean = href.split(/[?#]/)[0];
+  const collection = clean.match(/^\/collections\/([a-z-]+)$/); if (collection) return `theme:${collection[1]}`;
   const reading = clean.match(/^\/learn\/readings\/([a-z0-9-]+)$/); if (reading) return reading[1];
   const community = clean.match(/^\/minnesota-communities\/([a-z0-9-]+)$/); if (community) return `brief:${community[1]}`;
   const practice = clean.match(/^\/practice\/([a-z0-9-]+)$/); if (practice) return practice[1];
@@ -155,6 +158,8 @@ export function contentGraphForDocs(docs: readonly GraphDoc[]): ContentGraph {
     } else if (doc.type === "curriculum") {
       nodeId = `curriculum:${doc.id}`;
       g.addNode({ id: nodeId, kind: "curriculum", title: doc.title, href: doc.href });
+      const course = nodeIdForHref(doc.href);
+      if (course) g.addEdge({ from: nodeId, to: course, type: "part_of", weight: 1 });
     } else {
       const known = nodeIdForHref(doc.href);
       if (known && g.nodes.has(known)) nodeId = known;
@@ -167,15 +172,18 @@ export function contentGraphForDocs(docs: readonly GraphDoc[]): ContentGraph {
     }
     g.attach(nodeId, doc);
   }
-  for (const doc of docs) for (const href of doc.graphLinks ?? []) {
-    const target = nodeIdForHref(href);
-    for (const from of g.nodesForDocument(doc.id)) if (target) g.addEdge({ from, to: target, type: "cites", weight: 1 });
+  for (const doc of docs) for (const [href, type] of [...(doc.graphLinks ?? []).map(href => [href, "cites"] as const), ...(doc.graphRelated ?? []).map(href => [href, "related"] as const)]) {
+    // Do not create nodes for arbitrary links: connect only to an existing
+    // graph node or an already indexed public document.
+    const known = nodeIdForHref(href);
+    const target = known && g.nodes.has(known) ? known : (g.nodes.has(`document:${href.split("#")[0]}`) ? `document:${href.split("#")[0]}` : null);
+    for (const from of g.nodesForDocument(doc.id)) if (target && (type !== "related" || g.documentsForNode(target).length > 0)) g.addEdge({ from, to: target, type, weight: 1, why: type === "related" ? "Linked program content" : "Cited source" });
   }
   contentGraphCache = { docs, graph: g };
   return g;
 }
 
-const WEIGHT: Record<GraphEdgeType, number> = { curated_reading: 5, suggested_reading: 5, informs: 4, practice_link: 2, series: 1.5, theme: 1, level: 0.4, part_of: 2, about_community: 3, cites: 3 };
+const WEIGHT: Record<GraphEdgeType, number> = { curated_reading: 5, suggested_reading: 5, informs: 4, practice_link: 2, series: 1.5, theme: 1, level: 0.4, part_of: 2, about_community: 3, cites: 3, related: 1.5 };
 
 /** Items most connected to the given one, scored by the strength and kind of the connections between them. */
 export function relatedItems(id: string, options: { limit?: number; kinds?: GraphNodeKind[]; exclude?: string[] } = {}): RelatedItem[] {

@@ -26,6 +26,13 @@ const html = (element: Parameters<typeof renderToStaticMarkup>[0]) => renderToSt
 describe("supervisor and manager pages render with their data", () => {
   it("opens the landing page with the question and all nine doors", async () => {
     const page = html(await LeadingPage());
+    expect(page).toContain("Lead equity in everyday work");
+    expect(page).toContain("Explore leadership");
+    expect(page).toContain("/one-dsd/leadership#starting-points");
+    expect(page).toContain("/one-dsd/leadership#continuity-plan");
+    expect(page).toContain("/one-dsd/amplify/mentoring#mentoring-tool");
+    expect(page).toContain("until you copy or download them");
+    expect(page).toContain("Human Resources or selection process");
     expect(page).toContain("What are you deciding?");
     for (const door of LEADING_DOORS) { expect(page).toContain(door.title); expect(page).toContain(`/leading/${door.slug}`); }
     for (const path of LEADING_PATHS) expect(page).toContain(`/leading/paths/${path.slug}`);

@@ -1,5 +1,6 @@
 import "server-only";
 import reference from "@/data/organization/minnesota-dhs.json";
+import sourceRegister from "@/data/source-register/source-register.json";
 import { tokens, type Doc } from "../retrieval/search";
 
 export const DHS_REFERENCE = reference;
@@ -25,6 +26,10 @@ export function organizationalDocs(now = new Date()): Doc[] {
       reviewDate: reference.checkedOn, scope: "all",
       summary, text: [entry.title, summary, ...entry.aliases].join(" "),
       tags: entry.aliases, intents: [],
+      // Each referenced URL is an explicit source for this organizational entry.
+      graphLinks: sources.slice(1).map(source => source.url),
+      // Source-register citations name public program pages that cite this exact external URL.
+      graphRelated: sources.flatMap(source => sourceRegister.sources.filter(item => item.href === source.url).flatMap(item => item.citations.map(citation => citation.route).filter(route => route.startsWith("/")))),
     };
   });
 }
