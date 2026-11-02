@@ -14,7 +14,7 @@ export default function ThemeCollectionsPage() {
       <p className={base.lede}>Choose a subject to find related learning, practical resources, reading, research and listening together.</p>
       <p>Topics overlap. A resource may appear under more than one theme when it helps with different kinds of work; each link opens the same resource.</p>
     </header>
-    <aside className={base.continue}><h2>CLAS curriculum collection</h2><p>Nine connected lessons, with videos, discussion audio, practice and planning resources in one shareable collection.</p><p><Link href="/learn/clas/collection">Open the collection or download it for offline use →</Link></p></aside>
+    <aside className={base.continue}><h2>CLAS curriculum collection</h2><p>Nine connected lessons, with videos, discussion audio, practice and planning resources in one shareable collection.</p><p><Link href="/learn/clas/collection">Open the collection →</Link></p></aside>
     <ul className={styles.doors} aria-label="Themes">{RESOURCE_THEMES.map(theme => <li key={theme.id}>
       <Link className={styles.door} href={`/collections/${theme.id}`}><span className={styles.doorTitle}>{theme.title}</span><span>{theme.description}</span><span className={styles.doorAction}>Explore this theme <span aria-hidden="true">→</span></span></Link>
     </li>)}</ul>

@@ -31,8 +31,8 @@ export default async function CollectionsPage() {
     </aside>
     <aside className={styles.requiredNote} aria-labelledby="clas-collection-title">
       <h2 id="clas-collection-title">CLAS curriculum collection</h2>
-      <p>Nine connected lessons with videos, discussion audio, practice and planning resources. Share one link or download the complete collection for offline use.</p>
-      <p><Link href="/learn/clas/collection">Open, share or download the CLAS collection →</Link></p>
+      <p>Nine connected lessons with videos, discussion audio, practice and planning resources. Share one link to the collection.</p>
+      <p><Link href="/learn/clas/collection">Open or share the CLAS collection →</Link></p>
     </aside>
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
       <h2 id="required-course-title">One course is required</h2>

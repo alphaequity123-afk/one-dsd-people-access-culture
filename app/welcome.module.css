@@ -1,8 +1,13 @@
 .welcome { width: 100%; max-width: 3840px; margin: 0 auto; background: #e7e7e7; }
 .graphic { position: relative; }
 .artwork { display: block; width: 100%; height: auto; }
-.title { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.qrLink { position: absolute; left: 44.5%; top: 74%; width: 11%; height: 19.56%; }
+.title { margin: 0; padding: 18px 20px; text-align: center; color: #003865; background: white; font-size: clamp(26px, 4vw, 42px); }
+.qrMask { position: absolute; left: 44.5%; top: 74%; width: 11%; height: 19.56%; background: #f1f1f1; }
+.clasShare { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 24px 16px; text-align: center; background: white; }
+.clasShare h2 { margin: 0; color: #003865; font-size: clamp(26px, 4vw, 38px); }
+.clasShare img { display: block; width: min(320px, 80vw); height: auto; }
+.clasShare button { padding: 14px 28px; border: 0; border-radius: 4px; background: #003865; color: white; font: inherit; font-weight: 600; cursor: pointer; }
+.clasShare p { margin: 0; }
 .entry { display: flex; justify-content: center; padding: 16px 20px 32px; }
 .enter { display: inline-flex; align-items: center; gap: 18px; padding: 14px 28px; border-radius: 4px; background: #003865; color: white !important; text-decoration: none; font-size: 18px; font-weight: 600; }
 .enter:hover { background: #005780; }
