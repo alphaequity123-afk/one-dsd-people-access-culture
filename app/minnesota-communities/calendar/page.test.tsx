@@ -7,6 +7,19 @@ import { calendarDayHref, calendarEntryHref, entryAnchor } from "@/lib/content/c
 import CulturalCalendarPage from "./page";
 
 vi.mock("@/lib/content/cultural-intelligence-publication", () => ({ communityPagePublished: async () => true }));
+// The published data has no observance spanning New Year, so add one to keep that path tested.
+const crossingId = "test-community--year-crossing";
+vi.mock("@/lib/content/cultural-calendar", async importOriginal => {
+  const actual = await importOriginal<typeof import("@/lib/content/cultural-calendar")>();
+  return {
+    ...actual,
+    publishedCalendar: async () => [...await actual.publishedCalendar(), {
+      id: crossingId, name: "Year-crossing test observance", alsoKnownAs: [], communities: ["african-american"], kind: "cultural", capsule: "Test entry.",
+      dateRule: "", dateCertainty: "fixed", dates: [{ year: 2026, date: "2026-12-28", endDate: "2027-01-03", confirmed: true }],
+      whatItMarks: "", howCelebrated: "", events: [], workplaceNote: null, sources: [],
+    }],
+  };
+});
 
 const page = async (params: Record<string, string>) => renderToStaticMarkup(await CulturalCalendarPage({ searchParams: Promise.resolve(params) }));
 const openDetails = (html: string) => [...html.matchAll(/<details id="([^"]+)"[^>]*\sopen=""/g)].map(match => match[1]);
@@ -35,9 +48,8 @@ describe("full calendar page", () => {
     const start = accented.dates.find(date => date.year === 2027)!.date!;
     const params = Object.fromEntries(new URL(calendarEntryHref(accented.id, start), "https://example.org").searchParams);
     expect(openDetails(await page(params))).toEqual([entryAnchor(accented.id)]);
-    const crossing = entries.flatMap(entry => entry.dates.filter(date => date.endDate && date.date && date.endDate.slice(0, 4) !== date.date.slice(0, 4)).map(date => ({ id: entry.id, start: date.date! })))[0];
-    const crossingParams = Object.fromEntries(new URL(calendarEntryHref(crossing.id, crossing.start), "https://example.org").searchParams);
-    expect(openDetails(await page(crossingParams))).toEqual([entryAnchor(crossing.id)]);
+    const crossingParams = Object.fromEntries(new URL(calendarEntryHref(crossingId, "2026-12-28"), "https://example.org").searchParams);
+    expect(openDetails(await page(crossingParams))).toEqual([entryAnchor(crossingId)]);
   });
 
   it("ignores an unknown entry and an excluded or invalid day without losing the month", async () => {
@@ -60,8 +72,7 @@ describe("full calendar page", () => {
     expect(html).toContain("Back to all of June 2026");
     expect(html).not.toContain("<h2>June 2026</h2>");
     // The crossing observance is listed on a day in the following year too.
-    const crossing = entries.flatMap(entry => entry.dates.filter(date => date.endDate && date.date && date.endDate.slice(0, 4) !== date.date.slice(0, 4)).map(() => entry.id))[0];
-    expect(anchors(await page({ year: "2027", month: "1", day: "2" }))).toContain(entryAnchor(crossing));
+    expect(anchors(await page({ year: "2027", month: "1", day: "2" }))).toContain(entryAnchor(crossingId));
     expect(openDetails(await page({ ...params, entry: juneteenth }))).toEqual([entryAnchor(juneteenth)]);
   });
 
