@@ -1,0 +1,103 @@
+{
+  "format": "clas-curriculum-practice-v1",
+  "modules": [
+    {
+      "id": "01",
+      "outcome": "After this part you can describe one work example in terms of the person's task, not only the organization's purpose.",
+      "recall": [
+        {
+          "question": "What does the principal standard ask you to focus on?",
+          "options": [
+            { "text": "Whether information was sent.", "correct": false, "feedback": "Sending is the organization's step. The standard asks about the person's experience of the service." },
+            { "text": "The person's experience of the service.", "correct": true, "feedback": "Yes. A notice can be accurate and still be hard to use." },
+            { "text": "Giving everyone the same format.", "correct": false, "feedback": "The same format does not show whether everyone can use it." }
+          ]
+        },
+        {
+          "question": "Which change is within an individual's authority?",
+          "options": [
+            { "text": "Rewriting a notice's instructions in plain language.", "correct": true, "feedback": "Yes. Wording within your own work is usually yours to improve; approval routes still apply." },
+            { "text": "Changing the program's language assistance budget.", "correct": false, "feedback": "Resourcing needs coordination and approval." },
+            { "text": "Deciding what a person needs from their name.", "correct": false, "feedback": "Needs are asked about, not assumed." }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "01-d1",
+          "scenario": "A colleague suggests resending the planning notice unchanged because responses are low.",
+          "question": "What is the most useful first step?",
+          "options": [
+            { "text": "Resend it unchanged.", "correct": false, "feedback": "Repeating an unclear message can repeat the barrier." },
+            { "text": "Examine the notice and the response routes first.", "correct": true, "feedback": "This starts with inquiry rather than assumption." },
+            { "text": "Assume people are not interested.", "correct": false, "feedback": "A response pattern does not establish motivation." }
+          ]
+        },
+        {
+          "id": "01-d2",
+          "scenario": "You are describing the sample notice for your working note.",
+          "question": "Which description centers the person's task?",
+          "options": [
+            { "text": "The notice schedules a meeting.", "correct": false, "feedback": "That is the organization's purpose." },
+            { "text": "The person needs to understand why the meeting matters, consider choices and respond in a way they can use.", "correct": true, "feedback": "That describes what the person must be able to do." }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "01-o1",
+        "scenario": "You want to understand why some people have not responded to the notice.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "Check the available feedback about how people experience the notice.",
+          "Describe the person's task and the notice's purpose.",
+          "Read the notice as a recipient would.",
+          "Note what you can change and what needs coordination."
+        ],
+        "correctOrder": [1, 2, 0, 3],
+        "feedback": "Start from purpose and task, read as the recipient, then use feedback before deciding what to change."
+      },
+      "keyPoints": [
+        { "chapter": "Welcome to your learning", "points": ["Learning is voluntary and self-paced.", "Leave names and case details out of notes."] },
+        { "chapter": "Choose something you can work with", "points": ["Pick one ordinary piece of your work.", "Separate the organization's purpose from the person's task."] },
+        { "chapter": "The principal standard", "points": ["Focus on the person's experience of the service."] }
+      ],
+      "cardDescriptions": [
+        { "chapter": "Welcome to your learning", "description": "A photo of an open notebook on a desk beside a cup of tea." },
+        { "chapter": "Choose something you can work with", "description": "A photo of a printed notice on a kitchen table." }
+      ],
+      "jobAid": {
+        "title": "Start with the person: a one-page job aid",
+        "useWhen": "Use when you are reviewing a notice, form or instruction that people need to act on.",
+        "sections": [
+          { "heading": "Before", "items": ["Write the notice's purpose in one sentence.", "Describe what the person must be able to do."] },
+          { "heading": "During", "items": ["Read it as a recipient would.", "Check the assistance offer and the response route."] },
+          { "heading": "After", "items": ["Note what you can change and what needs coordination."] }
+        ],
+        "remember": ["Ask; do not assume needs from a name or appearance.", "Use your program's current procedure for changes."],
+        "askWho": ["The responsible office for the notice.", "Your supervisor for approval routes."]
+      }
+    },
+    {
+      "id": "02",
+      "recall": [
+        {
+          "question": "Why confirm whether a response route works?",
+          "options": [
+            { "text": "Because sending is not the same as being usable.", "correct": true, "feedback": "Yes." },
+            { "text": "To record who called.", "correct": false, "feedback": "No records of individuals are needed for this check." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "outcome": "",
+      "recall": [],
+      "decisions": [{ "question": "A question with no valid options.", "options": [] }],
+      "ordering": { "steps": ["Only one step"], "correctOrder": [0] },
+      "keyPoints": [],
+      "cardDescriptions": [],
+      "jobAid": null
+    }
+  ]
+}

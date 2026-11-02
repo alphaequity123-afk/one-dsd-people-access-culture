@@ -1,0 +1,2500 @@
+{
+  "format": "clas-curriculum-practice-v1",
+  "modules": [
+    {
+      "id": "01",
+      "outcome": "After this part you can choose one ordinary work example and describe, from the person's side, what they need to be able to do with it.",
+      "recall": [
+        {
+          "question": "In part 1, what did the lesson ask you to describe first about your work example?",
+          "options": [
+            {
+              "text": "The organization's purpose and, separately, what the person receiving it needs to be able to do.",
+              "correct": true,
+              "feedback": "Right. Those are two different questions. The purpose might be to schedule a meeting; the person's task is to understand why it matters, weigh choices, arrange support and respond."
+            },
+            {
+              "text": "Every culture and language of the people you serve.",
+              "correct": false,
+              "feedback": "The lesson said you do not need to know every culture to begin. Start with one example and the person's task, then ask respectfully."
+            },
+            {
+              "text": "Who exactly did not respond to it, and why.",
+              "correct": false,
+              "feedback": "Learning notes stay free of personal details, and the lesson says a response pattern does not tell you why anyone did not respond. Describe the task and intended experience instead."
+            }
+          ]
+        },
+        {
+          "question": "Several people have not responded to the sample notice. Which starting point did part 1 recommend?",
+          "options": [
+            {
+              "text": "Send the same notice more often until responses improve.",
+              "correct": false,
+              "feedback": "Repeating an unclear message can repeat the same barrier. Understand the experience first; a reminder may come later."
+            },
+            {
+              "text": "Examine how people receive, understand and use the notice, without assuming why anyone did not respond.",
+              "correct": true,
+              "feedback": "Yes. A reasonable inquiry comes first, then an appropriate change, then a check on what happened."
+            },
+            {
+              "text": "Treat the silence as a sign that people are not interested.",
+              "correct": false,
+              "feedback": "A response pattern does not tell you anyone's motivation. Language, format, timing or delivery could all be involved."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "01-d1",
+          "scenario": "You are starting the curriculum and need to pick a work example to examine across the nine parts.",
+          "question": "Which example do you choose?",
+          "options": [
+            {
+              "text": "A routine public notice, form or instruction you work with, described in general terms.",
+              "correct": true,
+              "feedback": "Good choice. The lesson asks for one ordinary part of your work that you can examine safely, and you can change it later."
+            },
+            {
+              "text": "A sensitive situation you handled recently, with the details that make it real.",
+              "correct": false,
+              "feedback": "Keep names, health information and other private details out of learning notes. A general, non-sensitive example works better and is safer."
+            },
+            {
+              "text": "Nothing yet, until you are sure you have authority to change it.",
+              "correct": false,
+              "feedback": "You do not need authority over a whole program to begin. Pick something ordinary; part 5 covers what you can change and who approves."
+            }
+          ]
+        },
+        {
+          "id": "01-d2",
+          "scenario": "A colleague has drafted a notice and asks you to look it over before it goes out. They say it is accurate and went out on time last year.",
+          "question": "What do you look at first?",
+          "options": [
+            {
+              "text": "Whether the notice went out on schedule and reached the right addresses.",
+              "correct": false,
+              "feedback": "Delivery matters, but the lesson's focus is the person's experience. A letter can be accurate and on time and still be hard to use."
+            },
+            {
+              "text": "What the person receiving it needs to understand and do, and whether the notice supports that.",
+              "correct": true,
+              "feedback": "Yes. Standard 1 is about services people can understand and use, not only whether information was sent."
+            },
+            {
+              "text": "Whether the wording matches what the team has always used.",
+              "correct": false,
+              "feedback": "Familiar wording feels clear to the people who use it daily. Check whether someone meeting it for the first time can understand the purpose and the next step."
+            }
+          ]
+        },
+        {
+          "id": "01-d3",
+          "scenario": "In a team discussion about low responses, one colleague wants to learn how people actually experience the notice. Another says that will delay action for months.",
+          "question": "How do you respond?",
+          "options": [
+            {
+              "text": "Agree to wait until the team has complete information before changing anything.",
+              "correct": false,
+              "feedback": "The lesson does not ask for perfect information. It asks for a reasonable inquiry, an appropriate change and a check on what happened."
+            },
+            {
+              "text": "Suggest a reasonable inquiry now, then try an appropriate change and check what happened.",
+              "correct": true,
+              "feedback": "Right. Understanding the experience does not mean delaying every action. Inquiry, change and checking can move together."
+            },
+            {
+              "text": "Drop the inquiry and send a reminder, since any action is better than none.",
+              "correct": false,
+              "feedback": "A reminder may help some people, but repeating the same message can repeat the same barrier. Start by understanding the experience."
+            }
+          ]
+        },
+        {
+          "id": "01-d4",
+          "scenario": "You are reviewing a form used by people from many communities. A teammate proposes offering extra help only to people whose names look unfamiliar.",
+          "question": "What is your next step?",
+          "options": [
+            {
+              "text": "Agree, since it targets help where it is probably needed.",
+              "correct": false,
+              "feedback": "The lesson says not to assume needs from a name, appearance, disability, language or community. That guess can be wrong in both directions."
+            },
+            {
+              "text": "Suggest asking everyone respectfully about needs and preferences, offering choices within the process, and confirming the response works.",
+              "correct": true,
+              "feedback": "Yes. Ask, offer choices, confirm. That respects the person and avoids guessing from surface features."
+            },
+            {
+              "text": "Give everyone the identical format so the form treats everyone the same.",
+              "correct": false,
+              "feedback": "The same format does not mean everyone can use it. Equity asks what people need in order to participate meaningfully."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "01-o1",
+        "scenario": "You have chosen your work example and want to use the approach from part 1.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "Make a reasonable inquiry into how people experience it",
+          "Choose one ordinary work example you can examine safely",
+          "Try an appropriate change and check what happened",
+          "Write its purpose and what the person needs to be able to do"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "feedback": "Start with an example, describe the purpose and the person's task, then inquire, try a change and check what happened. The lesson warns against both guessing and waiting for perfect information."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Welcome to your learning",
+          "points": [
+            "You do not need to know every culture or run a whole program to begin; you need to notice, ask and follow through.",
+            "The National CLAS Standards are a framework for organizations; this curriculum connects them to your own work.",
+            "Learning is voluntary and private: keep names, health information and other private details out of your notes."
+          ]
+        },
+        {
+          "chapter": "Choose something you can work with",
+          "points": [
+            "Pick one ordinary part of your work, or use the sample service-planning notice.",
+            "Write the organization's purpose and, separately, what the person needs to be able to do.",
+            "An observation such as 'some people do not respond' raises questions; it does not explain why."
+          ]
+        },
+        {
+          "chapter": "The principal standard",
+          "points": [
+            "Standard 1 asks for services people can understand, that respect them and that respond to their communication needs.",
+            "The focus is the person's experience, not only whether information was sent.",
+            "Do not assume needs from a name, appearance, disability or language: ask, offer choices and confirm."
+          ]
+        },
+        {
+          "chapter": "How the standards connect",
+          "points": [
+            "Standard 1 is the purpose; 2 to 4 cover leadership and workforce; 5 to 8 communication; 9 to 15 engagement, improvement and accountability.",
+            "A dependable offer of assistance needs a process, trained staff, resources and monitoring behind it.",
+            "Good practice includes telling a change within your authority from one that needs coordination or approval."
+          ]
+        },
+        {
+          "chapter": "Try a first decision",
+          "points": [
+            "Sending the same notice more often can repeat the same barrier.",
+            "Begin by understanding how people experience the notice, without assuming why anyone did not respond.",
+            "Inquiry does not mean waiting for perfect information: inquire reasonably, try a change, check what happened."
+          ]
+        },
+        {
+          "chapter": "Your first working note",
+          "points": [
+            "Note your work example, who needs to use it, and what successful participation looks like from their side.",
+            "Keep the note general and free of personal information.",
+            "Next: the difference between an observation and an assumption."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Welcome to your learning",
+          "description": "Part 1 card titled 'Welcome to your learning', showing on the left a photo of two people talking across an office desk, one listening with hands folded beside a laptop and notebook while the other gestures as they speak, and on the right three numbered points: One person. One work example.; Pause and return whenever useful; Keep reflection private."
+        },
+        {
+          "chapter": "Choose something you can work with",
+          "description": "Part 1 card titled 'Choose something you can work with', showing on the left a photo of two people at a table reading a printed page together, one holding a pen while the other points to a line on the page, and on the right three numbered points: Purpose → experience → next step; Choose a notice, form or process; Describe what the person needs to do."
+        },
+        {
+          "chapter": "The principal standard",
+          "description": "Part 1 card titled 'The principal standard', showing on the left a photo of two people in conversation in a sunlit office, one seated in an armchair listening while the other, who uses a wheelchair, speaks and gestures, and on the right three numbered points: Understandable • respectful • responsive; Check the experience, not just delivery; Ask about needs and preferences."
+        },
+        {
+          "chapter": "How the standards connect",
+          "description": "Part 1 card titled 'How the standards connect' with no photo, three numbered points across the card (1: the purpose; 2–4: leadership and workforce; 5–8: communication; 9–15: improvement) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Try a first decision",
+          "description": "Part 1 card titled 'Try a first decision' with no photo, three numbered points across the card (Observe before concluding; Examine the message and response route; Practice below, then review feedback) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Your first working note",
+          "description": "Part 1 card titled 'Your first working note' with no photo, three numbered points across the card (Your working note; Example • person’s task • intended experience; Next: notice and ask) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Start with the person and the purpose",
+        "useWhen": "Use when you pick up any notice, form, instruction or process and want to check it from the person's side.",
+        "sections": [
+          {
+            "heading": "Before",
+            "items": [
+              "Choose one ordinary, non-sensitive work example, or use the sample notice.",
+              "Write one sentence: what is the organization trying to do?",
+              "Write a second sentence: what does the person need to understand and do?"
+            ]
+          },
+          {
+            "heading": "During",
+            "items": [
+              "Check the experience, not just delivery: an accurate letter can still be hard to use.",
+              "Do not assume needs from a name, appearance, disability, language or community.",
+              "Ask respectfully, offer choices within the available process, and confirm the response works."
+            ]
+          },
+          {
+            "heading": "After",
+            "items": [
+              "Note the example, the people who need to use it, and what successful participation looks like.",
+              "Make a reasonable inquiry, try an appropriate change, check what happened.",
+              "Decide whether the change is within your authority or needs coordination."
+            ]
+          }
+        ],
+        "remember": [
+          "Giving everyone the same format does not tell you whether everyone can use it.",
+          "A response pattern is a question to explore, not an explanation."
+        ],
+        "askWho": [
+          "Your supervisor, for what you can change within your role.",
+          "The responsible program area, for how a notice or process was tested."
+        ]
+      }
+    },
+    {
+      "id": "02",
+      "outcome": "After this part you can separate what you observed from what you assumed, and write a respectful question that leaves room for the person's explanation.",
+      "recall": [
+        {
+          "question": "Part 2 asked you to write three things about your work example. Which set is right?",
+          "options": [
+            {
+              "text": "One observation, one assumption to set aside, and one respectful question.",
+              "correct": true,
+              "feedback": "Yes. Then identify an appropriate way to get the answer within your role, without guessing."
+            },
+            {
+              "text": "The person's culture, their likely preference, and the rule that follows from it.",
+              "correct": false,
+              "feedback": "The lesson warned against turning general information about a community into a rule about an individual. Ask instead."
+            },
+            {
+              "text": "The deadline, the penalty and the reminder schedule.",
+              "correct": false,
+              "feedback": "Requirements still matter, but the task was to notice barriers and ask without assumptions, not to tighten enforcement."
+            }
+          ]
+        },
+        {
+          "question": "Someone has not returned a form. Which opening did part 2 recommend?",
+          "options": [
+            {
+              "text": "Ask why they failed to return the form.",
+              "correct": false,
+              "feedback": "That asks the person to defend their behavior. The lesson preferred an opening that gives information and leaves room for an explanation."
+            },
+            {
+              "text": "Explain the form's purpose, ask whether they received it, and offer help finding a usable way to respond.",
+              "correct": true,
+              "feedback": "Right. It provides information, checks delivery and offers support, while keeping any requirement clear."
+            },
+            {
+              "text": "Assume the form was too hard and send an easier version.",
+              "correct": false,
+              "feedback": "That is still an interpretation. Until you ask, you do not know whether delivery, timing, format or something else was the barrier."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "02-d1",
+          "scenario": "In a team meeting a colleague says, 'People who do not reply are just not interested.' The only fact is that no reply was received.",
+          "question": "What do you say next?",
+          "options": [
+            {
+              "text": "Agree, because a missing reply speaks for itself.",
+              "correct": false,
+              "feedback": "A missing reply is an observation. 'Not interested' assigns a motive without evidence. Keep the two apart."
+            },
+            {
+              "text": "Ask what is known about delivery, understanding, timing and the response methods available.",
+              "correct": true,
+              "feedback": "Yes. That describes what is known and turns the gap into questions you can look into through the right route."
+            },
+            {
+              "text": "Suggest that people from that community probably prefer another process.",
+              "correct": false,
+              "feedback": "That swaps one assumption for another. General community knowledge is not a rule about an individual; ask the person."
+            }
+          ]
+        },
+        {
+          "id": "02-d2",
+          "scenario": "You are about to contact a person who has not responded, and your role permits the contact.",
+          "question": "How do you open?",
+          "options": [
+            {
+              "text": "'Why have you failed to return the form? The deadline has passed.'",
+              "correct": false,
+              "feedback": "This asks the person to defend themselves before they have any information. It invites silence, not an explanation."
+            },
+            {
+              "text": "Explain the form's purpose, ask whether they received it, and offer help finding a response method they can use.",
+              "correct": true,
+              "feedback": "Right. You give information first and create room for their perspective, while the requirement stays clear."
+            },
+            {
+              "text": "Tell them the deadline has been extended so there is no pressure.",
+              "correct": false,
+              "feedback": "Do not promise an extension or exception you cannot authorize. Explain what you can do next and who will review it."
+            },
+            {
+              "text": "Ask them to describe their personal circumstances so you can understand.",
+              "correct": false,
+              "feedback": "Ask only for what the task needs. The lesson says not to require private information that is not needed."
+            }
+          ]
+        },
+        {
+          "id": "02-d3",
+          "scenario": "You work on policy and data and have no direct contact with people who receive services. A new process is about to launch.",
+          "question": "How does inquiry apply to you?",
+          "options": [
+            {
+              "text": "It does not; inquiry is for front-line staff.",
+              "correct": false,
+              "feedback": "The lesson says inquiry matters in policy, data, contracts and communications too. Ask how the process was tested and whose experience informed it."
+            },
+            {
+              "text": "Ask how the process was tested, whose experience informed it, which access needs were considered and where feedback is recorded.",
+              "correct": true,
+              "feedback": "Yes. Those questions fit your role and point you to the appropriate people rather than guessing."
+            },
+            {
+              "text": "Reach out directly to a few people who receive services to hear what they think.",
+              "correct": false,
+              "feedback": "Consult the appropriate people rather than contacting someone outside your responsibilities. Use the approved engagement routes."
+            }
+          ]
+        },
+        {
+          "id": "02-d4",
+          "scenario": "A family arrives for a meeting. A teammate quietly suggests speaking mainly to the older relative, since 'that is how that community does things'.",
+          "question": "What do you do?",
+          "options": [
+            {
+              "text": "Follow the suggestion to be culturally respectful.",
+              "correct": false,
+              "feedback": "Culture can shape expectations, but it does not determine any one person's preferences. Deciding for them is still an assumption."
+            },
+            {
+              "text": "Ask the person whom they would like involved and how they want to participate.",
+              "correct": true,
+              "feedback": "Right. Curiosity about the individual replaces a community generalization, and the person keeps their say."
+            },
+            {
+              "text": "Speak only to the person and keep the relative out of it entirely.",
+              "correct": false,
+              "feedback": "The lesson does not say to exclude anyone. It says to ask whom the person wants involved rather than deciding for them."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "02-o1",
+        "scenario": "You have noticed something that is not working in your work example.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "Write a respectful question that invites the person's perspective",
+          "Describe what you observed, without assigning a motive",
+          "Identify an appropriate way to get the answer within your role",
+          "Name the assumption you need to set aside"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "feedback": "Observation first, then the assumption you are setting aside, then a respectful question, then the appropriate route to the answer. If you have no direct access, name the gap and find who can help."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Begin with what you know",
+          "points": [
+            "Start with an observation you could state without assigning a motive.",
+            "'They do not care' and 'they cannot understand it' are both interpretations until you know more.",
+            "A respectful inquiry begins by acknowledging what you do not know."
+          ]
+        },
+        {
+          "chapter": "Look at the whole encounter",
+          "points": [
+            "Responding takes steps: receive the notice, recognize its purpose, understand the options, decide, respond.",
+            "A difficulty at any one step can look like a lack of interest from the other end.",
+            "Look for strengths too: a working communication method, a trusted support, a community organization with relationships."
+          ]
+        },
+        {
+          "chapter": "Culture is a starting point for curiosity",
+          "points": [
+            "Culture can shape communication and expectations; it does not determine any one person's preferences.",
+            "Ask whom the person wants involved; offer time and a way to ask questions instead of reading silence as agreement.",
+            "Familiar procedures feel simple to the people who use them daily and may be new to everyone else."
+          ]
+        },
+        {
+          "chapter": "Practice a useful question",
+          "points": [
+            "'Why have you failed to return the form?' asks the person to defend themselves.",
+            "Explain the purpose, ask whether they received it, and offer help finding a usable way to respond.",
+            "Keep requirements clear, and do not promise an extension or exception you cannot authorize."
+          ]
+        },
+        {
+          "chapter": "Apply inquiry to your own role",
+          "points": [
+            "In policy, data, contracts or communications, ask how the process was tested and whose experience informed it.",
+            "Consult the appropriate people rather than guessing or contacting someone outside your responsibilities.",
+            "Supervisors can make it safe to ask; managers can look for repeated barriers; directors can check resources and accountability."
+          ]
+        },
+        {
+          "chapter": "Add to your working example",
+          "points": [
+            "Write one observation, one assumption to set aside and one respectful question.",
+            "If you cannot reach the people affected, name the gap and identify who can help.",
+            "Next: following a language-assistance request through an encounter."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Begin with what you know",
+          "description": "Part 2 card titled 'Begin with what you know', showing on the left a photo of two people talking across an office table, one writing in a notebook while the other speaks, and on the right three numbered points: Observation is not explanation; What happened?; What do you still need to learn?."
+        },
+        {
+          "chapter": "Look at the whole encounter",
+          "description": "Part 2 card titled 'Look at the whole encounter' with no photo, three numbered points across the card (Receive → understand → choose → respond; Look for barriers and existing strengths; Investigate; do not assign a cause) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Culture is a starting point for curiosity",
+          "description": "Part 2 card titled 'Culture is a starting point for curiosity', showing on the left a photo of two people in conversation in a sunlit office, one seated in an armchair listening while the other, who uses a wheelchair, speaks and gestures, and on the right three numbered points: Curiosity about the individual; Ask about preferences; Do not turn community knowledge into a rule."
+        },
+        {
+          "chapter": "Practice a useful question",
+          "description": "Part 2 card titled 'Practice a useful question', showing on the left a photo of two people talking across an office desk, one listening with hands folded beside a laptop and notebook while the other gestures as they speak, and on the right three numbered points: Explain the purpose; Ask what would help; Keep requirements and authority clear."
+        },
+        {
+          "chapter": "Apply inquiry to your own role",
+          "description": "Part 2 card titled 'Apply inquiry to your own role' with no photo, three numbered points across the card (Inquiry belongs in every role; Direct service • policy • data • communications; Use the appropriate route) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Add to your working example",
+          "description": "Part 2 card titled 'Add to your working example' with no photo, three numbered points across the card (Your working note; Observation • assumption • respectful question; Next: usable language assistance) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Notice barriers and ask without assumptions",
+        "useWhen": "Use when a response is missing, an appointment is missed, or you are tempted to explain someone's behavior.",
+        "sections": [
+          {
+            "heading": "Before",
+            "items": [
+              "Write down what you actually observed. Leave out motives.",
+              "Name the assumption you are tempted to make, and set it aside.",
+              "List the steps the person had to complete: receive, recognize the purpose, understand the options, decide, respond."
+            ]
+          },
+          {
+            "heading": "During",
+            "items": [
+              "Explain the purpose first. Ask whether the information was received.",
+              "Offer help finding a response method they can use.",
+              "Ask whom the person wants involved and how they want to participate.",
+              "Keep requirements clear; do not promise exceptions you cannot authorize."
+            ]
+          },
+          {
+            "heading": "After",
+            "items": [
+              "Record only what the task needs; no unnecessary private information.",
+              "If you have no direct access to the people affected, name the gap and find who can help.",
+              "Raise repeated barriers through the appropriate route."
+            ]
+          }
+        ],
+        "remember": [
+          "An observation describes; an assumption explains. Keep them apart.",
+          "Community knowledge is a starting point for curiosity, not a rule about an individual."
+        ],
+        "askWho": [
+          "Your supervisor, when you are uncertain and want to talk it through.",
+          "The responsible program area, for how a process was tested and where feedback is recorded.",
+          "Approved engagement or accessibility review processes, for perspectives you cannot reach directly."
+        ]
+      }
+    },
+    {
+      "id": "03",
+      "outcome": "After this part you can trace a language-assistance request from the offer through the request, the arrangement, the conversation and the follow-up, and spot where it could fail.",
+      "recall": [
+        {
+          "question": "An assistance request was sent, but nobody has confirmed the arrangement. What did part 3 say should happen?",
+          "options": [
+            {
+              "text": "Assume it is handled; the usual address always responds.",
+              "correct": false,
+              "feedback": "A sent request is not a confirmed arrangement. Someone needs to own the follow-through and a backup if it fails."
+            },
+            {
+              "text": "Check it through the approved process, tell the person what will happen, and escalate if needed.",
+              "correct": true,
+              "feedback": "Right. Confirm, communicate, escalate: that keeps the person informed without promising something outside your authority."
+            },
+            {
+              "text": "Plan to ask a family member to interpret if nobody arrives.",
+              "correct": false,
+              "feedback": "A chosen support person and a qualified interpreter have different roles. Follow the applicable requirements rather than improvising."
+            }
+          ]
+        },
+        {
+          "question": "What did part 3 say about checking whether the person understood the next step?",
+          "options": [
+            {
+              "text": "Repeat the same wording more loudly until they confirm.",
+              "correct": false,
+              "feedback": "If the explanation was unclear, try a different way. Repeating the same words louder does not add clarity."
+            },
+            {
+              "text": "Say you want to check your own explanation was clear, then invite them to say what they understand will happen.",
+              "correct": true,
+              "feedback": "Yes. Framing it as checking your explanation avoids making the person feel tested or blamed."
+            },
+            {
+              "text": "Skip it, since asking could feel like a test.",
+              "correct": false,
+              "feedback": "Checking understanding matters. The lesson's point is to do it in a way that does not feel like testing or blaming."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "03-d1",
+          "scenario": "You are reviewing the sample notice before it goes out. It lists a date and a phone number but says nothing about communication assistance.",
+          "question": "What do you check first?",
+          "options": [
+            {
+              "text": "Whether the phone number is correct.",
+              "correct": false,
+              "feedback": "Accuracy matters, but the lesson's review asks whether assistance is visible, whether the request method is usable, and who responds."
+            },
+            {
+              "text": "Whether the notice makes assistance visible, whether the request method is usable, and whether someone is responsible for responding.",
+              "correct": true,
+              "feedback": "Right. Standards 5, 6 and 7 work together: an available service does little good if nobody knows about it or can request it."
+            },
+            {
+              "text": "Whether the notice is short enough to fit on one page.",
+              "correct": false,
+              "feedback": "Length is not the issue here. A short notice that hides the assistance offer still leaves the barrier in place."
+            }
+          ]
+        },
+        {
+          "id": "03-d2",
+          "scenario": "A person arrives for a planning conversation with a relative who says they have been helping with communication. No interpreter has been arranged.",
+          "question": "What is your next step?",
+          "options": [
+            {
+              "text": "Let the relative interpret, since the person seems comfortable with them.",
+              "correct": false,
+              "feedback": "The CLAS framework discourages using untrained individuals as interpreters. A chosen support and an interpreter are different roles."
+            },
+            {
+              "text": "Explain the available assistance, ask about the person's preferences, and follow the approved process for appropriate assistance.",
+              "correct": true,
+              "feedback": "Yes. Treat both people respectfully, keep the person involved in decisions, and use the applicable arrangements and contingency process."
+            },
+            {
+              "text": "Ask the relative to step out so the conversation can be done properly.",
+              "correct": false,
+              "feedback": "The lesson does not say to exclude a chosen support person. Clarify roles; do not remove the support the person wants."
+            },
+            {
+              "text": "Use a translation app on your phone to get through today's conversation.",
+              "correct": false,
+              "feedback": "Do not improvise with an unapproved automated tool for a consequential conversation. Follow the approved contingency and escalation route."
+            }
+          ]
+        },
+        {
+          "id": "03-d3",
+          "scenario": "An interpreter is present. The conversation is moving quickly and the person has gone quiet.",
+          "question": "What do you do?",
+          "options": [
+            {
+              "text": "Ask the interpreter to find out whether the person is following.",
+              "correct": false,
+              "feedback": "Address the person directly, not the interpreter. Avoid speaking about the person as though they are not present."
+            },
+            {
+              "text": "Slow down, give information in manageable portions, allow time for interpretation, and check whether the method is working.",
+              "correct": true,
+              "feedback": "Right. Clear language, smaller portions, time for questions and a check on the communication method itself."
+            },
+            {
+              "text": "Finish quickly to respect everyone's time, then send a written summary.",
+              "correct": false,
+              "feedback": "A written summary does not fix a conversation that did not work. Check now whether communication is working, and respond if it is not."
+            }
+          ]
+        },
+        {
+          "id": "03-d4",
+          "scenario": "For the third time this month, an assistance arrangement for your team fell through at the last minute.",
+          "question": "Beyond handling today's situation, what do you do?",
+          "options": [
+            {
+              "text": "Keep a private workaround ready so it does not catch you out again.",
+              "correct": false,
+              "feedback": "Staff should not have to solve the same preventable problem repeatedly. A private workaround hides the pattern from the people who could fix it."
+            },
+            {
+              "text": "Raise the pattern through the appropriate channel, without personal details.",
+              "correct": true,
+              "feedback": "Yes. Recurring difficulty is organizational information. Raising it connects to leadership, resources and improvement."
+            },
+            {
+              "text": "Stop offering assistance until the process becomes reliable.",
+              "correct": false,
+              "feedback": "Withholding the offer removes the person's access. Keep following the approved process and raise the pattern."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "03-o1",
+        "scenario": "You are tracing an assistance request through the whole encounter.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "During the conversation, address the person directly and check understanding",
+          "Afterwards, confirm the next step in a form the person can use",
+          "Make the assistance offer visible and the request method usable",
+          "Arrange assistance early and confirm it, with a plan if it fails"
+        ],
+        "correctOrder": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "feedback": "Before: make the offer visible, then arrange and confirm. During: speak to the person and check understanding. After: confirm the next step in a usable form, and raise any repeated difficulty."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Follow the request through",
+          "points": [
+            "Standard 5: timely assistance at no cost; Standard 6: tell people about it orally and in writing; Standard 7: competent assistance.",
+            "Assistance is useful only when someone can find it, request it and receive it in time to participate.",
+            "This lesson sets no new vendor, reimbursement or approval rule; use current agency procedures."
+          ]
+        },
+        {
+          "chapter": "Before the encounter",
+          "points": [
+            "Check that the notice makes assistance visible, that the request method is usable, and that someone responds.",
+            "Ask about preferred language and communication needs through an approved process; do not assume from a name, accent or brief conversation.",
+            "A request is not complete when sent: confirm the arrangement and know what to do if it fails."
+          ]
+        },
+        {
+          "chapter": "Support people and interpreter roles",
+          "points": [
+            "Treat the person and their chosen support respectfully; do not assume a family member is qualified to interpret.",
+            "The framework discourages using untrained individuals and minors as interpreters; follow applicable laws and procedures.",
+            "An interpreter conveys communication accurately; a support person provides the support the person wants. Clarify the roles."
+          ]
+        },
+        {
+          "chapter": "During the encounter",
+          "points": [
+            "Address the person directly, use clear language in manageable portions, and allow time for interpretation and questions.",
+            "Check understanding by checking your own explanation, then try a different way if it was unclear.",
+            "If assistance is unavailable or unsuitable, use the approved contingency and escalation process; do not improvise."
+          ]
+        },
+        {
+          "chapter": "After the encounter",
+          "points": [
+            "Confirm the next step in a form the person can use.",
+            "Record operational information only in approved systems; a learning worksheet is not a record.",
+            "Raise delays or repeated difficulty through the appropriate channel."
+          ]
+        },
+        {
+          "chapter": "Practice and carry it forward",
+          "points": [
+            "A sent request that nobody confirmed leaves the barrier unresolved.",
+            "For your example, map where assistance is offered, how it is requested, who responds and how completion is confirmed.",
+            "Next: whether people can find, access, understand, use and act on the information itself."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Follow the request through",
+          "description": "Part 3 card titled 'Follow the request through', showing on the left a photo of a service counter where a staff member talks with a visitor while a colleague sets up a tablet showing a remote interpreter on video, and on the right three numbered points: 5: timely assistance without cost; 6: make assistance known; 7: competent assistance."
+        },
+        {
+          "chapter": "Before the encounter",
+          "description": "Part 3 card titled 'Before the encounter', showing on the left a photo of a service counter where a staff member talks with a visitor while a colleague sets up a tablet showing a remote interpreter on video, and on the right three numbered points: Offer → request → arrange → confirm; Ask about language and communication needs; Use the current approved process."
+        },
+        {
+          "chapter": "Support people and interpreter roles",
+          "description": "Part 3 card titled 'Support people and interpreter roles' with no photo, three numbered points across the card (Chosen support and interpreting are different roles; Respect the person’s preferences; Follow applicable assistance requirements) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "During the encounter",
+          "description": "Part 3 card titled 'During the encounter', showing on the left a photo of a service counter where a staff member talks with a visitor while a colleague sets up a tablet showing a remote interpreter on video, and on the right three numbered points: Speak to the person; Allow interpretation and questions; Check the clarity of your explanation."
+        },
+        {
+          "chapter": "After the encounter",
+          "description": "Part 3 card titled 'After the encounter' with no photo, three numbered points across the card (Confirm a usable next step; Record only through approved systems; Raise recurring barriers) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Practice and carry it forward",
+          "description": "Part 3 card titled 'Practice and carry it forward' with no photo, three numbered points across the card (Your working note; Offer • request • owner • confirmation; Next: accessible information) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Make language assistance usable",
+        "useWhen": "Use before, during and after any conversation where language or communication assistance may be needed.",
+        "sections": [
+          {
+            "heading": "Before",
+            "items": [
+              "Does the notice or invitation make assistance visible and say how to request it?",
+              "Ask about preferred language and communication needs through the approved process. Do not assume from a name, accent or short chat.",
+              "Arrange assistance early; confirm the language, setting, timing and what the assignment needs.",
+              "A sent request is not a confirmed one. Know who confirms and what happens if it fails."
+            ]
+          },
+          {
+            "heading": "During",
+            "items": [
+              "Speak to the person, not about them.",
+              "Use clear language in small portions; allow time for interpretation and questions.",
+              "Check your own explanation: 'I want to make sure I explained the next step clearly. What do you understand will happen?'",
+              "If assistance is missing or unsuitable, use the approved contingency route. No children, bystanders or unapproved tools."
+            ]
+          },
+          {
+            "heading": "After",
+            "items": [
+              "Confirm the next step in a form the person can use.",
+              "Record only in approved systems, with privacy protections.",
+              "Raise delays or repeated problems through the appropriate channel."
+            ]
+          }
+        ],
+        "remember": [
+          "A chosen support person and a qualified interpreter have different roles.",
+          "Everyday conversation and a complex service decision are different tasks."
+        ],
+        "askWho": [
+          "The responsible program area, for the current assistance procedure and contingency route.",
+          "Your supervisor, when an arrangement is still unconfirmed close to the conversation."
+        ]
+      }
+    },
+    {
+      "id": "04",
+      "outcome": "After this part you can review a notice or instruction with five questions (find, access, understand, use, act) and propose one change, one specialist review and one usability check.",
+      "recall": [
+        {
+          "question": "Part 4 gave five review questions for a piece of information. Which list is right?",
+          "options": [
+            {
+              "text": "Can the person find it, access it, understand it, use it and act on it?",
+              "correct": true,
+              "feedback": "Yes. They are a practical review aid, not a replacement for technical accessibility testing or translation review."
+            },
+            {
+              "text": "Print it, post it, mail it, email it, text it.",
+              "correct": false,
+              "feedback": "Channels matter, but the five questions are about the person's experience of the information, not how it is distributed."
+            },
+            {
+              "text": "Shorten it, simplify it, translate it, approve it, send it.",
+              "correct": false,
+              "feedback": "Some of those may be steps you take, but the lesson's five questions are about what the person can do with the information."
+            }
+          ]
+        },
+        {
+          "question": "A colleague wants to publish the notice as an image so the layout stays consistent. What did part 4 say?",
+          "options": [
+            {
+              "text": "Fine, as long as the wording is unchanged.",
+              "correct": false,
+              "feedback": "An image of text can be unreadable to assistive technology, and it does nothing about unclear wording."
+            },
+            {
+              "text": "Use an accessible format and the appropriate checks; an image of text may exclude people.",
+              "correct": true,
+              "feedback": "Right. Check the document people will actually receive, including any exported version."
+            },
+            {
+              "text": "Only a problem if someone complains.",
+              "correct": false,
+              "feedback": "Standard 8 asks for understandable materials up front. Use the established review process rather than waiting for a complaint."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "04-d1",
+          "scenario": "You are revising the sample notice. The opening sentence is full of acronyms and internal references.",
+          "question": "What do you change first?",
+          "options": [
+            {
+              "text": "Delete the technical terms and the required details so the notice is shorter.",
+              "correct": false,
+              "feedback": "Shorter is not necessarily clearer or complete. Keep essential rights, choices and requirements; explain terms when they first appear."
+            },
+            {
+              "text": "Start with the purpose and the next step, explain necessary terms, and keep the required meaning intact.",
+              "correct": true,
+              "feedback": "Yes. Purpose first, then the action, the date and how to ask questions or request assistance, with required content preserved."
+            },
+            {
+              "text": "Keep the wording and add a glossary page at the end.",
+              "correct": false,
+              "feedback": "A glossary leaves the reader to decode the opening before they know why they are reading. Explain terms where they appear and lead with purpose."
+            }
+          ]
+        },
+        {
+          "id": "04-d2",
+          "scenario": "The notice needs to reach people who read languages other than English. A teammate suggests pasting it into a free online translator.",
+          "question": "What do you say?",
+          "options": [
+            {
+              "text": "Good idea; it is fast and free.",
+              "correct": false,
+              "feedback": "Do not send confidential information into an unapproved translation service. Use the qualified review and the approved process."
+            },
+            {
+              "text": "Simplify the English source first, then use the approved qualified translation process.",
+              "correct": true,
+              "feedback": "Right. A translated document can still be hard to understand if the source is complicated, and the translation route must be approved."
+            },
+            {
+              "text": "Skip translation; a plain-English version is enough for everyone.",
+              "correct": false,
+              "feedback": "An easy-to-read English version does not meet every language need. Plain language and translation solve related but different problems."
+            }
+          ]
+        },
+        {
+          "id": "04-d3",
+          "scenario": "You have improved a draft of an official, regulated form. Your version is clearer.",
+          "question": "What is your next step?",
+          "options": [
+            {
+              "text": "Replace the current form with your version so people benefit right away.",
+              "correct": false,
+              "feedback": "A regulated notice or official form may require review before use. Check whether the change is within your authority."
+            },
+            {
+              "text": "Preserve the required content and route the revision to the person responsible for review.",
+              "correct": true,
+              "feedback": "Yes. You improved the draft; approval belongs to the responsible role. That keeps the required meaning safe."
+            },
+            {
+              "text": "Drop the idea, since you cannot approve it yourself.",
+              "correct": false,
+              "feedback": "Not being the approver does not make the improvement worthless. Send a proposal with the required content preserved."
+            }
+          ]
+        },
+        {
+          "id": "04-d4",
+          "scenario": "A new instruction says: 'Contact the department before the deadline.' It does not say how, or what must be done by that date.",
+          "question": "What do you check?",
+          "options": [
+            {
+              "text": "Whether the deadline is correct.",
+              "correct": false,
+              "feedback": "Correctness matters, but the person still cannot act. The lesson asks whether they can use the information to complete a step."
+            },
+            {
+              "text": "Whether the person can act: a named contact route, the action that is due, and how to ask for help or assistance.",
+              "correct": true,
+              "feedback": "Right. Make the next step concrete with the approved contact details, and keep a way to request assistance."
+            },
+            {
+              "text": "Whether it fits the house style.",
+              "correct": false,
+              "feedback": "Style is secondary. The question is whether a person can act: how to contact, what to do, and by when."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "04-o1",
+        "scenario": "You are reviewing a notice with the questions from part 4.",
+        "prompt": "Put these in the order you would check them.",
+        "steps": [
+          "Can the person understand it?",
+          "Can the person use it and act on it?",
+          "Can the person find it?",
+          "Can the person access it in a format they can use?"
+        ],
+        "correctOrder": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "feedback": "Find, access, understand, then use and act. Each question only matters if the one before it is answered: nobody can act on information they cannot find or open."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Examine the information itself",
+          "points": [
+            "Standard 8 covers understandable print and digital materials and signage in the languages people use.",
+            "Five questions: can the person find it, access it, understand it, use it and act on it?",
+            "The questions are a review aid, not a substitute for accessibility testing or translation review."
+          ]
+        },
+        {
+          "chapter": "Find and access",
+          "points": [
+            "An assistance statement that lives on a website but not on the notice is hard to find when it is needed.",
+            "Images of text, uncaptioned video, mouse-only forms and digital-only instructions can all exclude people.",
+            "Use the established review process and check the document people will actually receive, including exports."
+          ]
+        },
+        {
+          "chapter": "Understand the message",
+          "points": [
+            "Lead with purpose and action; explain necessary terms when they first appear.",
+            "Plain language is not permission to remove rights, choices or requirements.",
+            "Simplify the source before translating, use the approved qualified process, and never paste confidential text into an unapproved tool."
+          ]
+        },
+        {
+          "chapter": "Use and act",
+          "points": [
+            "Make the next step concrete: how to confirm, how to request assistance, where to ask questions.",
+            "Use approved contact details; this lesson invents no new contact or process.",
+            "A regulated notice or official form may need review before use; route your revision to the responsible role."
+          ]
+        },
+        {
+          "chapter": "Try a communication review",
+          "points": [
+            "Compare revisions for clarity, accessibility, required meaning and a way to request assistance.",
+            "Identify one change you can propose, one item for specialist review and one way to check usability.",
+            "Feedback from people who use the information should be accessible, voluntary and clear about how it will be used."
+          ]
+        },
+        {
+          "chapter": "Carry the change forward",
+          "points": [
+            "Note the barrier, the proposed change, the necessary review and the expected benefit.",
+            "One automated check or one positive comment does not make a document fully accessible.",
+            "Next: the roles, resources and decisions that make the improvement sustainable."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Examine the information itself",
+          "description": "Part 4 card titled 'Examine the information itself', showing on the left a photo of two people at a table reading a printed page together, one holding a pen while the other points to a line on the page, and on the right three numbered points: Find • access • understand • use • act; A practical review, not a compliance certification; Use a non-sensitive example."
+        },
+        {
+          "chapter": "Find and access",
+          "description": "Part 4 card titled 'Find and access' with no photo, three numbered points across the card (Check the actual format; Keyboard • assistive technology • captions; Use appropriate accessibility review) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Understand the message",
+          "description": "Part 4 card titled 'Understand the message', showing on the left a photo of two people at a table reading a printed page together, one holding a pen while the other points to a line on the page, and on the right three numbered points: Purpose first; Explain the action and necessary terms; Preserve rights, choices and requirements."
+        },
+        {
+          "chapter": "Use and act",
+          "description": "Part 4 card titled 'Use and act' with no photo, three numbered points across the card (Make the next step concrete; Use approved contact routes; Check review and approval requirements) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Try a communication review",
+          "description": "Part 4 card titled 'Try a communication review', showing on the left a photo of two people at a table reading a printed page together, one holding a pen while the other points to a line on the page, and on the right three numbered points: Compare the revisions; Clarity and completeness belong together; Practice below, then review feedback."
+        },
+        {
+          "chapter": "Carry the change forward",
+          "description": "Part 4 card titled 'Carry the change forward' with no photo, three numbered points across the card (Your working note; Barrier • revision • review • usability check; Next: roles and responsibility) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Make information accessible and actionable",
+        "useWhen": "Use when you draft, review or approve a notice, form, instruction, web page or sign.",
+        "sections": [
+          {
+            "heading": "Find",
+            "items": [
+              "Is the assistance offer on the notice itself, not only somewhere on a website?",
+              "Do links and headings say what they are for?"
+            ]
+          },
+          {
+            "heading": "Access",
+            "items": [
+              "Is it real text, not an image of text?",
+              "Captions and a transcript for video; keyboard access for forms; a non-digital route where needed.",
+              "Check the exported version people will actually receive."
+            ]
+          },
+          {
+            "heading": "Understand",
+            "items": [
+              "Purpose and next step first. Explain terms when they first appear.",
+              "Keep rights, choices and requirements intact.",
+              "Simplify the English source before translation; use the approved qualified translation process."
+            ]
+          },
+          {
+            "heading": "Use and act",
+            "items": [
+              "Name a usable contact route and the action due by the date.",
+              "Include how to request communication assistance, using approved wording and contact details.",
+              "Check whether the change is within your authority; route regulated content to the responsible reviewer."
+            ]
+          }
+        ],
+        "remember": [
+          "Shorter is not automatically clearer or complete.",
+          "One automated check does not make a document accessible."
+        ],
+        "askWho": [
+          "The appropriate accessibility support, for technical review.",
+          "The approved translation route, for other languages.",
+          "The person responsible for the official notice, for review and approval."
+        ]
+      }
+    },
+    {
+      "id": "05",
+      "outcome": "After this part you can sort an improvement into what you can change yourself, what needs coordination or review, and what needs someone else's decision, and name the responsible role for each.",
+      "recall": [
+        {
+          "question": "You find a barrier in an official notice but cannot change the requirement. What did part 5 recommend?",
+          "options": [
+            {
+              "text": "Change it anyway, because the goal is important.",
+              "correct": false,
+              "feedback": "An important goal does not expand your authority. Preserve the requirement and send a supported proposal."
+            },
+            {
+              "text": "Describe the barrier, propose a revision that keeps the required meaning, and identify the responsible role.",
+              "correct": true,
+              "feedback": "Yes. That moves the work forward without exceeding authority or abandoning the concern."
+            },
+            {
+              "text": "Leave it, because you cannot approve the change.",
+              "correct": false,
+              "feedback": "You can still document the barrier and recommend a next step. A well-described problem is a real contribution."
+            }
+          ]
+        },
+        {
+          "question": "Part 5 asked you to sort proposed actions into three categories. Which are they?",
+          "options": [
+            {
+              "text": "What you can change, what needs coordination or review, and what needs a decision by someone with different authority.",
+              "correct": true,
+              "feedback": "Right. For each one, name the responsible role, the resource needed and a reasonable next step."
+            },
+            {
+              "text": "Urgent, important and optional.",
+              "correct": false,
+              "feedback": "Priority is useful, but the lesson's categories are about authority: yours, shared, or someone else's."
+            },
+            {
+              "text": "Front line, supervisor and director.",
+              "correct": false,
+              "feedback": "Those are perspectives the lesson explored, not the three categories for sorting an action."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "05-d1",
+          "scenario": "You prepare information for a program. The same unclear instruction has caused confusion in several encounters this month.",
+          "question": "What do you do with that?",
+          "options": [
+            {
+              "text": "Handle each confused person as they come; it is part of the job.",
+              "correct": false,
+              "feedback": "Avoid carrying an unresolved access problem privately from one encounter to the next. A pattern is something others can act on."
+            },
+            {
+              "text": "Describe the pattern with clear evidence, protecting personal information, and raise it through the appropriate route.",
+              "correct": true,
+              "feedback": "Yes. Observation, a clear description and a supported suggestion give the responsible role something concrete to act on."
+            },
+            {
+              "text": "Rewrite the instruction and start using your version.",
+              "correct": false,
+              "feedback": "You may be able to propose a revision, but an approved instruction may need review. Preserve the required meaning and route it."
+            }
+          ]
+        },
+        {
+          "id": "05-d2",
+          "scenario": "You supervise a team. A staff member says a person 'just does not engage' and asks what to do.",
+          "question": "How do you coach?",
+          "options": [
+            {
+              "text": "Suggest moving on if the person does not engage soon.",
+              "correct": false,
+              "feedback": "That accepts a label instead of looking for the access barrier. Help staff tell an assumption about motivation from a barrier."
+            },
+            {
+              "text": "Ask what they observed, what they asked, what remains uncertain and what support they need.",
+              "correct": true,
+              "feedback": "Right. Coaching through questions makes room for uncertainty and turns a label back into something to investigate."
+            },
+            {
+              "text": "Give them the answer so they do not have to work it out.",
+              "correct": false,
+              "feedback": "Standard 4 is about learning connected to real decisions. Questions help staff practice, not just receive a definition."
+            }
+          ]
+        },
+        {
+          "id": "05-d3",
+          "scenario": "You manage a process. An instruction tells staff to offer language assistance, but the one person who arranges it is often unavailable.",
+          "question": "What do you look at?",
+          "options": [
+            {
+              "text": "Remind staff to keep offering assistance regardless.",
+              "correct": false,
+              "feedback": "An instruction to offer assistance is incomplete if staff have no workable way to arrange it. Fix the process, not just the reminder."
+            },
+            {
+              "text": "Clarify who owns the arrangement, how requests are tracked, what happens when the usual contact is away, and whether capacity is enough.",
+              "correct": true,
+              "feedback": "Yes. Ownership, tracking, continuity and capacity make the process dependable, not just stated."
+            },
+            {
+              "text": "Compare participation across groups and assign the cause.",
+              "correct": false,
+              "feedback": "A difference in participation is a reason to investigate, not proof of one cause. Part 7 covers reading evidence carefully."
+            }
+          ]
+        },
+        {
+          "id": "05-d4",
+          "scenario": "You advise leadership. A proposal suggests relying on a bilingual employee to interpret informally because of their background.",
+          "question": "What goes in your advice?",
+          "options": [
+            {
+              "text": "Support it; it saves money and the employee speaks the language.",
+              "correct": false,
+              "feedback": "Identity is not qualification. The lesson warns against assuming one employee represents a community or should interpret informally."
+            },
+            {
+              "text": "Frame the access problem, the evidence and uncertainty, the options, and what each option requires, including proper roles and support.",
+              "correct": true,
+              "feedback": "Right. Clear framing lets leadership decide with capability, preparation and appropriate role assignments in view."
+            },
+            {
+              "text": "Recommend that leadership simply issue a policy that assistance must be offered.",
+              "correct": false,
+              "feedback": "A policy statement without resources, trained staff and a workable process does not make assistance dependable. Say what each option requires."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "05-o1",
+        "scenario": "You have spotted unclear wording in an official notice you cannot approve.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "Identify the responsible role",
+          "Describe the barrier you observed",
+          "Send the proposal for review and ask about the next step",
+          "Draft a revision that preserves the required meaning"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "feedback": "Describe the barrier, draft a revision that keeps the required meaning, identify the responsible role, then send it for review. Clarify ownership and resources rather than assuming approval."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Individual action needs support",
+          "points": [
+            "Some improvements are in your control; others depend on authority, resources or coordination.",
+            "Standards 2 to 4 cover governance, leadership and workforce; Standard 9 ties goals, policies and accountability to operations.",
+            "The examples describe possible contributions, not new duties; use your actual role and current procedures."
+          ]
+        },
+        {
+          "chapter": "If your contribution is an everyday task",
+          "points": [
+            "Begin with careful observation, a respectful question, a well-supported suggestion and follow-through on what you own.",
+            "Describe the barrier, preserve the required meaning, and send the proposed improvement to the person responsible.",
+            "Do not carry an unresolved access problem privately from one encounter to the next; raise the pattern."
+          ]
+        },
+        {
+          "chapter": "If you supervise people",
+          "points": [
+            "Coach with questions: what did you observe, what did you ask, what is uncertain, what support do you need?",
+            "Help staff tell an access barrier from an assumption about motivation.",
+            "Useful learning connects to real decisions, such as reviewing a notice or an assistance request."
+          ]
+        },
+        {
+          "chapter": "If you manage a process or resources",
+          "points": [
+            "Clarify who maintains the text, who arranges assistance, how requests are tracked and how problems are reviewed.",
+            "Ask whether the process still works when the usual contact is unavailable; consider workload and capacity.",
+            "A difference in participation is a reason to investigate, not proof of one cause."
+          ]
+        },
+        {
+          "chapter": "If you set direction or advise leadership",
+          "points": [
+            "Make expectations visible in policy, planning, resources and accountability.",
+            "Do not assume one employee represents a community or should interpret informally because of their identity.",
+            "Frame a decision: the access problem, the evidence and uncertainty, the options, and what each requires."
+          ]
+        },
+        {
+          "chapter": "Map the next step",
+          "points": [
+            "Sort actions: within your responsibilities, needing coordination or review, or needing someone else's decision.",
+            "Name the responsible role, the resource or information needed and a reasonable next step.",
+            "Neither changing a requirement on your own nor leaving the problem unraised is a complete response."
+          ]
+        },
+        {
+          "chapter": "Connect responsibility with participation",
+          "points": [
+            "A role map makes the improvement realistic and shows who has not yet been heard.",
+            "Next: how the people affected can inform a change before the decision is made."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Individual action needs support",
+          "description": "Part 5 card titled 'Individual action needs support', showing on the left a photo of three colleagues at a table reviewing a printed diagram beside a laptop and a notebook, one pointing at the page, and on the right three numbered points: Individual action needs organizational support; 2–4: leadership and workforce; 9: goals and accountability."
+        },
+        {
+          "chapter": "If your contribution is an everyday task",
+          "description": "Part 5 card titled 'If your contribution is an everyday task' with no photo, three numbered points across the card (Notice and describe; Propose a supported improvement; Stay within your authority) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "If you supervise people",
+          "description": "Part 5 card titled 'If you supervise people', showing on the left a photo of two people in conversation in a sunlit office, one seated in an armchair listening while the other, who uses a wheelchair, speaks and gestures, and on the right three numbered points: Coach through questions; Make room for uncertainty; Connect learning to real decisions."
+        },
+        {
+          "chapter": "If you manage a process or resources",
+          "description": "Part 5 card titled 'If you manage a process or resources', showing on the left a photo of three colleagues at a table reviewing a printed diagram beside a laptop and a notebook, one pointing at the page, and on the right three numbered points: Clarify ownership and resources; Check capacity and continuity; Review recurring patterns."
+        },
+        {
+          "chapter": "If you set direction or advise leadership",
+          "description": "Part 5 card titled 'If you set direction or advise leadership' with no photo, three numbered points across the card (Make expectations visible; Equip and support the workforce; Do not assign roles by identity) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Map the next step",
+          "description": "Part 5 card titled 'Map the next step' with no photo, three numbered points across the card (Direct action • coordination • decision; Name the responsible role; Identify support and a next step) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Connect responsibility with participation",
+          "description": "Part 5 card titled 'Connect responsibility with participation' with no photo, three numbered points across the card (Your working note; Who needs to be involved?; Next: meaningful participation) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Connect your role with organizational responsibility",
+        "useWhen": "Use when you have found a barrier and need to decide what you can do about it and who else must be involved.",
+        "sections": [
+          {
+            "heading": "Sort the action",
+            "items": [
+              "Within my responsibilities: I can change this now.",
+              "Needs coordination or review: who must look at it first?",
+              "Needs a decision by someone with different authority: who?"
+            ]
+          },
+          {
+            "heading": "For each action",
+            "items": [
+              "Name the responsible role, not a person's name.",
+              "Note the resource or information needed.",
+              "Write one reasonable next step. If ownership is unclear, clarifying it is the next step."
+            ]
+          },
+          {
+            "heading": "By perspective",
+            "items": [
+              "Everyday task: observe, ask, propose with evidence, follow through on what you own.",
+              "Supervisor: coach with questions; make room for uncertainty and escalation.",
+              "Manager: clarify ownership, tracking, continuity and capacity.",
+              "Leadership adviser: frame the problem, the evidence, the options and what each requires."
+            ]
+          }
+        ],
+        "remember": [
+          "An important goal does not expand your authority; silence does not discharge your responsibility.",
+          "Identity is not a qualification; do not assign interpreting or representation by background."
+        ],
+        "askWho": [
+          "Your supervisor, for what you can decide in your role.",
+          "The owner of the notice or process, for review and approval.",
+          "The responsible office, when ownership is unclear."
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "outcome": "After this part you can plan accessible input on a decision while it is still open, say honestly what can and cannot change, and explain how people will hear what happened.",
+      "recall": [
+        {
+          "question": "A team wants input on a revised notice. Which timing did part 6 recommend?",
+          "options": [
+            {
+              "text": "After approval and distribution, so people react to the real thing.",
+              "correct": false,
+              "feedback": "By then participation arrives too late to influence the decision. Later evaluation helps, but it serves a different purpose."
+            },
+            {
+              "text": "Before approval, with a clear statement of what can change and a plan to report back.",
+              "correct": true,
+              "feedback": "Yes. Input matters when there is a real opportunity to act on it, and closing the loop keeps trust."
+            },
+            {
+              "text": "Only if someone complains about the first version.",
+              "correct": false,
+              "feedback": "Standards 12 and 13 ask for partnership in design, not just complaint handling. Invite input while the decision is open."
+            }
+          ]
+        },
+        {
+          "question": "What did part 6 say about asking one community member to speak for everyone?",
+          "options": [
+            {
+              "text": "It is efficient and usually accurate.",
+              "correct": false,
+              "feedback": "One perspective can be valuable without representing every experience. Ask whose perspectives are missing."
+            },
+            {
+              "text": "One person cannot be assumed to speak for every person with a disability, every language community or every family.",
+              "correct": true,
+              "feedback": "Right. Look for the experiences that are missing, especially people who had trouble with the original information."
+            },
+            {
+              "text": "It is fine as long as the person is a professional.",
+              "correct": false,
+              "feedback": "Do not automatically substitute the views of professionals or family members for the person's own perspective."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "06-d1",
+          "scenario": "Your team is revising the notice. A required time limit cannot change, but the wording, layout and assistance explanation can.",
+          "question": "How do you invite input?",
+          "options": [
+            {
+              "text": "Ask what people would change about the notice, without mentioning the fixed time limit.",
+              "correct": false,
+              "feedback": "Asking people to choose something that is not open can damage trust. Say honestly what can change and what must stay."
+            },
+            {
+              "text": "Say what is open to change, what is fixed, how input will be considered, who decides and when people will hear back.",
+              "correct": true,
+              "feedback": "Yes. A constrained decision can still benefit from meaningful participation when the boundaries are honest."
+            },
+            {
+              "text": "Skip input, since the most important part cannot change anyway.",
+              "correct": false,
+              "feedback": "Wording, layout and the assistance explanation are open. That is real room for people to improve the decision."
+            }
+          ]
+        },
+        {
+          "id": "06-d2",
+          "scenario": "An online survey about the notice got plenty of responses, all positive. Someone suggests the review is done.",
+          "question": "What do you check?",
+          "options": [
+            {
+              "text": "Nothing; the numbers are good.",
+              "correct": false,
+              "feedback": "People who readily answer an online survey may not represent those who had difficulty accessing the original information."
+            },
+            {
+              "text": "Whose experience is missing, and whether there is an accessible way to hear from them through the approved process.",
+              "correct": true,
+              "feedback": "Right. Ask whose perspectives are absent and offer appropriate ways to participate, including routes that are not online."
+            },
+            {
+              "text": "Whether the survey could be sent out a second time to get more replies.",
+              "correct": false,
+              "feedback": "More of the same replies does not fill the gap. The question is who is missing, not how many answered."
+            }
+          ]
+        },
+        {
+          "id": "06-d3",
+          "scenario": "You are setting up a feedback session. Someone proposes telling people that services depend on taking part, to boost attendance.",
+          "question": "What do you say?",
+          "options": [
+            {
+              "text": "Agree; participation is important enough.",
+              "correct": false,
+              "feedback": "Respect a person's choice not to participate, and never make access to services appear dependent on giving feedback."
+            },
+            {
+              "text": "Keep it voluntary; explain what is asked, how it will be used and any limits on confidentiality; follow the rules on reimbursement.",
+              "correct": true,
+              "feedback": "Yes. Usable, voluntary participation with clear explanations, following privacy, records and payment rules."
+            },
+            {
+              "text": "Offer a cash payment to anyone who attends.",
+              "correct": false,
+              "feedback": "If compensation is available, use the established rules. Do not promise a payment you cannot authorize."
+            }
+          ]
+        },
+        {
+          "id": "06-d4",
+          "scenario": "The team adds an online response form and plans to remove the telephone option to keep things simple. Earlier feedback praised the phone route.",
+          "question": "What do you recommend?",
+          "options": [
+            {
+              "text": "Remove the phone option; the online form is more modern.",
+              "correct": false,
+              "feedback": "A redesign can remove a feature some people depend on. Improving one route does not justify removing another."
+            },
+            {
+              "text": "Keep the phone option alongside the new form, and report back on what changed and why.",
+              "correct": true,
+              "feedback": "Right. Listen for assets as well as problems, preserve what works, and close the loop with the people who gave input."
+            },
+            {
+              "text": "Ask people to vote on which single route to keep.",
+              "correct": false,
+              "feedback": "Forcing one channel assumes it will work for everyone. Different preferences can coexist; look for choices that support participation."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "06-o1",
+        "scenario": "You are planning input on a decision that is still open.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "Offer accessible, voluntary ways to take part through the approved process",
+          "Explain what changed, what did not, and why",
+          "Describe the decision: what can change, what is fixed, who decides",
+          "Ask whose experience is missing"
+        ],
+        "correctOrder": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "feedback": "Describe the decision honestly, work out who is missing, make participation usable, then close the loop. Partnership continues into implementation and evaluation."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Ask before the decision is settled",
+          "points": [
+            "Feedback requested after approval and distribution arrives too late to influence the decision.",
+            "Standard 12: understand community assets and needs; Standard 13: partner in design, implementation and evaluation.",
+            "You do not need to organize a group yourself; identify the established route and the people responsible."
+          ]
+        },
+        {
+          "chapter": "Clarify what can change",
+          "points": [
+            "Before asking, describe what is open, what must remain, how input will be considered, who decides and when people hear back.",
+            "Asking people to choose something that is not open can damage trust.",
+            "Ask whose experience is missing; one person cannot speak for every community or family."
+          ]
+        },
+        {
+          "chapter": "Make participation usable",
+          "points": [
+            "Consider format, language, communication support, timing, location, technology and effort.",
+            "Keep participation voluntary; never make services appear to depend on giving feedback.",
+            "Explain what is asked and how it is used; follow privacy, records and reimbursement rules."
+          ]
+        },
+        {
+          "chapter": "Listen for assets as well as problems",
+          "points": [
+            "Ask what already works, which approaches are trusted and what people want preserved.",
+            "Improving one route does not justify removing another.",
+            "When feedback differs, describe the difference instead of forcing agreement."
+          ]
+        },
+        {
+          "chapter": "Close the loop",
+          "points": [
+            "Explain what changed, what did not and why, without exposing personal information.",
+            "Acknowledge suggestions that cannot be adopted and name the constraint or next step.",
+            "Partnership continues into implementation and evaluation; it is not an endorsement of a finished product."
+          ]
+        },
+        {
+          "chapter": "Plan your contribution",
+          "points": [
+            "Write the decision needing input, the missing perspectives, an accessible way to obtain input, the responsible role and how people hear back.",
+            "If you lack authority to start engagement, make a precise recommendation to the responsible person.",
+            "The aim is a better decision and experience, not a participant count."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Ask before the decision is settled",
+          "description": "Part 6 card titled 'Ask before the decision is settled', showing on the left a photo of three people seated around a meeting-room table with paper cups, one speaking while the others listen, and on the right three numbered points: Input before the decision is settled; 12: community assets and needs; 13: partnership."
+        },
+        {
+          "chapter": "Clarify what can change",
+          "description": "Part 6 card titled 'Clarify what can change' with no photo, three numbered points across the card (What can change?; What constraints remain?; Who decides and who is missing?) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Make participation usable",
+          "description": "Part 6 card titled 'Make participation usable', showing on the left a photo of three people seated around a meeting-room table with paper cups, one speaking while the others listen, and on the right three numbered points: Make participation accessible and voluntary; Explain use and privacy limits; Use approved engagement arrangements."
+        },
+        {
+          "chapter": "Listen for assets as well as problems",
+          "description": "Part 6 card titled 'Listen for assets as well as problems', showing on the left a photo of two people talking across an office table, one writing in a notebook while the other speaks, and on the right three numbered points: Preserve what already works; Different preferences can coexist; Avoid assuming one route fits everyone."
+        },
+        {
+          "chapter": "Close the loop",
+          "description": "Part 6 card titled 'Close the loop' with no photo, three numbered points across the card (Explain what changed and why; Acknowledge ideas not adopted; Continue learning during implementation) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Plan your contribution",
+          "description": "Part 6 card titled 'Plan your contribution' with no photo, three numbered points across the card (Your working note; Decision • perspectives • access • response; Next: evidence of improvement) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Learn with people affected by the work",
+        "useWhen": "Use before a decision is settled, whenever a change will affect how people receive or use a service.",
+        "sections": [
+          {
+            "heading": "Before",
+            "items": [
+              "Write the decision. What is open? What is fixed? Who decides? When will people hear back?",
+              "List whose experience is missing, including people who had trouble with the original information.",
+              "Identify the established engagement route and the role responsible for it."
+            ]
+          },
+          {
+            "heading": "During",
+            "items": [
+              "Make participation accessible: format, language, communication support, timing, location, technology, effort.",
+              "Keep it voluntary. Explain what is asked, how it will be used and any limits on confidentiality.",
+              "Make room for the person themselves, including self-advocates and chosen supports.",
+              "Ask what works now and what should be preserved."
+            ]
+          },
+          {
+            "heading": "After",
+            "items": [
+              "Report back: what changed, what did not, and why.",
+              "Acknowledge ideas not adopted and name the constraint.",
+              "Keep learning during implementation and evaluation."
+            ]
+          }
+        ],
+        "remember": [
+          "Honest boundaries make a constrained decision worth consulting on.",
+          "Do not promise reimbursement or outcomes you cannot authorize."
+        ],
+        "askWho": [
+          "The role responsible for engagement, to arrange accessible participation.",
+          "The responsible office, for privacy, records and reimbursement rules."
+        ]
+      }
+    },
+    {
+      "id": "07",
+      "outcome": "After this part you can set a practical aim for an improvement and choose a process question, an experience question and an outcome question to check whether it helped.",
+      "recall": [
+        {
+          "question": "Part 7 named three kinds of measure. Which set is right?",
+          "options": [
+            {
+              "text": "Process, experience and outcome.",
+              "correct": true,
+              "feedback": "Yes. Did the action happen, how did people encounter it, and did the intended result improve? Add a balancing question about new burdens."
+            },
+            {
+              "text": "Cost, speed and volume.",
+              "correct": false,
+              "feedback": "Those can be tracked, but the lesson's three measures are process, experience and outcome."
+            },
+            {
+              "text": "Input, output and feedback.",
+              "correct": false,
+              "feedback": "Close in spirit, but the lesson used process, experience and outcome, each answering a different question."
+            }
+          ]
+        },
+        {
+          "question": "A revised notice got more responses than the old one. What did part 7 say that shows?",
+          "options": [
+            {
+              "text": "The new wording caused the improvement.",
+              "correct": false,
+              "feedback": "Timing, recipients, contact method and assistance availability may also differ. A difference is a question, not proof of cause."
+            },
+            {
+              "text": "A useful observation that needs checking against the denominator, what is missing, and people's experience.",
+              "correct": true,
+              "feedback": "Right. Use the observation while checking its limits before deciding what it means."
+            },
+            {
+              "text": "Nothing, because the comparison is not a controlled study.",
+              "correct": false,
+              "feedback": "Imperfect information can still guide inquiry when its limits are clear. Do not dismiss it; examine it."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "07-d1",
+          "scenario": "Your team wants to show the revised notice is working. The only number on hand is how many notices were sent.",
+          "question": "What do you propose?",
+          "options": [
+            {
+              "text": "Report the number sent as evidence of improvement.",
+              "correct": false,
+              "feedback": "An action is evidence of implementation, not proof of its effect. Sending a notice does not show anyone could use it."
+            },
+            {
+              "text": "Add an experience question and an outcome question alongside the process count, using information that is already available.",
+              "correct": true,
+              "feedback": "Yes. Process, experience and outcome together give a more useful picture than a completion count alone."
+            },
+            {
+              "text": "Create a new survey collecting personal details from everyone who received it.",
+              "correct": false,
+              "feedback": "Do not create a new dataset or collect personal information just to complete this learning. Use available, approved information."
+            }
+          ]
+        },
+        {
+          "id": "07-d2",
+          "scenario": "A colleague says people from one community respond less often, and wants to record each person's likely background from their names to track it.",
+          "question": "What do you say?",
+          "options": [
+            {
+              "text": "Good idea; it will make the pattern visible.",
+              "correct": false,
+              "feedback": "Do not infer language, disability, race or other identity from a name or appearance. Standard 11 is about accurate, reliable data gathered under approved methods."
+            },
+            {
+              "text": "Treat the pattern as a prompt to investigate with appropriate input, and use only approved demographic data under applicable privacy rules.",
+              "correct": true,
+              "feedback": "Right. A difference is a reason for inquiry, not a label for a community, and data use must follow approved methods."
+            },
+            {
+              "text": "Ignore the pattern until an official study is commissioned.",
+              "correct": false,
+              "feedback": "You do not have to dismiss the observation. Investigate appropriately with the responsible staff and the people affected."
+            }
+          ]
+        },
+        {
+          "id": "07-d3",
+          "scenario": "A summary table shows results by neighborhood, language and disability. Some cells contain two or three people.",
+          "question": "What do you do before sharing it?",
+          "options": [
+            {
+              "text": "Share it; the more detail the better.",
+              "correct": false,
+              "feedback": "Small groups and combined characteristics can make individuals recognizable. Use the approved protections and reporting rules."
+            },
+            {
+              "text": "Apply the approved protections and reporting rules, and explain the limits where information cannot be shared safely.",
+              "correct": true,
+              "feedback": "Yes. When something cannot be shared safely, explain the limitation rather than inventing a conclusion."
+            },
+            {
+              "text": "Remove the whole table and report nothing.",
+              "correct": false,
+              "feedback": "Protecting people does not require silence. Use the approved reporting rules and share what can be shared responsibly."
+            }
+          ]
+        },
+        {
+          "id": "07-d4",
+          "scenario": "You are allowed to try a small change to your own drafting practice, and you want to learn from it.",
+          "question": "What goes in the plan?",
+          "options": [
+            {
+              "text": "Try it, and keep it if nobody complains.",
+              "correct": false,
+              "feedback": "Without a planned review, a temporary fix becomes permanent with nobody checking its effect. Name who reviews and when."
+            },
+            {
+              "text": "Identify the barrier, plan the authorized change, try it at a sensible scale, set who reviews the evidence and when, and record the reasoning.",
+              "correct": true,
+              "feedback": "Right. That is the lesson's improvement cycle, with a review step so the next person can see why."
+            },
+            {
+              "text": "Roll it out everywhere at once so results come faster.",
+              "correct": false,
+              "feedback": "Scale depends on the work. Try it at an appropriate scale, review what happened, then decide what to keep or adjust."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "07-o1",
+        "scenario": "You are planning a manageable improvement.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "Try it at an appropriate scale",
+          "Identify the barrier",
+          "Review what happened and decide what to keep or adjust",
+          "Plan an authorized change"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "feedback": "Identify, plan, try, review. Specify who reviews the evidence and when, and record the reasoning so the next person understands why the change was made."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Decide what improvement means",
+          "points": [
+            "Standards 9, 10 and 11 connect goals, accountability, ongoing assessment and reliable demographic data to improvement.",
+            "Start with a specific aim, such as making the next step and assistance options easier to understand.",
+            "Fit the aim to your role; do not collect personal information or create a dataset just for this lesson."
+          ]
+        },
+        {
+          "chapter": "Look at process, experience and outcome",
+          "points": [
+            "Process: did the planned action happen? Experience: how did people encounter it? Outcome: did the intended result improve?",
+            "A high response rate does not show that people understood their choices or felt respected.",
+            "Ask a balancing question: did the change create a new burden or barrier elsewhere?"
+          ]
+        },
+        {
+          "chapter": "Read differences carefully",
+          "points": [
+            "More responses to one version does not prove the wording caused it; timing, recipients and assistance may differ.",
+            "Ask about the denominator, what is missing, and whether the measure means the same across groups.",
+            "Never infer language, disability, race or identity from a name or appearance; data use must follow approved rules."
+          ]
+        },
+        {
+          "chapter": "Protect people while learning",
+          "points": [
+            "Small groups and combined characteristics can identify individuals; use approved protections and reporting rules.",
+            "When information cannot be shared safely, explain the limitation rather than inventing a conclusion.",
+            "Treat a difference as a prompt for inquiry, not a label attached to a community."
+          ]
+        },
+        {
+          "chapter": "Try a manageable improvement",
+          "points": [
+            "Identify the barrier, plan an authorized change, try it at an appropriate scale, review, then keep or adjust.",
+            "Name who reviews the evidence and when, so a temporary fix does not quietly become permanent.",
+            "Document the reasoning so the next person understands why."
+          ]
+        },
+        {
+          "chapter": "Add evidence to your plan",
+          "points": [
+            "Write a practical aim, one process question, one experience question and one outcome question.",
+            "Note the information already available, an important limitation, the responsible role and a review date.",
+            "If your role lacks data access, do not work around it; ask whether an approved evaluation exists."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Decide what improvement means",
+          "description": "Part 7 card titled 'Decide what improvement means', showing on the left a photo of two colleagues at a table, each reading a printed page of bar and pie charts, and on the right three numbered points: 9: a practical aim; 10: ongoing assessment; 11: accurate, reliable information."
+        },
+        {
+          "chapter": "Look at process, experience and outcome",
+          "description": "Part 7 card titled 'Look at process, experience and outcome' with no photo, three numbered points across the card (Process: did the action happen?; Experience: was it usable?; Outcome: did participation improve?) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Read differences carefully",
+          "description": "Part 7 card titled 'Read differences carefully', showing on the left a photo of two colleagues at a table, each reading a printed page of bar and pie charts, and on the right three numbered points: Check context and denominators; Ask what information is missing; A difference is a question, not proof of cause."
+        },
+        {
+          "chapter": "Protect people while learning",
+          "description": "Part 7 card titled 'Protect people while learning' with no photo, three numbered points across the card (Use approved information and safeguards; Protect small groups and personal details; Explain limits honestly) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Try a manageable improvement",
+          "description": "Part 7 card titled 'Try a manageable improvement', showing on the left a photo of three colleagues at a table reviewing a printed diagram beside a laptop and a notebook, one pointing at the page, and on the right three numbered points: Plan → try → review → adjust; Follow the required approval process; Check for new burdens."
+        },
+        {
+          "chapter": "Add evidence to your plan",
+          "description": "Part 7 card titled 'Add evidence to your plan' with no photo, three numbered points across the card (Your working note; Aim • measures • source • owner • date; Next: concerns and progress) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Use evidence to improve access",
+        "useWhen": "Use when you propose a change and need to say how you will know whether it helped.",
+        "sections": [
+          {
+            "heading": "Set the aim",
+            "items": [
+              "One specific aim, in plain words.",
+              "Fit it to your role and to information that already exists."
+            ]
+          },
+          {
+            "heading": "Choose the questions",
+            "items": [
+              "Process: did the planned action happen?",
+              "Experience: could people understand the next step and get support?",
+              "Outcome: did the intended result improve?",
+              "Balance: did the change create a new burden elsewhere?"
+            ]
+          },
+          {
+            "heading": "Read the numbers",
+            "items": [
+              "How many people received each version? That is the denominator.",
+              "What is missing: undelivered notices, unanswered questions?",
+              "Does the measure mean the same thing across groups?",
+              "Small counts can swing with a few extra responses."
+            ]
+          },
+          {
+            "heading": "Protect people",
+            "items": [
+              "Never infer identity from a name or appearance.",
+              "Use approved demographic data, methods and privacy rules only.",
+              "Protect small groups; explain limits instead of inventing conclusions."
+            ]
+          },
+          {
+            "heading": "Review",
+            "items": [
+              "Who reviews the evidence, and when?",
+              "Record the reasoning for the next person."
+            ]
+          }
+        ],
+        "remember": [
+          "An action is evidence of implementation, not proof of effect.",
+          "A difference is a question, not a label."
+        ],
+        "askWho": [
+          "The responsible team, for what information an evaluation would need.",
+          "The responsible office, before any data collection or reporting."
+        ]
+      }
+    },
+    {
+      "id": "08",
+      "outcome": "After this part you can respond to an access concern with acknowledgment, a usable next step and honest limits, and write a progress update that separates actions from results.",
+      "recall": [
+        {
+          "question": "Someone says they could not understand the notice and could not request assistance. Which response did part 8 recommend?",
+          "options": [
+            {
+              "text": "Explain that the notice was sent correctly and close the matter.",
+              "correct": false,
+              "feedback": "Sending information does not establish that it was usable. Acknowledge the concern and follow the appropriate process."
+            },
+            {
+              "text": "Acknowledge the concern, clarify what they need now, and explain the next step and the responsible route.",
+              "correct": true,
+              "feedback": "Yes. That is usable and honest, without promising outcomes, timing or confidentiality beyond your authority."
+            },
+            {
+              "text": "Promise it will be fixed tomorrow and kept completely confidential.",
+              "correct": false,
+              "feedback": "Do not promise an outcome, a deadline you cannot control, or confidentiality beyond what the process permits."
+            }
+          ]
+        },
+        {
+          "question": "A draft update says the new notice 'has solved communication barriers'. What did part 8 say about that?",
+          "options": [
+            {
+              "text": "Fine, as long as the notice really was revised.",
+              "correct": false,
+              "feedback": "Updating a notice is an action. Evidence that people can use it is a result that still needs checking."
+            },
+            {
+              "text": "Separate the action from the result: say what was revised, how usability is being checked and when the next review is.",
+              "correct": true,
+              "feedback": "Right. Honest progress communication explains what was done, what was learned and what happens next."
+            },
+            {
+              "text": "Remove the update; progress should stay internal.",
+              "correct": false,
+              "feedback": "Standard 15 asks organizations to communicate progress. The fix is accuracy, not silence."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "08-d1",
+          "scenario": "A person tells you they missed a planning conversation because they could not understand the notice. Your first instinct is to check whether it was mailed.",
+          "question": "What do you do first?",
+          "options": [
+            {
+              "text": "Confirm the notice was sent on the right date and tell them so.",
+              "correct": false,
+              "feedback": "Proving delivery does not help the person now and can sound like blame. Acknowledge the concern and ask what they need."
+            },
+            {
+              "text": "Acknowledge the concern, ask what they need now, and explain what you can do and who is responsible for the next step.",
+              "correct": true,
+              "feedback": "Yes. Receive the concern respectfully, then follow the applicable process without over-promising."
+            },
+            {
+              "text": "Apologize and promise the meeting will be rescheduled this week with full confidentiality.",
+              "correct": false,
+              "feedback": "Do not promise timing or confidentiality beyond your authority and the process's limits. Explain what will happen and who owns it."
+            }
+          ]
+        },
+        {
+          "id": "08-d2",
+          "scenario": "A concern sounds like it may involve discrimination, but your team's usual route is the general feedback form.",
+          "question": "What do you do?",
+          "options": [
+            {
+              "text": "Log it in the feedback form; that is the process you know.",
+              "correct": false,
+              "feedback": "Do not relabel a concern to fit the process most familiar to you. Get the appropriate guidance and keep the person's channels open."
+            },
+            {
+              "text": "Obtain the appropriate guidance on the right route and preserve the person's opportunity to use the available channels.",
+              "correct": true,
+              "feedback": "Right. Discrimination, service failure and accessibility issues may need specific routes. Do not decide for the person which one."
+            },
+            {
+              "text": "Tell the person to look up the complaints process online.",
+              "correct": false,
+              "feedback": "Sending someone elsewhere without explaining the route can leave them with no next step. Explain the route clearly and usably."
+            }
+          ]
+        },
+        {
+          "id": "08-d3",
+          "scenario": "Several people have raised the same unclear instruction this quarter. Each concern was resolved individually.",
+          "question": "What else is needed?",
+          "options": [
+            {
+              "text": "Nothing; every concern was closed.",
+              "correct": false,
+              "feedback": "Resolving each issue may be necessary without addressing the condition that caused it. Recurring concerns should inform improvement."
+            },
+            {
+              "text": "Raise the pattern so the instruction itself is reviewed, using approved channels and no personal details.",
+              "correct": true,
+              "feedback": "Yes. Recurring concerns are improvement information. Review the instruction as well as responding to each person."
+            },
+            {
+              "text": "Add a note to the form warning people to read carefully.",
+              "correct": false,
+              "feedback": "That shifts the burden to the reader. If several people hit the same barrier, the instruction needs review."
+            }
+          ]
+        },
+        {
+          "id": "08-d4",
+          "scenario": "You are drafting a progress update about the revised notice. The revision is approved and distributed; usability has not yet been checked.",
+          "question": "What do you write?",
+          "options": [
+            {
+              "text": "'The new notice has removed communication barriers.'",
+              "correct": false,
+              "feedback": "That claims a result when only the action is confirmed. Keep actions and results separate."
+            },
+            {
+              "text": "'The notice and assistance information were revised after review; usability is being checked and the next review point is set.'",
+              "correct": true,
+              "feedback": "Right. Understandable, honest about limits, and clear about what was done, what was learned and what happens next."
+            },
+            {
+              "text": "'The person who complained has been dealt with and the notice updated.'",
+              "correct": false,
+              "feedback": "Avoid details that could identify someone who raised a concern. Share only what is approved for the audience and purpose."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "08-o1",
+        "scenario": "A person raises an access concern with you.",
+        "prompt": "Put these in the order you would do them.",
+        "steps": [
+          "Explain what you can do, what happens next and who is responsible",
+          "Acknowledge the concern",
+          "Follow the applicable process and raise any recurring pattern",
+          "Clarify what the person needs now"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "feedback": "Acknowledge, clarify the immediate need, explain the next step and the responsible route, then follow the process. Urgent safety, legal or service needs use the current urgent procedure."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Make it possible to raise a concern",
+          "points": [
+            "Standard 14: accessible ways to identify, prevent and resolve complaints; Standard 15: communicate progress.",
+            "Know the appropriate route and explain it clearly.",
+            "Do not leave someone without a next step just because the issue belongs to another part of the organization."
+          ]
+        },
+        {
+          "chapter": "Receive the concern respectfully",
+          "points": [
+            "Acknowledge the concern, clarify what the person needs now, and follow the applicable process.",
+            "Do not promise an outcome, a deadline you cannot control, or confidentiality beyond what the process permits.",
+            "Do not relabel a concern to fit the process you know; urgent matters use the current urgent procedure."
+          ]
+        },
+        {
+          "chapter": "Check the route itself",
+          "points": [
+            "Can someone find the concern process, understand it and use it in a suitable language and format?",
+            "Tell people how receipt is acknowledged, what information is needed and how to ask about progress.",
+            "Recurring concerns should inform improvement; review the instruction as well as responding to each person."
+          ]
+        },
+        {
+          "chapter": "Communicate what has changed",
+          "points": [
+            "Progress communication is understandable, accessible and honest about limits.",
+            "Say what was done, what was learned and what happens next.",
+            "Updating a notice is an action; evidence that people can use it is a result that needs checking."
+          ]
+        },
+        {
+          "chapter": "Protect privacy and preserve trust",
+          "points": [
+            "Share only what is approved for the audience and purpose; avoid details that could identify someone who raised a concern.",
+            "Use the appropriate review process for public communication; this lesson does not authorize publishing for the division.",
+            "If a change did not help, explain the next step rather than hiding the result."
+          ]
+        },
+        {
+          "chapter": "Practice the response",
+          "points": [
+            "A good response acknowledges, gives a usable next step and is honest about responsibility.",
+            "Draft a progress statement: the issue, the action, how the effect will be checked, the next review point.",
+            "Keep the statement general and suitable for a learning exercise."
+          ]
+        },
+        {
+          "chapter": "Prepare to bring the work together",
+          "points": [
+            "You now have the elements: the person's task, a barrier to investigate, a response, roles, input, evidence, and a way to respond and report back.",
+            "The final part assembles them into one usable plan.",
+            "It is not a test of memorizing fifteen numbers; it is practice at a thoughtful decision and a concrete next step."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Make it possible to raise a concern",
+          "description": "Part 8 card titled 'Make it possible to raise a concern', showing on the left a photo of two people talking across an office table, one writing in a notebook while the other speaks, and on the right three numbered points: 14: a usable concern process; 15: honest communication of progress; Know the appropriate route."
+        },
+        {
+          "chapter": "Receive the concern respectfully",
+          "description": "Part 8 card titled 'Receive the concern respectfully', showing on the left a photo of two people in conversation in a sunlit office, one seated in an armchair listening while the other, who uses a wheelchair, speaks and gestures, and on the right three numbered points: Acknowledge and clarify; Explain what you can do; Avoid promises outside your authority."
+        },
+        {
+          "chapter": "Check the route itself",
+          "description": "Part 8 card titled 'Check the route itself' with no photo, three numbered points across the card (Find • understand • use the concern route; Language and format matter here too; Use approved records and channels) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Communicate what has changed",
+          "description": "Part 8 card titled 'Communicate what has changed', showing on the left a photo of three colleagues at a table reviewing a printed diagram beside a laptop and a notebook, one pointing at the page, and on the right three numbered points: Action is not the same as result; Explain what changed; Describe how its effect is being checked."
+        },
+        {
+          "chapter": "Protect privacy and preserve trust",
+          "description": "Part 8 card titled 'Protect privacy and preserve trust' with no photo, three numbered points across the card (Protect personal information; Use the appropriate publication review; State what remains uncertain) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Practice the response",
+          "description": "Part 8 card titled 'Practice the response' with no photo, three numbered points across the card (Practice a response; Issue • action • evidence • next step; Keep the learning example non-sensitive) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Prepare to bring the work together",
+          "description": "Part 8 card titled 'Prepare to bring the work together' with no photo, three numbered points across the card (Your working note; Connect response with improvement; Next: bring the plan together) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Respond to concerns and share progress",
+        "useWhen": "Use when someone tells you something is not working, and when you write an update about a change.",
+        "sections": [
+          {
+            "heading": "When a concern is raised",
+            "items": [
+              "Acknowledge it. Do not start by proving the information was sent.",
+              "Ask what the person needs now.",
+              "Explain what you can do, what happens next and who is responsible.",
+              "Do not promise outcomes, deadlines or confidentiality beyond the process.",
+              "Urgent safety, legal or service needs: use the current urgent procedure."
+            ]
+          },
+          {
+            "heading": "Check the route",
+            "items": [
+              "Can people find, understand and use the concern process in a suitable language and format?",
+              "Is receipt acknowledged? Is it clear how to ask about progress?",
+              "Do not relabel a concern to fit a familiar process; get the right guidance.",
+              "Raise recurring concerns so the cause is reviewed."
+            ]
+          },
+          {
+            "heading": "When you write an update",
+            "items": [
+              "Issue, action taken or proposed, how the effect will be checked, next review point.",
+              "Separate the action (notice revised) from the result (people can use it).",
+              "Say what is known and what remains uncertain.",
+              "No details that could identify a person; use the approved review before publishing."
+            ]
+          }
+        ],
+        "remember": [
+          "Sending information does not establish that it was usable.",
+          "Clear limits are more useful than broad assurance."
+        ],
+        "askWho": [
+          "The responsible office, for the correct concern route and urgent procedures.",
+          "The appropriate review process, before any public or organizational statement."
+        ]
+      }
+    },
+    {
+      "id": "09",
+      "outcome": "After this part you can assemble your notes into one improvement plan with an observed barrier, a proposed change, the responsible role, participation, evidence and a follow-up date.",
+      "recall": [
+        {
+          "question": "Part 9 said to describe the issue in your plan as what?",
+          "options": [
+            {
+              "text": "An observation, not an assumption about why it happens.",
+              "correct": true,
+              "feedback": "Yes. For the notice: some people have not responded, and the next step and assistance options need review. No conclusion about motives or a single cause."
+            },
+            {
+              "text": "A conclusion about the single cause, so the plan is decisive.",
+              "correct": false,
+              "feedback": "The lesson kept uncertainty visible. Naming what you do not know directs the next inquiry; it does not weaken the plan."
+            },
+            {
+              "text": "A list of all fifteen standards.",
+              "correct": false,
+              "feedback": "The plan is not a memorization test. Connect the standards that fit the action and consider the wider conditions."
+            }
+          ]
+        },
+        {
+          "question": "Part 9 distinguished completion from effect. Which statement matches?",
+          "options": [
+            {
+              "text": "Sending a revised document for approval means the barrier is fixed.",
+              "correct": false,
+              "feedback": "Sending it is progress; approval is another step; evidence that people can use it is a further question."
+            },
+            {
+              "text": "Sending for approval is progress, approval is another step, and evidence of use is a further question.",
+              "correct": true,
+              "feedback": "Right. Recognizing each stage helps you describe progress accurately."
+            },
+            {
+              "text": "Nothing counts until the effect is proven.",
+              "correct": false,
+              "feedback": "Progress can be real at each stage. The point is to describe each stage accurately, not to dismiss it."
+            }
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "09-d1",
+          "scenario": "You are writing the issue statement for your plan. Your notes say some people did not respond to the notice.",
+          "question": "How do you write it?",
+          "options": [
+            {
+              "text": "'People are not interested in the service-planning conversation.'",
+              "correct": false,
+              "feedback": "That is an assumption. The lesson describes the issue as an observation: some people have not responded, and the next step and assistance options need review."
+            },
+            {
+              "text": "'Some people have not responded; the explanation of the next step and assistance options needs review.'",
+              "correct": true,
+              "feedback": "Yes. An observation plus the thing to examine, without concluding about motives or a single cause."
+            },
+            {
+              "text": "'The wording is the cause, so the wording will be fixed.'",
+              "correct": false,
+              "feedback": "Wording may be part of it, but the lesson warns against treating one cause as proven. Keep uncertainty visible."
+            }
+          ]
+        },
+        {
+          "id": "09-d2",
+          "scenario": "Your plan proposes adding an online response route to the notice.",
+          "question": "What do you check before finalizing?",
+          "options": [
+            {
+              "text": "That the online form looks modern and loads quickly.",
+              "correct": false,
+              "feedback": "The lesson's check is about barriers: who needs another method, and whether necessary information remains."
+            },
+            {
+              "text": "Whether the change creates a new barrier, and that another method remains for people who need one.",
+              "correct": true,
+              "feedback": "Right. Check for unintended barriers: keep an alternative route and keep the necessary information in place."
+            },
+            {
+              "text": "Nothing; adding a route can only help.",
+              "correct": false,
+              "feedback": "A new online option can help some people while leaving others without a usable alternative. Check for the new barrier."
+            }
+          ]
+        },
+        {
+          "id": "09-d3",
+          "scenario": "Your plan is written. The draft notice has not yet been reviewed by the right group, and you are not sure the assistance route is reliably available.",
+          "question": "What do you do with those gaps?",
+          "options": [
+            {
+              "text": "Leave them out so the plan looks complete.",
+              "correct": false,
+              "feedback": "Naming an uncertainty directs the next inquiry. Pretending the issue is resolved does not make it so."
+            },
+            {
+              "text": "Record them as uncertainties, with a next inquiry for each and a realistic next step.",
+              "correct": true,
+              "feedback": "Yes. A strong plan can acknowledge uncertainty and still identify a concrete next step."
+            },
+            {
+              "text": "Wait to finish the plan until both are resolved.",
+              "correct": false,
+              "feedback": "A manageable, authorized contribution is worthwhile now. Name what you can do and what needs wider coordination."
+            }
+          ]
+        },
+        {
+          "id": "09-d4",
+          "scenario": "It has been about thirty days and the action in your plan has not started.",
+          "question": "What does the follow-up look like?",
+          "options": [
+            {
+              "text": "Mark the plan complete since the time has passed.",
+              "correct": false,
+              "feedback": "Completion is not the same as effect, and nothing has started. Identify the reason and the next realistic step."
+            },
+            {
+              "text": "Note the reason it has not started and the next realistic step, and keep progress and effect separate.",
+              "correct": true,
+              "feedback": "Right. Ask what you tried, what changed, what evidence you have and what remains. If nothing started, say why and what is next."
+            },
+            {
+              "text": "Share your full notes, including the people involved, with your team for help.",
+              "correct": false,
+              "feedback": "A follow-up discussion can help, but keep it to a non-sensitive summary with an appropriate colleague or supervisor."
+            }
+          ]
+        }
+      ],
+      "ordering": {
+        "id": "09-o1",
+        "scenario": "You are assembling your improvement plan.",
+        "prompt": "Put these in the order you would write them.",
+        "steps": [
+          "Identify the proposed change and the standards it connects to",
+          "Describe the issue as an observation",
+          "Name the action, the responsible role, the resources and a review point",
+          "Describe the intended experience for the person"
+        ],
+        "correctOrder": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "feedback": "Observation, intended experience, proposed change with its standards, then the workable details: action, owner, resources, review point. Record what remains uncertain and check for new barriers."
+      },
+      "keyPoints": [
+        {
+          "chapter": "Return to the person and the task",
+          "points": [
+            "Go back to your first notes: has your understanding changed?",
+            "The standards give a connected way to think about quality and access; your plan turns that into a manageable contribution.",
+            "Use the sample notice if your own example is too sensitive or not ready."
+          ]
+        },
+        {
+          "chapter": "Put the improvement into words",
+          "points": [
+            "Describe the issue as an observation, not an assumption about motives or a single cause.",
+            "Describe the intended experience: understand the purpose, consider choices, request assistance, use a clear response route.",
+            "Connect the change to the standards: 1 and 8 for the notice, 5 to 7 for assistance, 2 to 4 and 9 for ownership, 10 to 13 for input and evidence, 14 and 15 for concerns and progress."
+          ]
+        },
+        {
+          "chapter": "Make the plan workable",
+          "points": [
+            "Name the action, the role responsible for approval or coordination, the resources needed and a review point.",
+            "Record what remains uncertain; it directs the next inquiry.",
+            "Check whether the plan creates a new barrier: keep an alternative route, keep necessary information, keep the decision open to input."
+          ]
+        },
+        {
+          "chapter": "Test your reasoning",
+          "points": [
+            "Does the plan begin with inquiry, preserve choices, provide a usable assistance route, stay within authority, involve people affected and include a credible check?",
+            "A strong answer can acknowledge uncertainty and still name a concrete next step.",
+            "The goal is transfer to work, not repeating a definition."
+          ]
+        },
+        {
+          "chapter": "Plan a voluntary follow-up",
+          "points": [
+            "Revisit the plan about thirty days after the action begins: what did you try, what changed, what evidence, what remains?",
+            "If the action has not started, identify the reason and the next realistic step.",
+            "Distinguish completion from effect: sent for approval, approved, and usable are different stages."
+          ]
+        },
+        {
+          "chapter": "Reflect and choose your next step",
+          "points": [
+            "Three optional questions: what do you understand more clearly, what matters most for people affected, what will you do next?",
+            "The companion sheet gathers purpose, barrier, standards, change, authority, participation, assistance, evidence, concern route and follow-up.",
+            "It is a personal working copy, not an official record or an approval."
+          ]
+        },
+        {
+          "chapter": "Continue using the framework",
+          "points": [
+            "Return to any lesson or the original standards when a new situation arises.",
+            "Current policy, specialist guidance and people's experience still matter; the curriculum supports judgment, it does not replace requirements.",
+            "A next step does not have to be large: a clearer question, a more usable instruction, an appropriate escalation."
+          ]
+        }
+      ],
+      "cardDescriptions": [
+        {
+          "chapter": "Return to the person and the task",
+          "description": "Part 9 card titled 'Return to the person and the task', showing on the left a photo of two people at a table reading a printed page together, one holding a pen while the other points to a line on the page, and on the right three numbered points: Return to the person’s task; What do you see differently now?; Use your example or the sample notice."
+        },
+        {
+          "chapter": "Put the improvement into words",
+          "description": "Part 9 card titled 'Put the improvement into words' with no photo, three numbered points across the card (Observation → experience → proposed change; Identify the relevant standards; Recognize the wider support needed) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Make the plan workable",
+          "description": "Part 9 card titled 'Make the plan workable', showing on the left a photo of three colleagues at a table reviewing a printed diagram beside a laptop and a notebook, one pointing at the page, and on the right three numbered points: Action • owner • resources • review; Name uncertainty; Check for unintended barriers."
+        },
+        {
+          "chapter": "Test your reasoning",
+          "description": "Part 9 card titled 'Test your reasoning' with no photo, three numbered points across the card (Test the whole plan; Inquiry • assistance • authority • participation; Use feedback to refine your reasoning) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Plan a voluntary follow-up",
+          "description": "Part 9 card titled 'Plan a voluntary follow-up', showing on the left a photo of two people talking across an office table, one writing in a notebook while the other speaks, and on the right three numbered points: Choose a voluntary follow-up; What happened? What helped?; What remains to be done?."
+        },
+        {
+          "chapter": "Reflect and choose your next step",
+          "description": "Part 9 card titled 'Reflect and choose your next step' with no photo, three numbered points across the card (Understand • care • act; Download a working copy if useful; Keep official records in approved systems) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        },
+        {
+          "chapter": "Continue using the framework",
+          "description": "Part 9 card titled 'Continue using the framework' with no photo, three numbered points across the card (Choose a responsible next step; Return to the standards and current guidance; Learn from what happens) and the reminder 'Pause whenever you want to think, practice or make a note.'"
+        }
+      ],
+      "jobAid": {
+        "title": "Bring it together in your work",
+        "useWhen": "Use when you turn your notes into an improvement plan, and again at your follow-up.",
+        "sections": [
+          {
+            "heading": "Plan",
+            "items": [
+              "Issue, written as an observation.",
+              "Intended experience: understand the purpose, consider choices, request assistance, respond.",
+              "Proposed change and the standards it connects to.",
+              "Action, responsible role, resources, review point.",
+              "What remains uncertain, and the next inquiry for each."
+            ]
+          },
+          {
+            "heading": "Check",
+            "items": [
+              "Begins with inquiry? Preserves the person's choices?",
+              "Usable assistance route? Within the appropriate authority?",
+              "People affected involved? Credible way to check the result?",
+              "Any new barrier: a lost route, lost information, a decision already closed?"
+            ]
+          },
+          {
+            "heading": "Follow up (about 30 days)",
+            "items": [
+              "What did you try? What changed? What evidence? What remains?",
+              "If not started: why, and what is the next realistic step?",
+              "Sent for approval, approved, and usable are different stages; say which you reached."
+            ]
+          }
+        ],
+        "remember": [
+          "Keep official records in approved systems; the companion sheet is a personal working copy.",
+          "A clearer question or a more usable instruction is a worthwhile next step."
+        ],
+        "askWho": [
+          "Your supervisor or an appropriate colleague, for a non-sensitive summary at follow-up.",
+          "The original standards and current policy, when a new situation arises."
+        ]
+      }
+    }
+  ]
+}
