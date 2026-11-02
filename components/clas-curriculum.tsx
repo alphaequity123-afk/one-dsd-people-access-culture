@@ -11,6 +11,7 @@ import { SyncedMediaPlayer } from './clas-curriculum/media-player';
 import { ImprovementPlan, WorkingNote } from './clas-curriculum/notes';
 import { DecisionList, OrderingQuestion, RecallSection } from './clas-curriculum/practice';
 import { WalkthroughPlaylist } from './clas-curriculum/walkthrough-playlist';
+import { ShareClasCollection } from './clas-curriculum/share-collection';
 import './clas-curriculum.css';
 
 const base = '/learn/clas/curriculum';
@@ -41,9 +42,10 @@ export default function ClasCurriculum({ lessonId, data, front }: Props) {
   const walkthrough = page.walkthrough;
   const lastPart = index === curriculum.modules.length - 1;
   return <div className="clas-study">
-    <nav aria-label="CLAS learning"><Link prefetch={false} href="/learn/clas">National CLAS Standards collection</Link>{lesson && <a href={base}>Curriculum overview</a>}</nav>
+    <nav aria-label="CLAS learning"><Link prefetch={false} href="/learn/clas/collection">Shareable curriculum collection</Link><Link prefetch={false} href="/learn/clas">National CLAS Standards collection</Link>{lesson && <a href={base}>Curriculum overview</a>}</nav>
     <header><p className="clas-study-eyebrow">SELF-DIRECTED LEARNING</p><h1>{lesson ? lesson.title : curriculum.title}</h1>{practice?.outcome && <p className="clas-study-outcome">{practice.outcome}</p>}<p className="clas-study-lede">{lesson ? lesson.deliverable : 'Follow one work example from understanding a barrier to planning and reviewing an improvement.'}</p></header>
     {!lesson ? <>
+      <ShareClasCollection />
       <section aria-labelledby="start"><h2 id="start">A connected path you can use at your own pace</h2><p>Begin with the person’s experience, then explore communication, responsibility, participation and improvement. Every part includes recorded guidance, a synced transcript, decisions to practice, a working note that builds into your own plan and, where available, a one-page job aid.</p><p>You do not need a group. You can pause, revisit a lesson or use the sample service notice. Reflection is optional and does not need to be shared. Leave names, case details and other private information out of learning notes.</p><a className="clas-study-primary text-white" href={`${base}/01`}>Start the curriculum</a> <button type="button" onClick={workbook}>Download the companion working notes</button></section>
       {frontPage.walkthroughs.length > 0 && <section aria-labelledby="listen"><h2 id="listen">Listen to the full walkthrough</h2><p>Two voices discuss the whole curriculum, one chapter per part. Listen here from start to finish, or open any part to hear its chapter with a synced transcript. The lessons stand on their own; this is a second, deeper pass.</p><WalkthroughPlaylist items={frontPage.walkthroughs} /></section>}
       <ol className="clas-study-path">{curriculum.modules.map(m => <li key={m.id}><a href={`${base}/${m.id}`}><span>Part {Number(m.id)}</span><h2>{m.title}</h2></a><p>{m.deliverable}</p>{m.durationSeconds > 0 && <p>Video: about {minutes(m.durationSeconds)} minutes, plus time for your own practice.</p>}<p>CLAS standards: {m.standards.join(', ')}{completed.includes(m.id) ? ' · Marked complete' : ''}</p>{frontPage.jobAidIds.includes(m.id) && <p><a href={`${base}/${m.id}/job-aid`}>One-page job aid for Part {Number(m.id)}</a></p>}</li>)}</ol>

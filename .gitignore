@@ -5,3 +5,6 @@ node_modules/
 .env*
 !.env.example
 *.tsbuildinfo
+
+# Generated complete offline CLAS collection
+public/downloads/clas-curriculum-collection.zip*

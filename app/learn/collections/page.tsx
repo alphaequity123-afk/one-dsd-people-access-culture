@@ -29,6 +29,11 @@ export default async function CollectionsPage() {
       <p>Find related learning, tools, sources, readings and available listening together, then return to the course shelves below whenever you need them.</p>
       <p><Link href="/collections">Explore themes across the program →</Link></p>
     </aside>
+    <aside className={styles.requiredNote} aria-labelledby="clas-collection-title">
+      <h2 id="clas-collection-title">CLAS curriculum collection</h2>
+      <p>Nine connected lessons with videos, discussion audio, practice and planning resources. Share one link or download the complete collection for offline use.</p>
+      <p><Link href="/learn/clas/collection">Open, share or download the CLAS collection →</Link></p>
+    </aside>
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
       <h2 id="required-course-title">One course is required</h2>
       <p><CollectionItemLink id={REQUIRED_COURSE_ID} published={published} /></p>
