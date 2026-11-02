@@ -69,7 +69,7 @@
     note.value = saved.notes[note.dataset.note] || '';
     note.addEventListener('input', () => {
       saved.notes[note.dataset.note] = note.value;
-      document.querySelector('[data-save-status]').textContent = persist() ? 'Saved in this browser. Download a copy to keep or move your notes.' : 'Available for this visit. Download your notes before leaving this page.';
+      note.closest('[data-view]').querySelector('[data-save-status]').textContent = persist() ? 'Saved in this browser. Download a copy to keep or move your notes.' : 'Available for this visit. Download your notes before leaving this page.';
     });
   });
   document.querySelectorAll('[data-complete]').forEach(button => {
@@ -79,7 +79,7 @@
     button.addEventListener('click', () => {
       saved.completed = [...new Set([...saved.completed, id])];
       const stored = persist(); update();
-      document.querySelector('[data-save-status]').textContent = stored ? 'Completion saved in this browser.' : 'Marked complete for this visit.';
+      button.closest('[data-view]').querySelector('[data-save-status]').textContent = stored ? 'Completion saved in this browser.' : 'Marked complete for this visit.';
     });
   });
   document.querySelectorAll('[data-download-notes]').forEach(button => button.addEventListener('click', () => {
@@ -90,4 +90,16 @@
   }));
   const progress = document.querySelector('[data-progress]');
   if (progress) progress.textContent = `${saved.completed.length} of 9 lessons marked complete in this browser.`;
+  function showView() {
+    const requested = location.hash.slice(1) || 'home';
+    const views = [...document.querySelectorAll('[data-view]')];
+    const selected = views.find(view => view.dataset.view === requested) || views.find(view => view.dataset.view === 'home');
+    if (!selected) return;
+    views.forEach(view => { view.hidden = view !== selected; });
+    document.querySelectorAll('video,audio').forEach(media => media.pause());
+    if (progress) progress.textContent = `${saved.completed.length} of 9 lessons marked complete in this browser.`;
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', showView);
+  showView();
 })();
