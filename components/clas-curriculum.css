@@ -2,6 +2,7 @@
 
 /* Upgrade: outcome line, synced players, practice, notes, plan and job aid. */
 .clas-study{overflow-wrap:anywhere}
+.clas-welcome{display:grid;grid-template-columns:minmax(0,1fr) 240px;align-items:center;gap:24px}.clas-welcome-image{position:relative;display:block}.clas-welcome-image img{width:100%;height:auto;display:block}.clas-welcome-image::after{content:"";position:absolute;left:44.5%;top:74%;width:11%;height:20%;background:#f1f1f1}.clas-welcome>div{text-align:center}.clas-welcome>div img{width:100%;max-width:240px;height:auto}@media(max-width:700px){.clas-welcome{grid-template-columns:1fr}.clas-welcome>div img{max-width:220px}}
 .clas-study img,.clas-study video,.clas-study audio,.clas-study iframe{max-width:100%}
 .clas-study audio{width:100%;max-width:800px;display:block;margin:8px 0}
 .clas-study-outcome{font-size:19px;line-height:1.6;font-weight:600;color:#003865;margin:12px 0 4px}
