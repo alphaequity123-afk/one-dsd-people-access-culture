@@ -8,8 +8,10 @@ import { NATIVE_DEFERENCE_COMMUNITY_IDS } from "@/lib/content/community-presenta
 
 // Exact JSON.stringify pin for the independently reviewed 39-entry selection.
 // Future data changes require renewed factual, rights and publication review.
+// Re-pinned Nov. 1, 2026 after the Somali and Nigerian contributor claims were
+// reworded to name the office rather than a sitting office holder.
 // This binding does not replace the request-scoped publication checks below.
-const REVIEWED_ADDITIONS_SHA256 = "aa819e949661110c379fa86358bf7f81cd62e022ae7b6d8102e1164d2374e655";
+const REVIEWED_ADDITIONS_SHA256 = "3f6f0bfce7cf96d3ef5dad7c5fce85aad172accdfb9341fcbe71be3d5e74383b";
 
 function Photo({ photo }: { photo: CommunityPhoto }) {
   return <figure className="my-4 max-w-xl">
