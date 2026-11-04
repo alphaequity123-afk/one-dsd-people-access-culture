@@ -1,7 +1,7 @@
 ﻿import "server-only";
 import { contentGraphForDocs, type GraphEdgeType } from "@/lib/content/knowledge-graph";
 import { AUTHORITY } from "@/lib/content/types";
-import { scoreDoc, tokens, type Doc, type SearchHit } from "./search";
+import { scoreDoc, searchExcerpt, tokens, type Doc, type SearchHit } from "./search";
 
 const EDGE_WEIGHT: Partial<Record<GraphEdgeType, number>> = { curated_reading: 5, suggested_reading: 5, informs: 4, about_community: 3, cites: 3, practice_link: 2, part_of: 2, related: 1.5 };
 export const BRAIN_LIMITS = { connected: 6, totalChars: 24_000, leadChars: 4000, connectedChars: 1500 };
@@ -28,7 +28,7 @@ export function expandThroughGraph(hits: SearchHit[], docs: Doc[], question: str
   return [...scores.values()].sort((a, b) => b.score - a.score).slice(0, limit).map(({ doc, score, via }) => ({
     kind: doc.kind, id: doc.id, title: doc.title, href: doc.href, authority: doc.authority, authorityLabel: AUTHORITY[doc.authority].label,
     type: doc.type, layer: doc.layer, status: doc.status, reviewDate: doc.reviewDate, scope: doc.scope,
-    excerpt: (doc.summary || doc.text).replace(/\s+/g, " ").trim().slice(0, 360), score: Math.round(score * 10) / 10, via,
+    excerpt: searchExcerpt(doc.text || doc.summary, question, doc.title), score: Math.round(score * 10) / 10, via,
   }));
 }
 

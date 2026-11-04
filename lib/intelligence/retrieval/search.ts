@@ -205,19 +205,51 @@ const AUTHORITY_BOOST: Partial<Record<AuthorityLabel, number>> = {
   external_verify: 0.2,
 };
 
-function excerpt(text: string, query: string): string {
-  const q = tokens(query)[0];
-  const lower = text.toLowerCase();
-  const idx = q ? lower.indexOf(q) : -1;
-  const start = Math.max(0, idx - 60);
-  const normalized = text.slice(start).replace(/\s+/g, " ").trim();
-  if (normalized.length <= 360) return `${start > 0 ? "..." : ""}${normalized}`;
-
+/** The bounded passage shown from `start`: whole sentences where possible, never more than 360 characters. */
+function excerptWindow(clean: string, start: number): string {
+  const normalized = clean.slice(start);
+  if (normalized.length <= 360) return normalized;
   const window = normalized.slice(0, 361);
   const sentenceEnd = Math.max(window.lastIndexOf(". "), window.lastIndexOf("? "), window.lastIndexOf("! "));
   const wordEnd = window.lastIndexOf(" ");
   const end = sentenceEnd >= 160 ? sentenceEnd + 1 : wordEnd >= 160 ? wordEnd : 360;
-  return `${start > 0 ? "..." : ""}${window.slice(0, end).trim()}...`;
+  return window.slice(0, end).trim();
+}
+
+/**
+ * Choose the passage that answers the question. Each candidate is scored on the exact
+ * text it would show, so words cut off at the sentence boundary never count. Title words
+ * describe the whole document and accompany every citation, so they cannot pick out the
+ * one line (a group, a year) the question asks about; passages compete first on the
+ * remaining question words. Ties keep the earliest passage.
+ */
+export function searchExcerpt(text: string, query: string, title = ""): string {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= 360) return clean;
+  const terms = new Set(tokens(query));
+  const titled = new Set(tokens(title));
+  const lower = clean.toLowerCase();
+  const starts = new Set([0]);
+  for (const term of terms) {
+    let from = 0;
+    for (let count = 0; count < 40; count++) {
+      const index = lower.indexOf(term, from);
+      if (index < 0) break;
+      starts.add(Math.max(0, index - 60)); from = index + term.length;
+    }
+  }
+  let start = 0, bestSpecific = -1, bestTotal = -1;
+  for (const candidate of starts) {
+    const found = new Set(tokens(excerptWindow(clean, candidate)));
+    const matched = [...terms].filter(term => found.has(term));
+    const specific = matched.filter(term => !titled.has(term)).length;
+    if (specific > bestSpecific || (specific === bestSpecific && matched.length > bestTotal)) {
+      start = candidate; bestSpecific = specific; bestTotal = matched.length;
+    }
+  }
+  const passage = excerptWindow(clean, start);
+  const truncated = passage.length < clean.length - start;
+  return `${start > 0 ? "..." : ""}${passage}${truncated ? "..." : ""}`;
 }
 
 // Reuse token counts within a request. Documents are rebuilt from current publications,
@@ -285,7 +317,7 @@ export function corpusSearch(query: string, opts: { limit?: number; intents?: As
       status: d.status,
       reviewDate: d.reviewDate,
       scope: d.scope,
-      excerpt: excerpt(d.summary || d.text, q),
+      excerpt: searchExcerpt(d.text || d.summary, q, d.title),
       score: Math.round(score * 10) / 10,
     }));
 }
@@ -320,7 +352,7 @@ export function searchDocs(query: string, docs: Doc[], opts: SearchOptions = {})
       status: d.status,
       reviewDate: d.reviewDate,
       scope: d.scope,
-      excerpt: excerpt(d.summary || d.text, q),
+      excerpt: searchExcerpt(d.text || d.summary, q, d.title),
       score: Math.round(score * 10) / 10,
     }));
 }
@@ -360,10 +392,10 @@ export function citationAttachFromDocs(hits: SearchHit[], docs: Doc[]): Citation
     if (!doc || seen.has(key)) return [];
     seen.add(key);
     const currentSpans = [doc.summary, doc.text].map(text => text.replace(/\s+/g, " ").trim());
-    const suppliedExcerpt = hit.excerpt.replace(/\s+/g, " ").trim();
+    const suppliedExcerpt = hit.excerpt.replace(/^\.\.\.|\.\.\.$/g, "").replace(/\s+/g, " ").trim();
     // Retain a useful search excerpt only when it is an exact current-source span.
     const currentExcerpt = suppliedExcerpt && currentSpans.some(text => text.includes(suppliedExcerpt))
-      ? suppliedExcerpt : excerpt(doc.summary || doc.text, "");
+      ? suppliedExcerpt : searchExcerpt(doc.text || doc.summary, "");
     return [{
       id: doc.id,
       title: doc.title,

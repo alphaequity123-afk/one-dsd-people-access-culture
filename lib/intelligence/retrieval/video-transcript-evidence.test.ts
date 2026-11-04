@@ -17,9 +17,11 @@ const doc: Doc = {
 describe("leadership video scenario evidence", () => {
   it("supplies an exact, current scenario passage to support a video example answer", () => {
     const question = "Using only this application, what example does the democratic leadership video give?";
-    const hits = searchDocs(question, [doc]);
+    // A retrieval seed may carry only the style summary. Enrichment must supply
+    // the actual scenario regardless of how keyword search selects its excerpt.
+    const hits = searchDocs(question, [doc]).map(hit => ({ ...hit, excerpt: doc.summary }));
     const original = citationEvidenceFromDocs(hits, [doc])[0];
-    expect(original.evidence!.excerpt.quote).not.toContain("Imagine a team");
+    expect(original.evidence!.excerpt.quote).toBe(doc.summary);
     const contextual = videoScenarioEvidenceHits(hits, [doc], question);
     const source = citationEvidenceFromDocs(contextual, [doc])[0];
     expect(source.evidence!.excerpt.quote).toContain("Imagine a team in the Disability Services Division");

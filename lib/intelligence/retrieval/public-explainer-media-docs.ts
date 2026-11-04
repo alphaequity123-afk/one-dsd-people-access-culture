@@ -21,7 +21,8 @@ const ENTRIES: Entry[] = [
   { id: "community-briefs", href: "/minnesota-communities", related: ["/minnesota-communities"], gates: ["communities.index"] },
   { id: "draft-review", href: "/practice/gp-9", related: ["/practice/gp-9"], gates: ["practice.path-shell", "graduation-path.gp-9"] },
   { id: "equity-pause", href: "/practice/gp-12", related: ["/practice/gp-12"], gates: ["practice.path-shell", "graduation-path.gp-12"] },
-  { id: "learning-journey", href: "/learn/paths", related: ["/learn/paths"] },
+  // My work plays the same journey video above the saved plans.
+  { id: "learning-journey", href: "/learn/paths", related: ["/learn/paths", "/my-work"] },
 ];
 
 /** Only fixed public video paths may enter this projection; no owner or volume data. */
@@ -66,8 +67,9 @@ function availableTranscript(root: string, clip: Clip): string | null {
 /** Exact current public transcript text, split into citation-sized passages. */
 export function publicExplainerMediaDocs(scope: StaffProgramScope, published: ReadonlySet<string>, publicRoot = path.join(process.cwd(), "public")): Doc[] {
   const entries = [...ENTRIES];
-  if (published.has("support.right-person")) entries.push({ id: "right-person", href: "/support/right-person", related: ["/support/right-person"] });
-  else if (published.has("support.page")) entries.push({ id: "right-person", href: "/support", related: ["/support"] });
+  // Both support pages play the right-person video; each published one is a related page.
+  const supportPages = [...(published.has("support.right-person") ? ["/support/right-person"] : []), ...(published.has("support.page") ? ["/support"] : [])];
+  if (supportPages.length) entries.push({ id: "right-person", href: supportPages[0], related: supportPages });
   const docs: Doc[] = [];
   for (const entry of entries) {
     if (entry.gates?.some(gate => !published.has(gate))) continue;

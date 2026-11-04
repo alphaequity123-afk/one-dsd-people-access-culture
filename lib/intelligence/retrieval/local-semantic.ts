@@ -6,7 +6,7 @@ import type { FeatureExtractionPipeline } from "@huggingface/transformers";
 import modelManifest from "../../../models/bge-small-en-v1.5/manifest.json";
 import type { AskIntent } from "@/lib/content/types";
 import { AUTHORITY } from "@/lib/content/types";
-import type { Doc, SearchHit } from "./search";
+import { searchExcerpt, type Doc, type SearchHit } from "./search";
 import { getModel, isCallableInProduction } from "../registry/models";
 import { flagEnabled } from "../registry/flags";
 import type { AgentDefinition } from "../types";
@@ -149,7 +149,7 @@ export async function localSemanticRetrieve(query: string, intents: AskIntent[],
         kind: doc.kind, id: doc.id, title: doc.title, href: doc.href, authority: doc.authority,
         authorityLabel: AUTHORITY[doc.authority].label, type: doc.type, layer: doc.layer,
         status: doc.status, reviewDate: doc.reviewDate, scope: doc.scope,
-        excerpt: (doc.summary || doc.text).replace(/\s+/g," ").trim().slice(0,360), score: Math.round(similarity * 1000) / 100,
+        excerpt: searchExcerpt(doc.text || doc.summary, question, doc.title), score: Math.round(similarity * 1000) / 100,
       }));
   } catch (error) {
     const failure = error instanceof SemanticSearchUnavailable ? error : new SemanticSearchUnavailable("inference_failed", { cause: error });
