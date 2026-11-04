@@ -18,7 +18,8 @@ export function expandThroughGraph(hits: SearchHit[], docs: Doc[], question: str
         if (!weight) continue;
         for (const candidate of graph.documentsForNode<Doc>(node.id)) {
           if (present.has(candidate.id)) continue;
-          const row = scores.get(candidate.id) ?? { doc: candidate, score: scoreDoc(question, candidate), via: `Connected to ${hit.title}` };
+          const fromPage = hit.kind === "brief" && candidate.kind === "brief" && candidate.href === hit.href;
+          const row = scores.get(candidate.id) ?? { doc: candidate, score: scoreDoc(question, candidate, [], fromPage), via: `Connected to ${hit.title}` };
           row.score += weight;
           scores.set(candidate.id, row);
         }

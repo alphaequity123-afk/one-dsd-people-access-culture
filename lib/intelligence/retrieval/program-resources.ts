@@ -24,6 +24,7 @@ import { publicExplainerMediaDocs } from "./public-explainer-media-docs";
 import { publicPracticeDocs } from "./public-practice-docs";
 import { directorToolkitDocs } from "./director-toolkit-docs";
 import { leadershipStylesPathwayDocs } from "./leadership-styles-pathway-docs";
+import { equityDataDocs } from "./equity-data-docs";
 import { culturalIntelligenceSearchValues, leadershipLearningDocs, learningNavigationDocs, publishedLeadershipVideoDocs, themeCollectionDocs, programFrameworkDocs, additionalPublicRouteDocs } from "./public-learning-docs";
 
 /** Public page definitions only. No owner workspace, draft, intake, or source archive. */
@@ -170,7 +171,8 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   // is published. Theme descriptions are public and context links are gated.
   destinations.push(...leadershipLearningDocs(scope, publishedIds), ...leadershipVideos, ...themeCollectionDocs(scope, publishedIds), ...learningNavigationDocs(scope, publishedIds), ...programFrameworkDocs(scope), ...publicPracticeDocs(scope), ...publicRouteDocs(scope), ...additionalPublicRouteDocs(scope, publishedIds), ...dynamicPublicRouteDocs(scope, publications));
   // Code-defined public pages: the Equity Director toolkit and the leadership styles pathway, one document per anchored passage.
-  destinations.push(...directorToolkitDocs(scope), ...leadershipStylesPathwayDocs(scope));
+  // Aggregate equity baseline figures, one document per measure and year, citing the leaders dashboard.
+  destinations.push(...directorToolkitDocs(scope), ...leadershipStylesPathwayDocs(scope), ...equityDataDocs(scope));
   const communityDocs = destinations.filter(d => d.kind === "brief");
   // Everything readable on the site belongs in the search. A failure here is visible and leaves the rest working.
   try {

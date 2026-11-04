@@ -256,11 +256,16 @@ export function searchExcerpt(text: string, query: string, title = ""): string {
 // so this does not retain stale published text across requests or scope changes.
 const frequencies = new WeakMap<Doc, { text: Map<string, number>; title: Map<string, number>; norm: number; length: number; titleWords: string[]; slugWords: string[] }>();
 
-export function scoreDoc(query: string, doc: Doc, intents: AskIntent[] = []): number {
-  return scoreDocWithTerms(termFreq(query), doc, intents);
+/**
+ * `fromCommunityPage` is set when the document was reached from its community's page
+ * (graph expansion). There, naming the community names every entry on that page; in
+ * open search it names only the community brief itself.
+ */
+export function scoreDoc(query: string, doc: Doc, intents: AskIntent[] = [], fromCommunityPage = false): number {
+  return scoreDocWithTerms(termFreq(query), doc, intents, fromCommunityPage);
 }
 
-function scoreDocWithTerms(q: Map<string, number>, doc: Doc, intents: AskIntent[] = []): number {
+function scoreDocWithTerms(q: Map<string, number>, doc: Doc, intents: AskIntent[] = [], fromCommunityPage = false): number {
   let frequency = frequencies.get(doc);
   if (!frequency) {
     const text = termFreq(doc.text);
@@ -286,8 +291,11 @@ function scoreDocWithTerms(q: Map<string, number>, doc: Doc, intents: AskIntent[
   const intentBoost = intents.some((i) => doc.intents.includes(i)) ? 1.5 : 0;
   const auth = AUTHORITY_BOOST[doc.authority] ?? 0.5;
   const { titleWords, slugWords } = frequency;
+  // A community's page slug names its brief. Research and profile entries share the page
+  // link, so naming the community names them only when they were reached from that page.
+  const slugNames = doc.type === "community_brief" || fromCommunityPage;
   const named = (titleWords.length > 0 && titleWords.every(word => q.has(word)))
-    || (slugWords.length > 0 && slugWords.every(word => q.has(word)));
+    || (slugNames && slugWords.length > 0 && slugWords.every(word => q.has(word)));
   return base <= 0 ? 0 : base + intentBoost + auth + (named ? 20 : 0);
 }
 

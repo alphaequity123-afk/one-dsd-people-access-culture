@@ -5,11 +5,14 @@ import { useEffect, useRef, useState } from "react";
 import { STRUCTURAL_GUIDANCE, STRUCTURAL_STEPS, type StructuralField, type StructuralStepId } from "@/lib/structural-review/content";
 import { freshStructuralDraft, isStructuralCalendarDate, parseStructuralDraft, structuralChecks, structuralProgress, structuralRouteWarning, STRUCTURAL_DRAFT_MAX_BYTES, STRUCTURAL_FIELD_MAX_LENGTH, STRUCTURAL_TABLE_MAX_ROWS, type StructuralDraft, type StructuralValue } from "@/lib/structural-review/draft";
 import { structuralRecordText, structuralReportHtml } from "@/lib/structural-review/report";
+import { DECISION_TYPES, DECISION_TYPE_LABELS, EQUITY_REVIEW_COUNT_NOTICE, PRACTICE_COUNTERS_ENABLED, sendEquityReviewCompletion, type DecisionType } from "@/lib/practice/equity-review-count";
+import goalsFile from "@/lib/content/data/equity-goals.json";
 import styles from "./structural-review-workspace.module.css";
 
 export const STRUCTURAL_DRAFT_KEY = "one-dsd-structural-review-draft";
 export const STRUCTURAL_IMPORT_LIMIT = STRUCTURAL_DRAFT_MAX_BYTES;
 const SUMMARY = STRUCTURAL_STEPS.length;
+const COUNT_GOALS = goalsFile.goals.map(goal => ({ number: goal.number, title: goal.title }));
 
 function text(value: StructuralValue | undefined) { return typeof value === "string" ? value : ""; }
 function choices(value: StructuralValue | undefined) { return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : []; }
@@ -35,6 +38,10 @@ export function StructuralReviewWorkspace() {
   const draftNow = useRef(draft);
   const generation = useRef(0);
   const importSequence = useRef(0);
+  // One anonymous count per review. Kept with the saved draft so a reload does not count it again.
+  const counted = useRef(false);
+  const [countGoals, setCountGoals] = useState<number[]>([]);
+  const [countDecision, setCountDecision] = useState<DecisionType | "">("");
 
   useEffect(() => {
     let cancelled = false;
@@ -43,9 +50,10 @@ export function StructuralReviewWorkspace() {
       try {
         const saved = localStorage.getItem(STRUCTURAL_DRAFT_KEY);
         if (saved) {
-          const envelope = JSON.parse(saved) as { keep?: unknown; draft?: unknown };
+          const envelope = JSON.parse(saved) as { keep?: unknown; draft?: unknown; counted?: unknown };
           if (envelope.keep !== true) throw new Error("Unrecognized saved copy");
           const restored = parseStructuralDraft(envelope.draft);
+          counted.current = envelope.counted === true;
           draftNow.current = restored; savingAllowed.current = true;
           setDraft(restored); setKeep(true); setNotice("Your saved draft is open.");
         }
@@ -63,7 +71,7 @@ export function StructuralReviewWorkspace() {
     const timer = setTimeout(() => {
       if (!savingAllowed.current || version !== generation.current) return;
       try {
-        localStorage.setItem(STRUCTURAL_DRAFT_KEY, JSON.stringify({ keep: true, draft: draftNow.current }));
+        localStorage.setItem(STRUCTURAL_DRAFT_KEY, savedEnvelope());
         setNotice("Draft saved on this device.");
       } catch {
         setError("This device could not save your draft. Your work is still open. Download a working copy to keep it.");
@@ -82,6 +90,15 @@ export function StructuralReviewWorkspace() {
   }, [current, draft]);
 
   function replace(next: StructuralDraft) { draftNow.current = next; setDraft(next); }
+  function savedEnvelope() { return JSON.stringify({ keep: true, draft: draftNow.current, ...(counted.current ? { counted: true } : {}) }); }
+  function resetCount() { counted.current = false; setCountGoals([]); setCountDecision(""); }
+  /** Fire-and-forget: adds one to the anonymous total the first time this review is finished. */
+  function countFinishedReview() {
+    if (counted.current) return;
+    counted.current = true;
+    sendEquityReviewCompletion({ tool: "structural", goals: countGoals, decisionType: countDecision || undefined });
+    if (savingAllowed.current) { try { localStorage.setItem(STRUCTURAL_DRAFT_KEY, savedEnvelope()); } catch { /* The draft save effect reports storage problems. */ } }
+  }
   function update(id: StructuralStepId, key: string, value: StructuralValue) {
     const inputTexts = typeof value === "string" ? [value] : value.flatMap(item => typeof item === "string" ? [item] : Object.values(item));
     if (inputTexts.some(input => input.length > STRUCTURAL_FIELD_MAX_LENGTH || /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/.test(input))) {
@@ -120,7 +137,7 @@ export function StructuralReviewWorkspace() {
       if (new TextEncoder().encode(content).byteLength > STRUCTURAL_IMPORT_LIMIT) throw new Error("Too large");
       const parsed = parseStructuralDraft(JSON.parse(content));
       if (sequence !== importSequence.current) return;
-      replace(parsed); go(0); setNotice("Working copy opened. Your answers are ready to continue.");
+      replace(parsed); resetCount(); go(0); setNotice("Working copy opened. Your answers are ready to continue.");
     } catch {
       if (sequence === importSequence.current) setError(`This working copy could not be opened. Use a structural review working copy under ${STRUCTURAL_IMPORT_LIMIT / 1_000_000} MB. Your current answers have not been replaced.`);
     }
@@ -128,7 +145,7 @@ export function StructuralReviewWorkspace() {
   function startOver() {
     if (!window.confirm("Start a new structural review? This will clear the current answers and the draft saved by this tool on this device. Download a working copy first if you want to keep them.")) return;
     generation.current++; importSequence.current++; savingAllowed.current = false; setKeep(false);
-    replace(freshStructuralDraft()); go(0); setError("");
+    replace(freshStructuralDraft()); resetCount(); go(0); setError("");
     try { localStorage.removeItem(STRUCTURAL_DRAFT_KEY); setNotice("A new review is open. Draft saving is off."); }
     catch { setError("A new review is open, but this device could not remove the older saved draft. Clear this site's saved data through your browser if needed."); }
   }
@@ -142,6 +159,7 @@ export function StructuralReviewWorkspace() {
       } else if (format === "word") {
         const { structuralWordBlob } = await import("@/lib/structural-review/word-report");
         download(await structuralWordBlob(snapshot), "One-DSD-Structural-Review.docx");
+        countFinishedReview();
         setNotice("Word report download requested. Check your downloads.");
       } else if (format === "copy") {
         download(new Blob([JSON.stringify(snapshot, null, 2)], { type: "application/json" }), "One-DSD-Structural-Review-Working-Copy.json");
@@ -150,16 +168,17 @@ export function StructuralReviewWorkspace() {
         const report = new Blob([structuralReportHtml(snapshot)], { type: "text/html" });
         const file = new File([report], "One-DSD-Structural-Review.html", { type: "text/html" });
         if (format === "share" && navigator.canShare?.({ files: [file] }) && navigator.share) {
-          try { await navigator.share({ files: [file], title: "One DSD structural review" }); setNotice("Report shared through your chosen application."); return; }
+          try { await navigator.share({ files: [file], title: "One DSD structural review" }); countFinishedReview(); setNotice("Report shared through your chosen application."); return; }
           catch (failure) { if (failure instanceof DOMException && failure.name === "AbortError") { setNotice("Sharing cancelled. Your work is unchanged."); return; } }
         }
         download(report, file.name);
+        countFinishedReview();
         setNotice(format === "share" ? "Report download requested. Attach the downloaded file to your message. No public link was created." : "Readable report download requested. Check your downloads.");
       }
     } catch { setError("The report could not be prepared. Your work is still open. Try again or download a working copy."); }
     finally { setBusy(false); }
   }
-  function printSummary() { go(SUMMARY); setTimeout(() => window.print(), 100); }
+  function printSummary() { go(SUMMARY); countFinishedReview(); setTimeout(() => window.print(), 100); }
 
   const step = STRUCTURAL_STEPS[current];
   const completed = STRUCTURAL_STEPS.filter(item => structuralProgress(draft, item.id) === "done").length;
@@ -205,6 +224,12 @@ export function StructuralReviewWorkspace() {
           <h3>Before you share</h3><ul className={styles.checks}>{structuralChecks(draft).map(check => <li key={check.id}><strong>{check.met ? "Answered" : "Needs attention"}:</strong> {check.label}</li>)}</ul>
           <label className={styles.consent}><input type="checkbox" checked={draft.review.privacyChecked} onChange={event => replace({ ...draftNow.current, review: { ...draftNow.current.review, privacyChecked: event.target.checked } })} />I have checked this record for personal, client, complaint, and confidential information before sharing.</label>
           <label className={styles.consent}><input type="checkbox" checked={draft.review.ownerConfirmed} onChange={event => replace({ ...draftNow.current, review: { ...draftNow.current.review, ownerConfirmed: event.target.checked } })} />The process owner has confirmed the proposed next steps.</label>
+          {/* Shown only while One DSD can keep the anonymous count; see PRACTICE_COUNTERS_ENABLED. */}
+          {PRACTICE_COUNTERS_ENABLED ? <>
+          <fieldset className={styles.field}><legend>Which equity goals does this review connect to? (optional)</legend><p className={styles.help}>Your choices here are added to the count. They are not saved with your answers.</p><div className={styles.choices}>{COUNT_GOALS.map(goal => <label key={goal.number} htmlFor={`structural-count-goal-${goal.number}`}><input id={`structural-count-goal-${goal.number}`} type="checkbox" checked={countGoals.includes(goal.number)} onChange={event => setCountGoals(current => event.target.checked ? [...current.filter(item => item !== goal.number), goal.number] : current.filter(item => item !== goal.number))} />Goal {goal.number}: {goal.title}</label>)}</div></fieldset>
+          <div className={styles.field}><label htmlFor="structural-count-decision">What kind of decision is this? (optional)</label><select id="structural-count-decision" value={countDecision} onChange={event => setCountDecision(event.target.value as DecisionType | "")}><option value="">Choose one</option>{DECISION_TYPES.map(type => <option key={type} value={type}>{DECISION_TYPE_LABELS[type]}</option>)}</select></div>
+          <p className={styles.help}>{EQUITY_REVIEW_COUNT_NOTICE} Downloading, sharing or printing the report finishes the review.</p>
+          </> : null}
           <div className={styles.actions}><button disabled={busy} onClick={() => void exportReport("html")}>Download readable report</button><button disabled={busy} onClick={() => void exportReport("word")}>Download Word report</button><button disabled={busy} onClick={() => void exportReport("share")}>Share report</button><button onClick={printSummary}>Print report</button></div>
           <p className={styles.help}>A working copy keeps your answers editable. Word and readable reports can be attached to a message. Consultant support is optional; preparing a report does not send it to the consultant.</p>
           <details className={styles.guidance}><summary>Continue in the Consultant Workspace</summary><p>Download your analysis notes and upload them as supporting material in the <Link href="/consultant/analysis">Consultant Workspace</Link>. Check the supporting evidence separately. This does not submit your draft or make recommendations on its own.</p><button disabled={busy} onClick={() => void exportReport("notes")}>Download analysis notes</button></details>

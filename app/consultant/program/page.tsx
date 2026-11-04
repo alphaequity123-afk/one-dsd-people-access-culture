@@ -9,6 +9,7 @@ import { ProgramWorkSummary } from "@/components/program-work-summary";
 import { programWorkSummary } from "@/lib/program/work-summary";
 import { programFunctions } from "@/lib/program/model";
 import { getStore, storeIsPersistent } from "@/lib/intelligence/memory/store";
+import { leadersKey } from "@/lib/auth/leaders";
 export const metadata:Metadata={title:"Program work"};
 export const dynamic="force-dynamic";
 const labels:Record<string,string>={queued:"Ready to begin",started:"In progress",completed:"Preparation produced",prepared:"Preparation recorded",decision_recorded:"Decision reported",failed:"Unfinished",cancelled:"Stopped",retry_requested:"Ready to revise",applied:"Implementation reported",reviewed:"Reviewed",results_recorded:"Results reported",results_reported:"Results reported",implementation_reported:"Implementation reported",decision_reported:"Decision reported",prepared_for_review:"Prepared for review",stopped:"Stopped"};
@@ -21,6 +22,7 @@ export default async function ProgramWorkPage(){
     <PageIntro kicker="Consultant Workspace" title="Priorities, preparation and follow-through" lede="Connect an approved priority with evidence, affected perspectives, a reasoned recommendation and the responsible next step."/>
     <div className="wrap space-y-8 py-8">
       <ProgramWorkControls/>
+      {(()=>{const key=leadersKey();return <section className="card p-6" aria-labelledby="leaders-key-heading"><h2 id="leaders-key-heading" className="text-2xl font-semibold">Equity baseline access for managers and supervisors</h2><p>The <Link href="/data/equity-baseline">equity baseline</Link> is for Disability Services Division managers and supervisors and for you. They open it with the leaders access key below. Share it in person or by direct message, not in a group post. The key changes only when the owner key changes.</p>{key?<details className="mt-3"><summary>Show the leaders access key</summary><p className="mt-2"><code>{key}</code></p></details>:<p role="alert">Leaders access is not set up, so the equity baseline is locked.</p>}</section>;})()}
       <section className="card p-6"><h2 className="text-2xl font-semibold">A contribution is not a decision</h2><p>Prepare the analysis, name what remains unknown, and identify who can decide. Record an authorized decision only when it has actually been made. Implementation and observed results remain separate from the draft and from one another.</p><p className="mt-3">You can prepare work manually with automated assistance off. Sources, authority, privacy and evidence standards remain the same; the two paths do not promise identical reasoning.</p><p className="mt-3"><Link href="/program/model">Explore learning and practice</Link> · <Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link> · <Link href="/equity-review">Prepare an equity review</Link></p></section>
       <section className="card p-6" aria-labelledby="work-evidence-heading">
         <h2 id="work-evidence-heading" className="text-2xl font-semibold">What the work shows</h2>

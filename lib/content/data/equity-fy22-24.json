@@ -1,0 +1,2487 @@
+{
+ "source": "FY22_24 Equity Data.xlsx (Disability Services Division), read 2026-11-03",
+ "fiscalYearNote": "Fiscal year 2022 runs July 1, 2021 to June 30, 2022. Other fiscal years are measured the same way.",
+ "races": {
+  "american-indian": "American Indian or Alaska Native",
+  "asian-pacific-islander": "Asian or Pacific Islander",
+  "black": "Black or African American",
+  "hispanic": "Hispanic or Latino",
+  "multiracial": "Multiracial",
+  "unknown": "Race not recorded",
+  "white": "White",
+  "all": "All people"
+ },
+ "phases": [
+  {
+   "id": "explore",
+   "label": "Explore: deciding whether to work"
+  },
+  {
+   "id": "plan",
+   "label": "Plan: setting work goals"
+  },
+  {
+   "id": "find",
+   "label": "Find: getting a job"
+  },
+  {
+   "id": "keep",
+   "label": "Keep: staying employed"
+  }
+ ],
+ "serviceAccess": {
+  "youth": {
+   "age": "14-21",
+   "services": [
+    {
+     "short": "Waiver",
+     "full": "Disability waiver services",
+     "phase": null
+    },
+    {
+     "short": "VRS/SSB",
+     "full": "Vocational Rehabilitation Services or State Services for the Blind",
+     "phase": "find"
+    },
+    {
+     "short": "ESS (all)",
+     "full": "Employment Support Services, all types",
+     "phase": "keep"
+    }
+   ],
+   "rows": [
+    {
+     "year": 2022,
+     "race": "american-indian",
+     "counts": {
+      "Waiver": 143,
+      "VRS/SSB": 12,
+      "ESS (all)": null
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.64,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2022,
+     "race": "asian-pacific-islander",
+     "counts": {
+      "Waiver": 282,
+      "VRS/SSB": 35,
+      "ESS (all)": 6
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.95,
+      "ESS (all)": 0.64
+     }
+    },
+    {
+     "year": 2022,
+     "race": "black",
+     "counts": {
+      "Waiver": 1178,
+      "VRS/SSB": 102,
+      "ESS (all)": 22
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.63,
+      "ESS (all)": 0.53
+     }
+    },
+    {
+     "year": 2022,
+     "race": "hispanic",
+     "counts": {
+      "Waiver": 473,
+      "VRS/SSB": 84,
+      "ESS (all)": 6
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.39,
+      "ESS (all)": 0.37
+     }
+    },
+    {
+     "year": 2022,
+     "race": "multiracial",
+     "counts": {
+      "Waiver": 354,
+      "VRS/SSB": 67,
+      "ESS (all)": 7
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.48,
+      "ESS (all)": 0.59
+     }
+    },
+    {
+     "year": 2022,
+     "race": "unknown",
+     "counts": {
+      "Waiver": 619,
+      "VRS/SSB": 25,
+      "ESS (all)": 17
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.29,
+      "ESS (all)": 0.83
+     }
+    },
+    {
+     "year": 2022,
+     "race": "white",
+     "counts": {
+      "Waiver": 4612,
+      "VRS/SSB": 675,
+      "ESS (all)": 192
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.37,
+      "ESS (all)": 2.15
+     }
+    },
+    {
+     "year": 2022,
+     "race": "all",
+     "counts": {
+      "Waiver": 7661,
+      "VRS/SSB": 1000,
+      "ESS (all)": null
+     },
+     "riskRatios": {
+      "VRS/SSB": null,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2023,
+     "race": "american-indian",
+     "counts": {
+      "Waiver": 150,
+      "VRS/SSB": 13,
+      "ESS (all)": null
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.66,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2023,
+     "race": "asian-pacific-islander",
+     "counts": {
+      "Waiver": 290,
+      "VRS/SSB": 37,
+      "ESS (all)": null
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.97,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2023,
+     "race": "black",
+     "counts": {
+      "Waiver": 1304,
+      "VRS/SSB": 110,
+      "ESS (all)": 17
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.6,
+      "ESS (all)": 0.34
+     }
+    },
+    {
+     "year": 2023,
+     "race": "hispanic",
+     "counts": {
+      "Waiver": 512,
+      "VRS/SSB": 99,
+      "ESS (all)": 9
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.53,
+      "ESS (all)": 0.49
+     }
+    },
+    {
+     "year": 2023,
+     "race": "multiracial",
+     "counts": {
+      "Waiver": 387,
+      "VRS/SSB": 74,
+      "ESS (all)": null
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.49,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2023,
+     "race": "unknown",
+     "counts": {
+      "Waiver": 755,
+      "VRS/SSB": 28,
+      "ESS (all)": 24
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.26,
+      "ESS (all)": 0.91
+     }
+    },
+    {
+     "year": 2023,
+     "race": "white",
+     "counts": {
+      "Waiver": 4682,
+      "VRS/SSB": 697,
+      "ESS (all)": 218
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.4,
+      "ESS (all)": 2.55
+     }
+    },
+    {
+     "year": 2023,
+     "race": "all",
+     "counts": {
+      "Waiver": 8080,
+      "VRS/SSB": 1058,
+      "ESS (all)": 280
+     },
+     "riskRatios": {
+      "VRS/SSB": null,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2024,
+     "race": "american-indian",
+     "counts": {
+      "Waiver": 129,
+      "VRS/SSB": 15,
+      "ESS (all)": null
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.94,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2024,
+     "race": "asian-pacific-islander",
+     "counts": {
+      "Waiver": 320,
+      "VRS/SSB": 49,
+      "ESS (all)": null
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.25,
+      "ESS (all)": null
+     }
+    },
+    {
+     "year": 2024,
+     "race": "black",
+     "counts": {
+      "Waiver": 1396,
+      "VRS/SSB": 118,
+      "ESS (all)": 17
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.64,
+      "ESS (all)": 0.32
+     }
+    },
+    {
+     "year": 2024,
+     "race": "hispanic",
+     "counts": {
+      "Waiver": 541,
+      "VRS/SSB": 97,
+      "ESS (all)": 25
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.49,
+      "ESS (all)": 1.41
+     }
+    },
+    {
+     "year": 2024,
+     "race": "multiracial",
+     "counts": {
+      "Waiver": 417,
+      "VRS/SSB": 58,
+      "ESS (all)": 11
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.13,
+      "ESS (all)": 0.78
+     }
+    },
+    {
+     "year": 2024,
+     "race": "unknown",
+     "counts": {
+      "Waiver": 966,
+      "VRS/SSB": 24,
+      "ESS (all)": 24
+     },
+     "riskRatios": {
+      "VRS/SSB": 0.18,
+      "ESS (all)": 0.72
+     }
+    },
+    {
+     "year": 2024,
+     "race": "white",
+     "counts": {
+      "Waiver": 4814,
+      "VRS/SSB": 704,
+      "ESS (all)": 206
+     },
+     "riskRatios": {
+      "VRS/SSB": 1.53,
+      "ESS (all)": 1.97
+     }
+    },
+    {
+     "year": 2024,
+     "race": "all",
+     "counts": {
+      "Waiver": 8583,
+      "VRS/SSB": 1065,
+      "ESS (all)": 288
+     },
+     "riskRatios": {
+      "VRS/SSB": null,
+      "ESS (all)": null
+     }
+    }
+   ]
+  },
+  "adults": {
+   "age": "22-64",
+   "services": [
+    {
+     "short": "Waiver",
+     "full": "Disability waiver services",
+     "phase": null
+    },
+    {
+     "short": "EES",
+     "full": "Employment Exploration Services",
+     "phase": "explore"
+    },
+    {
+     "short": "EDS",
+     "full": "Employment Development Services",
+     "phase": "plan"
+    },
+    {
+     "short": "EDS Plan",
+     "full": "Employment Development Services, Plan phase",
+     "phase": "plan"
+    },
+    {
+     "short": "EDS Find",
+     "full": "Employment Development Services, Find phase",
+     "phase": "find"
+    },
+    {
+     "short": "VRS/SSB",
+     "full": "Vocational Rehabilitation Services or State Services for the Blind",
+     "phase": "find"
+    },
+    {
+     "short": "ESS Indiv.",
+     "full": "Employment Support Services, Individual",
+     "phase": "keep"
+    },
+    {
+     "short": "ESS Group",
+     "full": "Employment Support Services, Group",
+     "phase": "keep"
+    },
+    {
+     "short": "Prevoc",
+     "full": "Prevocational Services",
+     "phase": "keep"
+    }
+   ],
+   "rows": [
+    {
+     "year": 2022,
+     "race": "american-indian",
+     "counts": {
+      "Waiver": 1225,
+      "EES": 22,
+      "EDS": 48,
+      "EDS Plan": 22,
+      "EDS Find": 14,
+      "VRS/SSB": 43,
+      "ESS Indiv.": 105,
+      "ESS Group": 63,
+      "Prevoc": 79
+     },
+     "riskRatios": {
+      "EES": 1.01,
+      "EDS": 0.96,
+      "EDS Plan": 0.78,
+      "EDS Find": 0.73,
+      "VRS/SSB": 0.94,
+      "ESS Indiv.": 0.88,
+      "ESS Group": 0.81,
+      "Prevoc": 0.7
+     }
+    },
+    {
+     "year": 2022,
+     "race": "asian-pacific-islander",
+     "counts": {
+      "Waiver": 1673,
+      "EES": 15,
+      "EDS": 51,
+      "EDS Plan": 29,
+      "EDS Find": 12,
+      "VRS/SSB": 48,
+      "ESS Indiv.": 107,
+      "ESS Group": 63,
+      "Prevoc": 83
+     },
+     "riskRatios": {
+      "EES": 0.5,
+      "EDS": 0.74,
+      "EDS Plan": 0.75,
+      "EDS Find": 0.45,
+      "VRS/SSB": 0.76,
+      "ESS Indiv.": 0.65,
+      "ESS Group": 0.59,
+      "Prevoc": 0.53
+     }
+    },
+    {
+     "year": 2022,
+     "race": "black",
+     "counts": {
+      "Waiver": 8984,
+      "EES": 144,
+      "EDS": 270,
+      "EDS Plan": 150,
+      "EDS Find": 128,
+      "VRS/SSB": 172,
+      "ESS Indiv.": 402,
+      "ESS Group": 119,
+      "Prevoc": 197
+     },
+     "riskRatios": {
+      "EES": 0.88,
+      "EDS": 0.69,
+      "EDS Plan": 0.69,
+      "EDS Find": 0.9,
+      "VRS/SSB": 0.46,
+      "ESS Indiv.": 0.41,
+      "ESS Group": 0.18,
+      "Prevoc": 0.2
+     }
+    },
+    {
+     "year": 2022,
+     "race": "hispanic",
+     "counts": {
+      "Waiver": 1216,
+      "EES": 28,
+      "EDS": 51,
+      "EDS Plan": 31,
+      "EDS Find": 19,
+      "VRS/SSB": 83,
+      "ESS Indiv.": 115,
+      "ESS Group": 55,
+      "Prevoc": 84
+     },
+     "riskRatios": {
+      "EES": 1.31,
+      "EDS": 1.03,
+      "EDS Plan": 1.12,
+      "EDS Find": 1.01,
+      "VRS/SSB": 1.86,
+      "ESS Indiv.": 0.97,
+      "ESS Group": 0.71,
+      "Prevoc": 0.75
+     }
+    },
+    {
+     "year": 2022,
+     "race": "multiracial",
+     "counts": {
+      "Waiver": 469,
+      "EES": 14,
+      "EDS": 21,
+      "EDS Plan": 15,
+      "EDS Find": 12,
+      "VRS/SSB": 74,
+      "ESS Indiv.": 46,
+      "ESS Group": 12,
+      "Prevoc": 14
+     },
+     "riskRatios": {
+      "EES": 1.69,
+      "EDS": 1.1,
+      "EDS Plan": 1.4,
+      "EDS Find": 1.66,
+      "VRS/SSB": 4.35,
+      "ESS Indiv.": 1.01,
+      "ESS Group": 0.4,
+      "Prevoc": 0.32
+     }
+    },
+    {
+     "year": 2022,
+     "race": "unknown",
+     "counts": {
+      "Waiver": 741,
+      "EES": 11,
+      "EDS": 33,
+      "EDS Plan": 27,
+      "EDS Find": 11,
+      "VRS/SSB": 34,
+      "ESS Indiv.": 70,
+      "ESS Group": 30,
+      "Prevoc": 47
+     },
+     "riskRatios": {
+      "EES": 0.83,
+      "EDS": 1.09,
+      "EDS Plan": 1.61,
+      "EDS Find": 0.96,
+      "VRS/SSB": 1.23,
+      "ESS Indiv.": 0.97,
+      "ESS Group": 0.64,
+      "Prevoc": 0.69
+     }
+    },
+    {
+     "year": 2022,
+     "race": "white",
+     "counts": {
+      "Waiver": 33756,
+      "EES": 620,
+      "EDS": 1486,
+      "EDS Plan": 825,
+      "EDS Find": 548,
+      "VRS/SSB": 1346,
+      "ESS Indiv.": 3844,
+      "ESS Group": 2687,
+      "Prevoc": 3888
+     },
+     "riskRatios": {
+      "EES": 1.12,
+      "EDS": 1.33,
+      "EDS Plan": 1.28,
+      "EDS Find": 1.19,
+      "VRS/SSB": 1.26,
+      "ESS Indiv.": 1.93,
+      "ESS Group": 3.33,
+      "Prevoc": 3.27
+     }
+    },
+    {
+     "year": 2022,
+     "race": "all",
+     "counts": {
+      "Waiver": 48064,
+      "EES": 854,
+      "EDS": 1960,
+      "EDS Plan": 1099,
+      "EDS Find": 744,
+      "VRS/SSB": 1800,
+      "ESS Indiv.": 4689,
+      "ESS Group": 3029,
+      "Prevoc": 4392
+     },
+     "riskRatios": {
+      "EES": null,
+      "EDS": null,
+      "EDS Plan": null,
+      "EDS Find": null,
+      "VRS/SSB": null,
+      "ESS Indiv.": null,
+      "ESS Group": null,
+      "Prevoc": null
+     }
+    },
+    {
+     "year": 2023,
+     "race": "american-indian",
+     "counts": {
+      "Waiver": 1318,
+      "EES": 23,
+      "EDS": null,
+      "EDS Plan": 40,
+      "EDS Find": 21,
+      "VRS/SSB": 52,
+      "ESS Indiv.": 101,
+      "ESS Group": 55,
+      "Prevoc": 76
+     },
+     "riskRatios": {
+      "EES": 0.87,
+      "EDS": null,
+      "EDS Plan": 0.78,
+      "EDS Find": 0.89,
+      "VRS/SSB": 0.96,
+      "ESS Indiv.": 0.75,
+      "ESS Group": 0.74,
+      "Prevoc": 0.68
+     }
+    },
+    {
+     "year": 2023,
+     "race": "asian-pacific-islander",
+     "counts": {
+      "Waiver": 1822,
+      "EES": 24,
+      "EDS": null,
+      "EDS Plan": 53,
+      "EDS Find": 26,
+      "VRS/SSB": 68,
+      "ESS Indiv.": 114,
+      "ESS Group": 53,
+      "Prevoc": 74
+     },
+     "riskRatios": {
+      "EES": 0.65,
+      "EDS": null,
+      "EDS Plan": 0.75,
+      "EDS Find": 0.8,
+      "VRS/SSB": 0.91,
+      "ESS Indiv.": 0.61,
+      "ESS Group": 0.51,
+      "Prevoc": 0.48
+     }
+    },
+    {
+     "year": 2023,
+     "race": "black",
+     "counts": {
+      "Waiver": 9905,
+      "EES": 203,
+      "EDS": 8,
+      "EDS Plan": 295,
+      "EDS Find": 184,
+      "VRS/SSB": 214,
+      "ESS Indiv.": 422,
+      "ESS Group": 126,
+      "Prevoc": 203
+     },
+     "riskRatios": {
+      "EES": 1.03,
+      "EDS": null,
+      "EDS Plan": 0.73,
+      "EDS Find": 1.05,
+      "VRS/SSB": 0.47,
+      "ESS Indiv.": 0.37,
+      "ESS Group": 0.19,
+      "Prevoc": 0.21
+     }
+    },
+    {
+     "year": 2023,
+     "race": "hispanic",
+     "counts": {
+      "Waiver": 1339,
+      "EES": 33,
+      "EDS": null,
+      "EDS Plan": 65,
+      "EDS Find": 22,
+      "VRS/SSB": 88,
+      "ESS Indiv.": 119,
+      "ESS Group": 53,
+      "Prevoc": 81
+     },
+     "riskRatios": {
+      "EES": 1.24,
+      "EDS": null,
+      "EDS Plan": 1.27,
+      "EDS Find": 0.92,
+      "VRS/SSB": 1.63,
+      "ESS Indiv.": 0.87,
+      "ESS Group": 0.7,
+      "Prevoc": 0.72
+     }
+    },
+    {
+     "year": 2023,
+     "race": "multiracial",
+     "counts": {
+      "Waiver": 545,
+      "EES": 12,
+      "EDS": 0,
+      "EDS Plan": 23,
+      "EDS Find": 12,
+      "VRS/SSB": 81,
+      "ESS Indiv.": 51,
+      "ESS Group": 13,
+      "Prevoc": 17
+     },
+     "riskRatios": {
+      "EES": 1.1,
+      "EDS": null,
+      "EDS Plan": 1.1,
+      "EDS Find": 1.24,
+      "VRS/SSB": 3.73,
+      "ESS Indiv.": 0.92,
+      "ESS Group": 0.42,
+      "Prevoc": 0.37
+     }
+    },
+    {
+     "year": 2023,
+     "race": "unknown",
+     "counts": {
+      "Waiver": 934,
+      "EES": 14,
+      "EDS": 0,
+      "EDS Plan": 45,
+      "EDS Find": 14,
+      "VRS/SSB": 32,
+      "ESS Indiv.": 100,
+      "ESS Group": 27,
+      "Prevoc": 37
+     },
+     "riskRatios": {
+      "EES": 0.74,
+      "EDS": null,
+      "EDS Plan": 1.26,
+      "EDS Find": 0.84,
+      "VRS/SSB": 0.83,
+      "ESS Indiv.": 1.05,
+      "ESS Group": 0.51,
+      "Prevoc": 0.47
+     }
+    },
+    {
+     "year": 2023,
+     "race": "white",
+     "counts": {
+      "Waiver": 34683,
+      "EES": 705,
+      "EDS": 26,
+      "EDS Plan": 1424,
+      "EDS Find": 621,
+      "VRS/SSB": 1537,
+      "ESS Indiv.": 4234,
+      "ESS Group": 2500,
+      "Prevoc": 3735
+     },
+     "riskRatios": {
+      "EES": 1.04,
+      "EDS": null,
+      "EDS Plan": 1.25,
+      "EDS Find": 1.02,
+      "VRS/SSB": 1.31,
+      "ESS Indiv.": 2.14,
+      "ESS Group": 3.5,
+      "Prevoc": 3.5
+     }
+    },
+    {
+     "year": 2023,
+     "race": "all",
+     "counts": {
+      "Waiver": 50546,
+      "EES": 1014,
+      "EDS": 39,
+      "EDS Plan": 1945,
+      "EDS Find": 900,
+      "VRS/SSB": 2072,
+      "ESS Indiv.": 5141,
+      "ESS Group": 2827,
+      "Prevoc": 4223
+     },
+     "riskRatios": {
+      "EES": null,
+      "EDS": null,
+      "EDS Plan": null,
+      "EDS Find": null,
+      "VRS/SSB": null,
+      "ESS Indiv.": null,
+      "ESS Group": null,
+      "Prevoc": null
+     }
+    },
+    {
+     "year": 2024,
+     "race": "american-indian",
+     "counts": {
+      "Waiver": 1376,
+      "EES": 28,
+      "EDS": 0,
+      "EDS Plan": 48,
+      "EDS Find": 23,
+      "VRS/SSB": 61,
+      "ESS Indiv.": 104,
+      "ESS Group": 48,
+      "Prevoc": 74
+     },
+     "riskRatios": {
+      "EES": 0.99,
+      "EDS": null,
+      "EDS Plan": 0.84,
+      "EDS Find": 1.01,
+      "VRS/SSB": 1,
+      "ESS Indiv.": 0.76,
+      "ESS Group": 0.68,
+      "Prevoc": 0.72
+     }
+    },
+    {
+     "year": 2024,
+     "race": "asian-pacific-islander",
+     "counts": {
+      "Waiver": 2001,
+      "EES": 25,
+      "EDS": 0,
+      "EDS Plan": 61,
+      "EDS Find": 25,
+      "VRS/SSB": 74,
+      "ESS Indiv.": 125,
+      "ESS Group": 48,
+      "Prevoc": 66
+     },
+     "riskRatios": {
+      "EES": 0.6,
+      "EDS": null,
+      "EDS Plan": 0.73,
+      "EDS Find": 0.75,
+      "VRS/SSB": 0.83,
+      "ESS Indiv.": 0.62,
+      "ESS Group": 0.46,
+      "Prevoc": 0.43
+     }
+    },
+    {
+     "year": 2024,
+     "race": "black",
+     "counts": {
+      "Waiver": 10865,
+      "EES": 260,
+      "EDS": 0,
+      "EDS Plan": 351,
+      "EDS Find": 216,
+      "VRS/SSB": 250,
+      "ESS Indiv.": 429,
+      "ESS Group": 125,
+      "Prevoc": 192
+     },
+     "riskRatios": {
+      "EES": 1.22,
+      "EDS": null,
+      "EDS Plan": 0.74,
+      "EDS Find": 1.26,
+      "VRS/SSB": 0.46,
+      "ESS Indiv.": 0.35,
+      "ESS Group": 0.19,
+      "Prevoc": 0.2
+     }
+    },
+    {
+     "year": 2024,
+     "race": "hispanic",
+     "counts": {
+      "Waiver": 1492,
+      "EES": 30,
+      "EDS": 0,
+      "EDS Plan": 68,
+      "EDS Find": 19,
+      "VRS/SSB": 121,
+      "ESS Indiv.": 143,
+      "ESS Group": 51,
+      "Prevoc": 78
+     },
+     "riskRatios": {
+      "EES": 0.98,
+      "EDS": null,
+      "EDS Plan": 1.1,
+      "EDS Find": 0.76,
+      "VRS/SSB": 1.87,
+      "ESS Indiv.": 0.97,
+      "ESS Group": 0.66,
+      "Prevoc": 0.69
+     }
+    },
+    {
+     "year": 2024,
+     "race": "multiracial",
+     "counts": {
+      "Waiver": 639,
+      "EES": 22,
+      "EDS": 0,
+      "EDS Plan": 34,
+      "EDS Find": 12,
+      "VRS/SSB": 97,
+      "ESS Indiv.": 55,
+      "ESS Group": 11,
+      "Prevoc": 20
+     },
+     "riskRatios": {
+      "EES": 1.69,
+      "EDS": null,
+      "EDS Plan": 1.29,
+      "EDS Find": 1.13,
+      "VRS/SSB": 3.52,
+      "ESS Indiv.": 0.87,
+      "ESS Group": 0.33,
+      "Prevoc": 0.42
+     }
+    },
+    {
+     "year": 2024,
+     "race": "unknown",
+     "counts": {
+      "Waiver": 1203,
+      "EES": 15,
+      "EDS": 0,
+      "EDS Plan": 58,
+      "EDS Find": 12,
+      "VRS/SSB": 26,
+      "ESS Indiv.": 125,
+      "ESS Group": 26,
+      "Prevoc": 37
+     },
+     "riskRatios": {
+      "EES": 0.6,
+      "EDS": null,
+      "EDS Plan": 1.17,
+      "EDS Find": 0.6,
+      "VRS/SSB": 0.48,
+      "ESS Indiv.": 1.05,
+      "ESS Group": 0.42,
+      "Prevoc": 0.41
+     }
+    },
+    {
+     "year": 2024,
+     "race": "white",
+     "counts": {
+      "Waiver": 35609,
+      "EES": 710,
+      "EDS": 0,
+      "EDS Plan": 1584,
+      "EDS Find": 575,
+      "VRS/SSB": 1731,
+      "ESS Indiv.": 4271,
+      "ESS Group": 2412,
+      "Prevoc": 3501
+     },
+     "riskRatios": {
+      "EES": 0.92,
+      "EDS": null,
+      "EDS Plan": 1.26,
+      "EDS Find": 0.92,
+      "VRS/SSB": 1.36,
+      "ESS Indiv.": 2.15,
+      "ESS Group": 3.85,
+      "Prevoc": 3.7
+     }
+    },
+    {
+     "year": 2024,
+     "race": "all",
+     "counts": {
+      "Waiver": 53185,
+      "EES": 1090,
+      "EDS": 0,
+      "EDS Plan": 2204,
+      "EDS Find": 882,
+      "VRS/SSB": 2360,
+      "ESS Indiv.": 5252,
+      "ESS Group": 2721,
+      "Prevoc": 3968
+     },
+     "riskRatios": {
+      "EES": null,
+      "EDS": null,
+      "EDS Plan": null,
+      "EDS Find": null,
+      "VRS/SSB": null,
+      "ESS Indiv.": null,
+      "ESS Group": null,
+      "Prevoc": null
+     }
+    }
+   ]
+  }
+ },
+ "income": {
+  "youth": {
+   "age": "14-21",
+   "bands": [
+    {
+     "short": "No income",
+     "full": "No reported income"
+    },
+    {
+     "short": "$1-$599",
+     "full": "$1 to $599 a month"
+    },
+    {
+     "short": "$600+",
+     "full": "$600 or more a month"
+    }
+   ],
+   "rows": [
+    {
+     "year": 2022,
+     "race": "american-indian",
+     "total": 285,
+     "counts": {
+      "No income": 244,
+      "$1-$599": 12,
+      "$600+": 29
+     },
+     "riskRatios": {
+      "No income": 1,
+      "$1-$599": 0.67,
+      "$600+": 1.2
+     }
+    },
+    {
+     "year": 2022,
+     "race": "asian-pacific-islander",
+     "total": 351,
+     "counts": {
+      "No income": 320,
+      "$1-$599": 13,
+      "$600+": 18
+     },
+     "riskRatios": {
+      "No income": 1.07,
+      "$1-$599": 0.58,
+      "$600+": 0.6
+     }
+    },
+    {
+     "year": 2022,
+     "race": "black",
+     "total": 1500,
+     "counts": {
+      "No income": 1328,
+      "$1-$599": 60,
+      "$600+": 112
+     },
+     "riskRatios": {
+      "No income": 1.05,
+      "$1-$599": 0.6,
+      "$600+": 0.86
+     }
+    },
+    {
+     "year": 2022,
+     "race": "hispanic",
+     "total": 718,
+     "counts": {
+      "No income": 612,
+      "$1-$599": 41,
+      "$600+": 65
+     },
+     "riskRatios": {
+      "No income": 1,
+      "$1-$599": 0.91,
+      "$600+": 1.07
+     }
+    },
+    {
+     "year": 2022,
+     "race": "multiracial",
+     "total": 575,
+     "counts": {
+      "No income": 489,
+      "$1-$599": 36,
+      "$600+": 50
+     },
+     "riskRatios": {
+      "No income": 1,
+      "$1-$599": 1,
+      "$600+": 1.02
+     }
+    },
+    {
+     "year": 2022,
+     "race": "unknown",
+     "total": 1195,
+     "counts": {
+      "No income": 1037,
+      "$1-$599": 52,
+      "$600+": 106
+     },
+     "riskRatios": {
+      "No income": 1.02,
+      "$1-$599": 0.67,
+      "$600+": 1.05
+     }
+    },
+    {
+     "year": 2022,
+     "race": "white",
+     "total": 5894,
+     "counts": {
+      "No income": 4937,
+      "$1-$599": 443,
+      "$600+": 514
+     },
+     "riskRatios": {
+      "No income": 0.96,
+      "$1-$599": 1.62,
+      "$600+": 1.06
+     }
+    },
+    {
+     "year": 2022,
+     "race": "all",
+     "total": 10518,
+     "counts": {
+      "No income": 8967,
+      "$1-$599": 657,
+      "$600+": 894
+     },
+     "riskRatios": {
+      "No income": null,
+      "$1-$599": null,
+      "$600+": null
+     }
+    },
+    {
+     "year": 2023,
+     "race": "american-indian",
+     "total": 282,
+     "counts": {
+      "No income": 244,
+      "$1-$599": 9,
+      "$600+": 29
+     },
+     "riskRatios": {
+      "No income": 1.02,
+      "$1-$599": 0.51,
+      "$600+": 1.1
+     }
+    },
+    {
+     "year": 2023,
+     "race": "asian-pacific-islander",
+     "total": 344,
+     "counts": {
+      "No income": 314,
+      "$1-$599": 11,
+      "$600+": 19
+     },
+     "riskRatios": {
+      "No income": 1.08,
+      "$1-$599": 0.51,
+      "$600+": 0.58
+     }
+    },
+    {
+     "year": 2023,
+     "race": "black",
+     "total": 1585,
+     "counts": {
+      "No income": 1379,
+      "$1-$599": 72,
+      "$600+": 134
+     },
+     "riskRatios": {
+      "No income": 1.04,
+      "$1-$599": 0.71,
+      "$600+": 0.88
+     }
+    },
+    {
+     "year": 2023,
+     "race": "hispanic",
+     "total": 717,
+     "counts": {
+      "No income": 601,
+      "$1-$599": 46,
+      "$600+": 70
+     },
+     "riskRatios": {
+      "No income": 0.99,
+      "$1-$599": 1.05,
+      "$600+": 1.04
+     }
+    },
+    {
+     "year": 2023,
+     "race": "multiracial",
+     "total": 593,
+     "counts": {
+      "No income": 494,
+      "$1-$599": 33,
+      "$600+": 66
+     },
+     "riskRatios": {
+      "No income": 0.99,
+      "$1-$599": 0.9,
+      "$600+": 1.2
+     }
+    },
+    {
+     "year": 2023,
+     "race": "unknown",
+     "total": 1330,
+     "counts": {
+      "No income": 1155,
+      "$1-$599": 59,
+      "$600+": 116
+     },
+     "riskRatios": {
+      "No income": 1.03,
+      "$1-$599": 0.7,
+      "$600+": 0.92
+     }
+    },
+    {
+     "year": 2023,
+     "race": "white",
+     "total": 5884,
+     "counts": {
+      "No income": 4881,
+      "$1-$599": 428,
+      "$600+": 575
+     },
+     "riskRatios": {
+      "No income": 0.96,
+      "$1-$599": 1.53,
+      "$600+": 1.09
+     }
+    },
+    {
+     "year": 2023,
+     "race": "all",
+     "total": 10735,
+     "counts": {
+      "No income": 9068,
+      "$1-$599": 658,
+      "$600+": 1009
+     },
+     "riskRatios": {
+      "No income": null,
+      "$1-$599": null,
+      "$600+": null
+     }
+    },
+    {
+     "year": 2024,
+     "race": "american-indian",
+     "total": 256,
+     "counts": {
+      "No income": 213,
+      "$1-$599": 12,
+      "$600+": 31
+     },
+     "riskRatios": {
+      "No income": 1,
+      "$1-$599": 0.69,
+      "$600+": 1.23
+     }
+    },
+    {
+     "year": 2024,
+     "race": "asian-pacific-islander",
+     "total": 373,
+     "counts": {
+      "No income": 339,
+      "$1-$599": 19,
+      "$600+": 15
+     },
+     "riskRatios": {
+      "No income": 1.09,
+      "$1-$599": 0.75,
+      "$600+": 0.4
+     }
+    },
+    {
+     "year": 2024,
+     "race": "black",
+     "total": 1691,
+     "counts": {
+      "No income": 1482,
+      "$1-$599": 68,
+      "$600+": 141
+     },
+     "riskRatios": {
+      "No income": 1.06,
+      "$1-$599": 0.56,
+      "$600+": 0.82
+     }
+    },
+    {
+     "year": 2024,
+     "race": "hispanic",
+     "total": 782,
+     "counts": {
+      "No income": 633,
+      "$1-$599": 50,
+      "$600+": 99
+     },
+     "riskRatios": {
+      "No income": 0.97,
+      "$1-$599": 0.95,
+      "$600+": 1.31
+     }
+    },
+    {
+     "year": 2024,
+     "race": "multiracial",
+     "total": 623,
+     "counts": {
+      "No income": 519,
+      "$1-$599": 37,
+      "$600+": 67
+     },
+     "riskRatios": {
+      "No income": 1,
+      "$1-$599": 0.88,
+      "$600+": 1.1
+     }
+    },
+    {
+     "year": 2024,
+     "race": "unknown",
+     "total": 1744,
+     "counts": {
+      "No income": 1494,
+      "$1-$599": 86,
+      "$600+": 164
+     },
+     "riskRatios": {
+      "No income": 1.03,
+      "$1-$599": 0.7,
+      "$600+": 0.95
+     }
+    },
+    {
+     "year": 2024,
+     "race": "white",
+     "total": 6135,
+     "counts": {
+      "No income": 5001,
+      "$1-$599": 507,
+      "$600+": 627
+     },
+     "riskRatios": {
+      "No income": 0.95,
+      "$1-$599": 1.66,
+      "$600+": 1.08
+     }
+    },
+    {
+     "year": 2024,
+     "race": "all",
+     "total": 11604,
+     "counts": {
+      "No income": 9681,
+      "$1-$599": 779,
+      "$600+": 1144
+     },
+     "riskRatios": {
+      "No income": null,
+      "$1-$599": null,
+      "$600+": null
+     }
+    }
+   ]
+  },
+  "adults": {
+   "age": "22-64",
+   "bands": [
+    {
+     "short": "No income",
+     "full": "No reported income"
+    },
+    {
+     "short": "$1-$599",
+     "full": "$1 to $599 a month"
+    },
+    {
+     "short": "$600+",
+     "full": "$600 or more a month"
+    }
+   ],
+   "rows": [
+    {
+     "year": 2022,
+     "race": "american-indian",
+     "total": 1880,
+     "counts": {
+      "No income": 1420,
+      "$1-$599": 208,
+      "$600+": 252
+     },
+     "riskRatios": {
+      "No income": 1.18,
+      "$1-$599": 0.62,
+      "$600+": 0.74
+     }
+    },
+    {
+     "year": 2022,
+     "race": "asian-pacific-islander",
+     "total": 2458,
+     "counts": {
+      "No income": 1897,
+      "$1-$599": 214,
+      "$600+": 347
+     },
+     "riskRatios": {
+      "No income": 1.21,
+      "$1-$599": 0.48,
+      "$600+": 0.78
+     }
+    },
+    {
+     "year": 2022,
+     "race": "black",
+     "total": 11269,
+     "counts": {
+      "No income": 9054,
+      "$1-$599": 740,
+      "$600+": 1475
+     },
+     "riskRatios": {
+      "No income": 1.32,
+      "$1-$599": 0.33,
+      "$600+": 0.69
+     }
+    },
+    {
+     "year": 2022,
+     "race": "hispanic",
+     "total": 1746,
+     "counts": {
+      "No income": 1188,
+      "$1-$599": 230,
+      "$600+": 328
+     },
+     "riskRatios": {
+      "No income": 1.06,
+      "$1-$599": 0.74,
+      "$600+": 1.05
+     }
+    },
+    {
+     "year": 2022,
+     "race": "multiracial",
+     "total": 1076,
+     "counts": {
+      "No income": 801,
+      "$1-$599": 83,
+      "$600+": 192
+     },
+     "riskRatios": {
+      "No income": 1.16,
+      "$1-$599": 0.43,
+      "$600+": 1
+     }
+    },
+    {
+     "year": 2022,
+     "race": "unknown",
+     "total": 3185,
+     "counts": {
+      "No income": 2092,
+      "$1-$599": 248,
+      "$600+": 845
+     },
+     "riskRatios": {
+      "No income": 1.02,
+      "$1-$599": 0.43,
+      "$600+": 1.52
+     }
+    },
+    {
+     "year": 2022,
+     "race": "white",
+     "total": 44212,
+     "counts": {
+      "No income": 25896,
+      "$1-$599": 9954,
+      "$600+": 8362
+     },
+     "riskRatios": {
+      "No income": 0.77,
+      "$1-$599": 2.82,
+      "$600+": 1.19
+     }
+    },
+    {
+     "year": 2022,
+     "race": "all",
+     "total": 65826,
+     "counts": {
+      "No income": 42348,
+      "$1-$599": 11677,
+      "$600+": 11801
+     },
+     "riskRatios": {
+      "No income": null,
+      "$1-$599": null,
+      "$600+": null
+     }
+    },
+    {
+     "year": 2023,
+     "race": "american-indian",
+     "total": 1914,
+     "counts": {
+      "No income": 1464,
+      "$1-$599": 171,
+      "$600+": 279
+     },
+     "riskRatios": {
+      "No income": 1.18,
+      "$1-$599": 0.56,
+      "$600+": 0.76
+     }
+    },
+    {
+     "year": 2023,
+     "race": "asian-pacific-islander",
+     "total": 2675,
+     "counts": {
+      "No income": 2107,
+      "$1-$599": 193,
+      "$600+": 375
+     },
+     "riskRatios": {
+      "No income": 1.22,
+      "$1-$599": 0.45,
+      "$600+": 0.73
+     }
+    },
+    {
+     "year": 2023,
+     "race": "black",
+     "total": 12385,
+     "counts": {
+      "No income": 9933,
+      "$1-$599": 676,
+      "$600+": 1776
+     },
+     "riskRatios": {
+      "No income": 1.3,
+      "$1-$599": 0.3,
+      "$600+": 0.72
+     }
+    },
+    {
+     "year": 2023,
+     "race": "hispanic",
+     "total": 1920,
+     "counts": {
+      "No income": 1281,
+      "$1-$599": 240,
+      "$600+": 399
+     },
+     "riskRatios": {
+      "No income": 1.02,
+      "$1-$599": 0.78,
+      "$600+": 1.1
+     }
+    },
+    {
+     "year": 2023,
+     "race": "multiracial",
+     "total": 1166,
+     "counts": {
+      "No income": 846,
+      "$1-$599": 80,
+      "$600+": 240
+     },
+     "riskRatios": {
+      "No income": 1.12,
+      "$1-$599": 0.43,
+      "$600+": 1.08
+     }
+    },
+    {
+     "year": 2023,
+     "race": "unknown",
+     "total": 3817,
+     "counts": {
+      "No income": 2417,
+      "$1-$599": 285,
+      "$600+": 1115
+     },
+     "riskRatios": {
+      "No income": 0.97,
+      "$1-$599": 0.46,
+      "$600+": 1.59
+     }
+    },
+    {
+     "year": 2023,
+     "race": "white",
+     "total": 44672,
+     "counts": {
+      "No income": 26613,
+      "$1-$599": 9211,
+      "$600+": 8848
+     },
+     "riskRatios": {
+      "No income": 0.79,
+      "$1-$599": 2.99,
+      "$600+": 1.13
+     }
+    },
+    {
+     "year": 2023,
+     "race": "all",
+     "total": 68549,
+     "counts": {
+      "No income": 44661,
+      "$1-$599": 10856,
+      "$600+": 13032
+     },
+     "riskRatios": {
+      "No income": null,
+      "$1-$599": null,
+      "$600+": null
+     }
+    },
+    {
+     "year": 2024,
+     "race": "american-indian",
+     "total": 2023,
+     "counts": {
+      "No income": 1557,
+      "$1-$599": 163,
+      "$600+": 303
+     },
+     "riskRatios": {
+      "No income": 1.19,
+      "$1-$599": 0.54,
+      "$600+": 0.73
+     }
+    },
+    {
+     "year": 2024,
+     "race": "asian-pacific-islander",
+     "total": 3014,
+     "counts": {
+      "No income": 2355,
+      "$1-$599": 199,
+      "$600+": 460
+     },
+     "riskRatios": {
+      "No income": 1.22,
+      "$1-$599": 0.44,
+      "$600+": 0.74
+     }
+    },
+    {
+     "year": 2024,
+     "race": "black",
+     "total": 13704,
+     "counts": {
+      "No income": 11035,
+      "$1-$599": 677,
+      "$600+": 1992
+     },
+     "riskRatios": {
+      "No income": 1.32,
+      "$1-$599": 0.29,
+      "$600+": 0.67
+     }
+    },
+    {
+     "year": 2024,
+     "race": "hispanic",
+     "total": 2164,
+     "counts": {
+      "No income": 1436,
+      "$1-$599": 248,
+      "$600+": 480
+     },
+     "riskRatios": {
+      "No income": 1.02,
+      "$1-$599": 0.77,
+      "$600+": 1.09
+     }
+    },
+    {
+     "year": 2024,
+     "race": "multiracial",
+     "total": 1291,
+     "counts": {
+      "No income": 934,
+      "$1-$599": 94,
+      "$600+": 263
+     },
+     "riskRatios": {
+      "No income": 1.12,
+      "$1-$599": 0.49,
+      "$600+": 1
+     }
+    },
+    {
+     "year": 2024,
+     "race": "unknown",
+     "total": 4968,
+     "counts": {
+      "No income": 3235,
+      "$1-$599": 319,
+      "$600+": 1414
+     },
+     "riskRatios": {
+      "No income": 1.01,
+      "$1-$599": 0.42,
+      "$600+": 1.43
+     }
+    },
+    {
+     "year": 2024,
+     "race": "white",
+     "total": 46115,
+     "counts": {
+      "No income": 26942,
+      "$1-$599": 9117,
+      "$600+": 10056
+     },
+     "riskRatios": {
+      "No income": 0.77,
+      "$1-$599": 3.16,
+      "$600+": 1.21
+     }
+    },
+    {
+     "year": 2024,
+     "race": "all",
+     "total": 73279,
+     "counts": {
+      "No income": 47494,
+      "$1-$599": 10817,
+      "$600+": 14968
+     },
+     "riskRatios": {
+      "No income": null,
+      "$1-$599": null,
+      "$600+": null
+     }
+    }
+   ]
+  }
+ },
+ "vocationalRehabilitationOutcomes": {
+  "age": "22-64",
+  "rows": [
+   {
+    "year": 2022,
+    "race": "american-indian",
+    "group": "all",
+    "exits": 50,
+    "employed": 19,
+    "percent": 38,
+    "riskRatio": 0.86
+   },
+   {
+    "year": 2022,
+    "race": "american-indian",
+    "group": "waiver",
+    "exits": 13,
+    "employed": 8,
+    "percent": 61.5,
+    "riskRatio": 1.27
+   },
+   {
+    "year": 2022,
+    "race": "american-indian",
+    "group": "non-waiver",
+    "exits": 37,
+    "employed": 11,
+    "percent": 29.7,
+    "riskRatio": 0.7
+   },
+   {
+    "year": 2022,
+    "race": "asian-pacific-islander",
+    "group": "all",
+    "exits": 115,
+    "employed": 60,
+    "percent": 52.2,
+    "riskRatio": 1.2
+   },
+   {
+    "year": 2022,
+    "race": "asian-pacific-islander",
+    "group": "waiver",
+    "exits": 21,
+    "employed": 9,
+    "percent": 42.9,
+    "riskRatio": 0.88
+   },
+   {
+    "year": 2022,
+    "race": "asian-pacific-islander",
+    "group": "non-waiver",
+    "exits": 94,
+    "employed": 51,
+    "percent": 54.3,
+    "riskRatio": 1.29
+   },
+   {
+    "year": 2022,
+    "race": "black",
+    "group": "all",
+    "exits": 381,
+    "employed": 127,
+    "percent": 33.3,
+    "riskRatio": 0.74
+   },
+   {
+    "year": 2022,
+    "race": "black",
+    "group": "waiver",
+    "exits": 62,
+    "employed": 22,
+    "percent": 35.5,
+    "riskRatio": 0.71
+   },
+   {
+    "year": 2022,
+    "race": "black",
+    "group": "non-waiver",
+    "exits": 319,
+    "employed": 105,
+    "percent": 32.9,
+    "riskRatio": 0.75
+   },
+   {
+    "year": 2022,
+    "race": "hispanic",
+    "group": "all",
+    "exits": 171,
+    "employed": 62,
+    "percent": 36.3,
+    "riskRatio": 0.82
+   },
+   {
+    "year": 2022,
+    "race": "hispanic",
+    "group": "waiver",
+    "exits": 37,
+    "employed": 15,
+    "percent": 40.5,
+    "riskRatio": 0.82
+   },
+   {
+    "year": 2022,
+    "race": "hispanic",
+    "group": "non-waiver",
+    "exits": 134,
+    "employed": 47,
+    "percent": 35.1,
+    "riskRatio": 0.82
+   },
+   {
+    "year": 2022,
+    "race": "multiracial",
+    "group": "all",
+    "exits": 145,
+    "employed": 48,
+    "percent": 33.1,
+    "riskRatio": 0.75
+   },
+   {
+    "year": 2022,
+    "race": "multiracial",
+    "group": "waiver",
+    "exits": 34,
+    "employed": 12,
+    "percent": 35.3,
+    "riskRatio": 0.71
+   },
+   {
+    "year": 2022,
+    "race": "multiracial",
+    "group": "non-waiver",
+    "exits": 111,
+    "employed": 36,
+    "percent": 32.4,
+    "riskRatio": 0.75
+   },
+   {
+    "year": 2022,
+    "race": "unknown",
+    "group": "all",
+    "exits": 42,
+    "employed": 15,
+    "percent": 35.7,
+    "riskRatio": 0.81
+   },
+   {
+    "year": 2022,
+    "race": "unknown",
+    "group": "waiver",
+    "exits": 12,
+    "employed": 5,
+    "percent": 41.7,
+    "riskRatio": 0.85
+   },
+   {
+    "year": 2022,
+    "race": "unknown",
+    "group": "non-waiver",
+    "exits": 30,
+    "employed": 10,
+    "percent": 33.3,
+    "riskRatio": 0.78
+   },
+   {
+    "year": 2022,
+    "race": "white",
+    "group": "all",
+    "exits": 2494,
+    "employed": 1161,
+    "percent": 46.6,
+    "riskRatio": 1.27
+   },
+   {
+    "year": 2022,
+    "race": "white",
+    "group": "waiver",
+    "exits": 561,
+    "employed": 290,
+    "percent": 51.7,
+    "riskRatio": 1.3
+   },
+   {
+    "year": 2022,
+    "race": "white",
+    "group": "non-waiver",
+    "exits": 1933,
+    "employed": 871,
+    "percent": 45.1,
+    "riskRatio": 1.26
+   },
+   {
+    "year": 2022,
+    "race": "all",
+    "group": "all",
+    "exits": 3398,
+    "employed": 1492,
+    "percent": 43.9,
+    "riskRatio": null
+   },
+   {
+    "year": 2022,
+    "race": "all",
+    "group": "waiver",
+    "exits": 740,
+    "employed": 361,
+    "percent": 48.8,
+    "riskRatio": null
+   },
+   {
+    "year": 2022,
+    "race": "all",
+    "group": "non-waiver",
+    "exits": 2658,
+    "employed": 1131,
+    "percent": 42.6,
+    "riskRatio": null
+   },
+   {
+    "year": 2023,
+    "race": "american-indian",
+    "group": "all",
+    "exits": 56,
+    "employed": 18,
+    "percent": 32.1,
+    "riskRatio": 0.68
+   },
+   {
+    "year": 2023,
+    "race": "american-indian",
+    "group": "waiver",
+    "exits": 24,
+    "employed": 8,
+    "percent": 33.3,
+    "riskRatio": 0.63
+   },
+   {
+    "year": 2023,
+    "race": "american-indian",
+    "group": "non-waiver",
+    "exits": 32,
+    "employed": 10,
+    "percent": 31.3,
+    "riskRatio": 0.7
+   },
+   {
+    "year": 2023,
+    "race": "asian-pacific-islander",
+    "group": "all",
+    "exits": 94,
+    "employed": 47,
+    "percent": 50,
+    "riskRatio": 1.07
+   },
+   {
+    "year": 2023,
+    "race": "asian-pacific-islander",
+    "group": "waiver",
+    "exits": 29,
+    "employed": 17,
+    "percent": 58.6,
+    "riskRatio": 1.13
+   },
+   {
+    "year": 2023,
+    "race": "asian-pacific-islander",
+    "group": "non-waiver",
+    "exits": 65,
+    "employed": 30,
+    "percent": 46.2,
+    "riskRatio": 1.04
+   },
+   {
+    "year": 2023,
+    "race": "black",
+    "group": "all",
+    "exits": 311,
+    "employed": 100,
+    "percent": 32.2,
+    "riskRatio": 0.66
+   },
+   {
+    "year": 2023,
+    "race": "black",
+    "group": "waiver",
+    "exits": 85,
+    "employed": 30,
+    "percent": 35.3,
+    "riskRatio": 0.65
+   },
+   {
+    "year": 2023,
+    "race": "black",
+    "group": "non-waiver",
+    "exits": 226,
+    "employed": 70,
+    "percent": 31,
+    "riskRatio": 0.67
+   },
+   {
+    "year": 2023,
+    "race": "hispanic",
+    "group": "all",
+    "exits": 195,
+    "employed": 94,
+    "percent": 48.2,
+    "riskRatio": 1.03
+   },
+   {
+    "year": 2023,
+    "race": "hispanic",
+    "group": "waiver",
+    "exits": 48,
+    "employed": 25,
+    "percent": 52.1,
+    "riskRatio": 1
+   },
+   {
+    "year": 2023,
+    "race": "hispanic",
+    "group": "non-waiver",
+    "exits": 147,
+    "employed": 69,
+    "percent": 46.9,
+    "riskRatio": 1.06
+   },
+   {
+    "year": 2023,
+    "race": "multiracial",
+    "group": "all",
+    "exits": 143,
+    "employed": 71,
+    "percent": 49.7,
+    "riskRatio": 1.06
+   },
+   {
+    "year": 2023,
+    "race": "multiracial",
+    "group": "waiver",
+    "exits": 40,
+    "employed": 27,
+    "percent": 67.5,
+    "riskRatio": 1.31
+   },
+   {
+    "year": 2023,
+    "race": "multiracial",
+    "group": "non-waiver",
+    "exits": 103,
+    "employed": 44,
+    "percent": 42.7,
+    "riskRatio": 0.96
+   },
+   {
+    "year": 2023,
+    "race": "unknown",
+    "group": "all",
+    "exits": 48,
+    "employed": 23,
+    "percent": 47.9,
+    "riskRatio": 1.02
+   },
+   {
+    "year": 2023,
+    "race": "unknown",
+    "group": "waiver",
+    "exits": 19,
+    "employed": 11,
+    "percent": 57.9,
+    "riskRatio": 1.11
+   },
+   {
+    "year": 2023,
+    "race": "unknown",
+    "group": "non-waiver",
+    "exits": 29,
+    "employed": 12,
+    "percent": 41.4,
+    "riskRatio": 0.93
+   },
+   {
+    "year": 2023,
+    "race": "white",
+    "group": "all",
+    "exits": 2206,
+    "employed": 1079,
+    "percent": 48.9,
+    "riskRatio": 1.17
+   },
+   {
+    "year": 2023,
+    "race": "white",
+    "group": "waiver",
+    "exits": 686,
+    "employed": 368,
+    "percent": 53.6,
+    "riskRatio": 1.11
+   },
+   {
+    "year": 2023,
+    "race": "white",
+    "group": "non-waiver",
+    "exits": 1520,
+    "employed": 711,
+    "percent": 46.8,
+    "riskRatio": 1.2
+   },
+   {
+    "year": 2023,
+    "race": "all",
+    "group": "all",
+    "exits": 3053,
+    "employed": 1432,
+    "percent": 46.9,
+    "riskRatio": null
+   },
+   {
+    "year": 2023,
+    "race": "all",
+    "group": "waiver",
+    "exits": 931,
+    "employed": 486,
+    "percent": 52.2,
+    "riskRatio": null
+   },
+   {
+    "year": 2023,
+    "race": "all",
+    "group": "non-waiver",
+    "exits": 2122,
+    "employed": 946,
+    "percent": 44.6,
+    "riskRatio": null
+   },
+   {
+    "year": 2024,
+    "race": "american-indian",
+    "group": "all",
+    "exits": 46,
+    "employed": 17,
+    "percent": 37,
+    "riskRatio": 0.77
+   },
+   {
+    "year": 2024,
+    "race": "american-indian",
+    "group": "waiver",
+    "exits": 22,
+    "employed": 11,
+    "percent": 50,
+    "riskRatio": 1
+   },
+   {
+    "year": 2024,
+    "race": "american-indian",
+    "group": "non-waiver",
+    "exits": 24,
+    "employed": 6,
+    "percent": 25,
+    "riskRatio": 0.53
+   },
+   {
+    "year": 2024,
+    "race": "asian-pacific-islander",
+    "group": "all",
+    "exits": 105,
+    "employed": 57,
+    "percent": 54.3,
+    "riskRatio": 1.14
+   },
+   {
+    "year": 2024,
+    "race": "asian-pacific-islander",
+    "group": "waiver",
+    "exits": 24,
+    "employed": 18,
+    "percent": 75,
+    "riskRatio": 1.52
+   },
+   {
+    "year": 2024,
+    "race": "asian-pacific-islander",
+    "group": "non-waiver",
+    "exits": 81,
+    "employed": 39,
+    "percent": 48.1,
+    "riskRatio": 1.03
+   },
+   {
+    "year": 2024,
+    "race": "black",
+    "group": "all",
+    "exits": 316,
+    "employed": 115,
+    "percent": 36.4,
+    "riskRatio": 0.74
+   },
+   {
+    "year": 2024,
+    "race": "black",
+    "group": "waiver",
+    "exits": 92,
+    "employed": 34,
+    "percent": 37,
+    "riskRatio": 0.72
+   },
+   {
+    "year": 2024,
+    "race": "black",
+    "group": "non-waiver",
+    "exits": 224,
+    "employed": 81,
+    "percent": 36.2,
+    "riskRatio": 0.75
+   },
+   {
+    "year": 2024,
+    "race": "hispanic",
+    "group": "all",
+    "exits": 204,
+    "employed": 98,
+    "percent": 48,
+    "riskRatio": 1.01
+   },
+   {
+    "year": 2024,
+    "race": "hispanic",
+    "group": "waiver",
+    "exits": 46,
+    "employed": 28,
+    "percent": 60.9,
+    "riskRatio": 1.23
+   },
+   {
+    "year": 2024,
+    "race": "hispanic",
+    "group": "non-waiver",
+    "exits": 158,
+    "employed": 70,
+    "percent": 44.3,
+    "riskRatio": 0.94
+   },
+   {
+    "year": 2024,
+    "race": "multiracial",
+    "group": "all",
+    "exits": 137,
+    "employed": 52,
+    "percent": 38,
+    "riskRatio": 0.79
+   },
+   {
+    "year": 2024,
+    "race": "multiracial",
+    "group": "waiver",
+    "exits": 42,
+    "employed": 18,
+    "percent": 42.9,
+    "riskRatio": 0.85
+   },
+   {
+    "year": 2024,
+    "race": "multiracial",
+    "group": "non-waiver",
+    "exits": 95,
+    "employed": 34,
+    "percent": 35.8,
+    "riskRatio": 0.76
+   },
+   {
+    "year": 2024,
+    "race": "unknown",
+    "group": "all",
+    "exits": 53,
+    "employed": 22,
+    "percent": 41.5,
+    "riskRatio": 0.87
+   },
+   {
+    "year": 2024,
+    "race": "unknown",
+    "group": "waiver",
+    "exits": 12,
+    "employed": 5,
+    "percent": 41.7,
+    "riskRatio": 0.83
+   },
+   {
+    "year": 2024,
+    "race": "unknown",
+    "group": "non-waiver",
+    "exits": 41,
+    "employed": 17,
+    "percent": 41.5,
+    "riskRatio": 0.89
+   },
+   {
+    "year": 2024,
+    "race": "white",
+    "group": "all",
+    "exits": 2282,
+    "employed": 1138,
+    "percent": 49.9,
+    "riskRatio": 1.19
+   },
+   {
+    "year": 2024,
+    "race": "white",
+    "group": "waiver",
+    "exits": 703,
+    "employed": 356,
+    "percent": 50.6,
+    "riskRatio": 1.06
+   },
+   {
+    "year": 2024,
+    "race": "white",
+    "group": "non-waiver",
+    "exits": 1579,
+    "employed": 782,
+    "percent": 49.5,
+    "riskRatio": 1.25
+   },
+   {
+    "year": 2024,
+    "race": "all",
+    "group": "all",
+    "exits": 3143,
+    "employed": 1499,
+    "percent": 47.7,
+    "riskRatio": null
+   },
+   {
+    "year": 2024,
+    "race": "all",
+    "group": "waiver",
+    "exits": 941,
+    "employed": 470,
+    "percent": 49.9,
+    "riskRatio": null
+   },
+   {
+    "year": 2024,
+    "race": "all",
+    "group": "non-waiver",
+    "exits": 2202,
+    "employed": 1029,
+    "percent": 46.7,
+    "riskRatio": null
+   }
+  ]
+ },
+ "vocationalRehabilitationExitIncome": {
+  "age": "22-64",
+  "years": "FY2022 and FY2023 combined",
+  "rows": [
+   {
+    "race": "american-indian",
+    "nonWaiver": 31153,
+    "waiver": 8081,
+    "all": 20734
+   },
+   {
+    "race": "asian-pacific-islander",
+    "nonWaiver": 24727,
+    "waiver": 11565,
+    "all": 21701
+   },
+   {
+    "race": "black",
+    "nonWaiver": 26996,
+    "waiver": 12283,
+    "all": 23589
+   },
+   {
+    "race": "hispanic",
+    "nonWaiver": 25640,
+    "waiver": 10206,
+    "all": 21481
+   },
+   {
+    "race": "multiracial",
+    "nonWaiver": 23678,
+    "waiver": 9061,
+    "all": 18478
+   },
+   {
+    "race": "unknown",
+    "nonWaiver": 24182,
+    "waiver": 9943,
+    "all": 18141
+   },
+   {
+    "race": "white",
+    "nonWaiver": 24873,
+    "waiver": 9386,
+    "all": 20278
+   },
+   {
+    "race": "all",
+    "nonWaiver": 25088,
+    "waiver": 9622,
+    "all": 20540
+   }
+  ]
+ }
+}
