@@ -645,7 +645,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     items: [],
     notes: [
       "Together, they turn the published policy expectation and the statewide analysis criteria into a repeatable process with evidence, participation, resources and accountability.",
-      "For the Disability Services Division (DSD) and its One DSD People, Access and Culture work, the most useful next design step is to connect these instruments to the proposed strategic tool suite while keeping clear which items are approved DHS requirements, which are ADSA-specific guidance and which are project recommendations. That keeps the program grounded in existing authority without presenting planned capabilities as established agency practice.",
+      "Across the Minnesota Department of Human Services, the most useful next design step is to connect these instruments to the proposed strategic tool suite while keeping clear which items are approved DHS requirements, which are ADSA-specific guidance and which are project recommendations. That keeps the program grounded in existing authority without presenting planned capabilities as established agency practice.",
     ],
   },
 ];
