@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Block, BoundaryNote, PathwayEyebrow, PathwayShell, SectionNav, Steps } from "@/components/leadership-styles-pathway";
+import TutorPanel from "@/components/tutor-panel";
 import { CAPSTONE, LEADERSHIP_PATHWAY_HREF, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, RUBRIC } from "@/lib/content/leadership-styles-pathway";
+import { LEADERSHIP_CAPSTONE_LESSON_ID } from "@/lib/tutor/leadership-items";
 import styles from "../leadership-styles.module.css";
+import "@/components/clas-curriculum.css";
 
 const page = LEADERSHIP_PATHWAY_PAGES.capstone;
 
 export const metadata: Metadata = {
   title: `${page.title} (${LEADERSHIP_PATHWAY_TITLE})`,
-  description: "Rewrite a weak leadership response and check it against an eight-point rubric. Responses are reviewed, never people.",
+  description: "Rewrite a weak leadership response, check it against an eight-point rubric, and practice with Guidance. Responses are scored, never people.",
 };
 
 export default function LeadershipCapstonePage() {
@@ -22,7 +25,7 @@ export default function LeadershipCapstonePage() {
       { href: "#worked-analysis", title: "Worked analysis" },
       { href: "#stronger-response", title: "A stronger response" },
       { href: "#rubric", title: "Practice rubric" },
-      { href: "#more-practice", title: "More practice" },
+      { href: "#guided-practice", title: "Practice with Guidance" },
     ]} />
     <Block id="capstone" title="The statement to rewrite">
       <p className={styles.prose}>A supervisor says this to the employee in the common scenario, <Link className="underline" href={`${LEADERSHIP_PATHWAY_HREF}#common-scenario`}>“Who gets the visible work?”</Link></p>
@@ -51,9 +54,10 @@ export default function LeadershipCapstonePage() {
       </table></div>
       <p className={`${styles.callout} mt-6`}>{RUBRIC.limits}</p>
     </Block>
-    <Block id="more-practice" title="More practice">
-      <p className={styles.prose}>Work through the seven tasks one at a time. Then go back over your rewrite with each rubric question in turn. Use the rubric to look at your written response, not at yourself or anyone else.</p>
-      <p className={`${styles.prose} mt-4`}>For more practice, try the <Link className="underline" href={`${LEADERSHIP_PATHWAY_PAGES.scenarios.href}#practice-on-your-own`}>seven scenarios</Link> and compare the responses each approach gives.</p>
+    <Block id="guided-practice" title="Practice with Guidance">
+      <p className={styles.prose}>Work through the capstone one step at a time. Each choice is checked against the rubric, not against you. After you answer, you can ask Guidance for a hint or an example. Your progress stays on this device.</p>
+      <TutorPanel lessonId={LEADERSHIP_CAPSTONE_LESSON_ID} />
+      <p className={`${styles.prose} mt-4`}>More practice: <Link className="underline" href={`${LEADERSHIP_PATHWAY_PAGES.scenarios.href}#guided-practice`}>style scenarios with Guidance</Link>.</p>
     </Block>
     <BoundaryNote />
     <nav className={styles.pager} aria-label="Pathway pages">

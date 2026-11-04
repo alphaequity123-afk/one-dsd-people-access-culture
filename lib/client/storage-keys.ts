@@ -54,6 +54,8 @@ export const PRIVATE_BROWSER_STORAGE_PATTERNS = [
   { area: "local", keyPattern: `^pac-course:${COURSE_ID}:${COURSE_ID}$`, purpose: "course_notes" },
   { area: "local", keyPattern: `^pac-course-resume:${COURSE_ID}$`, purpose: "course_progress" },
   { area: "local", keyPattern: "^one-dsd-learning-[FIA](?:0[1-9]|1[0-9]|2[0-4])$", purpose: "course_progress" },
+  // Guided-practice record for one curriculum or leadership lesson (lib/tutor/student-model.ts): attempt counts only, no answers or messages.
+  { area: "local", keyPattern: "^tutor:(?:0[1-9]|ls0[1-9])$", purpose: "course_progress" },
 ] as const;
 
 export function isPrivateBrowserStorageKey(area: PrivateBrowserStorageKey["area"], key: string): boolean {

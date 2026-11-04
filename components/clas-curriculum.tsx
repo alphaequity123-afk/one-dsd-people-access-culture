@@ -10,6 +10,7 @@ import { KeyPointsPanel } from './clas-curriculum/key-points';
 import { SyncedMediaPlayer } from './clas-curriculum/media-player';
 import { ImprovementPlan, WorkingNote } from './clas-curriculum/notes';
 import { DecisionList, OrderingQuestion, RecallSection } from './clas-curriculum/practice';
+import TutorPanel from './tutor-panel';
 import { WalkthroughPlaylist } from './clas-curriculum/walkthrough-playlist';
 import { ShareClasCollection } from './clas-curriculum/share-collection';
 import './clas-curriculum.css';
@@ -27,7 +28,7 @@ type Props = {
 };
 
 export default function ClasCurriculum({ lessonId, data, front }: Props) {
-  const [completed, setCompleted] = useState<string[]>([]), [answer, setAnswer] = useState<number | null>(null), [storageMessage, setStorageMessage] = useState(''), [noteVersion, setNoteVersion] = useState(0);
+  const [completed, setCompleted] = useState<string[]>([]), [storageMessage, setStorageMessage] = useState(''), [noteVersion, setNoteVersion] = useState(0);
   const index = curriculum.modules.findIndex(m => m.id === lessonId), lesson = curriculum.modules[index];
   const page: ClasLessonPageData = { ...EMPTY_LESSON_PAGE_DATA, ...data };
   const frontPage: ClasFrontPageData = { ...EMPTY_FRONT_PAGE_DATA, ...front };
@@ -69,7 +70,10 @@ export default function ClasCurriculum({ lessonId, data, front }: Props) {
         </SyncedMediaPlayer>
       </section>}
       <section><h2>{lesson.example.title}</h2><p>{lesson.example.situation}</p><details><summary>Work through the example</summary><p>{lesson.example.response}</p><p>{lesson.example.reason}</p></details></section>
-      <section aria-labelledby="practice"><h2 id="practice">Try a decision</h2><fieldset className="clas-question"><legend>{lesson.practice.question}</legend>{lesson.practice.options.map((o, n) => <label key={n}><input type="radio" name="decision" checked={answer === n} onChange={() => setAnswer(n)} /><span>{o.text}</span></label>)}</fieldset><div className="clas-study-feedback" aria-live="polite">{answer !== null && <><h3>Think it through</h3><p>{lesson.practice.options[answer].feedback}</p><p>You can choose another response and compare the reasoning.</p></>}</div>
+      <section aria-labelledby="practice"><h2 id="practice">Practice with guidance</h2>
+        <p className="clas-guidance-intro">Guidance is ready for every answer, right or wrong, before you move on.</p>
+        <p>Answer the question, then get guidance that works through your thinking step by step.</p>
+        <TutorPanel key={lesson.id} lessonId={lesson.id} />
         {practice && <DecisionList decisions={practice.decisions} />}
         {practice?.ordering && <div className="clas-decisions"><h3>What would you check first?</h3><OrderingQuestion ordering={practice.ordering} /></div>}
       </section>

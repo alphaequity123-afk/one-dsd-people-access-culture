@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Block, BoundaryNote, Bullets, PathwayEyebrow, PathwayShell, SectionNav, Steps } from "@/components/leadership-styles-pathway";
+import TutorPanel from "@/components/tutor-panel";
 import {
   LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, LEADERSHIP_SCENARIO_FAMILIES, leadershipStyle, leadershipStyleHref,
 } from "@/lib/content/leadership-styles-pathway";
+import { LEADERSHIP_SCENARIO_LESSON_ID } from "@/lib/tutor/leadership-items";
 import styles from "../leadership-styles.module.css";
+import "@/components/clas-curriculum.css";
 
 const page = LEADERSHIP_PATHWAY_PAGES.scenarios;
 
@@ -19,7 +22,7 @@ export default function LeadershipScenariosPage() {
     title={page.title}
     intro={<p>Each situation below is fictional, and every line of dialogue is original. For each one, several leadership approaches respond, some in a stronger way and some in a harmful way. Then comes a combined response and questions to discuss.</p>}
   >
-    <SectionNav label="Scenarios" items={[...LEADERSHIP_SCENARIO_FAMILIES.map(family => ({ href: `#scenario-${family.id}`, title: family.title })), { href: "#practice-on-your-own", title: "Practice on your own" }]} />
+    <SectionNav label="Scenarios" items={[...LEADERSHIP_SCENARIO_FAMILIES.map(family => ({ href: `#scenario-${family.id}`, title: family.title })), { href: "#guided-practice", title: "Practice with Guidance" }]} />
     <p className={styles.prose}>Responses illustrate tendencies and choices. They are not scripts that predict how anyone who uses a style would act, and no response is a judgment about a real person. Check your own response against the <Link className="underline" href={`${LEADERSHIP_PATHWAY_PAGES.capstone.href}#rubric`}>eight-point practice rubric</Link>.</p>
     {LEADERSHIP_SCENARIO_FAMILIES.map(family => <section key={family.id} id={`scenario-${family.id}`} aria-labelledby={`scenario-${family.id}-title`} className={styles.scenario}>
       <p className={styles.family}>{family.family}</p>
@@ -43,8 +46,9 @@ export default function LeadershipScenariosPage() {
       <h3>To discuss</h3>
       <Bullets items={family.discuss} />
     </section>)}
-    <Block id="practice-on-your-own" title="Practice on your own">
-      <p className={styles.prose}>For each situation, choose the response you think is strongest and write one or two sentences on why. Then check your reasoning against the <Link className="underline" href={`${LEADERSHIP_PATHWAY_PAGES.capstone.href}#rubric`}>practice rubric</Link>. The rubric looks at responses, not at you. Write in your own notes. This page does not collect or save anything.</p>
+    <Block id="guided-practice" title="Practice with Guidance">
+      <p className={styles.prose}>Choose the response you think is strongest for each situation. Each choice is checked against the practice rubric, not against you. After you answer, you can ask Guidance for a hint or an example.</p>
+      <TutorPanel lessonId={LEADERSHIP_SCENARIO_LESSON_ID} />
     </Block>
     <BoundaryNote />
     <nav className={styles.pager} aria-label="Pathway pages">

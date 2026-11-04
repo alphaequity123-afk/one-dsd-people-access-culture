@@ -70,8 +70,9 @@ export function leadershipStylesPathwayDocs(scope: StaffProgramScope): Doc[] {
     [RUBRIC.intro, ...RUBRIC.criteria.map((criterion, n) => `${n + 1}. ${criterion.title}. Ask: ${criterion.question} Stronger sign: ${criterion.strong} Weaker sign: ${criterion.weak}`), RUBRIC.limits],
     ["rubric", "practice", "assessment of responses"]));
   docs.push(make("leadership-pathway-capstone", LEADERSHIP_PATHWAY_PAGES.capstone.title, `${LEADERSHIP_PATHWAY_PAGES.capstone.href}#capstone`, `Rewrite this statement: ${CAPSTONE.statement}`,
-    [`Statement to rewrite: ${CAPSTONE.statement}`, "Tasks:", ...CAPSTONE.tasks, ...CAPSTONE.analysis.map(item => `${item.title}: ${item.body}`), `A stronger response: ${CAPSTONE.stronger}`, CAPSTONE.outcome],
-    ["capstone", "rewrite the response"]));
+    [`Statement to rewrite: ${CAPSTONE.statement}`, "Tasks:", ...CAPSTONE.tasks, ...CAPSTONE.analysis.map(item => `${item.title}: ${item.body}`), `A stronger response: ${CAPSTONE.stronger}`, CAPSTONE.outcome,
+      "Practice the capstone step by step with Guidance on this page."],
+    ["capstone", "rewrite the response", "Guidance"]));
   return docs;
 }
 

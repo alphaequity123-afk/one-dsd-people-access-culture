@@ -78,3 +78,14 @@
 @media print{.clas-study[data-print=plan]>*:not(section),.clas-study[data-print=plan] section:not(:has(.clas-plan)),.clas-study[data-print=plan] section:has(.clas-plan)>*:not(.clas-plan),.clas-study[data-print=plan] .clas-plan-actions,.clas-study[data-print=plan] .clas-plan>p{display:none}.clas-study[data-print=plan] .clas-plan{border:0;margin:0;padding:0}.clas-plan-body{border:0;padding:0;max-width:none}.clas-plan article{break-inside:avoid}
 .clas-study--job-aid{padding:0;max-width:none;color:#000}.clas-job-aid-actions,.clas-job-aid-nav{display:none}.clas-job-aid{border:0;padding:0;margin:0;max-width:none}.clas-job-aid h1{font-size:24pt}.clas-job-aid h2{font-size:14pt}.clas-job-aid section{break-inside:avoid}.clas-job-aid-grid{grid-template-columns:repeat(3,1fr)}
 .clas-transcript-list{max-height:none;overflow:visible;border:0;padding:0}.clas-transcript-cue>button[aria-current=true]{background:none;border-color:transparent;font-weight:400}.clas-transcript-time{display:none}.clas-transcript-head button,.clas-transcript-help{display:none}}
+
+/* Guided practice: question, deterministic feedback, then guidance fetched on request. */
+.clas-guidance-intro{font-weight:600;color:#003865}
+.clas-guidance-area{margin:20px 0 0;padding:20px;border:1px solid #bacbd7;border-radius:6px;background:#fff}
+.clas-guidance-area h3{margin:0 0 8px;font-size:20px}
+.clas-guidance-kind{font-size:15px;font-weight:600;color:#45576a;margin:0 0 6px}
+.clas-guidance-reply{padding:16px 20px;background:#eef4f8;border-left:4px solid #008eaa;margin:12px 0}
+.clas-guidance-followup label{display:block;font-weight:600;margin-top:12px}
+.clas-guidance-hint{font-size:15px;margin:2px 0 6px}
+.clas-guidance-links ul{padding-left:22px;line-height:1.7}
+.clas-guidance-notice{font-size:15px;color:#45576a;margin:14px 0 0}
