@@ -128,12 +128,19 @@ function statewidePages(): Page[] {
       const v = typeof r.values[0] === "number" ? Math.round(r.values[0] * 100) : null;
       return v == null ? null : `${r.year}, ${race(r.race)}: ${v} out of every 100 ${phrase}.`;
     }).filter(Boolean);
+    // The summary carries the latest year's figures: a question is answered by the passage shown first.
+    const latest = Math.max(...rows.map(r => r.year));
+    const latestFigures = rows.filter(r => r.year === latest && typeof r.values[0] === "number")
+      .map(r => `${race(r.race)} ${Math.round((r.values[0] as number) * 100)} out of every 100`).join("; ");
     return { id: `statewide-${measure.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, href: BASE, title: `${title}, Minnesota statewide, 2018 to 2022`,
-      summary: `${title}, by race and ethnicity, from the Minnesota Department of Human Services public Long-Term Services and Supports performance measures.`, text: lines.join("\n"), tags: ["equity data", "Long-Term Services and Supports", "statewide", "Home and Community-Based Services"] };
+      summary: `${title}, by race and ethnicity, from the Minnesota Department of Human Services public Long-Term Services and Supports performance measures.${latestFigures ? ` In ${latest}: ${latestFigures}. Earlier years follow.` : ""}`, text: lines.join("\n"), tags: ["equity data", "Long-Term Services and Supports", "statewide", "Home and Community-Based Services"] };
   });
   const spend = perf["Avg LTSS Spending"]?.rows.filter(r => r.population === "Total LTSS Population" && r.race !== "unknown") ?? [];
+  const spendLatest = Math.max(...spend.map(r => r.year));
+  const spendFigures = spend.filter(r => r.year === spendLatest && typeof r.values[0] === "number")
+    .map(r => `${race(r.race)} $${Math.round(r.values[0] as number).toLocaleString()}`).join("; ");
   pages.push({ id: "statewide-average-spending", href: BASE, title: "Average yearly Long-Term Services and Supports spending per person, Minnesota statewide, 2018 to 2022",
-    summary: "Average spending per person receiving Long-Term Services and Supports, by race and ethnicity.",
+    summary: `Average spending per person receiving Long-Term Services and Supports, by race and ethnicity.${spendFigures ? ` In ${spendLatest}: ${spendFigures}. Earlier years follow.` : ""}`,
     text: spend.sort((a, b) => a.year - b.year).map(r => typeof r.values[0] === "number" ? `${r.year}, ${race(r.race)}: $${Math.round(r.values[0]).toLocaleString()} per person.` : null).filter(Boolean).join("\n"),
     tags: ["equity data", "Long-Term Services and Supports", "spending"] });
   return pages;

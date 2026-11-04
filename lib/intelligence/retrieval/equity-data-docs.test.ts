@@ -38,3 +38,11 @@ describe("per-year service documents", () => {
     expect(doc.text).toContain("Black or African American, fiscal year 2024: 125 people used Employment Support Services, Group. Risk ratio 0.19");
   });
 });
+
+describe("statewide summaries", () => {
+  it("state the latest year's figures, so an answer can quote them", () => {
+    const statewide = equityDataDocs("dsd").filter(d => d.id.startsWith("public-equity-data-statewide-"));
+    expect(statewide.length).toBe(5);
+    for (const doc of statewide) expect(doc.summary).toMatch(/In 2022: .*out of every 100|In 2022: .*\$/);
+  });
+});
