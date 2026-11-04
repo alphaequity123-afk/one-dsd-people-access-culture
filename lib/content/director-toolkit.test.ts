@@ -28,7 +28,7 @@ describe("Equity Director toolkit content", () => {
     expect(DIRECTOR_TOOLKIT_SECTIONS.map(section => section.number)).toEqual(Array.from({ length: 14 }, (_, index) => index + 1));
     expect(new Set(DIRECTOR_TOOLKIT_SECTIONS.map(section => section.id)).size).toBe(14);
     for (const section of DIRECTOR_TOOLKIT_SECTIONS) for (const item of section.items) {
-      expect(item.purpose && item.use && item.limitation, item.name).toBeTruthy();
+      expect(item.purpose && item.use, item.name).toBeTruthy();
     }
     const all = DIRECTOR_TOOLKIT_SECTIONS.map(sectionText).join("\n");
     for (const phrase of ["DHS Equity Policy", "Equity, Diversity and Inclusion InfoLink", "seven criteria", "DHS-4210-ENG", "15 languages", "Office of Equity in Procurement", "Equity Select",

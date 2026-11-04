@@ -21,7 +21,6 @@ function Item({ item }: { item: ToolkitItem }) {
     <dl className={styles.facts}>
       <dt>What it is for</dt><dd>{item.purpose}</dd>
       <dt>How an Equity Director uses it</dt><dd>{item.use}</dd>
-      <dt>Limitation</dt><dd>{item.limitation}</dd>
     </dl>
     {template || item.href || item.url ? <p className={styles.itemLinks}>
       {template ? <Link href={templateHref(template.id)}>Fill in the {template.title.replaceAll("\"", "")} template</Link> : null}
@@ -33,7 +32,7 @@ function Item({ item }: { item: ToolkitItem }) {
 
 function FirstNinetyDays() {
   return <div className={styles.tableWrap}><table className={styles.plan}>
-    <caption className="sr-only">Recommended first 90 days: priority actions and deliverables for each period</caption>
+    <caption className="sr-only">First 90 days: priority actions and deliverables for each period</caption>
     <thead><tr><th scope="col">Period</th><th scope="col">Priority actions</th><th scope="col">Deliverables</th></tr></thead>
     <tbody>{DIRECTOR_FIRST_90_DAYS.map(period => <tr key={period.id} id={period.id}>
       <th scope="row">{period.period}</th>
@@ -91,7 +90,7 @@ export default function DirectorToolkitPage() {
           <h2 id="start-here-title" className="text-2xl font-bold">Start here</h2>
           <p>New to the role, or starting a new equity effort? Begin with two things.</p>
           <ul className="list-disc pl-6">
-            <li><a href="#first-90-days">The recommended first 90 days</a>: what to do in each 30-day period, and what each period should produce.</li>
+            <li><a href="#first-90-days">The first 90 days</a>: what to do in each 30-day period, and what each period should produce.</li>
             <li><a href="#starter-package">The 12-item priority starter package</a>: three foundational DHS resources and nine practical supports to build with the people responsible for each area.</li>
             <li><Link href={DIRECTOR_TEMPLATES_HREF}>The printable templates</Link>: fill them in on screen, then print, copy or download. Nothing is saved or sent.</li>
           </ul>

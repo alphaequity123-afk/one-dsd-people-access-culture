@@ -19,7 +19,7 @@ export type ToolkitItem = {
   publisher?: string;
   purpose: string;
   use: string;
-  limitation: string;
+  limitation?: string;
   /** A fill-in template on the templates page. */
   templateId?: DirectorTemplateId;
   /** The official public address of the resource. */
@@ -60,7 +60,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
   {
     id: "foundation",
     number: 1,
-    title: "Recommended foundation for DHS",
+    title: "Foundation for DHS",
     question: "Which resources should every equity review start from?",
     intro: [
       "Start with what DHS already has. Connect equity reviews to the policy, budget, program and management decisions that are already happening, rather than starting a separate initiative.",
@@ -147,7 +147,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
       },
       {
         name: "Decision and mitigation log",
-        purpose: "Keep a record of findings, recommended changes, the decision made, the reasons, the accountable owner and the risks still open.",
+        purpose: "Keep a record of findings, changes to make, the decision made, the reasons, the accountable owner and the risks still open.",
         use: "Make decisions visible and traceable, with clear responsibility for approval, carrying out the work and raising concerns.",
         limitation: "Keep entries factual and brief. Leave out names and sensitive details.",
         templateId: "decision-log",
@@ -218,7 +218,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     question: "When does a decision call for Tribal consultation, and who leads it?",
     intro: [
       "Tribal consultation needs its own workflow. It is not the same as general community outreach and cannot be swapped for it. DHS's Tribal and Urban Indian Relations function provides guidance for ongoing consultation and program development with Tribal governments and promotes government-to-government relations.",
-      "The tools below are recommended to develop with the person or area responsible for Tribal and Urban Indian Relations.",
+      "Develop the tools below with the person or area responsible for Tribal and Urban Indian Relations.",
     ],
     items: [
       {
@@ -507,7 +507,6 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
         name: "Grant-making equity questions",
         purpose: "Ask whether communities helped define the problem, whether application requirements create barriers that are not needed, whether technical assistance is accessible, and whether reporting expectations are proportionate.",
         use: "Answer them during grant design, before the solicitation is released. The ADSA guide names grant design, requests for information, requests for proposals and grantee selection as chances for engagement.",
-        limitation: "Recommended questions, not a required form.",
         templateId: "procurement-grant-review",
       },
     ],
@@ -527,12 +526,12 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
       { name: "LTSS demographic dashboard", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Demographic information on people using long-term services and supports.", use: "Use to see who is and is not reaching services.", limitation: "Interpret with data-quality checks and community context." },
       { name: "Vulnerable Adult Protection Dashboard", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Data on adult protection.", use: "Use for context on protection-related work.", limitation: "Interpret with care and privacy review." },
       { name: "Minnesota Olmstead Plan progress reports", publisher: "State of Minnesota; identified in the ADSA guide", purpose: "Progress on Minnesota's Olmstead Plan for people with disabilities.", use: "Connect reviews to statewide integration goals.", limitation: "Statewide progress reports may not break out a single program.", url: "https://mn.gov/dhs/general-public/about-dhs/olmstead/" },
-      { name: "Internal person-level database dashboard", publisher: "Identified in the ADSA guide", purpose: "An internal dashboard with person-level data.", use: "Use it inside DHS only, and work with data staff on what can be shared.", limitation: "The ADSA guide states it is internal-only. Do not give PDFs or screenshots of it to external partners; work with data staff on appropriate sharing." },
-      { name: "Equity metric definition sheet", purpose: "Set the population, numerator, denominator, period, source, missing data and limits on interpretation.", use: "Fill one in for every measure before reporting it.", limitation: "A recommended instrument grounded in the statewide toolkit's data, monitoring and accountability criteria.", templateId: "metric-definition" },
-      { name: "Baseline and trend dashboard", purpose: "Show whether access, timeliness, experience and outcomes change over time.", use: "Start from a defined baseline.", limitation: "A recommended instrument." },
-      { name: "Mixed-method evaluation plan", purpose: "Show how administrative data and lived experience will be read together.", use: "Plan both kinds of evidence from the start.", limitation: "A recommended instrument.", href: "/practice/measurement" },
-      { name: "Root-cause review", purpose: "Find which policy, process, communication or resource barriers may contribute to a disparity.", use: "Use it when a measure shows a gap.", limitation: "A recommended instrument.", href: "/equity-review/structural" },
-      { name: "Improvement action tracker", purpose: "Record what will change, who owns the change and when results will be reviewed.", use: "Link every finding to an owned action.", limitation: "A recommended instrument.", templateId: "action-tracker" },
+      { name: "Internal person-level database dashboard", publisher: "Identified in the ADSA guide", purpose: "An internal dashboard with person-level data.", use: "Use it inside DHS only. Do not give PDFs or screenshots of it to external partners; work with data staff on what can be shared.", limitation: "The ADSA guide states it is internal-only. Do not give PDFs or screenshots of it to external partners; work with data staff on appropriate sharing." },
+      { name: "Equity metric definition sheet", purpose: "Set the population, numerator, denominator, period, source, missing data and limits on interpretation.", use: "Fill one in for every measure before reporting it.", templateId: "metric-definition" },
+      { name: "Baseline and trend dashboard", purpose: "Show whether access, timeliness, experience and outcomes change over time.", use: "Start from a defined baseline." },
+      { name: "Mixed-method evaluation plan", purpose: "Show how administrative data and lived experience will be read together.", use: "Plan both kinds of evidence from the start.", href: "/practice/measurement" },
+      { name: "Root-cause review", purpose: "Find which policy, process, communication or resource barriers may contribute to a disparity.", use: "Use it when a measure shows a gap.", href: "/equity-review/structural" },
+      { name: "Improvement action tracker", purpose: "Record what will change, who owns the change and when results will be reviewed.", use: "Link every finding to an owned action.", templateId: "action-tracker" },
       { name: "Human Services Performance Management improvement tools", publisher: "Minnesota Department of Human Services, for counties", purpose: "Process-improvement tools DHS publishes for counties.", use: "Use as an additional process-improvement resource.", limitation: "Written for counties; adapt to the agency setting." },
     ],
     caution: "The ADSA guide states that the person-level database dashboard is internal-only. PDFs or screenshots of it should not be given to external partners. Work with data staff on appropriate sharing.",
@@ -604,7 +603,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
   {
     id: "first-90-days",
     number: 13,
-    title: "Recommended first 90 days",
+    title: "First 90 days",
     question: "What should a new Equity Director do first?",
     intro: [
       "Start with a small number of real policies or programs, as the statewide guide advises. Then follow a simple cycle: assess, implement, measure, improve.",
@@ -709,7 +708,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
         "Anything affecting Minnesota's 11 Tribal Nations or urban American Indian communities.", "Digital content or systems people must use.", "Notices or materials for people who speak languages other than English.",
       ] },
       { kind: "long", id: "affected", label: "Who is likely to be affected, and how?" },
-      { kind: "choice", id: "level", label: "Recommended review", options: ["Full equity impact assessment.", "Focused review of specific parts.", "No further review now, with the reason recorded below."] },
+      { kind: "choice", id: "level", label: "Level of review", options: ["Full equity impact assessment.", "Focused review of specific parts.", "No further review now, with the reason recorded below."] },
       { kind: "long", id: "reason", label: "Reason for the triage decision" },
       { kind: "text", id: "decided", label: "Triage decided by (role) and date", help: role },
     ],
@@ -725,7 +724,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
       { kind: "long", id: "engagement", label: "4. Community and Tribal engagement completed or still needed" },
       { kind: "long", id: "effects", label: "5. Possible benefits, burdens and unintended effects" },
       { kind: "long", id: "alternatives", label: "6. Alternatives considered" },
-      { kind: "long", id: "modifications", label: "7. Recommended changes" },
+      { kind: "long", id: "modifications", label: "7. Changes to make" },
       { kind: "text", id: "owners", label: "8. Responsible executive and implementation owner", help: role },
       { kind: "long", id: "resources", label: "9. Resources, measures and review date" },
       { kind: "checklist", id: "criteria", label: "Statewide criteria covered", help: "The seven criteria of the State of Minnesota Equity Analysis Toolkit.", items: ["Impact.", "Partner engagement.", "Data.", "Access.", "Monitoring.", "Resources.", "Accountability."] },
@@ -747,11 +746,11 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
   },
   {
     id: "decision-log", title: "Decision and mitigation log", sectionId: "policy-program-budget",
-    purpose: "Keep findings, recommended changes, decisions, reasons, owners and open risks in one place.",
+    purpose: "Keep findings, changes to make, decisions, reasons, owners and open risks in one place.",
     howToUse: "Add a row each time a finding leads to a decision. It also serves as the decision and risk register in governance.",
     fields: [
       { kind: "text", id: "subject", label: "Decision or review this log covers" },
-      { kind: "table", id: "log", label: "Log", columns: ["Finding", "Recommended change", "Decision made", "Reason", "Accountable owner (role)", "Open risks", "Date"], rows: 3 },
+      { kind: "table", id: "log", label: "Log", columns: ["Finding", "Change to make", "Decision made", "Reason", "Accountable owner (role)", "Open risks", "Date"], rows: 3 },
     ],
   },
   {
@@ -955,7 +954,7 @@ export function templateText(template: DirectorTemplate, values: Readonly<Record
 export function sectionText(section: ToolkitSection): string {
   const parts = [`${section.number}. ${section.title}`, section.question, ...section.intro];
   for (const item of section.items) {
-    parts.push(`${item.name}${item.publisher ? ` (${item.publisher})` : ""}. Purpose: ${item.purpose} How an Equity Director can use it: ${item.use} Limitation: ${item.limitation}`);
+    parts.push(`${item.name}${item.publisher ? ` (${item.publisher})` : ""}. Purpose: ${item.purpose} How an Equity Director can use it: ${item.use}`);
   }
   for (const list of section.lists ?? []) parts.push(`${list.heading}:`, ...list.items, ...(list.note ? [list.note] : []));
   if (section.id === "first-90-days") for (const period of DIRECTOR_FIRST_90_DAYS) parts.push(`${period.period}. Priority actions: ${period.actions.join(" ")} Deliverables: ${period.deliverables.join(" ")}`);

@@ -21,7 +21,7 @@ import CapstonePage from "./capstone/page";
  * classifies or disclaims the material. Practical guidance and protective cautions stay.
  */
 const STATUS_LANGUAGE = new RegExp([
-  "Existing DHS resource", "ADSA guidance", "Project recommendations?", "How items are labeled", "three (?:labels|tiers|kinds of guidance)",
+  "\brecommended\b", "\bLimitation\b", "Existing DHS resource", "ADSA guidance", "Project recommendations?", "How items are labeled", "three (?:labels|tiers|kinds of guidance)",
   "kinds of guidance", "kept distinct", "proposed, not adopted", "not adopted agency policy", "not a claim that", "proposed architecture",
   "proposed measures", "established (?:DHS )?scorecard", "recommended adaptation", "Items 1 to 3 are", "proposed (?:tool|component|plan|arrangement|administrative support|operational supports)",
   "design resource", "agency-?wide mandate", "validated probabilit", "voluntary", "standalone",

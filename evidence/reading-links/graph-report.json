@@ -1,0 +1,72 @@
+{
+  "at": "2026-11-04T14:12:14.972Z",
+  "nodes": {
+    "theme": 8,
+    "level": 3,
+    "series": 6,
+    "resource": 812,
+    "reading": 304,
+    "path": 13,
+    "brief": 42
+  },
+  "edges": {
+    "theme": 2073,
+    "level": 732,
+    "series": 428,
+    "informs": 1949,
+    "curated_reading": 12,
+    "suggested_reading": 84,
+    "practice_link": 36
+  },
+  "readingsWithoutWork": [],
+  "resourcesWithoutTheme": [],
+  "isolated": [],
+  "resourcesWithoutBook": 0,
+  "booksWithoutUse": [],
+  "sample": [
+    {
+      "id": "course-cultural-humility-vs-checklist",
+      "related": [
+        "reading:The Latehomecomer: A Hmong Family Memoir",
+        "reading:Building Cultural Competence: Innovative Activities and Models",
+        "reading:Cultural Humility: Engaging Diverse Identities in Therapy",
+        "resource:African American Minnesota"
+      ]
+    },
+    {
+      "id": "ja-plain-language",
+      "related": [
+        "reading:A Web for Everyone: Designing Accessible User Experiences",
+        "reading:Accessibility for Everyone",
+        "reading:Letting Go of the Words: Writing Web Content that Works",
+        "reading:Writing for Busy Readers: Communicate More Effectively in the Real World"
+      ]
+    },
+    {
+      "id": "gp-12",
+      "related": [
+        "reading:Erasing Institutional Bias: How to Create Systemic Change for Organizational Inclusion",
+        "resource:Language access checklist",
+        "resource:Plain language and accessible documents checklist"
+      ]
+    },
+    {
+      "id": "brief:somali",
+      "related": [
+        "reading:Elusive Jannah: The Somali Diaspora and a Borderless Muslim Identity",
+        "reading:Somalis in Minnesota",
+        "brief:11 Tribal Nations",
+        "reading:A Backpack, a Bear, and Eight Crates of Vodka: A Memoir"
+      ]
+    },
+    {
+      "id": "reading-001",
+      "related": [
+        "resource:Racial Socialization: How We Learn Messages About Race",
+        "resource:Facilitating difficult conversations about race and equity",
+        "resource:Talking about race at work",
+        "brief:11 Tribal Nations"
+      ]
+    }
+  ]
+}
