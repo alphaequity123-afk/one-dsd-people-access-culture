@@ -23,13 +23,13 @@ describe("Equity Director toolkit retrieval", () => {
     expect(directorToolkitDocs("dsd").every(doc => doc.scope === "dsd")).toBe(true);
   });
 
-  it("keeps the tier labels and the internal-only caution in the searchable text", () => {
+  it("keeps the internal-only caution in the searchable text, with no status labels", () => {
     const data = docs.find(doc => doc.id === id("section-data-evaluation"))!;
-    expect(data.text).toContain("ADSA guidance");
     expect(data.text).toContain("Do not give PDFs or screenshots of it to external partners");
     const starter = docs.find(doc => doc.id === id("section-starter-package"))!;
-    expect(starter.text).toContain("12. A small outcome scorecard (Project recommendation)");
-    expect(starter.text).toContain("1. Current DHS Equity Policy (Existing DHS resource)");
+    expect(starter.text).toContain("12. A small outcome scorecard.");
+    expect(starter.text).toContain("1. Current DHS Equity Policy.");
+    for (const doc of docs) expect(doc.text, doc.id).not.toMatch(/Existing DHS resource|ADSA guidance|Project recommendation/i);
   });
 
   it("lands plain questions on the right passage", () => {

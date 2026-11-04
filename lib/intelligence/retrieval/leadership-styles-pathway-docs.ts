@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import {
   CAPSTONE, COMMON_SCENARIO, CONDUCIVE_GROUPS, CONDUCIVE_SUMMARY, FOUNDATIONS, LEADERSHIP_PATHWAY_HREF, LEADERSHIP_PATHWAY_PAGES,
-  LEADERSHIP_PATHWAY_TITLE, LEADERSHIP_SCENARIO_FAMILIES, LEADERSHIP_STYLE_LESSONS, LIFECYCLE, PATHWAY_AUTHORITY, PATHWAY_BOUNDARY,
+  LEADERSHIP_PATHWAY_TITLE, LEADERSHIP_SCENARIO_FAMILIES, LEADERSHIP_STYLE_LESSONS, LIFECYCLE, PATHWAY_BOUNDARY, PATHWAY_PROCESSES,
   PATHWAY_INTRO, RACE_SECTION, RUBRIC, STYLE_GROUP_LABEL, leadershipStyle, leadershipStyleHref, type StyleLesson,
 } from "@/lib/content/leadership-styles-pathway";
 import type { Doc } from "./search";
@@ -31,7 +31,7 @@ export function leadershipStylesPathwayDocs(scope: StaffProgramScope): Doc[] {
 
   const docs: Doc[] = [
     make("leadership-pathway-overview", LEADERSHIP_PATHWAY_TITLE, `${LEADERSHIP_PATHWAY_HREF}#about`, PATHWAY_INTRO[0],
-      [LEADERSHIP_PATHWAY_TITLE, ...PATHWAY_INTRO, ...PATHWAY_AUTHORITY.map(item => `${item.label}: ${item.body}`), PATHWAY_BOUNDARY,
+      [LEADERSHIP_PATHWAY_TITLE, ...PATHWAY_INTRO, PATHWAY_PROCESSES, PATHWAY_BOUNDARY,
         `The pathway has ${LEADERSHIP_STYLE_LESSONS.length} lessons: ${LEADERSHIP_STYLE_LESSONS.map(lesson => lesson.name).join(", ")}.`],
       ["leadership development", "pathway"]),
     make("leadership-pathway-foundations", "Foundations: leadership style, conflict response, equity and inclusion", `${LEADERSHIP_PATHWAY_HREF}#foundations`, FOUNDATIONS.styleVsConflict.body[0],

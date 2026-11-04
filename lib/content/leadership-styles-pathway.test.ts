@@ -2,12 +2,12 @@ import { describe, expect, it } from "vitest";
 import { fleschKincaidGrade, splitSentences } from "@/lib/content/readability";
 import {
   CAPSTONE, COMMON_SCENARIO, CONDUCIVE_GROUPS, FOUNDATIONS, LEADERSHIP_SCENARIO_FAMILIES, LEADERSHIP_STYLE_LESSONS, LEGACY_STYLE_TO_PATHWAY,
-  LIFECYCLE, PATHWAY_AUTHORITY, PATHWAY_BOUNDARY, PATHWAY_INTRO, RACE_SECTION, RUBRIC, leadershipStyle,
+  LIFECYCLE, PATHWAY_BOUNDARY, PATHWAY_INTRO, PATHWAY_PROCESSES, RACE_SECTION, RUBRIC, leadershipStyle,
 } from "./leadership-styles-pathway";
 
 const strings = (value: unknown): string[] => typeof value === "string" ? [value] : Array.isArray(value) ? value.flatMap(strings)
   : value && typeof value === "object" ? Object.values(value).flatMap(strings) : [];
-const ALL = { LEADERSHIP_STYLE_LESSONS, LEADERSHIP_SCENARIO_FAMILIES, PATHWAY_INTRO, PATHWAY_AUTHORITY, PATHWAY_BOUNDARY, FOUNDATIONS, COMMON_SCENARIO, CONDUCIVE_GROUPS, RACE_SECTION, LIFECYCLE, RUBRIC, CAPSTONE };
+const ALL = { LEADERSHIP_STYLE_LESSONS, LEADERSHIP_SCENARIO_FAMILIES, PATHWAY_INTRO, PATHWAY_PROCESSES, PATHWAY_BOUNDARY, FOUNDATIONS, COMMON_SCENARIO, CONDUCIVE_GROUPS, RACE_SECTION, LIFECYCLE, RUBRIC, CAPSTONE };
 const visible = strings(ALL).filter(text => !/^[a-z-]+$/.test(text));
 
 describe("leadership styles pathway content", () => {
@@ -49,10 +49,9 @@ describe("leadership styles pathway content", () => {
       expect(text, text).not.toMatch(/probabilit(?:y|ies) (?:of|that)|personality type (?:is|of)/i);
     }
     // Acronyms are spelled out where they first appear.
-    expect(PATHWAY_AUTHORITY[0].label).toContain("Department of Human Services (DHS)");
-    expect(PATHWAY_AUTHORITY[1].label).toContain("Aging and Disability Services Administration (ADSA)");
-    // The three kinds of guidance stay distinct.
-    expect(PATHWAY_AUTHORITY.map(item => item.label)).toEqual([expect.stringMatching(/requirements/), expect.stringMatching(/guidance/), "Project recommendations"]);
+    expect(PATHWAY_PROCESSES).toContain("Department of Human Services (DHS)");
+    // Formal matters still go to the authorized process.
+    expect(PATHWAY_PROCESSES).toMatch(/discrimination, harassment or retaliation/);
   });
   it("stays near a 10th-grade reading level on average", () => {
     const sentences = visible.flatMap(text => splitSentences(text));

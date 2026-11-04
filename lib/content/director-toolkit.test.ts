@@ -1,13 +1,13 @@
 import { describe, expect, it } from "vitest";
 import {
   DIRECTOR_STARTER_PACKAGE, DIRECTOR_TEMPLATES, DIRECTOR_TOOLKIT_INTRO, DIRECTOR_TOOLKIT_SECTIONS, DIRECTOR_FIRST_90_DAYS, TEMPLATE_KEEP_OUT,
-  TOOLKIT_TIERS, TOOLKIT_TIERS_INTRO, cellKey, checkKey, directorTemplate, sectionText, templateAnchor, templateDescriptionText, templateText,
+  cellKey, checkKey, directorTemplate, sectionText, templateAnchor, templateDescriptionText, templateText,
 } from "./director-toolkit";
 
 /** Hub page text in reading order, then the templates page. */
-const hubText = [DIRECTOR_TOOLKIT_INTRO.lede, ...DIRECTOR_TOOLKIT_INTRO.summary, DIRECTOR_TOOLKIT_INTRO.privacy, TOOLKIT_TIERS_INTRO,
-  ...Object.values(TOOLKIT_TIERS).flatMap(tier => [tier.label, tier.description]), ...DIRECTOR_TOOLKIT_SECTIONS.map(sectionText)].join("\n");
-const templatesText = ["Fill-in templates for equity reviews at the Minnesota Department of Human Services (DHS).", TOOLKIT_TIERS.project.description, ...DIRECTOR_TEMPLATES.map(templateDescriptionText)].join("\n");
+const hubText = [DIRECTOR_TOOLKIT_INTRO.lede, ...DIRECTOR_TOOLKIT_INTRO.summary, DIRECTOR_TOOLKIT_INTRO.privacy,
+  ...DIRECTOR_TOOLKIT_SECTIONS.map(sectionText)].join("\n");
+const templatesText = ["Fill-in templates for equity reviews at the Minnesota Department of Human Services (DHS).", ...DIRECTOR_TEMPLATES.map(templateDescriptionText)].join("\n");
 
 /** Parts of official names and form numbers ("Level AA", "Minnesota IT Services", "DHS-4210-ENG"), not short forms to spell out. */
 const NOT_SHORT_FORMS = new Set(["ENG", "AA", "IT"]);
@@ -29,28 +29,19 @@ describe("Equity Director toolkit content", () => {
     expect(new Set(DIRECTOR_TOOLKIT_SECTIONS.map(section => section.id)).size).toBe(14);
     for (const section of DIRECTOR_TOOLKIT_SECTIONS) for (const item of section.items) {
       expect(item.purpose && item.use && item.limitation, item.name).toBeTruthy();
-      expect(Object.keys(TOOLKIT_TIERS)).toContain(item.tier);
     }
     const all = DIRECTOR_TOOLKIT_SECTIONS.map(sectionText).join("\n");
     for (const phrase of ["DHS Equity Policy", "Equity, Diversity and Inclusion InfoLink", "seven criteria", "DHS-4210-ENG", "15 languages", "Office of Equity in Procurement", "Equity Select",
       "Vulnerable Adult Protection Dashboard", "Olmstead Plan", "internal-only", "11 Tribal Nations", "July 1, 2024", "Human Services Performance Management"]) expect(all, phrase).toContain(phrase);
   });
 
-  it("keeps the three tiers distinct and labels ADSA guidance and project recommendations as the source does", () => {
-    expect(Object.values(TOOLKIT_TIERS).map(tier => tier.label)).toEqual(["Existing DHS resource", "ADSA guidance", "Project recommendation"]);
-    const item = (name: string) => DIRECTOR_TOOLKIT_SECTIONS.flatMap(section => section.items).find(entry => entry.name.startsWith(name))!;
-    expect(item("DHS Equity Policy").tier).toBe("existing");
-    expect(item("Aging and Disability Services Administration (ADSA) Outreach").tier).toBe("adsa");
-    expect(item("Internal person-level database dashboard").tier).toBe("adsa");
-    expect(item("Project Diversity, Equity, Inclusion and Accessibility").tier).toBe("project");
-    expect(item("Decision and mitigation log").tier).toBe("project");
+  it("keeps the internal-only caution for the person-level dashboard", () => {
     expect(DIRECTOR_TOOLKIT_SECTIONS.find(section => section.id === "data-evaluation")!.caution).toMatch(/internal-only.*should not be given to external partners/);
   });
 
-  it("has the first 90 days and the 12-item starter package, items 1 to 3 existing and 4 to 12 proposed", () => {
+  it("has the first 90 days and the 12-item starter package, three foundational resources then nine supports with templates", () => {
     expect(DIRECTOR_FIRST_90_DAYS.map(period => period.period)).toEqual(["Days 1 to 30", "Days 31 to 60", "Days 61 to 90"]);
     expect(DIRECTOR_STARTER_PACKAGE).toHaveLength(12);
-    expect(DIRECTOR_STARTER_PACKAGE.map(item => item.tier)).toEqual([...Array(3).fill("existing"), ...Array(9).fill("project")]);
     const anchors = new Set(DIRECTOR_TEMPLATES.map(template => templateAnchor(template.id)));
     for (const item of DIRECTOR_STARTER_PACKAGE.slice(3)) expect(anchors.has(item.href.split("#")[1]), item.title).toBe(true);
   });

@@ -2,8 +2,8 @@ import type { StyleLesson } from "./leadership-styles-pathway-types";
 
 /**
  * Sixteen leadership-style lessons. Every scenario is fictional and every line of
- * dialogue is original teaching material. The equity judgments are qualitative
- * curriculum judgments, not validated probabilities or predictions about a person.
+ * dialogue is original teaching material. The equity judgments describe
+ * responses, never a person.
  */
 export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
   {
@@ -1148,7 +1148,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
     conflict: {
       title: "A high performer's comments",
       situation: "A manager learns that a high-performing staff member has been making comments about a coworker's accent. The high performer is close to the manager and is leading an important project.",
-      tendency: "The temptation is to handle it lightly or wait until the project ends.",
+      tendency: "The temptation is to handle it lightly or wait until that work is done.",
       stronger: "The manager applies the same standard that would apply to anyone. The manager addresses the conduct, follows the authorized process for reporting and responding to it, protects the coworker from retaliation, and does not ask the coworker to smooth things over.",
     },
     promotes: [

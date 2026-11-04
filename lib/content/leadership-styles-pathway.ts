@@ -48,17 +48,13 @@ export const LEGACY_STYLE_TO_PATHWAY: Record<LeadershipStyleSlug, string> = {
 export const PATHWAY_INTRO = [
   "Leadership development should help people recognize how leadership behavior affects power, conflict, access, opportunity and outcomes. It is not about finding your preferred “style.”",
   "The most important distinction is behavior: what a leader does when challenged, when someone reports exclusion, when resources are scarce, and when a familiar process produces unequal results. A leader can use participative language while keeping every important decision. A decisive leader can also use authority responsibly to remove an access barrier.",
-  "The scenarios in this pathway are fictional and the sample dialogue is original. The equity judgments are qualitative curriculum judgments. They are not validated probabilities or predictions about individual leaders.",
+  "The scenarios in this pathway are fictional and the sample dialogue is original.",
 ];
 
-/** Keep existing requirements, ADSA guidance and project recommendations distinct. */
-export const PATHWAY_AUTHORITY = [
-  { label: "Existing Department of Human Services (DHS) requirements", body: "The DHS Equity Policy and the Equity Analysis Toolkit, which is required of all DHS staff. The agency's existing processes for reporting and responding to discrimination, harassment and retaliation, for reasonable accommodation, for accessibility and language access, and for Tribal consultation and coordination. When a scenario touches one of these, follow the existing process and the person or area responsible for it." },
-  { label: "Aging and Disability Services Administration (ADSA) guidance", body: "The ADSA Outreach and Engagement Guide, April 2026, is guidance for ADSA staff on planning engagement, recruitment, accessibility, communication and reporting back. It is not evidence of an agencywide mandate." },
-  { label: "Project recommendations", body: "This pathway, its style lessons, scenarios, conflict lifecycle and practice rubric are recommendations from this program. They are learning resources, not adopted agency policy, and they do not decide any individual matter." },
-];
+/** Where a situation leaves leadership practice and enters a formal process. */
+export const PATHWAY_PROCESSES = "When a situation involves discrimination, harassment or retaliation, a reasonable accommodation, accessibility or language access, or Tribal consultation and coordination, follow the agency's process for it and bring in the person or area responsible. Use the Department of Human Services (DHS) Equity Policy and the Equity Analysis Toolkit, which is required of all DHS staff, to examine how a decision affects people.";
 
-export const PATHWAY_BOUNDARY = "This learning is voluntary. Use the fictional scenarios and practice with non-sensitive responses. Do not enter real complaints, personnel decisions or stories that could identify anyone. Nothing here tracks commitments, awards credit or claims that anyone has changed. The application does not sign in to, read from, write to or depend on any DHS system.";
+export const PATHWAY_BOUNDARY = "Practice with the fictional scenarios and with responses that contain nothing sensitive. Do not enter real complaints, personnel decisions or stories that could identify anyone.";
 
 export const FOUNDATIONS = {
   styleVsConflict: {

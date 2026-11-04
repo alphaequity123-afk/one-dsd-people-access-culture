@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { CHECKLIST_ANSWERS, TEMPLATE_KEEP_OUT, TOOLKIT_TIERS, cellKey, checkKey, sectionHref, templateAnchor, templateText, type DirectorTemplate } from "@/lib/content/director-toolkit";
+import { CHECKLIST_ANSWERS, TEMPLATE_KEEP_OUT, cellKey, checkKey, sectionHref, templateAnchor, templateText, type DirectorTemplate } from "@/lib/content/director-toolkit";
 import styles from "./director-toolkit.module.css";
 
 /** One printable fill-in template. Everything stays in this browser tab: nothing is saved, stored or sent. */
@@ -39,7 +39,6 @@ export function DirectorToolkitTemplate({ template, sectionTitle }: { template: 
   function clear() { setValues({}); setRowCounts({}); setNotice("The template is clear."); setManual(false); }
 
   return <section id={anchor} className={styles.template} data-printing={printing ? "true" : undefined} aria-labelledby={`${anchor}-title`}>
-    <span className={styles.tier} data-tier="project">{TOOLKIT_TIERS.project.label}</span>
     <h2 id={`${anchor}-title`} className="text-2xl font-bold">{template.title}</h2>
     <p>{template.purpose}</p>
     <p>{template.howToUse}</p>

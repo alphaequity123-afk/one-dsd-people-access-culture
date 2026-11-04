@@ -3,7 +3,7 @@ import Link from "next/link";
 import { PageIntro } from "@/components/ui";
 import { DirectorToolkitTemplate } from "@/components/director-toolkit-template";
 import styles from "@/components/director-toolkit.module.css";
-import { DIRECTOR_TEMPLATES, DIRECTOR_TOOLKIT_HREF, DIRECTOR_TOOLKIT_SECTIONS, TEMPLATE_KEEP_OUT, TOOLKIT_TIERS, templateAnchor } from "@/lib/content/director-toolkit";
+import { DIRECTOR_TEMPLATES, DIRECTOR_TOOLKIT_HREF, DIRECTOR_TOOLKIT_SECTIONS, TEMPLATE_KEEP_OUT, templateAnchor } from "@/lib/content/director-toolkit";
 
 export const metadata: Metadata = {
   title: "Equity Director toolkit templates",
@@ -21,8 +21,7 @@ export default function DirectorToolkitTemplatesPage() {
     <div className="wrap max-w-5xl space-y-10 py-10">
       <section aria-labelledby="templates-about" className={styles.printHide}>
         <h2 id="templates-about" className="text-2xl font-bold">Before you start</h2>
-        <p><span className={styles.tier} data-tier="project">{TOOLKIT_TIERS.project.label}</span></p>
-        <p>Every template here is a project recommendation. {TOOLKIT_TIERS.project.description} They put the DHS Equity Policy, the DHS Equity Analysis Toolkit and the State of Minnesota Equity Analysis Toolkit into practice; they do not replace them.</p>
+        <p>These templates put the DHS Equity Policy, the DHS Equity Analysis Toolkit and the State of Minnesota Equity Analysis Toolkit into practice. They do not replace them. Adapt each one with the people responsible for the work it covers.</p>
         <p className="notice">These templates run only in your browser. Nothing you type is saved, stored or sent anywhere, and it is gone when you leave the page. {TEMPLATE_KEEP_OUT}</p>
         <h3 className="mt-6 text-xl font-bold">The 14 templates</h3>
         <ol className={styles.templateIndex}>{DIRECTOR_TEMPLATES.map(template => <li key={template.id}><a href={`#${templateAnchor(template.id)}`}>{template.title}</a></li>)}</ol>

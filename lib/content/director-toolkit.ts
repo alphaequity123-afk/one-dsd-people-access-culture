@@ -3,9 +3,9 @@
  * Human Services can use to carry out equity work across the agency (source:
  * migration/source-materials/equity-director-toolkit-and-leadership-styles-20261103.md, sections 1 to 14).
  *
- * Every resource carries one of three tiers the source keeps distinct: an existing resource, guidance from the Aging and
- * Disability Services Administration, or a project recommendation still to be developed with the person or area
- * responsible. Pages, Ask retrieval and the knowledge graph all read this one file. Nothing here stores what people type.
+ * Each resource is written as direct, practical guidance: what it is for, how to use it and its limits. Owner rule: no
+ * status labels or classification language on the page. Pages, Ask retrieval and the knowledge graph all read this one
+ * file. Nothing here stores what people type.
  */
 
 export const DIRECTOR_TOOLKIT_HREF = "/equity-review/director-toolkit";
@@ -13,28 +13,8 @@ export const DIRECTOR_TEMPLATES_HREF = "/equity-review/director-toolkit/template
 export const DIRECTOR_TOOLKIT_SOURCE_FILE = "lib/content/director-toolkit.ts";
 export const DIRECTOR_TOOLKIT_REVIEWED_ON = "2026-11-03";
 
-export type ToolkitTier = "existing" | "adsa" | "project";
-
-export const TOOLKIT_TIERS: Record<ToolkitTier, { label: string; description: string }> = {
-  existing: {
-    label: "Existing DHS resource",
-    description: "A resource that exists today and can be used now: a Minnesota Department of Human Services (DHS) policy, guide or tool, or a published State of Minnesota or outside resource that DHS staff already use. It was not created by this program.",
-  },
-  adsa: {
-    label: "ADSA guidance",
-    description: "Guidance from the Aging and Disability Services Administration (ADSA). It is written for ADSA staff. It is not an agency-wide requirement unless DHS adopts it as one.",
-  },
-  project: {
-    label: "Project recommendation",
-    description: "A proposed tool or practice from this program. It is not current DHS policy or practice. Develop it with the person or area responsible before using it as an agency standard.",
-  },
-};
-
-export const TOOLKIT_TIERS_INTRO = "Every item carries one of three labels: an existing resource, guidance from the Aging and Disability Services Administration (ADSA), or a project recommendation. Keep them distinct so planned tools are never presented as established agency practice.";
-
 export type ToolkitItem = {
   name: string;
-  tier: ToolkitTier;
   /** Who publishes or holds it, when that helps a reader find it. */
   publisher?: string;
   purpose: string;
@@ -42,13 +22,13 @@ export type ToolkitItem = {
   limitation: string;
   /** A fill-in template on the templates page. */
   templateId?: DirectorTemplateId;
-  /** An official public address already used elsewhere in this program. */
+  /** The official public address of the resource. */
   url?: string;
-  /** A related page in this program. */
+  /** A related page on this site. */
   href?: string;
 };
 
-export type ToolkitList = { heading: string; tier?: ToolkitTier; items: string[]; note?: string };
+export type ToolkitList = { heading: string; items: string[]; note?: string };
 
 export type ToolkitSection = {
   id: string;
@@ -71,7 +51,7 @@ export const DIRECTOR_TOOLKIT_INTRO = {
   summary: [
     "Equity Directors get the most done through a connected set of tools. These tools link policy analysis, community engagement, workforce practices, accessibility, language access, procurement and clear accountability. Training alone, or a software platform alone, will not do this work.",
     "The strongest starting point is the DHS Equity Policy and the internal DHS Equity Analysis Toolkit. Add the State of Minnesota Equity Analysis Toolkit, and build practical templates around those resources. The DHS Equity Policy asks employees to look at policies, practices, procedures, rules, budgets and decisions through an equity lens. The goal is to reduce disparities and improve access to human services.",
-    "This toolkit lists each resource, what it is for, how an Equity Director can use it, and its limits. Every item carries a label so you can tell an existing resource from guidance written for one administration and from a recommendation this program is proposing.",
+    "This toolkit lists each resource, what it is for, how an Equity Director can use it, and its limits.",
   ],
   privacy: "The fill-in templates run only in your browser. Nothing you type is saved or sent anywhere. Keep sensitive employee concerns and protected client information out of these templates and out of general-purpose trackers.",
 };
@@ -87,50 +67,50 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     ],
     items: [
       {
-        name: "DHS Equity Policy", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "DHS Equity Policy", publisher: "Minnesota Department of Human Services",
         purpose: "Published agency policy that sets the expectation for equity analysis.",
         use: "Connect equity reviews to existing policy, budget, program and management decisions rather than creating a separate initiative.",
         limitation: "The policy sets the expectation. It does not by itself tell a team how to complete a review; pair it with the toolkits below.",
         url: "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf", href: "/equity-policy",
       },
       {
-        name: "DHS Equity Analysis Toolkit", tier: "existing", publisher: "Minnesota Department of Human Services, through the Equity, Diversity and Inclusion InfoLink page",
+        name: "DHS Equity Analysis Toolkit", publisher: "Minnesota Department of Human Services, through the Equity, Diversity and Inclusion InfoLink page",
         purpose: "The internal agency toolkit named in the DHS Equity Policy. It is available through the Equity, Diversity and Inclusion InfoLink page.",
         use: "Get the current approved version and use it as the main agency-specific analysis tool.",
         limitation: "Do not assume it is the same as the statewide toolkit. Always work from the current approved version.",
         href: "/learn/equity-toolkit",
       },
       {
-        name: "State of Minnesota Equity Analysis Toolkit: A Quick Guide", tier: "existing", publisher: "State of Minnesota, developed with DHS and other agencies",
+        name: "State of Minnesota Equity Analysis Toolkit: A Quick Guide", publisher: "State of Minnesota, developed with DHS and other agencies",
         purpose: "Published statewide tool developed with participation from DHS and other agencies.",
         use: "Use its seven criteria to structure reviews: impact, partner engagement, data, access, monitoring, resources and accountability.",
         limitation: "It is a statewide companion. The DHS toolkit stays the agency starting point.",
         url: "https://mn.gov/oeoa/resources/equity-analysis-toolkit/",
       },
       {
-        name: "Step-by-Step Guide for Applying the State Equity Analysis Tool", tier: "existing", publisher: "State of Minnesota",
+        name: "Step-by-Step Guide for Applying the State Equity Analysis Tool", publisher: "State of Minnesota",
         purpose: "Published companion that shows how to apply the statewide tool.",
         use: "Help policy teams choose an issue, bring the right people together, examine intended outcomes and develop recommendations they can act on.",
         limitation: "It guides the process. The team still has to gather evidence and make the recommendations.",
       },
       {
-        name: "Aging and Disability Services Administration (ADSA) Outreach and Engagement Guide, April 2026", tier: "adsa", publisher: "Aging and Disability Services Administration",
-        purpose: "Internal ADSA guide for ADSA staff. It is not evidence of an agency-wide mandate.",
+        name: "Aging and Disability Services Administration (ADSA) Outreach and Engagement Guide, April 2026", publisher: "Aging and Disability Services Administration",
+        purpose: "Internal guide from the Aging and Disability Services Administration (ADSA) for planning outreach and engagement.",
         use: "Use its practices for engagement planning, recruitment, accessibility, communication and reporting.",
-        limitation: "Get authorization before treating it as an agency-wide standard.",
+        limitation: "It is written for aging and disability work. Check with the person or area responsible before using it elsewhere in DHS.",
       },
       {
-        name: "Government Alliance on Race and Equity (GARE) Racial Equity Toolkit and action-planning resources", tier: "existing", publisher: "Government Alliance on Race and Equity (outside resource)",
+        name: "Government Alliance on Race and Equity (GARE) Racial Equity Toolkit and action-planning resources", publisher: "Government Alliance on Race and Equity (outside resource)",
         purpose: "Outside methods designed for government.",
         use: "Add to DHS methods with approaches for institutional change, policy and budget analysis, and action planning with clear accountability.",
         limitation: "It supplements DHS methods; it does not replace the DHS Equity Policy or the DHS toolkit.",
         url: "https://www.racialequityalliance.org/resources/racial-equity-toolkit-opportunity-operationalize-equity/",
       },
       {
-        name: "Project Diversity, Equity, Inclusion and Accessibility (DEIA) Strategic Plan and Resource Tool Suite", tier: "project", publisher: "This program",
-        purpose: "A proposed framework that can be adapted. It is expressly not adopted agency policy.",
-        use: "Use it as a design resource for governance, workforce, culture, service access, partnerships and continuous improvement.",
-        limitation: "It is a design resource only. Do not present it as established agency practice.",
+        name: "Diversity, Equity, Inclusion and Accessibility (DEIA) Strategic Plan and Resource Tool Suite",
+        purpose: "A framework you can adapt for governance, workforce, culture, service access, partnerships and continuous improvement.",
+        use: "Use it to design tools for each of those areas, one area at a time.",
+        limitation: "Adapt each part with the people responsible for the area that will use it.",
         href: "/equity-framework",
       },
     ],
@@ -145,31 +125,31 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     ],
     items: [
       {
-        name: "Equity impact assessment", tier: "existing", publisher: "DHS Equity Analysis Toolkit, with the statewide toolkit as a companion",
+        name: "Equity impact assessment", publisher: "DHS Equity Analysis Toolkit, with the statewide toolkit as a companion",
         purpose: "Look closely at a decision before it is made. The statewide tool asks teams to identify affected groups, look at evidence broken out by group, check accessibility, set aside resources and name who is accountable for carrying it out.",
         use: "Use the DHS toolkit as the agency starting point and the statewide toolkit as a companion. Record the review using the nine-part assessment record.",
-        limitation: "The nine-part record is a project recommendation that puts the statewide toolkit into practice. It is not a claim that DHS currently requires this exact form.",
+        limitation: "The nine-part record puts the statewide toolkit into practice. Check it against the current approved DHS Equity Analysis Toolkit.",
         templateId: "impact-assessment",
       },
       {
-        name: "Equity review intake and triage", tier: "project",
+        name: "Equity review intake and triage",
         purpose: "A short intake form that shows which proposals need a fuller review. Suggested triggers include changes to eligibility processes, service access, assessment practices, public communications, grants, procurement and workforce procedures.",
         use: "Screen proposals early so teams apply the existing analysis tools in proportion to the stakes. The ADSA guide names many of these same decision areas as times when engagement matters.",
         limitation: "Triage should help teams use the existing tools in proportion. It must not replace real analysis with a checkbox.",
         templateId: "intake-triage",
       },
       {
-        name: "Budget equity worksheet", tier: "project",
+        name: "Budget equity worksheet",
         purpose: "For each significant proposal, ask who benefits from the spending, who feels the effects of a cut or service change, what funding is needed for translation, accommodations, accessible technology and participation, which barriers remain unfunded, and which outcomes will show whether the investment improved access.",
         use: "Use it alongside the equity impact assessment for proposals with budget effects. The statewide toolkit includes financial resources, dedicated funding to reduce disparities, staff and training as review criteria.",
-        limitation: "A proposed worksheet. Budget decisions stay with the people who hold budget authority.",
+        limitation: "Budget decisions stay with the people who hold budget authority.",
         templateId: "budget-worksheet",
       },
       {
-        name: "Decision and mitigation log", tier: "project",
+        name: "Decision and mitigation log",
         purpose: "Keep a record of findings, recommended changes, the decision made, the reasons, the accountable owner and the risks still open.",
-        use: "Make decisions visible and traceable. The project's strategic framework recommends open decision-making and clear responsibility for approval, carrying out the work and raising concerns.",
-        limitation: "A useful proposed tool. It is not evidence of an existing DHS decision-log requirement.",
+        use: "Make decisions visible and traceable, with clear responsibility for approval, carrying out the work and raising concerns.",
+        limitation: "Keep entries factual and brief. Leave out names and sensitive details.",
         templateId: "decision-log",
       },
     ],
@@ -188,36 +168,36 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     ],
     items: [
       {
-        name: "DHS Community Engagement Guide", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "DHS Community Engagement Guide", publisher: "Minnesota Department of Human Services",
         purpose: "Plan meaningful participation before decisions are final.",
         use: "Produce an engagement plan that names the purpose, who will take part, the timing and how their input will influence the decision.",
         limitation: "A plan on paper is not engagement. Build in accessibility, language support and follow-up from the start.",
         href: "/practice/gp-3",
       },
       {
-        name: "ADSA Outreach and Engagement Guide", tier: "adsa", publisher: "Aging and Disability Services Administration",
+        name: "ADSA Outreach and Engagement Guide", publisher: "Aging and Disability Services Administration",
         purpose: "Organize trust-building, inclusive outreach, accessible activities, sharing results and tracking.",
-        use: "Produce a project-specific outreach and engagement plan.",
-        limitation: "Written for ADSA staff. Get authorization before using it as an agency-wide standard.",
+        use: "Produce an outreach and engagement plan for the specific decision or effort.",
+        limitation: "It is written for aging and disability work. Check with the person or area responsible before using it elsewhere in DHS.",
       },
       {
-        name: "Community Engagement in Grant-Making guide", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "Community Engagement in Grant-Making guide", publisher: "Minnesota Department of Human Services",
         purpose: "Look at how communities take part in grant design and related decisions.",
         use: "Produce a documented engagement approach for a grant initiative.",
         limitation: "Written in 2019. Review the older guidance for whether it still applies.",
       },
       {
-        name: "Partner and participation map", tier: "project",
+        name: "Partner and participation map",
         purpose: "Identify affected groups, missing perspectives, trusted organizations and barriers to taking part.",
         use: "Produce a recruitment and relationship plan, shaped by the guide's emphasis on hearing many perspectives.",
-        limitation: "A recommended adaptation. It needs relationships and follow-through, not only a list.",
+        limitation: "It needs relationships and follow-through, not only a list.",
         templateId: "partner-map",
       },
       {
-        name: "\"What we heard / what changed\" log", tier: "project",
+        name: "\"What we heard / what changed\" log",
         purpose: "Link community input to decisions, and explain recommendations that were not adopted.",
         use: "Produce an accessible feedback report and follow-up commitments.",
-        limitation: "A recommended adaptation. It only builds trust if people actually receive the report back.",
+        limitation: "It only builds trust if people actually receive the report back.",
         templateId: "heard-changed-log",
       },
     ],
@@ -242,42 +222,42 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     ],
     items: [
       {
-        name: "Tribal and Urban Indian Relations", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "Tribal and Urban Indian Relations", publisher: "Minnesota Department of Human Services",
         purpose: "Guidance for ongoing consultation and program development with Tribal governments, and promotion of government-to-government relations.",
         use: "Bring this function in early. Its consultation procedures and guidance decide the content of every tool below.",
         limitation: "Equity Directors coordinate with this function; they do not replace it.",
         url: "https://mn.gov/dhs/partners-and-providers/program-overviews/tribal-and-urban-indian-relations/index.jsp",
       },
       {
-        name: "Consultation screening checklist", tier: "project",
+        name: "Consultation screening checklist",
         purpose: "Screen proposed decisions to see whether consultation is needed.",
         use: "Run it at intake, before timelines are fixed, and share the result with the person or area responsible for Tribal relations.",
         limitation: "A screening tool does not decide whether consultation happens. DHS consultation procedures do.",
         templateId: "tribal-screening",
       },
       {
-        name: "Consultation planning record", tier: "project",
+        name: "Consultation planning record",
         purpose: "Name the issue, the decision timeline, the right contacts and the responsible DHS officials.",
         use: "Keep the plan in one place so the timeline leaves room for real consultation.",
-        limitation: "A proposed administrative support. Its content follows DHS consultation procedures and Tribal relations guidance.",
+        limitation: "Its content follows DHS consultation procedures and Tribal relations guidance.",
         templateId: "tribal-screening",
       },
       {
-        name: "Record of issues, commitments and follow-up", tier: "project",
+        name: "Record of issues, commitments and follow-up",
         purpose: "Record issues raised, commitments made, follow-up and decisions.",
         use: "Track that every commitment gets a response and that the response is shared back.",
-        limitation: "A proposed administrative support, shaped by Tribal relations guidance.",
+        limitation: "Shape it with Tribal relations guidance.",
         templateId: "tribal-screening",
       },
       {
-        name: "Separate engagement plan for urban American Indian communities", tier: "project",
+        name: "Separate engagement plan for urban American Indian communities",
         purpose: "Plan engagement with urban American Indian communities where it fits.",
         use: "Keep it separate from government-to-government consultation with Tribal Nations.",
-        limitation: "A proposed administrative support. Develop it with the person or area responsible for Tribal and Urban Indian Relations.",
+        limitation: "Develop it with the person or area responsible for Tribal and Urban Indian Relations.",
       },
     ],
     notes: [
-      "These are proposed administrative supports. The applicable DHS consultation procedures and Tribal relations guidance should decide what goes in them.",
+      "The applicable DHS consultation procedures and Tribal relations guidance decide what goes in these supports.",
       "The statewide equity toolkit separately asks whether Minnesota's 11 Tribal Nations, urban Native populations or agency Tribal liaisons were engaged or notified.",
     ],
     related: [{ label: "Tribal referral and relationships", href: "/learn/tribal-referral" }],
@@ -292,53 +272,53 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     ],
     items: [
       {
-        name: "Minnesota IT Services (MNIT) accessibility policies, standards, training and implementation resources", tier: "existing", publisher: "Minnesota IT Services",
+        name: "Minnesota IT Services (MNIT) accessibility policies, standards, training and implementation resources", publisher: "Minnesota IT Services",
         purpose: "Set requirements and staff responsibilities for digital content and systems.",
         use: "Use the current standard as the baseline for every digital product, form and document.",
         limitation: "Apply the current standard rather than relying on older training references.",
         url: "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
       },
       {
-        name: "Accessibility Insights for Web", tier: "existing", publisher: "Outside testing tool",
+        name: "Accessibility Insights for Web", publisher: "Outside testing tool",
         purpose: "Support website accessibility evaluation.",
         use: "Run it as one step in testing a web page or application.",
         limitation: "Include it within a broader testing process.",
       },
       {
-        name: "WAVE (Web Accessibility Evaluation Tool) browser extension", tier: "existing", publisher: "Outside testing tool",
+        name: "WAVE (Web Accessibility Evaluation Tool) browser extension", publisher: "Outside testing tool",
         purpose: "Find possible accessibility errors and inspect page features.",
         use: "Use it for a quick first look at a page and to show teams where problems are.",
         limitation: "Findings need interpretation and follow-through.",
       },
       {
-        name: "axe DevTools browser extension", tier: "existing", publisher: "Outside testing tool",
+        name: "axe DevTools browser extension", publisher: "Outside testing tool",
         purpose: "Support repeatable web accessibility testing.",
         use: "Use it for testing that teams can repeat each time content changes.",
         limitation: "Free and paid versions differ. Confirm agency approval before adoption.",
       },
       {
-        name: "ANDI (Accessible Name & Description Inspector)", tier: "existing", publisher: "Outside testing tool",
+        name: "ANDI (Accessible Name & Description Inspector)", publisher: "Outside testing tool",
         purpose: "Help analysts and designers find accessibility issues and possible fixes.",
         use: "Use it to check how screen readers will announce page elements.",
         limitation: "Use it alongside other evaluation methods.",
       },
       {
-        name: "Keyboard testing", tier: "existing", publisher: "Testing method",
+        name: "Keyboard testing", publisher: "Testing method",
         purpose: "Check whether people can move through and operate an interface without a mouse.",
         use: "Include it in documented testing.",
         limitation: "Do not rely only on automated scans; keyboard testing must be done by a person.",
       },
       {
-        name: "Adobe accessibility checking tools", tier: "existing", publisher: "Outside testing tool",
+        name: "Adobe accessibility checking tools", publisher: "Outside testing tool",
         purpose: "Find possible accessibility problems in Portable Document Format (PDF) files.",
         use: "Check PDFs before they are published, then fix and recheck.",
         limitation: "Treat checking as part of fixing and confirming, not the whole process.",
       },
       {
-        name: "Accessible meeting and event checklist", tier: "project",
+        name: "Accessible meeting and event checklist",
         purpose: "Cover materials, ways to take part, captioning, interpretation and accommodation requests.",
         use: "Use it when planning any meeting, listening session or public event.",
-        limitation: "A recommended adaptation. Build it with agency accessibility specialists and the people who will take part.",
+        limitation: "Build it with agency accessibility specialists and the people who will take part.",
         templateId: "accessibility-review", href: "/practice-guides/inclusive-meetings",
       },
     ],
@@ -357,41 +337,41 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     ],
     items: [
       {
-        name: "DHS Limited English Proficiency (LEP) Plan, DHS-4210-ENG", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "DHS Limited English Proficiency (LEP) Plan, DHS-4210-ENG", publisher: "Minnesota Department of Human Services",
         purpose: "The agency plan for language assistance.",
         use: "Use it as an operational reference when reviewing language assistance procedures.",
         limitation: "A plan describes procedures; check that people can actually get the help it describes.",
       },
       {
-        name: "DHS eDocs translated-document search", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "DHS eDocs translated-document search", publisher: "Minnesota Department of Human Services",
         purpose: "Find existing translated forms and publications by language, document number or keyword.",
         use: "Search here before paying for new translation work.",
         limitation: "A translated document only helps if it is current and people can find it.",
       },
       {
-        name: "\"I need a language interpreter\" cards", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "\"I need a language interpreter\" cards", publisher: "Minnesota Department of Human Services",
         purpose: "Help people tell staff they need an interpreter. DHS lists them as available in 15 languages.",
         use: "Make sure front-line and outreach staff have them and know what to do when someone shows one.",
         limitation: "A card starts the request; staff still need to arrange the interpreter.",
       },
       {
-        name: "State interpreter and translation purchasing contracts", tier: "existing", publisher: "State of Minnesota",
+        name: "State interpreter and translation purchasing contracts", publisher: "State of Minnesota",
         purpose: "Buy interpreter and translation services.",
         use: "Arrange services through the applicable procurement process and agency Limited English Proficiency procedures.",
         limitation: "Use the applicable procurement process; the contracts do not replace agency procedures.",
       },
       {
-        name: "DHS Language Block guidance", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "DHS Language Block guidance", publisher: "Minnesota Department of Human Services",
         purpose: "Review public-facing publications for the required notice of free language assistance.",
         use: "Check every public document against it before release. The published DHS Language Block policy says documents intended for the general public must follow its guidelines.",
         limitation: "The notice tells people help exists; staff must be ready to provide it.",
         url: "https://mn.gov/dhs/assets/language-block-required-documents-available-general-public_tcm1053-646949.pdf",
       },
       {
-        name: "Language-access workflow audit", tier: "project",
+        name: "Language-access workflow audit",
         purpose: "Follow a person's experience from first contact through application, notices, follow-up and appeals to find gaps.",
         use: "Walk the path step by step and note where language help is missing or hard to reach.",
-        limitation: "A recommended adaptation. It needs real service data and the experience of people who use the service.",
+        limitation: "It needs real service data and the experience of people who use the service.",
         templateId: "language-access-review",
       },
     ],
@@ -406,62 +386,62 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     title: "Workforce equity and inclusive management tools",
     question: "Do our hiring, development and retention practices remove barriers that have nothing to do with the work?",
     intro: [
-      "The project's strategic framework offers a proposed set of workforce tools: structured selection, accessible hiring, open advancement, employee support, and analysis of everything from recruitment through retention. It is a design resource, not proof that these tools are in use across DHS.",
+      "A strong set of workforce tools covers structured selection, accessible hiring, open advancement, employee support, and analysis of everything from recruitment through retention.",
     ],
     items: [
       {
-        name: "Job-description review checklist", tier: "project",
+        name: "Job-description review checklist",
         purpose: "Look for credentials that are not needed, unclear essential functions, inaccessible wording and requirements unrelated to the work.",
         use: "Review job descriptions with human resources, hiring managers and accessibility specialists.",
-        limitation: "A proposed tool. Employment changes need the reviews named below before they take effect.",
+        limitation: "Employment changes need the reviews named below before they take effect.",
         templateId: "workforce-review",
       },
       {
-        name: "Structured interview guide and scoring rubric", tier: "project",
+        name: "Structured interview guide and scoring rubric",
         purpose: "Check that questions are consistent, criteria are related to the job and the reason for each selection is written down.",
         use: "Work with human resources and hiring managers.",
-        limitation: "A proposed tool, subject to human resources and labor relations review.",
+        limitation: "Get human resources and labor relations review before using it.",
         templateId: "workforce-review", href: "/practice/gp-6",
       },
       {
-        name: "Hiring-stage analysis", tier: "project",
+        name: "Hiring-stage analysis",
         purpose: "Look at patterns from applicant to interview, and from interview to offer.",
         use: "Work with human resources analytics and equity staff.",
         limitation: "Use group-level patterns only; never review individual candidates in a general tracker.",
         templateId: "workforce-review",
       },
       {
-        name: "Retention and advancement dashboard", tier: "project",
+        name: "Retention and advancement dashboard",
         purpose: "Look at turnover, promotion, access to development and differences across job categories.",
         use: "Work with human resources, leadership and data staff.",
-        limitation: "A proposed tool. Small groups need privacy protection.",
+        limitation: "Small groups need privacy protection.",
         templateId: "workforce-review",
       },
       {
-        name: "Accessible onboarding checklist", tier: "project",
+        name: "Accessible onboarding checklist",
         purpose: "Check whether new employees can use required systems, get support and understand expectations.",
         use: "Work with supervisors, human resources and accessibility staff.",
-        limitation: "A proposed tool.",
+        limitation: "Ask new employees what helped and what did not, and update the checklist.",
         templateId: "workforce-review",
       },
       {
-        name: "Mentoring and development access inventory", tier: "project",
+        name: "Mentoring and development access inventory",
         purpose: "Check how open and accessible career-development opportunities are.",
         use: "Work with learning staff and managers.",
-        limitation: "A proposed tool.",
+        limitation: "Look at who is offered opportunities, not only who takes them.",
         templateId: "workforce-review",
       },
       {
-        name: "Employee resource group charter", tier: "project",
+        name: "Employee resource group charter",
         purpose: "Set purpose, leadership support and participation, and protect members from carrying an unfair share of unpaid inclusion work.",
         use: "Work with executive sponsors and employee groups.",
-        limitation: "A proposed tool; follow current state employee resource group guidelines.",
+        limitation: "Follow current state employee resource group guidelines.",
         templateId: "workforce-review", href: "/employee-resource-groups",
       },
     ],
     notes: [
       "Use these tools to improve job-related processes and remove barriers that are not needed.",
-      "Have human resources, labor relations, affirmative action and legal counsel review proposed employment changes before they take effect. The project framework itself calls for these partners and for applicable employment requirements to guide the work.",
+      "Have human resources, labor relations, affirmative action and legal counsel review employment changes before they take effect, and follow applicable employment requirements.",
     ],
   },
   {
@@ -470,16 +450,16 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     title: "Workplace culture, learning and concern-response tools",
     question: "Are people heard, learning in ways that change practice, and able to raise concerns safely?",
     intro: [
-      "A useful culture toolkit combines listening to employees, manager practice, applied learning and clear routes for raising concerns. The project framework recommends all four, rather than treating training completion as the outcome.",
+      "A useful culture toolkit combines listening to employees, manager practice, applied learning and clear routes for raising concerns. Use all four, rather than treating training completion as the outcome.",
     ],
     items: [
-      { name: "Employee climate survey", tier: "project", purpose: "Cover belonging, fairness, voice, trust and accessibility.", use: "Run it on a regular cycle and share results and actions back.", limitation: "A proposed component. Results are group-level only." },
-      { name: "Facilitated listening-session guide", tier: "project", purpose: "Hear experiences that a survey cannot capture.", use: "Use trained facilitators and accessible formats.", limitation: "A proposed component. Listening sessions are not a reporting channel for formal complaints." },
-      { name: "Inclusive team norms and meeting practices", tier: "project", purpose: "Agree how a team works together and makes room for every voice.", use: "Revisit norms when teams change.", limitation: "A proposed component.", href: "/practice-guides/inclusive-meetings" },
-      { name: "Role-based learning plans", tier: "project", purpose: "Learning plans for managers, policy staff, grant managers, analysts and service teams.", use: "Tie each plan to the decisions that role makes.", limitation: "A proposed component. Completion is not the outcome." },
-      { name: "Scenario-based exercises tied to actual work", tier: "project", purpose: "Practice on real situations.", use: "Use cases from the team's own work, with details removed.", limitation: "A proposed component. Remove names and case details." },
-      { name: "Follow-up checks", tier: "project", purpose: "Check whether participants changed a practice or process.", use: "Ask a few weeks after learning what changed.", limitation: "A proposed component." },
-      { name: "Concern-routing guide", tier: "project", purpose: "Tell informal support apart from formal reporting channels.", use: "Make sure staff know where each kind of concern goes.", limitation: "A proposed component. It routes concerns; it does not resolve formal matters.", href: "/support/right-person" },
+      { name: "Employee climate survey", purpose: "Cover belonging, fairness, voice, trust and accessibility.", use: "Run it on a regular cycle and share results and actions back.", limitation: "Results are group-level only." },
+      { name: "Facilitated listening-session guide", purpose: "Hear experiences that a survey cannot capture.", use: "Use trained facilitators and accessible formats.", limitation: "Listening sessions are not a reporting channel for formal complaints." },
+      { name: "Inclusive team norms and meeting practices", purpose: "Agree how a team works together and makes room for every voice.", use: "Revisit norms when teams change.", limitation: "Norms help only when the team, including its leader, holds to them.", href: "/practice-guides/inclusive-meetings" },
+      { name: "Role-based learning plans", purpose: "Learning plans for managers, policy staff, grant managers, analysts and service teams.", use: "Tie each plan to the decisions that role makes.", limitation: "Completion is not the outcome." },
+      { name: "Scenario-based exercises tied to actual work", purpose: "Practice on real situations.", use: "Use cases from the team's own work, with details removed.", limitation: "Remove names and case details." },
+      { name: "Follow-up checks", purpose: "Check whether participants changed a practice or process.", use: "Ask a few weeks after learning what changed.", limitation: "Ask about changes in practice, not about how people felt about the session." },
+      { name: "Concern-routing guide", purpose: "Tell informal support apart from formal reporting channels.", use: "Make sure staff know where each kind of concern goes.", limitation: "It routes concerns; it does not resolve formal matters.", href: "/support/right-person" },
     ],
     caution: "Formal discrimination, harassment, retaliation and accessibility matters should go to authorized processes rather than being handled only through dialogue, coaching or learning activities.",
   },
@@ -493,38 +473,38 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     ],
     items: [
       {
-        name: "Certified vendor directory", tier: "existing", publisher: "Office of Equity in Procurement, State of Minnesota",
+        name: "Certified vendor directory", publisher: "Office of Equity in Procurement, State of Minnesota",
         purpose: "Searchable directory of certified Targeted Group, Economically Disadvantaged and Veteran-Owned businesses.",
         use: "Search it before every solicitation and record the outreach.",
         limitation: "Finding vendors is a first step; the solicitation itself must not create barriers that are not needed.",
       },
       {
-        name: "State diverse-spend reporting", tier: "existing", publisher: "State of Minnesota",
+        name: "State diverse-spend reporting", publisher: "State of Minnesota",
         purpose: "Existing reporting on state spending with diverse businesses.",
         use: "Use it as a baseline for the participation and spending dashboard.",
         limitation: "Reporting shows results; it does not explain the process behind them.",
       },
       {
-        name: "Equity Select purchasing policy", tier: "existing", publisher: "State of Minnesota",
+        name: "Equity Select purchasing policy", publisher: "State of Minnesota",
         purpose: "A published state purchasing policy.",
         use: "Procurement staff should verify its current applicability, conditions and approval requirements for a specific purchase.",
         limitation: "It is not blanket permission for an award.",
       },
       {
-        name: "Procurement review package", tier: "project",
+        name: "Procurement review package",
         purpose: "Certified vendor directory search, outreach log, review of unnecessary experience, insurance, administrative or submission barriers, accessible solicitation checklist, clear evaluation rubric, record of award decisions, payment-timeliness and vendor-experience review, and a participation and spending dashboard.",
         use: "Apply the package to each significant solicitation.",
-        limitation: "The directory and state diverse-spend reporting are existing resources. The broader package is a recommended adaptation of the project's operational-integration framework.",
+        limitation: "Start from the directory and state diverse-spend reporting, and have procurement staff confirm each step fits current procurement rules.",
         templateId: "procurement-grant-review", href: "/practice/gp-10",
       },
       {
-        name: "Community Engagement in Grant-Making resource", tier: "existing", publisher: "Minnesota Department of Human Services",
+        name: "Community Engagement in Grant-Making resource", publisher: "Minnesota Department of Human Services",
         purpose: "Guidance on community participation in grant-making.",
         use: "Use it alongside an equity assessment of the grant process.",
         limitation: "Written in 2019; review it for whether it still applies.",
       },
       {
-        name: "Grant-making equity questions", tier: "project",
+        name: "Grant-making equity questions",
         purpose: "Ask whether communities helped define the problem, whether application requirements create barriers that are not needed, whether technical assistance is accessible, and whether reporting expectations are proportionate.",
         use: "Answer them during grant design, before the solicitation is released. The ADSA guide names grant design, requests for information, requests for proposals and grantee selection as chances for engagement.",
         limitation: "Recommended questions, not a required form.",
@@ -542,23 +522,23 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
       "For aging and disability work, the ADSA guide identifies these existing data resources.",
     ],
     items: [
-      { name: "DHS Aging Data Profiles", tier: "existing", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Data profiles on older Minnesotans.", use: "Use as background for aging-related reviews.", limitation: "Profiles describe populations; pair them with program and lived-experience evidence." },
-      { name: "Long-Term Services and Supports (LTSS) performance measures", tier: "existing", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Performance measures for long-term services and supports.", use: "Use as baseline and trend measures for service reviews.", limitation: "Check definitions and denominators before comparing groups." },
-      { name: "LTSS demographic dashboard", tier: "existing", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Demographic information on people using long-term services and supports.", use: "Use to see who is and is not reaching services.", limitation: "Interpret with data-quality checks and community context." },
-      { name: "Vulnerable Adult Protection Dashboard", tier: "existing", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Data on adult protection.", use: "Use for context on protection-related work.", limitation: "Interpret with care and privacy review." },
-      { name: "Minnesota Olmstead Plan progress reports", tier: "existing", publisher: "State of Minnesota; identified in the ADSA guide", purpose: "Progress on Minnesota's Olmstead Plan for people with disabilities.", use: "Connect reviews to statewide integration goals.", limitation: "Statewide progress reports may not break out a single program.", url: "https://mn.gov/dhs/general-public/about-dhs/olmstead/" },
-      { name: "Internal person-level database dashboard", tier: "adsa", publisher: "Identified in the ADSA guide", purpose: "An internal dashboard with person-level data.", use: "Use it inside DHS only, and work with data staff on what can be shared.", limitation: "The ADSA guide states it is internal-only. Do not give PDFs or screenshots of it to external partners; work with data staff on appropriate sharing." },
-      { name: "Equity metric definition sheet", tier: "project", purpose: "Set the population, numerator, denominator, period, source, missing data and limits on interpretation.", use: "Fill one in for every measure before reporting it.", limitation: "A recommended instrument grounded in the statewide toolkit's data, monitoring and accountability criteria.", templateId: "metric-definition" },
-      { name: "Baseline and trend dashboard", tier: "project", purpose: "Show whether access, timeliness, experience and outcomes change over time.", use: "Start from a defined baseline.", limitation: "A recommended instrument." },
-      { name: "Mixed-method evaluation plan", tier: "project", purpose: "Show how administrative data and lived experience will be read together.", use: "Plan both kinds of evidence from the start.", limitation: "A recommended instrument.", href: "/practice/measurement" },
-      { name: "Root-cause review", tier: "project", purpose: "Find which policy, process, communication or resource barriers may contribute to a disparity.", use: "Use it when a measure shows a gap.", limitation: "A recommended instrument.", href: "/equity-review/structural" },
-      { name: "Improvement action tracker", tier: "project", purpose: "Record what will change, who owns the change and when results will be reviewed.", use: "Link every finding to an owned action.", limitation: "A recommended instrument.", templateId: "action-tracker" },
-      { name: "Human Services Performance Management improvement tools", tier: "existing", publisher: "Minnesota Department of Human Services, for counties", purpose: "Process-improvement tools DHS publishes for counties.", use: "Use as an additional process-improvement resource.", limitation: "Written for counties; adapt to the agency setting." },
+      { name: "DHS Aging Data Profiles", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Data profiles on older Minnesotans.", use: "Use as background for aging-related reviews.", limitation: "Profiles describe populations; pair them with program and lived-experience evidence." },
+      { name: "Long-Term Services and Supports (LTSS) performance measures", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Performance measures for long-term services and supports.", use: "Use as baseline and trend measures for service reviews.", limitation: "Check definitions and denominators before comparing groups." },
+      { name: "LTSS demographic dashboard", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Demographic information on people using long-term services and supports.", use: "Use to see who is and is not reaching services.", limitation: "Interpret with data-quality checks and community context." },
+      { name: "Vulnerable Adult Protection Dashboard", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Data on adult protection.", use: "Use for context on protection-related work.", limitation: "Interpret with care and privacy review." },
+      { name: "Minnesota Olmstead Plan progress reports", publisher: "State of Minnesota; identified in the ADSA guide", purpose: "Progress on Minnesota's Olmstead Plan for people with disabilities.", use: "Connect reviews to statewide integration goals.", limitation: "Statewide progress reports may not break out a single program.", url: "https://mn.gov/dhs/general-public/about-dhs/olmstead/" },
+      { name: "Internal person-level database dashboard", publisher: "Identified in the ADSA guide", purpose: "An internal dashboard with person-level data.", use: "Use it inside DHS only, and work with data staff on what can be shared.", limitation: "The ADSA guide states it is internal-only. Do not give PDFs or screenshots of it to external partners; work with data staff on appropriate sharing." },
+      { name: "Equity metric definition sheet", purpose: "Set the population, numerator, denominator, period, source, missing data and limits on interpretation.", use: "Fill one in for every measure before reporting it.", limitation: "A recommended instrument grounded in the statewide toolkit's data, monitoring and accountability criteria.", templateId: "metric-definition" },
+      { name: "Baseline and trend dashboard", purpose: "Show whether access, timeliness, experience and outcomes change over time.", use: "Start from a defined baseline.", limitation: "A recommended instrument." },
+      { name: "Mixed-method evaluation plan", purpose: "Show how administrative data and lived experience will be read together.", use: "Plan both kinds of evidence from the start.", limitation: "A recommended instrument.", href: "/practice/measurement" },
+      { name: "Root-cause review", purpose: "Find which policy, process, communication or resource barriers may contribute to a disparity.", use: "Use it when a measure shows a gap.", limitation: "A recommended instrument.", href: "/equity-review/structural" },
+      { name: "Improvement action tracker", purpose: "Record what will change, who owns the change and when results will be reviewed.", use: "Link every finding to an owned action.", limitation: "A recommended instrument.", templateId: "action-tracker" },
+      { name: "Human Services Performance Management improvement tools", publisher: "Minnesota Department of Human Services, for counties", purpose: "Process-improvement tools DHS publishes for counties.", use: "Use as an additional process-improvement resource.", limitation: "Written for counties; adapt to the agency setting." },
     ],
     caution: "The ADSA guide states that the person-level database dashboard is internal-only. PDFs or screenshots of it should not be given to external partners. Work with data staff on appropriate sharing.",
     lists: [
       {
-        heading: "Suggested indicators", tier: "project",
+        heading: "Suggested indicators",
         items: [
           "Application completion and abandonment.",
           "Processing time.",
@@ -569,7 +549,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
           "Community recommendations receiving a documented response.",
           "Procurement participation and payment experience.",
         ],
-        note: "Choose indicators that fit the service or process being improved. These are proposed measures, not an established DHS scorecard. Read them with suitable denominators, community context, data-quality checks and privacy review. The statewide toolkit calls for evidence broken out by group and clear success measures; the project framework connects measurement to corrective action.",
+        note: "Choose indicators that fit the service or process being improved. Read them with suitable denominators, community context, data-quality checks and privacy review. The statewide toolkit calls for evidence broken out by group and clear success measures. Connect each measure to the corrective action it should trigger.",
       },
     ],
   },
@@ -579,20 +559,20 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     title: "Governance and implementation tools",
     question: "How do findings become decisions owned by the people with authority to change the system?",
     intro: [
-      "Equity Directors need a way to turn findings into operational decisions owned by the people who have authority to change the underlying systems. These recommended management tools draw directly on the project's proposed leadership and governance framework.",
+      "Equity Directors need a way to turn findings into operational decisions owned by the people who have authority to change the underlying systems. These management tools help.",
     ],
     items: [
-      { name: "Equity governance charter", tier: "project", purpose: "Set sponsorship, scope, membership and decision authority.", use: "Agree it with the executive sponsor first.", limitation: "A proposed tool." },
-      { name: "Responsibility matrix", tier: "project", purpose: "Make clear who approves, advises, carries out, reviews and resolves escalations.", use: "Fill it in for each pilot decision.", limitation: "A proposed tool.", href: "/support/right-person" },
-      { name: "Diversity, equity, inclusion and accessibility activity inventory", tier: "project", purpose: "Find current work, duplication, gaps and chances to share resources.", use: "Build it in the first 30 days.", limitation: "A proposed tool." },
-      { name: "Unit action-plan template", tier: "project", purpose: "Connect findings to actions, owners, resources, milestones and measures.", use: "One plan per unit or pilot.", limitation: "A proposed tool.", templateId: "action-tracker" },
-      { name: "Decision and risk register", tier: "project", purpose: "Make unresolved barriers and executive decisions visible.", use: "Review it at each leadership review.", limitation: "A proposed tool.", templateId: "decision-log" },
-      { name: "Leadership review agenda", tier: "project", purpose: "Review results and decisions needed, not only completed activities.", use: "Put decisions needed at the top of the agenda.", limitation: "A proposed tool." },
-      { name: "Community feedback commitment tracker", tier: "project", purpose: "Track whether promised follow-up happened.", use: "Check it before every community report-back.", limitation: "A proposed tool.", templateId: "action-tracker" },
-      { name: "Evidence register", tier: "project", purpose: "Keep the basis for findings, recommendations and claims of progress.", use: "Add the source for every claim of progress.", limitation: "A proposed tool.", href: "/practice/requirements" },
+      { name: "Equity governance charter", purpose: "Set sponsorship, scope, membership and decision authority.", use: "Agree it with the executive sponsor first.", limitation: "A charter without decision authority becomes a discussion group." },
+      { name: "Responsibility matrix", purpose: "Make clear who approves, advises, carries out, reviews and resolves escalations.", use: "Fill it in for each pilot decision.", limitation: "Name roles, not people.", href: "/support/right-person" },
+      { name: "Diversity, equity, inclusion and accessibility activity inventory", purpose: "Find current work, duplication, gaps and chances to share resources.", use: "Build it in the first 30 days.", limitation: "Keep it short enough to stay current." },
+      { name: "Unit action-plan template", purpose: "Connect findings to actions, owners, resources, milestones and measures.", use: "One plan per unit or pilot.", limitation: "Every action needs an owner who has the authority to do it.", templateId: "action-tracker" },
+      { name: "Decision and risk register", purpose: "Make unresolved barriers and executive decisions visible.", use: "Review it at each leadership review.", limitation: "Keep sensitive employee and client information out of it.", templateId: "decision-log" },
+      { name: "Leadership review agenda", purpose: "Review results and decisions needed, not only completed activities.", use: "Put decisions needed at the top of the agenda.", limitation: "Keep the review on results, not on activity counts." },
+      { name: "Community feedback commitment tracker", purpose: "Track whether promised follow-up happened.", use: "Check it before every community report-back.", limitation: "Report back on commitments that were not kept, too.", templateId: "action-tracker" },
+      { name: "Evidence register", purpose: "Keep the basis for findings, recommendations and claims of progress.", use: "Add the source for every claim of progress.", limitation: "Record where evidence is missing as well as where it exists.", href: "/practice/requirements" },
     ],
     notes: [
-      "An Equity Director can coordinate methods and provide analysis. Human resources, program leadership, accessibility specialists, procurement, Tribal relations and other authorized owners keep responsibility for their own operational decisions. Clear decision rights are a central feature of the proposed framework.",
+      "An Equity Director can coordinate methods and provide analysis. Human resources, program leadership, accessibility specialists, procurement, Tribal relations and other authorized owners keep responsibility for their own operational decisions. Clear decision rights keep this work moving.",
     ],
   },
   {
@@ -601,12 +581,12 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     title: "How to organize the tools digitally",
     question: "Where should the tools and records live?",
     intro: [
-      "Start with the workflows and records, then decide whether existing approved systems can support them. The project framework stresses using existing structures where they can do the job.",
+      "Start with the workflows and records, then decide whether existing approved systems can support them. Use existing structures where they can do the job.",
     ],
     items: [],
     lists: [
       {
-        heading: "A minimum digital arrangement could include", tier: "project",
+        heading: "A minimum digital arrangement could include",
         items: [
           "A resource library holding current approved tools and guidance.",
           "An intake register for proposed reviews.",
@@ -616,7 +596,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
           "A restricted analytics workspace.",
           "A separate area for approved public reporting.",
         ],
-        note: "This is a proposed arrangement, not a finding that DHS has deployed or authorized a particular platform. Before choosing software, confirm agency accessibility, security, records, procurement and data-handling requirements.",
+        note: "Before choosing software, confirm agency accessibility, security, records, procurement and data-handling requirements.",
       },
     ],
     caution: "Keep sensitive employee concerns and protected client information out of general-purpose trackers.",
@@ -627,7 +607,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     title: "Recommended first 90 days",
     question: "What should a new Equity Director do first?",
     intro: [
-      "This sequence is a proposed plan, not an existing DHS requirement. It follows the statewide guide's advice to start with a small number of real policies or programs, and the project framework's approach: assess, implement, measure, improve.",
+      "Start with a small number of real policies or programs, as the statewide guide advises. Then follow a simple cycle: assess, implement, measure, improve.",
     ],
     items: [],
     notes: [
@@ -640,12 +620,12 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     title: "Priority starter package",
     question: "Which 12 items should be assembled first?",
     intro: [
-      "For practical deployment, assemble these 12 items first. Items 1 to 3 are existing foundational resources. Items 4 to 12 are proposed operational supports to develop with the right agency owners.",
+      "For practical deployment, assemble these 12 items first. Start with the three foundational DHS resources, then build the nine operational supports with the people responsible for each area.",
     ],
     items: [],
     notes: [
       "Together, they turn the published policy expectation and the statewide analysis criteria into a repeatable process with evidence, participation, resources and accountability.",
-      "Across the Minnesota Department of Human Services, the most useful next design step is to connect these instruments to the proposed strategic tool suite while keeping clear which items are approved DHS requirements, which are ADSA-specific guidance and which are project recommendations. That keeps the program grounded in existing authority without presenting planned capabilities as established agency practice.",
+      "Across the Minnesota Department of Human Services, the next step is to connect these instruments to the strategic plan and tool suite in section 1, so each one has an owner, a review date and a place in regular decision-making.",
     ],
   },
 ];
@@ -670,21 +650,21 @@ export const DIRECTOR_FIRST_90_DAYS: readonly NinetyDayPeriod[] = [
   },
 ];
 
-export type StarterItem = { number: number; title: string; tier: ToolkitTier; href: string; detail: string };
+export type StarterItem = { number: number; title: string; href: string; detail: string };
 
 export const DIRECTOR_STARTER_PACKAGE: readonly StarterItem[] = [
-  { number: 1, title: "Current DHS Equity Policy", tier: "existing", href: "/equity-policy", detail: "The published policy expectation for equity analysis." },
-  { number: 2, title: "Current internal DHS Equity Analysis Toolkit", tier: "existing", href: `${DIRECTOR_TOOLKIT_HREF}#foundation`, detail: "The current approved version, through the Equity, Diversity and Inclusion InfoLink page." },
-  { number: 3, title: "State Equity Analysis Toolkit and step-by-step guide", tier: "existing", href: `${DIRECTOR_TOOLKIT_HREF}#foundation`, detail: "The seven statewide criteria and the guide for applying them." },
-  { number: 4, title: "Equity review intake form", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-intake-triage`, detail: "Shows which proposals need a fuller review." },
-  { number: 5, title: "Community engagement planning template", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-partner-map`, detail: "Plan who takes part, how, and how their input shapes the decision." },
-  { number: 6, title: "Tribal coordination and consultation screening process, developed with Tribal relations", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-tribal-screening`, detail: "Screen decisions early and bring in the person or area responsible for Tribal and Urban Indian Relations." },
-  { number: 7, title: "Accessibility review checklist", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-accessibility-review`, detail: "Accessibility built into design and approval." },
-  { number: 8, title: "Language-access review checklist", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-language-access-review`, detail: "Translated content and a real path to an interpreter." },
-  { number: 9, title: "Workforce process-review worksheet", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-workforce-review`, detail: "Hiring, onboarding, development and retention processes." },
-  { number: 10, title: "Procurement and grant equity review worksheet", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-procurement-grant-review`, detail: "Solicitations, awards and grant design." },
-  { number: 11, title: "Action, decision and commitment tracker", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-action-tracker`, detail: "Owners, deadlines, evidence and follow-up." },
-  { number: 12, title: "A small outcome scorecard", tier: "project", href: `${DIRECTOR_TEMPLATES_HREF}#template-outcome-scorecard`, detail: "A few measures that show whether access improved." },
+  { number: 1, title: "Current DHS Equity Policy", href: "/equity-policy", detail: "The published policy expectation for equity analysis." },
+  { number: 2, title: "Current internal DHS Equity Analysis Toolkit", href: `${DIRECTOR_TOOLKIT_HREF}#foundation`, detail: "The current approved version, through the Equity, Diversity and Inclusion InfoLink page." },
+  { number: 3, title: "State Equity Analysis Toolkit and step-by-step guide", href: `${DIRECTOR_TOOLKIT_HREF}#foundation`, detail: "The seven statewide criteria and the guide for applying them." },
+  { number: 4, title: "Equity review intake form", href: `${DIRECTOR_TEMPLATES_HREF}#template-intake-triage`, detail: "Shows which proposals need a fuller review." },
+  { number: 5, title: "Community engagement planning template", href: `${DIRECTOR_TEMPLATES_HREF}#template-partner-map`, detail: "Plan who takes part, how, and how their input shapes the decision." },
+  { number: 6, title: "Tribal coordination and consultation screening process, developed with Tribal relations", href: `${DIRECTOR_TEMPLATES_HREF}#template-tribal-screening`, detail: "Screen decisions early and bring in the person or area responsible for Tribal and Urban Indian Relations." },
+  { number: 7, title: "Accessibility review checklist", href: `${DIRECTOR_TEMPLATES_HREF}#template-accessibility-review`, detail: "Accessibility built into design and approval." },
+  { number: 8, title: "Language-access review checklist", href: `${DIRECTOR_TEMPLATES_HREF}#template-language-access-review`, detail: "Translated content and a real path to an interpreter." },
+  { number: 9, title: "Workforce process-review worksheet", href: `${DIRECTOR_TEMPLATES_HREF}#template-workforce-review`, detail: "Hiring, onboarding, development and retention processes." },
+  { number: 10, title: "Procurement and grant equity review worksheet", href: `${DIRECTOR_TEMPLATES_HREF}#template-procurement-grant-review`, detail: "Solicitations, awards and grant design." },
+  { number: 11, title: "Action, decision and commitment tracker", href: `${DIRECTOR_TEMPLATES_HREF}#template-action-tracker`, detail: "Owners, deadlines, evidence and follow-up." },
+  { number: 12, title: "A small outcome scorecard", href: `${DIRECTOR_TEMPLATES_HREF}#template-outcome-scorecard`, detail: "A few measures that show whether access improved." },
 ];
 
 /* ------------------------------------------------------------------ Templates */
@@ -737,7 +717,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
   {
     id: "impact-assessment", title: "Equity impact assessment record", sectionId: "policy-program-budget",
     purpose: "Record a full equity review in nine parts. It puts the statewide toolkit into practice alongside the DHS Equity Analysis Toolkit.",
-    howToUse: "Use the DHS toolkit as the agency starting point and the statewide toolkit as a companion. This record is a project recommendation; it is not a claim that DHS currently requires this exact form.",
+    howToUse: "Use the DHS toolkit as the agency starting point and the statewide toolkit as a companion.",
     fields: [
       { kind: "long", id: "decision", label: "1. Decision or proposal under review" },
       { kind: "long", id: "outcome", label: "2. Intended outcome and affected populations" },
@@ -768,7 +748,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
   {
     id: "decision-log", title: "Decision and mitigation log", sectionId: "policy-program-budget",
     purpose: "Keep findings, recommended changes, decisions, reasons, owners and open risks in one place.",
-    howToUse: "Add a row each time a finding leads to a decision. This is a proposed tool; it is not evidence of an existing DHS decision-log requirement. It also serves as the decision and risk register in governance.",
+    howToUse: "Add a row each time a finding leads to a decision. It also serves as the decision and risk register in governance.",
     fields: [
       { kind: "text", id: "subject", label: "Decision or review this log covers" },
       { kind: "table", id: "log", label: "Log", columns: ["Finding", "Recommended change", "Decision made", "Reason", "Accountable owner (role)", "Open risks", "Date"], rows: 3 },
@@ -779,7 +759,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
     purpose: "Link community input to decisions, and explain recommendations that were not adopted.",
     howToUse: "Summarize themes, not individual comments. Use it to write an accessible feedback report and to track follow-up commitments.",
     fields: [
-      { kind: "text", id: "decision", label: "Decision or project" },
+      { kind: "text", id: "decision", label: "Decision or effort" },
       { kind: "text", id: "engagement", label: "Engagement activities and dates" },
       { kind: "table", id: "log", label: "What we heard and what changed", columns: ["What we heard (theme)", "Where we heard it (group or forum)", "What changed", "If not adopted, why", "How and when we reported back"], rows: 4 },
       { kind: "long", id: "report", label: "How the feedback report will be shared in accessible formats and languages" },
@@ -790,7 +770,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
     purpose: "Identify affected groups, missing perspectives, trusted organizations and barriers to taking part. This also serves as the community engagement planning template in the starter package.",
     howToUse: "Fill it in before inviting anyone. Start from the DHS Community Engagement Guide. For paying or reimbursing participants, settle the applicable agency authority and administrative process before making any promise.",
     fields: [
-      { kind: "text", id: "decision", label: "Decision or project" },
+      { kind: "text", id: "decision", label: "Decision or effort" },
       { kind: "long", id: "purpose", label: "Purpose of engagement and how input will influence the decision" },
       { kind: "text", id: "timing", label: "Timing: when input is needed so it can still change the decision" },
       { kind: "table", id: "map", label: "Participation map", columns: ["Affected group", "Missing perspective?", "Trusted organizations or channels", "Barriers to taking part", "Supports needed (language, accessibility, scheduling, resources)", "How we will invite them"], rows: 4 },
@@ -895,7 +875,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
     purpose: "Track actions, decisions and commitments with owners, deadlines and evidence. It works as the improvement action tracker, the unit action plan and the community feedback commitment tracker.",
     howToUse: "Review it at each leadership review. Put decisions needed at the top. Keep sensitive employee concerns and protected client information out of it.",
     fields: [
-      { kind: "text", id: "scope", label: "Unit, pilot or project" },
+      { kind: "text", id: "scope", label: "Unit, pilot or effort" },
       { kind: "table", id: "tracker", label: "Tracker", columns: ["Item", "Type (action, decision or commitment)", "Owner (role)", "Resources", "Due date", "Status", "Evidence", "Review date"], rows: 4 },
     ],
   },
@@ -919,7 +899,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
   {
     id: "outcome-scorecard", title: "Small outcome scorecard", sectionId: "data-evaluation",
     purpose: "Track a few measures that show whether access improved.",
-    howToUse: "Pick three to six indicators that fit the service. Suggested indicators: application completion and abandonment, processing time, successful service connection, access to requested communication assistance, accommodation fulfillment, employee retention and advancement, community recommendations receiving a documented response, and procurement participation and payment experience. These are proposed measures, not an established DHS scorecard.",
+    howToUse: "Pick three to six indicators that fit the service. Suggested indicators: application completion and abandonment, processing time, successful service connection, access to requested communication assistance, accommodation fulfillment, employee retention and advancement, community recommendations receiving a documented response, and procurement participation and payment experience.",
     fields: [
       { kind: "text", id: "scope", label: "Service or process" },
       { kind: "table", id: "scorecard", label: "Scorecard", columns: ["Indicator", "Baseline", "Current", "Direction we want", "Data notes (denominator, quality, privacy)", "What we will do"], rows: 4 },
@@ -950,7 +930,7 @@ export const checkKey = (field: string, item: number) => `${field}.${item}`;
 
 /** Plain-text copy of a filled template, for copying, downloading or pasting elsewhere. Nothing is stored. */
 export function templateText(template: DirectorTemplate, values: Readonly<Record<string, string>>, rowCounts: Readonly<Record<string, number>> = {}): string {
-  const lines = [template.title, `${TOOLKIT_TIERS.project.label}: proposed, to develop with the person or area responsible.`, `From the Equity Director toolkit: ${templateHref(template.id)}`, ""];
+  const lines = [template.title, `From the Equity Director toolkit: ${templateHref(template.id)}`, ""];
   for (const field of template.fields) {
     if (field.kind === "checklist") {
       lines.push(field.label);
@@ -975,11 +955,11 @@ export function templateText(template: DirectorTemplate, values: Readonly<Record
 export function sectionText(section: ToolkitSection): string {
   const parts = [`${section.number}. ${section.title}`, section.question, ...section.intro];
   for (const item of section.items) {
-    parts.push(`${item.name} (${TOOLKIT_TIERS[item.tier].label}${item.publisher ? `; ${item.publisher}` : ""}). Purpose: ${item.purpose} How an Equity Director can use it: ${item.use} Limitation: ${item.limitation}`);
+    parts.push(`${item.name}${item.publisher ? ` (${item.publisher})` : ""}. Purpose: ${item.purpose} How an Equity Director can use it: ${item.use} Limitation: ${item.limitation}`);
   }
-  for (const list of section.lists ?? []) parts.push(`${list.heading}${list.tier ? ` (${TOOLKIT_TIERS[list.tier].label})` : ""}:`, ...list.items, ...(list.note ? [list.note] : []));
+  for (const list of section.lists ?? []) parts.push(`${list.heading}:`, ...list.items, ...(list.note ? [list.note] : []));
   if (section.id === "first-90-days") for (const period of DIRECTOR_FIRST_90_DAYS) parts.push(`${period.period}. Priority actions: ${period.actions.join(" ")} Deliverables: ${period.deliverables.join(" ")}`);
-  if (section.id === "starter-package") for (const item of DIRECTOR_STARTER_PACKAGE) parts.push(`${item.number}. ${item.title} (${TOOLKIT_TIERS[item.tier].label}). ${item.detail}`);
+  if (section.id === "starter-package") for (const item of DIRECTOR_STARTER_PACKAGE) parts.push(`${item.number}. ${item.title}. ${item.detail}`);
   if (section.caution) parts.push(section.caution);
   parts.push(...(section.notes ?? []));
   return parts.join("\n");
@@ -987,5 +967,5 @@ export function sectionText(section: ToolkitSection): string {
 
 export function templateDescriptionText(template: DirectorTemplate): string {
   const fields = template.fields.flatMap(field => field.kind === "checklist" ? [field.label, ...field.items] : field.kind === "table" ? [`${field.label}: ${field.columns.join(", ")}.`, ...(field.help ? [field.help] : [])] : [field.label, ...(field.help ? [field.help] : [])]);
-  return [template.title, `${TOOLKIT_TIERS.project.label}. ${TOOLKIT_TIERS.project.description}`, template.purpose, template.howToUse, ...fields, TEMPLATE_KEEP_OUT].join("\n");
+  return [template.title, template.purpose, template.howToUse, ...fields, TEMPLATE_KEEP_OUT].join("\n");
 }

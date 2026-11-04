@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import {
   DIRECTOR_TEMPLATES, DIRECTOR_TEMPLATES_HREF, DIRECTOR_TOOLKIT_HREF, DIRECTOR_TOOLKIT_INTRO, DIRECTOR_TOOLKIT_REVIEWED_ON, DIRECTOR_TOOLKIT_SECTIONS,
-  TOOLKIT_TIERS, TOOLKIT_TIERS_INTRO, sectionHref, sectionText, templateDescriptionText, templateHref, type ToolkitTier,
+  sectionHref, sectionText, templateDescriptionText, templateHref,
 } from "@/lib/content/director-toolkit";
 import type { Doc } from "./search";
 
@@ -22,9 +22,8 @@ export function directorToolkitDocs(scope: StaffProgramScope): Doc[] {
     scope: docScope, summary, text, tags: ["Equity Director toolkit", "equity director", ...tags], intents, graphRelated: [...new Set(related)],
     evidenceRevisions: [{ sourceId: `${DIRECTOR_TOOLKIT_DOC_PREFIX}${id}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
   });
-  const tierText = (Object.keys(TOOLKIT_TIERS) as ToolkitTier[]).map(tier => `${TOOLKIT_TIERS[tier].label}: ${TOOLKIT_TIERS[tier].description}`);
   const overview = make("overview", DIRECTOR_TOOLKIT_INTRO.title, DIRECTOR_TOOLKIT_HREF, DIRECTOR_TOOLKIT_INTRO.lede,
-    [DIRECTOR_TOOLKIT_INTRO.title, DIRECTOR_TOOLKIT_INTRO.lede, ...DIRECTOR_TOOLKIT_INTRO.summary, "How items are labeled:", TOOLKIT_TIERS_INTRO, ...tierText, DIRECTOR_TOOLKIT_INTRO.privacy,
+    [DIRECTOR_TOOLKIT_INTRO.title, DIRECTOR_TOOLKIT_INTRO.lede, ...DIRECTOR_TOOLKIT_INTRO.summary, DIRECTOR_TOOLKIT_INTRO.privacy,
       "Sections:", ...DIRECTOR_TOOLKIT_SECTIONS.map(section => `${section.number}. ${section.title}: ${section.question}`),
       `Printable templates: ${DIRECTOR_TEMPLATES.map(template => template.title).join("; ")}.`].join("\n"),
     ["DEI tools", "equity tools", "toolkit overview"], [DIRECTOR_TEMPLATES_HREF, "/equity-review", "/equity-policy", "/learn/equity-toolkit"], "public_director_toolkit", ["policy_orientation", "next_actions"]);

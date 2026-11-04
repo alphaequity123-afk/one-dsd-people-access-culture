@@ -292,7 +292,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (input.mode !== "review" && asksAboutThisAssistant(question)) {
     return { kind: "answer", answer: {
       context, intent: "next_actions",
-      shortAnswer: "I’m Ask, the question-and-answer tool on this site, not a person. I can help you think through questions, find program resources, and check public sources. Decisions that belong to a person stay with the person responsible for them.",
+      shortAnswer: "I’m Ask, the One DSD question-and-answer tool, not a human adviser. I can help you think through questions, find program resources, and check public sources. Decisions that belong to a person stay with the person responsible for them.",
       whyItMatters: "", sources: [], limits: [], nextActions: [],
       grounding: "none", degraded: false, generative: false,
     } };

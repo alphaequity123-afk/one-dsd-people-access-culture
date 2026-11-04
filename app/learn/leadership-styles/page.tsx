@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Block, BoundaryNote, Bullets, PathwayPages, PathwayShell, SectionNav, StyleCards } from "@/components/leadership-styles-pathway";
 import {
   COMMON_SCENARIO, CONDUCIVE_GROUPS, CONDUCIVE_SUMMARY, FOUNDATIONS, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE,
-  LEADERSHIP_STYLE_LESSONS, PATHWAY_AUTHORITY, PATHWAY_INTRO, PATHWAY_SOURCES, leadershipStyleHref,
+  LEADERSHIP_STYLE_LESSONS, PATHWAY_INTRO, PATHWAY_PROCESSES, PATHWAY_SOURCES, leadershipStyleHref,
 } from "@/lib/content/leadership-styles-pathway";
 import styles from "./leadership-styles.module.css";
 
@@ -32,8 +32,8 @@ export default function LeadershipStylesPathwayPage() {
     <Block id="about" title="About this pathway">
       <div className={styles.prose}>{PATHWAY_INTRO.slice(1).map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       <p className={styles.prose}>Each lesson gives a working definition and its limits, a stronger and a harmful response to the same scenario, a second conflict example, an analysis of how the approach can promote or undermine equity and inclusion, including racial equity, strengths, weaknesses, opportunities and threats, when to use it and when not to, approaches that complement it, a practice exercise and review questions.</p>
-      <h3>Keep three kinds of guidance distinct</h3>
-      <dl className={styles.prose}>{PATHWAY_AUTHORITY.map(item => <div key={item.label} className="mt-3"><dt className="font-semibold">{item.label}</dt><dd>{item.body}</dd></div>)}</dl>
+      <h3>When a formal process applies</h3>
+      <p className={styles.prose}>{PATHWAY_PROCESSES}</p>
       <BoundaryNote />
     </Block>
 

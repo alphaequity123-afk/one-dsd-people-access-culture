@@ -42,7 +42,7 @@ describe("local ASK identity", () => {
     const result = await askConcierge({ question }, ctx);
     expect(result.kind).toBe("answer");
     if (result.kind === "answer") {
-      expect(result.answer.shortAnswer).toContain("I’m Ask, the question-and-answer tool on this site, not a person");
+      expect(result.answer.shortAnswer).toContain("I’m Ask, the One DSD question-and-answer tool, not a human adviser");
       expect(result.answer).toMatchObject({ generative: false, degraded: false, grounding: "none", sources: [] });
       expect(result.answer.publicResearch).toBeUndefined();
     }
@@ -85,7 +85,7 @@ describe("identity through the public ASK route", () => {
     const response = await POST(request({ question: exactQuestion, responseMode }));
     expect(response.status).toBe(200);
     const body = await response.json();
-    expect(body.answer.shortAnswer).toContain("I’m Ask, the question-and-answer tool on this site, not a person");
+    expect(body.answer.shortAnswer).toContain("I’m Ask, the One DSD question-and-answer tool, not a human adviser");
     expect(f.admit).toHaveBeenCalledTimes(1);
     expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "completed");
     expect(f.research).not.toHaveBeenCalled(); expect(f.complete).not.toHaveBeenCalled(); expect(f.review).not.toHaveBeenCalled();

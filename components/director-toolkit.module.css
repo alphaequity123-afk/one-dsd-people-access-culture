@@ -1,12 +1,5 @@
-/* Equity Director toolkit: tier labels, resource cards, plan tables and printable fill-in templates. */
-.tier { display: inline-block; border-radius: 999px; padding: .2rem .7rem; font-size: .82rem; font-weight: 700; line-height: 1.4; border: 1px solid; white-space: normal; }
-.tier[data-tier="existing"] { background: #e7f1ec; color: #1b5136; border-color: #6f9f86; }
-.tier[data-tier="adsa"] { background: #eaf0f7; color: #1f456b; border-color: #7f9cbb; }
-.tier[data-tier="project"] { background: #faf2df; color: #6a4a10; border-color: #c9a45a; }
+/* Equity Director toolkit: resource cards, plan tables and printable fill-in templates. */
 
-.legend { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1rem; }
-.legend > div { border: 1px solid var(--pac-border, #adb9c4); border-radius: 8px; padding: 1rem 1.1rem; background: #fff; }
-.legend p { margin: .6rem 0 0; line-height: 1.6; }
 
 .highlight { border: 1px solid #c9a45a; border-left: 5px solid #b58731; border-radius: 8px; padding: clamp(1.1rem, 2.5vw, 1.6rem); background: #fffaf0; }
 .highlight h2 { margin-top: 0; }
@@ -58,7 +51,7 @@
 .keepOut { margin-top: 1rem; }
 
 @media (max-width: 760px) {
-  .legend, .starter { grid-template-columns: 1fr; }
+  .starter { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr; }
   .templateIndex { columns: 1; }
   .checkRow { grid-template-columns: 1fr; }
@@ -66,7 +59,7 @@
 
 @media print {
   .actions, .noPrint { display: none !important; }
-  .item, .template, .highlight, .legend > div { break-inside: avoid; box-shadow: none; }
+  .item, .template, .highlight { break-inside: avoid; box-shadow: none; }
   .template { border: 0; padding: 0; }
   .grid textarea, .field textarea { border: 1px solid #777; min-height: 3.5rem; }
   /* Printing one template: hide everything else on the templates page. */
