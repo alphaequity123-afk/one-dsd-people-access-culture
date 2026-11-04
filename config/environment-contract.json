@@ -46,6 +46,13 @@
       "required_when": "explicitly running the optional real-provider organizational check; ordinary isolated test runs remove it"
     },
     {
+      "name": "PAC_LEADERS_KEY",
+      "class": "server_secret",
+      "surface": "leaders_dashboard",
+      "example": true,
+      "required_when": "optional separate leaders access key; when absent the existing owner key supplies the derived leaders key; at least 32 bytes in production"
+    },
+    {
       "name": "PAC_OWNER_KEY",
       "class": "server_secret",
       "surface": "owner_workspace",
