@@ -60,6 +60,7 @@ export default async function OperationalizingEquityPage({ searchParams }: { sea
           <li><Link href="/ask">Ask a question</Link> to read a published answer and download a copy.</li>
           <li><Link href="/learn/equity-toolkit">Use the Equity Analysis Toolkit companion</Link> to explore decisions, participation and practical application.</li>
           <li><Link href="/equity-policy">Read the DHS equity policy</Link> and run the guided toolkit walkthrough on your own work; what staff add is counted there.</li>
+          <li><Link href="/equity-review/director-toolkit">Use the Equity Director toolkit</Link> for a first 90-day plan, a 12-item starter package and printable templates for leading equity work across DHS.</li>
           <li><Link href="/equity-framework">Read the Equity Strategic Framework</Link>, the operational spine that every part of the program is mapped to.</li>
           <li><Link href="/practice">Explore guided practice</Link> to develop a checklist, plan, or other useful piece of work.</li>
           <li><Link href="/learn">Browse learning and resources</Link> for courses, podcasts and tools connected to your interests.</li>

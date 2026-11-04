@@ -10,6 +10,7 @@ import { CulturalIntelligenceExplainerDraft } from "@/components/cultural-intell
 import { CulturalIntelligenceWorkJourney } from "@/components/cultural-intelligence-work-journey";
 import { CulturalLeadershipStyles } from "@/components/cultural-leadership-styles";
 import { CulturalLeadershipCurriculum } from "@/components/cultural-leadership-curriculum";
+import { LEADERSHIP_PATHWAY_HREF } from "@/lib/content/leadership-styles-pathway";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import styles from "../learning-family.module.css";
 
@@ -135,6 +136,7 @@ export default async function CulturalIntelligencePage() {
       </section>
       <section id="leaders" aria-labelledby="leaders-title" className="border-t border-line pt-8">
         <h2 id="leaders-title" className="text-3xl font-semibold">For leaders</h2>
+        <p className="mt-4 max-w-4xl leading-7"><Link className="font-semibold underline" href={LEADERSHIP_PATHWAY_HREF}>Explore the leadership styles pathway</Link>: sixteen approaches, how each one handles conflict and affects equity and inclusion, scenarios, a practice rubric and a capstone.</p>
         <CulturalLeadershipStyles />
         <CulturalLeadershipCurriculum />
         <p className="mt-4 max-w-4xl leading-7">Leaders begin with the same questions about their own culture, then ask them of the institution. What does this organization treat as normal? Who designed the default? Whose experience is missing, including disabled colleagues and people served, and people at the point where disability, language, race and income meet? Bring these to policy, program and resource decisions and, with equal weight, to workforce decisions and workplace culture.</p>

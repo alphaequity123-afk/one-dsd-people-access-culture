@@ -1,0 +1,39 @@
+/* Leadership-styles pathway: builds on learning-family.module.css tokens. */
+.prose { max-width: 75ch; line-height: 1.75; }
+.prose p + p { margin-top: .9rem; }
+.block { margin-block: 2.75rem; scroll-margin-top: 1.5rem; }
+.block > h2 { margin: 0 0 1rem; color: #183247; font-size: clamp(1.45rem, 2.4vw, 1.85rem); font-weight: 600; line-height: 1.25; letter-spacing: -.02em; }
+.block h3 { margin: 1.5rem 0 .5rem; color: #183247; font-size: 1.2rem; font-weight: 650; }
+.list { margin: .5rem 0 0; padding-left: 1.4rem; list-style: disc; line-height: 1.7; }
+.list > li + li { margin-top: .35rem; }
+.ordered { margin: .5rem 0 0; padding-left: 1.4rem; list-style: decimal; line-height: 1.7; }
+.ordered > li + li { margin-top: .35rem; }
+.callout { max-width: 75ch; margin-block: 1.5rem; padding: 1.1rem 1.35rem; border: 1px solid var(--pac-border, #adb9c4); border-left: 5px solid #176B65; border-radius: .6rem; background: #f5f8f7; line-height: 1.7; }
+.callout > :first-child { margin-top: 0; }
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.quote { padding: 1.1rem 1.25rem; border: 1px solid var(--pac-border, #adb9c4); border-radius: .6rem; background: #fff; line-height: 1.7; }
+.quote > p:first-of-type { margin-top: .4rem; font-size: 1.05rem; font-style: italic; color: #182c3a; }
+.quoteLabel { margin: 0; font-size: .78rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; color: var(--pac-secondary, #45576a); }
+.stronger { border-top: 4px solid #176B65; }
+.harmful { border-top: 4px solid #9b3b22; }
+.swot { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+.swot > div { padding: 1rem 1.2rem; border: 1px solid var(--pac-border, #adb9c4); border-radius: .6rem; background: #fff; }
+.swot h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); gap: 1rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.card { display: flex; flex-direction: column; gap: .35rem; height: 100%; padding: 1.1rem 1.25rem; border: 1px solid var(--pac-border, #adb9c4); border-radius: .6rem; background: #fff; color: #182c3a; text-decoration: none; line-height: 1.6; }
+.card:hover { border-color: var(--pac-action, #005ea8); }
+.card:hover .cardTitle { text-decoration: underline; text-underline-offset: .25em; }
+.cardTitle { color: #183247; font-weight: 650; font-size: 1.05rem; }
+.cardMeta { color: var(--pac-secondary, #45576a); font-size: .9rem; }
+.table { width: 100%; max-width: 72rem; margin-top: 1rem; border-collapse: collapse; line-height: 1.6; }
+.table caption { text-align: left; padding-bottom: .5rem; color: var(--pac-secondary, #45576a); }
+.table th, .table td { padding: .7rem .8rem; border: 1px solid #becbd4; text-align: left; vertical-align: top; }
+.table thead th { background: #eef2f4; color: #183247; }
+.tableWrap { max-width: 100%; overflow-x: auto; }
+.assessment { display: inline-block; margin: 0 0 .5rem; padding: .3rem .7rem; border-radius: .35rem; background: #eef2f4; color: #183247; font-weight: 650; }
+.pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--pac-border, #adb9c4); font-weight: 650; }
+.scenario { margin-block: 2rem; padding: clamp(1.1rem, 3vw, 1.75rem); border: 1px solid var(--pac-border, #adb9c4); border-radius: .8rem; background: #fff; scroll-margin-top: 1.5rem; }
+.scenario > h2 { margin-top: 0; }
+.family { margin: 0 0 .35rem; color: var(--pac-secondary, #45576a); font-size: .82rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.responses { display: grid; gap: .9rem; margin-top: 1rem; padding: 0; list-style: none; }
+@media (max-width: 720px) { .quotes, .swot { grid-template-columns: minmax(0, 1fr); } }

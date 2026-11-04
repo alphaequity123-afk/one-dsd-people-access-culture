@@ -31,6 +31,7 @@ describe("supervisor and manager pages render with their data", () => {
     expect(page).toContain("/one-dsd/leadership#starting-points");
     expect(page).toContain("/one-dsd/leadership#continuity-plan");
     expect(page).toContain("/one-dsd/amplify/mentoring#mentoring-tool");
+    expect(page).toContain("/learn/leadership-styles");
     expect(page).toContain("until you copy or download them");
     expect(page).toContain("Human Resources or selection process");
     expect(page).toContain("What are you deciding?");

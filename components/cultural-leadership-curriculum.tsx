@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { culturalLeadershipLessons } from "@/lib/content/cultural-leadership-learning";
+import { LEADERSHIP_PATHWAY_HREF } from "@/lib/content/leadership-styles-pathway";
 
 /** A self-directed practice sequence; no responses, scores or personal records are collected. */
 export function CulturalLeadershipCurriculum() {
@@ -22,7 +23,7 @@ export function CulturalLeadershipCurriculum() {
     <div className="max-w-4xl space-y-3 leading-7">
       <h4 className="text-xl font-semibold">Continue with the work</h4>
       <p>Use a real decision only in an appropriate setting, involve the people affected and follow up on what changed. These lessons do not award training credit or evaluate an individual&apos;s performance.</p>
-      <ul className="list-disc space-y-1 pl-6"><li><Link className="underline" href="/leading">Explore supervisor and manager guidance</Link></li><li><Link className="underline" href="/learn/equity-toolkit">Use the Equity Analysis Toolkit</Link></li><li><Link className="underline" href="/my-work/plan">Make a plan in My Work</Link></li></ul>
+      <ul className="list-disc space-y-1 pl-6"><li><Link className="underline" href={LEADERSHIP_PATHWAY_HREF}>Go deeper with the leadership styles pathway</Link></li><li><Link className="underline" href="/leading">Explore supervisor and manager guidance</Link></li><li><Link className="underline" href="/learn/equity-toolkit">Use the Equity Analysis Toolkit</Link></li><li><Link className="underline" href="/my-work/plan">Make a plan in My Work</Link></li></ul>
     </div>
     <details className="max-w-4xl rounded-xl border border-line p-5">
       <summary className="cursor-pointer font-semibold">Sources and further learning</summary>

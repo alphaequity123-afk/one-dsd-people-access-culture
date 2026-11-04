@@ -6,6 +6,7 @@ import { LEADING_DOORS, LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE, 
 import { publishedCourses } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
+import { LEADERSHIP_PATHWAY_HREF } from "@/lib/content/leadership-styles-pathway";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "@/components/collections.module.css";
 
@@ -32,6 +33,7 @@ export default async function LeadingPage() {
       <ul className={styles.doors}>
         <li><Link className={styles.door} href="/one-dsd/leadership#starting-points"><span className={styles.doorTitle}>Explore leadership</span><span>Connect an interest or aspiration with an accessible opportunity to practice, support and feedback.</span><span className={styles.doorAction}>Make a development map <span aria-hidden="true">→</span></span></Link></li>
         <li><Link className={styles.door} href="#decision-doors"><span className={styles.doorTitle}>Lead a team or a decision</span><span>Find questions and resources for hiring, access, feedback, team culture and policy.</span><span className={styles.doorAction}>Choose a decision <span aria-hidden="true">→</span></span></Link></li>
+        <li><Link className={styles.door} href={LEADERSHIP_PATHWAY_HREF}><span className={styles.doorTitle}>Compare leadership approaches</span><span>See how sixteen leadership approaches handle conflict and affect equity and inclusion, with scenarios, a practice rubric and a capstone.</span><span className={styles.doorAction}>Leadership styles pathway <span aria-hidden="true">→</span></span></Link></li>
         <li><Link className={styles.door} href="/leading/direction"><span className={styles.doorTitle}>Lead leaders and set direction</span><span>Support supervisors and managers, examine organizational practices, and connect decisions to accountability.</span><span className={styles.doorAction}>Explore direction <span aria-hidden="true">→</span></span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Build future leadership</span><span>Plan for continuity, share knowledge and make development opportunities visible and accessible.</span><span className={styles.doorAction}>Practice succession planning <span aria-hidden="true">→</span></span></Link></li>
       </ul>

@@ -16,11 +16,13 @@ describe("leadership approaches learning", () => {
     ]) {
       const summary = screen.getByText(label);
       expect(summary.tagName).toBe("SUMMARY");
-      expect(summary.closest("details")?.querySelectorAll("p").length).toBe(3);
+      expect(summary.closest("details")?.querySelectorAll("p").length).toBe(4);
+      expect(summary.closest("details")?.querySelector("a[href^='/learn/leadership-styles/']")).toBeTruthy();
     }
     expect(screen.getByText(/not labels, scores or a complete list/i)).toBeTruthy();
     expect(screen.getByText(/not interchangeable with, transformational leadership/i)).toBeTruthy();
     expect(screen.getByText(/race, gender, disability, language/i)).toBeTruthy();
     expect(container.querySelectorAll("a[href^='https://']").length).toBeGreaterThanOrEqual(5);
+    expect(container.querySelector("a[href='/learn/leadership-styles']")?.textContent).toMatch(/leadership styles pathway/i);
   });
 });
