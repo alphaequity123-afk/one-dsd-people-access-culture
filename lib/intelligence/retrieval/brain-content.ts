@@ -1,4 +1,5 @@
 import "server-only";
+import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
@@ -40,6 +41,8 @@ export function communityResearchDocs(scope: StaffProgramScope, publishedCommuni
   const out: Doc[] = [];
   for (const page of publishedCommunities) {
     const id = page.href.split("/").pop()!;
+    // Owner rule: Native community pages defer to the Office of Indian Affairs and are never given research content.
+    if (isNativeCommunity(id)) continue;
     const file = path.join(folder, `${id}.json`);
     if (!existsSync(file)) continue;
     const research = JSON.parse(readFileSync(file, "utf8")) as {
@@ -81,6 +84,8 @@ export function communityProfileDocs(scope: StaffProgramScope, publishedCommunit
   const out: Doc[] = [];
   for (const page of publishedCommunities) {
     const id = page.href.split("/").pop()!;
+    // Owner rule: Native community pages defer to the Office of Indian Affairs and are never given research content.
+    if (isNativeCommunity(id)) continue;
     const file = path.join(folder, `${id}.json`);
     if (!existsSync(file)) continue;
     const profile = JSON.parse(readFileSync(file, "utf8")) as {

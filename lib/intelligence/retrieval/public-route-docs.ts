@@ -7,6 +7,30 @@ import type { Doc } from "./search";
 // visitor-created work. Course records have their own publication checks.
 const pages = [
   {
+    id: "community-outreach-sources", href: "/community-outreach/sources", title: "Where to reach people",
+    summary: "These are possible sources, not partners.",
+    detail: "Places to find job candidates, share information and involve community members across Minnesota: state hiring programs, workforce programs, colleges and universities, professional associations, community media, community institutions, venues and cultural events.",
+    links: ["/community-outreach", "/learn/tribal-referral"], tags: ["recruitment", "outreach", "engagement", "media", "events", "colleges", "workforce"],
+  },
+  {
+    id: "community-outreach-plan", href: "/community-outreach/plan", title: "Plan an engagement",
+    summary: "Answer these questions before you reach out. Then draft your engagement and report-back plan below.",
+    detail: "Questions about your own lens, the decision, the community, who to involve, language and access, compensation, report-back and Tribal Nations, practice situations, and a fill-in engagement and report-back plan. The page saves nothing.",
+    links: ["/community-outreach", "/minnesota-communities", "/community-outreach/organizations", "/learn/community-connections"], tags: ["community outreach", "community engagement", "report back", "planning"],
+  },
+  {
+    id: "community-outreach-county-map", href: "/community-outreach/county-map", title: "Minnesota county map",
+    summary: "A difference is a question to look into, not an explanation.",
+    detail: "Compare each Minnesota county's population with the people receiving home and community-based services, and earned income, by race and ethnicity, from Department of Human Services public dashboards.",
+    links: ["/community-outreach", "/minnesota-communities", "/community-outreach/plan"], tags: ["county", "map", "home and community-based services", "race and ethnicity", "equity data"],
+  },
+  {
+    id: "community-outreach-organizations", href: "/community-outreach/organizations", title: "Organizations connected with the Disability Services Division",
+    summary: "Each page lists the records it rests on.",
+    detail: "Grantees, contractors, partners and advisory members of the Disability Services Division, filtered by community and type of connection, each with the public records behind the connection.",
+    links: ["/community-outreach"], tags: ["community outreach", "organizations", "grantees", "partners"],
+  },
+  {
     id: "collaboration", href: "/learn/collaboration", title: "Teams and Cross-Collaboration",
     summary: "Good collaboration helps people contribute, understand one another, and carry shared work forward.",
     detail: "Explore learning for your team, work across DSD and ADSA, and relationships with partners. Foundation, intermediate, and advanced describe learning depth, not job rank.",
@@ -32,7 +56,7 @@ const pages = [
   },
   {
     id: "tribal-referral", href: "/learn/tribal-referral", title: "Native American and Tribal-specific guidance",
-    summary: "For Native American and Tribal-specific learning, questions, or engagement, connect with the appropriate DHS office or responsible Tribal liaison.",
+    summary: "For Native American and Tribal-specific learning, questions, or engagement, connect with the appropriate Department of Human Services office or responsible Tribal liaison.",
     detail: "One DSD refers this work to those offices rather than providing its own training.",
     links: ["/support/right-person", "/learn"], tags: ["Tribal", "Native American", "referral"],
   },

@@ -19,6 +19,8 @@ import { CommunityResearchSections } from "./community-research-sections";
 import { minnesotaAccess, publishedCommunityResearch } from "@/lib/content/community-research";
 import { CommunityProfileSections } from "./community-profile-sections";
 import { publishedCommunityProfile } from "@/lib/content/community-profile";
+import { CommunityHubSections } from "./hub/community-hub-sections";
+import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import "./community-editorial.css";
 
 function inlineText(text: string): ReactNode {
@@ -41,7 +43,10 @@ function Reading({ body }: { body: string }) {
   })}</>;
 }
 
-function chapterTitle(title: string) {
+function chapterTitle(raw: string) {
+  // Recovered drafts carry numbering and lowercase editing notes after a dash,
+  // such as "9. Other considerations — unvarnished". Staff see the plain heading.
+  const title = raw.replace(/^\s*\d+\.\s+/, "").replace(/\s+[—–-]\s+(?=[a-z0-9]).*$/, "").trim();
   if (title === "A Note on This Guide") return "People, place, and perspective";
   if (/^How it hits DHS gates/.test(title)) return "Connections to human services";
   return title;
@@ -97,6 +102,7 @@ export async function CommunityDesignPage({ id }: { id: string }) {
     <ul className="community-link-list">
       {b?.relatedPathIds.map(id => getPath(id)).filter(path => path !== undefined).map(path => <li key={path.id}><Link href={`/paths/${path.id}`}>{path.title}</Link></li>)}
       <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li>
+      <li><Link href="/community-outreach">Community Outreach and Engagement</Link></li>
       <li><Link href="/learn/community-connections">Community engagement and connections</Link></li>
       <li><Link href="/learn">Learning and resources</Link></li>
       <li><Link href="/ask">Ask a question</Link></li>
@@ -105,10 +111,11 @@ export async function CommunityDesignPage({ id }: { id: string }) {
     {suggestedReadingFor(id).length ? <><h3>Suggested reading</h3><p>Two books chosen to deepen your understanding of this community, with reading notes, key ideas and questions to discuss with your team.</p><ul className="community-link-list">{suggestedReadingFor(id).map(book => <li key={book.id}><Link href={`/learn/readings/${book.id}`}>{book.title}</Link> <span>· {book.authors}</span></li>)}</ul></> : null}
   </section>;
   const overview = <>
-    <nav className="community-reading-contents" aria-label="In this brief">{readingGroups.some(group => group.chapters.length) ? <a href="#community-history">History and culture</a> : null}{b ? <a href="#community-practice">Practice considerations</a> : null}<a href="#community-connections">Related resources</a></nav>
+    <nav className="community-reading-contents" aria-label="In this brief">{readingGroups.some(group => group.chapters.length) ? <a href="#community-history">History and culture</a> : null}{b ? <a href="#community-practice">Practice considerations</a> : null}{!isNativeCommunity(id) ? <><a href="#community-numbers">Numbers</a><a href="#community-organizations">Organizations</a><a href="#community-before-outreach">Before you reach out</a></> : null}<a href="#community-connections">Related resources</a></nav>
     {b ? <section id="community-overview"><h2>Community overview</h2><p>{b.level0.withinGroupDiversity}</p><h3>Names and terms</h3><p>{b.names.preferred.join("; ")}</p>{b.names.alsoUsed.length ? <p>Also used: {b.names.alsoUsed.join("; ")}</p> : null}<p>{b.names.note}</p>{b.names.uncertainty ? <p>{b.names.uncertainty}</p> : null}</section> : null}
     {readingGroups.some(group => group.chapters.length) ? <section id="community-history"><h2>History, culture, and life today</h2>{readingGroups.filter(group => group.chapters.length).map(group => <details className="community-reading-theme" key={group.title}><summary>{group.title}</summary><div><Chapters chapters={group.chapters} /></div></details>)}</section> : null}
     {practice}
+    <CommunityHubSections id={id} title={title} />
     {b?.level2?.length && recovered ? <section id="community-context"><h2>More context for your work</h2><Chapters chapters={b.level2} /></section> : null}
     {b?.observances?.length ? <section id="community-observances"><h2>Observances at work</h2><div className="community-table" role="region" aria-label="Observances at work" tabIndex={0}><table><thead><tr><th scope="col">Observance</th><th scope="col">When</th><th scope="col">At work</th></tr></thead><tbody>{b.observances.map((o, i) => <tr key={i}><th scope="row">{o.title}</th><td>{o.when}</td><td>{o.atWork}</td></tr>)}</tbody></table></div></section> : null}
     {b?.sources.length ? <section id="community-sources"><h2>Sources</h2><ul>{b.sources.map((source, index) => <li key={index}>{source.href ? <a href={source.href}>{source.label}</a> : source.label}</li>)}</ul></section> : null}

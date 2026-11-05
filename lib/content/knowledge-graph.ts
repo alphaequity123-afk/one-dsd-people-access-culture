@@ -13,9 +13,10 @@ import themeMemberships from "./courses/theme-memberships.json";
 import { RESOURCE_THEMES } from "./resource-organization";
 import { GRADUATION_PATHS } from "./paths";
 import { communityDesignEntries } from "./community-design";
+import { ORGANIZATIONS, isNativeCommunity, organizationHref } from "./hub/organizations";
 
-export type GraphNodeKind = "resource" | "reading" | "path" | "brief" | "theme" | "level" | "series" | "lesson" | "curriculum" | "community_research" | "document";
-export type GraphEdgeType = "theme" | "level" | "series" | "curated_reading" | "suggested_reading" | "informs" | "practice_link" | "part_of" | "about_community" | "cites" | "related";
+export type GraphNodeKind = "resource" | "reading" | "path" | "brief" | "theme" | "level" | "series" | "lesson" | "curriculum" | "community_research" | "document" | "organization";
+export type GraphEdgeType = "theme" | "level" | "series" | "curated_reading" | "suggested_reading" | "informs" | "practice_link" | "part_of" | "about_community" | "cites" | "related" | "serves_community";
 export type GraphNode = { id: string; kind: GraphNodeKind; title: string; href: string | null };
 export type GraphEdge = { from: string; to: string; type: GraphEdgeType; weight: number; why?: string; practice?: string };
 export type RelatedItem = { id: string; kind: GraphNodeKind; title: string; href: string; score: number; why: string; practice?: string };
@@ -32,8 +33,17 @@ const SERIES_TITLES: Record<string, string> = {
 
 /** Library ids map to their richest page: courses to the course page, everything else to its library page. */
 export function resourceHref(id: string): string {
-  return id.startsWith("course-") ? `/courses/${id.slice("course-".length)}` : `/library/${id}`;
+  if (id.startsWith("course-")) return `/courses/${id.slice("course-".length)}`;
+  // Practice guides and podcasts have their own pages rather than library pages.
+  if (id.startsWith("practice-guide-")) return `/practice-guides/${id.slice("practice-guide-".length)}`;
+  const podcast = PODCAST_HREFS[id]; if (podcast) return podcast;
+  return `/library/${id}`;
 }
+
+const PODCAST_HREFS: Record<string, string> = {
+  "podcast.equity-toolkit": "/learn/equity-toolkit#podcast-equity-toolkit",
+  "podcast.anti-racism-public-service": "/learn#podcast-anti-racism-public-service",
+};
 
 function resourceIdFromHref(href: string): string | null {
   const clean = href.split(/[?#]/)[0];
@@ -92,6 +102,15 @@ export function knowledgeGraph(): KnowledgeGraph {
     g.addNode({ id: `brief:${entry.id}`, kind: "brief", title: entry.title, href: `/minnesota-communities/${entry.id}` });
     for (const theme of ["identity", "partnership"]) g.addEdge({ from: `brief:${entry.id}`, to: `theme:${theme}`, type: "theme", weight: 1 });
   }
+  // Organizations connected with the Disability Services Division, linked to the
+  // community pages their public records name. Native pages are never linked.
+  for (const org of ORGANIZATIONS) {
+    g.addNode({ id: `organization:${org.slug}`, kind: "organization", title: org.name, href: organizationHref(org.slug) });
+    for (const community of org.communities) {
+      if (isNativeCommunity(community) || !g.nodes.has(`brief:${community}`)) continue;
+      g.addEdge({ from: `organization:${org.slug}`, to: `brief:${community}`, type: "serves_community", weight: 1, why: "Named in the organization's public records" });
+    }
+  }
   const byNumber = new Map(readingsData.map(book => [book.number, book.id]));
   for (const link of connectionsData as Array<{ book: number; course: string; reason: string; practice: string }>) {
     const book = byNumber.get(link.book); if (!book) continue;
@@ -117,6 +136,7 @@ function nodeIdForHref(href: string): string | null {
   const collection = clean.match(/^\/collections\/([a-z-]+)$/); if (collection) return `theme:${collection[1]}`;
   const reading = clean.match(/^\/learn\/readings\/([a-z0-9-]+)$/); if (reading) return reading[1];
   const community = clean.match(/^\/minnesota-communities\/([a-z0-9-]+)$/); if (community) return `brief:${community[1]}`;
+  const organization = clean.match(/^\/community-outreach\/organizations\/([a-z0-9-]+)$/); if (organization) return `organization:${organization[1]}`;
   const practice = clean.match(/^\/practice\/([a-z0-9-]+)$/); if (practice) return practice[1];
   return resourceIdFromHref(clean);
 }
@@ -183,7 +203,7 @@ export function contentGraphForDocs(docs: readonly GraphDoc[]): ContentGraph {
   return g;
 }
 
-const WEIGHT: Record<GraphEdgeType, number> = { curated_reading: 5, suggested_reading: 5, informs: 4, practice_link: 2, series: 1.5, theme: 1, level: 0.4, part_of: 2, about_community: 3, cites: 3, related: 1.5 };
+const WEIGHT: Record<GraphEdgeType, number> = { curated_reading: 5, suggested_reading: 5, informs: 4, practice_link: 2, series: 1.5, theme: 1, level: 0.4, part_of: 2, about_community: 3, cites: 3, related: 1.5, serves_community: 3 };
 
 /** Items most connected to the given one, scored by the strength and kind of the connections between them. */
 export function relatedItems(id: string, options: { limit?: number; kinds?: GraphNodeKind[]; exclude?: string[] } = {}): RelatedItem[] {

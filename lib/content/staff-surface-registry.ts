@@ -18,6 +18,7 @@ import { WORK_LEARNING_SURFACE } from "./work-learning";
 import { EQUITY_TOOLKIT_SURFACE } from "./equity-toolkit";
 import { DECISION_WORKSPACE_SURFACE } from "./decision-workspace";
 import { COMMUNITY_CONNECTIONS_SURFACE } from "./community-connections";
+import { COMMUNITY_OUTREACH_SURFACE } from "./hub/hub-surface";
 import { CULTURAL_INTELLIGENCE_SURFACE } from "./cultural-intelligence-hub";
 import { WORKFORCE_SURFACES } from "./workforce-editor";
 import { PODCAST_SURFACES } from "./podcasts";
@@ -194,7 +195,7 @@ const NON_BRIEF_SURFACES: readonly StaffSurfaceDefinition[] = [
       programName: "One DSD People, Access and Culture",
       programSubtitle: "Staff learning and practical support",
       programDescriptor: "an independently managed resource for Disability Services Division staff",
-      primaryNavigation: [{"label":"Home","href":"/"},{"label":"Start","href":"/start"},{"label":"Ask","href":"/ask"},{"label":"Areas of work","href":"/areas"},{"label":"Learning and resources","href":"/learn"},{"label":"Practice","href":"/practice"},{"label":"One DSD","href":"/one-dsd"},{"label":"Amplify Equity","href":"/one-dsd/amplify"},{"label":"Support","href":"/support"}],
+      primaryNavigation: [{"label":"Home","href":"/"},{"label":"Start","href":"/start"},{"label":"Ask","href":"/ask"},{"label":"Areas of work","href":"/areas"},{"label":"Learning and resources","href":"/learn"},{"label":"Practice","href":"/practice"},{"label":"Community Outreach and Engagement","href":"/community-outreach"},{"label":"One DSD","href":"/one-dsd"},{"label":"Amplify Equity","href":"/one-dsd/amplify"},{"label":"Support","href":"/support"}],
       personalNavigation: [{ label: "My Work", href: "/my-work" }],
     },
   }),
@@ -353,6 +354,7 @@ const NON_BRIEF_SURFACES: readonly StaffSurfaceDefinition[] = [
   EQUITY_TOOLKIT_SURFACE,
   DECISION_WORKSPACE_SURFACE,
   COMMUNITY_CONNECTIONS_SURFACE,
+  COMMUNITY_OUTREACH_SURFACE,
   CULTURAL_INTELLIGENCE_SURFACE,
   ...WORKFORCE_SURFACES,
   defineSurface({

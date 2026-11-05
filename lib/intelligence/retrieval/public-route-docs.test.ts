@@ -6,7 +6,7 @@ import { publicRouteDocs } from "./public-route-docs";
 describe("public landing page retrieval", () => {
   it("keeps public summaries aligned with the actual pages and contains no unpublished course links", () => {
     const docs = publicRouteDocs("dsd");
-    expect(docs).toHaveLength(6);
+    expect(docs).toHaveLength(10);
     for (const doc of docs) {
       const file = `app${doc.href}/page.tsx`;
       const page = readFileSync(file, "utf8");

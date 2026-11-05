@@ -1,0 +1,2854 @@
+{
+  "generatedBy": "scripts/data/extract-community-figures.py",
+  "sources": {
+    "chartbook": {
+      "id": "economic-status-2026",
+      "title": "The Economic Status of Minnesotans 2026: A Chartbook with Data for Minnesota's Largest Cultural Groups",
+      "publisher": "Minnesota State Demographic Center",
+      "date": "January 2026",
+      "url": "https://mn.gov/admin/assets/The%20Economic%20Status%20of%20Minnesotans%202026_tcm36-717691.pdf",
+      "surveyYears": "2019 to 2023",
+      "dataSource": "Census Bureau American Community Survey, 2019 to 2023 combined five-year sample, tabulated by the Demographic Center from the University of Minnesota's Integrated Public Use Microdata Series, USA version 16.0 (2025).",
+      "geography": "Statewide only. The report says its group sizes are too small for county or regional detail."
+    },
+    "disabilityBrief": {
+      "id": "disabilities-2026",
+      "title": "Minnesotans with Disabilities: Demographic and Economic Characteristics",
+      "publisher": "Minnesota State Demographic Center",
+      "date": "February 2026",
+      "url": "https://mn.gov/admin/assets/accessible%20MN_MinnesotansWithDisabilities_tcm36-734001.pdf",
+      "surveyYears": "2019 to 2023",
+      "dataSource": "Census Bureau American Community Survey, 2019 to 2023, using the same cultural groups as the 2026 chartbook.",
+      "geography": "Statewide."
+    }
+  },
+  "surveyYears": "2019 to 2023",
+  "suppressionRules": [
+    "A cultural group appears in the report only if it had 300 or more survey respondents in the 2019 to 2023 sample.",
+    "A value is not shown when fewer than 150 survey respondents are in the group of people that value describes. The report prints NA, and marks the group with an asterisk.",
+    "All values are rounded. Groups may not add up to the total because of rounding and values not shown.",
+    "Margins of error are at the 95 percent confidence level. They are generally larger for smaller groups."
+  ],
+  "comparabilityNote": "Do not compare these figures with the 2023 edition of this report. The 2023 edition used 2016 to 2020 survey data, which overlaps with the 2019 to 2023 data used here, and the Census Bureau cautions against comparing overlapping five-year samples.",
+  "periodNote": "The figures are averages over January 2019 to December 2023, a period that includes the economic disruption of the COVID-19 pandemic.",
+  "readingNote": "Values are counts and medians exactly as printed in the report tables, with their margins of error. The report's tables print counts, not percentages, so no percentages are given here except the share of Minnesota's population printed in Table ii. Where a measure is a count of people, universeCount is the printed number of people the count is out of.",
+  "measures": [
+    {
+      "key": "totalPopulation",
+      "label": "Number of people",
+      "table": "Table ii. Minnesota's Largest Cultural Groups",
+      "page": 8,
+      "universe": "All residents",
+      "unit": "people",
+      "note": "Household counts from the same table are kept under households."
+    },
+    {
+      "key": "bornOutsideUnitedStates",
+      "label": "People born outside the United States",
+      "table": "Table 3. Birthplace by Cultural Group",
+      "page": 16,
+      "universe": "All residents",
+      "unit": "people"
+    },
+    {
+      "key": "limitedEnglish",
+      "label": "People ages 5 and older who do not speak English well or at all",
+      "table": "Table 5. Ability to Speak English by Cultural Group, Ages 5+",
+      "page": 20,
+      "universe": "Residents ages 5 and older",
+      "unit": "people",
+      "note": "The report's measure is \"does not speak English well or at all\". It is not the Census Bureau's broader \"speaks English less than very well\", which the report does not give."
+    },
+    {
+      "key": "disabilityAges18to64",
+      "label": "People ages 18 to 64 with a disability",
+      "table": "Table 17. Disability Status by Cultural Group, Population Ages 18-64",
+      "page": 45,
+      "universe": "Residents ages 18 to 64",
+      "unit": "people",
+      "note": "The table gives the number with a disability only. It does not print the number of people ages 18 to 64 in each group, so no percentage is given here."
+    },
+    {
+      "key": "employedAges16to64",
+      "label": "People ages 16 to 64 who are employed",
+      "table": "Table 14. Labor Force and Employment Status, Ages 16-64 Years, By Cultural Group",
+      "page": 38,
+      "universe": "Residents ages 16 to 64",
+      "unit": "people",
+      "note": "The report uses ages 16 to 64, not 25 to 64. The universe is everyone ages 16 to 64, not only people in the labor force."
+    },
+    {
+      "key": "medianHouseholdIncome",
+      "label": "Median household income",
+      "table": "Table 19. Median Household Income by Cultural Group",
+      "page": 49,
+      "universe": "All households",
+      "unit": "dollars",
+      "note": "In dollars as printed in the report."
+    },
+    {
+      "key": "peopleInPoverty",
+      "label": "People living below the federal poverty line",
+      "table": "Table 20. Poverty Status of Individuals by Cultural Group",
+      "page": 51,
+      "universe": "People for whom poverty status is known",
+      "unit": "people"
+    },
+    {
+      "key": "childrenInPoverty",
+      "label": "Children under 18 living below the federal poverty line",
+      "table": "Table 21. Poverty Status of Children by Cultural Group",
+      "page": 53,
+      "universe": "Children under 18 living in households, for whom poverty status is known",
+      "unit": "people"
+    },
+    {
+      "key": "homeownerHouseholds",
+      "label": "Households that own their home",
+      "table": "Table 23. Households by Owner/Renter Status and Cultural Group",
+      "page": 57,
+      "universe": "All households",
+      "unit": "households"
+    },
+    {
+      "key": "households",
+      "label": "Number of households",
+      "table": "Table ii. Minnesota's Largest Cultural Groups",
+      "page": 8,
+      "universe": "All households",
+      "unit": "households"
+    }
+  ],
+  "groups": [
+    {
+      "name": "Dakota",
+      "reportRacialOrEthnicGroup": "American Indian",
+      "definition": "People who identified as Dakota or Sioux.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 3300,
+          "marginOfError": 600,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.1
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "dash",
+          "note": "Printed as a dash in the report."
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "dash",
+          "note": "Printed as a dash in the report."
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 1100,
+          "marginOfError": 300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 2200,
+          "universeMarginOfError": 500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 800,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 2800,
+          "universeMarginOfError": 600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 1700,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Ojibwe",
+      "reportRacialOrEthnicGroup": "American Indian",
+      "definition": "People who identified as Ojibwe, Chippewa or Anishinaabe.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 21600,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.4
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 200,
+          "marginOfError": 100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 21600,
+          "universeMarginOfError": 1600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "dash",
+          "note": "Printed as a dash in the report."
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 2400,
+          "marginOfError": 600,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 7800,
+          "marginOfError": 800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 13500,
+          "universeMarginOfError": 1100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 40100,
+          "marginOfError": 7200,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 6200,
+          "marginOfError": 1500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 20400,
+          "universeMarginOfError": 1500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 2600,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 6300,
+          "universeMarginOfError": 900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 3400,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 7000,
+          "universeMarginOfError": 700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 7800,
+          "marginOfError": 800,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Other American Indian",
+      "reportRacialOrEthnicGroup": "American Indian",
+      "definition": "All other American Indian people, except Dakota and Ojibwe.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 15300,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.3
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 500,
+          "marginOfError": 300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 15300,
+          "universeMarginOfError": 1400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "dash",
+          "note": "Printed as a dash in the report."
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 2200,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 5300,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 10200,
+          "universeMarginOfError": 1000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 45500,
+          "marginOfError": 7900,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 3400,
+          "marginOfError": 800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 12500,
+          "universeMarginOfError": 1400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 1100,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 3300,
+          "universeMarginOfError": 700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 2400,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 4900,
+          "universeMarginOfError": 700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 7300,
+          "marginOfError": 700,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Asian Indian",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Asian Indian, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 44000,
+          "marginOfError": 4600,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.8
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 32500,
+          "marginOfError": 3700,
+          "marginOfErrorPrinted": true,
+          "universeCount": 44000,
+          "universeMarginOfError": 4600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 800,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 41100,
+          "universeMarginOfError": 4400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 1300,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 26200,
+          "marginOfError": 3000,
+          "marginOfErrorPrinted": true,
+          "universeCount": 32500,
+          "universeMarginOfError": 3500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 130200,
+          "marginOfError": 9000,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 3000,
+          "marginOfError": 1200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 43500,
+          "universeMarginOfError": 4600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 500,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 10500,
+          "universeMarginOfError": 1600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 10700,
+          "marginOfError": 1300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 17900,
+          "universeMarginOfError": 2000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 18400,
+          "marginOfError": 2000,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Chinese",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Chinese, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 30500,
+          "marginOfError": 3700,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.5
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 21700,
+          "marginOfError": 2800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 30500,
+          "universeMarginOfError": 3700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 4500,
+          "marginOfError": 1200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 30100,
+          "universeMarginOfError": 3600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 900,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 17900,
+          "marginOfError": 2300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 22900,
+          "universeMarginOfError": 2800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 102800,
+          "marginOfError": 16800,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 2800,
+          "marginOfError": 1200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 29100,
+          "universeMarginOfError": 3700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 600,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 5700,
+          "universeMarginOfError": 1100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 8300,
+          "marginOfError": 1500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 11700,
+          "universeMarginOfError": 1900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 13100,
+          "marginOfError": 1800,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Filipino",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Filipino, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 11800,
+          "marginOfError": 2400,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.2
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 8800,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 11800,
+          "universeMarginOfError": 2400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 300,
+          "marginOfError": 200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 11400,
+          "universeMarginOfError": 2200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 7800,
+          "marginOfError": 1800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 9600,
+          "universeMarginOfError": 2000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 700,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 11700,
+          "universeMarginOfError": 2400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 3900,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Hmong",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Hmong ancestry, language or birthplace, including children born in the United States.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 96700,
+          "marginOfError": 7000,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 1.7
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 34600,
+          "marginOfError": 3400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 96700,
+          "universeMarginOfError": 7000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 10800,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 86000,
+          "universeMarginOfError": 6300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 4500,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 46200,
+          "marginOfError": 3500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 60600,
+          "universeMarginOfError": 4300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 89800,
+          "marginOfError": 10000,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 8700,
+          "marginOfError": 3100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 95400,
+          "universeMarginOfError": 7000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 4300,
+          "marginOfError": 2200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 35400,
+          "universeMarginOfError": 3300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 14000,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 22200,
+          "universeMarginOfError": 2000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 23300,
+          "marginOfError": 2100,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Karen",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Burmese ancestry with the Karen language, including children born in the United States.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 12500,
+          "marginOfError": 3100,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.2
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 9200,
+          "marginOfError": 2500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 12500,
+          "universeMarginOfError": 3100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 4900,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 11500,
+          "universeMarginOfError": 2900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 4700,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 7500,
+          "universeMarginOfError": 1800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 3500,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 12500,
+          "universeMarginOfError": 3100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 2500,
+          "marginOfError": 600,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Korean",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Korean, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 15700,
+          "marginOfError": 2200,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.3
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 11800,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 15700,
+          "universeMarginOfError": 2200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 600,
+          "marginOfError": 300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 15300,
+          "universeMarginOfError": 2200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 10400,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 12600,
+          "universeMarginOfError": 1700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 77700,
+          "marginOfError": 26800,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 600,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 15200,
+          "universeMarginOfError": 2200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 4000,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 6300,
+          "universeMarginOfError": 1300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 6700,
+          "marginOfError": 1300,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Lao",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Lao, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 8900,
+          "marginOfError": 2100,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.2
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 5700,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 8900,
+          "universeMarginOfError": 2100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 1700,
+          "marginOfError": 600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 8600,
+          "universeMarginOfError": 2000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 5000,
+          "marginOfError": 1200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 6300,
+          "universeMarginOfError": 1500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 600,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 8700,
+          "universeMarginOfError": 2000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 3200,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Vietnamese",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "Vietnamese, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 27200,
+          "marginOfError": 3900,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.5
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 16600,
+          "marginOfError": 2500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 27200,
+          "universeMarginOfError": 3900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 5500,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 26400,
+          "universeMarginOfError": 3700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 1000,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 15100,
+          "marginOfError": 2200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 19000,
+          "universeMarginOfError": 2700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 93300,
+          "marginOfError": 9800,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 2600,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 26600,
+          "universeMarginOfError": 3900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 6800,
+          "marginOfError": 1100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 9400,
+          "universeMarginOfError": 1400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 10000,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Other Asian",
+      "reportRacialOrEthnicGroup": "Asian",
+      "definition": "All other Asian people not in the Asian groups above.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 38500,
+          "marginOfError": 4800,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.7
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 24900,
+          "marginOfError": 3100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 38500,
+          "universeMarginOfError": 4800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 4500,
+          "marginOfError": 1100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 35900,
+          "universeMarginOfError": 4300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 2000,
+          "marginOfError": 700,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 19800,
+          "marginOfError": 2500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 26600,
+          "universeMarginOfError": 3000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 76100,
+          "marginOfError": 4900,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 4400,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 37500,
+          "universeMarginOfError": 4800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 1600,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 8300,
+          "universeMarginOfError": 2100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 7700,
+          "marginOfError": 1300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 12400,
+          "universeMarginOfError": 1600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 13300,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "African-American",
+      "reportRacialOrEthnicGroup": "Black or African-American",
+      "definition": "Black residents born in the United States, and their children, with no Ethiopian, Liberian or Somali ancestry or birthplace in the last two generations. Black immigrants are not in this group.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 184700,
+          "marginOfError": 8600,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 3.2
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "dash",
+          "note": "Printed as a dash in the report."
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 600,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 169200,
+          "universeMarginOfError": 7800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 22000,
+          "marginOfError": 2500,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 75100,
+          "marginOfError": 5400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 118700,
+          "universeMarginOfError": 5800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 44000,
+          "marginOfError": 3700,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 34500,
+          "marginOfError": 3900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 169400,
+          "universeMarginOfError": 8400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 11200,
+          "marginOfError": 2400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 56400,
+          "universeMarginOfError": 5200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 18300,
+          "marginOfError": 2200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 62700,
+          "universeMarginOfError": 3500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 76800,
+          "marginOfError": 3800,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Ethiopian",
+      "reportRacialOrEthnicGroup": "Black or African-American",
+      "definition": "Black residents with Ethiopian ancestry or birthplace, including children born in the United States.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 37400,
+          "marginOfError": 5200,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.7
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 24900,
+          "marginOfError": 3400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 37400,
+          "universeMarginOfError": 5200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 2800,
+          "marginOfError": 1200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 33300,
+          "universeMarginOfError": 4600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 16300,
+          "marginOfError": 2500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 21800,
+          "universeMarginOfError": 2900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 58000,
+          "marginOfError": 6400,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 6100,
+          "marginOfError": 2400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 37100,
+          "universeMarginOfError": 5200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 2700,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 15200,
+          "universeMarginOfError": 3100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 3900,
+          "marginOfError": 1200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 11100,
+          "universeMarginOfError": 1800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 11400,
+          "marginOfError": 1800,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Liberian",
+      "reportRacialOrEthnicGroup": "Black or African-American",
+      "definition": "Black residents with Liberian ancestry or birthplace, including children born in the United States.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 20600,
+          "marginOfError": 4700,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.4
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 13800,
+          "marginOfError": 3200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 20600,
+          "universeMarginOfError": 4700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 100,
+          "marginOfError": 100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 18500,
+          "universeMarginOfError": 4100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 9400,
+          "marginOfError": 2200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 12300,
+          "universeMarginOfError": 2700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 4400,
+          "marginOfError": 2600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 20500,
+          "universeMarginOfError": 4700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 6100,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Somali",
+      "reportRacialOrEthnicGroup": "Black or African-American",
+      "definition": "Black residents with Somali ancestry or birthplace, including children born in the United States.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 75100,
+          "marginOfError": 8300,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 1.3
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 43600,
+          "marginOfError": 5200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 75100,
+          "universeMarginOfError": 8300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 10800,
+          "marginOfError": 2100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 64500,
+          "universeMarginOfError": 7300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 28300,
+          "marginOfError": 3600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 42500,
+          "universeMarginOfError": 4700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 42500,
+          "marginOfError": 6800,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 28000,
+          "marginOfError": 6100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 74600,
+          "universeMarginOfError": 8300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 15500,
+          "marginOfError": 3900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 32400,
+          "universeMarginOfError": 4900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 2800,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 20200,
+          "universeMarginOfError": 2200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 20700,
+          "marginOfError": 2300,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Other Black",
+      "reportRacialOrEthnicGroup": "Black or African-American",
+      "definition": "All other Black residents not in the Black groups above. Most were born outside the United States.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 54700,
+          "marginOfError": 5500,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 1.0
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 54400,
+          "marginOfError": 5500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 54700,
+          "universeMarginOfError": 5500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 3300,
+          "marginOfError": 1000,
+          "marginOfErrorPrinted": true,
+          "universeCount": 54300,
+          "universeMarginOfError": 5400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 2100,
+          "marginOfError": 700,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 37500,
+          "marginOfError": 3700,
+          "marginOfErrorPrinted": true,
+          "universeCount": 45800,
+          "universeMarginOfError": 4300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 74300,
+          "marginOfError": 12300,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 5700,
+          "marginOfError": 1800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 53700,
+          "universeMarginOfError": 5400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 11200,
+          "marginOfError": 1900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 25200,
+          "universeMarginOfError": 3000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 26300,
+          "marginOfError": 3100,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Mexican",
+      "reportRacialOrEthnicGroup": "Hispanic or Latino",
+      "definition": "Hispanic origin of Mexican, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 195900,
+          "marginOfError": 7300,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 3.4
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 60400,
+          "marginOfError": 4300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 195900,
+          "universeMarginOfError": 7300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 21500,
+          "marginOfError": 2600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 179300,
+          "universeMarginOfError": 6700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 9900,
+          "marginOfError": 1500,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 95900,
+          "marginOfError": 3800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 126900,
+          "universeMarginOfError": 4700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 66600,
+          "marginOfError": 4000,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 25600,
+          "marginOfError": 4500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 192800,
+          "universeMarginOfError": 7200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 10900,
+          "marginOfError": 2500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 68100,
+          "universeMarginOfError": 3900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 29600,
+          "marginOfError": 2400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 54700,
+          "universeMarginOfError": 2900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 57500,
+          "marginOfError": 3000,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Puerto Rican",
+      "reportRacialOrEthnicGroup": "Hispanic or Latino",
+      "definition": "Hispanic origin of Puerto Rican, wherever born.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 15500,
+          "marginOfError": 3000,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.3
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 400,
+          "marginOfError": 300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 15500,
+          "universeMarginOfError": 3000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 600,
+          "marginOfError": 500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 13700,
+          "universeMarginOfError": 2600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 7800,
+          "marginOfError": 1700,
+          "marginOfErrorPrinted": true,
+          "universeCount": 9600,
+          "universeMarginOfError": 2000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 1400,
+          "marginOfError": 600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 15200,
+          "universeMarginOfError": 3000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "suppressed",
+          "note": "Not shown: fewer than 150 survey respondents."
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 5600,
+          "marginOfError": 1300,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Other Hispanic",
+      "reportRacialOrEthnicGroup": "Hispanic or Latino",
+      "definition": "All other Hispanic or Latino people, except Mexican and Puerto Rican.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 95100,
+          "marginOfError": 5500,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 1.7
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 42600,
+          "marginOfError": 3800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 95100,
+          "universeMarginOfError": 5500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 14000,
+          "marginOfError": 2200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 86900,
+          "universeMarginOfError": 5100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 4700,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 46900,
+          "marginOfError": 3500,
+          "marginOfErrorPrinted": true,
+          "universeCount": 62600,
+          "universeMarginOfError": 3800,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 74900,
+          "marginOfError": 6700,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 10600,
+          "marginOfError": 2600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 92700,
+          "universeMarginOfError": 5500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 4300,
+          "marginOfError": 1600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 31600,
+          "universeMarginOfError": 3200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 15600,
+          "marginOfError": 1900,
+          "marginOfErrorPrinted": true,
+          "universeCount": 26800,
+          "universeMarginOfError": 2600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 29100,
+          "marginOfError": 2700,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Russian",
+      "reportRacialOrEthnicGroup": "White",
+      "definition": "Non-Hispanic White residents of Russian ancestry, including children born in the United States. This is ancestry, not language.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 34500,
+          "marginOfError": 4200,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.6
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 6700,
+          "marginOfError": 1300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 34500,
+          "universeMarginOfError": 4200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 1000,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 31800,
+          "universeMarginOfError": 4000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 2000,
+          "marginOfError": 600,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 16500,
+          "marginOfError": 2100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 21000,
+          "universeMarginOfError": 2700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 82600,
+          "marginOfError": 13300,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 2300,
+          "marginOfError": 800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 33800,
+          "universeMarginOfError": 4200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 300,
+          "marginOfError": 300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 9500,
+          "universeMarginOfError": 2100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 8900,
+          "marginOfError": 1200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 13200,
+          "universeMarginOfError": 1700,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 13900,
+          "marginOfError": 1700,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "White",
+      "reportRacialOrEthnicGroup": "White",
+      "definition": "Non-Hispanic White residents, except those of Russian ancestry.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 4381800,
+          "marginOfError": 5900,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 76.7
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 83600,
+          "marginOfError": 5000,
+          "marginOfErrorPrinted": true,
+          "universeCount": 4381800,
+          "universeMarginOfError": 5900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 9800,
+          "marginOfError": 1700,
+          "marginOfErrorPrinted": true,
+          "universeCount": 4167700,
+          "universeMarginOfError": 5500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 245200,
+          "marginOfError": 5200,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 2206200,
+          "marginOfError": 7300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 2749300,
+          "universeMarginOfError": 4100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 86000,
+          "marginOfError": 900,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 245400,
+          "marginOfError": 8300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 4276000,
+          "universeMarginOfError": 6100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 39000,
+          "marginOfError": 3300,
+          "marginOfErrorPrinted": true,
+          "universeCount": 844600,
+          "universeMarginOfError": 3400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 1462500,
+          "marginOfError": 9800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 1887700,
+          "universeMarginOfError": 7100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 1990000,
+          "marginOfError": 7200,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Other (including Pacific Islander)",
+      "reportRacialOrEthnicGroup": "Other/Multiple Groups",
+      "definition": "People who reported Pacific Islander or another race not in the groups above.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 28300,
+          "marginOfError": 3600,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 0.5
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 3300,
+          "marginOfError": 1000,
+          "marginOfErrorPrinted": true,
+          "universeCount": 28300,
+          "universeMarginOfError": 3600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 200,
+          "marginOfError": 100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 25900,
+          "universeMarginOfError": 3200,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 2400,
+          "marginOfError": 1100,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 12700,
+          "marginOfError": 1700,
+          "marginOfErrorPrinted": true,
+          "universeCount": 17500,
+          "universeMarginOfError": 2300,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 89300,
+          "marginOfError": 18200,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 2100,
+          "marginOfError": 1000,
+          "marginOfErrorPrinted": true,
+          "universeCount": 27300,
+          "universeMarginOfError": 3600,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 400,
+          "marginOfError": 400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 8200,
+          "universeMarginOfError": 1900,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 6000,
+          "marginOfError": 1000,
+          "marginOfErrorPrinted": true,
+          "universeCount": 9200,
+          "universeMarginOfError": 1400,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 9600,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Multiple Cultural Groups",
+      "reportRacialOrEthnicGroup": "Other/Multiple Groups",
+      "definition": "People who belong to two or more of the groups above.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 264300,
+          "marginOfError": 10500,
+          "marginOfErrorPrinted": true,
+          "percentOfMinnesota": 4.6
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 23300,
+          "marginOfError": 3700,
+          "marginOfErrorPrinted": true,
+          "universeCount": 264300,
+          "universeMarginOfError": 10500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 4200,
+          "marginOfError": 1400,
+          "marginOfErrorPrinted": true,
+          "universeCount": 227900,
+          "universeMarginOfError": 9000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 17600,
+          "marginOfError": 2100,
+          "marginOfErrorPrinted": true
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 96200,
+          "marginOfError": 5100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 134400,
+          "universeMarginOfError": 6000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 64200,
+          "marginOfError": 4700,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 31700,
+          "marginOfError": 4100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 259200,
+          "universeMarginOfError": 10500,
+          "universeMarginOfErrorPrinted": true
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 15400,
+          "marginOfError": 2600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 133500,
+          "universeMarginOfError": 7100,
+          "universeMarginOfErrorPrinted": true
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 27700,
+          "marginOfError": 2200,
+          "marginOfErrorPrinted": true,
+          "universeCount": 58300,
+          "universeMarginOfError": 3000,
+          "universeMarginOfErrorPrinted": true
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 62700,
+          "marginOfError": 3000,
+          "marginOfErrorPrinted": true
+        }
+      }
+    },
+    {
+      "name": "Total",
+      "reportRacialOrEthnicGroup": "Total",
+      "definition": "All Minnesotans.",
+      "figures": {
+        "totalPopulation": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 5713700,
+          "marginOfError": null,
+          "marginOfErrorPrinted": false,
+          "percentOfMinnesota": 100.0
+        },
+        "bornOutsideUnitedStates": {
+          "table": "Table 3",
+          "page": 16,
+          "status": "published",
+          "estimate": 523600,
+          "marginOfError": 13000,
+          "marginOfErrorPrinted": true,
+          "universeCount": 5713700,
+          "universeMarginOfError": null,
+          "universeMarginOfErrorPrinted": false
+        },
+        "limitedEnglish": {
+          "table": "Table 5",
+          "page": 20,
+          "status": "published",
+          "estimate": 102400,
+          "marginOfError": 6100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 5376600,
+          "universeMarginOfError": null,
+          "universeMarginOfErrorPrinted": false
+        },
+        "disabilityAges18to64": {
+          "table": "Table 17",
+          "page": 45,
+          "status": "published",
+          "estimate": 329800,
+          "marginOfError": null,
+          "marginOfErrorPrinted": false
+        },
+        "employedAges16to64": {
+          "table": "Table 14",
+          "page": 38,
+          "status": "published",
+          "estimate": 2816100,
+          "marginOfError": 10600,
+          "marginOfErrorPrinted": true,
+          "universeCount": 3585900,
+          "universeMarginOfError": null,
+          "universeMarginOfErrorPrinted": false
+        },
+        "medianHouseholdIncome": {
+          "table": "Table 19",
+          "page": 49,
+          "status": "published",
+          "estimate": 82700,
+          "marginOfError": 600,
+          "marginOfErrorPrinted": true
+        },
+        "peopleInPoverty": {
+          "table": "Table 20",
+          "page": 51,
+          "status": "published",
+          "estimate": 434900,
+          "marginOfError": 15800,
+          "marginOfErrorPrinted": true,
+          "universeCount": 5568200,
+          "universeMarginOfError": null,
+          "universeMarginOfErrorPrinted": false
+        },
+        "childrenInPoverty": {
+          "table": "Table 21",
+          "page": 53,
+          "status": "published",
+          "estimate": 116500,
+          "marginOfError": 9100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 1305500,
+          "universeMarginOfError": null,
+          "universeMarginOfErrorPrinted": false
+        },
+        "homeownerHouseholds": {
+          "table": "Table 23",
+          "page": 57,
+          "status": "published",
+          "estimate": 1654900,
+          "marginOfError": 12100,
+          "marginOfErrorPrinted": true,
+          "universeCount": 2282800,
+          "universeMarginOfError": null,
+          "universeMarginOfErrorPrinted": false
+        },
+        "households": {
+          "table": "Table ii",
+          "page": 8,
+          "status": "published",
+          "estimate": 2420700,
+          "marginOfError": null,
+          "marginOfErrorPrinted": false
+        }
+      }
+    }
+  ],
+  "disabilityBrief": {
+    "source": "disabilities-2026",
+    "figure": "Figure 6a. Number of People with at Least One Disability, by Cultural Group, 2019-2023",
+    "page": 6,
+    "universe": "Residents ages 18 to 64 (civilian, not living in institutions)",
+    "unit": "people",
+    "marginOfErrorNote": "The brief draws 95 percent margins of error as error bars but does not print them as numbers, so none are given here.",
+    "definitionNote": "Same cultural groups and survey years as the chartbook. The brief prints counts for some groups that the chartbook does not show because of small samples (Somali, Karen, Puerto Rican, Ethiopian, Korean, Lao, Liberian, Dakota, Filipino). Treat those with extra caution. It gives no count for Other American Indian, Other Asian, Other Black, Other Hispanic, White, Other (including Pacific Islander), Multiple Cultural Groups or the total.",
+    "excluded": "Figures 6b and 6c (percent with a disability, ages 18 to 44 and 45 to 64) are not used. Their printed percentages sit at the end of each error bar and do not match the length of the drawn bars (for example, Dakota is printed as 40.2 percent but its bar ends near 26 percent), so the estimate cannot be read reliably. Neither figure gives a rate for ages 18 to 64.",
+    "groups": [
+      {
+        "group": "African-American",
+        "briefLabel": "African American",
+        "status": "published",
+        "estimate": 22000,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 22000
+      },
+      {
+        "group": "Mexican",
+        "briefLabel": "Mexican",
+        "status": "published",
+        "estimate": 9900,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 9900
+      },
+      {
+        "group": "Hmong",
+        "briefLabel": "Hmong",
+        "status": "published",
+        "estimate": 4500,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 4500
+      },
+      {
+        "group": "Somali",
+        "briefLabel": "Somali",
+        "status": "published",
+        "estimate": 3100,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Ojibwe",
+        "briefLabel": "Ojibwe",
+        "status": "published",
+        "estimate": 2400,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 2400
+      },
+      {
+        "group": "Russian",
+        "briefLabel": "Russian",
+        "status": "published",
+        "estimate": 2000,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 2000
+      },
+      {
+        "group": "Puerto Rican",
+        "briefLabel": "Puerto Rican",
+        "status": "published",
+        "estimate": 1400,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Asian Indian",
+        "briefLabel": "Indian (Asia)",
+        "status": "published",
+        "estimate": 1300,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 1300
+      },
+      {
+        "group": "Ethiopian",
+        "briefLabel": "Ethiopian",
+        "status": "published",
+        "estimate": 1100,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Karen",
+        "briefLabel": "Karen",
+        "status": "published",
+        "estimate": 1100,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Vietnamese",
+        "briefLabel": "Vietnamese",
+        "status": "published",
+        "estimate": 1000,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 1000
+      },
+      {
+        "group": "Chinese",
+        "briefLabel": "Chinese",
+        "status": "published",
+        "estimate": 900,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": 900
+      },
+      {
+        "group": "Korean",
+        "briefLabel": "Korean",
+        "status": "published",
+        "estimate": 800,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Lao",
+        "briefLabel": "Lao",
+        "status": "published",
+        "estimate": 700,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Liberian",
+        "briefLabel": "Liberian",
+        "status": "published",
+        "estimate": 500,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Dakota",
+        "briefLabel": "Dakota",
+        "status": "published",
+        "estimate": 500,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      },
+      {
+        "group": "Filipino",
+        "briefLabel": "Filipino",
+        "status": "published",
+        "estimate": 400,
+        "marginOfError": null,
+        "marginOfErrorPrinted": false,
+        "table": "Figure 6a",
+        "page": 6,
+        "chartbookTable17": "not shown in the chartbook"
+      }
+    ]
+  },
+  "verification": {
+    "methods": [
+      "pdfplumber word positions (values placed in columns by their right edge)",
+      "PyMuPDF word positions (separate reading and placement)",
+      "pypdf text (the printed values on each row, in order, must match)",
+      "Figure 6a only: each printed number must also match its drawn bar length within 2 percent of the axis"
+    ],
+    "valuesVerified": 1334,
+    "valuesDropped": 0,
+    "disagreements": []
+  }
+}

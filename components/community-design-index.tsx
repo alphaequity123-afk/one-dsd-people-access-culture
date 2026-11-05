@@ -38,7 +38,7 @@ export async function CommunityDesignIndex({ query = "" }: { query?: string }) {
   const matching = entries.filter(b => `${b.title} ${b.id}`.toLocaleLowerCase().includes(normalized));
   const featured = matching.filter(b => FEATURED_COMMUNITY_IDS.some(id => id === b.id));
   const more = matching.filter(b => !FEATURED_COMMUNITY_IDS.some(id => id === b.id));
-  const list = (items: typeof entries) => <ul className="community-directory">{items.map(b => <li key={b.id}><Link prefetch={false} href={`/minnesota-communities/${b.id}`}>{b.title}</Link>{(NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(b.id) ? <span className="community-in-development-tag"> (we defer to the Office of Indian Affairs and the DHS offices that handle Tribal relations and consultation)</span> : null}</li>)}</ul>;
+  const list = (items: typeof entries) => <ul className="community-directory">{items.map(b => <li key={b.id}><Link prefetch={false} href={`/minnesota-communities/${b.id}`}>{b.title}</Link>{(NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(b.id) ? <span className="community-in-development-tag"> (we defer to the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation)</span> : null}</li>)}</ul>;
   return <EditableSurfaceRegion surface={pageSurface}><div className="community-editorial">
     <div className="community-index-layout">
       <p className="community-eyebrow">People, place, and perspective</p>
@@ -48,6 +48,7 @@ export async function CommunityDesignIndex({ query = "" }: { query?: string }) {
       {normalized ? list(matching) : <><h2>Explore communities</h2>{list(featured)}<details className="community-more"><summary>All other communities and places ({more.length})</summary>{list(more)}</details></>}
       {normalized && !matching.length ? <p>No community matched that name. You might try a different spelling, or browse the full collection.</p> : null}
       <p className="mt-8"><Link href="/minnesota-communities/calendar">Open the cultural calendar</Link> for observances, festivals and remembrances across these communities.</p>
+      <p><Link href="/community-outreach">Community Outreach and Engagement</Link>: find organizations connected with the Disability Services Division, compare counties, and plan an engagement.</p>
       <ToolDecisionQuestions tool="minnesota-communities" className="mt-8" />
     </div>
   </div></EditableSurfaceRegion>;
