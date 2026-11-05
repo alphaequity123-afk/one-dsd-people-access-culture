@@ -5,7 +5,6 @@ import { readBoundedJson } from "@/lib/http/request";
 import { getAgent } from "@/lib/intelligence/registry/agents";
 import { resolveBinding } from "@/lib/intelligence/providers";
 import { consumeRequestLimit, rateLimitHeaders } from "@/lib/security/rate-limit";
-import { recordTutorRound } from "@/lib/tutor/counter-store";
 import { tutorGrounding } from "@/lib/tutor/grounding";
 import { scoreChoice, tutorItem } from "@/lib/tutor/items";
 import { MAX_BODY_BYTES, TutorRequestSchema, type TutorResponse } from "@/lib/tutor/request";
@@ -74,11 +73,8 @@ export async function POST(request: NextRequest) {
   }
   if (reply && leaksAnswer(replyText(reply), item, chosenIndex)) reply = fallbackReply(item, chosenIndex, scored.correct);
 
-  try {
-    await recordTutorRound({ lessonId, itemId, attemptNumber, correct: scored.correct, strategy });
-  } catch {
-    // Counting is optional; guidance is not withheld when the count cannot be added.
-  }
+  // Owner rule: lesson activity is private between the learner and the program.
+  // Nothing about a guidance round is counted, stored or shown to anyone.
 
   const response: TutorResponse = {
     correct: scored.correct,

@@ -4,8 +4,6 @@ import Link from "next/link";
 import { askQuestion, goalMap, headlineNarratives, measures } from "@/lib/content/data/equity-baseline";
 import { readEquityReviewTotals } from "@/lib/practice/equity-review-count-store";
 import { EquityReviewCountSection } from "./review-count-section";
-import { readTutorTotals } from "@/lib/tutor/counter-store";
-import { TutorSignalsSection } from "./tutor-signals-section";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "./equity-baseline.module.css";
 
@@ -21,7 +19,6 @@ export default async function EquityBaselinePage() {
   const goals = goalMap();
   const headlines = headlineNarratives(5);
   const reviewTotals = await readEquityReviewTotals().catch(() => null);
-  const tutorTotals = await readTutorTotals().catch(() => null);
   return <div className={base.page}><div className={base.content}>
     <header className={base.intro}>
       <p className={base.eyebrow}>Data</p>
@@ -57,8 +54,6 @@ export default async function EquityBaselinePage() {
     </section>
 
     <EquityReviewCountSection totals={reviewTotals} />
-
-    <TutorSignalsSection totals={tutorTotals} />
 
     <section className={styles.section} aria-labelledby="count-title">
       <div className={styles.howWeCount}>

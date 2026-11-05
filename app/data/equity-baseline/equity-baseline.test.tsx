@@ -6,8 +6,6 @@ import EquityGoalPage from "./goal/[number]/page";
 import EquityGlossaryPage from "./glossary/page";
 import { resetStoreForTests } from "@/lib/intelligence/memory/store";
 import { REVIEW_COUNT_OFF } from "./review-count-section";
-import { passageGrade } from "@/lib/content/readability";
-import { TUTOR_SIGNALS_COPY } from "./tutor-signals-section";
 
 vi.mock("@/lib/auth/leaders-access", () => ({ leadersAllowed: async () => true }));
 vi.mock("next/navigation", async original => ({ ...await original<typeof import("next/navigation")>(), usePathname: () => "/data/equity-baseline", notFound: () => { throw new Error("not found"); } }));
@@ -60,26 +58,17 @@ describe("equity baseline pages", () => {
     expect(page).toContain("No workforce data exists yet");
     expect(shortFormIn(visibleText(page))).toBeNull();
   });
-  it("says plainly that One DSD keeps no review or guidance totals", async () => {
+  it("says plainly that One DSD keeps no review totals and shows nothing about lesson activity", async () => {
     const page = html(await EquityBaselinePage());
-    const reviews = page.slice(page.indexOf('aria-labelledby="reviews-completed-title"'), page.indexOf('aria-labelledby="guidance-signals-title"'));
+    const reviews = page.slice(page.indexOf('aria-labelledby="reviews-completed-title"'), page.indexOf('aria-labelledby="count-title"'));
     expect(reviews).toContain("Equity reviews completed");
     expect(reviews).toContain(REVIEW_COUNT_OFF);
     expect(reviews).not.toContain("<table");
-    const guidance = page.slice(page.indexOf('aria-labelledby="guidance-signals-title"'), page.indexOf('aria-labelledby="count-title"'));
-    expect(guidance).toContain(TUTOR_SIGNALS_COPY.heading);
-    expect(guidance).toContain(TUTOR_SIGNALS_COPY.off);
-    expect(guidance).not.toContain("<table");
+    expect(page).not.toContain("guidance-signals-title");
+    expect(visibleText(page)).not.toMatch(/Guidance signals|Guidance sessions|Guidance rounds|Hints given/i);
     expect(visibleText(page)).not.toMatch(BANNED_VISIBLE);
     expect(visibleText(page)).not.toMatch(/\bthe app\b|\b(?:the|this) application\b/i);
     expect(shortFormIn(visibleText(page))).toBeNull();
-  });
-  it("keeps every guidance-signals string at or below a 10.5 reading grade with no banned words", () => {
-    const flat = (value: unknown): string[] => typeof value === "string" ? [value] : typeof value === "object" && value ? Object.values(value).flatMap(flat) : [];
-    for (const text of flat(TUTOR_SIGNALS_COPY)) {
-      expect(passageGrade(text, ["Culturally and Linguistically Appropriate Services"]), text).toBeLessThanOrEqual(10.5);
-      expect(text, text).not.toMatch(BANNED_VISIBLE);
-    }
   });
   it("shows the short forms only on the glossary page, beside the full names", async () => {
     const page = html(await EquityGlossaryPage());
