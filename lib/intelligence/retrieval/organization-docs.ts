@@ -2,6 +2,10 @@ import "server-only";
 import { createHash } from "node:crypto";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { ORGANIZATIONS, ORGANIZATIONS_CHECKED, organizationHref, relationshipLine } from "@/lib/content/hub/organizations";
+import { getCountyAgencies } from "@/lib/content/hub/county-agencies";
+import { getSystemConnections } from "@/lib/content/hub/system-connections";
+import { getOfficialProviders } from "@/lib/content/hub/official-providers";
+import { SOURCING_CATEGORIES, SOURCING_CHECKED } from "@/lib/content/hub/sourcing";
 import type { Doc } from "./search";
 
 // Organizations connected with the Disability Services Division, as Ask
@@ -28,4 +32,94 @@ export function organizationDocs(scope: StaffProgramScope): Doc[] {
       evidenceRevisions: [{ sourceId: `community-organization:${org.slug}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
     } satisfies Doc;
   });
+}
+
+// County agencies, one document per county, so Ask can answer "who serves people in this county".
+export function countyAgencyDocs(scope: StaffProgramScope): Doc[] {
+  const data = getCountyAgencies();
+  return data.counties.map(c => {
+    const text = [
+      `${c.county} County: ${c.agencyName}${c.shared ? `, an agency shared by ${c.sharedCounties.join(", ")} counties` : ""}.`,
+      "This is the county agency for Department of Human Services disability programs: MnCHOICES assessments, disability waivers, case management and other home and community-based services.",
+      c.phone ? `Phone: ${c.phone} (${c.phoneLabel}).` : "",
+      c.website ? `Website: ${c.website}` : "",
+      c.notes,
+    ].filter(Boolean).join("\n");
+    return {
+      kind: "content", id: `public-county-agency-${c.fips}`, title: `${c.county} County agency for disability services`,
+      href: `/community-outreach/county-agencies#county-${c.fips}`, authority: "program_reference", type: "county_agency", status: "approved",
+      reviewDate: c.checked, scope: "dsd", summary: text.split("\n")[0], text,
+      tags: ["county", "lead agency", "county agency", c.county.toLowerCase(), "disability services"], intents: [],
+      graphRelated: ["/community-outreach/county-map"],
+      evidenceRevisions: [{ sourceId: `county-agency:${c.fips}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
+    } satisfies Doc;
+  });
+}
+
+// Sources for recruitment, outreach and engagement, one document per category.
+export function sourcingDocs(scope: StaffProgramScope): Doc[] {
+  return SOURCING_CATEGORIES.map(category => {
+    const text = [category.title, category.intro, ...category.entries.map(e =>
+      `${e.name} (${[e.kind, e.region].filter(Boolean).join(", ")}): ${e.what} ${e.howToUse}${e.languages?.length ? ` Languages: ${e.languages.join(", ")}.` : ""}${e.website ? ` ${e.website}` : ""}`)].join("\n");
+    return {
+      kind: "content", id: `public-community-sources-${category.category}`, title: `Where to reach people: ${category.title}`,
+      href: `/community-outreach/sources?category=${category.category}`, authority: "program_reference", type: "community_sources", status: "approved",
+      reviewDate: SOURCING_CHECKED, scope: "dsd", summary: category.intro, text,
+      tags: ["recruitment", "outreach", "engagement", category.title.toLowerCase()], intents: [],
+      graphRelated: ["/community-outreach/sources"],
+      evidenceRevisions: [{ sourceId: `community-sources:${category.category}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
+    } satisfies Doc;
+  });
+}
+
+// How the Department of Human Services, the Disability Services Division, other
+// divisions and lead agencies connect: one document per unit, role and referral path.
+export function systemConnectionDocs(scope: StaffProgramScope): Doc[] {
+  const data = getSystemConnections();
+  const href = "/community-outreach/how-the-system-connects";
+  const make = (id: string, title: string, text: string, anchor: string, tags: string[]): Doc => ({
+    kind: "content", id: `public-system-connection-${id}`, title, href: `${href}#${anchor}`, authority: "program_reference",
+    type: "system_connection", status: "approved", reviewDate: data.checked, scope: "dsd", summary: text.split("\n")[0].slice(0, 360), text,
+    tags: ["how the system connects", "lead agency", "Department of Human Services", "Disability Services Division", ...tags], intents: [],
+    graphRelated: [href, "/community-outreach/county-agencies"],
+    evidenceRevisions: [{ sourceId: `system-connection:${id}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
+  });
+  const slug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
+  return [
+    ...data.structure.map(item => make(`structure-${slug(item.name)}`, `${item.name}: role in disability services`,
+      `${item.name} (${item.kind}). ${item.whatItDoesForDisabilityServices}\nConnection to the Disability Services Division: ${item.connectionToDivision}\nSource: ${item.source.title}, ${item.source.date}. ${item.source.url}`, "structure", [item.kind])),
+    ...data.leadAgencyTypes.map(item => make(`lead-agency-${slug(item.type)}`, `Lead agency type: ${item.type}`,
+      `${item.type}. ${item.description}${item.examples?.length ? ` Examples: ${item.examples.join("; ")}.` : ""}${item.programs?.length ? ` Programs: ${item.programs.join("; ")}.` : ""}\nSource: ${item.source.title}, ${item.source.date}. ${item.source.url}`, "lead-agencies", ["lead agency type"])),
+    ...data.divisionRoles.map(item => make(`division-${slug(item.role)}`, `Disability Services Division and lead agencies: ${item.role}`,
+      `${item.role}. ${item.description}\nHow lead agencies experience it: ${item.howLeadAgenciesExperienceIt}\nSource: ${item.source.title}, ${item.source.date}. ${item.source.url}`, "division-roles", ["division role"])),
+    ...data.departmentRoles.map(item => make(`department-${slug(item.role)}`, `Department of Human Services and lead agencies: ${item.role}`,
+      `${item.role}. ${item.description}\nSource: ${item.source.title}, ${item.source.date}. ${item.source.url}`, "department-roles", ["department role"])),
+    ...data.referralPaths.map((item, i) => make(`referral-${i}-${slug(item.from)}`, `Referral: ${item.from} to ${item.to}`,
+      `From ${item.from} to ${item.to}. ${item.when}\nSource: ${item.source.title}, ${item.source.date}. ${item.source.url}`, "referrals", ["referral"])),
+    make("glossary", "Plain-language glossary for how the system connects", data.glossary.map(g => `${g.term}: ${g.plain}`).join("\n"), "glossary", ["glossary"]),
+  ];
+}
+
+// Designated providers and agencies, one document per entry.
+export function officialProviderDocs(scope: StaffProgramScope): Doc[] {
+  const data = getOfficialProviders();
+  return data.categories.flatMap(category => category.entries.map(entry => {
+    const text = [
+      `${entry.name}${entry.alsoKnownAs?.length ? ` (also known as ${entry.alsoKnownAs.join(", ")})` : ""}: ${category.title}. Designated by ${category.designatedBy}.`,
+      entry.what,
+      entry.counties.length ? `Counties served: ${entry.counties.join(", ")}.` : "No published county list.",
+      entry.phone ? `Phone: ${entry.phone}.` : "",
+      entry.website ? `Website: ${entry.website}` : "",
+      `Record: ${entry.source.title}, ${entry.source.date}. ${entry.source.url}`,
+    ].filter(Boolean).join("\n");
+    const slug = entry.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    return {
+      kind: "content", id: `public-designated-provider-${slug}`, title: `${entry.name}: ${category.title}`,
+      href: `/community-outreach/providers#cat-${category.id}`, authority: "program_reference", type: "designated_provider", status: "approved",
+      reviewDate: data.checked, scope: "dsd", summary: entry.what.slice(0, 360), text,
+      tags: ["designated provider", category.title.toLowerCase(), ...entry.counties.slice(0, 20).map(c => c.toLowerCase())], intents: [],
+      graphRelated: ["/community-outreach/providers", "/community-outreach/how-the-system-connects"],
+      evidenceRevisions: [{ sourceId: `designated-provider:${slug}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
+    } satisfies Doc;
+  }));
 }

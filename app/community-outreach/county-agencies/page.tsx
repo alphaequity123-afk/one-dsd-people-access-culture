@@ -50,7 +50,7 @@ export default async function CountyAgenciesPage({ searchParams }: { searchParam
     <section className={styles.section}>
       <h2>Sources</h2>
       <ul className="list-disc pl-6">{data.sources.map(s => <li key={s.id}>{s.url ? <a href={s.url}>{s.title}</a> : s.title}: {s.usedFor}</li>)}</ul>
-      <p><Link href="/community-outreach/county-map">Minnesota county map</Link></p>
+      <p><Link href="/community-outreach/how-the-system-connects">How the system connects</Link> · <Link href="/community-outreach/providers">Providers and designated agencies</Link> · <Link href="/community-outreach/county-map">Minnesota county map</Link></p>
     </section>
   </div>;
 }

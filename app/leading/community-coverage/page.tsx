@@ -5,6 +5,7 @@ import { BRIEFS } from "@/lib/content/briefs";
 import { communityDesignEntries } from "@/lib/content/community-design";
 import { ORGANIZATIONS, hasDivisionRecord, isNativeCommunity, organizationHref } from "@/lib/content/hub/organizations";
 import { CROSSWALK_BY_ID } from "@/lib/content/hub/community-coverage";
+import { NO_PUBLISHED_RECORD } from "@/lib/content/hub/record-findings";
 import styles from "@/app/community-outreach/hub.module.css";
 
 export const metadata: Metadata = {
@@ -60,6 +61,12 @@ export default async function CommunityCoveragePage() {
           </tr>)}</tbody>
         </table>
       </div>
+    </section>
+
+    <section className={styles.section} aria-labelledby="no-record-title">
+      <h2 id="no-record-title">No published record found</h2>
+      <p>Research on November 5, 2026 looked for published records of these relationships and found none. Someone inside the Department of Human Services may know more; add what you can confirm.</p>
+      <ul className="list-disc space-y-2 pl-6">{NO_PUBLISHED_RECORD.map(item => <li key={item.subject}><strong>{item.subject}:</strong> {item.finding}</li>)}</ul>
     </section>
 
     <section className={styles.section}>

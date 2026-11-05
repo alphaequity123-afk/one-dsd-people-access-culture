@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { communityDesignEntries } from "@/lib/content/community-design";
 import { ORGANIZATIONS, ORGANIZATIONS_CHECKED, RELATIONSHIP_ORDER, hasDivisionRecord, isNativeCommunity, organizationHref } from "@/lib/content/hub/organizations";
+import { DEPARTMENT_WIDE_GRANTS } from "@/lib/content/hub/record-findings";
 import styles from "../hub.module.css";
 
 export const metadata: Metadata = {
@@ -24,6 +25,8 @@ export default async function OrganizationDirectory({ searchParams }: { searchPa
     <p className={styles.lede}>Each organization here has a published record of working with the Disability Services Division as a grantee, contractor, partner or advisory member. Each page lists the records it rests on.</p>
     <p className={styles.note}>Being listed here does not mean the organization speaks for a whole community, and it is not a ranking. Some connections ended years ago. Confirm current details with the organization before you rely on them. Facts were checked on {ORGANIZATIONS_CHECKED}.</p>
 
+    <p><a href="/documents/community-outreach/organizations-connected-with-the-disability-services-division.pdf" download>Download all organization pages as one PDF</a> (45 pages, 1 MB)</p>
+
     <form method="get" className={styles.filters} role="search" aria-label="Filter organizations">
       <label>Community<select name="community" defaultValue={community}><option value="">All communities</option>{linked.map(id => <option key={id} value={id}>{titles.get(id) ?? id}</option>)}</select></label>
       <label>Connection<select name="type" defaultValue={type}><option value="">All connections</option>{RELATIONSHIP_ORDER.map(t => <option key={t} value={t}>{t}</option>)}</select></label>
@@ -42,6 +45,15 @@ export default async function OrganizationDirectory({ searchParams }: { searchPa
         {org.communities.length ? <p className={styles.small}>Communities named in its records: {org.communities.map(id => titles.get(id) ?? id).join(", ")}</p> : null}
       </li>)}
     </ul> : <p>No organization matches these filters. <Link href="/community-outreach/organizations">Show all organizations</Link>.</p>}
+
+    <section className={styles.section} aria-labelledby="department-title">
+      <h2 id="department-title">Also on record with the Department of Human Services</h2>
+      <p>These grants are recorded with the Department of Human Services, but the records do not name the Disability Services Division. They are listed so the record is complete.</p>
+      <ul className="list-disc space-y-3 pl-6">{DEPARTMENT_WIDE_GRANTS.map(grant => <li key={grant.organizations}>
+        <strong>{grant.organizations}</strong>. {grant.program}, {grant.years}{grant.amounts ? `, ${grant.amounts}` : ""}. {grant.focus}{" "}
+        <a href={grant.record.url}>{grant.record.title}, {grant.record.date}</a>.
+      </li>)}</ul>
+    </section>
 
     <section className={styles.section}>
       <h2>Where the records come from</h2>

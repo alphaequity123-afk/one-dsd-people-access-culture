@@ -1,0 +1,527 @@
+{
+  "checked": "2026-11-05",
+  "structure": [
+    {
+      "name": "Aging and Disability Services Administration",
+      "kind": "administration",
+      "whatItDoesForDisabilityServices": "The part of the Department of Human Services that holds the divisions for older adults and people with disabilities. Its divisions include the Aging and Adult Services Division, the Disability Services Division, the Nursing Facility Rates and Policy Division, and the Deaf, DeafBlind, and Hard of Hearing Services Division.",
+      "connectionToDivision": "The Disability Services Division is part of this administration.",
+      "source": {
+        "title": "Budget Overview Brief, Department of Human Services (Minnesota House Fiscal Analysis)",
+        "url": "https://www.house.mn.gov/comm/docs/IdNy49bLVUeqnk6fEwWNTg.pdf",
+        "date": "2025-01-14"
+      }
+    },
+    {
+      "name": "Disability Services Division",
+      "kind": "division",
+      "whatItDoesForDisabilityServices": "Manages publicly funded programs for people with disabilities, including people with brain injuries, chronic medical conditions, developmental disabilities and physical disabilities. Its stated goals include better access, quality, accountability and person-centered decisions.",
+      "connectionToDivision": "This is the division itself. The Community-Based Services Manual names it as part of the Aging and Disability Services Administration.",
+      "source": {
+        "title": "Community-Based Services Manual: Introduction to the Disability Services Division",
+        "url": "https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=ID_000721",
+        "date": "2022-10-11"
+      }
+    },
+    {
+      "name": "Aging and Adult Services Division",
+      "kind": "division",
+      "whatItDoesForDisabilityServices": "Handles programs for older adults, such as Alternative Care. It sends eligibility worksheets and webinar notices to assessors, case managers and lead agencies.",
+      "connectionToDivision": "A sister division in the same administration. It and the Disability Services Division send joint weekly updates to lead agencies and other partners.",
+      "source": {
+        "title": "Aging and Adult Services Division and Disability Services Division weekly updates (Department of Human Services email bulletin)",
+        "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/404104d",
+        "date": "2026-01-13"
+      }
+    },
+    {
+      "name": "Deaf, DeafBlind, and Hard of Hearing State Services Division",
+      "kind": "division",
+      "whatItDoesForDisabilityServices": "Runs a statewide network of services and supports for people who are deaf, deafblind or hard of hearing, including regional services, interpreting and captioning planning, and culturally and linguistically affirmative mental health services. It also gives information and training on serving these groups well.",
+      "connectionToDivision": "A sister division in the same administration. State law says it works across Department of Human Services divisions, with other state agencies and with counties.",
+      "source": {
+        "title": "Minnesota Statutes, section 256C.233",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256C.233",
+        "date": "2026"
+      }
+    },
+    {
+      "name": "Behavioral Health Administration",
+      "kind": "administration",
+      "whatItDoesForDisabilityServices": "Sets policy and makes grants for mental health, substance use disorder and problem gambling services for children, families and adults. It works with county partners and behavioral health providers.",
+      "connectionToDivision": "A separate administration in the same department. Like the Disability Services Division, it works through counties and community providers.",
+      "source": {
+        "title": "Budget Overview Brief, Department of Human Services (Minnesota House Fiscal Analysis)",
+        "url": "https://www.house.mn.gov/comm/docs/IdNy49bLVUeqnk6fEwWNTg.pdf",
+        "date": "2025-01-14"
+      }
+    },
+    {
+      "name": "Homelessness, Housing and Support Services Administration",
+      "kind": "administration",
+      "whatItDoesForDisabilityServices": "The department's administration for homelessness and housing. It runs Housing Support, a state-funded income support that pays housing costs for adults with disabilities or people age 65 or older who have low income and live in approved settings.",
+      "connectionToDivision": "A separate administration. Housing Support can pay for added supportive services when a person is not eligible for home and community-based waiver services or personal care assistance.",
+      "source": {
+        "title": "Budget Overview Brief, Department of Human Services (Minnesota House Fiscal Analysis)",
+        "url": "https://www.house.mn.gov/comm/docs/IdNy49bLVUeqnk6fEwWNTg.pdf",
+        "date": "2025-01-14"
+      }
+    },
+    {
+      "name": "Office of Inspector General",
+      "kind": "office",
+      "whatItDoesForDisabilityServices": "Holds three main divisions: Background Studies, Licensing, and Program Integrity Oversight. Its legal authority includes human services licensing, background studies and maltreatment of vulnerable adults.",
+      "connectionToDivision": "Its Licensing Division licenses providers of home and community-based services. See the Licensing Division entry.",
+      "source": {
+        "title": "Budget Overview Brief, Department of Human Services (Minnesota House Fiscal Analysis)",
+        "url": "https://www.house.mn.gov/comm/docs/IdNy49bLVUeqnk6fEwWNTg.pdf",
+        "date": "2025-01-14"
+      }
+    },
+    {
+      "name": "Licensing Division, Office of Inspector General",
+      "kind": "division",
+      "whatItDoesForDisabilityServices": "Licenses providers of home and community-based services under Minnesota Statutes chapter 245D. A temporary pause on new 245D licenses started January 1, 2026 and is expected to last through December 31, 2027. During the pause it plans to review providers that have not been reviewed in more than three years.",
+      "connectionToDivision": "Exceptions to the licensing pause are based on requests from a lead agency. Regional quality councils report life-safety concerns to this division.",
+      "source": {
+        "title": "Temporary 245D licensing moratorium (Office of Inspector General, Licensing Division email bulletin)",
+        "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/3fdeb77",
+        "date": "2025-12-02"
+      }
+    },
+    {
+      "name": "Health Care Administration",
+      "kind": "administration",
+      "whatItDoesForDisabilityServices": "Runs Medical Assistance and MinnesotaCare. Its units include Health Care Eligibility Operations, Health Care Eligibility and Access, and Managed Care Contracting and Rates.",
+      "connectionToDivision": "Long-term care waivers, including the disability waivers, are paid for through Medical Assistance.",
+      "source": {
+        "title": "Budget Overview Brief, Department of Human Services (Minnesota House Fiscal Analysis)",
+        "url": "https://www.house.mn.gov/comm/docs/IdNy49bLVUeqnk6fEwWNTg.pdf",
+        "date": "2025-01-14"
+      }
+    }
+  ],
+  "leadAgencyTypes": [
+    {
+      "type": "County",
+      "description": "State law defines a lead agency as a county administering services, or a Tribe or health plan under contract with the commissioner of human services. Each county board must set up a long-term care consultation team.",
+      "examples": [
+        "Each of Minnesota's 87 counties, through its human services or social services agency"
+      ],
+      "programs": [
+        "MnCHOICES assessments and support planning",
+        "Brain Injury, Community Alternative Care, Community Access for Disability Inclusion and Developmental Disabilities waivers",
+        "Elderly Waiver and Alternative Care",
+        "Case management"
+      ],
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0911",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0911",
+        "date": "2026"
+      }
+    },
+    {
+      "type": "Group of counties sharing one agency",
+      "description": "State law lets the commissioner give waiver funding for people with developmental disabilities to single counties or to groups of counties working in partnership.",
+      "examples": [
+        "Counties that share one human services agency"
+      ],
+      "programs": [
+        "Developmental Disabilities waiver funding"
+      ],
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0916",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0916",
+        "date": "2026"
+      }
+    },
+    {
+      "type": "Tribal Nation under contract",
+      "description": "A Tribal Nation can act as a lead agency under a contract with the Department of Human Services.",
+      "examples": [
+        "Leech Lake Band of Ojibwe",
+        "Red Lake Nation",
+        "White Earth Nation"
+      ],
+      "programs": [
+        "Home and community-based services and long-term services and supports"
+      ],
+      "source": {
+        "title": "MnCHOICES Matters: Spring 2023 edition (Department of Human Services email bulletin)",
+        "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/3587de7",
+        "date": "2023-05-12"
+      }
+    },
+    {
+      "type": "Health plan (managed care organization) under contract",
+      "description": "Health plans under contract with the commissioner must provide long-term care consultation services as their contracts specify. Where a health plan's area overlaps another lead agency's area, people can choose who manages their home and community-based services at the first assessment and at each yearly reassessment.",
+      "examples": [
+        "Health plans that contract with the Department of Human Services"
+      ],
+      "programs": [
+        "Long-term care consultation, including MnCHOICES assessments and support planning, for their members"
+      ],
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0911",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0911",
+        "date": "2026"
+      }
+    }
+  ],
+  "divisionRoles": [
+    {
+      "role": "Waiver policy and the Community-Based Services Manual",
+      "description": "The commissioner applies for the federal disability waivers and seeks amendments to them. The Community-Based Services Manual is the department's resource for lead agencies that administer home and community-based services for older adults and people with disabilities.",
+      "howLeadAgenciesExperienceIt": "Lead agency staff use the manual for program rules and watch it for guidance updates, such as guidance on authorizing employment services posted in March 2026.",
+      "source": {
+        "title": "Community-Based Services Manual (Department of Human Services)",
+        "url": "https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=id_000402",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Waiver budgets and allocations",
+      "description": "The commissioner gives waiver funding to lead agencies and must manage allocations to fully use state and federal waiver money. The department must post monthly figures on resources allocated, authorized and not used.",
+      "howLeadAgenciesExperienceIt": "Lead agencies are responsible for spending above their yearly allocation and must send a corrective action plan if they overspend. A lead agency that spends less than 97 percent of its allocation while keeping a waiting list must also send a corrective action plan. State law says these parts end once federal approval of the waiver changes is given.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0916",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0916",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Lead Agency Reviews",
+      "description": "The department began reviewing lead agencies in 2006 and has finished four full rounds. Each review covers six programs: Alternative Care and the Brain Injury, Community Alternative Care, Community Access for Disability Inclusion, Developmental Disabilities and Elderly waivers. Round 5 began in spring 2024.",
+      "howLeadAgenciesExperienceIt": "A lead agency hears 60 to 90 days before its review. Afterward it receives a report written for it, and it may need a corrective action plan. The department makes both public and shares findings with the federal Centers for Medicare & Medicaid Services and the Olmstead Implementation Office.",
+      "source": {
+        "title": "About the Home and Community-Based Services Lead Agency Review (Department of Human Services)",
+        "url": "https://mn.gov/dhs/hcbs-lead-agency-review/about/",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "MnCHOICES assessment, support planning and certified assessor training",
+      "description": "The commissioner builds the training curriculum and the certification process for assessors. Certified assessors must be recertified every three years. Lead agencies must use the MnCHOICES assessment the commissioner provides.",
+      "howLeadAgenciesExperienceIt": "Lead agencies must use certified assessors. An assessment must begin within 20 working days of a request, and the support plan is due no more than 60 calendar days after the assessment visit. The department keeps a public dashboard of assessment completions by lead agency.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0911",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0911",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Case management standards",
+      "description": "State law lists case management duties, such as finalizing the support plan and coordinating and monitoring services. Case managers must complete at least 20 hours of education and training each year.",
+      "howLeadAgenciesExperienceIt": "Case management is provided directly by county agencies or under contract. Lead agencies must approve or deny requests for technology within 30 business days, and must offer to meet with the person when services are denied, reduced or ended.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.092",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.092",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Waiver Reimagine",
+      "description": "The Disability Services Division's plan reshapes the four disability waivers (Brain Injury, Community Alternative Care, Community Access for Disability Inclusion and Developmental Disabilities) into two waivers based on where a person lives, with individual budgets. People who live on their own or with family would use the Individual Support Waiver. People in group or shared living would use the Residential Support Waiver.",
+      "howLeadAgenciesExperienceIt": "Lead agencies follow launch news through department bulletins. In March 2026 the department said it could not launch by the original January 1, 2027 date set by the Legislature. As of July 2026 it planned a rolling, phased launch after federal approval and had not set a new date.",
+      "source": {
+        "title": "Legislative Report: Waiver Reimagine Phase 1 Service Streamline and Phase 2 Recommendations for Reshaping Waivers and Individualized Budgets (Disability Services Division)",
+        "url": "https://www.lrl.mn.gov/docs/2021/mandated/210419.pdf",
+        "date": "2021-01"
+      },
+      "alsoSee": [
+        {
+          "title": "Waiver Reimagine update: Delayed launch of Minnesota's new disability waiver program (Department of Human Services email bulletin)",
+          "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/40f430d",
+          "date": "2026-03-23"
+        },
+        {
+          "title": "Waiver Reimagine update: What 2026 legislative changes mean for Minnesota's new Disability Waiver Program (Department of Human Services)",
+          "url": "https://mn.gov/dhs/partners-and-providers/news-initiatives-reports-workgroups/long-term-services-and-supports/waiver-reimagine/wr-july-2026-update.jsp",
+          "date": "2026-07"
+        }
+      ]
+    },
+    {
+      "role": "Disability Hub MN referral connection",
+      "description": "The commissioner must run the Disability Hub, in partnership with the Senior LinkAge Line, as the state's neutral access point for disability information and help. It makes referrals, gives benefits and options counseling, and helps solve problems getting services.",
+      "howLeadAgenciesExperienceIt": "Long-term care consultation must be coordinated with the Disability Hub, and lead agencies refer people to the Disability Hub and Disability Benefits 101.",
+      "source": {
+        "title": "Minnesota Statutes, section 256.01, subdivision 24",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256.01",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Lead agency bulletins and webinars",
+      "description": "The Aging and Adult Services Division and the Disability Services Division send joint weekly email updates. Each item names its audience, often lead agencies.",
+      "howLeadAgenciesExperienceIt": "Lead agency staff get notices of new requirements, form changes and webinars. For example, a January 2026 update covered a new disability waiver service agreement review set by the 2025 Legislature and a January 29, 2026 webinar for lead agencies.",
+      "source": {
+        "title": "Aging and Adult Services Division and Disability Services Division weekly updates (Department of Human Services email bulletin)",
+        "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/4062ffa",
+        "date": "2026-01-27"
+      }
+    },
+    {
+      "role": "Quality assurance and regional quality councils",
+      "description": "The commissioner must keep up the regional quality councils. They look for barriers to home and community-based services, review quality and critical incident data, report life-safety concerns to the Licensing Division, and report to the Legislature every two years.",
+      "howLeadAgenciesExperienceIt": "Lead agency staff are among the council members, along with people with disabilities, families, providers and advocates.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.097",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.097",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Olmstead Plan",
+      "description": "Lead Agency Reviews are guided in part by Minnesota's Olmstead Plan and the Person-Centered, Informed Choice and Transition Protocol. Review findings go to the Olmstead Implementation Office.",
+      "howLeadAgenciesExperienceIt": "Lead agencies are reviewed on how they follow the Olmstead Plan and the person-centered protocol.",
+      "source": {
+        "title": "About the Home and Community-Based Services Lead Agency Review (Department of Human Services)",
+        "url": "https://mn.gov/dhs/hcbs-lead-agency-review/about/",
+        "date": "2026"
+      }
+    }
+  ],
+  "departmentRoles": [
+    {
+      "role": "State-supervised, county-administered services",
+      "description": "Local social services agencies run public welfare programs for children and adults under the supervision of the commissioners of human services and of children, youth, and families.",
+      "source": {
+        "title": "Minnesota Statutes, section 393.07",
+        "url": "https://www.revisor.mn.gov/statutes/cite/393.07",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Supervising and monitoring county agencies",
+      "description": "The commissioner administers and supervises public assistance programs and can monitor the performance of county agencies on an ongoing basis and enforce the rules.",
+      "source": {
+        "title": "Minnesota Statutes, section 256.01, subdivision 2",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256.01",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Contracts with Tribes and health plans",
+      "description": "Besides counties, a Tribe or health plan becomes a lead agency through a contract with the commissioner. Each lead agency must give the commissioner an administrative contact.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0911",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0911",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Waiver administration with lead agencies",
+      "description": "The department runs waiver programs together with lead agencies' social services and public health programs. About 92 percent of Medical Assistance long-term care spending for people with disabilities in Minnesota goes to services in the community.",
+      "source": {
+        "title": "Budget Overview Brief, Department of Human Services (Minnesota House Fiscal Analysis)",
+        "url": "https://www.house.mn.gov/comm/docs/IdNy49bLVUeqnk6fEwWNTg.pdf",
+        "date": "2025-01-14"
+      }
+    },
+    {
+      "role": "How money flows",
+      "description": "The commissioner pays approved providers for home and community-based services. Lead agencies authorize services through service agreements, and the department pays through the state's Medical Assistance payment system.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.49",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.49",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Federal waivers and statewide priorities",
+      "description": "The commissioner applies for and keeps the federal waivers, sets statewide waiting list priorities and sets the criteria for getting services.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.49",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.49",
+        "date": "2026"
+      }
+    },
+    {
+      "role": "Olmstead Subcabinet member",
+      "description": "The Department of Human Services is a member of the Olmstead Subcabinet, the group of state agencies that carries out Minnesota's Olmstead Plan.",
+      "source": {
+        "title": "Minnesota Olmstead Subcabinet Procedures",
+        "url": "https://mn.gov/olmstead/assets/2021-07-26-mn-olmstead-subcabinet-procedures-rev_R_tcm1143-494921.pdf",
+        "date": "2021-07-26"
+      }
+    }
+  ],
+  "referralPaths": [
+    {
+      "from": "Senior LinkAge Line",
+      "to": "Lead agency (long-term care consultation)",
+      "when": "After its first review of certain nursing home residents, or for a person under 65 who is going into a nursing facility, the Senior LinkAge Line can refer the person for long-term care consultation.",
+      "source": {
+        "title": "Minnesota Statutes, section 256.975, subdivision 7",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256.975",
+        "date": "2026"
+      }
+    },
+    {
+      "from": "Long-term care options counselors",
+      "to": "Lead agency (in-person assessment)",
+      "when": "When an in-person assessment is needed, referrals are taken from long-term care options counselors.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0911",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0911",
+        "date": "2026"
+      }
+    },
+    {
+      "from": "Lead agency",
+      "to": "Disability Hub MN and Disability Benefits 101",
+      "when": "As part of long-term care consultation, when a person needs disability information, benefits counseling or help with options.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0911",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0911",
+        "date": "2026"
+      }
+    },
+    {
+      "from": "Disability Hub MN",
+      "to": "Senior LinkAge Line",
+      "when": "The two work in partnership. Together they serve as Minnesota's aging and disability resource center, with the Disability Hub serving people with disabilities and the Senior LinkAge Line serving older Minnesotans.",
+      "source": {
+        "title": "Minnesota Statutes, section 256.975, subdivision 7",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256.975",
+        "date": "2026"
+      }
+    },
+    {
+      "from": "Disability Hub MN",
+      "to": "Other services and programs",
+      "when": "When a person needs a referral, benefits or options counseling, or help solving a problem getting services.",
+      "source": {
+        "title": "Minnesota Statutes, section 256.01, subdivision 24",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256.01",
+        "date": "2026"
+      }
+    },
+    {
+      "from": "Lead agency",
+      "to": "Providers",
+      "when": "The support plan lists the person's options, including case management services and providers. The person has the right to make the final decision.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.0911",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.0911",
+        "date": "2026"
+      }
+    },
+    {
+      "from": "Lead agency",
+      "to": "Office of Inspector General, Licensing Division",
+      "when": "When a lead agency asks for an exception to the 2026 to 2027 pause on new 245D licenses so a provider can apply or add services.",
+      "source": {
+        "title": "Temporary 245D licensing moratorium (Office of Inspector General, Licensing Division email bulletin)",
+        "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/3fdeb77",
+        "date": "2025-12-02"
+      }
+    },
+    {
+      "from": "Regional quality councils",
+      "to": "Office of Inspector General, Licensing Division",
+      "when": "When a council finds a life-safety concern.",
+      "source": {
+        "title": "Minnesota Statutes, section 256B.097",
+        "url": "https://www.revisor.mn.gov/statutes/cite/256B.097",
+        "date": "2026"
+      }
+    }
+  ],
+  "tribalNations": {
+    "lines": [
+      "Three Tribal Nations act as lead agencies for home and community-based services and long-term services and supports under contracts with the Department of Human Services: Leech Lake Band of Ojibwe, Red Lake Nation and White Earth Nation.",
+      "Relationships between the State of Minnesota and Tribal Nations are government to government."
+    ],
+    "note": "For anything concerning Native American individuals, communities or Tribal Nations, contact the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation.",
+    "source": {
+      "title": "MnCHOICES Matters: Spring 2023 edition (Department of Human Services email bulletin); Minnesota Statutes, section 10.65",
+      "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/3587de7",
+      "date": "2023-05-12"
+    },
+    "relationshipSource": {
+      "title": "Minnesota Statutes, section 10.65: Government-to-government relationship with Tribal governments",
+      "url": "https://www.revisor.mn.gov/statutes/cite/10.65",
+      "date": "2026"
+    }
+  },
+  "glossary": [
+    {
+      "term": "Lead agency",
+      "plain": "The county, Tribal Nation or health plan that assesses people, plans their services and manages their home and community-based services."
+    },
+    {
+      "term": "Home and community-based services",
+      "plain": "Services that help people live at home or in the community instead of in an institution."
+    },
+    {
+      "term": "Waiver",
+      "plain": "A Medical Assistance program that the federal government allows the state to run with different rules, so services can be given in the community."
+    },
+    {
+      "term": "Medical Assistance",
+      "plain": "Minnesota's Medicaid program. It pays for health care and long-term services for people who qualify."
+    },
+    {
+      "term": "MnCHOICES",
+      "plain": "The state's assessment and support planning tool that lead agencies must use."
+    },
+    {
+      "term": "Certified assessor",
+      "plain": "A lead agency worker trained and certified by the state to do MnCHOICES assessments. Certification is renewed every three years."
+    },
+    {
+      "term": "Support plan",
+      "plain": "The written plan that lists a person's services, options and choices after an assessment."
+    },
+    {
+      "term": "Case management",
+      "plain": "Help finalizing the support plan and coordinating and checking on a person's services."
+    },
+    {
+      "term": "Community-Based Services Manual",
+      "plain": "The Department of Human Services' online rule book for lead agencies on home and community-based services."
+    },
+    {
+      "term": "Allocation",
+      "plain": "The amount of waiver funding the state gives a lead agency to manage."
+    },
+    {
+      "term": "Lead Agency Review",
+      "plain": "A Department of Human Services check of how a lead agency runs its home and community-based service programs."
+    },
+    {
+      "term": "Corrective action plan",
+      "plain": "A lead agency's written plan to fix problems found by the state."
+    },
+    {
+      "term": "Disability Hub MN",
+      "plain": "The state's neutral place for disability information, benefits counseling and referrals."
+    },
+    {
+      "term": "Senior LinkAge Line",
+      "plain": "The Minnesota Board on Aging's toll-free help line for older Minnesotans and their families."
+    },
+    {
+      "term": "245D license",
+      "plain": "The state license many home and community-based service providers must have, named after Minnesota Statutes chapter 245D."
+    },
+    {
+      "term": "Regional quality council",
+      "plain": "A regional group of people with disabilities, families, providers, advocates and agency staff that works to improve disability services."
+    },
+    {
+      "term": "Olmstead Plan",
+      "plain": "Minnesota's plan to help people with disabilities live, learn, work and enjoy life in the most integrated setting."
+    },
+    {
+      "term": "Waiver Reimagine",
+      "plain": "The state's planned change from four disability waivers to two, with individual budgets."
+    },
+    {
+      "term": "Government to government",
+      "plain": "How the State of Minnesota and each Tribal Nation deal with each other: as one government with another."
+    }
+  ]
+}

@@ -692,6 +692,7 @@ function Details({
         return agency ? <p>
           <strong>County agency:</strong> <a href={`/community-outreach/county-agencies#county-${agency.fips}`}>{agency.agencyName}</a>
           {agency.phone ? <>, <a href={`tel:${agency.phone.replace(/[^0-9]/g, "")}`}>{agency.phone}</a></> : null}
+          {" · "}<a href={`/community-outreach/providers?county=${encodeURIComponent(place.name)}`}>Providers and designated agencies</a>
         </p> : null;
       })() : null}
       {!isState ? (

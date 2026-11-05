@@ -7,6 +7,18 @@ import type { Doc } from "./search";
 // visitor-created work. Course records have their own publication checks.
 const pages = [
   {
+    id: "community-outreach-how-the-system-connects", href: "/community-outreach/how-the-system-connects", title: "How the system connects",
+    summary: "This page shows how those parts connect, with a source for each point.",
+    detail: "How the Department of Human Services, the Disability Services Division, other divisions and offices, lead agencies and providers connect in Minnesota disability services: structure, lead agency types, division and department roles, referral paths, Tribal Nations and a plain-language glossary.",
+    links: ["/community-outreach/county-agencies", "/community-outreach/providers", "/learn/tribal-referral"], tags: ["lead agency", "Department of Human Services", "Disability Services Division", "structure", "referral"],
+  },
+  {
+    id: "community-outreach-providers", href: "/community-outreach/providers", title: "Providers and designated agencies",
+    summary: "Each entry names the public record of its designation.",
+    detail: "Centers for Independent Living, area agencies on aging, health plans under contract, Disability Hub MN, licensed home and community-based services providers and other state-designated agencies, with the counties each serves.",
+    links: ["/community-outreach/how-the-system-connects", "/community-outreach/county-agencies", "/community-outreach/county-map", "/learn/tribal-referral"], tags: ["providers", "designated", "centers for independent living", "area agencies on aging", "health plans", "licensed"],
+  },
+  {
     id: "community-outreach-sources", href: "/community-outreach/sources", title: "Where to reach people",
     summary: "These are possible sources, not partners.",
     detail: "Places to find job candidates, share information and involve community members across Minnesota: state hiring programs, workforce programs, colleges and universities, professional associations, community media, community institutions, venues and cultural events.",
