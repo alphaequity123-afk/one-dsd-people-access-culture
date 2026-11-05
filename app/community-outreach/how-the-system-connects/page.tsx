@@ -51,6 +51,7 @@ export default function HowTheSystemConnectsPage() {
       <ul className="list-disc space-y-3 pl-6">{data.departmentRoles.map(item => <li key={item.role}>
         <strong>{item.role}.</strong> {item.description}<Source source={item.source} />
       </li>)}</ul>
+      <p><Link href="/equity-review/working-group-plan">Plan a legislatively required working group</Link>: the Waiver Case Management Advisory Working Group's charge turned into a month-by-month plan.</p>
     </section>
 
     <section className={styles.section} id="referrals" aria-labelledby="referrals-title">

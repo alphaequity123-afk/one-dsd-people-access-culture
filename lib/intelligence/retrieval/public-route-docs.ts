@@ -7,6 +7,12 @@ import type { Doc } from "./search";
 // visitor-created work. Course records have their own publication checks.
 const pages = [
   {
+    id: "equity-review-working-group-plan", href: "/equity-review/working-group-plan", title: "Plan a legislatively required working group",
+    summary: "This page turns that charge into a month-by-month plan, using the Waiver Case Management Advisory Working Group as the worked example, and shows how to reuse the plan for another group.",
+    detail: "The charge from 2026 Session Law chapter 121, article 9, section 53: purpose, nine member groups, monthly meetings under the open meeting law, seven duties, report due September 1, 2027. A roadmap, ten meetings, a consistent method for every topic, topic plans with evidence, discussion, approach and expected output, a recommendation record, report checkpoints, kickoff decisions, and steps to reuse the plan.",
+    links: ["/equity-review", "/community-outreach/how-the-system-connects", "/community-outreach/plan"], tags: ["working group", "task force", "legislative report", "waiver case management", "lead agency", "statutory duties"],
+  },
+  {
     id: "community-outreach-how-the-system-connects", href: "/community-outreach/how-the-system-connects", title: "How the system connects",
     summary: "This page shows how those parts connect, with a source for each point.",
     detail: "How the Department of Human Services, the Disability Services Division, other divisions and offices, lead agencies and providers connect in Minnesota disability services: structure, lead agency types, division and department roles, referral paths, Tribal Nations and a plain-language glossary.",
