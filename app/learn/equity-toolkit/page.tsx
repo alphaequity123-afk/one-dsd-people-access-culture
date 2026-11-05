@@ -40,6 +40,7 @@ export default async function Page() {
           <div><Link href="/learn/equity-toolkit/practice#toolkit-draft">Work through a decision →</Link><p>Choose a starting question, compare options, and save your analysis with a practice plan.</p></div>
         </nav>
         <p>Follow one decision through eight connected lessons, individual practice and working notes. <Link href="/learn/equity-toolkit/curriculum">Explore equity in everyday decisions →</Link></p>
+        <p>Have a policy, notice or plan in hand? <Link href="/equity-review/analyze">Analyze a document →</Link></p>
       </header>
       <PageContents items={[
         { href: "#analysis-in-practice", label: "What an analysis reveals" },

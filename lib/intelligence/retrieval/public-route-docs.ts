@@ -7,6 +7,12 @@ import type { Doc } from "./search";
 // visitor-created work. Course records have their own publication checks.
 const pages = [
   {
+    id: "equity-review-analyze", href: "/equity-review/analyze", title: "Analyze a document",
+    summary: "Attach or paste a policy, program description, notice or plan and get each question answered as evidence, inference or gap, with next steps in this program.",
+    detail: "Choose one of six analysis methods: equity analysis, policy review, program analysis, engagement plan, plain language, or a legislatively required working group plan. Each question gets an answer typed as evidence (a quotation from the material), inference (a conclusion drawn from it) or gap (something the material does not settle), with next steps that point to pages in this program. Nothing uploaded or pasted is stored; the result goes back to the browser only, and can be printed, copied or kept in that browser.",
+    links: ["/equity-review", "/learn/equity-toolkit", "/community-outreach/plan", "/equity-review/working-group-plan"], tags: ["analyze a document", "document analysis", "policy", "notice", "plan", "evidence", "inference", "gap", "equity analysis"],
+  },
+  {
     id: "equity-review-working-group-plan", href: "/equity-review/working-group-plan", title: "Plan a legislatively required working group",
     summary: "This page turns that charge into a month-by-month plan, using the Waiver Case Management Advisory Working Group as the worked example, and shows how to reuse the plan for another group.",
     detail: "The charge from 2026 Session Law chapter 121, article 9, section 53: purpose, nine member groups, monthly meetings under the open meeting law, seven duties, report due September 1, 2027. A roadmap, ten meetings, a consistent method for every topic, topic plans with evidence, discussion, approach and expected output, a recommendation record, report checkpoints, kickoff decisions, and steps to reuse the plan.",

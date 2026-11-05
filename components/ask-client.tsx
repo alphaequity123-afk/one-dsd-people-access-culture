@@ -117,6 +117,12 @@ export function AskClient({
     <div className={styles.askLayout}>
       <div>
         <button type="button" className="underline text-sm mb-3" disabled={busy} onClick={() => { setSession(EMPTY_SESSION); setQuestion(""); setError(""); }}>Clear this conversation</button>
+        {reviewDraft ? (
+          <section className="card mb-4" aria-labelledby={`${textId}-analyze`}>
+            <h2 id={`${textId}-analyze`} className="text-lg font-bold">Review a draft with Analyze a document</h2>
+            <p className="mt-2">Attach or paste the draft and get each question answered as evidence, inference or gap, with next steps in this program. <Link href="/equity-review/analyze">Open Analyze a document</Link></p>
+          </section>
+        ) : null}
         <form onSubmit={submit} className={styles.askComposer}>
           <label htmlFor={textId} className="block text-lg font-bold">
             {copyText(copy, reviewDraft ? "reviewDraftLabel" : "questionLabel")}

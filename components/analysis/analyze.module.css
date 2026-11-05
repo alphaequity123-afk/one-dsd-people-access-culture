@@ -1,0 +1,77 @@
+/* Analyze a document: workspace and result. Print-friendly; controls hide when printing. */
+
+.workspace { display: grid; gap: 2.5rem; min-width: 0; color: var(--gray-900); }
+.workspace h2 { color: var(--blue); font-size: clamp(1.4rem, 2.6vw, 1.75rem); line-height: 1.25; font-weight: 650; }
+.workspace h3 { color: var(--blue); font-size: 1.2rem; line-height: 1.3; font-weight: 650; }
+.workspace p, .workspace li { line-height: 1.65; }
+.step { display: grid; gap: 1rem; border-top: 1px solid var(--gray-200); padding-top: 1.75rem; }
+.stepNumber { color: var(--gray-600); font-size: .9rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 650; }
+.privacy { border-left: 3px solid var(--amber-strong); padding-left: 1rem; font-weight: 600; max-width: 72ch; }
+.help { color: var(--gray-600); font-size: .95rem; max-width: 72ch; }
+
+.instruments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.instrument { position: relative; border: 1px solid var(--gray-300); border-top: 3px solid var(--blue-mid); border-radius: var(--radius); padding: 1rem 1rem 1rem 2.75rem; display: grid; gap: .4rem; min-width: 0; background: var(--white); }
+.instrument:has(input:checked) { border-color: var(--blue); background: var(--green-soft); box-shadow: inset 0 0 0 1px var(--blue); }
+.instrument:has(input:focus-visible) { outline: 3px solid var(--blue-mid); outline-offset: 3px; }
+.instrument input { position: absolute; left: 1rem; top: 1.2rem; width: 1.15rem; height: 1.15rem; margin: 0; }
+.instrument label { font-weight: 650; color: var(--blue); cursor: pointer; }
+.instrument label::before { content: ""; position: absolute; inset: 0; }
+.instrument p { color: var(--gray-600); font-size: .95rem; margin: 0; }
+
+.field { display: grid; gap: .45rem; min-width: 0; max-width: 48rem; }
+.field label { font-weight: 650; color: var(--blue); }
+.workspace textarea, .workspace select { border: 1px solid var(--gray-400); border-radius: var(--radius); background: var(--white); color: var(--gray-900); padding: .7rem .8rem; width: 100%; min-width: 0; font: inherit; line-height: 1.5; }
+.workspace select { min-height: 2.75rem; max-width: 28rem; }
+.workspace textarea { resize: vertical; }
+.counter { color: var(--gray-600); font-size: .9rem; }
+
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; }
+.primary, .secondary { padding: .7rem 1.1rem; min-height: 2.75rem; font: inherit; font-weight: 600; border-radius: var(--radius); cursor: pointer; }
+.primary { border: 1px solid var(--blue); color: var(--white); background: var(--blue); }
+.primary:hover { background: var(--blue-dark); }
+.secondary { background: var(--white); border: 1px solid var(--gray-400); color: var(--blue); }
+.secondary:hover { border-color: var(--blue); }
+.workspace button:disabled { opacity: .55; cursor: not-allowed; }
+.workspace :is(button, a, textarea, select):focus-visible { outline: 3px solid var(--blue-mid); outline-offset: 3px; }
+.status { border-left: 3px solid var(--blue-mid); padding-left: 1rem; line-height: 1.6; }
+/* The status line stays in the page while idle so a screen reader announces it when it fills. */
+.silent { margin: 0; padding: 0; min-height: 0; border: 0; }
+.error { color: var(--red-strong); font-weight: 600; line-height: 1.6; }
+.kept { color: var(--gray-600); font-size: .95rem; }
+
+/* Result. Long unbroken text, such as an address quoted from a document, wraps instead of widening the page. */
+.result { display: grid; gap: 2rem; border-top: 2px solid var(--blue); padding-top: 1.75rem; overflow-wrap: anywhere; }
+.notice { background: var(--amber-soft); border-left: 3px solid var(--amber-strong); padding: .9rem 1rem; line-height: 1.6; max-width: 80ch; }
+.summary { font-size: 1.1rem; max-width: 72ch; }
+.chips { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin: 0; padding: 0; }
+.chip { border: 1px solid var(--gray-300); border-radius: 999px; padding: .35rem .9rem; font-weight: 600; background: var(--gray-50); }
+.stage { display: grid; gap: 1.25rem; }
+.stage > p { color: var(--gray-600); max-width: 72ch; }
+.question { display: grid; gap: .6rem; border-left: 3px solid var(--gray-200); padding-left: 1rem; }
+.prompt { font-weight: 650; }
+.kind { display: inline-block; border-radius: var(--radius); padding: .15rem .55rem; font-size: .9rem; font-weight: 650; background: var(--gray-100); color: var(--gray-700); margin-right: .5rem; }
+.kindEvidence { background: var(--green-soft); color: var(--green-stronger); border: 1px solid var(--green-strong); }
+.kindInference { background: var(--gray-100); color: var(--blue); border: 1px solid var(--blue-mid); }
+.kindGap { background: var(--amber-soft); color: var(--amber-strong); border: 1px solid var(--amber-strong); }
+.answer { max-width: 72ch; white-space: pre-wrap; }
+.citations { display: grid; gap: .75rem; list-style: none; margin: 0; padding: 0; }
+.citations blockquote { margin: 0; border-left: 3px solid var(--green-strong); padding: .4rem 0 .4rem 1rem; font-style: italic; max-width: 72ch; }
+.citations cite { display: block; font-style: normal; font-size: .9rem; color: var(--gray-600); margin-top: .3rem; }
+.missing { color: var(--gray-600); font-style: italic; }
+.nextSteps { display: grid; gap: .9rem; list-style: none; margin: 0; padding: 0; }
+.nextSteps li { border-left: 3px solid var(--blue-mid); padding-left: 1rem; max-width: 72ch; }
+.nextSteps a { font-weight: 650; }
+.limitations { padding-left: 1.2rem; display: grid; gap: .5rem; list-style: disc; max-width: 72ch; }
+
+/* Worksheet shown when the answer service cannot run */
+.worksheet { display: grid; gap: 1.75rem; overflow-wrap: anywhere; }
+.worksheetLine { border-bottom: 1px solid var(--gray-400); min-height: 4.5rem; }
+
+@media (max-width: 680px) { .instruments { grid-template-columns: 1fr; } }
+@media print {
+  .noPrint { display: none !important; }
+  .workspace, .result { border: 0; padding: 0; gap: 1.25rem; }
+  .question, .nextSteps li, .citations blockquote { break-inside: avoid; }
+  .chip, .kind, .notice { border: 1px solid #000; background: none; color: #000; }
+  .worksheetLine { min-height: 6rem; }
+}

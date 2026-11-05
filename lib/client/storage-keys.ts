@@ -11,6 +11,7 @@ export const BROWSER_STORAGE_KEYS = {
   askSession: "pac_ask_session_v2",
   equityAnalysisDraft: "pac_equity_analysis_draft_v1",
   structuralReviewDraft: "one-dsd-structural-review-draft",
+  analyzeDocumentKeep: "one-dsd-analyze-document-v1",
   askPracticeHandoff: "pac_ask_practice_handoff_v1",
   consultationPrefill: "pac_intake_prefill",
   recentConsultationReferences: "pac_requests_session",
@@ -34,6 +35,8 @@ export const PRIVATE_BROWSER_STORAGE_KEYS: readonly PrivateBrowserStorageKey[] =
   { area: "local", key: BROWSER_STORAGE_KEYS.learningPracticeNotes, purpose: "learning_notes" },
   { area: "local", key: BROWSER_STORAGE_KEYS.equityAnalysisDraft, purpose: "equity_analysis_draft" },
   { area: "local", key: BROWSER_STORAGE_KEYS.structuralReviewDraft, purpose: "equity_analysis_draft" },
+  // "Keep in this browser" on Analyze a document: the request and its result, only when the person chose to keep them.
+  { area: "local", key: BROWSER_STORAGE_KEYS.analyzeDocumentKeep, purpose: "equity_analysis_draft" },
   { area: "local", key: BROWSER_STORAGE_KEYS.practicePlans, purpose: "practice_plans" },
   { area: "local", key: BROWSER_STORAGE_KEYS.savedResources, purpose: "saved_resources" },
   { area: "local", key: BROWSER_STORAGE_KEYS.practiceReflection, purpose: "practice_reflection" },

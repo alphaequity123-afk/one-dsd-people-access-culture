@@ -27,7 +27,7 @@ export default function PlanPage() {
           <ul className="list-disc pl-6">{group.items.map(item => <li key={item}>{item}</li>)}</ul>
         </div>)}
       </div>
-      <p className={styles.noPrint}>Helpful pages: <Link href="/minnesota-communities">Minnesota Communities</Link> · <Link href="/community-outreach/organizations">Organization directory</Link> · <Link href="/learn/community-connections">Community engagement: from input to action</Link> · <Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></p>
+      <p className={styles.noPrint}>Helpful pages: <Link href="/minnesota-communities">Minnesota Communities</Link> · <Link href="/community-outreach/organizations">Organization directory</Link> · <Link href="/learn/community-connections">Community engagement: from input to action</Link> · <Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link> · <Link href="/equity-review/analyze">Analyze a document</Link></p>
     </section>
 
     <section className={`${styles.section} ${styles.noPrint}`} aria-labelledby="practice-title">
