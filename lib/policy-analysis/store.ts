@@ -1,6 +1,6 @@
 import "server-only";
 import { randomUUID } from "node:crypto";
-import { ownerDatabase } from "@/lib/db/owner-client";
+import { equityCaseDatabase } from "@/lib/db/owner-client";
 import {
   activeCaseKey,
   caseRowKind,
@@ -61,7 +61,7 @@ function keys() {
   catch { throw new PolicyAnalysisError("storage_unavailable"); }
 }
 async function database() {
-  try { return await ownerDatabase(); }
+  try { return await equityCaseDatabase(); }
   catch { throw new PolicyAnalysisError("storage_unavailable"); }
 }
 function caseId(id: string) {

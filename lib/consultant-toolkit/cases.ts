@@ -1,6 +1,6 @@
 import "server-only";
 import { createCipheriv, createDecipheriv, randomBytes, randomUUID } from "node:crypto";
-import { ownerDatabase } from "@/lib/db/owner-client";
+import { equityCaseDatabase } from "@/lib/db/owner-client";
 import { casePayloadSchema, toolkitCaseSchema, validateToolkitResponse, type CasePayload, type ToolkitCase } from "./schema";
 import { TOOLKIT_VERSION } from "./instrument";
 
@@ -118,7 +118,7 @@ export function nextCaseStatus(current: CaseStatus, next: CaseStatus, changed: b
 export async function toolkitCaseSavingAvailability() {
   try {
     activeKey(); previousKey();
-    const sql = await ownerDatabase();
+    const sql = await equityCaseDatabase();
     await sql`select id from pac_dsd.consultant_toolkit_cases limit 0`;
     return { caseSavingAvailable: true, caseSavingUnavailableReason: null };
   } catch { return { caseSavingAvailable: false, caseSavingUnavailableReason: "Private case storage requires its dedicated database table and encryption key." }; }
@@ -126,7 +126,7 @@ export async function toolkitCaseSavingAvailability() {
 
 export async function getToolkitCase(id: string): Promise<ToolkitCase | null> {
   idValue(id);
-  const key = activeKey(), previous = previousKey(), sql = await ownerDatabase();
+  const key = activeKey(), previous = previousKey(), sql = await equityCaseDatabase();
   const rows = await sql<CaseRow[]>`select id, version, status, encrypted_payload, created_at, updated_at, finalized_at from pac_dsd.consultant_toolkit_cases where id=${id}::uuid`;
   return rows[0] ? decodeToolkitRowOrSkip(rows[0], key, previous) : null;
 }
@@ -142,7 +142,7 @@ export function decodeToolkitRowOrSkip(row: CaseRow, key: Buffer, previous?: Buf
 
 export async function listToolkitCases(offset = 0) {
   if (!Number.isSafeInteger(offset) || offset < 0 || offset > 100000) throw new ToolkitCaseError("invalid");
-  const key = activeKey(), previous = previousKey(), sql = await ownerDatabase();
+  const key = activeKey(), previous = previousKey(), sql = await equityCaseDatabase();
   const rows = await sql<CaseRow[]>`select id, version, status, encrypted_payload, created_at, updated_at, finalized_at from pac_dsd.consultant_toolkit_cases order by updated_at desc, id limit 101 offset ${offset}`;
   const cases = rows.slice(0, 100).flatMap(row => {
     // Policy-change cases share this table; the policy analyzer lists them, not the toolkit.
@@ -153,7 +153,7 @@ export async function listToolkitCases(offset = 0) {
 }
 
 export async function createToolkitCase(value: unknown): Promise<ToolkitCase> {
-  const checked = payload(value), key = activeKey(), sql = await ownerDatabase();
+  const checked = payload(value), key = activeKey(), sql = await equityCaseDatabase();
   const now = new Date().toISOString();
   const record = toolkitCaseSchema.parse({ id: randomUUID(), version: 1, status: "draft", title: checked.request.title, ...checked, createdAt: now, updatedAt: now, finalizedAt: null });
   const encrypted = encryptToolkitCase(record, key);
@@ -167,7 +167,7 @@ export async function createToolkitCase(value: unknown): Promise<ToolkitCase> {
 export async function updateToolkitCase(id: string, expectedVersion: number, value: unknown, status: CaseStatus, approveFinal = false): Promise<ToolkitCase> {
   idValue(id);
   if (!Number.isSafeInteger(expectedVersion) || expectedVersion < 1 || !["draft", "review", "final"].includes(status)) throw new ToolkitCaseError("invalid");
-  const checked = payload(value), key = activeKey(), previous = previousKey(), sql = await ownerDatabase();
+  const checked = payload(value), key = activeKey(), previous = previousKey(), sql = await equityCaseDatabase();
   return sql.begin(async tx => {
     const rows = await tx<CaseRow[]>`select id,version,status,encrypted_payload,created_at,updated_at,finalized_at from pac_dsd.consultant_toolkit_cases where id=${id}::uuid for update`;
     if (!rows[0]) throw new ToolkitCaseError("not_found", 404);
@@ -189,7 +189,7 @@ export async function updateToolkitCase(id: string, expectedVersion: number, val
 export async function deleteToolkitCase(id: string, expectedVersion: number): Promise<void> {
   idValue(id);
   if (!Number.isSafeInteger(expectedVersion) || expectedVersion < 1) throw new ToolkitCaseError("invalid");
-  const sql = await ownerDatabase();
+  const sql = await equityCaseDatabase();
   const rows = await sql<{ id: string }[]>`delete from pac_dsd.consultant_toolkit_cases where id=${id}::uuid and version=${expectedVersion} returning id`;
   if (!rows.length) throw new ToolkitCaseError("conflict", 409);
 }

@@ -27,7 +27,7 @@ vi.mock("@/lib/db/owner-client", () => {
     if (query.includes("order by updated_at")) return [...mocks.rows.values()].slice(Number(values[0]), Number(values[0]) + 101);
     throw new Error("Unrecognized synthetic SQL");
   }, { begin: async <T>(work: (tx: unknown) => Promise<T>) => work(sql) });
-  return { ownerDatabase: async () => sql };
+  return { ownerDatabase: async () => sql, equityCaseDatabase: async () => sql };
 });
 vi.mock("@/lib/auth/request", () => ({ ownerFromCookies: async () => mocks.owner, ownerFromRequest: async () => mocks.owner }));
 vi.mock("@/lib/consultant-toolkit/service", () => ({ readiness: async () => ({ available: false, reason: "off" }), ToolkitServiceError: class extends Error {} }));

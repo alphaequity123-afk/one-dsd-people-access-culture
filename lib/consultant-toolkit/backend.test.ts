@@ -30,7 +30,8 @@ vi.mock("@/lib/db/owner-client", () => {
     if (query.includes("order by updated_at")) return [...mocks.rows.values()].slice(Number(values[0]), Number(values[0]) + 101);
     throw new Error("Unrecognized synthetic SQL");
   }, { begin: async <T>(work: (tx: unknown) => Promise<T>) => work(sql) });
-  return { ownerDatabase: async () => { if (!mocks.owner) throw new Error("An active owner session is required."); return sql; } };
+  // equityCaseDatabase follows the open Equity workspace rule (owner decision, November 6, 2026); ownerDatabase still needs the owner.
+  return { ownerDatabase: async () => { if (!mocks.owner) throw new Error("An active owner session is required."); return sql; }, equityCaseDatabase: async () => sql };
 });
 vi.mock("@/lib/intelligence/orchestrator", () => ({ contextFor: () => ({ agent: { agent_id: "ask_concierge", tools_allowlist: ["answer.structured_draft"], scope: { environments: ["local"], roles: ["owner"] } }, role: "owner" }) }));
 vi.mock("@/lib/intelligence/registry/models", () => ({ STAFF_GENERATION_MODEL_ID: "synthetic", getModel: () => ({ provider_id: "openai", model_id: "synthetic", provider_model_ref: "synthetic", approval_state: mocks.modelApproved ? "approved" : "candidate", supports_json_schema: true, allowed_agent_ids: ["ask_concierge"], scope: { environments: ["local"], data_classes: ["staff_public_corpus"] } }) }));
@@ -91,12 +92,12 @@ describe("private persistent case lifecycle", () => {
     expect(mocks.revisions).toHaveLength(4);
     await deleteToolkitCase(created.id, 4); expect(await getToolkitCase(created.id)).toBeNull(); expect(mocks.revisions).toHaveLength(0);
   });
-  it("requires saved unchanged content for review and active owner for reads", async () => {
+  it("requires saved unchanged content for review, and reads cases in the open Equity workspace", async () => {
     expect(() => nextCaseStatus("draft", "final", false, true, true)).toThrow();
     expect(() => nextCaseStatus("draft", "review", true, true, false)).toThrow();
     expect(() => nextCaseStatus("draft", "review", false, false, false)).toThrow();
     const created = await createToolkitCase({ request: request(), result: null });
-    mocks.owner = false; await expect(getToolkitCase(created.id)).rejects.toThrow(); await expect(listToolkitCases()).rejects.toThrow();
+    mocks.owner = false; expect((await getToolkitCase(created.id))?.id).toBe(created.id); expect((await listToolkitCases()).cases).toHaveLength(1);
   });
 });
 
@@ -153,6 +154,12 @@ describe("consultant route boundaries", () => {
     const crossOrigin = new NextRequest("https://example.test/api/consultant/toolkit/cases", { method: "POST", headers: { origin: "https://other.test" }, body: "private material" });
     expect((await createCaseRoute(crossOrigin)).status).toBe(403); expect(crossOrigin.bodyUsed).toBe(false);
     expect(mocks.rows.size).toBe(0);
+  });
+  it("saves a case without a sign-in, because the Equity workspace is open", async () => {
+    mocks.owner = false;
+    const response = await createCaseRoute(new NextRequest("https://example.test/api/consultant/toolkit/cases", { method: "POST", headers: { origin: "https://example.test", "content-type": "application/json" }, body: JSON.stringify({ payload: { request: request(), result: null } }) }));
+    expect(response.status).toBe(201);
+    mocks.owner = true;
   });
   it("returns private no-store case responses and saves encrypted documents", async () => {
     const response = await createCaseRoute(new NextRequest("https://example.test/api/consultant/toolkit/cases", { method: "POST", headers: { origin: "https://example.test", "content-type": "application/json" }, body: JSON.stringify({ payload: { request: request(), result: null } }) }));
