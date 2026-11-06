@@ -43,7 +43,7 @@ describe("POST /api/analyze/upload", () => {
     const response = await POST(multipart(textFile("notes.txt", "hello")));
     expect(response.status).toBe(429);
     expect(response.headers.get("retry-after")).toBe("60");
-    expect(limiter.consume).toHaveBeenCalledWith(expect.anything(), { scope: "staff-analyze-upload", limit: 20, windowSeconds: 600 });
+    expect(limiter.consume).toHaveBeenCalledWith(expect.anything(), { scope: "staff-equity-register", limit: 60, windowSeconds: 600 });
   });
 
   it("rejects a request that is not multipart", async () => {

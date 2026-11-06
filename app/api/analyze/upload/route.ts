@@ -13,7 +13,8 @@ export const runtime = "nodejs";
 export const maxDuration = 90;
 
 const READ_TIMEOUT_MS = 30000;
-const RATE_LIMIT = { scope: "staff-analyze-upload", limit: 20, windowSeconds: 600 } as const;
+// Shares the registered equity-register request limit; the live database accepts only registered scopes.
+const RATE_LIMIT = { scope: "staff-equity-register", limit: 60, windowSeconds: 600 } as const;
 const headers = { "cache-control": "private, no-store, max-age=0", "x-content-type-options": "nosniff", "referrer-policy": "no-referrer" };
 const json = (body: unknown, status = 200, extra: Record<string, string> = {}) => NextResponse.json(body, { status, headers: { ...headers, ...extra } });
 

@@ -114,8 +114,6 @@ const RUNTIME_RATE_LIMIT_REQUESTS = {
   "staff-program-outcome": { limit: 10, windowSeconds: 600 },
   "staff-equity-analysis": { limit: 10, windowSeconds: 600 },
   "staff-equity-register": { limit: 60, windowSeconds: 600 },
-  "staff-analyze": { limit: 10, windowSeconds: 600 },
-  "staff-analyze-upload": { limit: 20, windowSeconds: 600 },
   "owner-login": { limit: 10, windowSeconds: 900 },
   "team-login": { limit: 10, windowSeconds: 900 },
   "consultation-intake": { limit: 20, windowSeconds: 3_600 },

@@ -75,7 +75,7 @@ describe("POST /api/analyze", () => {
   it("returns 429 when the request limit is spent", async () => {
     f.limit.mockResolvedValue({ allowed: false, remaining: 0, resetAt: new Date(Date.now() + 60_000).toISOString() });
     expect((await POST(request(valid))).status).toBe(429);
-    expect(f.limit.mock.calls[0][1]).toEqual({ scope: "staff-analyze", limit: 10, windowSeconds: 600 });
+    expect(f.limit.mock.calls[0][1]).toEqual({ scope: "staff-equity-analysis", limit: 10, windowSeconds: 600 });
     expect(f.analyze).not.toHaveBeenCalled();
   });
   it("streams the result with no-store and finishes the run as completed", async () => {
