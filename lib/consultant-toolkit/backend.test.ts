@@ -113,11 +113,11 @@ describe("private provider boundary", () => {
     await expect(privateStructuredDraft("synthetic", "system", "private", "test", fetcher)).rejects.toMatchObject({ code: "provider_failed", message: "The drafting service could not complete this request. Your saved case is unchanged." });
     expect(spy).not.toHaveBeenCalled(); spy.mockRestore();
   });
-  it("accepts confidential subject matter only through the authenticated consultant workflow", async () => {
+  it("accepts confidential subject matter through the open Equity workspace (owner decision, November 6, 2026)", async () => {
     const fetcher = vi.fn(async () => Response.json({ status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify(result()) }] }] }));
     vi.stubGlobal("fetch", fetcher);
     const generated = await prepareToolkitDraft(request()); expect(generated.analysis.answers).toHaveLength(getQuestions("scan").length); expect(fetcher).toHaveBeenCalledOnce();
-    mocks.owner = false; await expect(prepareToolkitDraft(request())).rejects.toMatchObject({ code: "unauthorized" }); expect(fetcher).toHaveBeenCalledOnce();
+    mocks.owner = false; await expect(prepareToolkitDraft(request())).resolves.toBeTruthy(); expect(fetcher).toHaveBeenCalledTimes(2);
     vi.unstubAllGlobals();
   });
   it("uses the dedicated consultant credential independently of the staff generation flag", async () => {
@@ -145,10 +145,10 @@ describe("private provider boundary", () => {
 });
 
 describe("consultant route boundaries", () => {
-  it("denies unsigned and cross-origin writes before reading private bodies", async () => {
+  it("denies writes from outside the program before reading private bodies, signed in or not", async () => {
     mocks.owner = false;
     const unsigned = new NextRequest("https://example.test/api/consultant/toolkit/cases", { method: "POST", body: "private material" });
-    expect((await createCaseRoute(unsigned)).status).toBe(401); expect(unsigned.bodyUsed).toBe(false);
+    expect((await createCaseRoute(unsigned)).status).toBe(403); expect(unsigned.bodyUsed).toBe(false);
     mocks.owner = true;
     const crossOrigin = new NextRequest("https://example.test/api/consultant/toolkit/cases", { method: "POST", headers: { origin: "https://other.test" }, body: "private material" });
     expect((await createCaseRoute(crossOrigin)).status).toBe(403); expect(crossOrigin.bodyUsed).toBe(false);

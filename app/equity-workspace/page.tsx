@@ -12,7 +12,7 @@ export default async function EquityWorkspaceHome() {
   return (
     <>
       <PageIntro
-        kicker={`Signed in as ${ROLE_LABELS[role]}`}
+        kicker={`Decisions recorded as the ${ROLE_LABELS[role]}`}
         title="Equity workspace"
         lede="Two connected tools for the Equity and Inclusion Operations Consultant and the One DSD Team: one analyzes any document for equity, the other turns a policy analysis into approved, formal changes."
         tone="business"

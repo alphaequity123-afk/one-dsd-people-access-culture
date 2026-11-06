@@ -314,7 +314,7 @@ export function PolicyAnalyzer({ catalog, kinds, questions, principleLabels, ini
           ) : null}
 
           {current && current.recommendations.length ? (
-            <DecisionsStep recommendations={current.recommendations} canDecide={current.status === "review"} busy={locked} roleLabel={status?.roleLabel ?? "role you signed in with"}
+            <DecisionsStep recommendations={current.recommendations} canDecide={current.status === "review"} busy={locked} roleLabel={status?.roleLabel ?? "Equity and Inclusion Operations Consultant"}
               notReadyText={current.status === "draft" ? "Send the changes for decisions to record approvals." : final ? "This analysis is formalized. Reopen it in step 6 to change a decision." : undefined}
               onDecide={async (input: DecisionInput) => (await run("decide", value => api.decide({ caseId: value.id, expectedVersion: value.version, ...input }), "The decision is recorded.")) !== null} />
           ) : null}

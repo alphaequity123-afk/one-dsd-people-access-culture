@@ -66,7 +66,7 @@ export default async function EquityWorkspaceLayout({ children }: { children: Re
             <Link href="/equity-workspace/policy-analyzer" className="font-bold text-white">Equity Policy Analyzer</Link>
             <Link href="/community-outreach/policies" className="font-bold text-white">Policies that shape disability services</Link>
           </nav>
-          <p className="m-0">Signed in as {ROLE_LABELS[role]}</p>
+          <p className="m-0">Decisions here are recorded as the {ROLE_LABELS[role]}</p>
         </div>
       </div>
       {children}

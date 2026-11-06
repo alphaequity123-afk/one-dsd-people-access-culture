@@ -19,7 +19,8 @@ export default async function OneDsdTeamWorkspacePage() {
 
   if (!authorized) {
     // A One DSD Team sign-in (not the owner) reaches the shared Equity workspace instead of a dead end.
-    const teamMember = (await analysisRoleFromCookies()) === "team";
+    const role = await analysisRoleFromCookies();
+    const teamMember = role === "team";
     return (
       <div className="wrap py-8">
         <Link href="/one-dsd/team">Back to {PROGRAM.oneDsdTeamName}</Link>
@@ -28,8 +29,8 @@ export default async function OneDsdTeamWorkspacePage() {
           title={`${PROGRAM.oneDsdTeamName} space`}
           lede="This working space is for reading and downloading; it does not take or save what you write."
         />
-        {teamMember ? (
-          <EquityWorkspaceLinks intro="You are signed in as the One DSD Team. Your shared work happens in the Equity workspace: analyze documents and policies for equity, decide on recommended changes, and download the finished documents." />
+        {role ? (
+          <EquityWorkspaceLinks intro={teamMember ? "You are signed in as the One DSD Team. Your shared work happens in the Equity workspace: analyze documents and policies for equity, decide on recommended changes, and download the finished documents." : "The Equity workspace is open: analyze documents and policies for equity, decide on recommended changes, and download the finished documents."} />
         ) : (
           <Notice>
             <strong>Team writes are closed. </strong>

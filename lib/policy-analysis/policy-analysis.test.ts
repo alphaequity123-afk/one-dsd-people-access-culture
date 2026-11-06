@@ -362,11 +362,11 @@ describe("routes", () => {
   const get = (path: string) => new NextRequest(`${BASE}${path}`);
   const params = (id: string) => ({ params: Promise.resolve({ id }) });
 
-  it("requires a sign-in and a same-origin mutation", async () => {
+  it("opens without a sign-in (owner decision, November 6, 2026) and still requires a same-origin mutation", async () => {
     mocks.owner = false;
-    const denied = await availabilityRoute(get(""));
-    expect(denied.status).toBe(401);
-    expect((await denied.json()).error).toBe("Sign in to the Consultant Workspace or the One DSD Team to continue.");
+    const open = await availabilityRoute(get(""));
+    expect(open.status).toBe(200);
+    expect(await open.json()).toMatchObject({ role: "consultant", roleLabel: "Equity and Inclusion Operations Consultant" });
     mocks.owner = true;
     const available = await (await availabilityRoute(get(""))).json();
     expect(available).toMatchObject({ role: "consultant", roleLabel: "Equity and Inclusion Operations Consultant", analysisAvailable: false });

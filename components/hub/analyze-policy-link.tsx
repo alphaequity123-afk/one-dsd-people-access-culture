@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 /**
- * Shows "Analyze this policy for equity" only to people signed in to the Equity workspace
+ * Shows "Analyze this policy for equity" whenever the Equity workspace answers (it is open without sign-in by owner decision, November 6, 2026; otherwise only to people signed in to the Equity workspace
  * (the consultant or the One DSD Team). The policy page itself stays static: the check runs
  * in the browser, and everyone else sees nothing.
  */
