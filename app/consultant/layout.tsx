@@ -70,6 +70,8 @@ export default async function ConsultantLayout({ children }: { children: React.R
           <nav aria-label="Consultant Workspace" className="flex flex-wrap gap-4">
             <Link href="/consultant/program" className="font-bold text-white">Program work</Link>
             <Link href="/consultant/toolkit" className="font-bold text-white">Equity Analysis Toolkit</Link>
+            <Link href="/equity-workspace/policy-analyzer" className="font-bold text-white">Equity Policy Analyzer</Link>
+            <Link href="/equity-workspace" className="font-bold text-white">Equity workspace</Link>
             <Link href="/consultant/analysis" className="font-bold text-white">Research and policy analysis</Link>
             <Link href="/consultant/data" className="font-bold text-white">Data exploration</Link>
             <Link href="/consultant/workforce" className="font-bold text-white">Workforce map</Link>

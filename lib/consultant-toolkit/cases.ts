@@ -5,9 +5,9 @@ import { casePayloadSchema, toolkitCaseSchema, validateToolkitResponse, type Cas
 import { TOOLKIT_VERSION } from "./instrument";
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-const MAX_CASE_BYTES = 3_000_000;
+export const MAX_CASE_BYTES = 3_000_000;
 type CaseStatus = ToolkitCase["status"];
-type CaseRow = { id: string; version: number; status: CaseStatus; encrypted_payload: string; created_at: Date | string; updated_at: Date | string; finalized_at: Date | string | null };
+export type CaseRow = { id: string; version: number; status: CaseStatus; encrypted_payload: string; created_at: Date | string; updated_at: Date | string; finalized_at: Date | string | null };
 
 export class ToolkitCaseError extends Error {
   constructor(public readonly code: "unavailable" | "invalid" | "not_found" | "conflict" | "transition" | "instrument_version", public readonly status = 400) {
@@ -24,40 +24,63 @@ export function decodeCaseKey(value: string | undefined): Buffer {
   return key;
 }
 
-function activeKey() { return decodeCaseKey(process.env.PAC_CONSULTANT_CASE_KEY); }
-/** Temporary read-only fallback during a controlled key transition; writes always use activeKey. */
-function previousKey() {
+/** The key every write uses. Shared with the policy analyzer, which stores its cases in the same table. */
+export function activeCaseKey() { return decodeCaseKey(process.env.PAC_CONSULTANT_CASE_KEY); }
+/** Temporary read-only fallback during a controlled key transition; writes always use activeCaseKey. */
+export function previousCaseKey() {
   const value = process.env.PAC_CONSULTANT_CASE_PREVIOUS_KEY;
   return value === undefined ? undefined : decodeCaseKey(value);
 }
-function aad(id: string, version: number) { return Buffer.from(`consultant-toolkit:pac_dsd:v1:${id}:${version}`, "utf8"); }
+const activeKey = activeCaseKey, previousKey = previousCaseKey;
 
-export function encryptToolkitCase(value: ToolkitCase, key: Buffer): string {
-  const plaintext = Buffer.from(JSON.stringify(value), "utf8");
+// Each kind of case sealed in the shared table binds its own additional data, so a
+// policy-change envelope never authenticates as a toolkit case and the reverse.
+export function toolkitCaseAad(id: string, version: number) { return Buffer.from(`consultant-toolkit:pac_dsd:v1:${id}:${version}`, "utf8"); }
+export function policyChangeCaseAad(id: string, version: number) { return Buffer.from(`policy-change:pac_dsd:v1:${id}:${version}`, "utf8"); }
+const aad = toolkitCaseAad;
+
+/** Seal a JSON body as a "v1:" AES-256-GCM envelope bound to the given additional data. */
+export function sealCaseEnvelope(json: string, additionalData: Buffer, key: Buffer): string {
+  const plaintext = Buffer.from(json, "utf8");
   if (plaintext.length > MAX_CASE_BYTES) throw new ToolkitCaseError("invalid", 413);
   const iv = randomBytes(12);
   const cipher = createCipheriv("aes-256-gcm", key, iv);
-  cipher.setAAD(aad(value.id, value.version));
+  cipher.setAAD(additionalData);
   const encrypted = Buffer.concat([cipher.update(plaintext), cipher.final()]);
   return ["v1", iv.toString("base64"), cipher.getAuthTag().toString("base64"), encrypted.toString("base64")].join(":");
 }
 
+/** Open an envelope with the active key, then the previous key. Returns undefined when neither authenticates. */
+export function openCaseEnvelope(envelope: string, additionalData: Buffer, key: Buffer, previous?: Buffer): string | undefined {
+  const parts = envelope.split(":");
+  if (parts.length !== 4 || parts[0] !== "v1" || envelope.length > MAX_CASE_BYTES * 1.4) return undefined;
+  const iv = Buffer.from(parts[1], "base64"), tag = Buffer.from(parts[2], "base64");
+  if (iv.length !== 12 || tag.length !== 16) return undefined;
+  // Retry only failed authentication, never authenticated schema or instrument validation.
+  for (const candidate of previous ? [key, previous] : [key]) {
+    try {
+      const cipher = createDecipheriv("aes-256-gcm", candidate, iv);
+      cipher.setAAD(additionalData); cipher.setAuthTag(tag);
+      return Buffer.concat([cipher.update(Buffer.from(parts[3], "base64")), cipher.final()]).toString("utf8");
+    } catch { /* The previous key can authenticate an unchanged pre-transition record. */ }
+  }
+  return undefined;
+}
+
+/** Which kind of case a stored row holds, decided only by which additional data authenticates it. */
+export function caseRowKind(row: Pick<CaseRow, "id" | "version" | "encrypted_payload">, key: Buffer, previous?: Buffer): "toolkit" | "policy-change" | "unreadable" {
+  if (openCaseEnvelope(row.encrypted_payload, toolkitCaseAad(row.id, row.version), key, previous) !== undefined) return "toolkit";
+  if (openCaseEnvelope(row.encrypted_payload, policyChangeCaseAad(row.id, row.version), key, previous) !== undefined) return "policy-change";
+  return "unreadable";
+}
+
+export function encryptToolkitCase(value: ToolkitCase, key: Buffer): string {
+  return sealCaseEnvelope(JSON.stringify(value), aad(value.id, value.version), key);
+}
+
 export function decryptToolkitCase(envelope: string, id: string, version: number, key: Buffer, previous?: Buffer): ToolkitCase {
   try {
-    const parts = envelope.split(":");
-    if (parts.length !== 4 || parts[0] !== "v1" || envelope.length > MAX_CASE_BYTES * 1.4) throw new Error();
-    const iv = Buffer.from(parts[1], "base64"), tag = Buffer.from(parts[2], "base64");
-    if (iv.length !== 12 || tag.length !== 16) throw new Error();
-    let raw: string | undefined;
-    // Retry only failed authentication, never authenticated schema or instrument validation.
-    for (const candidate of previous ? [key, previous] : [key]) {
-      try {
-        const cipher = createDecipheriv("aes-256-gcm", candidate, iv);
-        cipher.setAAD(aad(id, version)); cipher.setAuthTag(tag);
-        raw = Buffer.concat([cipher.update(Buffer.from(parts[3], "base64")), cipher.final()]).toString("utf8");
-        break;
-      } catch { /* The previous key can authenticate an unchanged pre-transition record. */ }
-    }
+    const raw = openCaseEnvelope(envelope, aad(id, version), key, previous);
     if (raw === undefined) throw new Error();
     const decoded = JSON.parse(raw);
     if (decoded && typeof decoded === "object" && decoded.instrumentVersion !== undefined && decoded.instrumentVersion !== TOOLKIT_VERSION) throw new ToolkitCaseError("instrument_version", 409);
@@ -105,16 +128,26 @@ export async function getToolkitCase(id: string): Promise<ToolkitCase | null> {
   idValue(id);
   const key = activeKey(), previous = previousKey(), sql = await ownerDatabase();
   const rows = await sql<CaseRow[]>`select id, version, status, encrypted_payload, created_at, updated_at, finalized_at from pac_dsd.consultant_toolkit_cases where id=${id}::uuid`;
-  return rows[0] ? decodeRow(rows[0], key, previous) : null;
+  return rows[0] ? decodeToolkitRowOrSkip(rows[0], key, previous) : null;
+}
+
+/** Decode a toolkit row; a policy-change row in the shared table reads as absent (null). Other failures keep their errors. */
+export function decodeToolkitRowOrSkip(row: CaseRow, key: Buffer, previous?: Buffer): ToolkitCase | null {
+  try { return decodeRow(row, key, previous); }
+  catch (error) {
+    if (error instanceof ToolkitCaseError && error.code === "unavailable" && caseRowKind(row, key, previous) === "policy-change") return null;
+    throw error;
+  }
 }
 
 export async function listToolkitCases(offset = 0) {
   if (!Number.isSafeInteger(offset) || offset < 0 || offset > 100000) throw new ToolkitCaseError("invalid");
   const key = activeKey(), previous = previousKey(), sql = await ownerDatabase();
   const rows = await sql<CaseRow[]>`select id, version, status, encrypted_payload, created_at, updated_at, finalized_at from pac_dsd.consultant_toolkit_cases order by updated_at desc, id limit 101 offset ${offset}`;
-  const cases = rows.slice(0, 100).map(row => {
-    const value = decodeRow(row, key, previous);
-    return { id: value.id, version: value.version, instrumentVersion: value.instrumentVersion, status: value.status, title: value.title, createdAt: value.createdAt, updatedAt: value.updatedAt, finalizedAt: value.finalizedAt };
+  const cases = rows.slice(0, 100).flatMap(row => {
+    // Policy-change cases share this table; the policy analyzer lists them, not the toolkit.
+    const value = decodeToolkitRowOrSkip(row, key, previous);
+    return value ? [{ id: value.id, version: value.version, instrumentVersion: value.instrumentVersion, status: value.status, title: value.title, createdAt: value.createdAt, updatedAt: value.updatedAt, finalizedAt: value.finalizedAt }] : [];
   });
   return { cases, nextOffset: rows.length > 100 ? offset + 100 : null };
 }
@@ -138,7 +171,8 @@ export async function updateToolkitCase(id: string, expectedVersion: number, val
   return sql.begin(async tx => {
     const rows = await tx<CaseRow[]>`select id,version,status,encrypted_payload,created_at,updated_at,finalized_at from pac_dsd.consultant_toolkit_cases where id=${id}::uuid for update`;
     if (!rows[0]) throw new ToolkitCaseError("not_found", 404);
-    const current = decodeRow(rows[0], key, previous);
+    const current = decodeToolkitRowOrSkip(rows[0], key, previous);
+    if (!current) throw new ToolkitCaseError("not_found", 404);
     if (current.version !== expectedVersion) throw new ToolkitCaseError("conflict", 409);
     const changed = JSON.stringify({ request: current.request, result: current.result }) !== JSON.stringify(checked);
     const next = nextCaseStatus(current.status, status, changed, Boolean(checked.result), approveFinal);

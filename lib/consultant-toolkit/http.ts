@@ -1,6 +1,6 @@
 import "server-only";
 import { NextResponse, type NextRequest } from "next/server";
-import { ownerFromRequest } from "@/lib/auth/request";
+import { analysisRoleFromRequest } from "@/lib/auth/consultant-or-team";
 import { isSameOriginMutation } from "@/lib/auth/mutation";
 import { ToolkitCaseError } from "./cases";
 import { ToolkitServiceError } from "./service";
@@ -8,7 +8,8 @@ import { ToolkitServiceError } from "./service";
 export const toolkitHeaders = { "cache-control": "private, no-store, max-age=0", "x-content-type-options": "nosniff", "referrer-policy": "no-referrer" };
 export const toolkitJson = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: toolkitHeaders });
 export async function toolkitAccess(request: NextRequest, mutation = false) {
-  if (!(await ownerFromRequest(request))) return toolkitJson({ error: "Sign in to the Consultant Workspace to continue." }, 401);
+  // The consultant (owner sign-in) and the One DSD Team (team sign-in) share these tools.
+  if (!(await analysisRoleFromRequest(request))) return toolkitJson({ error: "Sign in to the Consultant Workspace or the One DSD Team to continue." }, 401);
   if (mutation && !isSameOriginMutation(request)) return toolkitJson({ error: "Open this workspace from the program before changing a case." }, 403);
   return null;
 }

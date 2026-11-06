@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { ConsultantToolkitWorkspace } from "@/components/consultant-toolkit-workspace";
+import { navigation } from "@/components/consultant-toolkit/outputs";
 import { getQuestions, TOOLKIT_VERSION } from "./instrument";
 import type { ToolkitCase, ToolkitRequest, ToolkitResponse } from "./schema";
 
@@ -33,16 +34,16 @@ async function openSaved(){
 
 describe("consultant toolkit review",()=>{
   it("shows every preparation and scan response with exact evidence",async()=>{
-    await openSaved();fireEvent.click(screen.getByRole("button",{name:"2. Examine"}));
+    await openSaved();fireEvent.click(screen.getByRole("button",{name:"4. Run the analysis"}));
     fireEvent.click(screen.getByText("Read the complete analysis — 10 responses and evidence"));
     for(const question of getQuestions("scan"))expect(screen.getByLabelText(question.prompt)).toBeTruthy();
     expect(screen.getByText("A translated notice is available.")).toBeTruthy();
   });
   it("saves edits as draft then records an unchanged review before finalizing",async()=>{
-    await openSaved();fireEvent.click(screen.getByRole("button",{name:"2. Examine"}));
+    await openSaved();fireEvent.click(screen.getByRole("button",{name:"4. Run the analysis"}));
     fireEvent.click(screen.getByText("Edit the summary"));
     fireEvent.change(screen.getByLabelText("Summary"),{target:{value:"Reviewed summary."}});
-    fireEvent.click(screen.getByRole("button",{name:"3. Review and download"}));
+    fireEvent.click(screen.getByRole("button",{name:"6. Download the outputs"}));
     fireEvent.click(screen.getByRole("button",{name:"Save for review"}));
     await screen.findByText("Saved for your final review.");
     expect(updates.map(item=>item.status)).toEqual(["draft","review"]);
@@ -54,7 +55,7 @@ describe("consultant toolkit review",()=>{
   });
   it("locks a final analysis until explicitly reopened and clears final approval",async()=>{
     record={...record,status:"final",finalizedAt:"2026-10-15T12:10:00.000Z"};
-    await openSaved();fireEvent.click(screen.getByRole("button",{name:"1. Prepare"}));expect((screen.getByLabelText("Analysis title") as HTMLInputElement).disabled).toBe(false);
+    await openSaved();fireEvent.click(screen.getByRole("button",{name:"1. Attach the document"}));expect((screen.getByLabelText("Analysis title") as HTMLInputElement).disabled).toBe(false);
     expect(screen.getByLabelText("Analysis title").closest("fieldset")?.disabled).toBe(true);
     fireEvent.click(screen.getByRole("button",{name:"Reopen as draft"}));
     await screen.findByText("Reopened as a draft. It will need your review again before it can be marked final.");
@@ -62,16 +63,17 @@ describe("consultant toolkit review",()=>{
   });
   it("requires an explicit choice before abandoning unsaved work and does not store it in the browser",async()=>{
     const store=vi.spyOn(Storage.prototype,"setItem");
-    await openSaved();fireEvent.click(screen.getByRole("button",{name:"1. Prepare"}));fireEvent.change(screen.getByLabelText("Decision or question"),{target:{value:"A revised decision question."}});
+    await openSaved();fireEvent.click(screen.getByRole("button",{name:"2. Check the setup"}));fireEvent.change(screen.getByLabelText("Decision or question"),{target:{value:"A revised decision question."}});
     fireEvent.click(screen.getByRole("button",{name:"New analysis"}));
     expect(screen.getByText("You have unsaved changes. Save them before opening another analysis, or discard them.")).toBeTruthy();
     expect(store).not.toHaveBeenCalled();
   });
-  it("provides clear LTSS evidence links without claiming their data is loaded",async()=>{
-    await openSaved();fireEvent.click(screen.getByRole("button",{name:"1. Prepare"}));expect(screen.getByRole("link",{name:"Who uses LTSS"})).toBeTruthy();
+  it("provides clear long-term services and supports evidence links without claiming their data is loaded",async()=>{
+    await openSaved();fireEvent.click(screen.getByRole("button",{name:"1. Attach the document"}));expect(screen.getByRole("link",{name:"Who uses long-term services and supports"})).toBeTruthy();
     expect(screen.getByText(/Opening a dashboard does not load its data/)).toBeTruthy();
     const attach=screen.getByRole("button",{name:"Attach documents"});expect(attach.querySelector("svg")).toBeTruthy();
-    await waitFor(()=>expect(screen.getByRole("button",{name:"Prepare scan draft"})).toBeTruthy());
+    fireEvent.click(screen.getByRole("button",{name:"4. Run the analysis"}));
+    await waitFor(()=>expect((screen.getByRole("button",{name:"Run the analysis again"}) as HTMLButtonElement).disabled).toBe(false));
   });
 });
 
@@ -118,5 +120,76 @@ describe("evidence-preserving decision brief",()=>{
     expect(record.result).toEqual({...result,summary:"Consultant interpretation, subject to participant review.",limitations:["The affected participants have not yet reviewed the proposal."]});
     expect(record.status).toBe("draft");expect(record.request).toEqual(request);
     expect(updates).toHaveLength(1);
+  });
+});
+
+describe("automated run",()=>{
+  it("suggests a setup after a document is pasted and applies it only when chosen",async()=>{
+    render(<ConsultantToolkitWorkspace/>);
+    fireEvent.click(screen.getByRole("button",{name:"Paste a document"}));
+    fireEvent.change(screen.getByLabelText("Source title"),{target:{value:"Waiver notice proposal"}});
+    fireEvent.change(screen.getByLabelText("Source text"),{target:{value:"The department will adopt new eligibility requirements for the CADI waiver. American Indian participants are underrepresented."}});
+    fireEvent.click(screen.getByRole("button",{name:"2. Check the setup"}));
+    await waitFor(()=>expect(document.activeElement?.textContent).toBe("Step 2 of 6: Check the setup"));
+    const panel=screen.getByRole("region",{name:"Suggested setup"});
+    expect(within(panel).getByText(/Suggested; you decide\./)).toBeTruthy();
+    expect(within(panel).getByText("Community Access for Disability Inclusion Waiver")).toBeTruthy();
+    expect((screen.getByLabelText("Decision or question") as HTMLTextAreaElement).value).toBe("");
+    fireEvent.click(within(panel).getByRole("button",{name:"Use this setup"}));
+    expect((screen.getByLabelText("Decision or question") as HTMLTextAreaElement).value).toMatch(/^How would .*Community Access for Disability Inclusion Waiver/);
+    expect((screen.getByLabelText(/^Programs and service lines/) as HTMLInputElement).value).toBe("Community Access for Disability Inclusion Waiver");
+    expect((screen.getByRole("radio",{name:/Full equity analysis/}) as HTMLInputElement).checked).toBe(true);
+    fireEvent.click(screen.getByRole("button",{name:"3. See what is still needed"}));
+    const needs=screen.getByRole("region",{name:"What is still needed"});
+    expect(within(needs).getByText(/Dated information describing who is served/)).toBeTruthy();
+    expect(within(needs).getByText(/not a judgement/)).toBeTruthy();
+  });
+
+  it("runs again on the same case, keeps typed notes and shows what closed since the last run",async()=>{
+    record.request.answers={"scan-1":"Typed note from the review team."};
+    let analyzeBody:{request:ToolkitRequest}|undefined;
+    const rerun:ToolkitResponse={...structuredClone(result),answers:result.answers.map((answer,index)=>index===1?{...answer,kind:"inference",text:"Now answered from new data."}:answer),limitations:["Fewer gaps remain."]};
+    const base=(globalThis.fetch as ReturnType<typeof vi.fn>).getMockImplementation() as (url:string,options?:RequestInit)=>Promise<unknown>;
+    vi.stubGlobal("fetch",vi.fn((url:string,options?:RequestInit)=>{
+      if(url==="/api/consultant/toolkit/analyze"){analyzeBody=JSON.parse(options!.body as string);return json({analysis:rerun,sources:analyzeBody!.request.sources,contextNote:""});}
+      return base(url,options);
+    }));
+    await openSaved();
+    fireEvent.click(screen.getByRole("button",{name:"5. Close the gaps"}));
+    expect(screen.getByRole("region",{name:"What is still needed after this run"})).toBeTruthy();
+    fireEvent.click(screen.getByRole("button",{name:"Attach more material and run again"}));
+    expect(screen.getByText(/The same case and your typed notes are kept/)).toBeTruthy();
+    fireEvent.click(screen.getByRole("button",{name:"Go to step 4 and run again"}));
+    fireEvent.click(await screen.findByRole("button",{name:"Run the analysis again"}));
+    const closedList=await screen.findByRole("region",{name:"Closed since the last run"});
+    expect(within(closedList).getByText("Whether the review team reflects the identities of the people the decision will affect.")).toBeTruthy();
+    expect(analyzeBody!.request.answers).toEqual({"scan-1":"Typed note from the review team."});
+    expect(updates).toEqual([]);
+  });
+
+  it("sends the analysis to the Equity Policy Analyzer and opens the new case",async()=>{
+    record.request.sources.push({id:"program-ref",title:"Reference",text:"Application reference.",origin:"application-context"});
+    let sent:Record<string,unknown>|undefined;
+    const assign=vi.spyOn(navigation,"assign").mockImplementation(()=>{});
+    const base=(globalThis.fetch as ReturnType<typeof vi.fn>).getMockImplementation() as (url:string,options?:RequestInit)=>Promise<unknown>;
+    vi.stubGlobal("fetch",vi.fn((url:string,options?:RequestInit)=>{
+      if(url==="/api/equity-workspace/policy-analysis/cases"){sent=JSON.parse(options!.body as string);return Promise.resolve({ok:true,status:201,json:async()=>({case:{id:"9b2f7a52-3c3e-4d55-9a5e-0d1c9e4c7f11"}})});}
+      return base(url,options);
+    }));
+    await openSaved();
+    fireEvent.click(screen.getByRole("button",{name:"6. Download the outputs"}));
+    for(const name of ["Download Leadership brief as Word","Download Request for information as PDF","Download Analysis report as Word"])expect(screen.getByRole("button",{name})).toBeTruthy();
+    fireEvent.click(screen.getByRole("button",{name:"Turn the recommendations into policy changes"}));
+    await waitFor(()=>expect(assign).toHaveBeenCalledWith("/equity-workspace/policy-analyzer?case=9b2f7a52-3c3e-4d55-9a5e-0d1c9e4c7f11"));
+    expect(sent).toEqual({title:request.title,policy:{title:request.title,programs:["CFSS"]},sources:[{id:"source-1",title:"Practice notice",text:"A translated notice is available.",origin:"user"}],context:`${request.question}\n\n${result.summary}`});
+  });
+
+  it("shows the error when the Equity Policy Analyzer refuses the case",async()=>{
+    const base=(globalThis.fetch as ReturnType<typeof vi.fn>).getMockImplementation() as (url:string,options?:RequestInit)=>Promise<unknown>;
+    vi.stubGlobal("fetch",vi.fn((url:string,options?:RequestInit)=>url==="/api/equity-workspace/policy-analysis/cases"?Promise.resolve({ok:false,status:400,json:async()=>({error:"Check the policy title."})}):base(url,options)));
+    await openSaved();
+    fireEvent.click(screen.getByRole("button",{name:"6. Download the outputs"}));
+    fireEvent.click(screen.getByRole("button",{name:"Turn the recommendations into policy changes"}));
+    expect((await screen.findByRole("alert")).textContent).toBe("Check the policy title.");
   });
 });

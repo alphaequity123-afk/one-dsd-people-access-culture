@@ -105,6 +105,8 @@ const nextConfig: NextConfig = {
     "/api/consultant/**": hostedSemanticRuntimeIncludes,
     "/api/cron/orchestrate": hostedSemanticRuntimeIncludes,
     "/api/downloads/**": downloadRuntimeIncludes,
+    "/api/equity-workspace/policy-analysis/export": downloadRuntimeIncludes,
+    "/api/equity-workspace/policy-analysis/fetch-source": ["./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
   },
   outputFileTracingExcludes: {
     "/*": [

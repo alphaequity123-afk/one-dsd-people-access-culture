@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     if (!file.size || file.size > MAX_UPLOAD_BYTES) throw new UploadError("Choose a nonempty document no larger than 20 MB.", 413);
     const name = file.name.split(/[\\/]/).pop()?.replace(/[\u0000-\u001f]/g, "").trim() ?? "";
     const tabular = isTabularUpload(name);
-    if (!name || (!tabular && !acceptsDocumentUpload(name))) throw new UploadError("Choose PDF, Word (.docx), PowerPoint (.pptx), text, CSV, TSV, or Excel (.xlsx).", 415);
+    if (!name || (!tabular && !acceptsDocumentUpload(name))) throw new UploadError("Choose a PDF, Word, PowerPoint, Excel, comma-separated, tab-separated or plain text file.", 415);
     const bytes = new Uint8Array(await file.arrayBuffer());
     // All extraction is server-local. There is no provider or web call.
     const result = tabular ? await extractTabularUpload(name, bytes) : await extractDocumentUpload(bytes, name);

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { OneDsdTeamClient } from "@/components/one-dsd-team-client";
 import { Notice, PageIntro } from "@/components/ui";
 import { ParticipationNotice } from "@/components/participation-notice";
+import { EquityWorkspaceLinks } from "@/components/policy-analysis/equity-workspace-links";
+import { analysisRoleFromCookies } from "@/lib/auth/consultant-or-team";
 import { ownerFromCookies } from "@/lib/auth/request";
 import { getMicrosoftBridgeState } from "@/lib/collaboration/microsoft-boundary";
 import { readOneDsdTeamWorkspace } from "@/lib/collaboration/store";
@@ -16,6 +18,8 @@ export default async function OneDsdTeamWorkspacePage() {
   const authorized = await ownerFromCookies();
 
   if (!authorized) {
+    // A One DSD Team sign-in (not the owner) reaches the shared Equity workspace instead of a dead end.
+    const teamMember = (await analysisRoleFromCookies()) === "team";
     return (
       <div className="wrap py-8">
         <Link href="/one-dsd/team">Back to {PROGRAM.oneDsdTeamName}</Link>
@@ -24,10 +28,14 @@ export default async function OneDsdTeamWorkspacePage() {
           title={`${PROGRAM.oneDsdTeamName} space`}
           lede="This working space is for reading and downloading; it does not take or save what you write."
         />
-        <Notice>
-          <strong>Team writes are closed. </strong>
-          Browse published One DSD pages and downloads. The working space loads only for the Consultant Workspace owner.
-        </Notice>
+        {teamMember ? (
+          <EquityWorkspaceLinks intro="You are signed in as the One DSD Team. Your shared work happens in the Equity workspace: analyze documents and policies for equity, decide on recommended changes, and download the finished documents." />
+        ) : (
+          <Notice>
+            <strong>Team writes are closed. </strong>
+            Browse published One DSD pages and downloads. The working space loads only for the Consultant Workspace owner.
+          </Notice>
+        )}
         <p className="mt-6"><Link href="/one-dsd">Open One DSD</Link> · <Link href="/consultant">Consultant Workspace</Link></p>
       </div>
     );
@@ -56,6 +64,7 @@ export default async function OneDsdTeamWorkspacePage() {
         </form>
       </div>
       <OneDsdTeamClient initialState={workspace} microsoftConnection={microsoft.status} />
+      <div className="wrap pb-8"><EquityWorkspaceLinks /></div>
     </>
   );
 }

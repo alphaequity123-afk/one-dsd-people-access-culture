@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnalyzePolicyLink } from "@/components/hub/analyze-policy-link";
 import { PrintPageButton } from "@/components/hub/print-page-button";
 import { formatPolicyDate, getPolicies, getPolicy, getPolicyKind, policiesByTag, policyHref } from "@/lib/content/hub/dsd-policies";
 import styles from "../../hub.module.css";
@@ -50,7 +51,7 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
     <p className={styles.meta}>Applies to: {policy.appliesTo.join(", ")}</p>
     <p className={styles.lede}>{policy.summary}</p>
     <p className={styles.note}>This is a summary written in plain language. The policy itself is the source document linked below. Check the date on the source before relying on it.</p>
-    <p className={styles.noPrint}><PrintPageButton /></p>
+    <p className={`${styles.noPrint} flex flex-wrap gap-3`}><PrintPageButton /><AnalyzePolicyLink policyId={policy.id} /></p>
 
     <section className={styles.section} aria-labelledby="dates-title">
       <h2 id="dates-title">Dates and source</h2>

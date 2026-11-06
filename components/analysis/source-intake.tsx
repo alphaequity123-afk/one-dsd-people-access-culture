@@ -14,7 +14,7 @@ export type SourceIntakeProps = {
 const ACCEPT = ".pdf,.docx,.pptx,.txt,.csv,.tsv,.xlsx";
 const EXTENSION = /\.(pdf|docx|pptx|txt|csv|tsv|xlsx)$/i;
 const MAX_FILE_BYTES = 20 * 1024 * 1024;
-export const INTAKE_HELP = "PDF with selectable text, Word, PowerPoint, Excel, CSV, TSV, or text, up to 20 MB each. Scanned pages and images need their text added separately. Files are read into text in this session only and are not stored.";
+export const INTAKE_HELP = "PDF with selectable text, Word, PowerPoint, Excel, comma-separated, tab-separated or plain text, up to 20 megabytes each. Scanned pages and images need their text added separately. Files are read into text in this session only and are not stored.";
 
 function newId(prefix: string) {
   const random = typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `${Date.now().toString(16)}-${Math.random().toString(16).slice(2, 10)}`;
@@ -62,7 +62,7 @@ export function SourceIntake({ sources, onChange, disabled = false, uploadUrl = 
     try {
       for (const file of Array.from(files)) {
         if (sources.length + added.length >= maxSources) { problems.push(`Use up to ${maxSources} sources at a time.`); break; }
-        if (!EXTENSION.test(file.name)) { problems.push(`${file.name}: choose a PDF, Word, PowerPoint, Excel, CSV, TSV, or text file.`); continue; }
+        if (!EXTENSION.test(file.name)) { problems.push(`${file.name}: choose a PDF, Word, PowerPoint, Excel, comma-separated, tab-separated or plain text file.`); continue; }
         if (!file.size || file.size > MAX_FILE_BYTES) { problems.push(`${file.name}: choose a nonempty file no larger than 20 MB.`); continue; }
         try {
           const form = new FormData();

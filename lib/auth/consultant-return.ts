@@ -10,6 +10,9 @@ const CONSULTANT_EXACT_RETURN_PATHS = new Set([
   "/consultant/resources",
   "/consultant/review",
   "/consultant/workforce",
+  "/equity-workspace",
+  "/equity-workspace/toolkit",
+  "/equity-workspace/policy-analyzer",
 ]);
 
 const CONSULTANT_ITEM_RETURN_PATH = /^\/consultant\/(?:queue|resources|workforce)\/[A-Za-z0-9][A-Za-z0-9._~-]{0,127}$/;
