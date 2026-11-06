@@ -331,7 +331,7 @@ describe("official source fetching", () => {
     const page = new Response("<main><h2>Reporting</h2><p>Providers report each year.</p></main>", { headers: { "content-type": "text/html; charset=utf-8" } });
     const fetcher = vi.fn(async () => page);
     const source = await fetchCatalogSource(CATALOG_ID, fetcher as unknown as typeof fetch, new Date(NOW));
-    expect(source).toMatchObject({ id: `catalog-${CATALOG_ID}`, origin: "catalog", text: "Reporting\n\nProviders report each year.", note: "Text retrieved from the official source on 2026-11-05." });
+    expect(source).toMatchObject({ id: `catalog-${CATALOG_ID}`, origin: "catalog", text: "Reporting\n\nProviders report each year.", note: "Text retrieved from the official source on November 5, 2026." });
     expect((fetcher.mock.calls[0] as unknown[])[0]).toBe(source.url);
     const away = vi.fn(async () => new Response(null, { status: 302, headers: { location: "https://example.com/elsewhere" } }));
     await expect(fetchCatalogSource(CATALOG_ID, away as unknown as typeof fetch)).rejects.toMatchObject({ code: "source_unreadable", status: 502 });

@@ -68,7 +68,7 @@ function policyFields(value: PolicyCase): DocumentBlock {
 }
 
 function sourcesSection(value: PolicyCase): DocumentSection {
-  return section("Sources", [
+  return section("Material analyzed", [
     value.sources.length
       ? table(["Source", "Where it comes from", "Date", "Note"], value.sources.map(source => [source.title, ORIGIN_LABELS[source.origin], source.date ?? "", source.note ?? ""]))
       : paragraph("No sources were attached to this case."),
@@ -168,15 +168,18 @@ export function recommendationsDocument(value: PolicyCase): ResourceDocument {
 }
 
 function decisionTable(value: PolicyCase): DocumentBlock {
-  return table(["Change", "Outcome", "Role", "Date", "Reason", "Conditions", "Come back to it on"], value.recommendations.map(item => {
+  // Three columns keep each row readable in Word and PDF; outcome, role and date read as one sentence.
+  return table(["Change", "Decision", "Reason"], value.recommendations.map(item => {
     const decision = item.decision;
-    return [changeHeading(item), decision ? OUTCOME_LABELS[decision.outcome] : "No decision yet", decision ? ROLE_LABELS[decision.role] : "", decision ? longDate(decision.at) : "", decision?.reason ?? "", decision?.conditions ?? "", longDate(decision?.deferredUntil)];
+    if (!decision) return [changeHeading(item), "No decision yet", ""];
+    const when = decision.deferredUntil ? ` Come back to it on ${longDate(decision.deferredUntil)}.` : "";
+    return [changeHeading(item), `${OUTCOME_LABELS[decision.outcome]} by the ${ROLE_LABELS[decision.role]} on ${longDate(decision.at)}.${when}`, decision.conditions ? `${decision.reason} Conditions: ${decision.conditions}` : decision.reason];
   }));
 }
 
 function historySections(value: PolicyCase): DocumentSection[] {
   return value.recommendations.filter(item => item.history.length > 0).map(item => section(`History: ${changeHeading(item)}`, [
-    table(["Date", "Outcome", "Role", "Reason", "Conditions", "Come back to it on"], item.history.map(entry => [longDate(entry.at), OUTCOME_LABELS[entry.outcome], ROLE_LABELS[entry.role], entry.reason, entry.conditions ?? "", longDate(entry.deferredUntil)])),
+    table(["Decision", "Reason"], item.history.map(entry => [`${OUTCOME_LABELS[entry.outcome]} by the ${ROLE_LABELS[entry.role]} on ${longDate(entry.at)}.${entry.deferredUntil ? ` Come back to it on ${longDate(entry.deferredUntil)}.` : ""}`, entry.conditions ? `${entry.reason} Conditions: ${entry.conditions}` : entry.reason])),
   ]));
 }
 

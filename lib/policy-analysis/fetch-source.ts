@@ -146,7 +146,7 @@ export async function fetchCatalogSource(catalogId: string, fetcher: typeof fetc
     else if (type === "text/plain") text = new TextDecoder("utf-8").decode(bytes).trim();
     else throw new PolicyAnalysisError("source_unsupported");
     if (!text.trim()) throw new PolicyAnalysisError("source_unreadable");
-    const date = now.toISOString().slice(0, 10);
+    const date = new Intl.DateTimeFormat("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "America/Chicago" }).format(now);
     return {
       id: `catalog-${catalogId}`,
       title: policy.source.title,

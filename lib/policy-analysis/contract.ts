@@ -196,7 +196,7 @@ export function readyToFormalize(value: PolicyCase): boolean {
 export const EXPORT_KINDS = ["analysis", "recommendations", "decision-record", "formal-policy-proposal"] as const;
 export type PolicyExportKind = (typeof EXPORT_KINDS)[number];
 
-export const FORMALIZATION_STATEMENT = "This document records changes approved inside the One DSD People, Access and Culture program by the Equity and Inclusion Operations Consultant and the One DSD Team. It is a program decision. Adoption as Department of Human Services policy follows the department's own policy process, and the official source named here remains the authority until that process is complete.";
+export const FORMALIZATION_STATEMENT = "This document records changes approved inside the One DSD People, Access and Culture program by the roles named in its decision record. It is a program decision. Adoption as Department of Human Services policy follows the department's own policy process, and the official source named here remains the authority until that process is complete.";
 
 /** Request bodies for the routes. */
 export const createCaseRequestSchema = z.object({
