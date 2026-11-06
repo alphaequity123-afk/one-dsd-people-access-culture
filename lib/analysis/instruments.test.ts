@@ -24,6 +24,7 @@ const ALLOWED_HREFS = [
   "/support/right-person",
   "/library/ja-access-checks",
   "/learn/tribal-referral",
+  "/community-outreach/policies",
 ];
 
 // "/library/ja-access-checks" is served by the dynamic route app/library/[id]/page.tsx.

@@ -36,7 +36,7 @@ export default function HowTheSystemConnectsPage() {
       <ul className="list-disc space-y-3 pl-6">{data.leadAgencyTypes.map(item => <li key={item.type}>
         <strong>{item.type}.</strong> {item.description}{item.examples?.length ? ` Examples: ${item.examples.join("; ")}.` : ""}{item.programs?.length ? ` Programs: ${item.programs.join("; ")}.` : ""}<Source source={item.source} />
       </li>)}</ul>
-      <p><Link href="/community-outreach/county-agencies">See the agency for each county</Link> · <Link href="/community-outreach/providers">Providers and designated agencies</Link></p>
+      <p><Link href="/community-outreach/county-agencies">See the agency for each county</Link> · <Link href="/community-outreach/providers">Providers and designated agencies</Link> · <Link href="/community-outreach/policies">Policies that shape disability services</Link></p>
     </section>
 
     <section className={styles.section} id="division-roles" aria-labelledby="division-title">

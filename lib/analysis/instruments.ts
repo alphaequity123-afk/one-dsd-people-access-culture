@@ -18,6 +18,12 @@ function question(id: string, prompt: string, help?: string): InstrumentQuestion
 // the link. Keep single words specific: every gap answer mentions "the sources",
 // so that word alone would attach a link to every gap.
 const LINKS = {
+  policies: (why: string): GuidanceLink => ({
+    keywords: ["policy", "policies", "statute", "law", "rule", "manual", "requirement", "waiver", "federal", "bulletin"],
+    label: "Policies that shape disability services",
+    href: "/community-outreach/policies",
+    why,
+  }),
   countyMap: (why: string): GuidanceLink => ({
     keywords: ["county", "population", "population share", "data", "figures", "demographic", "race", "ethnicity", "share of people"],
     label: "Minnesota county map",
@@ -222,6 +228,7 @@ const policyReview: Instrument = {
     LINKS.equityReview("The review tools hold the full policy, process and service equity review and its guides."),
     LINKS.rightPerson("When the document does not say who handles a step, this page helps find the person or area responsible."),
     LINKS.tribalReferral("A change that could affect Tribal Nations needs consultation handled separately from outreach."),
+    LINKS.policies("The policy catalog summarizes the statutes, rules, manual chapters and waiver plans a change has to fit, with what each requires."),
   ],
 };
 
@@ -302,6 +309,7 @@ const programAnalysis: Instrument = {
     LINKS.communities("Community pages carry dated figures and the organizations on record for each community."),
     LINKS.equityReview("The review tools hold the full home and community-based services equity review, its guides and its companion."),
     LINKS.tribalReferral("Services for Tribal Nations run through their own arrangements and consultation."),
+    LINKS.policies("The policy catalog lists the waiver plans, statutes and manual chapters that govern the program, with what each requires."),
   ],
 };
 

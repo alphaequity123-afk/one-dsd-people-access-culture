@@ -27,6 +27,8 @@ import {
 import { getInstrument } from "./instruments";
 import { anyKeywordMatches } from "./keywords";
 import { askPrivacyGate } from "@/lib/intelligence/safety";
+import { ORGANIZATIONS } from "@/lib/content/hub/organizations";
+import { getSystemConnections } from "@/lib/content/hub/system-connections";
 import { cloneAgentsEnabled } from "@/lib/intelligence/clone/config";
 import { contextFor } from "@/lib/intelligence/orchestrator";
 import { resolveBinding } from "@/lib/intelligence/providers";
@@ -210,11 +212,45 @@ export function nextSteps(instrument: Instrument, answers: AnalysisAnswer[]): Ne
  * Runs the Ask privacy gate over the context and over every source's title, text and reading note,
  * since all of them reach the prompt. Returns the gate's message when it refuses.
  */
+/**
+ * Names of offices, divisions, programs and organizations the program knows about. The
+ * privacy gate treats two capitalized words beside a word such as "disability" as a person's
+ * name with sensitive details, so "Disability Services Division" would be refused. Known
+ * organization names are replaced with a plain phrase before the gate runs; everything
+ * else is checked exactly as the gate checks an Ask question.
+ */
+const FIXED_ORGANIZATION_NAMES = [
+  "Minnesota Department of Human Services", "Department of Human Services", "Disability Services Division",
+  "Aging and Disability Services Administration", "Aging and Adult Services Division", "Deaf and Hard of Hearing Services Division",
+  "Behavioral Health Administration", "Health Care Administration", "Office of Inspector General", "Licensing Division",
+  "Minnesota Disability Law Center", "Minnesota Council on Disability", "Governor's Council on Developmental Disabilities",
+  "Disability Hub MN", "Disability Linkage Line", "Community-Based Services Manual", "Equity Analysis Toolkit",
+  "Office of Indian Affairs", "Minnesota Department of Health", "Minnesota Department of Employment and Economic Development",
+  "Vocational Rehabilitation Services", "State Services for the Blind", "Social Security Administration",
+  "Centers for Medicare and Medicaid Services", "Minnesota Board on Aging", "Minnesota Aging Pathways", "Senior LinkAge Line",
+  "Waiver Reimagine", "Employment First", "Technology First", "Positive Supports Rule", "Olmstead Plan",
+];
+let knownNamePattern: RegExp | undefined;
+function knownNames(): RegExp {
+  if (knownNamePattern) return knownNamePattern;
+  const names = new Set<string>(FIXED_ORGANIZATION_NAMES);
+  for (const org of ORGANIZATIONS) { names.add(org.name); if (org.alsoKnownAs) names.add(org.alsoKnownAs); }
+  for (const unit of getSystemConnections().structure) names.add(unit.name);
+  const escaped = [...names].filter(name => name.length >= 4).sort((a, b) => b.length - a.length).map(name => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  knownNamePattern = new RegExp(`\\b(?:${escaped.join("|")})(?:['\u2019]s)?\\b`, "g");
+  return knownNamePattern;
+}
+
+/** The text the privacy gate sees: known organization names replaced with "the organization". */
+export function textForPrivacyGate(text: string): string {
+  return text.replace(knownNames(), "the organization");
+}
+
 export function privacyRefusal(request: AnalysisRequest): string | undefined {
   const texts = [request.context ?? "", ...request.sources.flatMap(source => [source.title, source.text, source.note ?? ""])];
   for (const text of texts) {
     if (!text) continue;
-    const result = askPrivacyGate(text);
+    const result = askPrivacyGate(textForPrivacyGate(text));
     if (!result.ok) return result.message ?? "This material may include private information about a person, so it was not analyzed. Remove names, identifiers and any case, medical or personnel details, then try again.";
   }
   return undefined;

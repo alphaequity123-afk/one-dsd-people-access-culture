@@ -5,6 +5,7 @@ import { ORGANIZATIONS, ORGANIZATIONS_CHECKED, organizationHref, relationshipLin
 import { getCountyAgencies } from "@/lib/content/hub/county-agencies";
 import { getSystemConnections } from "@/lib/content/hub/system-connections";
 import { getOfficialProviders } from "@/lib/content/hub/official-providers";
+import { getPolicies, policyHref } from "@/lib/content/hub/dsd-policies";
 import { SOURCING_CATEGORIES, SOURCING_CHECKED } from "@/lib/content/hub/sourcing";
 import type { Doc } from "./search";
 
@@ -122,4 +123,29 @@ export function officialProviderDocs(scope: StaffProgramScope): Doc[] {
       evidenceRevisions: [{ sourceId: `designated-provider:${slug}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
     } satisfies Doc;
   }));
+}
+
+// Policies that shape disability services, one document per policy.
+export function policyDocs(scope: StaffProgramScope): Doc[] {
+  return getPolicies().map(policy => {
+    const text = [
+      `${policy.title}.`,
+      policy.summary,
+      policy.programs.length ? `Programs: ${policy.programs.join(", ")}.` : "",
+      policy.appliesTo.length ? `Applies to: ${policy.appliesTo.join(", ")}.` : "",
+      policy.requires.length ? `What it requires: ${policy.requires.join(" ")}` : "",
+      policy.equityCheck.length ? `What to check for equity: ${policy.equityCheck.join(" ")}` : "",
+      policy.effective ? `Effective: ${policy.effective}.` : "",
+      policy.lastUpdated ? `Last updated: ${policy.lastUpdated}.` : "",
+      `Source: ${policy.source.title}${policy.source.date ? `, ${policy.source.date}` : ""}. ${policy.source.url}`,
+    ].filter(Boolean).join("\n");
+    return {
+      kind: "content", id: `public-dsd-policy-${policy.id}`.slice(0, 120), title: `${policy.title} (policy summary)`,
+      href: policyHref(policy.id), authority: "program_reference", type: "dsd_policy", status: "approved",
+      reviewDate: policy.checked, scope: "dsd", summary: policy.summary.slice(0, 360), text,
+      tags: ["policy", ...policy.tags.slice(0, 12)], intents: [],
+      graphRelated: ["/community-outreach/policies", ...policy.relatedPages.filter(page => page.startsWith("/"))],
+      evidenceRevisions: [{ sourceId: `dsd-policy:${policy.id}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
+    } satisfies Doc;
+  });
 }

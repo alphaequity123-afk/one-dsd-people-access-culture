@@ -43,7 +43,7 @@ vi.mock("@/lib/intelligence/orchestrator", () => ({ contextFor: f.contextFor }))
 vi.mock("@/lib/intelligence/providers", () => ({ resolveBinding: f.resolveBinding }));
 vi.mock("@/lib/intelligence/tools/runtime", () => ({ runTool: f.runTool }));
 
-import { PROMPT_BYTE_LIMIT, TOO_MUCH_TEXT_MESSAGE, analyze, buildPrompt, effectiveCommunityId, isRefusal, nextSteps, privacyRefusal, promptTooLarge, validateDraft, writeNamesInFull } from "./service";
+import { PROMPT_BYTE_LIMIT, TOO_MUCH_TEXT_MESSAGE, analyze, buildPrompt, effectiveCommunityId, isRefusal, nextSteps, privacyRefusal, promptTooLarge, textForPrivacyGate, validateDraft, writeNamesInFull } from "./service";
 
 const sourceText = "The Disability Services Division serves adults with disabilities in Hennepin County.\nServices   are funded through the waiver program.";
 const request = (overrides: Partial<AnalysisRequest> = {}): AnalysisRequest => ({
@@ -72,6 +72,11 @@ describe("privacy gate", () => {
   it("refuses a context holding a personal email address", () => {
     expect(privacyRefusal(request({ context: "Send the result to someone@example.org" }))).toContain("email address");
     expect(privacyRefusal(request())).toBeUndefined();
+    // Known organization names are not a person's name: the division's name beside "disability" passes.
+    expect(privacyRefusal(request({ context: "The Disability Services Division is considering adopting this guide. Does it fit the division's equity analysis expectations?" }))).toBeUndefined();
+    expect(privacyRefusal(request({ context: "The Minnesota Disability Law Center's assessment of the Olmstead Plan and the Aging and Disability Services Administration." }))).toBeUndefined();
+    // A real person's details are still refused.
+    expect(privacyRefusal(request({ context: "Ms. Smith's disability case was denied last week." }))).toMatch(/private information/);
   });
   it("refuses a source whose only private detail is in its title, with no model call", async () => {
     const outcome = await analyze(request({ sources: [{ id: "doc-1", title: "Case file SSN 123-45-6789.pdf", text: sourceText }] }));
@@ -252,5 +257,10 @@ describe("audit record", () => {
     const event = { trace_id: "f5ba7d21-9571-41e7-839f-75b13e09ba01", span_id: "0123abcd", at: "2026-11-05T00:00:00.000Z", agent_id: "ask_concierge", agent_version: "0.1.0", tool_name: "answer.structured_draft", autonomy_level_used: "A2", permission_mode: "with_preview", dry_run: false, content_ids_touched: ["tool-analyze-equity-analysis"], allowlist_hit: true, model_id: "mdl_test", latency_ms: 12, ok: true };
     expect(() => assertAuditEventPersistence(event)).not.toThrow();
     expect(() => assertAuditEventPersistence({ ...event, content_ids_touched: ["uploaded-document-text"] })).toThrow();
+  });
+
+  it("replaces known organization names before the privacy gate and nothing else", () => {
+    expect(textForPrivacyGate("Ask Disability Services Division and Disability Hub MN.")).toBe("Ask the organization and the organization.");
+    expect(textForPrivacyGate("Ms. Smith's disability case")).toBe("Ms. Smith's disability case");
   });
 });
