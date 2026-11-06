@@ -115,8 +115,8 @@ export const api = {
 
   decide: async (body: unknown) => readCase(await request(`${API_BASE}/decide`, { method: "POST", body })),
 
-  formalize: async (caseId: string, expectedVersion: number, documentTitle: string) =>
-    readCase(await request(`${API_BASE}/formalize`, { method: "POST", body: { caseId, expectedVersion, documentTitle } })),
+  formalize: async (caseId: string, expectedVersion: number, documentTitle: string, decidingAs?: string) =>
+    readCase(await request(`${API_BASE}/formalize`, { method: "POST", body: { caseId, expectedVersion, documentTitle, ...(decidingAs ? { decidingAs } : {}) } })),
 
   reopen: async (caseId: string, expectedVersion: number) =>
     readCase(await request(`${API_BASE}/reopen`, { method: "POST", body: { caseId, expectedVersion } })),

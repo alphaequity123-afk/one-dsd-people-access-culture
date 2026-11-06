@@ -1,6 +1,6 @@
 import "server-only";
 import { getPolicy } from "@/lib/content/hub/dsd-policies";
-import { ROLE_LABELS } from "@/lib/auth/consultant-or-team";
+import { DECISION_ROLE_LABELS as ROLE_LABELS } from "./contract";
 import { bullets, callout, compactSections, downloadFileName, fields, heading, paragraph, quote, section, table, type DocumentBlock, type DocumentSection, type DocumentSource, type ResourceDocument } from "@/lib/downloads/model";
 import { renderResourceDocument } from "@/lib/downloads/render";
 import { CHANGE_TYPES, FORMALIZATION_STATEMENT, type ChangeType, type Decision, type PolicyCase, type PolicyExportKind, type Recommendation } from "./contract";
@@ -209,7 +209,7 @@ export function formalProposalDocument(value: PolicyCase): ResourceDocument {
   return {
     ...base(value, "formal-policy-proposal"),
     sections: compactSections([
-      section("Purpose", [paragraph(`This proposal sets out the changes the ${ROLE_LABELS.consultant} and the ${ROLE_LABELS.team} approved after an equity analysis of ${value.policy.title}. It records each change, the equity consideration behind it, who is responsible and when it will be reviewed.`)]),
+      section("Purpose", [paragraph(`This proposal sets out the changes approved after an equity analysis of ${value.policy.title}, with the role that made each decision named in the decision record. It records each change, the equity consideration behind it, who is responsible and when it will be reviewed.`)]),
       section("Policy it changes", [
         fields([
           { label: "Policy", value: value.policy.title },

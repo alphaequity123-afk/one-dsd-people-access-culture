@@ -65,7 +65,7 @@ describe("Equity Policy Analyzer", () => {
     expect(screen.getByRole("button", { name: "Get the official text" })).toBeTruthy();
     expect((screen.getByLabelText("Name of this analysis") as HTMLInputElement).value).toBe("Equity analysis: Interpreter access in assessments");
     expect(screen.getByRole("button", { name: "Attach a document" })).toBeTruthy();
-    await waitFor(() => expect(screen.getByText(/recorded as the One DSD Team/)).toBeTruthy());
+    await waitFor(() => expect(screen.getByText(/recorded with the role you choose in step 5, now the Equity and Inclusion Operations Consultant/)).toBeTruthy());
   });
 
   it("shows the analysis, gaps, changes and decision controls for a case waiting for decisions", async () => {

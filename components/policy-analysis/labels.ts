@@ -64,10 +64,7 @@ export const OUTCOME_ACTIONS: Record<DecisionOutcome, string> = {
   deferred: "Defer",
 };
 
-export const ROLE_NAMES: Record<"consultant" | "team", string> = {
-  consultant: "Equity and Inclusion Operations Consultant",
-  team: "One DSD Team",
-};
+export { DECISION_ROLE_LABELS as ROLE_NAMES } from "@/lib/policy-analysis/contract";
 
 /** "language-access" -> "Language access". Used for principle ids until a label list is supplied. */
 export function humanizeId(value: string): string {

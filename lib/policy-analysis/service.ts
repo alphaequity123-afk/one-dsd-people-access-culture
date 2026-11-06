@@ -26,7 +26,7 @@ import { isPrincipleId } from "./principles";
 // status transition. Nothing here reads the database, the network or the session, so
 // each rule can be tested directly. lib/policy-analysis/operations.ts wires it to storage.
 
-export type DecisionRole = "consultant" | "team";
+export type DecisionRole = import("./contract").DecisionRoleId;
 export type CreateCaseRequest = z.infer<typeof createCaseRequestSchema>;
 export type UpdateCaseRequest = z.infer<typeof updateCaseRequestSchema>;
 export type DecideRequest = z.infer<typeof decideRequestSchema>;

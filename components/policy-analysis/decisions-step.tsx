@@ -1,11 +1,11 @@
 "use client";
 
 import { useId, useState } from "react";
-import { POLICY_LIMITS, type DecisionOutcome, type Recommendation } from "@/lib/policy-analysis/contract";
+import { DECISION_ROLE_LABELS, DECISION_ROLES, POLICY_LIMITS, type DecisionOutcome, type DecisionRoleId, type Recommendation } from "@/lib/policy-analysis/contract";
 import { CHANGE_TYPE_LABELS, formatDate, OUTCOME_ACTIONS, OUTCOME_LABELS, ROLE_NAMES } from "./labels";
 import styles from "./policy-analysis.module.css";
 
-export type DecisionInput = { recommendationId: string; outcome: DecisionOutcome; reason: string; conditions?: string; deferredUntil?: string };
+export type DecisionInput = { recommendationId: string; outcome: DecisionOutcome; reason: string; conditions?: string; deferredUntil?: string; decidingAs?: DecisionRoleId };
 
 function DecisionSummary({ decision }: { decision: NonNullable<Recommendation["decision"]> }) {
   return (
@@ -72,11 +72,12 @@ function DecisionForm({ item, outcome, busy, onCancel, onSubmit }: {
 }
 
 /** Step 5: approve, reject or defer each change, recorded by role with the reason. */
-export function DecisionsStep({ recommendations, canDecide, busy, roleLabel, onDecide, notReadyText }: {
+export function DecisionsStep({ recommendations, canDecide, busy, decidingAs, onDecidingAs, onDecide, notReadyText }: {
   recommendations: Recommendation[];
   canDecide: boolean;
   busy: boolean;
-  roleLabel: string;
+  decidingAs: DecisionRoleId;
+  onDecidingAs: (role: DecisionRoleId) => void;
   onDecide: (input: DecisionInput) => Promise<boolean>;
   notReadyText?: string;
 }) {
@@ -87,7 +88,14 @@ export function DecisionsStep({ recommendations, canDecide, busy, roleLabel, onD
     <section className={styles.step} aria-labelledby="decisions-title">
       <span className={styles.stepNumber}>Step 5</span>
       <h2 id="decisions-title">Decide</h2>
-      <p className="mt-0">Approve, reject or defer each change and give the reason. Decisions are recorded by role. Named approvers can be added later. Your decisions are recorded as the {roleLabel}.</p>
+      <p className="mt-0">Approve, reject or defer each change and give the reason. Each decision is recorded with the role of the person who made it, never a name.</p>
+      <div className="field">
+        <label htmlFor="deciding-as">Deciding as</label>
+        <p className="help m-0" id="deciding-as-help">Choose your role before you record a decision. It applies to each decision you record and to formalizing in step 6.</p>
+        <select id="deciding-as" aria-describedby="deciding-as-help" value={decidingAs} disabled={busy} onChange={event => onDecidingAs(event.target.value as DecisionRoleId)}>
+          {DECISION_ROLES.map(role => <option key={role} value={role}>{DECISION_ROLE_LABELS[role]}</option>)}
+        </select>
+      </div>
       {notReadyText ? <p className={styles.muted}>{notReadyText}</p> : null}
       {recommendations.length ? <p className={styles.muted}>{decided} of {recommendations.length} changes have a decision.</p> : null}
       <ol className={styles.list}>

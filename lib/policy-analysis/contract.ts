@@ -85,7 +85,20 @@ export const EFFORT = ["low", "medium", "high"] as const;
 
 export const DECISION_OUTCOMES = ["approved", "rejected", "deferred"] as const;
 export type DecisionOutcome = (typeof DECISION_OUTCOMES)[number];
-export const DECISION_ROLES = ["consultant", "team"] as const;
+/**
+ * Who records a decision. With no sign-in (owner decision, November 6, 2026) the person deciding
+ * chooses the role they are deciding as; a session supplies the default. Roles, never names.
+ */
+export const DECISION_ROLES = ["consultant", "team", "supervisor", "manager", "deputy-director", "division-director"] as const;
+export type DecisionRoleId = (typeof DECISION_ROLES)[number];
+export const DECISION_ROLE_LABELS: Record<DecisionRoleId, string> = {
+  consultant: "Equity and Inclusion Operations Consultant",
+  team: "One DSD Team",
+  supervisor: "Supervisor",
+  manager: "Manager",
+  "deputy-director": "Deputy Director",
+  "division-director": "Division Director",
+};
 
 export const decisionSchema = z.object({
   outcome: z.enum(DECISION_OUTCOMES),
@@ -217,12 +230,15 @@ export const decideRequestSchema = z.object({
   reason: plain(POLICY_LIMITS.reasonCharacters),
   conditions: z.string().max(POLICY_LIMITS.reasonCharacters).optional(),
   deferredUntil: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  /** The role the person is deciding as. When absent, the session's role is used. */
+  decidingAs: z.enum(DECISION_ROLES).optional(),
 }).strict();
 
 export const formalizeRequestSchema = z.object({
   caseId: z.string().uuid(),
   expectedVersion: z.number().int().positive(),
   documentTitle: plain(300),
+  decidingAs: z.enum(DECISION_ROLES).optional(),
 }).strict();
 
 export const exportRequestSchema = z.object({

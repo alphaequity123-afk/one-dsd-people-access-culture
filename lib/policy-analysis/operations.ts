@@ -41,11 +41,11 @@ export async function analyzePolicyCase(request: z.infer<typeof analyzeCaseReque
 }
 
 export function decidePolicyCase(request: z.infer<typeof decideRequestSchema>, role: DecisionRole) {
-  return mutatePolicyCase(request.caseId, request.expectedVersion, current => applyDecision(current, request, role, new Date().toISOString()));
+  return mutatePolicyCase(request.caseId, request.expectedVersion, current => applyDecision(current, request, request.decidingAs ?? role, new Date().toISOString()));
 }
 
 export function formalizePolicyCase(request: z.infer<typeof formalizeRequestSchema>, role: DecisionRole) {
-  return mutatePolicyCase(request.caseId, request.expectedVersion, current => applyFormalize(current, request.documentTitle, role, new Date().toISOString()));
+  return mutatePolicyCase(request.caseId, request.expectedVersion, current => applyFormalize(current, request.documentTitle, request.decidingAs ?? role, new Date().toISOString()));
 }
 
 export function reopenPolicyCase(caseId: string, expectedVersion: number) {

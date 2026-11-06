@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { policyRefSchema, type PolicyCase, type PolicyRef, type PolicySource } from "@/lib/policy-analysis/contract";
+import { DECISION_ROLE_LABELS, DECISION_ROLES, policyRefSchema, type DecisionRoleId, type PolicyCase, type PolicyRef, type PolicySource } from "@/lib/policy-analysis/contract";
 import { AnalyzeStep } from "./analyze-step";
 import { ApiError, api, downloadExport, isConflict, type ExportKind, type WorkspaceStatus } from "./api";
 import { CaseLibrary } from "./case-library";
@@ -60,6 +60,18 @@ export function PolicyAnalyzer({ catalog, kinds, questions, principleLabels, ini
   const [manual, setManual] = useState(false);
   const [manualReason, setManualReason] = useState<string | null>(null);
   const [libraryKey, setLibraryKey] = useState(0);
+  // The role the person is deciding as. Remembered in this browser only, as a convenience.
+  const [decidingAs, setDecidingAsState] = useState<DecisionRoleId>("consultant");
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem("equity-workspace:deciding-as");
+      if (saved && (DECISION_ROLES as readonly string[]).includes(saved)) setDecidingAsState(saved as DecisionRoleId);
+    } catch { /* storage unavailable */ }
+  }, []);
+  const setDecidingAs = useCallback((role: DecisionRoleId) => {
+    setDecidingAsState(role);
+    try { window.localStorage.setItem("equity-workspace:deciding-as", role); } catch { /* storage unavailable */ }
+  }, []);
   const errorRef = useRef<HTMLDivElement>(null);
 
   const catalogById = useMemo(() => new Map(catalog.map(item => [item.id, item])), [catalog]);
@@ -249,7 +261,7 @@ export function PolicyAnalyzer({ catalog, kinds, questions, principleLabels, ini
       </div>
       <p className="m-0" role="status">{notice}</p>
 
-      {status ? <p className={`${styles.muted} m-0`}>Decisions you record here are recorded as the {status.roleLabel}.</p> : null}
+      {status ? <p className={`${styles.muted} m-0`}>Decisions are recorded with the role you choose in step 5, now the {DECISION_ROLE_LABELS[decidingAs]}.</p> : null}
       {status && !status.caseSavingAvailable ? (
         <div className="notice notice--warn"><p className="m-0"><strong>Saving is not available right now.</strong> {status.caseSavingUnavailableReason ?? ""}</p></div>
       ) : null}
@@ -314,14 +326,14 @@ export function PolicyAnalyzer({ catalog, kinds, questions, principleLabels, ini
           ) : null}
 
           {current && current.recommendations.length ? (
-            <DecisionsStep recommendations={current.recommendations} canDecide={current.status === "review"} busy={locked} roleLabel={status?.roleLabel ?? "Equity and Inclusion Operations Consultant"}
+            <DecisionsStep recommendations={current.recommendations} canDecide={current.status === "review"} busy={locked} decidingAs={decidingAs} onDecidingAs={setDecidingAs}
               notReadyText={current.status === "draft" ? "Send the changes for decisions to record approvals." : final ? "This analysis is formalized. Reopen it in step 6 to change a decision." : undefined}
-              onDecide={async (input: DecisionInput) => (await run("decide", value => api.decide({ caseId: value.id, expectedVersion: value.version, ...input }), "The decision is recorded.")) !== null} />
+              onDecide={async (input: DecisionInput) => (await run("decide", value => api.decide({ caseId: value.id, expectedVersion: value.version, ...input, decidingAs }), "The decision is recorded.")) !== null} />
           ) : null}
 
           {current && (current.analysis || current.recommendations.length) ? (
-            <FormalizeStep key={current.id} value={current} busy={locked}
-              onFormalize={documentTitle => run("formalize", value => api.formalize(value.id, value.version, documentTitle), "The approved changes are formalized. Download the formal policy proposal below.")}
+            <FormalizeStep key={current.id} value={current} busy={locked} decidingAsLabel={DECISION_ROLE_LABELS[decidingAs]}
+              onFormalize={documentTitle => run("formalize", value => api.formalize(value.id, value.version, documentTitle, decidingAs), "The approved changes are formalized. Download the formal policy proposal below.")}
               onReopen={() => run("reopen", value => api.reopen(value.id, value.version), "The analysis is open for changes again.")}
               onDownload={async (kind: ExportKind, format) => {
                 setProblem(null);

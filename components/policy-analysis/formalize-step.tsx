@@ -27,9 +27,10 @@ function DownloadPair({ label, disabled, working, onDownload }: { label: string;
 }
 
 /** Step 6: formalize the approved changes, download the documents, or reopen for changes. */
-export function FormalizeStep({ value, busy, onFormalize, onReopen, onDownload }: {
+export function FormalizeStep({ value, busy, decidingAsLabel, onFormalize, onReopen, onDownload }: {
   value: PolicyCase;
   busy: boolean;
+  decidingAsLabel: string;
   onFormalize: (documentTitle: string) => Promise<unknown>;
   onReopen: () => Promise<unknown>;
   onDownload: (kind: ExportKind, format: "docx" | "pdf") => Promise<unknown>;
@@ -78,6 +79,7 @@ export function FormalizeStep({ value, busy, onFormalize, onReopen, onDownload }
             <label htmlFor="formal-document-title">Document title</label>
             <input id="formal-document-title" type="text" maxLength={300} value={documentTitle} disabled={!ready || disabled} onChange={event => setDocumentTitle(event.target.value)} />
           </div>
+          <p className={styles.muted}>Formalizing as the {decidingAsLabel}. Change who is deciding in step 5.</p>
           <button type="button" className="btn btn--primary" disabled={!ready || disabled || !documentTitle.trim()} onClick={() => void onFormalize(documentTitle.trim())}>
             {busy ? "Working…" : "Formalize the approved changes"}
           </button>
