@@ -67,6 +67,25 @@ async function adapterFor(kind: DownloadKind, id: string, scope: StaffProgramSco
       return async () => (singleton(SINGLETON_IDS["support-directory"]) ? (await import("./adapters/program")).supportDirectoryDocument(scope) : null);
     case "toolkit-studio":
       return async () => (await import("./adapters/toolkit-studio")).toolkitStudioDocument(id, scope);
+    case "course":
+    case "lesson":
+    case "clas-curriculum":
+    case "clas-lesson":
+    case "toolkit-curriculum":
+    case "toolkit-lesson":
+    case "intercultural-curriculum":
+    case "intercultural-lesson":
+    case "water-we-swim-in":
+    case "leadership-styles":
+    case "reading":
+    case "learn-page":
+      return async () => (await import("./adapters/elearning")).elearningDocument(kind, id, scope);
+    case "organization":
+    case "policy":
+    case "community-outreach":
+    case "community":
+    case "equity-review":
+      return async () => (await import("./adapters/hub")).hubDocument(kind, id, scope);
   }
 }
 

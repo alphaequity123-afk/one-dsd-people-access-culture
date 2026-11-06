@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/ui";
 import { ADSA_IMPLEMENTATION_GOALS } from "@/lib/program/adsa-implementation";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = { title: "From equity goals to implementation" };
 const routeLabels: Record<string, string> = {
@@ -10,6 +11,7 @@ const routeLabels: Record<string, string> = {
 export default function ImplementationPage() {
   return <article className="dsd-shell dsd-stage">
     <PageIntro title="From equity goals to implementation" lede="Connect an ADSA action step with the work, knowledge, participation and evidence needed to carry it forward."/>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="program-implementation" noun="page" /></details>
     <section className="dsd-model-note"><h2>One connected piece of work</h2><p>The constitution guides how the program operates. The ADSA Equity and Inclusion Implementation Plan sets out six goals and twenty-eight action steps for administration and division work. The supporting tools help people prepare, review, implement and learn from that work.</p><p>Begin with an actual question, responsibility or desired outcome. Where an ADSA action step applies, connect it to that work. Choose a useful work product, involve the people whose knowledge is needed, and seek the responsible decision. Revisit the work to examine implementation, barriers and results.</p><p><Link href="/learn/equity-toolkit/goals">Open the six goals and three-goal working plan</Link> · <Link href="/practice/requirements">Connect requirements to review evidence</Link></p></section>
     <nav aria-label="Choose an ADSA goal" className="dsd-model-note"><h2>Find the goal connected to your work</h2><ul className="dsd-model-list">{ADSA_IMPLEMENTATION_GOALS.map(goal => <li key={goal.number}><a href={`#goal-${goal.number}`}>Goal {goal.number}: {goal.title}</a></li>)}</ul></nav>
     <p className="max-w-4xl">The action steps below retain the supplied ADSA plan&apos;s wording. Divisions have discretion to choose approaches suited to their work while maintaining alignment with the plan and applicable requirements. The suggested work products, questions and resource connections can be adapted; they are not a prescribed sequence or an additional set of mandates. The program also supports equity work beyond these six goals. ADSA goals retain their administration and division context; they are not presented as newly adopted goals for every DHS office.</p>

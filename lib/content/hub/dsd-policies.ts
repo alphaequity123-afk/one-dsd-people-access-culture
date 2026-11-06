@@ -135,3 +135,32 @@ export function formatPolicyDate(value: string): string {
   const options: Intl.DateTimeFormatOptions = day ? { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" } : { year: "numeric", month: "long", timeZone: "UTC" };
   return date.toLocaleDateString("en-US", options);
 }
+
+const POLICY_PAGE_TITLES: Record<string, string> = {
+  "/community-outreach/county-agencies": "County agencies",
+  "/community-outreach/county-map": "Minnesota county map",
+  "/community-outreach/how-the-system-connects": "How the system connects",
+  "/community-outreach/plan": "Community outreach plan",
+  "/community-outreach/providers": "Providers and designated agencies",
+  "/equity-policy": "Equity policy",
+  "/equity-review": "Equity review",
+  "/equity-review/working-group-plan": "Equity review working group plan",
+  "/learn/equity-toolkit": "Equity toolkit",
+  "/minnesota-communities": "Minnesota communities",
+};
+
+/** Readable name for a related program page route. */
+export function policyPageTitle(route: string): string {
+  return POLICY_PAGE_TITLES[route] ?? route.split("/").filter(Boolean).map(part => part.replace(/-/g, " ")).join(": ");
+}
+
+/** Up to eight other policies that share a topic with this one, in tag order. */
+export function relatedPolicies(policy: Policy, limit = 8): { id: string; title: string }[] {
+  const related = new Map<string, { id: string; title: string }>();
+  for (const tag of policy.tags) {
+    for (const other of policiesByTag(tag)) {
+      if (other.id !== policy.id && related.size < limit) related.set(other.id, { id: other.id, title: other.title });
+    }
+  }
+  return [...related.values()];
+}

@@ -4,6 +4,7 @@ import { PageIntro } from "@/components/ui";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { linkListValue, stringListValue, stringValue } from "@/lib/content/staff-surface-registry";
 import { PROGRAM } from "@/lib/constants";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = { title: "About" };
 
@@ -20,6 +21,7 @@ export default async function AboutPage() {
         lede={stringValue(copy, "introLede")}
       />
       <div className="wrap max-w-5xl space-y-10 py-10">
+        {surface.available ? <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="about" noun="page" /></details> : null}
         <section className="grid gap-x-12 gap-y-8 lg:grid-cols-2" aria-labelledby="purpose-title">
           <div>
             <p className="kicker">{stringValue(copy, "purposeKicker")}</p>

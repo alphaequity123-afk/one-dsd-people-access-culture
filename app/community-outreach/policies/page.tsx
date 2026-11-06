@@ -11,6 +11,7 @@ import {
   type Policy,
 } from "@/lib/content/hub/dsd-policies";
 import styles from "../hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Policies that shape disability services",
@@ -55,6 +56,7 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
     <h1 className={styles.title}>Policies that shape disability services</h1>
     <p className={styles.lede}>The statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules and reports that decide who gets home and community-based services in Minnesota, what they get, and who is responsible.</p>
     <p className={styles.note}>These are summaries written in plain language. The policy itself is the source document: each entry links to it. Check the date on the source before relying on it, because policies change. Facts checked on {formatPolicyDate(data.checked)}.</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="policies" noun="policy catalog" /></details>
     <p>
       <Link href="/community-outreach/how-the-system-connects">How the system connects</Link> · <Link href="/equity-review">Equity review</Link> · <Link href="/equity-review/analyze">Analyze a policy document</Link>
     </p>

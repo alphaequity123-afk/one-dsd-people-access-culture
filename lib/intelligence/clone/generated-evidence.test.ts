@@ -29,11 +29,19 @@ describe("generated evidence coordinate resolution", () => {
     expect(canonical[0].references[0].start).toBe(source.evidence!.excerpt.start + Array.from("Plan access 🙂 ").length);
     expect(validateEvidenceClaims(canonical, [source], [doc])).toEqual(canonical);
   });
-  it.each(["unknown-id", "altered-quote", "mismatched-excerpt-text", "invalid-number", "extra-field"])("rejects %s instead of silently normalizing it", change => {
+  it("never presents mismatched excerpt text as a quotation: it stays an inference on the exact passage", () => {
+    const claim = fullClaim();
+    claim.text = "An invented quotation.";
+    const [canonical] = canonicalizeGeneratedEvidenceClaims([claim], [source]);
+    expect(canonical.kind).toBe("inference");
+    expect(canonical.text).toBe("An invented quotation.");
+    expect(canonical.references).toEqual(fullClaim().references);
+    expect(validateEvidenceClaims([canonical], [source], [doc])).toEqual([canonical]);
+  });
+  it.each(["unknown-id", "altered-quote", "invalid-number", "extra-field"])("rejects %s instead of silently normalizing it", change => {
     const claim = fullClaim() as ReturnType<typeof fullClaim> & { references: { approved?: boolean }[] };
     if (change === "unknown-id") claim.references[0].evidenceId = "0".repeat(64);
     if (change === "altered-quote") claim.text = claim.references[0].quote = doc.text.replace("childcare", "housing");
-    if (change === "mismatched-excerpt-text") claim.text = "An invented quotation.";
     if (change === "invalid-number") claim.references[0].start = -1;
     if (change === "extra-field") claim.references[0].approved = true;
     expect(() => canonicalizeGeneratedEvidenceClaims([claim], [source])).toThrow();

@@ -9,6 +9,9 @@ export const ADMINISTRATION_NAVIGATION = [
   { id: "housing", description: "Housing, homelessness and the relationships that support community life.", topics: ["housing", "county-tribal", "language-access"], divisions: [] },
 ].map(area => ({ ...area, name: ORGANIZATIONAL_AREAS.find(item => item.id === area.id)!.name }));
 
+/** Service-context topics on the Disability Services Division branch page. */
+export const DIVISION_BRANCH_TOPICS = ["dsd-choice", "manuals", "assessment", "person-centered"] as const;
+
 export function administrationNavigation(id: string) {
   return ADMINISTRATION_NAVIGATION.find(area => area.id === id);
 }

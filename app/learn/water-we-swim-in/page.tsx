@@ -3,6 +3,7 @@ import Link from "next/link";
 import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_MODULES, WATER_SUPPORT } from "@/lib/content/water-we-swim-in";
 import "@/components/community-editorial.css";
 import "@/components/community-research-sections.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = { title: WATER_COURSE_TITLE };
 
@@ -10,6 +11,7 @@ export default function WaterCoursePage() {
   return <div className="community-editorial"><div className="community-index-layout community-research">
     <p className="community-eyebrow"><Link href="/learn">Learn</Link></p>
     <h1>{WATER_COURSE_TITLE}</h1>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this course</summary><ResourceDownloads kind="water-we-swim-in" id="home" noun="course" /></details>
     <p className="community-opening">A voluntary course on Minnesota&apos;s mainstream culture: its real strengths, its blind spots, and how it shapes our work with Minnesotans of other cultures and with disabled people and their families.</p>
     <p>There are six modules of about 20 minutes each. You can take them in any order, and nothing is collected or graded.</p>
     <h2>Modules</h2>

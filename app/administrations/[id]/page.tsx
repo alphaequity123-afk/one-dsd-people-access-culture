@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/ui";
 import { OrganizationBreadcrumb, OrganizationSourceNote, OrganizationTopicCards, SharedAgencyResources } from "@/components/organization-navigation";
 import { administrationNavigation } from "@/lib/product/organization-navigation";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const area = administrationNavigation((await params).id);
@@ -18,5 +19,6 @@ export default async function AdministrationPage({ params }: { params: Promise<{
       {area.divisions.includes("dsd") && <section className="mb-12" aria-labelledby="division-branches"><h2 id="division-branches" className="text-2xl font-bold">Explore a division</h2><article className="mt-5 rounded-xl border border-line bg-white p-6"><h3 className="m-0 text-xl font-bold"><Link href="/administrations/adsa/divisions/dsd">Disability Services Division</Link></h3><p>Explore the DSD program, its service context and its practical learning resources in One DSD.</p><Link href="/administrations/adsa/divisions/dsd">Open the Disability Services branch</Link></article><p className="mt-4"><Link href="/learn/equity-toolkit/goals">ADSA&apos;s six equity goals and implementation connections</Link></p></section>}
       <section aria-labelledby="administration-context"><h2 id="administration-context" className="mb-6 text-2xl font-bold">Services and working relationships</h2><OrganizationTopicCards ids={area.topics} /></section>
       <SharedAgencyResources /><OrganizationSourceNote />
+      <details className="border-b border-line pb-3 print:hidden mt-6"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id={`administration~${area.id}`} noun="page" /></details>
     </div></>;
 }

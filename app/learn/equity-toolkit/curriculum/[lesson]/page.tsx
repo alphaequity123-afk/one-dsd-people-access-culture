@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { ResourceDownloads } from '@/components/resource-downloads';
 import EquityDecisionsCurriculum from '@/components/equity-decisions-curriculum';
 import data from '@/lib/content/equity-everyday-decisions.json';
 import type { Curriculum } from '@/lib/content/equity-decisions-model';
@@ -34,5 +35,6 @@ export default async function Page({ params }: { params: Promise<{ lesson: strin
   if (!(await toolkitAvailable())) notFound();
   const { lesson } = await params;
   if (!curriculum.modules.some(module => module.id === lesson)) notFound();
-  return <EquityDecisionsCurriculum key={lesson} lessonId={lesson}/>;
+  const scope = await requestedContentScope();
+  return <><div className="mx-auto max-w-[1120px] px-4 pt-6 sm:px-6 print:hidden"><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="toolkit-lesson" id={lesson} noun="lesson" scope={scope} /></details></div><EquityDecisionsCurriculum key={lesson} lessonId={lesson}/></>;
 }

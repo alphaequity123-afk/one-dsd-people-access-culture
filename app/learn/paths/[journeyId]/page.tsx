@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import { notFound } from "next/navigation";
 import { developmentModel, developmentJourney, journeyHref, stageGuidance } from "@/lib/program/development";
 import { publishedDevelopment, availableDevelopmentLink } from "@/lib/program/development-published";
@@ -11,11 +12,13 @@ export async function generateMetadata({ params }: { params: Promise<{ journeyId
 export default async function JourneyPage({ params }: { params: Promise<{ journeyId: string }> }) {
   const journey = developmentJourney((await params).journeyId);
   if (!journey) notFound();
-  const { records } = await publishedDevelopment(await requestedContentScope());
+  const scope = await requestedContentScope();
+  const { records } = await publishedDevelopment(scope);
   const resources = records.filter(record => record.journeyIds.includes(journey.id));
   return <div className="development-page">
     <Link href="/learn/paths">← All guided pathways</Link>
     <header><p className="development-eyebrow">From engagement to action</p><h1>{journey.title}</h1><p>{journey.summary}</p><p>Use the steps that help with your question. There is no enrollment or required completion order.</p></header>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id={`paths-${journey.id}`} noun="pathway" scope={scope} /></details>
     <nav aria-label="Pathway steps"><ol className="development-stages">{developmentModel.stages.map((stage, index) => <li key={stage.id}><a href={`#${stage.id}`}>{index + 1}. {stage.title}</a></li>)}</ol></nav>
     {developmentModel.stages.map((stage, index) => <section id={stage.id} className="development-step" aria-labelledby={`title-${stage.id}`} key={stage.id}>
       <header><span className="development-step-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><h2 id={`title-${stage.id}`}>{stage.title}</h2></header>

@@ -6,6 +6,7 @@ import { readEquityReviewTotals } from "@/lib/practice/equity-review-count-store
 import { EquityReviewCountSection } from "./review-count-section";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "./equity-baseline.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Equity baseline",
@@ -25,6 +26,7 @@ export default async function EquityBaselinePage() {
       <h1>Equity baseline</h1>
       <p className={base.lede}>A baseline is the starting line. It shows who got each employment service, by race and ethnicity, before the next plan begins.</p>
       <p>These numbers pool fiscal years 2022, 2023 and 2024 into one value for each group. Three years together give a steadier picture than any one year. The plan for fiscal years 2027 to 2030 will be measured against this starting line. <Link href="/data/equity-baseline/glossary">Glossary of full names</Link>.</p>
+      <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="equity-baseline" noun="baseline" /></details>
     </header>
 
     <section className={styles.section} aria-labelledby="goals-title">

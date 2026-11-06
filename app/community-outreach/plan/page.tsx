@@ -5,6 +5,7 @@ import { BEFORE_YOU_REACH_OUT, OUTREACH_PRACTICE } from "@/lib/content/hub/befor
 import { CommunityPractice } from "@/components/community-experience-controls";
 import "@/components/community-editorial.css";
 import styles from "../hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Plan an engagement",
@@ -18,6 +19,7 @@ export default function PlanPage() {
     <h1 className={styles.title}>Plan an engagement</h1>
     <p className={styles.lede}>Answer these questions before you reach out. Then draft your engagement and report-back plan below.</p>
     <p className={styles.note}>This page saves nothing. Your plan stays on this page until you print it or copy it. Nothing about what you plan is recorded or shared.</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="plan" noun="blank plan" /></details>
 
     <section className={styles.section} aria-labelledby="before-title">
       <h2 id="before-title">Before you reach out</h2>

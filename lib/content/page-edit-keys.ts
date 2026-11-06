@@ -58,7 +58,7 @@ const PUBLIC_EDIT_PAGES = new Set([
   "/one-dsd/evidence/minnesota-government", "/one-dsd/leadership", "/one-dsd/planning", "/one-dsd/programs",
   "/one-dsd/team", "/operationalizing-equity", "/paths", "/practice", "/practice/clas",
   "/practice/measurement", "/practice/requirements", "/program-foundation",
-  "/program-foundation/legacy-resources", "/program/implementation", "/program/model",
+  "/program/implementation", "/program/model",
   "/resources", "/site-map", "/start", "/support", "/support/directory", "/support/right-person",
   "/understanding-dhs", "/user-guide",
 ]);

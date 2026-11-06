@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import { notFound } from "next/navigation";
 import { culturalMultidisciplinary } from "@/lib/content/cultural-multidisciplinary";
+import { CULTURAL_INTELLIGENCE_PERSPECTIVE_SOURCES } from "@/lib/content/learn-page-copy";
 import { culturalIntelligenceCollection } from "@/lib/content/cultural-intelligence-collection";
 import { CULTURAL_INTELLIGENCE_SURFACE_ID, CULTURAL_INTELLIGENCE_VISIBLE_FIELDS, culturalIntelligenceVisibleText } from "@/lib/content/cultural-intelligence-hub";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
@@ -49,6 +51,7 @@ export default async function CulturalIntelligencePage() {
     <div className={`${styles.content} space-y-10`}>
       <nav aria-label="Collection sections" className="flex flex-wrap gap-5"><a href="#foundation">Foundation</a><a href="#start">Start from your work</a><a href="#frameworks">Frameworks</a><a href="#learn">Learn</a><a href="#explore">Explore</a><a href="#apply">Apply</a><a href="#leaders">Leaders</a></nav>
       <p className="max-w-4xl leading-7">{text("scopeLine")}</p>
+      <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="cultural-intelligence" noun="collection" scope={scope} /></details>
       <section id="foundation" aria-labelledby="foundation-title" className="max-w-4xl space-y-4">
         <h2 id="foundation-title" className="text-3xl font-semibold">{text("foundationTitle")}</h2>
         <p className="leading-7">{text("foundationBody")}</p>
@@ -68,19 +71,7 @@ export default async function CulturalIntelligencePage() {
         <details className="rounded-xl border border-line p-5">
         <summary className="cursor-pointer font-semibold">Explore sources behind these perspectives</summary>
         <ul className="mt-4 space-y-2">
-          <li><a href="https://implicit.harvard.edu/implicit/faqs.html" target="_blank" rel="noreferrer" className="underline">Project Implicit: questions and limitations</a></li>
-          <li><a href="https://idiinventory.zendesk.com/hc/en-us/articles/360042578534-Should-I-become-an-IDI-Qualified-Administrator-QA" target="_blank" rel="noreferrer" className="underline">Intercultural Development Inventory: qualified administration</a></li>
-          <li><a href="https://americananthro.org/practice-teach/what-is-anthropology/" target="_blank" rel="noreferrer" className="underline">American Anthropological Association: what is anthropology?</a></li>
-          <li><a href="https://perspectives.americananthro.org/Chapters/Fieldwork.pdf" target="_blank" rel="noreferrer" className="underline">American Anthropological Association: ethnographic fieldwork</a></li>
-          <li><a href="https://ethics.americananthro.org/ethics-statement-3-obtain-informed-consent-and-necessary-permissions/" target="_blank" rel="noreferrer" className="underline">American Anthropological Association: informed consent</a></li>
-          <li><a href="https://www.asanet.org/wp-content/uploads/savvy/documents/research/pdfs/ASA_Launching_Majors_Faculty_Manual_2010.pdf" target="_blank" rel="noreferrer" className="underline">American Sociological Association: exploring sociology</a></li>
-          <li><a href="https://www.federalreserveeducation.org/teaching-resources/economics/scarcity/opportunity-cost" target="_blank" rel="noreferrer" className="underline">Federal Reserve Education: choices and opportunity cost</a></li>
-          <li><a href="https://www.who.int/news-room/questions-and-answers/item/determinants-of-health" target="_blank" rel="noreferrer" className="underline">World Health Organization: social and economic conditions</a></li>
-          <li><a href="https://www.eeoc.gov/systemic-enforcement-eeoc" target="_blank" rel="noreferrer" className="underline">EEOC: examining systemic workplace practices</a></li>
-          <li><a href="https://www.upliftoregon.org/wp-content/uploads/Continuum_AntiRacist.pdf" target="_blank" rel="noreferrer" className="underline">Crossroads Ministry: continuum for anti-racist multicultural organizations</a></li>
-          <li><a href="https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Organizational_Learning_and_Change/Edmondson_1999_Psychological_safety.pdf" target="_blank" rel="noreferrer" className="underline">Research on psychological safety and learning in teams</a></li>
-          <li><a href="https://psnet.ahrq.gov/perspective/ensuring-patient-and-workforce-safety-culture-healthcare" target="_blank" rel="noreferrer" className="underline">AHRQ: safety culture in health care</a></li>
-          <li><a href="https://www.cms.gov/newsroom/fact-sheets/home-and-community-based-services" target="_blank" rel="noreferrer" className="underline">CMS: person-centered planning in home and community-based services</a></li>
+          {CULTURAL_INTELLIGENCE_PERSPECTIVE_SOURCES.map(source => <li key={source.href}><a href={source.href} target="_blank" rel="noreferrer" className="underline">{source.title}</a></li>)}
         </ul>
         </details>
       </section>

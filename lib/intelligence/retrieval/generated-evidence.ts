@@ -6,9 +6,13 @@ import type { Citation } from "./search";
 // Model transport keeps every reference field and bound. Only the relationship
 // between its numeric offsets and exact quote is deferred to server resolution.
 const TransportReferenceSchema = z.object(EvidenceReferenceSchema.shape).strict();
-export const GeneratedEvidenceClaimsSchema = z.array(EvidenceClaimSchema.safeExtend({
+// The claim-level rule (a source_excerpt must equal its one quote) is also deferred:
+// enforcing it here rejected the whole written answer and forced a full rewrite for a
+// paraphrase. canonicalizeGeneratedEvidenceClaims applies it after resolution instead.
+export const GeneratedEvidenceClaimsSchema = z.array(z.object({
+  ...EvidenceClaimSchema.shape,
   references: z.array(TransportReferenceSchema).min(1).max(4),
-})).max(12);
+}).strict()).max(12);
 
 // One plain character for each typographic mark, so offsets are unchanged.
 const TYPOGRAPHY: Record<string, string> = {
@@ -54,7 +58,11 @@ export function canonicalizeGeneratedEvidenceClaims(value: unknown, supplied: Ci
     const start = snapshot.excerpt.start + relative;
     return { ...reference, quote, start, end: start + Array.from(quote).length };
   }) })).map(claim => claim.kind === "source_excerpt" && claim.references.length === 1 && claim.text !== claim.references[0].quote
-    && plainTypography(claim.text) === plainTypography(claim.references[0].quote) ? { ...claim, text: claim.references[0].quote } : claim);
+    && plainTypography(claim.text) === plainTypography(claim.references[0].quote) ? { ...claim, text: claim.references[0].quote } : claim)
+    // Text that is not the exact passage is a paraphrase of it. Keep it, with its exact
+    // basis passages, as an inference rather than presenting it as a quotation.
+    .map(claim => claim.kind === "source_excerpt" && (claim.references.length !== 1 || claim.text !== claim.references[0].quote)
+      ? { ...claim, kind: "inference" as const } : claim);
   // The authoritative evidence contract is unchanged. The caller must also
   // validate these references against the fresh current-publication projection.
   return EvidenceClaimsSchema.parse(canonical);

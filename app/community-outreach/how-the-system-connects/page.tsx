@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getSystemConnections } from "@/lib/content/hub/system-connections";
 import styles from "../hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "How the system connects",
@@ -17,6 +18,7 @@ export default function HowTheSystemConnectsPage() {
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
     <h1 className={styles.title}>How the system connects</h1>
     <p className={styles.lede}>Minnesota disability services are state-supervised and county-administered. The Department of Human Services sets policy and pays for services; the Disability Services Division leads the disability programs; lead agencies assess people and manage their services; and licensed providers deliver them. This page shows how those parts connect, with a source for each point.</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="how-the-system-connects" noun="page" /></details>
     <nav aria-label="On this page" className={styles.links}><a href="#structure">Inside the department</a><a href="#lead-agencies">Lead agencies</a><a href="#division-roles">The division and lead agencies</a><a href="#department-roles">The department and lead agencies</a><a href="#referrals">How people are referred</a><a href="#tribal">Tribal Nations</a><a href="#glossary">Plain-language glossary</a></nav>
 
     <section className={styles.section} id="structure" aria-labelledby="structure-title">

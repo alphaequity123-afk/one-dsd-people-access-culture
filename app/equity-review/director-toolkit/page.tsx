@@ -7,6 +7,7 @@ import {
   DIRECTOR_FIRST_90_DAYS, DIRECTOR_STARTER_PACKAGE, DIRECTOR_TEMPLATES_HREF, DIRECTOR_TOOLKIT_INTRO, DIRECTOR_TOOLKIT_SECTIONS,
   directorTemplate, templateHref, type ToolkitItem, type ToolkitSection,
 } from "@/lib/content/director-toolkit";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Equity Director toolkit",
@@ -78,6 +79,7 @@ export default function DirectorToolkitPage() {
   return <>
     <PageIntro tone="business" kicker="Equity in practice" title={DIRECTOR_TOOLKIT_INTRO.title} lede={DIRECTOR_TOOLKIT_INTRO.lede}>
       <p className="mt-4 max-w-3xl"><Link href={DIRECTOR_TEMPLATES_HREF}>Open the 14 printable templates</Link></p>
+      <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="director-toolkit" noun="toolkit" /></details>
     </PageIntro>
     <div className="wrap py-10">
       <PageContents items={contents}>

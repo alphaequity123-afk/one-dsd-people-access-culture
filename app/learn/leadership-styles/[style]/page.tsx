@@ -8,6 +8,7 @@ import {
   STYLE_GROUP_LABEL, STYLE_SECTIONS, leadershipStyle, leadershipStyleHref,
 } from "@/lib/content/leadership-styles-pathway";
 import styles from "../leadership-styles.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const dynamicParams = false;
 
@@ -35,6 +36,7 @@ export default async function LeadershipStylePage({ params }: { params: Promise<
     title={lesson.name}
     intro={<p>{lesson.tagline}. <Link className="underline" href={`${LEADERSHIP_PATHWAY_HREF}#group-${lesson.group}`}>{STYLE_GROUP_LABEL[lesson.group]}</Link>.</p>}
   >
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="leadership-styles" id={lesson.slug} noun="lesson" /></details>
     <SectionNav label="Lesson sections" items={STYLE_SECTIONS.map(section => ({ href: `#${section.id}`, title: section.title }))} />
 
     <Block id="how-it-works" title="Working definition and boundaries">

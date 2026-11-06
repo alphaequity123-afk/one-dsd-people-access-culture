@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PrintPageButton } from "@/components/hub/print-page-button";
 import { CHARGE, CHECKPOINTS, KICKOFF_DECISIONS, LAW, MEETINGS, PROGRAM_SUPPORT, RECOMMENDATION_RECORD, REUSE_STEPS, ROADMAP, TOPICS, TOPIC_METHOD, WORKING_GROUP_PLAN_CHECKED } from "@/lib/content/hub/working-group-plan";
 import styles from "@/app/community-outreach/hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Plan a legislatively required working group",
@@ -15,6 +16,7 @@ export default function WorkingGroupPlanPage() {
     <h1 className={styles.title}>Plan a legislatively required working group</h1>
     <p className={styles.lede}>When the Legislature creates a working group or task force, the law sets its purpose, members, meetings, duties and report date. This page turns that charge into a month-by-month plan, using the Waiver Case Management Advisory Working Group as the worked example, and shows how to reuse the plan for another group.</p>
     <p className={styles.note}>The charge below is quoted from the law. The workplan, topic method, recommendation record and checkpoints are proposed practice for confirmation by the group and the department, not statutory requirements. Checked on {WORKING_GROUP_PLAN_CHECKED}.</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="working-group-plan" noun="plan" /></details>
     <nav aria-label="On this page" className={styles.links}><a href="#charge">The charge</a><a href="#roadmap">Roadmap</a><a href="#meetings">Meetings</a><a href="#method">Each topic</a><a href="#topics">Topic plans</a><a href="#record">Recommendation record</a><a href="#checkpoints">Checkpoints</a><a href="#kickoff">Kickoff</a><a href="#reuse">Reuse this plan</a><a href="#support">What this program supplies</a></nav>
 
     <section className={styles.section} id="charge" aria-labelledby="charge-title">

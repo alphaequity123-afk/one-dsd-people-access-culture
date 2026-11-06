@@ -153,7 +153,7 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       <p style={paragraph}>The six goals can help you see where to focus and what to try next in your work.</p>
       <p style={paragraph}>Using the DHS Equity Policy and its Equity Analysis Toolkit is part of every staff member’s responsibility. Equity professionals can help you work through it.</p>
       <details style={{ margin: "18px 0" }}><summary style={{ cursor: "pointer", color: navy, fontWeight: 700 }}>About these goals and the toolkit</summary>
-        <p style={paragraph}>These six goals come from the Aging and Disability Services Administration (ADSA) Equity and Inclusion Implementation Plan. All six guide every unit in the Disability Services Division. They are not department-wide DHS goals.</p>
+        <p style={paragraph}>These six goals come from the Aging and Disability Services Administration Equity and Inclusion Implementation Plan. All six guide every unit in the Disability Services Division. They are not department-wide DHS goals.</p>
         <p style={paragraph}>This companion learning does not replace required agency training. Staff apply the current policy and toolkit to their work; the equity consultant and appropriate partners provide guidance, facilitation and analysis support. That support does not transfer staff responsibility or grant approval authority.</p>
         <p style={paragraph}>The goals describe what to improve. The official toolkit guides how to examine a decision. The plan below helps record action and follow-through. Use the current official decision guidance to determine the appropriate review; a short timeline alone does not establish that a scan is sufficient.</p>
         <p style={paragraph}>In DSD, the <strong>One DSD Team</strong> is the division equity team. DHS and ADSA committees retain their own names and responsibilities.</p>
@@ -161,7 +161,7 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       <button type="button" onClick={() => { planner.current?.focus({ preventScroll: true }); planner.current?.scrollIntoView({ behavior: "auto", block: "start" }); }} style={{ ...button, color: "#fff", background: navy }}>Open the three-goal work plan</button>
     </header>
 
-    <section aria-label="The six ADSA goals" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: 20 }}>
+    <section aria-label="The six Aging and Disability Services Administration goals" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: 20 }}>
       {goals.map(goal => <article id={goal.id} key={goal.number} style={{ ...panel, borderTop: `6px solid ${goalAccents[goal.number - 1]}`, scrollMarginTop: 24 }}>
         <p style={{ margin: "0 0 6px", color: goalAccents[goal.number - 1], fontWeight: 700 }}>Goal {goal.number}</p>
         <h3 style={heading}>{goal.title}</h3>

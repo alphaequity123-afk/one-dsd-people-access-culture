@@ -10,6 +10,7 @@ import { getEditableSurfaceDefinition } from "@/lib/content/staff-surface-regist
 import { CoursePackSchema } from "@/lib/content/courses/contract";
 import { courseText, sanitizedLesson, lessonObjectives } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import type { Metadata } from "next";
 import "../../../../courses/courses.css";
@@ -40,7 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ courseId:
 export default async function SharedLessonPage({ params }: { params: Promise<{ courseId: string; lessonId: string }> }) {
   const { courseId, lessonId } = await params;
   if (!getEditableSurfaceDefinition(`course.${courseId}`)) notFound();
-  const surface = await prepareEditableSurface(`course.${courseId}`, { scope: await requestedContentScope(), includeOwner: false });
+  const scope = await requestedContentScope();
+  const surface = await prepareEditableSurface(`course.${courseId}`, { scope, includeOwner: false });
   if (!surface.available) notFound();
   const { course } = CoursePackSchema.parse(surface.values.pack);
   const index = course.lessons.findIndex((lesson) => lesson.id === lessonId);
@@ -51,6 +53,7 @@ export default async function SharedLessonPage({ params }: { params: Promise<{ c
       <Link className={styles.breadcrumb} href={shareCourseHref(courseId)}>← {course.title}</Link>
       <div className={styles.lessonLayout}>
         <div className={styles.lessonMain}>
+          <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="lesson" id={`${courseId}~${lessonId}`} noun="lesson" scope={scope} /></details>
           <CourseLesson
             key={`${courseId}:${lessonId}`}
             courseId={courseId}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import Link from "next/link";
 import { courseHref, courseSummary, publishedCourses } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
@@ -8,7 +9,7 @@ import styles from "./collaboration.module.css";
 
 export const metadata: Metadata = {
   title: "Teams and Cross-Collaboration",
-  description: "Strengthen your team, work across DSD and ADSA, and collaborate with partners. Find learning at Foundation, Intermediate, and Advanced levels.",
+  description: "Strengthen your team, work across the Disability Services Division and the Aging and Disability Services Administration, and collaborate with partners. Find learning at Foundation, Intermediate, and Advanced levels.",
 };
 export const dynamic = "force-dynamic";
 
@@ -33,8 +34,8 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
       <header className={styles.intro}>
         <p className={styles.eyebrow}>Work better together</p>
         <h1>Teams and Cross-Collaboration</h1>
-        <p className={styles.lede}>Good collaboration helps people contribute, understand one another, and carry shared work forward. Explore learning for your team, work across DSD and ADSA, and relationships with partners.</p>
-        <p>Choose the situation that fits your work. Each course brings together explanation, examples, reflection, and practice you can return to when it is useful.</p>
+        <p className={styles.lede}>Good collaboration helps people contribute, understand one another, and carry shared work forward. Explore learning for your team, work across the Disability Services Division and the Aging and Disability Services Administration, and relationships with partners.</p>
+        <p>Choose the situation that fits your work. Each course brings together explanation, examples, reflection, and practice you can return to when it is useful.</p><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="collaboration" noun="collection" scope={scope} /></details>
       </header>
 
       <nav className={styles.paths} aria-label="Choose your collaboration focus">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Block, BoundaryNote, Bullets, PathwayEyebrow, PathwayShell, SectionNav } from "@/components/leadership-styles-pathway";
 import { LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, RACE_SECTION } from "@/lib/content/leadership-styles-pathway";
 import styles from "../leadership-styles.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 const page = LEADERSHIP_PATHWAY_PAGES.race;
 
@@ -17,6 +18,7 @@ export default function RaceAndLeadershipPage() {
     title={`${page.title}, not a leadership stereotype`}
     intro={<p>{RACE_SECTION.intro[0]}</p>}
   >
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="leadership-styles" id="race-and-leadership" noun="lesson" /></details>
     <SectionNav label="Parts" items={RACE_SECTION.parts.map(part => ({ href: `#${part.id}`, title: part.title }))} />
     <p className={styles.prose}>{RACE_SECTION.intro[1]} The examples are fictional.</p>
     {RACE_SECTION.parts.map((part, index) => <Block key={part.id} id={part.id} title={`${String.fromCharCode(65 + index)}. ${part.title}`}>

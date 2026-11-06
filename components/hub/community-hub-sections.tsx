@@ -5,51 +5,24 @@ import { COMMUNITY_CROSSWALK_BY_ID, communityFigureGroups, type CommunityFigureG
 import { isNativeCommunity, organizationHref, organizationsForCommunity, relationshipLine } from "@/lib/content/hub/organizations";
 import { BEFORE_YOU_REACH_OUT } from "@/lib/content/hub/before-you-reach-out";
 import { DEPARTMENT_WIDE_GRANTS } from "@/lib/content/hub/record-findings";
+import { DISABILITY_BRIEF_SOURCE, FIGURES_PER_100_NOTE, FIGURES_SOURCE, FIGURE_MEASURES, groupFigureText } from "@/lib/content/hub/community-figures-format";
 
 // Sections added to each community page: dated figures, organizations on record,
 // and the questions to answer before reaching out. Native community pages get
 // none of this (owner rule: those pages defer to the Office of Indian Affairs).
 
-type Figure = { status: string; estimate?: number; marginOfError?: number; universeCount?: number; percentOfMinnesota?: number; note?: string };
-type Measure = { key: string; label: string; table: string; page: number; universe: string; unit: string; note?: string };
-
-const MEASURES = (figures.measures as Measure[]).filter(m => m.key !== "households");
-const SOURCE = figures.sources.chartbook;
-const number = (n: number) => n.toLocaleString("en-US");
-
-function value(measure: Measure, figure: Figure | undefined) {
-  if (!figure || figure.status !== "published" || figure.estimate === undefined) {
-    return figure?.status === "suppressed" ? "Not shown: too few survey responses" : "Not available";
-  }
-  const money = measure.unit === "dollars";
-  const main = money ? `$${number(figure.estimate)}` : `${number(figure.estimate)} people`;
-  const moe = figure.marginOfError !== undefined ? ` (give or take ${money ? "$" : ""}${number(figure.marginOfError)})` : "";
-  const share = figure.universeCount ? ` out of ${number(figure.universeCount)}, about ${Math.round((figure.estimate / figure.universeCount) * 100)} in 100` : "";
-  const ofState = figure.percentOfMinnesota !== undefined ? `, ${figure.percentOfMinnesota}% of Minnesotans` : "";
-  return `${main}${moe}${share}${ofState}`;
-}
-
-type BriefValue = { group: string; status: string; estimate?: number | null };
-const DISABILITY_BRIEF = figures.disabilityBrief as unknown as { groups: BriefValue[] };
-const DISABILITY_SOURCE = figures.sources.disabilityBrief;
-
-/** When the chartbook hides a group's disability count, the February 2026 disability brief may print one. */
-function disabilityFromBrief(groupName: string): string | null {
-  const row = DISABILITY_BRIEF.groups.find(item => item.group === groupName);
-  if (!row || row.status !== "published" || row.estimate == null) return null;
-  return `${number(row.estimate)} people, from the disability brief (${DISABILITY_SOURCE.date}). Few survey responses and no printed margin of error, so read with extra caution.`;
-}
+const MEASURES = FIGURE_MEASURES;
+const SOURCE = FIGURES_SOURCE;
+const DISABILITY_SOURCE = DISABILITY_BRIEF_SOURCE;
 
 function FigureTable({ group }: { group: CommunityFigureGroup }) {
-  const groupFigures = group.figures as Record<string, Figure>;
   return <div className="community-table" role="region" aria-label={`Figures for ${group.name} Minnesotans`} tabIndex={0}>
     <table>
       <caption>{group.name} Minnesotans, statewide, {figures.surveyYears}</caption>
       <thead><tr><th scope="col">Measure</th><th scope="col">Figure</th></tr></thead>
       <tbody>{MEASURES.map(measure => <tr key={measure.key}>
         <th scope="row">{measure.label}</th>
-        <td>{measure.key === "disabilityAges18to64" && groupFigures[measure.key]?.status !== "published" && disabilityFromBrief(group.name)
-          ? disabilityFromBrief(group.name) : value(measure, groupFigures[measure.key])}</td>
+        <td>{groupFigureText(group, measure)}</td>
       </tr>)}</tbody>
     </table>
     {"definition" in group && group.definition ? <p className="text-sm">Who is counted: {String(group.definition)}</p> : null}
@@ -68,7 +41,7 @@ export function CommunityHubSections({ id, title }: { id: string; title: string 
       {groups.length ? <>
         {crosswalk?.match === "approximate" ? <p><strong>How these figures differ from this page:</strong> {crosswalk.note}</p> : null}
         {groups.map(group => <FigureTable key={group.name} group={group} />)}
-        <p className="text-sm">&ldquo;About N in 100&rdquo; is worked out from the report&apos;s published counts; the report itself prints counts, not percentages. {figures.comparabilityNote} {figures.periodNote}</p>
+        <p className="text-sm">{FIGURES_PER_100_NOTE} {figures.comparabilityNote} {figures.periodNote}</p>
         <p className="text-sm">Source: <a href={SOURCE.url}>{SOURCE.title}</a>, {SOURCE.publisher}, {SOURCE.date}. {SOURCE.dataSource}</p>
         <p className="text-sm">Disability counts not shown in that report come from <a href={DISABILITY_SOURCE.url}>{DISABILITY_SOURCE.title}</a>, {DISABILITY_SOURCE.publisher}, {DISABILITY_SOURCE.date}.</p>
       </> : <p>{crosswalk?.note ?? "The Minnesota State Demographic Center report does not give separate figures for this community."}</p>}

@@ -185,7 +185,7 @@ export const adsaImplementation: ADSAImplementation = {
             "toolRoutes": [
               "/learn/equity-toolkit",
               "/practice/gp-7",
-              "/equity-review/policy"
+              "/equity-review/general"
             ],
             "workProduct": "Decision analysis using the current official Equity Analysis Toolkit, with the problem, evidence, affected perspectives, alternatives and recommendation documented.",
             "evidenceQuestions": [
@@ -1016,7 +1016,7 @@ export const adsaImplementation: ADSAImplementation = {
         },
         {
           "id": "ADSA-6.4",
-          "sourceAction": "Ensure communication practices align with the National CLAS Standards.",
+          "sourceAction": "Ensure communication practices align with the National Culturally and Linguistically Appropriate Services Standards.",
           "sourceLine": 83,
           "support": {
             "status": "Program-authored implementation support; not an additional official action or completion claim.",
@@ -1039,7 +1039,7 @@ export const adsaImplementation: ADSAImplementation = {
               "/practice/clas",
               "/library/ja-language-access-checklist"
             ],
-            "workProduct": "Communication practice crosswalk to applicable National CLAS Standards, with language/cultural access actions, responsible review and evidence of intended-task use.",
+            "workProduct": "Communication practice crosswalk to applicable National Culturally and Linguistically Appropriate Services Standards, with language/cultural access actions, responsible review and evidence of intended-task use.",
             "evidenceQuestions": [
               "Which CLAS standards apply to this communication context and what action follows from each?",
               "How will language assistance, cultural responsiveness and participant feedback be reviewed without declaring compliance from a completed checklist?"

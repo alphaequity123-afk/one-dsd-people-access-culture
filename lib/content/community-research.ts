@@ -8,6 +8,7 @@ import {
   type MinnesotaAccess,
 } from "@/lib/content/community-research-policy";
 import { communityPagePublished } from "@/lib/content/cultural-intelligence-publication";
+import type { StaffProgramScope } from "@/lib/content/staff-publications";
 
 /** One JSON file per community. Missing or invalid files leave the page as it was. */
 export async function loadCommunityResearch(id: string): Promise<CommunityResearch | null> {
@@ -24,8 +25,8 @@ export function minnesotaAccess(): MinnesotaAccess | null {
 }
 
 /** The same request-scoped publication gates as the community additions. */
-export async function publishedCommunityResearch(id: string): Promise<CommunityResearch | null> {
+export async function publishedCommunityResearch(id: string, scope?: StaffProgramScope): Promise<CommunityResearch | null> {
   const research = await loadCommunityResearch(id);
   if (!research) return null;
-  return await communityPagePublished(id) ? research : null;
+  return await communityPagePublished(id, scope) ? research : null;
 }

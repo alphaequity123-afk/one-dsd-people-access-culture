@@ -788,6 +788,24 @@ function checkedToolUsage(data: AgentResponse, evidence: AgentEvidence): {
 
 const citationToken = (index: number) => `\uE000PACXCITEX${index}X\uE001`;
 
+/**
+ * The joiner still fails closed with the one public code. The finite reason and detail only
+ * record which rule refused, so a log can tell a changed provider form from an invented link.
+ */
+export class UnresolvedCitationError extends Error {
+  constructor(readonly reason: string, readonly detail?: string) {
+    super("research_unresolved_citation");
+    this.name = "UnresolvedCitationError";
+  }
+}
+
+/** same_host: a page on a returned source's site in another URL form; other_host: no returned source there. */
+function unresolvedUrlDetail(raw: string | null | undefined, evidence: AgentEvidence): string {
+  const url = raw ? safeUrl(raw) : null;
+  if (!url) return "unsafe_or_malformed_url";
+  return evidence.sources.some((source) => new URL(source.url).hostname === url.hostname) ? "same_host" : "other_host";
+}
+
 function renderedCitedAnswer(evidence: AgentEvidence): string {
   let resolvedCitations = 0;
 
@@ -800,7 +818,7 @@ function renderedCitedAnswer(evidence: AgentEvidence): string {
     while ((marker = markerPattern.exec(part.text)) !== null) {
       if (inCode(marker.index)) continue;
       const sourceIndex = evidence.resultIdToSource.get(marker[1]);
-      if (!sourceIndex) throw new Error("research_unresolved_citation");
+      if (!sourceIndex) throw new UnresolvedCitationError("marker_id");
       rawCitationSpans.push({ start: marker.index, end: marker.index + marker[0].length, sourceIndex });
     }
 
@@ -810,7 +828,7 @@ function renderedCitedAnswer(evidence: AgentEvidence): string {
       if (inCode(link.index)) continue;
       const url = safeUrl(link[2]);
       const sourceIndex = url ? evidence.sourceByUrl.get(url.toString()) : undefined;
-      if (!sourceIndex) throw new Error("research_unresolved_citation");
+      if (!sourceIndex) throw new UnresolvedCitationError("link_url", unresolvedUrlDetail(link[2], evidence));
       rawCitationSpans.push({ start: link.index, end: link.index + link[0].length, sourceIndex });
     }
 
@@ -820,20 +838,20 @@ function renderedCitedAnswer(evidence: AgentEvidence): string {
       const isCitation = annotation.type === "url_citation" || annotation.type === "page_citation";
       if (!isCitation) {
         if (annotation.url || annotation.type?.toLowerCase().includes("citation")) {
-          throw new Error("research_unresolved_citation");
+          throw new UnresolvedCitationError("annotation_type", /^[a-z_]{1,40}$/i.test(annotation.type ?? "") ? annotation.type : "other");
         }
         continue;
       }
       const url = annotation.url ? safeUrl(annotation.url) : null;
       const sourceIndex = url ? evidence.sourceByUrl.get(url.toString()) : undefined;
-      if (!sourceIndex) throw new Error("research_unresolved_citation");
+      if (!sourceIndex) throw new UnresolvedCitationError("annotation_url", unresolvedUrlDetail(annotation.url, evidence));
       if (alreadyCited.has(sourceIndex)) continue;
       const at = annotation.end_index;
       if (typeof at !== "number" || at < 0 || at > part.text.length) {
-        throw new Error("research_unresolved_citation");
+        throw new UnresolvedCitationError("annotation_index", "out_of_range");
       }
       if (inCode(at) || rawCitationSpans.some((span) => at > span.start && at < span.end)) {
-        throw new Error("research_unresolved_citation");
+        throw new UnresolvedCitationError("annotation_index", "inside_code_or_link");
       }
       const placements = annotationPlacements.get(at) ?? new Set<number>();
       placements.add(sourceIndex);
@@ -852,14 +870,14 @@ function renderedCitedAnswer(evidence: AgentEvidence): string {
     const code = protectedCode(withAnnotations);
     withAnnotations = code.text.replace(markerPattern, (_match, raw: string) => {
       const sourceIndex = evidence.resultIdToSource.get(raw);
-      if (!sourceIndex) throw new Error("research_unresolved_citation");
+      if (!sourceIndex) throw new UnresolvedCitationError("marker_id");
       resolvedCitations += 1;
       return citationToken(sourceIndex);
     });
     withAnnotations = withAnnotations.replace(linkPattern, (_match, label: string, rawUrl: string) => {
       const url = safeUrl(rawUrl);
       const sourceIndex = url ? evidence.sourceByUrl.get(url.toString()) : undefined;
-      if (!sourceIndex) throw new Error("research_unresolved_citation");
+      if (!sourceIndex) throw new UnresolvedCitationError("link_url", unresolvedUrlDetail(rawUrl, evidence));
       resolvedCitations += 1;
       return `${label} ${citationToken(sourceIndex)}`;
     });
@@ -871,7 +889,7 @@ function renderedCitedAnswer(evidence: AgentEvidence): string {
         withAnnotations,
       )
     ) {
-      throw new Error("research_unresolved_citation");
+      throw new UnresolvedCitationError("combined_marker");
     }
     return code.restore(withAnnotations);
   });

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Block, BoundaryNote, PathwayEyebrow, PathwayShell } from "@/components/leadership-styles-pathway";
 import { COMMON_SCENARIO, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, LIFECYCLE, leadershipStyle, leadershipStyleHref } from "@/lib/content/leadership-styles-pathway";
 import styles from "../leadership-styles.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 const page = LEADERSHIP_PATHWAY_PAGES.lifecycle;
 
@@ -17,6 +18,7 @@ export default function ConflictLifecyclePage() {
     title={page.title}
     intro={<p>{LIFECYCLE.intro}</p>}
   >
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="leadership-styles" id="conflict-lifecycle" noun="lesson" /></details>
     <Block id="lifecycle-table" title="The eight stages">
       <div className={styles.tableWrap}><table className={styles.table}>
         <caption>Each stage needs a different behavior. The useful contribution names approaches that help at that stage.</caption>

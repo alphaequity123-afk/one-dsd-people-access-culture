@@ -6,6 +6,7 @@ import { CAPSTONE, LEADERSHIP_PATHWAY_HREF, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP
 import { LEADERSHIP_CAPSTONE_LESSON_ID } from "@/lib/tutor/leadership-items";
 import styles from "../leadership-styles.module.css";
 import "@/components/clas-curriculum.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 const page = LEADERSHIP_PATHWAY_PAGES.capstone;
 
@@ -20,6 +21,7 @@ export default function LeadershipCapstonePage() {
     title={page.title}
     intro={<p>Bring the pathway together by rewriting one weak response into a strong one. Then check your rewrite against the practice rubric.</p>}
   >
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="leadership-styles" id="capstone" noun="lesson" /></details>
     <SectionNav label="Capstone sections" items={[
       { href: "#capstone", title: "The statement" },
       { href: "#worked-analysis", title: "Worked analysis" },

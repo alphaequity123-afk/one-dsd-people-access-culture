@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCountyAgencies, sharedAgencies } from "@/lib/content/hub/county-agencies";
 import styles from "../hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "County agencies",
@@ -18,6 +19,7 @@ export default async function CountyAgenciesPage({ searchParams }: { searchParam
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
     <h1 className={styles.title}>County agencies</h1>
     <p className={styles.lede}>{data.description}</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="county-agencies" noun="county agency directory" /></details>
     <p className={styles.note}>Counties are where most people meet the disability services system: assessments, waivers and case management happen there. Most counties publish one human services line rather than a separate disability line. Details were checked on {data.checked}; confirm them before you share them.</p>
     {data.tribalNations.map(link => <p key={link.url}>{link.note} <a href={link.url}>{link.title}</a>.</p>)}
 

@@ -17,7 +17,7 @@ const resources = [
   { title: "Connect an analysis with applicable requirements", href: "/practice/requirements", description: "Use the requirements crosswalk to distinguish the program constitution, published policy, service standards and local implementation priorities. Record what applies, what needs confirmation and who can authorize a decision." },
   { title: "See the toolkit in everyday work", href: "/learn/equity-in-practice", description: "Follow DSD examples connecting the Equity Outcome Map and ADSA goals with a service notice, support planning, contracting, and workforce learning." },
   { title: "Examine barriers in a process", href: "/equity-review/structural", description: "Use the structural analysis workspace to map decision points, examine requirements and responsibilities, and turn evidence into an action with an owner and a review date." },
-  { title: "Plan cultural and language access", href: "/practice/clas", description: "Use the National CLAS Standards to prepare service-specific actions, distinguish requirements to confirm, and identify the people responsible and ways to learn from the change." },
+  { title: "Plan cultural and language access", href: "/practice/clas", description: "Use the National Culturally and Linguistically Appropriate Services Standards to prepare service-specific actions, distinguish requirements to confirm, and identify the people responsible and ways to learn from the change." },
   { title: "Equity analysis for policy review", href: "/learn/equity-toolkit/policy-review", description: "Use the One DSD presentation to explore equity analysis in policy work. Read the slides here or download a copy for a team discussion." },
 ];
 
@@ -81,7 +81,7 @@ export default async function Page() {
           <h2>Connect the analysis with your wider work</h2>
           <p>The ADSA goals and work plan provide context for applying an analysis. They are available whenever useful; you can start the example or your own draft directly.</p>
           {culturalIntelligenceAvailable && <p><Link href="/learn/cultural-intelligence">Explore cultural context for your analysis →</Link></p>}
-          <p><Link href="/learn/equity-toolkit/goals">ADSA six goals and work plan →</Link></p>
+          <p><Link href="/learn/equity-toolkit/goals">Aging and Disability Services Administration six goals and work plan →</Link></p>
           <details><summary>About this companion</summary><p>{text("companionNote")}</p><p><Link href="/operationalizing-equity">Explore operationalizing equity in everyday work</Link></p></details>
         </section>
         <section id="toolkit-downloads" className={`${styles.section} ${styles.support} print:hidden`}>

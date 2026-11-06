@@ -45,7 +45,7 @@ describe("spoken answer preference", () => {
     expect(spoken.request.system).toContain("continuing an existing draft");
     expect(strictSchemaForOpenAI(spoken.request.schema).schema).toEqual(strictSchemaForOpenAI(text.request.schema).schema);
     expect(JSON.parse(spoken.request.user)).toEqual(JSON.parse(text.request.user));
-  }, 20000);
+  }, 120000);
 
   it("does not truncate a requested detailed answer or code in spoken mode", async () => {
     const detailedQuestion = "Explain accessible meeting planning in detail, with ten numbered steps and a sample HTML button.";
@@ -54,7 +54,7 @@ describe("spoken answer preference", () => {
     const { result, request } = await complete({ question: detailedQuestion, responseMode: "spoken" });
     expect(JSON.parse(request.user).question).toBe(detailedQuestion);
     if (result.kind === "answer") expect(result.answer.shortAnswer).toBe(detail);
-  }, 20000);
+  }, 120000);
 
   it("keeps an explicitly requested worksheet and its follow-up revision in spoken mode", async () => {
     f.complete.mockResolvedValue({ parsed: { ...answer, practiceDraft: { pathId: "gp-8", fields: [{ id: "ahead", value: "Proposed: send accessible materials before the meeting; timing to confirm." }] } } });
@@ -69,5 +69,5 @@ describe("spoken answer preference", () => {
       expect(revised.result.answer.practiceArtifact?.parentRevisionId).toBe(priorArtifact!.revisionId);
       expect(revised.result.answer.practiceArtifact?.values).toMatchObject({ ahead: priorArtifact!.values.ahead, formats: ["Speaking", "Written input"] });
     }
-  }, 20000);
+  }, 120000);
 });

@@ -5,6 +5,7 @@ import { ResearchMarkdown } from "@/components/research-markdown";
 import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_MODULES, WATER_SUPPORT } from "@/lib/content/water-we-swim-in";
 import "@/components/community-editorial.css";
 import "@/components/community-research-sections.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export async function generateMetadata({ params }: { params: Promise<{ module: string }> }): Promise<Metadata> {
   const { module: slug } = await params;
@@ -23,6 +24,7 @@ export default async function WaterModulePage({ params }: { params: Promise<{ mo
     <p className="community-eyebrow"><Link href={WATER_COURSE_HREF}>{WATER_COURSE_TITLE}</Link>: module {current.number} of {WATER_MODULES.length}</p>
     <h1>{current.title}</h1>
     <p className="community-opening">{current.goal}</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this module</summary><ResourceDownloads kind="water-we-swim-in" id={current.slug} noun="module" /></details>
     <ResearchMarkdown markdown={current.body} notesKey={`water-we-swim-in-notes-${current.number}`} />
     <p>{WATER_SUPPORT}</p>
     <nav className="course-next" aria-label="Course modules">

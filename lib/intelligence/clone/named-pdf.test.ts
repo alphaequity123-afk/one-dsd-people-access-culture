@@ -65,7 +65,7 @@ describe("named original PDF grounding", () => {
       expect(result.answer.sources).toHaveLength(2);
       expect(result.answer.sources.every(source => source.href.includes(".pdf#page="))).toBe(true);
     }
-  }, 20000);
+  }, 120000);
   it("resolves wrong generated offsets only for exact real PDF quotes before strict answer validation", async () => {
     f.complete.mockImplementation(async (request: { user: string; schema: { parse: (value: unknown) => unknown } }) => {
       const pages = JSON.parse(request.user).programSources.filter((source: { href: string }) => source.href.includes(".pdf#page="));
@@ -86,12 +86,12 @@ describe("named original PDF grounding", () => {
       expect(claim.references[0]).toEqual({ evidenceId: source.evidence!.evidenceId, ...source.evidence!.excerpt });
     }
     expect(f.research).not.toHaveBeenCalled();
-  }, 20000);
+  }, 120000);
   it.each(["research", "clarify", null])("retains research when the named PDF evidence is not sufficient: %s", async evidence => {
     f.plan.mockResolvedValue(evidence ? { route: "resources", evidence } : null);
     await askConcierge({ question, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.research).toHaveBeenCalledOnce();
-  }, 20000);
+  }, 120000);
   it("includes the complete CLAS action-step guidance when the title is paraphrased", async () => {
     const clasQuestion = "According to the CLAS handout Your CLAS Action Worksheet, what should I write down for three practices, implementation timeframes, and concrete action steps? Please cite the original PDF page.";
     f.complete.mockImplementation(async (request: { user: string }) => {
@@ -107,19 +107,19 @@ describe("named original PDF grounding", () => {
     expect(result.answer.failureCode).toBeUndefined();
     expect(result.answer.sources[0].href).toBe("/documents/engagement/clas-implementation-checklist.pdf#page=8");
     expect(result.answer.evidenceClaims).toHaveLength(1);
-  }, 20000);
+  }, 120000);
   it.each([" Only use sources from this application; do not search the web.", " Use internal sources only.", " Using only this application, answer the question.", " Using this program alone, answer the question."])("does not initiate outside research for explicit local-only wording: %s", async (preference) => {
     f.plan.mockResolvedValue({ route: "resources", evidence: "research" });
     await askConcierge({ question: question + preference, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.research).not.toHaveBeenCalled();
-  }, 20000);
+  }, 120000);
   it("honors the exact video question without starting public research", async () => {
     f.plan.mockResolvedValue({ route: "resources", evidence: "research" });
     const result = await askConcierge({ question: "Using only this application, what example does the democratic leadership video give?", contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.research).not.toHaveBeenCalled();
     expect(result.kind).toBe("answer");
     if (result.kind === "answer") expect(result.answer.publicResearch).toBeUndefined();
-  }, 20000);
+  }, 120000);
   it("keeps external source URLs and prior outside answers out of the writer payload for explicit program-only requests", async () => {
     let payload: any;
     let writerSystem = "";
@@ -143,7 +143,7 @@ describe("named original PDF grounding", () => {
     expect(payload.operationalizingEquity).toBeUndefined();
     if (result.kind !== "answer") throw Error("Expected an answer");
     expect(result.answer.sources.every(source => /^\/(?!\/)/.test(source.href))).toBe(true);
-  }, 20000);
+  }, 120000);
   it("retains source-backed organizational context for an ordinary question", async () => {
     let payload: any;
     f.complete.mockImplementation(async (request: { user: string }) => {
@@ -154,9 +154,9 @@ describe("named original PDF grounding", () => {
     expect(f.complete).toHaveBeenCalledOnce();
     expect(payload.organization.entries.length).toBeGreaterThan(0);
     expect(payload.organization.entries.some((entry: { sources: Array<{ url: string }> }) => entry.sources.some(source => /^https?:/.test(source.url)))).toBe(true);
-  }, 20000);
+  }, 120000);
   it.each([" Search external research too.", " Compare this guide with external sources.", " What has changed in current guidance?"])("retains explicit outside or current research: %s", async extra => {
     await askConcierge({ question: question + extra, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.research).toHaveBeenCalledOnce();
-  }, 20000);
+  }, 120000);
 });

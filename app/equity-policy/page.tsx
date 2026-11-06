@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/ui";
 import { EQUITY_POLICY } from "@/lib/equity-analysis/policy";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = { title: "DHS Equity Policy", description: "The DHS equity policy, what it asks of staff, and how it is being used across the department." };
 export const dynamic = "force-dynamic";
@@ -22,6 +23,7 @@ export default function EquityPolicyPage() {
           <Link href="/learn/equity-toolkit">Toolkit companion</Link>
           <Link href="/learn/equity-toolkit/policy-review">Equity analysis for policy review</Link>
         </div>
+        <details className="border-b border-line pb-3 print:hidden mt-4"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="equity-policy" noun="page" /></details>
       </PageIntro>
 
       <div className="wrap max-w-6xl space-y-12 py-10">

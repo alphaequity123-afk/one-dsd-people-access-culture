@@ -6,6 +6,7 @@ import {
   LEADERSHIP_STYLE_LESSONS, PATHWAY_INTRO, PATHWAY_PROCESSES, PATHWAY_SOURCES, leadershipStyleHref,
 } from "@/lib/content/leadership-styles-pathway";
 import styles from "./leadership-styles.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: LEADERSHIP_PATHWAY_TITLE,
@@ -19,6 +20,7 @@ export default function LeadershipStylesPathwayPage() {
     intro={<p>{PATHWAY_INTRO[0]}</p>}
     links={<><a href="#common-scenario">Start with the common scenario</a><Link href={LEADERSHIP_PATHWAY_PAGES.capstone.href}>Go to the capstone</Link><Link href="/leading">Lead equity in everyday work</Link></>}
   >
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this pathway</summary><ResourceDownloads kind="leadership-styles" id="home" noun="pathway" /></details>
     <SectionNav label="Pathway sections" items={[
       { href: "#about", title: "About this pathway" },
       { href: "#foundations", title: "Foundations" },

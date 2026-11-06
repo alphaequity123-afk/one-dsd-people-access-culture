@@ -1,6 +1,7 @@
 import type { CompleteRequest, CompleteResult, ProviderAdapter } from "./index";
 import type { ModelRecord } from "../types";
 import { strictSchemaForOpenAI, stripInjectedNulls } from "./openai";
+import { logProviderFailure } from "./log";
 
 /** Server-only model routing; search evidence is supplied separately by research. */
 export class OpenRouterAdapter implements ProviderAdapter {
@@ -27,7 +28,15 @@ export class OpenRouterAdapter implements ProviderAdapter {
     const choice = data.choices?.[0];
     if (choice?.finish_reason !== "stop" || choice.message?.refusal || typeof choice.message?.content !== "string") throw new Error("openrouter_incomplete");
     const value = stripInjectedNulls(JSON.parse(choice.message.content), strict.schema, strict.schema, strict.injected);
-    return { parsed: req.schema.parse(value), model_id: req.model_id, provider_trace_id: data.id,
+    const checked = req.schema.safeParse(value);
+    if (!checked.success) {
+      // Issue paths and codes only: generated text never reaches the log. The ZodError is
+      // rethrown unchanged so the caller's one format retry still applies.
+      const issues = checked.error.issues.slice(0, 6).map((issue) => `${issue.path.join(".") || "(root)"}: ${issue.code}`);
+      logProviderFailure({ provider: "openrouter", model: record.provider_model_ref, reason: "openrouter_invalid_structured_output", trace_id: req.trace_id, detail: { issues } });
+      throw checked.error;
+    }
+    return { parsed: checked.data, model_id: req.model_id, provider_trace_id: data.id,
       usage: data.usage ? { input_tokens: data.usage.prompt_tokens ?? 0, output_tokens: data.usage.completion_tokens ?? 0 } : undefined };
   }
   async health() { return { ok: Boolean(process.env.OPENROUTER_API_KEY?.trim()), latency_ms: 0 }; }

@@ -9,6 +9,7 @@ import { usesOfReading, briefsSuggestingReading } from '@/lib/content/knowledge-
 import { getAvailableInterculturalResources } from '@/lib/content/intercultural-resource-resolver';
 import { requestedContentScope } from '@/lib/product/request-context';
 import styles from '../reading.module.css';
+import { ResourceDownloads } from "@/components/resource-downloads";
 const KIND_LABEL: Record<string, string> = { resource: 'Course or resource', path: 'Guided practice', brief: 'Community brief' };
 /** These pages have no withdrawal gate of their own; the Cultural Intelligence hub shows them the same way. */
 const UNGATED_GUIDE_PATHS = new Set(['/learn/clas','/practice/clas','/one-dsd/leadership']);
@@ -31,7 +32,7 @@ export default async function ReadingPage({params}:{params:Promise<{readingId:st
   const showGuideLink=await guideLinkFilter(book.chapterGuide?.flatMap(item=>item.usedIn)??[]);
   return <div className={styles.page}><div className={styles.body}><Link className={styles.back} href="/learn/readings">← Books and ideas for your work</Link></div>
     <PageIntro kicker={readingSections[book.section-1]} title={book.title} lede={book.authors}/>
-    <div className={styles.body}><article className={styles.article}>
+    <div className={styles.body}><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this reading</summary><ResourceDownloads kind="reading" id={book.id} noun="reading" /></details><article className={styles.article}>
       {book.citation?<section><div className="flex flex-col gap-6 sm:flex-row">{book.cover?<figure className="shrink-0"><img src={book.cover.src} alt={book.cover.alt} width={book.cover.width} height={book.cover.height} loading="lazy" className="h-auto w-40" /><figcaption className="mt-2 max-w-40 text-sm">{book.cover.credit}</figcaption></figure>:null}<div><p>{book.citation}</p>{book.bookLinks?<ul className={styles.related}>{book.bookLinks.map(link=><li key={link.href}><a href={link.href}>{link.label}</a></li>)}</ul>:null}{book.bookAccess?<p>{book.bookAccess}</p>:null}{book.trademarkNote?<p>{book.trademarkNote}</p>:null}</div></div></section>:null}
       <section><h2>About this book</h2>{book.overview.map((p,i)=><p key={i}>{p}</p>)}</section>
       <section><h2>Key ideas</h2><p>These reading notes present the author&apos;s arguments for reflection and discussion. They are not statements of DHS policy.</p><ul>{book.mainPoints.map((p,i)=><li key={i}>{p}</li>)}</ul></section>

@@ -7,6 +7,7 @@ import { requestedContentScope } from "@/lib/product/request-context";
 import { collaborationCourses, collaborationHref } from "@/lib/learning/collaboration-collection";
 import { PageContents, type PageContentsItem } from "@/components/page-contents";
 import styles from "../practice-guide-layout.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 const relatedCollaboration: Record<string, readonly { id: string; purpose: string }[]> = {
   "clearer-processes": [
@@ -44,7 +45,7 @@ export default async function PracticeGuidePage({ params }: Props) {
     { href: "#guide-resources", label: "Related guidance" },
   ];
   return <article className={`dsd-shell dsd-stage dsd-guide ${styles.guide}`}>
-    <header className="dsd-page-heading"><p className="dsd-eyebrow">{guide.purpose}</p><h1>{guide.title}.</h1><p className="dsd-lede">{guide.introduction}</p></header>
+    <header className="dsd-page-heading"><p className="dsd-eyebrow">{guide.purpose}</p><h1>{guide.title}.</h1><p className="dsd-lede">{guide.introduction}</p><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id={`practice-guide~${guide.slug}`} noun="practice guide" /></details></header>
     <PageContents items={contents}>
       <ol className="dsd-guide-steps">{guide.steps.map((step, index) => <li key={step.title}><span className="dsd-guide-step-number" aria-hidden="true">0{index + 1}</span><div><h2 id={`guide-step-${index + 1}`}>{step.title}</h2><p>{step.body}</p><p className="dsd-guide-question">{step.question}</p></div></li>)}</ol>
         <section className="dsd-guide-example" aria-labelledby="guide-example"><p className="dsd-eyebrow">An example to consider</p><h2 id="guide-example">What this could look like</h2><p>{guide.example}</p></section>

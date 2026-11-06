@@ -4,6 +4,7 @@ import { PageIntro } from "@/components/ui";
 import { DirectorToolkitTemplate } from "@/components/director-toolkit-template";
 import styles from "@/components/director-toolkit.module.css";
 import { DIRECTOR_TEMPLATES, DIRECTOR_TOOLKIT_HREF, DIRECTOR_TOOLKIT_SECTIONS, TEMPLATE_KEEP_OUT, templateAnchor } from "@/lib/content/director-toolkit";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Equity Director toolkit templates",
@@ -16,6 +17,7 @@ export default function DirectorToolkitTemplatesPage() {
     <div className={styles.printHide}>
       <PageIntro tone="business" kicker="Equity Director toolkit" title="Printable templates" lede="Fill-in templates for equity reviews at the Minnesota Department of Human Services (DHS). Fill them in on screen, then print, copy or download.">
         <p className="mt-4 max-w-3xl"><Link href={DIRECTOR_TOOLKIT_HREF}>Back to the Equity Director toolkit</Link></p>
+        <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="templates" noun="set of blank templates" /></details>
       </PageIntro>
     </div>
     <div className="wrap max-w-5xl space-y-10 py-10">

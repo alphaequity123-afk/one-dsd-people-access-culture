@@ -4,6 +4,7 @@ import { getOfficialProviders } from "@/lib/content/hub/official-providers";
 import { ORGANIZATIONS, organizationHref } from "@/lib/content/hub/organizations";
 import { getCountyAgencies } from "@/lib/content/hub/county-agencies";
 import styles from "../hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Providers and designated agencies",
@@ -21,6 +22,7 @@ export default async function ProvidersPage({ searchParams }: { searchParams: Pr
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
     <h1 className={styles.title}>Providers and designated agencies</h1>
     <p className={styles.lede}>Organizations that the State of Minnesota designates, contracts, licenses or certifies to serve people with disabilities, and which counties each one serves. Each entry names the public record of its designation.</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="providers" noun="provider directory" /></details>
     <p className={styles.note}>Designation is a matter of public record; it is not a judgment of quality, and it is not a referral. Confirm current details with the organization. Facts checked on {data.checked}.</p>
     <p>{data.tribalNote} <Link href="/learn/tribal-referral">Native American and Tribal-specific guidance</Link>.</p>
 

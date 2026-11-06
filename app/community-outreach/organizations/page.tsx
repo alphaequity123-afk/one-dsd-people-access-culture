@@ -4,6 +4,7 @@ import { communityDesignEntries } from "@/lib/content/community-design";
 import { ORGANIZATIONS, ORGANIZATIONS_CHECKED, RELATIONSHIP_ORDER, hasDivisionRecord, isNativeCommunity, organizationHref } from "@/lib/content/hub/organizations";
 import { DEPARTMENT_WIDE_GRANTS } from "@/lib/content/hub/record-findings";
 import styles from "../hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Organizations connected with the Disability Services Division",
@@ -26,6 +27,7 @@ export default async function OrganizationDirectory({ searchParams }: { searchPa
     <p className={styles.note}>Being listed here does not mean the organization speaks for a whole community, and it is not a ranking. Some connections ended years ago. Confirm current details with the organization before you rely on them. Facts were checked on {ORGANIZATIONS_CHECKED}.</p>
 
     <p><a href="/documents/community-outreach/organizations-connected-with-the-disability-services-division.pdf" download>Download all organization pages as one PDF</a> (45 pages, 1 MB)</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="organizations" noun="directory" /></details>
 
     <form method="get" className={styles.filters} role="search" aria-label="Filter organizations">
       <label>Community<select name="community" defaultValue={community}><option value="">All communities</option>{linked.map(id => <option key={id} value={id}>{titles.get(id) ?? id}</option>)}</select></label>

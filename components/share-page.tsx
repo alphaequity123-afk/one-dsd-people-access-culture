@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PRODUCT_CONTEXT_COOKIE, resolveProductContext, type ProductContextId } from "@/lib/product/federation";
 import { currentShareLocation, shareLink } from "@/lib/product/share-link";
 
@@ -58,11 +58,22 @@ export function SharePage({ title, href, noun = "page", compact = false }: Share
     window.location.href = `mailto:?subject=${encodeURIComponent(subject())}&body=${encodeURIComponent(`I thought you might find this useful:\n\n${subject()}\n${link()}`)}`;
   };
 
+  const [canShare, setCanShare] = useState(false);
+  useEffect(() => { setCanShare(typeof navigator !== "undefined" && typeof navigator.share === "function"); }, []);
+  const deviceShare = async () => {
+    try {
+      await navigator.share({ title: subject(), url: link() });
+    } catch {
+      /* the person closed the share sheet */
+    }
+  };
+
   const buttonClass = compact ? "btn btn--light !min-h-0 !px-3 !py-1 !text-xs" : "btn";
   return (
     <div className={compact ? "inline-flex flex-wrap items-center gap-2" : "mt-4 flex flex-wrap items-center gap-3"} data-share-page="true">
-      <button type="button" className={buttonClass} onClick={() => void copy()}>{compact ? "Share" : `Share this ${noun}`}</button>
-      {compact ? null : <button type="button" className="btn btn--light" onClick={email}>Share by email</button>}
+      <button type="button" className={buttonClass} onClick={() => void copy()}>{compact ? "Copy link" : `Share this ${noun}`}</button>
+      <button type="button" className={compact ? buttonClass : "btn btn--light"} onClick={email}>{compact ? "Email link" : "Share by email"}</button>
+      {canShare ? <button type="button" className={compact ? buttonClass : "btn btn--light"} onClick={() => void deviceShare()}>More ways to share</button> : null}
       {message ? <span role="status" className="text-sm break-all">{message}</span> : null}
     </div>
   );

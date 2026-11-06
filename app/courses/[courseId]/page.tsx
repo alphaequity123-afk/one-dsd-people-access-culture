@@ -19,6 +19,7 @@ import { getEditableSurfaceDefinition } from "@/lib/content/staff-surface-regist
 import { requestedContentScope } from "@/lib/product/request-context";
 import { CourseResume } from "@/components/course-resume";
 import { ResourceShare } from "@/components/resource-tools";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import type { Metadata } from "next";
 import "../courses.css";
 export const dynamic="force-dynamic";
@@ -53,7 +54,7 @@ export default async function CoursePage({params}:{params:Promise<{courseId:stri
     </section> : null}
     {course.scope && /^sm-/.test(course.id) ? <div className={styles.credit} data-course-scope={course.id}><p>{course.scope}</p></div> : null}
     <section id="lessons"><h2>Course outline</h2><ol className={styles.lessons}>{course.lessons.map((lesson,i)=><li key={lesson.id}><span className={styles.lessonNumber} aria-hidden="true">{String(i+1).padStart(2,"0")}</span><div><h3><Link href={courseHref(course.id,lesson.id)}>{lesson.title}</Link></h3><p>{lesson.summary}</p></div>{lesson.minutes > 0 ? <span className={styles.lessonTime}>{lesson.minutes} minutes</span> : null}</li>)}</ol></section>
-    <details className={styles.supporting}><summary>Share this course</summary><ResourceShare title={course.title} href={`/share/courses/${encodeURIComponent(course.id)}`} noun="course" /></details>
+    <details className={styles.supporting}><summary>Download or share this course</summary><ResourceDownloads kind="course" id={course.id} noun="course" scope={scope} share={false} /><ResourceShare title={course.title} href={`/share/courses/${encodeURIComponent(course.id)}`} noun="course" /></details>
     <details id="job-aid" className={styles.jobAid}><summary><h2>{pack.jobAid.title}</h2><span>{pack.jobAid.subtitle}</span></summary><div className={styles.jobAidBody}><GeffenCourseReadAloud pack={pack} />{pack.jobAid.quote?<blockquote>{pack.jobAid.quote}</blockquote>:null}{pack.jobAid.use?<><p>{pack.jobAid.use.purpose}</p><ul>{pack.jobAid.use.remember.map((item,i)=><li key={i}>{item}</li>)}</ul><p>{pack.jobAid.use.doNext}</p></>:null}<div className={styles.jobSections}>{pack.jobAid.sections.map((section,i)=><div key={i}><h3>{section.heading}</h3><ul>{section.items.map((item,n)=><li key={n}>{item}</li>)}</ul></div>)}</div></div></details>
     <RelatedReadings courseId={course.id} />
     <LearningJourneyLink scope={scope} resourceId={"course-"+course.id} />

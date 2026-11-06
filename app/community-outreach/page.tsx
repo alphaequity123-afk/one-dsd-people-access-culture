@@ -3,6 +3,8 @@ import Link from "next/link";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { stringValue } from "@/lib/content/staff-surface-registry";
 import { ORGANIZATIONS } from "@/lib/content/hub/organizations";
+import { OUTREACH_TASKS, outreachSteps } from "@/lib/content/hub/outreach-home";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import styles from "./hub.module.css";
 
 export const metadata: Metadata = {
@@ -10,39 +12,23 @@ export const metadata: Metadata = {
   description: "Prepare to work with Minnesota communities, find organizations connected with the Disability Services Division, and involve people in decisions.",
 };
 
-const TASKS = [
-  { title: "I'm preparing to meet a community", body: "Read who the community is, how people differ within it, dated figures and questions to ask.", href: "/minnesota-communities", action: "Minnesota Communities" },
-  { title: "I need to find an organization", body: "See organizations connected with the Disability Services Division, what they do and the public records behind each connection.", href: "/community-outreach/organizations", action: "Organization directory" },
-  { title: "I'm planning an engagement", body: "Work through the questions to answer before you reach out, then draft an engagement and report-back plan.", href: "/community-outreach/plan", action: "Plan an engagement" },
-  { title: "I need to reach people", body: "Find colleges, workforce programs, associations, media, community places and events for recruitment, outreach and engagement.", href: "/community-outreach/sources", action: "Where to reach people" },
-  { title: "I need to understand who does what", body: "See how the Department of Human Services, the Disability Services Division, other divisions, lead agencies and providers connect, and which designated agencies serve each county.", href: "/community-outreach/how-the-system-connects", action: "How the system connects" },
-  { title: "I need to know which policy applies", body: "Find the statutes, rules, manual chapters, waiver plans and department policies that govern disability services, each summarized in plain language with what it requires and what to check for equity.", href: "/community-outreach/policies", action: "Policies that shape disability services" },
-  { title: "I'm looking at the numbers", body: "Compare each county's population with the people receiving home and community-based services, by race and ethnicity.", href: "/community-outreach/county-map", action: "Minnesota county map" },
-  { title: "I need to analyze a document", body: "Attach or paste a policy, program description, notice or plan and get an analysis typed as evidence, inference or gap, with next steps in this program.", href: "/equity-review/analyze", action: "Analyze a document" },
-];
-
 export default async function CommunityOutreachPage() {
   const surface = await prepareEditableSurface("community-outreach.home");
   const text = (key: string) => stringValue(surface.values, key);
-  const steps = [
-    { key: "Understand", capability: "Cultural intelligence: drive, the motivation to learn and adapt.", links: [{ label: "Cultural Intelligence collection", href: "/learn/cultural-intelligence" }, { label: "The water we swim in", href: "/learn/water-we-swim-in" }] },
-    { key: "Learn", capability: "Cultural intelligence: knowledge of how cultures shape needs and choices.", links: [{ label: "Minnesota Communities", href: "/minnesota-communities" }, { label: "Minnesota county map", href: "/community-outreach/county-map" }] },
-    { key: "Connect", capability: "Cultural intelligence: strategy, planning before you act.", links: [{ label: `Organization directory (${ORGANIZATIONS.length} organizations)`, href: "/community-outreach/organizations" }, { label: "Where to reach people", href: "/community-outreach/sources" }, { label: "County agencies", href: "/community-outreach/county-agencies" }, { label: "Providers and designated agencies", href: "/community-outreach/providers" }, { label: "Policies that shape disability services", href: "/community-outreach/policies" }, { label: "How the system connects", href: "/community-outreach/how-the-system-connects" }, { label: "Find the right person", href: "/support/right-person" }] },
-    { key: "Engage", capability: "Cultural intelligence: action, adapting what you do in the moment.", links: [{ label: "Community engagement: from input to action", href: "/learn/community-connections" }, { label: "Plan an engagement", href: "/community-outreach/plan" }, { label: "Analyze a document", href: "/equity-review/analyze" }, { label: "Equity Analysis Toolkit", href: "/learn/equity-toolkit" }] },
-    { key: "Report", capability: "Cultural intelligence: strategy again, checking what worked and what to change.", links: [{ label: "Report-back plan", href: "/community-outreach/plan#report-back" }] },
-  ];
+  const steps = outreachSteps(ORGANIZATIONS.length);
   return <EditableSurfaceRegion surface={surface}>
     <div className={styles.page}>
       <header>
         <p className={styles.kicker}>{text("kicker")}</p>
         <h1 className={styles.title}>{text("title")}</h1>
         <p className={styles.lede}>{text("lede")}</p>
+        {surface.available ? <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="home" noun="page" /></details> : null}
       </header>
 
       <section className={styles.section} aria-labelledby="tasks-title">
         <h2 id="tasks-title">{text("tasksTitle")}</h2>
         <ul className={styles.tasks}>
-          {TASKS.map(task => <li key={task.href}><Link className={styles.task} href={task.href}>
+          {OUTREACH_TASKS.map(task => <li key={task.href}><Link className={styles.task} href={task.href}>
             <span className={styles.taskTitle}>{task.title}</span><span>{task.body}</span><span className={styles.taskAction}>{task.action} <span aria-hidden="true">→</span></span>
           </Link></li>)}
         </ul>

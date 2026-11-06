@@ -8,6 +8,7 @@ import {
 import { LEADERSHIP_SCENARIO_LESSON_ID } from "@/lib/tutor/leadership-items";
 import styles from "../leadership-styles.module.css";
 import "@/components/clas-curriculum.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 const page = LEADERSHIP_PATHWAY_PAGES.scenarios;
 
@@ -22,6 +23,7 @@ export default function LeadershipScenariosPage() {
     title={page.title}
     intro={<p>Each situation below is fictional, and every line of dialogue is original. For each one, several leadership approaches respond, some in a stronger way and some in a harmful way. Then comes a combined response and questions to discuss.</p>}
   >
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share these scenarios</summary><ResourceDownloads kind="leadership-styles" id="scenarios" noun="lesson" /></details>
     <SectionNav label="Scenarios" items={[...LEADERSHIP_SCENARIO_FAMILIES.map(family => ({ href: `#scenario-${family.id}`, title: family.title })), { href: "#guided-practice", title: "Practice with Guidance" }]} />
     <p className={styles.prose}>Responses illustrate tendencies and choices. They are not scripts that predict how anyone who uses a style would act, and no response is a judgment about a real person. Check your own response against the <Link className="underline" href={`${LEADERSHIP_PATHWAY_PAGES.capstone.href}#rubric`}>eight-point practice rubric</Link>.</p>
     {LEADERSHIP_SCENARIO_FAMILIES.map(family => <section key={family.id} id={`scenario-${family.id}`} aria-labelledby={`scenario-${family.id}-title`} className={styles.scenario}>

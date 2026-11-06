@@ -12,6 +12,7 @@ import { withResearchSlot } from "./slots";
 import {
   resolveResearchProvider,
   searchWithPerplexity,
+  UnresolvedCitationError,
   type ExternalSource,
   type ResearchDepth,
   type ResearchOutput,
@@ -33,8 +34,14 @@ function researchFailure(error: unknown, context: { trace_id: string; provider: 
     : error instanceof Error && (error.name === "TimeoutError" || error.name === "AbortError") ? "research_timeout"
     : "research_execution_failed";
   const status = errorStatus(error);
+  // Finite rule names from the citation joiner only (see UnresolvedCitationError); never answer text.
+  const finite = (value: unknown) => typeof value === "string" && /^[a-z][a-z_]{0,39}$/i.test(value) ? value : undefined;
+  const reason = error instanceof UnresolvedCitationError ? finite(error.reason) : undefined;
+  const detail = error instanceof UnresolvedCitationError ? finite(error.detail) : undefined;
   console.error("research_failed", {
     ...context, code,
+    ...(reason ? { reason } : {}),
+    ...(detail ? { detail } : {}),
     ...(status ? { status } : {}),
     ...(code === "research_execution_failed" ? { error: providerErrorExcerpt(error, 200) } : {}),
   });

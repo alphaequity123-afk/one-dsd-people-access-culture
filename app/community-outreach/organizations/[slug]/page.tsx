@@ -5,6 +5,7 @@ import { communityDesignEntries } from "@/lib/content/community-design";
 import { ORGANIZATIONS, getOrganization, relationshipLine } from "@/lib/content/hub/organizations";
 import { PrintPageButton } from "@/components/hub/print-page-button";
 import styles from "../../hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export function generateStaticParams() {
   return ORGANIZATIONS.map(org => ({ slug: org.slug }));
@@ -32,6 +33,7 @@ export default async function OrganizationPage({ params }: { params: Promise<{ s
     <div>{org.relationshipTypes.map(t => <span className={styles.chip} key={t}>{t}</span>)}</div>
     {org.closed ? <p className={styles.note}>This organization has closed, according to its own website. It is listed for the record of its work with the Disability Services Division, not as a place to refer people.</p> : null}
     <p className={styles.lede}>{org.summary}</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="organization" id={org.slug} noun="organization page" /></details>
 
     <div className={styles.grid}>
       <section><h2 className="text-lg font-bold">Who it serves</h2><p>{org.whoItServes || "Not confirmed in the public records."}</p>

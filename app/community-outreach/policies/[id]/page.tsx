@@ -3,25 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnalyzePolicyLink } from "@/components/hub/analyze-policy-link";
 import { PrintPageButton } from "@/components/hub/print-page-button";
-import { formatPolicyDate, getPolicies, getPolicy, getPolicyKind, policiesByTag, policyHref } from "@/lib/content/hub/dsd-policies";
+import { formatPolicyDate, getPolicies, getPolicy, getPolicyKind, policyHref, policyPageTitle, relatedPolicies } from "@/lib/content/hub/dsd-policies";
 import styles from "../../hub.module.css";
-
-const PAGE_TITLES: Record<string, string> = {
-  "/community-outreach/county-agencies": "County agencies",
-  "/community-outreach/county-map": "Minnesota county map",
-  "/community-outreach/how-the-system-connects": "How the system connects",
-  "/community-outreach/plan": "Community outreach plan",
-  "/community-outreach/providers": "Providers and designated agencies",
-  "/equity-policy": "Equity policy",
-  "/equity-review": "Equity review",
-  "/equity-review/working-group-plan": "Equity review working group plan",
-  "/learn/equity-toolkit": "Equity toolkit",
-  "/minnesota-communities": "Minnesota communities",
-};
-
-function pageTitle(route: string): string {
-  return PAGE_TITLES[route] ?? route.split("/").filter(Boolean).map(part => part.replace(/-/g, " ")).join(": ");
-}
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export function generateStaticParams() {
   return getPolicies().map(p => ({ id: p.id }));
@@ -36,12 +20,7 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
   const policy = getPolicy((await params).id);
   if (!policy) notFound();
   const kind = getPolicyKind(policy.kind);
-  const related = new Map<string, { id: string; title: string }>();
-  for (const tag of policy.tags) {
-    for (const other of policiesByTag(tag)) {
-      if (other.id !== policy.id && related.size < 8) related.set(other.id, { id: other.id, title: other.title });
-    }
-  }
+  const related = relatedPolicies(policy);
 
   return <article className={styles.page}>
     <p className={`${styles.kicker} ${styles.noPrint}`}><Link href="/community-outreach">Community Outreach and Engagement</Link> · <Link href="/community-outreach/policies">Policies that shape disability services</Link></p>
@@ -52,6 +31,7 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
     <p className={styles.lede}>{policy.summary}</p>
     <p className={styles.note}>This is a summary written in plain language. The policy itself is the source document linked below. Check the date on the source before relying on it.</p>
     <p className={`${styles.noPrint} flex flex-wrap gap-3`}><PrintPageButton /><AnalyzePolicyLink policyId={policy.id} /></p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="policy" id={policy.id} noun="policy summary" /></details>
 
     <section className={styles.section} aria-labelledby="dates-title">
       <h2 id="dates-title">Dates and source</h2>
@@ -83,12 +63,12 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
 
     {policy.relatedPages.length ? <section className={`${styles.section} ${styles.noPrint}`} aria-labelledby="pages-title">
       <h2 id="pages-title">Related program pages</h2>
-      <ul className="list-disc pl-6">{policy.relatedPages.map(route => <li key={route}><Link href={route}>{pageTitle(route)}</Link></li>)}</ul>
+      <ul className="list-disc pl-6">{policy.relatedPages.map(route => <li key={route}><Link href={route}>{policyPageTitle(route)}</Link></li>)}</ul>
     </section> : null}
 
-    {related.size ? <section className={`${styles.section} ${styles.noPrint}`} aria-labelledby="related-title">
+    {related.length ? <section className={`${styles.section} ${styles.noPrint}`} aria-labelledby="related-title">
       <h2 id="related-title">Policies on the same topics</h2>
-      <ul className="list-disc pl-6">{[...related.values()].map(r => <li key={r.id}><Link href={policyHref(r.id)}>{r.title}</Link></li>)}</ul>
+      <ul className="list-disc pl-6">{related.map(r => <li key={r.id}><Link href={policyHref(r.id)}>{r.title}</Link></li>)}</ul>
     </section> : null}
 
     <section className={styles.section} aria-labelledby="tags-title">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ResourceDownloads } from "@/components/resource-downloads";
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageIntro } from '@/components/ui';
@@ -6,16 +7,18 @@ import { publishedCourses } from '@/lib/content/courses/published';
 import { requestedContentScope } from '@/lib/product/request-context';
 import { TRAINING_CREDIT_NOTICE } from '@/lib/program/learning-credit';
 import styles from './series.module.css';
+import { EMOTIONS_AND_VALUES_COURSE_IDS } from '@/lib/content/learn-page-copy';
 export const metadata: Metadata = {title:'Emotions, Values, and Everyday Practice'};
 export const dynamic='force-dynamic';
-const ids=['ei-understanding-emotions','ei-conversations-and-leadership','cv-understanding-your-lens','cv-decisions-and-services'];
+const ids=EMOTIONS_AND_VALUES_COURSE_IDS;
 export default async function Page(){
- const available=await publishedCourses(await requestedContentScope());
+ const scope=await requestedContentScope();
+ const available=await publishedCourses(scope);
  const courses=ids.flatMap(id=>available.filter(({pack})=>pack.course.id===id));
  return <div>
   <PageIntro kicker="Learn at your own pace" title="Emotions, Values, and Everyday Practice" lede="Understand your responses, explore different perspectives, and put that understanding to work in conversations and decisions."/>
   <div className={`wrap ${styles.body}`}>
-   <p><Link href="/learn">← Learn</Link></p>
+   <p><Link href="/learn">← Learn</Link></p><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="emotions-and-values" noun="series" scope={scope} /></details>
    <section aria-labelledby="start-title"><h2 id="start-title">Choose a starting point</h2><p>Begin with emotional awareness or your own cultural-value lens, then move into conversations and practical decisions. Each course stands on its own. Directors, managers, supervisors, and staff can use the same cases from the perspective of their responsibilities.</p><p>Each course offers seven lessons, situations you may recognize, choices with helpful feedback, and a guide to take into your work. Listen to the two-person conversation or read it, then try an activity at your own pace. Allow about 75–90 minutes per course, including practice, or return for one lesson at a time.</p></section>
    <div className={styles.grid}>{courses.map(({pack},i)=><article className={styles.card} key={pack.course.id}>
     <div className={styles.image}><Image src={pack.course.coverImage} alt={pack.course.coverAlt} fill sizes="(max-width: 760px) 90vw, 520px" unoptimized/></div>

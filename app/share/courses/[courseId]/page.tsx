@@ -8,6 +8,7 @@ import { withCourseCover } from "@/lib/content/courses/cover-overrides";
 import { courseLink, courseSummary } from "@/lib/content/courses/published";
 import { getEditableSurfaceDefinition } from "@/lib/content/staff-surface-registry";
 import { requestedContentScope } from "@/lib/product/request-context";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import type { Metadata } from "next";
 import "../../../courses/courses.css";
@@ -39,7 +40,8 @@ export async function generateMetadata({ params }: { params: Promise<{ courseId:
 export default async function SharedCoursePage({ params }: { params: Promise<{ courseId: string }> }) {
   const { courseId } = await params;
   if (!getEditableSurfaceDefinition(`course.${courseId}`)) notFound();
-  const surface = await prepareEditableSurface(`course.${courseId}`, { scope: await requestedContentScope(), includeOwner: false });
+  const scope = await requestedContentScope();
+  const surface = await prepareEditableSurface(`course.${courseId}`, { scope, includeOwner: false });
   if (!surface.available) notFound();
   const pack = withCourseCover(CoursePackSchema.parse(surface.values.pack));
   const course = pack.course;
@@ -58,6 +60,7 @@ export default async function SharedCoursePage({ params }: { params: Promise<{ c
           <Image src={course.coverImage} alt={course.coverAlt} fill sizes="(max-width: 700px) 90vw, 480px" style={{ objectFit: "contain" }} unoptimized />
         </div>
       </header>
+      <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this course</summary><ResourceDownloads kind="course" id={course.id} noun="course" scope={scope} /></details>
       <section id="lessons">
         <h2>Course outline</h2>
         <ol className={styles.lessons}>

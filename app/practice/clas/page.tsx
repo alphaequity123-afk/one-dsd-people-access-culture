@@ -13,7 +13,7 @@ export const metadata: Metadata = { title: "Cultural and language access plannin
 export default async function ClasPlanningPage() {
   const culturalIntelligenceAvailable = await culturalIntelligenceHubAvailable();
   return <>
-    <PageIntro title="Cultural and language access planning" lede="Connect the National CLAS Standards with a service question, proposed actions and the reviews needed before a change." />
+    <PageIntro title="Cultural and language access planning" lede="Connect the National Culturally and Linguistically Appropriate Services Standards with a service question, proposed actions and the reviews needed before a change." />
     <div className="wrap" style={{ paddingBlock: "2rem 4rem" }}>
       <PageContents items={[
         { href: "#standards-reference", label: "Use the standards" },

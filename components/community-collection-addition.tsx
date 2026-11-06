@@ -1,7 +1,8 @@
 import "server-only";
 import { createHash } from "node:crypto";
 import additions from "@/lib/content/community-collection-additions.json";
-import { selectCommunityAddition, type CommunityClaim, type CommunityPhoto } from "@/lib/content/community-collection-additions-policy";
+import { selectCommunityAddition, type CommunityAddition, type CommunityClaim, type CommunityPhoto, type CommunitySupplement } from "@/lib/content/community-collection-additions-policy";
+import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { additionsNotInResearch, type CommunityResearch } from "@/lib/content/community-research-policy";
 import { communityPagePublished } from "@/lib/content/cultural-intelligence-publication";
 import { NATIVE_DEFERENCE_COMMUNITY_IDS } from "@/lib/content/community-presentation";
@@ -32,8 +33,19 @@ function ClaimContent({ item }: { item: CommunityClaim }) {
   </>;
 }
 
-/** Optional addition; the existing brief and its editable surfaces remain intact. */
-export async function CommunityCollectionAddition({ id, research = null }: { id: string; research?: CommunityResearch | null }) {
+export type PublishedCommunityAddition = {
+  addition: CommunityAddition;
+  claims: Array<CommunityClaim & { title: string }>;
+  supplements: CommunitySupplement[];
+  showResource: boolean;
+  hasStories: boolean;
+};
+
+/**
+ * What the community page adds to its brief, after the review pin, standing deference and the
+ * publication gate. Shared by the page and its downloadable copy so both show the same thing.
+ */
+export async function publishedCommunityAddition(id: string, research: CommunityResearch | null = null, scope?: StaffProgramScope): Promise<PublishedCommunityAddition | null> {
   const dataSha256 = createHash("sha256").update(JSON.stringify(additions)).digest("hex");
   if (dataSha256 !== REVIEWED_ADDITIONS_SHA256) return null;
   // Standing deference remains in force. Do not enable substantive additions
@@ -41,14 +53,22 @@ export async function CommunityCollectionAddition({ id, research = null }: { id:
   if ((NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(id)) return null;
   const addition = selectCommunityAddition(additions, id);
   if (!addition) return null;
-  if (!await communityPagePublished(id)) return null;
+  if (!await communityPagePublished(id, scope)) return null;
   // Anyone the full research set already covers is shown there, not here too.
   const shown = additionsNotInResearch(addition, research);
   const claims = [
     ...(shown.contributor ? [{ title: "A person to learn about", ...addition.contributor }] : []),
     ...(shown.institution ? [{ title: "An organization or institution", ...addition.institution }] : []),
   ];
-  const hasStories = claims.length > 0 || shown.supplements.length > 0;
+  return { addition, claims, supplements: shown.supplements, showResource: shown.resource, hasStories: claims.length > 0 || shown.supplements.length > 0 };
+}
+
+/** Optional addition; the existing brief and its editable surfaces remain intact. */
+export async function CommunityCollectionAddition({ id, research = null }: { id: string; research?: CommunityResearch | null }) {
+  const published = await publishedCommunityAddition(id, research);
+  if (!published) return null;
+  const { addition, claims, hasStories } = published;
+  const shown = { supplements: published.supplements, resource: published.showResource };
   return <section aria-labelledby="community-collection-addition-title">
     <h2 id="community-collection-addition-title">{hasStories ? "More to explore" : "Try it in your work"}</h2>
     {hasStories ? <p>These examples offer context. They do not describe any individual or represent every experience in a community.</p> : null}

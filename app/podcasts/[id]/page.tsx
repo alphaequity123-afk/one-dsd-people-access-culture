@@ -7,6 +7,7 @@ import { PublishedPodcast } from "@/components/published-podcast";
 import { PODCASTS, type Podcast } from "@/lib/content/podcasts";
 import { stringValue } from "@/lib/content/staff-surface-registry";
 import { requestedContentScope } from "@/lib/product/request-context";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const dynamic = "force-dynamic";
 
@@ -37,6 +38,7 @@ export default async function PodcastPage({ params }: { params: Promise<{ id: st
       <p className="m-0 text-sm font-medium text-[#526777]">Podcast · {podcast.duration}</p>
     </header>
     <PublishedPodcast headingLevel={1} ownPage podcast={podcast} surface={surface} />
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id={`podcast~${podcast.id}`} noun="podcast chapters and transcript" /></details>
     <section className="space-y-4 border-t border-line pt-8 print:hidden" aria-labelledby="podcast-related-title">
       <h2 id="podcast-related-title" className="text-2xl font-semibold">Related</h2>
       <ul className="list-disc space-y-3 pl-6">

@@ -1,4 +1,5 @@
 import styles from "../toolkit-layout.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { EquityToolkitWorkedExample } from "@/components/equity-toolkit-worked-example";
 import { DecisionWorkspace } from "@/components/decision-workspace";
@@ -31,6 +32,7 @@ export default async function ToolkitPracticePage() {
           <div><Link href="#toolkit-draft">Work through your decision →</Link><p>Start with a question and save your notes in My Work when you are ready.</p></div>
           <div><Link href="#worked-example">Watch the example →</Link><p>See how an analysis takes shape before trying it yourself.</p></div>
         </nav>
+      {surface.available ? <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share the toolkit</summary><ResourceDownloads kind="equity-toolkit" id="companion" noun="toolkit" scope={scope} /></details> : null}
       </header>
       <PageContents items={[
         { href: "#worked-example", label: "Watch the worked example" },

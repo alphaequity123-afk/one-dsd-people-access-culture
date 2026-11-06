@@ -7,6 +7,7 @@ import { ORGANIZATIONS, hasDivisionRecord, isNativeCommunity, organizationHref }
 import { CROSSWALK_BY_ID } from "@/lib/content/hub/community-coverage";
 import { NO_PUBLISHED_RECORD } from "@/lib/content/hub/record-findings";
 import styles from "@/app/community-outreach/hub.module.css";
+import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Community coverage",
@@ -37,6 +38,7 @@ export default async function CommunityCoveragePage() {
     <h1 className={styles.title}>Community coverage</h1>
     <p className={styles.lede}>Where the program and the Disability Services Division have gaps: communities with no organization on record, communities without figures, and briefs that members of the community have not yet reviewed.</p>
     <p className={styles.note}>These are findings about the system, not about any community. A missing organization means no published record of a connection was found, not that the community lacks organizations. Nothing here counts or shows anyone&apos;s use of the program.</p>
+    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="community-coverage" noun="coverage report" /></details>
 
     <section className={styles.section}>
       <h2>Summary</h2>

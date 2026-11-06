@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { ResourceDownloads } from '@/components/resource-downloads';
 import { JobAidSheet } from '@/components/clas-curriculum/job-aid';
 import { JobAidActions } from '@/components/clas-curriculum/job-aid-actions';
 import curriculum from '@/lib/content/clas-curriculum.json';
@@ -25,9 +26,10 @@ export default async function Page({ params }: { params: Promise<{ lesson: strin
   const aid = loadClasLessonPageData(lesson).practice?.jobAid ?? null;
   return (
     <div className="clas-study clas-study--job-aid">
-      <nav aria-label="CLAS learning" className="clas-job-aid-nav"><Link prefetch={false} href="/learn/clas">National CLAS Standards collection</Link><a href={base}>Curriculum overview</a><a href={`${base}/${module.id}`}>Part {index + 1}: {module.title}</a></nav>
+      <nav aria-label="CLAS learning" className="clas-job-aid-nav"><Link prefetch={false} href="/learn/clas">National Culturally and Linguistically Appropriate Services Standards collection</Link><a href={base}>Curriculum overview</a><a href={`${base}/${module.id}`}>Part {index + 1}: {module.title}</a></nav>
       {aid
         ? <>
+          <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson and its job aid</summary><ResourceDownloads kind="clas-lesson" id={module.id} noun="lesson" /></details>
           <JobAidActions fileName={`CLAS-part-${module.id}-job-aid.txt`} text={jobAidText(module.title, aid)} />
           <JobAidSheet aid={aid} lessonTitle={module.title} part={index + 1} standards={module.standards} />
         </>

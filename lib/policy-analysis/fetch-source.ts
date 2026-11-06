@@ -31,11 +31,61 @@ function decode(value: string): string {
   });
 }
 
+const VOID_TAGS = new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"]);
+
+// Page furniture that sits inside the main content on official sites: breadcrumbs, previous/next
+// links, "hidden when printing" resource boxes, toolbars, and the per-section permalink anchors
+// whose symbol would otherwise land in the text.
+const CLUTTER_ATTRIBUTE = /\b(?:role\s*=\s*["']?navigation|aria-hidden\s*=\s*["']?true)\b/i;
+const CLUTTER_NAME = /(?:^|[\s_-])(?:breadcrumbs?|doc[_-]?nav|docnav|resource[_-]?box|d-print-none|print-hidden|navbar|side-?bar|tool-?bar|skip[_-]?links?|site[_-]?nav|main[_-]?nav|sub[_-]?nav|menu|pagination|share[_-]?links?|social[_-]?links?|cookie[_-]?banner|permalink|pdf_doc_type_link)(?:[\s_-]|$)/i;
+
+function isClutterTag(attributes: string): boolean {
+  if (CLUTTER_ATTRIBUTE.test(attributes)) return true;
+  const names = /\b(?:id|class)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/gi;
+  let match: RegExpExecArray | null;
+  while ((match = names.exec(attributes)) !== null) {
+    if (CLUTTER_NAME.test(match[1] ?? match[2] ?? match[3] ?? "")) return true;
+  }
+  return false;
+}
+
+/** Remove whole elements (with everything nested inside them) whose start tag marks them as page furniture. */
+export function stripClutterElements(html: string): string {
+  const tag = /<(\/?)([a-zA-Z][\w:-]*)((?:"[^"]*"|'[^']*'|[^'">])*)>/g;
+  let output = "";
+  let copiedThrough = 0;
+  let match: RegExpExecArray | null;
+  while ((match = tag.exec(html)) !== null) {
+    const [whole, closing, rawName, attributes] = match;
+    if (closing || !isClutterTag(attributes)) continue;
+    const name = rawName.toLowerCase();
+    const start = match.index;
+    let end = start + whole.length;
+    if (!VOID_TAGS.has(name) && !whole.endsWith("/>")) {
+      // Find the matching close tag, counting nested elements of the same name.
+      const inner = /<(\/?)([a-zA-Z][\w:-]*)(?:"[^"]*"|'[^']*'|[^'">])*>/g;
+      inner.lastIndex = end;
+      let depth = 1;
+      let found: RegExpExecArray | null;
+      while (depth > 0 && (found = inner.exec(html)) !== null) {
+        if (found[2].toLowerCase() !== name) continue;
+        if (found[1]) depth -= 1;
+        else if (!found[0].endsWith("/>")) depth += 1;
+        if (depth === 0) end = found.index + found[0].length;
+      }
+      if (depth > 0) end = html.length; // unclosed: the rest of the page belongs to it
+    }
+    output += html.slice(copiedThrough, start) + " ";
+    copiedThrough = end;
+    tag.lastIndex = end;
+  }
+  return output + html.slice(copiedThrough);
+}
+
 /** Readable text from an HTML page: no scripts, styles or navigation; headings and blocks on their own lines. */
 export function htmlToReadableText(html: string): string {
   const body = (/<main[\s>][\s\S]*?<\/main>/i.exec(html)?.[0]) ?? html;
-  const stripped = body
-    .replace(/<!--[\s\S]*?-->/g, " ")
+  const stripped = stripClutterElements(body.replace(/<!--[\s\S]*?-->/g, " "))
     .replace(/<(script|style|nav|noscript|svg|template|iframe|footer|aside)\b[\s\S]*?<\/\1\s*>/gi, " ")
     .replace(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi, (_match, _level, inner: string) => `\n\n${inner.replace(/<[^>]*>/g, " ")}\n`)
     .replace(/<br\s*\/?>/gi, "\n")
