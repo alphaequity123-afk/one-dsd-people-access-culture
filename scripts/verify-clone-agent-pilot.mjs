@@ -10,6 +10,8 @@ if (process.env.PAC_CLONE_AGENTS === "on") {
     "c84555b7-726f-44ab-8141-689cc1faf3c6": { origin: "https://one-dhs-pac-clone-production.up.railway.app", store: "file" },
     "6cd9836c-4591-422f-ab26-7cc062cebdd4": { origin: "https://one-dsd-people-access-culture-production.up.railway.app", store: "postgres" },
     "dc09906d-494f-49cb-8c19-916db3ec1931": { origin: "https://one-dhs-dsd-web-production.up.railway.app", store: "postgres" },
+    // Owner-requested copy in the "Gary Banks" workspace (2026-11-07); shares the same Supabase databases.
+    "0de310b5-4c71-4696-ab9d-5c78c62e1fbb": { origin: "https://one-dsd-people-access-culture-production-2454.up.railway.app", store: "postgres" },
   };
   const target = deployments[process.env.RAILWAY_SERVICE_ID];
   if (!target) throw new Error("Agent rollout must run in an owner-authorized service.");
