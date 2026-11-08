@@ -180,6 +180,12 @@ export default async function OneDsdPage() {
             </div>
           </div>
         </section>
+        <nav aria-label="About the program" className="flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-5">
+          <Link href="/program/model">How the program works</Link>
+          <Link href="/program/impact">Long-term impact</Link>
+          <Link href="/equity-policy">DHS equity policy</Link>
+          <Link href="/program-foundation">Program charter</Link>
+        </nav>
       </div>
     </EditableSurfaceRegion>
   );

@@ -1,50 +1,57 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CultureCalendarSection } from "@/components/culture-calendar-section";
 import { HomeTaskFinder } from "@/components/home-task-finder";
-import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
+import { publishedCalendar } from "@/lib/content/cultural-calendar";
+import { CALENDAR_PATH, chicagoToday, compactCalendar, shortDateRange, upcomingObservances } from "@/lib/content/culture-calendar-grid";
 import "./task-home.css";
 
+/**
+ * The home page has one job: get a person to the right place. The task finder is the main
+ * action; three doors and a short calendar preview follow. Everything that used to sit here
+ * has a home one click away: the full Culture Calendar on its own page, the topic links on the
+ * Learn, Practice and community landing pages, and the program links under One DSD.
+ */
 export default async function HomePage() {
-  const culturalIntelligenceAvailable = await culturalIntelligenceHubAvailable();
-  return <div className="dsd-home">
-    <section className="dsd-shell dsd-welcome" aria-labelledby="home-title">
-      <div><p className="dsd-eyebrow">One DSD People, Access and Culture</p><h1 id="home-title">People, access<br />and culture.</h1></div>
-      <div className="dsd-welcome-copy"><p>Make equity part of the work and the workplace.</p><p>Find learning, guidance and tools to apply equity in the work and workplace of the Disability Services Division. Connect service delivery, policy, community knowledge and employee experience within Minnesota DHS.</p><div className="dsd-home-actions"><Link href="/one-dsd/programs">Explore DSD programs and services <span aria-hidden="true">→</span></Link><Link href="#start-here">Find a resource for your work <span aria-hidden="true">↓</span></Link></div></div>
+  const upcoming = await upcomingFromCalendar();
+  return <div className="dsd-home od">
+    <section className="home-hero" aria-labelledby="home-title">
+      <div className="w home-title">
+        <h1 id="home-title">People, access and culture</h1>
+        <p>Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.</p>
+      </div>
+      <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />
     </section>
-    <div className="dsd-shell"><Image className="dsd-home-photo" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 760px) calc(100vw - 36px), (max-width: 1224px) calc(100vw - 64px), 1160px" /></div>
-    <div className="dsd-shell"><CultureCalendarSection /></div>
-<div className="od">
-  <div className="start" id="start-here"><div className="w">
-    <h2>Find a resource for your work</h2>
-    <p className="lead">Tell us what you&apos;re doing and we&apos;ll take you to the right place.</p>
-    <HomeTaskFinder />
-  </div></div>
 
-  <div className="blk"><div className="w">
-    <h2 className="sh">Find what you need</h2><p className="sd">Everything on the site, organized by what you&apos;re doing.</p>
-    <div className="topics">
-      <div className="topic"><div className="bar"></div><div className="in"><h3>Learn</h3><p>Build your understanding.</p><ul><li><Link href="/learn">Browse learning</Link></li>{culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Explore Cultural Intelligence</Link></li>}<li><Link href="/operationalizing-equity">Operationalizing equity</Link></li><li><Link href="/learn/collaboration">Work better across teams</Link></li><li><Link href="/collections">Themes and collections</Link></li><li><Link href="/library">Resource library</Link></li></ul></div></div>
-      <div className="topic"><div className="bar"></div><div className="in"><h3>Apply a tool</h3><p>Work through a real decision.</p><ul><li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li><li><Link href="/equity-review">Review a policy or service change</Link></li><li><Link href="/practice/gp-3">Prepare for community engagement</Link></li><li><Link href="/one-dsd#scenarios">DSD scenarios</Link></li></ul></div></div>
-      <div className="topic"><div className="bar"></div><div className="in"><h3>Get support</h3><p>Guidance, people and answers.</p><ul><li><Link href="/support/right-person">Find the right person or office</Link></li><li><Link href="/ask">Ask</Link></li><li><Link href="/one-dsd/team">One DSD Team</Link></li><li><Link href="/user-guide">How to use this site</Link></li></ul></div></div>
-    </div>
-  </div></div>
+    <section className="start" id="start-here" aria-labelledby="finder-title"><div className="w">
+      <h2 id="finder-title">Find a resource for your work</h2>
+      <p className="lead">Tell us what you&apos;re doing and we&apos;ll take you to the right place.</p>
+      <HomeTaskFinder />
+    </div></section>
 
-  <div className="blk band"><div className="w feature">
-    <div className="copy"><p className="kicker">FROM SHARED PURPOSE TO EVERYDAY WORK</p><h2>Equity in practice</h2><p>Understand the Equity Outcome Map, then follow DSD examples that connect the six goals of the Aging and Disability Services Administration with useful tools and learning.</p><Link className="btn" href="/learn/equity-in-practice">Watch the two-part story</Link></div>
-    <div className="pair">
-      <Link className="pc" href="/operationalizing-equity"><h3>Operationalizing equity</h3><p>Turn an intention into practical action: consider how work is designed, whose perspectives shape it, and where barriers can be reduced.</p></Link>
-      <Link className="pc" href="/learn/equity-toolkit"><h3>Equity Analysis Toolkit</h3><p>Examine a proposal or decision: consider its effects, compare alternatives, and involve the people who will be affected.</p></Link>
-    </div>
-  </div></div>
+    <section className="blk" aria-label="Main areas"><div className="w doors">
+      <Link className="door" href="/learn"><h2>Learn</h2><p>Courses, readings and collections to build your understanding.</p></Link>
+      <Link className="door" href="/practice"><h2>Apply a tool</h2><p>Work through a real decision, meeting, process or review.</p></Link>
+      <Link className="door" href="/minnesota-communities"><h2>Communities</h2><p>Minnesota communities, their history and how to connect well.</p></Link>
+    </div></section>
 
-  <div className="blk"><div className="w">
-    <h2 className="sh">Explore DSD and the program</h2><p className="sd">How equity connects to the Division&apos;s services and the program behind this site.</p>
-    <div className="links">
-      <Link href="/one-dsd/programs">DSD programs and services</Link><Link href="/one-dsd/amplify">Amplify Equity</Link><Link href="/one-dsd/planning">Planning and progress</Link><Link href="/start">Getting started</Link><Link href="/leading">For leaders, supervisors, managers, and directors</Link>
-      <Link href="/program/model">How the program works</Link><Link href="/program-foundation">Program charter</Link><Link href="/equity-policy">DHS equity policy</Link><Link href="/program/impact">Long-term impact</Link>
-    </div>
-  </div></div>
-</div>
+    <section className="blk month" aria-labelledby="month-title"><div className="w">
+      <div className="month-head"><h2 id="month-title">Coming up</h2><Link href={CALENDAR_PATH}>Open the One DSD Culture Calendar <span aria-hidden="true">→</span></Link></div>
+      {upcoming.length ? <ul className="month-list">{upcoming.map(item => <li key={item.id}><Link href={item.href}><span>{shortDateRange(item.start, item.end)}</span>{item.name}</Link></li>)}</ul>
+        : <p>See the full calendar for observances across Minnesota communities.</p>}
+    </div></section>
+
+    <section className="blk leaders" aria-label="For leaders"><div className="w">
+      <p><Link href="/leading">For leaders, supervisors, managers, and directors <span aria-hidden="true">→</span></Link> Decisions, paths and tools for leading equity work.</p>
+    </div></section>
   </div>;
+}
+
+/** The calendar preview must never break the home page: if the calendar cannot be read, it shows the link only. */
+async function upcomingFromCalendar() {
+  try {
+    return upcomingObservances(compactCalendar(await publishedCalendar()), chicagoToday(), 3);
+  } catch (error) {
+    console.error("home calendar preview unavailable", error instanceof Error ? `${error.name}: ${error.message}` : error);
+    return [];
+  }
 }

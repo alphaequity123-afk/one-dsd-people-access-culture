@@ -30,9 +30,11 @@ function ResourceActionsForPath({ path }: { path: string }) {
     const title = document.querySelector("main h1")?.textContent?.trim() || document.title.split("|")[0].trim();
     saved.setNotice(changeSavedResource({ href: path, title, savedAt: new Date().toISOString() }, Boolean(current)).message);
   }
+  // One quiet control. Finding another resource is the Learn menu's job; using a saved
+  // resource in a practice plan is offered once the resource is saved.
   return <aside className="dsd-shell dsd-resource-actions" aria-label="Resource actions">
-    <div><Link href="/library">Find another resource</Link><Link href="/my-work/plan">Use it in a practice plan</Link></div>
     <button type="button" aria-pressed={Boolean(current)} onClick={toggle}>{current ? "Saved to My work" : "Save resource"}</button>
+    {current ? <Link href="/my-work/plan">Use it in a practice plan</Link> : null}
     {saved.notice ? <p role="status">{saved.notice}</p> : null}
   </aside>;
 }

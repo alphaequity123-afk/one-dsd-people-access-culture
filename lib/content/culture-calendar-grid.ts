@@ -153,6 +153,36 @@ export function calendarEntryHref(id: string, start: string): string {
 
 export const calendarDayHref = (year: number, month: number, day: number) => `${calendarMonthHref({ year, month })}&day=${day}`;
 
+export type UpcomingObservance = { id: string; name: string; start: string; end: string; state: DateStateKind; href: string };
+
+/**
+ * The next observances from today: anything still running today first, then the soonest
+ * to start. Single-day observances come before long seasons that started on the same day,
+ * so a month-long season does not crowd out a holiday. Each observance appears once.
+ */
+export function upcomingObservances(entries: CompactEntry[], today: string, count = 3): UpcomingObservance[] {
+  const found = new Map<string, UpcomingObservance>();
+  for (const [id, name, dates] of entries) for (const date of dates) {
+    const start = date[0];
+    const end = date.length === 3 ? date[1] : start;
+    if (end < today) continue;
+    const item = { id, name, start, end, state: STATE_KINDS[date[date.length - 1] as StateCode], href: calendarEntryHref(id, start) };
+    const prior = found.get(id);
+    if (!prior || item.start < prior.start) found.set(id, item);
+  }
+  const key = (item: UpcomingObservance) => item.start < today ? today : item.start;
+  return [...found.values()]
+    .sort((a, b) => key(a).localeCompare(key(b)) || Number(a.start !== a.end) - Number(b.start !== b.end) || a.name.localeCompare(b.name, "en"))
+    .slice(0, count);
+}
+
+/** "November 11" or "November 1 to 30", for a short list. */
+export function shortDateRange(start: string, end: string): string {
+  const day = (iso: string) => `${MONTH_NAMES[Number(iso.slice(5, 7)) - 1]} ${Number(iso.slice(8))}`;
+  if (start === end) return day(start);
+  return start.slice(0, 7) === end.slice(0, 7) ? `${day(start)} to ${Number(end.slice(8))}` : `${day(start)} to ${day(end)}`;
+}
+
 /** The day param as a real date in the given month, or null. Requires a specific month. */
 export function validDay(year: number, month: number | "all", value: unknown): string | null {
   if (month === "all" || typeof value !== "string" || !/^(?:[1-9]|[12]\d|3[01])$/.test(value)) return null;

@@ -6,6 +6,7 @@ import "./development.css";
 import "./approved-palette.css";
 import "./internal-pages.css";
 import { InternalPage } from "@/components/internal-page";
+import { OpenDetailsForHash } from "@/components/open-details-for-hash";
 import { PROGRAM } from "@/lib/constants";
 import { PublishedProgramHeader } from "@/components/published-program-header";
 import { DsdProgramFooter } from "@/components/dsd-program-footer";
@@ -106,6 +107,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main id="main" tabIndex={-1} className="flex-1">
             <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><DsdResourceActions /></ChromeGate>
             <InternalPage>{children}</InternalPage>
+            <OpenDetailsForHash />
 
           </main>
           <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}>

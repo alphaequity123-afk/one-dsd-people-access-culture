@@ -9,8 +9,12 @@ export function InternalPage({ children }: { children: React.ReactNode }) {
   if (!internalPage(pathname)) return <>{children}</>;
   const area = pageArea(pathname);
   const shared = pathname.startsWith("/share/");
+  // The section tabs move between a section's landing pages. A course, lesson, reading or
+  // record already has the header and its own back link, so a third row of navigation there
+  // only competes with the content.
+  const landing = PAGE_AREAS[area].links.some(([, href]) => href.split("#")[0] === pathname);
   return <div className="internal-page" data-page-purpose={area}>
-    {!shared && <nav className="internal-section-nav dsd-shell" aria-label={`${PAGE_AREAS[area].label} pages`}>
+    {!shared && landing && <nav className="internal-section-nav dsd-shell" aria-label={`${PAGE_AREAS[area].label} pages`}>
       {PAGE_AREAS[area].links.map(([label, href]) => <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined}>{label}</Link>)}
     </nav>}
     {children}

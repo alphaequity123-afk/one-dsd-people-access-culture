@@ -52,6 +52,10 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
       <div className="wrap space-y-7 py-8">
         <ProgramContextNote />
         <WorkOriginLinks origin={origin} />
+        <aside className="card" aria-label="Equity in practice">
+          <p className="font-semibold"><Link href="/learn/equity-in-practice">Equity in practice: watch the two-part story</Link></p>
+          <p className="mt-2">Understand the Equity Outcome Map, then follow DSD examples that connect the six goals of the Aging and Disability Services Administration with useful tools and learning. <Link href="/one-dsd#scenarios">See DSD scenarios</Link>.</p>
+        </aside>
         <EquityAnalysisLadder />
         <details className="card"><summary className="font-semibold">Check which requirements apply before choosing an action</summary><p className="mt-3">Connect the Program charter, published policies, standards and local priorities to the work in front of you. Separate what is clearly required from the questions that belong with the responsible office.</p><Link href={withWorkOrigin("/practice/requirements", origin)}>Prepare a requirements crosswalk</Link></details>
 
