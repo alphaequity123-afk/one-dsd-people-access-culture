@@ -25,7 +25,8 @@ export function Hub2Choices({ label, choices, className = "" }: { label: string;
 
 /** A closed panel for material that moved off the first screen. The id stays reachable: a link to it opens the panel. */
 export function Hub2More({ id, title, open, children, headingId }: { id?: string; title: ReactNode; open?: boolean; children: ReactNode; headingId?: string }) {
-  return <details id={id} className="course-more-item" open={open || undefined}>
+  // Browsers open a closed panel themselves when a link targets it, before hydration.
+  return <details id={id} className="course-more-item" open={open || undefined} suppressHydrationWarning>
     <summary><h2 id={headingId}>{title}</h2></summary>
     {children}
   </details>;
