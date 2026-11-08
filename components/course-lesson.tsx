@@ -12,7 +12,7 @@ const blank=():State=>({schemaVersion:1,fields:{},submitted:{},completed:false})
 function validState(value:unknown):value is State { if(!value||typeof value!=="object"||Array.isArray(value))return false; const state=value as State;return state.schemaVersion===1&&typeof state.completed==="boolean"&&!!state.fields&&typeof state.fields==="object"&&!Array.isArray(state.fields)&&!!state.submitted&&typeof state.submitted==="object"&&!Array.isArray(state.submitted)&&Object.values(state.fields).every(item=>typeof item==="string")&&Object.values(state.submitted).every(item=>typeof item==="boolean"); }
 function Rich({text}:{text:string}) {return <div className="course-rich" dangerouslySetInnerHTML={{__html:text}}/>;}
 /** Authored blocks that close a lesson; they join the "Finish this lesson" tabs instead of standing as sections of their own. */
-const CLOSING_BLOCK_HEADINGS=/^(continue your learning|put this lesson into practice)$/i;
+const CLOSING_BLOCK_HEADINGS=/^(continue your learning|put this lesson into practice|put this lesson to work)$/i;
 export function CourseLesson({courseId,lesson,objectives,previous,next,companion,courseOverviewHref}:{courseId:string;lesson:Lesson;objectives:string[];previous?:string;next?:string;companion?:ReactNode;courseOverviewHref?:string}) {
   const overviewHref=courseOverviewHref??`/courses/${courseId}`;
   const [state,setState]=useState<State>(blank); const [loaded,setLoaded]=useState(false); const [message,setMessage]=useState(""); const uid=useId();
