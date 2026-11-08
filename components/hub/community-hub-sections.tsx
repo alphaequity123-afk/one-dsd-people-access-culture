@@ -29,13 +29,23 @@ function FigureTable({ group }: { group: CommunityFigureGroup }) {
   </div>;
 }
 
+/** All three sections in their original order. Native community pages get none. */
 export function CommunityHubSections({ id, title }: { id: string; title: string }) {
+  if (isNativeCommunity(id)) return null;
+  return <>
+    <CommunityNumbersSection id={id} />
+
+    <CommunityOrganizationsSection id={id} title={title} />
+
+    <CommunityBeforeOutreachSection id={id} />
+  </>;
+}
+
+export function CommunityNumbersSection({ id }: { id: string }) {
   if (isNativeCommunity(id)) return null;
   const crosswalk = COMMUNITY_CROSSWALK_BY_ID.get(id);
   const groups = communityFigureGroups(id);
-  const orgs = organizationsForCommunity(id);
-  return <>
-    <section id="community-numbers" aria-labelledby="community-numbers-title">
+  return <section id="community-numbers" aria-labelledby="community-numbers-title">
       <h2 id="community-numbers-title">Numbers, with care</h2>
       <p>Figures describe groups and conditions, not any one person. Read how people differ within this community before you read the numbers.</p>
       {groups.length ? <>
@@ -50,9 +60,13 @@ export function CommunityHubSections({ id, title }: { id: string; title: string 
         <CountyMap fixedGroup={crosswalk.equityGroup} initialMeasure="comparison" compact heading="Minnesota counties" headingLevel={3} />
       </> : null}
       <p><Link href={crosswalk?.equityGroup && crosswalk.equityGroup !== "all" ? `/community-outreach/county-map?group=${crosswalk.equityGroup}` : "/community-outreach/county-map"}>Open the full Minnesota county map</Link></p>
-    </section>
+    </section>;
+}
 
-    <section id="community-organizations" aria-labelledby="community-organizations-title">
+export function CommunityOrganizationsSection({ id, title }: { id: string; title: string }) {
+  if (isNativeCommunity(id)) return null;
+  const orgs = organizationsForCommunity(id);
+  return <section id="community-organizations" aria-labelledby="community-organizations-title">
       <h2 id="community-organizations-title">Organizations connected with the Disability Services Division</h2>
       {orgs.length ? <>
         <p>These organizations have a published record of working with the Disability Services Division, and their records name work with {title}. No organization speaks for a whole community.</p>
@@ -66,12 +80,14 @@ export function CommunityHubSections({ id, title }: { id: string; title: string 
         <ul>{DEPARTMENT_WIDE_GRANTS.filter(grant => grant.communities.includes(id)).map(grant => <li key={grant.organizations}>{grant.organizations}: {grant.program}, {grant.years}. <a href={grant.record.url}>Record</a></li>)}</ul>
       </> : null}
       <p><Link href="/community-outreach/organizations">See all organizations</Link></p>
-    </section>
+    </section>;
+}
 
-    <section id="community-before-outreach" aria-labelledby="community-before-outreach-title">
+export function CommunityBeforeOutreachSection({ id }: { id: string }) {
+  if (isNativeCommunity(id)) return null;
+  return <section id="community-before-outreach" aria-labelledby="community-before-outreach-title">
       <h2 id="community-before-outreach-title">Before you reach out</h2>
       <ul>{BEFORE_YOU_REACH_OUT.slice(0, 6).map(group => <li key={group.title}><strong>{group.title}:</strong> {group.items[0]}</li>)}</ul>
       <p><Link href="/community-outreach/plan">Plan an engagement</Link> · <Link href="/community-outreach">Community Outreach and Engagement</Link></p>
-    </section>
-  </>;
+    </section>;
 }

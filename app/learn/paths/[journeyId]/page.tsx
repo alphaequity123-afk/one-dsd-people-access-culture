@@ -23,7 +23,10 @@ export default async function JourneyPage({ params }: { params: Promise<{ journe
     {developmentModel.stages.map((stage, index) => <section id={stage.id} className="development-step" aria-labelledby={`title-${stage.id}`} key={stage.id}>
       <header><span className="development-step-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><h2 id={`title-${stage.id}`}>{stage.title}</h2></header>
       <p>{stage.purpose}</p><div className="development-practice"><h3>{stage.id === "practice" ? "Try a different approach" : stage.id === "apply" ? "Take it into your situation" : "A question to work with"}</h3><p>{stageGuidance(journey, stage.id)}</p></div>
-      <ul className="development-step-links">{journey.links.filter(link => link.stage === stage.id && availableDevelopmentLink(link.href, records)).map(link => <li key={link.href}><Link href={link.href}>{link.label} →</Link></li>)}</ul>
+      {(() => {
+        const links = journey.links.filter(link => link.stage === stage.id && availableDevelopmentLink(link.href, records));
+        return links.length ? <details className="course-more-item"><summary>Courses and resources for this step ({links.length})</summary><ul className="development-step-links">{links.map(link => <li key={link.href}><Link href={link.href}>{link.label} →</Link></li>)}</ul></details> : null;
+      })()}
       <p><strong>Something to carry forward:</strong> {stage.evidence}</p>
       {index < developmentModel.stages.length - 1 ? <a href={`#${developmentModel.stages[index + 1].id}`}>Continue to {developmentModel.stages[index + 1].title.toLowerCase()} →</a> : <Link href="/learn/paths">See all learning paths →</Link>}
     </section>)}

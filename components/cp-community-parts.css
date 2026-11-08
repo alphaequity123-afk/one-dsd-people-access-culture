@@ -1,0 +1,18 @@
+/* Parts of a community page: overview list, small part navigation, breadcrumb. */
+.cp-community-parts ol { list-style: none; padding-left: 0; margin: 12px 0 0; }
+.cp-community-parts li { padding: 12px 0; border-bottom: 1px solid #e0e6e9; }
+.cp-community-parts li > a { font-size: 19px; font-weight: 600; }
+.cp-community-parts li > p { margin: 6px 0 0; font-size: 15px; color: #405d6c; }
+.cp-community-parts-nav { margin: 8px 0 28px; padding: 14px 0; border-top: 1px solid #dce3e6; border-bottom: 1px solid #dce3e6; }
+.cp-community-parts-nav > p { margin: 0 0 6px; font-size: 15px; font-weight: 600; color: #405d6c; }
+.cp-community-parts-nav ul { display: flex; flex-wrap: wrap; gap: 0 22px; list-style: none; padding-left: 0; margin: 0; }
+.cp-community-parts-nav li { padding: 0; }
+.cp-community-parts-nav a { display: inline-block; min-height: 44px; padding: 10px 0; font-size: 15px; }
+.cp-community-parts-nav a[aria-current="page"] { font-weight: 700; color: #173951; text-decoration-thickness: 2px; }
+.cp-community-breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0 8px; list-style: none; padding-left: 0; margin: 0 0 12px; font-size: 15px; }
+.cp-community-breadcrumb li { padding: 0; }
+.cp-community-breadcrumb li + li::before { content: "/"; margin-right: 8px; color: #6b7f8a; }
+.cp-community-breadcrumb a { display: inline-block; min-height: 44px; padding: 10px 0; }
+.cp-community-breadcrumb [aria-current="page"] { display: inline-block; padding: 10px 0; color: #405d6c; }
+.cp-community-part-end { padding-top: 24px; }
+@media print { .cp-community-parts-nav, .cp-community-breadcrumb { display: none; } }

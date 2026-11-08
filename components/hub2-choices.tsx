@@ -1,0 +1,32 @@
+import Link from "next/link";
+import type { ReactNode } from "react";
+
+export type Hub2Choice = { href: string; title: string; body: ReactNode; action: string };
+
+/**
+ * The few clear choices at the top of a hub page. A link to an id on the same page uses a plain
+ * anchor so the browser fires hashchange and the closed panel holding that id opens.
+ */
+export function Hub2Choices({ label, choices, className = "" }: { label: string; choices: Hub2Choice[]; className?: string }) {
+  return <ul aria-label={label} className={`grid list-none gap-4 p-0 sm:grid-cols-2 ${className}`.trim()}>
+    {choices.map(choice => {
+      const inner = <>
+        <span className="block text-xl font-semibold text-[#183247]">{choice.title}</span>
+        <span className="mt-2 block leading-7 text-[#1f2a33]">{choice.body}</span>
+        <span className="mt-3 block font-semibold underline">{choice.action} <span aria-hidden="true">→</span></span>
+      </>;
+      const card = "block h-full rounded-xl border border-line bg-white p-5 no-underline hover:border-[#183247] focus-visible:outline-2";
+      return <li key={choice.href} className="m-0">
+        {choice.href.startsWith("#") ? <a className={card} href={choice.href}>{inner}</a> : <Link prefetch={false} className={card} href={choice.href}>{inner}</Link>}
+      </li>;
+    })}
+  </ul>;
+}
+
+/** A closed panel for material that moved off the first screen. The id stays reachable: a link to it opens the panel. */
+export function Hub2More({ id, title, open, children, headingId }: { id?: string; title: ReactNode; open?: boolean; children: ReactNode; headingId?: string }) {
+  return <details id={id} className="course-more-item" open={open || undefined}>
+    <summary><h2 id={headingId}>{title}</h2></summary>
+    {children}
+  </details>;
+}

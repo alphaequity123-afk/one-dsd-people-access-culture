@@ -70,7 +70,8 @@ const PUBLIC_EDIT_PATTERNS = [
   /^\/learn\/collections\/[a-z0-9-]+$/,
   /^\/learn\/readings\/[a-z0-9-]+$/,
   /^\/learn\/(?:clas|intercultural|equity-toolkit)\/curriculum\/[a-z0-9-]+$/,
-  /^\/minnesota-communities\/[a-z0-9-]+$/,
+  /^\/minnesota-communities\/[a-z0-9-]+(?:\/[a-z0-9-]+)?$/,
+  /^\/learn\/water-we-swim-in\/essay\/[a-z0-9-]+$/,
   /^\/one-dsd\/(?:programs|scenarios)\/[a-z0-9-]+$/,
   /^\/program\/(?:what-informs|practice|resources|progress|impact)$/,
 ];

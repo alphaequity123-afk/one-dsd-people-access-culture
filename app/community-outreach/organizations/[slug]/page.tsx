@@ -6,6 +6,7 @@ import { ORGANIZATIONS, getOrganization, relationshipLine } from "@/lib/content/
 import { PrintPageButton } from "@/components/hub/print-page-button";
 import styles from "../../hub.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
+import { PrintOpenPanels } from "@/components/rp-print-open-panels";
 
 export function generateStaticParams() {
   return ORGANIZATIONS.map(org => ({ slug: org.slug }));
@@ -36,19 +37,9 @@ export default async function OrganizationPage({ params }: { params: Promise<{ s
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="organization" id={org.slug} noun="organization page" /></details>
 
     <div className={styles.grid}>
-      <section><h2 className="text-lg font-bold">Who it serves</h2><p>{org.whoItServes || "Not confirmed in the public records."}</p>
-        <h2 className="text-lg font-bold">Where it works</h2><p>{org.whereItWorks || "Not confirmed in the public records."}</p></section>
+      <section><h2 className="text-lg font-bold">Who it serves</h2><p>{org.whoItServes || "Not confirmed in the public records."}</p></section>
       <section><h2 className="text-lg font-bold">What it does</h2>{org.services.length ? <ul className="list-disc pl-6">{org.services.map(s => <li key={s}>{s}</li>)}</ul> : <p>Not confirmed in the public records.</p>}</section>
     </div>
-
-    <section className={styles.section}>
-      <h2>Work with the Disability Services Division and the Department of Human Services</h2>
-      {org.withTheDivision.map((rel, i) => <div className={styles.rel} key={i}>
-        <strong>{relationshipLine(rel)}</strong>
-        {rel.departmentWide ? <p className={styles.small}>This record names the Department of Human Services, not the Disability Services Division.</p> : null}
-        <p style={{ margin: 0 }}>{rel.what}</p>
-      </div>)}
-    </section>
 
     <section className={styles.section}>
       <h2>When staff might connect</h2>
@@ -63,11 +54,29 @@ export default async function OrganizationPage({ params }: { params: Promise<{ s
     </section>
 
     <section className={styles.section}>
-      <h2>Public records</h2>
-      <ul className="list-disc pl-6">{org.records.map(r => <li key={r.url}>{r.title}{r.date ? `, ${r.date}` : ""}. <a href={r.url}>{r.url.replace(/^https:\/\/(www\.)?/, "").slice(0, 70)}</a></li>)}</ul>
-      {org.uncertainties.filter(Boolean).length ? <><h3 className="mt-4 font-bold">Not confirmed</h3><ul className="list-disc pl-6">{org.uncertainties.filter(Boolean).map(u => <li key={u}>{u}</li>)}</ul></> : null}
-      <p className={styles.small}>Facts checked against public sources on {org.checked}. Confirm current details with the organization before relying on them.</p>
+      <h2>More about this organization</h2>
+      <details className="course-more-item">
+        <summary>Where it works</summary>
+        <p>{org.whereItWorks || "Not confirmed in the public records."}</p>
+      </details>
+
+      <details className="course-more-item">
+        <summary>Work with the Disability Services Division and the Department of Human Services</summary>
+        {org.withTheDivision.map((rel, i) => <div className={styles.rel} key={i}>
+          <strong>{relationshipLine(rel)}</strong>
+          {rel.departmentWide ? <p className={styles.small}>This record names the Department of Human Services, not the Disability Services Division.</p> : null}
+          <p style={{ margin: 0 }}>{rel.what}</p>
+        </div>)}
+      </details>
+
+      <details className="course-more-item">
+        <summary>Public records</summary>
+        <ul className="list-disc pl-6">{org.records.map(r => <li key={r.url}>{r.title}{r.date ? `, ${r.date}` : ""}. <a href={r.url}>{r.url.replace(/^https:\/\/(www\.)?/, "").slice(0, 70)}</a></li>)}</ul>
+        {org.uncertainties.filter(Boolean).length ? <><h3 className="mt-4 font-bold">Not confirmed</h3><ul className="list-disc pl-6">{org.uncertainties.filter(Boolean).map(u => <li key={u}>{u}</li>)}</ul></> : null}
+        <p className={styles.small}>Facts checked against public sources on {org.checked}. Confirm current details with the organization before relying on them.</p>
+      </details>
     </section>
+    <PrintOpenPanels />
     <p className={styles.noPrint}><PrintPageButton /></p>
   </article>;
 }

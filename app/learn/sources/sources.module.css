@@ -42,7 +42,7 @@
 .selection > p { max-width: 65ch; }
 .filters { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin-block: 1.25rem; }
 .filters label { display: grid; gap: .4rem; font-weight: 600; min-width: 0; }
-.filters select { max-width: 100%; min-height: 44px; padding: .65rem; border: 1px solid #687d8c; border-radius: .3rem; background: #fff; color: #183247; font: inherit; }
+.filters select, .search { max-width: 100%; min-height: 44px; padding: .65rem; border: 1px solid #687d8c; border-radius: .3rem; background: #fff; color: #183247; font: inherit; }
 .filters button { min-height: 44px; border-radius: .3rem; padding: .65rem 1rem; border: 1px solid var(--blue); color: #fff; background: var(--blue); font: inherit; font-weight: 700; cursor: pointer; }
 .filters a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; text-decoration: underline; }
 .filters :is(select, button, a):focus-visible, .themeGrid a:focus-visible { outline: 3px solid #b66c00; outline-offset: 3px; }

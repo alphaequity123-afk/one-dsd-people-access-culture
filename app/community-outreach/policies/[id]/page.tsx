@@ -6,6 +6,7 @@ import { PrintPageButton } from "@/components/hub/print-page-button";
 import { formatPolicyDate, getPolicies, getPolicy, getPolicyKind, policyHref, policyPageTitle, relatedPolicies } from "@/lib/content/hub/dsd-policies";
 import styles from "../../hub.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
+import { PrintOpenPanels } from "@/components/rp-print-open-panels";
 
 export function generateStaticParams() {
   return getPolicies().map(p => ({ id: p.id }));
@@ -56,24 +57,28 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
       <p className={styles.noPrint}><Link href="/equity-review/analyze">Analyze a policy document</Link> · <Link href="/equity-review">Equity review</Link></p>
     </section>
 
-    {policy.relatedSources.length ? <section className={styles.section} aria-labelledby="sources-title">
-      <h2 id="sources-title">Related sources</h2>
-      <ul className="list-disc pl-6">{policy.relatedSources.map(s => <li key={s.url}><a href={s.url}>{s.title}</a></li>)}</ul>
-    </section> : null}
+    <section className={styles.section} aria-labelledby="more-title">
+      <h2 id="more-title">Related and sources</h2>
+      {policy.relatedSources.length ? <details className="course-more-item">
+        <summary id="sources-title">Related sources</summary>
+        <ul className="list-disc pl-6">{policy.relatedSources.map(s => <li key={s.url}><a href={s.url}>{s.title}</a></li>)}</ul>
+      </details> : null}
 
-    {policy.relatedPages.length ? <section className={`${styles.section} ${styles.noPrint}`} aria-labelledby="pages-title">
-      <h2 id="pages-title">Related program pages</h2>
-      <ul className="list-disc pl-6">{policy.relatedPages.map(route => <li key={route}><Link href={route}>{policyPageTitle(route)}</Link></li>)}</ul>
-    </section> : null}
+      {policy.relatedPages.length ? <details className={`course-more-item ${styles.noPrint}`}>
+        <summary id="pages-title">Related program pages</summary>
+        <ul className="list-disc pl-6">{policy.relatedPages.map(route => <li key={route}><Link href={route}>{policyPageTitle(route)}</Link></li>)}</ul>
+      </details> : null}
 
-    {related.length ? <section className={`${styles.section} ${styles.noPrint}`} aria-labelledby="related-title">
-      <h2 id="related-title">Policies on the same topics</h2>
-      <ul className="list-disc pl-6">{related.map(r => <li key={r.id}><Link href={policyHref(r.id)}>{r.title}</Link></li>)}</ul>
-    </section> : null}
+      {related.length ? <details className={`course-more-item ${styles.noPrint}`}>
+        <summary id="related-title">Policies on the same topics</summary>
+        <ul className="list-disc pl-6">{related.map(r => <li key={r.id}><Link href={policyHref(r.id)}>{r.title}</Link></li>)}</ul>
+      </details> : null}
 
-    <section className={styles.section} aria-labelledby="tags-title">
-      <h2 id="tags-title">Topics</h2>
-      <div>{policy.tags.map(tag => <span className={styles.chip} key={tag}>{tag}</span>)}</div>
+      <details className="course-more-item">
+        <summary id="tags-title">Topics</summary>
+        <div>{policy.tags.map(tag => <span className={styles.chip} key={tag}>{tag}</span>)}</div>
+      </details>
     </section>
+    <PrintOpenPanels />
   </article>;
 }

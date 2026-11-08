@@ -8,6 +8,7 @@ import { DSD_SCENARIOS } from "@/lib/dsd";
 import { requestedContentScope } from "@/lib/product/request-context";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "@/components/collections.module.css";
+import { Hub2More } from "@/components/hub2-choices";
 
 export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: { params: Promise<{ door: string }> }): Promise<Metadata> {
@@ -34,8 +35,7 @@ export default async function LeadingDoorPage({ params }: { params: Promise<{ do
         const start = collectionItem(question.startId);
         const aid = start && published.has(start.id) ? jobAidHref(start) : undefined;
         const scenarios = (QUESTION_SCENARIOS[question.key] ?? []).flatMap(id => DSD_SCENARIOS.filter(scenario => scenario.id === id));
-        return <article key={question.key} id={question.key} className={styles.question}>
-          <h2>{question.question}</h2>
+        return <Hub2More key={question.key} id={question.key} title={question.question}>
           <dl className={styles.facts}>
             <dt>Start here</dt><dd><CollectionItemLink id={question.startId} published={published} /></dd>
             {aid ? <><dt>Job aid</dt><dd><Link href={aid} prefetch={false}>Open the one-page job aid</Link></dd></> : null}
@@ -43,22 +43,20 @@ export default async function LeadingDoorPage({ params }: { params: Promise<{ do
             <dt>Whom to ask</dt><dd>{whomToAsk(door.slug, question.key).map(entry => entry.role).join("; ")}</dd>
           </dl>
           {question.deeperIds.length ? <details className={styles.deeper}><summary>Go deeper: {question.deeperIds.length} more</summary><ul>{question.deeperIds.map(id => <li key={id}><CollectionItemLink id={id} published={published} /></li>)}</ul></details> : null}
-        </article>;
+        </Hub2More>;
       })}
     </section>
     {door.relatedIds.length ? <details className={styles.deeper}><summary>Also related to this decision: {door.relatedIds.length}</summary><ul>{door.relatedIds.map(id => <li key={id}><CollectionItemLink id={id} published={published} /></li>)}</ul></details> : null}
     {resources.practice.length ? <details className={styles.deeper}><summary>Guided practice: {resources.practice.length}</summary><ul>{resources.practice.map(link => <li key={link.href}><Link href={link.href} prefetch={false}>{link.label}</Link></li>)}</ul></details> : null}
     {resources.jobAids.length ? <details className={styles.deeper}><summary>More job aids: {resources.jobAids.length}</summary><ul>{resources.jobAids.map(link => <li key={link.href}><Link href={link.href} prefetch={false}>{link.label}</Link></li>)}</ul></details> : null}
     {resources.tools.length ? <details className={styles.deeper}><summary>Tools and related pages: {resources.tools.length}</summary><ul>{resources.tools.map(link => <li key={link.href}><Link href={link.href} prefetch={false}>{link.label}</Link></li>)}</ul></details> : null}
-    <section className={styles.section} aria-labelledby="whom-to-ask-title">
-      <h2 id="whom-to-ask-title">Whom to ask, by role</h2>
+    <Hub2More headingId="whom-to-ask-title" title="Whom to ask, by role">
       <p>Names change, so these are roles. Keep the contacts for your own division where you can reach them.</p>
       <dl className={styles.facts}>{DOOR_ASK[door.slug].map(entry => <div key={entry.role} style={{ display: "contents" }}><dt>{entry.role}</dt><dd>{entry.forWhat}</dd></div>)}</dl>
       <p><Link href={RIGHT_PERSON_HREF}>Find the right person or office</Link></p>
-    </section>
-    <aside className={base.continue}>
-      <h2>Keep exploring</h2>
-      <p><Link href="/leading">All nine decisions</Link><Link href="/leading/paths">Suggested paths</Link><Link href="/leading/how-this-works">How this works</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
-    </aside>
+    </Hub2More>
+    <Hub2More title="Keep exploring">
+      <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/leading">All nine decisions</Link><Link href="/leading/paths">Suggested paths</Link><Link href="/leading/how-this-works">How this works</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
+    </Hub2More>
   </div></div>;
 }

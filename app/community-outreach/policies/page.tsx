@@ -5,11 +5,12 @@ import {
   allPrograms,
   formatPolicyDate,
   getPoliciesData,
-  policiesByKind,
   policyHref,
   searchPolicies,
   type Policy,
 } from "@/lib/content/hub/dsd-policies";
+import { catOneLine, catPaginate, catParam } from "@/lib/cat-paging";
+import { CatList, CatPager, CatResultStatus, CatRow } from "@/components/cat-list";
 import styles from "../hub.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
 
@@ -18,28 +19,31 @@ export const metadata: Metadata = {
   description: "Plain-language summaries of the Minnesota statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules and reports that shape disability services, each with its official source.",
 };
 
-type Query = { kind?: string; program?: string; "applies-to"?: string; search?: string };
+const PER_PAGE = 20;
+const BASE = "/community-outreach/policies";
+
+type Query = { q?: string | string[]; search?: string | string[]; kind?: string | string[]; program?: string | string[]; "applies-to"?: string | string[]; page?: string | string[] };
 
 function same(a: string, b: string): boolean {
   return a.trim().toLocaleLowerCase("en-US") === b.trim().toLocaleLowerCase("en-US");
 }
 
-function dateLine(p: Policy): string {
-  const parts: string[] = [];
-  if (p.effective) parts.push(`Effective ${formatPolicyDate(p.effective)}`);
-  if (p.lastUpdated) parts.push(`Last updated ${formatPolicyDate(p.lastUpdated)}`);
-  parts.push(`Checked ${formatPolicyDate(p.checked)}`);
-  return parts.join(" · ");
+/** The most recent date the policy carries, for its one-line row. */
+function rowDate(p: Policy): string {
+  if (p.lastUpdated) return `Last updated ${formatPolicyDate(p.lastUpdated)}`;
+  if (p.effective) return `Effective ${formatPolicyDate(p.effective)}`;
+  return `Checked ${formatPolicyDate(p.checked)}`;
 }
 
 export default async function PoliciesPage({ searchParams }: { searchParams: Promise<Query> }) {
   const query = await searchParams;
-  const kind = (query.kind ?? "").trim();
-  const program = (query.program ?? "").trim();
-  const appliesTo = (query["applies-to"] ?? "").trim();
-  const search = (query.search ?? "").trim();
+  const kind = catParam(query.kind);
+  const program = catParam(query.program);
+  const appliesTo = catParam(query["applies-to"]);
+  const search = catParam(query.q) || catParam(query.search);
   const data = getPoliciesData();
   const kinds = data.kinds;
+  const kindTitle = new Map(kinds.map(k => [k.id, k.title]));
   const programs = allPrograms();
   const groups = allAppliesTo();
 
@@ -48,8 +52,13 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
   if (program) matches = matches.filter(p => p.programs.some(name => same(name, program)));
   if (appliesTo) matches = matches.filter(p => p.appliesTo.some(name => same(name, appliesTo)));
   if (search) matches = searchPolicies(search, matches);
+  // Keep the order of the kinds, as the catalog has always been read.
+  const kindOrder = new Map(kinds.map((k, i) => [k.id, i]));
+  matches = matches.slice().sort((a, b) => (kindOrder.get(a.kind) ?? 99) - (kindOrder.get(b.kind) ?? 99));
   const filtered = Boolean(kind || program || appliesTo || search);
-  const grouped = policiesByKind(matches).filter(g => g.policies.length > 0);
+  const page = catPaginate(matches, catParam(query.page), PER_PAGE);
+  const params = { q: search, kind, program, "applies-to": appliesTo };
+  const selectedKind = kinds.find(k => k.id === kind);
 
   return <div className={styles.page}>
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
@@ -57,59 +66,53 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
     <p className={styles.lede}>The statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules and reports that decide who gets home and community-based services in Minnesota, what they get, and who is responsible.</p>
     <p className={styles.note}>These are summaries written in plain language. The policy itself is the source document: each entry links to it. Check the date on the source before relying on it, because policies change. Facts checked on {formatPolicyDate(data.checked)}.</p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="policies" noun="policy catalog" /></details>
-    <p>
-      <Link href="/community-outreach/how-the-system-connects">How the system connects</Link> · <Link href="/equity-review">Equity review</Link> · <Link href="/equity-review/analyze">Analyze a policy document</Link>
-    </p>
+    <details className="course-more-item">
+      <summary>About each kind of policy and how to use them</summary>
+      <dl>{kinds.map(k => <div key={k.id} id={`kind-${k.id}`}>
+        <dt><strong><Link href={`${BASE}?kind=${k.id}`}>{k.title}</Link></strong> ({data.policies.filter(p => p.kind === k.id).length})</dt>
+        <dd style={{ margin: "0 0 0.75rem" }}>{k.intro}</dd>
+      </div>)}</dl>
+      <p><Link href="/community-outreach/how-the-system-connects">How the system connects</Link> shows where each policy sits between the Department of Human Services, lead agencies, providers and the people they serve. <Link href="/equity-review">Equity review</Link> holds the review tools. <Link href="/equity-review/analyze">Analyze a policy document</Link> to work through the text of a policy section by section.</p>
+    </details>
 
-    <form method="get" className={styles.filters} aria-label="Filter the policies">
-      <label>Kind
-        <select name="kind" defaultValue={kind}>
+    <form method="get" action={BASE} className={styles.filters} role="search" aria-label="Find a policy">
+      <label htmlFor="policy-q">Search
+        <input id="policy-q" type="search" name="q" defaultValue={search} placeholder="Words in a policy" />
+      </label>
+      <label htmlFor="policy-kind">Kind
+        <select id="policy-kind" name="kind" defaultValue={kind}>
           <option value="">All kinds</option>
           {kinds.map(k => <option key={k.id} value={k.id}>{k.title}</option>)}
         </select>
       </label>
-      <label>Program
-        <select name="program" defaultValue={program}>
+      <label htmlFor="policy-program">Program
+        <select id="policy-program" name="program" defaultValue={program}>
           <option value="">All programs</option>
           {programs.map(name => <option key={name} value={name}>{name}</option>)}
         </select>
       </label>
-      <label>Applies to
-        <select name="applies-to" defaultValue={appliesTo}>
+      <label htmlFor="policy-applies-to">Applies to
+        <select id="policy-applies-to" name="applies-to" defaultValue={appliesTo}>
           <option value="">Everyone</option>
           {groups.map(name => <option key={name} value={name}>{name}</option>)}
         </select>
       </label>
-      <label>Search
-        <input type="search" name="search" defaultValue={search} placeholder="Words in a policy" />
-      </label>
       <button className={styles.button} type="submit">Show</button>
-      {filtered ? <Link href="/community-outreach/policies">Show all policies</Link> : null}
+      {filtered ? <Link href={BASE}>Show all policies</Link> : null}
     </form>
 
-    <p className={styles.small} aria-live="polite">{matches.length === data.policies.length ? `${data.policies.length} policies.` : `${matches.length} of ${data.policies.length} policies match.`}</p>
+    {selectedKind ? <p>{selectedKind.intro}</p> : null}
+    <CatResultStatus page={page} noun="policy" nouns="policies" of={data.policies.length} empty="No policy matches these filters. Try fewer filters or different words." />
+    {page.items.length ? <CatList label="Policies">
+      {page.items.map(p => <CatRow key={p.id} id={`policy-${p.id}`}
+        title={<Link href={policyHref(p.id)}>{p.title}</Link>}
+        line={catOneLine(p.summary)}
+        meta={`${kindTitle.get(p.kind) ?? p.kind} · ${rowDate(p)}`} />)}
+    </CatList> : null}
+    <CatPager page={page} basePath={BASE} params={params} label="Policy result pages" />
 
-    {grouped.length === 0 ? <p>No policy matches these filters. Try fewer filters or different words.</p> : null}
-
-    {grouped.map(({ kind: k, policies }) => <section className={styles.section} key={k.id} aria-labelledby={`kind-${k.id}`}>
-      <h2 id={`kind-${k.id}`}>{k.title} <span className={styles.small}>({policies.length})</span></h2>
-      <p>{k.intro}</p>
-      <ul className={styles.grid} style={{ listStyle: "none", padding: 0 }}>
-        {policies.map(p => <li className={styles.card} key={p.id}>
-          <h3><Link href={policyHref(p.id)}>{p.title}</Link></h3>
-          <div>{p.programs.map(name => <span className={styles.chip} key={name}>{name}</span>)}</div>
-          <p className={styles.meta}>Applies to: {p.appliesTo.join(", ")}</p>
-          <p>{p.summary}</p>
-          <p className={styles.meta}>{dateLine(p)}</p>
-          <p className={styles.small}>Source: <a href={p.source.url}>{p.source.title}</a>{p.source.date ? ` (${formatPolicyDate(p.source.date)})` : ""}</p>
-          <p className={styles.small}><Link href={policyHref(p.id)}>What it requires and what to check for equity</Link></p>
-        </li>)}
-      </ul>
-    </section>)}
-
-    <section className={styles.section} aria-labelledby="next-title">
-      <h2 id="next-title">Use a policy</h2>
-      <p><Link href="/community-outreach/how-the-system-connects">How the system connects</Link> shows where each policy sits between the Department of Human Services, lead agencies, providers and the people they serve. <Link href="/equity-review">Equity review</Link> holds the review tools. <Link href="/equity-review/analyze">Analyze a policy document</Link> to work through the text of a policy section by section.</p>
-    </section>
+    <p>
+      <Link href="/community-outreach/how-the-system-connects">How the system connects</Link> · <Link href="/equity-review">Equity review</Link> · <Link href="/equity-review/analyze">Analyze a policy document</Link>
+    </p>
   </div>;
 }

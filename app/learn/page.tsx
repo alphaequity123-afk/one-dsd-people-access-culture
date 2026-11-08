@@ -8,6 +8,7 @@ import { ResourceStartingPoints } from '@/components/resource-starting-points';
 import { RESOURCE_THEMES, RESOURCE_LEGACY_THEME_LABELS, resourceLearningLevel } from '@/lib/content/resource-organization';
 import { SELF_DIRECTED_COURSES, selfDirectedHref, selfDirectedItems } from "@/lib/content/self-directed";
 import { CoreFifteen } from "@/components/core-fifteen";
+import { Hub2More } from "@/components/hub2-choices";
 import styles from "./learning-family.module.css";
 import preview from "./learning-preview.module.css";
 import { getLearningJourney } from "@/lib/content/learning-journey";
@@ -113,20 +114,6 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
       <div className={styles.content}>
         <ResourceFormatLinks theme={selectedTheme?.id} current="learning" />
         <p className={preview.collectionLinks}><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link><Link href="/library?browse=all">Search the complete library</Link><Link href="/practice">Go straight to guided practice</Link></p>
-        {!filtered ? <section className={preview.startHere}><CoreFifteen /></section> : null}
-        {!filtered ? <section className={styles.section} aria-labelledby="series-title">
-          <h2 id="series-title">Course series</h2>
-          <ul className={styles.pathList}>
-            <li><Link href="/learn/collections">Collections</Link><p>All the learning on eight shelves named by subject, each opening with where to start. Leaders, supervisors, managers, and directors can start from <Link href="/leading">the decision in front of them</Link>.</p></li>
-            {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Cultural Intelligence collection</Link><p>Connect community context and intercultural learning with decisions in everyday work.</p></li>}
-            <li><Link href="/learn/self-directed">One DSD Self-Directed Learning Series</Link><p>Seventy-two courses built around real service and workplace situations, with reflection and practice. Choose Foundation, Intermediate, or Advanced, and download editable slides to use with a team. Includes <Link href="/learn/self-directed?curriculum=policy">Equity in Policy and Legislative Practice</Link>.</p></li>
-            <li><Link href="/learn/water-we-swim-in">The Water We Swim In</Link><p>Six short modules on Minnesota&apos;s mainstream culture: its strengths, its blind spots, and how it shapes our work.</p></li>
-            <li><Link href="/learn/emotions-and-values">Emotions, Values, and Everyday Practice</Link><p>Four courses that connect emotional intelligence and cultural values with conversations, team decisions, and usable services.</p></li>
-            <li><Link href="/learn/clas">National Culturally and Linguistically Appropriate Services Standards</Link><p>Explore cultural and language access learning, planning tools and supporting references together.</p></li>
-            {collaborationCollection.length ? <li><Link href={collaborationHref()}>Teams and Cross-Collaboration</Link><p>Build trust within your team, connect work across the Disability Services Division and the Aging and Disability Services Administration, and strengthen relationships with partners.</p></li> : null}
-            {courses.some(({pack}) => /^div-[fia]/.test(pack.course.id)) ? <li><Link href="/learn/diversity">Diversity courses</Link><p>Foundation, Intermediate, and Advanced courses on difference, assumptions, and belonging.</p></li> : null}
-          </ul>
-        </section> : null}
         {selectedTheme || legacyThemeTitle ? <section id="start-here" className={preview.startHere} aria-labelledby="topic-start-title">
           <p className={styles.eyebrow}>Explore a topic</p><h2 id="topic-start-title">{selectedTheme?.title ?? legacyThemeTitle}</h2><p>{selectedTheme?.description ?? "Explore learning and practical resources related to this topic."}</p>
           {topicFirst && !selectedTheme ? <div className={preview.topicFirst}><h3>A useful starting point</h3><Link href={itemHref(topicFirst)}>{topicFirst.title}</Link><p>{shortSummary(topicFirst.whyItMatters || topicFirst.summary, 220)}</p></div> : null}
@@ -154,6 +141,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
             {!totalFound ? <div><h2>{hubText("emptyTitle")}</h2><p>{hubText("emptyBody")}</p></div> : null}
           </EditableSurfaceRegion>
           <EditableSurfaceRegion surface={catalog}>{null}</EditableSurfaceRegion>
+          {!filtered ? <section className={preview.startHere}><CoreFifteen /></section> : null}
           {!filtered ? <ResourceThemeNav basePath="/learn" className={preview.themeSection} gridClassName={preview.themeGrid} /> : null}
           {expanded && learning.length ? <section className={styles.section} aria-labelledby="modules-title">
             <div className={styles.sectionHeading}><h2 id="modules-title">{hub.available ? hubText("coursesTitle") : stringValue(copy, "modulesTitle")}</h2><span>{learning.length} to explore</span></div>
@@ -162,13 +150,24 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
           {!expanded && learning.length ? <p className={preview.browseAll}><Link href="/learn?browse=all#modules-title">Browse all {learning.length} courses and learning resources →</Link></p> : null}
           {expanded && hub.available && resources.length ? <section className={styles.section} aria-labelledby="hub-resources-title"><div className={styles.sectionHeading}><h2 id="hub-resources-title">{hubText("resourcesTitle")}</h2><span>{resources.length} resources</span></div><ul className={styles.resourceList}>{resources.map((item) => <li key={item.id} data-hub-resource={item.id}><span className={styles.resourceKind}>{CONTENT_TYPE_LABEL[item.type]}</span><h3><Link href={`/library/${item.id}`}>{item.title}</Link></h3><p>{shortSummary(item.summary)}</p><AuthorityPill authority={item.authority} />{owner ? <> <ResourceRemove contentItemId={item.id} title={item.title} compact /></> : null}</li>)}</ul></section> : null}
           {!expanded && hub.available && resources.length ? <p><Link href="/library?browse=all">Looking for a tool, a guide, or further reading? Browse all {resources.length} resources in the library →</Link></p> : null}
-          {podcasts.length ? <section className={styles.section} aria-labelledby="podcasts-title"><div className={styles.sectionHeading}><h2 id="podcasts-title">Podcasts</h2></div><p>Listen in the audio library, where every episode comes with chapters and a full transcript.</p><ul className={styles.pathList}>{podcasts.map(({ podcast, surface: podcastSurface }) => <li key={podcast.id}><Link href={`/audio-library#podcast-${podcast.id}`}>{stringValue(podcastSurface.values, "title") || podcast.title}</Link></li>)}</ul></section> : null}
+          {podcasts.length ? <Hub2More headingId="podcasts-title" title="Podcasts" open={filtered}><p>Listen in the audio library, where every episode comes with chapters and a full transcript.</p><ul className={styles.pathList}>{podcasts.map(({ podcast, surface: podcastSurface }) => <li key={podcast.id}><Link href={`/audio-library#podcast-${podcast.id}`}>{stringValue(podcastSurface.values, "title") || podcast.title}</Link></li>)}</ul></Hub2More> : null}
         </div>
-        {!filtered ? <section className={styles.section} aria-labelledby="more-learning-title">
-          <h2 id="more-learning-title">Take it into your work</h2>
+        {!filtered ? <Hub2More headingId="series-title" title="Course series">
+          <ul className={styles.pathList}>
+            <li><Link href="/learn/collections">Collections</Link><p>All the learning on eight shelves named by subject, each opening with where to start. Leaders, supervisors, managers, and directors can start from <Link href="/leading">the decision in front of them</Link>.</p></li>
+            {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Cultural Intelligence collection</Link><p>Connect community context and intercultural learning with decisions in everyday work.</p></li>}
+            <li><Link href="/learn/self-directed">One DSD Self-Directed Learning Series</Link><p>Seventy-two courses built around real service and workplace situations, with reflection and practice. Choose Foundation, Intermediate, or Advanced, and download editable slides to use with a team. Includes <Link href="/learn/self-directed?curriculum=policy">Equity in Policy and Legislative Practice</Link>.</p></li>
+            <li><Link href="/learn/water-we-swim-in">The Water We Swim In</Link><p>Six short modules on Minnesota&apos;s mainstream culture: its strengths, its blind spots, and how it shapes our work.</p></li>
+            <li><Link href="/learn/emotions-and-values">Emotions, Values, and Everyday Practice</Link><p>Four courses that connect emotional intelligence and cultural values with conversations, team decisions, and usable services.</p></li>
+            <li><Link href="/learn/clas">National Culturally and Linguistically Appropriate Services Standards</Link><p>Explore cultural and language access learning, planning tools and supporting references together.</p></li>
+            {collaborationCollection.length ? <li><Link href={collaborationHref()}>Teams and Cross-Collaboration</Link><p>Build trust within your team, connect work across the Disability Services Division and the Aging and Disability Services Administration, and strengthen relationships with partners.</p></li> : null}
+            {courses.some(({pack}) => /^div-[fia]/.test(pack.course.id)) ? <li><Link href="/learn/diversity">Diversity courses</Link><p>Foundation, Intermediate, and Advanced courses on difference, assumptions, and belonging.</p></li> : null}
+          </ul>
+        </Hub2More> : null}
+        {!filtered ? <Hub2More headingId="more-learning-title" title="Take it into your work">
           <p><Link href="/practice">Put learning into practice with the {graduationPaths.length} guided practices →</Link></p>
           {staffGuide ? <p><Link href={`/library/${staffGuide.id}`}>{staffGuide.title}</Link></p> : null}
-        </section> : null}
+        </Hub2More> : null}
         <div className={styles.context}><p><Link href="/learn/sources">Research and sources</Link> · <Link href="/ask">Ask</Link></p><details className={preview.disclosure}><summary>About these learning resources</summary><DhsReferenceLink /><ProgramContextNote /></details></div>
         {catalog.available ? <details className={styles.participation}><summary>{stringValue(catalog.values, "participationDetailsLabel")}</summary><ParticipationNotice surface="learning" /></details> : <ParticipationNotice surface="learning" />}
       </div>

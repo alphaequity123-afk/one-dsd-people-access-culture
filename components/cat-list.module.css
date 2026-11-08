@@ -1,0 +1,23 @@
+.status { margin-block: 1rem 0.5rem; color: var(--color-muted, #4b5a66); font-weight: 600; }
+.list { list-style: none; margin: 0; padding: 0; max-width: 60rem; border-top: 1px solid var(--color-line, #d5c8b4); }
+.row { padding: 0.75rem 0.25rem; border-bottom: 1px solid var(--color-line, #d5c8b4); scroll-margin-top: 5rem; }
+.title { display: block; margin: 0; font-size: 1.05rem; font-weight: 700; line-height: 1.4; }
+.title a { color: var(--blue, #183247); text-decoration: underline; text-underline-offset: 0.2em; }
+.line { margin: 0.2rem 0 0; max-width: 70ch; line-height: 1.5; }
+.meta { margin: 0.2rem 0 0; color: var(--color-muted, #4b5a66); font-size: 0.9rem; }
+.expand > summary { cursor: pointer; min-height: 44px; display: list-item; padding-block: 0.35rem; }
+.expand > summary .title { display: inline; }
+.expand[open] { padding-bottom: 0.5rem; }
+.body { margin: 0.5rem 0 0 1.25rem; display: grid; gap: 0.35rem; max-width: 65ch; }
+.body p { margin: 0; }
+.pager { margin-block: 1.25rem 2rem; }
+.pager ul { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; align-items: center; }
+.pager a, .pager span[aria-current] { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 0.7rem; border: 1px solid var(--color-line, #d5c8b4); border-radius: 0.3rem; font-weight: 600; text-decoration: underline; }
+.pager a[aria-current="page"] { background: var(--blue, #183247); border-color: var(--blue, #183247); color: #fff; text-decoration: none; }
+.pager a:focus-visible, .jump a:focus-visible { outline: 3px solid #b66c00; outline-offset: 3px; }
+.gap { padding: 0 0.3rem; color: var(--color-muted, #4b5a66); }
+.jump { margin-block: 1rem; }
+.jump ul { display: flex; flex-wrap: wrap; gap: 0.3rem; list-style: none; margin: 0; padding: 0; }
+.jump a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; border: 1px solid var(--color-line, #d5c8b4); border-radius: 0.3rem; font-weight: 700; }
+.jump a[aria-current="page"] { background: var(--blue, #183247); color: #fff; border-color: var(--blue, #183247); }
+.jump .none { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; color: var(--color-muted, #4b5a66); }

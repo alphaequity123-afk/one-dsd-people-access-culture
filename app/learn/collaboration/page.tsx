@@ -6,6 +6,7 @@ import { requestedContentScope } from "@/lib/product/request-context";
 import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import { COLLABORATION_FOCUSES, COLLABORATION_LEVELS, collaborationCourses, collaborationHref, normalizeCollaborationFilters } from "@/lib/learning/collaboration-collection";
 import styles from "./collaboration.module.css";
+import { Hub2More } from "@/components/hub2-choices";
 
 export const metadata: Metadata = {
   title: "Teams and Cross-Collaboration",
@@ -69,11 +70,11 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
           const categories = [...new Set(rows.map(course => course.category))];
           return <section key={focus.id} className={styles.focusGroup} aria-label={focus.title}>
             {!selectedFocus ? <><h3>{focus.title}</h3><p>{focus.description}</p></> : null}
-            {categories.map((category, index) => {
+            {categories.map(category => {
               const courses = rows.filter(course => course.category === category);
               // T84 is excluded; the public group describes the learning actually offered here.
               const title = focus.id === "partners" ? "Working with agencies, counties, providers, and communities" : category;
-              return <details key={`${category}:${filters.level ?? "all"}`} className={styles.topic} open={Boolean(filters.focus || filters.level) || (focus.id === "teams" && index === 0)}>
+              return <details key={`${category}:${filters.level ?? "all"}`} className={styles.topic} open={Boolean(filters.focus || filters.level)}>
                 <summary><span>{title}</span><span className={styles.topicCount}>{courses.length} {courses.length === 1 ? "course" : "courses"}</span></summary>
                 <ul className={styles.courseGrid}>{courses.map(({ pack, level, topicId }) => <li key={pack.course.id} data-collaboration-course={pack.course.id} data-collaboration-level={level} data-collaboration-topic={topicId}>
                   <p className={styles.courseLevel}>{COLLABORATION_LEVELS.find(item => item.id === level)!.title}</p>
@@ -86,7 +87,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
           </section>;
         })}
       </section>
-      <aside className={styles.continue}><h2>Keep exploring</h2><p><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link><Link href="/library?theme=workforce">Find resources for team and workplace practice</Link></p></aside>
+      <Hub2More title="Keep exploring"><p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link><Link href="/library?theme=workforce">Find resources for team and workplace practice</Link></p></Hub2More>
       <details className={styles.credit}><summary>About participation and training credit</summary><p>Learning here is voluntary. Choose what supports your work and return when it is useful.</p><p>{TRAINING_CREDIT_NOTICE}</p></details>
     </div>
   </div>;

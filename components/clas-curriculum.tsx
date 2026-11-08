@@ -13,6 +13,7 @@ import { DecisionList, OrderingQuestion, RecallSection } from './clas-curriculum
 import TutorPanel from './tutor-panel';
 import { WalkthroughPlaylist } from './clas-curriculum/walkthrough-playlist';
 import { ShareClasCollection } from './clas-curriculum/share-collection';
+import { ClTabs } from './cl-tabs';
 import './clas-curriculum.css';
 
 const base = '/learn/clas/curriculum';
@@ -55,6 +56,8 @@ export default function ClasCurriculum({ lessonId, data, front }: Props) {
     </> : <>
       <p>Part {index + 1} of {curriculum.modules.length} · CLAS standards {lesson.standards.join(', ')}{lesson.durationSeconds > 0 ? ` · Video: about ${minutes(lesson.durationSeconds)} minutes` : ''}{walkthrough && walkthrough.durationSeconds > 0 ? ` · Discussion: about ${minutes(walkthrough.durationSeconds)} minutes` : ''}</p>
       {page.jobAidAvailable && <p><a href={`${base}/${lesson.id}/job-aid`}>Open the one-page job aid for this part</a> (printable, with a text download)</p>}
+      <ClTabs label="Lesson sections" tabs={[
+        { id: 'tab-watch', label: 'Watch', content: <>
       {page.recall.length > 0 && index > 0 && <RecallSection questions={page.recall} previousTitle={curriculum.modules[index - 1].title} previousPart={index} />}
       <section aria-labelledby="watch"><h2 id="watch">Watch the lesson</h2>
         <SyncedMediaPlayer mediaId={`video:${lesson.id}`} kind="video" src={lesson.video} captions={lesson.captions} poster={`/learning/clas-curriculum/${lesson.id}/poster.png`} label={lesson.title} chapters={chapters} cues={page.cues} keyPoints={practice?.keyPoints} cardDescriptions={practice?.cardDescriptions} transcriptTitle="Transcript of the lesson video">
@@ -63,6 +66,8 @@ export default function ClasCurriculum({ lessonId, data, front }: Props) {
         </SyncedMediaPlayer>
         {practice && practice.keyPoints.length > 0 && <KeyPointsPanel keyPoints={practice.keyPoints} chapters={chapters} />}
       </section>
+      </> },
+        { id: 'tab-discuss', label: 'Discuss', content: <>
       {walkthrough && <section aria-labelledby="discuss"><h2 id="discuss">Hear it discussed</h2><p>Two voices talk through this part in more depth. Listen when you want the longer version; the lesson above stands on its own.</p>
         <SyncedMediaPlayer mediaId={`walkthrough:${lesson.id}`} kind="audio" src={walkthrough.audio} captions={walkthrough.captions} label={`Walkthrough discussion, Part ${index + 1}: ${lesson.title}`} chapters={walkthrough.chapters} cues={page.walkthroughCues} transcriptTitle="Transcript of the discussion">
           <p>Playback does not begin automatically. Pause whenever you want time to think.</p>
@@ -70,6 +75,8 @@ export default function ClasCurriculum({ lessonId, data, front }: Props) {
         </SyncedMediaPlayer>
       </section>}
       <section><h2>{lesson.example.title}</h2><p>{lesson.example.situation}</p><details><summary>Work through the example</summary><p>{lesson.example.response}</p><p>{lesson.example.reason}</p></details></section>
+      </> },
+        { id: 'tab-practice', label: 'Practice', content: <>
       <section aria-labelledby="practice"><h2 id="practice">Practice with guidance</h2>
         <p className="clas-guidance-intro">Guidance is ready for every answer, right or wrong, before you move on.</p>
         <p>Answer the question, then get guidance that works through your thinking step by step.</p>
@@ -77,14 +84,22 @@ export default function ClasCurriculum({ lessonId, data, front }: Props) {
         {practice && <DecisionList decisions={practice.decisions} />}
         {practice?.ordering && <div className="clas-decisions"><h3>What would you check first?</h3><OrderingQuestion ordering={practice.ordering} /></div>}
       </section>
+      </> },
+        { id: 'tab-use-at-work', label: 'Use it at work', content: <>
       <section aria-labelledby="apply"><h2 id="apply">Bring it into your work</h2><p>{lesson.practice.reflection}</p>
         <WorkingNote moduleId={lesson.id} title={lesson.title} prompt={lesson.practice.reflection} allModuleIds={moduleIds} onChange={() => setNoteVersion(v => v + 1)} />
         <button type="button" onClick={workbook}>Download the full working-notes companion</button><p><Link prefetch={false} href="/practice/clas">Open the existing CLAS planning worksheet</Link></p>
         {lastPart && <ImprovementPlan curriculumTitle={curriculum.title} modules={curriculum.modules} version={noteVersion} />}
       </section>
-      <section aria-labelledby="transcript"><h2 id="transcript">Read the full lesson</h2>{lesson.sections.map(s => <section key={s.title}><h3>{s.title}</h3>{s.paragraphs.map((p, n) => <p key={n}>{p}</p>)}</section>)}</section>
       <section><h2>Your next step</h2><button type="button" onClick={complete}>{completed.includes(lesson.id) ? 'Marked complete' : 'Mark this lesson complete'}</button><p role="status">{storageMessage}</p><nav aria-label="Lesson sequence">{index > 0 && <a href={`${base}/${curriculum.modules[index - 1].id}`}>Previous: {curriculum.modules[index - 1].title}</a>}{index < curriculum.modules.length - 1 ? <a href={`${base}/${curriculum.modules[index + 1].id}`}>Next: {curriculum.modules[index + 1].title}</a> : <a href={base}>Return to the curriculum overview</a>}</nav></section>
+      </> },
+        { id: 'tab-full-lesson', label: 'Full lesson text', content: <>
+      <section aria-labelledby="transcript"><h2 id="transcript">Read the full lesson</h2>{lesson.sections.map(s => <section key={s.title}><h3>{s.title}</h3>{s.paragraphs.map((p, n) => <p key={n}>{p}</p>)}</section>)}</section>
+      </> },
+        { id: 'tab-sources', label: 'Sources', content: <>
       <section><h2>Sources and further guidance</h2><ul><li><a href="https://thinkculturalhealth.hhs.gov/clas/standards" target="_blank" rel="noreferrer">HHS Office of Minority Health: National Culturally and Linguistically Appropriate Services Standards</a></li><li><a href="https://thinkculturalhealth.hhs.gov/assets/pdfs/EnhancedNationalCLASStandards_Revised_June2025.pdf" target="_blank" rel="noreferrer">HHS National Culturally and Linguistically Appropriate Services Standards (June 2025 PDF)</a></li><li><a href="https://mn.gov/dhs/assets/language-disability-assistance_tcm1053-646948.pdf" target="_blank" rel="noreferrer">Minnesota DHS language and disability assistance — published policy reference</a></li></ul><p>Use the current procedures applicable to your role and program when taking action.</p></section>
+      </> },
+      ]} />
     </>}
   </div>;
 }

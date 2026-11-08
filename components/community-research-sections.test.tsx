@@ -109,7 +109,7 @@ vi.mock("@/lib/content/staff-surface-registry", () => ({
   communityBriefSurfaceId: (id: string) => `brief.${id}`,
   stringValue: () => "",
 }));
-vi.mock("./resource-downloads", () => ({ ResourceDownloads: () => null }));
+vi.mock("./resource-downloads", () => ({ ResourceDownloads: ({ kind, id }: { kind: string; id: string }) => <span data-test-downloads={`${kind}:${id}`} /> }));
 vi.mock("./community-experience-controls", () => ({
   CommunityExperience: ({ brief }: { brief: React.ReactNode }) => <div>{brief}</div>,
   CommunityPractice: () => null,
@@ -117,9 +117,24 @@ vi.mock("./community-experience-controls", () => ({
 
 describe("community page with the database mocked", () => {
   beforeEach(() => { gate.communityAvailable = true; gate.parentAvailable = true; gate.interculturalAvailable = true; });
-  const page = async (id: string) => {
+  const render = async (id: string, part?: string) => {
     const { CommunityDesignPage } = await import("./community-design-page");
-    return renderToStaticMarkup(await CommunityDesignPage({ id }));
+    return renderToStaticMarkup(await CommunityDesignPage({ id, part }));
+  };
+  const renderOrMissing = async (id: string, part: string) => {
+    try { return await render(id, part); } catch (error) { if (String(error).includes("NOT_FOUND")) return null; throw error; }
+  };
+  // A community page is an overview plus parts; together they hold everything
+  // the single page used to hold, in the same order.
+  const page = async (id: string) => {
+    const { COMMUNITY_PARTS } = await import("./cp-community-parts");
+    // One render at a time, as separate requests would be.
+    const pages = [await render(id)];
+    for (const part of COMMUNITY_PARTS) {
+      const html = await renderOrMissing(id, part.slug);
+      if (html !== null) pages.push(html);
+    }
+    return pages.join("\n");
   };
   it("shows the pilot beneath the page once, with no duplicate additions", async () => {
     const html = await page("african-american");
@@ -160,5 +175,38 @@ describe("community page with the database mocked", () => {
     expect(html).toContain("defers to the Office of Indian Affairs");
     expect(html).not.toContain("research-people");
     expect(html).not.toContain("research-disability");
+  });
+  it("keeps the overview short and lists only the parts that exist", async () => {
+    const overview = await render("african-american");
+    expect(overview).toContain('id="community-overview"');
+    expect(overview).toContain('data-test-downloads="community:african-american"');
+    expect(overview).toContain("Parts of this page");
+    for (const part of ["history", "learning", "working-with", "numbers", "organizations", "profile", "people", "sources"]) {
+      expect(overview).toContain(`href="/minnesota-communities/african-american/${part}"`);
+    }
+    for (const id of ["community-history", "community-practice", "community-numbers", "community-organizations", "research-people", "community-sources"]) {
+      expect(overview).not.toContain(`id="${id}"`);
+    }
+    const deaf = await render("deaf-deafblind-hard-of-hearing");
+    expect(deaf).not.toContain('href="/minnesota-communities/deaf-deafblind-hard-of-hearing/history"');
+    await expect(render("deaf-deafblind-hard-of-hearing", "history")).rejects.toThrow("NOT_FOUND");
+  });
+  it("gives each part a way back, the parts navigation and the same download", async () => {
+    const html = await render("african-american", "numbers");
+    expect(html).toContain('aria-label="Breadcrumb"');
+    expect(html).toContain('href="/minnesota-communities/african-american"');
+    expect(html).toContain('aria-label="Parts of this page"');
+    expect(html).toContain('<a aria-current="page" href="/minnesota-communities/african-american/numbers">');
+    expect((html.match(/aria-current="page"/g) ?? []).length).toBe(2);
+    expect(html).toContain('data-test-downloads="community:african-american"');
+    expect(html).toContain('id="community-numbers"');
+    expect(html).not.toContain('id="community-organizations"');
+    await expect(render("african-american", "not-a-part")).rejects.toThrow("NOT_FOUND");
+  });
+  it("never splits a Native community page", async () => {
+    for (const id of ["native-american", "tribal-nations", "alaska-native"]) {
+      expect(await render(id)).not.toContain("Parts of this page");
+      await expect(render(id, "history")).rejects.toThrow("NOT_FOUND");
+    }
   });
 });

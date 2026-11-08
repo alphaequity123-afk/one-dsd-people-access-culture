@@ -122,18 +122,18 @@ export default function EquityDecisionsCurriculum({ lessonId }: { lessonId?: str
         <button type="button" onClick={() => download(`equity-decisions-part-${lesson.id}-notes.txt`, `${lesson.title}\n\n${lesson.practice.reflection}\n\n${notes}`)}>Download my note</button>{' '}
         <button type="button" onClick={downloadCompanion}>Download the full working-notes companion</button>
       </section>
-      {lesson.resources && lesson.resources.length > 0 && <section><h2>Resources for this part</h2><ResourceList resources={lesson.resources}/></section>}
+      {lesson.resources && lesson.resources.length > 0 && <details className="course-more-item"><summary><h2>Resources for this part</h2></summary><ResourceList resources={lesson.resources}/></details>}
       <section aria-labelledby="transcript"><h2 id="transcript">Read the full lesson</h2>{lesson.sections.map(section => <section key={section.title}>
         <h3>{section.title}</h3>{section.paragraphs.map((paragraph, number) => <p key={number}>{paragraph}</p>)}
       </section>)}</section>
-      <section><h2>Your next step</h2>
+      <details className="course-more-item"><summary><h2>Your next step</h2></summary>
         <button type="button" onClick={complete}>{completed.includes(lesson.id) ? 'Marked complete' : 'Mark this lesson complete'}</button>
         <p role="status">{storageMessage}</p><nav aria-label="Lesson sequence">
           {index > 0 && <a href={`${base}/${curriculum.modules[index - 1].id}`}>Previous: {curriculum.modules[index - 1].title}</a>}
           {index < curriculum.modules.length - 1 ? <a href={`${base}/${curriculum.modules[index + 1].id}`}>Next: {curriculum.modules[index + 1].title}</a> : <a href={base}>Return to the learning overview</a>}
         </nav>
-      </section>
-      {curriculum.sources && curriculum.sources.length > 0 && <section><h2>Sources and further guidance</h2><ResourceList resources={curriculum.sources}/></section>}
+      </details>
+      {curriculum.sources && curriculum.sources.length > 0 && <details className="course-more-item"><summary><h2>Sources and further guidance</h2></summary><ResourceList resources={curriculum.sources}/></details>}
     </>}
   </div>;
 }

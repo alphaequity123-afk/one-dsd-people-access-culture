@@ -2,7 +2,7 @@ import React from 'react';
 import fs from 'node:fs';
 import path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, within } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, within } from '@testing-library/react';
 import ClasCurriculum from './clas-curriculum';
 import fixture from '@/lib/content/__fixtures__/clas-curriculum-practice.fixture.json';
 import curriculum from '@/lib/content/clas-curriculum.json';
@@ -24,7 +24,10 @@ beforeEach(() => {
   Object.defineProperty(URL, 'createObjectURL', { value: vi.fn(() => 'blob:local'), configurable: true });
   Object.defineProperty(URL, 'revokeObjectURL', { value: vi.fn(), configurable: true });
 });
-afterEach(() => { cleanup(); vi.restoreAllMocks(); localStorage.clear(); });
+afterEach(() => { cleanup(); vi.restoreAllMocks(); localStorage.clear(); window.history.replaceState(null, '', '/'); });
+
+/** Lesson sections sit in tabs on one address; open one the way a reader would. */
+const openTab = (view: ReturnType<typeof render>, name: string) => fireEvent.click(view.getByRole('tab', { name }));
 
 describe('lesson page without practice data (older content)', () => {
   it('renders the video, transcript and chapters, and none of the practice-only sections', () => {
@@ -99,12 +102,14 @@ describe('lesson page with practice data', () => {
     const welcome = within(chapterNav).getByRole('button', { name: /Welcome to your learning/ });
     expect(document.getElementById(welcome.getAttribute('aria-describedby')!)?.textContent).toBe('A photo of an open notebook on a desk beside a cup of tea.');
     expect(view.getByText('More decisions to practice')).toBeTruthy();
+    openTab(view, 'Practice');
     expect(view.getAllByRole('group').filter(g => g.classList.contains('clas-question'))).toHaveLength(3);
     expect(view.getByText('What would you check first?')).toBeTruthy();
     expect(view.queryByText(/Before you watch/)).toBeNull();
   });
   it('gives feedback on a checked decision and allows a retry', () => {
     const view = render(<ClasCurriculum lessonId="01" data={{ practice: moduleOne }} />);
+    openTab(view, 'Practice');
     const decision = view.getByRole('group', { name: moduleOne.decisions[0].question });
     fireEvent.click(within(decision).getByRole('button', { name: 'Check my answer' }));
     expect(within(decision).getByText('Choose one option, then check your answer.')).toBeTruthy();
@@ -121,6 +126,7 @@ describe('lesson page with practice data', () => {
   });
   it('builds the order with numbered buttons, checks it position by position and allows a retry', () => {
     const view = render(<ClasCurriculum lessonId="01" data={{ practice: moduleOne }} />);
+    openTab(view, 'Practice');
     const ordering = view.getByRole('group', { name: moduleOne.ordering!.prompt });
     const steps = moduleOne.ordering!.steps;
     fireEvent.click(within(ordering).getByRole('button', { name: `Step 1: ${steps[2]}` }));
@@ -153,9 +159,68 @@ describe('lesson page with practice data', () => {
   });
 });
 
+describe('lesson tabs', () => {
+  const tabs = ['Watch', 'Discuss', 'Practice', 'Use it at work', 'Full lesson text', 'Sources'];
+  it('groups every section into tabs on one address, with Watch open and every panel still in the page', () => {
+    const view = render(<ClasCurriculum lessonId="02" data={{ cues, walkthrough, walkthroughCues, practice: moduleOne, recall: moduleOne.recall }} />);
+    const list = view.getByRole('tablist', { name: 'Lesson sections' });
+    expect(within(list).getAllByRole('tab').map(tab => tab.textContent)).toEqual(tabs);
+    expect(view.getByRole('tab', { name: 'Watch' }).getAttribute('aria-selected')).toBe('true');
+    expect(view.getAllByRole('tabpanel')).toHaveLength(1);
+    expect(view.getByRole('tabpanel').id).toBe('tab-watch');
+    const lesson = curriculum.modules[1];
+    // Every original section heading is still on the page (hidden panels included), word for word.
+    for (const heading of [/Before you watch: a quick recall from Part 1/, 'Watch the lesson', 'Hear it discussed', lesson.example.title, 'Practice with guidance', 'Bring it into your work', 'Read the full lesson', 'Your next step', 'Sources and further guidance'])
+      expect(view.getByRole('heading', { name: heading, hidden: true })).toBeTruthy();
+    for (const section of lesson.sections) for (const paragraph of section.paragraphs) expect(view.getAllByText(paragraph).length).toBeGreaterThan(0);
+    expect(view.getByText(lesson.example.response)).toBeTruthy();
+    expect(view.container.querySelectorAll('.cl-tabs-panel')).toHaveLength(6);
+    for (const panel of view.container.querySelectorAll('.cl-tabs-panel')) expect(panel.getAttribute('role')).toBe('tabpanel');
+  });
+  it('moves between tabs with the arrow, Home and End keys and records the tab in the address', () => {
+    const view = render(<ClasCurriculum lessonId="01" />);
+    fireEvent.keyDown(view.getByRole('tab', { name: 'Watch' }), { key: 'ArrowRight' });
+    expect(document.activeElement).toBe(view.getByRole('tab', { name: 'Discuss' }));
+    expect(view.getByRole('tabpanel').id).toBe('tab-discuss');
+    expect(window.location.hash).toBe('#tab-discuss');
+    fireEvent.keyDown(document.activeElement!, { key: 'End' });
+    expect(view.getByRole('tabpanel').id).toBe('tab-sources');
+    fireEvent.keyDown(document.activeElement!, { key: 'ArrowRight' });
+    expect(view.getByRole('tabpanel').id).toBe('tab-watch');
+    fireEvent.keyDown(document.activeElement!, { key: 'ArrowLeft' });
+    expect(view.getByRole('tabpanel').id).toBe('tab-sources');
+    fireEvent.keyDown(document.activeElement!, { key: 'Home' });
+    expect(view.getByRole('tab', { name: 'Watch' }).tabIndex).toBe(0);
+    expect(view.getByRole('tab', { name: 'Sources' }).tabIndex).toBe(-1);
+  });
+  it('opens the tab that holds a deep-linked section, and a tab named in the address', () => {
+    window.history.replaceState(null, '', '/learn/clas/curriculum/01#practice');
+    const view = render(<ClasCurriculum lessonId="01" />);
+    expect(view.getByRole('tab', { name: 'Practice' }).getAttribute('aria-selected')).toBe('true');
+    view.unmount();
+    window.history.replaceState(null, '', '/learn/clas/curriculum/01#tab-full-lesson');
+    const again = render(<ClasCurriculum lessonId="01" />);
+    expect(again.getByRole('tabpanel').id).toBe('tab-full-lesson');
+    window.history.replaceState(null, '', '/learn/clas/curriculum/01#apply');
+    act(() => { window.dispatchEvent(new HashChangeEvent('hashchange')); });
+    expect(again.getByRole('tabpanel').id).toBe('tab-use-at-work');
+  });
+  it('renders every panel visible before hydration, so the lesson reads without JavaScript', async () => {
+    const { renderToString } = await import('react-dom/server');
+    const html = renderToString(<ClasCurriculum lessonId="01" />);
+    expect(html).not.toMatch(/<div[^>]*cl-tabs-panel[^>]*hidden/);
+    expect(html).not.toContain('role="tablist"');
+    for (const id of ['tab-watch', 'tab-discuss', 'tab-practice', 'tab-use-at-work', 'tab-full-lesson', 'tab-sources']) expect(html).toContain(`href="#${id}"`);
+    expect(html).toContain('Read the full lesson');
+    expect(html).toContain('Sources and further guidance');
+  });
+});
+
 describe('walkthrough audio', () => {
   it('adds "Hear it discussed" with its own synced transcript, chapters and downloads when the fields exist', () => {
     const view = render(<ClasCurriculum lessonId="01" data={{ cues, walkthrough, walkthroughCues }} />);
+    expect(view.queryByRole('heading', { name: 'Hear it discussed' })).toBeNull();
+    openTab(view, 'Discuss');
     expect(view.getByRole('heading', { name: 'Hear it discussed' })).toBeTruthy();
     expect(view.getByText(/Discussion: about 9 minutes/)).toBeTruthy();
     const audio = view.container.querySelector('audio')!;
@@ -163,7 +228,7 @@ describe('walkthrough audio', () => {
     expect(audio.autoplay).toBe(false);
     const nav = view.getByRole('navigation', { name: /Chapters: Walkthrough discussion/ });
     expect(within(nav).getAllByRole('button')).toHaveLength(2);
-    expect(view.getAllByRole('link', { name: 'Download captions' })).toHaveLength(2);
+    expect(view.getAllByRole('link', { name: 'Download captions', hidden: true })).toHaveLength(2);
     expect(view.getByRole('link', { name: 'Download the transcript' }).getAttribute('href')).toBe(walkthrough.transcript);
     audio.currentTime = 62;
     fireEvent.timeUpdate(audio);
@@ -187,12 +252,14 @@ describe('walkthrough audio', () => {
 describe('working notes and the improvement plan', () => {
   it('keeps each part\'s note on this device, shows it again and can clear every note', () => {
     const view = render(<ClasCurriculum lessonId="03" />);
+    openTab(view, 'Use it at work');
     fireEvent.change(view.getByLabelText(/Your working note for this part/), { target: { value: 'Our intake form.' } });
     expect(localStorage.getItem('one-dsd-clas-curriculum-note-v1:03')).toBe('Our intake form.');
     expect(view.getByText('Saved on this computer.')).toBeTruthy();
     expect(view.getByText(/anyone else who uses this computer could see it/)).toBeTruthy();
     view.unmount();
     const again = render(<ClasCurriculum lessonId="03" />);
+    openTab(again, 'Use it at work');
     expect((again.getByLabelText(/Your working note for this part/) as HTMLTextAreaElement).value).toBe('Our intake form.');
     expect(again.getByText(/earlier note for this part is shown from this computer/)).toBeTruthy();
     fireEvent.click(again.getByRole('button', { name: 'Clear my notes on this device' }));
@@ -206,6 +273,7 @@ describe('working notes and the improvement plan', () => {
   it('assembles all nine notes into the plan on part 9 with the prompts as headings', () => {
     localStorage.setItem('one-dsd-clas-curriculum-note-v1:01', 'A planning notice.');
     const view = render(<ClasCurriculum lessonId="09" />);
+    openTab(view, 'Use it at work');
     expect(view.queryByRole('heading', { name: 'Your improvement plan' })).toBeTruthy();
     expect(view.getByText('A planning notice.')).toBeTruthy();
     expect(view.getByText(/1 of 9 parts have a note/)).toBeTruthy();

@@ -9,6 +9,7 @@ import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelli
 import { LEADERSHIP_PATHWAY_HREF } from "@/lib/content/leadership-styles-pathway";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "@/components/collections.module.css";
+import { Hub2More } from "@/components/hub2-choices";
 
 export const metadata: Metadata = {
   title: LEADING_LABEL,
@@ -79,11 +80,10 @@ export default async function LeadingPage() {
       </ul>
       <p>Development and continuity drafts stay on their page until you copy or download them. Do not enter names or private personnel details. They do not replace the applicable Human Resources or selection process.</p>
     </section>
-    <aside className={base.continue}>
-      <h2>Keep exploring</h2>
+    <Hub2More title="Keep exploring">
       {culturalLearningAvailable && <p><Link href="/learn/cultural-intelligence#leaders">Explore leadership approaches, power and inclusive practice</Link></p>}
-      <p><Link href="/support/right-person">Find the right person or office</Link><Link href="/learn/collections">Collections for all staff</Link><Link href="/one-dsd/leadership">Equity leadership and growth</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
-    </aside>
+      <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/support/right-person">Find the right person or office</Link><Link href="/learn/collections">Collections for all staff</Link><Link href="/one-dsd/leadership">Equity leadership and growth</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
+    </Hub2More>
     <details className={base.credit}><summary>About participation and privacy</summary><p>Please do not type anyone&apos;s name or details into Ask. It answers general questions only. {LEADING_PRIVACY_SENTENCE}</p><ParticipationNotice surface="learning" /></details>
   </div></div>;
 }

@@ -14,12 +14,15 @@ import { EditableSurfaceRegion, prepareEditableSurface } from "./editable-surfac
 import { ResourceDownloads } from "./resource-downloads";
 import { CommunityExperience, CommunityPractice } from "./community-experience-controls";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
-import { CommunityCollectionAddition } from "./community-collection-addition";
+import { CommunityCollectionAddition, publishedCommunityAddition } from "./community-collection-addition";
 import { CommunityResearchSections } from "./community-research-sections";
 import { minnesotaAccess, publishedCommunityResearch } from "@/lib/content/community-research";
 import { CommunityProfileSections } from "./community-profile-sections";
 import { publishedCommunityProfile } from "@/lib/content/community-profile";
-import { CommunityHubSections } from "./hub/community-hub-sections";
+import { CommunityBeforeOutreachSection, CommunityHubSections, CommunityNumbersSection, CommunityOrganizationsSection } from "./hub/community-hub-sections";
+import { COMMUNITY_PARTS, communityPartHref, isCommunityPartSlug, type CommunityPartSlug } from "./cp-community-parts";
+import { CommunityBreadcrumb, CommunityPartsList, CommunityPartsNav, type CommunityPartSummary } from "./cp-community-parts-nav";
+import { CommunityHashForward } from "./cp-community-hash-forward";
 import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import "./community-editorial.css";
 
@@ -68,10 +71,13 @@ function Chapters({ chapters, openFirst = false }: { chapters: Array<{ heading: 
   </details>)}</>;
 }
 
-export async function CommunityDesignPage({ id }: { id: string }) {
+export async function CommunityDesignPage({ id, part }: { id: string; part?: string }) {
   const raw = getBrief(id);
   const recovered = communityReading(id);
   if (!raw && !recovered) notFound();
+  // Native community pages are never split into parts (owner rule).
+  const native = isNativeCommunity(id) || (NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(id);
+  if (part !== undefined && (native || !isCommunityPartSlug(part))) notFound();
   const [surface, readingSurface] = await Promise.all([
     raw ? prepareEditableSurface(communityBriefSurfaceId(id)) : Promise.resolve(null),
     recovered ? prepareEditableSurface(communityReadingSurfaceId(id)) : Promise.resolve(null),
@@ -92,9 +98,11 @@ export async function CommunityDesignPage({ id }: { id: string }) {
     response: "Use the community context to prepare questions, not to decide the answers for participants. Ask about language, access, timing, and how people want to contribute. Explain what they can influence and how the team will respond to their input.",
   };
   const spotlight = surface ? stringValue(surface.values, "spotlightTitle") : "";
-  const culturalIntelligenceAvailable = [surface, readingSurface].every(area => !area || area.available) && await culturalIntelligenceHubAvailable();
+  const available = [surface, readingSurface].every(area => !area || area.available);
+  const culturalIntelligenceAvailable = available && await culturalIntelligenceHubAvailable();
+  const practiceTitle = b?.tribalGate ? "Government-to-government relationships" : "Practice considerations";
   const practice = b ? <section id="community-practice">
-    <h2>{b.tribalGate ? "Government-to-government relationships" : "Practice considerations"}</h2>
+    <h2>{practiceTitle}</h2>
     <p>{b.level0.whyItMattersForDhsWork}</p>
     {Object.entries({ "What to ask": b.level1.whatToAsk, "Access considerations": b.level1.accessChecks, "Who to involve": b.level1.whoToInvolve, "Assumptions to examine": b.level1.whatNotToAssume }).map(([heading, items]) => <details key={heading}><summary>{heading}</summary><div><ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul></div></details>)}
   </section> : null;
@@ -110,63 +118,130 @@ export async function CommunityDesignPage({ id }: { id: string }) {
     {culturalIntelligenceAvailable ? <p><Link href="/learn/cultural-intelligence">Explore the Cultural Intelligence collection</Link></p> : null}
     {suggestedReadingFor(id).length ? <><h3>Suggested reading</h3><p>Two books chosen to deepen your understanding of this community, with reading notes, key ideas and questions to discuss with your team.</p><ul className="community-link-list">{suggestedReadingFor(id).map(book => <li key={book.id}><Link href={`/learn/readings/${book.id}`}>{book.title}</Link> <span>· {book.authors}</span></li>)}</ul></> : null}
   </section>;
-  const overview = <>
-    <nav className="community-reading-contents" aria-label="In this brief">{readingGroups.some(group => group.chapters.length) ? <a href="#community-history">History and culture</a> : null}{b ? <a href="#community-practice">Practice considerations</a> : null}{!isNativeCommunity(id) ? <><a href="#community-numbers">Numbers</a><a href="#community-organizations">Organizations</a><a href="#community-before-outreach">Before you reach out</a></> : null}<a href="#community-connections">Related resources</a></nav>
-    {b ? <section id="community-overview"><h2>Community overview</h2><p>{b.level0.withinGroupDiversity}</p><h3>Names and terms</h3><p>{b.names.preferred.join("; ")}</p>{b.names.alsoUsed.length ? <p>Also used: {b.names.alsoUsed.join("; ")}</p> : null}<p>{b.names.note}</p>{b.names.uncertainty ? <p>{b.names.uncertainty}</p> : null}</section> : null}
-    {readingGroups.some(group => group.chapters.length) ? <section id="community-history"><h2>History, culture, and life today</h2>{readingGroups.filter(group => group.chapters.length).map(group => <details className="community-reading-theme" key={group.title}><summary>{group.title}</summary><div><Chapters chapters={group.chapters} /></div></details>)}</section> : null}
-    {practice}
-    <CommunityHubSections id={id} title={title} />
-    {b?.level2?.length && recovered ? <section id="community-context"><h2>More context for your work</h2><Chapters chapters={b.level2} /></section> : null}
-    {b?.observances?.length ? <section id="community-observances"><h2>Observances at work</h2><div className="community-table" role="region" aria-label="Observances at work" tabIndex={0}><table><thead><tr><th scope="col">Observance</th><th scope="col">When</th><th scope="col">At work</th></tr></thead><tbody>{b.observances.map((o, i) => <tr key={i}><th scope="row">{o.title}</th><td>{o.when}</td><td>{o.atWork}</td></tr>)}</tbody></table></div></section> : null}
-    {b?.sources.length ? <section id="community-sources"><h2>Sources</h2><ul>{b.sources.map((source, index) => <li key={index}>{source.href ? <a href={source.href}>{source.label}</a> : source.label}</li>)}</ul></section> : null}
-    {links}
-  </>;
+  const communityOverview = b ? <section id="community-overview"><h2>Community overview</h2><p>{b.level0.withinGroupDiversity}</p><h3>Names and terms</h3><p>{b.names.preferred.join("; ")}</p>{b.names.alsoUsed.length ? <p>Also used: {b.names.alsoUsed.join("; ")}</p> : null}<p>{b.names.note}</p>{b.names.uncertainty ? <p>{b.names.uncertainty}</p> : null}</section> : null;
+  const history = readingGroups.some(group => group.chapters.length) ? <section id="community-history"><h2>History, culture, and life today</h2>{readingGroups.filter(group => group.chapters.length).map(group => <details className="community-reading-theme" key={group.title}><summary>{group.title}</summary><div><Chapters chapters={group.chapters} /></div></details>)}</section> : null;
+  const context = b?.level2?.length && recovered ? <section id="community-context"><h2>More context for your work</h2><Chapters chapters={b.level2} /></section> : null;
+  const observances = b?.observances?.length ? <section id="community-observances"><h2>Observances at work</h2><div className="community-table" role="region" aria-label="Observances at work" tabIndex={0}><table><thead><tr><th scope="col">Observance</th><th scope="col">When</th><th scope="col">At work</th></tr></thead><tbody>{b.observances.map((o, i) => <tr key={i}><th scope="row">{o.title}</th><td>{o.when}</td><td>{o.atWork}</td></tr>)}</tbody></table></div></section> : null;
+  const sources = b?.sources.length ? <section id="community-sources"><h2>Sources</h2><ul>{b.sources.map((source, index) => <li key={index}>{source.href ? <a href={source.href}>{source.label}</a> : source.label}</li>)}</ul></section> : null;
   // All recovered chapters remain available in the brief. Learning brings full
   // readings alongside three objectives and a reflection, rather than replacing
   // the source material with short question-only summaries.
-  const learning = <>
-    <section><h2>History and the decisions we make today</h2><h3>In this lesson</h3><ul>
+  const lessonHistory = <section><h2>History and the decisions we make today</h2><h3>In this lesson</h3><ul>
       <li>Connect a historical condition described in the brief to a present-day service question.</li>
       <li>Distinguish community-level context from an individual’s circumstances.</li>
       <li>Identify evidence needed before changing a service requirement.</li>
     </ul><Chapters chapters={readingGroups[0].chapters} />
-    {!b?.tribalGate ? <CommunityPractice {...question} /> : <p>Historical and cultural learning does not replace government-to-government consultation. Begin with the Tribal Relations guidance and the Nation’s own designated contacts.</p>}</section>
-    <section><h2>Family, identity, and individual experience</h2><h3>In this lesson</h3><ul>
+    {!b?.tribalGate ? <CommunityPractice {...question} /> : <p>Historical and cultural learning does not replace government-to-government consultation. Begin with the Tribal Relations guidance and the Nation’s own designated contacts.</p>}</section>;
+  const lessonIdentity = <section><h2>Family, identity, and individual experience</h2><h3>In this lesson</h3><ul>
       <li>Recognize differences in identity, language, and experience within a community.</li>
       <li>Ask about a person’s relationships without prescribing who should be involved.</li>
       <li>Identify an assumption that could distort a service conversation.</li>
     </ul><Chapters chapters={readingGroups[1].chapters} />
-    <CommunityPractice question="A person names a close friend as an important source of support. How would you learn what that relationship means for the decision being discussed?" response="Ask the person how they want their friend involved, and explain any relevant requirements. A community description cannot establish whom an individual trusts or what support they want." /></section>
-    <section><h2>From understanding to an equity analysis</h2><h3>In this lesson</h3><ul>
+    <CommunityPractice question="A person names a close friend as an important source of support. How would you learn what that relationship means for the decision being discussed?" response="Ask the person how they want their friend involved, and explain any relevant requirements. A community description cannot establish whom an individual trusts or what support they want." /></section>;
+  const lessonEquity = <section><h2>From understanding to an equity analysis</h2><h3>In this lesson</h3><ul>
       <li>Identify a specific access barrier in a proposed process.</li>
       <li>Name whose input would help evaluate the decision.</li>
       <li>Choose a way to check whether a revision improves access.</li>
     </ul><Chapters chapters={readingGroups[2].chapters} />
     <CommunityPractice question="A team has offered a listening session but has not explained what changed afterward. What would strengthen the work?" response="Explain what input affected the decision, what remains unresolved, and how participants can respond. Attendance is useful information, but it does not show that the decision became more responsive." />
-    <p><Link href="/learn/equity-toolkit">Connect your reflection to the Equity Analysis Toolkit</Link></p></section>
-  </>;
+    <p><Link href="/learn/equity-toolkit">Connect your reflection to the Equity Analysis Toolkit</Link></p></section>;
   // Applies the same publication gates as the additions and never loads for
   // pages under standing deference. The deference notice above is unchanged.
   const research = await publishedCommunityResearch(id);
   const profile = await publishedCommunityProfile(id);
   const collectionAddition = await CommunityCollectionAddition({ id, research });
-  const content = <div className="community-editorial">
+  const downloads = available ? <div className="community-download-links"><ResourceDownloads kind="community" id={id} noun="page" appearance="links" /></div> : null;
+  const spotlightSection = spotlight && surface ? <section className="community-spotlight"><h2>{spotlight}</h2><p>{stringValue(surface.values, "spotlightBody")}</p><a href={stringValue(surface.values, "spotlightHref")}>{stringValue(surface.values, "spotlightLinkLabel")}</a></section> : null;
+  const reflection = surface && stringValue(surface.values, "reflectionBody") ? <details className="community-opening-reflection"><summary>{stringValue(surface.values, "reflectionTitle")}</summary><div><p>{stringValue(surface.values, "reflectionBody")}</p></div></details> : null;
+  const aside = <aside><Link href="/minnesota-communities">Minnesota Communities</Link><p>History, everyday life, and the connections that shape our work.</p></aside>;
+  const wrap = (content: ReactNode) => {
+    const readings = readingSurface ? <EditableSurfaceRegion surface={readingSurface}>{content}</EditableSurfaceRegion> : content;
+    return surface ? <EditableSurfaceRegion surface={surface}>{readings}</EditableSurfaceRegion> : readings;
+  };
+
+  if (native) {
+    // Native community pages render exactly as they always have: one page.
+    const overview = <>
+      <nav className="community-reading-contents" aria-label="In this brief">{readingGroups.some(group => group.chapters.length) ? <a href="#community-history">History and culture</a> : null}{b ? <a href="#community-practice">Practice considerations</a> : null}{!isNativeCommunity(id) ? <><a href="#community-numbers">Numbers</a><a href="#community-organizations">Organizations</a><a href="#community-before-outreach">Before you reach out</a></> : null}<a href="#community-connections">Related resources</a></nav>
+      {communityOverview}
+      {history}
+      {practice}
+      <CommunityHubSections id={id} title={title} />
+      {context}
+      {observances}
+      {sources}
+      {links}
+    </>;
+    const learning = <>{lessonHistory}{lessonIdentity}{lessonEquity}</>;
+    return wrap(<div className="community-editorial">
+      <div className="community-reading-layout">
+        {aside}
+        <article>
+          <p className="community-eyebrow">Minnesota Communities</p><h1>{title}</h1>
+          {(NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(id) ? <Notice tone="info">This program defers to the Office of Indian Affairs and to the Department of Human Services offices that handle Tribal relations and consultation for anything concerning Native American individuals, communities, or Tribal Nations. That deference is standing, not a brief under construction — this program does not complete or expand this content on its own. For anything substantive, contact the Office of Indian Affairs or the Department of Human Services offices that handle Tribal relations and consultation directly.</Notice> : null}
+          {opening ? <p className="community-opening">{opening}</p> : null}
+          {spotlightSection}
+          {downloads}
+          {reflection}
+          <CommunityExperience title={title} brief={overview} learning={learning} />
+          {collectionAddition}
+          {profile ? <CommunityProfileSections profile={profile} /> : null}
+          {research ? <CommunityResearchSections research={research} access={minnesotaAccess()} /> : null}
+        </article>
+      </div>
+    </div>);
+  }
+
+  // Every other community page is an overview plus parts. Each section of the
+  // former single page lands on exactly one part; nothing is left out.
+  const collection = collectionAddition ? await publishedCommunityAddition(id, research) : null;
+  const bodies: Record<CommunityPartSlug, { sections: Array<string | false | null | undefined | 0>; body: ReactNode }> = {
+    history: { sections: [history && "History, culture, and life today", context && "More context for your work", observances && "Observances at work"], body: <>{history}{context}{observances}</> },
+    learning: { sections: ["History and the decisions we make today", "Family, identity, and individual experience", "From understanding to an equity analysis"], body: <>{lessonHistory}{lessonIdentity}{lessonEquity}</> },
+    "working-with": { sections: [practice && practiceTitle, "Before you reach out", "Continue the connection"], body: <>{practice}<CommunityBeforeOutreachSection id={id} />{links}</> },
+    numbers: { sections: ["Numbers, with care"], body: <CommunityNumbersSection id={id} /> },
+    organizations: { sections: ["Organizations connected with the Disability Services Division"], body: <CommunityOrganizationsSection id={id} title={title} /> },
+    profile: { sections: [profile && "Community profile"], body: profile ? <CommunityProfileSections profile={profile} /> : null },
+    // The research set stays together: its sections link to one another within the page.
+    people: { sections: research ? [research.people.length && "People and contributions", research.institutions.length && "Institutions and history", "Disability and access", "Organizations and media", "About this page"] : [], body: research ? <CommunityResearchSections research={research} access={minnesotaAccess()} /> : null },
+    sources: { sections: [sources && "Sources", collectionAddition && (collection?.hasStories ? "More to explore" : "Try it in your work")], body: <>{sources}{collectionAddition}</> },
+  };
+  const parts: CommunityPartSummary[] = COMMUNITY_PARTS
+    .map(({ slug, label }) => ({ slug, label, sections: bodies[slug].sections.filter((section): section is string => typeof section === "string" && section.length > 0) }))
+    .filter(entry => entry.sections.length > 0);
+
+  if (part === undefined) {
+    return wrap(<div className="community-editorial">
+      <div className="community-reading-layout">
+        {aside}
+        <article>
+          <p className="community-eyebrow">Minnesota Communities</p><h1>{title}</h1>
+          {opening ? <p className="community-opening">{opening}</p> : null}
+          {spotlightSection}
+          {downloads}
+          {reflection}
+          {communityOverview}
+          <CommunityPartsList id={id} parts={parts} />
+          <CommunityHashForward id={id} parts={parts.map(entry => entry.slug)} />
+        </article>
+      </div>
+    </div>);
+  }
+
+  const current = parts.find(entry => entry.slug === part);
+  // A part with nothing in it for this community is never linked and does not exist.
+  if (!current) notFound();
+  return wrap(<div className="community-editorial">
     <div className="community-reading-layout">
-      <aside><Link href="/minnesota-communities">Minnesota Communities</Link><p>History, everyday life, and the connections that shape our work.</p></aside>
+      {aside}
       <article>
-        <p className="community-eyebrow">Minnesota Communities</p><h1>{title}</h1>
-        {(NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(id) ? <Notice tone="info">This program defers to the Office of Indian Affairs and to the Department of Human Services offices that handle Tribal relations and consultation for anything concerning Native American individuals, communities, or Tribal Nations. That deference is standing, not a brief under construction — this program does not complete or expand this content on its own. For anything substantive, contact the Office of Indian Affairs or the Department of Human Services offices that handle Tribal relations and consultation directly.</Notice> : null}
-        {opening ? <p className="community-opening">{opening}</p> : null}
-        {spotlight && surface ? <section className="community-spotlight"><h2>{spotlight}</h2><p>{stringValue(surface.values, "spotlightBody")}</p><a href={stringValue(surface.values, "spotlightHref")}>{stringValue(surface.values, "spotlightLinkLabel")}</a></section> : null}
-        {[surface, readingSurface].every(area => !area || area.available) ? <div className="community-download-links"><ResourceDownloads kind="community" id={id} noun="page" appearance="links" /></div> : null}
-        {surface && stringValue(surface.values, "reflectionBody") ? <details className="community-opening-reflection"><summary>{stringValue(surface.values, "reflectionTitle")}</summary><div><p>{stringValue(surface.values, "reflectionBody")}</p></div></details> : null}
-        <CommunityExperience title={title} brief={overview} learning={learning} />
-        {collectionAddition}
-        {profile ? <CommunityProfileSections profile={profile} /> : null}
-        {research ? <CommunityResearchSections research={research} access={minnesotaAccess()} /> : null}
+        <CommunityBreadcrumb id={id} title={title} current={current.label} />
+        <p className="community-eyebrow">{title}</p><h1>{current.label}</h1>
+        {downloads}
+        <CommunityPartsNav id={id} title={title} parts={parts} current={current.slug} />
+        {bodies[current.slug].body}
+        <p className="cp-community-part-end"><Link href={communityPartHref(id)}>Back to the {title} overview</Link></p>
       </article>
     </div>
-  </div>;
-  const readings = readingSurface ? <EditableSurfaceRegion surface={readingSurface}>{content}</EditableSurfaceRegion> : content;
-  return surface ? <EditableSurfaceRegion surface={surface}>{readings}</EditableSurfaceRegion> : readings;
+  </div>);
 }
