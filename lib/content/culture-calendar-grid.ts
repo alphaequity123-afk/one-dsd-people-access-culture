@@ -171,9 +171,16 @@ export function upcomingObservances(entries: CompactEntry[], today: string, coun
     if (!prior || item.start < prior.start) found.set(id, item);
   }
   const key = (item: UpcomingObservance) => item.start < today ? today : item.start;
-  return [...found.values()]
-    .sort((a, b) => key(a).localeCompare(key(b)) || Number(a.start !== a.end) - Number(b.start !== b.end) || a.name.localeCompare(b.name, "en"))
-    .slice(0, count);
+  const sorted = [...found.values()]
+    .sort((a, b) => key(a).localeCompare(key(b)) || Number(a.start !== a.end) - Number(b.start !== b.end) || a.name.length - b.name.length || a.name.localeCompare(b.name, "en"));
+  // A local event of an observance already listed ("Diwali Puja at Milan Mandir" after "Diwali") adds nothing to a short preview.
+  const picked: UpcomingObservance[] = [];
+  for (const item of sorted) {
+    if (picked.length >= count) break;
+    const name = item.name.toLowerCase();
+    if (!picked.some(other => name.includes(other.name.toLowerCase()))) picked.push(item);
+  }
+  return picked;
 }
 
 /** "November 11" or "November 1 to 30", for a short list. */
