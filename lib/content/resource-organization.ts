@@ -25,7 +25,7 @@ export const RESOURCE_LEARNING_LEVELS = [
 export const RESOURCE_LEGACY_THEME_LABELS: Readonly<Record<string, string>> = {
   culture: "Workplace culture and well-being",
   intercultural: "Intercultural practice",
-  structural: "Anti-racism and structural equity",
+  structural: "Fair access and how systems work",
   facilitation: "Learning together",
 };
 

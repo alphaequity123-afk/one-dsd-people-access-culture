@@ -18,7 +18,7 @@ export function ResourceMediaPreview({ resourceId }: { resourceId: string }) {
   const frame = "mt-4 flex max-w-xl flex-wrap items-center gap-4 rounded-lg border border-[#cbd8e0] bg-[#f5f8fa] p-4";
   const podcast = ({
     "podcast-equity-toolkit": { href: "/learn/equity-toolkit#podcast-equity-toolkit", title: "DHS equity policy and toolkit" },
-    "podcast-anti-racism-public-service": { href: "/learn#podcast-anti-racism-public-service", title: "Anti-racism in public service" },
+    "podcast-anti-racism-public-service": { href: "/learn#podcast-anti-racism-public-service", title: "Fair access in public service: the rules we inherit" },
   } as Record<string, { href: string; title: string }>)[resourceId];
   if (podcast) return <figure className={frame}><figcaption><p className="m-0 text-sm">Recording and reading companion</p><Link href={podcast.href} className="font-semibold">{podcast.title}: listen, read or choose a chapter</Link></figcaption></figure>;
   if (resourceId === "course-critical-incidents-in-the-work") return <figure className={frame}>

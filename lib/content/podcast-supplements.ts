@@ -47,48 +47,36 @@ export const PODCAST_SUPPLEMENTS: Partial<Record<string, PodcastReadingSupport>>
     "transcriptUrl": "/audio/transcripts/anti-racism-public-service.json",
     "chapters": [
       {
-        "start": 0,
-        "title": "What anti-racism means for public service"
+        "start": 0.25,
+        "title": "The rules we inherit"
       },
       {
-        "start": 152.91,
-        "title": "Racism, institutions, intent and impact"
+        "start": 131.66,
+        "title": "What a rule says and what it does"
       },
       {
-        "start": 371.95,
-        "title": "Anti-racism as a deliberate practice"
+        "start": 254.07,
+        "title": "The duties already on the books"
       },
       {
-        "start": 508.57,
-        "title": "Different claims, evidence and accountability"
+        "start": 365.05,
+        "title": "History that still shapes decisions"
       },
       {
-        "start": 596.27,
-        "title": "Examining common claims about equity practice"
+        "start": 489.47,
+        "title": "Being honest about training"
       },
       {
-        "start": 880.81,
-        "title": "History and present-day decisions"
+        "start": 615.99,
+        "title": "Evidence and evaluation"
       },
       {
-        "start": 948.17,
-        "title": "Government services and public responsibility"
+        "start": 745.11,
+        "title": "Taking concerns seriously"
       },
       {
-        "start": 1123.87,
-        "title": "Defining problems and evaluating change"
-      },
-      {
-        "start": 1283.89,
-        "title": "Taking concerns seriously and building trust"
-      },
-      {
-        "start": 1413.43,
-        "title": "Practical steps for everyday service"
-      },
-      {
-        "start": 1500.53,
-        "title": "Sustaining the work through ordinary decisions"
+        "start": 835.85,
+        "title": "What you can do this week"
       }
     ]
   }
