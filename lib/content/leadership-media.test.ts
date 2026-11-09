@@ -55,7 +55,7 @@ describe('leadership media public-volume boundary', () => {
     expect(response.status).toBe(200);
     expect(await response.json()).toEqual({ format: 'leadership-video-v1', style: 'servant', video: `/learning/leadership-videos/${names.video}`, captions: `/learning/leadership-videos/${names.captions}`, transcript: `/learning/leadership-videos/${names.transcript}` });
     expect((await serveLeadershipMedia(get(), 'transformative.json', root)).status).toBe(200);
-    expect((await serveLeadershipMedia(get(), 'authoritarian.json', root)).status).toBe(404);
+    expect((await serveLeadershipMedia(get(), 'authoritarian.json', root)).status).toBe(204); // not published yet
     expect((await serveLeadershipMedia(new Request('http://local.test', { method: 'HEAD' }), 'servant.json', root)).status).toBe(200);
     await rm(path.join(root, 'leadership', 'assets', names.transcript));
     expect((await serveLeadershipMedia(get(), 'servant.json', root)).status).toBe(404);

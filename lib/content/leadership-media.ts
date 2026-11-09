@@ -161,10 +161,12 @@ function byteRange(value: string, size: number): [number, number] | null {
 }
 
 /** Serve an independently published manifest or a hash-addressed public asset. */
+// A known style with no published video answers 204, so lessons can check quietly.
+const none = () => new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } });
 export async function serveLeadershipMedia(request: Request, name: string, root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
   if (styleName(name)) {
     const opened = await safeOpen(root, ['leadership', 'manifests', name]);
-    if (!opened) return unavailable();
+    if (!opened) return none();
     try {
       if (!opened.info.size || opened.info.size > MAX_MANIFEST) return unavailable();
       const item = cleanManifest(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));

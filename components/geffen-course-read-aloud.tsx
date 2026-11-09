@@ -26,7 +26,7 @@ function ReadAloud({ sections, allowFullLesson = false, fullTitle = 'Listen to t
       const courseKey = sections[0]?.id.split('/')[1];
       if (!courseKey) return;
       const response = await fetch(`/learning/geffen-read-aloud/courses/${courseKey}.json`);
-      if (!response.ok) return;
+      if (!response.ok || response.status === 204) return;
       const index: { format?: string; recordings?: Recording[] } = await response.json();
       if (index.format !== 'geffen-course-read-aloud-v1' || !Array.isArray(index.recordings)) return;
       const matches: ReadySection[] = [];

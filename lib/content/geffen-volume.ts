@@ -60,10 +60,12 @@ export function cleanIndex(input: unknown, course: string): { format: string; re
   return { format: 'geffen-course-read-aloud-v1', recordings };
 }
 
+// A valid course with no recordings yet answers 204, so pages can check quietly; invalid names stay 404.
+const none = () => new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } });
 export async function serveGeffenIndex(request: Request, name: string, root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
   if (!name.endsWith('.json') || !COURSE.test(name.slice(0, -5))) return missing();
   const opened = await safeOpen(root, ['courses', name]);
-  if (!opened) return missing();
+  if (!opened) return none();
   try {
     if (opened.info.size > MAX_INDEX_BYTES) return missing();
     const index = cleanIndex(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));

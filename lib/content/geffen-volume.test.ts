@@ -40,7 +40,8 @@ describe('public Geffen volume', () => {
       expect((await serveGeffenIndex(get(), 'self-directed-A01.json', root)).status).toBe(404);
     }
     expect((await serveGeffenIndex(get(), '../private.json', root)).status).toBe(404);
-    expect((await serveGeffenIndex(get(), 'missing.json', root)).status).toBe(404);
+    // A well-formed course name with nothing recorded yet answers 204 so pages can check quietly.
+    expect((await serveGeffenIndex(get(), 'missing.json', root)).status).toBe(204);
   });
   it('streams entire files, seek ranges and HEAD accurately', async () => {
     const full = await serveGeffenAudio(get(), [fileName], root);

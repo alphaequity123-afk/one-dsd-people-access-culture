@@ -32,7 +32,7 @@ export function LeadershipStyleVideo({ style, title }: { style: LeadershipStyleS
     async function load() {
       try {
         const response = await fetch(`/learning/leadership-videos/${style}.json`, { cache: "no-store", signal: controller.signal });
-        if (!response.ok) return;
+        if (!response.ok || response.status === 204) return;
         const body: unknown = await response.json();
         if (active && verifiedManifest(body, style)) setMedia(body);
       } catch { /* The written lesson remains available when media is unavailable. */ }

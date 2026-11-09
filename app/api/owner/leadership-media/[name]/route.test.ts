@@ -40,7 +40,9 @@ describe('leadership media route authentication', () => {
     vi.stubEnv('PAC_GEFFEN_PUBLIC_MEDIA_ROOT', mount);
     expect((await POST(request(true), context)).status).toBe(404);
     const publicResponse = await GET(new Request('https://example.test'), { params: Promise.resolve({ name: 'servant.json' }) });
-    expect(publicResponse.status).toBe(404);
+    // No media is served: the lesson sees "nothing published" (204, empty body).
+    expect(publicResponse.status).toBe(204);
+    expect(await publicResponse.text()).toBe('');
   });
 
   it('publishes and serves a complete style over isolated loopback HTTP', async () => {
