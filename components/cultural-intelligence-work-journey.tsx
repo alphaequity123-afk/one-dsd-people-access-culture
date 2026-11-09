@@ -36,7 +36,7 @@ const drive = (path: Path): Step => ({
     "If you feel unsure, build confidence with some history, someone who can coach you and a small first step. If you feel very sure, slow down. Dwelling on mistakes can freeze you, and overconfidence does harm too.",
     "If a hard stretch has worn you down, do not read that as lost commitment. Budget cuts, slow change and carrying other people's stories can lower anyone's energy. Talk with someone you trust before you judge yourself.",
     "Recover on purpose. Time with what is familiar is fine, and rest gets you back to the work. The risk comes when rest turns into avoiding anything unfamiliar.",
-    "If you lead people, ask how to move the load, especially from staff of color and disabled staff, and not only how one person can cope with it.",
+    "If you lead people, look at who is carrying extra work such as interpreting, explaining or sitting on every panel, then share it out, make it part of the job and count the time, and not only ask how one person can cope with it.",
   ],
 
   resourceIds: ["/learn/intercultural/curriculum", "/areas/culture-trust"],
@@ -256,7 +256,7 @@ const workplaceSteps: Step[] = [
       "When you hear poor fit, ask what was actually observed. It may only mean someone works differently from the people already here.",
       "Do not score eye contact, presence or how much feeling someone shows. Each reads differently with culture and also with autism, blindness, Deaf communication or anxiety. Test what the work requires.",
       "Saying people do not apply leaves the process off the hook. Look at the hiring system, at why people leave, and at who is left out of information and decisions once they join.",
-      "Ask Human Resources which rules apply to anonymous résumé screening, diverse panels, pay gap checks and floating holidays, and build accommodation into each stage.",
+      "Ask Human Resources which rules apply to anonymous résumé screening, trained and rotating interview panels, pay gap checks and floating holidays, and build accommodation into each stage.",
     ],
 
     resourceIds: ["/practice/gp-6", "/courses/dc-l53-reducing-bias-in-hiring-and-selection", "/areas/workforce"],

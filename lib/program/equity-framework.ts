@@ -201,10 +201,10 @@ export const EQUITY_FRAMEWORK = {
     {
       id: "workforce",
       title: "Workforce equity",
-      purpose: "Build, retain, develop and advance a workforce that better reflects the communities served and provides equitable access to employment opportunity.",
+      purpose: "Build, retain, develop and advance a skilled workforce that can serve every community and gives everyone fair access to employment opportunity.",
       objectives: [
         "Reduce barriers in recruitment, hiring, onboarding, advancement, retention and leadership development.",
-        "Improve representation of historically marginalized communities, including people with disabilities, communities of color and multilingual communities.",
+        "Find and remove barriers that keep qualified people from applying, being hired or advancing, including people with disabilities, people of every race and background, and multilingual applicants.",
         "Strengthen equitable career pathways, mentorship, sponsorship and succession planning.",
         "Improve retention and reduce disparities in promotion, turnover and engagement.",
       ],
@@ -212,10 +212,10 @@ export const EQUITY_FRAMEWORK = {
         "Audit job descriptions for unnecessary degree requirements, inaccessible language, biased criteria and barriers to nontraditional candidates.",
         "Make job postings, application systems, interviews and onboarding materials accessible.",
         "Prepare hiring managers and interview panels in structured interviewing, bias mitigation, disability inclusion and equitable selection.",
-        "Use diverse, prepared interview panels whenever feasible.",
+        "Use trained interview panels that rotate members, ask the same job-related questions and score against the same written criteria.",
         "Develop transparent advancement pathways and competency-based career ladders.",
-        "Offer mentorship and sponsorship for employees from historically marginalized groups and emerging leaders.",
-        "Strengthen employee resource groups, affinity spaces and engagement structures.",
+        "Offer mentorship and sponsorship open to every employee, and check that people who have been left out of informal networks hear about it and can take part.",
+        "Strengthen employee resource groups and other engagement structures, keeping membership open to every employee.",
         "Analyze recruitment, hiring, promotion, retention, evaluation, compensation and exit data for disparities at the group level.",
       ],
       measures: [
@@ -328,7 +328,7 @@ export const EQUITY_FRAMEWORK = {
         "Strengthen relationships with Tribal Nations, culturally specific organizations, disability communities, advocacy groups and other partners.",
       ],
       initiatives: [
-        "Establish a Community Advisory Board or strengthen existing advisory structures with diverse representation.",
+        "Establish a Community Advisory Board or strengthen existing advisory structures, with open recruitment and outreach wide enough that people across the communities served, including people with disabilities and people who use other languages, hear about it and can take part.",
         "Adopt a community-engagement standard that defines when, how and why community input is required.",
         "Create a stipend and compensation process for community members and presenters.",
         "Formalize Tribal consultation processes and make sure staff complete appropriate consultation training.",
@@ -418,7 +418,7 @@ export const EQUITY_FRAMEWORK = {
       enterWhen: "Enter when the Foundations readiness conditions are met and the responsible offices agree.",
       workstreams: [
         { title: "Performance management", items: ["Equity responsibilities and measurable objectives in leader and manager performance plans, where adopted.", "Inclusive leadership behaviors in feedback, coaching, promotion and succession.", "Managers review workforce, climate and service-equity data as part of business planning.", "Corrective-action procedures for missed goals or worsening disparities."] },
-        { title: "Mentorship and leadership development", items: ["Mentorship and sponsorship for emerging leaders and employees from historically marginalized groups.", "Transparent leadership-development pathways.", "Cohort-based development for supervisors and managers.", "Leader capability in conflict navigation, inclusive decision-making, accessibility, community engagement and equity-focused change."] },
+        { title: "Mentorship and leadership development", items: ["Mentorship and sponsorship open to every employee, with outreach to people who have been left out of informal networks.", "Transparent leadership-development pathways.", "Cohort-based development for supervisors and managers.", "Leader capability in conflict navigation, inclusive decision-making, accessibility, community engagement and equity-focused change."] },
         { title: "Applied and advanced learning", items: ["Structural racism, disability justice, trauma-informed practice, language access, inclusive supervision, culturally responsive service and equitable procurement.", "Simulations, case studies, team action-learning and coaching rather than awareness sessions alone.", "Skill application and changes in team practice evaluated over time."] },
         { title: "Data systems", items: ["The dashboard expanded to workforce, accessibility, service, community-engagement and climate measures.", "Disaggregated reporting by relevant demographic and geographic factors.", "An early-warning process for emerging service disparities, inequitable access or declining inclusion indicators.", "Leaders and teams prepared to interpret and act on equity data."] },
         { title: "Community partnerships", items: ["A Community Advisory Board established or strengthened.", "Compensation and stipend practices for community expertise.", "Formal Tribal consultation and culturally specific engagement protocols.", "Community profiles and resource guides for priority communities.", "Feedback loops that visibly show how community input influences decisions."] },
@@ -442,8 +442,8 @@ export const EQUITY_FRAMEWORK = {
   ],
 
   outcomes: [
-    { title: "Workforce equity", items: ["More representative applicant pools, hiring outcomes, leadership pipelines and workforce composition.", "Reduced disparities in hiring, promotion, retention, evaluation and development.", "More accessible and equitable hiring, onboarding and advancement systems."] },
-    { title: "Engagement and belonging", items: ["Higher employee-reported inclusion, trust, psychological safety, fairness, voice and belonging.", "Greater confidence among managers and staff in applying equity and accessibility practices.", "Stronger retention of employees from historically marginalized communities."] },
+    { title: "Workforce equity", items: ["Broader applicant pools and fair, job-related hiring and promotion decisions, with group-level data used to find and remove barriers.", "Reduced disparities in hiring, promotion, retention, evaluation and development.", "More accessible and equitable hiring, onboarding and advancement systems."] },
+    { title: "Engagement and belonging", items: ["Higher employee-reported inclusion, trust, psychological safety, fairness, voice and belonging.", "Greater confidence among managers and staff in applying equity and accessibility practices.", "Stronger retention across the workforce, with group-level data used to find and fix the barriers that push people out."] },
     { title: "Accessibility and service outcomes", items: ["More accessible communications, meetings, technology, programs and service pathways.", "Improved access, timeliness, quality, satisfaction and outcomes for people receiving services.", "Reduced disparities in priority service measures across race, disability, language, culture and geography."] },
     { title: "Community trust and partnership", items: ["Consistent, meaningful engagement with the communities most affected by decisions.", "Increased community confidence that input is heard, valued and used.", "Stronger partnerships with Tribal Nations, disability communities, culturally specific organizations and advocacy groups."] },
     { title: "Organizational performance", items: ["Better decisions through equity data, equity analysis and lived experience.", "Resources directed toward barriers and disparities.", "Reduced risk of inaccessible, inequitable or harmful policies and practices.", "Increased innovation, collaboration, service relevance and credibility."] },

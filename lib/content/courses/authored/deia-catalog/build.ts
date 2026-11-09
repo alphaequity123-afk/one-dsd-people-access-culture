@@ -132,7 +132,7 @@ export function catalogCourse(spec: CatalogSpec): CoursePack {
         contentOwner: "Equity and Inclusion Operations Consultant", reviewers: [], evidenceDate: "2026-10-06",
         lastReviewed: "Source checks and content reviews are recorded separately with the course release.",
         nextReview: "2027-04-06 or when evidence, law, policy, or relevant guidance changes",
-        updateTriggers: ["Updated research, law, DHS or MMB policy, or official guidance", "Learner or community feedback about accuracy, accessibility, or a scenario", "Changes to the DSD DEIA catalog levels, roles, or knowledge graph"],
+        updateTriggers: ["Updated research, law, DHS or Minnesota Management and Budget policy, or official guidance", "Learner or community feedback about accuracy, accessibility, or a scenario", "Changes to the DSD People, Access and Culture catalog levels, roles, or knowledge graph"],
         relatedDoor: "Use the responsible agency office for formal policy, employment, accommodation, civil-rights, eligibility, or Tribal consultation decisions. This course supports learning rather than making those determinations.",
         toolkitQuestion: "Who is affected by this decision, and what would I need to learn from them before it is final?",
         status: "current",

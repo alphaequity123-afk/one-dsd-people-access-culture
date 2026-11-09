@@ -13,10 +13,10 @@ export const logicStages: LogicStage[] = [
     resources: [
       { title: "Program charter", href: "/program-foundation", description: "Connect the program’s purpose, responsibilities, operating principles and authority boundaries with the work you prepare." },
       { title: "Requirements and review evidence", href: "/practice/requirements", description: "Identify applicable requirements and sources, prepare supporting evidence and make the responsible review visible." },
-      { title: "Understanding White Privilege", href: "/courses/div-f01-white-privilege", description: "Examine unearned racial advantages while recognizing effort, hardship, and individual variation." },
+      { title: "Unequal Starting Points: Seeing Advantages You Did Not Have to Earn", href: "/courses/div-f01-white-privilege", description: "Examine unearned racial advantages while recognizing effort, hardship, and individual variation." },
       { title: "Microaggressions: Recognition, Intent, and Impact", href: "/courses/div-f02-microaggressions", description: "Recognize everyday identity-based messages and practice proportionate responses, repair, and follow-through." },
-      { title: "Unconscious Bias in Everyday Decisions", href: "/courses/sf-unconscious-bias-everyday-decisions", description: "Separate observations from assumptions, check familiar explanations, and review everyday decision practices." },
-      { title: "Implicit Bias and the Implicit Association Test", href: "/courses/div-f05-implicit-bias-iat", description: "Understand automatic associations and their limits. Explore practical decisions with an optional test or an equally useful practice case." },
+      { title: "Sound Judgment in Everyday Decisions", href: "/courses/sf-unconscious-bias-everyday-decisions", description: "Separate observations from assumptions, check familiar explanations, and review everyday decision practices." },
+      { title: "Checking Assumptions in Everyday Decisions", href: "/courses/div-f05-implicit-bias-iat", description: "Learn how quick judgments enter decisions, and use shared criteria, a second reader and written reasons to keep decisions fair." },
       { title: "About the program", href: "/about", description: "Understand the purpose of One DSD and how learning connects with practical work in the division." },
       { title: "DHS equity policy", href: "/equity-policy", description: "Read the policy context for considering equity in workforce, policy, program, and service decisions." },
       { title: "Minnesota Communities", href: "/minnesota-communities", description: "Explore community histories, perspectives, and service context while keeping individual experience in view." },

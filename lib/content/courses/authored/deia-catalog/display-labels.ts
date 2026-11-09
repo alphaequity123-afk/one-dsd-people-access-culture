@@ -11,5 +11,6 @@ export function catalogDisplayLabel(label: string): string {
     .replace(/^Key DEIA terms in plain language$/, "Key People, Access and Culture terms in plain language")
     .replace(/^DEIA at DSD: what it means and why it matters$/, "People, Access and Culture at DSD: what it means and why it matters")
     .replace(/^Staff DEIA$/, "For all staff")
+    .replace(/^Bias, microaggressions, and everyday inclusion$/, "Assumptions, everyday respect and belonging")
     .replace(/^Leader DEIA$/, "Leadership");
 }

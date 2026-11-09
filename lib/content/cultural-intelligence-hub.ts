@@ -144,8 +144,8 @@ export type CulturalFramework = {
 
 export const CULTURAL_FRAMEWORKS: readonly CulturalFramework[] = [
   {
-    id: "implicit-bias", name: "Implicit bias and Project Implicit", kind: "Research and optional reflection",
-    contributes: "Explore automatic associations and how decision processes can be checked for unsupported assumptions. An individual test result is not a diagnosis or a reliable prediction of one person's behavior; participation is optional.",
+    id: "implicit-bias", name: "Checking assumptions in decisions", kind: "Research and decision practice",
+    contributes: "Learn how quick judgments such as familiarity and first impressions can enter a decision, and how shared criteria, a second reader and written reasons keep the decision fair for everyone.",
     hrefs: ["/courses/div-f05-implicit-bias-iat"],
   },
   {

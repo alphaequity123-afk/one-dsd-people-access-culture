@@ -51,7 +51,6 @@ export const ENGAGEMENT_STARTING_STEPS: readonly { lead: string; body: string }[
 
 /** /learn/cultural-intelligence: sources behind the perspectives the collection connects. */
 export const CULTURAL_INTELLIGENCE_PERSPECTIVE_SOURCES: readonly { title: string; href: string }[] = [
-  { title: "Project Implicit: questions and limitations", href: "https://implicit.harvard.edu/implicit/faqs.html" },
   { title: "Intercultural Development Inventory: qualified administration", href: "https://idiinventory.zendesk.com/hc/en-us/articles/360042578534-Should-I-become-an-IDI-Qualified-Administrator-QA" },
   { title: "American Anthropological Association: what is anthropology?", href: "https://americananthro.org/practice-teach/what-is-anthropology/" },
   { title: "American Anthropological Association: ethnographic fieldwork", href: "https://perspectives.americananthro.org/Chapters/Fieldwork.pdf" },

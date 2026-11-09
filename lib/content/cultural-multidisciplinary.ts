@@ -4,7 +4,7 @@ export const culturalMultidisciplinary = {
   "introduction": [
     "This is a multidisciplinary program. It draws on social sciences such as sociology, anthropology and psychology; research methods such as ethnography; the humanities; and the knowledge and lived experience of people and communities. Each offers a different way to understand culture, relationships and the systems around us.",
     "Cultural understanding draws on more than one perspective. Intercultural development, awareness of implicit bias, psychological safety, disability and language access, person-centered practice, and lived experience each offer different ways to learn and act. They are complementary; none is a substitute for listening to people affected.",
-    "The Intercultural Development Inventory is a developmental assessment administered by qualified administrators. Harvard’s Project Implicit offers information about implicit associations and optional tests. Neither is required to use this collection, and individual results should not be used to label people or make personnel decisions."
+    "The Intercultural Development Inventory is a developmental assessment administered by qualified administrators. It is not required to use this collection, and individual results should not be used to label people or make personnel decisions."
   ],
   "progressionTitle": "Moving from symbolic change to institutional change",
   "progression": [
