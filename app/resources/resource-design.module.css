@@ -82,7 +82,7 @@
 
 @media print { .hero { background: #fff; } .search,.filters { display: none; } .content { padding: 0; } }
 
-.hero h1::after { content: ""; display: block; width: 3.5rem; height: 3px; margin-top: 1.15rem; background: var(--pac-gold, #e5ad24); }
+.hero h1::after { content: ""; display: block; width: 3.5rem; height: 3px; margin-top: 1.15rem; background: var(--pac-gold, #008eaa); }
 
 .page .reading :is(h2,h3) { color: #183247; line-height: 1.35; margin-top: 2rem; }
 
@@ -306,7 +306,7 @@
 
 /* Purpose-based entry links reuse the existing resources and practice pages. */
 
-.startingPoints { margin-block: 2rem; padding: clamp(1.25rem,3vw,2rem); border: 1px solid #ccd6de; border-top: 4px solid #d5aa50; border-radius: .65rem; background: #fff; }
+.startingPoints { margin-block: 2rem; padding: clamp(1.25rem,3vw,2rem); border: 1px solid #ccd6de; border-top: 4px solid #008eaa; border-radius: .65rem; background: #fff; }
 
 .startingPoints h2 { color:#183247; font-size:clamp(1.4rem,2.6vw,1.9rem); line-height:1.35; margin:0 0 .7rem; }
 
@@ -342,7 +342,7 @@
 
 .themeGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); list-style:none; padding:0; gap:1rem; margin-block:1.5rem; }
 
-.themeGrid li { padding:1.25rem 1.5rem; background:#fff; border:1px solid #ccd6de; border-left:3px solid #d5aa50; border-radius:.4rem; min-width:0; }
+.themeGrid li { padding:1.25rem 1.5rem; background:#fff; border:1px solid #ccd6de; border-left:3px solid #008eaa; border-radius:.4rem; min-width:0; }
 
 .themeGrid h3 { margin:0; font-size:1.12rem; line-height:1.5; }
 
@@ -372,6 +372,6 @@
 .filters a[aria-current] { background: #fff; color: #183247; border-color: #176b65; font-weight: 700; }
 .directory > li { grid-template-columns: minmax(8rem,.65fr) minmax(0,3fr); gap: .5rem 1.5rem; }
 .results li { padding: 1.25rem 0; }
-.why { border-left-color: #b58731; background: #f5f7f8; }
+.why { border-left-color: #008eaa; background: #f5f7f8; }
 @media(max-width:700px) { .heroInner { padding-block: 1.75rem; } .directory > li { display: flex; flex-direction: column; } }
 

@@ -8,13 +8,13 @@
 .page p { line-height: 1.65; }
 .sectionHeading p, .context > p { margin: 0; color: var(--pac-secondary, #45576a); }
 .stages { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
-.stages > li { min-width: 0; border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-gold, #e5ad24); border-radius: 4px; padding: 1.25rem 1rem; }
+.stages > li { min-width: 0; border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-gold, #008eaa); border-radius: 4px; padding: 1.25rem 1rem; }
 .stages h3 { font-size: 1.16rem; line-height: 1.35; margin: 0 0 1.1rem; }
 .stages h3 a { text-decoration: underline; text-underline-offset: 4px; }
 .stages p { font-size: .96rem; margin: .65rem 0 0; }
 .stages .question { font-weight: 650; color: var(--pac-ink, #183247); }
 .stages > li > p:last-child { color: var(--pac-secondary, #45576a); }
-.boundary { border-left: 3px solid var(--pac-gold, #e5ad24); padding-left: 1rem; margin: 1.5rem 0 0; max-width: 58rem; font-size: .95rem; color: var(--pac-secondary, #45576a); }
+.boundary { border-left: 3px solid var(--pac-gold, #008eaa); padding-left: 1rem; margin: 1.5rem 0 0; max-width: 58rem; font-size: .95rem; color: var(--pac-secondary, #45576a); }
 .context { margin-top: 3rem; }
 .detailColumns { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; margin-top: 1.5rem; }
 .detail { border-top: 1px solid var(--pac-border, #adb9c4); scroll-margin-top: 2rem; }
@@ -54,14 +54,14 @@
 
 .entry { margin-bottom: 2.5rem; }
 .intents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1.25rem; }
-.intents > div { min-width: 0; border-top: 3px solid var(--pac-gold, #e5ad24); padding-top: 1rem; }
+.intents > div { min-width: 0; border-top: 3px solid var(--pac-gold, #008eaa); padding-top: 1rem; }
 .intents > div:nth-child(2) { border-top-color: var(--pac-action, #005ea8); }
 .intents > div:nth-child(3) { border-top-color: var(--pac-navy, #003865); }
 .intents .intentLabel, .example .exampleLabel { margin: 0 0 .55rem; color: var(--pac-secondary, #45576a); font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .intents h3 { margin: 0 0 .65rem; font-size: 1.25rem; line-height: 1.35; }
 .intents p { color: var(--pac-secondary, #45576a); margin: 0 0 1rem; }
 .intents a, .exampleLinks a { font-weight: 650; text-underline-offset: .22em; }
-.example { border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid var(--pac-gold, #e5ad24); padding: clamp(1.25rem, 3vw, 2rem); margin-bottom: 3rem; }
+.example { border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid var(--pac-gold, #008eaa); padding: clamp(1.25rem, 3vw, 2rem); margin-bottom: 3rem; }
 .example > p, .reasoning { max-width: 70ch; }
 .example > p { margin-block: .75rem; }
 .reasoning summary { color: var(--pac-navy, #003865); cursor: pointer; font-weight: 650; padding-block: .6rem; }

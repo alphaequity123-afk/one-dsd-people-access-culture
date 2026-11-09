@@ -17,7 +17,7 @@
 .section + .section { padding-top: 3rem; border-top: 1px solid var(--pac-border, #adb9c4); }
 .section > ul, .detail ul { padding-left: 1.35rem; }
 .section li + li, .detail li + li { margin-top: .6rem; }
-.note { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-left: 3px solid var(--pac-gold, #e5ad24); padding: 1.35rem 1.5rem; margin-block: 1.75rem; border-radius: .35rem; }
+.note { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-left: 3px solid var(--pac-gold, #008eaa); padding: 1.35rem 1.5rem; margin-block: 1.75rem; border-radius: .35rem; }
 .note p:last-child { margin-bottom: 0; }
 .sourceLinks { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; font-size: .95rem; }
 .detail { margin-top: 1rem; border: 1px solid var(--pac-border, #adb9c4); border-radius: .35rem; background: #fff; padding: 0 1.25rem; }
@@ -39,7 +39,7 @@
 .goalConnections > div { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; padding-block: .85rem; border-top: 1px solid var(--pac-border, #adb9c4); }
 .goalConnections ul { margin: 0; }
 .phase { margin-top: 2.25rem; border-top: 3px solid var(--pac-border, #adb9c4); padding-top: 1.5rem; }
-.phase:first-of-type { border-top-color: var(--pac-gold, #e5ad24); }
+.phase:first-of-type { border-top-color: var(--pac-gold, #008eaa); }
 .eyebrow { font-size: .875rem; font-weight: 600; }
 .quarter, .subsection { margin-top: 1.6rem; }
 .quarter + .quarter { padding-top: 1.5rem; border-top: 1px solid var(--pac-border, #adb9c4); }

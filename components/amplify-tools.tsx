@@ -52,11 +52,11 @@ export function AmplifyActivityStudio() {
     <p className="mt-3 max-w-2xl">Choose an idea that fits the people and the moment. These are starting points you can adapt.</p>
     <div role="group" aria-label="Activity interests" className="my-6 flex flex-wrap gap-2">{categories.map(item => <button key={item} type="button" aria-pressed={category === item} onClick={() => setCategory(item)} className={`rounded-full border px-4 py-2 ${category === item ? "border-[#123f60] bg-[#123f60] text-white" : "border-slate-400 bg-white"}`}>{item}</button>)}</div>
     <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">{AMPLIFY_ACTIVITIES.filter(item => category === "All" || category === item.category).map(item => <article key={item.id} className="flex flex-col rounded-xl border border-slate-300 bg-white p-5">
-      <p className="text-sm font-semibold text-[#71502f]">{item.category} · {item.time}</p><h3 className="mt-2 text-xl font-semibold">{item.title}</h3><p className="my-3 grow leading-7">{item.intro}</p>
+      <p className="text-sm font-semibold text-[#005ea8]">{item.category} · {item.time}</p><h3 className="mt-2 text-xl font-semibold">{item.title}</h3><p className="my-3 grow leading-7">{item.intro}</p>
       <button type="button" aria-pressed={selected === item.id} onClick={() => { setSelected(item.id); setDraft(""); document.getElementById("gathering-plan")?.scrollIntoView({ block: "start", behavior: "instant" }); document.getElementById("gathering-plan")?.focus(); }} className="mt-2 self-start rounded-md border border-slate-400 px-4 py-2 text-left font-semibold">Explore {item.title.toLowerCase()}</button>
     </article>)}</div>
     <div id="gathering-plan" tabIndex={-1} className="mt-8 scroll-mt-6 rounded-xl border border-[#d3c7b5] bg-white p-5 sm:p-7">
-      <p className="text-sm font-semibold text-[#71502f]">A starting point for your gathering</p><h3 className="mt-2 text-2xl font-semibold">{activity.title}</h3>
+      <p className="text-sm font-semibold text-[#005ea8]">A starting point for your gathering</p><h3 className="mt-2 text-2xl font-semibold">{activity.title}</h3>
       <p className="my-4 text-lg">{activity.question}</p><ol className="list-decimal space-y-3 pl-5">{activity.steps.map(step => <li key={step}>{step}</li>)}</ol><p className="mt-4 text-sm leading-6">{activity.access}</p>
       <EngagementActivitySample key={activity.id} activityId={activity.id} />
       <Link className="mt-4 inline-block font-semibold underline" href={activity.href}>{activity.link} →</Link>

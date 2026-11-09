@@ -3,7 +3,7 @@
 .eyebrow { font-weight: 700; color: var(--pac-navy, #003865); }
 .section h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.25; }
 .example { border-bottom: 1px solid var(--pac-border, #adb9c4); }
-.example:first-of-type { border-top: 3px solid var(--pac-gold, #e5ad24); }
+.example:first-of-type { border-top: 3px solid var(--pac-gold, #008eaa); }
 .example summary { padding: 1.25rem .5rem; font-size: 1.15rem; font-weight: 650; cursor: pointer; color: var(--pac-navy, #003865); }
 .example summary:hover { text-decoration: underline; text-underline-offset: .22em; }
 .example summary:focus-visible, .example a:focus-visible { outline: 3px solid var(--pac-action, #005ea8); outline-offset: 4px; }
@@ -14,7 +14,7 @@
 .steps li::marker { color: var(--pac-navy, #003865); font-weight: 700; }
 .steps a { font-weight: 650; text-underline-offset: .22em; }
 .steps p { line-height: 1.6; margin-top: .5rem; }
-.outcome { border-left: 3px solid var(--pac-gold, #e5ad24); padding-left: 1.25rem; max-width: 76ch; }
+.outcome { border-left: 3px solid var(--pac-gold, #008eaa); padding-left: 1.25rem; max-width: 76ch; }
 .outcome h3 { margin: 1rem 0 .4rem; font-size: 1.05rem; }
 .outcome p { margin: 0; line-height: 1.65; }
 .note { font-size: .95rem; color: var(--pac-secondary, #45576a); }

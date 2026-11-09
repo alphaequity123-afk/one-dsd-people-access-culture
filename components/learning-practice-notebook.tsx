@@ -3,7 +3,7 @@ import type { LearningStop } from "@/lib/content/learning-journey";
 
 /** F-02: published practice prompts only. Staff do not type or save notes here. */
 export function LearningPracticeNotebook({ stops }: {stops: Pick<LearningStop,"id"|"title"|"practice"|"reflection">[]; initialFocus?: string}) {
-  return <section id="practice-notebook" className="scroll-mt-8 rounded-2xl border border-[#d5c8b4] bg-[#faf7f0] p-5 sm:p-8" aria-labelledby="practice-notebook-title">
+  return <section id="practice-notebook" className="scroll-mt-8 rounded-2xl border border-[#8ea2b5] bg-[#f4f7f9] p-5 sm:p-8" aria-labelledby="practice-notebook-title">
     <h2 id="practice-notebook-title" className="text-3xl font-semibold">Put one idea into practice</h2>
     <p className="notice mt-3 max-w-3xl leading-7" role="note">
       <strong>Read it here, then download it to use. </strong>

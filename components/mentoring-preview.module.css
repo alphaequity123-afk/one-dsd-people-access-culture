@@ -13,7 +13,7 @@
 .steps li:nth-child(3){border-color:#b88a35}
 .number{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:50%;background:#fff0b8;color:#183247;font-size:.95rem;font-weight:700}
 .steps li:nth-child(2) .number{background:#eef2f5}
-.steps li:nth-child(3) .number{background:#f7f5ef}
+.steps li:nth-child(3) .number{background:#f4f7f9}
 .steps h3{font-size:1.2rem;font-weight:650;line-height:1.35;color:#183247;margin:1rem 0 .5rem}
 .steps p{font-size:1rem;line-height:1.75;color:#183247;margin:0}
 .page :global(#mentoring-tool){background:#eef2f5;border-color:#c6cfd3;border-radius:1.4rem;padding:clamp(1.25rem,3vw,2rem);scroll-margin-top:1.5rem}

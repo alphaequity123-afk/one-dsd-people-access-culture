@@ -9,7 +9,7 @@
 .position { color: #425b6b; font-size: .95rem; }
 .frame { background: #eef2f5; border: 1px solid #bac4cd; }
 .image { display: block; width: 100%; height: auto; }
-.transcript { margin-top: 18px; padding: 18px 20px; background: #f7f5ef; border-radius: 4px; }
+.transcript { margin-top: 18px; padding: 18px 20px; background: #f4f7f9; border-radius: 4px; }
 .transcript summary { cursor: pointer; font-weight: 650; min-height: 32px; }
 .transcript p { line-height: 1.8; white-space: pre-line; overflow-wrap: anywhere; }
 @media(max-width: 600px) { .controls label { flex-basis: 100%; order: -1; } .controls { justify-content: space-between; } }

@@ -1,9 +1,9 @@
 .page { width: min(100%, 1240px); margin-inline: auto; padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 4vw, 3.5rem) 4.5rem; }
-.intro { padding-bottom: 2.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--pac-border, #adb9c4); }
+.intro { padding: 2rem clamp(1rem, 3vw, 2.5rem) 2.5rem; margin-bottom: 2.5rem; background: #eef4f8; border-bottom: 6px solid #008eaa; }
 .intro h1 { max-width: 23ch; margin: 1.25rem 0 0; font-size: clamp(2.2rem, 4vw, 3.6rem); line-height: 1.14; letter-spacing: -.035em; font-weight: 600; }
 .intro > p { max-width: 68ch; margin: 1.25rem 0 0; font-size: clamp(1.05rem, 1.7vw, 1.2rem); line-height: 1.75; }
 .starts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; max-width: 60rem; }
-.starts > div { border-top: 3px solid var(--pac-gold, #e5ad24); padding-top: 1rem; }
+.starts > div { border-top: 3px solid var(--pac-gold, #008eaa); padding-top: 1rem; }
 .starts > div + div { border-top-color: var(--pac-action, #005ea8); }
 .starts a { font-size: 1.2rem; font-weight: 650; text-underline-offset: .25em; }
 .starts p { max-width: 48ch; margin: .65rem 0 0; color: var(--pac-secondary, #45576a); line-height: 1.65; }
@@ -27,7 +27,7 @@
   .starts { display: none; }
 }
 
-.insight { border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid var(--pac-gold, #e5ad24); padding: clamp(1.1rem, 2.5vw, 1.75rem); }
+.insight { border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid var(--pac-gold, #008eaa); padding: clamp(1.1rem, 2.5vw, 1.75rem); }
 .insight .exampleLabel { margin: 0 0 .65rem; color: var(--pac-secondary, #45576a); font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .contrast { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin: 1.25rem 0 .75rem; }
 .contrast > div { min-width: 0; border-top: 2px solid var(--pac-border, #adb9c4); padding-top: .85rem; }
@@ -48,9 +48,11 @@
 /* Reference-aligned internal page treatment. */
 
 .starts { gap: 1.25rem; }
-.starts > div { border: 1px solid #cbd4dc; border-top: 3px solid #b58731; border-radius: 6px; padding: 1.25rem; }
+.starts > div { border: 1px solid #cbd4dc; border-top: 3px solid #008eaa; border-radius: 6px; padding: 1.25rem; }
 .starts > div + div { border-top-color: #176b65; }
-.insight { border-radius: 6px; border-left-color: #b58731; }
+.insight { border-radius: 6px; border-left-color: #008eaa; }
 .resources li { padding-block: 1.35rem; }
 .intro { padding-bottom: 2rem; margin-bottom: 2rem; }
-
+/* Inner-page theme: the two start tiles sit on the band as white tiles. */
+.starts > div { background: #fff; border: 1px solid #8ea2b5; border-top: 5px solid #003865; border-radius: 10px; padding: 1.25rem; }
+.starts > div + div { border-top-color: #005ea8; }

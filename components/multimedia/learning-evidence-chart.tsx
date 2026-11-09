@@ -15,8 +15,8 @@ export function LearningEvidenceChart({ courseId, lessonId }: { courseId: string
   const route = LEARNING_CHART_ROUTES.find(item => item.courseId === courseId && item.lessonId === lessonId);
   if (!route) return null;
   const isSurvey = courseId === "employee-viewpoint-and-wellbeing-surveys";
-  return <section aria-labelledby={uid + "-heading"} className="my-8 rounded-2xl border border-[#dcd5c8] bg-[#faf7f1] p-5 sm:p-8">
-    <p className="text-sm font-semibold uppercase tracking-wider text-[#71502f]">Practice example · not DHS data</p>
+  return <section aria-labelledby={uid + "-heading"} className="my-8 rounded-2xl border border-[#8ea2b5] bg-[#f4f7f9] p-5 sm:p-8">
+    <p className="text-sm font-semibold uppercase tracking-wider text-[#005ea8]">Practice example · not DHS data</p>
     <h2 id={uid + "-heading"} className="mt-3 text-2xl font-bold text-[#123f60] sm:text-3xl">{isSurvey ? "One survey result, two work patterns" : "An average wait can hide a long wait"}</h2>
     <p className="mt-4 leading-7">{isSurvey ? "In this made-up example, 140 of 200 respondents report that they can plan their workload: 70% overall. The two groups have different work patterns and the same number of respondents." : "Ten made-up applications have an average wait of 10 days. Looking at the individual waits changes the question you might ask next."}</p>
     <figure className="m-0 mt-6 rounded-xl bg-white p-4 sm:p-5">
@@ -35,8 +35,8 @@ export function LearningEvidenceChart({ courseId, lessonId }: { courseId: string
         <title id={uid + "-title"}>Nine applications waited 2 days. One waited 82 days. The average was 10 days.</title>
         <desc id={uid + "-description"}>Each row is one practice application. The dashed line marks the 10-day average. The complete individual values are in the table below.</desc>
         <line x1="100" x2="480" y1="235" y2="235" stroke="#a4b4c1" />
-        <line x1={100 + 380 * 10 / 90} x2={100 + 380 * 10 / 90} y1="30" y2="235" stroke="#71502f" strokeWidth="2" strokeDasharray="5 4" />
-        <text x="150" y="19" fontSize="15" fill="#71502f">Average: 10 days</text>
+        <line x1={100 + 380 * 10 / 90} x2={100 + 380 * 10 / 90} y1="30" y2="235" stroke="#005ea8" strokeWidth="2" strokeDasharray="5 4" />
+        <text x="150" y="19" fontSize="15" fill="#005ea8">Average: 10 days</text>
         {waits.map((days, index) => <g key={index}>
           <text x="10" y={47 + index * 20} fontSize="15" fill="#445868">Case {index + 1}</text>
           <circle cx={100 + 380 * days / 90} cy={42 + index * 20} r="5" fill="#123f60" />
@@ -45,10 +45,10 @@ export function LearningEvidenceChart({ courseId, lessonId }: { courseId: string
         {[0, 30, 60, 90].map(days => <text key={days} x={100 + 380 * days / 90} y="258" textAnchor="middle" fontSize="15" fill="#445868">{days}</text>)}
       </svg>}
     </figure>
-    <div className="mt-5 overflow-x-auto rounded-xl border border-[#dcd5c8] bg-white" role="region" aria-label="Complete sample data table" tabIndex={0}>
+    <div className="mt-5 overflow-x-auto rounded-xl border border-[#8ea2b5] bg-white" role="region" aria-label="Complete sample data table" tabIndex={0}>
       <table className="w-full border-collapse text-left text-sm">
         <caption className="p-4 text-left text-base font-bold">{isSurvey ? "All sample survey responses" : "All ten practice waits"}</caption>
-        <thead className="border-y border-[#dcd5c8] bg-[#edf2f6]"><tr><th scope="col" className="p-3">{isSurvey ? "Work pattern" : "Application"}</th><th scope="col" className="p-3">{isSurvey ? "Favorable / respondents" : "Wait in days"}</th>{isSurvey ? <th scope="col" className="p-3">Percent</th> : null}</tr></thead>
+        <thead className="border-y border-[#8ea2b5] bg-[#edf2f6]"><tr><th scope="col" className="p-3">{isSurvey ? "Work pattern" : "Application"}</th><th scope="col" className="p-3">{isSurvey ? "Favorable / respondents" : "Wait in days"}</th>{isSurvey ? <th scope="col" className="p-3">Percent</th> : null}</tr></thead>
         <tbody>{isSurvey ? <>{surveyGroups.map(group => <tr key={group.title} className="border-b border-[#e4e0d8]"><th scope="row" className="p-3 font-semibold">{group.title}</th><td className="p-3">{group.favorable} / {group.respondents}</td><td className="p-3">{group.favorable}%</td></tr>)}<tr><th scope="row" className="p-3 font-semibold">Combined</th><td className="p-3">140 / 200</td><td className="p-3">70%</td></tr></> : waits.map((days, index) => <tr key={index} className="border-b border-[#e4e0d8]"><th scope="row" className="p-3 font-semibold">Case {index + 1}</th><td className="p-3">{days}</td></tr>)}</tbody>
       </table>
     </div>

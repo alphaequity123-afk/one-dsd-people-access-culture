@@ -33,9 +33,9 @@ export function CriticalIncidentScene() {
   const current = moments[moment];
   const selected = openingNotes.find(note => note.id === choice);
 
-  return <section aria-labelledby={uid + "-heading"} className="my-8 overflow-hidden rounded-2xl border border-[#dcd5c8] bg-[#faf7f1]">
+  return <section aria-labelledby={uid + "-heading"} className="my-8 overflow-hidden rounded-2xl border border-[#8ea2b5] bg-[#f4f7f9]">
     <div className="p-5 sm:p-8">
-      <p className="text-sm font-semibold uppercase tracking-wider text-[#71502f]">Practice scene · optional practice</p>
+      <p className="text-sm font-semibold uppercase tracking-wider text-[#005ea8]">Practice scene · optional practice</p>
       <h2 id={uid + "-heading"} className="mt-3 text-2xl font-bold text-[#123f60] sm:text-3xl">The papers arrive just before the decision</h2>
       <p className="mt-4 leading-7">Use the scene to practice the lesson’s four lines. Look for the timing, materials and requests that can be described. The dialogue below supplies the facts of this practice event.</p>
     </div>
@@ -47,13 +47,13 @@ export function CriticalIncidentScene() {
       <div role="group" aria-label="Choose a moment in the practice scene" className="flex flex-wrap gap-2">
         {moments.map((item, index) => <button key={item.title} type="button" aria-pressed={moment === index} aria-controls={uid + "-moment"} onClick={() => setMoment(index)} className={"rounded-lg border px-4 py-3 text-left font-semibold " + (moment === index ? "border-[#123f60] bg-[#123f60] text-white" : "border-[#b7c8d5] bg-white text-[#123f60]")}>{index + 1}. {item.title}</button>)}
       </div>
-      <div id={uid + "-moment"} aria-live="polite" aria-atomic="true" className="mt-4 rounded-xl border border-[#dcd5c8] bg-white p-5">
-        <p className="text-sm font-semibold text-[#71502f]">{current.time}</p>
+      <div id={uid + "-moment"} aria-live="polite" aria-atomic="true" className="mt-4 rounded-xl border border-[#8ea2b5] bg-white p-5">
+        <p className="text-sm font-semibold text-[#005ea8]">{current.time}</p>
         <h3 className="mt-2 text-xl font-bold">{current.title}</h3>
         <p className="mt-3 leading-7">{current.description}</p>
         <p className="mb-0 mt-4 border-l-4 border-[#b7c8d5] pl-4 leading-7"><strong>{current.speaker}:</strong> “{current.dialogue}”</p>
       </div>
-      <details className="mt-4 rounded-xl border border-[#dcd5c8] bg-white p-5">
+      <details className="mt-4 rounded-xl border border-[#8ea2b5] bg-white p-5">
         <summary className="cursor-pointer font-semibold">Read the complete scene</summary>
         <ol className="mt-4 list-decimal space-y-5 pl-5">
           {moments.map(item => <li key={item.title}><h3 className="font-bold">{item.time}</h3><p className="mt-2 leading-7">{item.description}</p><p className="mt-2 leading-7"><strong>{item.speaker}:</strong> “{item.dialogue}”</p></li>)}
@@ -61,14 +61,14 @@ export function CriticalIncidentScene() {
       </details>
       <fieldset className="mt-7 space-y-3">
         <legend className="mb-3 text-xl font-bold">Which opening line stays with what was observed?</legend>
-        {openingNotes.map(note => <label key={note.id} className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#dcd5c8] bg-white p-4 leading-6">
+        {openingNotes.map(note => <label key={note.id} className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#8ea2b5] bg-white p-4 leading-6">
           <input type="radio" className="mt-1 h-4 w-4 shrink-0 accent-[#123f60]" name={uid + "-opening"} value={note.id} checked={choice === note.id} onChange={() => { setChoice(note.id); setConsidered(false); }} />
           <span>{note.label}</span>
         </label>)}
       </fieldset>
       <button type="button" className="btn btn--primary mt-4 disabled:opacity-50" disabled={!selected} onClick={() => setConsidered(true)}>Consider this opening line</button>
       <div aria-live="polite">{considered && selected ? <p className="mt-4 rounded-xl border-l-4 border-[#123f60] bg-white p-4 leading-7">{selected.response}</p> : null}</div>
-      <div className="mt-6 border-t border-[#dcd5c8] pt-5">
+      <div className="mt-6 border-t border-[#8ea2b5] pt-5">
         <h3 className="text-xl font-bold">Write the four lines</h3>
         <p className="mt-3 leading-7">Use “Notes to take with you” below to draft your response. Separate what the scene tells you from what you would need to ask.</p>
         <ol className="mt-3 list-decimal space-y-3 pl-5 leading-7">

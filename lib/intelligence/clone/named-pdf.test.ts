@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
 const f = vi.hoisted(() => ({ complete: vi.fn(), plan: vi.fn(), research: vi.fn() }));
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: string, fn: () => unknown) => fn(), auditRefusal: async () => {} }));
@@ -25,6 +25,19 @@ beforeEach(() => {
   f.complete.mockResolvedValue({ parsed: { shortAnswer: "Synthetic answer.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [] } });
 });
 afterEach(() => { vi.unstubAllEnvs(); vi.unstubAllGlobals(); });
+// Warm the ask corpus once. The first askConcierge call builds the program corpus from cold,
+// which on a busy machine can take longer than a single test's 20-second limit; the tests below
+// then measure their own work only.
+beforeAll(async () => {
+  vi.stubEnv("PAC_CLONE_AGENTS", "on"); vi.stubEnv("PAC_STORE", "memory"); vi.stubEnv("PAC_CONTENT_SOURCE", "static");
+  vi.stubGlobal("fetch", vi.fn(() => { throw Error("Network blocked in regression test"); }));
+  f.plan.mockResolvedValue({ route: "resources", evidence: "sufficient" });
+  f.research.mockResolvedValue({ status: "failed", message: "Synthetic offline research" });
+  f.complete.mockResolvedValue({ parsed: { shortAnswer: "Synthetic warm-up answer.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [] } });
+  await askConcierge({ question, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "00000000-0000-4000-8000-000000000001" }).catch(() => undefined);
+  vi.unstubAllEnvs(); vi.unstubAllGlobals();
+}, 120000);
+
 
 describe("named original PDF grounding", () => {
   it("retrieves participation guidance from the full pages, with exact current spans", () => {

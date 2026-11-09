@@ -18,8 +18,8 @@
 .gateways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
 .gateways article{padding:1.5rem clamp(1.2rem,2.3vw,2rem);min-width:0;display:flex;flex-direction:column}
 .learning{background:#edf3f6;border-radius:1rem 0 0 1rem}
-.practice{background:#f7f5f0}
-.connection{background:#fbf8f0;border-radius:0 1rem 1rem 0}
+.practice{background:#f4f7f9}
+.connection{background:#f4f7f9;border-radius:0 1rem 1rem 0}
 .number{margin:0 0 1.3rem;font-size:.8rem;color:#4c606d;font-weight:600}
 .gateways h3{font-size:1.5rem;font-weight:500;letter-spacing:-.025em;line-height:1.2}
 .gateways h3 a{color:#003865;text-decoration:none}
@@ -63,7 +63,7 @@
 .gateways{gap:1.25rem}
 .gateways article{border:0;padding:clamp(1.4rem,2.4vw,2rem);border-radius:1.15rem}
 .gateways .learning{background:#fff0b8;border-radius:1.15rem 1.15rem .4rem 1.15rem}
-.gateways .practice{background:#fbf8f0;border-radius:.4rem 1.15rem 1.15rem 1.15rem}
+.gateways .practice{background:#f4f7f9;border-radius:.4rem 1.15rem 1.15rem 1.15rem}
 .gateways .connection{background:#eee5d6;border-radius:1.15rem .4rem 1.15rem 1.15rem}
 .gateways .number{color:#42564c}
 .gateways h3 a,.gateways .smallLink{color:#164e49}

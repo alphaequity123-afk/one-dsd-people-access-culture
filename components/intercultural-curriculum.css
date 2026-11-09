@@ -18,6 +18,6 @@
 .intercultural-study input[type=radio]{margin-top:7px;min-width:20px;min-height:20px}
 .intercultural-feedback:has(p){padding:20px;background:#eef4f8;border-left:4px solid #008eaa;margin-top:20px}
 .intercultural-study textarea{display:block;width:100%;max-width:800px;box-sizing:border-box;font:inherit;padding:14px;border:1px solid #7893a5;border-radius:4px;margin:8px 0}
-.intercultural-study :is(a,button,input,textarea,summary):focus-visible{outline:3px solid #b88000;outline-offset:4px}
+.intercultural-study :is(a,button,input,textarea,summary):focus-visible{outline:3px solid #005ea8;outline-offset:4px}
 @media(max-width:700px){.intercultural-study{padding:24px 16px}.intercultural-study header{padding:24px}.intercultural-path{grid-template-columns:1fr}.intercultural-study button{max-width:100%;white-space:normal}}
 @media print{.intercultural-study video,.intercultural-study button,.intercultural-study>nav{display:none}.intercultural-study header{padding:12px}.intercultural-study{max-width:none;padding:0}.intercultural-path{display:block}.intercultural-path li{break-inside:avoid}}

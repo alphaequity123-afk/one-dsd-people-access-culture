@@ -1,6 +1,6 @@
 .doors { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; list-style:none; padding:0; margin:2rem 0 2.5rem; }
 .doors > li { display:flex; min-width:0; }
-.door { display:flex; flex-direction:column; gap:.75rem; width:100%; min-width:0; padding:1.5rem; background:#fff; border:1px solid #c4cfd6; border-top:4px solid #d5aa50; border-radius:.5rem; text-decoration:none; color:inherit; }
+.door { display:flex; flex-direction:column; gap:.75rem; width:100%; min-width:0; padding:1.5rem; background:#fff; border:1px solid #c4cfd6; border-top:4px solid #008eaa; border-radius:.5rem; text-decoration:none; color:inherit; }
 .door:hover { border-color:#003865; box-shadow:0 3px 12px #00386512; }
 .doorTitle { display:block; color:#003865; font-size:1.2rem; font-weight:700; line-height:1.35; }
 .doorAction { margin-top:auto; font-weight:650; text-decoration:underline; text-underline-offset:.22em; }

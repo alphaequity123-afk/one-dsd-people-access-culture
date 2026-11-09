@@ -2,7 +2,7 @@
 main .leadership-palette-preview { color:#263b49; }
 main .leadership-palette-preview :is(h1,h2,h3,h4) { color:#103f62; }
 main .leadership-palette-preview > header { background:var(--pac-white, #ffffff)!important; border:0!important; box-shadow:none!important; }
-main .leadership-palette-preview > header::before { background:var(--pac-gold, #e5ad24)!important; width:5rem; }
+main .leadership-palette-preview > header::before { background:var(--pac-gold, #008eaa)!important; width:5rem; }
 main .leadership-palette-preview > header a[href="#starting-points"] { background:var(--pac-action, #005ea8)!important; color:#fff!important; border-radius:.5rem; }
 main .leadership-palette-preview > nav { border-color:#c4d4e0; }
 main .leadership-palette-preview > nav a { color:#103f62; }
@@ -12,7 +12,7 @@ main .leadership-palette-preview > section:has(> h2 + p) { border-color:var(--pa
 main .leadership-palette-preview > section:has(> p:first-child + h2) { background:var(--pac-white, #ffffff); }
 main .leadership-palette-preview #connections { background:#103f62!important; color:#fff; border:0; }
 main .leadership-palette-preview #connections :is(h2,p,a) { color:#fff!important; }
-main .leadership-palette-preview #connections h2::after { content:""; display:block; width:4rem; height:3px; background:var(--pac-gold, #e5ad24); margin-top:1rem; }
+main .leadership-palette-preview #connections h2::after { content:""; display:block; width:4rem; height:3px; background:var(--pac-gold, #008eaa); margin-top:1rem; }
 main .leadership-palette-preview a:focus-visible { outline:3px solid #1767ad; outline-offset:4px; }
 main .leadership-palette-preview #connections a:focus-visible { outline-color:#fff; }
 main .leadership-palette-preview .leadership-pathway-stage > summary:focus-visible,

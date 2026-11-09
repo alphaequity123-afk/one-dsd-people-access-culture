@@ -9,7 +9,7 @@
 .body :is(section, h2, h3, div)[id] { scroll-margin-top: 2rem; }
 .body p { max-width: 72ch; line-height: 1.75; }
 .rail { grid-column: 2; grid-row: 1; position: sticky; top: 1.5rem; min-width: 0; }
-.desktop { border-left: 2px solid var(--pac-gold, #e5ad24); padding-left: 1.25rem; }
+.desktop { border-left: 2px solid var(--pac-gold, #008eaa); padding-left: 1.25rem; }
 .label { margin: 0 0 .5rem; font-size: .9rem; font-weight: 700; color: var(--pac-ink, #183247); }
 .rail ul { list-style: none; padding: 0; margin: 0; }
 .rail a { display: block; padding: .65rem 0; font-size: .94rem; line-height: 1.45; text-underline-offset: .22em; }
@@ -31,5 +31,5 @@
 }
 
 .layout { gap: 2.5rem; }
-.desktop { border-left-color: #b58731; }
+.desktop { border-left-color: #008eaa; }
 .rail li + li { border-top: 1px solid #dce2e7; }

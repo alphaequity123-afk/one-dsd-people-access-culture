@@ -32,12 +32,12 @@ export function LearningHistory({ courseId, lessonId }: { courseId: string; less
   const history = LEARNING_HISTORY.find(x => x.courseId === courseId && x.lessonId === lessonId);
   const isRondo = courseId === "cultural-intelligence-african-american";
   return <section aria-labelledby={id} className="my-8 rounded-2xl border border-[#d5cbbd] bg-[#faf8f3] p-5 sm:p-8">
-    <p className="text-sm font-semibold uppercase tracking-wider text-[#71502f]">Read the source in context</p>
+    <p className="text-sm font-semibold uppercase tracking-wider text-[#005ea8]">Read the source in context</p>
     <h2 id={id} className="mt-3 text-2xl font-bold text-[#123f60]">{history?.title ?? (isRondo ? "Rondo: a neighborhood before the highway" : "Read the number with its definition")}</h2>
     {history ? <>
       <p className="mt-4 leading-7">{history.introduction}</p>
       <ol className="ml-3 mt-6 list-none space-y-5 border-l-2 border-[#a49175] p-0 pl-6" aria-label="Selected historical timeline">
-        {history.entries.map(entry => <li key={entry.date} className="relative rounded-xl bg-white p-5"><span aria-hidden="true" className="absolute -left-[33px] top-6 h-3 w-3 rounded-full bg-[#71502f]" /><h3 className="text-lg font-bold">{entry.date}</h3><p className="mt-2 leading-7">{entry.text}</p><a href={entry.source} className="mt-2 inline-block font-semibold underline">{entry.sourceTitle}</a></li>)}
+        {history.entries.map(entry => <li key={entry.date} className="relative rounded-xl bg-white p-5"><span aria-hidden="true" className="absolute -left-[33px] top-6 h-3 w-3 rounded-full bg-[#005ea8]" /><h3 className="text-lg font-bold">{entry.date}</h3><p className="mt-2 leading-7">{entry.text}</p><a href={entry.source} className="mt-2 inline-block font-semibold underline">{entry.sourceTitle}</a></li>)}
       </ol>
       {history.note ? <p className="mt-5 border-t border-[#d5cbbd] pt-4 leading-7">{history.note}</p> : null}
       {courseId === "cultural-intelligence-hmong" ? <a href="https://www.mnhs.org/mnopedia/search/index/hmong-and-hmong-americans-minnesota" className="font-semibold underline">MNopedia: Hmong and Hmong Americans in Minnesota</a> : null}

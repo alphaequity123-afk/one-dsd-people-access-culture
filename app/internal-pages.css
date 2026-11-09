@@ -1,6 +1,6 @@
 /* Internal pages inherit the approved home treatment. Content, media and controls
    retain their own structure; these rules never target the welcome or home hero. */
-.internal-page { --page-accent: #b58731; background: #fff; color: #183247; min-width: 0; padding-bottom: 1.5rem; }
+.internal-page { --page-accent: #008eaa; background: #fff; color: #183247; min-width: 0; padding-bottom: 1.5rem; }
 .internal-page[data-page-purpose="learn"] { --page-accent: #176b65; }
 .internal-page[data-page-purpose="support"] { --page-accent: #176b65; }
 .internal-page[data-page-purpose="consultant"] { --page-accent: #003865; }
@@ -42,7 +42,7 @@ body.dsd-calm main .internal-page :is(h1,h2,h3) { font-weight: 650; }
 .internal-page .community-search { border: 1px solid #b8c4cd; border-top: 3px solid #176b65; border-radius: 6px; padding: 1.25rem; }
 .internal-page .community-directory a { padding-inline: 0; font-size: 1.15rem; font-weight: 600; }
 .internal-page .community-reading-layout { gap: 2.5rem; }
-.internal-page .community-practice { background: #fff; border: 1px solid #b8c4cd; border-left: 3px solid #b58731; border-radius: 0 6px 6px 0; }
+.internal-page .community-practice { background: #fff; border: 1px solid #b8c4cd; border-left: 3px solid #008eaa; border-radius: 0 6px 6px 0; }
 @media(max-width:760px) {
  .internal-section-nav { column-gap: 1.1rem; }
  .internal-page .dsd-stage-columns { grid-template-columns: minmax(0,1fr); }

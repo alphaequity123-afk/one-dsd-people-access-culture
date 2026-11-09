@@ -13,7 +13,7 @@
 @media (max-width: 460px) { .tile { grid-template-columns: minmax(0, 1fr); } .media { aspect-ratio: 16 / 8; } .title { font-size: 1.2rem; } }
 
 .tile { padding: 1.4rem; border: 1px solid #c6cfd3; border-radius: .75rem; background: #fff; }
-.media { background: #F7F5EF; }
+.media { background: #f4f7f9; }
 .tile:hover { border-color: #003865; }
 
 .level { color: #003865; font-size: .9rem; font-weight: 650; margin: 0 0 .6rem; }

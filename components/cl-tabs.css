@@ -3,7 +3,7 @@
 .cl-tabs [role=tablist]{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 8px;padding-bottom:12px;border-bottom:1px solid #bacbd7}
 .cl-tabs [role=tab]{min-height:44px;margin:0;padding:8px 16px;border:1px solid #7893a5;border-radius:6px;background:#fff;color:#003865;font:inherit;font-weight:600;cursor:pointer;white-space:normal}
 .cl-tabs [role=tab][aria-selected=true]{background:#003865;border-color:#003865;color:#fff}
-.cl-tabs [role=tab]:focus-visible,.cl-tabs [role=tabpanel]:focus-visible{outline:3px solid #b88000;outline-offset:3px}
+.cl-tabs [role=tab]:focus-visible,.cl-tabs [role=tabpanel]:focus-visible{outline:3px solid #005ea8;outline-offset:3px}
 .cl-tabs-contents ul{display:flex;flex-wrap:wrap;gap:8px 20px;list-style:none;padding:0;margin:12px 0}
 .cl-tabs-panel{scroll-margin-top:24px}
 .cl-tabs-panel>section:first-child{margin-top:16px}

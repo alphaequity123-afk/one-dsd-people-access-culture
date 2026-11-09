@@ -1,6 +1,6 @@
 .space {
   color: #182c3a;
-  background: #f7f5f0;
+  background: #f4f7f9;
   padding-bottom: 2.5rem;
   overflow-wrap: anywhere;
 }
@@ -11,7 +11,7 @@
 .space .askComposer { border-top: 3px solid #176b65; }
 .space .askComposer textarea { background: #fff; border-radius: 4px; }
 .space .askLayout { gap: 2rem; }
-.space .supportDirectory > li:first-child { background: #fff; border: 1px solid #b8c4cd; border-top: 3px solid #b58731; border-radius: 6px; padding: 1.5rem; margin-right: 1rem; }
+.space .supportDirectory > li:first-child { background: #fff; border: 1px solid #b8c4cd; border-top: 3px solid #008eaa; border-radius: 6px; padding: 1.5rem; margin-right: 1rem; }
 .space .supportDirectory > li:first-child::before { display: none; }
 .space .researchPanel { background: #f5f7f8; border-radius: 0 6px 6px 0; }
 .space :global(.page-intro) { border-bottom: 1px solid rgba(0, 56, 101, .13); }
@@ -87,12 +87,13 @@
 .goalTags { display: flex; flex-wrap: wrap; gap: .6rem 1rem; }
 .goalTags span { border-bottom: 1px solid #9cb1bf; padding-block: .35rem; font-size: .9rem; color: #415664; }
 .workGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
-.formPanel { padding: clamp(1.25rem, 3vw, 2.5rem); border: 1px solid #cbd4da; border-top: 3px solid #003865; border-radius: .2rem .2rem 1rem 1rem; background: #fff; }
+.formPanel { padding: clamp(1.25rem, 3vw, 2.5rem); border: 1px solid #8ea2b5; border-top: 5px solid #003865; border-radius: 10px; background: #fff; }
 .formPanel :global(.field) { margin-block: 1.7rem; }
 .formPanel :global(.checks) { gap: .75rem; }
-.formPanel :global(.checks) label { border-radius: .5rem; background: #f4f6f7; border: 1px solid #d6dfe5; padding: .85rem; }
-.recommendation { background: #edf2f6; padding: clamp(1.3rem, 3.4vw, 2.75rem); border-radius: 1rem; border: 1px solid #cbd7df; }
-.recommendation::before { content: ''; display: block; background: #78be21; width: 3rem; height: .25rem; margin-bottom: 1.65rem; border-radius: 1rem; }
+.formPanel :global(.checks) label { border-radius: 8px; background: #fff; border: 1px solid #8ea2b5; padding: .85rem 1rem; color: #183247; transition: border-color .15s, background-color .15s; }
+.formPanel :global(.checks) label:hover { border-color: #003865; background: #f1f5f9; }
+.formPanel :global(.checks) label:has(input:checked) { background: #dbe7f3; border-color: #005ea8; box-shadow: inset 0 0 0 1px #005ea8; color: #003865; font-weight: 700; }
+.recommendation { background: #fff; padding: clamp(1.3rem, 3.4vw, 2.75rem); border-radius: 10px; border: 1px solid #8ea2b5; border-top: 5px solid #005ea8; }
 .recommendation h2 { line-height: 1.3; font-weight: 650; }
 .recommendation p { line-height: 1.75; }
 .orientationInvitation { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem 2rem; padding: 1.5rem 0 2rem; border-bottom: 1px solid #c5d0d7; }
@@ -146,7 +147,7 @@
 .atlasNav ul { margin-top: 1.35rem; }
 .atlasNav a { color: #fff; font-size: 1.08rem; font-weight: 500; line-height: 1.5; min-height: 48px; padding: .85rem .6rem; border-bottom: 1px solid #667d8e; border-radius: .2rem; overflow-wrap: break-word; }
 .atlasNav a:hover { background: #2b4960; color: #fff; text-decoration: underline; text-underline-offset: .25em; }
-.atlasNav a:focus-visible { outline: 3px solid #E8BD62; outline-offset: 3px; background: #2b4960; }
+.atlasNav a:focus-visible { outline: 3px solid #008eaa; outline-offset: 3px; background: #2b4960; }
 .atlasNav a:active { background: #fff; color: #183247; }
 .areaSection { scroll-margin-top: 2rem; }
 .areaSection:target { border-top: 3px solid #183247; }
@@ -164,13 +165,13 @@
 .practiceMore { border: 0; border-top: 1px solid #c5d0d7; border-radius: 0; padding-inline: 0; }
 
 /* Shared work, support, practice, and personal-work surfaces retain their different layouts. */
-.space { background: #F7F5EF; }
-.space :global(.page-intro) { background: #F0ECE2; border-color: #c6cbd0; }
+.space { background: #f4f7f9; }
+.space :global(.page-intro) { background: #eef4f8; border-color: #c6cbd0; }
 .space :global(.page-intro) h1, .space :is(h2,h3) { color: #183247; }
-.supportDirectory > li:first-child, .recommendation, .workInvitation { background: #F0ECE2; border-radius: .75rem; }
-.supportDirectory > li:first-child::before, .recommendation::before { background: #E8BD62; }
+.supportDirectory > li:first-child, .recommendation, .workInvitation { background: #eef4f8; border-radius: .75rem; }
+.supportDirectory > li:first-child::before, .recommendation::before { background: #008eaa; }
 .supportDirectory > li:first-child strong { font-size: clamp(1.6rem,3vw,2.5rem); }
-.workFilters { background: #F0ECE2; border-color: #a9b2b7; }
+.workFilters { background: #eef4f8; border-color: #a9b2b7; }
 .workFilters :is(input,select) { background: #fff; color: #183247; }
 .practiceRow, .domainTask { background: #fff; padding: clamp(1.25rem,3vw,2rem); border: 1px solid #d4d9dc; border-radius: .65rem; margin-bottom: 1.25rem; }
 .practiceList { border-top: 0; }
@@ -182,7 +183,7 @@
 .areaChooser li { min-width: 0; scroll-margin-top: 2rem; }
 .areaChooser a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; height: 100%; min-height: 80px; padding: 1.1rem; color: #fff; background: #213f55; border: 1px solid #78909f; border-radius: .4rem; font-size: 1.08rem; font-weight: 500; line-height: 1.5; text-decoration: none; }
 .areaChooser a:hover, .atlasNav a[aria-current] { background: #fff; color: #183247; text-decoration: underline; text-underline-offset: .25em; }
-.areaChooser a:focus-visible { outline: 3px solid #E8BD62; outline-offset: 3px; box-shadow: none; }
+.areaChooser a:focus-visible { outline: 3px solid #008eaa; outline-offset: 3px; box-shadow: none; }
 .areaContext { background: #fff; border: 1px solid #d4d9dc; border-radius: .5rem; padding: 1rem 1.5rem; }
 .areaContext > summary { font-weight: 600; color: #183247; cursor: pointer; }
 .backToAreas { display: inline-block; min-height: 44px; font-weight: 600; color: #183247; }

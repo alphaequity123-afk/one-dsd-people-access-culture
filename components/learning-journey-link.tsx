@@ -14,7 +14,7 @@ export async function LearningJourneyLink({scope, resourceId, compact=false}: {s
     <p className="mb-2 font-semibold">{resourceId ? "Connect this learning with your work" : journeyText(surface.values,"previewTitle")}</p>
     <div className="flex flex-wrap gap-x-6 gap-y-3">{matches.length ? matches.map(stop=><Link className="underline" key={stop.id} href={LEARNING_JOURNEY_HREF+"#"+stop.id}>{stop.title}</Link>) : <Link className="underline" href={LEARNING_JOURNEY_HREF}>{journeyText(surface.values,"previewLink")}</Link>}</div>
   </aside>;
-  return <aside className="my-6 rounded-xl border border-[#d5c8b4] bg-[#faf7f0] p-6" aria-label="A path through learning">
+  return <aside className="my-6 rounded-xl border border-[#8ea2b5] bg-[#f4f7f9] p-6" aria-label="A path through learning">
     <h2 className="text-2xl font-semibold"><Link href={LEARNING_JOURNEY_HREF}>{journeyText(surface.values,"previewTitle")}</Link></h2>
     <p className="mt-3 max-w-3xl leading-7">{journeyText(surface.values,"previewBody")}</p>
     <Link className="mt-2 inline-block font-semibold underline" href={LEARNING_JOURNEY_HREF}>{journeyText(surface.values,"previewLink")} →</Link>

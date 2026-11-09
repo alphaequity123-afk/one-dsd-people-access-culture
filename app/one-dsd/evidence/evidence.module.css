@@ -11,7 +11,7 @@
 .list > li { border: 1px solid var(--pac-border, #adb9c4); padding: 28px; border-radius: 8px; background: #fff; }
 .list h2 { font-size: 1.6rem; margin: 10px 0 14px; }
 .list p { max-width: 850px; line-height: 1.75; }
-.note { padding: 24px 28px; background: var(--pac-white, #ffffff); border-left: 4px solid var(--pac-gold, #e5ad24); margin: 26px 0; line-height: 1.75; }
+.note { padding: 24px 28px; background: var(--pac-white, #ffffff); border-left: 4px solid var(--pac-gold, #008eaa); margin: 26px 0; line-height: 1.75; }
 .note h2 { margin-top: 0; font-size: 1.3rem; }
 .contents { padding: 24px; background: var(--pac-white, #ffffff); margin: 24px 0; }
 .contents ol { padding-left: 24px; display: grid; gap: 8px; }

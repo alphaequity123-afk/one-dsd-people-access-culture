@@ -18,6 +18,6 @@
 .equity-decisions-study input[type=radio]{margin-top:7px;min-width:20px;min-height:20px}
 .equity-decisions-feedback:has(p){padding:20px;background:#eef4f8;border-left:4px solid #008eaa;margin-top:20px}
 .equity-decisions-study textarea{display:block;width:100%;max-width:800px;box-sizing:border-box;font:inherit;padding:14px;border:1px solid #7893a5;border-radius:4px;margin:8px 0}
-.equity-decisions-study :is(a,button,input,textarea):focus-visible{outline:3px solid #b88000;outline-offset:4px}
+.equity-decisions-study :is(a,button,input,textarea):focus-visible{outline:3px solid #005ea8;outline-offset:4px}
 @media(max-width:700px){.equity-decisions-study{padding:24px 16px}.equity-decisions-study header{padding:24px}.equity-decisions-path{grid-template-columns:1fr}.equity-decisions-study button{max-width:100%;white-space:normal}}
 @media print{.equity-decisions-study video,.equity-decisions-study button,.equity-decisions-study>nav{display:none}.equity-decisions-study header{padding:12px}.equity-decisions-study{max-width:none;padding:0}.equity-decisions-path{display:block}.equity-decisions-path li{break-inside:avoid}}

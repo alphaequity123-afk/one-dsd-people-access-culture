@@ -21,9 +21,9 @@ export function MeasurementEvidenceExample() {
   const [choice, setChoice] = useState("");
   const [considered, setConsidered] = useState(false);
   const selected = interpretations.find(item => item.id === choice);
-  return <section aria-labelledby={uid + "-heading"} className="mb-10 overflow-hidden rounded-2xl border border-[#dcd5c8] bg-[#faf7f1]">
+  return <section aria-labelledby={uid + "-heading"} className="mb-10 overflow-hidden rounded-2xl border border-[#8ea2b5] bg-[#f4f7f9]">
     <div className="p-5 sm:p-8">
-      <p className="text-sm font-semibold uppercase tracking-wider text-[#71502f]">Practice example · not DHS data</p>
+      <p className="text-sm font-semibold uppercase tracking-wider text-[#005ea8]">Practice example · not DHS data</p>
       <h2 id={uid + "-heading"} className="mt-3 text-2xl font-bold text-[#123f60] sm:text-3xl">More activity. A better result?</h2>
       <p className="mt-4 max-w-3xl leading-7">A team revises a reminder letter and asks a separate group to find its next action. Each version is read by 100 people in this made-up example. What would help the team decide what to keep or change?</p>
       <div className="mt-6 grid gap-6 md:grid-cols-2">
@@ -50,10 +50,10 @@ export function MeasurementEvidenceExample() {
           <div><h3 className="text-lg font-bold">Influence: what did input change?</h3><p className="mt-2 leading-7">The team documented two wording changes prompted by participants and explained its response to two other suggestions. The earlier period has no comparable record.</p></div>
         </div>
       </div>
-      <div role="region" aria-label="Complete sample evidence, scroll for all columns" tabIndex={0} className="mt-7 overflow-x-auto rounded-xl border border-[#dcd5c8] bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#123f60]">
+      <div role="region" aria-label="Complete sample evidence, scroll for all columns" tabIndex={0} className="mt-7 overflow-x-auto rounded-xl border border-[#8ea2b5] bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#123f60]">
         <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
           <caption className="p-4 text-left text-base font-bold">The complete sample evidence</caption>
-          <thead className="border-y border-[#dcd5c8] bg-[#edf2f6]"><tr><th scope="col" className="p-4">Evidence</th><th scope="col" className="p-4">Earlier period</th><th scope="col" className="p-4">Later period</th><th scope="col" className="p-4">What to ask next</th></tr></thead>
+          <thead className="border-y border-[#8ea2b5] bg-[#edf2f6]"><tr><th scope="col" className="p-4">Evidence</th><th scope="col" className="p-4">Earlier period</th><th scope="col" className="p-4">Later period</th><th scope="col" className="p-4">What to ask next</th></tr></thead>
           <tbody>
             <tr className="border-b border-[#e4e0d8] align-top"><th scope="row" className="p-4 font-semibold">Activity: review sessions</th><td className="p-4">2 sessions</td><td className="p-4">4 sessions</td><td className="p-4">Who could take part, and what did the sessions help the team understand?</td></tr>
             <tr className="border-b border-[#e4e0d8] align-top"><th scope="row" className="p-4 font-semibold">Outcome: readers finding the action</th>{readings.map(item => <td key={item.label} className="p-4">{item.foundAction} of {item.total} readers ({item.foundAction}%)</td>)}<td className="p-4">Were the groups and reading conditions comparable? Whose access needs remain unexamined?</td></tr>
@@ -63,14 +63,14 @@ export function MeasurementEvidenceExample() {
       </div>
       <fieldset className="mt-7 space-y-3">
         <legend className="mb-3 text-xl font-bold">Which interpretation does the evidence support?</legend>
-        {interpretations.map(item => <label key={item.id} className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#dcd5c8] bg-white p-4 leading-6">
+        {interpretations.map(item => <label key={item.id} className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#8ea2b5] bg-white p-4 leading-6">
           <input type="radio" className="mt-1 h-4 w-4 shrink-0 accent-[#123f60]" name={uid + "-interpretation"} value={item.id} checked={choice === item.id} onChange={() => { setChoice(item.id); setConsidered(false); }} />
           <span>{item.label}</span>
         </label>)}
       </fieldset>
       <button type="button" className="btn btn--primary mt-4 disabled:opacity-50" disabled={!selected} onClick={() => setConsidered(true)}>Consider this interpretation</button>
       <div aria-live="polite">{considered && selected ? <p className="mt-4 rounded-xl border-l-4 border-[#123f60] bg-white p-4 leading-7">{selected.response}</p> : null}</div>
-      <p className="mb-0 mt-6 border-t border-[#dcd5c8] pt-5 leading-7">For your evaluation plan, choose an outcome that matters to the people affected. Describe how their experience can shape the next decision, and record what the evidence cannot show.</p>
+      <p className="mb-0 mt-6 border-t border-[#8ea2b5] pt-5 leading-7">For your evaluation plan, choose an outcome that matters to the people affected. Describe how their experience can shape the next decision, and record what the evidence cannot show.</p>
     </div>
   </section>;
 }

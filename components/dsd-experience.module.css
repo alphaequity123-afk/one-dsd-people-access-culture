@@ -21,7 +21,7 @@
   width: 3.5rem;
   height: 4px;
   border-radius: 0 0 3px 3px;
-  background: var(--pac-gold, #e5ad24);
+  background: var(--pac-gold, #008eaa);
   z-index: 1;
 }
 .page .hero h1 { color: #003865; font-size: clamp(2.35rem, 4.5vw, 3.65rem); line-height: 1.08; letter-spacing: -.035em; }
@@ -139,7 +139,7 @@
 /* Restrained inner-page treatment; retain the approved leadership and mentoring previews. */
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) { background: #fff; }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .hero { background: var(--pac-white, #ffffff); border: 0; border-bottom: 1px solid var(--pac-border, #adb9c4); border-radius: .75rem; box-shadow: none; }
-.page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .hero::before { background: var(--pac-gold, #e5ad24); }
+.page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .hero::before { background: var(--pac-gold, #008eaa); }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .entryCards > article { background: #fff; border: 0; border-top: 2px solid #a5bbc9; border-radius: 0; padding-inline: 0; box-shadow: none; }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .entryCards > article:nth-child(2) { border-top-color: #b89a64; }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .entryCards > article:nth-child(3) { border-top-color: #8e9cb5; }
@@ -152,7 +152,7 @@
 }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) { background: var(--pac-white, #ffffff); }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .hero { background: var(--pac-white, #ffffff); border: 1px solid #c6cbd0; }
-.page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .hero::before { background: var(--pac-gold, #e5ad24); }
+.page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .hero::before { background: var(--pac-gold, #008eaa); }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) .entryCards > article { border: 1px solid var(--pac-border, #adb9c4); border-radius: .65rem; padding: 1.5rem; }
 .page:where(:not(.amplifyPage):not(.teamPage):not(.orientationPage)):not(:global(.leadership-palette-preview)):not(:has(:global(#mentoring-tool))) :is(.welcomeNote,.statewide,.communityDoor) { background: #fff; }
 .sectionNav a { background: #fff; border: 1px solid #8799a3; border-radius: .4rem; color: #183247; }
@@ -171,10 +171,10 @@
 /* Orientation welcomes; program references keep their businesslike reading surface. */
 .page.orientationPage, .page.programPage { background: #fff; }
 .page.orientationPage .hero { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-radius: .75rem; box-shadow: inset 0 1px 0 #ffffffd9, 0 2px 5px #18324708; }
-.page.orientationPage .hero::before { width: 4.5rem; background: var(--pac-gold, #e5ad24); }
+.page.orientationPage .hero::before { width: 4.5rem; background: var(--pac-gold, #008eaa); }
 .page.orientationPage :is(h1,h2,h3) { color: #183247; font-weight: 600; }
 .page.orientationPage .eyebrow { letter-spacing: .06em; }
-.page.orientationPage .orientationItem { background: #fff; border-top: 2px solid var(--pac-gold, #e5ad24); }
+.page.orientationPage .orientationItem { background: #fff; border-top: 2px solid var(--pac-gold, #008eaa); }
 .page.orientationPage .orientationItem:nth-child(even) { border-top-color: #9db4c4; }
 .page.orientationPage .sectionNav a:hover { background: var(--pac-white, #ffffff); border-color: #708a9c; }
 .page.orientationPage .welcomeNote { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid #607f94; border-radius: .65rem; box-shadow: inset 0 1px 0 #ffffffd9; }
@@ -196,7 +196,7 @@
 .page.amplifyPage, .page.teamPage { background: #fff; }
 .page.amplifyPage { --amplify-hero: #fff0b8; --amplify-edge: #c6cfd3; --amplify-accent: #176b65; }
 .page.amplifyPage.amplifyGathering { --amplify-hero: #fff0b8; --amplify-edge: #c6cfd3; --amplify-accent: #b88a35; }
-.page.amplifyPage.amplifyPractical { --amplify-hero: #fbf8f0; --amplify-edge: #c6cfd3; --amplify-accent: #b88a35; }
+.page.amplifyPage.amplifyPractical { --amplify-hero: #f4f7f9; --amplify-edge: #c6cfd3; --amplify-accent: #b88a35; }
 .page.amplifyPage .hero { background: var(--amplify-hero); border: 1px solid var(--amplify-edge); border-radius: .75rem; }
 .page.amplifyPage .hero::before { width: 4.5rem; background: var(--amplify-accent); }
 .page.amplifyPage .hero h1, .page.amplifyPage :is(h2,h3) { color: #183247; font-weight: 600; }
@@ -207,9 +207,9 @@
 .page.amplifyPage .sectionNav a { background: #fff; border-color: var(--pac-border, #adb9c4); color: #183247; border-radius: .4rem; }
 .page.amplifyPage .sectionNav a:hover { background: var(--pac-white, #ffffff); }
 .page.amplifyPage .sectionNav a[aria-current="page"] { background: var(--pac-action, #005ea8); border-color: var(--pac-action, #005ea8); color: #fff; }
-.page.amplifyPage .entryCards > article { background: #fff0b8; border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-gold, #e5ad24); border-radius: .65rem; }
+.page.amplifyPage .entryCards > article { background: #fff0b8; border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-gold, #008eaa); border-radius: .65rem; }
 .page.amplifyPage .entryCards > article:nth-child(2) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-action, #005ea8); }
-.page.amplifyPage .entryCards > article:nth-child(3) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #e5ad24); }
+.page.amplifyPage .entryCards > article:nth-child(3) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #008eaa); }
 .page.amplifyPage .entryCards a { color: #145b57; }
 .page.amplifyPage .conversationBand { padding: clamp(1.25rem,3vw,2rem); background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid var(--pac-action, #005ea8); border-radius: .65rem; }
 .page.amplifyPage .sidebar { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-action, #005ea8); border-radius: .5rem; }
@@ -225,13 +225,13 @@
 .page.teamPage .hero a[class*="text-white"] { border-radius: .4rem; }
 .page.teamPage .entryCards > article { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid #003865; border-radius: .5rem; }
 .page.teamPage .entryCards > article:nth-child(2) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-action, #005ea8); }
-.page.teamPage .entryCards > article:nth-child(3) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #e5ad24); }
+.page.teamPage .entryCards > article:nth-child(3) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #008eaa); }
 .page.teamPage .leadershipInvitation { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid var(--pac-action, #005ea8); border-radius: .5rem; }
 .page.teamPage .sidebar { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-radius: .5rem; }
 .page.teamPage .connections { background: #fff; border-color: var(--pac-border, #adb9c4); border-radius: .5rem; }
 .page.teamPage .connectionGrid > article { border-radius: .4rem; }
 .page.teamPage .labPanels > section { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-action, #005ea8); border-radius: .5rem; }
-.page.teamPage .labPanels > section + section { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #e5ad24); }
+.page.teamPage .labPanels > section + section { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #008eaa); }
 .page.teamPage .welcomeNote { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-left: 3px solid var(--pac-action, #005ea8); border-radius: .5rem; }
 .page:is(.amplifyPage,.teamPage) :is(.hero,.entryCards > article,.conversationBand,.sidebar,.leadershipInvitation,.labPanels > section,.welcomeNote) { box-shadow: inset 0 1px 0 #ffffffd9, inset 0 -1px 0 #18324708, 0 2px 5px #18324708; }
 .page:is(.amplifyPage,.teamPage) .entryCards > article:focus-within { border-color: #183247; }
@@ -248,9 +248,9 @@
 /* Reference-aligned internal page treatment. */
 
 .page .hero { border: 0; border-bottom: 1px solid #cbd4dc; border-radius: 0; box-shadow: none; }
-.page .hero::before { left: 0; background: #b58731; }
+.page .hero::before { left: 0; background: #008eaa; }
 .page .entryCards > article, .page .sidebar { border-radius: 6px; box-shadow: none; }
-.page .entryCards > article { border-top: 3px solid #b58731; padding: 1.5rem; }
+.page .entryCards > article { border-top: 3px solid #008eaa; padding: 1.5rem; }
 .page .entryCards > article:nth-child(even) { border-top-color: #176b65; }
 .sectionNav a { border-radius: 0; padding-inline: .35rem; text-decoration: underline; }
 .sectionNav a[aria-current="page"] { background: #fff; color: #183247; text-decoration-thickness: 3px; }

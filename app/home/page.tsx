@@ -16,8 +16,9 @@ export default async function HomePage() {
   return <div className="dsd-home od">
     <section className="home-hero" aria-labelledby="home-title">
       <div className="w home-title">
-        <h1 id="home-title">People, access and culture</h1>
+        <h1 id="home-title">People, Access and Culture</h1>
         <p>Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.</p>
+        <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site: read the user guide <span aria-hidden="true">→</span></Link></p>
       </div>
       <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />
     </section>
