@@ -89,7 +89,7 @@ const approvedValues: EditableSurfaceValues = { ...copy, relatedLinks: [
   { label: "Learning for your work", href: "/my-work/explore" },
   { label: "Amplify Equity", href: "/one-dsd/amplify" },
   { label: "One DSD Team", href: "/one-dsd/team" },
-  { label: "DEIA leadership and growth in DSD", href: "/one-dsd/leadership" }
+  { label: "People, Access and Culture leadership in DSD", href: "/one-dsd/leadership" }
 ]};
 const fields: EditableSurfaceFieldDefinition[] = Object.keys(copy).map(key => ({
   key, label: key, kind: key === "idiLink" ? "url" : "long", required: true

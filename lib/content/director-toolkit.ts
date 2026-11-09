@@ -107,7 +107,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
         url: "https://www.racialequityalliance.org/resources/racial-equity-toolkit-opportunity-operationalize-equity/",
       },
       {
-        name: "Diversity, Equity, Inclusion and Accessibility (DEIA) Strategic Plan and Resource Tool Suite",
+        name: "People, Access and Culture Strategic Plan and Resource Tool Suite",
         purpose: "A framework you can adapt for governance, workforce, culture, service access, partnerships and continuous improvement.",
         use: "Use it to design tools for each of those areas, one area at a time.",
         limitation: "Adapt each part with the people responsible for the area that will use it.",

@@ -58,6 +58,8 @@ const SERIES_LABELS: Record<string, string> = {
   "Team and collaboration": "Teams and collaboration",
   "Intercultural": "Intercultural learning",
 };
+/** Lowercase only the leading word so proper names such as DHS keep their form mid-sentence. */
+const lowerFirst = (value: string) => value.charAt(0).toLowerCase() + value.slice(1);
 const escape = (value: string) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 const html = (value: string) => value.trim().split(/\n\s*\n/).map(p => `<p>${escape(p.trim())}</p>`).join("");
 const topicLink = (topicId: string) => {
@@ -116,7 +118,7 @@ export function catalogCourse(spec: CatalogSpec): CoursePack {
   return {
     course: {
       id: spec.id, indexNumber: row.indexNumber, title: catalogDisplayLabel(row.title), seriesLabel: `${SERIES_LABELS[row.series] ?? row.series} · ${row.level}`, subtitle: spec.subtitle,
-      scope: `${spec.scope} This ${row.level.toLowerCase()} course focuses on ${catalogDisplayLabel(row.category).toLowerCase()}. ${LEVELS[row.level]} Participation is voluntary and lessons can be opened in any order. Examples are practice. Keep reflection notes without identifying coworkers or members of the public. Use the applicable agency equity-analysis process for actual decisions; course routines are preparation and do not replace it. This course supports learning; formal employment, accommodation, civil-rights, eligibility, Tribal consultation and licensing decisions stay with the responsible office.`,
+      scope: `${spec.scope} This ${row.level.toLowerCase()} course focuses on ${lowerFirst(catalogDisplayLabel(row.category))}. ${LEVELS[row.level]} Participation is voluntary and lessons can be opened in any order. Examples are practice. Keep reflection notes without identifying coworkers or members of the public. Use the applicable agency equity-analysis process for actual decisions; course routines are preparation and do not replace it. This course supports learning; formal employment, accommodation, civil-rights, eligibility, Tribal consultation and licensing decisions stay with the responsible office.`,
       treatment: "Six lessons with explanations, DSD practice cases, key terms, practice decisions and feedback, knowledge checks, sorting activities, personal reflection, related courses, and a practical job aid.",
       duration: `About ${total} minutes, plus optional practice`, author: OWNER,
       coverImage: row.coverImage, coverAlt: row.coverAlt, kind: "course", contentType: row.contentType as CoursePack["course"]["contentType"],

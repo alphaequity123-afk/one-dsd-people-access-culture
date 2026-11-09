@@ -95,8 +95,8 @@ export async function teamDocument(): Promise<ResourceDocument | null> {
 
 export function leadershipDocument(): ResourceDocument {
   return {
-    kicker: kicker("dsd", "DEIA leadership and growth"),
-    title: "Grow your DEIA leadership",
+    kicker: kicker("dsd", "People, Access and Culture leadership"),
+    title: "Grow your People, Access and Culture leadership",
     subtitle:
       "Bring your experience, your curiosity, and the kind of leader you want to become. Develop a practice that makes equity, inclusion, and accessibility part of how DSD works.",
     meta: [],
