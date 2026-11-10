@@ -434,6 +434,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question)));
   const researchDepth: ResearchDepth = requestedMode === "deep_research" ? "deep_research" : "current_web";
   let publicResearch: AskAnswer["publicResearch"];
+  let researchFailureCode: string | undefined;
 
   if (requestedMode === "web_results") {
     const result = await governedSearch(question, true, ctx);
@@ -488,6 +489,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         note: result.message,
       };
     } else {
+      researchFailureCode = result.error_code;
       publicResearch = {
         status: "failed",
         kind: researchDepth === "deep_research" ? "deep_answer" : "current_answer",
@@ -499,6 +501,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   }
 
   const limits: string[] = [];
+  if (tribalSubject) limits.push("For Native American and Tribal-specific learning, questions, or engagement, connect with the Office of Indian Policy or the responsible Tribal liaison. One DSD refers this work to them and does not speak for a Tribal Nation or replace consultation.");
   const nextActions: AskAnswer["nextActions"] = [];
   if (trainingCreditQuestion) limits.push(TRAINING_CREDIT_NOTICE);
   let questions: EmbedQuestion[] | undefined;
@@ -506,6 +509,12 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let escalate: AskAnswer["escalate"];
 
   // Uncertainty and authority mapping.
+  // The research service reports "no tool evidence" when a question did not draw on the web
+  // at all (a calculation, a rewrite). Any other failure means a check that was wanted did not happen: say so.
+  const outsideCheckFailed = publicResearch?.status === "failed" && researchFailureCode !== "research_no_tool_evidence" && researchFailureCode !== "research_search_not_performed";
+  if (outsideCheckFailed && !CURRENT_INFORMATION.test(question)) {
+    limits.push("Public sources could not be checked for this answer just now. Treat dates, amounts, requirements, and other details that change as unverified, or ask again in a moment.");
+  }
   if (CURRENT_INFORMATION.test(question) && publicResearch?.status !== "used") {
     limits.push("Current public information could not be checked for this answer. Treat dates, officeholders, prices, requirements, and other changing details as unverified.");
   }

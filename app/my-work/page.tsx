@@ -12,6 +12,7 @@ import { DsdSavedResourceShelf } from "@/components/dsd-workspace";
 import { SavedDecisionLinks } from "@/components/dsd-practice-planner-editor";
 import { MyPath } from "@/components/my-path";
 import { ExplainerVideo } from "@/components/explainer-video";
+import { AskHistoryNote } from "@/components/ask-history-note";
 
 export const metadata: Metadata = { title: "My Work" };
 
@@ -54,6 +55,7 @@ export default async function MyWorkPage() {
           <p className="my-3">The most useful learning often comes after the fact. Return to the change you tried, note what you observed, and decide what you would keep or do differently next time. You can download it whenever you like.</p>
           <Link href="/program/reflection">Open your reflection</Link>
         </section>
+        <AskHistoryNote />
         </div>
         {scope === "dsd" ? <section className="rounded-xl border border-line bg-white p-6" aria-labelledby="goal-work-plan-title">
           <h2 id="goal-work-plan-title" className="text-2xl font-bold">Connect your work to the six equity goals</h2>

@@ -52,7 +52,9 @@ export function AskClient({
   const [error, setError] = useState("");
   const [retryQuestion, setRetryQuestion] = useState("");
   const researchMode: AskResearchMode = "auto";
-  const [session, setSession] = useStored<Session>("session", BROWSER_STORAGE_KEYS.askSession, EMPTY_SESSION);
+  const [storedSession, setSession] = useStored<Session>("session", BROWSER_STORAGE_KEYS.askSession, EMPTY_SESSION);
+  // Another page may have read this key first, or older saved data may have another shape: never trust it blindly.
+  const session: Session = storedSession && Array.isArray(storedSession.turns) ? storedSession : EMPTY_SESSION;
   const path = publishedPath;
   const reviewDraft = initialMode === "review";
   const textId = useId();

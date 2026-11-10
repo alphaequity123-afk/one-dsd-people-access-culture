@@ -19,11 +19,15 @@ const contentSecurityPolicy = [
   ...(development || offlineBuild ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
+// Ask dictation and read-aloud need the microphone and in-memory audio. People usually reach Ask through the menu,
+// which does not load a new document, so the page they started on must already allow both. The browser still asks
+// the person before any microphone use, and only the Ask page requests it.
+const askVoiceAllowed = process.env.PAC_CLONE_AGENTS === "on";
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: contentSecurityPolicy },
+  { key: "Content-Security-Policy", value: contentSecurityPolicy + (askVoiceAllowed ? "; media-src 'self' blob:" : "") },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
+  { key: "Permissions-Policy", value: `camera=(), microphone=(${askVoiceAllowed ? "self" : ""}), geolocation=(), browsing-topics=()` },
   // Preserve same-origin form authentication; send no referrer to other sites.
   { key: "Referrer-Policy", value: "same-origin" },
   { key: "X-Content-Type-Options", value: "nosniff" },

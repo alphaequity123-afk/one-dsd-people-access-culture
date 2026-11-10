@@ -16,10 +16,11 @@ import {
   type SearchOptions,
 } from "./search";
 import type { AskIntent } from "@/lib/content/types";
+import { publicRetrievalDocumentEligible } from "./public-course-boundary";
 
 export async function indexedStaffDocs(scope?: StaffProgramScope): Promise<Doc[]> {
   const snapshot = await loadStaffContentSnapshot({ scope });
-  return [...docsFromStaffContent(snapshot), ...engagementPdfDocs(snapshot.items)];
+  return [...docsFromStaffContent(snapshot), ...engagementPdfDocs(snapshot.items)].filter(publicRetrievalDocumentEligible);
 }
 
 export async function corpusSearchAsync(

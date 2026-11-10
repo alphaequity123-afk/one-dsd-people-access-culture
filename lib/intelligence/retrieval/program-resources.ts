@@ -1,3 +1,4 @@
+import { publicRetrievalDocumentEligible } from "./public-course-boundary";
 import { withReviewedHistoricalSurface } from "@/lib/content/courses/historical-course-editorial";
 import historicalEditorialData from "@/lib/content/courses/historical-course-editorial.json";
 import readingCollection from "@/lib/content/reading-collection.json";
@@ -191,7 +192,8 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   } catch (error) {
     console.error("ask_brain_content_unavailable", error instanceof Error ? error.message : "unknown");
   }
-  const index = { communityDocs, destinations: destinations.map(doc => ({ ...doc, id: publicProjectionAuditId(doc.id) })) };
+  // Courses One DSD refers elsewhere are not answer evidence or destinations.
+  const index = { communityDocs, destinations: destinations.filter(publicRetrievalDocumentEligible).map(doc => ({ ...doc, id: publicProjectionAuditId(doc.id) })) };
   currentIndexes.set(scope, { key: scopedKey, index });
   return index;
 }
