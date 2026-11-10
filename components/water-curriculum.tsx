@@ -8,6 +8,7 @@ import type { WaterImage, WaterLesson } from "@/lib/content/water-curriculum";
 import { loadCaptionCues } from "@/lib/content/clas-curriculum-page-data";
 import "@/components/clas-curriculum.css";
 import "./water-curriculum.css";
+import { FeaturedMediaPanel, mediaLength } from "./featured-media-panel";
 
 /** A full-width 4K photograph. The browser picks a smaller rendering for small screens. */
 export function WaterFigure({ image, priority = false }: { image: WaterImage; priority?: boolean }) {
@@ -24,13 +25,31 @@ export function chapterImages(lesson: WaterLesson | null): Record<string, WaterI
   return Object.fromEntries((lesson?.images ?? []).filter(img => img.slot === "chapter" && img.chapter).map(img => [img.chapter!, img]));
 }
 
-/** Before the module text: what this module leads to, a recall from the last one, and the podcast. */
-export function WaterLessonOpening({ lesson, practice, recall, previousTitle, previousNumber, moduleTitle }: {
-  lesson: WaterLesson | null; practice: PracticeModule | null; recall: RecallQuestion[];
-  previousTitle?: string; previousNumber?: number; moduleTitle: string;
-}) {
+/**
+ * The module podcast, placed directly under the module title and goal so it is found without
+ * scrolling. Renders nothing until the release step marks the podcast ready.
+ */
+export function WaterLessonPodcast({ lesson, moduleTitle }: { lesson: WaterLesson | null; moduleTitle: string }) {
   const podcast = lesson?.podcast;
-  const cues = podcast ? loadCaptionCues(podcast.captions) : [];
+  if (!podcast) return null;
+  const cues = loadCaptionCues(podcast.captions);
+  return <div className="water-lesson-opening clas-study">
+    <FeaturedMediaPanel kind="podcast" length={mediaLength(podcast.durationSeconds)}><section aria-labelledby="water-podcast-title" className="water-podcast">
+      <h2 id="water-podcast-title">Listen: {podcast.title}</h2>
+      <p>{podcast.summary} About {Math.max(1, Math.round(podcast.durationSeconds / 60))} minutes. Two colleagues talk the module through; the full text and its sources follow below.</p>
+      <SyncedMediaPlayer mediaId={`water:${lesson!.id}`} kind="audio" src={podcast.src} captions={podcast.captions} label={`${moduleTitle} podcast`}
+        chapters={podcast.chapters} cues={cues} transcriptTitle="Podcast transcript">
+        <p className="water-podcast-links"><a href={podcast.src} download>Download the podcast (MP3)</a> · <a href={podcast.transcript}>Read the transcript</a></p>
+      </SyncedMediaPlayer>
+    </section></FeaturedMediaPanel>
+  </div>;
+}
+
+/** After the podcast, before the module text: what this module leads to, a recall from the last one, and the key points. */
+export function WaterLessonOpening({ practice, recall, previousTitle, previousNumber }: {
+  practice: PracticeModule | null; recall: RecallQuestion[];
+  previousTitle?: string; previousNumber?: number;
+}) {
   return <div className="water-lesson-opening clas-study">
     {practice?.outcome && <p className="water-outcome"><strong>What you will be able to do: </strong>{practice.outcome.replace(/^After this module you can\s*/i, "")}</p>}
     {previousTitle && previousNumber && recall.length > 0 && <section aria-labelledby="water-recall-title">
@@ -38,16 +57,7 @@ export function WaterLessonOpening({ lesson, practice, recall, previousTitle, pr
       <p>Two short questions from “{previousTitle}”. Answer from memory; the feedback explains the reasoning. Nothing is scored or recorded.</p>
       {recall.map(q => <ChoiceQuestion key={q.id} id={`recall-${q.id}`} question={q.question} options={q.options} />)}
     </section>}
-    {podcast && <section aria-labelledby="water-podcast-title" className="water-podcast">
-      <h2 id="water-podcast-title">Listen: {podcast.title}</h2>
-      <p>{podcast.summary} About {Math.max(1, Math.round(podcast.durationSeconds / 60))} minutes. Two colleagues talk the module through; the full text and its sources follow below.</p>
-      <SyncedMediaPlayer mediaId={`water:${lesson!.id}`} kind="audio" src={podcast.src} captions={podcast.captions} label={`${moduleTitle} podcast`}
-        chapters={podcast.chapters} cues={cues} transcriptTitle="Podcast transcript">
-        <p className="water-podcast-links"><a href={podcast.src} download>Download the podcast (MP3)</a> · <a href={podcast.transcript}>Read the transcript</a></p>
-      </SyncedMediaPlayer>
-      {practice?.keyPoints.length ? <KeyPointsPanel keyPoints={practice.keyPoints} chapters={[]} title="Key points from this module" /> : null}
-    </section>}
-    {!podcast && practice?.keyPoints.length ? <KeyPointsPanel keyPoints={practice.keyPoints} chapters={[]} title="Key points from this module" /> : null}
+    {practice?.keyPoints.length ? <KeyPointsPanel keyPoints={practice.keyPoints} chapters={[]} title="Key points from this module" headingLevel={2} /> : null}
   </div>;
 }
 

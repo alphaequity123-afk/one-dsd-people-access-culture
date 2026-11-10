@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { SharePage } from "@/components/share-page";
 import { podcastShareHref } from "@/lib/product/share-link";
 import type { PodcastReadingSupport, PodcastTranscript } from "./podcast-transcript-data";
+import { FeaturedMediaPanel } from "./featured-media-panel";
 
 type PodcastPlayerProps = PodcastReadingSupport & {
   headingLevel?: 1 | 2 | 3;
@@ -112,7 +113,7 @@ export function PodcastPlayer({ headingLevel = 3, ownPage = false, id, src, titl
     try { await audio.play(); } catch { setFailed(true); }
   }
 
-  return <section id={`podcast-${id}`} className={ownPage ? "space-y-3 print:hidden" : "space-y-3 border-t border-line pt-6 print:hidden"} aria-labelledby={titleId}>
+  return <FeaturedMediaPanel kind="podcast" className="print:hidden"><section id={`podcast-${id}`} className="space-y-3 print:hidden" aria-labelledby={titleId}>
     <Heading id={titleId} className={headingLevel === 1 ? "text-4xl font-semibold" : "text-2xl font-semibold"}>{title}</Heading>
     <p id={detailsId}>{intro}</p>
     <audio id={playerId} ref={player} src={src} controls preload="none" className="w-full max-w-2xl" aria-labelledby={titleId} aria-describedby={`${detailsId}${failed ? ` ${errorId}` : ""}`} onLoadedMetadata={() => { if (pendingSeek.current === null) { const saved = savedPosition(id); if (saved && player.current && saved < player.current.duration - 5) player.current.currentTime = saved; } applyPendingSeek(); }} onPlay={event => { const current = event.currentTarget; current.ownerDocument.querySelectorAll<HTMLMediaElement>("audio, video").forEach(media => { if (media !== current) media.pause(); }); current.ownerDocument.dispatchEvent(new CustomEvent("pac-media-play")); }} onTimeUpdate={event => rememberPosition(id, event.currentTarget.currentTime)} onEnded={() => rememberPosition(id, 0, true)} onError={() => setFailed(true)} onCanPlay={() => { if (pendingSeek.current === null) setFailed(false); }}>
@@ -146,5 +147,5 @@ export function PodcastPlayer({ headingLevel = 3, ownPage = false, id, src, titl
         </li>)}</ol>
       </details>
     </div> : null}
-  </section>;
+  </section></FeaturedMediaPanel>;
 }

@@ -108,7 +108,8 @@ const nextConfig: NextConfig = {
     "/api/consultant/analysis/upload": ["./node_modules/ffmpeg-static/ffmpeg*", "./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
     "/api/consultant/**": hostedSemanticRuntimeIncludes,
     "/api/cron/orchestrate": hostedSemanticRuntimeIncludes,
-    "/api/downloads/**": downloadRuntimeIncludes,
+    // Self-directed course downloads are built from the page's own course list and data files.
+    "/api/downloads/**": [...downloadRuntimeIncludes, "./public/learning/self-directed/index.html", "./public/learning/self-directed/data/*.json"],
     "/api/equity-workspace/policy-analysis/export": downloadRuntimeIncludes,
     "/api/equity-workspace/policy-analysis/fetch-source": ["./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
   },

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Block, BoundaryNote, Bullets, PathwayEyebrow, PathwayShell, QuoteCard, SectionNav, Steps } from "@/components/leadership-styles-pathway";
 import { LeadershipStyleVideo } from "@/components/leadership-style-video";
+import { CourseMediaSlot } from "@/components/course-media-for-page";
 import {
   COMMON_SCENARIO, LEADERSHIP_PATHWAY_HREF, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, LEADERSHIP_STYLE_LESSONS,
   STYLE_GROUP_LABEL, STYLE_SECTIONS, leadershipStyle, leadershipStyleHref,
@@ -36,6 +37,9 @@ export default async function LeadershipStylePage({ params }: { params: Promise<
     title={lesson.name}
     intro={<p>{lesson.tagline}. <Link className="underline" href={`${LEADERSHIP_PATHWAY_HREF}#group-${lesson.group}`}>{STYLE_GROUP_LABEL[lesson.group]}</Link>.</p>}
   >
+    {/* The lesson video comes first, right under the title, so nobody has to scroll to find it. */}
+    {lesson.legacyVideo && <LeadershipStyleVideo style={lesson.legacyVideo} title={lesson.name} />}
+    <CourseMediaSlot />
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="leadership-styles" id={lesson.slug} noun="lesson" /></details>
     <SectionNav label="Lesson sections" items={STYLE_SECTIONS.map(section => ({ href: `#${section.id}`, title: section.title }))} />
 
@@ -43,7 +47,6 @@ export default async function LeadershipStylePage({ params }: { params: Promise<
       <div className={styles.prose}>{lesson.definition.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
       <h3>What it is not</h3>
       <Bullets items={lesson.isNot} />
-      {lesson.legacyVideo && <LeadershipStyleVideo style={lesson.legacyVideo} title={lesson.name} />}
     </Block>
 
     <Block id="common-scenario" title={`The common scenario: “${COMMON_SCENARIO.title}”`}>

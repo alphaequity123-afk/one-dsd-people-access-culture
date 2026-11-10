@@ -1,3 +1,4 @@
+import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 import { listResourceMedia, mediaAvailable, videoEmbedUrl, type ResourceMediaItem } from "@/lib/content/media";
 import { ResourceMediaManager } from "@/components/resource-media-manager";
 import { SyncedAudio } from "@/components/synced-audio";
@@ -35,7 +36,7 @@ export async function ResourceMediaGallery({ contentItemId, owner }: { contentIt
         </p>
       ) : null}
       {audio.length > 0 ? (
-        <div className="card" data-resource-listen="true">
+        <FeaturedMediaPanel kind="audio" label="Listen"><div data-resource-listen="true">
           <h2 id={`resource-listen-${contentItemId}`} className="m-0 text-xl font-extrabold">Listen to this resource</h2>
           {audio.map((item) => (
             <figure key={item.id} className="m-0 mt-3">
@@ -46,7 +47,7 @@ export async function ResourceMediaGallery({ contentItemId, owner }: { contentIt
               {owner ? <ResourceMediaManager contentItemId={contentItemId} deleteId={item.id} deleteTitle={item.title || item.fileName || "audio"} /> : null}
             </figure>
           ))}
-        </div>
+        </div></FeaturedMediaPanel>
       ) : null}
       {showVisualHeading ? <h2 id={headingId} className="mt-6 text-xl font-extrabold">Images, video, and documents</h2> : null}
       <div className="mt-4 grid gap-6" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>

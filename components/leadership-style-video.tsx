@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FeaturedMediaPanel } from "./featured-media-panel";
 
 export type LeadershipStyleSlug = "democratic" | "authoritarian" | "laissez-faire" | "servant" | "charismatic" | "transformative" | "transformational";
 
@@ -42,12 +43,12 @@ export function LeadershipStyleVideo({ style, title }: { style: LeadershipStyleS
   }, [style]);
 
   if (!media || media.style !== style) return null;
-  return <div className="mt-4 space-y-3">
+  return <FeaturedMediaPanel kind="video" description={`${title}, with captions and a transcript.`}><div className="space-y-3">
     <video controls playsInline preload="none" aria-label={`${title} video`} className="h-auto w-full">
       <source src={media.video} type="video/mp4" />
       <track kind="captions" src={media.captions} srcLang="en" label="English" default />
       Your browser cannot play this video. You can read the transcript instead.
     </video>
     <p><a className="underline" href={media.transcript}>Read the transcript</a></p>
-  </div>;
+  </div></FeaturedMediaPanel>;
 }

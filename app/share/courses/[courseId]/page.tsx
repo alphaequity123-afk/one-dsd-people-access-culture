@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 import Link from "next/link";
 import styles from "../../../courses/course-design.module.css";
 import { notFound } from "next/navigation";
@@ -60,6 +61,14 @@ export default async function SharedCoursePage({ params }: { params: Promise<{ c
           <Image src={course.coverImage} alt={course.coverAlt} fill sizes="(max-width: 700px) 90vw, 480px" style={{ objectFit: "contain" }} unoptimized />
         </div>
       </header>
+      {/* The course introduction recording sits right under the title, before the outline and downloads. */}
+      {course.introAudio ? (
+        <FeaturedMediaPanel kind="audio" label="Listen"><section className={styles.introduction}>
+          <h2>Listen to the introduction</h2>
+          <audio controls preload="none" src={course.introAudio}>This recording cannot play here. Use the transcript below.</audio>
+          {course.introTranscript ? <details><summary>Read the introduction</summary><p>{course.introTranscript}</p></details> : null}
+        </section></FeaturedMediaPanel>
+      ) : course.introTranscript ? <details className={styles.introduction}><summary>Read the introduction</summary><p>{course.introTranscript}</p></details> : null}
       <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this course</summary><ResourceDownloads kind="course" id={course.id} noun="course" scope={scope} /></details>
       <section id="lessons">
         <h2>Course outline</h2>
@@ -86,13 +95,6 @@ export default async function SharedCoursePage({ params }: { params: Promise<{ c
           </div>
         </details>
       ) : null}
-      {course.introAudio ? (
-        <section className={styles.introduction}>
-          <h2>Listen to the introduction</h2>
-          <audio controls preload="none" src={course.introAudio}>This recording cannot play here. Use the transcript below.</audio>
-          {course.introTranscript ? <details><summary>Read the introduction</summary><p>{course.introTranscript}</p></details> : null}
-        </section>
-      ) : course.introTranscript ? <details className={styles.introduction}><summary>Read the introduction</summary><p>{course.introTranscript}</p></details> : null}
       <details id="job-aid" className={styles.jobAid}>
         <summary><h2>{pack.jobAid.title}</h2><span>{pack.jobAid.subtitle}</span></summary>
         <div className={styles.jobAidBody}>

@@ -80,6 +80,8 @@ async function adapterFor(kind: DownloadKind, id: string, scope: StaffProgramSco
     case "reading":
     case "learn-page":
       return async () => (await import("./adapters/elearning")).elearningDocument(kind, id, scope);
+    case "self-directed-course":
+      return async () => (await import("./adapters/self-directed")).selfDirectedCourseDocument(id, scope);
     case "organization":
     case "policy":
     case "community-outreach":

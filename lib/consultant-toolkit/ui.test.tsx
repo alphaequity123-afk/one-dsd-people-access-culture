@@ -1,4 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import React from "react";
 import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { ConsultantToolkitWorkspace } from "@/components/consultant-toolkit-workspace";
 import { navigation } from "@/components/consultant-toolkit/outputs";
@@ -191,5 +192,76 @@ describe("automated run",()=>{
     fireEvent.click(screen.getByRole("button",{name:"6. Download the outputs"}));
     fireEvent.click(screen.getByRole("button",{name:"Turn the recommendations into policy changes"}));
     expect((await screen.findByRole("alert")).textContent).toBe("Check the policy title.");
+  });
+});
+
+describe("a course opened from its own page",()=>{
+  const COURSE_TEXT="One DSD People, Access and Culture · Self-directed learning\nMicroaggressions: Recognizing Messages and Responding with Care\nFoundation · All staff\n\nPAGE 1: LISTEN TO THE MESSAGE\nA small exchange can carry more meaning than the speaker intended.\n";
+  function linked(search:string,answer:()=>Promise<unknown>=()=>Promise.resolve({ok:true,status:200,text:async()=>COURSE_TEXT})){
+    const base=(globalThis.fetch as ReturnType<typeof vi.fn>).getMockImplementation() as (url:string,options?:RequestInit)=>Promise<unknown>;
+    const calls:{url:string;method:string}[]=[];
+    vi.stubGlobal("fetch",vi.fn((url:string,options?:RequestInit)=>{calls.push({url,method:options?.method??"GET"});return url.startsWith("/api/downloads/")?answer():base(url,options);}));
+    window.history.replaceState(null,"",`/consultant/toolkit${search}`);
+    return calls;
+  }
+  afterEach(()=>window.history.replaceState(null,"","/"));
+
+  it("loads the course as one pasted source and runs or saves nothing",async()=>{
+    const calls=linked("?source=self-directed-course%3AF07");
+    render(<ConsultantToolkitWorkspace/>);
+    await screen.findByText("Microaggressions: Recognizing Messages and Responding with Care is loaded as a source. Check it below, then continue to the setup. Nothing has been run or saved.");
+    expect((screen.getByLabelText("Source title") as HTMLInputElement).value).toBe("Microaggressions: Recognizing Messages and Responding with Care");
+    expect((screen.getByLabelText("Source text") as HTMLTextAreaElement).value).toBe(COURSE_TEXT.trim());
+    expect(screen.getByText("1 / 40 sources")).toBeTruthy();
+    expect(calls.filter(call=>call.url.startsWith("/api/downloads/")).map(call=>call.url)).toEqual(["/api/downloads/self-directed-course/F07?format=txt"]);
+    expect(calls.every(call=>call.method==="GET")).toBe(true);
+    expect(calls.some(call=>/analyze|upload|export/.test(call.url))).toBe(false);
+    expect(screen.queryByRole("alert")).toBeNull();
+  });
+
+  it("loads a catalog course by its id",async()=>{
+    const calls=linked("?source=course:div-f02-microaggressions");
+    render(<ConsultantToolkitWorkspace/>);
+    await screen.findByLabelText("Source title");
+    expect(calls.some(call=>call.url==="/api/downloads/course/div-f02-microaggressions?format=txt")).toBe(true);
+  });
+
+  it("never adds the same course twice",async()=>{
+    linked("?source=self-directed-course:F07");
+    const first=render(<React.StrictMode><ConsultantToolkitWorkspace/></React.StrictMode>);
+    await screen.findByLabelText("Source title");
+    await waitFor(()=>expect(screen.getByText("1 / 40 sources")).toBeTruthy());
+    expect(screen.getAllByLabelText("Source title")).toHaveLength(1);
+    first.unmount();
+  });
+
+  it("refuses an unknown kind or id with a plain message and asks for nothing",async()=>{
+    for(const search of ["?source=lesson:div-f02~lesson-1","?source=self-directed-course:F99","?source=course:../secret","?source=","?source=course:cultural-intelligence-tribal"]){
+      const calls=linked(search);
+      const view=render(<ConsultantToolkitWorkspace/>);
+      expect((await screen.findByRole("alert")).textContent).toBe("That course could not be loaded. Attach the document or paste its text instead. Your work here is unchanged.");
+      expect(calls.some(call=>call.url.startsWith("/api/downloads/")),search).toBe(false);
+      expect(screen.getByText("0 / 40 sources")).toBeTruthy();
+      view.unmount();
+    }
+  });
+
+  it("shows a plain message when the course cannot be fetched",async()=>{
+    for(const answer of [()=>Promise.resolve({ok:false,status:404,text:async()=>"{}"}),()=>Promise.resolve({ok:true,status:200,text:async()=>"   "}),()=>Promise.reject(new Error("offline"))]){
+      linked("?source=self-directed-course:F07",answer);
+      const view=render(<ConsultantToolkitWorkspace/>);
+      expect((await screen.findByRole("alert")).textContent).toBe("That course could not be loaded. Attach the document or paste its text instead. Your work here is unchanged.");
+      expect(screen.getByText("0 / 40 sources")).toBeTruthy();
+      expect(screen.queryByLabelText("Source title")).toBeNull();
+      view.unmount();
+    }
+  });
+
+  it("does nothing without the parameter",async()=>{
+    const calls=linked("");
+    render(<ConsultantToolkitWorkspace/>);
+    await waitFor(()=>expect(calls.length).toBeGreaterThan(1));
+    expect(calls.some(call=>call.url.startsWith("/api/downloads/"))).toBe(false);
+    expect(screen.queryByRole("alert")).toBeNull();
   });
 });

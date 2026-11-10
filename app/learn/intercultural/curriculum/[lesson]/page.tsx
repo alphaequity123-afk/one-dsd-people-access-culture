@@ -21,5 +21,5 @@ export default async function Page({ params }: { params: Promise<{ lesson: strin
   const data = await interculturalRequestData(lesson);
   if (!data.curriculum.modules.some(item => item.id === lesson)) notFound();
   const scope = await requestedContentScope();
-  return <><div className="mx-auto max-w-[1120px] px-4 pt-6 sm:px-6 print:hidden"><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="intercultural-lesson" id={lesson} noun="lesson" scope={scope} /></details></div><InterculturalCurriculum key={lesson} lessonId={lesson} {...data}/></>;
+  return <InterculturalCurriculum key={lesson} lessonId={lesson} {...data} downloads={<details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="intercultural-lesson" id={lesson} noun="lesson" scope={scope} /></details>}/>;
 }

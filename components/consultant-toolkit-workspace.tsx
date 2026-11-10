@@ -7,6 +7,7 @@ import { afterRun, beforeRun, closedSinceLastRun, gapQuestionIds } from "@/lib/c
 import { getInstrument, getQuestions, recommendTrack } from "@/lib/consultant-toolkit/instrument";
 import { casePayloadSchema, toolkitCaseSchema, toolkitRequestSchema, toolkitResponseSchema, TOOLKIT_LIMITS, type ToolkitCase, type ToolkitRequest, type ToolkitResponse } from "@/lib/consultant-toolkit/schema";
 import { LTSS_RESOURCES } from "@/lib/consultant-toolkit/ltss";
+import { linkedSourceId, linkedSourceTextHref, linkedSourceTitle, parseLinkedSource } from "@/lib/consultant-toolkit/linked-source";
 import { AnalysisView, sourceNotes } from "./consultant-toolkit/analysis-view";
 import { Field, ROUTING_LABELS, SCOPE_LABELS, spelledOut, TRACK_LABELS } from "./consultant-toolkit/field";
 import { ClosedSinceLastRun, InformationNeededPanel } from "./consultant-toolkit/information-needed-panel";
@@ -35,6 +36,7 @@ const plainError = (cause: unknown, fallback: string) => cause instanceof Error 
 const answersFor = (answers: ToolkitRequest["answers"], track: ToolkitRequest["track"]) => { const ids = new Set(getQuestions(track).map(question=>question.id)); return Object.fromEntries(Object.entries(answers).filter(([id])=>ids.has(id))); };
 const fileName = (header: string|null, fallback: string) => /filename="([^"]+)"/.exec(header||"")?.[1] || fallback;
 const POLICY_ERROR = "The Equity Policy Analyzer could not open this analysis. Your work here is unchanged.";
+const LINKED_SOURCE_ERROR = "That course could not be loaded. Attach the document or paste its text instead. Your work here is unchanged.";
 
 export function ConsultantToolkitWorkspace() {
   const [request,setRequest] = useState<ToolkitRequest>(emptyRequest);
@@ -75,6 +77,25 @@ export function ConsultantToolkitWorkspace() {
       fetch("/api/consultant/toolkit",{ signal:controller.signal,cache:"no-store" }).then(async response=>{ const body=await response.json(); if(!response.ok) throw new Error(body.error||"The workspace could not connect."); setAvailability(body); }),
       fetch("/api/consultant/toolkit/cases",{ signal:controller.signal,cache:"no-store" }).then(async response=>{ const body=await response.json(); if(response.ok && Array.isArray(body.cases)){setCases(body.cases);setNextOffset(body.nextOffset??null);} }),
     ]).catch(cause=>{ if(!controller.signal.aborted)setError(plainError(cause,"The workspace could not connect. You can still prepare your material.")); });
+    return ()=>controller.abort();
+  },[]);
+  // A course opened from its own page (?source=course:<id>) arrives as one pasted source. Nothing is run or saved.
+  useEffect(()=>{
+    const requested=new URLSearchParams(window.location.search).get("source");
+    if(requested===null)return;
+    const controller=new AbortController();
+    Promise.resolve(parseLinkedSource(requested)).then(async linked=>{
+      if(!linked)throw new Error(LINKED_SOURCE_ERROR);
+      setBusy("Loading the course…");
+      const response=await fetch(linkedSourceTextHref(linked),{signal:controller.signal,cache:"no-store",credentials:"same-origin"});
+      if(!response.ok)throw new Error(LINKED_SOURCE_ERROR);
+      const text=(await response.text()).trim();
+      if(!text)throw new Error(LINKED_SOURCE_ERROR);
+      const id=linkedSourceId(linked),title=linkedSourceTitle(text,linked);
+      setRequest(previous=>previous.sources.some(source=>source.id===id)||previous.sources.length>=TOOLKIT_LIMITS.sources?previous:{...previous,sources:[...previous.sources,{id,title,text:text.slice(0,TOOLKIT_LIMITS.sourceCharacters),origin:"user"}]});
+      setDirty(true);
+      setMessage(`${title} is loaded as a source. Check it below, then continue to the setup. Nothing has been run or saved.`);
+    }).catch(()=>{ if(!controller.signal.aborted)setError(LINKED_SOURCE_ERROR); }).finally(()=>{ if(!controller.signal.aborted)setBusy(""); });
     return ()=>controller.abort();
   },[]);
   useEffect(()=>{

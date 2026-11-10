@@ -1,3 +1,4 @@
+import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 import Link from "next/link";
 import SequenceVideo from "@/app/learn/equity-in-practice/sequence-video";
 import example from "@/lib/program/equity-toolkit-example.json";
@@ -9,12 +10,12 @@ export function EquityToolkitWorkedExample() {
     <p className={styles.eyebrow}>An optional worked example</p>
     <h2 id="worked-example-title">See how a useful analysis takes shape</h2>
     <p className={styles.intro}>See how a team could review a Community First Services and Supports (CFSS) notice, then try the approach with a different decision.</p>
-    {media.src ? <div className={styles.video}>
+    {media.src ? <FeaturedMediaPanel kind="video"><div className={styles.video}>
       <h3>{example.title}</h3>
       <p className={styles.runtime}>{media.runtime}</p>
       <SequenceVideo className={styles.player} src={media.src} poster={media.poster} title={example.title} />
       {media.transcript ? <p className={styles.runtime}><a href={media.transcript}>Read the video transcript</a></p> : null}
-    </div> : null}
+    </div></FeaturedMediaPanel> : null}
     <p className={styles.note}>Use these five questions to build confidence alongside the Equity Analysis Toolkit training. For an actual review, follow the official toolkit and the approval steps that apply to your work.</p>
     <details className={styles.example}>
       <summary>Read the completed example</summary>

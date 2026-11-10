@@ -3,6 +3,7 @@ import { GeffenLessonReadAloud } from "./geffen-course-read-aloud";
 import { useEffect, useId, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { CourseAudioDiscussion, CourseAudioGuidance } from "./course-audio-discussion";
+import { CourseMediaSlot } from "./course-media-for-page";
 import type { Block, Lesson } from "@/lib/content/courses/source-types";
 import { lessonImageOverrides } from "@/lib/content/courses/lesson-image-overrides";
 import { duplicateLessonImageKeys } from "@/lib/content/courses/lesson-image-repeat-suppression";
@@ -61,7 +62,7 @@ export function CourseLesson({courseId,lesson,objectives,previous,next,companion
   const savedFinish=Number(state.fields.finish??0);
   const finishSelected=Number.isInteger(savedFinish)&&savedFinish>=0&&savedFinish<finishParts.length?savedFinish:0;
   const finishId=`${uid}-finish`;
-  return <article className="course-lesson"><p>{lesson.minutes} minutes</p><h1>{lesson.title}</h1><Rich text={lesson.summary}/><section><h2>What you’ll be able to do</h2><ul>{objectives.map((objective,i)=><li key={i}>{objective}</li>)}</ul></section><GeffenLessonReadAloud courseId={courseId} lesson={lesson} objectives={objectives} />{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioDiscussion id="gc-structural-racism" /> : null}<fieldset disabled={!loaded} className="course-activities">{lesson.blocks.map((block,index)=>closingIndexes.includes(index)?null:<div key={index} data-course-block={block.type}>{render(block,index)}{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioGuidance id="gc-structural-racism" afterBlock={index} /> : null}</div>)}
+  return <article className="course-lesson"><p>{lesson.minutes} minutes</p><h1>{lesson.title}</h1><Rich text={lesson.summary}/>{/* Listening comes right under the title, before the objectives and activities. */}<GeffenLessonReadAloud courseId={courseId} lesson={lesson} objectives={objectives} />{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioDiscussion id="gc-structural-racism" /> : null}<CourseMediaSlot /><section><h2>What you’ll be able to do</h2><ul>{objectives.map((objective,i)=><li key={i}>{objective}</li>)}</ul></section><fieldset disabled={!loaded} className="course-activities">{lesson.blocks.map((block,index)=>closingIndexes.includes(index)?null:<div key={index} data-course-block={block.type}>{render(block,index)}{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioGuidance id="gc-structural-racism" afterBlock={index} /> : null}</div>)}
     {companion}
     {courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioGuidance id="gc-structural-racism" beforeScenario /> : null}
     {finishParts.length?<section className="course-finish" aria-labelledby={`${finishId}-title`}><h2 id={`${finishId}-title`}>Finish this lesson</h2>

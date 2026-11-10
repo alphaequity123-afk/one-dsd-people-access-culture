@@ -1,13 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import { LearningAudio } from "@/components/learning-audio";
+import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 type Guidance = {kind?:string;id:string;title:string;text:string;src?:string;afterBlock?:number;beforeScenario?:boolean};
 type Discussion = { guidance?:Guidance[]; checkIn?:string; title:string; src:string; before:string; after:string; turns:{host:string;text:string}[] };
 export function CourseAudioDiscussion({id}:{id:string}) {
  const [discussion,setDiscussion]=useState<Discussion>();
  useEffect(()=>{let active=true; fetch(`/learning/audio-discussions/${encodeURIComponent(id)}.json`).then(r=>r.ok?r.json():null).then(value=>{if(active&&value)setDiscussion(value);}).catch(()=>{});return()=>{active=false;};},[id]);
  if(!discussion)return null;
- return <section aria-label="Listen and reflect"><h2>{discussion.title}</h2><p>{discussion.before}</p><p>You can listen or read the conversation below, at your own pace.</p><LearningAudio src={discussion.src} title={discussion.title} /><p><a href={discussion.src} download>Download the discussion</a></p><details><summary>Read the complete conversation</summary>{discussion.turns.map((turn,index)=><p key={index}><strong>{turn.host==="host1"?"Host":"Co-host"}</strong><br/>{turn.text}</p>)}</details><p>{discussion.after}</p>{discussion.checkIn ? <details><summary>A moment to reflect</summary><p>{discussion.checkIn}</p></details> : null}</section>;
+ return <FeaturedMediaPanel kind="audio"><section aria-label="Listen and reflect"><h2>{discussion.title}</h2><p>{discussion.before}</p><p>You can listen or read the conversation below, at your own pace.</p><LearningAudio src={discussion.src} title={discussion.title} /><p><a href={discussion.src} download>Download the discussion</a></p><details><summary>Read the complete conversation</summary>{discussion.turns.map((turn,index)=><p key={index}><strong>{turn.host==="host1"?"Host":"Co-host"}</strong><br/>{turn.text}</p>)}</details><p>{discussion.after}</p>{discussion.checkIn ? <details><summary>A moment to reflect</summary><p>{discussion.checkIn}</p></details> : null}</section></FeaturedMediaPanel>;
 }
 
 export function CourseAudioGuidance({id,afterBlock,beforeScenario}:{id:string;afterBlock?:number;beforeScenario?:boolean}) {

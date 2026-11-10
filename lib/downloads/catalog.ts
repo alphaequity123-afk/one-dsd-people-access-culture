@@ -37,6 +37,8 @@ export const DOWNLOAD_KINDS = [
   "leadership-styles",
   "reading",
   "learn-page",
+  // Self-directed courses, by course number such as F07 (lib/downloads/adapters/self-directed.ts)
+  "self-directed-course",
   // Community Outreach and Engagement and related public pages (lib/downloads/adapters/hub.ts)
   "organization",
   "policy",

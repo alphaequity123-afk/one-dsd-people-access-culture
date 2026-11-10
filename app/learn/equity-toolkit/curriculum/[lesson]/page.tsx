@@ -36,5 +36,5 @@ export default async function Page({ params }: { params: Promise<{ lesson: strin
   const { lesson } = await params;
   if (!curriculum.modules.some(module => module.id === lesson)) notFound();
   const scope = await requestedContentScope();
-  return <><div className="mx-auto max-w-[1120px] px-4 pt-6 sm:px-6 print:hidden"><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="toolkit-lesson" id={lesson} noun="lesson" scope={scope} /></details></div><EquityDecisionsCurriculum key={lesson} lessonId={lesson}/></>;
+  return <EquityDecisionsCurriculum key={lesson} lessonId={lesson} downloads={<details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="toolkit-lesson" id={lesson} noun="lesson" scope={scope} /></details>}/>;
 }

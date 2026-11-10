@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import { FeaturedMediaPanel, mediaLength } from './featured-media-panel';
 
 // Isolated presentation candidate. Its parent must supply media only after a
 // separate seven-lesson release gate validates current source, audio and video
@@ -26,7 +27,7 @@ export function validLessonMedia(id: string, media: LessonMedia | undefined): me
 export default function InterculturalLessonVideo({ id, title, media }: { id: string; title: string; media?: LessonMedia }) {
   const video = useRef<HTMLVideoElement>(null);
   if (!validLessonMedia(id, media)) return null;
-  return <section aria-labelledby={`watch-${id}`}>
+  return <FeaturedMediaPanel kind="video" length={mediaLength(media.durationSeconds)}><section aria-labelledby={`watch-${id}`}>
     <h2 id={`watch-${id}`}>Watch and work through the lesson</h2>
     <video ref={video} controls preload="metadata" playsInline poster={media.poster} aria-label={title}
       onPlay={event => document.querySelectorAll<HTMLMediaElement>('audio,video').forEach(other => { if (other !== event.currentTarget) other.pause(); })}>
@@ -34,10 +35,9 @@ export default function InterculturalLessonVideo({ id, title, media }: { id: str
       <track kind="captions" src={media.captions} srcLang="en" label="English" default />
       Your browser cannot play this video. The full transcript is below.
     </video>
-    <p>Pause when you want time to think or use the activity below.</p>
     <a href={media.video}>Open the video</a>{' | '}<a href={media.captions}>Download captions</a>
     <details><summary>Go to a chapter</summary><ol>{media.chapters.map((chapter, i) => <li key={`${i}-${chapter.title}`}>
       <button type="button" onClick={() => { if (video.current) { video.current.currentTime = chapter.start; video.current.focus(); } }}>{chapter.title}</button>
     </li>)}</ol></details>
-  </section>;
+  </section></FeaturedMediaPanel>;
 }

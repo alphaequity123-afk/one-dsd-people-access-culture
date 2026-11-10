@@ -17,11 +17,11 @@ export function CulturalLeadershipStyles() {
     </aside>
     <div className="grid gap-4 md:grid-cols-2">{culturalLeadershipApproaches.map(approach => <details id={`leadership-style-${approach.id}`} key={approach.id} className="rounded-xl border border-line p-5">
       <summary className="cursor-pointer font-semibold">{approach.name}</summary>
+      <LeadershipStyleVideo style={approach.id} title={approach.name} />
       <p className="mt-3 leading-7">{approach.description}</p>
       <p className="mt-3 leading-7"><strong>Where it may help:</strong> {approach.possibleUse}</p>
       <p className="mt-3 leading-7"><strong>What to examine:</strong> {approach.watchFor}</p>
       <p className="mt-3"><Link className="underline" href={leadershipStyleHref(LEGACY_STYLE_TO_PATHWAY[approach.id])}>Read the full lesson, with scenarios and practice</Link></p>
-      <LeadershipStyleVideo style={approach.id} title={approach.name} />
     </details>)}</div>
     <div className="max-w-4xl space-y-3 leading-7">
       <h4 className="text-xl font-semibold">Bring the comparison to DSD work</h4>

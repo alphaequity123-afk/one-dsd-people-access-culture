@@ -1,8 +1,9 @@
 'use client';
 import Link from "next/link";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import InterculturalLessonVideo, { type LessonMedia } from './intercultural-lesson-video';
+import { CourseMediaSlot } from './course-media-for-page';
 import './intercultural-curriculum.css';
 
 type Community = { id: string; title: string; href: string; standingTribalDeference: boolean; prompt: string; lesson: number };
@@ -33,7 +34,8 @@ function Communities({ items }: { items: Community[] }) {
   </section>;
 }
 
-export default function InterculturalCurriculum({ lessonId, communities, resources, curriculum, mediaData }: { lessonId?: string; communities: Community[]; resources: Resource[]; curriculum: Curriculum; mediaData: MediaIndex }) {
+/** `downloads` is the page's "Download or share" panel; it follows the lesson video so the video sits right under the title. */
+export default function InterculturalCurriculum({ lessonId, communities, resources, curriculum, mediaData, downloads }: { lessonId?: string; communities: Community[]; resources: Resource[]; curriculum: Curriculum; mediaData: MediaIndex; downloads?: ReactNode }) {
   const modules = curriculum.modules;
   const [completed, setCompleted] = useState<string[]>([]);
   const [answer, setAnswer] = useState<number | null>(null);
@@ -74,6 +76,8 @@ export default function InterculturalCurriculum({ lessonId, communities, resourc
     </> : <>
       <p>Part {index + 1} of {modules.length}</p>
       <InterculturalLessonVideo id={lesson.id} title={lesson.title} media={media} />
+      <CourseMediaSlot />
+      {downloads}
       <section><h2>Read and reflect</h2>{lesson.sections.map((section, n) => <section key={`${n}-${section.title}`}><h3>{section.title}</h3>{section.paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}</section>)}</section>
       <section><h2>Try a decision</h2><fieldset><legend>{lesson.practice.question}</legend>{lesson.practice.options.map((option, n) => <label key={n}><input type="radio" name={`decision-${lesson.id}`} checked={answer === n} onChange={() => setAnswer(n)}/><span>{option.text}</span></label>)}</fieldset><div className="intercultural-feedback" aria-live="polite">{answer !== null && <><h3>Think it through</h3><p>{lesson.practice.options[answer].feedback}</p><p>You can choose another response and compare the reasoning.</p></>}</div></section>
       <section><h2>Bring it into your work</h2><p>{lesson.practice.reflection}</p><p>{lesson.practice.artifact}</p><label htmlFor="intercultural-note">Optional working note</label><textarea id="intercultural-note" rows={6} value={notes} onChange={e => setNotes(e.target.value)} aria-describedby="note-privacy"/><p id="note-privacy">This note is not sent or automatically saved. Download it if you want to keep a copy. Do not include names, case details or other private information.</p><button type="button" onClick={() => download(`Intercultural-part-${lesson.id}-notes.txt`, `${lesson.title}\n\n${lesson.practice.reflection}\n\n${notes}`)}>Download my note</button> <button type="button" onClick={() => download('Intercultural-working-notes.txt', companion(modules))}>Download working notes</button></section>

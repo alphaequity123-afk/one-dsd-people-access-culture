@@ -6,7 +6,8 @@ import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_MODULES, WATER_SUPPORT } f
 import "@/components/community-editorial.css";
 import "@/components/community-research-sections.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
-import { WaterFigure, WaterLessonOpening, WaterLessonPractice, chapterImages, heroOf } from "@/components/water-curriculum";
+import { WaterFigure, WaterLessonOpening, WaterLessonPodcast, WaterLessonPractice, chapterImages, heroOf } from "@/components/water-curriculum";
+import { CourseMediaSlot } from "@/components/course-media-for-page";
 import { waterLesson, waterModuleId, waterPractice, waterRecall } from "@/lib/content/water-curriculum";
 
 export async function generateMetadata({ params }: { params: Promise<{ module: string }> }): Promise<Metadata> {
@@ -29,9 +30,18 @@ export default async function WaterModulePage({ params }: { params: Promise<{ mo
   return <div className="community-editorial"><div className="community-index-layout community-research">
     <p className="community-eyebrow"><Link href={WATER_COURSE_HREF}>{WATER_COURSE_TITLE}</Link>: module {current.number} of {WATER_MODULES.length}</p>
     <h1 id="top">{current.title}</h1>
-    {hero && <WaterFigure image={hero} priority />}
-    <p className="community-opening">{current.goal}</p>
-    <WaterLessonOpening lesson={lesson} practice={practice} recall={waterRecall(id)} previousTitle={previous?.title} previousNumber={previous?.number} moduleTitle={current.title} />
+    {/* With a podcast, it sits right under the title and goal; the photograph follows it. */}
+    {lesson?.podcast ? <>
+      <p className="community-opening">{current.goal}</p>
+      <WaterLessonPodcast lesson={lesson} moduleTitle={current.title} />
+      <CourseMediaSlot />
+      {hero && <WaterFigure image={hero} priority />}
+    </> : <>
+      {hero && <WaterFigure image={hero} priority />}
+      <p className="community-opening">{current.goal}</p>
+      <CourseMediaSlot />
+    </>}
+    <WaterLessonOpening practice={practice} recall={waterRecall(id)} previousTitle={previous?.title} previousNumber={previous?.number} />
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this module</summary><ResourceDownloads kind="water-we-swim-in" id={current.slug} noun="module" /></details>
     <WaterModuleBody markdown={current.body} notesKey={`water-we-swim-in-notes-${current.number}`} images={chapterImages(lesson)} />
     <WaterLessonPractice practice={practice} moduleTitle={current.title} moduleNumber={current.number} />

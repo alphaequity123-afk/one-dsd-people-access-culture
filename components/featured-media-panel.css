@@ -1,0 +1,74 @@
+/* Shared panel for lesson videos, explainers and podcasts (owner 2026-11-10: near the top, clearly labeled,
+   must stand out from the white page). A solid title bar with white text sits across the top of a tinted panel
+   with a matching border: program navy for video, deep green for podcasts and listening. Contrast: white on
+   #003865 12.6:1; white on #1f5f3f 8.0:1; length #d6e4f0 on #003865 9.4:1; body #183247 on #eef4f8 11.9:1;
+   focus ring #005ea8 6.0:1. Text labels only. */
+.featured-media-panel {
+  margin: 1rem 0 1.75rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: #eef4f8;
+  border: 2px solid #003865;
+  border-top-width: 10px;
+  border-radius: 10px;
+  color: #183247;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 56, 101, .14);
+}
+.featured-media-panel.featured-media-panel .featured-media-label {
+  max-width: none;
+  margin: 0 -1.5rem 1rem;
+  padding: .7rem 1.5rem;
+  background: #003865;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.featured-media-panel .featured-media-length {
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #d6e4f0;
+}
+.featured-media-panel--podcast,
+.featured-media-panel--audio { border-color: #1f5f3f; background: #eef6f0; box-shadow: 0 2px 10px rgba(31, 95, 63, .14); }
+.featured-media-panel--podcast .featured-media-label,
+.featured-media-panel--audio .featured-media-label { background: #1f5f3f; }
+.featured-media-panel--podcast .featured-media-length,
+.featured-media-panel--audio .featured-media-length { color: #e2efe6; }
+.featured-media-panel .featured-media-description {
+  margin: 0 0 .75rem;
+  line-height: 1.6;
+}
+/* Doubled class so page rules such as ".clas-study section" do not add their own outer margins inside the panel. */
+.featured-media-panel.featured-media-panel > :is(section, details, div, aside) { margin-top: .5rem; margin-bottom: 0; border-top: 0; padding-top: 0; }
+.featured-media-panel.featured-media-panel > :last-child { margin-bottom: 0; }
+.featured-media-panel.featured-media-panel h2 { margin-top: .25rem; }
+.featured-media-panel video { display: block; max-width: 100%; }
+.featured-media-panel :is(a, button, summary, video, audio):focus-visible { outline: 3px solid #005ea8; outline-offset: 3px; }
+.media-quick-links { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; margin: .75rem 0 0; }
+.media-quick-links-label { font-weight: 700; color: #183247; }
+/* Doubled classes so page link colors (for example ".clas-study a") cannot turn the button text dark. */
+.media-quick-links.media-quick-links a.media-quick-link,
+.media-quick-links.media-quick-links a.media-quick-link:visited { color: #fff; }
+.media-quick-links .media-quick-link {
+  display: inline-flex; align-items: center; min-height: 2.5rem; padding: .35rem 1rem;
+  border-radius: 999px; background: #003865; color: #fff; font-weight: 700; text-decoration: none;
+}
+.media-quick-links.media-quick-links a.media-quick-link--video { background: #003865; }
+.media-quick-links.media-quick-links a.media-quick-link--podcast,
+.media-quick-links.media-quick-links a.media-quick-link--audio { background: #1f5f3f; }
+.media-quick-links .media-quick-link:hover { text-decoration: underline; }
+.media-quick-links .media-quick-link:focus-visible { outline: 3px solid #005ea8; outline-offset: 3px; }
+@media print { .media-quick-links { display: none; } }
+@media (max-width: 700px) {
+  .featured-media-panel { padding: 1rem 1rem 1.25rem; }
+  .featured-media-panel .featured-media-label { margin: 0 -1rem .85rem; padding: .6rem 1rem; }
+}
+@media print {
+  .featured-media-panel { background: none; border: 0; padding: 0; box-shadow: none; }
+  .featured-media-panel .featured-media-label { background: none; color: #003865; margin: 0 0 .35rem; padding: 0; }
+}

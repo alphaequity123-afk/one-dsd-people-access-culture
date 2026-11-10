@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import curriculum from '@/lib/content/clas-curriculum.json';
 import { EMPTY_FRONT_PAGE_DATA, EMPTY_LESSON_PAGE_DATA, type ClasFrontPageData, type ClasLessonPageData } from '@/lib/learning/clas-page-data';
 import { workbookText } from '@/lib/learning/clas-workbook';
@@ -14,6 +14,8 @@ import TutorPanel from './tutor-panel';
 import { WalkthroughPlaylist } from './clas-curriculum/walkthrough-playlist';
 import { ShareClasCollection } from './clas-curriculum/share-collection';
 import { ClTabs } from './cl-tabs';
+import { CourseMediaSlot } from './course-media-for-page';
+import { FeaturedMediaPanel, MediaQuickLinks, mediaLength } from './featured-media-panel';
 import './clas-curriculum.css';
 
 const base = '/learn/clas/curriculum';
@@ -26,9 +28,11 @@ type Props = {
   data?: Partial<ClasLessonPageData>;
   /** Server-loaded extras for the front page. */
   front?: Partial<ClasFrontPageData>;
+  /** The page's "Download or share" panel. It sits after the lesson video and discussion, so the players are near the top. */
+  downloads?: ReactNode;
 };
 
-export default function ClasCurriculum({ lessonId, data, front }: Props) {
+export default function ClasCurriculum({ lessonId, data, front, downloads }: Props) {
   const [completed, setCompleted] = useState<string[]>([]), [storageMessage, setStorageMessage] = useState(''), [noteVersion, setNoteVersion] = useState(0);
   const index = curriculum.modules.findIndex(m => m.id === lessonId), lesson = curriculum.modules[index];
   const page: ClasLessonPageData = { ...EMPTY_LESSON_PAGE_DATA, ...data };
@@ -43,37 +47,48 @@ export default function ClasCurriculum({ lessonId, data, front }: Props) {
   const chapters = (lesson?.chapters ?? []) as Chapter[];
   const walkthrough = page.walkthrough;
   const lastPart = index === curriculum.modules.length - 1;
+  const showRecall = page.recall.length > 0 && index > 0;
+  const hasKeyPoints = Boolean(practice && practice.keyPoints.length > 0);
+  const clasNav = <nav aria-label="CLAS learning"><Link prefetch={false} href="/learn/clas/collection">Shareable curriculum collection</Link><Link prefetch={false} href="/learn/clas">National Culturally and Linguistically Appropriate Services Standards collection</Link>{lesson && <a href={base}>Curriculum overview</a>}</nav>;
   return <div className="clas-study">
-    <nav aria-label="CLAS learning"><Link prefetch={false} href="/learn/clas/collection">Shareable curriculum collection</Link><Link prefetch={false} href="/learn/clas">National Culturally and Linguistically Appropriate Services Standards collection</Link>{lesson && <a href={base}>Curriculum overview</a>}</nav>
+    {/* On a lesson the collection links follow the media, so the video starts in the first screen. */}
+    {!lesson && clasNav}
     <header><p className="clas-study-eyebrow">SELF-DIRECTED LEARNING</p><h1>{lesson ? lesson.title : curriculum.title}</h1>{practice?.outcome && <p className="clas-study-outcome">{practice.outcome}</p>}<p className="clas-study-lede">{lesson ? lesson.deliverable : 'Follow one work example from understanding a barrier to planning and reviewing an improvement.'}</p></header>
     {!lesson ? <>
+      {frontPage.walkthroughs.length > 0 && <FeaturedMediaPanel kind="podcast"><section aria-labelledby="listen"><h2 id="listen">Listen to the full walkthrough</h2><p>Two voices discuss the whole curriculum, one chapter per part. Listen here from start to finish, or open any part to hear its chapter with a synced transcript. The lessons stand on their own; this is a second, deeper pass.</p><WalkthroughPlaylist items={frontPage.walkthroughs} /></section></FeaturedMediaPanel>}
+      <CourseMediaSlot />
       <ShareClasCollection />
       <section aria-labelledby="start"><h2 id="start">A connected path you can use at your own pace</h2><p>Begin with the person’s experience, then explore communication, responsibility, participation and improvement. Every part includes recorded guidance, a synced transcript, decisions to practice, a working note that builds into your own plan and, where available, a one-page job aid.</p><p>You do not need a group. You can pause, revisit a lesson or use the sample service notice. Reflection is optional and does not need to be shared. Leave names, case details and other private information out of learning notes.</p><a className="clas-study-primary text-white" href={`${base}/01`}>Start the curriculum</a> <button type="button" onClick={workbook}>Download the companion working notes</button></section>
-      {frontPage.walkthroughs.length > 0 && <section aria-labelledby="listen"><h2 id="listen">Listen to the full walkthrough</h2><p>Two voices discuss the whole curriculum, one chapter per part. Listen here from start to finish, or open any part to hear its chapter with a synced transcript. The lessons stand on their own; this is a second, deeper pass.</p><WalkthroughPlaylist items={frontPage.walkthroughs} /></section>}
       <ol className="clas-study-path">{curriculum.modules.map(m => <li key={m.id}><a href={`${base}/${m.id}`}><span>Part {Number(m.id)}</span><h2>{m.title}</h2></a><p>{m.deliverable}</p>{m.durationSeconds > 0 && <p>Video: about {minutes(m.durationSeconds)} minutes, plus time for your own practice.</p>}<p>CLAS standards: {m.standards.join(', ')}{completed.includes(m.id) ? ' · Marked complete' : ''}</p>{frontPage.jobAidIds.includes(m.id) && <p><a href={`${base}/${m.id}/job-aid`}>One-page job aid for Part {Number(m.id)}</a></p>}</li>)}</ol>
       <section><h2>Where the standards fit</h2><p>These brief descriptions help you find the relevant lesson. Read the original standards for their complete wording.</p><ol>{curriculum.standards.map(s => <li key={s.number}><a href={`${base}/${s.lesson}`}>{s.focus}</a></li>)}</ol></section>
       <section><h2>Use the standards alongside current guidance</h2><p>This curriculum connects the National Culturally and Linguistically Appropriate Services Standards to individual work. It does not replace agency requirements, specialist guidance or approval processes. Identify what you can change and where coordination is needed.</p><a href="https://thinkculturalhealth.hhs.gov/clas/standards" target="_blank" rel="noreferrer">Read the current National Culturally and Linguistically Appropriate Services Standards</a></section>
     </> : <>
-      <p>Part {index + 1} of {curriculum.modules.length} · CLAS standards {lesson.standards.join(', ')}{lesson.durationSeconds > 0 ? ` · Video: about ${minutes(lesson.durationSeconds)} minutes` : ''}{walkthrough && walkthrough.durationSeconds > 0 ? ` · Discussion: about ${minutes(walkthrough.durationSeconds)} minutes` : ''}</p>
-      {page.jobAidAvailable && <p><a href={`${base}/${lesson.id}/job-aid`}>Open the one-page job aid for this part</a> (printable, with a text download)</p>}
-      <ClTabs label="Lesson sections" tabs={[
-        { id: 'tab-watch', label: 'Watch', content: <>
-      {page.recall.length > 0 && index > 0 && <RecallSection questions={page.recall} previousTitle={curriculum.modules[index - 1].title} previousPart={index} />}
-      <section aria-labelledby="watch"><h2 id="watch">Watch the lesson</h2>
+      <p>Part {index + 1} of {curriculum.modules.length} · CLAS standards {lesson.standards.join(', ')}</p>
+      <MediaQuickLinks links={[
+        { href: '#watch', kind: 'video', text: 'Watch the lesson' },
+        ...(walkthrough ? [{ href: '#discuss', kind: 'podcast' as const, text: 'Listen to the discussion' }] : []),
+      ]} />
+      {/* The lesson video and its discussion come first, right under the title, so nobody has to scroll to find them. */}
+      <FeaturedMediaPanel kind="video" length={mediaLength(lesson.durationSeconds)}><section aria-labelledby="watch"><h2 id="watch">Watch the lesson</h2>
         <SyncedMediaPlayer mediaId={`video:${lesson.id}`} kind="video" src={lesson.video} captions={lesson.captions} poster={`/learning/clas-curriculum/${lesson.id}/poster.png`} label={lesson.title} chapters={chapters} cues={page.cues} keyPoints={practice?.keyPoints} cardDescriptions={practice?.cardDescriptions} transcriptTitle="Transcript of the lesson video">
-          <p>Pause when you want time to think or use the activity below. Playback does not begin automatically.</p>
           <p><a href={lesson.video}>Open the video</a> · <a href={lesson.captions}>Download captions</a></p>
         </SyncedMediaPlayer>
-        {practice && practice.keyPoints.length > 0 && <KeyPointsPanel keyPoints={practice.keyPoints} chapters={chapters} />}
-      </section>
-      </> },
-        { id: 'tab-discuss', label: 'Discuss', content: <>
-      {walkthrough && <section aria-labelledby="discuss"><h2 id="discuss">Hear it discussed</h2><p>Two voices talk through this part in more depth. Listen when you want the longer version; the lesson above stands on its own.</p>
+      </section></FeaturedMediaPanel>
+      {walkthrough && <FeaturedMediaPanel kind="podcast" length={mediaLength(walkthrough.durationSeconds)}><section aria-labelledby="discuss"><h2 id="discuss">Listen to the discussion</h2>
         <SyncedMediaPlayer mediaId={`walkthrough:${lesson.id}`} kind="audio" src={walkthrough.audio} captions={walkthrough.captions} label={`Walkthrough discussion, Part ${index + 1}: ${lesson.title}`} chapters={walkthrough.chapters} cues={page.walkthroughCues} transcriptTitle="Transcript of the discussion">
-          <p>Playback does not begin automatically. Pause whenever you want time to think.</p>
           <p><a href={walkthrough.audio}>Open the audio</a>{walkthrough.captions && <> · <a href={walkthrough.captions}>Download captions</a></>}{walkthrough.transcript && <> · <a href={walkthrough.transcript}>Download the transcript</a></>}</p>
         </SyncedMediaPlayer>
-      </section>}
+      </section></FeaturedMediaPanel>}
+      <CourseMediaSlot />
+      {clasNav}
+      {page.jobAidAvailable && <p><a href={`${base}/${lesson.id}/job-aid`}>Open the one-page job aid for this part</a> (printable, with a text download)</p>}
+      {downloads}
+      <ClTabs label="Lesson sections" tabs={[
+        ...(showRecall || hasKeyPoints ? [{ id: 'tab-watch', label: showRecall ? 'Recall and key points' : 'Key points', content: <>
+      {showRecall && <RecallSection questions={page.recall} previousTitle={curriculum.modules[index - 1].title} previousPart={index} />}
+      {hasKeyPoints && <KeyPointsPanel keyPoints={practice!.keyPoints} chapters={chapters} headingLevel={2} />}
+      </> }] : []),
+        { id: 'tab-discuss', label: 'Example', content: <>
       <section><h2>{lesson.example.title}</h2><p>{lesson.example.situation}</p><details><summary>Work through the example</summary><p>{lesson.example.response}</p><p>{lesson.example.reason}</p></details></section>
       </> },
         { id: 'tab-practice', label: 'Practice', content: <>

@@ -1,10 +1,12 @@
 'use client';
 import Link from "next/link";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import data from '@/lib/content/equity-everyday-decisions.json';
 import { hasReadyMedia, validCompleted, workbookText, type Curriculum, type Resource } from '@/lib/content/equity-decisions-model';
 import './equity-decisions-curriculum.css';
+import { CourseMediaSlot } from './course-media-for-page';
+import { FeaturedMediaPanel, mediaLength } from './featured-media-panel';
 
 const curriculum = data as unknown as Curriculum;
 const base = '/learn/equity-toolkit/curriculum';
@@ -26,7 +28,8 @@ function ResourceList({ resources }: { resources: Resource[] }) {
   </li>)}</ul>;
 }
 
-export default function EquityDecisionsCurriculum({ lessonId }: { lessonId?: string }) {
+/** `downloads` is the page's "Download or share" panel; it follows the lesson video so the video sits right under the title. */
+export default function EquityDecisionsCurriculum({ lessonId, downloads }: { lessonId?: string; downloads?: ReactNode }) {
   const [completed, setCompleted] = useState<string[]>([]);
   const [answer, setAnswer] = useState<number | null>(null);
   const [notes, setNotes] = useState('');
@@ -89,19 +92,20 @@ export default function EquityDecisionsCurriculum({ lessonId }: { lessonId?: str
       </section>
     </> : <>
       <p>Part {index + 1} of {curriculum.modules.length}{hasReadyMedia(lesson) ? ` · Video: about ${Math.ceil(lesson.durationSeconds! / 60)} minutes` : ''}</p>
-      {hasReadyMedia(lesson) && <section aria-labelledby="watch">
+      {hasReadyMedia(lesson) && <FeaturedMediaPanel kind="video" length={mediaLength(lesson.durationSeconds)}><section aria-labelledby="watch">
         <h2 id="watch">Watch and work through the lesson</h2>
         <video ref={video} onPlay={event => document.querySelectorAll<HTMLMediaElement>('audio,video').forEach(other => { if (other !== event.currentTarget) other.pause(); })} controls preload="metadata" playsInline poster={lesson.poster} aria-label={lesson.title}>
           <source src={lesson.video} type="video/mp4"/>
           <track kind="captions" src={lesson.captions} srcLang="en" label="English" default/>
           Your browser cannot play this video. The full transcript is below.
         </video>
-        <p>Pause when you want time to think or use the activity below. Playback does not begin automatically.</p>
         <a href={lesson.video}>Open the video</a> · <a href={lesson.captions}>Download captions</a>
         <details><summary>Go to a chapter</summary><ol>{lesson.chapters!.map(chapter => <li key={chapter.title}>
           <button type="button" onClick={() => { if (video.current) { video.current.currentTime = chapter.start; video.current.focus(); } }}>{chapter.title}</button>
         </li>)}</ol></details>
-      </section>}
+      </section></FeaturedMediaPanel>}
+      <CourseMediaSlot />
+      {downloads}
       <section><h2>{lesson.example.title}</h2><p>{lesson.example.situation}</p>
         <details><summary>Work through the example</summary><p>{lesson.example.response}</p><p>{lesson.example.reason}</p></details>
       </section>

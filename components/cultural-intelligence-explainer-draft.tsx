@@ -1,4 +1,5 @@
 "use client";
+import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 
 import { useState } from "react";
 import content from "@/lib/content/cultural-intelligence-explainer-draft.json";
@@ -20,14 +21,14 @@ export function CulturalIntelligenceExplainerDraft({ media = {} }: { media?: Rec
     <p>Explore these topics in any order. Your practice choices stay on this page and are not saved when you leave or reload it.</p>
     {content.lessons.map(lesson => <section key={lesson.id} aria-labelledby={`explainer-${lesson.id}`} className="space-y-5 border-t border-line pt-6">
       <h4 id={`explainer-${lesson.id}`} className="text-2xl font-semibold">{lesson.title}</h4>
-      {availableMedia(lesson.id, media[lesson.id]) ? <div className="space-y-3">
+      {availableMedia(lesson.id, media[lesson.id]) ? <FeaturedMediaPanel kind="video"><div className="space-y-3">
         <video controls playsInline preload="metadata" aria-label={lesson.title}>
           <source src={media[lesson.id].video} type="video/mp4" />
           <track kind="captions" src={media[lesson.id].captions} srcLang="en" label="English" default />
           Your browser cannot play this video. You can read the lesson below.
         </video>
-        <p>Pause whenever you want time to think or try the activity below.</p>
-      </div> : <p>You can read the lesson below.</p>}
+        <p><a href={media[lesson.id].captions}>Download the captions</a></p>
+      </div></FeaturedMediaPanel> : <p>You can read the lesson below.</p>}
       <p>If you’re reading, take a moment to choose your response before continuing.</p>
       <details className="rounded-xl border border-line p-5">
         <summary className="cursor-pointer font-semibold">Read {lesson.title}</summary>

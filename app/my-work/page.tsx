@@ -28,6 +28,7 @@ export default async function MyWorkPage() {
         lede="Everything you choose to keep lives here: the resources you saved, the plans you are working on, your reflection, and the courses you left off in. It stays on this computer, private to you."
       />
       <div className="wrap space-y-6 py-8">
+        <ExplainerVideo id="learning-journey" />
         <section aria-labelledby="put-to-work-title">
           <h2 id="put-to-work-title" className="text-2xl font-bold">Put learning to work</h2>
           <ul className="calm-choices">
@@ -38,7 +39,6 @@ export default async function MyWorkPage() {
           </ul>
         </section>
         <MyPath />
-        <ExplainerVideo id="learning-journey" />
         <DsdSavedResourceShelf />
         <SavedDecisionLinks />
         <SelfDirectedContinue courses={SELF_DIRECTED_COURSES.map(({number,title})=>({number,title}))} />

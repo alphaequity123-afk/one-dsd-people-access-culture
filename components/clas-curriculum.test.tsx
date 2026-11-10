@@ -35,6 +35,7 @@ describe('lesson page without practice data (older content)', () => {
     expect(view.getByRole('heading', { level: 1 }).textContent).toBe(curriculum.modules[0].title);
     expect(view.container.querySelector('.clas-study-outcome')).toBeNull();
     expect(view.queryByText(/Before you watch/)).toBeNull();
+    expect(view.queryByRole('heading', { name: 'Listen to the discussion' })).toBeNull();
     expect(view.queryByRole('heading', { name: 'Hear it discussed' })).toBeNull();
     expect(view.queryByRole('heading', { name: 'Key points from this lesson' })).toBeNull();
     expect(view.queryByText(/More decisions to practice/)).toBeNull();
@@ -42,7 +43,8 @@ describe('lesson page without practice data (older content)', () => {
     const video = view.container.querySelector('video')!;
     expect(video.autoplay).toBe(false);
     expect(video.querySelector('track')?.getAttribute('src')).toBe(curriculum.modules[0].captions);
-    expect(view.getByText(/Playback does not begin automatically/)).toBeTruthy();
+    // Owner 2026-11-10: no extra wording around the player.
+    expect(view.container.textContent).not.toMatch(/Playback does not begin automatically|Pause when you want time to think|Pause whenever you want time to think/);
     expect(view.container.querySelectorAll('.clas-transcript-cue')).toHaveLength(cues.length);
     const chapterNav = view.getByRole('navigation', { name: `Chapters: ${curriculum.modules[0].title}` });
     expect(within(chapterNav).getAllByRole('button')).toHaveLength(curriculum.modules[0].chapters.length);
@@ -144,10 +146,12 @@ describe('lesson page with practice data', () => {
     expect(within(ordering).getByText('That matches the suggested order')).toBeTruthy();
     expect(ordering.querySelector('[draggable="true"]')).toBeNull();
   });
-  it('asks the previous part\'s recall questions before the video on part 2, with feedback', () => {
+  it('asks the previous part\'s recall questions on part 2, right after the lesson video and before practice, with feedback', () => {
     const view = render(<ClasCurriculum lessonId="02" data={{ recall: moduleOne.recall }} />);
     const recall = view.getByRole('region', { name: /Before you watch: a quick recall from Part 1/ });
-    expect(recall.compareDocumentPosition(view.container.querySelector('video')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    // Owner rule 2026-11-10: the video is found without scrolling, so it comes before the recall.
+    expect(view.container.querySelector('video')!.compareDocumentPosition(recall) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(view.getByRole('tab', { name: 'Recall and key points' }).getAttribute('aria-selected')).toBe('true');
     const first = within(recall).getByRole('group', { name: moduleOne.recall[0].question });
     fireEvent.click(within(first).getByLabelText('The person\'s experience of the service.'));
     fireEvent.click(within(first).getByRole('button', { name: 'Check my answer' }));
@@ -160,17 +164,17 @@ describe('lesson page with practice data', () => {
 });
 
 describe('lesson tabs', () => {
-  const tabs = ['Watch', 'Discuss', 'Practice', 'Use it at work', 'Full lesson text', 'Sources'];
-  it('groups every section into tabs on one address, with Watch open and every panel still in the page', () => {
+  const tabs = ['Recall and key points', 'Example', 'Practice', 'Use it at work', 'Full lesson text', 'Sources'];
+  it('groups every section into tabs on one address, with the first tab open and every panel still in the page', () => {
     const view = render(<ClasCurriculum lessonId="02" data={{ cues, walkthrough, walkthroughCues, practice: moduleOne, recall: moduleOne.recall }} />);
     const list = view.getByRole('tablist', { name: 'Lesson sections' });
     expect(within(list).getAllByRole('tab').map(tab => tab.textContent)).toEqual(tabs);
-    expect(view.getByRole('tab', { name: 'Watch' }).getAttribute('aria-selected')).toBe('true');
+    expect(view.getByRole('tab', { name: 'Recall and key points' }).getAttribute('aria-selected')).toBe('true');
     expect(view.getAllByRole('tabpanel')).toHaveLength(1);
     expect(view.getByRole('tabpanel').id).toBe('tab-watch');
     const lesson = curriculum.modules[1];
     // Every original section heading is still on the page (hidden panels included), word for word.
-    for (const heading of [/Before you watch: a quick recall from Part 1/, 'Watch the lesson', 'Hear it discussed', lesson.example.title, 'Practice with guidance', 'Bring it into your work', 'Read the full lesson', 'Your next step', 'Sources and further guidance'])
+    for (const heading of [/Before you watch: a quick recall from Part 1/, 'Watch the lesson', 'Listen to the discussion', lesson.example.title, 'Practice with guidance', 'Bring it into your work', 'Read the full lesson', 'Your next step', 'Sources and further guidance'])
       expect(view.getByRole('heading', { name: heading, hidden: true })).toBeTruthy();
     for (const section of lesson.sections) for (const paragraph of section.paragraphs) expect(view.getAllByText(paragraph).length).toBeGreaterThan(0);
     expect(view.getByText(lesson.example.response)).toBeTruthy();
@@ -178,9 +182,9 @@ describe('lesson tabs', () => {
     for (const panel of view.container.querySelectorAll('.cl-tabs-panel')) expect(panel.getAttribute('role')).toBe('tabpanel');
   });
   it('moves between tabs with the arrow, Home and End keys and records the tab in the address', () => {
-    const view = render(<ClasCurriculum lessonId="01" />);
-    fireEvent.keyDown(view.getByRole('tab', { name: 'Watch' }), { key: 'ArrowRight' });
-    expect(document.activeElement).toBe(view.getByRole('tab', { name: 'Discuss' }));
+    const view = render(<ClasCurriculum lessonId="01" data={{ practice: moduleOne }} />);
+    fireEvent.keyDown(view.getByRole('tab', { name: 'Key points' }), { key: 'ArrowRight' });
+    expect(document.activeElement).toBe(view.getByRole('tab', { name: 'Example' }));
     expect(view.getByRole('tabpanel').id).toBe('tab-discuss');
     expect(window.location.hash).toBe('#tab-discuss');
     fireEvent.keyDown(document.activeElement!, { key: 'End' });
@@ -190,7 +194,7 @@ describe('lesson tabs', () => {
     fireEvent.keyDown(document.activeElement!, { key: 'ArrowLeft' });
     expect(view.getByRole('tabpanel').id).toBe('tab-sources');
     fireEvent.keyDown(document.activeElement!, { key: 'Home' });
-    expect(view.getByRole('tab', { name: 'Watch' }).tabIndex).toBe(0);
+    expect(view.getByRole('tab', { name: 'Key points' }).tabIndex).toBe(0);
     expect(view.getByRole('tab', { name: 'Sources' }).tabIndex).toBe(-1);
   });
   it('opens the tab that holds a deep-linked section, and a tab named in the address', () => {
@@ -207,7 +211,7 @@ describe('lesson tabs', () => {
   });
   it('renders every panel visible before hydration, so the lesson reads without JavaScript', async () => {
     const { renderToString } = await import('react-dom/server');
-    const html = renderToString(<ClasCurriculum lessonId="01" />);
+    const html = renderToString(<ClasCurriculum lessonId="01" data={{ practice: moduleOne }} />);
     expect(html).not.toMatch(/<div[^>]*cl-tabs-panel[^>]*hidden/);
     expect(html).not.toContain('role="tablist"');
     for (const id of ['tab-watch', 'tab-discuss', 'tab-practice', 'tab-use-at-work', 'tab-full-lesson', 'tab-sources']) expect(html).toContain(`href="#${id}"`);
@@ -217,12 +221,18 @@ describe('lesson tabs', () => {
 });
 
 describe('walkthrough audio', () => {
-  it('adds "Hear it discussed" with its own synced transcript, chapters and downloads when the fields exist', () => {
+  it('adds "Listen to the discussion" with its own synced transcript, chapters and downloads when the fields exist', () => {
     const view = render(<ClasCurriculum lessonId="01" data={{ cues, walkthrough, walkthroughCues }} />);
+    // Shown with the video at the top of the page, not behind a tab.
+    const heading = view.getByRole('heading', { level: 2, name: 'Listen to the discussion' });
+    expect(heading.id).toBe('discuss');
+    expect(heading.closest('.cl-tabs-panel')).toBeNull();
     expect(view.queryByRole('heading', { name: 'Hear it discussed' })).toBeNull();
-    openTab(view, 'Discuss');
-    expect(view.getByRole('heading', { name: 'Hear it discussed' })).toBeTruthy();
-    expect(view.getByText(/Discussion: about 9 minutes/)).toBeTruthy();
+    // The jump buttons under the title go to both recordings (owner rule: findable without scrolling), with no minutes or prefix.
+    const quickLinks = view.container.querySelector('.media-quick-links')!;
+    expect(Array.from(quickLinks.querySelectorAll('a')).map(a => [a.textContent, a.getAttribute('href')])).toEqual([['Watch the lesson', '#watch'], ['Listen to the discussion', '#discuss']]);
+    expect(quickLinks.textContent).not.toMatch(/In this lesson|minute/);
+    expect(view.container.textContent).not.toMatch(/Two voices talk through this part/);
     const audio = view.container.querySelector('audio')!;
     expect(audio.getAttribute('src')).toBe(walkthrough.audio);
     expect(audio.autoplay).toBe(false);
@@ -326,5 +336,40 @@ describe('front page', () => {
     const view = render(<ClasCurriculum front={{ walkthroughs: items }} />);
     expect(view.container.querySelector('audio')?.getAttribute('src')).toBe('/learning/clas-walkthrough/02.mp3');
     expect(play).not.toHaveBeenCalled();
+  });
+});
+
+describe('media at the top of the lesson (owner rule 2026-11-10)', () => {
+  const before = (a: Element, b: Element) => Boolean(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+  it('puts the video, then the discussion, directly under the title, before the downloads, key points, tabs and practice', () => {
+    const view = render(<ClasCurriculum lessonId="02" data={{ cues, walkthrough, walkthroughCues, practice: moduleOne, recall: moduleOne.recall }} downloads={<details data-testid="downloads"><summary>Download or share this lesson</summary></details>} />);
+    const title = view.getByRole('heading', { level: 1 });
+    const video = view.container.querySelector('video')!;
+    const audio = view.container.querySelector('audio')!;
+    const h2s = [...view.container.querySelectorAll('h2')];
+    expect(h2s[0].textContent).toBe('Watch the lesson');
+    expect(h2s[1].textContent).toBe('Listen to the discussion');
+    expect(before(title, video)).toBe(true);
+    expect(before(video, audio)).toBe(true);
+    for (const later of [view.getByTestId('downloads'), view.getByRole('tablist', { name: 'Lesson sections' }), view.getByRole('heading', { name: 'Key points from this lesson' }), view.getByRole('heading', { name: 'Practice with guidance', hidden: true }), view.getByRole('heading', { name: 'Read the full lesson', hidden: true })])
+      expect(before(audio, later)).toBe(true);
+    // Neither player is inside a tab panel, so neither is ever hidden.
+    expect(video.closest('.cl-tabs-panel')).toBeNull();
+    expect(audio.closest('.cl-tabs-panel')).toBeNull();
+    // Each sits in the shared media panel, named for screen readers only: no visible label and no length (owner 2026-11-10).
+    const videoPanel = view.getByRole('group', { name: 'Video explainer' });
+    expect(videoPanel.getAttribute('data-featured-media')).toBe('video');
+    expect(videoPanel.contains(video)).toBe(true);
+    const podcastPanel = view.getByRole('group', { name: 'Podcast' });
+    expect(podcastPanel.getAttribute('data-featured-media')).toBe('podcast');
+    expect(podcastPanel.contains(audio)).toBe(true);
+    for (const panel of [videoPanel, podcastPanel]) {
+      expect(panel.querySelector('.featured-media-label, .featured-media__label')).toBeNull();
+      expect(panel.textContent).not.toMatch(/Video explainer|Podcast ·|about \d+ minutes?/);
+    }
+    // Captions, transcripts and labels stay with the players.
+    expect(video.getAttribute('aria-label')).toBe(curriculum.modules[1].title);
+    expect(video.querySelector('track')).not.toBeNull();
+    expect(view.getByRole('region', { name: 'Transcript of the discussion' })).toBeTruthy();
   });
 });

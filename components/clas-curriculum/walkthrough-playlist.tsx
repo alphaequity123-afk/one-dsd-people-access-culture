@@ -95,7 +95,7 @@ export function WalkthroughPlaylist({ items }: { items: WalkthroughItem[] }) {
         onError={() => setStatus('This chapter could not be loaded. You can open it from its lesson page.')}>
         Your browser cannot play this audio. Each lesson page offers the same chapter with a transcript.
       </audio>
-      <p>Playback does not begin automatically. When a chapter ends, the next one follows{total ? `; the full walkthrough runs about ${Math.round(total / 60)} minutes` : ''}. You can pause at any time and return later.</p>
+      <p>When a chapter ends, the next one follows{total ? `; the full walkthrough runs about ${Math.round(total / 60)} minutes` : ''}. You can pause at any time and return later.</p>
       <div className="clas-player-controls">
         <SpeedControl speed={speed} onChange={changeSpeed} />
         <button type="button" className="clas-study-secondary" onClick={() => select(index - 1, false)} disabled={index === 0}>Previous chapter</button>
