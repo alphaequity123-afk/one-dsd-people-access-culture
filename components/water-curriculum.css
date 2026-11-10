@@ -1,0 +1,19 @@
+/* The Water We Swim In curriculum layer: type and whitespace, no icons. */
+.water-figure { margin: 1.5rem 0; }
+.water-figure img { display: block; width: 100%; height: auto; border-radius: 10px; background: #eef1f4; }
+.water-figure-hero { margin-top: 1rem; }
+.water-outcome { font-size: 1.1rem; margin: 1.25rem 0; }
+.water-lesson-opening { margin: 1.5rem 0 2rem; }
+.water-podcast { margin: 2rem 0; }
+.water-podcast-links { margin: .5rem 0 0; font-size: .95rem; }
+.water-practice { margin: 2.5rem 0; border-top: 1px solid var(--line, #d9dee3); padding-top: 1.5rem; }
+.water-job-aid { margin: 1.5rem 0; }
+.water-job-aid > summary { cursor: pointer; font-weight: 600; min-height: 2.75rem; padding: .5rem 0; }
+.water-practice-note { color: #52606d; font-size: .95rem; }
+.water-module-grid { list-style: none; padding: 0; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.water-module-grid li { border: 1px solid var(--line, #d9dee3); border-radius: 10px; overflow: hidden; background: #fff; }
+.water-module-grid img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.water-module-grid .water-card-body { padding: 1rem 1.25rem 1.25rem; }
+.water-module-grid h3 { margin: 0 0 .5rem; font-size: 1.15rem; }
+.water-module-grid p { margin: .25rem 0; }
+@media print { .water-figure, .water-podcast, .water-practice .clas-ordering, .water-practice .clas-decisions { display: none; } }

@@ -6,6 +6,8 @@ import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_MODULES, WATER_SUPPORT } f
 import "@/components/community-editorial.css";
 import "@/components/community-research-sections.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
+import { WaterFigure, WaterLessonOpening, WaterLessonPractice, chapterImages, heroOf } from "@/components/water-curriculum";
+import { waterLesson, waterModuleId, waterPractice, waterRecall } from "@/lib/content/water-curriculum";
 
 export async function generateMetadata({ params }: { params: Promise<{ module: string }> }): Promise<Metadata> {
   const { module: slug } = await params;
@@ -20,12 +22,19 @@ export default async function WaterModulePage({ params }: { params: Promise<{ mo
   const current = WATER_MODULES[index];
   const previous = WATER_MODULES[index - 1];
   const next = WATER_MODULES[index + 1];
+  const id = waterModuleId(current.number);
+  const lesson = waterLesson(id);
+  const practice = waterPractice(id);
+  const hero = heroOf(lesson);
   return <div className="community-editorial"><div className="community-index-layout community-research">
     <p className="community-eyebrow"><Link href={WATER_COURSE_HREF}>{WATER_COURSE_TITLE}</Link>: module {current.number} of {WATER_MODULES.length}</p>
-    <h1>{current.title}</h1>
+    <h1 id="top">{current.title}</h1>
+    {hero && <WaterFigure image={hero} priority />}
     <p className="community-opening">{current.goal}</p>
+    <WaterLessonOpening lesson={lesson} practice={practice} recall={waterRecall(id)} previousTitle={previous?.title} previousNumber={previous?.number} moduleTitle={current.title} />
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this module</summary><ResourceDownloads kind="water-we-swim-in" id={current.slug} noun="module" /></details>
-    <WaterModuleBody markdown={current.body} notesKey={`water-we-swim-in-notes-${current.number}`} />
+    <WaterModuleBody markdown={current.body} notesKey={`water-we-swim-in-notes-${current.number}`} images={chapterImages(lesson)} />
+    <WaterLessonPractice practice={practice} moduleTitle={current.title} moduleNumber={current.number} />
     <p>{WATER_SUPPORT}</p>
     <nav className="course-next" aria-label="Course modules">
       {previous ? <Link href={`${WATER_COURSE_HREF}/${previous.slug}`}>Previous: {previous.title}</Link> : <Link href={WATER_COURSE_HREF}>Course overview</Link>}

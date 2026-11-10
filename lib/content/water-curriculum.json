@@ -1,0 +1,1338 @@
+{
+ "format": "water-curriculum-v1",
+ "modules": [
+  {
+   "id": "01",
+   "outcome": "After this module you can describe Minnesota's majority culture as a culture, explain why it is hard to see from inside, and name one place at work where \"normal\" may really mean \"how we do it here.\"",
+   "reflection": "Think of one meeting habit, phrase or form you use at work that feels completely normal to you. Who might experience it differently, and what might they need to know that you never had to learn?",
+   "keyPoints": [
+    {
+     "chapter": "Opening",
+     "points": [
+      "Howard Mohr's 1987 book How to Talk Minnesotan used humor to describe local habits like \"That's different\" and the Minnesota Long Goodbye.",
+      "Habits like these feel like plain good manners to people who grew up with them, but can look like unwritten rules to someone from elsewhere.",
+      "This module is about that gap: the way \"we\" do things is a culture, too."
+     ]
+    },
+    {
+     "chapter": "What the fish cannot see",
+     "points": [
+      "Like the fish in David Foster Wallace's parable, people rarely notice the culture they grew up in; it feels like \"normal.\"",
+      "Milton Bennett notes that people have far more detailed categories for reading their own culture than anyone else's.",
+      "Seeing your own culture is not criticizing it, and patterns describe averages, not any one person."
+     ]
+    },
+    {
+     "chapter": "Who Minnesotans are now",
+     "points": [
+      "About three in four Minnesotans are white and not Hispanic, but the exact share depends on which definition you use, so name it.",
+      "People of color are 7 percent of Minnesotans 80 and older but 42 percent of children under 5.",
+      "About 9 percent of Minnesotans were born abroad in 2024, and about 66 percent were born in Minnesota."
+     ]
+    },
+    {
+     "chapter": "Who works in state government",
+     "points": [
+      "In fiscal year 2023 about 15.9 percent of executive branch employees identified as Black, Indigenous or People of Color, compared with 20.4 percent of the state labor force.",
+      "DHS is the largest agency; its 7,360 employees were 20.0 percent people of color and 12.1 percent reporting a disability.",
+      "No published source shows where staff grew up, what languages they speak or their cultural backgrounds, and race is not the same as culture."
+     ]
+    },
+    {
+     "chapter": "A mirror, not a label",
+     "points": [
+      "The habits of a majority culture tend to become the default settings of its institutions, in meetings, feedback, forms and plans.",
+      "Defaults that feel neutral are not neutral; they are familiar to some people and not to others.",
+      "The course's frameworks are mirrors for noticing your own defaults, not scores or labels for anyone."
+     ]
+    }
+   ],
+   "decisions": [
+    {
+     "id": "01-d1",
+     "scenario": "You are reviewing a letter your unit sends to families about a services review. A coworker who joined the team recently says the letter's tone feels cold and confusing. Everyone else on the team has used the letter for years without complaint.",
+     "question": "What do you do?",
+     "options": [
+      {
+       "text": "Ask the coworker what specifically reads as cold or confusing, and take those notes to the person or area responsible for the letter.",
+       "correct": true,
+       "feedback": "This treats the newcomer's view as useful information. The module explains that people inside a culture are often the least likely to notice how it shapes a form, so a fresh reader can see what the team cannot."
+      },
+      {
+       "text": "Explain that the letter has worked for years, so the tone must be fine.",
+       "correct": false,
+       "feedback": "Years without complaint may only mean the letter is familiar to the people who wrote it. The module warns that defaults can feel neutral when most people setting them share one culture."
+      },
+      {
+       "text": "Rewrite the whole letter yourself so it matches what you think the coworker meant.",
+       "correct": false,
+       "feedback": "Your effort is well meant, but you would be guessing at the concern. Asking first gives you real feedback instead of a code to crack, and the change belongs with the person or area responsible."
+      }
+     ]
+    },
+    {
+     "id": "01-d2",
+     "scenario": "Your team is planning outreach for a disability services program. A colleague shares state population numbers and says, \"Minnesota is about 83 percent white, so we can mostly plan around that.\"",
+     "question": "What is the most helpful response?",
+     "options": [
+      {
+       "text": "Point out that the share depends on the definition and source, and that people of color are 42 percent of Minnesota children under 5, so the people served are changing fast.",
+       "correct": true,
+       "feedback": "The module shows the white share ranges from about 74.7 to 82.8 percent depending on the definition, and stresses the age gap as perhaps the most important fact for a public agency."
+      },
+      {
+       "text": "Agree, since a large majority means the majority's habits will work for nearly everyone.",
+       "correct": false,
+       "feedback": "Even a large majority leaves many people outside it, and the module notes that the young are far more diverse than the old. Planning only for the majority would miss them."
+      },
+      {
+       "text": "Tell the colleague that population numbers do not matter for this kind of work.",
+       "correct": false,
+       "feedback": "The numbers do matter; the module uses them to show who is swimming in the water. The point is to name which definition you use and to notice change over time."
+      }
+     ]
+    },
+    {
+     "id": "01-d3",
+     "scenario": "In a team discussion about culture, a coworker says, \"I don't really have a culture. I'm just a regular Minnesotan.\" A few people nod.",
+     "question": "Which response best reflects this module?",
+     "options": [
+      {
+       "text": "Gently note that the culture we grew up in often feels like normal, and invite the group to name a few habits that might look like unwritten rules to a newcomer.",
+       "correct": true,
+       "feedback": "This is the module's main idea: mainstream Minnesota culture can be the water people do not see. Inviting everyone to notice habits works as a mirror, not a label."
+      },
+      {
+       "text": "Tell the coworker that saying this shows they are biased.",
+       "correct": false,
+       "feedback": "The module says not noticing your own culture is not a flaw in anyone; it is how being inside a culture works. Labeling the person ends the conversation."
+      },
+      {
+       "text": "Let it pass, since culture is mainly something other groups have.",
+       "correct": false,
+       "feedback": "The module points out that the majority culture is a culture too. Letting the comment pass keeps it looking like the neutral background against which everyone else looks cultural."
+      }
+     ]
+    }
+   ],
+   "ordering": {
+    "id": "01-o1",
+    "scenario": "At a team meeting, a coworker who recently moved to Minnesota proposes an idea. A longtime colleague responds, \"Well, that's different,\" and the meeting moves on. Afterward the newer coworker tells you the team liked the idea. You suspect the longtime colleague has doubts.",
+    "prompt": "Put these in the order you would do them.",
+    "steps": [
+     "Notice that the phrase may carry a local meaning the newer coworker could not read.",
+     "Check in privately with the longtime colleague about what they meant.",
+     "Afterward, reflect on what other local habits might leave newcomers outside.",
+     "Remind yourself that your reading of the phrase is still a guess about one person.",
+     "Invite the longtime colleague to share their view directly with the newer coworker."
+    ],
+    "correctOrder": [
+     0,
+     3,
+     1,
+     4,
+     2
+    ],
+    "feedback": "Noticing comes first, then checking your own assumptions before acting. Asking the colleague directly lets the newcomer get real feedback instead of a code to crack."
+   },
+   "recall": [
+    {
+     "question": "What was the point of David Foster Wallace's parable about the fish, as the module uses it?",
+     "options": [
+      {
+       "text": "The most obvious and important realities, like the culture we grew up in, are often the hardest to see.",
+       "correct": true,
+       "feedback": "Right. The module uses the water as a picture of a majority culture that feels like normal from inside."
+      },
+      {
+       "text": "Older people always understand culture better than younger people.",
+       "correct": false,
+       "feedback": "The parable is not about age. It is about how hard it is to notice what surrounds you."
+      },
+      {
+       "text": "Newcomers should learn local customs as quickly as possible.",
+       "correct": false,
+       "feedback": "The module asks people inside the majority culture to notice their own habits, not to put the work on newcomers."
+      }
+     ]
+    },
+    {
+     "question": "What does the module say the state workforce numbers do not show?",
+     "options": [
+      {
+       "text": "Where employees grew up, what languages they speak, or their cultural backgrounds.",
+       "correct": true,
+       "feedback": "Correct. The report covers race, sex, disability, veteran status and age. Race is not the same as culture."
+      },
+      {
+       "text": "How many employees report a disability.",
+       "correct": false,
+       "feedback": "The report does show disability: 11.6 percent of executive branch employees and 12.1 percent of DHS employees."
+      },
+      {
+       "text": "How many people work at DHS.",
+       "correct": false,
+       "feedback": "The report lists 7,360 DHS employees, about one in five executive branch employees."
+      }
+     ]
+    }
+   ],
+   "cardDescriptions": [],
+   "jobAid": {
+    "title": "Spot the water at work",
+    "useWhen": "Use when you plan a meeting, write a form or letter, or give feedback, and want to notice where \"normal\" may really mean \"how we do it here.\"",
+    "sections": [
+     {
+      "heading": "Before",
+      "items": [
+       "Ask which habits in this meeting, form or plan you have never had to explain.",
+       "Picture someone who grew up elsewhere reading or hearing it for the first time.",
+       "If you use population or workforce numbers, name the definition and source."
+      ]
+     },
+     {
+      "heading": "During",
+      "items": [
+       "Listen for indirect phrases, like \"that's different,\" that may carry a meaning a newcomer cannot read.",
+       "When you are unsure what someone meant, ask plainly instead of decoding.",
+       "Remember that a pattern describes an average, not the person in front of you."
+      ]
+     },
+     {
+      "heading": "After",
+      "items": [
+       "Write down one moment when \"normal\" turned out to mean \"how we do it here.\"",
+       "Ask who might experience that moment differently.",
+       "Share what you noticed with the person or area responsible if a form or process could be clearer."
+      ]
+     }
+    ],
+    "remember": [
+     "Seeing your own culture is not the same as criticizing it.",
+     "Defaults that feel neutral are often just familiar.",
+     "Use frameworks as a mirror, not a label."
+    ],
+    "askWho": [
+     "Your supervisor, for help raising a team habit that may leave people out.",
+     "The person or area responsible for a form, letter or process you think could be clearer."
+    ]
+   },
+   "images": [],
+   "podcast": null
+  },
+  {
+   "id": "02",
+   "outcome": "After this module you can recognize the warm side and the guarded side of Minnesota nice in your own habits, and answer coworkers and families plainly and kindly so they do not have to decode what you mean.",
+   "reflection": "Think of a recent reply, meeting or conversation at work where you softened a concern or a no. How might a coworker or family from another background have heard it, and what would a plain and kind version have sounded like?",
+   "keyPoints": [
+    {
+     "chapter": "Opening",
+     "points": [
+      "Minnesotans wrote their own humor about Minnesota nice, such as the Minnesota Long Goodbye in Howard Mohr's 1987 book.",
+      "Most people learn these unwritten rules without anyone teaching them in a class.",
+      "Minnesota nice has a warm side worth keeping and a guarded side that can be hard to read for people who did not grow up with it."
+     ]
+    },
+    {
+     "chapter": "The warm side is real",
+     "points": [
+      "The kindness is not a myth: in 2023, 40.3 percent of Minnesotans 16 and older volunteered, third among the states.",
+      "Minnesotans also give and vote at high rates, and young Minnesotans voted at the highest rate in the nation in 2024.",
+      "Generosity can sit side by side with distance, as one immigration attorney noted about making refugees really feel Minnesotan."
+     ]
+    },
+    {
+     "chapter": "Reading the code",
+     "points": [
+      "In the code, the words carry less than the meaning: \"interesting\" may mean \"I don't like it,\" and a first no may mean \"ask me again.\"",
+      "People raised in the code find it smooth and polite, but coworkers, clients and families from elsewhere may take the words at face value.",
+      "Mohr's book described one then culturally dominant group of Minnesotans; many Minnesotans of every background use these habits, and many do not."
+     ]
+    },
+    {
+     "chapter": "When nice avoids conflict",
+     "points": [
+      "One sociologist describes avoiding conflict as central, using a smile, a nod and a change of subject.",
+      "To others, that response can appear like agreement when it is not.",
+      "At work, silence and a nod can look like a yes, and a warm tone can look like an answer."
+     ]
+    },
+    {
+     "chapter": "Friendly, but hard to befriend",
+     "points": [
+      "Many newcomers in a 2012 MPR series found Minnesotans friendly but hard to befriend, and feelings of isolation were even more common among professionals of color.",
+      "A useful self-test: who have I invited into my house in the last year that I did not know five years ago?",
+      "These sources describe a reputation many newcomers recognize, not a statewide measurement."
+     ]
+    },
+    {
+     "chapter": "What research shows, and a question",
+     "points": [
+      "A 2013 study found Minnesota high on average agreeableness and low on average openness, with cautions about how the data were gathered.",
+      "Phrases like \"that's different\" are high-context moves, which raises a question about why newcomers find Minnesota speech hard to read.",
+      "Use these frameworks as mirrors for your own default settings, not as labels for other people."
+     ]
+    }
+   ],
+   "decisions": [
+    {
+     "id": "02-d1",
+     "scenario": "You lead a team meeting in a county human services unit and propose a new way to handle intake calls. You ask if there are concerns. People nod, a few look at their notes, and someone mentions the snow coming this weekend. Nobody objects.",
+     "question": "What do you do?",
+     "options": [
+      {
+       "text": "Before treating the plan as agreed, ask a specific question, such as what could go wrong with it, and offer a way to share concerns after the meeting, in person or in writing.",
+       "correct": true,
+       "feedback": "The module notes that a smile, a nod and a change of subject can appear like agreement when it is not. A specific question and a second way to respond make it easier for people to say what they actually think."
+      },
+      {
+       "text": "Take the silence as a yes and roll out the plan on Monday.",
+       "correct": false,
+       "feedback": "This is understandable, since no one objected. But in a culture where avoiding conflict is central, silence and a nod can look like a yes without being one, and concerns may surface later as quiet resistance."
+      },
+      {
+       "text": "Tell the group you can tell some people are unhappy and ask them to speak up now.",
+       "correct": false,
+       "feedback": "The intent is good, but calling people out in the room can make open disagreement feel even riskier. A specific question and a private or written option usually draw out more honest input."
+      }
+     ]
+    },
+    {
+     "id": "02-d2",
+     "scenario": "A coworker's case notes in a disability services program keep missing a required section. You have mentioned it twice by saying things like \"it might be nice to add a bit more detail sometime.\" Nothing has changed. Your coworker grew up in a culture where people speak more directly.",
+     "question": "What is the best next step?",
+     "options": [
+      {
+       "text": "Name the concern clearly and kindly: say which section is missing, why it matters, and what you need by when, then offer help.",
+       "correct": true,
+       "feedback": "The module warns that a concern wrapped very softly may not be heard at all by someone from a more direct culture. Saying it plainly, with courtesy, gives your coworker what they need to act."
+      },
+      {
+       "text": "Keep hinting, since a third gentle reminder should get the message across.",
+       "correct": false,
+       "feedback": "Hints rely on the listener filling in the rest. Two hints have not worked, which suggests your coworker is hearing a suggestion, not a requirement."
+      },
+      {
+       "text": "Fix the notes yourself so you do not have to bring it up again.",
+       "correct": false,
+       "feedback": "This avoids the conflict but leaves the problem in place and keeps your coworker from learning what is expected. It is the guarded side of nice, not the warm side."
+      }
+     ]
+    },
+    {
+     "id": "02-d3",
+     "scenario": "A colleague moved to Minnesota from another state four months ago to join your team at a state agency. They are friendly in meetings, but you notice they eat lunch alone and once mentioned that their only friends here are other transplants.",
+     "question": "What do you do?",
+     "options": [
+      {
+       "text": "Invite them to something specific, such as lunch with you and a couple of coworkers, and follow up with another invitation later.",
+       "correct": true,
+       "feedback": "The module describes locals who are willing to be friendly but do not follow up. A specific invitation and a second one show real welcome, not just friendliness."
+      },
+      {
+       "text": "Keep being friendly in the hallway; they will find their own people in time.",
+       "correct": false,
+       "feedback": "Friendliness is good, but many newcomers in the module found Minnesotans friendly yet hard to befriend. Without follow-up, the distance can stay in place."
+      },
+      {
+       "text": "Tell them that Minnesotans just take a while to warm up and not to take it personally.",
+       "correct": false,
+       "feedback": "This may be meant as comfort, but it puts the work on the newcomer. The module's self-test asks what you yourself have done to invite someone new in."
+      }
+     ]
+    }
+   ],
+   "ordering": {
+    "id": "02-o1",
+    "scenario": "A parent emails your program area. They have called several times with no call back, a service has stopped, and they ask who is responsible and when it will be fixed. You have checked and know what happened and the likely timeline.",
+    "prompt": "Put these in the order you would do them.",
+    "steps": [
+     "Add the warmth, then read the reply as someone who does not know the code would read it.",
+     "Confirm the facts, including what went wrong and the expected timeline.",
+     "Answer the direct question in the first sentence, and acknowledge the missed calls.",
+     "Reread the message and list each direct question the parent asked.",
+     "Give the timeline and name who will follow up and when."
+    ],
+    "correctOrder": [
+     3,
+     1,
+     2,
+     4,
+     0
+    ],
+    "feedback": "Knowing the questions and facts first lets you answer plainly up front. The module's takeaway is to answer the direct question in the first sentence, then add the warmth, so the parent does not have to decode the reply."
+   },
+   "recall": [
+    {
+     "question": "According to the sociologist the module quotes, how can a smile, a nod and a change of subject look to others?",
+     "options": [
+      {
+       "text": "Like agreement.",
+       "correct": true,
+       "feedback": "Right. She writes that this response appears like agreement, which is why silence in a meeting may not mean a yes."
+      },
+      {
+       "text": "Like anger.",
+       "correct": false,
+       "feedback": "Not quite. The point is that avoiding conflict hides disagreement, so it tends to look like agreement, not anger."
+      },
+      {
+       "text": "Like confusion.",
+       "correct": false,
+       "feedback": "Not quite. The module's concern is that the response appears like agreement, so others may think a matter is settled."
+      }
+     ]
+    },
+    {
+     "question": "What did the 2013 personality study find about Minnesota's averages?",
+     "options": [
+      {
+       "text": "High agreeableness and low openness.",
+       "correct": true,
+       "feedback": "Right. Minnesota ranked sixth of 49 in agreeableness and 44th of 49 in openness, with the authors' caution that the labels give only a broad sense."
+      },
+      {
+       "text": "Low agreeableness and high openness.",
+       "correct": false,
+       "feedback": "It was the reverse. The data fit the nice part of the reputation and showed a lower average taste for novelty and change."
+      },
+      {
+       "text": "Average on both, near the middle of the states.",
+       "correct": false,
+       "feedback": "That describes a different study, which ranked Minnesota 28th on tightness. The personality study placed Minnesota high on agreeableness and low on openness."
+      }
+     ]
+    }
+   ],
+   "cardDescriptions": [],
+   "jobAid": {
+    "title": "Say it plainly and kindly",
+    "useWhen": "Use when you need to share a no, a concern or a hard fact with a coworker or a family.",
+    "sections": [
+     {
+      "heading": "Before",
+      "items": [
+       "List the direct questions the person asked or the one point you must get across.",
+       "Get the facts, including any mistake and the realistic timeline.",
+       "Notice any soft phrases you plan to use, like \"interesting\" or \"we're looking into it,\" and ask what they really mean."
+      ]
+     },
+     {
+      "heading": "During",
+      "items": [
+       "Answer the direct question or state the concern in the first sentence.",
+       "Name what happened, what comes next, and who will follow up and when.",
+       "Add warmth and courtesy after the answer, not in place of it.",
+       "In meetings, ask a specific question and offer another way to respond instead of reading silence as a yes."
+      ]
+     },
+     {
+      "heading": "After",
+      "items": [
+       "Follow up when you said you would.",
+       "Check whether the person understood what you meant, not just what you said.",
+       "Reflect on whether your default settings made the message too soft or too blunt for this listener."
+      ]
+     }
+    ],
+    "remember": [
+     "Warmth without an answer can read as a brush-off.",
+     "Silence and a nod are not always agreement.",
+     "Frameworks describe averages, not people; use them as mirrors."
+    ],
+    "askWho": [
+     "Your supervisor, if you are unsure how much to share about a mistake or a timeline.",
+     "The person or area responsible for the policy or process, if you need facts before you reply."
+    ]
+   },
+   "images": [],
+   "podcast": null
+  },
+  {
+   "id": "03",
+   "outcome": "After this module you can trace a habit you bring to work, such as modesty, self-reliance or waiting for consensus, to its roots in Minnesota settlement, faith, farm life, climate and civic tradition, and choose when to lean on it and when to set it aside.",
+   "reflection": "Think of one habit you rely on at work, like not asking for help or waiting until everyone is on board. Where did you learn it, and how might it land with a coworker or a person you serve whose background is different from yours?",
+   "keyPoints": [
+    {
+     "chapter": "Opening",
+     "points": [
+      "A church basement funeral lunch with hotdish feels natural, yet MNopedia traces the earliest known hotdish recipe to a 1930 Lutheran church women's cookbook in Mankato.",
+      "Something many of us see as just food grew out of particular churches, particular immigrants and a particular way of showing care.",
+      "Work habits are the same: they feel natural, and they also came from somewhere."
+     ]
+    },
+    {
+     "chapter": "Settlers, churches and keeping your head down",
+     "points": [
+      "The state's story begins with land taken from Native people, and the settlement that followed began on that land.",
+      "German, Norwegian and Swedish settlers built churches that were school, social club and aid society, one reason so much help in Minnesota still flows through organizations.",
+      "The usual story of roots leaves people out, including Dakota and Ojibwe people, Black Minnesotans and Mexican farmworkers, so a culture's picture of itself is a selection."
+     ]
+    },
+    {
+     "chapter": "Farms, winters and cooperatives",
+     "points": [
+      "Sociologist Lisa Waldner offered two likely threads for Minnesota nice: settlers who lived side by side without mixing much, and farm neighbors who needed each other.",
+      "Long winters may shape sociability and can leave newcomers isolated when people stay with the friends they already have.",
+      "Cooperatives like the Clarks Grove creamery, founded in 1890, show deep local habits of pooling resources and meeting to decide."
+     ]
+    },
+    {
+     "chapter": "Government as a shared moral project",
+     "points": [
+      "Daniel Elazar called Minnesota the archetypical moralistic political culture, where government is a positive instrument for the general welfare.",
+      "Treat the framework as a mirror, not a label: it describes a state's public life, not any one person, and Elazar noted this culture has difficulty with bureaucracy.",
+      "Easy consensus is part of the inheritance, but not a promise, as recent writing on sharp regional divides suggests."
+     ]
+    },
+    {
+     "chapter": "Values under the surface",
+     "points": [
+      "Self-reliance, egalitarianism, modesty and privacy, and trust in consensus and process are each strengths that can also hide something.",
+      "Treating everyone the same can mean identical treatment or treatment that gets people to the same place, and those are not the same thing.",
+      "These values are inherited defaults, not traits of every Minnesotan, and knowing their history lets you choose when to use them."
+     ]
+    }
+   ],
+   "decisions": [
+    {
+     "id": "03-d1",
+     "scenario": "You work at a county service counter that helps people apply for disability services. A caregiver in his sixties is applying for help for his adult son. When you mention respite care, he says twice, \"We're fine, we can handle it ourselves.\" His paperwork suggests he is stretched thin.",
+     "question": "What do you do?",
+     "options": [
+      {
+       "text": "Accept his answer, note that he declined respite care, and move on to the next item.",
+       "correct": false,
+       "feedback": "This respects his words, but the module notes that in Minnesota help is often given more easily than it is asked for. Taking a first refusal as final may leave him without support he would welcome."
+      },
+      {
+       "text": "Tell him plainly that many families use respite care, describe what it looks like, and leave the door open so he can say yes later without having to ask.",
+       "correct": true,
+       "feedback": "This honors self-reliance while making help easier to accept. The module describes a strong ethic of handling your own problems alongside a real habit of organized help, and this approach works with both."
+      },
+      {
+       "text": "Insist that he needs respite care and sign him up so he does not have to decide.",
+       "correct": false,
+       "feedback": "This overrides his choice. The goal is to make help easy to accept, not to take the decision away from him."
+      }
+     ]
+    },
+    {
+     "id": "03-d2",
+     "scenario": "Your team is planning outreach about a new disability services option. The draft materials say, \"Just fill out the form and the process will take care of the rest.\" A community partner tells you that many families they work with have reasons, from their own or their family's history, to trust state systems less.",
+     "question": "What is the best next step?",
+     "options": [
+      {
+       "text": "Keep the message as written, since the process really is fair and families will see that over time.",
+       "correct": false,
+       "feedback": "Trust in process is a real Minnesota strength, but the module warns it can be a blind spot with people who have reason to trust less. Assuming trust may keep families away."
+      },
+      {
+       "text": "Drop the outreach to those communities, since they may not want to hear from the state.",
+       "correct": false,
+       "feedback": "This leaves people without information they may need. The point is to adjust the approach, not to step back from people."
+      },
+      {
+       "text": "Thank the partner, ask what would help families trust the steps, and revise the materials to explain plainly what happens to their information and who they can talk to.",
+       "correct": true,
+       "feedback": "This treats trust in process as one inherited default, not a universal starting point. It uses the partner's knowledge and makes the process visible instead of asking people to take it on faith."
+      }
+     ]
+    },
+    {
+     "id": "03-d3",
+     "scenario": "A staff member in your unit asks for written agendas a day before meetings because she processes information better when she can read ahead. Another coworker says, \"We should treat everyone the same, so either everyone gets agendas early or no one does.\"",
+     "question": "How do you respond?",
+     "options": [
+      {
+       "text": "Agree that fairness means identical treatment and drop the request unless the whole team wants it.",
+       "correct": false,
+       "feedback": "The module points out that fairness can mean identical treatment or treatment that gets people to the same place. Choosing only the first meaning can keep someone from taking full part."
+      },
+      {
+       "text": "Name that fairness can mean getting people to the same place, share agendas early, and check with the person or area responsible if a formal accommodation process applies.",
+       "correct": true,
+       "feedback": "This puts the module's question about what \"the same\" means into practice. Early agendas help her take part fully and cost the team little."
+      },
+      {
+       "text": "Tell the coworker that is just Minnesota nice talking and change the subject.",
+       "correct": false,
+       "feedback": "A joke may ease the moment, but it leaves the real value question out of view. Naming the value openly is more useful."
+      }
+     ]
+    }
+   ],
+   "ordering": {
+    "id": "03-o1",
+    "scenario": "A community partner tells you your team's decisions seem to take forever. You realize your team discusses even small changes in several meetings until everyone is on board.",
+    "prompt": "Put these in the order you would do them.",
+    "steps": [
+     "Name the value underneath it, such as consensus and trust in process.",
+     "Choose with your team when to lean on consensus and when to decide faster.",
+     "Ask the partner how the delay affects them and what would help.",
+     "Trace where the habit was learned, for example in civic tradition, cooperatives or a first supervisor.",
+     "Notice the habit: small decisions are waiting for full team consensus."
+    ],
+    "correctOrder": [
+     4,
+     0,
+     3,
+     2,
+     1
+    ],
+    "feedback": "You can only weigh a habit once you see it and name the value behind it. Knowing its roots and hearing the partner's view then lets you choose deliberately instead of by default."
+   },
+   "recall": [
+    {
+     "question": "According to MNopedia, where was the earliest known hotdish recipe found?",
+     "options": [
+      {
+       "text": "In a 1930 cookbook from a Lutheran church women's society in Mankato",
+       "correct": true,
+       "feedback": "Right. The module uses this to show that something that feels like just food grew out of particular churches and immigrants."
+      },
+      {
+       "text": "In a farm magazine published after World War II",
+       "correct": false,
+       "feedback": "Not quite. After World War II the dish moved into home kitchens, but the earliest known recipe is from a 1930 church cookbook in Mankato."
+      },
+      {
+       "text": "In a cooperative creamery newsletter from Clarks Grove",
+       "correct": false,
+       "feedback": "Not quite. Clarks Grove appears in the module as an early cooperative creamery, not as the source of the hotdish recipe."
+      }
+     ]
+    },
+    {
+     "question": "Which political culture did Daniel Elazar say Minnesota is the archetypical example of?",
+     "options": [
+      {
+       "text": "Individualistic, where politics is a marketplace and a career",
+       "correct": false,
+       "feedback": "Not quite. Elazar described that culture, but he did not place Minnesota there."
+      },
+      {
+       "text": "Moralistic, where politics is a shared search for the good society",
+       "correct": true,
+       "feedback": "Right. The module asks you to treat this as a mirror, not a label, since it describes a state's public life and not any one person."
+      },
+      {
+       "text": "Traditionalistic, where an established elite governs",
+       "correct": false,
+       "feedback": "Not quite. Elazar described that culture too, but he called Minnesota the archetypical moralistic culture."
+      }
+     ]
+    }
+   ],
+   "cardDescriptions": [],
+   "jobAid": {
+    "title": "Trace a work habit to its roots",
+    "useWhen": "Use when a habit you or your team rely on, like modesty, refusing help or slow consensus, seems to puzzle or exclude a coworker or a person you serve.",
+    "sections": [
+     {
+      "heading": "Before",
+      "items": [
+       "Notice the habit in plain terms, such as not taking credit or waiting until everyone is on board.",
+       "Name the value under it: self-reliance, treating everyone the same, modesty and privacy, or trust in consensus and process.",
+       "Remind yourself that it is an inherited default, not the universal standard."
+      ]
+     },
+     {
+      "heading": "During",
+      "items": [
+       "If someone is puzzled, say that the habit may have local roots instead of calling it just how professional work is done.",
+       "Ask how their past team, family or community handled the same thing.",
+       "When someone declines help, make help easy to accept later without them having to ask.",
+       "When fairness comes up, ask whether the same treatment will get people to the same place."
+      ]
+     },
+     {
+      "heading": "After",
+      "items": [
+       "Write down the value and where you learned it, such as a church basement, a family farm or a first supervisor.",
+       "Decide when to lean on the habit and when to set it aside.",
+       "Check back with the person to see whether the change helped."
+      ]
+     }
+    ],
+    "remember": [
+     "Each value is a strength that can also hide something.",
+     "A culture's picture of itself is a selection; ask who is left out.",
+     "Trust in process is not shared by everyone, and some people have good reason to trust less."
+    ],
+    "askWho": [
+     "Your supervisor, when a team habit seems to be shutting someone out.",
+     "The person or area responsible for the policy, when a request may need a formal accommodation or a change in practice."
+    ]
+   },
+   "images": [],
+   "podcast": null
+  },
+  {
+   "id": "04",
+   "outcome": "After this module you can describe how Minnesota's majority culture can look from outside it, name parts of the state's racial history that were kept out of view, and use outside perspectives to check how your own meetings, letters and processes land.",
+   "reflection": "Think of a recent meeting, letter or process you were part of at work. How might it have looked to someone outside your own background, and who could you ask?",
+   "keyPoints": [
+    {
+     "chapter": "Opening",
+     "points": [
+      "A culture looks one way from the inside and another way from the outside.",
+      "Friendly, helpful people can still leave a newcomer feeling like a guest.",
+      "The goal is not to feel bad about home but to see home more completely."
+     ]
+    },
+    {
+     "chapter": "Voices from outside the majority",
+     "points": [
+      "People who stand partly outside the majority often see what insiders miss, though no one speaks for a whole community.",
+      "Experiences differ: some newcomers felt accepted but not understood, while a refugee felt truly welcomed, and both are real.",
+      "Being asked for input again and again without seeing it in the final product is a warning sign for any public agency."
+     ]
+    },
+    {
+     "chapter": "The Minnesota paradox",
+     "points": [
+      "Minnesota ranks among the best places to live, yet its racial gaps for African Americans are among the widest in the country.",
+      "The gaps are wide partly because white Minnesotans do better than average, not only because Black Minnesotans do worse.",
+      "Watch for the habit of placing a problem outside the group so the group's self-image stays intact."
+     ]
+    },
+    {
+     "chapter": "A history kept out of view",
+     "points": [
+      "Racial covenants in property deeds shaped Twin Cities housing from 1910 until the legislature banned them in 1953.",
+      "Interstate 94 cut St. Paul's Rondo neighborhood in half, and a process open to everyone still responded most to people with political clout.",
+      "The 1920 Duluth lynchings were mostly forgotten until 1991, and that long forgetting is part of the cultural story."
+     ]
+    },
+    {
+     "chapter": "2020: a hard look at culture",
+     "points": [
+      "The Minnesota Department of Human Rights found the Minneapolis pattern of race discrimination was caused primarily by an organizational culture.",
+      "Without real culture change, new policies and trainings can be meaningless.",
+      "Culture is shaped by the tone leaders set, how norms are taught and reinforced, and what happens when they are broken."
+     ]
+    },
+    {
+     "chapter": "Repair, equity work and an honest debate",
+     "points": [
+      "Minnesotans repair the record through covenant discharges, volunteer mapping, a pardon, memorial work and Rondo Days.",
+      "State executive orders have continued equity councils and directed agencies to carry out a long-range equity plan.",
+      "People of good faith disagree about equity and equality, and the habit of treating everyone the same sits at the center of that debate."
+     ]
+    }
+   ],
+   "decisions": [
+    {
+     "id": "04-d1",
+     "scenario": "Your team plans a third round of listening sessions with an immigrant community about a new service. Community members have already given input twice. A partner mentions that people are asking whether anything changed after the last two sessions.",
+     "question": "What do you do before scheduling the next session?",
+     "options": [
+      {
+       "text": "Go back to the community first and share what you heard, what changed because of it, and what did not change and why.",
+       "correct": true,
+       "feedback": "This answers the frustration the module describes as over-engagement: being asked again and again without seeing your input in the final product. Showing what changed builds trust before you ask for more."
+      },
+      {
+       "text": "Schedule the session right away, since more input always shows the community is valued.",
+       "correct": false,
+       "feedback": "More sessions can feel like respect from inside the agency. From outside, repeated asks with no visible result can feel like the opposite, which is what immigrant and refugee participants described."
+      },
+      {
+       "text": "Skip further sessions and finish the work with the input you already have.",
+       "correct": false,
+       "feedback": "This saves people time, but it still leaves them unsure whether their input mattered. Reporting back closes the loop either way."
+      }
+     ]
+    },
+    {
+     "id": "04-d2",
+     "scenario": "In a planning meeting, a colleague explains a gap in who uses a disability service by saying the families who do not apply mostly moved here from other states and do not understand how things work in Minnesota.",
+     "question": "What is the most useful response?",
+     "options": [
+      {
+       "text": "Agree, and suggest a fact sheet that explains Minnesota's system to people from other states.",
+       "correct": false,
+       "feedback": "A fact sheet may help, but this accepts a cause placed outside our own systems without checking. The module describes this as a common move that keeps the group's self-image intact."
+      },
+      {
+       "text": "Ask what in our own outreach, forms or process might also make it harder for these families to apply, and who could tell us.",
+       "correct": true,
+       "feedback": "This uses the module's mirror. Samuel Myers Jr. describes leaders blaming problems on newcomers so the problem was not Minnesota. Looking inside our systems first keeps the question open and honest."
+      },
+      {
+       "text": "Say nothing, since the colleague means well and raising it could feel awkward.",
+       "correct": false,
+       "feedback": "Staying quiet keeps the meeting smooth, but the module notes that kindness and avoidance can look the same from inside. A gentle question helps more than silence."
+      }
+     ]
+    },
+    {
+     "id": "04-d3",
+     "scenario": "Your area opens a public comment period on a change to how families learn about a waiver service. Halfway through, nearly all comments come from a few established advocacy groups that comment on every change.",
+     "question": "What do you do?",
+     "options": [
+      {
+       "text": "Keep the comment period as is, since it is open to everyone and anyone could have commented.",
+       "correct": false,
+       "feedback": "The Rondo history shows that a process can be open to everyone and still respond most to people who already know how it works."
+      },
+      {
+       "text": "Give extra weight to the established groups because they understand the policy best.",
+       "correct": false,
+       "feedback": "Their input matters, but weighting it more would repeat the pattern MNopedia describes, where political clout shaped whose concerns were heard."
+      },
+      {
+       "text": "Reach out to families and community partners who have not commented and offer simpler ways to share their views before the period closes.",
+       "correct": true,
+       "feedback": "This applies the module's lesson from Rondo and Merriam Park. Going to people who are less familiar with the process helps their voices count, not only the voices of those who know how to work it."
+      }
+     ]
+    }
+   ],
+   "ordering": {
+    "id": "04-o1",
+    "scenario": "After a meeting with community partners that seemed smooth to you, a colleague tells you she saw it differently: two partners went quiet after their first comments were passed over.",
+    "prompt": "Put these in the order you would do them.",
+    "steps": [
+     "Bring what you learned back to the meeting lead and the group.",
+     "Listen without explaining what you meant or defending the meeting.",
+     "Agree together on how to follow up with the partners who went quiet.",
+     "Thank your colleague and ask what she noticed.",
+     "Reach out to those partners and ask how the meeting looked to them."
+    ],
+    "correctOrder": [
+     3,
+     1,
+     2,
+     4,
+     0
+    ],
+    "feedback": "Her outside view is information you could not see from where you sat, so you take it in first. Then you move toward the people whose voices were lost before changing the record of the meeting."
+   },
+   "recall": [
+    {
+     "question": "What did the Minnesota Department of Human Rights say was the main cause of the Minneapolis pattern of race discrimination?",
+     "options": [
+      {
+       "text": "Primarily an organizational culture.",
+       "correct": true,
+       "feedback": "Right. The report said that without real culture change, new policies and trainings would be meaningless."
+      },
+      {
+       "text": "Mainly a lack of written policies.",
+       "correct": false,
+       "feedback": "Not quite. The report's point was that culture can outlast policy, so new policies alone would not fix it."
+      },
+      {
+       "text": "Mostly people who moved to Minnesota from other states.",
+       "correct": false,
+       "feedback": "No. Placing the cause outside the group is the habit Samuel Myers Jr. warns about, not the report's finding."
+      }
+     ]
+    },
+    {
+     "question": "What lesson does the module draw from comparing Rondo with Merriam Park during the building of Interstate 94?",
+     "options": [
+      {
+       "text": "Highway projects always treat every neighborhood the same way.",
+       "correct": false,
+       "feedback": "No. Well-connected Merriam Park residents won several changes, while Rondo did not."
+      },
+      {
+       "text": "A process can be open to everyone and still respond most to people who already know how it works.",
+       "correct": true,
+       "feedback": "Right. MNopedia concludes that a lack of political clout, along with racial and class bias, left Rondo vulnerable."
+      },
+      {
+       "text": "Rondo residents did not care about their neighborhood.",
+       "correct": false,
+       "feedback": "No. Rondo was the center of Black life in St. Paul, and residents have kept its memory alive through Rondo Days since 1983."
+      }
+     ]
+    }
+   ],
+   "cardDescriptions": [],
+   "jobAid": {
+    "title": "Check how it looks from outside",
+    "useWhen": "Use when you plan or review a meeting, letter, outreach effort or public process that affects people outside your own background.",
+    "sections": [
+     {
+      "heading": "Before",
+      "items": [
+       "Ask who already knows how this process works and who does not.",
+       "Check whether the people you are asking have given input before and what they saw come of it.",
+       "Plan more than one way for people to share their views."
+      ]
+     },
+     {
+      "heading": "During",
+      "items": [
+       "Notice who goes quiet, and do not treat silence or a nod as agreement.",
+       "Make sure concerns are followed up, not just thanked and dropped.",
+       "When a problem comes up, look first for causes inside our own systems."
+      ]
+     },
+     {
+      "heading": "After",
+      "items": [
+       "Ask someone from outside your own background how it looked to them, then listen without explaining.",
+       "Follow up with people whose voices were passed over.",
+       "Report back to participants what their input changed."
+      ]
+     }
+    ],
+    "remember": [
+     "Kindness and avoidance can look the same from inside.",
+     "Open to everyone is not the same as heard equally.",
+     "Culture can outlast policy."
+    ],
+    "askWho": [
+     "Your supervisor or the meeting lead, when a concern was raised and not followed up.",
+     "The person or area responsible for the policy or process, when input needs to reach the final product."
+    ]
+   },
+   "images": [],
+   "podcast": null
+  },
+  {
+   "id": "05",
+   "outcome": "After this module you can explain how majority-culture values such as individual choice, independence and integrated settings are built into Minnesota disability policy, and ask each person and family how those values fit their own idea of a good life.",
+   "reflection": "Think of a recent plan, meeting or form you worked on. Which picture of a good life did it assume, and how would you find out whether the person and their family share it?",
+   "keyPoints": [
+    {
+     "chapter": "Opening",
+     "points": [
+      "Minnesota humor about refusing help three times points to a real pattern: help is often given more easily than it is asked for.",
+      "In Minnesota, help often comes through institutions such as the church, the cooperative, the nonprofit and the state.",
+      "Disability services are a cultural product that carries our habits, so they fit some families easily and others less well."
+     ]
+    },
+    {
+     "chapter": "A history we inherited",
+     "points": [
+      "Minnesota's state institutions, its 1917 commitment law and its 1925 sterilization law harmed many people, and that history still shapes trust in public agencies.",
+      "The people behind eugenics saw themselves as reformers, which shows that confidence in our own good intentions is not a safeguard.",
+      "Families and self-advocates pushed back, and the central question shifted from how to care for people to who decides."
+     ]
+    },
+    {
+     "chapter": "Values written into law",
+     "points": [
+      "Minnesota law protects informed choice, person-centered planning, self-determination and the most integrated setting.",
+      "The law also asks for information that is culturally and linguistically appropriate and for each person's cultural needs to be identified.",
+      "These protections were won by disabled people and families, and they also reflect majority-culture values such as individual decision-making and independence."
+     ]
+    },
+    {
+     "chapter": "The same values, seen from other homes",
+     "points": [
+      "Studies of Hmong, Somali and Latino families show differences in how disability is named, where families turn first and who in the family decides.",
+      "Data show different patterns of service use by group, but the researchers did not draw conclusions about causes, and we should not either.",
+      "When a family member answers for an adult with a disability, the honest answer to whether that is a rights problem or a chosen norm is that you have to ask."
+     ]
+    },
+    {
+     "chapter": "Inside the agency",
+     "points": [
+      "In the 2025 statewide survey, roughly four in ten state employees did not fully agree that they feel comfortable sharing ideas that differ from others'.",
+      "A smile and a nod can look like agreement, so silence in a meeting does not always mean the group has agreed.",
+      "Recent oversight findings raise a hard question: how does a culture of trust notice abuse without casting suspicion on whole communities?"
+     ]
+    }
+   ],
+   "decisions": [
+    {
+     "id": "05-d1",
+     "scenario": "You are a county case manager meeting with a young adult who has a developmental disability and his family. The family says they make decisions together and want him to keep living at home with relatives caring for him. Your planning form has sections on independent living and competitive employment.",
+     "question": "What do you do next?",
+     "options": [
+      {
+       "text": "Ask the young man and his family what a good life looks like for him in their own words, explain all the options in their preferred language, and ask how they would like to decide.",
+       "correct": true,
+       "feedback": "This treats care at home and shared decision-making as real choices while making sure the choice is informed, as Minnesota law on informed choice and cultural needs expects."
+      },
+      {
+       "text": "Note the family's preference, then present supported living and job services as the goals to work toward.",
+       "correct": false,
+       "feedback": "This covers the form, but it can signal that care at home is something to move past. The family may agree politely without feeling heard, and the plan may not reflect what they want."
+      },
+      {
+       "text": "Ask the family to leave the room right away so you can hear his wishes privately.",
+       "correct": false,
+       "feedback": "Hearing his own voice matters, but doing this without explanation can feel like distrust. Asking him first how he wants decisions made, and who he wants in the room, honors both his choice and the family's way of deciding."
+      }
+     ]
+    },
+    {
+     "id": "05-d2",
+     "scenario": "In a team meeting, your manager proposes a change to how waiver information is shared with families. Everyone nods and no one objects. You noticed two newer colleagues looked uneasy.",
+     "question": "What is the most useful thing to do?",
+     "options": [
+      {
+       "text": "Treat the nods as agreement and move on, since no one spoke up.",
+       "correct": false,
+       "feedback": "The module notes that a smile and a nod can look like agreement. Silence may mean some people decided objecting was not worth the cost."
+      },
+      {
+       "text": "Invite other views directly, for example by asking what might not work for some families, and offer a way to share concerns after the meeting.",
+       "correct": true,
+       "feedback": "This makes it easier for people to share ideas that differ from others', which roughly four in ten state employees did not fully agree they feel comfortable doing."
+      },
+      {
+       "text": "Tell the two newer colleagues afterward that they should have spoken up.",
+       "correct": false,
+       "feedback": "This puts the burden on individuals instead of the group's habits. The question is whether the meeting made objecting feel safe."
+      }
+     ]
+    },
+    {
+     "id": "05-d3",
+     "scenario": "A coworker looks at service-use data and says one community must value independence less because fewer of its members use disability waivers.",
+     "question": "How do you respond?",
+     "options": [
+      {
+       "text": "Agree, since the numbers show a clear difference.",
+       "correct": false,
+       "feedback": "The study authors say plainly that they do not draw conclusions about causes. The data show a difference, not a reason."
+      },
+      {
+       "text": "Say that research has not established why the gaps exist, and suggest the team ask families how they name disability, where they turn first and who decides.",
+       "correct": true,
+       "feedback": "This matches the module: the findings show differences in naming, help-seeking, decision-making and service use, not that any community values independence less."
+      },
+      {
+       "text": "Say the difference is because the system is unfair and leave it there.",
+       "correct": false,
+       "feedback": "This also jumps to a cause the research did not establish. It is better to stay curious and ask families directly."
+      }
+     ]
+    }
+   ],
+   "ordering": {
+    "id": "05-o1",
+    "scenario": "You are preparing for a person-centered planning meeting with an adult with a disability and their family, who have a different cultural background from your own.",
+    "prompt": "Put these in the order you would do them.",
+    "steps": [
+     "Explain every service option in their preferred language so the choice is informed.",
+     "Ask how they would like to decide among the options.",
+     "Ask the person and their family what a good life means to them, and write it down in their words.",
+     "Ask the person how they would like decisions made and who they want in the room.",
+     "Fill in the planning form so it reflects what they told you, not only the form's headings."
+    ],
+    "correctOrder": [
+     3,
+     2,
+     0,
+     1,
+     4
+    ],
+    "feedback": "Starting with who decides and what a good life means keeps the person's own values at the center. Information comes before the choice, and the form comes last so it records their words."
+   },
+   "recall": [
+    {
+     "question": "What lesson does the module draw from the fact that Minnesota's eugenics supporters saw themselves as reformers?",
+     "options": [
+      {
+       "text": "Confidence in our own good intentions is not a safeguard.",
+       "correct": true,
+       "feedback": "Right. The module says the lesson is not that reform is dangerous, but that good intentions alone do not protect people."
+      },
+      {
+       "text": "Reform efforts are always dangerous and should be avoided.",
+       "correct": false,
+       "feedback": "The module says directly that the lesson is not that reform is dangerous."
+      },
+      {
+       "text": "Eugenics laws were mostly limited to a few counties.",
+       "correct": false,
+       "feedback": "The module does not say this. It describes statewide laws from 1917 and 1925."
+      }
+     ]
+    },
+    {
+     "question": "According to the module, what do Minnesota disability laws assume that matches majority culture?",
+     "options": [
+      {
+       "text": "That families should make all decisions for adults with disabilities.",
+       "correct": false,
+       "feedback": "The laws center the individual's informed choice, not family decision-making."
+      },
+      {
+       "text": "That the individual is the main decision-maker, independence is a central goal and the most integrated setting is usually best.",
+       "correct": true,
+       "feedback": "Right. The module calls these strong protections that also carry majority-culture assumptions, a tension the law names when it requires cultural needs to be identified."
+      },
+      {
+       "text": "That cultural background should not play a role in planning.",
+       "correct": false,
+       "feedback": "The opposite. The law asks planners to respect each person's history, dignity and cultural background."
+      }
+     ]
+    }
+   ],
+   "cardDescriptions": [],
+   "jobAid": {
+    "title": "Plan around the person's own picture of a good life",
+    "useWhen": "Use when you plan services with a person with a disability and their family, especially when their way of deciding differs from what the form expects.",
+    "sections": [
+     {
+      "heading": "Before",
+      "items": [
+       "Notice your own picture of a good outcome and where it came from.",
+       "Arrange information and an interpreter in the person's preferred language.",
+       "Remember that some families may carry distrust of public agencies because of Minnesota's institutional history."
+      ]
+     },
+     {
+      "heading": "During",
+      "items": [
+       "Ask the person how they want decisions made and who they want in the room.",
+       "Before turning to the form, ask what a good life means to them and write it down in their words.",
+       "Explain every option clearly, including care at home and shared decision-making, so the choice is informed.",
+       "Do not take a polite nod as agreement; check what people actually want."
+      ]
+     },
+     {
+      "heading": "After",
+      "items": [
+       "Make sure the plan reflects the person's and family's words, not only the form's headings.",
+       "Note any place where the form did not fit the family's way of deciding.",
+       "Follow up to see whether the plan still fits."
+      ]
+     }
+    ],
+    "remember": [
+     "Informed choice, independence and integration are protections, and they are also cultural values.",
+     "Differences in service use do not show that any community values independence less.",
+     "When you are unsure who decides, ask."
+    ],
+    "askWho": [
+     "Your supervisor, when a family's way of deciding does not fit the planning form.",
+     "The person or area responsible for the policy, when you think the process itself needs to change."
+    ]
+   },
+   "images": [],
+   "podcast": null
+  },
+  {
+   "id": "06",
+   "outcome": "After this module you can use frameworks like Bennett's six stages as a mirror for your own habits, notice the starting point hidden inside \"treating everyone the same,\" and choose one Minnesota strength to practice on purpose.",
+   "reflection": "Think of one form, meeting or plan you use often in your work. Whose household or way of life does its idea of \"the same\" start from, and what would you change first?",
+   "keyPoints": [
+    {
+     "chapter": "Opening",
+     "points": [
+      "Hotdish shows a gentle truth about belonging: new Minnesotans picked up the dish and changed it, and the old Minnesotans ate it.",
+      "This last module asks what to do with what you have seen over five modules.",
+      "The focus is which lenses help, how to use them without turning them into labels, and which Minnesota strengths to carry forward on purpose."
+     ]
+    },
+    {
+     "chapter": "Six ways of meeting difference",
+     "points": [
+      "Milton Bennett describes six stages, from Denial, Defense and Minimization to Acceptance, Adaptation and Integration.",
+      "Acceptance has its own trap: saying \"it's just different\" can stop you from making fair judgments that are not built only on your own culture's yardstick.",
+      "The stages are a mirror, not a test, and many people find themselves in more than one stage depending on the day, topic or person."
+     ]
+    },
+    {
+     "chapter": "Whose \"same\"?",
+     "points": [
+      "Minimization plays down differences, and organizations at this stage can overstate the benefits of equal opportunity.",
+      "Treating everyone \"the same\" always has a starting point, often the household the form, meeting or plan was designed around.",
+      "The module does not settle the debate over fairness; it asks you to notice the starting point inside your own idea of \"the same.\""
+     ]
+    },
+    {
+     "chapter": "Averages, not people",
+     "points": [
+      "Every framework in this course describes averages or ideal types, not any one person.",
+      "The researchers themselves warn about limits, from volunteer samples to flawed country classifications to numbers that disagree.",
+      "If a framework helps you ask a better question about yourself or your process, it is working; if it helps you predict what one family will do, set it down."
+     ]
+    },
+    {
+     "chapter": "Strengths worth keeping",
+     "points": [
+      "Minnesota's majority culture brings real strengths: fairness and civic commitment, follow-through and patience, care, and a record of rights and reckoning.",
+      "Each strength has a shadow, such as believing that holding a meeting means you listened.",
+      "Follow-through answers that shadow: go back to people and show them what changed."
+     ]
+    }
+   ],
+   "decisions": [
+    {
+     "id": "06-d1",
+     "scenario": "You help a family complete a standard intake form for disability services. Several questions assume one parent works and the household includes only parents and children. This family has grandparents, an aunt and an older cousin who all share care. A coworker says, \"Just fill it in like everyone else does.\"",
+     "question": "What do you do?",
+     "options": [
+      {
+       "text": "Complete the form with the family, record who actually helps with what in the notes, and tell the person or area responsible for the form what assumptions it makes.",
+       "correct": true,
+       "feedback": "This notices the starting point hiding inside \"the same.\" The form was built around one kind of household, so you capture this family's real support and raise the pattern with the person or area responsible."
+      },
+      {
+       "text": "Fill it in like everyone else, listing only the parents, so the record matches the standard format.",
+       "correct": false,
+       "feedback": "This feels fair because every family gets the same form. But it quietly treats one kind of household as the norm and leaves out the support this family actually relies on."
+      },
+      {
+       "text": "Skip the form for now and write your own description of the family's culture instead.",
+       "correct": false,
+       "feedback": "The intent to respect the family is good, but skipping the process can cause problems for them, and describing their \"culture\" risks turning a group pattern into a label."
+      }
+     ]
+    },
+    {
+     "id": "06-d2",
+     "scenario": "Before a phone call with a family who recently moved to Minnesota, a colleague says, \"I read about high-context cultures. They won't want us to be direct, so let's keep it vague.\"",
+     "question": "How do you respond?",
+     "options": [
+      {
+       "text": "Suggest using the framework to check your own habits, then simply ask the family early in the call how they like to talk through decisions.",
+       "correct": true,
+       "feedback": "This uses the framework as a mirror, not a label. The module's test is that a framework should help you ask better questions, not predict what one family \"will\" do."
+      },
+      {
+       "text": "Agree and plan to keep everything vague, since the research describes their culture.",
+       "correct": false,
+       "feedback": "This moves from a group average to a single family, the mistake the module calls a stereotype. Researchers themselves say these classifications are broad or limited."
+      },
+      {
+       "text": "Say frameworks are useless and that culture should never come up.",
+       "correct": false,
+       "feedback": "This swings toward Minimization. The module says frameworks are useful as mirrors for noticing your own default settings; the problem is using them as labels for others."
+      }
+     ]
+    },
+    {
+     "id": "06-d3",
+     "scenario": "Your team held three listening sessions with a community about access to services. Now your manager wants to schedule a fourth. A community member tells you, \"We keep giving input and never see what happens with it.\"",
+     "question": "What is the best next step?",
+     "options": [
+      {
+       "text": "Before asking for more input, go back to the community and show what changed because of their earlier input, and what has not changed yet and why.",
+       "correct": true,
+       "feedback": "This is follow-through, the strength the module says answers the shadow of over-engagement. People see their input reflected before being asked again."
+      },
+      {
+       "text": "Hold the fourth session as planned; more listening is always better.",
+       "correct": false,
+       "feedback": "This is the shadow of trust in process: believing that holding a meeting means you listened. The module describes frustration with \"over-engagement\" for exactly this reason."
+      },
+      {
+       "text": "Stop engaging the community, since they are tired of meetings.",
+       "correct": false,
+       "feedback": "Pulling back leaves people without answers. The frustration is about not seeing results, so the answer is to report back, not to stop talking."
+      }
+     ]
+    }
+   ],
+   "ordering": {
+    "id": "06-o1",
+    "scenario": "You are preparing for a planning meeting with a young adult who has a developmental disability and his family. Your plan template leans toward goals like living on his own and working in the community.",
+    "prompt": "Put these in the order you would do them.",
+    "steps": [
+     "Ask the young adult first what a good life looks like to him.",
+     "Ask his family what a good life looks like to them and who usually helps decide what.",
+     "Follow up later and show the person and family what changed because of what they told you.",
+     "Notice the starting point built into your template and your own idea of a good life.",
+     "Explain every option in plain language and build the plan from their answers."
+    ],
+    "correctOrder": [
+     3,
+     0,
+     1,
+     4,
+     2
+    ],
+    "feedback": "Checking your own default first keeps the template from setting the agenda. Asking the person before the family keeps his own voice in the plan, and following up shows that the meeting was more than a meeting."
+   },
+   "recall": [
+    {
+     "question": "Which of Bennett's stages does the module say is most worth a close look in a Minnesota workplace?",
+     "options": [
+      {
+       "text": "Minimization",
+       "correct": true,
+       "feedback": "Right. A culture that values treating everyone alike and stressing what people share may find Minimization comfortable, which can hide whose \"same\" is the standard."
+      },
+      {
+       "text": "Denial",
+       "correct": false,
+       "feedback": "Denial is when other cultures are barely noticed. The module points instead to Minimization as the stage that may feel natural in Minnesota's majority culture."
+      },
+      {
+       "text": "Integration",
+       "correct": false,
+       "feedback": "Integration is when people move in and out of worldviews as part of who they are. The module's close look is at Minimization."
+      }
+     ]
+    },
+    {
+     "question": "According to the module, how can you tell whether a cultural framework is being used well?",
+     "options": [
+      {
+       "text": "It helps you ask a better question about yourself or your process.",
+       "correct": true,
+       "feedback": "Yes. Frameworks are most useful as mirrors for noticing your own default settings."
+      },
+      {
+       "text": "It helps you predict what a particular family or coworker will do.",
+       "correct": false,
+       "feedback": "This is the signal to set the framework down. Moving from a group average to one person is a stereotype."
+      },
+      {
+       "text": "It gives everyone on your team a stage or score.",
+       "correct": false,
+       "feedback": "The module says this is a mirror, not a test. Nothing in it measures you or places anyone on a stage."
+      }
+     ]
+    }
+   ],
+   "cardDescriptions": [],
+   "jobAid": {
+    "title": "Use a framework as a mirror",
+    "useWhen": "Use when you are planning with a person or family, designing a process, or catching yourself thinking \"we treat everyone the same.\"",
+    "sections": [
+     {
+      "heading": "Before",
+      "items": [
+       "Ask yourself whose household or way of life your form, meeting or plan was designed around.",
+       "Check whether you are using a framework to question your own habits or to predict someone else.",
+       "Pick one habit to practice, such as asking \"What does a good life look like to you?\""
+      ]
+     },
+     {
+      "heading": "During",
+      "items": [
+       "Ask the person first, then the family, what a good life looks like and who helps decide what.",
+       "Explain every option in plain language, without assuming which one they will want.",
+       "Before closing, ask who has not yet weighed in."
+      ]
+     },
+     {
+      "heading": "After",
+      "items": [
+       "Go back to people and show what changed because of what they told you.",
+       "Jot down one moment each week when your habit changed what you heard.",
+       "Share any pattern in a standard form or process with the person or area responsible for it."
+      ]
+     }
+    ],
+    "remember": [
+     "Frameworks describe averages, not people.",
+     "\"The same\" always has a starting point.",
+     "Keep making judgments, just not only by your own culture's yardstick."
+    ],
+    "askWho": [
+     "Your supervisor, when a standard practice seems to fit some families better than others.",
+     "The person or area responsible for the form, template or policy you want to change."
+    ]
+   },
+   "images": [],
+   "podcast": null
+  }
+ ]
+}

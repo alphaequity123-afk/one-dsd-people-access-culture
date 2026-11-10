@@ -3,6 +3,8 @@ import { ResearchBlocks, ResearchInline, ResearchMarkdown } from "@/components/r
 import { parseResearchMarkdown, type ResearchBlock } from "@/lib/content/research-markdown";
 import { WATER_COURSE_HREF, WATER_ESSAY } from "@/lib/content/water-we-swim-in";
 import "./cl-water.css";
+import { WaterFigure } from "./water-curriculum";
+import type { WaterImage } from "@/lib/content/water-curriculum";
 
 /** One page of the essay. Its words come unchanged from the essay data; only the page layout is new. */
 export type WaterEssayPart = { slug: string; heading: string; body: string };
@@ -71,7 +73,7 @@ function moduleGroups(markdown: string): ModuleGroup[] {
 }
 
 /** A module with an "In this module" contents list; every word and block renders as before. */
-export function WaterModuleBody({ markdown, notesKey }: { markdown: string; notesKey?: string }) {
+export function WaterModuleBody({ markdown, notesKey, images = {} }: { markdown: string; notesKey?: string; images?: Record<string, WaterImage> }) {
   const groups = moduleGroups(markdown);
   const headed = groups.filter(group => group.heading);
   return <>
@@ -80,7 +82,7 @@ export function WaterModuleBody({ markdown, notesKey }: { markdown: string; note
       <ol>{headed.map(group => <li key={group.id}><a href={`#${group.id}`}><ResearchInline text={group.heading!} /></a></li>)}</ol>
     </nav>}
     {groups.map((group, index) => group.heading
-      ? <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} className="cl-water-part"><h2 id={`${group.id}-title`}><ResearchInline text={group.heading} /></h2><ResearchBlocks blocks={group.blocks} notesKey={notesKey} /></section>
+      ? <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} className="cl-water-part"><h2 id={`${group.id}-title`}><ResearchInline text={group.heading} /></h2>{images[group.heading] && <WaterFigure image={images[group.heading]} />}<ResearchBlocks blocks={group.blocks} notesKey={notesKey} /></section>
       : <ResearchBlocks key={`intro-${index}`} blocks={group.blocks} notesKey={notesKey} />)}
   </>;
 }
