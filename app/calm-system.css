@@ -86,3 +86,8 @@ body.dsd-calm .calm-glyph, body.dsd-calm span[aria-hidden="true"].arrow { displa
   .calm details { border: 0; }
   .calm details > * { display: block !important; }
 }
+
+.course-media-item { border-top: 1px solid var(--calm-line); padding: 1.5rem 0; }
+.course-media-item h2 { margin-top: 0.25rem; }
+.course-media-chapter { background: none; border: 0; padding: 0; color: var(--calm-accent); font: inherit; font-weight: 600; cursor: pointer; text-align: left; }
+.course-media-chapter:hover { text-decoration: underline; }

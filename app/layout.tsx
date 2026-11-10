@@ -9,6 +9,7 @@ import "./inner-theme.css";
 import "./calm-system.css";
 import { InternalPage } from "@/components/internal-page";
 import { OpenDetailsForHash } from "@/components/open-details-for-hash";
+import { CourseMediaForPage } from "@/components/course-media-for-page";
 import { PROGRAM } from "@/lib/constants";
 import { PublishedProgramHeader } from "@/components/published-program-header";
 import { DsdProgramFooter } from "@/components/dsd-program-footer";
@@ -109,6 +110,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main id="main" tabIndex={-1} className="flex-1">
             <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><DsdResourceActions /></ChromeGate>
             <InternalPage>{children}</InternalPage>
+            <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><CourseMediaForPage /></ChromeGate>
             <OpenDetailsForHash />
 
           </main>
