@@ -56,6 +56,7 @@ export const config = {
     "/share/courses/cultural-intelligence-tribal/:path*", "/share/courses/cultural-intelligence-native-american/:path*", "/share/courses/ipe-20-tribal-sovereignty/:path*",
     "/equity-review/:path*",
     // Public images that may have a 4K sibling (see lib/content/image-4k.ts).
+    "/learning/self-directed/covers/index.json",
     "/((?:images|learning|library|documents|videos|toolkit-work)/.+\\.(?:png|jpe?g|webp))",
     {
       // Pages only: never API routes, Next.js assets, or public files such as images and audio.
