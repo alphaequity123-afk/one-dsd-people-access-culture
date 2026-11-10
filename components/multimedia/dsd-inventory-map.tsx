@@ -18,5 +18,5 @@ const questions: Record<string, string> = {
 /** Receives only the profiles already visible in the scoped published inventory. */
 export function DsdInventoryMap({ programs }: { programs: { id: string; title: string }[] }) {
   if (!programs.length) return null;
-  return <details className="my-6 rounded-xl border border-slate-300 bg-white p-5"><summary className="cursor-pointer text-lg font-semibold">Find a program through a work question</summary><dl className="mt-5 grid gap-5 md:grid-cols-2">{programs.filter(program => questions[program.id]).map(program => <div key={program.id}><dt className="font-semibold">{questions[program.id]}</dt><dd className="ml-0 mt-2"><Link href={"/one-dsd/programs/" + program.id}>{program.title} →</Link></dd></div>)}</dl></details>;
+  return <details className="my-6 rounded-xl border border-slate-300 bg-white p-5"><summary className="cursor-pointer text-lg font-semibold">Find a program through a work question</summary><dl className="mt-5 grid gap-5 md:grid-cols-2">{programs.filter(program => questions[program.id]).map(program => <div key={program.id}><dt className="font-semibold">{questions[program.id]}</dt><dd className="ml-0 mt-2"><Link href={"/one-dsd/programs/" + program.id}>{program.title}</Link></dd></div>)}</dl></details>;
 }

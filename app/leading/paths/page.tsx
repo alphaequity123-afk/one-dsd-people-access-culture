@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function LeadingPathsPage() {
   return <div className={base.page}><div className={base.content}>
-    <p className={base.back}><Link href="/leading">← {LEADING_LABEL}</Link></p>
+    <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
     <header className={base.intro}>
       <p className={base.eyebrow}>Optional</p>
       <h1>Suggested paths</h1>
@@ -22,7 +22,7 @@ export default function LeadingPathsPage() {
       {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
         <span className={styles.doorTitle}>{path.title}</span>
         <span>{path.description}</span>
-        <span className={styles.doorAction}>{path.courseIds.length} courses, about {pathHours(path)} hours <span aria-hidden="true">→</span></span>
+        <span className={styles.doorAction}>{path.courseIds.length} courses, about {pathHours(path)} hours</span>
       </Link></li>)}
     </ul>
     <p className={styles.plain}>Times come from each course&apos;s own stated length and have not been tested with readers. They count courses only, not optional practice or live sessions.</p>

@@ -23,7 +23,7 @@ export default async function LeadingDoorPage({ params }: { params: Promise<{ do
   const published = new Set((await publishedCourses(scope)).map(({ pack }) => pack.course.id));
   const resources = DOOR_RESOURCES[door.slug];
   return <div className={base.page}><div className={base.content}>
-    <p className={base.back}><Link href="/leading">← {LEADING_LABEL}</Link></p>
+    <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
     <header className={base.intro}>
       <p className={base.eyebrow}>What are you deciding?</p>
       <h1>{door.title}</h1>

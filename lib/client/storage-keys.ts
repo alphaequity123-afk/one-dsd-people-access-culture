@@ -21,6 +21,8 @@ export const BROWSER_STORAGE_KEYS = {
   savedResources: "one-dsd-saved-resources-v1",
   practiceReflection: "one-dsd-logic-model-reflection-v1",
   myPath: "one-dsd-my-path-v1",
+  actionPlans: "one-dsd-action-plans-v1",
+  decisionRecords: "one-dsd-decision-records-v1",
   pathArtifact: (pathId: string) => `pac_artifact_${pathId}`,
   pathArtifactSource: (pathId: string) => `pac_artifact_source_${pathId}`,
   pathProgress: (pathId: string) => `pac_progress_${pathId}`,
@@ -41,6 +43,9 @@ export const PRIVATE_BROWSER_STORAGE_KEYS: readonly PrivateBrowserStorageKey[] =
   { area: "local", key: BROWSER_STORAGE_KEYS.savedResources, purpose: "saved_resources" },
   { area: "local", key: BROWSER_STORAGE_KEYS.practiceReflection, purpose: "practice_reflection" },
   { area: "local", key: BROWSER_STORAGE_KEYS.myPath, purpose: "my_path" },
+  // Personal action plans and decision records the person chose to keep on this computer.
+  { area: "local", key: BROWSER_STORAGE_KEYS.actionPlans, purpose: "practice_plans" },
+  { area: "local", key: BROWSER_STORAGE_KEYS.decisionRecords, purpose: "practice_plans" },
   ...GRADUATION_PATHS.flatMap((path) => [
     { area: "local" as const, key: BROWSER_STORAGE_KEYS.pathArtifact(path.id), purpose: "path_notes" as const },
     { area: "local" as const, key: BROWSER_STORAGE_KEYS.pathArtifactSource(path.id), purpose: "path_notes" as const },

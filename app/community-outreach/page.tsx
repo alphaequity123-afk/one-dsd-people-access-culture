@@ -29,7 +29,7 @@ export default async function CommunityOutreachPage() {
         <h2 id="tasks-title">{text("tasksTitle")}</h2>
         <ul className={styles.tasks}>
           {OUTREACH_TASKS.map(task => <li key={task.href}><Link className={styles.task} href={task.href}>
-            <span className={styles.taskTitle}>{task.title}</span><span>{task.body}</span><span className={styles.taskAction}>{task.action} <span aria-hidden="true">→</span></span>
+            <span className={styles.taskTitle}>{task.title}</span><span>{task.body}</span><span className={styles.taskAction}>{task.action}</span>
           </Link></li>)}
         </ul>
       </section>

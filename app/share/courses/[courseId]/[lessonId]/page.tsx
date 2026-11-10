@@ -50,7 +50,7 @@ export default async function SharedLessonPage({ params }: { params: Promise<{ c
   const lesson = course.lessons[index];
   return (
     <div className={`course-page ${styles.page}`}>
-      <Link className={styles.breadcrumb} href={shareCourseHref(courseId)}>← {course.title}</Link>
+      <Link className={styles.breadcrumb} href={shareCourseHref(courseId)}>{course.title}</Link>
       <div className={styles.lessonLayout}>
         <div className={styles.lessonMain}>
           <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this lesson</summary><ResourceDownloads kind="lesson" id={`${courseId}~${lessonId}`} noun="lesson" scope={scope} /></details>

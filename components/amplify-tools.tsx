@@ -59,7 +59,7 @@ export function AmplifyActivityStudio() {
       <p className="text-sm font-semibold text-[#005ea8]">A starting point for your gathering</p><h3 className="mt-2 text-2xl font-semibold">{activity.title}</h3>
       <p className="my-4 text-lg">{activity.question}</p><ol className="list-decimal space-y-3 pl-5">{activity.steps.map(step => <li key={step}>{step}</li>)}</ol><p className="mt-4 text-sm leading-6">{activity.access}</p>
       <EngagementActivitySample key={activity.id} activityId={activity.id} />
-      <Link className="mt-4 inline-block font-semibold underline" href={activity.href}>{activity.link} →</Link>
+      <Link className="mt-4 inline-block font-semibold underline" href={activity.href}>{activity.link}</Link>
       <form className="mt-6 border-t border-slate-200 pt-5" onSubmit={event => { event.preventDefault(); setDraft(`You're invited: ${activity.title}\n\n${activity.intro}\n\n${details.trim() || "Time and joining details: to be arranged."}\n\nCome to share, listen, or enjoy the conversation. No preparation is needed.\n\nA question to begin\n${activity.question}\n\nA simple plan\n${activity.steps.map((step,index) => `${index+1}. ${step}`).join("\n")}\n\nMaking room\n${activity.access}`); }}>
         <label className="block font-semibold" htmlFor="gathering-details">Time, place, and anything you would like to add <span className="font-normal">(optional)</span></label><textarea id="gathering-details" className={field} rows={3} maxLength={2000} value={details} onChange={event => {setDetails(event.target.value);setDraft("");}} />
         <p className="my-3 text-sm">Your draft stays on this page until you copy or download it. Nothing is sent.</p><button className={button}>Create invitation and plan</button>

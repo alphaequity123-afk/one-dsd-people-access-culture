@@ -13,7 +13,7 @@ export default async function ToolkitStudioPage() {
     <>
       <PageIntro kicker="Toolkit practice companion" title={TOOLKIT_WHY.title} lede={TOOLKIT_WHY.authority}>
         <p className="mt-3 text-sm">{TOOLKIT_WHY.chrome}</p>
-        <p className="mt-5"><Link href="/equity-review">Ready to apply this to your work? Open the complete equity review tools →</Link></p>
+        <p className="mt-5"><Link href="/equity-review">Ready to apply this to your work? Open the complete equity review tools</Link></p>
       </PageIntro>
       <div className="wrap max-w-5xl space-y-10 py-8">
         <section aria-labelledby="why-title">

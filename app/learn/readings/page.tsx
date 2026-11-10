@@ -19,14 +19,14 @@ export default async function ReadingsPage({searchParams}:{searchParams:Promise<
   const page=catPaginate(books,catParam(params.page),PER_PAGE);
   const choices={q,theme,section};
   return <div className={styles.page}>
-    <div className={styles.body}><Link href="/learn/sources" className={styles.back}>← Books and research</Link></div>
+    <div className={styles.body}><Link href="/learn/sources" className={styles.back}>Books and research</Link></div>
     <PageIntro kicker="Read, reflect and put ideas to work" title="Books and ideas for your work" lede="Find a perspective that helps you understand a situation, ask a better question or try a different approach. Explore at your own pace." />
     <div className={styles.body}>
-      <p><Link href="/learn/readings/pathways">Find a reading path for a question in your work →</Link></p>
+      <p><Link href="/learn/readings/pathways">Find a reading path for a question in your work</Link></p>
       <details className="course-more-item">
         <summary>How each reading works and where to start</summary>
         <p className={styles.intro}>Each reading brings together an introduction, key ideas, a fuller summary and questions for reflection or conversation. The authors offer different perspectives; use them alongside the evidence, guidance and people relevant to your work.</p>
-        <section className={styles.path}><h2>Start with a question from your work</h2><p>How could a service notice become easier to understand and act on?</p><Link href="/learn/readings/practice/service-notice">Explore an example and try it yourself →</Link></section>
+        <section className={styles.path}><h2>Start with a question from your work</h2><p>How could a service notice become easier to understand and act on?</p><Link href="/learn/readings/practice/service-notice">Explore an example and try it yourself</Link></section>
       </details>
       <form className={styles.filters} action={BASE} method="get" role="search" aria-label="Find a reading">
         <label htmlFor="reading-q">Find a reading<input id="reading-q" name="q" defaultValue={q} type="search" placeholder="Title, author or idea" /></label>

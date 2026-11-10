@@ -14,7 +14,7 @@ export default function WelcomePage() {
     </div>
     <WelcomeClasShare />
     <div className={styles.entry}>
-      <Link className={styles.enter} href="/home">Open <span aria-hidden="true">→</span></Link>
+      <Link className={styles.enter} href="/home">Open</Link>
     </div>
     <p style={{ textAlign: "center", fontSize: "0.875rem", color: "#334155", padding: "0 20px 20px", margin: 0 }}>Property of Gary Banks</p>
   </section>;

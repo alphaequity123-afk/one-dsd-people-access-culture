@@ -25,10 +25,10 @@ export default function RequirementsPage() {
           <h2 className="text-xl font-semibold">Use the crosswalk with the work it supports</h2>
           <p className="my-3">Download the summary and keep it with the draft analysis or recommendation through the appropriate review channel. Carry unresolved requirements, responsible roles and next actions into implementation planning. When the work changes, reopen the editable file and revise the affected entries.</p>
           <nav aria-label="Related work"><ul className="mt-4 space-y-3">
-            <li><Link href="/practice/gp-2">Policy, form or notice change →</Link></li>
-            <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit →</Link></li>
-            <li><Link href="/practice/measurement">Plan evidence of results →</Link></li>
-            <li><Link href="/support/right-person">Find the responsible person or office →</Link></li>
+            <li><Link href="/practice/gp-2">Policy, form or notice change</Link></li>
+            <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li>
+            <li><Link href="/practice/measurement">Plan evidence of results</Link></li>
+            <li><Link href="/support/right-person">Find the responsible person or office</Link></li>
           </ul></nav>
         </section>
       </PageContents>

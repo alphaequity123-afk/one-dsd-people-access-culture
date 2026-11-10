@@ -18,9 +18,9 @@ const scenes: Record<string, { title: string; columns: [string, string]; rows: [
     ["Staff: “Let's look at the reply route together. How would you like the instructions provided?”", "Makes the action usable and asks about communication preferences without inferring them."],
   ], question: "What would you check about the reply route before saying the explanation worked?" },
   decisions: { title: "Trace a renewal notice beyond its wording", columns: ["Part of the request", "A question for the responsible team"], rows: [
-    ["Notice received → action understood", "Are the requested action, necessary information, date and help route easy to find?"],
-    ["Information found → reply sent", "Is information being requested again, and which verified requirement makes it necessary?"],
-    ["Reply received → next step confirmed", "Who confirms receipt and helps when the response route does not work?"],
+    ["Notice received, then action understood", "Are the requested action, necessary information, date and help route easy to find?"],
+    ["Information found, then reply sent", "Is information being requested again, and which verified requirement makes it necessary?"],
+    ["Reply received, then next step confirmed", "Who confirms receipt and helps when the response route does not work?"],
   ], question: "Which step could be changed, and who has the authority to decide?" },
   reflection: { title: "Compare the evidence before claiming improvement", columns: ["What the team has", "What it can and cannot establish"], rows: [
     ["Written questions were invited before the meeting.", "A process change occurred. That alone does not establish whether colleagues could use the route."],

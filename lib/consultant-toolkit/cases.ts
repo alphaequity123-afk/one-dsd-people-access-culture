@@ -37,6 +37,8 @@ const activeKey = activeCaseKey, previousKey = previousCaseKey;
 // policy-change envelope never authenticates as a toolkit case and the reverse.
 export function toolkitCaseAad(id: string, version: number) { return Buffer.from(`consultant-toolkit:pac_dsd:v1:${id}:${version}`, "utf8"); }
 export function policyChangeCaseAad(id: string, version: number) { return Buffer.from(`policy-change:pac_dsd:v1:${id}:${version}`, "utf8"); }
+/** Decision records a person chose to save to the team space share the table under their own additional data. */
+export function decisionRecordAad(id: string, version: number) { return Buffer.from(`decision-record:pac_dsd:v1:${id}:${version}`, "utf8"); }
 const aad = toolkitCaseAad;
 
 /** Seal a JSON body as a "v1:" AES-256-GCM envelope bound to the given additional data. */
@@ -68,9 +70,10 @@ export function openCaseEnvelope(envelope: string, additionalData: Buffer, key: 
 }
 
 /** Which kind of case a stored row holds, decided only by which additional data authenticates it. */
-export function caseRowKind(row: Pick<CaseRow, "id" | "version" | "encrypted_payload">, key: Buffer, previous?: Buffer): "toolkit" | "policy-change" | "unreadable" {
+export function caseRowKind(row: Pick<CaseRow, "id" | "version" | "encrypted_payload">, key: Buffer, previous?: Buffer): "toolkit" | "policy-change" | "decision-record" | "unreadable" {
   if (openCaseEnvelope(row.encrypted_payload, toolkitCaseAad(row.id, row.version), key, previous) !== undefined) return "toolkit";
   if (openCaseEnvelope(row.encrypted_payload, policyChangeCaseAad(row.id, row.version), key, previous) !== undefined) return "policy-change";
+  if (openCaseEnvelope(row.encrypted_payload, decisionRecordAad(row.id, row.version), key, previous) !== undefined) return "decision-record";
   return "unreadable";
 }
 
@@ -135,7 +138,7 @@ export async function getToolkitCase(id: string): Promise<ToolkitCase | null> {
 export function decodeToolkitRowOrSkip(row: CaseRow, key: Buffer, previous?: Buffer): ToolkitCase | null {
   try { return decodeRow(row, key, previous); }
   catch (error) {
-    if (error instanceof ToolkitCaseError && error.code === "unavailable" && caseRowKind(row, key, previous) === "policy-change") return null;
+    if (error instanceof ToolkitCaseError && error.code === "unavailable" && caseRowKind(row, key, previous) !== "toolkit" && caseRowKind(row, key, previous) !== "unreadable") return null;
     throw error;
   }
 }

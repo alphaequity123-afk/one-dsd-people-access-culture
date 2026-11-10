@@ -14,9 +14,9 @@ export function PolicyPresentationReader({ slides }: { slides: PolicySlide[] }) 
   const next = () => setIndex(value => Math.min(slides.length - 1, value + 1));
   return <section className={styles.reader} aria-label="Policy review presentation">
     <div className={styles.controls}>
-      <button type="button" onClick={previous} disabled={index === 0}>← Previous</button>
+      <button type="button" onClick={previous} disabled={index === 0}>Previous</button>
       <label>Choose a slide<select value={index} onChange={event => setIndex(Number(event.target.value))}>{slides.map((item, position) => <option value={position} key={item.number}>{item.number}. {item.title}</option>)}</select></label>
-      <button type="button" onClick={next} disabled={index === slides.length - 1}>Next →</button>
+      <button type="button" onClick={next} disabled={index === slides.length - 1}>Next</button>
     </div>
     <p role="status" className={styles.position}>Slide {index + 1} of {slides.length}</p>
     <h2>{slide.title}</h2>

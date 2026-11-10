@@ -1,3 +1,4 @@
+import { ConnectedWith } from "@/components/connected-with";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -49,11 +50,12 @@ export default async function PracticeGuidePage({ params }: Props) {
     <PageContents items={contents}>
       <ol className="dsd-guide-steps">{guide.steps.map((step, index) => <li key={step.title}><span className="dsd-guide-step-number" aria-hidden="true">0{index + 1}</span><div><h2 id={`guide-step-${index + 1}`}>{step.title}</h2><p>{step.body}</p><p className="dsd-guide-question">{step.question}</p></div></li>)}</ol>
         <section className="dsd-guide-example" aria-labelledby="guide-example"><p className="dsd-eyebrow">An example to consider</p><h2 id="guide-example">What this could look like</h2><p>{guide.example}</p></section>
-        <section className="dsd-guide-review" aria-labelledby="guide-review"><h2 id="guide-review">Bring it back to your work</h2><p>{guide.review}</p><Link className="dsd-primary-link" href="/my-work/plan">Open your practice plans →</Link><p>After the appropriate decision and use of an approach, <Link href="/program/reflection">record an observation and its limits</Link>. Bring what you learn back to the people who contributed and to the next review.</p></section>
+        <section className="dsd-guide-review" aria-labelledby="guide-review"><h2 id="guide-review">Bring it back to your work</h2><p>{guide.review}</p><Link className="dsd-primary-link" href="/my-work/plan">Open your practice plans</Link><p>After the appropriate decision and use of an approach, <Link href="/program/reflection">record an observation and its limits</Link>. Bring what you learn back to the people who contributed and to the next review.</p></section>
       <section className={styles.resources} aria-labelledby="guide-resources"><h2 id="guide-resources">Keep the guidance close</h2><p>Use these resources to prepare for the task in front of you. It supports preparation and reflection; it does not replace policy or required approval.</p><ul className="dsd-guide-resources">{guide.resources.map(resource => <li key={resource.href}><Link href={resource.href}>{resource.title}</Link><p>{resource.purpose}</p></li>)}</ul>
-        {learning.length > 0 && <section aria-labelledby="guide-collaboration"><h3 id="guide-collaboration">Practice working across teams</h3><ul className="dsd-guide-resources">{learning.map(course => <li key={course.id}><Link href={courseHref(course.id)}>{course.title}</Link><p>{course.purpose}</p></li>)}</ul><Link href={collaborationHref({ focus: "cross-unit" })}>Explore more cross-unit learning →</Link></section>}
+        {learning.length > 0 && <section aria-labelledby="guide-collaboration"><h3 id="guide-collaboration">Practice working across teams</h3><ul className="dsd-guide-resources">{learning.map(course => <li key={course.id}><Link href={courseHref(course.id)}>{course.title}</Link><p>{course.purpose}</p></li>)}</ul><Link href={collaborationHref({ focus: "cross-unit" })}>Explore more cross-unit learning</Link></section>}
       </section>
     </PageContents>
-    <nav className="dsd-next" aria-label="Related resources"><Link href="/program/practice">← Put equity into practice</Link><Link href="/library">Find more learning and tools →</Link></nav>
+    <ConnectedWith href={`/practice-guides/${guide.slug}`} />
+    <nav className="dsd-next" aria-label="Related resources"><Link href="/program/practice">Put equity into practice</Link><Link href="/library">Find more learning and tools</Link></nav>
   </article>;
 }

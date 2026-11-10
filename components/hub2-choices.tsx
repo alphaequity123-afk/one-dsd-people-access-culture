@@ -13,7 +13,7 @@ export function Hub2Choices({ label, choices, className = "" }: { label: string;
       const inner = <>
         <span className="block text-xl font-semibold text-[#003865]">{choice.title}</span>
         <span className="mt-2 block leading-7 text-[#1f2a33]">{choice.body}</span>
-        <span className="mt-3 block font-semibold underline">{choice.action} <span aria-hidden="true">→</span></span>
+        <span className="mt-3 block font-semibold underline">{choice.action}</span>
       </>;
       const card = "block h-full rounded-[10px] border border-[#8ea2b5] bg-white p-5 no-underline hover:border-[#003865] hover:bg-[#f1f5f9] focus-visible:outline-2";
       return <li key={choice.href} className="m-0">

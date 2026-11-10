@@ -17,7 +17,7 @@ export default async function CollectionPage({ searchParams }: { searchParams: P
   const address = (n: number) => `/consultant/library?${new URLSearchParams({ q: params.q ?? "", page: String(n) })}`;
   return <div className="wrap py-8">
     <h1 className="text-3xl font-bold">Program collection</h1>
-    <p>See what has been received, where it belongs, and what is available to staff.</p><p><Link href="/consultant/content-review">Keep resources useful: review dates, responsibility, and possible overlap →</Link></p>
+    <p>See what has been received, where it belongs, and what is available to staff.</p><p><Link href="/consultant/content-review">Keep resources useful: review dates, responsibility, and possible overlap</Link></p>
     {!inventory ? <p>The collection is temporarily unavailable. Please try again.</p> : <>
       <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{Object.entries(inventory.counts).map(([key,value]) => <div className="panel" key={key}><dt>{LABELS[key] ?? key}</dt><dd className="text-2xl font-bold">{value.toLocaleString("en-US")}</dd></div>)}</dl>
       <form className="my-6 flex flex-wrap items-end gap-3"><label htmlFor="collection-search">Find an item<input id="collection-search" name="q" maxLength={200} defaultValue={params.q} className="block" /></label><button className="btn" type="submit">Search</button></form>

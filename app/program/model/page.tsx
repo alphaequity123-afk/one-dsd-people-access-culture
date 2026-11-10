@@ -34,19 +34,19 @@ export default async function ProgramModel() {
           <p className={styles.intentLabel}>Understand</p>
           <h3>Build your understanding</h3>
           <p>Explore the knowledge, perspectives and examples that can inform your work.</p>
-          <Link href="/learn">Find learning and examples <span aria-hidden="true">→</span></Link>
+          <Link href="/learn">Find learning and examples</Link>
         </div>
         <div>
           <p className={styles.intentLabel}>Apply</p>
           <h3>Work through a decision</h3>
           <p>Examine who is affected, compare options and prepare a recommendation.</p>
-          <Link href="/learn/equity-toolkit">Use the Equity Analysis Toolkit <span aria-hidden="true">→</span></Link>
+          <Link href="/learn/equity-toolkit">Use the Equity Analysis Toolkit</Link>
         </div>
         <div>
           <p className={styles.intentLabel}>Learn from change</p>
           <h3>Understand what helped</h3>
           <p>Look beyond what was completed to what changed for people.</p>
-          <Link href="/practice/measurement">Explore measurement guidance <span aria-hidden="true">→</span></Link>
+          <Link href="/practice/measurement">Explore measurement guidance</Link>
         </div>
       </nav>
     </section>
@@ -78,7 +78,7 @@ export default async function ProgramModel() {
           <details className={styles.detail}>
             <summary>Explore the five areas in more depth</summary>
             <ul className={styles.stageDetails}>{logicStages.map(stage => <li key={stage.slug}>
-              <h3><Link href={`/program/${stage.slug}`}>{stage.label} <span aria-hidden="true">→</span></Link></h3>
+              <h3><Link href={`/program/${stage.slug}`}>{stage.label}</Link></h3>
               <p>{stage.introduction}</p>
             </li>)}</ul>
           </details>

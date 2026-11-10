@@ -26,7 +26,7 @@ export default async function SupportPage() {
         <ProgramContextNote />
         <ExplainerVideo id="right-person" />
         <ul className={styles.supportDirectory}>
-          {doors.map((door) => <li key={door.href}><Link href={door.href} className={styles.directoryLink}><strong>{door.title}</strong><span>{door.description}</span><span className={styles.directoryArrow} aria-hidden="true">→</span></Link></li>)}
+          {doors.map((door) => <li key={door.href}><Link href={door.href} className={styles.directoryLink}><strong>{door.title}</strong><span>{door.description}</span></Link></li>)}
         </ul>
         <p><Link href="/support/directory">DHS offices and guidance</Link></p>
         <div className={styles.supportLower}>

@@ -18,7 +18,7 @@ export default async function CollectionsPage() {
   const scope = await requestedContentScope();
   const published = new Set((await publishedCourses(scope)).map(({ pack }) => pack.course.id));
   return <div className={base.page}><div className={base.content}>
-    <p className={base.back}><Link href="/learn">← Learn</Link></p>
+    <p className={base.back}><Link href="/learn">Learn</Link></p>
     <header className={base.intro}>
       <p className={base.eyebrow}>Learn</p>
       <h1>Collections</h1>
@@ -27,12 +27,12 @@ export default async function CollectionsPage() {
     <aside className={styles.requiredNote} aria-labelledby="all-format-collections-title">
       <h2 id="all-format-collections-title">Explore all formats by theme</h2>
       <p>Find related learning, tools, sources, readings and available listening together, then return to the course shelves below whenever you need them.</p>
-      <p><Link href="/collections">Explore themes across the program →</Link></p>
+      <p><Link href="/collections">Explore themes across the program</Link></p>
     </aside>
     <aside className={styles.requiredNote} aria-labelledby="clas-collection-title">
       <h2 id="clas-collection-title">CLAS curriculum collection</h2>
       <p>Nine connected lessons with videos, discussion audio, practice and planning resources. Share one link to the collection.</p>
-      <p><Link href="/learn/clas/collection">Open or share the CLAS collection →</Link></p>
+      <p><Link href="/learn/clas/collection">Open or share the CLAS collection</Link></p>
     </aside>
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
       <h2 id="required-course-title">One course is required</h2>
@@ -43,7 +43,7 @@ export default async function CollectionsPage() {
       {STAFF_COLLECTIONS.map(collection => <li key={collection.id}><Link className={styles.door} href={`/learn/collections/${collection.id}`}>
         <span className={styles.doorTitle}>{collection.title}</span>
         <span>{collection.description}</span>
-        <span className={styles.doorAction}>{collection.itemCount} courses <span aria-hidden="true">→</span></span>
+        <span className={styles.doorAction}>{collection.itemCount} courses</span>
       </Link></li>)}
     </ul>
     <aside className={base.continue}>

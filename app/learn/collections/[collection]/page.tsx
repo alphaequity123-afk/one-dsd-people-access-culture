@@ -21,7 +21,7 @@ export default async function CollectionPage({ params }: { params: Promise<{ col
   const published = new Set((await publishedCourses(scope)).map(({ pack }) => pack.course.id));
   const resources = STAFF_RESOURCES[collection.id] ?? [];
   return <div className={base.page}><div className={base.content}>
-    <p className={base.back}><Link href="/learn/collections">← Collections</Link></p>
+    <p className={base.back}><Link href="/learn/collections">Collections</Link></p>
     <header className={base.intro}>
       <p className={base.eyebrow}>Collections</p>
       <h1>{collection.title}</h1>

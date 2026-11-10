@@ -40,7 +40,7 @@ export async function WorkAreaDetail({ areaId }: { areaId: string }) {
         lede={selectedArea.summary}
       />
       <div className="wrap space-y-8 py-8">
-        <Link href="/areas" className={styles.backToAreas}>← All nine areas of work</Link>
+        <Link href="/areas" className={styles.backToAreas}>All nine areas of work</Link>
         <ProgramContextNote />
 
         <div className={styles.atlas}>

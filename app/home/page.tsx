@@ -18,7 +18,7 @@ export default async function HomePage() {
       <div className="w home-title">
         <h1 id="home-title">People, Access and Culture</h1>
         <p>Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.</p>
-        <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site: read the user guide <span aria-hidden="true">→</span></Link></p>
+        <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site: read the user guide</Link></p>
       </div>
       <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />
     </section>
@@ -33,16 +33,16 @@ export default async function HomePage() {
       <Link className="door" href="/learn"><h2>Learn</h2><p>Courses, readings and collections to build your understanding.</p></Link>
       <Link className="door" href="/practice"><h2>Apply a tool</h2><p>Work through a real decision, meeting, process or review.</p></Link>
       <Link className="door" href="/minnesota-communities"><h2>Communities</h2><p>Minnesota communities, their history and how to connect well.</p></Link>
-    </div></section>
+    </div><div className="w"><p className="home-explore">Or <Link href="/explore">explore everything by task, role, standard or community</Link>. When something helps, <Link href="/my-work/action-plan">turn it into an action plan</Link>.</p></div></section>
 
     <section className="blk month" aria-labelledby="month-title"><div className="w">
-      <div className="month-head"><h2 id="month-title">Coming up</h2><Link href={CALENDAR_PATH}>Open the One DSD Culture Calendar <span aria-hidden="true">→</span></Link></div>
+      <div className="month-head"><h2 id="month-title">Coming up</h2><Link href={CALENDAR_PATH}>Open the One DSD Culture Calendar</Link></div>
       {upcoming.length ? <ul className="month-list">{upcoming.map(item => <li key={item.id}><Link href={item.href}><span>{shortDateRange(item.start, item.end)}</span>{item.name}</Link></li>)}</ul>
         : <p>See the full calendar for observances across Minnesota communities.</p>}
     </div></section>
 
     <section className="blk leaders" aria-label="For leaders"><div className="w">
-      <p><Link href="/leading">For leaders, supervisors, managers, and directors <span aria-hidden="true">→</span></Link> Decisions, paths and tools for leading equity work.</p>
+      <p><Link href="/leading">For leaders, supervisors, managers, and directors</Link> Decisions, paths and tools for leading equity work. Also: <Link href="/growth">growth paths by role</Link>, <Link href="/team-kits">team kits</Link> and <Link href="/my-work/decision-records">decision records</Link>.</p>
     </div></section>
   </div>;
 }

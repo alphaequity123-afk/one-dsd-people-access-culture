@@ -12,12 +12,12 @@ const examples = EQUITY_IN_PRACTICE_EXAMPLES;
 
 export default function EquityInPracticePage() {
   return <article className={styles.page}><div className={styles.content}>
-    <p className={styles.back}><Link href="/learn">← Learn</Link></p>
+    <p className={styles.back}><Link href="/learn">Learn</Link></p>
     <header className={styles.intro}><p className={styles.eyebrow}>People, Access and Culture</p><h1>From shared purpose to everyday work.</h1><p className={styles.lede}>Begin with the Equity Outcome Map. Then follow examples from disability services to see how people, decisions, and practical resources connect.</p><p>Use the DSD examples to connect the six Aging and Disability Services Administration goals with your responsibilities, relevant learning, and the resources already available in One DSD.</p><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="equity-in-practice" noun="lesson" /></details></header>
     <section id="understand-the-map" className={styles.videoSection} aria-labelledby="map-title">
       <p className={styles.eyebrow}>Part one · Understand the map</p><h2 id="map-title">Equity Outcome Map</h2><p className={styles.videoDescription}>Explore the shared direction for equity work across the Department of Human Services, the intended outcomes, and why everyday decisions matter.</p><p className={styles.runtime}>{media.foundation.runtime}</p>
       <SequenceVideo className={styles.player} src={media.foundation.src} poster={media.foundation.poster} title="Equity Outcome Map" />
-      <p className={styles.next}><a href="#put-it-into-practice">Continue to the DSD example <span aria-hidden="true">↓</span></a></p>
+      <p className={styles.next}><a href="#put-it-into-practice">Continue to the DSD example</a></p>
     </section>
     <section id="put-it-into-practice" className={styles.videoSection} aria-labelledby="practice-title">
       <p className={styles.eyebrow}>Part two · Put it into practice</p><h2 id="practice-title">People, Access and Culture in Practice: A Disability Services Division Example</h2><p className={styles.videoDescription}>Follow four situations in Disability Services Division work. See how the six Aging and Disability Services Administration goals, policy, learning, and practical tools can help a team examine a decision and its effects.</p><p className={styles.runtime}>{media.companion.runtime}</p>

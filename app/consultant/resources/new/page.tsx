@@ -20,7 +20,7 @@ export default async function NewResourcePage() {
         lede="Write a new resource and publish it. It appears in the library and learning pages right away, and in Ask."
       />
       <div className="wrap py-8">
-        <p><Link href="/consultant/resources">← Resource review</Link></p>
+        <p><Link href="/consultant/resources">Resource review</Link></p>
         {!mediaAvailable() ? <Notice tone="warn">Adding resources is not connected in this copy of the program.</Notice> : <NewResourceForm today={today} />}
       </div>
     </>

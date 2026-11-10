@@ -24,7 +24,7 @@ export default async function LeadingPathPage({ params }: { params: Promise<{ pa
     return { id, title: item.title, minutes: item.minutes, required: item.required, href: item.kind !== "course" || published.has(id) ? collectionItemHref(item) : undefined };
   });
   return <div className={base.page}><div className={base.content}>
-    <p className={base.back}><Link href="/leading/paths">← Suggested paths</Link></p>
+    <p className={base.back}><Link href="/leading/paths">Suggested paths</Link></p>
     <header className={base.intro}>
       <p className={base.eyebrow}>{LEADING_LABEL} · optional</p>
       <h1>{path.title}</h1>

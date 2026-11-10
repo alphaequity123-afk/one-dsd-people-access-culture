@@ -34,7 +34,7 @@ export function EquityAnalysisLadder({ headingLevel = 2 }: { headingLevel?: 2 | 
         <RungHeading className="text-xl font-extrabold">{rung.level}</RungHeading>
         <p>{rung.who}</p>
         <p className="text-muted">{rung.next}</p>
-        <p className="flex flex-col gap-1"><Link className="font-semibold" href={rung.href}>{rung.label} →</Link>{"extra" in rung ? <Link href={rung.extra.href}>{rung.extra.label}</Link> : null}</p>
+        <p className="flex flex-col gap-1"><Link className="font-semibold" href={rung.href}>{rung.label}</Link>{"extra" in rung ? <Link href={rung.extra.href}>{rung.extra.label}</Link> : null}</p>
       </li>)}
     </ol>
     <ExplainerVideo id="decision-depth" />

@@ -1,0 +1,88 @@
+/*
+ * Calm system: type and whitespace carry the page. One quiet accent, plain text labels,
+ * no icons or decorative glyphs. Loaded last so it settles the older layers.
+ */
+:root {
+  --calm-ink: #1f2933;
+  --calm-muted: #52606d;
+  --calm-line: #e4e7eb;
+  --calm-surface: #ffffff;
+  --calm-wash: #f7f8f9;
+  --calm-accent: #1d4f73;
+  --calm-accent-soft: #eef3f7;
+  --calm-measure: 68ch;
+  --calm-space-1: 0.5rem;
+  --calm-space-2: 1rem;
+  --calm-space-3: 1.75rem;
+  --calm-space-4: 3rem;
+  --calm-space-5: 4.5rem;
+}
+
+body.dsd-calm { color: var(--calm-ink); background: var(--calm-surface); line-height: 1.6; text-rendering: optimizeLegibility; }
+body.dsd-calm :focus-visible { outline: 3px solid var(--calm-accent); outline-offset: 3px; }
+
+/* Arrows and similar glyphs are decoration; plain text labels do the work. */
+body.dsd-calm .calm-glyph, body.dsd-calm span[aria-hidden="true"].arrow { display: none; }
+
+.calm { max-width: 72rem; margin: 0 auto; padding: var(--calm-space-4) 1.25rem var(--calm-space-5); }
+.calm-narrow { max-width: 46rem; }
+.calm h1 { font-size: clamp(2rem, 3.2vw, 2.6rem); line-height: 1.15; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 var(--calm-space-2); }
+.calm h2 { font-size: 1.45rem; line-height: 1.25; font-weight: 650; margin: var(--calm-space-4) 0 var(--calm-space-2); }
+.calm h3 { font-size: 1.1rem; line-height: 1.35; font-weight: 650; margin: 0 0 0.35rem; }
+.calm p { max-width: var(--calm-measure); }
+.calm-lede { font-size: 1.2rem; color: var(--calm-muted); margin: 0 0 var(--calm-space-3); }
+.calm-kicker { font-size: 0.85rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--calm-accent); margin: 0 0 var(--calm-space-1); }
+.calm-muted { color: var(--calm-muted); }
+.calm-small { font-size: 0.92rem; }
+
+.calm a { color: var(--calm-accent); text-underline-offset: 0.18em; }
+.calm a:hover { text-decoration-thickness: 2px; }
+
+/* Choice lists: the one to four things most people come to do. */
+.calm-choices { display: grid; gap: var(--calm-space-2); grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: var(--calm-space-3) 0; padding: 0; list-style: none; }
+.calm-choice { display: block; padding: var(--calm-space-3) var(--calm-space-3); border: 1px solid var(--calm-line); border-radius: 10px; background: var(--calm-surface); text-decoration: none; color: inherit; height: 100%; }
+.calm-choice:hover { border-color: var(--calm-accent); background: var(--calm-accent-soft); }
+.calm-choice h3, .calm-choice h2 { color: var(--calm-accent); margin-top: 0; }
+.calm-choice p { margin: 0; color: var(--calm-muted); }
+
+/* Quiet lists of linked items. */
+.calm-list { list-style: none; padding: 0; margin: var(--calm-space-2) 0; border-top: 1px solid var(--calm-line); }
+.calm-list li { padding: 0.85rem 0; border-bottom: 1px solid var(--calm-line); }
+.calm-list li a { font-weight: 600; text-decoration: none; }
+.calm-list li a:hover { text-decoration: underline; }
+.calm-list li p { margin: 0.2rem 0 0; color: var(--calm-muted); font-size: 0.95rem; }
+.calm-list .calm-count { color: var(--calm-muted); font-weight: 400; margin-left: 0.4rem; }
+
+.calm-columns { display: grid; gap: var(--calm-space-4); grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+
+.calm-panel { border: 1px solid var(--calm-line); border-radius: 10px; padding: var(--calm-space-3); margin: var(--calm-space-3) 0; background: var(--calm-wash); }
+.calm details { border-top: 1px solid var(--calm-line); padding: 0.9rem 0; }
+.calm details > summary { cursor: pointer; font-weight: 600; color: var(--calm-accent); }
+
+.calm-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: var(--calm-space-3) 0; }
+.calm-button { display: inline-block; padding: 0.7rem 1.2rem; border-radius: 8px; border: 1px solid var(--calm-accent); background: var(--calm-accent); color: #fff !important; font-weight: 600; text-decoration: none; cursor: pointer; font: inherit; }
+.calm-button:hover { background: #163d59; }
+.calm-button--quiet { background: var(--calm-surface); color: var(--calm-accent) !important; }
+.calm-button--quiet:hover { background: var(--calm-accent-soft); }
+
+.calm-form { display: grid; gap: var(--calm-space-3); max-width: 46rem; }
+.calm-field label { display: block; font-weight: 650; margin-bottom: 0.25rem; }
+.calm-field .calm-help { display: block; color: var(--calm-muted); font-size: 0.92rem; margin-bottom: 0.4rem; }
+.calm-field input, .calm-field textarea, .calm-field select { width: 100%; padding: 0.65rem 0.75rem; border: 1px solid #c3c9d0; border-radius: 8px; font: inherit; background: #fff; color: inherit; }
+.calm-field textarea { min-height: 6.5rem; resize: vertical; }
+
+.calm-note { border-left: 3px solid var(--calm-accent); padding: 0.25rem 0 0.25rem 1rem; color: var(--calm-muted); margin: var(--calm-space-3) 0; }
+.calm-crumbs { font-size: 0.92rem; margin-bottom: var(--calm-space-2); color: var(--calm-muted); }
+.calm-crumbs a { text-decoration: none; }
+.calm-crumbs a:hover { text-decoration: underline; }
+
+.calm-steps { counter-reset: step; list-style: none; padding: 0; margin: var(--calm-space-3) 0; }
+.calm-steps > li { counter-increment: step; position: relative; padding: 0 0 var(--calm-space-3) 3rem; }
+.calm-steps > li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid var(--calm-accent); color: var(--calm-accent); display: grid; place-items: center; font-weight: 650; font-size: 0.95rem; }
+
+@media print {
+  .calm { padding: 0; }
+  .calm-actions, .calm-no-print { display: none !important; }
+  .calm details { border: 0; }
+  .calm details > * { display: block !important; }
+}

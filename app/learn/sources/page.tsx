@@ -49,7 +49,7 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
   const filtered = Boolean(theme || q || selectedGroup);
   return (
     <EditableSurfaceRegion surface={surface} className={styles.page}>
-      <div className="wrap"><Link href="/learn" className={styles.back}>← Learn</Link></div>
+      <div className="wrap"><Link href="/learn" className={styles.back}>Learn</Link></div>
       <PageIntro kicker={text("introKicker")} title={text("introTitle")} lede="Explore books, research, guidance and media used across the program. Choose a subject to find reading and references that connect with your work." />
       <div className="wrap">
         <CatHashLocator prefix="source-" />
@@ -57,7 +57,7 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
         <section className={styles.selection} aria-labelledby="reading-collection-title">
           <h2 id="reading-collection-title">Books and ideas for your work</h2>
           <p>Explore more than 270 books through summaries, key ideas and questions for reflection, including two suggested books for every Minnesota community brief. Connect a reading with a decision, a conversation or a change you want to make in your work.</p>
-          <Link href={selectedTheme ? `/learn/readings?theme=${selectedTheme.id}` : "/learn/readings"}>Explore the reading collection →</Link>
+          <Link href={selectedTheme ? `/learn/readings?theme=${selectedTheme.id}` : "/learn/readings"}>Explore the reading collection</Link>
         </section>
         {!theme ? <details className="course-more-item"><summary>Explore by theme</summary><ResourceThemeNav basePath="/learn/sources" className={styles.themes} gridClassName={styles.themeGrid} /></details> : null}
         <section className={styles.selection} aria-labelledby="source-selection-title">

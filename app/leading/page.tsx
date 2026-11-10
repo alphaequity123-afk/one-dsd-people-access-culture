@@ -32,13 +32,13 @@ export default async function LeadingPage() {
       <h2 id="leadership-start-title">Start where you are</h2>
       <p>Leadership can begin before a formal role. Choose a starting point that fits your work; these are invitations, not assignments or assessments.</p>
       <ul className={styles.doors}>
-        <li><Link className={styles.door} href="/one-dsd/leadership#starting-points"><span className={styles.doorTitle}>Explore leadership</span><span>Connect an interest or aspiration with an accessible opportunity to practice, support and feedback.</span><span className={styles.doorAction}>Make a development map <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="#decision-doors"><span className={styles.doorTitle}>Lead a team or a decision</span><span>Find questions and resources for hiring, access, feedback, team culture and policy.</span><span className={styles.doorAction}>Choose a decision <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href={LEADERSHIP_PATHWAY_HREF}><span className={styles.doorTitle}>Compare leadership approaches</span><span>See how sixteen leadership approaches handle conflict and affect equity and inclusion, with scenarios, a practice rubric and a capstone.</span><span className={styles.doorAction}>Leadership styles pathway <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="/data/equity-baseline"><span className={styles.doorTitle}>See the equity baseline</span><span>For managers, supervisors and the consultant (access key required). Who gets each employment service, by race and ethnicity, fiscal years 2022 to 2024.</span><span className={styles.doorAction}>Open the baseline <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="/leading/community-coverage"><span className={styles.doorTitle}>See community coverage</span><span>For managers, supervisors and the consultant (access key required). Which communities have organizations on record, figures, and a completed community review.</span><span className={styles.doorAction}>Open community coverage <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="/leading/direction"><span className={styles.doorTitle}>Lead leaders and set direction</span><span>Support supervisors and managers, examine organizational practices, and connect decisions to accountability.</span><span className={styles.doorAction}>Explore direction <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Build future leadership</span><span>Plan for continuity, share knowledge and make development opportunities visible and accessible.</span><span className={styles.doorAction}>Practice succession planning <span aria-hidden="true">→</span></span></Link></li>
+        <li><Link className={styles.door} href="/one-dsd/leadership#starting-points"><span className={styles.doorTitle}>Explore leadership</span><span>Connect an interest or aspiration with an accessible opportunity to practice, support and feedback.</span><span className={styles.doorAction}>Make a development map</span></Link></li>
+        <li><Link className={styles.door} href="#decision-doors"><span className={styles.doorTitle}>Lead a team or a decision</span><span>Find questions and resources for hiring, access, feedback, team culture and policy.</span><span className={styles.doorAction}>Choose a decision</span></Link></li>
+        <li><Link className={styles.door} href={LEADERSHIP_PATHWAY_HREF}><span className={styles.doorTitle}>Compare leadership approaches</span><span>See how sixteen leadership approaches handle conflict and affect equity and inclusion, with scenarios, a practice rubric and a capstone.</span><span className={styles.doorAction}>Leadership styles pathway</span></Link></li>
+        <li><Link className={styles.door} href="/data/equity-baseline"><span className={styles.doorTitle}>See the equity baseline</span><span>For managers, supervisors and the consultant (access key required). Who gets each employment service, by race and ethnicity, fiscal years 2022 to 2024.</span><span className={styles.doorAction}>Open the baseline</span></Link></li>
+        <li><Link className={styles.door} href="/leading/community-coverage"><span className={styles.doorTitle}>See community coverage</span><span>For managers, supervisors and the consultant (access key required). Which communities have organizations on record, figures, and a completed community review.</span><span className={styles.doorAction}>Open community coverage</span></Link></li>
+        <li><Link className={styles.door} href="/leading/direction"><span className={styles.doorTitle}>Lead leaders and set direction</span><span>Support supervisors and managers, examine organizational practices, and connect decisions to accountability.</span><span className={styles.doorAction}>Explore direction</span></Link></li>
+        <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Build future leadership</span><span>Plan for continuity, share knowledge and make development opportunities visible and accessible.</span><span className={styles.doorAction}>Practice succession planning</span></Link></li>
       </ul>
     </section>
     <section id="decision-doors" className={styles.section} aria-labelledby="decision-doors-title">
@@ -48,7 +48,7 @@ export default async function LeadingPage() {
       {LEADING_DOORS.map(door => <li key={door.slug}><Link className={styles.door} href={`/leading/${door.slug}`}>
         <span className={styles.doorTitle}>{door.title}</span>
         <span>{door.description}</span>
-        <span className={styles.doorAction}>{door.questions.length} questions <span aria-hidden="true">→</span></span>
+        <span className={styles.doorAction}>{door.questions.length} questions</span>
       </Link></li>)}
     </ul>
     </section>
@@ -64,7 +64,7 @@ export default async function LeadingPage() {
         {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
           <span className={styles.doorTitle}>{path.title}</span>
           <span>{path.description}</span>
-          <span className={styles.doorAction}>{path.courseIds.length} courses, about {pathHours(path)} hours <span aria-hidden="true">→</span></span>
+          <span className={styles.doorAction}>{path.courseIds.length} courses, about {pathHours(path)} hours</span>
         </Link></li>)}
       </ul>
       <p><Link href="/leading/paths">All suggested paths</Link></p>
@@ -73,10 +73,10 @@ export default async function LeadingPage() {
       <h2 id="leadership-tools-title">Tools for the work</h2>
       <p>Use a tool to prepare for a real conversation or decision. Include the people affected, follow the applicable policy and work with the office responsible for the decision.</p>
       <ul className={styles.doors}>
-        <li><Link className={styles.door} href="/learn/equity-toolkit"><span className={styles.doorTitle}>Examine a decision</span><span>Consider effects, evidence, alternatives and who needs to be involved.</span><span className={styles.doorAction}>Equity Analysis Toolkit <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="/one-dsd/leadership#life-cycle"><span className={styles.doorTitle}>Practice across the employee life cycle</span><span>Explore role design, development, advancement, retention, succession and transitions.</span><span className={styles.doorAction}>Open the life-cycle explorer <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="/one-dsd/amplify/mentoring#mentoring-tool"><span className={styles.doorTitle}>Prepare a mentoring conversation</span><span>Name a question, consider the support you need and choose a useful next step.</span><span className={styles.doorAction}>Prepare a conversation <span aria-hidden="true">→</span></span></Link></li>
-        <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Plan for continuity</span><span>Connect critical work, a development opportunity, knowledge sharing and follow-up.</span><span className={styles.doorAction}>Create a succession draft <span aria-hidden="true">→</span></span></Link></li>
+        <li><Link className={styles.door} href="/learn/equity-toolkit"><span className={styles.doorTitle}>Examine a decision</span><span>Consider effects, evidence, alternatives and who needs to be involved.</span><span className={styles.doorAction}>Equity Analysis Toolkit</span></Link></li>
+        <li><Link className={styles.door} href="/one-dsd/leadership#life-cycle"><span className={styles.doorTitle}>Practice across the employee life cycle</span><span>Explore role design, development, advancement, retention, succession and transitions.</span><span className={styles.doorAction}>Open the life-cycle explorer</span></Link></li>
+        <li><Link className={styles.door} href="/one-dsd/amplify/mentoring#mentoring-tool"><span className={styles.doorTitle}>Prepare a mentoring conversation</span><span>Name a question, consider the support you need and choose a useful next step.</span><span className={styles.doorAction}>Prepare a conversation</span></Link></li>
+        <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Plan for continuity</span><span>Connect critical work, a development opportunity, knowledge sharing and follow-up.</span><span className={styles.doorAction}>Create a succession draft</span></Link></li>
       </ul>
       <p>Development and continuity drafts stay on their page until you copy or download them. Do not enter names or private personnel details. They do not replace the applicable Human Resources or selection process.</p>
     </section>

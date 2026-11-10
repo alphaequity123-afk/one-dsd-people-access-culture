@@ -34,7 +34,7 @@ export default async function PodcastPage({ params }: { params: Promise<{ id: st
   const toolkitCompanion = podcast.href.startsWith("/learn/equity-toolkit");
   return <div className={`${styles.page} ${styles.content} ${styles.readingPage} space-y-5`}>
     <header className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 print:hidden">
-      <Link href="/learn">← Learn</Link>
+      <Link href="/learn">Learn</Link>
       <p className="m-0 text-sm font-medium text-[#526777]">Podcast · {podcast.duration}</p>
     </header>
     <PublishedPodcast headingLevel={1} ownPage podcast={podcast} surface={surface} />

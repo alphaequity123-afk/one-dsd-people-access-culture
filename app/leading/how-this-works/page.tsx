@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function LeadingHowThisWorksPage() {
   return <div className={base.page}><div className={base.content}>
-    <p className={base.back}><Link href="/leading">← {LEADING_LABEL}</Link></p>
+    <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
     <header className={base.intro}>
       <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>How this works</h1>

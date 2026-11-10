@@ -28,7 +28,7 @@ export function CoreFifteen() {
         <ol className="mt-2 list-decimal space-y-1 pl-5">{group.courses.map(course => <li key={course.number}><Link href={course.href}>{course.title}</Link></li>)}</ol>
       </div>)}
     </div>
-    <p><Link href="/learn/self-directed">See all 72 courses in the self-directed series →</Link></p>
+    <p><Link href="/learn/self-directed">See all 72 courses in the self-directed series</Link></p>
     <ExplainerVideo id="core-fifteen" />
   </section>;
 }

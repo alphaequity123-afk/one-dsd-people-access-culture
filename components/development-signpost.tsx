@@ -9,6 +9,6 @@ export function DevelopmentSignpost() {
   if (!context) return null;
   return <aside className="development-signpost wrap" aria-label="Connect learning and practice">
     <div><h2>{context.title}</h2><p>{context.body}</p></div>
-    <Link href={context.journeyId ? journeyHref(context.journeyId) : "/learn/paths"}>Explore a guided pathway <span aria-hidden="true">→</span></Link>
+    <Link href={context.journeyId ? journeyHref(context.journeyId) : "/learn/paths"}>Explore a guided pathway</Link>
   </aside>;
 }

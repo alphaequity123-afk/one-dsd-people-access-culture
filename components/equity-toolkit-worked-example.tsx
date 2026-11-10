@@ -32,7 +32,7 @@ export function EquityToolkitWorkedExample() {
     <div className={styles.next}>
       <h3>Now try a different decision</h3>
       <p>Consider a service team that wants to replace mailed appointment reminders with texts. What might become easier, and who might need another way to respond? Explore the choices below, using the CFSS review as a guide rather than copying its answers.</p>
-      <a href="#toolkit-practice">Try the appointment-reminder example <span aria-hidden="true">↓</span></a>
+      <a href="#toolkit-practice">Try the appointment-reminder example</a>
       <p className={styles.actualWork}>For your own work, the <a href="#toolkit-draft">working draft</a> starts empty. Keep practice separate from actual work, and leave out identifying or confidential details.</p>
     </div>
     <p className={styles.resources}>Return to the <Link href="/library/ext-dhs-equity-toolkit">official toolkit and access details</Link> and the <Link href="/learn/equity-toolkit/policy-review">equity analysis training</Link> for the broader framework and the review your work requires. For communication choices, use the <Link href="/library/ja-plain-language">plain-language guide</Link> and <Link href="/library/ja-language-access-checklist">language-access checklist</Link>.</p>

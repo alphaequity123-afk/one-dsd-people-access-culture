@@ -155,7 +155,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
 
   return (
     <EditableSurfaceRegion surface={surface} className={`${styles.page} ${styles.directoryPage}`}>
-      <header className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>{stringValue(copy, "introKicker")}</p><h1>{stringValue(copy, "introTitle")}</h1><p className={styles.lede}>{stringValue(copy, "introLede").replace(/, and its review date\.?$/, ".")}</p><Link className={styles.back} href="/learn">Explore learning and resources →</Link></div></header>
+      <header className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>{stringValue(copy, "introKicker")}</p><h1>{stringValue(copy, "introTitle")}</h1><p className={styles.lede}>{stringValue(copy, "introLede").replace(/, and its review date\.?$/, ".")}</p><Link className={styles.back} href="/learn">Explore learning and resources</Link></div></header>
       <div className={styles.content}>
         <WorkOriginLinks origin={origin} domainAvailable={Boolean(selectedDomain)} />
         {selectedDomain && !origin.task ? <p><Link href={withWorkOrigin("/areas/" + selectedDomain.id + (selectedTask ? "#task-" + selectedTask.id : ""),origin)}>{selectedTask?.label ?? selectedDomain.title}</Link></p> : null}

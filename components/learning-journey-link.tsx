@@ -17,6 +17,6 @@ export async function LearningJourneyLink({scope, resourceId, compact=false}: {s
   return <aside className="my-6 rounded-xl border border-[#8ea2b5] bg-[#f4f7f9] p-6" aria-label="A path through learning">
     <h2 className="text-2xl font-semibold"><Link href={LEARNING_JOURNEY_HREF}>{journeyText(surface.values,"previewTitle")}</Link></h2>
     <p className="mt-3 max-w-3xl leading-7">{journeyText(surface.values,"previewBody")}</p>
-    <Link className="mt-2 inline-block font-semibold underline" href={LEARNING_JOURNEY_HREF}>{journeyText(surface.values,"previewLink")} →</Link>
+    <Link className="mt-2 inline-block font-semibold underline" href={LEARNING_JOURNEY_HREF}>{journeyText(surface.values,"previewLink")}</Link>
   </aside>;
 }

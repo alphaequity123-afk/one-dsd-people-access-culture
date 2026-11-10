@@ -40,7 +40,7 @@ export default function LearningPathsPage() {
       return paths.length ? <section key={level.id} id={`level-${level.id}`} aria-labelledby={`level-${level.id}-title`}>
         <h2 id={`level-${level.id}-title`}>{level.title}</h2>
         <p>{level.fits}.</p>
-        <ul className="development-grid">{paths.map(path => <li key={path.key}><p className="development-eyebrow">{path.kind}</p><h3><Link href={path.href}>{path.title} →</Link></h3><p className="development-question">{path.question}</p></li>)}</ul>
+        <ul className="development-grid">{paths.map(path => <li key={path.key}><p className="development-eyebrow">{path.kind}</p><h3><Link href={path.href}>{path.title}</Link></h3><p className="development-question">{path.question}</p></li>)}</ul>
       </section> : null;
     })}
     <p>New to DSD? The best first step is <Link href="/start#new-to-dsd">getting to know the program</Link>, and the <Link href="/learn#start-here">Core 15</Link> courses make a strong foundation for every path here.</p>
@@ -48,6 +48,6 @@ export default function LearningPathsPage() {
     <details className="development-related"><summary>How learning becomes practice</summary><ol className="development-grid">{developmentModel.stages.map(stage => <li key={stage.id}><h3>{stage.title}</h3><p>{stage.purpose}</p><p><strong>Consider:</strong> {stage.prompt}</p></li>)}</ol></details>
     <details className="development-related"><summary>How the program contributes to change</summary><div className="development-logic"><ol>{developmentModel.logicModel.map(item => <li key={item.title}><strong>{item.title}:</strong> {item.text}</li>)}</ol><p>A resource delivered, an approach used, and an improvement observed are different kinds of evidence. Time, access, support, decision-making authority, and people’s willingness to participate all affect what becomes possible.</p></div></details>
     <details className="development-related"><summary>Research informing this approach</summary><ul>{developmentModel.sources.map(source => <li key={source.href}><a href={source.href}>{source.title}</a><p>{source.application}</p></li>)}</ul><p>{developmentModel.evidenceNote}</p></details>
-    <p><Link href="/learn">← Learn</Link> · <Link href="/library?browse=all">Explore all learning and resources</Link></p>
+    <p><Link href="/learn">Learn</Link> · <Link href="/library?browse=all">Explore all learning and resources</Link></p>
   </div>;
 }

@@ -50,7 +50,7 @@ export function SavedDecisionLinks() {
     <p>Pick up the Toolkit analyses you saved, right where you left them.</p>
     <ul className="space-y-4">{analyses.map(plan => <li key={plan.id}>
       <Link href={analysisHref(plan.id)}>{plan.title.trim() || "Untitled analysis"}</Link>
-      <p><Link href={`/my-work/plan?plan=${encodeURIComponent(plan.id)}`}>Read or download this plan →</Link></p>
+      <p><Link href={`/my-work/plan?plan=${encodeURIComponent(plan.id)}`}>Read or download this plan</Link></p>
     </li>)}</ul>
   </section>;
 }
@@ -177,7 +177,7 @@ export default function PracticePlannerEditor() {
         <header className="dsd-planner-heading"><p className="dsd-planner-eyebrow">Private working draft</p><h2 id="planner-current-heading">{active.title.trim() || "Untitled plan"}</h2><p>Use this plan to prepare a discussion or practical next step. It does not replace the official Equity Analysis Toolkit or establish an approved decision.</p></header>
         {active.analysis ? <div className="dsd-planner-field">
           <p>This plan includes your complete saved Toolkit analysis. Continue there to update the notes, options, responsibilities, and review together.</p>
-          <p><Link href={analysisHref(active.id)}>Continue your analysis →</Link></p>
+          <p><Link href={analysisHref(active.id)}>Continue your analysis</Link></p>
           <details><summary>Read the complete saved analysis</summary>{practicePlanSections(active).map(section => <section key={section.heading} className="my-6">
             <h3 className="font-semibold">{section.heading}</h3><dl>{section.entries.map((entry, index) => <div key={index} className="my-4">
               <dt className="font-medium">{entry.label}</dt><dd className="whitespace-pre-wrap break-words">{entry.text}</dd>
@@ -190,7 +190,7 @@ export default function PracticePlannerEditor() {
           {field.key === "reviewDate" ? <input type="date" id={`practice-plan-${field.key}`} aria-describedby={`practice-help-${field.key}`} value={active.fields[field.key]} onChange={event => edit({ fields: { ...active.fields, [field.key]: event.target.value } })} />
             : <textarea rows={3} id={`practice-plan-${field.key}`} aria-describedby={`practice-help-${field.key}`} value={active.fields[field.key]} onChange={event => edit({ fields: { ...active.fields, [field.key]: event.target.value } })} />}
         </div>)}
-        <p><Link href={analysisHref(active.id)}>Continue this plan in the Equity Analysis Toolkit →</Link></p>
+        <p><Link href={analysisHref(active.id)}>Continue this plan in the Equity Analysis Toolkit</Link></p>
         </>}
         <div className="dsd-planner-actions"><button type="button" onClick={downloadWord}>Download Word</button><button type="button" onClick={printReport}>Print or save as PDF</button><button type="button" onClick={download}>Download text copy</button><button type="button" onClick={() => setDeleteId(active.id)}>Delete this plan</button></div>
         {toDelete ? <div className="dsd-planner-confirm" role="group" aria-label="Confirm plan deletion"><p>Delete “{toDelete.title.trim() || "Untitled plan"}” from this device? Download a copy first if you want to keep it. Other plans will remain.</p><div className="dsd-planner-actions"><button type="button" onClick={remove}>Yes, delete this plan</button><button type="button" onClick={cancelDelete}>Keep this plan</button></div></div> : null}

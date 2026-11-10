@@ -19,7 +19,7 @@ export default async function SharedToolkitPracticePage() {
   return <EditableSurfaceRegion surface={surface}>
     <div className={`${styles.page} ${styles.content} ${styles.readingPage} space-y-10`}>
       <header className="space-y-4">
-        <Link href="/share/equity-toolkit">← Podcast and toolkit introduction</Link>
+        <Link href="/share/equity-toolkit">Podcast and toolkit introduction</Link>
         <h1 className="text-4xl font-semibold">Practice with the Equity Analysis Toolkit</h1>
         <p className="max-w-3xl text-xl">Explore a decision and prepare notes for a conversation with the people responsible.</p>
       </header>

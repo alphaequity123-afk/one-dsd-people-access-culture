@@ -29,7 +29,7 @@ export function EngagementContributionMap() {
             <span className={styles.stepNumber} aria-hidden="true">{index + 1}</span>
             <h4>{stage.title}</h4>
             <p>{stage.text}</p>
-            {index < stages.length - 1 && <span className={styles.connector} aria-hidden="true">→</span>}
+            {index < stages.length - 1 && <span className={styles.connector} aria-hidden="true">then</span>}
           </li>
         ))}
       </ol>

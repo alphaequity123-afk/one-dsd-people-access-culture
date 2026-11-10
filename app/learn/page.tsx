@@ -147,9 +147,9 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
             <div className={styles.sectionHeading}><h2 id="modules-title">{hub.available ? hubText("coursesTitle") : stringValue(copy, "modulesTitle")}</h2><span>{learning.length} to explore</span></div>
             {renderLearning(learning)}
           </section> : null}
-          {!expanded && learning.length ? <p className={preview.browseAll}><Link href="/learn?browse=all#modules-title">Browse all {learning.length} courses and learning resources →</Link></p> : null}
+          {!expanded && learning.length ? <p className={preview.browseAll}><Link href="/learn?browse=all#modules-title">Browse all {learning.length} courses and learning resources</Link></p> : null}
           {expanded && hub.available && resources.length ? <section className={styles.section} aria-labelledby="hub-resources-title"><div className={styles.sectionHeading}><h2 id="hub-resources-title">{hubText("resourcesTitle")}</h2><span>{resources.length} resources</span></div><ul className={styles.resourceList}>{resources.map((item) => <li key={item.id} data-hub-resource={item.id}><span className={styles.resourceKind}>{CONTENT_TYPE_LABEL[item.type]}</span><h3><Link href={`/library/${item.id}`}>{item.title}</Link></h3><p>{shortSummary(item.summary)}</p><AuthorityPill authority={item.authority} />{owner ? <> <ResourceRemove contentItemId={item.id} title={item.title} compact /></> : null}</li>)}</ul></section> : null}
-          {!expanded && hub.available && resources.length ? <p><Link href="/library?browse=all">Looking for a tool, a guide, or further reading? Browse all {resources.length} resources in the library →</Link></p> : null}
+          {!expanded && hub.available && resources.length ? <p><Link href="/library?browse=all">Looking for a tool, a guide, or further reading? Browse all {resources.length} resources in the library</Link></p> : null}
           {podcasts.length ? <Hub2More headingId="podcasts-title" title="Podcasts" open={filtered}><p>Listen in the audio library, where every episode comes with chapters and a full transcript.</p><ul className={styles.pathList}>{podcasts.map(({ podcast, surface: podcastSurface }) => <li key={podcast.id}><Link href={`/audio-library#podcast-${podcast.id}`}>{stringValue(podcastSurface.values, "title") || podcast.title}</Link></li>)}</ul></Hub2More> : null}
         </div>
         {!filtered ? <Hub2More headingId="series-title" title="Course series">
@@ -165,7 +165,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
           </ul>
         </Hub2More> : null}
         {!filtered ? <Hub2More headingId="more-learning-title" title="Take it into your work">
-          <p><Link href="/practice">Put learning into practice with the {graduationPaths.length} guided practices →</Link></p>
+          <p><Link href="/practice">Put learning into practice with the {graduationPaths.length} guided practices</Link></p>
           {staffGuide ? <p><Link href={`/library/${staffGuide.id}`}>{staffGuide.title}</Link></p> : null}
         </Hub2More> : null}
         <div className={styles.context}><p><Link href="/learn/sources">Research and sources</Link> · <Link href="/ask">Ask</Link></p><details className={preview.disclosure}><summary>About these learning resources</summary><DhsReferenceLink /><ProgramContextNote /></details></div>

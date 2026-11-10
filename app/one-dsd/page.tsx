@@ -73,7 +73,7 @@ export default async function OneDsdPage() {
           <p className="kicker">The division&apos;s work</p>
           <h2 id="division-programs-title" className="text-2xl font-extrabold">DSD programs, services, and priorities</h2>
           <p>Explore the eight service areas, division responsibilities, people and partners, contacts, and implementation priorities. Connect each area to practical equity tools and guidance.</p>
-          <Link href="/one-dsd/programs">Explore DSD programs and services →</Link>
+          <Link href="/one-dsd/programs">Explore DSD programs and services</Link>
         </section>
         <section aria-labelledby="use-title">
           <p className="kicker">{stringValue(copy, "useKicker")}</p>

@@ -31,7 +31,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
 
   return <div className={styles.page}>
     <div className={styles.content}>
-      <p className={styles.back}><Link href="/learn">← Learn</Link></p>
+      <p className={styles.back}><Link href="/learn">Learn</Link></p>
       <header className={styles.intro}>
         <p className={styles.eyebrow}>Work better together</p>
         <h1>Teams and Cross-Collaboration</h1>
@@ -45,7 +45,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
           return <Link key={focus.id} href={collaborationHref({ ...filters, focus: focus.id })} className={styles.path} aria-current={filters.focus === focus.id ? "page" : undefined}>
             <span className={styles.pathTitle}>{focus.title}</span>
             <span>{focus.description}</span>
-            <span className={styles.pathAction}>Explore {count} {count === 1 ? "course" : "courses"} <span aria-hidden="true">→</span></span>
+            <span className={styles.pathAction}>Explore {count} {count === 1 ? "course" : "courses"}</span>
           </Link>;
         })}
       </nav>
@@ -80,7 +80,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
                   <p className={styles.courseLevel}>{COLLABORATION_LEVELS.find(item => item.id === level)!.title}</p>
                   <h4><Link href={courseHref(pack.course.id)} prefetch={false}>{pack.course.title}</Link></h4>
                   <p>{summary(courseSummary(pack))}</p>
-                  <Link className={styles.courseAction} href={courseHref(pack.course.id)} prefetch={false} aria-label={`Explore ${pack.course.title}`}>Explore course <span aria-hidden="true">→</span></Link>
+                  <Link className={styles.courseAction} href={courseHref(pack.course.id)} prefetch={false} aria-label={`Explore ${pack.course.title}`}>Explore course</Link>
                 </li>)}</ul>
               </details>;
             })}

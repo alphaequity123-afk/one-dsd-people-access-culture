@@ -25,17 +25,17 @@ export default async function ClasPlanningPage() {
           <p>CLAS means culturally and linguistically appropriate services. Use the standards as a reference for examining communication, workforce preparation, community participation and service improvement. Confirm which standards are relevant to your work and which separate legal, policy or contract requirements apply; this worksheet does not make every standard binding for every service.</p>
           <p><a href={CLAS_SOURCE.href}>{CLAS_SOURCE.title}</a> · <Link href="/resources/ja-language-cultural-access-planning">Language and cultural access planning aid</Link></p>
         </section>
-        <p><Link href="/learn/clas">Explore CLAS courses, checklists and related learning →</Link></p>
+        <p><Link href="/learn/clas">Explore CLAS courses, checklists and related learning</Link></p>
         <EngagementResourceLinks kind="clas" />
         <ToolDecisionQuestions tool="clas-plan" />
         <ClasPlanningWorksheet />
         <section id="related-planning" className="border-t border-line pt-6">
           <h2 className="text-xl font-semibold">Continue your planning</h2>
           <nav aria-label="Related planning resources"><ul className="mt-4 space-y-3">
-            <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit →</Link></li>
-            {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Explore cultural context for your planning →</Link></li>}
-            <li><Link href="/practice/measurement">Plan how to learn from results →</Link></li>
-            <li><Link href="/support/right-person">Find the responsible person or office →</Link></li>
+            <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li>
+            {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Explore cultural context for your planning</Link></li>}
+            <li><Link href="/practice/measurement">Plan how to learn from results</Link></li>
+            <li><Link href="/support/right-person">Find the responsible person or office</Link></li>
           </ul></nav>
         </section>
       </PageContents>

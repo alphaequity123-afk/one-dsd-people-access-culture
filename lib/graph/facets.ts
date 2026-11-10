@@ -1,0 +1,208 @@
+/**
+ * Four ways into the whole collection: by task, by role, by standard or goal, and by community or
+ * program area. Every connection is computed from published content (the work areas and their
+ * tasks, the national standards curriculum, the six equity goals, the community briefs, the
+ * organization records and the policy catalog). Nothing here records or counts anyone's use.
+ */
+import { DOMAINS, ROLE_FAMILY_LABEL, type RoleFamily } from "@/lib/domains";
+import { knowledgeGraph, type GraphNode } from "@/lib/content/knowledge-graph";
+import { CORPUS } from "@/lib/content/corpus";
+import { selfDirectedRoles } from "@/lib/content/self-directed";
+import { practiceGuides } from "@/lib/program/dsd-practice-guides";
+import { getPolicies, policyHref } from "@/lib/content/hub/dsd-policies";
+import { isNativeCommunity } from "@/lib/content/hub/organizations";
+import clas from "@/lib/content/clas-curriculum.json";
+
+export type FacetId = "task" | "role" | "standard" | "community";
+export type ItemKind = "course" | "resource" | "reading" | "practice" | "brief" | "organization" | "policy" | "lesson";
+export type FacetItem = { id: string; kind: ItemKind; title: string; href: string };
+export type FacetValue = { facet: FacetId; id: string; title: string; summary: string; group: string; items: FacetItem[] };
+
+export const FACETS: { id: FacetId; title: string; question: string }[] = [
+  { id: "task", title: "By task", question: "What are you working on?" },
+  { id: "role", title: "By role", question: "What is your role?" },
+  { id: "standard", title: "By standard or goal", question: "Which commitment are you working toward?" },
+  { id: "community", title: "By community or program area", question: "Who or what is the work about?" },
+];
+
+export const KIND_LABEL: Record<ItemKind, string> = {
+  course: "Courses", lesson: "Lessons", practice: "Guided practices", resource: "Tools and guides",
+  reading: "Readings", brief: "Community briefs", organization: "Organizations", policy: "Policies",
+};
+export const KIND_ORDER: ItemKind[] = ["practice", "course", "lesson", "resource", "policy", "brief", "organization", "reading"];
+
+type Pool = { items: Map<string, FacetItem>; text: Map<string, string> };
+
+const STOP = new Set("a an and the of to for in on with without by or our your their its is are be as at from into how what when who which this that it make use run build plan".split(" "));
+function words(value: string): string[] {
+  return value.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/).filter(word => word.length > 3 && !STOP.has(word));
+}
+function slug(value: string): string { return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
+
+function kindOf(node: GraphNode): ItemKind | null {
+  if (node.kind === "resource") return node.id.startsWith("course-") ? "course" : node.id.startsWith("practice-guide-") ? "practice" : "resource";
+  if (node.kind === "path") return "practice";
+  if (node.kind === "reading") return "reading";
+  if (node.kind === "brief") return "brief";
+  if (node.kind === "organization") return "organization";
+  return null;
+}
+
+let pool: Pool | undefined;
+function itemPool(): Pool {
+  if (pool) return pool;
+  const items = new Map<string, FacetItem>(), text = new Map<string, string>();
+  const corpus = new Map(CORPUS.map(item => [item.id, item]));
+  for (const node of knowledgeGraph().nodes.values()) {
+    const kind = kindOf(node);
+    if (!kind || !node.href) continue;
+    items.set(node.id, { id: node.id, kind, title: node.title, href: node.href });
+    const entry = corpus.get(node.id);
+    text.set(node.id, [node.title, entry?.summary ?? "", ...(entry?.tags ?? [])].join(" "));
+  }
+  for (const guide of practiceGuides) {
+    const id = `practice-guide-${guide.slug}`;
+    items.set(id, { id, kind: "practice", title: guide.title, href: `/practice-guides/${guide.slug}` });
+    text.set(id, [guide.title, guide.purpose, guide.summary].join(" "));
+  }
+  for (const policy of getPolicies()) {
+    const id = `policy:${policy.id}`;
+    items.set(id, { id, kind: "policy", title: policy.title, href: policyHref(policy.id) });
+    text.set(id, [policy.title, policy.summary, ...policy.tags, ...policy.programs].join(" "));
+  }
+  for (const module of clas.modules) {
+    const id = `clas:${module.id}`;
+    items.set(id, { id, kind: "lesson", title: module.title, href: `/learn/clas/curriculum/${module.id}` });
+    text.set(id, module.title);
+  }
+  return (pool = { items, text });
+}
+
+/** Items whose text shares at least `min` meaningful words with the phrase. */
+function matching(phrase: string, min = 2, limit = 24, skip: RegExp = /^(policy:|organization:)/): string[] {
+  const { text } = itemPool();
+  const want = new Set(words(phrase));
+  if (!want.size) return [];
+  const scored: [string, number][] = [];
+  for (const [id, value] of text) {
+    if (skip.test(id)) continue;
+    const have = new Set(words(value));
+    let score = 0;
+    for (const word of want) if (have.has(word)) score++;
+    if (score >= Math.min(min, want.size)) scored.push([id, score]);
+  }
+  return scored.sort((a, b) => b[1] - a[1]).slice(0, limit).map(([id]) => id);
+}
+
+function pathNodeId(pathId: string): string { return pathId; }
+
+function value(facet: FacetId, id: string, title: string, summary: string, group: string, ids: Iterable<string>): FacetValue {
+  const { items } = itemPool();
+  const seen = new Set<string>(), list: FacetItem[] = [];
+  for (const itemId of ids) {
+    const item = items.get(itemId) ?? items.get(`course-${itemId}`);
+    if (item && !seen.has(item.id)) { seen.add(item.id); list.push(item); }
+  }
+  list.sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind));
+  return { facet, id, title, summary, group, items: list };
+}
+
+let built: Map<string, FacetValue> | undefined;
+
+function build(): Map<string, FacetValue> {
+  if (built) return built;
+  const out = new Map<string, FacetValue>();
+  const put = (entry: FacetValue) => { if (entry.items.length) out.set(`${entry.facet}/${entry.id}`, entry); };
+  const taskMembers = new Map<string, string[]>();
+  const roleMembers = new Map<RoleFamily, Set<string>>();
+
+  // Tasks: the work areas' own task lists, their named resources and practice paths, plus close matches.
+  for (const domain of DOMAINS) {
+    for (const task of domain.tasks) {
+      const ids = [...task.contentIds, ...(task.pathId ? [pathNodeId(task.pathId)] : []), ...matching(`${task.label} ${task.outcome}`, 2, 14)];
+      taskMembers.set(task.id, ids);
+      put(value("task", task.id, task.label, task.outcome, domain.staffLabel, ids));
+      for (const role of task.roles) {
+        const set = roleMembers.get(role) ?? new Set<string>();
+        ids.forEach(id => set.add(id));
+        roleMembers.set(role, set);
+      }
+    }
+  }
+  for (const id of itemPool().items.keys()) {
+    if (!id.startsWith("self-directed-")) continue;
+    for (const role of selfDirectedRoles(id)) roleMembers.get(role)?.add(id);
+  }
+  for (const [role, ids] of roleMembers) {
+    put(value("role", role, ROLE_FAMILY_LABEL[role], `Tasks, practices and learning that people in this role most often use. Every resource stays open to everyone.`, "Roles", ids));
+  }
+
+  // Standards: the 15 national standards through the curriculum lessons that teach them.
+  for (const standard of clas.standards) {
+    const lessons = clas.modules.filter(module => module.standards.includes(standard.number)).map(module => `clas:${module.id}`);
+    put(value("standard", `clas-${standard.number}`, `National standard ${standard.number}`, standard.focus, "National standards for culturally and linguistically appropriate services", [...lessons, ...matching(standard.focus, 2, 14)]));
+  }
+  // Goals: the six equity goals through the work areas that serve each one.
+  const goals = new Map<string, string[]>();
+  for (const domain of DOMAINS) for (const goal of domain.goals) {
+    const ids = goals.get(goal) ?? [];
+    for (const task of domain.tasks) ids.push(...(taskMembers.get(task.id) ?? []));
+    ids.push(...domain.toolIds);
+    goals.set(goal, ids);
+  }
+  for (const [goal, ids] of goals) put(value("standard", `goal-${slug(goal)}`, goal, `Work that serves the equity goal "${goal}".`, "Six equity goals", ids));
+  put(value("standard", "equity-policy", "DHS equity policy and the Equity Analysis Toolkit", "Looking at policies, practices, budgets and decisions through an equity lens. The Equity Analysis Toolkit is required for significant decisions.", "Department commitments", matching("equity analysis toolkit policy decision", 2, 30)));
+
+  // Communities: each brief with the organizations and work connected to it. Native pages stand as written.
+  const graph = knowledgeGraph();
+  for (const node of graph.nodes.values()) {
+    if (node.kind !== "brief") continue;
+    const communityId = node.id.slice("brief:".length);
+    const ids = [node.id];
+    if (!isNativeCommunity(communityId)) for (const { node: other } of graph.neighbors(node.id)) ids.push(other.id);
+    put(value("community", `community-${communityId}`, node.title, "The community brief and the organizations, readings and work connected with it.", "Minnesota communities", ids));
+  }
+  // Program areas: the seven work areas and the division's programs named in the policy catalog.
+  for (const domain of DOMAINS) {
+    const ids = [...domain.toolIds];
+    for (const task of domain.tasks) ids.push(...(taskMembers.get(task.id) ?? []));
+    put(value("community", `area-${domain.id}`, domain.staffLabel, domain.summary, "Work areas", ids));
+  }
+  const programs = new Map<string, string[]>();
+  for (const policy of getPolicies()) for (const program of policy.programs) {
+    const ids = programs.get(program) ?? [];
+    ids.push(`policy:${policy.id}`);
+    programs.set(program, ids);
+  }
+  for (const [program, ids] of programs) if (ids.length >= 3) put(value("community", `program-${slug(program)}`, program, `Policies and work connected with ${program}.`, "Division programs", [...ids, ...matching(program, 2, 10, /^organization:/)]));
+  return (built = out);
+}
+
+export function facetValues(facet: FacetId): FacetValue[] {
+  return [...build().values()].filter(entry => entry.facet === facet);
+}
+export function facetValue(facet: string, id: string): FacetValue | undefined {
+  return build().get(`${facet}/${id}`);
+}
+export function facetHref(entry: Pick<FacetValue, "facet" | "id">): string { return `/explore/${entry.facet}/${entry.id}`; }
+
+/** The facet values an item belongs to, for "Connected with" lists on item pages. */
+export function facetsForHref(href: string, limit = 8): FacetValue[] {
+  const clean = href.split(/[?#]/)[0];
+  return [...build().values()].filter(entry => entry.items.some(item => item.href.split(/[?#]/)[0] === clean))
+    .sort((a, b) => FACETS.findIndex(f => f.id === a.facet) - FACETS.findIndex(f => f.id === b.facet) || a.items.length - b.items.length)
+    .slice(0, limit);
+}
+
+/** Values grouped for a facet page. */
+export function groupedFacet(facet: FacetId): { group: string; values: FacetValue[] }[] {
+  const groups = new Map<string, FacetValue[]>();
+  for (const entry of facetValues(facet)) (groups.get(entry.group) ?? groups.set(entry.group, []).get(entry.group)!).push(entry);
+  return [...groups].map(([group, values]) => ({ group, values }));
+}
+
+export function graphStats() {
+  const all = [...build().values()];
+  const linked = new Set(all.flatMap(entry => entry.items.map(item => item.id)));
+  return { values: all.length, linkedItems: linked.size, pool: itemPool().items.size };
+}

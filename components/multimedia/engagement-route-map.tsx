@@ -26,7 +26,7 @@ export function EngagementRouteMap({ doors }: { doors: readonly OrientationDoor[
                 <h3>{group.question}</h3>
                 <ul>{group.routes.map(href => {
                   const door = doors.find(item => item.href === href);
-                  return door ? <li key={href}><Link href={door.href}>{door.label}<span aria-hidden="true"> ↗</span></Link></li> : null;
+                  return door ? <li key={href}><Link href={door.href}>{door.label}</Link></li> : null;
                 })}</ul>
               </li>
             ))}

@@ -83,7 +83,7 @@ export default async function InterculturalLearningPage({searchParams}:{searchPa
               </li>)}</ul>:<p className="mt-4">Explore the <Link href="/learn" className="underline">full learning collection</Link> or use the practice example here.</p>}
             </div>
           </div>
-          <div className="mt-7 flex flex-wrap items-baseline justify-between gap-4"><p className="max-w-3xl text-sm leading-6">{stop.nextStep}</p><Link className="font-semibold underline" href={"#"+next.id}>{index===stops.length-1?"Return to the foundations":next.title} →</Link></div>
+          <div className="mt-7 flex flex-wrap items-baseline justify-between gap-4"><p className="max-w-3xl text-sm leading-6">{stop.nextStep}</p><Link className="font-semibold underline" href={"#"+next.id}>{index===stops.length-1?"Return to the foundations":next.title}</Link></div>
         </section>;
       })}
       <LearningPracticeNotebook stops={stops.map(({id,title,practice,reflection})=>({id,title,practice,reflection}))}/>

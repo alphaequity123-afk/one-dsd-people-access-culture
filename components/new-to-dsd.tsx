@@ -20,7 +20,7 @@ const doors = [
 ["Find the right support", "Connect with professional support when a conversation or an extra pair of hands would make the work easier.", "/support", "Explore support"]];
 
 function renderDoor([title, body, href, label]: string[]) {
-  return <article key={href} className={styles.orientationItem}><h3 className="text-2xl font-semibold">{title}</h3><p className="my-4 leading-7">{body}</p><Link className="font-semibold" href={href}>{label} →</Link></article>;
+  return <article key={href} className={styles.orientationItem}><h3 className="text-2xl font-semibold">{title}</h3><p className="my-4 leading-7">{body}</p><Link className="font-semibold" href={href}>{label}</Link></article>;
 }
 
 export function NewToDsd() {
@@ -41,7 +41,7 @@ export function NewToDsd() {
     <div id="find-your-division" className={`${styles.welcomeNote} scroll-mt-24 rounded-xl border border-line p-7`}>
       <h3 className="text-2xl font-semibold">Your place in One DSD</h3>
       <p className="mt-4 leading-8">You belong to a division with its own programs, colleagues, and shared commitments. Explore the division’s programs, connect with people through the One DSD Team and Amplify Equity, and use the learning and tools here to strengthen a real piece of work. DSD sits within the Aging and Disability Services Administration at Minnesota DHS, and agency policy and delegated responsibilities continue to guide decisions.</p>
-      <p className="mt-4"><Link href="/one-dsd/team">Explore the One DSD Team →</Link> · <Link href="/one-dsd/amplify">Amplify Equity →</Link></p>
+      <p className="mt-4"><Link href="/one-dsd/team">Explore the One DSD Team</Link> · <Link href="/one-dsd/amplify">Amplify Equity</Link></p>
     </div>
   </section>;
 }

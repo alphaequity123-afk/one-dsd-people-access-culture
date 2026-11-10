@@ -54,7 +54,7 @@ export default async function ApplyToolkitPage() {
   if (scope === "one-dhs") redirect("/learn/equity-toolkit/practice");
   return <div className={`${styles.page} ${styles.content} ${styles.readingPage} space-y-8`}>
     <header className="space-y-4">
-      <Link href="/learn/equity-toolkit/goals">← Six goals and work plan</Link>
+      <Link href="/learn/equity-toolkit/goals">Six goals and work plan</Link>
       <h1>Apply the toolkit to your work</h1>
       <p>Choose a DSD program area or the kind of work you do. Each example helps you use the DHS Equity Analysis Toolkit in a real decision.</p>
     </header>
@@ -65,7 +65,7 @@ export default async function ApplyToolkitPage() {
       <p>You can also <Link href="/toolkit-work/Equity-Analysis-Toolkit-Guide.html">open the general guide</Link> if neither group fits.</p>
     </section>
     <nav aria-label="Continue the toolkit" className="border-t border-line pt-6 print:hidden">
-      <Link className={styles.primaryAction} href="/learn/equity-toolkit/practice">Continue to practice →</Link>
+      <Link className={styles.primaryAction} href="/learn/equity-toolkit/practice">Continue to practice</Link>
     </nav>
   </div>;
 }

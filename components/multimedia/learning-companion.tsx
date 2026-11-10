@@ -20,7 +20,6 @@ export function LearningCompanion({ courseId, lessonId }: { courseId: string; le
         <div className="flex items-center gap-3">
           {isFlow || isDocument ? <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#123f60] text-sm font-bold text-white">{index + 1}</span> : null}
           <h3 className="text-lg font-bold text-[#123f60]">{panel.title}</h3>
-          {isFlow && index < example.panels.length - 1 ? <span aria-hidden="true" className="ml-auto text-2xl text-[#005ea8]">→</span> : null}
         </div>
         <p className="mt-3 leading-7">{panel.text}</p>
         <details className="mt-4 border-t border-[#8ea2b5] pt-3">

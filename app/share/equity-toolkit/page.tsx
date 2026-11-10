@@ -41,12 +41,12 @@ export default async function SharedEquityToolkitPage() {
               <h1 className="text-4xl font-semibold">{text("title")}</h1>
               <p className="text-xl">{text("intro")}</p>
               <p>{text("companionNote")}</p>
-              <p><Link href="/share/equity-toolkit/practice">Continue to practice and resources →</Link></p>
+              <p><Link href="/share/equity-toolkit/practice">Continue to practice and resources</Link></p>
               <p className={styles.shareNote}>You&rsquo;re viewing a shared link to this toolkit only. It doesn&rsquo;t include the rest of the program.</p>
             </div>
           </header>
           <PublishedPodcast headingLevel={2} podcast={PODCASTS[0]} surface={podcastSurface} />
-          <nav aria-label="Continue the toolkit" className="border-t border-line pt-8 print:hidden"><Link className={styles.primaryAction} href="/share/equity-toolkit/practice">Continue to practice with the toolkit →</Link></nav>
+          <nav aria-label="Continue the toolkit" className="border-t border-line pt-8 print:hidden"><Link className={styles.primaryAction} href="/share/equity-toolkit/practice">Continue to practice with the toolkit</Link></nav>
         </div>
       </EditableSurfaceRegion>
     </>

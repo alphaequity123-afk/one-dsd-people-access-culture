@@ -25,8 +25,8 @@ export async function DevelopmentResourceGuide({ resourceId, scope = "one-dhs" }
   return <details className="development-resource" aria-label="Carry this resource into practice">
     <summary>Carry this into practice</summary>
     <p>{contribution}</p>
-    {mapped?.contextHref ? <p><Link href={mapped.contextHref}>Connect this reference with your starting point →</Link></p> : null}
-    {journeys.length ? <ul>{journeys.map(journey => <li key={journey.id}><Link href={journeyHref(journey.id)}><strong>{journey.title}</strong></Link><p>{journey.question}</p><Link href={journeyHref(journey.id, "practice")}>Explore a practice opportunity →</Link></li>)}</ul> : <p>Choose the question this resource helps you explore, compare it with another relevant perspective, and identify what it changes in your understanding. <Link href="/learn/paths">Find a pathway for that question →</Link></p>}
+    {mapped?.contextHref ? <p><Link href={mapped.contextHref}>Connect this reference with your starting point</Link></p> : null}
+    {journeys.length ? <ul>{journeys.map(journey => <li key={journey.id}><Link href={journeyHref(journey.id)}><strong>{journey.title}</strong></Link><p>{journey.question}</p><Link href={journeyHref(journey.id, "practice")}>Explore a practice opportunity</Link></li>)}</ul> : <p>Choose the question this resource helps you explore, compare it with another relevant perspective, and identify what it changes in your understanding. <Link href="/learn/paths">Find a pathway for that question</Link></p>}
     <p><strong>Return to the experience:</strong> What did you notice or try, whose perspective informed it, and what would you keep or adjust?</p>
   </details>;
 }

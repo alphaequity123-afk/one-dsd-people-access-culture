@@ -25,7 +25,7 @@ export default async function AreasPage() {
         <p className="max-w-3xl">Choose the area closest to the decision in front of you. For example, if you are changing a notice, begin with policy, program, and service design; you can return here for related areas.</p>
         <ul>{WORK_AREAS.map(area=><li key={area.id} id={area.id}><Link href={"/areas/work/"+area.id}>
           <Image className={styles.areaThumbnail} src={WORK_AREA_PHOTOS[area.id].src} alt={WORK_AREA_PHOTOS[area.id].alt} width={360} height={203} sizes="(max-width:640px) 85vw, (max-width:950px) 40vw, 340px" />
-          <span className={styles.areaChoiceLabel}>{stringValue(copy,areaFieldKey(area.id,"label"))}<span aria-hidden="true">→</span></span>
+          <span className={styles.areaChoiceLabel}>{stringValue(copy,areaFieldKey(area.id,"label"))}</span>
         </Link></li>)}</ul>
       </nav>
       <details className={styles.areaContext}><summary>Applying equity across areas</summary><EquityPractice scope={surface.scope}/></details>

@@ -42,7 +42,7 @@ function ResourceActionsForPath({ path }: { path: string }) {
 export function SavedResourceShelf() {
   const saved = useSavedResources();
   return <section className="dsd-saved-shelf" aria-labelledby="saved-resources-heading">
-    <div className="dsd-section-heading"><div><p className="dsd-eyebrow">Your collection</p><h2 id="saved-resources-heading">Saved resources</h2></div><Link href="/library">Find a resource →</Link></div>
+    <div className="dsd-section-heading"><div><p className="dsd-eyebrow">Your collection</p><h2 id="saved-resources-heading">Saved resources</h2></div><Link href="/library">Find a resource</Link></div>
     {!saved.available ? <div role="status"><p>{saved.message}</p><button type="button" onClick={saved.refresh}>Try opening saved resources again</button></div>
       : saved.items.length ? <ul>{saved.items.map(item => <li key={item.href}><Link href={item.href}>{item.title}</Link><button type="button" aria-label={`Remove ${item.title} from saved resources`} onClick={() => saved.setNotice(changeSavedResource(item, true).message)}>Remove</button></li>)}</ul>
       : <div className="dsd-empty-state"><p>Keep useful learning and tools close to your work.</p><p>Choose <strong>Save resource</strong> on a course, community brief, tool, or practice guide. Your collection stays on this device.</p></div>}

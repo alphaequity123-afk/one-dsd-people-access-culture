@@ -34,7 +34,7 @@ export function LearningTile({ item, presentation, href, owner = false, showLeve
         {progression ? <p className={styles.level} data-learning-level={level ?? progression}>{progressionLabel(progression)}</p> : null}
         <h3 id={titleId} className={styles.title}>{item.title}</h3>
         <p className={styles.summary}>{presentation?.summary || item.summary}</p>
-        <div className={styles.meta}><AuthorityPill authority={item.authority} /><span className={styles.arrow} aria-hidden="true">→</span></div>
+        <div className={styles.meta}><AuthorityPill authority={item.authority} /></div>
       </div>
     </Link>
   </article>;

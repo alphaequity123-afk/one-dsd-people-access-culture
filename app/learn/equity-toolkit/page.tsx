@@ -36,11 +36,11 @@ export default async function Page() {
         <h1>{text("title")}</h1>
         <p>{text("intro")}</p>
         <nav className={styles.starts} aria-label="Start with the toolkit">
-          <div><Link href="/learn/equity-toolkit/practice#worked-example">Watch the worked example →</Link><p>Follow a practice CFSS notice revision, see the completed notes, and try a different decision.</p></div>
-          <div><Link href="/learn/equity-toolkit/practice#toolkit-draft">Work through a decision →</Link><p>Choose a starting question, compare options, and save your analysis with a practice plan.</p></div>
+          <div><Link href="/learn/equity-toolkit/practice#worked-example">Watch the worked example</Link><p>Follow a practice CFSS notice revision, see the completed notes, and try a different decision.</p></div>
+          <div><Link href="/learn/equity-toolkit/practice#toolkit-draft">Work through a decision</Link><p>Choose a starting question, compare options, and save your analysis with a practice plan.</p></div>
         </nav>
-        <p>Follow one decision through eight connected lessons, individual practice and working notes. <Link href="/learn/equity-toolkit/curriculum">Explore equity in everyday decisions →</Link></p>
-        <p>Have a policy, notice or plan in hand? <Link href="/equity-review/analyze">Analyze a document →</Link></p>
+        <p>Follow one decision through eight connected lessons, individual practice and working notes. <Link href="/learn/equity-toolkit/curriculum">Explore equity in everyday decisions</Link></p>
+        <p>Have a policy, notice or plan in hand? <Link href="/equity-review/analyze">Analyze a document</Link></p>
       </header>
       <PageContents items={[
         { href: "#analysis-in-practice", label: "What an analysis reveals" },
@@ -62,35 +62,35 @@ export default async function Page() {
             <summary>Why the choice matters</summary>
             <p>A shorter notice can reduce reading effort, but removing an explanation may create confusion. Compare options against required content and people’s experience, state what the evidence does and does not establish, and identify what would show improvement after an authorized change.</p>
           </details>
-          <p className={styles.nextStep}><Link href="/learn/equity-toolkit/practice#worked-example">See the reasoning in the worked example <span aria-hidden="true">→</span></Link></p>
+          <p className={styles.nextStep}><Link href="/learn/equity-toolkit/practice#worked-example">See the reasoning in the worked example</Link></p>
         </section>
         <ToolDecisionQuestions tool="equity-toolkit" />
         <section id="supporting-tools" className={styles.section}>
           <h2>Choose the support your work needs</h2>
           <p>Use these resources alongside an analysis. Begin with the question you are working on; you can return to the others as needed.</p>
           <ul className={styles.resources}>{resources.map(resource => <li key={resource.href}>
-            <h3><Link href={resource.href}>{resource.title} →</Link></h3>
+            <h3><Link href={resource.href}>{resource.title}</Link></h3>
             <p>{resource.description}</p>
           </li>)}</ul>
         </section>
         <EngagementResourceLinks />
         <div id="toolkit-podcast" className={styles.support}>
-          {podcastSurface.available ? <><h2>{stringValue(podcastSurface.values, "title")}</h2><p>The companion podcast walks through the toolkit in conversation, with a full transcript. It plays in the audio library.</p><p><Link href={`/audio-library#podcast-${PODCASTS[0].id}`}>Listen to the companion podcast →</Link></p></> : null}
+          {podcastSurface.available ? <><h2>{stringValue(podcastSurface.values, "title")}</h2><p>The companion podcast walks through the toolkit in conversation, with a full transcript. It plays in the audio library.</p><p><Link href={`/audio-library#podcast-${PODCASTS[0].id}`}>Listen to the companion podcast</Link></p></> : null}
         </div>
         <section id="toolkit-context" className={`${styles.section} ${styles.support}`}>
           <h2>Connect the analysis with your wider work</h2>
           <p>The ADSA goals and work plan provide context for applying an analysis. They are available whenever useful; you can start the example or your own draft directly.</p>
-          {culturalIntelligenceAvailable && <p><Link href="/learn/cultural-intelligence">Explore cultural context for your analysis →</Link></p>}
-          <p><Link href="/learn/equity-toolkit/goals">Aging and Disability Services Administration six goals and work plan →</Link></p>
+          {culturalIntelligenceAvailable && <p><Link href="/learn/cultural-intelligence">Explore cultural context for your analysis</Link></p>}
+          <p><Link href="/learn/equity-toolkit/goals">Aging and Disability Services Administration six goals and work plan</Link></p>
           <details><summary>About this companion</summary><p>{text("companionNote")}</p><p><Link href="/operationalizing-equity">Explore operationalizing equity in everyday work</Link></p></details>
         </section>
         <section id="toolkit-downloads" className={`${styles.section} ${styles.support} print:hidden`}>
           <h2>Download or share this toolkit</h2>
-          <p><Link href="/share/equity-toolkit">Get a link to share this toolkit →</Link></p>
+          <p><Link href="/share/equity-toolkit">Get a link to share this toolkit</Link></p>
           <p>The shared link opens the Equity Analysis Toolkit on its own, so you can send it to someone without the rest of the program.</p>
           {surface.available ? <ResourceDownloads kind="equity-toolkit" id="companion" noun="toolkit" scope={scope} /> : null}
         </section>
-        <nav aria-label="Continue the toolkit" className={`${styles.support} print:hidden`}><Link href="/learn/equity-toolkit/practice">Continue to practice and resources →</Link></nav>
+        <nav aria-label="Continue the toolkit" className={`${styles.support} print:hidden`}><Link href="/learn/equity-toolkit/practice">Continue to practice and resources</Link></nav>
       </PageContents>
     </div>
   </EditableSurfaceRegion>;

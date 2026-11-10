@@ -49,7 +49,8 @@ export function decryptPolicyCase(envelope: string, id: string, version: number,
 export function decodePolicyRow(row: CaseRow, key: Buffer, previous?: Buffer): PolicyCase | null {
   const record = decryptPolicyCase(row.encrypted_payload, row.id, row.version, key, previous);
   if (!record) {
-    if (caseRowKind(row, key, previous) === "toolkit") return null;
+    const kind = caseRowKind(row, key, previous);
+    if (kind === "toolkit" || kind === "decision-record") return null;
     throw new PolicyAnalysisError("storage_unavailable");
   }
   if (record.status !== row.status || record.createdAt !== iso(row.created_at) || record.updatedAt !== iso(row.updated_at) || record.finalizedAt !== (row.finalized_at ? iso(row.finalized_at) : null)) throw new PolicyAnalysisError("storage_unavailable");
