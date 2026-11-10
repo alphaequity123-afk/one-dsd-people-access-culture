@@ -91,7 +91,7 @@ async function boundedBody(request: Request, maximum: number) {
 export async function initializeCourseMedia(root: string | undefined, mount: string | undefined) {
   if (!configuredCourseMediaRoot(root, mount) || !root) return unavailable(503);
   try {
-    for (const dir of [path.join(root, 'course-media'), path.join(root, 'course-media', 'assets'), path.join(root, 'course-media', 'manifests')]) {
+    for (const dir of [root, path.join(root, 'course-media'), path.join(root, 'course-media', 'assets'), path.join(root, 'course-media', 'manifests')]) {
       try { await mkdir(dir, { mode: 0o700 }); } catch (e) { if ((e as NodeJS.ErrnoException).code !== 'EEXIST') throw e; }
       const info = await lstat(dir);
       if (!info.isDirectory() || info.isSymbolicLink() || !same(await realpath(dir), dir)) return unavailable(503);
