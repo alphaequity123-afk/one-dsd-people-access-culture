@@ -106,8 +106,9 @@ export function AskRecordsClient({ initialData, initialError = "" }: { initialDa
     {message && <p role="status">{message}</p>}
     {data && <>
       <div className="panel text-sm space-y-2">
-        <p>{data.recording.durable ? "Response records are kept." : "Response records are temporary in this copy and can be lost when it restarts."}</p>
-        <p>{data.recording.retentionDays === null ? "Records remain until you delete them. There is no automatic expiry." : `New records expire after ${data.recording.retentionDays} days. Each record shows its own scheduled removal.`}</p>
+        <p>Current Ask does not add questions or answers to this collection.</p>
+        <p>{data.recording.durable ? "Earlier response records are kept in protected storage." : "Earlier response records are temporary in this copy and can be lost when it restarts."}</p>
+        <p>Each existing record keeps its own scheduled removal date, if one was set. A record without a removal date remains until you delete it.</p>
         <p>{data.records.length} records loaded. {normalized && `${visible.length} match your search within those records.`}</p>
         {data.recording.lastWriteFailure && <p role="alert">A response record could not be saved at {data.recording.lastWriteFailure.at}. This list may be missing that response.</p>}
       </div>

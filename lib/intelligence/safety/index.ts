@@ -372,17 +372,44 @@ const THIS_SPECIFIC_PERSON =
  * but private details stop here, before any provider can receive them. A general
  * question about "an employee" or "a client" describes no one and is answered.
  */
-export function askPrivacyGate(text: string): SafetyResult {
-  const direct = piiDetect(text);
-  if (!direct.ok) return direct;
-  for (const item of OUTBOUND_IDENTIFIERS) {
-    if (item.re.test(text)) return refusePii(item.cls);
+/** Material the person says is restricted, as opposed to a general question that uses the word "confidential". */
+const PASTED_NONPUBLIC =
+  /\b(?:do not share|not for distribution|attorney-client|personnel-only|internal draft|sensitive draft|predecisional)\b|\b(?:marked|labeled|labelled|stamped)\s+(?:as\s+)?(?:confidential|privileged|nonpublic)\b|\bthis\s+(?:document|draft|memo|file|email|message|report|record)\s+is\s+(?:confidential|privileged|nonpublic|not public)\b|\b(?:confidential|privileged|nonpublic)\s+(?:memo|document|draft|file|email|message|report|record|letter|notes?)\b/i;
+
+/** The person's own contact details count as private too ("email me at ...", "my number is ..."). */
+const OWN_CONTACT = /\b(?:my|me at|reach me|call me|text me|email me|contact me)\b/i;
+
+/** Identifiers of a person that are never sent on, wherever they appear (question, history, or an earlier draft). */
+export function askHardIdentifierGate(text: string): SafetyResult {
+  const t = text ?? "";
+  for (const item of HARD_IDENTIFIERS) {
+    if (item.cls !== "Phone number" && item.cls !== "Street address" && item.re.test(t)) return refusePii(item.cls);
   }
-  if (THIS_SPECIFIC_PERSON.test(text) && SENSITIVE_DESCRIPTORS.test(text)) {
+  const employeeId = OUTBOUND_IDENTIFIERS.find(item => item.cls === "Employee identifier");
+  if (employeeId?.re.test(t)) return refusePii(employeeId.cls);
+  return { ok: true };
+}
+
+export function askPrivacyGate(text: string): SafetyResult {
+  const t = text ?? "";
+  const hard = askHardIdentifierGate(t);
+  if (!hard.ok) return hard;
+  // A person is in the question only when one is named (honorific or role plus a name) or pointed to ("my client").
+  // Two capitalised words before "is" or "has" are usually a program or an agency, so they are not treated as a person.
+  const named = NAMED_INDIVIDUAL.test(t);
+  const specific = THIS_SPECIFIC_PERSON.test(t);
+  if (named && HR_PAYLOAD.test(t)) return hrRedirect();
+  if (named && SENSITIVE_DESCRIPTORS.test(t)) return refusePii("Named person with case, medical, disability, or personnel details");
+  if (specific && SENSITIVE_DESCRIPTORS.test(t)) {
     return refusePii("Case, medical, disability, complaint, eligibility, or personnel details about a specific person");
   }
-  const definition = /^(?:what (?:is|are|does)|define|explain the term)\s+(?:confidential|nonpublic|privileged)(?:\s+(?:information|material|data|communications?))?(?:\s+mean)?\??$/i.test(text.trim());
-  if (NONPUBLIC_MATERIAL.test(text) && !definition) return refusePii("Confidential or nonpublic material");
+  // A phone number, address or e-mail is private only when it is tied to a person. An agency's public contact is not.
+  if (named || specific || OWN_CONTACT.test(t)) {
+    for (const item of [...HARD_IDENTIFIERS.filter(h => h.cls === "Phone number" || h.cls === "Street address"), ...OUTBOUND_IDENTIFIERS.filter(o => o.cls === "Email address")]) {
+      if (item.re.test(t)) return refusePii(item.cls);
+    }
+  }
+  if (PASTED_NONPUBLIC.test(t)) return refusePii("Confidential or nonpublic material");
   return { ok: true };
 }
 

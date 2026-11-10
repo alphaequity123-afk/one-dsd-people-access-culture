@@ -14,7 +14,7 @@ export default async function AskRecordsPage() {
   try { initialData = await listAskResponseRecords({ limit: 50 }); }
   catch { initialError = "ASK response records could not be loaded. Refresh to try again."; }
   return <>
-    <PageIntro kicker="For your review" title="ASK response records" lede="Read the questions, full answers, sources, and outcomes that ASK keeps. Use them to see what staff received and where ASK needs to improve." />
+    <PageIntro kicker="For your review" title="Earlier ASK response records" lede="Review response records retained by earlier versions. Current Ask does not add questions or answers to this collection. Existing records remain available until deletion or their scheduled removal." />
     <div className="wrap py-8"><AskRecordsClient initialData={initialData} initialError={initialError} /></div>
   </>;
 }

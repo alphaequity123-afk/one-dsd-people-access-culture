@@ -33,7 +33,7 @@ import {
   type ResearchDepth,
 } from "@/lib/intelligence/research";
 import {
-  askPrivacyGate,
+  askPrivacyGate, askHardIdentifierGate,
   staffDisplayText,
   wantsCitation,
 } from "../safety";
@@ -279,9 +279,11 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     answer: turn.answer.slice(0, 2500),
   }));
   const suppliedArtifact = PracticeArtifactSchema.safeParse(input.priorArtifact);
-  const privacyTexts = [question, ...history.map(turn => turn.question), ...(suppliedArtifact.success ? [JSON.stringify(suppliedArtifact.data.values)] : [])];
-  for (const text of privacyTexts) {
-    const privacy = askPrivacyGate(text);
+  // The earlier practice draft was written by Ask itself, so only hard identifiers are checked in it;
+  // re-running the full check on it refused every follow-up after a draft.
+  const privacyChecks = [...[question, ...history.map(turn => turn.question)].map(text => askPrivacyGate(text)),
+    ...(suppliedArtifact.success ? [askHardIdentifierGate(JSON.stringify(suppliedArtifact.data.values))] : [])];
+  for (const privacy of privacyChecks) {
     if (!privacy.ok) {
       await auditRefusal(ctx, "safety.pii_detect", privacy.code!);
       return { kind: "refusal", safety: privacy };
@@ -792,7 +794,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (generative && cloneAgentsEnabled()) {
     const review = await reviewWithJev(question, [draft.shortAnswer, draft.whyItMatters].join("\n"), ctx, input.cloneRunId);
     if (review === "unavailable") console.warn("ask_review_unavailable", { traceId: ctx.trace_id });
-    if (review === "revise" || review === "human") {
+    // "revise" is a wording or boundary note: the answer is shared and the verdict is logged for follow-up.
+    if (review === "revise") console.warn("ask_review_flagged", { traceId: ctx.trace_id, review });
+    if (review === "human") {
       console.warn("ask_review_withheld", { traceId: ctx.trace_id, review });
       draft = { shortAnswer: "I can’t give a complete answer to this one here, because part of it needs a person’s judgment. The resources below can help, and Find the right person can connect you with someone who can decide.", whyItMatters: "" };
       answerSources = []; evidenceClaims = []; practiceArtifact = undefined;

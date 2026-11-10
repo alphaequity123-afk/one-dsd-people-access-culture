@@ -124,10 +124,29 @@ describe("the privacy check before any provider", () => {
   ])("still answers a general question: %s", async question => {
     expect((await askConcierge({ question }, ctx)).kind).toBe("answer");
   });
-  it("withholds a written answer the final review does not pass", async () => {
+  it("shares a written answer the final review marks revise, and withholds one it sends to a person", async () => {
     f.review.mockResolvedValue("revise");
-    const result = await askConcierge({ question: "What is person-centered planning?" }, ctx);
-    expect(result.kind).toBe("answer");
-    if (result.kind === "answer") expect(result.answer.shortAnswer).not.toBe("A general subject answer.");
+    const revised = await askConcierge({ question: "What is person-centered planning?" }, ctx);
+    expect(revised.kind).toBe("answer");
+    if (revised.kind === "answer") expect(revised.answer.shortAnswer).toBe("A general subject answer.");
+    f.review.mockResolvedValue("human");
+    const held = await askConcierge({ question: "What is person-centered planning?" }, ctx);
+    if (held.kind === "answer") expect(held.answer.shortAnswer).not.toBe("A general subject answer.");
+  });
+  it.each([
+    "The Disability Services Division has a new equity plan. Where can I find it?",
+    "Explain how Medical Assistance is different from Medicare.",
+    "What makes information confidential under the Minnesota Government Data Practices Act?",
+    "Is 651-431-2000 the main phone number for the Department of Human Services?",
+    "Who do I email about language access? Is it dhs.info@state.mn.us?",
+  ])("answers a general question that names no person: %s", async question => {
+    expect((await askConcierge({ question }, ctx)).kind).toBe("answer");
+  });
+  it.each([
+    "My client was denied a waiver. Her number is 612-555-0100.",
+    "Ms. Lopez has a disability accommodation on file. What should I do?",
+    "Client ID 12345678 was denied eligibility.",
+  ])("still declines private details about a person: %s", async question => {
+    expect((await askConcierge({ question }, ctx)).kind).toBe("refusal");
   });
 });
