@@ -8,3 +8,6 @@ node_modules/
 
 # Generated complete offline CLAS collection
 public/downloads/clas-curriculum-collection.zip*
+
+# 4K image siblings ship as release packages (config/current-release-transport.json); sources in image-4k-stage-20261110.
+public/**/*.4k.webp

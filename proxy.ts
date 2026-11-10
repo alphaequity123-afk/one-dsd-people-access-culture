@@ -1,9 +1,17 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { applyRequestedView } from "@/lib/product/view-proxy";
 import { retiredFeatureDestination } from "@/lib/program/retired-features";
+import { upgradedImagePath } from "@/lib/content/image-4k";
 
 /** Retires excluded staff features and applies an explicitly requested program view. */
 export function proxy(request: NextRequest) {
+  // 4K image upgrade: a listed image is answered with its "<name>.4k.webp" sibling; the original stays for old links.
+  const upgraded = upgradedImagePath(request.nextUrl.pathname);
+  if (upgraded) {
+    const target = request.nextUrl.clone();
+    target.pathname = upgraded;
+    return NextResponse.rewrite(target);
+  }
   const retired = retiredFeatureDestination(request.nextUrl.pathname);
   if (retired) return NextResponse.redirect(new URL(retired, request.url), 307);
   // The review page validates its tool and uses the shared application not-found
@@ -47,6 +55,8 @@ export const config = {
     "/courses/cultural-intelligence-tribal/:path*", "/courses/cultural-intelligence-native-american/:path*", "/courses/ipe-20-tribal-sovereignty/:path*",
     "/share/courses/cultural-intelligence-tribal/:path*", "/share/courses/cultural-intelligence-native-american/:path*", "/share/courses/ipe-20-tribal-sovereignty/:path*",
     "/equity-review/:path*",
+    // Public images that may have a 4K sibling (see lib/content/image-4k.ts).
+    "/((?:images|learning|library|documents|videos|toolkit-work)/.+\\.(?:png|jpe?g|webp))",
     {
       // Pages only: never API routes, Next.js assets, or public files such as images and audio.
       // Only real file extensions are excluded, so a page id that contains a dot still matches.
