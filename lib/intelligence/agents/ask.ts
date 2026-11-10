@@ -218,7 +218,7 @@ function languageAccessResource(doc: Doc): boolean {
 const ROUTINE = /\b(where (?:is|can i find)|checklist|job aid|template|link to)\b/i;
 const HIGH_STAKES = /\b(procurement|contract|vendor|RFP|budget|statute|rule change|system replacement|data sharing|algorithm|technology decision)\b/i;
 const PERSONNEL_MATTER = /\b(retaliat\w*|disciplin\w*|harass\w*|grievance|hostile work|wrongful|my (supervisor|manager|boss)\b.*\b(unfair|because i|punish\w*|targeting|singled)|written up|performance review\b.*\b(unfair|because))\b/i;
-const WANTS_HUMAN = /\b(i (?:want|need|would like) (?:to )?(?:talk|speak|meet)|request a consult|book|schedule|meet with|human advice|someone to review)\b/i;
+const WANTS_HUMAN = /\b(i (?:want|need|would like) (?:to )?(?:talk|speak|meet)|request a consult|book (?:a |an )?(?:time|meeting|consult\w*|appointment) with|schedule (?:a |an )?(?:time|meeting|consult\w*|appointment) with|meet with|human advice|someone to review)\b/i;
 const CURRENT_INFORMATION = /\b(current|currently|latest|recent|today|this (?:week|month|year)|new (?:law|rule|guidance|research)|updated|as of)\b/i;
 
 function pathFor(intents: AskIntent[], question: string, pathId?: string): GraduationPath | undefined {
