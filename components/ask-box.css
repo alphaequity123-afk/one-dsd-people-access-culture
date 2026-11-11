@@ -55,3 +55,11 @@ body .ask-panel-layer .ask-panel .ask-panel-head h2.ask-panel-title { margin: 0;
 @keyframes ask-panel-in { from { transform: translateX(32px); opacity: 0; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .ask-panel { animation: none; } }
 @media (max-width: 600px) { .ask-panel-body { padding: 16px 16px 28px; } }
+
+/* The microphone step: a button that asks the browser for the microphone (2026-11-11). */
+.ask-box .ask-voice-allow-row { order: 9; flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 2px 0 6px; }
+.ask-box .ask-voice-allow-row .ask-voice-note { order: 0; flex: 1 1 14rem; margin: 0; }
+button.ask-voice-allow.ask-voice-allow { min-height: 36px; padding: 6px 14px; border: 1px solid #003865; border-radius: 6px; background: #fff; color: #003865; font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; }
+button.ask-voice-allow.ask-voice-allow:hover:not(:disabled) { background: #003865; color: #fff; }
+button.ask-voice-allow.ask-voice-allow:focus-visible { outline: 3px solid #003865; outline-offset: 2px; box-shadow: none; }
+button.ask-voice-allow.ask-voice-allow:disabled { opacity: .5; cursor: not-allowed; }

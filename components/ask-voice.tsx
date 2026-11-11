@@ -4,6 +4,9 @@ import { createPortal } from "react-dom";
 import { CloseIcon, MicIcon, SpeakerIcon, StopIcon, WaveIcon } from "@/components/ask-icons";
 import { observeVoiceActivity, recordVoiceTurnTiming, voiceAvailabilityNotice, voiceCaptureAction, type VoiceActivity, type VoiceAvailability, type VoiceHealth, type VoiceTurnTiming } from "@/lib/voice/turn";
 
+/** The microphone for this site, as the browser reports it. */
+type MicState = "unknown" | "granted" | "prompt" | "denied";
+
 /** What happens to speech, shown in the small print under the Ask window. */
 export const VOICE_PRIVACY_NOTE = "When you speak, your browser or an outside service writes down your words. No audio is saved on this site.";
 
@@ -36,6 +39,8 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
   const [live, setLive] = useState(false);
   const [working, setWorking] = useState(false);
   const [reading, setReading] = useState(false);
+  // The microphone for this site: unknown until read, granted, not yet asked (prompt), or blocked (denied).
+  const [mic, setMic] = useState<MicState>("unknown");
   const [available, setAvailable] = useState<VoiceAvailability>({ transcription: false, speech: false, paused: false });
   const [health, setHealth] = useState<VoiceHealth>("checking");
   const [error, setError] = useState("");
@@ -108,6 +113,42 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     // Capture resources are held in refs and always released on unmount.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Read the microphone setting the browser already has for this site, and follow changes to it.
+  useEffect(() => {
+    const holder: { status: PermissionStatus | null } = { status: null };
+    let alive = true;
+    navigator.permissions?.query({ name: "microphone" as PermissionName }).then(result => {
+      if (!alive) return;
+      holder.status = result;
+      setMic(result.state);
+      result.onchange = () => { if (alive) setMic(result.state); };
+    }).catch(() => { if (alive) setMic("unknown"); });
+    return () => { alive = false; if (holder.status) holder.status.onchange = null; };
+  }, []);
+
+  /** Ask the browser for the microphone. Called from a press, so the browser can show its own Allow prompt. */
+  async function allowMicrophone(): Promise<boolean> {
+    if (!navigator.mediaDevices?.getUserMedia) {
+      setError("This browser cannot use the microphone. You can type your question.");
+      return false;
+    }
+    try {
+      const media = await navigator.mediaDevices.getUserMedia({ audio: true });
+      media.getTracks().forEach(track => track.stop());
+      setMic("granted"); setError("");
+      return true;
+    } catch (failure) {
+      const name = failure instanceof DOMException ? failure.name : "";
+      if (name === "NotAllowedError" || name === "SecurityError") {
+        setMic("denied");
+      } else {
+        setMic("prompt");
+        setError("The microphone could not be opened. Check that one is connected, then select Allow microphone again.");
+      }
+      return false;
+    }
+  }
 
   async function speak(text: string, token: number, timing?: VoiceTurnTiming) {
     // The program voice reads the answer when it is connected; otherwise the browser's own voice does.
@@ -185,6 +226,9 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     stop(); setError("");
     liveRef.current = continuous; setLive(continuous);
     const token = generation.current;
+    // Ask for the microphone from this press when it is not allowed yet, so the browser's prompt appears where the person can answer it.
+    if (mic !== "granted" && !(await allowMicrophone())) { liveRef.current = false; setLive(false); return; }
+    if (token !== generation.current) return;
     await record(token);
   }
   async function record(token: number) {
@@ -338,6 +382,12 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
       {listenSlot === undefined ? listenControl : null}
     </div>
     {availabilityNotice ? <p role="status" className="ask-voice-note">{availabilityNotice}</p> : null}
+    {mic !== "granted" && usable.transcription && !recording && !working ? <div className="ask-voice-allow-row">
+      <p className="ask-voice-note">{mic === "denied"
+        ? "Microphone access is not allowed for this site. Turn it on in your browser's site settings for this page, then select Allow microphone."
+        : "Ask needs your microphone to hear you. Select Allow microphone, then choose Allow when your browser asks."}</p>
+      <button type="button" className="ask-voice-allow" disabled={busy} onClick={() => void allowMicrophone()}>Allow microphone</button>
+    </div> : null}
     {error ? <p role="alert" className="ask-voice-note error">{error}</p> : null}
     {listenSlot && listenControl ? createPortal(listenControl, listenSlot) : null}
   </>;

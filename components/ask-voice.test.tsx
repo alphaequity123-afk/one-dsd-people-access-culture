@@ -31,12 +31,14 @@ beforeEach(() => {
     ? new Response(JSON.stringify({ transcription: true, speech: true, paused: false }))
     : new Response(JSON.stringify({ text: "A general question" }))));
   Object.defineProperty(navigator, "mediaDevices", { configurable: true, value: { getUserMedia: async () => ({ getTracks: () => [{ stop: () => undefined }] }) } });
+  Object.defineProperty(navigator, "permissions", { configurable: true, value: { query: async () => ({ state: "granted", onchange: null }) } });
   root = createRoot(document.getElementById("root")!);
 });
 afterEach(async () => {
   await act(async () => root.unmount());
   vi.unstubAllGlobals();
   Reflect.deleteProperty(navigator, "mediaDevices");
+  Reflect.deleteProperty(navigator, "permissions");
 });
 
 it("delivers a completed recording to the latest committed dictation callback", async () => {
@@ -105,6 +107,7 @@ class BrowserUtterance {
   constructor(public text: string) {}
 }
 function browserSpeech(services = { transcription: false, speech: false, paused: false }) {
+  BrowserRecognition.latest = undefined as unknown as BrowserRecognition;
   vi.stubGlobal("SpeechRecognition", BrowserRecognition);
   vi.stubGlobal("SpeechSynthesisUtterance", BrowserUtterance);
   const synthesis = { speak: vi.fn(), cancel: vi.fn() };
@@ -154,4 +157,55 @@ it("reads an answer aloud with the browser's voice when the program voice is not
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
   expect(control("Dictate question")!.disabled).toBe(true);
   expect(control("Talk with Ask")!.disabled).toBe(true);
+});
+
+const micState = (state: string) => Object.defineProperty(navigator, "permissions", { configurable: true, value: { query: async () => ({ state, onchange: null }) } });
+const micStub = (getUserMedia: unknown) => Object.defineProperty(navigator, "mediaDevices", { configurable: true, value: { getUserMedia } });
+const settle = () => act(async () => { await new Promise(resolve => setTimeout(resolve, 0)); });
+
+it("shows an Allow microphone button until the microphone is allowed, then removes it", async () => {
+  browserSpeech(); micState("prompt");
+  const asked = vi.fn(async () => ({ getTracks: () => [{ stop: () => undefined }] }));
+  micStub(asked);
+  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
+  await settle();
+  expect(document.body.textContent).toContain("Ask needs your microphone to hear you");
+  await act(async () => { control("Allow microphone")!.click(); });
+  await settle();
+  expect(asked).toHaveBeenCalledWith({ audio: true });
+  expect(control("Allow microphone")).toBeUndefined();
+  await act(async () => { control("Dictate question")!.click(); });
+  await settle();
+  expect(BrowserRecognition.latest.start).toHaveBeenCalledOnce();
+});
+
+it("asks for the microphone when a listening button is pressed before it is allowed", async () => {
+  browserSpeech(); micState("prompt");
+  const asked = vi.fn(async () => ({ getTracks: () => [{ stop: () => undefined }] }));
+  micStub(asked);
+  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
+  await settle();
+  await act(async () => { control("Dictate question")!.click(); });
+  await settle();
+  expect(asked).toHaveBeenCalledOnce();
+  expect(BrowserRecognition.latest.start).toHaveBeenCalledOnce();
+});
+
+it("explains a blocked microphone and does not start listening", async () => {
+  browserSpeech(); micState("denied");
+  micStub(vi.fn(async () => { throw new DOMException("Permission denied", "NotAllowedError"); }));
+  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
+  await settle();
+  expect(document.body.textContent).toContain("Microphone access is not allowed for this site");
+  await act(async () => { control("Dictate question")!.click(); });
+  await settle();
+  expect(BrowserRecognition.latest).toBeUndefined();
+  expect(document.body.textContent).toContain("Microphone access is not allowed for this site");
+});
+
+it("does not show the Allow microphone button once the microphone is allowed", async () => {
+  browserSpeech(); micState("granted");
+  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
+  await settle();
+  expect(control("Allow microphone")).toBeUndefined();
 });
