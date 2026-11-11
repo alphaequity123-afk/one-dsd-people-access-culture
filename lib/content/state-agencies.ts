@@ -6,12 +6,25 @@
  * the program points to them and to their own sites, and never answers from their content.
  */
 import data from "./state-agencies.json";
+import partners from "./public-partners.json";
 
 /** `areas`: the program work areas the agency's responsibilities fall under (reviewed responsibility map). */
 export type StateAgency = { id: string; name: string; href: string; description: string; topics: string; areas: string[]; linkOnly: boolean };
 
 export const STATE_AGENCIES: readonly StateAgency[] = data.agencies;
 export const STATE_AGENCY_SOURCE = data.source;
+
+/**
+ * Public partners outside the state directory: county lead agencies, the Minnesota Legislature and federal partners.
+ * They are nodes of the same graph. Nonprofit partners are the hub's organization records; Tribal Nations stay
+ * link-only in the hub's county directory.
+ */
+export type PartnerGroup = "county" | "legislature" | "federal";
+export type PublicPartner = StateAgency & { group: PartnerGroup };
+export const PUBLIC_PARTNERS: readonly PublicPartner[] = partners.partners as PublicPartner[];
+export const PARTNER_GROUP_LABEL: Record<PartnerGroup, string> = { county: "County lead agencies", legislature: "Minnesota Legislature", federal: "Federal partners" };
+/** Every public body in the graph: the state directory and the public partners. */
+export const PUBLIC_BODIES: readonly (StateAgency & { group?: PartnerGroup })[] = [...STATE_AGENCIES, ...PUBLIC_PARTNERS];
 
 /** The node id an agency carries in the knowledge graph and the facet map. */
 export function agencyNodeId(agency: Pick<StateAgency, "id">): string { return `agency:${agency.id}`; }

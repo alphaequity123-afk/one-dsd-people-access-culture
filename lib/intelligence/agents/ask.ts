@@ -436,7 +436,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const shouldPrepareResearchAnswer =
     requestedMode === "current_web" ||
     requestedMode === "deep_research" ||
-    (requestedMode === "auto" && ((cloneAgentsEnabled() && (jevPlan?.evidence !== "sufficient" || !merged.length)) || CURRENT_INFORMATION.test(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
+    (requestedMode === "auto" && ((cloneAgentsEnabled() && (jevPlan?.evidence !== "sufficient" || !merged.some(hit => !/^https?:\/\//.test(hit.href)))) || CURRENT_INFORMATION.test(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
       /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question)));
   const researchDepth: ResearchDepth = requestedMode === "deep_research" ? "deep_research" : "current_web";
   let publicResearch: AskAnswer["publicResearch"];

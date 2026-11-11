@@ -67,6 +67,17 @@ export const DEFAULT_RESEARCH_POLICY: ResearchPolicy = {
   deep_research_enabled: true,
 };
 
+/**
+ * Government and partner sites for live research (the provider accepts at most 20): the State of Minnesota and its
+ * agencies and Legislature, the counties' association and the two largest counties, the federal partners, and
+ * nonprofit partners from the Community Outreach directory. Tribal Nations' sites are never read; they are link-only.
+ */
+export const GOVERNMENT_AND_PARTNER_SITES = [
+  "mn.gov", "state.mn.us", "mncounties.org", "hennepin.us", "ramseycounty.us",
+  "cms.gov", "medicaid.gov", "acl.gov", "ssa.gov", "hhs.gov", "ada.gov", "census.gov",
+  "arcminnesota.org", "mylegalaid.org", "ici.umn.edu", "macssa.org", "selfadvocacy.org", "mcil-mn.org", "arrm.org", "ausm.org",
+] as const;
+
 /** 0 means no cap. */
 export const NO_CAP = 0;
 
@@ -103,6 +114,9 @@ export async function getResearchPolicy(): Promise<ResearchPolicy> {
     provider_order: normalizedOrder,
   };
   if (envEnabled !== undefined && stored?.enabled === undefined) base.enabled = ["1", "true", "on", "yes"].includes(envEnabled.toLowerCase());
+  // Owner decision, 2026-11-11: live research reads government and partner sites only. The scope is a service
+  // setting (PAC_RESEARCH_SCOPE=government); a stored list of sites, when the consultant sets one, takes its place.
+  if (process.env.PAC_RESEARCH_SCOPE === "government" && !(stored?.allowed_domains?.length)) base.allowed_domains = [...GOVERNMENT_AND_PARTNER_SITES];
   const cap = Number(process.env.PAC_RESEARCH_MONTHLY_USD_CAP);
   if (Number.isFinite(cap) && cap > 0 && stored?.monthly_usd_cap === undefined) base.monthly_usd_cap = cap;
   if (storedOrder !== undefined && JSON.stringify(storedOrder) !== JSON.stringify(normalizedOrder)) {

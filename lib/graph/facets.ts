@@ -12,7 +12,7 @@ import { practiceGuides } from "@/lib/program/dsd-practice-guides";
 import { getPolicies, policyHref } from "@/lib/content/hub/dsd-policies";
 import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import clas from "@/lib/content/clas-curriculum.json";
-import { STATE_AGENCIES, agencyConnectionText, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
+import { PARTNER_GROUP_LABEL, PUBLIC_BODIES, PUBLIC_PARTNERS, STATE_AGENCIES, agencyConnectionText, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
 
 export type FacetId = "task" | "role" | "standard" | "community";
 export type ItemKind = "course" | "resource" | "reading" | "practice" | "brief" | "organization" | "policy" | "lesson" | "agency";
@@ -28,7 +28,7 @@ export const FACETS: { id: FacetId; title: string; question: string }[] = [
 
 export const KIND_LABEL: Record<ItemKind, string> = {
   course: "Courses", lesson: "Lessons", practice: "Guided practices", resource: "Tools and guides",
-  reading: "Readings", brief: "Community briefs", organization: "Organizations", policy: "Policies", agency: "State of Minnesota agencies",
+  reading: "Readings", brief: "Community briefs", organization: "Organizations", policy: "Policies", agency: "Public agencies and partners",
 };
 export const KIND_ORDER: ItemKind[] = ["practice", "course", "lesson", "resource", "policy", "brief", "organization", "agency", "reading"];
 
@@ -77,7 +77,7 @@ function itemPool(): Pool {
     text.set(id, module.title);
   }
   // State of Minnesota agencies, boards and councils: nodes of the same graph, linked by the work they hold.
-  for (const agency of STATE_AGENCIES) {
+  for (const agency of PUBLIC_BODIES) {
     const id = agencyNodeId(agency);
     items.set(id, { id, kind: "agency", title: agencyDisplayName(agency.name), href: agency.href });
     text.set(id, agencyConnectionText(agency));
@@ -87,7 +87,8 @@ function itemPool(): Pool {
 
 /** Agencies whose responsibility words share at least `min` meaningful words with the phrase. Link-only agencies join only by name. */
 function agenciesFor(phrase: string, min = 2, limit = 4): string[] {
-  return matching(phrase, min, limit, /^(?!agency:)/);
+  // The 76 county lead agencies share one name pattern, so they join through their own group, not by word matching.
+  return matching(phrase, min, limit, /^(?!agency:)|^agency:county-(?!association)/);
 }
 
 /** Items whose text shares at least `min` meaningful words with the phrase. */
@@ -179,7 +180,7 @@ function build(): Map<string, FacetValue> {
   for (const domain of DOMAINS) {
     const ids = [...domain.toolIds];
     for (const task of domain.tasks) ids.push(...(taskMembers.get(task.id) ?? []));
-    ids.push(...STATE_AGENCIES.filter(agency => agency.areas.includes(domain.id)).map(agencyNodeId), ...agenciesFor(`${domain.staffLabel} ${domain.summary}`, 2, 6));
+    ids.push(...PUBLIC_BODIES.filter(agency => agency.areas.includes(domain.id)).map(agencyNodeId), ...agenciesFor(`${domain.staffLabel} ${domain.summary}`, 2, 6));
     put(value("community", `area-${domain.id}`, domain.staffLabel, domain.summary, "Work areas", ids));
   }
   const programs = new Map<string, string[]>();
@@ -197,6 +198,48 @@ function build(): Map<string, FacetValue> {
     put(value("community", `agency-${agency.id}`, agencyDisplayName(agency.name), agency.description, "State of Minnesota agencies", ids));
   }
   put(value("community", "state-agencies", "All State of Minnesota agencies, boards and councils", "Every agency, board and council in the state's official directory.", "State of Minnesota agencies", STATE_AGENCIES.map(agencyNodeId)));
+  // Public partners: each with topics gets its own page; every group has one page that holds all its members
+  // beside the program work the group does with the division, so no partner stands alone.
+  for (const partner of PUBLIC_PARTNERS) {
+    if (!partner.topics) continue;
+    const id = agencyNodeId(partner);
+    put(value("community", `agency-${partner.id}`, partner.name, partner.description, PARTNER_GROUP_LABEL[partner.group], [id, ...matching(agencyConnectionText(partner), 2, 16, /^agency:/)]));
+  }
+  const groupWork: Record<string, [string, string, string]> = {
+    county: ["county-lead-agencies", "County lead agencies", "county lead agency assessment support planning case management waiver home and community-based services eligibility"],
+    federal: ["federal-partners", "Federal partners", "federal medicaid waiver home and community-based services civil rights disability rights language access"],
+    legislature: ["minnesota-legislature", "Minnesota Legislature", "legislature statute law rule policy change legislative"],
+  };
+  for (const [group, [id, title, phrase]] of Object.entries(groupWork)) {
+    const members = PUBLIC_PARTNERS.filter(partner => partner.group === group).map(agencyNodeId);
+    // The Revisor and the Legislative Reference Library sit in the state directory and belong with the Legislature.
+    if (group === "legislature") members.push("agency:revisor-of-statutes", "agency:legislative-reference-library");
+    put(value("community", id, title, `${title} and the program work connected with them.`, "Public partners", [...members, ...matching(phrase, 2, 12, /^agency:/)]));
+  }
+  // No object stands alone (owner rule, 2026-11-11): anything no page holds yet joins the page it shares the most
+  // meaningful words with; an object that shares none joins a page for the rest of its kind.
+  const held = new Set<string>();
+  for (const entry of out.values()) for (const item of entry.items) held.add(item.id);
+  const homes = [...out.values()].filter(entry => entry.group !== "State of Minnesota agencies" && entry.group !== "Public partners" && !entry.id.startsWith("agency-")
+    // Native community pages stay link-only: the brief alone, nothing attached to it.
+    && !(entry.id.startsWith("community-") && isNativeCommunity(entry.id.slice("community-".length))))
+    .map(entry => ({ entry, have: new Set(words(`${entry.title} ${entry.summary}`)) }));
+  const { items: every, text: everyText } = itemPool();
+  const rest = new Map<ItemKind, string[]>();
+  for (const [id, item] of every) {
+    if (held.has(id)) continue;
+    const want = words(everyText.get(id) ?? item.title);
+    let best: FacetValue | undefined, top = 0;
+    for (const home of homes) {
+      let score = 0;
+      for (const word of want) if (home.have.has(word)) score++;
+      if (score > top) { top = score; best = home.entry; }
+    }
+    if (best) best.items.push(item);
+    else (rest.get(item.kind) ?? rest.set(item.kind, []).get(item.kind)!).push(id);
+  }
+  for (const entry of out.values()) entry.items.sort((a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind));
+  for (const [kind, ids] of rest) put(value("community", `more-${kind}`, `More ${KIND_LABEL[kind].toLowerCase()}`, `${KIND_LABEL[kind]} that belong to the program as a whole.`, "Across the program", ids));
   return (built = out);
 }
 
@@ -209,6 +252,22 @@ export function facetValue(facet: string, id: string): FacetValue | undefined {
 export function facetHref(entry: Pick<FacetValue, "facet" | "id">): string { return `/explore/${entry.facet}/${entry.id}`; }
 
 /** The facet values an item belongs to, for "Connected with" lists on item pages. */
+/** Items that no facet value holds: the build check for a fully connected graph. Empty when every object is linked. */
+export function isolatedItems(): FacetItem[] {
+  const held = new Set<string>();
+  for (const entry of build().values()) for (const item of entry.items) held.add(item.id);
+  return [...itemPool().items.values()].filter(item => !held.has(item.id));
+}
+
+/** Public bodies whose reviewed work areas include any of the given areas, most areas in common first. */
+export function agenciesForAreas(areas: readonly string[], limit = 8): FacetItem[] {
+  const pool = itemPool().items;
+  return PUBLIC_BODIES.filter(body => !body.linkOnly && body.areas.some(area => areas.includes(area)))
+    .map(body => ({ body, shared: body.areas.filter(area => areas.includes(area)).length }))
+    .sort((a, b) => b.shared - a.shared || a.body.areas.length - b.body.areas.length)
+    .slice(0, limit).map(({ body }) => pool.get(agencyNodeId(body))!).filter(Boolean);
+}
+
 export function facetsForHref(href: string, limit = 8): FacetValue[] {
   const clean = href.split(/[?#]/)[0];
   return [...build().values()].filter(entry => entry.items.some(item => item.href.split(/[?#]/)[0] === clean))

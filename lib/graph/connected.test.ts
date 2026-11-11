@@ -1,6 +1,6 @@
 import { expect, it } from "vitest";
-import { facetValue, facetValues } from "@/lib/graph/facets";
-import { STATE_AGENCIES, agencyNodeId } from "@/lib/content/state-agencies";
+import { facetValue, facetValues, isolatedItems } from "@/lib/graph/facets";
+import { PUBLIC_PARTNERS, STATE_AGENCIES, agencyNodeId } from "@/lib/content/state-agencies";
 
 const all = () => [...facetValues("task"), ...facetValues("role"), ...facetValues("standard"), ...facetValues("community")];
 
@@ -39,3 +39,18 @@ it("reports how connected the agencies are", () => {
   console.log(JSON.stringify({ agencies: STATE_AGENCIES.length, linkedBeyondTheirOwnPage: linked.length, connectedItems: counts.size }));
 });
 
+
+it("connects every county lead agency, the Legislature and every federal partner", () => {
+  const values = all();
+  expect(PUBLIC_PARTNERS.length).toBeGreaterThanOrEqual(80);
+  for (const partner of PUBLIC_PARTNERS) {
+    expect(values.some(value => value.items.some(item => item.id === agencyNodeId(partner))), partner.name).toBe(true);
+  }
+  const counties = facetValue("community", "county-lead-agencies")!;
+  expect(counties.items.filter(item => item.kind !== "agency").length).toBeGreaterThanOrEqual(2);
+  expect(facetValue("community", "federal-partners")!.items.filter(item => item.kind !== "agency").length).toBeGreaterThanOrEqual(2);
+});
+
+it("leaves no object of the knowledge graph isolated", () => {
+  expect(isolatedItems().map(item => `${item.kind}: ${item.title}`)).toEqual([]);
+});

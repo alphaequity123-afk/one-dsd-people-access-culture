@@ -7,7 +7,7 @@ import "server-only";
 import { indexedStaffDocs } from "@/lib/intelligence/retrieval/staff-search";
 import { searchDocs, type Doc } from "@/lib/intelligence/retrieval/search";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
-import { STATE_AGENCIES, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
+import { PUBLIC_BODIES, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
 import { pageArea, type PageArea } from "@/lib/program/page-purpose";
 import { statePageDocs } from "@/lib/search/state-pages";
 
@@ -15,7 +15,7 @@ export type SiteSearchResult = { id: string; title: string; href: string; excerp
 
 /** The agencies as documents. Ask leaves out link-only agencies (Tribal matters): it points to them but never answers from them. */
 export function agencyDocs(options: { forAnswers?: boolean } = {}): Doc[] {
-  return STATE_AGENCIES.filter(agency => !(options.forAnswers && agency.linkOnly)).map(agency => ({
+  return PUBLIC_BODIES.filter(agency => !(options.forAnswers && agency.linkOnly)).map(agency => ({
     kind: "content", id: agencyNodeId(agency), title: agencyDisplayName(agency.name), href: agency.href,
     authority: "external_verify", type: "agency", status: "published", reviewDate: "", scope: "public",
     summary: agency.description, text: agency.description, tags: agency.topics.split(/\s+/).filter(Boolean), intents: [],
