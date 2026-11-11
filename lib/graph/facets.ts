@@ -1,6 +1,6 @@
 /**
- * Four ways into the whole collection: by task, by role, by standard or goal, and by community or
- * program area. Every connection is computed from published content (the work areas and their
+ * Five ways into the whole collection: by task, by role, by standard or goal, by community or
+ * program area, and by skill. Every connection is computed from published content (the work areas and their
  * tasks, the national standards curriculum, the six equity goals, the community briefs, the
  * organization records and the policy catalog). Nothing here records or counts anyone's use.
  */
@@ -12,9 +12,11 @@ import { practiceGuides } from "@/lib/program/dsd-practice-guides";
 import { getPolicies, policyHref } from "@/lib/content/hub/dsd-policies";
 import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import clas from "@/lib/content/clas-curriculum.json";
+import { REFERRAL_ONLY_COURSE_IDS } from "@/lib/program/retired-features";
+import { SKILLS, SKILL_COURSES } from "./skills";
 import { PARTNER_GROUP_LABEL, PUBLIC_BODIES, PUBLIC_PARTNERS, STATE_AGENCIES, agencyConnectionText, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
 
-export type FacetId = "task" | "role" | "standard" | "community";
+export type FacetId = "task" | "role" | "standard" | "community" | "skill";
 export type ItemKind = "course" | "resource" | "reading" | "practice" | "brief" | "organization" | "policy" | "lesson" | "agency";
 export type FacetItem = { id: string; kind: ItemKind; title: string; href: string };
 export type FacetValue = { facet: FacetId; id: string; title: string; summary: string; group: string; items: FacetItem[] };
@@ -24,6 +26,7 @@ export const FACETS: { id: FacetId; title: string; question: string }[] = [
   { id: "role", title: "By role", question: "What is your role?" },
   { id: "standard", title: "By standard or goal", question: "Which commitment are you working toward?" },
   { id: "community", title: "By community or program area", question: "Who or what is the work about?" },
+  { id: "skill", title: "By skill", question: "What would you like to get better at?" },
 ];
 
 export const KIND_LABEL: Record<ItemKind, string> = {
@@ -215,6 +218,12 @@ function build(): Map<string, FacetValue> {
     // The Revisor and the Legislative Reference Library sit in the state directory and belong with the Legislature.
     if (group === "legislature") members.push("agency:revisor-of-statutes", "agency:legislative-reference-library");
     put(value("community", id, title, `${title} and the program work connected with them.`, "Public partners", [...members, ...matching(phrase, 2, 12, /^agency:/)]));
+  }
+  // Skills: the courses tagged to each one, with close matches. Referral-only courses are never listed here.
+  for (const skill of SKILLS) {
+    const ids = [...(SKILL_COURSES[skill.id] ?? []), ...matching(skill.phrase, 2, 12)]
+      .filter(id => !REFERRAL_ONLY_COURSE_IDS.has(id.replace(/^course-/, "")));
+    put(value("skill", skill.id, skill.title, skill.summary, skill.group, ids));
   }
   // No object stands alone (owner rule, 2026-11-11): anything no page holds yet joins the page it shares the most
   // meaningful words with; an object that shares none joins a page for the rest of its kind.
