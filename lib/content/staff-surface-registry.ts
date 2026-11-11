@@ -616,13 +616,6 @@ const NON_BRIEF_SURFACES: readonly StaffSurfaceDefinition[] = [
       deletingKicker: "Your privacy and choices", intakeOpenBeforeRole: "A submitted consultation request is separate from the reference saved here. The", intakeOpenAfterRole: "can see the submitted request so they can prepare and respond.", intakePreviewBeforeRole: "Consultation requests are not open yet. Nothing you enter is sent or saved for the", intakePreviewAfterRole: ".", deleteReferenceBody: "Removing a saved reference clears its reference number and access key from this computer. It does not withdraw a request that was already submitted.", deleteAllLabel: "Delete everything saved here",
     },
   }),
-  defineSurface({
-    surfaceId: "contribute.page",
-    route: "/contribute",
-    scopePolicy: "inheritable",
-    fields: [short("introKicker", "Opening section label"), short("introTitle", "Page title"), long("introLede", "Opening description"), short("noticeLead", "Access notice heading"), long("noticeBody", "Access notice explanation"), long("staffBody", "Staff alternatives explanation"), linkList("staffLinks", "Staff alternatives")],
-    approvedValues: { introKicker: "Shape the resources we share", introTitle: "For contributors", introLede: "A place for invited colleagues to prepare, review, and share useful program resources.", noticeLead: "Contributor sign-in is not open yet.", noticeBody: "You can continue exploring and using the program resources.", staffBody: "Learning, practice, and support remain open to everyone.", staffLinks: [{ label: "Library", href: "/library" }, { label: "Practice", href: "/practice" }, { label: "Support", href: "/support" }] },
-  }),
 ];
 
 function communityBriefDefinition(brief: CommunityBrief): StaffSurfaceDefinition {

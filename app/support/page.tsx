@@ -18,7 +18,7 @@ export default async function SupportPage() {
     href,
     title: stringValue(copy, `door${index}Title`),
     description: stringValue(copy, `door${index}Description`),
-  }));
+  })).filter(door => door.href !== ROUTES.ask.href);
   return (
     <EditableSurfaceRegion surface={surface}>
       <PageIntro kicker={stringValue(copy, "introKicker")} title={stringValue(copy, "introTitle")} lede="Find a practical starting point, or connect with the person who can help you take the next step." />

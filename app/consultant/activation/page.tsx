@@ -204,7 +204,7 @@ export default async function ActivationStatusPage() {
 
         <section aria-labelledby="contributor-identity-heading">
           <h2 id="contributor-identity-heading" className="text-xl font-extrabold">Contributor sign-in</h2>
-          <p className="text-sm text-muted">Check access for people <Link href={ROUTES.contribute.href}>contributing resources</Link>. Checks run in order; any remaining checks wait until the first issue is resolved.</p>
+          <p className="text-sm text-muted">Checks run in order; any remaining checks wait until the first issue is resolved.</p>
           <StatusLine ready={identity.ready} missingCount={identity.rows.filter((row) => row.state !== "Met").length} />
           <RequirementTable caption="Contributor identity requirements" rows={identity.rows} />
         </section>

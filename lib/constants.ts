@@ -48,7 +48,6 @@ export const ROUTES = {
   myWork: { href: "/my-work", label: "My Work" },
   about: { href: "/about", label: "About" },
   consultant: { href: "/consultant", label: "Consultant Workspace" },
-  contribute: { href: "/contribute", label: "Contributor Workspace" },
 
   /** Compatibility aliases. New staff links should use the canonical routes above. */
   guidedStart: { href: "/start", label: "Start" },

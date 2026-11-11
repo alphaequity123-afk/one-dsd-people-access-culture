@@ -134,6 +134,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...legacyCourseDataRedirects,
+      { source: "/contribute", destination: "/support", permanent: false },
+      { source: "/contribute/:path*", destination: "/support", permanent: false },
       { source: "/one-dsd/scenarios", destination: "/one-dsd#scenarios", permanent: false },
       { source: "/library/self-directed-:number", destination: "/learning/self-directed/index.html?course=:number", permanent: false },
       { source: "/resources/self-directed-:number", destination: "/learning/self-directed/index.html?course=:number", permanent: false },
