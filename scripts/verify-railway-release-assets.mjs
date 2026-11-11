@@ -16,6 +16,10 @@ for(const asset of reviewed.files){
   if(typeof asset.path!=='string'||!asset.path.startsWith('public/')||asset.path.includes('\\')||asset.path.includes(':')||asset.path.split('/').some(part=>!part||part==='.'||part==='..')||!Number.isSafeInteger(asset.bytes)||asset.bytes<0||!/^[a-f0-9]{64}$/.test(asset.sha256))throw Error('Invalid reviewed public asset identity.');
   if(overridden.has(asset.path))continue; // Applied last; the override identity above is the effective one.
   const archived=effectiveAssets.get(asset.path);
+  // A reviewed ZIP recipe (an Office file) can be superseded by a newer release asset, as the course decks corrected on
+  // 2026-11-10 are: the release identity is then the effective one and the file is checked against it below.
+  // apply-reviewed-public-assets.mjs accepts such a file only when it already matches that release identity.
+  if(archived&&asset.recipe&&(archived.bytes!==asset.bytes||archived.sha256!==asset.sha256))continue;
   if(archived&&(archived.bytes!==asset.bytes||archived.sha256!==asset.sha256))throw Error('Reviewed asset differs from effective release identity: '+asset.path);
   effectiveAssets.set(asset.path,asset);
 }
