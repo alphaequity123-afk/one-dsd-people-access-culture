@@ -152,7 +152,8 @@ describe("navigation", () => {
     expect(PAGE_AREAS.programs.links.map(([, href]) => href)).toContain("/one-dsd/leadership");
     for (const [, href] of PAGE_AREAS.leading.links) expect(destinationExists(href), href).toBe(true);
     const header = readFileSync(path.join(root, "components/dsd-program-header.tsx"), "utf8");
-    expect(header).toContain(">For leaders, supervisors, managers, and directors</Link>");
+    // Owner decision 2026-11-11: the menu says "Leadership"; the full wording stays as the tooltip.
+    expect(header).toContain('title="For leaders, supervisors, managers, and directors">Leadership</Link>');
   });
   it("sends the supervisor or manager role to the space, and no other role", () => {
     const intake = (role: string) => ({ contextPreference: "one_dsd", task: "workforce_equity", urgency: "exploratory", role }) as Parameters<typeof buildStartRecommendation>[0];

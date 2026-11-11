@@ -1,19 +1,49 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { CloseIcon, MicIcon, SpeakerIcon, StopIcon, WaveIcon } from "@/components/ask-icons";
 import { observeVoiceActivity, recordVoiceTurnTiming, voiceAvailabilityNotice, voiceCaptureAction, type VoiceActivity, type VoiceAvailability, type VoiceHealth, type VoiceTurnTiming } from "@/lib/voice/turn";
 
-/** Each voice turn goes through the same Ask route as a typed question. */
-export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
+/** What happens to speech, shown in the small print under the Ask window. */
+export const VOICE_PRIVACY_NOTE = "When you speak, your browser or an outside service writes down your words. No audio is saved on this site.";
+
+/** The browser's own speech recognition, where it has one. Words arrive while the person is still speaking. */
+type Recognition = {
+  lang: string; continuous: boolean; interimResults: boolean;
+  onresult: ((event: { results: ArrayLike<{ isFinal: boolean; [n: number]: { transcript: string } }> }) => void) | null;
+  onend: (() => void) | null; onerror: ((event: { error: string }) => void) | null;
+  start(): void; stop(): void; abort(): void;
+};
+function recognitionConstructor() {
+  const browser = window as typeof window & { SpeechRecognition?: new () => Recognition; webkitSpeechRecognition?: new () => Recognition };
+  return browser.SpeechRecognition ?? browser.webkitSpeechRecognition;
+}
+
+/**
+ * The voice controls of the Ask window, shown as small icons; each keeps its name as hidden text and a tooltip.
+ * Each voice turn goes through the same Ask route as a typed question.
+ * mode "dictate" offers dictation only (the landing page). `listenSlot` is the element under the latest
+ * answer where the read-aloud control appears (null while there is none); when it is not passed at all the
+ * control sits in the icon row. `busyLabel` is shown while a typed question is being answered.
+ */
+export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "full", busyLabel, listenSlot }: {
   busy: boolean; onDictation: (text: string) => void;
   onQuestion: (text: string) => Promise<string | undefined>; latestAnswer?: string;
+  mode?: "full" | "dictate"; busyLabel?: string; listenSlot?: HTMLElement | null;
 }) {
   const [status, setStatus] = useState("Microphone off");
   const [recording, setRecording] = useState(false);
   const [live, setLive] = useState(false);
   const [working, setWorking] = useState(false);
+  const [reading, setReading] = useState(false);
   const [available, setAvailable] = useState<VoiceAvailability>({ transcription: false, speech: false, paused: false });
   const [health, setHealth] = useState<VoiceHealth>("checking");
   const [error, setError] = useState("");
+  // What this browser can do by itself: write down speech as it is spoken, and read text aloud.
+  const [browserVoice, setBrowserVoice] = useState({ transcription: false, speech: false });
+  const recognition = useRef<Recognition | null>(null);
+  const recognitionLimit = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const finishBrowserSpeech = useRef<(() => void) | null>(null);
   const generation = useRef(0);
   const liveRef = useRef(false);
   const capture = useRef<MediaRecorder | null>(null);
@@ -35,12 +65,16 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
   }
   function stop() {
     generation.current++; liveRef.current = false; setLive(false);
+    if (recognitionLimit.current) clearTimeout(recognitionLimit.current); recognitionLimit.current = null;
+    const recognizer = recognition.current; recognition.current = null;
+    if (recognizer) { recognizer.onend = null; recognizer.onresult = null; recognizer.onerror = null; recognizer.abort(); }
+    window.speechSynthesis?.cancel(); finishBrowserSpeech.current?.(); finishBrowserSpeech.current = null;
     abort.current?.abort(); abort.current = null;
     if (capture.current?.state === "recording") capture.current.stop();
     capture.current = null; releaseMicrophone();
     audio.current?.pause(); audio.current = null;
     if (audioUrl.current) URL.revokeObjectURL(audioUrl.current); audioUrl.current = null;
-    setRecording(false); setWorking(false); setStatus("Microphone off");
+    setRecording(false); setWorking(false); setReading(false); setStatus("Microphone off");
   }
   useEffect(() => {
     let active = true;
@@ -57,6 +91,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
         const value = await response.json();
         if (typeof value?.transcription !== "boolean" || typeof value?.speech !== "boolean" || typeof value?.paused !== "boolean") throw new Error("voice_health_invalid");
         if (!active || current !== revision) return;
+        setBrowserVoice({ transcription: Boolean(recognitionConstructor()), speech: Boolean(window.speechSynthesis && typeof SpeechSynthesisUtterance !== "undefined") });
         setAvailable({ transcription: value.transcription, speech: value.speech, paused: value.paused });
         setHealth("ready");
         if (value.paused) stop();
@@ -67,13 +102,32 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
         }
       } finally { clearTimeout(timeout); }
     };
-    void refresh(); const poll = setInterval(() => void refresh(), 15000);
-    return () => { active = false; pending?.abort(); clearInterval(poll); stop(); };
+    // The landing page checks once; the Ask page keeps checking while it is open.
+    void refresh(); const poll = mode === "dictate" ? undefined : setInterval(() => void refresh(), 15000);
+    return () => { active = false; pending?.abort(); if (poll) clearInterval(poll); stop(); };
     // Capture resources are held in refs and always released on unmount.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function speak(text: string, token: number, timing?: VoiceTurnTiming) {
+    // The program voice reads the answer when it is connected; otherwise the browser's own voice does.
+    if (!available.speech && browserVoice.speech) {
+      if (text.length > 10000) throw new Error("That answer is too long to read aloud. The written answer is still here.");
+      for (const chunk of text.match(/[\s\S]{1,220}(?:\s|$)|\S{1,220}/g) ?? []) {
+        if (token !== generation.current) return;
+        setStatus("Reading the answer. You can stop or interrupt at any time.");
+        await new Promise<void>((resolve, reject) => {
+          const utterance = new SpeechSynthesisUtterance(chunk); utterance.lang = "en-US";
+          const timeout = setTimeout(() => { window.speechSynthesis.cancel(); reject(new Error("Reading aloud stopped responding. The written answer is still here.")); }, 45000);
+          const finish = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; resolve(); };
+          finishBrowserSpeech.current = finish;
+          utterance.onend = finish;
+          utterance.onerror = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; if (token === generation.current) reject(new Error("This browser could not read the answer aloud. The written answer is still here.")); else resolve(); };
+          window.speechSynthesis.speak(utterance);
+        });
+      }
+      return;
+    }
     setStatus("Preparing the answer…");
     if (timing) timing.speechStartedAt = performance.now();
     const controller = new AbortController(); abort.current = controller;
@@ -135,6 +189,52 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
   }
   async function record(token: number) {
     try {
+      const Constructor = recognitionConstructor();
+      if (Constructor) {
+        // The browser writes the words down while the person speaks, so they appear in the box as they are said.
+        const recognizer = new Constructor(); recognition.current = recognizer;
+        let finished = ""; let heard = "";
+        recognizer.lang = "en-US"; recognizer.continuous = false; recognizer.interimResults = true;
+        recognizer.onresult = event => {
+          const parts = Array.from(event.results);
+          finished = parts.filter(part => part.isFinal).map(part => part[0].transcript).join(" ").trim();
+          heard = parts.map(part => part[0].transcript).join(" ").trim().slice(0, 4000);
+          if (heard && token === generation.current) callbacks.current.onDictation(heard);
+        };
+        recognizer.onerror = event => {
+          if (token !== generation.current) return;
+          stop(); setError(event.error === "not-allowed" ? "Microphone permission was declined. You can type your question." : event.error === "no-speech" ? "Nothing was heard, so the microphone is off." : "Listening did not finish. Please try again or type your question.");
+        };
+        recognizer.onend = async () => {
+          if (recognitionLimit.current) clearTimeout(recognitionLimit.current); recognitionLimit.current = null;
+          if (token !== generation.current) return;
+          recognition.current = null; setRecording(false);
+          const text = (finished || heard).slice(0, 4000);
+          try {
+            if (!text) throw new Error("No words were caught. Please try again.");
+            callbacks.current.onDictation(text);
+            if (liveRef.current) {
+              setStatus("Finding an answer…");
+              const answer = await callbacks.current.onQuestion(text);
+              if (token !== generation.current) return;
+              if (!answer) throw new Error("Please read the written response before going on.");
+              await speak(answer, token);
+              if (token === generation.current && liveRef.current) { await record(token); return; }
+            }
+            setWorking(false); setStatus("Microphone off. Your words are in the question box.");
+          } catch (failure) {
+            if (token === generation.current) { stop(); setError(failure instanceof Error ? failure.message : "The voice conversation stopped before it finished."); }
+          }
+        };
+        setWorking(true); setRecording(true); setStatus(liveRef.current
+          ? "Listening. Your words appear as you speak; pause to send (30 seconds maximum)"
+          : "Listening. Your words appear as you speak; pause when you finish (30 seconds maximum)");
+        recognizer.start();
+        recognitionLimit.current = setTimeout(() => {
+          if (token === generation.current) { stop(); setError("The listening time limit was reached. Please try a shorter question."); }
+        }, 30000);
+        return;
+      }
       if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") throw new Error("This browser cannot record from the microphone, so please type your question.");
       setWorking(true); setStatus("Opening microphone…");
       const media = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true }, video: false });
@@ -207,24 +307,38 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer }: {
     }
   }
 
+  async function listen() {
+    if (!latestAnswer) return;
+    stop(); setError(""); setWorking(true); setReading(true); const token = generation.current;
+    try { await speak(latestAnswer, token); if (token === generation.current) { setWorking(false); setReading(false); setStatus("Microphone off"); } }
+    catch (failure) { if (token === generation.current) { stop(); setError(failure instanceof Error ? failure.message : "The answer could not be played."); } }
+  }
+
   const unavailable = health !== "ready" || available.paused;
-  const availabilityNotice = voiceAvailabilityNotice(health, available);
-  return <section className="mt-4 rounded-lg border p-4" aria-label="Voice conversation">
-    <div className="flex flex-wrap gap-2">
-      <button type="button" className="btn btn--light" disabled={unavailable || busy || working || !available.transcription} onClick={() => void start(false)}>Dictate question</button>
-      <button type="button" className="btn btn--light" disabled={unavailable || busy || working || !available.transcription || !available.speech} onClick={() => void start(true)}>Talk with Ask</button>
-      <button type="button" className="btn btn--light" disabled={unavailable || busy || working || !available.speech || !latestAnswer} onClick={async () => {
-        stop(); setError(""); setWorking(true); const token = generation.current;
-        try { await speak(latestAnswer!, token); if (token === generation.current) { setWorking(false); setStatus("Microphone off"); } }
-        catch (failure) { if (token === generation.current) { stop(); setError(failure instanceof Error ? failure.message : "The answer could not be played."); } }
-      }}>Listen to answer</button>
-      {recording ? <button type="button" className="btn btn--primary" onClick={() => capture.current?.stop()}>Finish speaking</button> : null}
-      {working || live ? <button type="button" className="btn btn--light" onClick={stop}>Stop and turn off the microphone</button> : null}
-      {live && !recording && !busy ? <button type="button" className="btn btn--light" onClick={() => void start(true)}>Interrupt and speak</button> : null}
+  // What can be used right now: the connected services, or this browser's own speech.
+  const usable = { ...available, transcription: available.transcription || browserVoice.transcription, speech: available.speech || browserVoice.speech };
+  const dictateOnly = mode === "dictate";
+  const voiceActive = recording || working || live;
+  // The landing page simply leaves the microphone out when dictation cannot work; the Ask page says why.
+  const availabilityNotice = dictateOnly || health === "checking" ? "" : voiceAvailabilityNotice(health, usable);
+  const shownStatus = voiceActive ? status : busy && busyLabel ? busyLabel : "";
+  const dictate = dictateOnly && (unavailable || !usable.transcription) ? null
+    : <button type="button" className="ask-icon" title="Dictate question" disabled={unavailable || busy || working || !usable.transcription} onClick={() => void start(false)}><MicIcon /><span className="sr-only">Dictate question</span></button>;
+  const listenControl = dictateOnly || !latestAnswer ? null : reading
+    ? <button type="button" className="ask-icon ask-icon--on" title="Stop reading aloud" onClick={stop}><StopIcon /><span className="sr-only">Stop reading aloud</span></button>
+    : <button type="button" className="ask-icon" title="Listen to answer" disabled={unavailable || busy || working || !usable.speech} onClick={() => void listen()}><SpeakerIcon /><span className="sr-only">Listen to answer</span></button>;
+  return <>
+    <p role="status" className={shownStatus ? "ask-voice-status" : "sr-only"}>{shownStatus || status}</p>
+    <div className="ask-voice-icons" role="group" aria-label={dictateOnly ? "Dictation" : "Voice conversation"}>
+      {voiceActive ? null : dictate}
+      {voiceActive || dictateOnly ? null : <button type="button" className="ask-icon" title="Talk with Ask" disabled={unavailable || busy || working || !usable.transcription || !usable.speech} onClick={() => void start(true)}><WaveIcon /><span className="sr-only">Talk with Ask</span></button>}
+      {recording ? <button type="button" className="ask-icon ask-icon--on" title="Finish speaking" onClick={() => { if (recognition.current) recognition.current.stop(); else capture.current?.stop(); }}><StopIcon /><span className="sr-only">Finish speaking</span></button> : null}
+      {live && !recording && !busy ? <button type="button" className="ask-icon" title="Interrupt and speak" onClick={() => void start(true)}><MicIcon /><span className="sr-only">Interrupt and speak</span></button> : null}
+      {working || live ? <button type="button" className="ask-icon" title="Stop and turn off the microphone" onClick={stop}><CloseIcon /><span className="sr-only">Stop and turn off the microphone</span></button> : null}
+      {listenSlot === undefined ? listenControl : null}
     </div>
-    <p role="status" className="text-sm mt-2">{status}</p>
-    {availabilityNotice ? <p role="status" className="text-sm mt-2">{availabilityNotice}</p> : null}
-    <p className="text-sm text-muted">You can read each answer or listen to it. When you speak, your recording goes to an outside service that writes down your words. No audio is saved on this site. Please keep to general examples and leave out anything confidential.</p>
-    {error ? <p role="alert" className="error">{error}</p> : null}
-  </section>;
+    {availabilityNotice ? <p role="status" className="ask-voice-note">{availabilityNotice}</p> : null}
+    {error ? <p role="alert" className="ask-voice-note error">{error}</p> : null}
+    {listenSlot && listenControl ? createPortal(listenControl, listenSlot) : null}
+  </>;
 }

@@ -92,3 +92,33 @@ body.dsd-calm .od .home-guide-link:hover{background:#003865;color:#fff}
 body.dsd-calm .od .home-guide-link:focus-visible{outline:3px solid #005ea8;outline-offset:3px}
 
 .home-explore { margin: 1.25rem 0 0; color: #52606d; }
+
+/* 2026-11-11: the Ask window on the landing page, under the opening lines. */
+body.dsd-calm .od .home-ask{margin:0;max-width:780px}
+body.dsd-calm .od .blk.home-ask-band{padding:40px 0 44px}
+body.dsd-calm .od .home-ask-title{margin:0 0 8px;font-size:1.15rem;font-weight:650;color:var(--od-navy)}
+body.dsd-calm .od .home-ask .ask-box p{font-size:.9rem;max-width:none}
+body.dsd-calm .od .home-ask p.ask-box-small{margin:8px 2px 0;font-size:.85rem;line-height:1.5;max-width:78ch;color:var(--od-muted)}
+body.dsd-calm .od .home-ask p.ask-box-small.error{color:#8a1c14}
+
+/* 2026-11-11: a compact finder, so it does not take up much of the landing page: the heading beside the choices, in one slim band. */
+body.dsd-calm .od .start{padding:16px 0;border-bottom-width:2px}
+body.dsd-calm .od .start .w{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px}
+body.dsd-calm .od .start h2{font-size:1.15rem;margin:0}
+body.dsd-calm .od .start p.lead{font-size:.88rem;margin:2px 0 0;line-height:1.4}
+body.dsd-calm .od .start .builder{flex:1 1 520px;max-width:none;padding:8px 12px;gap:8px 10px;font-size:.98rem}
+body.dsd-calm .od .start .builder select{padding:5px 8px;font-size:.95rem}
+body.dsd-calm .od .start .builder button{padding:6px 16px;font-size:.95rem}
+body.dsd-calm .od .blk.home-ask-band{padding:28px 0 32px}
+@media (min-width:900px){body.dsd-calm .od .start .builder{flex-wrap:nowrap}body.dsd-calm .od .start .builder select{flex:1 1 auto;min-width:0}body.dsd-calm .od .start .builder button{flex:none;white-space:nowrap}}
+
+/* 2026-11-11: less empty space from the Ask window down to the end of the landing page. */
+body.dsd-calm .od .blk.home-ask-band{padding:20px 0 14px}
+body.dsd-calm .od .blk.leaders{padding-bottom:18px}
+body.dsd-calm .od .leaders p{padding-top:12px;font-size:.95rem;line-height:1.5}
+body.dsd-calm:has(.dsd-home) .dsd-footer{padding-top:16px;padding-bottom:16px}
+
+/* 2026-11-11: the user guide link is a quiet text link, not a boxed button. */
+body.dsd-calm .od .home-guide{margin:8px 0 0}
+body.dsd-calm .od .home-guide-link{display:inline;min-height:0;padding:0;border:0;border-radius:0;background:none;color:#33566f;font-size:.95rem;font-weight:500;text-decoration:underline;text-underline-offset:3px}
+body.dsd-calm .od .home-guide-link:hover{background:none;color:#003865}

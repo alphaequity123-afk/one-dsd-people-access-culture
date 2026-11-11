@@ -33,7 +33,7 @@ export const USER_GUIDE = {
       "title": "Find your way around",
       "paras": [
         "The menu across the top of every page leads to the main areas: Start, Learn, Practice, Support and the other sections. Each area opens on a landing page with a short row of links to the pages inside it.",
-        "The home page offers three ways in: Learn, Apply a tool, and Communities. It also lists the next observances from the Culture Calendar and has a link for leaders, supervisors, managers and directors.",
+        "The home page offers three ways in: Learn, Apply a tool, and Communities. Near the bottom, a finder takes you to resources for your task, and a box lets you type a question for Ask. It also lists the next observances from the Culture Calendar and has a link for leaders, supervisors, managers and directors.",
         "Not sure where to begin? The Start page asks three short questions about your role, your work and your timing, then suggests a place to begin and explains why it fits. Nothing you choose there is saved or shared."
       ],
       "links": [
@@ -162,7 +162,7 @@ export const USER_GUIDE = {
       "id": "help",
       "title": "Ask and get support",
       "paras": [
-        "Ask takes a question in your own words and gives an answer with its sources and limits. Keep private client, case, health and personnel details out of what you type.",
+        "Ask takes a question in your own words and gives an answer with its sources and limits. Type in the box near the bottom of the home page and the answer opens in a panel beside the page, or use the Ask page. The small buttons in the box let you speak your question or hold a spoken conversation, and the one under an answer reads it aloud. Keep private client, case, health and personnel details out of what you type or say.",
         "When a matter needs professional support, a formal response or an authorized decision, find the person or area responsible through Support."
       ],
       "links": [

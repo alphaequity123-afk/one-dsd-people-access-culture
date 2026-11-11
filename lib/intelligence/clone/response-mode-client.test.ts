@@ -5,17 +5,26 @@ import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/re
 vi.mock("@/components/program-context", () => ({ useProgramContext: () => ({ context: "one_dsd" }) }));
 vi.mock("@/components/multimedia/resource-media-preview", () => ({ ResourceMediaPreview: () => null, mediaResourceIdFromHref: () => undefined }));
 vi.mock("next/link", () => ({ default: ({ children, href }: { children: ReactNode; href: string }) => createElement("a", { href }, children) }));
+// The question handed over from the landing page is the only value read directly from storage.
+const handed = vi.hoisted(() => ({ question: null as string | null }));
 vi.mock("@/lib/client/storage", async () => {
   const { useState } = await import("react");
-  return { newId: () => "synthetic-session", writeStored: vi.fn(), useStored: (_kind: unknown, _key: unknown, value: unknown) => useState(value) };
+  return {
+    newId: () => "synthetic-session",
+    useStored: (_kind: unknown, _key: unknown, value: unknown) => useState(value),
+    useHydrated: () => true,
+    readStored: (_kind: unknown, key: string, fallback: unknown) => key === "pac_ask_home_question_v1" && handed.question !== null ? handed.question : fallback,
+    writeStored: vi.fn((_kind: unknown, key: string, value: unknown) => { if (key === "pac_ask_home_question_v1" && value === null) handed.question = null; return true; }),
+  };
 });
 // Exercise the parent's actual event handling without browser microphone permissions.
 // AskVoice calls onQuestion only for Talk with ASK; dictation only fills the composer.
-vi.mock("@/components/ask-voice", () => ({ AskVoice: ({ onDictation, onQuestion }: {
+// The real voice controls are type="button" and sit inside the question form.
+vi.mock("@/components/ask-voice", () => ({ VOICE_PRIVACY_NOTE: "", AskVoice: ({ onDictation, onQuestion }: {
   onDictation: (text: string) => void; onQuestion: (text: string) => Promise<unknown>;
 }) => createElement("div", null,
-  createElement("button", { onClick: () => onDictation("A dictated question") }, "Dictate question"),
-  createElement("button", { onClick: () => { onDictation("A spoken question"); void onQuestion("A spoken question"); } }, "Talk with ASK")) }));
+  createElement("button", { type: "button", onClick: () => onDictation("A dictated question") }, "Dictate question"),
+  createElement("button", { type: "button", onClick: () => { onDictation("A spoken question"); void onQuestion("A spoken question"); } }, "Talk with ASK")) }));
 import { AskClient } from "@/components/ask-client";
 
 const fetch = vi.fn();
@@ -27,7 +36,7 @@ beforeEach(() => {
   } }) });
   vi.stubGlobal("fetch", fetch);
 });
-afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
+afterEach(() => { cleanup(); vi.unstubAllGlobals(); handed.question = null; });
 
 it("sends spoken only for Talk with ASK, without making dictation or subsequent typing inherit that preference", async () => {
   render(createElement(AskClient, { researchAvailable: true, intakeEnabled: false, copy }));
@@ -48,4 +57,25 @@ it("sends spoken only for Talk with ASK, without making dictation or subsequent 
   expect(fetch.mock.calls.map(([, init]) => JSON.parse(init.body).responseMode)).toEqual(["text", "text", "spoken", "text"]);
   expect(fetch.mock.calls.map(([, init]) => JSON.parse(init.body).question)).toEqual(["A typed question", "A dictated question", "A spoken question", "A later typed question"]);
   expect(screen.queryByRole("combobox")).toBeNull();
+});
+
+it("asks a question handed over from the landing page once and removes it", async () => {
+  handed.question = "A question typed on the landing page";
+  render(createElement(AskClient, { researchAvailable: true, intakeEnabled: false, copy }));
+  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+  expect(JSON.parse(fetch.mock.calls[0][1].body)).toMatchObject({ question: "A question typed on the landing page", responseMode: "text" });
+  expect(handed.question).toBeNull();
+  await waitFor(() => expect(screen.getByText("A synthetic answer.")).toBeTruthy());
+  expect(fetch).toHaveBeenCalledTimes(1);
+});
+
+it("sends with Enter, starts a new line with Shift and Enter, and keeps the window labelled", async () => {
+  render(createElement(AskClient, { researchAvailable: true, intakeEnabled: false, copy }));
+  const box = screen.getByRole("textbox", { name: "Question" });
+  fireEvent.change(box, { target: { value: "A question sent with the keyboard" } });
+  fireEvent.keyDown(box, { key: "Enter", shiftKey: true });
+  expect(fetch).not.toHaveBeenCalled();
+  fireEvent.keyDown(box, { key: "Enter" });
+  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+  expect(JSON.parse(fetch.mock.calls[0][1].body).question).toBe("A question sent with the keyboard");
 });

@@ -16,13 +16,19 @@ export type AskSearchParams = { path?: string; q?: string; mode?: string; topic?
 /** Lighter surface on /ask shows the first questions; /ask/all keeps the complete original page. */
 export const ASK_SURFACE_LIMIT = 6;
 
-export async function AskView({ searchParams, part }: { searchParams: AskSearchParams; part: "surface" | "all" }) {
-  const sp = searchParams;
-  const scope = await requestedContentScope();
+/** The Ask wording and availability, shared by the Ask page and the Ask panel on the landing page. */
+export async function prepareAsk() {
   const surface = await prepareEditableSurface("ask.page");
   const enabled = cloneAgentsEnabled();
   const research = enabled ? await getResearchPolicy() : null;
   const copy = enabled ? { ...surface.values, introKicker: "Your conversation", introTitle: "Ask", introLede: "Ask a question in your own words, whether it concerns your work, a resource, or an idea you are still shaping. Ask draws on the program's own material first and checks current public sources when a question calls for them. You can follow up, take the conversation in a new direction, or start fresh whenever you like.", answerButton: "Ask", questionLabel: "What would you like to ask?", questionHelp: "Write it the way you would put it to a colleague. There is no need to choose a topic or a search setting.", questionExample: "Ask a question or explore an idea…", howDsdPreviewSupport: "When a decision belongs to a person, Ask points you to the person or office responsible for it.", moreDsdPreviewBody: "Find the right person shows you who is responsible when a decision calls for someone's judgment.", privacyNotice: "Please use general or made-up examples, and leave out names, assessment scores, case details, medical or personnel information, and anything else confidential. So that Ask can respond, your question and the recent conversation are sent to outside answer and research services. This browser keeps the conversation for this session. The site’s operational records are designed to record use without retaining your conversation; outside services have their own data-handling terms." } : surface.values;
+  return { surface, enabled, research, copy };
+}
+
+export async function AskView({ searchParams, part }: { searchParams: AskSearchParams; part: "surface" | "all" }) {
+  const sp = searchParams;
+  const scope = await requestedContentScope();
+  const { surface, enabled, research, copy } = await prepareAsk();
   const topics = staffAskTopics();
   const initial = matchStaffAskTopic(sp.topic) ?? matchStaffAskTopic(sp.path) ?? matchStaffAskTopic(sp.q);
   const all = part === "all";

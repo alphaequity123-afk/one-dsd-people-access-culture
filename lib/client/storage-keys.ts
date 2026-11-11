@@ -13,6 +13,8 @@ export const BROWSER_STORAGE_KEYS = {
   structuralReviewDraft: "one-dsd-structural-review-draft",
   analyzeDocumentKeep: "one-dsd-analyze-document-v1",
   askPracticeHandoff: "pac_ask_practice_handoff_v1",
+  /** A question typed on the landing page, carried to the Ask page and removed as soon as it is asked. */
+  askHomeQuestion: "pac_ask_home_question_v1",
   consultationPrefill: "pac_intake_prefill",
   recentConsultationReferences: "pac_requests_session",
   savedConsultationReferences: "pac_requests",
@@ -31,6 +33,7 @@ export const BROWSER_STORAGE_KEYS = {
 export const PRIVATE_BROWSER_STORAGE_KEYS: readonly PrivateBrowserStorageKey[] = [
   { area: "session", key: BROWSER_STORAGE_KEYS.askSession, purpose: "ask_history" },
   { area: "session", key: BROWSER_STORAGE_KEYS.askPracticeHandoff, purpose: "practice_handoff" },
+  { area: "session", key: BROWSER_STORAGE_KEYS.askHomeQuestion, purpose: "ask_history" },
   { area: "session", key: BROWSER_STORAGE_KEYS.consultationPrefill, purpose: "consultation_prefill" },
   { area: "session", key: BROWSER_STORAGE_KEYS.recentConsultationReferences, purpose: "saved_request_reference" },
   { area: "local", key: BROWSER_STORAGE_KEYS.savedConsultationReferences, purpose: "saved_request_reference" },

@@ -86,6 +86,8 @@ export default async function CulturalIntelligencePage() {
           <p className="mt-4 max-w-4xl leading-7">Choose a community brief when it helps you understand context. You do not need to read every brief. Ask people directly what matters to them and what support works for them. Disability is part of every community, so look for it in each brief.</p>
           <p className="mt-3 max-w-4xl leading-7">The existing Tribal and Native community pages include guidance about Tribal authority and the appropriate relationships for this work. Follow that guidance and the applicable processes.</p>
           {communities.length ? <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{communities.map(community => <li key={community.id}><Link className="underline" href={community.href}>{community.title}</Link>{community.standingTribalDeference && <span> (we defer to the Office of Indian Affairs and the DHS offices that handle Tribal relations and consultation)</span>}</li>)}</ul> : <p className="mt-4">Community briefs are not available here right now.</p>}
+          <h3 className="mt-6 text-xl font-semibold">Community Outreach and Engagement</h3>
+          <p className="mt-2 max-w-4xl leading-7">Plan an engagement, find the organizations connected with the division, and see where to reach people. <Link className="font-semibold underline" href="/community-outreach">Open Community Outreach and Engagement</Link></p>
         </Hub2More>
         <Hub2More id="apply" headingId="apply-title" title="Apply">
           <p className="mt-4 max-w-4xl leading-7">Think about an upcoming notice, meeting, hiring step or team decision. Ask what language, format, and support the person wants; check who can make the decision; and make a plan to follow up.</p>

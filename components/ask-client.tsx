@@ -2,15 +2,16 @@
 
 /** Typed Ask is explicitly enabled only for the owner-authorized clone pilot. */
 import Link from "next/link";
-import { AskVoice } from "./ask-voice";
+import { AskVoice, VOICE_PRIVACY_NOTE } from "./ask-voice";
+import { AskBox } from "@/components/ask-box";
 import { ResourceMediaPreview, mediaResourceIdFromHref } from "@/components/multimedia/resource-media-preview";
 import styles from "@/components/workspace-presentation.module.css";
-import { useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { ActionList, Notice } from "@/components/ui";
 import type { AskResearchMode, AskResponseMode, StaffAskAnswer, StaffAskResult } from "@/lib/intelligence/agents/ask";
 import type { GraduationPath } from "@/lib/content/paths";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";
-import { newId, useStored, writeStored } from "@/lib/client/storage";
+import { newId, readStored, useHydrated, useStored, writeStored } from "@/lib/client/storage";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
 import { useProgramContext } from "@/components/program-context";
 import type { ProductContextId } from "@/lib/product/federation";
@@ -38,6 +39,7 @@ export function AskClient({
   researchAvailable,
   intakeEnabled,
   copy,
+  compact = false,
 }: {
   publishedPath?: GraduationPath;
   initialMode?: "question" | "review";
@@ -45,6 +47,8 @@ export function AskClient({
   researchAvailable: boolean;
   intakeEnabled: boolean;
   copy: EditableSurfaceValues;
+  /** One column without the side notes, for the Ask panel on the landing page. */
+  compact?: boolean;
 }) {
   const { context } = useProgramContext();
   const [question, setQuestion] = useState(initialQuestion ?? "");
@@ -59,18 +63,37 @@ export function AskClient({
   const reviewDraft = initialMode === "review";
   const textId = useId();
   const liveRef = useRef<HTMLDivElement>(null);
+  // Where the read-aloud control goes: under the latest answer.
+  const [listenSlot, setListenSlot] = useState<HTMLElement | null>(null);
+  const hydrated = useHydrated();
+  const handoffTaken = useRef(false);
+
+  // A question typed on the landing page arrives through this browser's session storage, never in the
+  // page address, and is asked once, after the conversation kept in this browser has been read.
+  useEffect(() => {
+    if (!hydrated || handoffTaken.current) return;
+    handoffTaken.current = true;
+    const handed = readStored<string | null>("session", BROWSER_STORAGE_KEYS.askHomeQuestion, null);
+    if (typeof handed !== "string" || !handed.trim()) return;
+    writeStored("session", BROWSER_STORAGE_KEYS.askHomeQuestion, null);
+    void sendQuestion(handed, "text", true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hydrated]);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
+    if (busy) return;
     await sendQuestion(question);
   }
 
-  async function sendQuestion(raw: string, responseMode: AskResponseMode = "text"): Promise<string | undefined> {
+  async function sendQuestion(raw: string, responseMode: AskResponseMode = "text", showInBox = false): Promise<string | undefined> {
     const q = raw.trim();
     if (!q) {
       setError(copyText(copy, "questionTooShort"));
       return;
     }
+    // A question handed over from the landing page shows in the window while it is answered, like a typed one.
+    if (showInBox) setQuestion(q);
     setError("");
     setBusy(true);
     const sessionId = session.id || newId("s");
@@ -116,7 +139,7 @@ export function AskClient({
   }
 
   return (
-    <div className={styles.askLayout}>
+    <div className={compact ? undefined : styles.askLayout}>
       <div>
         <button type="button" className="underline text-sm mb-3" disabled={busy} onClick={() => { setSession(EMPTY_SESSION); setQuestion(""); setError(""); }}>Clear this conversation</button>
         {reviewDraft ? (
@@ -125,39 +148,35 @@ export function AskClient({
             <p className="mt-2">Attach or paste the draft and get each question answered as evidence, inference or gap, with next steps in this program. <Link href="/equity-review/analyze">Open Analyze a document</Link></p>
           </section>
         ) : null}
-        <form onSubmit={submit} className={styles.askComposer}>
-          <label htmlFor={textId} className="block text-lg font-bold">
+        <form onSubmit={submit} className="ask-form">
+          <label htmlFor={textId} className="ask-form-label">
             {copyText(copy, reviewDraft ? "reviewDraftLabel" : "questionLabel")}
           </label>
-          <p id={`${textId}-help`} className="text-sm text-muted">
+          {/* The window speaks for itself; the help stays for screen readers, and shows when a draft or a path needs it. */}
+          <p id={`${textId}-help`} className={reviewDraft || path ? "ask-box-small ask-box-small--above" : "sr-only"}>
             {copyText(copy, reviewDraft ? "reviewDraftHelp" : "questionHelp")} {path ? `${copyText(copy, "connectedPathLead")} "${path.staffLabel}" path.` : ""}
+            <span className="sr-only"> Press Enter to send. Press Shift and Enter to start a new line.</span>
           </p>
-          <textarea
+          <AskBox
             id={textId}
             value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            rows={4}
-            maxLength={4000}
-            className="mt-2 w-full rounded border border-gray-400 p-3"
+            onChange={setQuestion}
             placeholder={reviewDraft ? copyText(copy, "reviewDraftPlaceholder") : path ? path.askStarters[0] : copyText(copy, "questionExample")}
-            aria-describedby={`${textId}-help ${textId}-research-privacy${error ? ` ${textId}-error` : ""}`}
-            aria-invalid={Boolean(error)}
-          />
-          <p className="help mt-3" id={`${textId}-research-privacy`}>{copyText(copy, "privacyNotice")}</p>
+            sendLabel={copyText(copy, reviewDraft ? "reviewDraftLabel" : "answerButton")}
+            busy={busy}
+            describedBy={`${textId}-help ${textId}-research-privacy${error ? ` ${textId}-error` : ""}`}
+            invalid={Boolean(error)}
+          >
+            <AskVoice busy={busy} busyLabel={busyLabel(researchMode, copy)} onDictation={setQuestion} onQuestion={text => sendQuestion(text, "spoken")} latestAnswer={session.turns[0]?.result.kind === "answer" ? session.turns[0].result.answer.shortAnswer : undefined} listenSlot={listenSlot} />
+          </AskBox>
           {error ? (
             <p className="error mt-2 font-bold" id={`${textId}-error`} role="alert">
               {error}
               {retryQuestion ? <> <button type="button" className="underline" disabled={busy} onClick={() => void sendQuestion(retryQuestion)}>Try again</button></> : null}
             </p>
           ) : null}
-          <div className="mt-3 flex flex-wrap items-center gap-3">
-            <button type="submit" className="btn btn--primary" disabled={busy}>
-              {busy ? busyLabel(researchMode, copy) : copyText(copy, reviewDraft ? "reviewDraftLabel" : "answerButton")}
-            </button>
-            <Link href="/library" className="btn btn--light">
-              {copyText(copy, "libraryButton")}
-            </Link>
-          </div>
+          <p className="ask-box-small" id={`${textId}-research-privacy`}>{copyText(copy, "privacyNotice")} {VOICE_PRIVACY_NOTE}</p>
+          {copyText(copy, "libraryButton") ? <p className="ask-box-small"><Link href="/library">{copyText(copy, "libraryButton")}</Link></p> : null}
           {path ? (
             <details className="mt-3">
               <summary>{copyText(copy, "starterQuestionsLabel")}</summary>
@@ -173,7 +192,6 @@ export function AskClient({
             </details>
           ) : null}
         </form>
-        <AskVoice busy={busy} onDictation={setQuestion} onQuestion={text => sendQuestion(text, "spoken")} latestAnswer={session.turns[0]?.result.kind === "answer" ? session.turns[0].result.answer.shortAnswer : undefined} />
 
         <div ref={liveRef} tabIndex={-1} aria-live="polite" className="mt-6 space-y-6">
           {session.turns.map((t, i) => (
@@ -209,13 +227,14 @@ export function AskClient({
                   />
                 </div>
               ) : (
-                <AnswerView context={context} answer={t.result.answer} onPrepareConsult={prepareConsult} intakeEnabled={intakeEnabled} dsdContext={context === "one_dsd" && (t.context ?? context) === "one_dsd"} copy={copy} />
+                <AnswerView context={context} answer={t.result.answer} onPrepareConsult={prepareConsult} intakeEnabled={intakeEnabled} dsdContext={context === "one_dsd" && (t.context ?? context) === "one_dsd"} copy={copy}
+                  tools={i === 0 ? <span ref={setListenSlot} className="ask-answer-tools" /> : undefined} />
               )}
             </article>
           ))}
         </div>
       </div>
-      <aside className={styles.askRail}>
+      {compact ? null : <aside className={styles.askRail}>
         <div className={styles.railNote}>
           <p className="kicker">{copyText(copy, "howKicker")}</p>
           <ul className="list-disc pl-5 text-sm">
@@ -235,7 +254,7 @@ export function AskClient({
           </p>
           <Link href="/support/right-person">{copyText(copy, "rightPersonLabel")}</Link>
         </div>
-      </aside>
+      </aside>}
     </div>
   );
 }
@@ -258,7 +277,9 @@ function citedAnswer(text: string, sources: Array<{ title: string; url: string }
   });
 }
 
-export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext, copy, context }: { context: ProductContextId; answer: StaffAskAnswer; onPrepareConsult: (a: StaffAskAnswer) => void; intakeEnabled: boolean; dsdContext: boolean; copy: EditableSurfaceValues }) {
+export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext, copy, context, tools }: { context: ProductContextId; answer: StaffAskAnswer; onPrepareConsult: (a: StaffAskAnswer) => void; intakeEnabled: boolean; dsdContext: boolean; copy: EditableSurfaceValues;
+  /** Small controls shown under the answer, such as read aloud. */
+  tools?: ReactNode }) {
   // Keep every evidence record for claim references, while listing each
   // destination once in the separate program-reading navigation.
   const programSources = [...new Map(answer.sources.map(source => [source.href, source])).values()];
@@ -272,6 +293,7 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
     <div className="mt-3">
       <h2 className="text-xl font-extrabold">{copyText(copy, "shortAnswerTitle")}</h2>
       <p className="whitespace-pre-wrap break-words">{citedAnswer(answer.shortAnswer, answer.publicResearch?.sources ?? [])}</p>
+      {tools}
       {answer.notice ? <Notice tone="warn">{answer.notice}</Notice> : null}
 
       {Object.keys(grouped).length ? (

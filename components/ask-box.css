@@ -1,0 +1,57 @@
+/* The Ask window: one box to type into with a row of small icon controls.
+   Used on the Ask page and on the landing page. Selectors are doubled where the site-wide
+   field and focus rules would otherwise win. */
+.ask-box.ask-box { display: flex; flex-direction: column; max-width: 100%; background: #fff; border: 1px solid #677a85; border-radius: 18px; padding: 12px 10px 8px 18px; box-shadow: 0 8px 24px -20px #003865; transition: border-color .15s ease, box-shadow .15s ease; }
+.ask-box.ask-box:focus-within { border-color: #003865; box-shadow: 0 0 0 3px rgba(0, 56, 101, .2); }
+.ask-box.ask-box textarea.ask-box-input { display: block; width: 100%; min-height: 3.4rem; max-height: 20rem; margin: 0; padding: 4px 8px 4px 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; resize: none; font: inherit; font-size: 1.05rem; font-weight: 400; line-height: 1.6; color: #182c3a; }
+.ask-box.ask-box textarea.ask-box-input:focus, .ask-box.ask-box textarea.ask-box-input:focus-visible { outline: none; box-shadow: none; }
+.ask-box.ask-box textarea.ask-box-input::placeholder { color: #4c606d; opacity: 1; }
+.ask-box-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 4px 6px; margin-top: 4px; min-height: 40px; }
+.ask-box .ask-voice-status { flex: 1 1 12rem; margin: 0; max-width: none; font-size: .9rem; font-weight: 400; line-height: 1.4; color: #42525f; text-align: left; }
+.ask-voice-icons { display: flex; align-items: center; gap: 2px; }
+.ask-box .ask-voice-note { order: 9; flex: 1 1 100%; margin: 2px 0 4px; max-width: none; font-size: .85rem; font-weight: 400; line-height: 1.45; color: #42525f; text-align: left; }
+.ask-box .ask-voice-note.error { color: #8a1c14; }
+.ask-voice-options { order: 10; flex: 1 1 100%; margin: 0 0 4px; font-size: .85rem; color: #42525f; text-align: left; }
+.ask-voice-options select { font: inherit; margin-left: 6px; }
+
+button.ask-icon.ask-icon { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 40px; height: 40px; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 999px; background: transparent; color: #33475b; font: inherit; cursor: pointer; transition: background-color .15s ease, color .15s ease; }
+button.ask-icon.ask-icon svg { width: 21px; height: 21px; }
+button.ask-icon.ask-icon:hover:not(:disabled) { background: #e7edf2; color: #003865; }
+button.ask-icon.ask-icon:focus-visible { outline: 3px solid #003865; outline-offset: 2px; box-shadow: 0 0 0 2px #fff; }
+button.ask-icon.ask-icon:disabled { opacity: .4; cursor: not-allowed; }
+button.ask-icon.ask-icon--on { background: #a3231b; color: #fff; }
+button.ask-icon.ask-icon--on:hover:not(:disabled) { background: #7f1a14; color: #fff; }
+button.ask-icon.ask-icon--send { margin-left: 4px; background: #003865; color: #fff; }
+button.ask-icon.ask-icon--send:hover:not(:disabled) { background: #00264a; color: #fff; }
+
+/* Small print under the window. */
+.ask-box-small.ask-box-small { margin: 8px 2px 0; max-width: 78ch; font-size: .85rem; font-weight: 400; line-height: 1.5; color: #4c606d; }
+.ask-box-small.ask-box-small--above { margin: 0 2px 10px; }
+.ask-form-label { display: block; margin: 0 0 10px; font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 650; line-height: 1.3; color: #003865; }
+/* The read-aloud control under the latest answer. */
+.ask-answer-tools { display: flex; align-items: center; gap: 2px; margin: 4px 0 0 -9px; }
+.ask-answer-tools:empty { display: none; }
+
+@media (forced-colors: active) {
+  .ask-box.ask-box { border-color: CanvasText; }
+  button.ask-icon.ask-icon { border: 1px solid ButtonText; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ask-box.ask-box, button.ask-icon.ask-icon { transition: none; }
+}
+
+/* The Ask panel: answers to a question asked on the landing page open beside the page (2026-11-11). */
+.ask-panel-layer { position: fixed; inset: 0; z-index: 80; display: flex; justify-content: flex-end; }
+.ask-panel-shade { position: absolute; inset: 0; background: rgba(8, 28, 46, .45); }
+.ask-panel { position: relative; display: flex; flex-direction: column; width: min(560px, 100%); height: 100%; background: #fff; box-shadow: -12px 0 40px -18px rgba(0, 0, 0, .5); animation: ask-panel-in .2s ease-out; }
+.ask-panel-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 22px; background: #003865; color: #fff; }
+body .ask-panel-layer .ask-panel .ask-panel-head h2.ask-panel-title { margin: 0; font-size: 1.25rem !important; font-weight: 650; color: #fff !important; }
+.ask-panel .ask-panel-head button.ask-panel-close { min-height: 40px; padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; background: transparent; color: #fff; font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; }
+.ask-panel .ask-panel-head button.ask-panel-close:hover { background: #fff; color: #003865; }
+.ask-panel .ask-panel-head button.ask-panel-close:focus-visible { outline: 3px solid #fff; outline-offset: 2px; box-shadow: none; }
+.ask-panel-body { flex: 1 1 auto; overflow-y: auto; padding: 20px 22px 32px; font-size: 1rem; line-height: 1.6; color: #182c3a; }
+.ask-panel-body .ask-form-label { font-size: 1.15rem; }
+.ask-panel-body p { max-width: none; }
+@keyframes ask-panel-in { from { transform: translateX(32px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .ask-panel { animation: none; } }
+@media (max-width: 600px) { .ask-panel-body { padding: 16px 16px 28px; } }

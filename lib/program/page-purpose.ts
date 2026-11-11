@@ -10,7 +10,10 @@ export const PAGE_AREAS = {
   consultant: { label: "Consultant workspace", home: "/consultant", links: [["Workspace", "/consultant"], ["My work", "/my-work"], ["Return to the program", "/home"]] },
 } as const;
 export type PageArea = keyof typeof PAGE_AREAS;
-/** The five main menu sections. My work and For leaders, supervisors, managers, and directors are header utilities; About lives in the footer and under One DSD. */
+/**
+ * The five main menu sections. My work and For leaders, supervisors, managers, and directors are header utilities; About lives in the footer and under One DSD.
+ * Owner decisions, 2026-11-11: Support stays in the menu and Ask is reached from the landing page and the Support row;
+ * Themes and collections sits under Learn; Community Outreach and Engagement sits under Cultural Intelligence. */
 export const PRIMARY_SECTIONS: ReadonlyArray<readonly [string, string, PageArea]> = [
   ["Start", "/start", "start"], ["Learn", "/learn", "learn"], ["Practice", "/practice", "tools"], ["Support", "/support", "support"], ["One DSD", "/one-dsd", "programs"],
 ];
