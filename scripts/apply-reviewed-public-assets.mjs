@@ -72,6 +72,13 @@ try {
     const { entry, target } = row;
     if (!entry.recipe) {
       if (!equal(await identity(row.source), entry)) throw Error('Reviewed asset checksum mismatch: ' + entry.path);
+      // A newer release asset (for example a slide re-rendered on 2026-11-10) supersedes the reviewed copy when the
+      // public file already matches the current release identity for this path.
+      const releasedRaw = releaseIdentity.get(entry.path);
+      if (releasedRaw && !equal(releasedRaw, entry)) {
+        const onDisk = await identity(target).catch(() => null);
+        if (onDisk && equal(onDisk, releasedRaw)) { superseded++; continue; }
+      }
       prepared.push(row);
       continue;
     }

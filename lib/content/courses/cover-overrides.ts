@@ -18,8 +18,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A visitor and service navigator review service options on a tablet at a library table.",
   },
   "cq-nordic-europe": {
-    src: "/images/covers/cq-nordic-europe.webp",
-    alt: "A meeting room is prepared beside a window overlooking a Minnesota winter scene.",
+    src: "/images/covers/catalog/season-P757.webp",
+    alt: "A meeting room with a long table set with notebooks, pens and water glasses, a green summer lakeshore outside the windows.",
   },
   "idi-denial": {
     src: "/images/covers/idi-denial.webp",
@@ -50,8 +50,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Two colleagues review a community service flyer together at a library table.",
   },
   "cultural-intelligence-bosnian": {
-    src: "/images/covers/bosnian-minnesota.webp",
-    alt: "A visitor and a Black service navigator review a folder at a civic office counter.",
+    src: "/images/covers/catalog/season-P740.webp",
+    alt: "A Bosnian American man and his mother review a folder with a navigator at a civic office counter.",
   },
   "cultural-intelligence-burmese": {
     src: "/images/covers/burmese-minnesota.webp",
@@ -82,8 +82,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Two adults greet a visitor across a community center table.",
   },
   "cultural-intelligence-french": {
-    src: "/images/covers/french-speaking-minnesota.webp",
-    alt: "Two colleagues review a service-navigation map in a civic office.",
+    src: "/images/covers/catalog/season-P837.webp",
+    alt: "A French-speaking woman and her father review a printed service guide with a navigator at a civic office counter.",
   },
   "cultural-intelligence-guatemalan": {
     src: "/images/covers/guatemalan-minnesota.webp",
@@ -98,8 +98,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "An older visitor speaks while a service navigator listens at a library table.",
   },
   "cultural-intelligence-karen": {
-    src: "/images/covers/karen-minnesota.webp",
-    alt: "A professional stands in a welcoming public-service office.",
+    src: "/images/covers/catalog/season-P909.webp",
+    alt: "A Karen woman stands in a public-service office while three Karen community members of different generations talk at a table behind her.",
   },
   "cultural-intelligence-kenyan": {
     src: "/images/covers/kenyan-minnesota.webp",
@@ -114,8 +114,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A professional walks through a public-service building with a folder.",
   },
   "cultural-intelligence-latino": {
-    src: "/images/covers/latino-minnesota.webp",
-    alt: "Three colleagues talk as they walk through a public-service atrium.",
+    src: "/images/covers/catalog/season-P915.webp",
+    alt: "Three Latino colleagues of different ages talk as they walk through a public-service atrium.",
   },
   "cultural-intelligence-lebanese": {
     src: "/images/covers/lebanese-minnesota.webp",
@@ -130,12 +130,12 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A professional arranges printed materials beside a window.",
   },
   "cultural-intelligence-minnesota": {
-    src: "/images/covers/minnesota-culture.webp",
-    alt: "Neighbors of varied ages and backgrounds enter a Minnesota public library.",
+    src: "/images/covers/catalog/owner-P924.webp",
+    alt: "Neighbors of different ages and backgrounds greet one another as they arrive at the entrance of a public library.",
   },
   "cultural-intelligence-somali": {
-    src: "/images/covers/somali-minnesota.webp",
-    alt: "A professional stands in a Minnesota public-service office.",
+    src: "/images/covers/catalog/season-P947.webp",
+    alt: "A Somali man stands in a public-service office while two Somali women of different generations talk at a table behind him.",
   },
   "cultural-intelligence-nigerian": {
     src: "/images/covers/nigerian-minnesota.webp",
@@ -150,8 +150,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A public-service worker welcomes a visitor across a reception counter.",
   },
   "cultural-intelligence-puerto-rican": {
-    src: "/images/covers/puerto-rican-minnesota.webp",
-    alt: "A professional carries a folder through a public-service building.",
+    src: "/images/covers/catalog/season-P936.webp",
+    alt: "A Puerto Rican man carries folders through a public-service building as an older woman and her granddaughter review a form nearby.",
   },
   "cultural-intelligence-russian": {
     src: "/images/covers/catalog/other-P942.webp",
@@ -166,16 +166,16 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Two colleagues review a service plan together at a table.",
   },
   "cultural-intelligence-vietnamese": {
-    src: "/images/covers/vietnamese-minnesota.webp",
-    alt: "A professional carries a tablet through a public-service atrium.",
+    src: "/images/covers/catalog/season-P964.webp",
+    alt: "A Vietnamese American staff member with a tablet points the way in a public-service atrium while an older woman and her grandson wait nearby.",
   },
   "cultural-intelligence-tribal": {
-    src: "/images/covers/tribal-nations-minnesota.webp",
-    alt: "A Native professional and a colleague discuss a planning board together.",
+    src: "/images/covers/catalog/plain-no-people.webp",
+    alt: "A notebook, a pen and a glass of water on a table by a window.",
   },
   "cultural-intelligence-alaska-native": {
-    src: "/images/covers/alaska-native-minnesota.webp",
-    alt: "A professional stands in a community office while colleagues meet nearby.",
+    src: "/images/covers/catalog/plain-no-people.webp",
+    alt: "A notebook, a pen and a glass of water on a table by a window.",
   },
   "cultural-intelligence-european-american": {
     src: "/images/covers/catalog/dc-i68-whiteness-and-european-american-cultures.webp",
@@ -186,8 +186,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Two colleagues review a document together at an office table.",
   },
   "cultural-intelligence-native-american": {
-    src: "/images/covers/native-american-minnesota.webp",
-    alt: "A Native professional sits in a contemporary community meeting room.",
+    src: "/images/covers/catalog/plain-no-people.webp",
+    alt: "A notebook, a pen and a glass of water on a table by a window.",
   },
   "cultural-intelligence-rural": {
     src: "/images/covers/rural-minnesota.webp",
@@ -370,8 +370,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A staff member checks the usability of an accessible workstation.",
   },
   "di-measuring-culture-and-sustained-progress": {
-    src: "/images/covers/di-measuring-culture.webp",
-    alt: "Two colleagues review progress together at an accessible worktable.",
+    src: "/images/covers/catalog/season-P787.webp",
+    alt: "Two colleagues, one using a wheelchair, review a progress chart on a monitor at a worktable.",
   },
   "di-leadership-case-for-inclusion": {
     src: "/images/covers/di-leadership-inclusion.webp",
@@ -406,20 +406,20 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A policy analyst compares two draft pages at his desk.",
   },
   "ipe-13-program-service-design": {
-    src: "/images/covers/ipe-13-program-service-design.webp",
-    alt: "People move through a welcoming, accessible civic reception area.",
+    src: "/images/covers/catalog/season-P881.webp",
+    alt: "People of different ages and backgrounds move through an accessible civic reception lobby, one using a wheelchair at the counter.",
   },
   "ipe-14-documentation-and-narrative": {
     src: "/images/covers/ipe-14-documentation-and-narrative.webp",
     alt: "A records analyst organizes folders at a desk.",
   },
   "ipe-15-stakeholder-partnership": {
-    src: "/images/covers/ipe-15-stakeholder-partnership.webp",
-    alt: "Three community partners talk while walking through a park.",
+    src: "/images/covers/catalog/season-P883.webp",
+    alt: "Three community partners of different ages talk while walking a park path beside a lake.",
   },
   "ipe-16-digital-equity-technology": {
-    src: "/images/covers/ipe-16-digital-equity-technology.webp",
-    alt: "A technologist tests an accessible self-service kiosk in a public lobby.",
+    src: "/images/covers/catalog/season-P884.webp",
+    alt: "A blind man tests an accessible self-service kiosk in a public lobby while a technologist takes notes.",
   },
   "ipe-17-responding-to-feedback": {
     src: "/images/covers/ipe-17-responding-to-feedback.webp",
@@ -430,16 +430,16 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Archival folders and a magnifier rest on a reading table.",
   },
   "ipe-20-tribal-sovereignty": {
-    src: "/images/covers/ipe-20-tribal-sovereignty.webp",
-    alt: "Two governance colleagues review a document together at a table.",
+    src: "/images/covers/catalog/plain-no-people.webp",
+    alt: "A notebook, a pen and a glass of water on a table by a window.",
   },
   "ipe-21-race-disability-outcomes": {
     src: "/images/covers/ipe-21-race-disability-outcomes.webp",
     alt: "A visitor using a cane talks with a navigator at a service counter.",
   },
   "ipe-22-immigration-system-navigation": {
-    src: "/images/covers/ipe-22-immigration-system-navigation.webp",
-    alt: "A navigator and visitor review service information at a counter.",
+    src: "/images/covers/catalog/season-P889.webp",
+    alt: "A navigator points to a page in a printed guide for a man and his mother at a service counter.",
   },
   "ipe-03-public-power": {
     src: "/images/covers/ipe-03-public-power.webp",
@@ -458,8 +458,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A staff member reflects at a private desk separated from the public area.",
   },
   "ipe-24-religion-spirituality-practice": {
-    src: "/images/covers/ipe-24-religion-spirituality-practice.webp",
-    alt: "A quiet reflection room offers flexible seating and natural light.",
+    src: "/images/covers/catalog/season-P891.webp",
+    alt: "A quiet reflection room with chairs arranged in a circle around a low wooden table.",
   },
   "ipe-25-trauma-responsive-administration": {
     src: "/images/covers/ipe-25-trauma-responsive-administration.webp",
@@ -514,8 +514,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A fiscal analyst arranges blank planning cards beside a calculator.",
   },
   "ipe-38-sustaining-voluntary-learning": {
-    src: "/images/covers/ipe-38-sustaining-voluntary-learning.webp",
-    alt: "A staff member reflects while reviewing learning material on a tablet.",
+    src: "/images/covers/catalog/season-P905.webp",
+    alt: "A staff member reflects while reading on a tablet at his desk as an older colleague looks over.",
   },
   "div-i03-identity-safety": {
     src: "/images/covers/identity-safety.webp",
@@ -610,8 +610,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Two staff members at a public-service counter welcome a visitor, one gesturing openly and the other with a hand on his chest, while three colleagues work in the background.",
   },
   "idi-integration": {
-    src: "/images/covers/idi-integration.webp",
-    alt: "Colleagues from varied backgrounds listen to one another around a meeting table.",
+    src: "/images/covers/catalog/owner-P860.webp",
+    alt: "Five colleagues of different ages and backgrounds listen as one of them speaks at a round meeting table.",
   },
   "cultural-intelligence-hmong": {
     src: "/images/covers/catalog/dc-s34-working-respectfully-with-hmong-communities.webp",
@@ -716,6 +716,38 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
   "cv-understanding-your-lens": {
     src: "/images/covers/catalog/cultural-values-lens.webp",
     alt: "Four colleagues of different ages and backgrounds write on cards about the values they grew up with.",
+  },
+  "equity-centered-leadership": {
+    src: "/images/covers/catalog/owner-P829.webp",
+    alt: "A supervisor hands a marker to a younger colleague to lead part of a team meeting while two colleagues look on.",
+  },
+  "cultural-intelligence-african-american": {
+    src: "/images/covers/catalog/season-P45.webp",
+    alt: "Three Black Minnesotans of different generations review printed pages together at an office desk in Saint Paul.",
+  },
+  "anti-racism-resource": {
+    src: "/images/covers/catalog/season-P640.webp",
+    alt: "Four staff of different ages and backgrounds mark up printed packets at a table.",
+  },
+  "gc-sustaining-the-work": {
+    src: "/images/covers/catalog/season-P851.webp",
+    alt: "Five colleagues of different ages and backgrounds listen to one another around a round table.",
+  },
+  "sm-your-own-load": {
+    src: "/images/covers/catalog/season-P851.webp",
+    alt: "Five colleagues of different ages and backgrounds listen to one another around a round table.",
+  },
+  "language-access-as-a-design": {
+    src: "/images/covers/catalog/season-P912.webp",
+    alt: "People wait in a human-services lobby: a man with a notice, a grandmother with a stroller and a receptionist at the desk.",
+  },
+  "sourcing-and-outreach": {
+    src: "/images/covers/catalog/season-P948.webp",
+    alt: "A recruiter hands a job flyer to a man in his 50s at an outdoor community resource fair while a younger woman reads another flyer.",
+  },
+  "brain-injury-and-complex-disability": {
+    src: "/images/covers/catalog/season-P741.webp",
+    alt: "A man in his 60s talks with a support worker across a kitchen table, a notebook open in front of him.",
   },
 };
 
