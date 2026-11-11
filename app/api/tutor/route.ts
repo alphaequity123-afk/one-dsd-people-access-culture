@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
   let limited: NextResponse | null = null;
   try {
     // "staff-ask" is already registered in the production database; a new scope would be refused there.
-    const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 30, windowSeconds: 600 });
+    const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 });
     if (!limit.allowed) limited = NextResponse.json({ error: "Please wait before asking for more guidance." }, { status: 429, headers: { ...headers, ...rateLimitHeaders(limit) } });
   } catch {
     return NextResponse.json({ error: "Guided practice is unavailable right now." }, { status: 503, headers });

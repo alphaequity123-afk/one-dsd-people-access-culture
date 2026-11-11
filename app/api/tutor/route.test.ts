@@ -167,7 +167,7 @@ describe("guidance endpoint", () => {
   });
 
   it("uses the already registered request limit and refuses once it is spent", async () => {
-    for (let index = 0; index < 30; index++) expect((await POST(post(base))).status).toBe(200);
+    for (let index = 0; index < 120; index++) expect((await POST(post(base))).status).toBe(200);
     const refused = await POST(post(base));
     expect(refused.status).toBe(429);
     expect(refused.headers.get("retry-after")).toBeTruthy();
