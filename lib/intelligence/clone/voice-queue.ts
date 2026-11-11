@@ -60,7 +60,7 @@ export function completeVoiceJob(id: string, audio: Uint8Array | null, sequence 
   return true;
 }
 export function queueVoice(text: string, signal: AbortSignal): ReadableStream<Uint8Array> | null {
-  if (!voiceWorkerReady() || queue.jobs.size >= 2 || signal.aborted) return null;
+  if (!voiceWorkerReady() || queue.jobs.size >= 4 || signal.aborted) return null;
   const id = randomUUID();
   const cleanup = () => { const job = queue.jobs.get(id); if (job) clearTimeout(job.timer); queue.jobs.delete(id); signal.removeEventListener("abort", cancel); };
   const cancel = () => { const job = queue.jobs.get(id); if (job) { try { job.controller.close(); } catch {} } cleanup(); };

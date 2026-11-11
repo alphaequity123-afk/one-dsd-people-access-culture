@@ -604,7 +604,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
             {
               model_id: binding.model.model_id,
               system: writerSystem + correction,
-              maxTokens: cloneAgentsEnabled() ? 4000 : undefined,
+              maxTokens: cloneAgentsEnabled() ? 8000 : undefined,
               // Reasoning models need the remaining request window; the route allows 120 seconds.
               timeoutMs: Math.max(20_000, Math.min(75_000, 110_000 - (Date.now() - startedAt))),
               user: writerUser.user,

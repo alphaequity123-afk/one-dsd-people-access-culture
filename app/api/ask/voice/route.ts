@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
   if (!cloneAgentsEnabled()) return reply({ error: "Unavailable" }, 404);
   if (!isSameOriginMutation(request)) return reply({ error: "Please use Ask from its page on this site." }, 403);
   if (await paused()) return reply({ error: "Ask is paused for now." }, 503);
-  if (!(await consumeRequestLimit(request, { scope: "ask-voice", limit: 30, windowSeconds: 600 })).allowed) return reply({ error: "Please wait a moment before listening again." }, 429);
+  if (!(await consumeRequestLimit(request, { scope: "ask-voice", limit: 120, windowSeconds: 600 })).allowed) return reply({ error: "Please wait a moment before listening again." }, 429);
   const body = await readBoundedJson(request, 16_000);
   if (!body.ok) return reply({ error: body.message }, body.status);
   const input = body.value as { text?: unknown };

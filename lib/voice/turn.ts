@@ -1,5 +1,6 @@
 /** Client-only timing data: no question text, transcript, audio, or identity. */
-export const VOICE_END_PAUSE_MS = 650;
+// A second of quiet ends a turn: long enough to pause mid-thought without being cut off.
+export const VOICE_END_PAUSE_MS = 1000;
 export const VOICE_NO_SPEECH_MS = 12_000;
 export const VOICE_MAX_RECORDING_MS = 30_000;
 export const VOICE_TURN_MEASURE = "ask.voice.turn";

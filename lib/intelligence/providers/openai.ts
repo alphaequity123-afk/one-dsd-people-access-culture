@@ -181,7 +181,7 @@ export class OpenAIAdapter implements ProviderAdapter {
     const timeoutMs = this.opts.timeoutMs ?? req.timeoutMs ?? (record.purpose === "eval_judge" ? 120_000 : 60_000);
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
-    if (process.env.PAC_CLONE_AGENTS === "on" && Buffer.byteLength(req.system + req.user, "utf8") > 80_000) return fail("clone_prompt_limit");
+    if (process.env.PAC_CLONE_AGENTS === "on" && Buffer.byteLength(req.system + req.user, "utf8") > 220_000) return fail("clone_prompt_limit");
     const strict = strictSchemaForOpenAI(req.schema);
 
     const body: Record<string, unknown> = {
@@ -193,7 +193,7 @@ export class OpenAIAdapter implements ProviderAdapter {
       text: { format: { type: "json_schema", name: "pac_structured_output", schema: strict.schema, strict: true } },
       // Reasoning tokens count toward this cap on the Responses API; 4000 left
       // medium-effort answers incomplete.
-      max_output_tokens: process.env.PAC_CLONE_AGENTS === "on" ? Math.min(req.maxTokens ?? 4000, 4000) : req.maxTokens ?? 12_000,
+      max_output_tokens: process.env.PAC_CLONE_AGENTS === "on" ? Math.min(req.maxTokens ?? 8000, 8000) : req.maxTokens ?? 12_000,
       // Disable API response storage. Provider abuse-monitoring terms still apply.
       store: false,
     };

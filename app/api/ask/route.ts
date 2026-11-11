@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
   if (!body.ok) return json({ error: body.message }, body.status);
   const input = Input.safeParse(body.value);
   if (!input.success) return json({ error: "Please shorten your question or start a new conversation." }, 400);
-  const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 30, windowSeconds: 600 });
+  const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 });
   if (!limit.allowed) return NextResponse.json({ error: "Please wait a moment before asking another question." }, { status: 429, headers: rateLimitHeaders(limit) });
   const db = openLedger();
   let id: string | null;

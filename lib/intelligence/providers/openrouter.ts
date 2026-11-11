@@ -11,14 +11,14 @@ export class OpenRouterAdapter implements ProviderAdapter {
   async complete(req: CompleteRequest, record: ModelRecord): Promise<CompleteResult> {
     const key = process.env.OPENROUTER_API_KEY?.trim();
     if (!key) throw new Error("openrouter_credential_missing");
-    if (Buffer.byteLength(req.system + req.user, "utf8") > 80_000) throw new Error("clone_prompt_limit");
+    if (Buffer.byteLength(req.system + req.user, "utf8") > 220_000) throw new Error("clone_prompt_limit");
     const strict = strictSchemaForOpenAI(req.schema);
     const response = await this.fetcher("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST", signal: AbortSignal.timeout(Math.min(req.timeoutMs ?? 60_000, 90_000)),
       headers: { authorization: `Bearer ${key}`, "content-type": "application/json", "X-Title": "People, Access and Culture ASK" },
       body: JSON.stringify({ model: record.provider_model_ref,
         messages: [{ role: "system", content: req.system }, { role: "user", content: req.user }],
-        max_tokens: Math.min(req.maxTokens ?? 4000, 4000),
+        max_tokens: Math.min(req.maxTokens ?? 8000, 8000),
         provider: { require_parameters: true, data_collection: "deny" },
         response_format: { type: "json_schema", json_schema: { name: "ask_answer", strict: true, schema: strict.schema } },
       }), cache: "no-store",
