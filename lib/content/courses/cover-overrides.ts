@@ -59,11 +59,11 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
   },
   "cultural-intelligence-chinese": {
     src: "/images/covers/chinese-minnesota.webp",
-    alt: "A visitor and service navigator review a form together in a community office.",
+    alt: "An older man and a young woman sit with a service navigator who points to a form on the table in a bright community office with a river and city skyline visible through the windows.",
   },
   "cultural-intelligence-colombian": {
-    src: "/images/covers/colombian-minnesota.webp",
-    alt: "Three colleagues share perspectives around a worktable in a community office.",
+    src: "/images/covers/catalog/other-P748.webp",
+    alt: "Colombian American community members of different ages talk with a library outreach worker around a worktable.",
   },
   "cultural-intelligence-cuban": {
     src: "/images/covers/cuban-minnesota.webp",
@@ -154,8 +154,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A professional carries a folder through a public-service building.",
   },
   "cultural-intelligence-russian": {
-    src: "/images/covers/russian-speaking-minnesota.webp",
-    alt: "Two colleagues discuss a document in an office.",
+    src: "/images/covers/catalog/other-P942.webp",
+    alt: "A county worker goes through a form with a Russian-speaking woman, her son and an interpreter.",
   },
   "cultural-intelligence-salvadoran": {
     src: "/images/covers/salvadoran-minnesota.webp",
@@ -178,8 +178,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "A professional stands in a community office while colleagues meet nearby.",
   },
   "cultural-intelligence-european-american": {
-    src: "/images/covers/european-american-minnesota.webp",
-    alt: "Colleagues from varied communities listen to one another in a civic meeting room.",
+    src: "/images/covers/catalog/dc-i68-whiteness-and-european-american-cultures.webp",
+    alt: "Minnesotans of European heritage and different ages look at old family photographs and a church record book.",
   },
   "cultural-intelligence-ukrainian": {
     src: "/images/covers/ukrainian-minnesota.webp",
@@ -306,8 +306,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Colleagues with varied lived experiences collaborate around a worktable.",
   },
   "di-conflict-resolution-and-neurodiversity": {
-    src: "/images/covers/di-conflict-neurodiversity.webp",
-    alt: "Two colleagues have a calm conversation in a quiet room.",
+    src: "/images/covers/catalog/other-P776.webp",
+    alt: "Two colleagues, one wearing noise-reducing headphones, work through a disagreement calmly in a quiet, softly lit room.",
   },
   "di-allyship-and-everyday-action": {
     src: "/images/covers/di-allyship-everyday-action.webp",
@@ -318,8 +318,8 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
     alt: "Several colleagues arrange plain colored cards on a planning table.",
   },
   "di-de-escalation-without-coercion": {
-    src: "/images/covers/di-de-escalation.webp",
-    alt: "A staff member listens calmly to a visitor in a quiet reception room.",
+    src: "/images/covers/catalog/other-P778.webp",
+    alt: "A staff member sits at eye level listening calmly to a visitor who uses a wheelchair while a colleague waits nearby.",
   },
   "di-disability-data-privacy-and-measurement": {
     src: "/images/covers/di-data-privacy.webp",
@@ -607,11 +607,115 @@ const coverOverrides: Readonly<Record<string, { src: string; alt: string }>> = {
   },
   "idi-adaptation": {
     src: "/images/covers/idi-adaptation.webp",
-    alt: "Two colleagues exchange perspectives in a public-service office.",
+    alt: "Two staff members at a public-service counter welcome a visitor, one gesturing openly and the other with a hand on his chest, while three colleagues work in the background.",
   },
   "idi-integration": {
     src: "/images/covers/idi-integration.webp",
     alt: "Colleagues from varied backgrounds listen to one another around a meeting table.",
+  },
+  "cultural-intelligence-hmong": {
+    src: "/images/covers/catalog/dc-s34-working-respectfully-with-hmong-communities.webp",
+    alt: "A Hmong American family of three generations reviews a service guide with a Hmong American navigator.",
+  },
+  "acceptance-in-dhs-work": {
+    src: "/images/covers/catalog/other-P730.webp",
+    alt: "Four colleagues of different ages and backgrounds listen as one explains how his family makes decisions.",
+  },
+  "conflict-at-work": {
+    src: "/images/covers/catalog/other-P750.webp",
+    alt: "Two colleagues talk through a disagreement over a printed work process while a third helps them listen.",
+  },
+  "disability-and-language": {
+    src: "/images/covers/catalog/other-P792.webp",
+    alt: "A young man using a wheelchair and his mother talk with a county staff member through an interpreter, with a translated form on the table.",
+  },
+  "health-wellness-and-safety": {
+    src: "/images/covers/catalog/other-P793.webp",
+    alt: "A man who uses a walker reviews his medication list and blood-pressure log with a home health nurse while his daughter listens.",
+  },
+  "working-with-an-interpreter": {
+    src: "/images/covers/catalog/other-P801.webp",
+    alt: "A county worker talks with a Karen man through an in-person interpreter seated beside him.",
+  },
+  "family-and-natural-support-systems": {
+    src: "/images/covers/catalog/other-P804.webp",
+    alt: "A man who uses a wheelchair leads a conversation with his mother, cousin and a family friend about who helps on which days.",
+  },
+  "how-it-shows-up-in-minnesota-human-services": {
+    src: "/images/covers/catalog/other-P815.webp",
+    alt: "People of different ages and backgrounds wait in a county human services lobby while a staff member calls the next name.",
+  },
+  "outcomes-not-intentions": {
+    src: "/images/covers/catalog/other-P817.webp",
+    alt: "Three staff of different ages and backgrounds, one using a wheelchair, review printed outcome charts together.",
+  },
+  "equal-opportunity-in-employment": {
+    src: "/images/covers/catalog/other-P826.webp",
+    alt: "A three-person hiring panel, one member using a wheelchair, interviews a young candidate with matching question sheets.",
+  },
+  "intercultural-competence-without-a-score": {
+    src: "/images/covers/catalog/other-P866.webp",
+    alt: "Five colleagues of different ages and backgrounds talk over coffee in an office hallway.",
+  },
+  "what-minimization-does-in-dhs-work": {
+    src: "/images/covers/catalog/other-P923.webp",
+    alt: "Six staff of different ages and backgrounds, one using a wheelchair, review the same printed form and point out different things.",
+  },
+  "somali-minnesota-brief": {
+    src: "/images/covers/catalog/other-P946.webp",
+    alt: "Two Somali American men of different generations talk over tea by a cafe window while a young woman works at the counter.",
+  },
+  "dsd-02-service-coordination-navigation": {
+    src: "/images/covers/catalog/stock-dsd-02-service-coordination-navigation.webp",
+    alt: "A service coordinator helps a man who uses a wheelchair and his caregiver map out his services.",
+  },
+  "cq-germanic-europe": {
+    src: "/images/covers/catalog/stock-cq-germanic-europe.webp",
+    alt: "A German American man and his daughter ask for the written rule and a county worker shows it in a handbook.",
+  },
+  "cq-eastern-europe": {
+    src: "/images/covers/catalog/stock-cq-eastern-europe.webp",
+    alt: "A county worker shows a Ukrainian American woman and her neighbor who will see their information on a consent form.",
+  },
+  "cq-latin-europe": {
+    src: "/images/covers/catalog/stock-cq-latin-europe.webp",
+    alt: "An Italian American woman shares family news at the start of an appointment while a county worker listens.",
+  },
+  "cq-latin-america": {
+    src: "/images/covers/catalog/stock-cq-latin-america.webp",
+    alt: "A county worker pulls up extra chairs as a Mexican American family of three generations arrives for an appointment.",
+  },
+  "sf-unconscious-bias-everyday-decisions": {
+    src: "/images/covers/catalog/stock-sf-unconscious-bias-everyday-decisions.webp",
+    alt: "Four colleagues of different ages and backgrounds compare notes on the same application against a shared checklist.",
+  },
+  "cq-southern-asia": {
+    src: "/images/covers/catalog/stock-cq-southern-asia.webp",
+    alt: "Three South Asian American colleagues and a project lead confirm a date on a printed calendar.",
+  },
+  "cq-sub-saharan-africa": {
+    src: "/images/covers/catalog/stock-cq-sub-saharan-africa.webp",
+    alt: "A Liberian American elder advises his niece about a form while a county worker waits.",
+  },
+  "cq-arab": {
+    src: "/images/covers/catalog/stock-cq-arab.webp",
+    alt: "A Syrian American family of three generations goes over the next step on a checklist with a county worker.",
+  },
+  "pi-what-fraud-enforcement-costs": {
+    src: "/images/covers/catalog/stock-pi-what-fraud-enforcement-costs.webp",
+    alt: "Three program integrity staff of different ages review a case file and a laptop together.",
+  },
+  "pi-public-perception-and-culture": {
+    src: "/images/covers/catalog/stock-pi-public-perception-and-culture.webp",
+    alt: "Community members of different ages and backgrounds ask questions at a public information session.",
+  },
+  "ipe-01-intercultural-practice": {
+    src: "/images/covers/catalog/stock-ipe-01-intercultural-practice.webp",
+    alt: "Five disability services staff of different ages and backgrounds, one using a wheelchair, review case papers together.",
+  },
+  "cv-understanding-your-lens": {
+    src: "/images/covers/catalog/cultural-values-lens.webp",
+    alt: "Four colleagues of different ages and backgrounds write on cards about the values they grew up with.",
   },
 };
 

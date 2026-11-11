@@ -217,7 +217,40 @@
      "The person or area responsible for a form, letter or process you think could be clearer."
     ]
    },
-   "images": [],
+   "images": [
+    {
+     "slot": "hero",
+     "chapter": null,
+     "src": "/learning/water-we-swim-in/01/hero.webp",
+     "alt": "Two hosts lean in at a car window in their driveway on a summer evening, still chatting with departing guests.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "What the fish cannot see",
+     "src": "/learning/water-we-swim-in/01/image-2.webp",
+     "alt": "Clear northern Minnesota lake water in morning light, with small fish visible over rocks near a wooden dock.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Who Minnesotans are now",
+     "src": "/learning/water-we-swim-in/01/image-3.webp",
+     "alt": "Families of many backgrounds share a meal at long tables in a bright church basement, including a man using a wheelchair.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "A mirror, not a label",
+     "src": "/learning/water-we-swim-in/01/image-4.webp",
+     "alt": "State staff of different ages and backgrounds talk around a table in a sunlit meeting room, one colleague using a white cane.",
+     "width": 3840,
+     "height": 2560
+    }
+   ],
    "podcast": null
   },
   {
@@ -445,7 +478,40 @@
      "The person or area responsible for the policy or process, if you need facts before you reply."
     ]
    },
-   "images": [],
+   "images": [
+    {
+     "slot": "hero",
+     "chapter": null,
+     "src": "/learning/water-we-swim-in/02/hero.webp",
+     "alt": "Two hosts chat with departing guests at a car window on a summer evening in a small Minnesota town.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "The warm side is real",
+     "src": "/learning/water-we-swim-in/02/image-2.webp",
+     "alt": "Neighbors of different backgrounds help carry a heavy table from a pickup truck into a house on a summer morning.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "When nice avoids conflict",
+     "src": "/learning/water-we-swim-in/02/image-3.webp",
+     "alt": "Coworkers sit around a meeting table in a state office; some nod, some look at notes, one looks unsure.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Friendly, but hard to befriend",
+     "src": "/learning/water-we-swim-in/02/image-4.webp",
+     "alt": "A newcomer holding a plate stands at the edge of a church basement potluck as clusters of longtime friends talk.",
+     "width": 3840,
+     "height": 2560
+    }
+   ],
    "podcast": null
   },
   {
@@ -665,8 +731,71 @@
      "The person or area responsible for the policy, when a request may need a formal accommodation or a change in practice."
     ]
    },
-   "images": [],
-   "podcast": null
+   "images": [
+    {
+     "slot": "hero",
+     "chapter": null,
+     "src": "/learning/water-we-swim-in/03/hero.webp",
+     "alt": "Neighbors of varied ages share a funeral lunch at long tables in a small-town church basement, with casseroles and a coffee urn.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Farms, winters and cooperatives",
+     "src": "/learning/water-we-swim-in/03/image-2.webp",
+     "alt": "Two farmers work together to repair a plow beside a red barn on a Minnesota farm in late summer.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Government as a shared moral project",
+     "src": "/learning/water-we-swim-in/03/image-3.webp",
+     "alt": "Residents of varied ages and backgrounds wait in line to vote in a small-town community center gym on a summer morning.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Values under the surface",
+     "src": "/learning/water-we-swim-in/03/image-4.webp",
+     "alt": "A small team of state employees of varied backgrounds talks around a meeting table in a bright workroom, one colleague listening closely.",
+     "width": 3840,
+     "height": 2560
+    }
+   ],
+   "podcast": {
+    "title": "Where it comes from",
+    "summary": "Two colleagues trace everyday Minnesota work habits, from modesty to slow consensus, back to settlement, churches, farms, winters, cooperatives and civic tradition.",
+    "src": "/learning/water-we-swim-in/03/podcast.mp3",
+    "captions": "/learning/water-we-swim-in/03/captions.vtt",
+    "transcript": "/learning/water-we-swim-in/03/transcript.txt",
+    "durationSeconds": 454.29,
+    "chapters": [
+     {
+      "title": "Welcome to the church basement",
+      "start": 0.25
+     },
+     {
+      "title": "Settlers, churches and caution",
+      "start": 55.54
+     },
+     {
+      "title": "Farms, winters and cooperatives",
+      "start": 180.33
+     },
+     {
+      "title": "Government and the values underneath",
+      "start": 274.41
+     },
+     {
+      "title": "One thing to try this week",
+      "start": 392.78
+     }
+    ],
+    "mediaReady": true
+   }
   },
   {
    "id": "04",
@@ -892,8 +1021,71 @@
      "The person or area responsible for the policy or process, when input needs to reach the final product."
     ]
    },
-   "images": [],
-   "podcast": null
+   "images": [
+    {
+     "slot": "hero",
+     "chapter": null,
+     "src": "/learning/water-we-swim-in/04/hero.webp",
+     "alt": "Two neighbors talk on the front walk of an older St. Paul home on a summer day while a child waits nearby.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Voices from outside the majority",
+     "src": "/learning/water-we-swim-in/04/image-2.webp",
+     "alt": "Neighbors of different ages and backgrounds share a meal at folding tables in a church basement, one using a wheelchair.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "A history kept out of view",
+     "src": "/learning/water-we-swim-in/04/image-3.webp",
+     "alt": "A quiet tree-lined St. Paul street of older houses ends at a concrete sound wall beside a busy highway in summer.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Repair, equity work and an honest debate",
+     "src": "/learning/water-we-swim-in/04/image-4.webp",
+     "alt": "Volunteers of varied ages study printed neighborhood maps together at a long table in a bright public library room.",
+     "width": 3840,
+     "height": 2560
+    }
+   ],
+   "podcast": {
+    "title": "Seen from the other side",
+    "summary": "Two colleagues talk about how Minnesota's majority culture looks to people partly outside it, the history kept out of view, and why culture can outlast policy.",
+    "src": "/learning/water-we-swim-in/04/podcast.mp3",
+    "captions": "/learning/water-we-swim-in/04/captions.vtt",
+    "transcript": "/learning/water-we-swim-in/04/transcript.txt",
+    "durationSeconds": 423.45,
+    "chapters": [
+     {
+      "title": "Welcome",
+      "start": 0.25
+     },
+     {
+      "title": "Voices from outside",
+      "start": 40.61
+     },
+     {
+      "title": "A paradox and a hidden history",
+      "start": 176.6
+     },
+     {
+      "title": "Culture and repair",
+      "start": 306.22
+     },
+     {
+      "title": "One thing to try",
+      "start": 391.8
+     }
+    ],
+    "mediaReady": true
+   }
   },
   {
    "id": "05",
@@ -1112,7 +1304,40 @@
      "The person or area responsible for the policy, when you think the process itself needs to change."
     ]
    },
-   "images": [],
+   "images": [
+    {
+     "slot": "hero",
+     "chapter": null,
+     "src": "/learning/water-we-swim-in/05/hero.webp",
+     "alt": "A host offers a casserole dish to a smiling guest at a kitchen table in a Minnesota home on a summer day.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Values written into law",
+     "src": "/learning/water-we-swim-in/05/image-2.webp",
+     "alt": "A case manager listens as a young man and his parents and sister talk at a small table in a county meeting room.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "The same values, seen from other homes",
+     "src": "/learning/water-we-swim-in/05/image-3.webp",
+     "alt": "Three generations of a family share a meal and conversation in a living room in a Minnesota home",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Inside the agency",
+     "src": "/learning/water-we-swim-in/05/image-4.webp",
+     "alt": "State employees in a team meeting, one person in a wheelchair speaking while colleagues listen",
+     "width": 3840,
+     "height": 2560
+    }
+   ],
    "podcast": null
   },
   {
@@ -1331,7 +1556,40 @@
      "The person or area responsible for the form, template or policy you want to change."
     ]
    },
-   "images": [],
+   "images": [
+    {
+     "slot": "hero",
+     "chapter": null,
+     "src": "/learning/water-we-swim-in/06/hero.webp",
+     "alt": "Neighbors of many ages and backgrounds share casserole dishes at a long table in a bright church basement potluck.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Whose \"same\"?",
+     "src": "/learning/water-we-swim-in/06/image-2.webp",
+     "alt": "A case manager listens as a young man, his parents and his sister talk at their kitchen table, papers set aside.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Averages, not people",
+     "src": "/learning/water-we-swim-in/06/image-3.webp",
+     "alt": "A state employee stands at a tall office window holding a folder, thinking, with green summer trees outside.",
+     "width": 3840,
+     "height": 2560
+    },
+    {
+     "slot": "chapter",
+     "chapter": "Strengths worth keeping",
+     "src": "/learning/water-we-swim-in/06/image-4.webp",
+     "alt": "Volunteers of different ages sort fresh produce together at a small-town community food shelf.",
+     "width": 3840,
+     "height": 2560
+    }
+   ],
    "podcast": null
   }
  ]

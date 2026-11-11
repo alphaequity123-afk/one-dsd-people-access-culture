@@ -18,8 +18,8 @@ export const LEARNING_TILE_DEFAULTS = {
     summary: "Plan accessible sessions that give participants time to practice and apply what they learn.",
   },
   "lm-interpreter": {
-    imageSrc: "/images/covers/working-with-interpreter.jpg",
-    imageAlt: "Three people in conversation around a table.",
+    imageSrc: "/images/covers/catalog/other-P801.webp",
+    imageAlt: "A county worker talks with a Karen man through an in-person interpreter seated beside him.",
     summary: "Prepare for conversations with a qualified interpreter and support clear, respectful communication.",
   },
 } as const satisfies Record<string, LearningTilePresentation>;
