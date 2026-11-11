@@ -33,6 +33,8 @@ const DOORS = [
   ["direction", "How do I back supervisors and set direction?", "Backing supervisors, governance, succession, senior sessions, live practice, learning culture"],
 ];
 const PATHS = [
+  ["exploring-leadership", "Exploring leadership", "For anyone drawn to leading, with or without a title: knowing your own starting point, hearing and being heard, and planning how you want to grow."],
+  ["program-leads", "Program leads", "For people who guide a program, policy or project without supervising the team: where a process loses people, partnership, evidence, and advising the person who decides."],
   ["first-year", "First-year supervisors", "For your first year of supervising: the duties that start on day one, then everyday decisions one at a time."],
   ["experienced", "Experienced supervisors", "For supervisors with some years behind them: harder conversations, whose norms count, and what to do when you are named."],
   ["managers-of-managers", "Managers of managers", "For people who back other supervisors: conversations before decisions, consistency, patterns and oversight."],

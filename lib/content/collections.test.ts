@@ -86,10 +86,11 @@ describe("every listed item resolves", () => {
 });
 
 describe("the plan's structure", () => {
-  it("has 8 staff collections, 9 doors, 89 questions and 4 paths", () => {
+  it("has 8 staff collections, 9 doors, 89 questions and 6 paths", () => {
     expect(STAFF_COLLECTIONS).toHaveLength(8);
     expect(LEADING_DOORS).toHaveLength(9);
-    expect(LEADING_PATHS).toHaveLength(4);
+    expect(LEADING_PATHS).toHaveLength(6);
+    expect(LEADING_PATHS.map(path => path.slug)).toEqual(["exploring-leadership", "program-leads", "first-year", "experienced", "managers-of-managers", "senior-leaders"]);
     expect(LEADING_DOORS.flatMap(door => door.questions)).toHaveLength(89);
     expect(LEADING_DOORS.map(door => door.itemCount)).toEqual([20, 9, 38, 29, 17, 100, 109, 23, 20]);
     expect(STAFF_COLLECTIONS.map(collection => collection.itemCount)).toEqual([26, 71, 60, 51, 139, 65, 109, 66]);
