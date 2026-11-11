@@ -4,7 +4,7 @@ import { KeyPointsPanel } from "@/components/clas-curriculum/key-points";
 import { ChoiceQuestion, OrderingQuestion } from "@/components/clas-curriculum/practice";
 import { JobAidActions } from "@/components/clas-curriculum/job-aid-actions";
 import type { JobAid, PracticeModule, RecallQuestion } from "@/lib/content/clas-curriculum-practice";
-import type { WaterImage, WaterLesson } from "@/lib/content/water-curriculum";
+import type { WaterCompanion, WaterImage, WaterLesson } from "@/lib/content/water-curriculum";
 import { loadCaptionCues } from "@/lib/content/clas-curriculum-page-data";
 import "@/components/clas-curriculum.css";
 import "./water-curriculum.css";
@@ -95,5 +95,46 @@ export function WaterLessonPractice({ practice, moduleTitle, moduleNumber }: { p
       <JobAidActions fileName={`water-we-swim-in-module-${moduleNumber}-job-aid.txt`} text={jobAidText(aid, moduleTitle)} />
     </details>}
     <p className="water-practice-note">Nothing here is scored or recorded. <Link href="#top">Back to the top of the module</Link></p>
+  </section>;
+}
+
+/**
+ * The companion podcast at the top of the course page: one 12 to 15 minute conversation that follows a single
+ * planning meeting through all six modules, in the program's two podcast voices, with its photograph.
+ * Renders nothing until the release step has verified the recording.
+ */
+export function WaterCompanionPodcast({ companion }: { companion: WaterCompanion | null }) {
+  const podcast = companion?.podcast;
+  if (!companion || !podcast) return null;
+  const cues = loadCaptionCues(podcast.captions);
+  const photo = companion.images.find(img => img.slot === "hero");
+  return <div className="water-lesson-opening clas-study water-companion">
+    {photo && <WaterFigure image={photo} priority />}
+    <FeaturedMediaPanel kind="podcast" length={mediaLength(podcast.durationSeconds)}><section aria-labelledby="water-companion-title" className="water-podcast">
+      <h2 id="water-companion-title">Listen first: the whole course in one conversation</h2>
+      <p>{podcast.summary} About {Math.max(1, Math.round(podcast.durationSeconds / 60))} minutes, in chapters for each module.</p>
+      <SyncedMediaPlayer mediaId="water:companion" kind="audio" src={podcast.src} captions={podcast.captions} label={podcast.title}
+        chapters={podcast.chapters} cues={cues} transcriptTitle="Podcast transcript">
+        <p className="water-podcast-links"><a href={podcast.src} download>Download the podcast (MP3)</a> · <a href={podcast.transcript}>Read the transcript</a></p>
+      </SyncedMediaPlayer>
+    </section></FeaturedMediaPanel>
+  </div>;
+}
+
+/** How the six modules build on each other: three stages, two modules each. A drawn graphic, no icons. */
+const WATER_STAGES = [
+  { stage: "See it", modules: [[1, "Notice that the way we do things here is a culture"], [2, "Decode Minnesota nice: warmth, indirectness, the newcomer freeze"]] },
+  { stage: "Understand it", modules: [[3, "Trace where it comes from"], [4, "Hear how it feels to Minnesotans of other cultures"]] },
+  { stage: "Act on it", modules: [[5, "Find it in disability policy and practice"], [6, "Choose practices that work across difference"]] },
+] as const;
+export function WaterCoursePath({ hrefFor }: { hrefFor: (number: number) => string }) {
+  return <section className="water-path" aria-labelledby="water-path-title">
+    <h2 id="water-path-title">How the six modules fit together</h2>
+    <ol className="water-path-stages">{WATER_STAGES.map((s, i) => <li key={s.stage} className={`water-path-stage water-path-stage-${i + 1}`}>
+      <p className="water-path-stage-name"><span>{i + 1}</span>{s.stage}</p>
+      <ol className="water-path-modules">{s.modules.map(([n, text]) => <li key={n} value={n}>
+        <a href={hrefFor(n)}><span className="water-path-number">Module {n}</span><span className="water-path-text">{text}</span></a>
+      </li>)}</ol>
+    </li>)}</ol>
   </section>;
 }

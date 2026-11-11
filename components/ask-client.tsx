@@ -368,9 +368,6 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
             {programSources.map((s) => (
               <li key={s.href}>
                 <Link href={s.href}>{s.title}</Link>{" "}
-                {s.authorityLabel ? <span className="label-pill label-pill--authority" aria-label={`${s.authorityLabel}. ${s.authorityDescription}`}>
-                  {s.authorityLabel}
-                </span> : null}{" "}
                 {mediaResourceIdFromHref(s.href) ? <ResourceMediaPreview resourceId={mediaResourceIdFromHref(s.href)!} /> : null}
               </li>
             ))}

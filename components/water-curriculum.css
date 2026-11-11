@@ -17,3 +17,22 @@
 .water-module-grid h3 { margin: 0 0 .5rem; font-size: 1.15rem; }
 .water-module-grid p { margin: .25rem 0; }
 @media print { .water-figure, .water-podcast, .water-practice .clas-ordering, .water-practice .clas-decisions { display: none; } }
+
+/* Course page: the companion podcast and the six-module path (owner request, 2026-11-11). */
+.water-companion { margin: 1rem 0 2rem; }
+.water-path { margin: 2rem 0; padding: 1.5rem; background: #f0fdfa; border-radius: 12px; border-top: 5px solid #0f766e; }
+.water-path h2 { margin: 0 0 1rem; }
+.water-path-stages { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; position: relative; }
+.water-path-stage { background: #fff; border-radius: 10px; padding: 1rem; border: 1px solid #99d5cc; position: relative; }
+.water-path-stage:not(:last-child)::after { content: ""; position: absolute; top: 1.6rem; right: -1rem; width: 1rem; height: 3px; background: #0f766e; }
+.water-path-stage-name { display: flex; align-items: center; gap: .6rem; margin: 0 0 .75rem; font-weight: 700; font-size: 1.1rem; color: #134e4a; }
+.water-path-stage-name span { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: #0f766e; color: #fff; font-size: 1rem; }
+.water-path-stage-2 .water-path-stage-name span { background: #0e7490; }
+.water-path-stage-3 .water-path-stage-name span { background: #1e3a8a; }
+.water-path-modules { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
+.water-path-modules a { display: block; padding: .6rem .75rem; border-left: 4px solid #5eead4; background: #f8fafc; border-radius: 0 6px 6px 0; text-decoration: none; color: #183247; }
+.water-path-modules a:hover, .water-path-modules a:focus-visible { background: #ecfeff; border-left-color: #0f766e; }
+.water-path-number { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #0f766e; }
+.water-path-text { display: block; font-weight: 600; line-height: 1.4; }
+@media (max-width: 860px) { .water-path-stages { grid-template-columns: 1fr; } .water-path-stage:not(:last-child)::after { top: auto; bottom: -1rem; right: auto; left: 2rem; width: 3px; height: 1rem; } }
+@media (forced-colors: active) { .water-path-stage, .water-path-modules a { border-color: CanvasText; } }

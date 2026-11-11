@@ -163,49 +163,40 @@ const micState = (state: string) => Object.defineProperty(navigator, "permission
 const micStub = (getUserMedia: unknown) => Object.defineProperty(navigator, "mediaDevices", { configurable: true, value: { getUserMedia } });
 const settle = () => act(async () => { await new Promise(resolve => setTimeout(resolve, 0)); });
 
-it("shows an Allow microphone button until the microphone is allowed, then removes it", async () => {
+it("shows a muted microphone icon until the microphone is allowed, with no Allow microphone label", async () => {
   browserSpeech(); micState("prompt");
   const asked = vi.fn(async () => ({ getTracks: () => [{ stop: () => undefined }] }));
   micStub(asked);
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
   await settle();
-  expect(document.body.textContent).toContain("Ask needs your microphone to hear you");
-  await act(async () => { control("Allow microphone")!.click(); });
+  expect(document.body.textContent).not.toContain("Allow microphone");
+  expect(control("Dictate question (microphone is off; select to turn it on)")!.title).toBe("Microphone is off. Select to turn it on and dictate");
+  await act(async () => { control("Dictate question (microphone is off; select to turn it on)")!.click(); });
   await settle();
   expect(asked).toHaveBeenCalledWith({ audio: true });
-  expect(control("Allow microphone")).toBeUndefined();
-  await act(async () => { control("Dictate question")!.click(); });
-  await settle();
   expect(BrowserRecognition.latest.start).toHaveBeenCalledOnce();
 });
 
-it("asks for the microphone when a listening button is pressed before it is allowed", async () => {
-  browserSpeech(); micState("prompt");
-  const asked = vi.fn(async () => ({ getTracks: () => [{ stop: () => undefined }] }));
-  micStub(asked);
-  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
-  await settle();
-  await act(async () => { control("Dictate question")!.click(); });
-  await settle();
-  expect(asked).toHaveBeenCalledOnce();
-  expect(BrowserRecognition.latest.start).toHaveBeenCalledOnce();
-});
-
-it("explains a blocked microphone and does not start listening", async () => {
+it("explains a blocked microphone after a press and does not start listening", async () => {
   browserSpeech(); micState("denied");
   micStub(vi.fn(async () => { throw new DOMException("Permission denied", "NotAllowedError"); }));
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
   await settle();
-  expect(document.body.textContent).toContain("Microphone access is not allowed for this site");
-  await act(async () => { control("Dictate question")!.click(); });
+  expect(document.body.textContent).not.toContain("Allow microphone");
+  await act(async () => { control("Dictate question (microphone is off; select to turn it on)")!.click(); });
   await settle();
   expect(BrowserRecognition.latest).toBeUndefined();
-  expect(document.body.textContent).toContain("Microphone access is not allowed for this site");
+  expect(document.body.textContent).toContain("The microphone is blocked for this site");
 });
 
-it("does not show the Allow microphone button once the microphone is allowed", async () => {
+it("shows the plain microphone once it is allowed, and mutes spoken answers from the speaker icon", async () => {
   browserSpeech(); micState("granted");
-  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
+  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." />); });
   await settle();
-  expect(control("Allow microphone")).toBeUndefined();
+  expect(control("Dictate question")).toBeDefined();
+  await act(async () => { control("Mute spoken answers")!.click(); });
+  expect(control("Spoken answers are muted. Select to turn sound on")!.getAttribute("aria-pressed")).toBe("true");
+  expect(window.localStorage.getItem("ask-voice-muted")).toBe("1");
+  await act(async () => { control("Spoken answers are muted. Select to turn sound on")!.click(); });
+  expect(control("Mute spoken answers")!.getAttribute("aria-pressed")).toBe("false");
 });

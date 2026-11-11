@@ -46,6 +46,8 @@ import {
   tokens,
 } from "../retrieval/search";
 import { indexedStaffDocs } from "../retrieval/staff-search";
+import { agencyDocs } from "@/lib/search/site-search";
+import { statePageDocs } from "@/lib/search/state-pages";
 import { focusPdfPageHits, namedPdfPageHits } from "../retrieval/named-pdf";
 import { semanticRetrieveForAgent, SemanticSearchUnavailable } from "../retrieval/local-semantic";
 import { indexedProgramResources, programResourceLinks } from "../retrieval/program-resources";
@@ -323,6 +325,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     ...organizationIndex,
     ...(await indexedStaffDocs(scope)).filter(doc => doc.kind !== "brief"),
     ...program.destinations,
+    // State of Minnesota agencies and their public pages: one connected knowledge base with the program.
+    ...(explicitProgramOnly ? [] : [...agencyDocs({ forAnswers: true }), ...statePageDocs()]),
   ].filter(doc => !explicitProgramOnly || /^\/(?!\/)/.test(doc.href)));
   let hits: SearchHit[] = [];
   try {
@@ -561,7 +565,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (organization.entries.length && input.mode !== "review") {
     const available = organization.entries.filter(entry => entry.facts && sources.some(source => source.id === entry.id)).slice(0, 3);
     draft = available.length ? {
-      shortAnswer: available.map(entry => entry.title + ": " + (entry.refreshDue ? "A source refresh is due. " : "") + entry.facts).join("\n\n"),
+      shortAnswer: available.map(entry => entry.title + ": " + entry.facts).join("\n\n"),
       whyItMatters: "These references explain the relevant responsibilities and service relationships.",
     } : { shortAnswer: "The organizational sources below need a fresh check before I can give a reliable answer. You can open them for the latest information.", whyItMatters: ""};
     answerSources = sources.filter(source => available.some(entry => entry.id === source.id));

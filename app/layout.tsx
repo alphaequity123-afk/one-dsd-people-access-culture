@@ -5,6 +5,7 @@ import "./dsd-calm.css";
 import "./development.css";
 import "./approved-palette.css";
 import "./internal-pages.css";
+import "./area-colors.css";
 import "./inner-theme.css";
 import "./calm-system.css";
 import { InternalPage } from "@/components/internal-page";
@@ -13,6 +14,7 @@ import { CourseMediaForPage } from "@/components/course-media-for-page";
 import { PROGRAM } from "@/lib/constants";
 import { PublishedProgramHeader } from "@/components/published-program-header";
 import { DsdProgramFooter } from "@/components/dsd-program-footer";
+import { ConnectedMinnesota } from "@/components/connected-minnesota";
 import { DsdResourceActions } from "@/components/dsd-workspace";
 import { ProgramContextProvider } from "@/components/program-context";
 import { requestedProductContext } from "@/lib/product/request-context";
@@ -115,6 +117,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
           </main>
           <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}>
+            <ConnectedMinnesota />
             <DsdProgramFooter />
             <UniversalEditor owner={owner} />
           </ChromeGate>

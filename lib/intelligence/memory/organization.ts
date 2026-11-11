@@ -16,9 +16,9 @@ export function organizationalDocs(now = new Date()): Doc[] {
   return reference.entries.map(entry => {
     const sources = entry.sourceIds.map(id => reference.sources.find(source => source.id === id)!);
     const due = sources.some(source => sourceReviewDue(source, now));
-    const summary = due
-      ? `A source refresh is due. This reference does not establish that details are current. ${entry.facts}`
-      : entry.facts;
+    // Owner rule (2026-11-11): no source-date or refresh labels in what people read. Review timing stays internal.
+    void due;
+    const summary = entry.facts;
     return {
       kind: "content", id: entry.id, title: entry.title,
       href: sources[0].url, authority: "external_verify", type: "organization_reference",

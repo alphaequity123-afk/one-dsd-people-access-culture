@@ -28,9 +28,9 @@ export default async function HomePage() {
     </section>
 
     <section className="blk" aria-label="Main areas"><div className="w doors">
-      <Link className="door" href="/learn"><h2>Learn</h2><p>Courses, readings and collections to build your understanding.</p></Link>
-      <Link className="door" href="/practice"><h2>Apply a tool</h2><p>Work through a real decision, meeting, process or review.</p></Link>
-      <Link className="door" href="/minnesota-communities"><h2>Communities</h2><p>Minnesota communities, their history and how to connect well.</p></Link>
+      <Link className="door" data-tone="learn" href="/learn"><h2>Learn</h2><p>Courses, readings and collections to build your understanding.</p></Link>
+      <Link className="door" data-tone="tools" href="/practice"><h2>Apply a tool</h2><p>Work through a real decision, meeting, process or review.</p></Link>
+      <Link className="door" data-tone="communities" href="/minnesota-communities"><h2>Communities</h2><p>Minnesota communities, their history and how to connect well.</p></Link>
     </div><div className="w"><p className="home-explore">Or <Link href="/explore">explore everything by task, role, standard or community</Link>. When something helps, <Link href="/my-work/action-plan">turn it into an action plan</Link>.</p></div></section>
 
     <section className="blk month" aria-labelledby="month-title"><div className="w">

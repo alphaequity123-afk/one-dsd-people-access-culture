@@ -1712,5 +1712,66 @@
     "mediaReady": true
    }
   }
- ]
+ ],
+ "companion": {
+  "title": "The Water We Swim In: A Two-Voice Companion",
+  "summary": "One conversation that follows a single planning meeting through all six modules.",
+  "images": [
+   {
+    "slot": "hero",
+    "chapter": null,
+    "src": "/learning/water-we-swim-in/companion/hero.webp",
+    "alt": "A case manager and a newer colleague meet with a Somali American family and their adult son around a small table.",
+    "width": 3840,
+    "height": 2560
+   },
+   {
+    "slot": "chapter",
+    "chapter": "Module 6: Seeing across difference",
+    "src": "/learning/water-we-swim-in/companion/image-2.webp",
+    "alt": "The newer colleague and the case manager talk quietly in a hallway after the meeting.",
+    "width": 3840,
+    "height": 2560
+   }
+  ],
+  "podcast": {
+   "title": "The Water We Swim In: A Two-Voice Companion",
+   "summary": "One conversation that follows a single planning meeting through all six modules.",
+   "src": "/learning/water-we-swim-in/companion/podcast.mp3",
+   "captions": "/learning/water-we-swim-in/companion/captions.vtt",
+   "transcript": "/learning/water-we-swim-in/companion/transcript.txt",
+   "durationSeconds": 636.12,
+   "chapters": [
+    {
+     "title": "Welcome",
+     "start": 0.25
+    },
+    {
+     "title": "Module 1: The water we swim in",
+     "start": 55.33
+    },
+    {
+     "title": "Module 2: Minnesota nice, decoded",
+     "start": 136.56
+    },
+    {
+     "title": "Module 3: Where it comes from",
+     "start": 240.92
+    },
+    {
+     "title": "Module 4: Seen from the other side",
+     "start": 302.1
+    },
+    {
+     "title": "Module 5: Culture in the system we run",
+     "start": 377.02
+    },
+    {
+     "title": "Module 6: Seeing across difference",
+     "start": 482.08
+    }
+   ],
+   "mediaReady": true
+  }
+ }
 }

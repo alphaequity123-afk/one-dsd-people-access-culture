@@ -12,9 +12,10 @@ import { practiceGuides } from "@/lib/program/dsd-practice-guides";
 import { getPolicies, policyHref } from "@/lib/content/hub/dsd-policies";
 import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import clas from "@/lib/content/clas-curriculum.json";
+import { STATE_AGENCIES, agencyConnectionText, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
 
 export type FacetId = "task" | "role" | "standard" | "community";
-export type ItemKind = "course" | "resource" | "reading" | "practice" | "brief" | "organization" | "policy" | "lesson";
+export type ItemKind = "course" | "resource" | "reading" | "practice" | "brief" | "organization" | "policy" | "lesson" | "agency";
 export type FacetItem = { id: string; kind: ItemKind; title: string; href: string };
 export type FacetValue = { facet: FacetId; id: string; title: string; summary: string; group: string; items: FacetItem[] };
 
@@ -27,9 +28,9 @@ export const FACETS: { id: FacetId; title: string; question: string }[] = [
 
 export const KIND_LABEL: Record<ItemKind, string> = {
   course: "Courses", lesson: "Lessons", practice: "Guided practices", resource: "Tools and guides",
-  reading: "Readings", brief: "Community briefs", organization: "Organizations", policy: "Policies",
+  reading: "Readings", brief: "Community briefs", organization: "Organizations", policy: "Policies", agency: "State of Minnesota agencies",
 };
-export const KIND_ORDER: ItemKind[] = ["practice", "course", "lesson", "resource", "policy", "brief", "organization", "reading"];
+export const KIND_ORDER: ItemKind[] = ["practice", "course", "lesson", "resource", "policy", "brief", "organization", "agency", "reading"];
 
 type Pool = { items: Map<string, FacetItem>; text: Map<string, string> };
 
@@ -75,11 +76,22 @@ function itemPool(): Pool {
     items.set(id, { id, kind: "lesson", title: module.title, href: `/learn/clas/curriculum/${module.id}` });
     text.set(id, module.title);
   }
+  // State of Minnesota agencies, boards and councils: nodes of the same graph, linked by the work they hold.
+  for (const agency of STATE_AGENCIES) {
+    const id = agencyNodeId(agency);
+    items.set(id, { id, kind: "agency", title: agencyDisplayName(agency.name), href: agency.href });
+    text.set(id, agencyConnectionText(agency));
+  }
   return (pool = { items, text });
 }
 
+/** Agencies whose responsibility words share at least `min` meaningful words with the phrase. Link-only agencies join only by name. */
+function agenciesFor(phrase: string, min = 2, limit = 4): string[] {
+  return matching(phrase, min, limit, /^(?!agency:)/);
+}
+
 /** Items whose text shares at least `min` meaningful words with the phrase. */
-function matching(phrase: string, min = 2, limit = 24, skip: RegExp = /^(policy:|organization:)/): string[] {
+function matching(phrase: string, min = 2, limit = 24, skip: RegExp = /^(policy:|organization:|agency:)/): string[] {
   const { text } = itemPool();
   const want = new Set(words(phrase));
   if (!want.size) return [];
@@ -119,7 +131,7 @@ function build(): Map<string, FacetValue> {
   // Tasks: the work areas' own task lists, their named resources and practice paths, plus close matches.
   for (const domain of DOMAINS) {
     for (const task of domain.tasks) {
-      const ids = [...task.contentIds, ...(task.pathId ? [pathNodeId(task.pathId)] : []), ...matching(`${task.label} ${task.outcome}`, 2, 14)];
+      const ids = [...task.contentIds, ...(task.pathId ? [pathNodeId(task.pathId)] : []), ...matching(`${task.label} ${task.outcome}`, 2, 14), ...agenciesFor(`${task.label} ${task.outcome}`)];
       taskMembers.set(task.id, ids);
       put(value("task", task.id, task.label, task.outcome, domain.staffLabel, ids));
       for (const role of task.roles) {
@@ -150,6 +162,7 @@ function build(): Map<string, FacetValue> {
     ids.push(...domain.toolIds);
     goals.set(goal, ids);
   }
+  for (const [goal, ids] of goals) ids.push(...agenciesFor(goal, 2, 3));
   for (const [goal, ids] of goals) put(value("standard", `goal-${slug(goal)}`, goal, `Work that serves the equity goal "${goal}".`, "Six equity goals", ids));
   put(value("standard", "equity-policy", "DHS equity policy and the Equity Analysis Toolkit", "Looking at policies, practices, budgets and decisions through an equity lens. The Equity Analysis Toolkit is required for significant decisions.", "Department commitments", matching("equity analysis toolkit policy decision", 2, 30)));
 
@@ -166,6 +179,7 @@ function build(): Map<string, FacetValue> {
   for (const domain of DOMAINS) {
     const ids = [...domain.toolIds];
     for (const task of domain.tasks) ids.push(...(taskMembers.get(task.id) ?? []));
+    ids.push(...STATE_AGENCIES.filter(agency => agency.areas.includes(domain.id)).map(agencyNodeId), ...agenciesFor(`${domain.staffLabel} ${domain.summary}`, 2, 6));
     put(value("community", `area-${domain.id}`, domain.staffLabel, domain.summary, "Work areas", ids));
   }
   const programs = new Map<string, string[]>();
@@ -175,6 +189,14 @@ function build(): Map<string, FacetValue> {
     programs.set(program, ids);
   }
   for (const [program, ids] of programs) if (ids.length >= 3) put(value("community", `program-${slug(program)}`, program, `Policies and work connected with ${program}.`, "Division programs", [...ids, ...matching(program, 2, 10, /^organization:/)]));
+  // Each agency: its own page of connected program work, so links run both ways, and the full directory.
+  for (const agency of STATE_AGENCIES) {
+    const id = agencyNodeId(agency);
+    // Links come from the reviewed responsibility map only; matching on general descriptions joined unrelated work.
+    const ids = agency.linkOnly || !agency.topics ? [id] : [id, ...matching(agencyConnectionText(agency), 2, 16, /^agency:/)];
+    put(value("community", `agency-${agency.id}`, agencyDisplayName(agency.name), agency.description, "State of Minnesota agencies", ids));
+  }
+  put(value("community", "state-agencies", "All State of Minnesota agencies, boards and councils", "Every agency, board and council in the state's official directory.", "State of Minnesota agencies", STATE_AGENCIES.map(agencyNodeId)));
   return (built = out);
 }
 

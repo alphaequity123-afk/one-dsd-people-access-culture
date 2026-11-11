@@ -1,0 +1,69 @@
+/* Area colors (owner decision, 2026-11-11): Learn teal, Practice amber, Support violet, Communities green,
+   Leadership deep blue. Each area has a deep shade for text and rules on white, a light shade for marks on the
+   dark menu bar, and a tint for section bands. Color never carries meaning on its own: labels stay in words. */
+:root {
+  --area-learn: #0f766e;     --area-learn-light: #5eead4;     --area-learn-tint: #f0fdfa;
+  --area-tools: #b45309;     --area-tools-light: #fcd34d;     --area-tools-tint: #fffbeb;
+  --area-support: #6d28d9;   --area-support-light: #c4b5fd;   --area-support-tint: #f5f3ff;
+  --area-communities: #15803d; --area-communities-light: #86efac; --area-communities-tint: #f0fdf4;
+  --area-leading: #1e3a8a;   --area-leading-light: #93c5fd;   --area-leading-tint: #eff6ff;
+  --area-programs: #003865;  --area-programs-light: #7dd3fc;  --area-programs-tint: #f0f7fb;
+  --area-start: #0e7490;     --area-start-light: #67e8f9;     --area-start-tint: #ecfeff;
+}
+
+/* Menu bar: the current section is underlined in its own area color. */
+.dsd-header .dsd-nav a[data-tone="learn"] { --tone-light: var(--area-learn-light); }
+.dsd-header .dsd-nav a[data-tone="tools"] { --tone-light: var(--area-tools-light); }
+.dsd-header .dsd-nav a[data-tone="support"] { --tone-light: var(--area-support-light); }
+.dsd-header .dsd-nav a[data-tone="communities"] { --tone-light: var(--area-communities-light); }
+.dsd-header .dsd-nav a[data-tone="programs"] { --tone-light: var(--area-programs-light); }
+.dsd-header .dsd-nav a[data-tone="start"] { --tone-light: var(--area-start-light); }
+.dsd-header .dsd-nav a[data-tone]:hover, .dsd-header .dsd-nav a[data-tone][aria-current] { border-bottom-color: var(--tone-light, #008eaa); }
+@media (max-width: 760px) { .dsd-header .dsd-nav a[data-tone][aria-current] { border-left-color: var(--tone-light, #008eaa); } }
+
+/* Pages: one accent and one tint per area, used by the page heading rule, notes, lists and bands. */
+body.dsd-calm main .internal-page[data-tone="learn"] { --page-accent: var(--area-learn); --page-tint: var(--area-learn-tint); --band: var(--area-learn-tint); --pac-gold: var(--area-learn); --green-strong: var(--area-learn); }
+body.dsd-calm main .internal-page[data-tone="tools"] { --page-accent: var(--area-tools); --page-tint: var(--area-tools-tint); --band: var(--area-tools-tint); --pac-gold: var(--area-tools); --green-strong: var(--area-tools); }
+body.dsd-calm main .internal-page[data-tone="support"] { --page-accent: var(--area-support); --page-tint: var(--area-support-tint); --band: var(--area-support-tint); --pac-gold: var(--area-support); --green-strong: var(--area-support); }
+body.dsd-calm main .internal-page[data-tone="communities"] { --page-accent: var(--area-communities); --page-tint: var(--area-communities-tint); --band: var(--area-communities-tint); --pac-gold: var(--area-communities); --green-strong: var(--area-communities); }
+body.dsd-calm main .internal-page[data-tone="leading"] { --page-accent: var(--area-leading); --page-tint: var(--area-leading-tint); --band: var(--area-leading-tint); --pac-gold: var(--area-leading); --green-strong: var(--area-leading); }
+body.dsd-calm main .internal-page[data-tone="programs"] { --page-accent: var(--area-programs); --page-tint: var(--area-programs-tint); --band: var(--area-programs-tint); --pac-gold: var(--area-programs); --green-strong: var(--area-programs); }
+body.dsd-calm main .internal-page[data-tone="start"] { --page-accent: var(--area-start); --page-tint: var(--area-start-tint); --band: var(--area-start-tint); --pac-gold: var(--area-start); --green-strong: var(--area-start); }
+body.dsd-calm main .internal-page:is([data-tone="about"], [data-tone="consultant"]) { --page-accent: var(--area-programs); --page-tint: var(--area-programs-tint); --band: var(--area-programs-tint); }
+
+/* The page heading sits on a tinted band with a full-width rule in the area color. */
+.internal-page .page-intro h1::before { width: 3.5rem; height: 4px; border-radius: 2px; }
+.internal-page .internal-section-nav a[aria-current="page"] { color: var(--page-accent); }
+body.dsd-calm main .internal-page .internal-section-nav a[aria-current="page"] { color: var(--page-accent); }
+
+/* Pages that build their own title header (Leadership, community briefs) take the same tint and an area-colored edge. */
+body.dsd-calm main .internal-page header:has(> h1):not(.page-intro, .page-intro *) {
+  background: var(--page-tint); border-left: 6px solid var(--page-accent); border-radius: 0 10px 10px 0; padding: 1.25rem 1.5rem;
+}
+
+/* Cards and panels pick up the area color on their top edge; links inside headings follow it on hover. */
+.internal-page :is(.card, .panel) { border-top: 3px solid var(--page-accent); }
+.internal-page :is(.card, .panel) :is(h2, h3) a:hover { color: var(--page-accent); }
+.internal-page .community-search { border-top-color: var(--page-accent); }
+.internal-page .community-practice { border-left-color: var(--page-accent); }
+
+/* Every other top-level section on a page alternates onto the tint, so long pages read as bands. */
+.internal-page > section:nth-of-type(even), .internal-page main > section.dsd-band:nth-of-type(even) { background: var(--page-tint); }
+
+@media print {
+  .internal-page .page-intro { background: #fff; }
+  .internal-page > section:nth-of-type(even) { background: #fff; }
+}
+@media (forced-colors: active) {
+  .internal-page .page-intro, .internal-page :is(.card, .panel) { border-color: CanvasText; }
+}
+
+/* Landing page: each door carries its area's color; the calendar preview sits on a soft band. */
+body.dsd-calm .od .door[data-tone="learn"] { --door: var(--area-learn); --door-tint: var(--area-learn-tint); }
+body.dsd-calm .od .door[data-tone="tools"] { --door: var(--area-tools); --door-tint: var(--area-tools-tint); }
+body.dsd-calm .od .door[data-tone="communities"] { --door: var(--area-communities); --door-tint: var(--area-communities-tint); }
+body.dsd-calm .od .door[data-tone] { border-top: 6px solid var(--door); background: linear-gradient(180deg, var(--door-tint) 0, #fff 70%); transition: box-shadow .15s ease, transform .15s ease; }
+body.dsd-calm .od .door[data-tone] h2 { color: var(--door); }
+body.dsd-calm .od .door[data-tone]:hover, body.dsd-calm .od .door[data-tone]:focus-visible { box-shadow: 0 6px 18px rgb(15 23 42 / .12); transform: translateY(-2px); }
+body.dsd-calm .od .month { background: var(--area-programs-tint); }
+@media (prefers-reduced-motion: reduce) { body.dsd-calm .od .door[data-tone] { transition: none; } body.dsd-calm .od .door[data-tone]:hover { transform: none; } }

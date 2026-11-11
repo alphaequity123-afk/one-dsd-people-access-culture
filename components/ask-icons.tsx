@@ -9,6 +9,14 @@ const line = { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strok
 export function MicIcon() {
   return <svg {...line}><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0M12 18v3" /></svg>;
 }
+/** The microphone is off or not allowed yet: the same microphone with a line through it. */
+export function MicOffIcon() {
+  return <svg {...line}><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0M12 18v3" /><path d="M4 3l16 18" /></svg>;
+}
+/** Spoken answers are muted: the speaker with a line through it. */
+export function SpeakerOffIcon() {
+  return <svg {...line}><path d="M4 9v6h4l5 4V5L8 9H4z" /><path d="M16.5 8.5a5 5 0 0 1 0 7" /><path d="M4 3l16 18" /></svg>;
+}
 /** Talk with Ask: a spoken conversation. */
 export function WaveIcon() {
   return <svg {...line}><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4" /></svg>;

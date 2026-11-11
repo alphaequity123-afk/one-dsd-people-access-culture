@@ -52,3 +52,15 @@ export function waterRecall(id: string) {
 }
 
 export const waterModuleId = (number: number) => String(number).padStart(2, "0");
+
+/** The two-voice companion that covers all six modules in one 12 to 15 minute conversation (owner request, 2026-11-11). */
+export type WaterCompanion = { title: string; summary: string; podcast: WaterPodcast | null; images: WaterImage[] };
+export function waterCompanion(): WaterCompanion | null {
+  const c = (raw as unknown as { companion?: { title: string; summary: string; podcast?: WaterPodcast | null; images?: WaterImage[] } | null }).companion;
+  if (!c) return null;
+  return {
+    title: c.title, summary: c.summary,
+    podcast: readyPodcast("companion", c.podcast),
+    images: (c.images ?? []).filter(img => local("companion", img.src) && img.alt && img.width > 0 && img.height > 0),
+  };
+}
