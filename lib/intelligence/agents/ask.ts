@@ -428,9 +428,13 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // retain the same research admission and final answer review.
   const requestedMode = explicitProgramOnly
     ? "program_only" : cloneAgentsEnabled() ? "auto" : input.researchMode ?? (input.mode === "review" ? "program_only" : "auto");
+  // When outside research is needed whatever the routing step decides, both start together instead of one after the other.
+  const researchCertain = cloneAgentsEnabled() && (requestedMode === "current_web" || requestedMode === "deep_research" || (requestedMode === "auto" && (
+    !merged.some(hit => !/^https?:\/\//.test(hit.href)) || CURRENT_INFORMATION.test(question) || (!namedPageHits.length && wantsCitation(question))
+    || /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question))));
   const [jevPlan, requiredResearch] = await Promise.all([
     cloneAgentsEnabled() ? planWithJev(question, merged.map(hit => ({ title: hit.title, excerpt: hit.excerpt.slice(0, 1200) })), ctx, input.cloneRunId) : null,
-    cloneAgentsEnabled() && requestedMode !== "program_only" && !merged.length ? governedResearch(question, "current_web", false, ctx) : undefined,
+    researchCertain ? governedResearch(question, requestedMode === "deep_research" ? "deep_research" : "current_web", requestedMode === "current_web" || requestedMode === "deep_research", ctx) : undefined,
   ]);
   const specialistReview = jevPlan?.route === "accessibility" ? await a11yScan({ text: question, artifactType: "document" }, { ...ctx, agent: getAgent("a11y_reviewer") }) : undefined;
   const sufficientNamedPdf = namedPageHits.length > 0 && jevPlan?.evidence === "sufficient";
@@ -907,7 +911,9 @@ function compose(intent: AskIntent, question: string, sources: Citation[], quest
   const decisionRecordSource = /\bdecision record\b/i.test(question) ? sources.find(source => source.id === "ja-operational-equity-canvas" && source.citeable) : undefined;
   const top = decisionRecordSource ?? sources.find((s) => s.citeable);
   const excerpt = top?.excerpt.trim() ?? "";
-  const lead = excerpt.endsWith("...") || excerpt === top?.title ? "": excerpt;
+  // A passage can begin or end partway through; keep only its whole sentences.
+  const whole = (excerpt.match(/[^.!?]+[.!?]+(?:["”’)]+)?/g) ?? []).map(part => part.trim()).filter(part => /^["“‘(]?[A-Z0-9]/.test(part)).join(" ");
+  const lead = excerpt.endsWith("...") || excerpt === top?.title ? "": whole;
 
   if (path?.id === "gp-8") {
     return {

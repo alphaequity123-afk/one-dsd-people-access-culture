@@ -8,6 +8,7 @@
  */
 import { randomUUID } from "node:crypto";
 import { getStore } from "../memory/store";
+import { auditableContentIds } from "@/lib/trust/work-object-contract";
 import { agentAllowed, effectiveCeiling, getPolicy } from "../policy";
 import { autonomyRank, type AuditEvent, type SafetyRefusalCode, type ToolContext } from "../types";
 import { getTool } from "./catalog";
@@ -76,7 +77,7 @@ export async function runTool<T>(ctx: ToolContext, toolName: string, fn: () => T
     autonomy_level_used: def?.min_autonomy ?? "A0",
     permission_mode: def?.permission_mode ?? "always",
     dry_run: ctx.dry_run,
-    content_ids_touched: opts.contentIds ?? [],
+    content_ids_touched: auditableContentIds(opts.contentIds ?? []),
     allowlist_hit: true,
     safety_refusal_code: opts.safetyRefusalCode,
     human_disposition: opts.humanDisposition ?? null,

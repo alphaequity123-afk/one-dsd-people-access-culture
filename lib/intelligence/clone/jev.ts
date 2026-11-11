@@ -12,6 +12,9 @@ const choice = <T extends z.ZodType>(schema: T) => z.object({ type: z.literal("c
 export const PlanSchema = z.object({ answers: z.object({ route: choice(RouteSchema), evidence: choice(z.enum(["sufficient", "research", "clarify"])) }) });
 const ReviewSchema = z.object({ answers: z.object({ review: choice(z.enum(["pass", "revise", "human"])) }) });
 
+/** Routing and the closing check are helpers. A slow one is skipped so it never holds up an answer. */
+export const JEV_WAIT_MS = 5_000;
+
 async function decision(questions: unknown, state: unknown, ctx: ToolContext, runId?: string) {
   return runTool(ctx, "decision.jev", async () => {
     const key = process.env.TYPESAFE_API_KEY?.trim();
@@ -19,7 +22,7 @@ async function decision(questions: unknown, state: unknown, ctx: ToolContext, ru
     if (runId) recordDecision(runId); // Count attempts, including network failures.
     const response = await fetch("https://api.typesafe.ai/v1/systemone", {
       method: "POST", headers: { Authorization: `Bearer ${key}`, "content-type": "application/json" },
-      body: JSON.stringify({ model: "jev-latest", state, questions }), signal: AbortSignal.timeout(12_000), cache: "no-store",
+      body: JSON.stringify({ model: "jev-latest", state, questions }), signal: AbortSignal.timeout(JEV_WAIT_MS), cache: "no-store",
     });
     if (!response.ok) throw new Error(`jev_http_${response.status}`);
     const text = await response.text();

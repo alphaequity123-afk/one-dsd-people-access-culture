@@ -86,7 +86,7 @@ export function externalResearchGate(text: string): SafetyResult {
     if (item.re.test(text)) return refusePii(item.cls);
   }
   if (SPECIFIC_PERSON_ROLE.test(text) && SENSITIVE_DESCRIPTORS.test(text)) {
-    return refusePii("Case, medical, disability, complaint, eligibility, or personnel details about a specific person");
+    return refuseSpecificPerson(text ?? "");
   }
   if (NONPUBLIC_MATERIAL.test(text)) return refusePii("Confidential or nonpublic material");
   if (HR_PAYLOAD.test(text)) return hrRedirect();
@@ -209,6 +209,23 @@ function refusePii(fieldClass: string): SafetyResult {
     fieldClass,
     message:
       `This entry may include private information about a person (${fieldClass.toLowerCase()}). To protect their privacy, please remove names, identifiers, and any case, medical, or personnel details. Then describe the program or situation in general terms. ${PROGRAM.staffBrand} is not a place to share or keep private information about a person.`,
+    alternatives: ALT_SELF_DIRECTED,
+  };
+}
+
+const OWN_WORKPLACE_CONCERN = /\b(retaliat\w*|harass\w*|discriminat\w*|bull(?:y|ied|ying)|hostile|treated unfairly|unfair treatment|complaint|grievance)\b/i;
+
+/** The same privacy stop, worded for someone describing a concern of their own. Nothing is sent or kept. */
+function refuseSpecificPerson(text: string): SafetyResult {
+  const fieldClass = "Case, medical, disability, complaint, eligibility, or personnel details about a specific person";
+  if (!OWN_WORKPLACE_CONCERN.test(text)) return refusePii(fieldClass);
+  return {
+    ok: false,
+    code: "pii_detected",
+    fieldClass,
+    message:
+      "This sounds like something that deserves a person who can act on it. Employee Culture, Human Resources, or the civil-rights channel can help, in confidence. Ask does not keep or pass on details about a particular person, so it cannot take this up here. If general guidance would help, you are welcome to describe the situation without details about any one person.",
+    redirect: { label: "See who to contact", href: "/library/pn-when-to-escalate" },
     alternatives: ALT_SELF_DIRECTED,
   };
 }
@@ -401,7 +418,7 @@ export function askPrivacyGate(text: string): SafetyResult {
   if (named && HR_PAYLOAD.test(t)) return hrRedirect();
   if (named && SENSITIVE_DESCRIPTORS.test(t)) return refusePii("Named person with case, medical, disability, or personnel details");
   if (specific && SENSITIVE_DESCRIPTORS.test(t)) {
-    return refusePii("Case, medical, disability, complaint, eligibility, or personnel details about a specific person");
+    return refuseSpecificPerson(text ?? "");
   }
   // A phone number, address or e-mail is private only when it is tied to a person. An agency's public contact is not.
   if (named || specific || OWN_CONTACT.test(t)) {
