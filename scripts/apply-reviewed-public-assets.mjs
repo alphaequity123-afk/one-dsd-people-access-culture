@@ -63,6 +63,9 @@ const entries = manifest.files.map(entry => {
 const temporary = await fs.mkdtemp(path.join(os.tmpdir(), 'reviewed-public-assets-'));
 const prepared = [];
 let reused = 0;
+let superseded = 0;
+const releaseManifest = JSON.parse(await fs.readFile(path.join(root, 'config/railway-release-assets.json'), 'utf8'));
+const releaseIdentity = new Map((releaseManifest.assets ?? []).filter(validIdentity).map(asset => [asset.path, { bytes: asset.bytes, sha256: asset.sha256 }]));
 try {
   // Check or reconstruct every candidate before replacing any public file.
   for (const row of entries) {
@@ -75,6 +78,14 @@ try {
     const existing = await identity(target);
     if (equal(existing, entry)) {
       reused++;
+      continue;
+    }
+    // A later release may replace a reviewed file (for example the course decks corrected on 2026-11-10).
+    // Accept the file only when it is exactly the current release's recorded identity for this path; the final
+    // gate (verify-railway-release-assets.mjs) checks every release asset against that same record.
+    const released = releaseIdentity.get(entry.path);
+    if (released && !equal(released, entry) && equal(existing, released)) {
+      superseded++;
       continue;
     }
     if (!equal(existing, entry.recipe.base)) throw Error('ZIP recipe original checksum mismatch: ' + entry.path);
@@ -119,7 +130,7 @@ try {
     await fs.copyFile(source, target);
     if (!equal(await identity(target), entry)) throw Error('Applied asset checksum mismatch: ' + entry.path);
   }
-  console.log(`Applied ${prepared.length} verified reviewed public assets; ${reused} reconstructed assets already match.`);
+  console.log(`Applied ${prepared.length} verified reviewed public assets; ${reused} reconstructed assets already match; ${superseded} replaced by a newer release asset.`);
 } finally {
   // Only the absolute temporary folder created by this process is removed.
   const resolved = path.resolve(temporary);
