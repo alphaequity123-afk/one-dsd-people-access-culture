@@ -626,9 +626,13 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   }
 
   // Draft: fixture composition by default; generative pilot only when bound and callable.
-  const binding = resolveBinding(ctx.agent);
+  const binding = resolveBinding(ctx.agent, { fallback: true });
+  // Without a written answer, quoted passages come straight from the library copy Ask keeps briefly,
+  // so each one is checked against the current publication first. A changed or withdrawn page is left out.
+  const composeSources = !binding.generative && programRelated && sources.length ? await stillPublished(sources, scope) : sources;
+  if (composeSources !== sources) answerSources = composeSources;
   let draft = programRelated
-    ? compose(primary, question, sources, questions, briefLink, path, context)
+    ? compose(primary, question, composeSources, questions, briefLink, path, context)
     : {
         shortAnswer: "We could not put together an answer just now. Please try again in a moment. Your question does not have to match anything in the program.",
         whyItMatters: "Ask can help with general questions as well as program work when its answer service is available.",
@@ -998,6 +1002,20 @@ function matchBrief(question: string, docs: Doc[]) {
 type Draft = { shortAnswer: string; whyItMatters: string };
 
 /** Deterministic, corpus-grounded composition (fixture binding). */
+/** Keeps a source only if its page, as held briefly, is still published unchanged at the same address. */
+async function stillPublished(sources: Citation[], scope: Parameters<typeof currentLibrary>[0]): Promise<Citation[]> {
+  const [heldStaff, heldProgram, current] = await Promise.all([recentStaffDocs(scope), recentProgramResources(scope), currentLibrary(scope)]);
+  const held = new Map([...heldStaff, ...heldProgram.destinations].map(doc => [doc.id, doc]));
+  const fresh = new Map([...current.staff, ...current.program.destinations].map(doc => [doc.id, doc]));
+  const checked = sources.filter(source => {
+    const before = held.get(source.id);
+    if (!before) return true;
+    const now = fresh.get(source.id);
+    return Boolean(now && now.href === source.href && now.text === before.text);
+  });
+  return checked.length === sources.length ? sources : checked;
+}
+
 function compose(intent: AskIntent, question: string, sources: Citation[], questions: EmbedQuestion[] | undefined, briefLink: { label: string; href: string } | undefined, path: GraduationPath | undefined, context: ProductContextId): Draft {
   const decisionRecordSource = /\bdecision record\b/i.test(question) ? sources.find(source => source.id === "ja-operational-equity-canvas" && source.citeable) : undefined;
   const top = decisionRecordSource ?? sources.find((s) => s.citeable);

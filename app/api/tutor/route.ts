@@ -26,7 +26,7 @@ export async function GET() {
 }
 
 async function generate(input: { system: string; user: string; traceId: string }): Promise<TutorReply | null> {
-  const binding = resolveBinding(getAgent("ask_concierge"));
+  const binding = resolveBinding(getAgent("ask_concierge"), { fallback: true });
   if (!binding.generative) return null;
   const out = await binding.adapter.complete(
     { model_id: binding.model.model_id, system: input.system, user: input.user, schema: TutorReplySchema, maxTokens: 700, timeoutMs: 25_000, trace_id: input.traceId },

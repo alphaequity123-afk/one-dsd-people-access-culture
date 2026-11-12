@@ -140,7 +140,12 @@ export type Binding = { model: ModelRecord; adapter: ProviderAdapter; generative
  * Resolve the model binding for an agent. Prefers a callable generative pilot when the
  * flag is on and a credential exists; otherwise the agent's primary (fixture) binding.
  */
-export function resolveBinding(agent: AgentDefinition): Binding {
+/**
+ * `fallback` lets a request use the next connected reasoning service when the preferred one has
+ * no credential. Only Ask's staff answers and guided practice pass it: other work, such as the
+ * consultant's document analysis, stays with the service cleared for its data.
+ */
+export function resolveBinding(agent: AgentDefinition, options: { fallback?: boolean } = {}): Binding {
   const primary = getModel(agent.model_setting.primary_model_id);
   if (!primary) throw new Error(`Agent ${agent.agent_id} has no registered primary model`);
 
@@ -155,7 +160,7 @@ export function resolveBinding(agent: AgentDefinition): Binding {
     reasonCode = "pilot_model_not_allowed";
     // The preferred service first; if it has no credential, the next connected one.
     // The choice is made once per request. A failed request is reported, not retried elsewhere.
-    for (const candidate of candidateModels(agent)) {
+    for (const candidate of candidateModels(agent, options.fallback === true)) {
       const adapter = PROVIDERS[candidate.provider_id];
       if (isCallableInProduction(candidate, flagEnabled) && credentialPresent(candidate.provider_id) && adapter.generative) {
         return { model: candidate, adapter, generative: true, reason: `generative pilot flag on; ${candidate.provider_id} callable; credential present`, reasonCode: "generative_pilot" };
@@ -170,12 +175,14 @@ export function resolveBinding(agent: AgentDefinition): Binding {
  * Reasoning services in the order they are tried: the preferred one, then OpenAI, Claude,
  * and OpenRouter. Only services the agent is allowed to use are listed, each provider once.
  */
-function candidateModels(agent: AgentDefinition): ModelRecord[] {
+function candidateModels(agent: AgentDefinition, fallback: boolean): ModelRecord[] {
   const preferred = candidatePilotModel(agent);
   if (!preferred) return [];
+  if (!fallback) return [preferred];
   const allowed = (id: string) => { const model = getModel(id); return model && model.allowed_agent_ids.includes(agent.agent_id) ? [model] : []; };
   const viaOpenRouter: ModelRecord = { ...preferred, model_id: "mdl_openrouter_ask", provider_id: "openrouter",
-    provider_model_ref: process.env.PAC_OPENROUTER_MODEL?.trim() || "openai/gpt-4.1", display_name_internal: "OpenRouter synthesis" };
+    provider_model_ref: process.env.PAC_OPENROUTER_MODEL?.trim() || "openai/gpt-4.1", display_name_internal: "OpenRouter synthesis",
+    region_policy: "OpenRouter routes the request to the named model's provider.", retention_notes: "OpenRouter and the routed provider apply their own retention terms; staff public corpus only." };
   const ordered = [preferred, ...allowed(STAFF_GENERATION_MODEL_ID), ...allowed("mdl_claude_staff_primary"), viaOpenRouter];
   return ordered.filter((model, index) => ordered.findIndex(other => other.provider_id === model.provider_id) === index);
 }

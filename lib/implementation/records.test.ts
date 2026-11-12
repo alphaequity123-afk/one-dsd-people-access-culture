@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { FIELDS_FOR, REFLECTION_KINDS, emptyRecord, loadBook, lookBackDue, recordText, recordWordDocument, validRecord } from "./records";
+import { FIELDS_FOR, REFLECTION_KINDS, emptyRecord, loadBook, localDate, lookBackDue, recordText, recordWordDocument, validRecord } from "./records";
 
 describe("personal records", () => {
   const now = new Date("2026-11-09T12:00:00Z");
@@ -71,3 +71,10 @@ describe("looking back when the date arrives", () => {
   });
 });
 
+describe("dates in the person's own time zone", () => {
+  it("uses the local calendar date late in the evening", () => {
+    const evening = new Date(2026, 10, 18, 23, 30);
+    expect(localDate(evening)).toBe("2026-11-18");
+    expect(emptyRecord("reflection", "r2", new Date(2026, 10, 11, 23, 30)).fields.reviewDate).toBe("2026-11-18");
+  });
+});

@@ -214,11 +214,14 @@ function refusePii(fieldClass: string): SafetyResult {
 }
 
 const OWN_WORKPLACE_CONCERN = /\b(retaliat\w*|harass\w*|discriminat\w*|bull(?:y|ied|ying)|hostile|treated unfairly|unfair treatment|complaint|grievance)\b/i;
+// The workplace wording is for a concern at work; a question about someone the person serves keeps the general message.
+const WORKPLACE_ROLE = /\b(co-?workers?|colleagues?|supervisors?|managers?|boss|director|employees?|staff members?|team ?mates?|my team|at work|workplace|my job)\b/i;
+const SERVED_PERSON = /\b(clients?|patients?|participants?|recipients?|residents?|consumers?|members?|applicants?|famil(?:y|ies)|guardians?|case)\b/i;
 
 /** The same privacy stop, worded for someone describing a concern of their own. Nothing is sent or kept. */
 function refuseSpecificPerson(text: string): SafetyResult {
   const fieldClass = "Case, medical, disability, complaint, eligibility, or personnel details about a specific person";
-  if (!OWN_WORKPLACE_CONCERN.test(text)) return refusePii(fieldClass);
+  if (!OWN_WORKPLACE_CONCERN.test(text) || !WORKPLACE_ROLE.test(text) || SERVED_PERSON.test(text)) return refusePii(fieldClass);
   return {
     ok: false,
     code: "pii_detected",

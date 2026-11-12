@@ -26,6 +26,7 @@ import {
   type StaffContentSource,
   type StaffProgramScope,
 } from "./staff-publications";
+import { publicationChanged } from "./publication-events";
 
 type Row = Record<string, unknown>;
 
@@ -379,5 +380,7 @@ export async function applyPageCopyAction<TSurface extends PageBlockSurface>(
   } = {},
 ): Promise<PageBlockEditingState<TSurface extends "home" ? HomePageCopy : FooterCopy>> {
   if (!options.store && !pageCopyEditingAvailable()) throw new Error("Page wording editing is not connected.");
-  return (options.store ?? runtimeStore()).mutate(surface, options.scope ?? staffProgramScope(), action);
+  const state = await (options.store ?? runtimeStore()).mutate(surface, options.scope ?? staffProgramScope(), action);
+  publicationChanged();
+  return state;
 }

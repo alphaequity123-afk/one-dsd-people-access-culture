@@ -57,6 +57,11 @@ const REVIEW_AFTER_DAYS: Record<RecordKind, number> = { "action-plan": 30, "deci
 const LOOK_BACK_FIELD: Partial<Record<RecordKind, string>> = { "action-plan": "happened", reflection: "lookBack" };
 
 /** True when the record's look-back date has arrived and nothing has been written about it yet. `today` is a YYYY-MM-DD date. */
+/** A calendar date in the person's own time zone, as YYYY-MM-DD. */
+export function localDate(date: Date = new Date()): string {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
 export function lookBackDue(record: LocalRecord, today: string): boolean {
   const field = LOOK_BACK_FIELD[record.kind];
   const date = record.fields.reviewDate;
@@ -81,7 +86,8 @@ export function validRecord(value: unknown, kind?: RecordKind): value is LocalRe
 export function emptyRecord(kind: RecordKind, id: string, now: Date, prefill: Record<string, string> = {}): LocalRecord {
   const fields: Record<string, string> = {};
   for (const field of FIELDS_FOR[kind]) fields[field.key] = "";
-  const review = new Date(now.getTime() + REVIEW_AFTER_DAYS[kind] * 86400000).toISOString().slice(0, 10);
+  const later = new Date(now.getFullYear(), now.getMonth(), now.getDate() + REVIEW_AFTER_DAYS[kind]);
+  const review = localDate(later);
   fields.reviewDate = review;
   for (const [key, text] of Object.entries(prefill)) if (key in fields) fields[key] = text.slice(0, MAX_FIELD);
   const stamp = now.toISOString();

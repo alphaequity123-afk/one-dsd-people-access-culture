@@ -2,6 +2,7 @@ import "server-only";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { indexedProgramResources } from "./program-resources";
 import { indexedStaffDocs } from "./staff-search";
+import { onPublicationChange } from "@/lib/content/publication-events";
 
 /**
  * The library Ask searches, kept in memory for a short time so each question does not
@@ -117,3 +118,6 @@ export function forgetAskLibrary(): void {
   staff.clear();
   program.clear();
 }
+
+// A save on this server makes the next question read the library again.
+onPublicationChange(forgetAskLibrary);

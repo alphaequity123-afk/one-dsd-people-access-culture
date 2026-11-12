@@ -58,6 +58,13 @@ describe("an answer that is still arriving", () => {
       expect(plain.slice(0, length).length - shown.length).toBeLessThanOrEqual(2);
     }
   });
+  it("keeps arithmetic signs, a number sign, absolute values and inline code as written", () => {
+    expect(plainAnswerText("Base hours: 30\n+ 8\n= 38\n* 2 = 76")).toBe("Base hours: 30\n+ 8\n= 38\n* 2 = 76");
+    expect(plainAnswerText("# of staff trained: 40\n|a - b|")).toBe("# of staff trained: 40\n|a - b|");
+    expect(plainAnswerText("Use `_id_` and `**kwargs**` here.")).toBe("Use _id_ and **kwargs** here.");
+    expect(plainAnswerText("* Captions\n+ Interpreters")).toBe("- Captions\n- Interpreters");
+    expect(plainAnswerText("Text \uE0000\uE001 stays")).toBe("Text 0 stays");
+  });
   it("keeps code inside a fence exactly as written", () => {
     const answer = "Here is the script.\n\n```python\n# add the totals\ntotal = a * b * c\n> not a quote\n```\n\n> A quoted line\n> 5 people waited";
     expect(plainAnswerText(answer)).toBe("Here is the script.\n\n# add the totals\ntotal = a * b * c\n> not a quote\n\nA quoted line\n> 5 people waited");

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
-import { FIELDS_FOR, RECORD_LABEL, emptyRecord, fileName, loadBook, lookBackDue, recordText, recordWordDocument, type LocalRecord, type RecordBook, type RecordKind } from "@/lib/implementation/records";
+import { FIELDS_FOR, RECORD_LABEL, emptyRecord, fileName, loadBook, localDate, lookBackDue, recordText, recordWordDocument, type LocalRecord, type RecordBook, type RecordKind } from "@/lib/implementation/records";
 
 const STORAGE: Record<RecordKind, string> = { "action-plan": BROWSER_STORAGE_KEYS.actionPlans, "decision-record": BROWSER_STORAGE_KEYS.decisionRecords, reflection: BROWSER_STORAGE_KEYS.reflections };
 
@@ -45,7 +45,7 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
 
   const active = useMemo(() => book.records.find(record => record.id === activeId) ?? null, [book, activeId]);
   // Anything whose look-back date has come, so a person who returns is shown what is ready to revisit. Nothing is sent as a reminder.
-  const due = useMemo(() => { const today = new Date().toISOString().slice(0, 10); return book.records.filter(record => lookBackDue(record, today)); }, [book]);
+  const due = useMemo(() => { const today = localDate(); return book.records.filter(record => lookBackDue(record, today)); }, [book]);
 
   function commit(next: RecordBook, message: string) {
     setBook(next);

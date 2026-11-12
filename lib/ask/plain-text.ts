@@ -25,20 +25,30 @@ export function plainAnswerText(value: string): string {
   return out.join("\n").replace(/\n{3,}/g, "\n\n");
 }
 
+// Private-use characters mark inline code while the other rules run, so code is never altered.
+const CODE_OPEN = "\uE000";
+const CODE_CLOSE = "\uE001";
+
 function plainProse(value: string): string {
+  // Inline code keeps its text exactly; it is set aside first and put back last.
+  const codes: string[] = [];
+  const text = value.replace(/[\uE000\uE001]/g, "")
+    .replace(/`+([^`\n]+?)`+/g, (_match, code: string) => `${CODE_OPEN}${codes.push(code) - 1}${CODE_CLOSE}`);
+  return cleanMarkup(text).replace(/\uE000(\d+)\uE001/g, (_match, index: string) => codes[Number(index)] ?? "");
+}
+
+function cleanMarkup(value: string): string {
   return value
-    // Inline code keeps its text.
-    .replace(/`+([^`\n]+?)`+/g, "$1")
     // Images and links become their label followed by the address.
     .replace(/!?\[([^\]\n]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*)(?:\s+"[^"\n]*")?\)/g, "$1 ($2)")
     // Headings and block quotes lose their markers. A line such as "> 5 people" keeps its sign.
-    .replace(/^[ \t]{0,3}#{1,6}(?:[ \t]+(.*?))?(?:[ \t]+#+)?[ \t]*$/gm, (_line, heading?: string) => heading ?? "")
+    .replace(/^[ \t]{0,3}#{1,6}(?:[ \t]+(.*?))?(?:[ \t]+#+)?[ \t]*$/gm, (line, heading?: string) => (heading && /^(?:of\b|\d)/i.test(heading) ? line : heading ?? ""))
     .replace(/^[ \t]{0,3}>(?![ \t]*[\d=])[ \t]?/gm, "")
     // Rules and table divider rows are dropped.
     .replace(/^[ \t]*([-*_])(?:[ \t]*\1){2,}[ \t]*(?:\n|$)/gm, "")
     .replace(/^[ \t]*\|?[ \t]*:?-{2,}:?[ \t]*(?:\|[ \t]*:?-{2,}:?[ \t]*)+\|?[ \t]*(?:\n|$)/gm, "")
     // A table row becomes its cells, separated by semicolons.
-    .replace(/^[ \t]*\|(.+)\|[ \t]*$/gm, (_row, cells: string) => cells.split("|").map(cell => cell.trim()).filter(Boolean).join("; "))
+    .replace(/^[ \t]*\|(.+)\|[ \t]*$/gm, (row, cells: string) => (cells.includes("|") ? cells.split("|").map(cell => cell.trim()).filter(Boolean).join("; ") : row))
     // Bold, strikethrough and emphasis keep their words. Arithmetic and names such as 2**3, 3 * 4 and snake_case are untouched.
     .replace(/(?<![\w*])\*\*(?=\S)([^*\n]+?)(?<=\S)\*\*(?![\w*])/g, "$1")
     // Two underscores mark bold only around a phrase; a name such as __init__ is left alone.
@@ -46,8 +56,8 @@ function plainProse(value: string): string {
     .replace(/~~(?=\S)([^~\n]+?)(?<=\S)~~/g, "$1")
     .replace(/(?<![\w*])\*(?=[^\s*])([^*\n]+?)(?<=[^\s*])\*(?![\w*])/g, "$1")
     .replace(/(?<![\w_])_(?=[^\s_])([^_\n]+?)(?<=[^\s_])_(?![\w_])/g, "$1")
-    // List items start with a hyphen.
-    .replace(/^([ \t]*)[*+][ \t]+/gm, "$1- ");
+    // List items start with a hyphen. A plus or times sign before a number or a sign stays as written.
+    .replace(/^([ \t]*)[*+][ \t]+(?![\d.(=+\-*/×÷])/gm, "$1- ");
 }
 
 /**
