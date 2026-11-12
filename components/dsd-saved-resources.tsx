@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { canSaveResource, changeSavedResource, readSavedResources, SAVED_RESOURCES_EVENT, SAVED_RESOURCES_KEY } from "@/lib/client/dsd-saved-resources";
 import { mayStudyPage, resourceStudyHref } from "@/lib/client/resource-study-links";
 import { useProgramContext } from "./program-context";
+import { ResourceCreationLink } from "./resource-creation-link";
 
 function useSavedResources() {
   const [saved, setSaved] = useState(readSavedResources);
@@ -20,22 +21,25 @@ function useSavedResources() {
   return { ...saved, notice, setNotice, refresh };
 }
 
-export function ResourceActions() {
+export function ResourceActions({ canCreate = false }: { canCreate?: boolean } = {}) {
   const path = usePathname();
   const { context } = useProgramContext();
   const canSave = canSaveResource(path);
-  const checkStudy = mayStudyPage(path);
-  return canSave || checkStudy
-    ? <ResourceActionsForPath key={`${context}:${path}`} path={path} canSave={canSave} checkStudy={checkStudy} />
+  const canStudy = mayStudyPage(path);
+  const canCreateFromWater = canCreate && /^\/learn\/water-we-swim-in(?:\/module-[1-6])?\/?$/.test(path);
+  return canSave || canStudy || canCreateFromWater
+    ? <ResourceActionsForPath key={`${context}:${path}`} path={path} canSave={canSave} canStudy={canStudy} canCreate={canCreate} checkSource={canStudy || canCreateFromWater} />
     : null;
 }
 
-function ResourceActionsForPath({ path, canSave, checkStudy }: { path: string; canSave: boolean; checkStudy: boolean }) {
+function ResourceActionsForPath({ path, canSave, canStudy, canCreate, checkSource }: {
+  path: string; canSave: boolean; canStudy: boolean; canCreate: boolean; checkSource: boolean;
+}) {
   const saved = useSavedResources();
   const current = saved.items.find(item => item.href === path);
   const [studyAvailable, setStudyAvailable] = useState(false);
   useEffect(() => {
-    if (!checkStudy) return;
+    if (!checkSource) return;
     const controller = new AbortController();
     const query = new URLSearchParams({ resourcePath: path });
     fetch(`/api/learn/resources?${query}`, { cache: "no-store", signal: controller.signal })
@@ -45,7 +49,7 @@ function ResourceActionsForPath({ path, canSave, checkStudy }: { path: string; c
       })
       .catch(() => undefined);
     return () => controller.abort();
-  }, [path, checkStudy]);
+  }, [path, checkSource]);
 
   function toggle() {
     const title = document.querySelector("main h1")?.textContent?.trim() || document.title.split("|")[0].trim();
@@ -55,7 +59,8 @@ function ResourceActionsForPath({ path, canSave, checkStudy }: { path: string; c
   return <aside className="dsd-shell dsd-resource-actions" aria-label="Resource actions">
     {canSave ? <button type="button" aria-pressed={Boolean(current)} onClick={toggle}>{current ? "Saved to My work" : "Save resource"}</button> : null}
     {current ? <Link href="/my-work/plan">Use it in a practice plan</Link> : null}
-    {studyAvailable ? <Link href={resourceStudyHref(path)} prefetch={false} className="inline-flex min-h-11 items-center underline underline-offset-4">Study this resource</Link> : null}
+    {canStudy && studyAvailable ? <Link href={resourceStudyHref(path)} prefetch={false} className="inline-flex min-h-11 items-center underline underline-offset-4">Study this resource</Link> : null}
+    {canCreate && studyAvailable ? <ResourceCreationLink resourcePath={path} className="inline-flex min-h-11 items-center font-semibold underline underline-offset-4" /> : null}
     {saved.notice ? <p role="status">{saved.notice}</p> : null}
   </aside>;
 }

@@ -6,6 +6,7 @@ node_modules/
 !.env.example
 *.tsbuildinfo
 cloud/voice/.private-voice/
+cloud/voice/.private-overview-voices/
 cloud/voice/__pycache__/
 
 # Generated complete offline CLAS collection

@@ -9,6 +9,7 @@ import { generativeStatus } from "@/lib/intelligence/providers";
 import { getPolicy } from "@/lib/intelligence/policy";
 import { ParticipationNotice } from "@/components/participation-notice";
 import { ConsultantSignIn } from "@/components/consultant-sign-in";
+import { ResourceCreationLink } from "@/components/resource-creation-link";
 import { ConsultantContextNotices } from "@/components/consultant-context-notices";
 import { headers } from "next/headers";
 import { isLoopbackHost, offlineConnectorsFile } from "@/lib/offline/mode";
@@ -94,6 +95,7 @@ export default async function ConsultantLayout({ children }: { children: React.R
             <Link href="/consultant/resources" className="font-bold text-white">
               Resource review
             </Link>
+            <ResourceCreationLink className="font-bold text-white" />
             <Link href="/consultant/ask-records" className="font-bold text-white">ASK response records</Link>
             {offlineConnectorsFile() && isLoopbackHost((await headers()).get("host")) ? <Link href="/consultant/connectors" className="font-bold text-white">Connected services</Link> : null}
             <Link href="/consultant/audit" className="font-bold text-white">

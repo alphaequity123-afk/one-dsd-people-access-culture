@@ -110,7 +110,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <PublishedProgramHeader />
           </ChromeGate>
           <main id="main" tabIndex={-1} className="flex-1">
-            <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><DsdResourceActions /></ChromeGate>
+            <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><DsdResourceActions canCreate={owner} /></ChromeGate>
             <InternalPage>{children}</InternalPage>
             <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><CourseMediaForPage /></ChromeGate>
             <OpenDetailsForHash />
