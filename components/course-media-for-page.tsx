@@ -58,7 +58,7 @@ export function CourseMediaSlot({ itemId }: { itemId?: string } = {}) {
  * Renders nothing by itself; the button appears only when a video is published for the page.
  */
 export function CourseMediaJumpSlot({ label }: { label?: string } = {}) {
-  return <span data-course-media-jump={label ?? ""} style={{ display: "contents" }} />;
+  return <span className="media-quick-links" data-course-media-jump={label ?? ""} style={{ display: "contents" }} />;
 }
 
 /**

@@ -3,7 +3,7 @@ import base64
 import json
 
 
-def create_app(render):
+def create_app(render, *, voice="host1", profile=None, verified_packets=False):
     from fastapi import FastAPI, Request
     from fastapi.responses import JSONResponse, StreamingResponse
     from starlette.concurrency import run_in_threadpool
@@ -11,7 +11,10 @@ def create_app(render):
 
     @web.get("/health")
     async def health():
-        return {"ready": True, "voice": "host1", "reference_verified": True}
+        result = {"ready": True, "voice": voice, "reference_verified": True}
+        if profile:
+            result["profile"] = profile
+        return result
 
     @web.post("/speech")
     async def speech(request: Request):
@@ -37,7 +40,10 @@ def create_app(render):
                     if audio is None:
                         yield "data: " + json.dumps({"done": True}) + "\n\n"
                         return
-                    yield "data: " + json.dumps({"audio": base64.b64encode(audio).decode("ascii"), "sequence": sequence}) + "\n\n"
+                    packet = {"audio": base64.b64encode(audio).decode("ascii"), "sequence": sequence}
+                    if verified_packets:
+                        packet["verified"] = True
+                    yield "data: " + json.dumps(packet) + "\n\n"
                     sequence += 1
             except Exception:
                 yield "data: " + json.dumps({"error": "The approved voice could not finish. Your written answer is still available."}) + "\n\n"
