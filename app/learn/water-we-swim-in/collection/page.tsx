@@ -58,9 +58,9 @@ export default async function WaterCollectionPage() {
         <p className={styles.lede}>Everyday routines can be hard to see when they feel familiar. Explore how culture shapes those routines, then use what you learn to make one public service easier to use.</p>
         <p>Six self-paced steps. Set aside about 6 to 8 hours for the readings, recordings and practice. You can work through one step at a time.</p>
         <div className={styles.actions}>
-          <a className={styles.primary} href="#step-1">Start with step 1</a>
+          <a className="btn btn--primary" href="#step-1">Start with step 1</a>
           <CourseMediaJumpSlot label="Watch the curriculum overview" />
-          {studyReady ? <a href="#resource-learning-assistant">Study this collection with Gemini</a> : null}
+          {studyReady ? <a href="#resource-learning-assistant">Ask about this collection</a> : null}
           {otherBriefs.length || referralPages.length ? <a href="#collection-briefs">Browse the culture briefs</a> : null}
           {owner && studyReady ? <ResourceCreationLink resourcePath={WATER_COLLECTION_HREF} /> : null}
         </div>
@@ -87,7 +87,7 @@ export default async function WaterCollectionPage() {
     <section className={styles.case} aria-labelledby="collection-case">
       <h2 id="collection-case">The North Crossing appointment notice</h2>
       <p>{WATER_COLLECTION_CASE}</p>
-      <GeffenReadAloud text={WATER_COLLECTION_CASE} label="North Crossing case" />
+      <GeffenReadAloud text={WATER_COLLECTION_CASE} label="North Crossing appointment notice" />
     </section>
 
     {studyReady ? <ResourceLearningAssistant resourcePath={WATER_COLLECTION_HREF} prompts={WATER_COLLECTION_PROMPTS} /> : null}

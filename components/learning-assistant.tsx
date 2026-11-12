@@ -106,7 +106,7 @@ export function LearningAssistant({
     .map((reading, index) => [reading.id, { ...reading, number: index + 1 }]));
 
   return <aside id={panelId} className={styles.panel} aria-labelledby={`${id}-heading`}>
-    <h2 id={`${id}-heading`}>Gemini learning assistant</h2>
+    <h2 id={`${id}-heading`}>Ask about the readings</h2>
     <p>{introduction}</p>
     <form onSubmit={ask}>
       <fieldset disabled={busy} className={styles.controls}>
@@ -136,13 +136,13 @@ export function LearningAssistant({
         <p id={`${id}-privacy`} className={styles.privacy}>{privacyNotice}</p>
       </fieldset>
       <div className={styles.actions}>
-        <button type="submit" className={styles.submit} disabled={busy || !question.trim()}>Ask Gemini</button>
+        <button type="submit" className={styles.submit} disabled={busy || !question.trim()}>Ask</button>
         {busy && <button type="button" onClick={stop}>Cancel</button>}
       </div>
     </form>
     <p className={styles.status} role="status">{message}</p>
     {result && <div className={styles.answer}>
-      <h3 ref={answerHeading} tabIndex={-1}>Gemini response</h3>
+      <h3 ref={answerHeading} tabIndex={-1}>Answer</h3>
       {result.paragraphs.map((paragraph, index) => <p key={index}>
         {paragraph.text}
         {Array.from(new Set(paragraph.sourceIds)).map(sourceId => {
@@ -151,7 +151,7 @@ export function LearningAssistant({
         })}
       </p>)}
       {result.grounded && readings.size > 0 && <>
-        <GeffenReadAloud text={result.paragraphs.map(paragraph => paragraph.text).join("\n\n")} label="Gemini response" />
+        <GeffenReadAloud text={result.paragraphs.map(paragraph => paragraph.text).join("\n\n")} label="Answer" />
         <h4>{sourcesHeading}</h4>
         <ol>
           {Array.from(readings.values()).map(reading => <li key={reading.id}><a href={reading.href}>{reading.title}</a></li>)}

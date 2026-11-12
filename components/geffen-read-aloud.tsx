@@ -70,7 +70,7 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
     const controller = new AbortController();
     activeRequest.current = controller;
     setBusy(true);
-    setStatus("Preparing GEFen audio. This may take a minute.");
+    setStatus("Getting the audio ready.");
 
     async function playChunk(encoded: string, player: HTMLAudioElement) {
       if (controller.signal.aborted) return;
@@ -82,21 +82,21 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
           finish = () => resolve();
           controller.signal.addEventListener("abort", finish, { once: true });
           player.onended = finish;
-          player.onerror = () => reject(new Error("GEFen audio could not play. Please try again."));
+          player.onerror = () => reject(new Error("The audio could not play. Please try again."));
           player.onplaying = () => {
             if (controller.signal.aborted) return;
             setNeedsPlay(false);
-            setStatus("GEFen is reading.");
+            setStatus("Playing audio.");
           };
           player.src = url;
           void player.play().catch(error => {
             if (controller.signal.aborted) return;
             if (error instanceof DOMException && error.name === "NotAllowedError") {
               setNeedsPlay(true);
-              setStatus("GEFen audio is ready. Select Play prepared audio.");
+              setStatus("The audio is ready. Select Play.");
               return;
             }
-            reject(new Error("GEFen audio could not play. Please try again."));
+            reject(new Error("The audio could not play. Please try again."));
           });
         });
       } finally {
@@ -120,7 +120,7 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
           body: JSON.stringify({ text: part }),
           signal: controller.signal,
         });
-        if (!response.ok || !response.body) throw new Error("GEFen read-aloud is unavailable right now.");
+        if (!response.ok || !response.body) throw new Error("Audio is unavailable right now.");
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let pending = "";
@@ -134,25 +134,25 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
             const block = await reader.read();
             if (block.done) break;
             pending += decoder.decode(block.value, { stream: true });
-            if (pending.length > 12_000_000) throw new Error("The voice service returned too much data.");
+            if (pending.length > 12_000_000) throw new Error("The audio could not play. Please try again.");
             const lines = pending.split("\n");
             pending = lines.pop() ?? "";
             for (const line of lines) {
               if (!line.trim()) continue;
               const packet = JSON.parse(line) as { audio?: string; done?: boolean; error?: string };
-              if (packet.error) throw new Error("GEFen audio could not finish. Please try again.");
+              if (packet.error) throw new Error("The audio stopped early. Please try again.");
               if (packet.done) completed = true;
               if (packet.audio) {
                 const encoded = packet.audio;
                 receivedAudio = true;
                 playback = playback.then(() => playChunk(encoded, audio)).catch(error => {
-                  playbackError = error instanceof Error ? error : new Error("GEFen audio could not play.");
+                  playbackError = error instanceof Error ? error : new Error("The audio could not play.");
                   controller.abort();
                 });
               }
             }
           }
-          if (!completed || !receivedAudio) throw new Error("GEFen audio ended early. Please try again.");
+          if (!completed || !receivedAudio) throw new Error("The audio stopped early. Please try again.");
           await playback;
         } catch (error) {
           throw playbackError ?? error;
@@ -161,10 +161,10 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
         }
         if (playbackError) throw playbackError;
       }
-      if (!controller.signal.aborted) setStatus("GEFen finished reading.");
+      if (!controller.signal.aborted) setStatus("Audio finished.");
     } catch (error) {
       if (activeRequest.current === controller) {
-        setStatus(error instanceof Error ? error.message : "GEFen read-aloud is unavailable right now.");
+        setStatus(error instanceof Error && error.message.startsWith("The audio ") ? error.message : "Audio is unavailable right now.");
       }
     } finally {
       controller.abort();
@@ -179,15 +179,15 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
 
   return <div className="wc-read-aloud flex flex-wrap items-center gap-2">
     <audio ref={player} hidden preload="none" />
-    <button type="button" onClick={() => busy ? stop("Read-aloud stopped.") : void read()} aria-label={`${busy ? "Stop reading" : "Listen with GEFen"}: ${label}`}>
-      {busy ? "Stop reading" : "Listen with GEFen"}
+    <button type="button" onClick={() => busy ? stop("Audio stopped.") : void read()} aria-label={`${busy ? "Stop" : "Listen"}: ${label}`}>
+      {busy ? "Stop" : "Listen"}
     </button>
     {needsPlay && <button type="button" onClick={() => {
       const request = activeRequest.current;
       void player.current?.play().catch(() => {
-        if (activeRequest.current === request) stop("GEFen audio could not play. Please try again.");
+        if (activeRequest.current === request) stop("The audio could not play. Please try again.");
       });
-    }}>Play prepared audio</button>}
+    }}>Play</button>}
     <span role="status">{status}</span>
   </div>;
 }

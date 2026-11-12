@@ -45,8 +45,8 @@ export function ResourceLearningAssistant({ resourcePath, prompts }: {
       ? prompts ? "Explore how the readings and toolkit inform the North Crossing case. Try a starting question or ask your own."
         : "Ask about the selected resource or try one of the starting questions."
       : "Ask across the program’s published resources or try one of the starting questions."}
-    privacyNotice="Your question and relevant published excerpts are sent to Google Gemini. Use fictional or anonymized examples and leave out names, case details, and other private information."
-    workingMessage="Gemini is working with the sources…"
+    privacyNotice="Use fictional examples or remove identifying details. Your question and relevant passages are shared with an outside service to prepare the answer."
+    workingMessage="Checking the readings…"
     modes={modes.map(({ value, label, library, scoped }) => ({ value, label, prompt: prompts?.[value] ?? (resourcePath ? scoped : library) }))}
     citationAllowed={localStudyHref}
     sourceLabel="Source"

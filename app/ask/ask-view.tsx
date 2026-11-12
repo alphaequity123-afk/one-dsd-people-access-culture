@@ -36,7 +36,7 @@ export async function AskView({ searchParams, part }: { searchParams: AskSearchP
   return (
     <EditableSurfaceRegion surface={surface} className={styles.page}>
       <PageIntro kicker={stringValue(copy, "introKicker")} title={all && !enabled ? "All common questions" : stringValue(copy, "introTitle")} lede={stringValue(copy, "introLede")}>
-        {process.env.GEMINI_API_KEY?.trim() ? <p className="mt-4"><Link href="/ask/study" className="font-semibold underline underline-offset-4">Study published resources with Gemini</Link></p> : null}
+        {process.env.GEMINI_API_KEY?.trim() ? <p className="mt-4"><Link href="/ask/study" className="font-semibold underline underline-offset-4">Study published resources</Link></p> : null}
       </PageIntro>
       <div className={`wrap space-y-6 ${styles.body}`}>
         {enabled ? <>
