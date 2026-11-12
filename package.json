@@ -38,7 +38,8 @@
     "db:provision-runtime": "node --env-file-if-exists=.env.local scripts/db/provision-runtime-role.mjs",
     "verify": "npm run verify:ci",
     "verify:ci": "npm run verify:environment && npm run verify:sources && npm run typecheck && npm run lint && npm run test && npm run build",
-    "build:clas-collection": "node scripts/build-clas-collection.mjs"
+    "build:clas-collection": "node scripts/build-clas-collection.mjs",
+    "prebuild": "node scripts/prepare-github-assets.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.123.0",
