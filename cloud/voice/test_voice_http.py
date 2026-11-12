@@ -19,6 +19,20 @@ class VoiceHTTPTests(unittest.TestCase):
         self.assertEqual([p["sequence"] for p in packets[:-1]], [0, 1])
         self.assertEqual(packets[-1], {"done": True})
         self.assertEqual(calls, ["A test answer."])
+        self.assertNotIn("verified", packets[0])
+
+    def test_geffen_reports_its_locked_profile_and_verified_packets(self):
+        def render(_):
+            yield b"verified-wave"
+
+        client = TestClient(create_app(render, voice="geffen", profile="approved-geffen-read-aloud-v1", verified_packets=True))
+        self.assertEqual(client.get("/health").json(), {
+            "ready": True, "voice": "geffen", "profile": "approved-geffen-read-aloud-v1", "reference_verified": True,
+        })
+        response = client.post("/speech", json={"text": "Public practice answer."})
+        packets = [json.loads(line[6:]) for line in response.text.splitlines() if line.startswith("data: ")]
+        self.assertIs(packets[0]["verified"], True)
+        self.assertEqual(packets[-1], {"done": True})
 
     def test_bad_requests_never_generate(self):
         def render(_):
