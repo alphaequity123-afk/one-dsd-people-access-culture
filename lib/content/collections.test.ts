@@ -103,7 +103,8 @@ describe("the plan's structure", () => {
     for (const collection of STAFF_COLLECTIONS) expect(staffCollection(collection.id)).toBe(collection);
     expect(leadingDoor("paths")).toBeUndefined();
     expect(leadingDoor("how-this-works")).toBeUndefined();
-    for (const page of ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx"]) expect(existsSync(path.join(root, page)), page).toBe(true);
+    for (const page of ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/leading/journey/page.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx"]) expect(existsSync(path.join(root, page)), page).toBe(true);
+    expect(leadingDoor("journey")).toBeUndefined();
   });
   it("gives every question whom to ask and places all 13 scenarios", () => {
     for (const door of LEADING_DOORS) {
@@ -165,7 +166,7 @@ describe("navigation", () => {
 });
 
 describe("the promises on these pages", () => {
-  const pageFiles = ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx", "components/leading-path-place.tsx", "components/collection-item-link.tsx"];
+  const pageFiles = ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/leading/journey/page.tsx", "components/leading-start-chooser.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx", "components/leading-path-place.tsx", "components/collection-item-link.tsx"];
   it("uses no sign-in or roster code", () => {
     for (const file of pageFiles) expect(readFileSync(path.join(root, file), "utf8"), file).not.toMatch(/@\/lib\/auth|fetch\(|editingModeFromCookies/);
   });
