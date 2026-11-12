@@ -3,44 +3,12 @@ import { isSameOriginMutation } from "@/lib/auth/mutation";
 import { readBoundedJson } from "@/lib/http/request";
 import { paused } from "@/lib/intelligence/orchestrator";
 import { externalResearchGate, profilingRefuse } from "@/lib/intelligence/safety";
-import { requestLimitSubjectHash } from "@/lib/security/rate-limit";
+import { reserveLearningQuestion } from "@/lib/intelligence/learning/gemini-learning-limit";
 import { learningModes, waterLearningAnswer, WaterLearningError, type WaterLearningMode } from "@/lib/intelligence/learning/water-learning-assistant";
 import { waterUnitScope } from "@/lib/intelligence/learning/water-reading-sources";
 
 export const runtime = "nodejs";
 export const maxDuration = 40;
-
-type Bucket = { count: number; expires: number };
-const clients = new Map<string, Bucket>();
-let minute: Bucket | undefined;
-let day: Bucket | undefined;
-
-function currentBucket(bucket: Bucket | undefined, now: number, windowMs: number): Bucket {
-  return bucket && now < bucket.expires ? bucket : { count: 0, expires: now + windowMs };
-}
-
-function reserveQuestion(subject: string): number {
-  const now = Date.now();
-  minute = currentBucket(minute, now, 60_000);
-  day = currentBucket(day, now, 86_400_000);
-  for (const [key, bucket] of clients) {
-    if (bucket.expires <= now) clients.delete(key);
-  }
-  const client = currentBucket(clients.get(subject), now, 600_000);
-  // Counters are local to the service process and contain only HMACs. Service
-  // limits protect the upstream quota even when requests come from many IPs.
-  const blockedUntil = Math.max(
-    minute.count >= 8 ? minute.expires : 0,
-    day.count >= 120 ? day.expires : 0,
-    client.count >= 12 ? client.expires : 0,
-  );
-  if (blockedUntil > now) return Math.ceil((blockedUntil - now) / 1000);
-  minute.count += 1;
-  day.count += 1;
-  client.count += 1;
-  clients.set(subject, client);
-  return 0;
-}
 
 function reply(body: unknown, status = 200, retryAfter?: number) {
   const headers = new Headers({ "cache-control": "no-store", "x-content-type-options": "nosniff" });
@@ -73,7 +41,7 @@ export async function POST(request: NextRequest) {
   if (!apiKey) return reply({ error: unavailable }, 503);
   try {
     if (await paused()) return reply({ error: unavailable }, 503);
-    const retryAfter = reserveQuestion(requestLimitSubjectHash(request, "water-learning"));
+    const retryAfter = reserveLearningQuestion(request);
     if (retryAfter) return reply({ error: "The learning assistant has reached its request limit. Please try again later." }, 429, retryAfter);
     const signal = AbortSignal.any([request.signal, AbortSignal.timeout(34_000)]);
     const result = await waterLearningAnswer({ question: question.trim(), unit, mode: mode as WaterLearningMode }, apiKey, signal);

@@ -18,6 +18,10 @@ const RECORDING_TRANSCRIPTS: Partial<Record<string, RecordingTranscript>> = {
   "equity-toolkit": toolkitTranscript,
   "anti-racism-public-service": antiRacismTranscript,
 };
+
+export function publishedRecordingTranscript(id: string): RecordingTranscript | undefined {
+  return RECORDING_TRANSCRIPTS[id];
+}
 export const MAX_PODCAST_READING_CHARACTERS = 64_000;
 const TRANSCRIPT_LABEL = "An unofficial transcript of this recording. Please check the recording itself before quoting or relying on exact wording.";
 
