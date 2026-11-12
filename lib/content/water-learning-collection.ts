@@ -2,7 +2,7 @@ export {
   WATER_RESOURCE_COLLECTION_PATH as WATER_COLLECTION_HREF,
   WATER_RESOURCE_COLLECTION_TITLE as WATER_COLLECTION_TITLE,
 } from "@/lib/learning/water-resource-collection";
-export const WATER_COLLECTION_CASE = "North Crossing, a fictional public-service office, sends this appointment notice: “Your intake appointment is set for Tuesday at 10. Contact us if you need to change it.” The team wants people to know what to do next, choose a way to get help, and reschedule without giving up their place. Across six steps, you will revise the notice and the process behind it.";
+export const WATER_COLLECTION_CASE = "North Crossing, a fictional public-service office, sends this appointment notice: “Your intake appointment is set for Tuesday at 10. Contact us if you need to change it.” You’ll revise the notice and the steps people take to get help or reschedule without losing their place.";
 
 export const WATER_COLLECTION_OUTCOMES = [
   "Recognize cultural assumptions in everyday work.",

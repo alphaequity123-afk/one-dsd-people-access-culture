@@ -8,7 +8,7 @@
 .collection ol{list-style:decimal}
 .collection ul{list-style:disc}
 .collection li+li{margin-top:.42rem}
-.collection a{color:#165870;text-decoration:underline;text-underline-offset:.19em}
+.collection a:not(:global(.btn)){color:#165870;text-decoration:underline;text-underline-offset:.19em}
 .collection :is(a,button,summary):focus-visible{outline:3px solid #19798e;outline-offset:3px}
 .hero{display:grid;align-items:center;gap:clamp(1rem,4vw,2.5rem);padding:clamp(1.1rem,4vw,2.65rem);border-radius:.55rem;background:#eaf3f5}
 .hero figure{margin:0}
@@ -18,22 +18,23 @@
 .actions{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1.2rem;margin-top:1rem}
 .actions a{display:inline-flex;align-items:center;min-height:44px;font-weight:650}
 .orientation{display:grid;gap:1.2rem;margin:2rem 0}
-.orientation section,.case{padding:clamp(.9rem,3vw,1.45rem);border:1px solid #ccdde2;border-radius:.4rem}
-.case{margin:1.5rem 0;border-inline-start:.35rem solid #19798e;background:#f3f8fa}
+.case{padding:clamp(.9rem,3vw,1.45rem);border:1px solid #ccdde2;border-radius:.4rem}
+.case{margin:1.5rem 0;background:#f3f8fa}
 .path{margin:2rem 0;padding:1rem 1.1rem;border-block:1px solid #ccdde2}
 .path ol{display:grid;gap:.6rem 2rem;margin:0}
 .path li{padding-inline-start:.15rem}
 .path a{font-weight:650}
 .path span{display:block;color:#466374;font-size:.9rem}
-.step{margin:2.5rem 0;scroll-margin-top:1rem;padding-top:1.1rem;border-top:.25rem solid #19798e}
+.step{margin:2.5rem 0;scroll-margin-top:1rem;padding-top:1.1rem;border-top:1px solid #ccdde2}
 .timing,.support{color:#466374;font-size:.95rem}
-.podcast{margin:1rem 0;border:1px solid #ccdde2;border-radius:.4rem;padding:.25rem .8rem}
-.podcast summary{min-height:44px;padding-block:.6rem;cursor:pointer;font-weight:650}
+.disclosure,.podcast{margin:1rem 0;border-block:1px solid #ccdde2}
+.stepIdea{max-width:68ch}
+.disclosure summary,.podcast summary{min-height:44px;padding-block:.6rem;cursor:pointer;font-weight:650}
 .stepBody{display:grid;gap:1.2rem;margin-top:1.2rem}
 .stepBody>section:first-child{padding:1rem;border-radius:.4rem;background:#f3f8fa}
 .output{padding:.85rem;border-inline-start:.25rem solid #19798e;background:#f3f8fa}
 .output strong{display:block}
-.briefs{margin:2.5rem 0;padding:clamp(.9rem,3vw,1.45rem);border:1px solid #ccdde2;border-radius:.4rem;scroll-margin-top:1rem}
+.briefs{margin:2.5rem 0;padding-top:1.25rem;border-top:1px solid #ccdde2;scroll-margin-top:1rem}
 .briefs summary{min-height:44px;padding-block:.6rem;cursor:pointer;font-weight:650}
 .briefs details ul{columns:2 15rem;column-gap:2rem}
 .briefs li{break-inside:avoid}
