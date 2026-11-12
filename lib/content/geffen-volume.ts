@@ -1,4 +1,5 @@
 import 'server-only';
+import { createHash } from 'node:crypto';
 import { constants } from 'node:fs';
 import { lstat, open, realpath } from 'node:fs/promises';
 import path from 'node:path';
@@ -62,17 +63,34 @@ export function cleanIndex(input: unknown, course: string): { format: string; re
 
 // A valid course with no recordings yet answers 204, so pages can check quietly; invalid names stay 404.
 const none = () => new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } });
-export async function serveGeffenIndex(request: Request, name: string, root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
-  if (!name.endsWith('.json') || !COURSE.test(name.slice(0, -5))) return missing();
+async function readGeffenIndex(name: string, root: string | undefined) {
+  if (!name.endsWith('.json') || !COURSE.test(name.slice(0, -5))) return null;
   const opened = await safeOpen(root, ['courses', name]);
-  if (!opened) return none();
+  if (!opened) return undefined;
   try {
-    if (opened.info.size > MAX_INDEX_BYTES) return missing();
-    const index = cleanIndex(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));
-    if (!index) return missing();
-    const body = JSON.stringify(index);
-    return new Response(request.method === 'HEAD' ? null : body, { headers: { 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': String(Buffer.byteLength(body)), 'Cache-Control': 'public, no-cache', 'X-Content-Type-Options': 'nosniff' } });
-  } catch { return missing(); } finally { await opened.file.close(); }
+    if (opened.info.size > MAX_INDEX_BYTES) return null;
+    return cleanIndex(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));
+  } catch { return null; } finally { await opened.file.close(); }
+}
+
+export async function serveGeffenIndex(request: Request, name: string, root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
+  const index = await readGeffenIndex(name, root);
+  if (index === undefined) return none();
+  if (!index) return missing();
+  const body = JSON.stringify(index);
+  return new Response(request.method === 'HEAD' ? null : body, { headers: { 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': String(Buffer.byteLength(body)), 'Cache-Control': 'public, no-cache', 'X-Content-Type-Options': 'nosniff' } });
+}
+
+/** Only use a publisher-verified recording of the currently displayed text. */
+export async function getGeffenPassageRecordings(course: string, passages: readonly { id: string; text: string }[], root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
+  const index = await readGeffenIndex(`${course}.json`, root);
+  const byId = new Map(index?.recordings.map(recording => [recording.id, recording]));
+  const sources = new Map<string, string>();
+  for (const { id, text } of passages) {
+    const recording = byId.get(id);
+    if (recording?.sourceTextHash === createHash('sha256').update(text, 'utf8').digest('hex')) sources.set(id, recording.src);
+  }
+  return sources;
 }
 
 function byteRange(value: string, size: number): [number, number] | null {
