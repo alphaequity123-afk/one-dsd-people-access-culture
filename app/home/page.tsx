@@ -43,8 +43,10 @@ export default async function HomePage() {
     <div className="w"><div className="mb-8"><WaterCollectionFeature /></div></div>
 
     <section className="start" id="start-here" aria-labelledby="finder-title"><div className="w">
-      <div className="start-words"><h2 id="finder-title">Find a resource for your work</h2>
-      <p className="lead">Choose what you&apos;re doing and go straight to the right place.</p></div>
+      <div className="start-words">
+        <h2 id="finder-title">Find a resource for your work</h2>
+        <p className="lead"><Link href="/start#new-to-dsd">Get started as a new staff member</Link></p>
+      </div>
       <HomeTaskFinder />
     </div></section>
 

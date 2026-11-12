@@ -107,8 +107,8 @@ body.dsd-calm .od .start .w{display:flex;flex-wrap:wrap;align-items:center;gap:1
 body.dsd-calm .od .start h2{font-size:1.15rem;margin:0}
 body.dsd-calm .od .start p.lead{font-size:.88rem;margin:2px 0 0;line-height:1.4}
 body.dsd-calm .od .start .builder{flex:1 1 520px;max-width:none;padding:8px 12px;gap:8px 10px;font-size:.98rem}
-body.dsd-calm .od .start .builder select{padding:5px 8px;font-size:.95rem}
-body.dsd-calm .od .start .builder button{padding:6px 16px;font-size:.95rem}
+body.dsd-calm .od .start .builder select{min-height:44px;padding:5px 8px;font-size:.95rem}
+body.dsd-calm .od .start .builder button{min-height:44px;padding:6px 16px;font-size:.95rem}
 body.dsd-calm .od .blk.home-ask-band{padding:28px 0 32px}
 @media (min-width:900px){body.dsd-calm .od .start .builder{flex-wrap:nowrap}body.dsd-calm .od .start .builder select{flex:1 1 auto;min-width:0}body.dsd-calm .od .start .builder button{flex:none;white-space:nowrap}}
 

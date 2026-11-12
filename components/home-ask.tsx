@@ -19,17 +19,21 @@ export function HomeAsk({ copy, researchAvailable }: { copy: EditableSurfaceValu
   const [question, setQuestion] = useState("");
   const [error, setError] = useState("");
   const [open, setOpen] = useState(false);
-  const panel = useRef<HTMLDivElement>(null);
+  const panel = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLElement | null>(null);
   const id = useId();
 
-  function show() {
-    opener.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  function show(trigger: HTMLElement | null) {
+    opener.current = trigger ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
     setOpen(true);
   }
   function close() {
+    panel.current?.close();
+  }
+  function restoreFocus() {
     setOpen(false);
-    opener.current?.focus();
+    opener.current?.focus({ preventScroll: true });
+    opener.current = null;
   }
   function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -38,14 +42,16 @@ export function HomeAsk({ copy, researchAvailable }: { copy: EditableSurfaceValu
     // The panel's conversation picks the question up and asks it once.
     writeStored("session", BROWSER_STORAGE_KEYS.askHomeQuestion, text);
     setQuestion("");
-    show();
+    const submitter = (event.nativeEvent as SubmitEvent).submitter;
+    show(submitter instanceof HTMLElement ? submitter : null);
   }
-  // While the panel is open the page behind it does not scroll, and the panel takes the keyboard.
   useEffect(() => {
-    if (!open) return;
+    const dialog = panel.current;
+    if (!open || !dialog) return;
     const previous = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    panel.current?.querySelector<HTMLElement>("textarea")?.focus();
+    if (!dialog.open) dialog.showModal();
+    dialog.querySelector("textarea")?.focus();
     return () => { document.body.style.overflow = previous; };
   }, [open]);
 
@@ -63,14 +69,14 @@ export function HomeAsk({ copy, researchAvailable }: { copy: EditableSurfaceValu
         invalid={Boolean(error)}
       >
         <AskVoice mode="dictate" busy={false} onDictation={setQuestion} onQuestion={async () => undefined} />
-        <button type="button" className="ask-icon" title="Talk with Ask" onClick={show}><WaveIcon /><span className="sr-only">Talk with Ask</span></button>
+        <button type="button" className="ask-icon" title="Talk with Ask" aria-haspopup="dialog" onClick={event => show(event.currentTarget)}><WaveIcon /><span className="sr-only">Talk with Ask</span></button>
       </AskBox>
       {error ? <p id={`${id}-error`} role="alert" className="ask-box-small error">{error}</p> : null}
       <p id={`${id}-note`} className="ask-box-small">Please leave out names, case details and anything private. Your question, and your recording when you speak, go to outside services to be answered. No audio is saved on this site.</p>
     </form>
-    {open ? <div className="ask-panel-layer" onKeyDown={event => { if (event.key === "Escape") { event.stopPropagation(); close(); } }}>
-      <div className="ask-panel-shade" onClick={close} />
-      <div ref={panel} className="ask-panel" role="dialog" aria-modal="true" aria-labelledby={`${id}-panel-title`}>
+    {open ? <dialog ref={panel} className="ask-panel-layer" aria-labelledby={`${id}-panel-title`} onClose={restoreFocus}>
+      <div className="ask-panel-shade" onClick={close} aria-hidden="true" />
+      <div className="ask-panel">
         <div className="ask-panel-head">
           <h2 id={`${id}-panel-title`} className="ask-panel-title">Ask</h2>
           <button type="button" className="ask-panel-close" onClick={close}>Close</button>
@@ -79,6 +85,6 @@ export function HomeAsk({ copy, researchAvailable }: { copy: EditableSurfaceValu
           <AskClient compact researchAvailable={researchAvailable} intakeEnabled={false} copy={copy} />
         </div>
       </div>
-    </div> : null}
+    </dialog> : null}
   </>;
 }

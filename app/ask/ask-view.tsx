@@ -22,7 +22,17 @@ export async function prepareAsk() {
   const surface = await prepareEditableSurface("ask.page");
   const enabled = cloneAgentsEnabled();
   const research = enabled ? await getResearchPolicy() : null;
-  const copy = enabled ? { ...surface.values, introKicker: "Your conversation", introTitle: "Ask", introLede: "Ask a question in your own words, whether it concerns your work, a resource, or an idea you are still shaping. Ask draws on the program's own material first and checks current public sources when a question calls for them. You can follow up, take the conversation in a new direction, or start fresh whenever you like.", answerButton: "Ask", questionLabel: "What would you like to ask?", questionHelp: "Write it the way you would put it to a colleague. There is no need to choose a topic or a search setting.", questionExample: "Ask a question or explore an idea…", howDsdPreviewSupport: "When a decision belongs to a person, Ask points you to the person or office responsible for it.", moreDsdPreviewBody: "Find the right person shows you who is responsible when a decision calls for someone's judgment.", privacyNotice: "Please use general or made-up examples, and leave out names, assessment scores, case details, medical or personnel information, and anything else confidential. So that Ask can respond, your question and the recent conversation are sent to outside answer and research services. This browser keeps the conversation for this session. The site’s operational records are designed to record use without retaining your conversation; outside services have their own data-handling terms." } : surface.values;
+  const copy = enabled ? {
+    ...surface.values,
+    introKicker: "",
+    introTitle: "Ask",
+    introLede: "Ask about your work or find a program resource.",
+    answerButton: "Ask",
+    questionLabel: "Your question",
+    questionHelp: "Use your own words.",
+    questionExample: "Type your question",
+    privacyNotice: "Your question and recent messages are shared with outside services to prepare the answer. Your browser keeps the conversation for this session. Site records are designed to track use without storing the conversation.",
+  } : surface.values;
   return { surface, enabled, research, copy };
 }
 
@@ -36,7 +46,7 @@ export async function AskView({ searchParams, part }: { searchParams: AskSearchP
   return (
     <EditableSurfaceRegion surface={surface} className={styles.page}>
       <PageIntro kicker={stringValue(copy, "introKicker")} title={all && !enabled ? "All common questions" : stringValue(copy, "introTitle")} lede={stringValue(copy, "introLede")}>
-        {process.env.GEMINI_API_KEY?.trim() ? <p className="mt-4"><Link href="/ask/study" className="font-semibold underline underline-offset-4">Study published resources</Link></p> : null}
+        {process.env.GEMINI_API_KEY?.trim() ? <p className="mt-4"><Link href="/ask/study" className="font-semibold underline underline-offset-4">Study the readings</Link></p> : null}
       </PageIntro>
       <div className={`wrap space-y-6 ${styles.body}`}>
         {enabled ? <>

@@ -80,14 +80,15 @@ export default async function CulturalIntelligencePage() {
         <Hub2More id="explore" headingId="explore-title" title="Explore">
           {ownCulture.length > 0 && <>
             <h3 className="mt-4 text-xl font-semibold">Begin with your own culture</h3>
-            <p className="mt-2 max-w-4xl leading-7">Everyone works from inside a culture, including people whose background is treated as the default.</p>
             <p className="mt-2 max-w-4xl leading-7">{text("exploreOwnCulture")}</p>
             <ul className="mt-3 space-y-2">{ownCulture.map(community => <li key={community.id}><Link className="underline" href={community.href}>{community.title}</Link></li>)}</ul>
-            <h3 className="mt-6 text-xl font-semibold">Communities you serve</h3>
           </>}
-          <p className="mt-4 max-w-4xl leading-7">Choose a community brief when it helps you understand context. You do not need to read every brief. Ask people directly what matters to them and what support works for them. Disability is part of every community, so look for it in each brief.</p>
-          <p className="mt-3 max-w-4xl leading-7">The existing Tribal and Native community pages include guidance about Tribal authority and the appropriate relationships for this work. Follow that guidance and the applicable processes.</p>
-          {communities.length ? <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{communities.map(community => <li key={community.id}><Link className="underline" href={community.href}>{community.title}</Link>{community.standingTribalDeference && <span> (we defer to the Office of Indian Affairs and the DHS offices that handle Tribal relations and consultation)</span>}</li>)}</ul> : <p className="mt-4">Community briefs are not available here right now.</p>}
+          <h3 className="mt-6 text-xl font-semibold">Communities you serve</h3>
+          {communities.length ? <>
+            <p className="mt-2 max-w-4xl leading-7">Use a brief to prepare questions about what matters to people and what support works for them.</p>
+            <p className="mt-3"><Link className="font-semibold underline" href="/minnesota-communities">Find a community brief</Link></p>
+            {communities.some(community => community.standingTribalDeference) ? <p className="mt-3 max-w-4xl leading-7">For Tribal consultation, follow the applicable Tribal processes and contact the Office of Indian Affairs or the DHS office responsible for Tribal relations.</p> : null}
+          </> : <p className="mt-2">Community briefs are unavailable right now.</p>}
           <h3 className="mt-6 text-xl font-semibold">Community Outreach and Engagement</h3>
           <p className="mt-2 max-w-4xl leading-7">Plan an engagement, find the organizations connected with the division, and see where to reach people. <Link className="font-semibold underline" href="/community-outreach">Open Community Outreach and Engagement</Link></p>
         </Hub2More>
