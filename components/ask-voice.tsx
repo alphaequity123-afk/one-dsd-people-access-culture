@@ -44,7 +44,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
   const [available, setAvailable] = useState<VoiceAvailability>({ transcription: false, speech: false, paused: false });
   const [health, setHealth] = useState<VoiceHealth>("checking");
   const [error, setError] = useState("");
-  // Browser recognition can write down speech; only the approved Geffen service reads answers.
+  // Browser recognition can write down speech; only the approved voice service reads answers.
   const [browserVoice, setBrowserVoice] = useState({ transcription: false });
   // Spoken answers can be muted; the choice is remembered in this browser only.
   const [muted, setMuted] = useState(false);
@@ -169,7 +169,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     if (mutedRef.current) return;
     const playbackToken = playbackGeneration.current;
     const cancelled = () => token !== generation.current || playbackToken !== playbackGeneration.current || mutedRef.current;
-    if (!available.speech) throw new Error("Geffen is not connected right now. The written answer is still here; please try listening again shortly.");
+    if (!available.speech) throw new Error("The approved read-aloud voice is not connected right now. The written answer is still here; please try listening again shortly.");
     setStatus("Preparing the answer…");
     if (timing) timing.speechStartedAt = performance.now();
     const controller = new AbortController(); abort.current = controller;

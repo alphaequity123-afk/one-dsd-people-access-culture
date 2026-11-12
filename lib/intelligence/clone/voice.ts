@@ -17,5 +17,5 @@ export function reserveVoice(kind: "speech" | "transcribe", units: number, now =
 }
 
 export function voiceStatus() {
-  return { transcription: Boolean(process.env.OPENAI_API_KEY?.trim()), speech: voiceWorkerReady(), voice: "Geffen" };
+  return { transcription: Boolean(process.env.OPENAI_API_KEY?.trim()), speech: voiceWorkerReady(), voice: "Approved program voice" };
 }

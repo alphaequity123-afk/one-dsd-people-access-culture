@@ -1,4 +1,4 @@
-"""Outbound-only ASK speech worker. The approved reference never leaves this computer."""
+"""Outbound-only ASK speech worker. Approved voice references stay on this computer."""
 import argparse, hashlib, io, json, os, re, time, sys, queue, threading
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -6,6 +6,7 @@ from urllib.request import Request, urlopen
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--profile', required=True)
+    parser.add_argument('--voice', choices=['geffen', 'host1', 'host2'], default='geffen')
     parser.add_argument('--model', required=True)
     parser.add_argument('--origin')
     parser.add_argument('--key-file')
@@ -15,10 +16,19 @@ def main():
     parser.add_argument('--engine-path')
     args = parser.parse_args()
     profile = json.loads(Path(args.profile).read_text(encoding='utf-8'))
-    voice = profile['geffen']
-    ref = Path(voice['referenceWav'])
-    if not profile.get('locked') or hashlib.sha256(ref.read_bytes()).hexdigest() != voice['referenceWavSha256']:
-        raise RuntimeError('Geffen reference does not match the approved voice profile')
+    if not profile.get('locked'): raise RuntimeError('A locked, approved voice profile is required')
+    if args.voice == 'geffen':
+        voice = profile['geffen']
+        ref = Path(voice['referenceWav'])
+        if hashlib.sha256(ref.read_bytes()).hexdigest() != voice['referenceWavSha256']:
+            raise RuntimeError('Reference does not match the approved voice profile')
+    else:
+        voice = profile['voices'][args.voice]
+        for kind in ('identity', 'style'):
+            asset = voice[kind]['asset']
+            expected = profile['assets'][args.voice + kind.title()]
+            if asset != expected['path'] or hashlib.sha256((Path(args.profile).parent / asset).read_bytes()).hexdigest() != expected['sha256']:
+                raise RuntimeError('Reference does not match the approved voice profile')
     os.environ['HF_HUB_OFFLINE'] = '1'
     os.environ['TRANSFORMERS_OFFLINE'] = '1'
     import torch, soundfile as sf, numpy as np
@@ -41,11 +51,17 @@ def main():
         model.predictor_graph.top_k = 20
         model.predictor_graph.top_p = .8
         model.predictor_graph.temperature = .7
-        prompt = model.model.create_voice_clone_prompt(ref_audio=str(ref), ref_text=voice['referenceTranscript'], x_vector_only_mode=False)
     else:
         model = Qwen3TTSModel.from_pretrained(args.model, device_map='cuda:0', dtype=torch.bfloat16, attn_implementation='sdpa', local_files_only=True)
-        prompt = model.create_voice_clone_prompt(ref_audio=str(ref), ref_text=voice['referenceTranscript'], x_vector_only_mode=False)
-    print('Approved local Geffen profile loaded', flush=True)
+    prompt_model = model.model if args.engine_path else model
+    if args.voice == 'geffen':
+        prompt = prompt_model.create_voice_clone_prompt(ref_audio=str(ref), ref_text=voice['referenceTranscript'], x_vector_only_mode=False)
+    else:
+        from qwen_tts.inference.qwen3_tts_model import VoiceClonePromptItem
+        identity = prompt_model.create_voice_clone_prompt(ref_audio=str(Path(args.profile).parent / voice['identity']['asset']), ref_text=voice['identity']['transcript'], x_vector_only_mode=False)[0]
+        style = prompt_model.create_voice_clone_prompt(ref_audio=str(Path(args.profile).parent / voice['style']['asset']), ref_text=voice['style']['transcript'], x_vector_only_mode=False)[0]
+        prompt = [VoiceClonePromptItem(ref_code=style.ref_code, ref_spk_embedding=identity.ref_spk_embedding, x_vector_only_mode=False, icl_mode=True, ref_text=voice['style']['transcript'])]
+    print('Approved local voice profile loaded: ' + args.voice, flush=True)
 
     def render_chunks(text):
         # Short chunks preserve the complete answer while bounding each generation.
@@ -145,7 +161,7 @@ def main():
                 time.sleep(2)
     for target in endpoints:
         threading.Thread(target=listen, args=(target,), daemon=True).start()
-    print('Geffen worker ready', flush=True)
+    print('Approved voice worker ready: ' + args.voice, flush=True)
     while True:
         completed = None
         try:
