@@ -58,6 +58,10 @@ describe("an answer that is still arriving", () => {
       expect(plain.slice(0, length).length - shown.length).toBeLessThanOrEqual(2);
     }
   });
+  it("keeps code inside a fence exactly as written", () => {
+    const answer = "Here is the script.\n\n```python\n# add the totals\ntotal = a * b * c\n> not a quote\n```\n\n> A quoted line\n> 5 people waited";
+    expect(plainAnswerText(answer)).toBe("Here is the script.\n\n# add the totals\ntotal = a * b * c\n> not a quote\n\nA quoted line\n> 5 people waited");
+  });
   it("handles nothing at all", () => {
     expect(plainLiveText("")).toBe("");
     expect(plainLiveText(undefined as unknown as string)).toBe("");

@@ -4,16 +4,36 @@
  * It is safe to apply to an answer that is still arriving.
  */
 export function plainAnswerText(value: string): string {
-  return (value ?? "")
-    // Code fences go; the code inside stays on its own lines.
-    .replace(/^[ \t]*(?:`{3,}|~{3,})[^\n`]*(?:\n|$)/gm, "")
+  // Code fences go; the code inside stays exactly as written, so a comment line or a prompt sign is kept.
+  const out: string[] = [];
+  let prose: string[] = [];
+  let inCode = false;
+  const flush = () => {
+    if (prose.length) out.push(plainProse(prose.join("\n")));
+    prose = [];
+  };
+  for (const line of (value ?? "").split("\n")) {
+    if (/^[ \t]*(?:`{3,}|~{3,})/.test(line)) {
+      flush();
+      inCode = !inCode;
+      continue;
+    }
+    if (inCode) out.push(line);
+    else prose.push(line);
+  }
+  flush();
+  return out.join("\n").replace(/\n{3,}/g, "\n\n");
+}
+
+function plainProse(value: string): string {
+  return value
     // Inline code keeps its text.
     .replace(/`+([^`\n]+?)`+/g, "$1")
     // Images and links become their label followed by the address.
     .replace(/!?\[([^\]\n]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*)(?:\s+"[^"\n]*")?\)/g, "$1 ($2)")
-    // Headings and block quotes lose their markers.
+    // Headings and block quotes lose their markers. A line such as "> 5 people" keeps its sign.
     .replace(/^[ \t]{0,3}#{1,6}(?:[ \t]+(.*?))?(?:[ \t]+#+)?[ \t]*$/gm, (_line, heading?: string) => heading ?? "")
-    .replace(/^[ \t]{0,3}>[ \t]?/gm, "")
+    .replace(/^[ \t]{0,3}>(?![ \t]*[\d=])[ \t]?/gm, "")
     // Rules and table divider rows are dropped.
     .replace(/^[ \t]*([-*_])(?:[ \t]*\1){2,}[ \t]*(?:\n|$)/gm, "")
     .replace(/^[ \t]*\|?[ \t]*:?-{2,}:?[ \t]*(?:\|[ \t]*:?-{2,}:?[ \t]*)+\|?[ \t]*(?:\n|$)/gm, "")
@@ -27,8 +47,7 @@ export function plainAnswerText(value: string): string {
     .replace(/(?<![\w*])\*(?=[^\s*])([^*\n]+?)(?<=[^\s*])\*(?![\w*])/g, "$1")
     .replace(/(?<![\w_])_(?=[^\s_])([^_\n]+?)(?<=[^\s_])_(?![\w_])/g, "$1")
     // List items start with a hyphen.
-    .replace(/^([ \t]*)[*+][ \t]+/gm, "$1- ")
-    .replace(/\n{3,}/g, "\n\n");
+    .replace(/^([ \t]*)[*+][ \t]+/gm, "$1- ");
 }
 
 /**

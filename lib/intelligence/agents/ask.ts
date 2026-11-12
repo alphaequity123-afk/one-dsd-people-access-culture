@@ -226,7 +226,7 @@ function languageAccessResource(doc: Doc): boolean {
 
 const ROUTINE = /\b(where (?:is|can i find)|checklist|job aid|template|link to)\b/i;
 // Native American communities and Tribal Nations. The program defers on this work to the offices responsible for it.
-const TRIBAL_SUBJECT = /\b(Tribal|Tribes?|Indigenous|Native American|American Indian|Alaska Native|First Nations|Native (?:people|person|communit\w*|nations?|Minnesotans?|famil\w*|children|youth|elders?|staff|clients?)|Anishinaabe|Ojibwe|Chippewa|Lakota|(?<!North |South )Dakota|Ho-Chunk|Red Lake|White Earth|Bois Forte|Fond du Lac|Grand Portage|Leech Lake|Mille Lacs|Upper Sioux|Lower Sioux|Prairie Island|Shakopee Mdewakanton)\b/i;
+const TRIBAL_SUBJECT = /\b(Tribal|(?:Minnesota|sovereign|federally recognized|Native|Indian|the 11|eleven) Tribes?|Tribes? (?:and bands|in Minnesota|of Minnesota)|Indigenous|Native American|American Indian|Alaska Native|First Nations|Native (?:people|person|communit\w*|nations?|Minnesotans?|famil\w*|children|youth|elders?|staff|clients?)|Anishinaabe|Ojibwe|Chippewa(?! County)|Lakota|(?<!North |South )Dakota(?! County)|ICWA|Indian Child Welfare|reservations?|Ho-Chunk|Red Lake(?! County| Falls)|White Earth|Bois Forte|Fond du Lac|Grand Portage|Leech Lake|Mille Lacs(?! County| Lake)|Upper Sioux|Lower Sioux|Prairie Island|Shakopee Mdewakanton)\b/i;
 const TRIBAL_WORK = /\b(meet\w*|engag\w*|outreach|consult\w*|work(?:ing|s)? with|serv(?:e|es|ing)|visit\w*|partner\w*|plan(?:ning|s)?|prepar\w*|invit\w*|listening sessions?|survey\w*|interview\w*|recruit\w*|hir(?:e|ing)|train(?:ing)? (?:for|on|about)|present\w*|assess\w*|cases?|clients?|famil(?:y|ies)|children|data|land|contract\w*|grant\w*|program design|polic(?:y|ies) (?:change|decision))\b/i;
 const TRIBAL_REFERRAL_FIRST = "For work with Native American communities or Tribal Nations, the Office of Indian Policy or the responsible Tribal liaison comes first. One DSD refers this work to them and does not speak for a Tribal Nation or replace consultation.";
 const TRIBAL_WRITING_RULE = "\nThis question is about work with Native American communities or Tribal Nations. This program defers on that work to the Office of Indian Policy and the responsible Tribal liaison, and they come first: say so plainly at the start. Say only what the supplied program sources say, and name those sources. Do not add your own description of Native cultures, family roles, history, beliefs or practices, and do not write an engagement plan of your own. Access practices that apply to any meeting may be offered as general practices.";
@@ -234,7 +234,20 @@ const HIGH_STAKES = /\b(procurement|contract|vendor|RFP|budget|statute|rule chan
 const PERSONNEL_MATTER = /\b(retaliat\w*|disciplin\w*|harass\w*|grievance|hostile work|wrongful|my (supervisor|manager|boss)\b.*\b(unfair|because i|punish\w*|targeting|singled)|written up|performance review\b.*\b(unfair|because))\b/i;
 const WANTS_HUMAN = /\b(i (?:want|need|would like) (?:to )?(?:talk|speak|meet)|request a consult|book (?:a |an )?(?:time|meeting|consult\w*|appointment) with|schedule (?:a |an )?(?:time|meeting|consult\w*|appointment) with|meet with|human advice|someone to review)\b/i;
 // Work that carries its own material: arithmetic, or wording help with text the person supplies.
-const SELF_CONTAINED = /^\s*(?:(?:what(?:'s| is)|calculate|compute|how much is)\s+)?[-+(]?\s*\d[\d\s.,]*(?:(?:[-+*/x×÷^%()]|plus|minus|times|multiplied by|divided by|over|percent of|squared|cubed)\s*[\d\s.,()]*)+\??\s*$|^\s*(?:please\s+)?(?:rewrite|rephrase|reword|proofread|shorten|simplify|tighten|translate|summari[sz]e|fix the (?:grammar|spelling|wording)|check the (?:grammar|spelling)|make (?:this|it) (?:shorter|clearer|plainer|warmer|friendlier|more (?:formal|concise|direct)))\b[\s\S]{20,}/i;
+const WORDING_HELP = /^\s*(?:please\s+)?(?:rewrite|rephrase|reword|proofread|shorten|simplify|tighten|translate|summari[sz]e|fix the (?:grammar|spelling|wording)|check the (?:grammar|spelling)|make (?:this|it) (?:shorter|clearer|plainer|warmer|friendlier|more (?:formal|concise|direct)))\b/i;
+const ARITHMETIC_WORDS = /\b(?:plus|minus|times|multiplied by|divided by|over|percent of|squared|cubed)\b/gi;
+/**
+ * Work that carries its own material: arithmetic, or wording help with text the person supplies
+ * after a colon, on a new line or in quotation marks. Written without nested repetition so that
+ * any question is checked in time proportional to its length.
+ */
+export function selfContainedWork(question: string): boolean {
+  const text = question.trim();
+  if (WORDING_HELP.test(text)) return /(?::|\n|["“‘])[\s\S]{20,}/.test(text);
+  const body = text.replace(/^(?:what(?:'s| is)|calculate|compute|how much is)\s+/i, "").replace(/\?\s*$/, "").replace(ARITHMETIC_WORDS, " + ");
+  if (body.length > 300 || !/^[-+(]?\s*\d/.test(body) || !/^[\d\s.,+\-*/x×÷^%()]+$/i.test(body)) return false;
+  return /\d[\s)]*[-+*/x×÷^%]/i.test(body);
+}
 const CURRENT_INFORMATION = /\b(current|currently|latest|recent|today|this (?:week|month|year)|new (?:law|rule|guidance|research)|updated|as of)\b/i;
 // "What can I try this week?" and "my current team" are about the person's own work, not a request for current facts.
 const OWN_PLANS = /\b((?:(?:can|should|could|might|do|will|must|shall)\s+(?:i|we)|(?:i|we)\s+(?:can|should|could|might|must|will|need to|want to|have to|plan to|hope to|am going to|are going to))\b[^.?!\n]*?)\s*\b(?:today|this (?:week|month|year))\b/gi;
@@ -472,14 +485,14 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // Where the program has some material but not enough, the routing step's reading decides, so nothing is searched needlessly.
   const localEvidence = assessLocalEvidence(question, merged.filter(hit => !/^https?:\/\//.test(hit.href)));
   // A calculation, or help with wording the person has supplied, needs no outside facts, so nothing is searched for it.
-  const selfContained = SELF_CONTAINED.test(question) && !asksForCurrentInformation(question) && !wantsCitation(question);
+  const selfContained = selfContainedWork(question) && !asksForCurrentInformation(question) && !wantsCitation(question);
   const research = (...args: Parameters<typeof governedResearch>) => {
     const began = Date.now();
     reportProgress(sink, { type: "stage", stage: "checking" });
     return governedResearch(...args).finally(() => { took.research = Date.now() - began; });
   };
   const planBegan = Date.now();
-  const researchCertain = cloneAgentsEnabled() && (requestedMode === "current_web" || requestedMode === "deep_research" || (requestedMode === "auto" && (
+  const researchCertain = cloneAgentsEnabled() && (requestedMode === "current_web" || requestedMode === "deep_research" || (requestedMode === "auto" && !tribalWork && (
     (!namedPageHits.length && localEvidence === "absent" && !selfContained) || asksForCurrentInformation(question) || (!namedPageHits.length && wantsCitation(question))
     || /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question))));
   const [jevPlan, requiredResearch] = await Promise.all([
@@ -492,7 +505,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const shouldPrepareResearchAnswer =
     requestedMode === "current_web" ||
     requestedMode === "deep_research" ||
-    (requestedMode === "auto" && ((cloneAgentsEnabled() && (!namedPageHits.length && localEvidence === "potentially_sufficient"
+    (requestedMode === "auto" && !tribalWork && ((cloneAgentsEnabled() && (!namedPageHits.length && localEvidence === "potentially_sufficient"
       ? jevPlan?.evidence === "research"
       : !selfContained && (jevPlan?.evidence !== "sufficient" || localEvidence === "absent"))) || asksForCurrentInformation(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
       /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question)));
@@ -890,7 +903,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   }
   // Operational timing only: how long each part took, in milliseconds. No question or answer text.
   took.total = Date.now() - startedAt;
-  console.info("ask_timing", { traceId: ctx.trace_id, generative, research: publicResearch?.status ?? "none", ...took });
+  console.info("ask_timing", { traceId: ctx.trace_id, generative, ...took, research_ms: took.research, research: publicResearch?.status ?? "none" });
   const pathSuggestion = path ? { id: path.id, title: path.title, why: `This question connects with the "${path.staffLabel}" path. It covers ${path.steps.map((s) => s.title).slice(0, 4).join(", ")} and ends with a review checklist.` } : undefined;
 
   return {

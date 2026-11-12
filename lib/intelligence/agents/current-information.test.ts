@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
-import { asksForCurrentInformation } from "./ask";
+import { asksForCurrentInformation, selfContainedWork } from "./ask";
 
 describe("whether a question asks for current public information", () => {
   it.each([
@@ -20,4 +20,23 @@ describe("whether a question asks for current public information", () => {
     "Our recent reorganization left people unsure who decides. What helps?",
     "How do I plan an accessible meeting?",
   ])("no: %s", question => expect(asksForCurrentInformation(question)).toBe(false));
+});
+
+describe("work that carries its own material", () => {
+  it.each([
+    "what is 12 * (1450 + 3)?",
+    "Calculate 12 * (1450 + (3 * (250 + 75))) - (2 * (600 + (4 * 35)))",
+    "15 percent of 200",
+    "Summarize this: The team met on Tuesday and agreed to three changes to intake.",
+  ])("yes: %s", question => expect(selfContainedWork(question)).toBe(true));
+  it.each([
+    "what is 2024",
+    "Summarize the latest Olmstead plan changes for me",
+    "what is the ADA",
+  ])("no: %s", question => expect(selfContainedWork(question)).toBe(false));
+  it("checks a long run of brackets followed by words quickly", () => {
+    const began = performance.now();
+    expect(selfContainedWork(`what is ${"(1)".repeat(2000)} dollars please`)).toBe(false);
+    expect(performance.now() - began).toBeLessThan(50);
+  });
 });
