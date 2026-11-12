@@ -92,8 +92,8 @@ describe("the plan's structure", () => {
     expect(LEADING_PATHS).toHaveLength(6);
     expect(LEADING_PATHS.map(path => path.slug)).toEqual(["exploring-leadership", "program-leads", "first-year", "experienced", "managers-of-managers", "senior-leaders"]);
     expect(LEADING_DOORS.flatMap(door => door.questions)).toHaveLength(89);
-    expect(LEADING_DOORS.map(door => door.itemCount)).toEqual([20, 9, 38, 29, 17, 100, 109, 23, 20]);
-    expect(STAFF_COLLECTIONS.map(collection => collection.itemCount)).toEqual([26, 71, 60, 51, 139, 65, 109, 66]);
+    expect(LEADING_DOORS.map(door => door.itemCount)).toEqual([20, 9, 39, 29, 17, 100, 112, 25, 24]);
+    expect(STAFF_COLLECTIONS.map(collection => collection.itemCount)).toEqual([26, 71, 60, 51, 139, 65, 113, 69]);
     for (const door of LEADING_DOORS) expect(new Set(doorIds(door)).size, door.slug).toBe(door.itemCount);
     for (const collection of STAFF_COLLECTIONS) expect(new Set(staffCollectionIds(collection)).size, collection.id).toBe(collection.itemCount);
   });

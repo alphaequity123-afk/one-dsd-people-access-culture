@@ -1,8 +1,8 @@
 {
  "generatedFrom": "collections-placement.csv",
  "counts": {
-  "rows": 717,
-  "items": 713,
+  "rows": 727,
+  "items": 723,
   "questions": 89
  },
  "items": {
@@ -1184,6 +1184,56 @@
   },
   "gc-sustaining-the-work": {
    "title": "Sustaining the Work: Secondary Trauma and Staff Well-Being",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-leading-with-purpose": {
+   "title": "Leading With Purpose and Values",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-accountability-public-service": {
+   "title": "Personal Accountability in Public Service",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-leading-without-authority": {
+   "title": "Leading Without Formal Authority",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-systems-thinking": {
+   "title": "Systems Thinking for Human Services Leaders",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-advising-decision-makers": {
+   "title": "Advising the Person Who Decides",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-delegation-and-development": {
+   "title": "Delegating Well and Growing Your Team",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-setting-direction": {
+   "title": "Setting Direction and Priorities With an Equity Lens",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-leading-culture-at-scale": {
+   "title": "Leading Culture Across a Division",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-foresight-and-stewardship": {
+   "title": "Looking Ahead: Foresight and Stewardship",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-knowledge-and-continuity": {
+   "title": "Sharing Knowledge and Learning Across Generations",
    "kind": "course",
    "minutes": 48
   },
@@ -4333,7 +4383,11 @@
     "dc-t64-feedback-across-power-differences",
     "dc-l71-leaders-duties-under-the-respectful-workplace-po",
     "sm-your-own-load",
-    "sm-who-carries-equity-work"
+    "sm-who-carries-equity-work",
+    "gc-leading-with-purpose",
+    "gc-accountability-public-service",
+    "gc-leading-without-authority",
+    "gc-knowledge-and-continuity"
    ],
    "deeper": [
     {
@@ -4531,7 +4585,7 @@
      ]
     }
    ],
-   "itemCount": 109
+   "itemCount": 113
   },
   {
    "id": "policy-data-decisions",
@@ -4547,7 +4601,10 @@
     "dc-l37-setting-equity-measures-and-targets",
     "pi-equitable-oversight-design",
     "dc-l43-meaningful-community-engagement-for-leaders",
-    "dc-t81-interagency-collaboration-basics"
+    "dc-t81-interagency-collaboration-basics",
+    "gc-systems-thinking",
+    "gc-advising-decision-makers",
+    "gc-setting-direction"
    ],
    "deeper": [
     {
@@ -4662,7 +4719,7 @@
      ]
     }
    ],
-   "itemCount": 66
+   "itemCount": 69
   }
  ],
  "doors": [
@@ -4899,9 +4956,10 @@
     }
    ],
    "relatedIds": [
-    "dc-s72-bias-in-everyday-decisions"
+    "dc-s72-bias-in-everyday-decisions",
+    "gc-delegation-and-development"
    ],
-   "itemCount": 38
+   "itemCount": 39
   },
   {
    "slug": "access",
@@ -5452,9 +5510,12 @@
     "dc-l17-employment-first-leading-for-competitive-integra",
     "dc-l18-positive-supports-and-reducing-restrictive-pract",
     "dc-l95-plain-language-as-an-equity-practice",
-    "dc-t88-managing-power-differences-in-partnerships"
+    "dc-t88-managing-power-differences-in-partnerships",
+    "gc-leading-without-authority",
+    "gc-systems-thinking",
+    "gc-advising-decision-makers"
    ],
-   "itemCount": 109
+   "itemCount": 112
   },
   {
    "slug": "keep-going",
@@ -5539,9 +5600,11 @@
     }
    ],
    "relatedIds": [
-    "dc-l93-trauma-informed-leadership"
+    "dc-l93-trauma-informed-leadership",
+    "gc-leading-with-purpose",
+    "gc-accountability-public-service"
    ],
-   "itemCount": 23
+   "itemCount": 25
   },
   {
    "slug": "direction",
@@ -5623,8 +5686,13 @@
      ]
     }
    ],
-   "relatedIds": [],
-   "itemCount": 20
+   "relatedIds": [
+    "gc-setting-direction",
+    "gc-leading-culture-at-scale",
+    "gc-foresight-and-stewardship",
+    "gc-knowledge-and-continuity"
+   ],
+   "itemCount": 24
   }
  ],
  "paths": [
@@ -5644,9 +5712,12 @@
     "intercultural-conflict-styles",
     "div-i10-receiving-feedback",
     "equity-champion-contribution-workflow",
-    "career-mentorship-and-sponsorship"
+    "career-mentorship-and-sponsorship",
+    "gc-leading-with-purpose",
+    "gc-accountability-public-service",
+    "gc-leading-without-authority"
    ],
-   "minutes": 523
+   "minutes": 667
   },
   {
    "slug": "program-leads",
@@ -5664,9 +5735,12 @@
     "outcomes-not-intentions",
     "idi-adaptation",
     "ipe-27-ethical-decision-making",
-    "di-capstone-remove-a-real-barrier"
+    "di-capstone-remove-a-real-barrier",
+    "gc-leading-without-authority",
+    "gc-systems-thinking",
+    "gc-advising-decision-makers"
    ],
-   "minutes": 547
+   "minutes": 691
   },
   {
    "slug": "first-year",
@@ -5700,9 +5774,11 @@
     "dc-t95-career-growth-conversations",
     "stay-and-exit-interviews",
     "gc-sustaining-the-work",
-    "sm-your-own-load"
+    "sm-your-own-load",
+    "gc-accountability-public-service",
+    "gc-delegation-and-development"
    ],
-   "minutes": 1588
+   "minutes": 1684
   },
   {
    "slug": "experienced",
@@ -5723,9 +5799,11 @@
     "sm-leave-and-return",
     "sm-budget-cuts-separation",
     "dc-t26-recognizing-hidden-and-invisible-work",
-    "sm-who-carries-equity-work"
+    "sm-who-carries-equity-work",
+    "gc-delegation-and-development",
+    "gc-knowledge-and-continuity"
    ],
-   "minutes": 833
+   "minutes": 929
   },
   {
    "slug": "managers-of-managers",
@@ -5745,9 +5823,14 @@
     "gc-career-pathways-succession",
     "pi-equitable-oversight-design",
     "sm-fair-oversight",
-    "sm-facilitator-guide"
+    "sm-facilitator-guide",
+    "gc-systems-thinking",
+    "gc-advising-decision-makers",
+    "gc-setting-direction",
+    "gc-foresight-and-stewardship",
+    "gc-knowledge-and-continuity"
    ],
-   "minutes": 815
+   "minutes": 1055
   },
   {
    "slug": "senior-leaders",
@@ -5762,9 +5845,13 @@
     "dc-l9-leading-with-values-when-guidance-shifts",
     "pi-equitable-oversight-design",
     "sm-fair-oversight",
-    "sm-rules-fall-2026"
+    "sm-rules-fall-2026",
+    "gc-setting-direction",
+    "gc-leading-culture-at-scale",
+    "gc-foresight-and-stewardship",
+    "gc-knowledge-and-continuity"
    ],
-   "minutes": 535
+   "minutes": 727
   }
  ],
  "referralIds": [
