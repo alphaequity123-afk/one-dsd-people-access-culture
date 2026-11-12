@@ -2,6 +2,7 @@ import { z, type ZodType } from "zod";
 import type { ModelRecord } from "../types";
 import type { CompleteRequest, CompleteResult, ProviderAdapter } from "./index";
 import { logProviderFailure, providerErrorExcerpt } from "./log";
+import { sseEvents } from "./sse";
 
 const OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses";
 
@@ -152,6 +153,34 @@ export class OpenAIRequestError extends Error {
   }
 }
 
+/**
+ * Read a streamed reply. Text is passed on as it arrives, and the service's own finished
+ * reply is returned so it is checked exactly like one that was not streamed.
+ */
+async function streamedReply(response: Response, onText: (textSoFar: string) => void): Promise<unknown> {
+  if (!response.body) throw new Error("openai_stream_error");
+  let text = "";
+  let finished: unknown;
+  for await (const { event, data } of sseEvents(response.body)) {
+    if (data === "[DONE]") break;
+    let payload: { type?: string; delta?: unknown; response?: unknown };
+    try { payload = JSON.parse(data); } catch { continue; }
+    const type = payload.type ?? event;
+    if (type === "response.output_text.delta" && typeof payload.delta === "string") {
+      text += payload.delta;
+      try { onText(text); } catch { /* Showing progress never interrupts the reply. */ }
+    } else if (type === "response.completed" || type === "response.incomplete" || type === "response.failed") {
+      finished = payload.response;
+    } else if (type === "error") {
+      throw new Error("openai_stream_error");
+    }
+  }
+  if (finished) return finished;
+  // The connection closed before the closing event. Whatever text arrived is checked as the reply.
+  if (text) return { status: "completed", output: [{ type: "message", content: [{ type: "output_text", text }] }] };
+  throw new Error("openai_stream_error");
+}
+
 export type OpenAIAdapterOptions = {
   fetcher?: typeof fetch;
   /** Read at call time so a test can stub the environment. */
@@ -181,7 +210,7 @@ export class OpenAIAdapter implements ProviderAdapter {
     const timeoutMs = this.opts.timeoutMs ?? req.timeoutMs ?? (record.purpose === "eval_judge" ? 120_000 : 60_000);
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
-    if (process.env.PAC_CLONE_AGENTS === "on" && Buffer.byteLength(req.system + req.user, "utf8") > 80_000) return fail("clone_prompt_limit");
+    if (process.env.PAC_CLONE_AGENTS === "on" && Buffer.byteLength(req.system + req.user, "utf8") > 220_000) return fail("clone_prompt_limit");
     const strict = strictSchemaForOpenAI(req.schema);
 
     const body: Record<string, unknown> = {
@@ -193,10 +222,12 @@ export class OpenAIAdapter implements ProviderAdapter {
       text: { format: { type: "json_schema", name: "pac_structured_output", schema: strict.schema, strict: true } },
       // Reasoning tokens count toward this cap on the Responses API; 4000 left
       // medium-effort answers incomplete.
-      max_output_tokens: process.env.PAC_CLONE_AGENTS === "on" ? Math.min(req.maxTokens ?? 4000, 4000) : req.maxTokens ?? 12_000,
+      max_output_tokens: process.env.PAC_CLONE_AGENTS === "on" ? Math.min(req.maxTokens ?? 8000, 8000) : req.maxTokens ?? 12_000,
       // Disable API response storage. Provider abuse-monitoring terms still apply.
       store: false,
     };
+    // Streaming changes only how the reply arrives. The finished reply passes the same checks below.
+    if (req.onText) body.stream = true;
 
     let response: Response;
     try {
@@ -224,9 +255,10 @@ export class OpenAIAdapter implements ProviderAdapter {
 
     let json: unknown;
     try {
-      json = await response.json();
+      json = req.onText ? await streamedReply(response, req.onText) : await response.json();
     } catch (error) {
-      return fail(error instanceof Error && error.name === "AbortError" ? "openai_timeout" : "openai_bad_json", { status: response.status });
+      const timedOut = error instanceof Error && error.name === "AbortError";
+      return fail(timedOut ? "openai_timeout" : req.onText ? "openai_stream_error" : "openai_bad_json", { status: response.status });
     } finally {
       clearTimeout(timer);
     }

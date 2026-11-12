@@ -159,6 +159,20 @@ it("reads an answer aloud with the browser's voice when the program voice is not
   expect(control("Talk with Ask")!.disabled).toBe(true);
 });
 
+it("reads the answer with the browser's voice when the program voice is connected but cannot take the request", async () => {
+  const synthesis = browserSpeech();
+  vi.stubGlobal("fetch", vi.fn(async (_url: string, init?: RequestInit) => init?.method === "POST"
+    ? new Response(JSON.stringify({ error: "The voice is busy." }), { status: 503 })
+    : new Response(JSON.stringify({ transcription: true, speech: true, paused: false }))));
+  await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="Offer meaningful language access." />); });
+  await act(async () => { control("Listen to answer")!.click(); });
+  await act(async () => { await new Promise(resolve => setTimeout(resolve, 0)); });
+  expect(synthesis.speak).toHaveBeenCalledTimes(1);
+  expect(synthesis.speak.mock.calls[0][0].text).toBe("Offer meaningful language access.");
+  expect(document.body.textContent).not.toContain("The voice is busy.");
+  await act(async () => { synthesis.speak.mock.calls[0][0].onend(); });
+});
+
 const micState = (state: string) => Object.defineProperty(navigator, "permissions", { configurable: true, value: { query: async () => ({ state, onchange: null }) } });
 const micStub = (getUserMedia: unknown) => Object.defineProperty(navigator, "mediaDevices", { configurable: true, value: { getUserMedia } });
 const settle = () => act(async () => { await new Promise(resolve => setTimeout(resolve, 0)); });

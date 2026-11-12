@@ -86,13 +86,14 @@ describe("every listed item resolves", () => {
 });
 
 describe("the plan's structure", () => {
-  it("has 8 staff collections, 9 doors, 89 questions and 4 paths", () => {
+  it("has 8 staff collections, 9 doors, 89 questions and 6 paths", () => {
     expect(STAFF_COLLECTIONS).toHaveLength(8);
     expect(LEADING_DOORS).toHaveLength(9);
-    expect(LEADING_PATHS).toHaveLength(4);
+    expect(LEADING_PATHS).toHaveLength(6);
+    expect(LEADING_PATHS.map(path => path.slug)).toEqual(["exploring-leadership", "program-leads", "first-year", "experienced", "managers-of-managers", "senior-leaders"]);
     expect(LEADING_DOORS.flatMap(door => door.questions)).toHaveLength(89);
-    expect(LEADING_DOORS.map(door => door.itemCount)).toEqual([20, 9, 38, 29, 17, 100, 109, 23, 20]);
-    expect(STAFF_COLLECTIONS.map(collection => collection.itemCount)).toEqual([26, 71, 60, 51, 139, 65, 109, 66]);
+    expect(LEADING_DOORS.map(door => door.itemCount)).toEqual([20, 9, 40, 29, 17, 100, 113, 25, 24]);
+    expect(STAFF_COLLECTIONS.map(collection => collection.itemCount)).toEqual([26, 71, 61, 51, 139, 65, 113, 69]);
     for (const door of LEADING_DOORS) expect(new Set(doorIds(door)).size, door.slug).toBe(door.itemCount);
     for (const collection of STAFF_COLLECTIONS) expect(new Set(staffCollectionIds(collection)).size, collection.id).toBe(collection.itemCount);
   });
@@ -102,7 +103,8 @@ describe("the plan's structure", () => {
     for (const collection of STAFF_COLLECTIONS) expect(staffCollection(collection.id)).toBe(collection);
     expect(leadingDoor("paths")).toBeUndefined();
     expect(leadingDoor("how-this-works")).toBeUndefined();
-    for (const page of ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx"]) expect(existsSync(path.join(root, page)), page).toBe(true);
+    for (const page of ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/leading/journey/page.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx"]) expect(existsSync(path.join(root, page)), page).toBe(true);
+    expect(leadingDoor("journey")).toBeUndefined();
   });
   it("gives every question whom to ask and places all 13 scenarios", () => {
     for (const door of LEADING_DOORS) {
@@ -164,7 +166,7 @@ describe("navigation", () => {
 });
 
 describe("the promises on these pages", () => {
-  const pageFiles = ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx", "components/leading-path-place.tsx", "components/collection-item-link.tsx"];
+  const pageFiles = ["app/leading/page.tsx", "app/leading/[door]/page.tsx", "app/leading/paths/page.tsx", "app/leading/paths/[path]/page.tsx", "app/leading/how-this-works/page.tsx", "app/leading/journey/page.tsx", "components/leading-start-chooser.tsx", "app/learn/collections/page.tsx", "app/learn/collections/[collection]/page.tsx", "components/leading-path-place.tsx", "components/collection-item-link.tsx"];
   it("uses no sign-in or roster code", () => {
     for (const file of pageFiles) expect(readFileSync(path.join(root, file), "utf8"), file).not.toMatch(/@\/lib\/auth|fetch\(|editingModeFromCookies/);
   });

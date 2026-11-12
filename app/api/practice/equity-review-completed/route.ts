@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
   if (!PRACTICE_COUNTERS_ENABLED) return new NextResponse(null, { status: 204, headers });
   try {
     // "staff-ask" is already registered in the production database; a new scope would be refused there.
-    const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 30, windowSeconds: 600 });
+    const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 });
     if (!limit.allowed) return NextResponse.json({ error: "Please wait before trying again." }, { status: 429, headers: { ...headers, ...rateLimitHeaders(limit) } });
     await recordEquityReviewCompletion(parsed.data);
     return new NextResponse(null, { status: 204, headers });

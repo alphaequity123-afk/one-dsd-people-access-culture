@@ -29,6 +29,7 @@ import {
   type StaffContentSource,
   type StaffProgramScope,
 } from "./staff-publications";
+import { publicationChanged } from "./publication-events";
 
 type Row = Record<string, unknown>;
 
@@ -712,7 +713,9 @@ export async function applyEditableSurfaceMutation(
   options: { store?: Pick<EditableSurfaceStore, "mutate"> } = {},
 ): Promise<EditableSurfaceEditingState> {
   if (!options.store && !editableSurfaceEditingAvailable(process.env, surfaceId)) throw new Error("Editable wording is not connected.");
-  return (options.store ?? runtimeStore()).mutate(surfaceId, action);
+  const state = await (options.store ?? runtimeStore()).mutate(surfaceId, action);
+  publicationChanged();
+  return state;
 }
 
 export function requiredEditableSurfaceReviews(definition: EditableSurfaceDefinition): readonly EditableSurfaceReviewDimension[] {

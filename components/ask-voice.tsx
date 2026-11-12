@@ -163,33 +163,38 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     }
   }
 
+  /** Read the answer with the browser's own voice, a sentence or two at a time. */
+  async function speakWithBrowser(text: string, token: number) {
+    if (text.length > 10000) throw new Error("That answer is too long to read aloud. The written answer is still here.");
+    for (const chunk of text.match(/[\s\S]{1,220}(?:\s|$)|\S{1,220}/g) ?? []) {
+      if (token !== generation.current) return;
+      setStatus("Reading the answer. You can stop or interrupt at any time.");
+      await new Promise<void>((resolve, reject) => {
+        const utterance = new SpeechSynthesisUtterance(chunk); utterance.lang = "en-US";
+        const timeout = setTimeout(() => { window.speechSynthesis.cancel(); reject(new Error("Reading aloud stopped responding. The written answer is still here.")); }, 45000);
+        const finish = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; resolve(); };
+        finishBrowserSpeech.current = finish;
+        utterance.onend = finish;
+        utterance.onerror = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; if (token === generation.current) reject(new Error("This browser could not read the answer aloud. The written answer is still here.")); else resolve(); };
+        window.speechSynthesis.speak(utterance);
+      });
+    }
+  }
   async function speak(text: string, token: number, timing?: VoiceTurnTiming) {
     // Muted: the answer is written only.
     if (mutedRef.current) return;
     // The program voice reads the answer when it is connected; otherwise the browser's own voice does.
-    if (!available.speech && browserVoice.speech) {
-      if (text.length > 10000) throw new Error("That answer is too long to read aloud. The written answer is still here.");
-      for (const chunk of text.match(/[\s\S]{1,220}(?:\s|$)|\S{1,220}/g) ?? []) {
-        if (token !== generation.current) return;
-        setStatus("Reading the answer. You can stop or interrupt at any time.");
-        await new Promise<void>((resolve, reject) => {
-          const utterance = new SpeechSynthesisUtterance(chunk); utterance.lang = "en-US";
-          const timeout = setTimeout(() => { window.speechSynthesis.cancel(); reject(new Error("Reading aloud stopped responding. The written answer is still here.")); }, 45000);
-          const finish = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; resolve(); };
-          finishBrowserSpeech.current = finish;
-          utterance.onend = finish;
-          utterance.onerror = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; if (token === generation.current) reject(new Error("This browser could not read the answer aloud. The written answer is still here.")); else resolve(); };
-          window.speechSynthesis.speak(utterance);
-        });
-      }
-      return;
-    }
+    if (!available.speech && browserVoice.speech) { await speakWithBrowser(text, token); return; }
     setStatus("Preparing the answer…");
     if (timing) timing.speechStartedAt = performance.now();
     const controller = new AbortController(); abort.current = controller;
     const response = await fetch("/api/ask/voice", { method: "POST", headers: { "content-type": "application/json" },
       body: JSON.stringify({ text }), signal: controller.signal });
-    if (!response.ok) throw new Error((await response.json()).error || "Listening is not available right now. The written answer is still here.");
+    if (!response.ok) {
+      // The program voice is busy or away: read the answer with the browser's own voice instead of stopping.
+      if (browserVoice.speech && text.length <= 10000) { await speakWithBrowser(text, token); return; }
+      throw new Error((await response.json()).error || "Listening is not available right now. The written answer is still here.");
+    }
     if (!response.body) throw new Error("There was no audio to play. The written answer is still here.");
     const reader = response.body.getReader();
     const decoder = new TextDecoder(); let pending = ""; let finished = false;
@@ -240,16 +245,20 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
   async function start(continuous: boolean) {
     stop(); setError("");
     liveRef.current = continuous; setLive(continuous);
+    if (continuous) {
+      // Some browsers allow sound only after a press. A silent clip here lets the spoken answer play later.
+      try { const quiet = new Audio("data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA="); quiet.muted = true; void quiet.play()?.catch(() => {}); } catch { /* sound will be requested again when the answer is ready */ }
+    }
     const token = generation.current;
     // Ask for the microphone from this press when it is not allowed yet, so the browser's prompt appears where the person can answer it.
     if (mic !== "granted" && !(await allowMicrophone())) { liveRef.current = false; setLive(false); return; }
     if (token !== generation.current) return;
     await record(token);
   }
-  async function record(token: number) {
+  async function record(token: number, useRecorder = false) {
     try {
       const Constructor = recognitionConstructor();
-      if (Constructor) {
+      if (Constructor && !useRecorder) {
         // The browser writes the words down while the person speaks, so they appear in the box as they are said.
         const recognizer = new Constructor(); recognition.current = recognizer;
         let finished = ""; let heard = "";
@@ -262,6 +271,16 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
         };
         recognizer.onerror = event => {
           if (token !== generation.current) return;
+          // When the browser's own listening fails for a reason other than permission or silence, record instead and have the words written down for the person.
+          const canRecord = available.transcription && Boolean(navigator.mediaDevices?.getUserMedia) && typeof MediaRecorder !== "undefined";
+          if (canRecord && !["not-allowed", "no-speech", "aborted"].includes(event.error)) {
+            if (recognitionLimit.current) clearTimeout(recognitionLimit.current); recognitionLimit.current = null;
+            recognizer.onend = null; recognizer.onresult = null; recognizer.onerror = null;
+            try { recognizer.abort(); } catch { /* already stopped */ }
+            recognition.current = null; setRecording(false);
+            void record(token, true);
+            return;
+          }
           stop(); setError(event.error === "not-allowed" ? "Microphone permission was declined. You can type your question." : event.error === "no-speech" ? "Nothing was heard, so the microphone is off." : "Listening did not finish. Please try again or type your question.");
         };
         recognizer.onend = async () => {

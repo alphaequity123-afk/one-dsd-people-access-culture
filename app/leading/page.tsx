@@ -39,6 +39,7 @@ export default async function LeadingPage() {
         <li><Link className={styles.door} href="/leading/community-coverage"><span className={styles.doorTitle}>See community coverage</span><span>For managers, supervisors and the consultant (access key required). Which communities have organizations on record, figures, and a completed community review.</span><span className={styles.doorAction}>Open community coverage</span></Link></li>
         <li><Link className={styles.door} href="/leading/direction"><span className={styles.doorTitle}>Lead leaders and set direction</span><span>Support supervisors and managers, examine organizational practices, and connect decisions to accountability.</span><span className={styles.doorAction}>Explore direction</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Build future leadership</span><span>Plan for continuity, share knowledge and make development opportunities visible and accessible.</span><span className={styles.doorAction}>Practice succession planning</span></Link></li>
+        <li><Link className={styles.door} href="/leading/journey"><span className={styles.doorTitle}>Follow your own journey</span><span>Learn, reflect, try it in your real work and note what changed, at your own pace and in any order.</span><span className={styles.doorAction}>See how it works</span></Link></li>
       </ul>
     </section>
     <section id="decision-doors" className={styles.section} aria-labelledby="decision-doors-title">

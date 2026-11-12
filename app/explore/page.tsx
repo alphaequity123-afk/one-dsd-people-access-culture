@@ -8,7 +8,7 @@ export default function ExplorePage() {
   return <div className="calm">
     <p className="calm-kicker">Explore</p>
     <h1>Find what connects to your work</h1>
-    <p className="calm-lede">Every course, practice, tool, reading, community brief, organization and policy is connected four ways. Start from whichever fits the moment you are in.</p>
+    <p className="calm-lede">Every course, practice, tool, reading, community brief, organization and policy is connected five ways. Start from whichever fits the moment you are in.</p>
     <ul className="calm-choices">
       {FACETS.map(facet => <li key={facet.id}><Link className="calm-choice" href={`/explore/${facet.id}`}><h2>{facet.title}</h2><p>{facet.question}</p></Link></li>)}
     </ul>

@@ -8,8 +8,8 @@ describe("voice turn endpoint", () => {
     let activity = observeVoiceActivity(initial, 1000, 0.04);
     expect(voiceCaptureAction(activity, 1600, true)).toBe("continue");
     activity = observeVoiceActivity(activity, 1600, 0.04);
-    expect(voiceCaptureAction(activity, 2249, true)).toBe("continue");
-    expect(voiceCaptureAction(activity, 2250, true)).toBe("finish");
+    expect(voiceCaptureAction(activity, 2599, true)).toBe("continue");
+    expect(voiceCaptureAction(activity, 2600, true)).toBe("finish");
   });
   it("does not treat low noise or initial silence as a completed question", () => {
     const activity = observeVoiceActivity(initial, 1000, 0.01);

@@ -15,6 +15,7 @@ import { OPERATIONALIZING_EQUITY } from "@/lib/program/equity";
 import equityGoals from "@/lib/program/equity-goals.json";
 import policyPresentation from "@/data/program-documents/policy-presentation.json";
 import { LEADING_PRIVACY_SENTENCE } from "@/lib/content/collections";
+import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, PATH_JOURNEY, REFLECTION_PROMPTS } from "@/lib/content/leadership-journey";
 import { TOOLKIT_WHY, TOOLKIT_STEPS, TOOLKIT_CATALOG, TOOLKIT_CARDS } from "@/lib/content/toolkit-studio";
 import { readingPathways } from "@/lib/content/reading-pathways";
 import { logicStages } from "@/lib/program/dsd-logic-model";
@@ -233,6 +234,13 @@ export function additionalPublicRouteDocs(scope: StaffProgramScope, publishedSur
   const privacy = make("public-leadership-participation", "Leadership learning: how this works", "/leading/how-this-works", "How leadership learning and privacy work.",
     [LEADING_PRIVACY_SENTENCE, "Progress and practice answers stay in the browser, and anyone using the same browser may see them. Ask questions and recent conversation go to outside answer and research services. The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask. Outside services have their own data-handling terms. Do not enter names or case, health or personnel details. This learning is general information and does not replace required state training or responsible personnel decisions. Tribal-specific learning and engagement are referred to the responsible Tribal liaison."].join("\n"),
     ["/leading", "/learn/tribal-referral", "/about"], LEADING_PRIVACY_SENTENCE);
+  const journey = make("public-leadership-journey", "Your leadership journey", "/leading/journey", "Grow as a leader at your own pace: learn, reflect, apply, capture and repeat.",
+    ["A self-paced, voluntary leadership journey with no nomination, group or deadline. One round: learn from a short lesson, reflect in a few lines, apply one idea in real work, capture what changed, and repeat.",
+      ...JOURNEY_STEPS.map(step => `${step.title}: ${step.body}`),
+      ...LEADING_PATHS.flatMap(path => PATH_JOURNEY[path.slug] ? [`${path.title}: ${PATH_JOURNEY[path.slug].question} Something to try: ${PATH_JOURNEY[path.slug].tryThis}`] : []),
+      ...REFLECTION_PROMPTS.map(prompt => `Reflection, ${prompt.kind.toLowerCase()}: ${prompt.questions.join(" ")}`),
+      `At the end of a path: ${END_OF_PATH_QUESTIONS.join(" ")}`].join("\n"),
+    ["/leading", "/leading/paths", "/my-work/reflections", "/my-work/action-plan", "/leading/how-this-works"], { JOURNEY_STEPS, PATH_JOURNEY, REFLECTION_PROMPTS, END_OF_PATH_QUESTIONS });
   const presentation = make("public-policy-review-presentation", "Equity analysis for policy review", "/learn/equity-toolkit/policy-review", "Adapted 2024 training; confirm current arrangements before acting.",
     [policyPresentation.sourceTitle, policyPresentation.sourceDate, ...policyPresentation.slides.flatMap(slide => [slide.title, ...slide.text])].join("\n"),
     ["/equity-policy", "/support/right-person", "/learn/equity-toolkit/practice"], policyPresentation);
@@ -257,7 +265,7 @@ export function additionalPublicRouteDocs(scope: StaffProgramScope, publishedSur
   const guide = make("public-site-user-guide", "How to use this site", "/user-guide", "Find useful learning and practical resources, explore at your own pace, and bring them into work.",
     "Begin from a question or task. Explore courses, community perspectives and source references; use an appropriate tool or guided practice. A community brief provides context, not a prediction about an individual. Protect private information in notes and Ask questions.",
     ["/one-dsd/programs", "/one-dsd/team", "/one-dsd/amplify", "/my-view"], "Public user guide overview");
-  const docs = [model, toolkit, clas, privacy, presentation, readings, notice, planning, reflection, groups, division, guide];
+  const docs = [model, toolkit, clas, privacy, journey, presentation, readings, notice, planning, reflection, groups, division, guide];
   if (publishedSurfaces.has("equity-toolkit.home")) docs.push(make("public-adsa-equity-goals", "ADSA six goals and work plan", "/learn/equity-toolkit/goals",
     "ADSA goals and program companion guidance; they are not a requirement for all DHS offices to choose three goals.",
     [equityGoals.goalAuthority, equityGoals.mappingAuthority, ...equityGoals.goals.flatMap(goal => [goal.title, goal.focus, goal.summary, goal.example, goal.antiRacism, goal.output, ...goal.questions])].join("\n"),

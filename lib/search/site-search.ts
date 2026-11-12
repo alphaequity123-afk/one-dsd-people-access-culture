@@ -14,8 +14,18 @@ import { statePageDocs } from "@/lib/search/state-pages";
 export type SiteSearchResult = { id: string; title: string; href: string; excerpt: string; area: PageArea | "state"; external: boolean };
 
 /** The agencies as documents. Ask leaves out link-only agencies (Tribal matters): it points to them but never answers from them. */
+const agencyDocsByUse = new Map<boolean, Doc[]>();
 export function agencyDocs(options: { forAnswers?: boolean } = {}): Doc[] {
-  return PUBLIC_BODIES.filter(agency => !(options.forAnswers && agency.linkOnly)).map(agency => ({
+  // The directory is fixed while the application runs, so the documents are built once and kept.
+  const forAnswers = Boolean(options.forAnswers);
+  const kept = agencyDocsByUse.get(forAnswers);
+  if (kept) return kept;
+  const built = buildAgencyDocs(forAnswers);
+  agencyDocsByUse.set(forAnswers, built);
+  return built;
+}
+function buildAgencyDocs(forAnswers: boolean): Doc[] {
+  return PUBLIC_BODIES.filter(agency => !(forAnswers && agency.linkOnly)).map(agency => ({
     kind: "content", id: agencyNodeId(agency), title: agencyDisplayName(agency.name), href: agency.href,
     authority: "external_verify", type: "agency", status: "published", reviewDate: "", scope: "public",
     summary: agency.description, text: agency.description, tags: agency.topics.split(/\s+/).filter(Boolean), intents: [],

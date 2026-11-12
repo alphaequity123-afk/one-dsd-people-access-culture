@@ -63,14 +63,13 @@ export function publicProjectionAuditId(id: string): string {
 type ProgramIndex = { communityDocs: Doc[]; destinations: Doc[] };
 const currentIndexes = new Map<StaffProgramScope, { key: string; index: ProgramIndex }>();
 
-export async function indexedProgramResources(scope: StaffProgramScope): Promise<ProgramIndex> {
-  const definitions = programResourceDefinitions();
-  const sourcePublications = await loadPublishedEditableSurfaces(definitions.map(d => d.surfaceId), scope);
-  // The practice shell has a parameterized route and is intentionally absent
-  // from destination documents, but its publication still gates path media.
-  const pathShellPublications = await loadPublishedEditableSurfaces(["practice.path-shell"], scope);
-  const editorialFingerprint = createHash("sha256").update(JSON.stringify(historicalEditorialData)).digest("hex");
-  const publications = sourcePublications.map(row => {
+let editorialFingerprintValue: string | undefined;
+function reviewedEditorialFingerprint(): string {
+  return editorialFingerprintValue ??= createHash("sha256").update(JSON.stringify(historicalEditorialData)).digest("hex");
+}
+
+type SourcePublication = Awaited<ReturnType<typeof loadPublishedEditableSurfaces>>[number];
+function preparePublication(row: SourcePublication) {
     const reviewed = withReviewedHistoricalSurface(row.surfaceId, row.values);
     // The public page hides retired fields and replaces old book-centered copy.
     // Search must index exactly that visible projection, not the stored legacy
@@ -81,9 +80,39 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
     const evidence = [{ sourceId: row.surfaceId, revisionId: row.revisionId, payloadHash: createHash("sha256").update(JSON.stringify(row.document)).digest("hex"), scope: row.sourceScope }];
     // Keep the stored source revision and separately identify the exact authored presentation.
     // No stored publication is rewritten or presented as the sole source of revised wording.
-    if (JSON.stringify(values) !== JSON.stringify(row.values)) evidence.push({ sourceId: `authored-review-20261024:${row.surfaceId}`, revisionId: null, payloadHash: createHash("sha256").update(JSON.stringify({ editorialFingerprint, values })).digest("hex"), scope: row.sourceScope });
-    return { ...row, values, editorialEvidence: evidence, renderedFingerprint: createHash("sha256").update(JSON.stringify(values)).digest("hex") };
-  });
+    if (JSON.stringify(values) !== JSON.stringify(row.values)) evidence.push({ sourceId: `authored-review-20261024:${row.surfaceId}`, revisionId: null, payloadHash: createHash("sha256").update(JSON.stringify({ editorialFingerprint: reviewedEditorialFingerprint(), values })).digest("hex"), scope: row.sourceScope });
+    return { values, editorialEvidence: evidence, renderedFingerprint: createHash("sha256").update(JSON.stringify(values)).digest("hex") };
+  }
+type PreparedPublication = ReturnType<typeof preparePublication>;
+const preparedPublications = new Map<string, PreparedPublication>();
+// A publication defined in the application's own code has no revision number. The same values object means the same content.
+const preparedCodePublications = new WeakMap<object, { row: SourcePublication; prepared: PreparedPublication }>();
+function preparedFor(scope: StaffProgramScope, row: SourcePublication): PreparedPublication {
+  // A published revision never changes, so what is worked out from it is kept and reused while it stays published.
+  if (row.revisionId) {
+    const key = `${scope}|${row.surfaceId}|${row.source}|${row.sourceScope}|${row.revisionId}`;
+    const kept = preparedPublications.get(key);
+    if (kept) return kept;
+    const prepared = preparePublication(row);
+    if (preparedPublications.size > 2000) preparedPublications.clear();
+    preparedPublications.set(key, prepared);
+    return prepared;
+  }
+  const kept = preparedCodePublications.get(row.values);
+  if (kept && kept.row.surfaceId === row.surfaceId && kept.row.sourceScope === row.sourceScope && kept.row.document === row.document) return kept.prepared;
+  const prepared = preparePublication(row);
+  preparedCodePublications.set(row.values, { row, prepared });
+  return prepared;
+}
+
+export async function indexedProgramResources(scope: StaffProgramScope): Promise<ProgramIndex> {
+  const definitions = programResourceDefinitions();
+  const sourcePublications = await loadPublishedEditableSurfaces(definitions.map(d => d.surfaceId), scope);
+  // The practice shell has a parameterized route and is intentionally absent
+  // from destination documents, but its publication still gates path media.
+  const pathShellPublications = await loadPublishedEditableSurfaces(["practice.path-shell"], scope);
+  const editorialFingerprint = reviewedEditorialFingerprint();
+  const publications = sourcePublications.map(row => ({ ...row, ...preparedFor(scope, row) }));
   const podcastReadings = publishedPodcastReadings(publications);
   const measurementAvailable = publications.some(row => row.surfaceId === "practice.measurement")
     && (await loadStaffContentSnapshot({ scope })).items.some(item => item.id === MEASUREMENT_RESOURCE_ID);

@@ -13,6 +13,7 @@ import {
   staffProgramScope,
   type StaffProgramScope,
 } from "./staff-publications";
+import { publicationChanged } from "./publication-events";
 
 type Row = Record<string, unknown>;
 
@@ -268,5 +269,7 @@ export async function saveOwnerApprovedResource(id: string, input: ResourceDraft
   options: { scope?: StaffProgramScope; store?: Pick<PostgresResourceDraftStore, "savePublished"> } = {},
 ): Promise<EditableResourceState> {
   if (!options.store && !resourceEditingAvailable()) throw new Error("Resource editing is not connected.");
-  return (options.store ?? runtimeStore()).savePublished(id, options.scope ?? staffProgramScope(), input);
+  const state = await (options.store ?? runtimeStore()).savePublished(id, options.scope ?? staffProgramScope(), input);
+  publicationChanged();
+  return state;
 }

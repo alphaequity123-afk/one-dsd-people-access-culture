@@ -25,6 +25,7 @@ export const BROWSER_STORAGE_KEYS = {
   myPath: "one-dsd-my-path-v1",
   actionPlans: "one-dsd-action-plans-v1",
   decisionRecords: "one-dsd-decision-records-v1",
+  reflections: "one-dsd-reflections-v1",
   pathArtifact: (pathId: string) => `pac_artifact_${pathId}`,
   pathArtifactSource: (pathId: string) => `pac_artifact_source_${pathId}`,
   pathProgress: (pathId: string) => `pac_progress_${pathId}`,
@@ -49,6 +50,7 @@ export const PRIVATE_BROWSER_STORAGE_KEYS: readonly PrivateBrowserStorageKey[] =
   // Personal action plans and decision records the person chose to keep on this computer.
   { area: "local", key: BROWSER_STORAGE_KEYS.actionPlans, purpose: "practice_plans" },
   { area: "local", key: BROWSER_STORAGE_KEYS.decisionRecords, purpose: "practice_plans" },
+  { area: "local", key: BROWSER_STORAGE_KEYS.reflections, purpose: "practice_reflection" },
   ...GRADUATION_PATHS.flatMap((path) => [
     { area: "local" as const, key: BROWSER_STORAGE_KEYS.pathArtifact(path.id), purpose: "path_notes" as const },
     { area: "local" as const, key: BROWSER_STORAGE_KEYS.pathArtifactSource(path.id), purpose: "path_notes" as const },
@@ -67,6 +69,8 @@ export const PRIVATE_BROWSER_STORAGE_PATTERNS = [
   { area: "local", keyPattern: "^one-dsd-learning-[FIA](?:0[1-9]|1[0-9]|2[0-4])$", purpose: "course_progress" },
   // Guided-practice record for one curriculum or leadership lesson (lib/tutor/student-model.ts): attempt counts only, no answers or messages.
   { area: "local", keyPattern: "^tutor:(?:0[1-9]|ls0[1-9])$", purpose: "course_progress" },
+  // "Keep my place" on any suggested leadership path, so clearing saved work removes every path's place, including paths added later.
+  { area: "local", keyPattern: "^pac_progress_leading-[a-z0-9-]{1,60}$", purpose: "path_progress" },
 ] as const;
 
 export function isPrivateBrowserStorageKey(area: PrivateBrowserStorageKey["area"], key: string): boolean {

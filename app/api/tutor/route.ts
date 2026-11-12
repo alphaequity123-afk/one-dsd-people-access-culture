@@ -9,6 +9,7 @@ import { tutorGrounding } from "@/lib/tutor/grounding";
 import { scoreChoice, tutorItem } from "@/lib/tutor/items";
 import { MAX_BODY_BYTES, TutorRequestSchema, type TutorResponse } from "@/lib/tutor/request";
 import { leaksAnswer } from "@/lib/tutor/leak-guard";
+import { plainAnswerText } from "@/lib/ask/plain-text";
 import { fallbackReply, replyText, TutorReplySchema, tutorSystemPrompt, tutorUserPrompt, type TutorReply } from "@/lib/tutor/prompt";
 
 /**
@@ -25,14 +26,17 @@ export async function GET() {
 }
 
 async function generate(input: { system: string; user: string; traceId: string }): Promise<TutorReply | null> {
-  const binding = resolveBinding(getAgent("ask_concierge"));
+  const binding = resolveBinding(getAgent("ask_concierge"), { fallback: true });
   if (!binding.generative) return null;
   const out = await binding.adapter.complete(
     { model_id: binding.model.model_id, system: input.system, user: input.user, schema: TutorReplySchema, maxTokens: 700, timeoutMs: 25_000, trace_id: input.traceId },
     binding.model,
   );
   const parsed = TutorReplySchema.safeParse(out.parsed);
-  return parsed.success ? parsed.data : null;
+  if (!parsed.success) return null;
+  // Guidance is plain text: any Markdown markup is removed and the words stay.
+  const plain = (text: string) => plainAnswerText(text).trim() || text;
+  return { restatement: plain(parsed.data.restatement), guidance: plain(parsed.data.guidance), nextStep: plain(parsed.data.nextStep) };
 }
 
 export async function POST(request: NextRequest) {
@@ -49,7 +53,7 @@ export async function POST(request: NextRequest) {
   let limited: NextResponse | null = null;
   try {
     // "staff-ask" is already registered in the production database; a new scope would be refused there.
-    const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 30, windowSeconds: 600 });
+    const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 });
     if (!limit.allowed) limited = NextResponse.json({ error: "Please wait before asking for more guidance." }, { status: 429, headers: { ...headers, ...rateLimitHeaders(limit) } });
   } catch {
     return NextResponse.json({ error: "Guided practice is unavailable right now." }, { status: 503, headers });

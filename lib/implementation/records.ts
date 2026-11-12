@@ -1,10 +1,10 @@
 /**
- * Personal action plans and decision records: plain, typed field lists that live in the
+ * Personal action plans, decision records and reflections: plain, typed field lists that live in the
  * person's own browser. Nothing here is sent anywhere unless the person chooses to save a
  * decision record to the team space.
  */
 export type RecordField = { key: string; label: string; help: string; kind?: "text" | "long" | "date" | "choice"; choices?: string[] };
-export type RecordKind = "action-plan" | "decision-record";
+export type RecordKind = "action-plan" | "decision-record" | "reflection";
 export type LocalRecord = { id: string; kind: RecordKind; title: string; createdAt: string; updatedAt: string; fields: Record<string, string>; teamRecordId?: string };
 export type RecordBook = { version: 1; records: LocalRecord[] };
 
@@ -35,8 +35,38 @@ export const DECISION_RECORD_FIELDS: RecordField[] = [
   { key: "reviewDate", label: "Review date", help: "When to revisit the decision and its effects.", kind: "date" },
 ];
 
-export const FIELDS_FOR: Record<RecordKind, RecordField[]> = { "action-plan": ACTION_PLAN_FIELDS, "decision-record": DECISION_RECORD_FIELDS };
-export const RECORD_LABEL: Record<RecordKind, string> = { "action-plan": "Action plan", "decision-record": "Decision record" };
+/** The kinds of reflection a person can choose from. The same three questions serve them all. */
+export const REFLECTION_KINDS = ["After a lesson", "A moment that mattered", "After a project or a stretch task", "At the end of a path", "What I am leaving in place"] as const;
+
+export const REFLECTION_FIELDS: RecordField[] = [
+  { key: "type", label: "Kind of reflection", help: "Choose the one that fits. The three questions below work for all of them.", kind: "choice", choices: ["", ...REFLECTION_KINDS] },
+  { key: "about", label: "What this is about", help: "The lesson, the moment or the piece of work. A few words are enough." },
+  { key: "what", label: "What happened", help: "What you saw, heard or did. Stay with what you observed. Leave out client, case, health and personnel details.", kind: "long" },
+  { key: "soWhat", label: "Why it matters", help: "What it shows you about access, fairness or how your team works, and about your own part in it.", kind: "long" },
+  { key: "nowWhat", label: "What I will do next", help: "One thing you will keep, change or try. Start with a verb.", kind: "long" },
+  { key: "reviewDate", label: "When I will look back", help: "A week suits a small step. A month shows whether it lasted.", kind: "date" },
+  { key: "lookBack", label: "Looking back: what I notice now", help: "Come back on that date. What changed, for whom, and what would you do differently?", kind: "long" },
+];
+
+export const FIELDS_FOR: Record<RecordKind, RecordField[]> = { "action-plan": ACTION_PLAN_FIELDS, "decision-record": DECISION_RECORD_FIELDS, reflection: REFLECTION_FIELDS };
+export const RECORD_LABEL: Record<RecordKind, string> = { "action-plan": "Action plan", "decision-record": "Decision record", reflection: "Reflection" };
+const DEFAULT_TITLE: Record<RecordKind, string> = { "action-plan": "My action plan", "decision-record": "Decision record", reflection: "My reflection" };
+/** How far ahead the look-back date starts: a month for a plan or a decision, a week for a reflection. */
+const REVIEW_AFTER_DAYS: Record<RecordKind, number> = { "action-plan": 30, "decision-record": 30, reflection: 7 };
+/** The field a person fills in when they look back. A record with a date that has come and this field still empty is ready to revisit. */
+const LOOK_BACK_FIELD: Partial<Record<RecordKind, string>> = { "action-plan": "happened", reflection: "lookBack" };
+
+/** True when the record's look-back date has arrived and nothing has been written about it yet. `today` is a YYYY-MM-DD date. */
+/** A calendar date in the person's own time zone, as YYYY-MM-DD. */
+export function localDate(date: Date = new Date()): string {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
+export function lookBackDue(record: LocalRecord, today: string): boolean {
+  const field = LOOK_BACK_FIELD[record.kind];
+  const date = record.fields.reviewDate;
+  return Boolean(field && /^\d{4}-\d{2}-\d{2}$/.test(date ?? "") && date <= today && !record.fields[field]?.trim());
+}
 export const MAX_FIELD = 4000;
 export const MAX_TITLE = 160;
 export const MAX_RECORDS = 60;
@@ -45,10 +75,10 @@ function isRecord(value: unknown): value is Record<string, unknown> { return !!v
 
 export function validRecord(value: unknown, kind?: RecordKind): value is LocalRecord {
   if (!isRecord(value) || typeof value.id !== "string" || !value.id || typeof value.title !== "string" || value.title.length > MAX_TITLE) return false;
-  if (value.kind !== "action-plan" && value.kind !== "decision-record") return false;
+  if (typeof value.kind !== "string" || !Object.hasOwn(FIELDS_FOR, value.kind)) return false;
   if (kind && value.kind !== kind) return false;
   if (typeof value.createdAt !== "string" || typeof value.updatedAt !== "string" || !isRecord(value.fields)) return false;
-  const allowed = new Set(FIELDS_FOR[value.kind].map(field => field.key));
+  const allowed = new Set(FIELDS_FOR[value.kind as RecordKind].map(field => field.key));
   for (const [key, text] of Object.entries(value.fields)) if (!allowed.has(key) || typeof text !== "string" || text.length > MAX_FIELD) return false;
   return value.teamRecordId === undefined || typeof value.teamRecordId === "string";
 }
@@ -56,11 +86,12 @@ export function validRecord(value: unknown, kind?: RecordKind): value is LocalRe
 export function emptyRecord(kind: RecordKind, id: string, now: Date, prefill: Record<string, string> = {}): LocalRecord {
   const fields: Record<string, string> = {};
   for (const field of FIELDS_FOR[kind]) fields[field.key] = "";
-  const review = new Date(now.getTime() + 30 * 86400000).toISOString().slice(0, 10);
+  const later = new Date(now.getFullYear(), now.getMonth(), now.getDate() + REVIEW_AFTER_DAYS[kind]);
+  const review = localDate(later);
   fields.reviewDate = review;
   for (const [key, text] of Object.entries(prefill)) if (key in fields) fields[key] = text.slice(0, MAX_FIELD);
   const stamp = now.toISOString();
-  return { id, kind, title: prefill.title?.slice(0, MAX_TITLE) || (kind === "action-plan" ? "My action plan" : "Decision record"), createdAt: stamp, updatedAt: stamp, fields };
+  return { id, kind, title: prefill.title?.slice(0, MAX_TITLE) || DEFAULT_TITLE[kind], createdAt: stamp, updatedAt: stamp, fields };
 }
 
 export function loadBook(raw: string | null): RecordBook {

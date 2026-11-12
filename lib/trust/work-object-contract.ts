@@ -108,9 +108,9 @@ const RUNTIME_RATE_LIMIT_REQUESTS = {
   "program-login-account": { limit: 10, windowSeconds: 900 },
   "program-invitation-network": { limit: 20, windowSeconds: 900 },
   "program-invitation-code": { limit: 10, windowSeconds: 900 },
-  "staff-ask": { limit: 30, windowSeconds: 600 },
-  "ask-voice": { limit: 30, windowSeconds: 600 },
-  "ask-transcribe": { limit: 20, windowSeconds: 600 },
+  "staff-ask": { limit: 120, windowSeconds: 600 },
+  "ask-voice": { limit: 120, windowSeconds: 600 },
+  "ask-transcribe": { limit: 80, windowSeconds: 600 },
   "staff-program-outcome": { limit: 10, windowSeconds: 600 },
   "staff-equity-analysis": { limit: 10, windowSeconds: 600 },
   "staff-equity-register": { limit: 60, windowSeconds: 600 },
@@ -1029,7 +1029,7 @@ const AUDIT_ALLOWLIST_REASONS = new Set([
   "agent disabled in its definition",
   "owner-only tool",
 ]);
-const CANONICAL_AUDIT_CONTENT_ID = /^(?:curriculum-[A-Za-z0-9][A-Za-z0-9-]{0,119}|CR-[0-9]{8}-[0-9]{4,10}|one_dsd_team|(?:pn|ja|lm|ext|asset|tool|program-development|program-reading|research|curriculum|profile|calendar|water)-[a-z0-9][a-z0-9-]{0,119}|(?:somali|hmong|karen|oromo|african-american|latino|vietnamese|khmer|lao|russian-speaking|arabic-speaking|deaf-deafblind-hard-of-hearing|rural|tribal-nations)|cycle-[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}(?:-[pg][1-9][0-9]*)?)$/;
+const CANONICAL_AUDIT_CONTENT_ID = /^(?:(?:agency|state-page|policy|guide|clas):[a-z0-9][a-z0-9-]{0,119}|curriculum-[A-Za-z0-9][A-Za-z0-9-]{0,119}|CR-[0-9]{8}-[0-9]{4,10}|one_dsd_team|(?:pn|ja|lm|ext|asset|tool|program-development|program-reading|research|curriculum|profile|calendar|water)-[a-z0-9][a-z0-9-]{0,119}|(?:somali|hmong|karen|oromo|african-american|latino|vietnamese|khmer|lao|russian-speaking|arabic-speaking|deaf-deafblind-hard-of-hearing|rural|tribal-nations)|cycle-[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}(?:-[pg][1-9][0-9]*)?)$/;
 const CANONICAL_AUDIT_MODEL_ID = /^(?=.{1,80}$)[A-Za-z0-9][A-Za-z0-9._-]*(?:\/[A-Za-z0-9][A-Za-z0-9._-]*)*$/;
 const PROFILE_LIKE_AUDIT_ID = PROFILE_LIKE_PERSISTENCE_ID;
 
@@ -1042,6 +1042,15 @@ export function durableAuditContentIds(ids: readonly string[]): string[] {
   const allowed = new RegExp(DURABLE_AUDIT_CONTENT_ID);
   const barred = new RegExp(DURABLE_AUDIT_BARRED_ID, "i");
   return ids.filter(id => allowed.test(id) && !barred.test(id));
+}
+
+/**
+ * The identifiers an activity record may carry: recognised, not profile-like, without repeats, at most 100.
+ * Anything else is left out of the record, so a logging rule can never stop a person's answer.
+ */
+export function auditableContentIds(ids: readonly string[]): string[] {
+  return Array.from(new Set(ids)).filter(id => (CANONICAL_AUDIT_CONTENT_ID.test(id) || PROGRAM_REFERENCE_IDS.has(id) || UUID_V4.test(id))
+    && !PROFILE_LIKE_AUDIT_ID.test(id)).slice(0, 100);
 }
 
 function validAuditContentIds(value: unknown): value is string[] {

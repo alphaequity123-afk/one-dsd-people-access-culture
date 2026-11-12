@@ -26,8 +26,8 @@ describe("Ask video scenario citations", () => {
     f.complete.mockImplementation(async (request: { user: string }) => {
       const payload = JSON.parse(request.user);
       const source = payload.programSources.find((item: { id: string }) => item.id === transcript.id);
-      expect(source.evidence.excerpt.quote).toContain("Imagine a team in the Disability Services Division");
-      return { parsed: { shortAnswer: "A team revises a meeting invitation and asks people what they need to participate.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [{ kind: "source_excerpt", text: source.evidence.excerpt.quote, references: [{ evidenceId: source.evidence.evidenceId, ...source.evidence.excerpt }] }] } };
+      expect(source.excerpt).toContain("Imagine a team in the Disability Services Division");
+      return { parsed: { shortAnswer: "A team revises a meeting invitation and asks people what they need to participate.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [{ text: source.excerpt, refs: [source.ref] }] } };
     });
     const result = await askConcierge({ question: "Using only this application, what example does the democratic leadership video give?", contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.research).not.toHaveBeenCalled();

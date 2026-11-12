@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
-import { FIELDS_FOR, RECORD_LABEL, emptyRecord, fileName, loadBook, recordText, recordWordDocument, type LocalRecord, type RecordBook, type RecordKind } from "@/lib/implementation/records";
+import { FIELDS_FOR, RECORD_LABEL, emptyRecord, fileName, loadBook, localDate, lookBackDue, recordText, recordWordDocument, type LocalRecord, type RecordBook, type RecordKind } from "@/lib/implementation/records";
 
-const STORAGE: Record<RecordKind, string> = { "action-plan": BROWSER_STORAGE_KEYS.actionPlans, "decision-record": BROWSER_STORAGE_KEYS.decisionRecords };
+const STORAGE: Record<RecordKind, string> = { "action-plan": BROWSER_STORAGE_KEYS.actionPlans, "decision-record": BROWSER_STORAGE_KEYS.decisionRecords, reflection: BROWSER_STORAGE_KEYS.reflections };
 
 function read(kind: RecordKind): RecordBook {
   try { return loadBook(window.localStorage.getItem(STORAGE[kind])); } catch { return { version: 1, records: [] }; }
@@ -44,6 +44,8 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
   }, [kind, prefillKey]);
 
   const active = useMemo(() => book.records.find(record => record.id === activeId) ?? null, [book, activeId]);
+  // Anything whose look-back date has come, so a person who returns is shown what is ready to revisit. Nothing is sent as a reminder.
+  const due = useMemo(() => { const today = localDate(); return book.records.filter(record => lookBackDue(record, today)); }, [book]);
 
   function commit(next: RecordBook, message: string) {
     setBook(next);
@@ -87,6 +89,10 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
         <select value={activeId ?? ""} onChange={event => setActiveId(event.target.value)}>{book.records.map(record => <option key={record.id} value={record.id}>{record.title}</option>)}</select>
       </label> : null}
     </div>
+    {due.length ? <div className="calm-note" role="note">
+      <p><strong>Ready to look back.</strong> The date you set has come for {due.length === 1 ? "this one" : "these"}. Open it and write what you notice now.</p>
+      <ul>{due.slice(0, 6).map(record => <li key={record.id}><button type="button" className="calm-button calm-button--quiet" onClick={() => setActiveId(record.id)}>{record.title}</button></li>)}</ul>
+    </div> : null}
     {!active ? <p className="calm-muted">Nothing saved yet. Start one when you are ready.</p> : <form className="calm-form" onSubmit={event => event.preventDefault()}>
       <p className="calm-note">Leave out client, case, health and personnel details. This stays on this computer unless you choose otherwise.</p>
       <div className="calm-field"><label htmlFor="record-title">Title</label><input id="record-title" value={active.title} maxLength={160} onChange={event => update({ title: event.target.value })} /></div>

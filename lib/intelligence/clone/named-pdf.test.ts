@@ -66,7 +66,9 @@ describe("named original PDF grounding", () => {
       expect(pages).toHaveLength(5);
       expect(pages.some((source: { href: string }) => source.href.endsWith("guide.pdf#page=39"))).toBe(true);
       expect(pages.some((source: { href: string }) => source.href.endsWith("checklist.pdf#page=3"))).toBe(true);
-      return { parsed: { shortAnswer: "Plan compensation and participation supports using the guide and checklist.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: pages.slice(0, 2).map((source: { evidence: { evidenceId: string; excerpt: { quote: string; start: number; end: number } } }) => ({ kind: "source_excerpt", text: source.evidence.excerpt.quote, references: [{ evidenceId: source.evidence.evidenceId, ...source.evidence.excerpt }] })) } };
+      // Each page is cited by its label; its passage is supplied once and never copied back.
+      expect(pages.every((source: { ref?: string; excerpt?: string; evidence?: unknown }) => /^S\d+$/.test(source.ref ?? "") && source.excerpt && source.evidence === undefined)).toBe(true);
+      return { parsed: { shortAnswer: "Plan compensation and participation supports using the guide and checklist.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: pages.slice(0, 2).map((source: { ref: string; excerpt: string }) => ({ text: source.excerpt, refs: [source.ref] })) } };
     });
     const result = await askConcierge({ question, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     expect(f.complete).toHaveBeenCalledOnce();
@@ -79,13 +81,13 @@ describe("named original PDF grounding", () => {
       expect(result.answer.sources.every(source => source.href.includes(".pdf#page="))).toBe(true);
     }
   }, 120000);
-  it("resolves wrong generated offsets only for exact real PDF quotes before strict answer validation", async () => {
+  it("attaches the exact supplied PDF passage to each cited label and leaves out an invented one", async () => {
     f.complete.mockImplementation(async (request: { user: string; schema: { parse: (value: unknown) => unknown } }) => {
       const pages = JSON.parse(request.user).programSources.filter((source: { href: string }) => source.href.includes(".pdf#page="));
-      const evidenceClaims = pages.slice(0, 2).map((source: { evidence: { evidenceId: string; excerpt: { quote: string } } }) => ({
-        kind: "source_excerpt", text: source.evidence.excerpt.quote,
-        references: [{ evidenceId: source.evidence.evidenceId, quote: source.evidence.excerpt.quote, start: 1, end: 2 }],
-      }));
+      const evidenceClaims = [
+        ...pages.slice(0, 2).map((source: { ref: string }) => ({ text: "The original page describes participation supports.", refs: [source.ref.toLowerCase(), source.ref] })),
+        { text: "A statement with no supplied source behind it.", refs: ["S99"] },
+      ];
       // Exercise the provider's transport-schema boundary as well as ASK's final schema.
       return { parsed: request.schema.parse({ shortAnswer: "Plan compensation and participation supports using both original PDFs.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims }) };
     });
@@ -94,6 +96,8 @@ describe("named original PDF grounding", () => {
     expect(result.answer.failureCode).toBeUndefined();
     expect(result.answer.generative).toBe(true);
     expect(result.answer.sources).toHaveLength(2);
+    expect(result.answer.evidenceClaims).toHaveLength(2);
+    expect(result.answer.evidenceClaims!.every(claim => claim.kind === "inference" && claim.references.length === 1)).toBe(true);
     for (const source of result.answer.sources) {
       const claim = result.answer.evidenceClaims!.find(claim => claim.references[0].evidenceId === source.evidence!.evidenceId)!;
       expect(claim.references[0]).toEqual({ evidenceId: source.evidence!.evidenceId, ...source.evidence!.excerpt });
@@ -110,10 +114,10 @@ describe("named original PDF grounding", () => {
     f.complete.mockImplementation(async (request: { user: string }) => {
       const source = JSON.parse(request.user).programSources.find((source: { href: string }) => source.href.endsWith("clas-implementation-checklist.pdf#page=8"));
       expect(source).toBeDefined();
-      expect(source.evidence.excerpt.quote).toMatch(/three practices/i);
-      expect(source.evidence.excerpt.quote).toMatch(/timeframes/i);
-      expect(source.evidence.excerpt.quote).toMatch(/concrete action steps/i);
-      return { parsed: { shortAnswer: "Choose three practices, set timeframes, and write concrete action steps.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [{ kind: "source_excerpt", text: source.evidence.excerpt.quote, references: [{ evidenceId: source.evidence.evidenceId, ...source.evidence.excerpt }] }] } };
+      expect(source.excerpt).toMatch(/three practices/i);
+      expect(source.excerpt).toMatch(/timeframes/i);
+      expect(source.excerpt).toMatch(/concrete action steps/i);
+      return { parsed: { shortAnswer: "Choose three practices, set timeframes, and write concrete action steps.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: [{ text: source.excerpt, refs: [source.ref] }] } };
     });
     const result = await askConcierge({ question: clasQuestion, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     if (result.kind !== "answer") throw Error("Expected CLAS answer");

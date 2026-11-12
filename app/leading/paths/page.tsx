@@ -6,7 +6,7 @@ import styles from "@/components/collections.module.css";
 
 export const metadata: Metadata = {
   title: `Suggested paths | ${LEADING_LABEL}`,
-  description: "Four optional paths for leaders, supervisors, managers, and directors. Nobody is enrolled, and progress stays in your browser.",
+  description: "Six optional paths, from exploring leadership to senior leaders. Nobody is enrolled, and progress stays in your browser.",
 };
 
 export default function LeadingPathsPage() {
@@ -15,7 +15,8 @@ export default function LeadingPathsPage() {
     <header className={base.intro}>
       <p className={base.eyebrow}>Optional</p>
       <h1>Suggested paths</h1>
-      <p className={base.lede}>Four suggested orders through the material. All of them are optional.</p>
+      <p className={base.lede}>Six suggested orders through the material. All of them are optional.</p>
+      <p>Not sure where to begin, or how to make a path your own? <Link href="/leading/journey">See how the leadership journey works</Link>.</p>
       <p>Nobody is enrolled, and you can start anywhere or skip anything. If you keep your place, it stays in your browser and nobody else can see it. The one exception to voluntary use is the Equity Analysis Toolkit, marked &ldquo;{REQUIRED_COURSE_LABEL}&rdquo;, which appears on every path for that reason.</p>
     </header>
     <ul className={styles.doors}>
