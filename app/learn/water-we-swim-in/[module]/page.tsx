@@ -9,6 +9,7 @@ import { ResourceDownloads } from "@/components/resource-downloads";
 import { WaterFigure, WaterLessonOpening, WaterLessonPodcast, WaterLessonPractice, chapterImages, heroOf } from "@/components/water-curriculum";
 import { CourseMediaSlot } from "@/components/course-media-for-page";
 import { waterLesson, waterModuleId, waterPractice, waterRecall } from "@/lib/content/water-curriculum";
+import { WaterLearningAssistant } from "@/components/water-learning-assistant";
 
 export async function generateMetadata({ params }: { params: Promise<{ module: string }> }): Promise<Metadata> {
   const { module: slug } = await params;
@@ -42,9 +43,11 @@ export default async function WaterModulePage({ params }: { params: Promise<{ mo
       <CourseMediaSlot />
     </>}
     <WaterLessonOpening practice={practice} recall={waterRecall(id)} previousTitle={previous?.title} previousNumber={previous?.number} />
+    <p><a href="#water-learning-assistant">Study this module with the Gemini learning assistant</a></p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this module</summary><ResourceDownloads kind="water-we-swim-in" id={current.slug} noun="module" /></details>
     <WaterModuleBody markdown={current.body} notesKey={`water-we-swim-in-notes-${current.number}`} images={chapterImages(lesson)} />
     <WaterLessonPractice practice={practice} moduleTitle={current.title} moduleNumber={current.number} />
+    <WaterLearningAssistant unit={current.slug} />
     <p>{WATER_SUPPORT}</p>
     <nav className="course-next" aria-label="Course modules">
       {previous ? <Link href={`${WATER_COURSE_HREF}/${previous.slug}`}>Previous: {previous.title}</Link> : <Link href={WATER_COURSE_HREF}>Course overview</Link>}
