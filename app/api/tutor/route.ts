@@ -9,6 +9,7 @@ import { tutorGrounding } from "@/lib/tutor/grounding";
 import { scoreChoice, tutorItem } from "@/lib/tutor/items";
 import { MAX_BODY_BYTES, TutorRequestSchema, type TutorResponse } from "@/lib/tutor/request";
 import { leaksAnswer } from "@/lib/tutor/leak-guard";
+import { plainAnswerText } from "@/lib/ask/plain-text";
 import { fallbackReply, replyText, TutorReplySchema, tutorSystemPrompt, tutorUserPrompt, type TutorReply } from "@/lib/tutor/prompt";
 
 /**
@@ -32,7 +33,10 @@ async function generate(input: { system: string; user: string; traceId: string }
     binding.model,
   );
   const parsed = TutorReplySchema.safeParse(out.parsed);
-  return parsed.success ? parsed.data : null;
+  if (!parsed.success) return null;
+  // Guidance is plain text: any Markdown markup is removed and the words stay.
+  const plain = (text: string) => plainAnswerText(text).trim() || text;
+  return { restatement: plain(parsed.data.restatement), guidance: plain(parsed.data.guidance), nextStep: plain(parsed.data.nextStep) };
 }
 
 export async function POST(request: NextRequest) {

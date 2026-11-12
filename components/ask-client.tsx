@@ -16,6 +16,7 @@ import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
 import { useProgramContext } from "@/components/program-context";
 import type { ProductContextId } from "@/lib/product/federation";
 import { activePracticeArtifact, PracticeArtifactSchema, type PracticeArtifact } from "@/lib/content/practice-artifact";
+import { ASK_PROGRESS_TYPE, readAskProgress, stageLine, type AskStage } from "@/lib/ask/progress-stream";
 
 type Turn = { at: string; question: string; result: StaffAskResult; context?: ProductContextId };
 type Session = { id: string; turns: Turn[] };
@@ -55,6 +56,8 @@ export function AskClient({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [retryQuestion, setRetryQuestion] = useState("");
+  // The answer being prepared right now: which part is under way, and the words so far. Kept only on this page.
+  const [live, setLive] = useState<{ question: string; stage: AskStage; text: string } | null>(null);
   const researchMode: AskResearchMode = "auto";
   const [storedSession, setSession] = useStored<Session>("session", BROWSER_STORAGE_KEYS.askSession, EMPTY_SESSION);
   // Another page may have read this key first, or older saved data may have another shape: never trust it blindly.
@@ -96,6 +99,7 @@ export function AskClient({
     if (showInBox) setQuestion(q);
     setError("");
     setBusy(true);
+    setLive({ question: q, stage: "reading", text: "" });
     const sessionId = session.id || newId("s");
     const history = session.turns
       .filter(turn => (turn.context ?? context) === context && turn.result.kind === "answer")
@@ -107,10 +111,16 @@ export function AskClient({
     try {
       const res = await fetch("/api/ask", {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        // Ask for progress as the answer is prepared; a single finished answer is still accepted.
+        headers: { "content-type": "application/json", accept: `${ASK_PROGRESS_TYPE}, application/json` },
         body: JSON.stringify({ question: q, responseMode, pathId: path?.id, mode: initialMode, researchMode, contextPreference: context, history, priorArtifact }),
       });
-      const payload = await res.json();
+      const payload = res.ok && res.body && res.headers.get("content-type")?.includes(ASK_PROGRESS_TYPE)
+        ? await readAskProgress(res.body, event => setLive(current => !current ? current
+          : event.type === "stage" ? { ...current, stage: event.stage }
+          : event.type === "text" ? { ...current, text: event.text }
+          : { ...current, text: "" })) as { error?: unknown }
+        : await res.json();
       // The answer's connection opens before the work finishes, so a late failure arrives in the body.
       if (!res.ok || typeof payload?.error === "string") {
         setError(typeof payload?.error === "string" ? payload.error : copyText(copy, "answerError"));
@@ -128,6 +138,7 @@ export function AskClient({
       setRetryQuestion(q);
     } finally {
       setBusy(false);
+      setLive(null);
     }
   }
 
@@ -167,7 +178,7 @@ export function AskClient({
             describedBy={`${textId}-help ${textId}-research-privacy${error ? ` ${textId}-error` : ""}`}
             invalid={Boolean(error)}
           >
-            <AskVoice busy={busy} busyLabel={busyLabel(researchMode, copy)} onDictation={setQuestion} onQuestion={text => sendQuestion(text, "spoken")} latestAnswer={session.turns[0]?.result.kind === "answer" ? session.turns[0].result.answer.shortAnswer : undefined} listenSlot={listenSlot} />
+            <AskVoice busy={busy} busyLabel={live ? undefined : busyLabel(researchMode, copy)} onDictation={setQuestion} onQuestion={text => sendQuestion(text, "spoken")} latestAnswer={session.turns[0]?.result.kind === "answer" ? session.turns[0].result.answer.shortAnswer : undefined} listenSlot={listenSlot} />
           </AskBox>
           {error ? (
             <p className="error mt-2 font-bold" id={`${textId}-error`} role="alert">
@@ -193,6 +204,20 @@ export function AskClient({
           ) : null}
         </form>
 
+        {live ? (
+          // Outside the announced region on purpose: a screen reader hears each stage once, not every added word.
+          <article className={`${styles.answer} mt-6`} aria-busy="true">
+            <p className="kicker">{copyText(copy, "askedKicker")}</p>
+            <p className="font-bold">{live.question}</p>
+            {live.text ? (
+              <div className="mt-3">
+                <h2 className="text-xl font-extrabold">{copyText(copy, "shortAnswerTitle")}</h2>
+                <p className="whitespace-pre-wrap break-words">{live.text}</p>
+              </div>
+            ) : null}
+            <p className="ask-box-small mt-3" role="status">{stageLine(live.stage)}</p>
+          </article>
+        ) : null}
         <div ref={liveRef} tabIndex={-1} aria-live="polite" className="mt-6 space-y-6">
           {session.turns.map((t, i) => (
             <article key={t.at + i} className={styles.answer}>

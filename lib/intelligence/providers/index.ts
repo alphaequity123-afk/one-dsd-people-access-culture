@@ -21,6 +21,11 @@ export type CompleteRequest = {
   maxTokens?: number;
   timeoutMs?: number;
   trace_id: string;
+  /**
+   * When given, the reply is streamed and this receives its raw text so far, each time more arrives.
+   * A service that cannot stream ignores it and returns the finished reply as usual.
+   */
+  onText?: (textSoFar: string) => void;
 };
 
 export type CompleteResult = {

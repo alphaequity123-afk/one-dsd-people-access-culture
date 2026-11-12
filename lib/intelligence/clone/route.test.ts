@@ -35,3 +35,56 @@ it.each(["short", true, null, { mode: "spoken" }])("rejects invalid response pre
   expect(f.admit).not.toHaveBeenCalled();
   expect(f.ask).not.toHaveBeenCalled();
 });
+
+// A page that asks for progress gets it one line at a time, ending with the finished answer.
+const progressRequest = (body: unknown) => new NextRequest("http://localhost:8911/api/ask", { method: "POST", headers: { origin: "http://localhost:8911", "content-type": "application/json", accept: "application/x-ndjson, application/json" }, body: JSON.stringify(body) });
+const progressLines = async (response: Response) => (await response.text()).split("\n").filter(Boolean).map(line => JSON.parse(line) as { type: string; stage?: string; text?: string; result?: { answer?: { shortAnswer: string }; error?: string } });
+it("sends progress line by line to a page that asks for it, then the finished answer", async () => {
+  f.ask.mockImplementation(async (input: { onProgress?: (event: unknown) => void }) => {
+    input.onProgress?.({ type: "stage", stage: "reading" });
+    input.onProgress?.({ type: "stage", stage: "writing" });
+    input.onProgress?.({ type: "text", text: "Consider" });
+    input.onProgress?.({ type: "text", text: "Consider another perspective." });
+    return { kind: "answer", answer: { shortAnswer: "Consider another perspective.", whyItMatters: "", limits: [], sources: [], degraded: false } };
+  });
+  const response = await POST(progressRequest({ question: "hello" }));
+  expect(response.status).toBe(200);
+  expect(response.headers.get("content-type")).toContain("application/x-ndjson");
+  expect(response.headers.get("cache-control")).toContain("no-store");
+  const lines = await progressLines(response);
+  expect(lines.map(line => line.type)).toEqual(["wait", "stage", "stage", "text", "text", "done"]);
+  expect(lines.at(-1)!.result!.answer!.shortAnswer).toBe("Consider another perspective.");
+  expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "completed");
+  expect(f.close).toHaveBeenCalledOnce();
+});
+it("never passes a progress hook to a request that did not ask for one", async () => {
+  await (await POST(request({ question: "hello" }))).json();
+  expect(f.ask.mock.calls[0][0].onProgress).toBeUndefined();
+});
+it("does not accept a progress hook from the browser", async () => {
+  expect((await POST(progressRequest({ question: "hello", onProgress: "x" }))).status).toBe(400);
+  expect(f.ask).not.toHaveBeenCalled();
+});
+it("reports a failure as the last line and closes its records", async () => {
+  f.ask.mockRejectedValue(new Error("synthetic"));
+  const lines = await progressLines(await POST(progressRequest({ question: "hello" })));
+  expect(lines.at(-1)!.type).toBe("done");
+  expect(lines.at(-1)!.result!.error).toBeTruthy();
+  expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "failed");
+  expect(f.close).toHaveBeenCalledOnce();
+});
+it("finishes and records the answer even when the page has gone away", async () => {
+  let finish: (value: unknown) => void = () => {};
+  f.ask.mockImplementation((input: { onProgress?: (event: unknown) => void }) => new Promise(resolve => { finish = value => { input.onProgress?.({ type: "text", text: "late" }); resolve(value); }; }));
+  const response = await POST(progressRequest({ question: "hello" }));
+  await response.body!.cancel();
+  finish({ kind: "answer", answer: { shortAnswer: "Consider another perspective.", whyItMatters: "", limits: [], sources: [], degraded: false } });
+  await vi.waitFor(() => expect(f.close).toHaveBeenCalledOnce());
+  expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "completed");
+});
+it("keeps the stop control in force for a page that follows progress", async () => {
+  f.paused.mockResolvedValueOnce(false).mockResolvedValueOnce(true);
+  const lines = await progressLines(await POST(progressRequest({ question: "hello" })));
+  expect(lines.at(-1)!.result!.error).toContain("paused");
+  expect(lines.at(-1)!.result!.answer).toBeUndefined();
+});

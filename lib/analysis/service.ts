@@ -1,4 +1,5 @@
 import "server-only";
+import { plainAnswerText } from "@/lib/ask/plain-text";
 
 /**
  * Server side of the staff "Analyze a document" workspace.
@@ -66,6 +67,8 @@ const SHORT_FORMS: Array<[RegExp, string]> = [
 ];
 
 /** Word-boundary, case-sensitive. Never applied to quoted excerpts, which must stay verbatim. */
+const plainText = (text: string) => plainAnswerText(text).trim() || text;
+
 export function writeNamesInFull(text: string): string {
   let out = text;
   for (const [pattern, full] of SHORT_FORMS) out = out.replace(pattern, full);
@@ -331,9 +334,10 @@ export async function analyze(request: AnalysisRequest): Promise<AnalysisOutcome
   if (!parsed.success) throw new Error("analysis_draft_invalid");
 
   const draft: AnalysisDraft = {
-    summary: writeNamesInFull(parsed.data.summary),
-    limitations: parsed.data.limitations.map(writeNamesInFull),
-    answers: parsed.data.answers.map(answer => ({ ...answer, text: writeNamesInFull(answer.text) })),
+    // Written results are plain text: any Markdown markup is removed and the words stay.
+    summary: plainText(writeNamesInFull(parsed.data.summary)),
+    limitations: parsed.data.limitations.map(item => plainText(writeNamesInFull(item))),
+    answers: parsed.data.answers.map(answer => ({ ...answer, text: plainText(writeNamesInFull(answer.text)) })),
   };
   const answers = validateDraft(draft, request, instrument);
 

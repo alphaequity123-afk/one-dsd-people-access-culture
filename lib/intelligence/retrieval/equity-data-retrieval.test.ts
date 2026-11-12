@@ -105,7 +105,7 @@ describe("per-year equity data questions reach the exact figure", () => {
 
 describe("Ask hands the generator the passage with the figure", () => {
   const ctx = () => ({ agent: getAgent("ask_concierge"), role: "staff" as const, dry_run: false, trace_id: "27ee20cc-5384-4e66-af31-9e3ae7e07922" });
-  type Source = { id: string; title: string; excerpt: string; href: string; evidence?: { evidenceId: string; excerpt: { start: number; end: number; quote: string } } };
+  type Source = { id: string; title: string; excerpt: string; href: string; ref?: string };
   let prompts: Array<{ question: string; programSources: Source[] }>;
   let expected = "";
   beforeEach(() => {
@@ -116,7 +116,7 @@ describe("Ask hands the generator the passage with the figure", () => {
       const payload = JSON.parse(request.user);
       prompts.push(payload);
       const source = payload.programSources.find((row: Source) => row.id === expected);
-      const evidenceClaims = source?.evidence ? [{ kind: "source_excerpt", text: source.evidence.excerpt.quote, references: [{ evidenceId: source.evidence.evidenceId, ...source.evidence.excerpt }] }] : [];
+      const evidenceClaims = source?.ref ? [{ text: source.excerpt, refs: [source.ref] }] : [];
       return { parsed: { shortAnswer: "Answer drafted from the supplied sources.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims } };
     });
   });

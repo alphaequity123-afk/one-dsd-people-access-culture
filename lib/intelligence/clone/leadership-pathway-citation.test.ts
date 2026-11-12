@@ -26,25 +26,27 @@ const typographic = /[“”‘’–—]/;
 
 describe("Ask leadership pathway citations", () => {
   it("keeps the leadership lesson citation when the writer retypes curly quotation marks", async () => {
-    let offered: Array<{ id: string; evidence: { evidenceId: string; excerpt: { start: number; end: number; quote: string } } }> = [];
+    let offered: Array<{ id: string; ref?: string; excerpt: string }> = [];
     f.complete.mockImplementation(async (request: { user: string }) => {
       offered = JSON.parse(request.user).programSources ?? [];
-      const claims = offered.filter(source => source.id.startsWith("leadership-pathway-") && typographic.test(source.evidence.excerpt.quote)).slice(0, 2).map(source => {
-        const quote = plain(source.evidence.excerpt.quote);
-        return { kind: "source_excerpt", text: quote, references: [{ evidenceId: source.evidence.evidenceId, start: source.evidence.excerpt.start, end: source.evidence.excerpt.end, quote }] };
-      });
+      const claims = offered.filter(source => source.id.startsWith("leadership-pathway-") && source.ref && typographic.test(source.excerpt)).slice(0, 2)
+        .map(source => ({ text: plain(source.excerpt), refs: [source.ref!] }));
       return { parsed: { shortAnswer: "Servant leadership listens to the person and checks how visible assignments are shared.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims: claims } };
     });
     const result = await askConcierge({ question: "How does servant leadership handle a report that an employee is excluded from visible assignments?", contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "5d1f0a52-3b8e-4c47-9e0f-1f5a3c2b7d10" });
     expect(result.kind).toBe("answer");
     if (result.kind !== "answer") return;
-    const cited = offered.filter(source => source.id.startsWith("leadership-pathway-") && typographic.test(source.evidence.excerpt.quote));
+    const cited = offered.filter(source => source.id.startsWith("leadership-pathway-") && source.ref && typographic.test(source.excerpt));
     expect(cited.length).toBeGreaterThan(0);
     expect(offered.some(source => source.id.startsWith("leadership-pathway-style-servant"))).toBe(true);
     expect(result.answer.limits.join(" ")).not.toContain("could not be matched exactly");
     expect(result.answer.sources.length).toBeGreaterThan(0);
     expect(result.answer.sources.every(source => source.href.startsWith("/learn/leadership-styles"))).toBe(true);
     // The citation shows the lesson's own characters, not the retyped ones.
-    for (const claim of result.answer.evidenceClaims ?? []) expect(cited.some(source => source.evidence.excerpt.quote === claim.text)).toBe(true);
+    expect(result.answer.evidenceClaims?.length).toBeGreaterThan(0);
+    for (const claim of result.answer.evidenceClaims ?? []) {
+      expect(claim.kind).toBe("source_excerpt");
+      expect(cited.some(source => source.excerpt === claim.text)).toBe(true);
+    }
   }, 20000);
 });

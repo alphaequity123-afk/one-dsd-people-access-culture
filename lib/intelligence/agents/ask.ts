@@ -4,12 +4,17 @@ import { cloneAgentsEnabled } from "../clone/config";
 import { CONSULTATION_REQUESTS_REMOVED } from "@/lib/program/retired-features";
 import { consultMethodInstruction } from "../practice/consult-method";
 import { planWithJev, reviewWithJev, SPECIALIST_GUIDANCE } from "../clone/jev";
+import { assessLocalEvidence } from "./local-evidence";
 import { brainContext, expandThroughGraph, fitWriterPrompt } from "../retrieval/brain";
 import { asksForProgramSourcesOnly } from "../research-preference";
 import { EvidenceClaimsSchema, type EvidenceClaim, type SourceEvidence } from "@/lib/content/ask-evidence";
 import { citationEvidenceFromDocs, validateEvidenceClaims } from "../retrieval/evidence";
 import { videoScenarioEvidenceHits } from "../retrieval/video-transcript-evidence";
-import { canonicalizeGeneratedEvidenceClaims, GeneratedEvidenceClaimsSchema } from "../retrieval/generated-evidence";
+import { CitedStatementsSchema, GeneratedEvidenceClaimsSchema, resolveCitedStatements, sourceRef } from "../retrieval/generated-evidence";
+import { recentProgramResources, recentStaffDocs } from "../retrieval/ask-library";
+import { readStringField } from "./partial-answer";
+import { plainAnswerText } from "@/lib/ask/plain-text";
+import { reportProgress, type AskProgressSink } from "./ask-progress";
 import { operationalEquityContext } from "@/lib/program/equity";
 import { TRAINING_CREDIT_NOTICE, trainingCreditContext } from "@/lib/program/learning-credit";
 import { getLearningJourneyContext, isLearningNavigationQuestion, isProgramTrainingCreditQuestion, type LearningJourneyContext } from "../learning-guidance";
@@ -151,6 +156,8 @@ export type AskInput = {
   researchMode?: AskResearchMode;
   /** Recent turns are client supplied, bounded, privacy checked, and never stored in server traces. */
   history?: Array<{ question: string; answer: string }>;
+  /** Set by the server for an open page: what to show while the answer is prepared. Never recorded. */
+  onProgress?: AskProgressSink;
 };
 
 const INTENT_RULES: Array<{ intent: AskIntent; re: RegExp }> = [
@@ -222,6 +229,8 @@ const ROUTINE = /\b(where (?:is|can i find)|checklist|job aid|template|link to)\
 const HIGH_STAKES = /\b(procurement|contract|vendor|RFP|budget|statute|rule change|system replacement|data sharing|algorithm|technology decision)\b/i;
 const PERSONNEL_MATTER = /\b(retaliat\w*|disciplin\w*|harass\w*|grievance|hostile work|wrongful|my (supervisor|manager|boss)\b.*\b(unfair|because i|punish\w*|targeting|singled)|written up|performance review\b.*\b(unfair|because))\b/i;
 const WANTS_HUMAN = /\b(i (?:want|need|would like) (?:to )?(?:talk|speak|meet)|request a consult|book (?:a |an )?(?:time|meeting|consult\w*|appointment) with|schedule (?:a |an )?(?:time|meeting|consult\w*|appointment) with|meet with|human advice|someone to review)\b/i;
+// Work that carries its own material: arithmetic, or wording help with text the person supplies.
+const SELF_CONTAINED = /^\s*(?:(?:what(?:'s| is)|calculate|compute|how much is)\s+)?[-+(]?\s*\d[\d\s.,]*(?:(?:[-+*/x×÷^%()]|plus|minus|times|multiplied by|divided by|over|percent of|squared|cubed)\s*[\d\s.,()]*)+\??\s*$|^\s*(?:please\s+)?(?:rewrite|rephrase|reword|proofread|shorten|simplify|tighten|translate|summari[sz]e|fix the (?:grammar|spelling|wording)|check the (?:grammar|spelling)|make (?:this|it) (?:shorter|clearer|plainer|warmer|friendlier|more (?:formal|concise|direct)))\b[\s\S]{20,}/i;
 const CURRENT_INFORMATION = /\b(current|currently|latest|recent|today|this (?:week|month|year)|new (?:law|rule|guidance|research)|updated|as of)\b/i;
 
 function pathFor(intents: AskIntent[], question: string, pathId?: string): GraduationPath | undefined {
@@ -267,10 +276,24 @@ const DraftSchema = z.object({
 });
 // Numeric quote coordinates are resolved from supplied evidence before this
 // transport result reaches the unchanged authoritative draft schema below.
-const TransportDraftSchema = DraftSchema.extend({ evidenceClaims: GeneratedEvidenceClaimsSchema.optional() });
+export const TransportDraftSchema = DraftSchema.extend({ evidenceClaims: GeneratedEvidenceClaimsSchema.optional() });
+// What the writer is asked for. The answer comes first so it can be shown while the rest is still being
+// written, and each supported statement names its sources by label instead of copying their passages back.
+const WriterDraftSchema = z.object({
+  shortAnswer: DraftSchema.shape.shortAnswer,
+  whyItMatters: DraftSchema.shape.whyItMatters,
+  limits: DraftSchema.shape.limits,
+  evidenceClaims: CitedStatementsSchema.optional(),
+  resourceHrefs: DraftSchema.shape.resourceHrefs,
+  sourceIds: DraftSchema.shape.sourceIds,
+  practiceDraft: DraftSchema.shape.practiceDraft,
+});
 
 export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<AskResult> {
   const startedAt = Date.now();
+  const sink = input.onProgress;
+  // How long each part took, for the operational log. No question or answer text is ever recorded here.
+  const took: Record<string, number> = {};
   const question = (input.question ?? "").trim();
   const context = resolveProductContext(input.contextPreference);
   const explicitProgramOnly = asksForProgramSourcesOnly(question);
@@ -314,7 +337,11 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
 
   let loadedDocs: Doc[] | undefined;
   const scope = context === "one_dsd" ? "dsd" : "one-dhs";
-  const program = await indexedProgramResources(scope);
+  reportProgress(sink, { type: "stage", stage: "reading" });
+  // Both parts of the library are read together, and held briefly between questions.
+  const staffLoad = recentStaffDocs(scope);
+  staffLoad.catch(() => undefined);
+  const program = await recentProgramResources(scope);
   const organizationMatch = organizationalBrief(retrievalQuestion);
   // A user who asks for only application sources must not receive outside URLs
   // or source-derived organizational summaries as independent evidence.
@@ -324,7 +351,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const organizationIndex = organizationalDocs().filter(doc => organization.entries.some(entry => entry.id === doc.id));
   const staffDocs = async () => (loadedDocs ??= [
     ...organizationIndex,
-    ...(await indexedStaffDocs(scope)).filter(doc => doc.kind !== "brief"),
+    ...(await staffLoad).filter(doc => doc.kind !== "brief"),
     ...program.destinations,
     // State of Minnesota agencies and their public pages: one connected knowledge base with the program.
     ...(explicitProgramOnly ? [] : [...agencyDocs({ forAnswers: true }), ...statePageDocs()]),
@@ -428,20 +455,34 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // retain the same research admission and final answer review.
   const requestedMode = explicitProgramOnly
     ? "program_only" : cloneAgentsEnabled() ? "auto" : input.researchMode ?? (input.mode === "review" ? "program_only" : "auto");
+  took.read = Date.now() - startedAt;
   // When outside research is needed whatever the routing step decides, both start together instead of one after the other.
+  // Where the program has some material but not enough, the routing step's reading decides, so nothing is searched needlessly.
+  const localEvidence = assessLocalEvidence(question, merged.filter(hit => !/^https?:\/\//.test(hit.href)));
+  // A calculation, or help with wording the person has supplied, needs no outside facts, so nothing is searched for it.
+  const selfContained = SELF_CONTAINED.test(question) && !CURRENT_INFORMATION.test(question) && !wantsCitation(question);
+  const research = (...args: Parameters<typeof governedResearch>) => {
+    const began = Date.now();
+    reportProgress(sink, { type: "stage", stage: "checking" });
+    return governedResearch(...args).finally(() => { took.research = Date.now() - began; });
+  };
+  const planBegan = Date.now();
   const researchCertain = cloneAgentsEnabled() && (requestedMode === "current_web" || requestedMode === "deep_research" || (requestedMode === "auto" && (
-    !merged.some(hit => !/^https?:\/\//.test(hit.href)) || CURRENT_INFORMATION.test(question) || (!namedPageHits.length && wantsCitation(question))
+    (!namedPageHits.length && localEvidence === "absent" && !selfContained) || CURRENT_INFORMATION.test(question) || (!namedPageHits.length && wantsCitation(question))
     || /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question))));
   const [jevPlan, requiredResearch] = await Promise.all([
     cloneAgentsEnabled() ? planWithJev(question, merged.map(hit => ({ title: hit.title, excerpt: hit.excerpt.slice(0, 1200) })), ctx, input.cloneRunId) : null,
-    researchCertain ? governedResearch(question, requestedMode === "deep_research" ? "deep_research" : "current_web", requestedMode === "current_web" || requestedMode === "deep_research", ctx) : undefined,
+    researchCertain ? research(question, requestedMode === "deep_research" ? "deep_research" : "current_web", requestedMode === "current_web" || requestedMode === "deep_research", ctx) : undefined,
   ]);
+  took.plan = Date.now() - planBegan;
   const specialistReview = jevPlan?.route === "accessibility" ? await a11yScan({ text: question, artifactType: "document" }, { ...ctx, agent: getAgent("a11y_reviewer") }) : undefined;
   const sufficientNamedPdf = namedPageHits.length > 0 && jevPlan?.evidence === "sufficient";
   const shouldPrepareResearchAnswer =
     requestedMode === "current_web" ||
     requestedMode === "deep_research" ||
-    (requestedMode === "auto" && ((cloneAgentsEnabled() && (jevPlan?.evidence !== "sufficient" || !merged.some(hit => !/^https?:\/\//.test(hit.href)))) || CURRENT_INFORMATION.test(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
+    (requestedMode === "auto" && ((cloneAgentsEnabled() && (!namedPageHits.length && localEvidence === "potentially_sufficient"
+      ? jevPlan?.evidence === "research"
+      : !selfContained && (jevPlan?.evidence !== "sufficient" || localEvidence === "absent"))) || CURRENT_INFORMATION.test(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
       /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question)));
   const researchDepth: ResearchDepth = requestedMode === "deep_research" ? "deep_research" : "current_web";
   let publicResearch: AskAnswer["publicResearch"];
@@ -475,7 +516,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       };
     }
   } else if (shouldPrepareResearchAnswer) {
-    const result = requiredResearch ?? await governedResearch(
+    const result = requiredResearch ?? await research(
       question,
       researchDepth,
       requestedMode === "current_web" || requestedMode === "deep_research",
@@ -600,6 +641,21 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         ? fitWriterPrompt(writerSystem, publicDirectory, brain.context, publicResearch, writerPrompt)
         : { user: writerPrompt(publicDirectory, brain.context, publicResearch), step: 0 };
       if (writerUser.step) console.info("ask_prompt_fitted", { traceId: ctx.trace_id, step: writerUser.step });
+      // Everyday answers appear on the page as they are written. A question that touches a personnel matter,
+      // a decision with serious consequences or a request for a person is shown only after the closing check.
+      const showAsWritten = Boolean(sink) && !escalate && jevPlan?.route !== "support";
+      let shown = "", shownAt = 0;
+      const writeBegan = Date.now();
+      const onText = showAsWritten ? (raw: string) => {
+        const field = readStringField(raw, "shortAnswer");
+        if (!field) return;
+        const text = askAnswerText(field.text);
+        const now = Date.now();
+        if (text.length <= shown.length || (!field.complete && now - shownAt < 60)) return;
+        if (!shown) took.first_text = now - startedAt;
+        shown = text; shownAt = now;
+        reportProgress(sink, { type: "text", text });
+      } : undefined;
       const writeDraft = (correction = "") => runTool(
         ctx,
         "answer.structured_draft",
@@ -612,44 +668,33 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
               // Reasoning models need the remaining request window; the route allows 120 seconds.
               timeoutMs: Math.max(20_000, Math.min(75_000, 110_000 - (Date.now() - startedAt))),
               user: writerUser.user,
-              schema: TransportDraftSchema,
+              schema: WriterDraftSchema,
               trace_id: ctx.trace_id,
+              onText,
             },
             binding.model,
           ),
         { modelId: binding.model.model_id, contentIds: sources.map((s) => s.id) },
       );
       const schemaError = (error: unknown) => error instanceof Error && (error.name.includes("ZodError") || "issues" in error);
-      // References that do not match the supplied passages are never accepted or repaired.
-      const currentDocs = async () => [...organizationalDocs(), ...await indexedStaffDocs(scope), ...(await indexedProgramResources(scope)).destinations];
       const claimsOf = (parsed: unknown) => parsed && typeof parsed === "object" && "evidenceClaims" in parsed ? (parsed as { evidenceClaims?: unknown }).evidenceClaims : undefined;
-      const resolvesEvidence = async (parsed: unknown) => {
-        const claims = claimsOf(parsed);
-        if (!Array.isArray(claims) || !claims.length) return true;
-        try {
-          validateEvidenceClaims(canonicalizeGeneratedEvidenceClaims(claims, sources), sources, await currentDocs());
-          return true;
-        } catch (error) {
-          if (schemaError(error) || (error instanceof Error && error.message === "generated_evidence_rejected")) return false;
-          throw error;
-        }
-      };
+      reportProgress(sink, { type: "stage", stage: "writing" });
       // A reply that does not fit the answer format gets one more attempt.
-      let out = await writeDraft().catch(error => { if (!schemaError(error) || Date.now() - startedAt > 60_000) throw error; console.warn("ask_format_retry", { traceId: ctx.trace_id }); return writeDraft("\nReturn only the requested JSON fields."); });
-      if (!await resolvesEvidence(out.parsed) && Date.now() - startedAt < 70_000) {
-        console.warn("ask_evidence_retry", { traceId: ctx.trace_id });
-        out = await writeDraft("\nYour previous evidence references did not match the supplied text. Copy each evidenceId and its complete evidence.excerpt exactly, or leave evidenceClaims empty.");
-      }
-      let writerParsed: unknown = out.parsed;
-      if (!await resolvesEvidence(writerParsed)) {
-        // Keep the written answer, with no program citations it could not support.
-        console.warn("ask_evidence_dropped", { traceId: ctx.trace_id });
-        writerParsed = { ...(writerParsed as object), evidenceClaims: [] };
-        limits.push("Program passages could not be matched exactly for this answer, so none are cited. Check the linked resources directly.");
-      }
-      const writerClaims = claimsOf(writerParsed);
-      const generatedDraft = writerClaims !== undefined
-        ? { ...(writerParsed as object), evidenceClaims: canonicalizeGeneratedEvidenceClaims(writerClaims, sources) }
+      const out = await writeDraft().catch(error => {
+        if (!schemaError(error) || Date.now() - startedAt > 60_000) throw error;
+        console.warn("ask_format_retry", { traceId: ctx.trace_id });
+        if (shown) { shown = ""; reportProgress(sink, { type: "reset" }); }
+        return writeDraft("\nReturn only the requested JSON fields.");
+      });
+      took.write = Date.now() - writeBegan;
+      reportProgress(sink, { type: "stage", stage: "finishing" });
+      const writerParsed: unknown = out.parsed;
+      // Each supported statement stands or falls on its own. A statement whose sources cannot be
+      // resolved from what was supplied is left out; nothing is repaired, and nothing is written twice.
+      const cited = resolveCitedStatements(claimsOf(writerParsed), sources);
+      if (cited.dropped) console.warn("ask_evidence_dropped", { traceId: ctx.trace_id, dropped: cited.dropped, kept: cited.claims.length });
+      const generatedDraft = writerParsed && typeof writerParsed === "object"
+        ? { ...(writerParsed as object), evidenceClaims: cited.claims.length ? cited.claims : undefined }
         : writerParsed;
       const completeDraft = DraftSchema.safeParse(generatedDraft);
       // A malformed optional worksheet must not discard an otherwise useful answer.
@@ -662,9 +707,16 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         const generatedLimits = parsed.data.limits.map(askAnswerText).filter(Boolean);
         const generatedNarrative = [short, why, ...generatedLimits].join("\n");
         if (short.length > 0 && !/^\s*[\[{]\s*["\'](?:role|system|provider)["\']\s*:/.test(generatedNarrative)) {
-          const freshDocs = (parsed.data.evidenceClaims?.length ?? 0) > 0
+          // Every citation is checked against the current publication, read fresh. One that no longer matches is left out.
+          const proposed = parsed.data.evidenceClaims ?? [];
+          const freshDocs = proposed.length
             ? [...organizationalDocs(), ...await indexedStaffDocs(scope), ...(await indexedProgramResources(scope)).destinations] : [];
-          const checkedClaims = validateEvidenceClaims(parsed.data.evidenceClaims, sources, freshDocs);
+          const checkedClaims = proposed.flatMap(claim => {
+            try { return validateEvidenceClaims([claim], sources, freshDocs); }
+            catch (error) { if (error instanceof Error && error.message === "generated_evidence_rejected") return []; throw error; }
+          });
+          if (checkedClaims.length < proposed.length) console.warn("ask_evidence_dropped", { traceId: ctx.trace_id, dropped: proposed.length - checkedClaims.length, kept: checkedClaims.length, reason: "publication_changed" });
+          if (proposed.length && !checkedClaims.length) limits.push("Program passages could not be matched exactly for this answer, so none are cited. Check the linked resources directly.");
           evidenceClaims = checkedClaims;
           draft = { shortAnswer: short, whyItMatters: why };
           const usedSourceIds = new Set(parsed.data.sourceIds ?? []);
@@ -693,6 +745,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       // Operational codes only: never log the question, generated text, or credentials.
       // The adapter has already logged the provider status and error-body excerpt.
       const status = errorStatus(error);
+      // Anything already shown is set aside: the answer below replaces it.
+      reportProgress(sink, { type: "reset" });
       const code = error instanceof Error && /^[a-z][a-z0-9_]{0,79}$/.test(error.message) ? error.message : undefined;
       const known = code && ["provider_refusal", "provider_incomplete", "generated_answer_rejected", "generated_evidence_rejected"].includes(code) ? code : "provider_request_failed";
       if (known === "generated_evidence_rejected") {
@@ -801,7 +855,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
 
   // Jev checks every written answer before it goes out. If the review is unavailable, the answer still goes out and the log says so.
   if (generative && cloneAgentsEnabled()) {
+    const reviewBegan = Date.now();
     const review = await reviewWithJev(question, [draft.shortAnswer, draft.whyItMatters].join("\n"), ctx, input.cloneRunId);
+    took.review = Date.now() - reviewBegan;
     if (review === "unavailable") console.warn("ask_review_unavailable", { traceId: ctx.trace_id });
     // "revise" is a wording or boundary note: the answer is shared and the verdict is logged for follow-up.
     if (review === "revise") console.warn("ask_review_flagged", { traceId: ctx.trace_id, review });
@@ -813,6 +869,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     }
   }
 
+  // Operational timing only: how long each part took, in milliseconds. No question or answer text.
+  took.total = Date.now() - startedAt;
+  console.info("ask_timing", { traceId: ctx.trace_id, generative, research: publicResearch?.status ?? "none", ...took });
   const pathSuggestion = path ? { id: path.id, title: path.title, why: `This question connects with the "${path.staffLabel}" path. It covers ${path.steps.map((s) => s.title).slice(0, 4).join(", ")} and ends with a review checklist.` } : undefined;
 
   return {
@@ -982,7 +1041,8 @@ function compose(intent: AskIntent, question: string, sources: Citation[], quest
  * as text; it is never interpreted as HTML or executable code.
  */
 function askAnswerText(value: string): string {
-  return (value ?? "").replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, "").trim();
+  // Written answers are plain text: any Markdown markup is removed and the words, code and formulas stay.
+  return plainAnswerText((value ?? "").replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, "")).trim();
 }
 
 /** Match the complete question, never an embedded quote, comparison, or compound request. */
@@ -1016,10 +1076,11 @@ function systemPrompt(responseMode: AskResponseMode = "text", explicitProgramOnl
     "Answer educational questions about Tribal Nations, Native communities, sovereignty, and geography. For actual government-to-government decisions, explain that authorized Tribal and agency representatives must handle consultation; do not claim authority to represent a Nation or infer an individual's affiliation.",
     "Protect private information and do not profile or rank people by identity, beliefs, or their private participation. For harmful requests, explain the relevant limit and offer safe, useful help.",
     "You can draft communications and describe how to carry out a task. Do not say you sent, published, scheduled, or changed anything. Do not impersonate a real person or imply official agency authority.",
+    "Write plain text only. Never use Markdown or any other markup: no asterisks or underscores for emphasis, no pound-sign headings, no backticks or code fences, no tables, and no bracketed links. For a list, put each item on its own line, starting with a number and a period or with a hyphen. When code or a formula is asked for, write it on its own lines as plain text.",
     "Write in a warm, professional and supportive voice at about a 10th to 12th grade reading level: clear and nuanced, never simplistic, and never stiff or process-heavy. Technical terms are allowed when they help answer the user's subject; do not discuss private implementation details about this application. Refer to yourself only as Ask. Never use the words AI, artificial intelligence, assistant, chatbot, bot, model, machine, automated, automation or generated anywhere in an answer, whether about yourself, this site, or a tool the reader might use: say “a translation tool”, “a checking tool” or “software” instead, and say “a qualified translator” rather than contrasting people with machines. Write in connected sentences and short paragraphs; use a numbered or bulleted list only when the reader will act on the items in order.",
     "The reader is a Minnesota Department of Human Services staff member in the Disability Services Division; never ask what country, state or employer they are in. For personnel matters such as retaliation, discipline, harassment, grievances or a supervisor's conduct, say plainly that Employee Culture, Human Resources and the civil-rights channel handle them, point the reader to Find the right person, and keep any general guidance brief and supportive rather than legal.",
     "When the reader asks for books, readings or what to read, draw on the reading collection in the supplied sources and directory, name the specific books with their links, and never say the site lacks a book on a subject unless the supplied directory truly has none.",
-    "Return evidenceClaims when using a program source: each has kind (source_excerpt or inference), text, and references (evidenceId, start, end, quote). Copy the complete supplied evidence.excerpt and evidenceId unchanged into each reference. Do not shorten or rewrite the quote or calculate new offsets. The start and end must be copied with their matching quote. External publicResearch sources have URLs rather than program evidence IDs: cite their supplied URLs in the answer and never create evidenceClaims for them. Leave evidenceClaims empty when only publicResearch supports the answer. A source_excerpt has one reference and text exactly equal to that quote. Put paraphrases, recommendations, and interpretations under inference, with their exact basis passages; do not label them as proven facts. These checks establish reference integrity, not factual truth or semantic entailment. Never invent a reference or infer a conflict from the question alone. If no suitable source supports the question, give a useful general explanation with evidenceClaims empty. Do not present general prose as quoted source evidence. sourceIds can suggest related reading but never establish support for a claim.",
+    "Return evidenceClaims when using a program source: each has text and refs. text is one statement the program material supports, in your own words, or a short exact quotation from it. refs lists the ref labels of the supplied programSources that support it, such as S1. Only a source that carries a ref can be cited, and its passage is attached for you: never copy passages, identifiers or offsets into evidenceClaims. External publicResearch sources have URLs rather than refs: cite their supplied URLs in the answer and never create evidenceClaims for them. Leave evidenceClaims empty when only publicResearch supports the answer. A statement that is not an exact quotation is treated as your reading of the passage, so word paraphrases, recommendations, and interpretations as what the material supports; do not present them as proven facts. These checks establish reference integrity, not factual truth or semantic entailment. Never invent a ref or infer a conflict from the question alone. If no suitable source supports the question, give a useful general explanation with evidenceClaims empty. Do not present general prose as quoted source evidence. sourceIds can suggest related reading but never establish support for a claim.",
     "Return shortAnswer (the complete answer, with the detail the question needs), whyItMatters (brief useful context, or an empty string when unnecessary), limits (only relevant limitations; an empty list is fine), and resourceHrefs (up to eight exact URLs from the supplied public program directory that help with this question, including paraphrased or multilingual requests; use an empty list when none is useful).",
   ];
   if (explicitProgramOnly) {
@@ -1075,9 +1136,10 @@ function userPrompt(
     answerPreference: asksForProgramSourcesOnly(question)
       ? "Use only the supplied application sources and program knowledge. Do not rely on outside sources or unsupported general knowledge. If the supplied material is insufficient, say so."
       : mode === "program_only" ? "Answer without a public web search; general knowledge is allowed." : "Answer the question using the most suitable available knowledge and evidence.",
-    programSources: sources.map(source => ({
-      id: source.id, title: source.title, authority: source.authorityLabel,
-      excerpt: source.evidence?.excerpt.quote ?? source.excerpt, href: source.href, evidence: source.evidence,
+    // Each citable source carries a short label. The writer cites by label and the passage is attached afterwards.
+    programSources: sources.map((source, index) => ({
+      ref: sourceRef(sources, index), id: source.id, title: source.title, authority: source.authorityLabel,
+      excerpt: source.evidence?.excerpt.quote ?? source.excerpt, href: source.href,
     })),
     programKnowledge,
     availableProgramDestinations: destinations,
@@ -1149,7 +1211,7 @@ export function toStaffAskResult(result: AskResult): StaffAskResult {
     reviewLabel: "",
   });
   const publicAnswer = publicResearch?.answer
-    ? researchAnswerText(publicResearch.answer, narrative)
+    ? plainAnswerText(researchAnswerText(publicResearch.answer, narrative)).trim()
     : undefined;
   const mainAnswer = result.answer.shortAnswer === publicResearch?.answer
     ? publicAnswer ?? ""

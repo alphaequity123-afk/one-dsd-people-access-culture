@@ -67,3 +67,61 @@ export function canonicalizeGeneratedEvidenceClaims(value: unknown, supplied: Ci
   // validate these references against the fresh current-publication projection.
   return EvidenceClaimsSchema.parse(canonical);
 }
+
+/**
+ * What the writer returns for each supported statement: its text and the labels of the
+ * supplied sources behind it. The passages are attached here from what was supplied, so
+ * the writer never copies them back and a retyped passage can never fail to match.
+ */
+export const CitedStatementsSchema = z.array(z.object({
+  text: z.string().min(1).max(4000),
+  refs: z.array(z.string().min(1).max(40)).min(1).max(4),
+})).max(12);
+
+/** The label a supplied source is cited by, or undefined when it carries no evidence to cite. */
+export function sourceRef(supplied: Citation[], index: number): string | undefined {
+  return supplied[index]?.evidence ? `S${index + 1}` : undefined;
+}
+
+/**
+ * Turn the writer's statements into evidence claims. Each statement stands or falls on its own:
+ * a label that names no supplied source is left out, and a statement with no valid label is
+ * dropped. Nothing is repaired or guessed. A statement in the earlier format, with its own
+ * quoted passage, is resolved by the exact-match rules above.
+ * The caller still validates every claim against the current publication.
+ */
+export function resolveCitedStatements(value: unknown, supplied: Citation[]): { claims: EvidenceClaim[]; dropped: number } {
+  if (!Array.isArray(value)) return { claims: [], dropped: 0 };
+  const byRef = new Map<string, NonNullable<Citation["evidence"]>>(supplied.flatMap((source, index) => source.evidence ? [[`S${index + 1}`, source.evidence] as const] : []));
+  const claims: EvidenceClaim[] = [];
+  let dropped = 0;
+  for (const raw of value.slice(0, 12)) {
+    try {
+      const statement = raw as { text?: unknown; refs?: unknown };
+      if (!raw || typeof raw !== "object" || !Array.isArray(statement.refs)) {
+        claims.push(...canonicalizeGeneratedEvidenceClaims([raw], supplied));
+        continue;
+      }
+      const text = typeof statement.text === "string" ? statement.text.trim().slice(0, 4000) : "";
+      const labels = Array.from(new Set(statement.refs.flatMap(ref => typeof ref === "string" ? [ref.trim().toUpperCase()] : [])));
+      const references = labels.flatMap(label => {
+        const snapshot = byRef.get(label);
+        if (!snapshot) return [];
+        // The whole supplied passage, or its opening when it is longer than a reference may be.
+        let characters = Array.from(snapshot.excerpt.quote);
+        while (characters.join("").length > 1500) characters = characters.slice(0, -1);
+        if (!characters.length) return [];
+        return [{ evidenceId: snapshot.evidenceId, start: snapshot.excerpt.start, end: snapshot.excerpt.start + characters.length, quote: characters.join("") }];
+      }).slice(0, 4);
+      if (!text || !references.length) { dropped += 1; continue; }
+      const quoted = references.length === 1 && plainTypography(text) === plainTypography(references[0].quote);
+      claims.push(...EvidenceClaimsSchema.parse([quoted
+        ? { kind: "source_excerpt", text: references[0].quote, references }
+        : { kind: "inference", text, references }]));
+    } catch {
+      dropped += 1;
+    }
+  }
+  return { claims, dropped };
+}
+

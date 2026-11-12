@@ -11,6 +11,8 @@ import { ask, paused } from "@/lib/intelligence/orchestrator";
 import { toStaffAskResult } from "@/lib/intelligence/agents/ask";
 import { PracticeArtifactSchema } from "@/lib/content/practice-artifact";
 import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
+import type { AskProgress, AskProgressSink } from "@/lib/intelligence/agents/ask-progress";
+import { ASK_PROGRESS_TYPE } from "@/lib/ask/progress-stream";
 
 export const maxDuration = 180;
 export const runtime = "nodejs";
@@ -54,6 +56,34 @@ function patientJson(work: () => Promise<unknown>) {
   return new Response(stream, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store, no-transform", "x-accel-buffering": "no" } });
 }
 
+/**
+ * The same patient connection, for a page that can show progress: one line of JSON at a time.
+ * The page sees which part of the work is under way and the answer as it is written, and the
+ * last line carries the finished, checked answer. Nothing here is recorded.
+ */
+function progressLines(work: (report: AskProgressSink) => Promise<unknown>) {
+  const encoder = new TextEncoder();
+  let open = true;
+  const stream = new ReadableStream<Uint8Array>({
+    start(controller) {
+      const line = (value: AskProgress | { type: "wait" } | { type: "done"; result: unknown }) => {
+        if (!open) return;
+        try { controller.enqueue(encoder.encode(JSON.stringify(value) + "\n")); } catch { open = false; }
+      };
+      line({ type: "wait" });
+      const beat = setInterval(() => line({ type: "wait" }), KEEP_ALIVE_MS);
+      void work(line).then(result => {
+        clearInterval(beat);
+        line({ type: "done", result });
+        if (open) { open = false; controller.close(); }
+      });
+    },
+    // The page went away. The answer is still finished and recorded as usual; nothing more is sent.
+    cancel() { open = false; },
+  });
+  return new Response(stream, { headers: { "content-type": `${ASK_PROGRESS_TYPE}; charset=utf-8`, "cache-control": "no-store, no-transform", "x-accel-buffering": "no" } });
+}
+
 /** Owner-authorized clone pilot; the other deployments remain browse-only. */
 export async function POST(request: NextRequest) {
   if (!cloneAgentsEnabled()) return staffWriteClosedResponse();
@@ -79,9 +109,9 @@ export async function POST(request: NextRequest) {
     return json({ error: "Ask has reached its limit for now. You can browse resources, or try again a little later." }, 429);
   }
   const runId = id;
-  return patientJson(async () => {
+  const answer = async (onProgress?: AskProgressSink) => {
     try {
-      const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: "auto", cloneRunId: runId }, "staff", runId);
+      const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: "auto", cloneRunId: runId, onProgress }, "staff", runId);
       if (await paused()) { finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
       if (result.kind === "refusal") { finishRun(db, runId, "refused"); return toStaffAskResult(result); }
       const answer = result.answer;
@@ -92,5 +122,7 @@ export async function POST(request: NextRequest) {
       finishRun(db, runId, "failed");
       return { error: "Ask could not finish this answer. Please try again later, or browse the Library." };
     } finally { db.close(); }
-  });
+  };
+  // A page that asks for progress gets it line by line; anything else gets the single finished answer as before.
+  return request.headers.get("accept")?.includes(ASK_PROGRESS_TYPE) ? progressLines(answer) : patientJson(() => answer());
 }

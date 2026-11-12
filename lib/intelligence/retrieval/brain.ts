@@ -4,7 +4,7 @@ import { AUTHORITY } from "@/lib/content/types";
 import { scoreDoc, searchExcerpt, tokens, type Doc, type SearchHit } from "./search";
 
 const EDGE_WEIGHT: Partial<Record<GraphEdgeType, number>> = { curated_reading: 5, suggested_reading: 5, informs: 4, about_community: 3, cites: 3, practice_link: 2, part_of: 2, related: 1.5 };
-export const BRAIN_LIMITS = { connected: 8, totalChars: 60_000, leadChars: 10_000, connectedChars: 3000 };
+export const BRAIN_LIMITS = { connected: 6, totalChars: 24_000, leadChars: 4000, connectedChars: 1500 };
 
 /** Follow the graph one step from the best matches, ranked by connection strength and fit with the question. */
 export function expandThroughGraph(hits: SearchHit[], docs: Doc[], question: string, limit = BRAIN_LIMITS.connected): Array<SearchHit & { via: string }> {
@@ -67,7 +67,7 @@ export function brainContext(lead: SearchHit[], connected: Array<SearchHit & { v
 
 /** Shrink what the writer receives, least useful first, so program knowledge and public research both still fit. */
 export function fitWriterPrompt<D, K extends { text: string }, R extends { answer?: string; sources: unknown[] } | undefined>(
-  system: string, directory: D[], knowledge: K[], research: R, build: (directory: D[], knowledge: K[], research: R) => string, limit = 200_000,
+  system: string, directory: D[], knowledge: K[], research: R, build: (directory: D[], knowledge: K[], research: R) => string, limit = 78_000,
 ) {
   const shortKnowledge = (share: number) => knowledge.map(item => ({ ...item, text: item.text.slice(0, Math.floor(item.text.length * share)) }));
   const shortResearch = (chars: number, sources: number) => (research ? { ...research, answer: research.answer?.slice(0, chars), sources: research.sources.slice(0, sources) } : research) as R;

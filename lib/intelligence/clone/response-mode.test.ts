@@ -53,7 +53,8 @@ describe("spoken answer preference", () => {
     f.complete.mockResolvedValue({ parsed: { ...answer, shortAnswer: detail } });
     const { result, request } = await complete({ question: detailedQuestion, responseMode: "spoken" });
     expect(JSON.parse(request.user).question).toBe(detailedQuestion);
-    if (result.kind === "answer") expect(result.answer.shortAnswer).toBe(detail);
+    // Nothing is cut short. The answer is plain text, so the code keeps its own line without the fence marks.
+    if (result.kind === "answer") expect(result.answer.shortAnswer).toBe(detail.replace("```html\n", "").replace(/\n```$/, ""));
   }, 120000);
 
   it("keeps an explicitly requested worksheet and its follow-up revision in spoken mode", async () => {
