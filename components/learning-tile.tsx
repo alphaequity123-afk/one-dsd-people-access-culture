@@ -40,6 +40,6 @@ export function LearningTile({ item, presentation, href, owner = false, showLeve
         <div className={styles.meta}><AuthorityPill authority={item.authority} /></div>
       </div>
     </Link>
-    {studyPath ? <Link href={resourceStudyHref(studyPath)} prefetch={false} className="mt-2 inline-block text-sm font-semibold underline underline-offset-4" aria-label={`Study ${item.title} with Gemini`}>Study this course</Link> : null}
+    {studyPath ? <Link href={resourceStudyHref(studyPath)} prefetch={false} className="mt-2 inline-block text-sm font-semibold underline underline-offset-4" aria-label={`Study ${item.title}`}>Study this course</Link> : null}
   </article>;
 }
