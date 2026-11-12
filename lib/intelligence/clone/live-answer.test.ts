@@ -162,3 +162,50 @@ describe("searching outside sources only when it helps", () => {
     expect(f.research).not.toHaveBeenCalled();
   }, 120000);
 });
+
+describe("work with Native American communities and Tribal Nations", () => {
+  const referred = /Office of Indian Policy or the (?:responsible|appropriate) Tribal liaison comes first/;
+  it("is referred first, holds to the program's own pages, and is not shown while it is written", async () => {
+    const { result, shown } = await ask({ question: "My team will meet next month with Native American families about waiver services. What should we prepare?" });
+    const request = f.complete.mock.calls.at(-1)![0] as { system: string };
+    expect(request.system).toContain("they come first");
+    expect(request.system).toContain("Do not add your own description of Native cultures");
+    expect(shown).toEqual([]);
+    if (result.kind !== "answer") throw new Error("Expected an answer");
+    expect(result.answer.shortAnswer).toMatch(referred);
+    expect(result.answer.shortAnswer.indexOf("Office of Indian Policy")).toBeLessThan(120);
+    expect(result.answer.shortAnswer).toContain(text);
+    expect(result.answer.limits.join(" ")).not.toContain("Office of Indian Policy");
+  }, 120000);
+
+  it("recognises Alaska Native people and the Nations by name", async () => {
+    for (const question of ["How should we plan outreach with Alaska Native families?", "We are preparing a listening session at Leech Lake. What should we plan for?"]) {
+      const { result } = await ask({ question });
+      if (result.kind !== "answer") throw new Error("Expected an answer");
+      expect(result.answer.shortAnswer, question).toMatch(referred);
+    }
+  }, 180000);
+
+  it("does not repeat the referral when the answer already opens with it", async () => {
+    f.complete.mockImplementation(streamingWriter({ ...reply, shortAnswer: "The Office of Indian Policy and the Tribal liaison come first for this work. " + text }));
+    const { result } = await ask({ question: "How do we consult with a Tribal Nation about a policy change?" });
+    if (result.kind !== "answer") throw new Error("Expected an answer");
+    expect(result.answer.shortAnswer.match(/Office of Indian Policy/g)).toHaveLength(1);
+  }, 120000);
+
+  it("answers a question of general knowledge as usual, with the referral as a note", async () => {
+    const { result } = await ask({ question: "What is Tribal sovereignty?" });
+    const request = f.complete.mock.calls.at(-1)![0] as { system: string };
+    expect(request.system).not.toContain("they come first");
+    if (result.kind !== "answer") throw new Error("Expected an answer");
+    expect(result.answer.shortAnswer).toBe(text);
+    expect(result.answer.limits.join(" ")).toContain("Office of Indian Policy");
+  }, 120000);
+
+  it("does not mistake North Dakota for a Tribal subject", async () => {
+    const { result } = await ask({ question: "How do we plan a meeting with partners from North Dakota?" });
+    if (result.kind !== "answer") throw new Error("Expected an answer");
+    expect(result.answer.shortAnswer).toBe(text);
+    expect(result.answer.limits.join(" ")).not.toContain("Office of Indian Policy");
+  }, 120000);
+});

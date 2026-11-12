@@ -225,6 +225,11 @@ function languageAccessResource(doc: Doc): boolean {
 }
 
 const ROUTINE = /\b(where (?:is|can i find)|checklist|job aid|template|link to)\b/i;
+// Native American communities and Tribal Nations. The program defers on this work to the offices responsible for it.
+const TRIBAL_SUBJECT = /\b(Tribal|Tribes?|Indigenous|Native American|American Indian|Alaska Native|First Nations|Native (?:people|person|communit\w*|nations?|Minnesotans?|famil\w*|children|youth|elders?|staff|clients?)|Anishinaabe|Ojibwe|Chippewa|Lakota|(?<!North |South )Dakota|Ho-Chunk|Red Lake|White Earth|Bois Forte|Fond du Lac|Grand Portage|Leech Lake|Mille Lacs|Upper Sioux|Lower Sioux|Prairie Island|Shakopee Mdewakanton)\b/i;
+const TRIBAL_WORK = /\b(meet\w*|engag\w*|outreach|consult\w*|work(?:ing|s)? with|serv(?:e|es|ing)|visit\w*|partner\w*|plan(?:ning|s)?|prepar\w*|invit\w*|listening sessions?|survey\w*|interview\w*|recruit\w*|hir(?:e|ing)|train(?:ing)? (?:for|on|about)|present\w*|assess\w*|cases?|clients?|famil(?:y|ies)|children|data|land|contract\w*|grant\w*|program design|polic(?:y|ies) (?:change|decision))\b/i;
+const TRIBAL_REFERRAL_FIRST = "For work with Native American communities or Tribal Nations, the Office of Indian Policy or the responsible Tribal liaison comes first. One DSD refers this work to them and does not speak for a Tribal Nation or replace consultation.";
+const TRIBAL_WRITING_RULE = "\nThis question is about work with Native American communities or Tribal Nations. This program defers on that work to the Office of Indian Policy and the responsible Tribal liaison, and they come first: say so plainly at the start. Say only what the supplied program sources say, and name those sources. Do not add your own description of Native cultures, family roles, history, beliefs or practices, and do not write an engagement plan of your own. Access practices that apply to any meeting may be offered as general practices.";
 const HIGH_STAKES = /\b(procurement|contract|vendor|RFP|budget|statute|rule change|system replacement|data sharing|algorithm|technology decision)\b/i;
 const PERSONNEL_MATTER = /\b(retaliat\w*|disciplin\w*|harass\w*|grievance|hostile work|wrongful|my (supervisor|manager|boss)\b.*\b(unfair|because i|punish\w*|targeting|singled)|written up|performance review\b.*\b(unfair|because))\b/i;
 const WANTS_HUMAN = /\b(i (?:want|need|would like) (?:to )?(?:talk|speak|meet)|request a consult|book (?:a |an )?(?:time|meeting|consult\w*|appointment) with|schedule (?:a |an )?(?:time|meeting|consult\w*|appointment) with|meet with|human advice|someone to review)\b/i;
@@ -388,7 +393,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const learningNavigation = isLearningNavigationQuestion(retrievalQuestion) && !(routine && namedResource);
   const trainingCreditQuestion = isProgramTrainingCreditQuestion(retrievalQuestion);
   const measurementPlanning = isMeasurementPlanningQuestion(retrievalQuestion);
-  const tribalSubject = /\b(Tribal|Indigenous|Native American|American Indian|Red Lake|White Earth|Ojibwe|Dakota|Chippewa)\b/i.test(retrievalQuestion);
+  const tribalSubject = TRIBAL_SUBJECT.test(retrievalQuestion);
+  // Work with a Nation or with Native people is referred first; a question of history or general knowledge is answered as usual.
+  const tribalWork = tribalSubject && TRIBAL_WORK.test(retrievalQuestion);
   // Public equity baseline questions name a measure, a fiscal year, a waiver or an
   // employment service; they must reach the published data documents like any other program question.
   const equityDataQuestion = /\b(risk ratios?|fiscal years?|waivers?|employment (?:support|exploration|development) services|vocational rehabilitation|prevocational|state services for the blind|long-term services and supports|home and community-based services|equity baseline)\b/i.test(retrievalQuestion);
@@ -558,7 +565,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   }
 
   const limits: string[] = [];
-  if (tribalSubject) limits.push("For Native American and Tribal-specific learning, questions, or engagement, connect with the Office of Indian Policy or the responsible Tribal liaison. One DSD refers this work to them and does not speak for a Tribal Nation or replace consultation.");
+  if (tribalSubject && !tribalWork) limits.push("For Native American and Tribal-specific learning, questions, or engagement, connect with the Office of Indian Policy or the responsible Tribal liaison. One DSD refers this work to them and does not speak for a Tribal Nation or replace consultation.");
   const nextActions: AskAnswer["nextActions"] = [];
   if (trainingCreditQuestion) limits.push(TRAINING_CREDIT_NOTICE);
   let questions: EmbedQuestion[] | undefined;
@@ -613,7 +620,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         shortAnswer: "We could not put together an answer just now. Please try again in a moment. Your question does not have to match anything in the program.",
         whyItMatters: "Ask can help with general questions as well as program work when its answer service is available.",
       };
-  if (organization.entries.length && input.mode !== "review") {
+  // When the question is about a community that has its own brief, the brief leads; organizational facts do not replace it.
+  const namedBrief = Boolean(briefLink && briefLink.href !== "/minnesota-communities");
+  if (organization.entries.length && input.mode !== "review" && !namedBrief) {
     const available = organization.entries.filter(entry => entry.facts && sources.some(source => source.id === entry.id)).slice(0, 3);
     draft = available.length ? {
       shortAnswer: available.map(entry => entry.title + ": " + entry.facts).join("\n\n"),
@@ -640,7 +649,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let failureDetail: string | undefined;
   if (binding.generative && !pureResearchAnswer && Date.now() - startedAt < (cloneAgentsEnabled() ? 100_000 : 55_000)) {
     try {
-      const writerSystem = systemPrompt(input.responseMode, explicitProgramOnly) + (jevPlan ? "\nSpecialist focus: " + SPECIALIST_GUIDANCE[jevPlan.route] : "");
+      const writerSystem = systemPrompt(input.responseMode, explicitProgramOnly) + (jevPlan ? "\nSpecialist focus: " + SPECIALIST_GUIDANCE[jevPlan.route] : "") + (tribalWork ? TRIBAL_WRITING_RULE : "");
       const writerPrompt = (directory: typeof publicDirectory, knowledge: typeof brain.context, research: typeof publicResearch) => userPrompt(question, sources, directory, research, explicitProgramOnly ? history.map(turn => ({ ...turn, answer: "" })) : history, requestedMode, input.mode, path ? program.destinations.find(doc => doc.href === "/practice/" + path!.id) : undefined, organization, learningJourney, artifactContext, specialistReview, knowledge);
       const writerUser = cloneAgentsEnabled()
         ? fitWriterPrompt(writerSystem, publicDirectory, brain.context, publicResearch, writerPrompt)
@@ -648,7 +657,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       if (writerUser.step) console.info("ask_prompt_fitted", { traceId: ctx.trace_id, step: writerUser.step });
       // Everyday answers appear on the page as they are written. A question that touches a personnel matter,
       // a decision with serious consequences or a request for a person is shown only after the closing check.
-      const showAsWritten = Boolean(sink) && !escalate && jevPlan?.route !== "support";
+      const showAsWritten = Boolean(sink) && !escalate && jevPlan?.route !== "support" && !tribalWork;
       let shown = "", shownAt = 0;
       const writeBegan = Date.now();
       const onText = showAsWritten ? (raw: string) => {
@@ -875,6 +884,10 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     }
   }
 
+  // Work with Native American communities or Tribal Nations is referred first, in the answer's opening words.
+  if (tribalWork && !/Office of Indian Policy|Tribal liaison/i.test(draft.shortAnswer.slice(0, 500))) {
+    draft = { ...draft, shortAnswer: `${TRIBAL_REFERRAL_FIRST}\n\n${draft.shortAnswer}` };
+  }
   // Operational timing only: how long each part took, in milliseconds. No question or answer text.
   took.total = Date.now() - startedAt;
   console.info("ask_timing", { traceId: ctx.trace_id, generative, research: publicResearch?.status ?? "none", ...took });

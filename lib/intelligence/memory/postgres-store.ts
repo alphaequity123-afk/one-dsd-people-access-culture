@@ -120,21 +120,32 @@ function databaseSsl(databaseUrl: string, configured?: string): false | "require
   throw new Error("PAC_RUNTIME_DATABASE_SSL must be require or disable.");
 }
 
+function connectionTimedOut(error: unknown): boolean {
+  return error instanceof Error && ((error as { code?: unknown }).code === "CONNECT_TIMEOUT" || /\bCONNECT_TIMEOUT\b/.test(error.message));
+}
+
 function defaultDatabaseFactory(configuration: {
   databaseUrl: string;
   ssl: false | "require";
 }): RuntimeDatabase {
   const { sql: client, release } = leaseRuntimeSql(configuration);
 
-  const wrap = (runner: postgres.Sql | postgres.TransactionSql): RuntimeQuery => ({
+  const wrap = (runner: postgres.Sql | postgres.TransactionSql, retryConnection = false): RuntimeQuery => ({
     async query<T extends Row>(statement: string, parameters: readonly unknown[] = []): Promise<T[]> {
-      const result = await runner.unsafe<T[]>(statement, parameters as never[]);
-      return Array.from(result);
+      try {
+        return Array.from(await runner.unsafe<T[]>(statement, parameters as never[]));
+      } catch (error) {
+        // A connection that could not be opened in time ran nothing, so the same statement is tried once more.
+        // Any other failure is reported as it is; a statement that may have run is never repeated.
+        if (!retryConnection || !connectionTimedOut(error)) throw error;
+        console.warn("runtime_database_connect_retry");
+        return Array.from(await runner.unsafe<T[]>(statement, parameters as never[]));
+      }
     },
   });
 
   return {
-    ...wrap(client),
+    ...wrap(client, true),
     async transaction<T>(work: (query: RuntimeQuery) => Promise<T>): Promise<T> {
       return client.begin((transaction) => work(wrap(transaction))) as Promise<T>;
     },
