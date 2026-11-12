@@ -46,7 +46,7 @@ function trustedNetworkSubject(request: NextRequest): string {
   return "unidentified-local-request";
 }
 
-function subjectHash(request: NextRequest, scope: string): string {
+export function requestLimitSubjectHash(request: NextRequest, scope: string): string {
   return createHmac("sha256", configuredSecret())
     .update(`pac-rate-limit-v1\0${scope}\0${trustedNetworkSubject(request)}`)
     .digest("hex");
@@ -56,7 +56,7 @@ export async function consumeRequestLimit(
   request: NextRequest,
   options: { scope: string; limit: number; windowSeconds: number },
 ): Promise<RateLimitDecision> {
-  const hashedSubject = subjectHash(request, options.scope);
+  const hashedSubject = requestLimitSubjectHash(request, options.scope);
   assertRuntimeRateLimitRequest(
     options.scope,
     hashedSubject,

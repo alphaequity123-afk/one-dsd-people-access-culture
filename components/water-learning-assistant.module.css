@@ -1,0 +1,141 @@
+.panel {
+  max-width: 52rem;
+  margin: 2rem 0;
+  scroll-margin-top: 1rem;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  color: #173951;
+  background: #f3f7f9;
+  border: 1px solid #cedbe2;
+  border-left: 4px solid #19798e;
+  border-radius: 0.375rem;
+}
+
+.panel h2 {
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  margin: 0 0 0.5rem;
+}
+
+.panel p {
+  margin: 0 0 0.85rem;
+}
+
+.controls {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.controls label,
+.controls legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.panel button {
+  min-height: 44px;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #69808e;
+  border-radius: 0.25rem;
+  background: white;
+  color: #173951;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.panel button:hover:not(:disabled) {
+  background: #e2edf2;
+}
+
+.panel button.submit {
+  background: #173951;
+  border-color: #173951;
+  color: white;
+}
+
+.panel button.submit:hover:not(:disabled) {
+  background: #24516e;
+}
+
+.panel button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.controls textarea {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #69808e;
+  border-radius: 0.25rem;
+  background: white;
+  color: #173951;
+  font: inherit;
+  resize: vertical;
+}
+
+.panel :is(button, textarea, a, h3):focus-visible {
+  outline: 3px solid #285d81;
+  outline-offset: 3px;
+}
+
+.panel .privacy {
+  margin-top: 0.45rem;
+  color: #405d6c;
+  font-size: 0.9rem;
+}
+
+.panel .status {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.answer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #cedbe2;
+}
+
+.answer h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.65rem;
+}
+
+.answer h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.answer p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.answer a {
+  color: #245d7b;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.citation {
+  display: inline-block;
+  padding-inline: 0.25rem;
+  font-weight: 600;
+}
+
+@media print {
+  .panel {
+    display: none;
+  }
+}
