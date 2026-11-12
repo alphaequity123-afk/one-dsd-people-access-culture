@@ -14,7 +14,7 @@ export function EngagementResourceLinks({kind='all'}:{kind?:'all'|'engagement'|'
         <p className="mt-2">{item.summary}</p>
         <div className="mt-3 flex flex-wrap items-center gap-x-4">
           <a className="inline-flex min-h-11 items-center" href={item.nextActions.find(action => action.href.startsWith("/documents/engagement/"))?.href}>Open original PDF</a>
-          {process.env.GEMINI_API_KEY?.trim() ? <Link className="inline-flex min-h-11 items-center font-semibold underline underline-offset-4" href={resourceStudyHref(resourcePath)} prefetch={false} aria-label={`Study ${item.title} with Gemini`}>Study this document</Link> : null}
+          {process.env.GEMINI_API_KEY?.trim() ? <Link className="inline-flex min-h-11 items-center font-semibold underline underline-offset-4" href={resourceStudyHref(resourcePath)} prefetch={false} aria-label={`Study ${item.title}`}>Study this document</Link> : null}
         </div>
       </li>;
     })}</ul>

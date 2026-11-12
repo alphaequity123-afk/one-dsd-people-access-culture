@@ -141,7 +141,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
       </p>
       <div className={styles.rowTitle}><h3><Link href={withWorkOrigin(h.href,origin)}>{h.title}</Link></h3><AuthorityPill authority={h.authority} />{owner && h.kind !== "brief" ? <ResourceRemove contentItemId={h.id} title={h.title} compact /> : null}</div>
       <p className={styles.rowSummary}>{h.excerpt}</p>{searchQuery !== q && matchesExpandedLibraryQuery(q, h.text) ? <p className={styles.orderNote}>Includes the program name or its abbreviation.</p> : null}
-      {process.env.GEMINI_API_KEY?.trim() && h.href.startsWith("/learning/self-directed/index.html?course=") ? <Link href={resourceStudyHref(h.href)} prefetch={false} className="text-sm font-semibold underline underline-offset-4" aria-label={`Study ${h.title} with Gemini`}>Study this course</Link> : null}
+      {process.env.GEMINI_API_KEY?.trim() && h.href.startsWith("/learning/self-directed/index.html?course=") ? <Link href={resourceStudyHref(h.href)} prefetch={false} className="text-sm font-semibold underline underline-offset-4" aria-label={`Study ${h.title}`}>Study this course</Link> : null}
       {hasResourceMediaPreview(h.id) ? <details className={styles.mediaDisclosure}><summary>Related example or recording</summary><ResourceMediaPreview resourceId={h.id} /></details> : null}
     </li>
     );
@@ -153,7 +153,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
       <p className={styles.rowMeta}>{CONTENT_TYPE_LABEL[c.type]} · {resourceDepthLabel(c)}</p>
       <div className={styles.rowTitle}><h3><Link href={withWorkOrigin(selfDirectedPath ?? courseLinks.get(c.id) ?? `/library/${c.id}`,origin)}>{c.title}</Link></h3><AuthorityPill authority={c.authority} />{owner ? <ResourceRemove contentItemId={c.id} title={c.title} compact /> : null}</div>
       <p className={styles.rowSummary}>{resourceSummary(c.summary, 140)}</p>
-      {process.env.GEMINI_API_KEY?.trim() && selfDirectedPath ? <Link href={resourceStudyHref(selfDirectedPath)} prefetch={false} className="text-sm font-semibold underline underline-offset-4" aria-label={`Study ${c.title} with Gemini`}>Study this course</Link> : null}
+      {process.env.GEMINI_API_KEY?.trim() && selfDirectedPath ? <Link href={resourceStudyHref(selfDirectedPath)} prefetch={false} className="text-sm font-semibold underline underline-offset-4" aria-label={`Study ${c.title}`}>Study this course</Link> : null}
       {hasResourceMediaPreview(c.id) ? <details className={styles.mediaDisclosure}><summary>Related example or recording</summary><ResourceMediaPreview resourceId={c.id} /></details> : null}
     </li>
     );
