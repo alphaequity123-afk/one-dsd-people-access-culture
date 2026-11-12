@@ -4,7 +4,7 @@ import "server-only";
  * boards and councils and the public state pages indexed for Ask. One index, so search and Ask always agree.
  * Nothing here records what anyone searches for.
  */
-import { indexedStaffDocs } from "@/lib/intelligence/retrieval/staff-search";
+import { recentStaffDocs, recentProgramResources } from "@/lib/intelligence/retrieval/ask-library";
 import { searchDocs, type Doc } from "@/lib/intelligence/retrieval/search";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { PUBLIC_BODIES, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
@@ -32,16 +32,9 @@ function buildAgencyDocs(forAnswers: boolean): Doc[] {
   }));
 }
 
-const cache = new Map<string, Promise<Doc[]>>();
-function allDocs(scope: StaffProgramScope): Promise<Doc[]> {
-  let docs = cache.get(scope);
-  if (!docs) {
-    docs = (async () => [...(await indexedStaffDocs(scope)), ...agencyDocs(), ...statePageDocs()])();
-    cache.set(scope, docs);
-    // A failed load is retried on the next search rather than remembered.
-    docs.catch(() => cache.delete(scope));
-  }
-  return docs;
+async function allDocs(scope: StaffProgramScope): Promise<Doc[]> {
+  const [staff, program] = await Promise.all([recentStaffDocs(scope), recentProgramResources(scope)]);
+  return [...staff, ...program.destinations, ...agencyDocs(), ...statePageDocs()];
 }
 
 export async function siteSearch(query: string, scope: StaffProgramScope, limit = 20): Promise<SiteSearchResult[]> {

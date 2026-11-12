@@ -9,6 +9,7 @@ def main():
     parser.add_argument('--model', required=True)
     parser.add_argument('--origin')
     parser.add_argument('--key-file')
+    parser.add_argument('--key-env', help='Read the worker credential from this environment variable instead of a file')
     parser.add_argument('--sample')
     parser.add_argument('--targets-file')
     parser.add_argument('--engine-path')
@@ -100,13 +101,15 @@ def main():
         sf.write(args.sample, np.concatenate(audio), rate, subtype='PCM_16')
         print(json.dumps({'sample': args.sample, 'elapsed_seconds': round(time.monotonic()-started, 2), 'reference_verified': True, 'first_audio_seconds': first}), flush=True)
         return
-    targets = json.loads(Path(args.targets_file).read_text(encoding='utf-8-sig')) if args.targets_file else [{'origin': args.origin, 'key_file': args.key_file}]
+    targets = json.loads(Path(args.targets_file).read_text(encoding='utf-8-sig')) if args.targets_file else [{'origin': args.origin, 'key_file': args.key_file, 'key_env': args.key_env}]
     import requests
     endpoints = []
     for target in targets:
         origin = target.get('origin') or ''
-        if not (origin.startswith('https://') or origin.startswith('http://127.0.0.1:')) or not target.get('key_file'): raise RuntimeError('HTTPS origin and worker key file required')
-        endpoints.append((origin.rstrip('/') + '/api/ask/voice/worker', Path(target['key_file']).read_text().strip(), requests.Session()))
+        if not (origin.startswith('https://') or origin.startswith('http://127.0.0.1:')): raise RuntimeError('HTTPS origin required')
+        credential = os.environ.get(target['key_env'], '').strip() if target.get('key_env') else Path(target['key_file']).read_text().strip() if target.get('key_file') else ''
+        if not credential: raise RuntimeError('Worker credential required')
+        endpoints.append((origin.rstrip('/') + '/api/ask/voice/worker', credential, requests.Session()))
     if not endpoints: raise RuntimeError('At least one application is required')
     endpoint, key, session = endpoints[0]
     cursor = 0

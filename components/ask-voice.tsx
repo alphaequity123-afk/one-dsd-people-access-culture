@@ -44,11 +44,12 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
   const [available, setAvailable] = useState<VoiceAvailability>({ transcription: false, speech: false, paused: false });
   const [health, setHealth] = useState<VoiceHealth>("checking");
   const [error, setError] = useState("");
-  // What this browser can do by itself: write down speech as it is spoken, and read text aloud.
-  const [browserVoice, setBrowserVoice] = useState({ transcription: false, speech: false });
+  // Browser recognition can write down speech; only the approved Geffen service reads answers.
+  const [browserVoice, setBrowserVoice] = useState({ transcription: false });
   // Spoken answers can be muted; the choice is remembered in this browser only.
   const [muted, setMuted] = useState(false);
   const mutedRef = useRef(false);
+  const playbackGeneration = useRef(0);
   // Read once after the page loads, so the first render matches the server.
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { try { if (window.localStorage.getItem("ask-voice-muted") === "1") { mutedRef.current = true; setMuted(true); } } catch { /* storage is optional */ } }, []);
@@ -56,11 +57,10 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     mutedRef.current = value; setMuted(value);
     try { window.localStorage.setItem("ask-voice-muted", value ? "1" : "0"); } catch { /* storage is optional */ }
     // Muting stops anything being read aloud right now; the written answer stays.
-    if (value) { window.speechSynthesis?.cancel(); finishBrowserSpeech.current?.(); audio.current?.pause(); }
+    if (value) { playbackGeneration.current++; audio.current?.pause(); }
   }
   const recognition = useRef<Recognition | null>(null);
   const recognitionLimit = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const finishBrowserSpeech = useRef<(() => void) | null>(null);
   const generation = useRef(0);
   const liveRef = useRef(false);
   const capture = useRef<MediaRecorder | null>(null);
@@ -81,11 +81,12 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     void context.current?.close(); context.current = null;
   }
   function stop() {
+    playbackGeneration.current++;
     generation.current++; liveRef.current = false; setLive(false);
     if (recognitionLimit.current) clearTimeout(recognitionLimit.current); recognitionLimit.current = null;
     const recognizer = recognition.current; recognition.current = null;
     if (recognizer) { recognizer.onend = null; recognizer.onresult = null; recognizer.onerror = null; recognizer.abort(); }
-    window.speechSynthesis?.cancel(); finishBrowserSpeech.current?.(); finishBrowserSpeech.current = null;
+
     abort.current?.abort(); abort.current = null;
     if (capture.current?.state === "recording") capture.current.stop();
     capture.current = null; releaseMicrophone();
@@ -108,7 +109,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
         const value = await response.json();
         if (typeof value?.transcription !== "boolean" || typeof value?.speech !== "boolean" || typeof value?.paused !== "boolean") throw new Error("voice_health_invalid");
         if (!active || current !== revision) return;
-        setBrowserVoice({ transcription: Boolean(recognitionConstructor()), speech: Boolean(window.speechSynthesis && typeof SpeechSynthesisUtterance !== "undefined") });
+        setBrowserVoice({ transcription: Boolean(recognitionConstructor()) });
         setAvailable({ transcription: value.transcription, speech: value.speech, paused: value.paused });
         setHealth("ready");
         if (value.paused) stop();
@@ -163,36 +164,19 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     }
   }
 
-  /** Read the answer with the browser's own voice, a sentence or two at a time. */
-  async function speakWithBrowser(text: string, token: number) {
-    if (text.length > 10000) throw new Error("That answer is too long to read aloud. The written answer is still here.");
-    for (const chunk of text.match(/[\s\S]{1,220}(?:\s|$)|\S{1,220}/g) ?? []) {
-      if (token !== generation.current) return;
-      setStatus("Reading the answer. You can stop or interrupt at any time.");
-      await new Promise<void>((resolve, reject) => {
-        const utterance = new SpeechSynthesisUtterance(chunk); utterance.lang = "en-US";
-        const timeout = setTimeout(() => { window.speechSynthesis.cancel(); reject(new Error("Reading aloud stopped responding. The written answer is still here.")); }, 45000);
-        const finish = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; resolve(); };
-        finishBrowserSpeech.current = finish;
-        utterance.onend = finish;
-        utterance.onerror = () => { clearTimeout(timeout); finishBrowserSpeech.current = null; if (token === generation.current) reject(new Error("This browser could not read the answer aloud. The written answer is still here.")); else resolve(); };
-        window.speechSynthesis.speak(utterance);
-      });
-    }
-  }
   async function speak(text: string, token: number, timing?: VoiceTurnTiming) {
     // Muted: the answer is written only.
     if (mutedRef.current) return;
-    // The program voice reads the answer when it is connected; otherwise the browser's own voice does.
-    if (!available.speech && browserVoice.speech) { await speakWithBrowser(text, token); return; }
+    const playbackToken = playbackGeneration.current;
+    const cancelled = () => token !== generation.current || playbackToken !== playbackGeneration.current || mutedRef.current;
+    if (!available.speech) throw new Error("Geffen is not connected right now. The written answer is still here; please try listening again shortly.");
     setStatus("Preparing the answer…");
     if (timing) timing.speechStartedAt = performance.now();
     const controller = new AbortController(); abort.current = controller;
     const response = await fetch("/api/ask/voice", { method: "POST", headers: { "content-type": "application/json" },
       body: JSON.stringify({ text }), signal: controller.signal });
+    if (cancelled()) { await response.body?.cancel(); return; }
     if (!response.ok) {
-      // The program voice is busy or away: read the answer with the browser's own voice instead of stopping.
-      if (browserVoice.speech && text.length <= 10000) { await speakWithBrowser(text, token); return; }
       throw new Error((await response.json()).error || "Listening is not available right now. The written answer is still here.");
     }
     if (!response.body) throw new Error("There was no audio to play. The written answer is still here.");
@@ -201,7 +185,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     let playback: Promise<void> = Promise.resolve(); let playbackFailure: Error | null = null;
     const enqueue = (encoded: string) => {
       playback = playback.then(async () => {
-        if (token !== generation.current || playbackFailure) return;
+        if (cancelled() || playbackFailure) return;
         const binary = atob(encoded); const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
         const url = URL.createObjectURL(new Blob([bytes], { type: "audio/wav" })); audioUrl.current = url;
         const player = new Audio(url); audio.current = player;
@@ -225,7 +209,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     try {
       while (true) {
         const part = await reader.read(); if (part.done) break;
-        if (token !== generation.current) { await reader.cancel(); return; }
+        if (cancelled()) { await reader.cancel(); return; }
         pending += decoder.decode(part.value, { stream: true });
         if (pending.length > 12_000_000) throw new Error("That answer is too long to read aloud. The written answer is still here.");
         let newline: number;
@@ -394,8 +378,8 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
   }
 
   const unavailable = health !== "ready" || available.paused;
-  // What can be used right now: the connected services, or this browser's own speech.
-  const usable = { ...available, transcription: available.transcription || browserVoice.transcription, speech: available.speech || browserVoice.speech };
+  // Browser recognition may transcribe, but never substitute a different read-aloud voice.
+  const usable = { ...available, transcription: available.transcription || browserVoice.transcription, speech: available.speech };
   const dictateOnly = mode === "dictate";
   const voiceActive = recording || working || live;
   // The landing page simply leaves the microphone out when dictation cannot work; the Ask page says why.
