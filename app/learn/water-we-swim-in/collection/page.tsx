@@ -59,7 +59,7 @@ export default async function WaterCollectionPage() {
         <p>Six self-paced steps. Set aside about 6 to 8 hours for the readings, recordings and practice. You can work through one step at a time.</p>
         <div className={styles.actions}>
           <a className="btn btn--primary" href="#step-1">Start with step 1</a>
-          <CourseMediaJumpSlot label="Watch the curriculum overview" />
+          <CourseMediaJumpSlot label="Watch" />
           {studyReady ? <a href="#resource-learning-assistant">Ask about this collection</a> : null}
           {otherBriefs.length || referralPages.length ? <a href="#collection-briefs">Browse the culture briefs</a> : null}
           {owner && studyReady ? <ResourceCreationLink resourcePath={WATER_COLLECTION_HREF} /> : null}
