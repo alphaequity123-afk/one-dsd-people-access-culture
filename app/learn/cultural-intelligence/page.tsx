@@ -1,3 +1,4 @@
+import { WaterCollectionFeature } from "@/components/water-collection-feature";
 import Link from "next/link";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { notFound } from "next/navigation";
@@ -50,6 +51,7 @@ export default async function CulturalIntelligencePage() {
       <p className={styles.intro}>{text("intro")}</p>
     </div></header>
     <div className={`${styles.content} space-y-10`}>
+      <WaterCollectionFeature />
       <p className="max-w-4xl leading-7">{text("scopeLine")}</p>
       <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="cultural-intelligence" noun="collection" scope={scope} /></details>
       <Hub2Choices label="Collection sections" className="lg:grid-cols-4" choices={[

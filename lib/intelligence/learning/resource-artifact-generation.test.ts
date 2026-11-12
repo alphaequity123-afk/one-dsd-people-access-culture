@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { Doc } from "@/lib/intelligence/retrieval/search";
+import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import {
   captureArtifactSourceRevision, generateResourceArtifact, searchArtifactResources, verifyArtifactSources,
 } from "./resource-artifact-generation";
@@ -113,5 +114,35 @@ describe("resource artifact generation", () => {
       title: "Accessible appointment notices", relatedCount: 1,
       related: [{ resourcePath: "/library/confirmation", title: "Appointment confirmation" }],
     });
+  });
+
+  it("balances the four current collection sources and requires the artifact to cite each family", async () => {
+    fixtures.docs = [
+      doc({ id: "essay", href: "/learn/water-we-swim-in/essay/minnesota-nice-decoded", title: "The Water We Swim In", text: "A meeting's silence may have several explanations. Ask a question before treating silence as agreement." }),
+      doc({ id: "american", href: "/minnesota-communities/american/profile#profile-disability", title: "American Culture Brief", text: "Consider how public rules and community practices interact to shape access to services." }),
+      doc({ id: "minnesota", href: "/minnesota-communities/minnesota/profile#profile-disability", title: "Minnesota Culture Brief", text: "Local service and transportation options differ across communities. Ask what an appointment requires in practice." }),
+      doc({ id: "toolkit", href: "/learn/equity-toolkit", title: "Equity Analysis Toolkit companion", text: "Identify the decision, compare options, ask who could bear extra work, and set a time to review the outcome." }),
+      doc({ id: "other", href: "/library/other", title: "Unrelated resource", text: "An unrelated source must never enter this collection." }),
+    ].map(item => ({ ...item, summary: item.text }));
+    const linked = quiz.map((section, index) => ({ ...section, passageIds: [String(index % 4 + 1)] }));
+    const fetcher = vi.fn(async (_url: string, init: RequestInit) => {
+      const request = JSON.parse(String(init.body));
+      const data = JSON.parse(request.contents[0].parts[0].text);
+      expect(data.excerpts).toHaveLength(4);
+      expect(new Set(data.excerpts.map((item: { collectionFamily: string }) => item.collectionFamily)).size).toBe(4);
+      expect(request.contents[0].parts[0].text).not.toContain("unrelated source");
+      expect(request.systemInstruction.parts[0].text).toContain("12th-grade");
+      expect(request.systemInstruction.parts[0].text).toContain("honest yet optimistic");
+      return envelope(fetcher.mock.calls.length === 1 ? quiz : linked);
+    });
+    vi.stubGlobal("fetch", fetcher);
+    const catalog = await searchArtifactResources(WATER_RESOURCE_COLLECTION_TITLE, 0, "dsd");
+    expect(catalog.resources[0]).toMatchObject({ resourcePath: WATER_RESOURCE_COLLECTION_PATH, relatedCount: 4 });
+    const artifact = await generateResourceArtifact({ resourcePath: WATER_RESOURCE_COLLECTION_PATH, kind: "quiz", scope: "dsd" }, "test-key", signal());
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    expect(artifact.sources.map(item => item.href)).toEqual(fixtures.docs.slice(0, 4).map(item => item.href));
+    fixtures.docs = fixtures.docs.filter(item => item.id !== "minnesota");
+    expect(await verifyArtifactSources(artifact, "dsd")).toBe(false);
+    expect(await captureArtifactSourceRevision(WATER_RESOURCE_COLLECTION_PATH, "dsd")).toBeNull();
   });
 });
