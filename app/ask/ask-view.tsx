@@ -1,4 +1,5 @@
 import { AskClient } from "@/components/ask-client";
+import Link from "next/link";
 import { cloneAgentsEnabled } from "@/lib/intelligence/clone/config";
 import { getResearchPolicy } from "@/lib/intelligence/research/governance";
 import styles from "./ask.module.css";
@@ -35,6 +36,7 @@ export async function AskView({ searchParams, part }: { searchParams: AskSearchP
   return (
     <EditableSurfaceRegion surface={surface} className={styles.page}>
       <PageIntro kicker={stringValue(copy, "introKicker")} title={all && !enabled ? "All common questions" : stringValue(copy, "introTitle")} lede={stringValue(copy, "introLede")}>
+        {process.env.GEMINI_API_KEY?.trim() ? <p className="mt-4"><Link href="/ask/study" className="font-semibold underline underline-offset-4">Study published resources with Gemini</Link></p> : null}
       </PageIntro>
       <div className={`wrap space-y-6 ${styles.body}`}>
         {enabled ? <>

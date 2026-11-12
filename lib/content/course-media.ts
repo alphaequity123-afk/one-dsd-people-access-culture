@@ -162,9 +162,9 @@ export async function ingestCourseMedia(request: Request, name: string, root: st
 let cache: { at: number; root: string; items: CourseMediaItem[] } | undefined;
 
 /** Every published item whose files are all present. Cached for one minute. */
-export async function publishedCourseMedia(root: string | undefined): Promise<CourseMediaItem[]> {
+export async function publishedCourseMedia(root: string | undefined, fresh = false): Promise<CourseMediaItem[]> {
   if (!root) return [];
-  if (cache && cache.root === root && Date.now() - cache.at < 60_000) return cache.items;
+  if (!fresh && cache && cache.root === root && Date.now() - cache.at < 60_000) return cache.items;
   const dir = await checkedDir(root, 'manifests');
   if (!dir) return [];
   const items: CourseMediaItem[] = [];

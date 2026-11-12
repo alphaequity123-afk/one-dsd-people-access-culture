@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { canSaveResource, changeSavedResource, readSavedResources, SAVED_RESOURCES_EVENT, SAVED_RESOURCES_KEY } from "@/lib/client/dsd-saved-resources";
+import { mayStudyPage, resourceStudyHref } from "@/lib/client/resource-study-links";
+import { useProgramContext } from "./program-context";
 
 function useSavedResources() {
   const [saved, setSaved] = useState(readSavedResources);
@@ -20,21 +22,40 @@ function useSavedResources() {
 
 export function ResourceActions() {
   const path = usePathname();
-  return canSaveResource(path) ? <ResourceActionsForPath key={path} path={path} /> : null;
+  const { context } = useProgramContext();
+  const canSave = canSaveResource(path);
+  const checkStudy = mayStudyPage(path);
+  return canSave || checkStudy
+    ? <ResourceActionsForPath key={`${context}:${path}`} path={path} canSave={canSave} checkStudy={checkStudy} />
+    : null;
 }
 
-function ResourceActionsForPath({ path }: { path: string }) {
+function ResourceActionsForPath({ path, canSave, checkStudy }: { path: string; canSave: boolean; checkStudy: boolean }) {
   const saved = useSavedResources();
   const current = saved.items.find(item => item.href === path);
+  const [studyAvailable, setStudyAvailable] = useState(false);
+  useEffect(() => {
+    if (!checkStudy) return;
+    const controller = new AbortController();
+    const query = new URLSearchParams({ resourcePath: path });
+    fetch(`/api/learn/resources?${query}`, { cache: "no-store", signal: controller.signal })
+      .then(response => response.ok ? response.json() : null)
+      .then(body => {
+        if (!controller.signal.aborted && body?.available === true) setStudyAvailable(true);
+      })
+      .catch(() => undefined);
+    return () => controller.abort();
+  }, [path, checkStudy]);
+
   function toggle() {
     const title = document.querySelector("main h1")?.textContent?.trim() || document.title.split("|")[0].trim();
     saved.setNotice(changeSavedResource({ href: path, title, savedAt: new Date().toISOString() }, Boolean(current)).message);
   }
-  // One quiet control. Finding another resource is the Learn menu's job; using a saved
-  // resource in a practice plan is offered once the resource is saved.
+  if (!canSave && !studyAvailable) return null;
   return <aside className="dsd-shell dsd-resource-actions" aria-label="Resource actions">
-    <button type="button" aria-pressed={Boolean(current)} onClick={toggle}>{current ? "Saved to My work" : "Save resource"}</button>
+    {canSave ? <button type="button" aria-pressed={Boolean(current)} onClick={toggle}>{current ? "Saved to My work" : "Save resource"}</button> : null}
     {current ? <Link href="/my-work/plan">Use it in a practice plan</Link> : null}
+    {studyAvailable ? <Link href={resourceStudyHref(path)} prefetch={false} className="inline-flex min-h-11 items-center underline underline-offset-4">Study this resource</Link> : null}
     {saved.notice ? <p role="status">{saved.notice}</p> : null}
   </aside>;
 }
