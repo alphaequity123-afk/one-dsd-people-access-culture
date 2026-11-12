@@ -26,6 +26,8 @@ export type CompleteRequest = {
    * A service that cannot stream ignores it and returns the finished reply as usual.
    */
   onText?: (textSoFar: string) => void;
+  /** Called when the reply is started again from the beginning, so anything already shown can be set aside. */
+  onRestart?: () => void;
 };
 
 export type CompleteResult = {

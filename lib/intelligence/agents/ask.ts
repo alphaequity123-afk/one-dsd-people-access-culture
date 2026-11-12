@@ -51,12 +51,11 @@ import {
   type Doc,
   tokens,
 } from "../retrieval/search";
-import { indexedStaffDocs } from "../retrieval/staff-search";
 import { agencyDocs } from "@/lib/search/site-search";
 import { statePageDocs } from "@/lib/search/state-pages";
 import { focusPdfPageHits, namedPdfPageHits } from "../retrieval/named-pdf";
 import { semanticRetrieveForAgent, SemanticSearchUnavailable } from "../retrieval/local-semantic";
-import { indexedProgramResources, programResourceLinks } from "../retrieval/program-resources";
+import { programResourceLinks } from "../retrieval/program-resources";
 import { resolveBinding } from "../providers";
 import { errorStatus, providerErrorExcerpt } from "../providers/log";
 import { organizationalBrief, organizationalDocs } from "../memory/organization";

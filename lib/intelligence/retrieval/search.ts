@@ -236,8 +236,16 @@ function excerptWindow(clean: string, start: number): string {
  * A text prepared once for choosing passages: its cleaned form and each word in it with its place.
  * The words are found by the same rules as `tokens`, so a passage's words can be read off this
  * list instead of being worked out again for every passage that is considered.
+ * Places are held in compact number arrays, and only a few texts are kept at a time.
  */
-type PreparedText = { clean: string; lower: string; words: Array<{ start: number; end: number; token: string | null }> | null };
+type PreparedWords = {
+  /** Where each written word starts and ends in the cleaned text. */
+  starts: Int32Array; ends: Int32Array;
+  /** Word i contributes the search words tokens[first[i]] up to tokens[first[i + 1]]. */
+  first: Int32Array; tokens: string[];
+};
+type PreparedText = { clean: string; lower: string; words: PreparedWords | null };
+const PREPARED_TEXTS_KEPT = 256;
 const preparedTexts = new Map<string, PreparedText>();
 function preparedText(text: string): PreparedText {
   const kept = preparedTexts.get(text);
@@ -245,18 +253,23 @@ function preparedText(text: string): PreparedText {
   const clean = text.replace(/\s+/g, " ").trim();
   const lower = clean.toLowerCase();
   // In the rare text whose lower-case form has a different length, places would not line up, so each passage is read directly.
-  let words: PreparedText["words"] = null;
-  if (lower.length === clean.length) {
-    words = [];
+  let words: PreparedWords | null = null;
+  if (lower.length === clean.length && clean.length > 360) {
+    const starts: number[] = [], ends: number[] = [], first: number[] = [], found: string[] = [];
     for (const run of lower.matchAll(/[a-z0-9'-]+/g)) {
-      const [token] = tokens(run[0]);
-      words.push({ start: run.index, end: run.index + run[0].length, token: token ?? null });
+      starts.push(run.index); ends.push(run.index + run[0].length); first.push(found.length);
+      // One written word can count as more than one search word (a hyphenated compound and its parts).
+      for (const token of tokens(run[0])) found.push(token);
     }
+    first.push(found.length);
+    words = { starts: Int32Array.from(starts), ends: Int32Array.from(ends), first: Int32Array.from(first), tokens: found };
   }
   const prepared = { clean, lower, words };
-  // The oldest entries make room, so memory stays bounded however many documents are searched.
-  if (preparedTexts.size >= 4000) for (const key of [...preparedTexts.keys()].slice(0, 1000)) preparedTexts.delete(key);
-  preparedTexts.set(text, prepared);
+  // Very long texts are prepared when needed but not kept, and the oldest entries make room for new ones.
+  if (clean.length <= 200_000) {
+    if (preparedTexts.size >= PREPARED_TEXTS_KEPT) for (const key of [...preparedTexts.keys()].slice(0, PREPARED_TEXTS_KEPT / 4)) preparedTexts.delete(key);
+    preparedTexts.set(text, prepared);
+  }
   return prepared;
 }
 
@@ -286,16 +299,16 @@ export function searchExcerpt(text: string, query: string, title = ""): string {
     const end = excerptEnd(clean, candidate);
     // The question words that appear in this passage. A word the passage cuts through is read as the passage shows it.
     const matched = new Set<string>();
-    const note = (token: string | null | undefined) => { if (token && terms.has(token)) matched.add(token); };
+    const note = (token: string) => { if (terms.has(token)) matched.add(token); };
     if (!words) {
       for (const token of tokens(clean.slice(candidate, end))) note(token);
     } else {
-      let low = 0, high = words.length;
-      while (low < high) { const middle = (low + high) >> 1; if (words[middle].end <= candidate) low = middle + 1; else high = middle; }
-      for (let index = low; index < words.length && words[index].start < end; index++) {
-        const word = words[index];
-        if (word.start >= candidate && word.end <= end) note(word.token);
-        else for (const token of tokens(lower.slice(Math.max(word.start, candidate), Math.min(word.end, end)))) note(token);
+      const { starts: wordStarts, ends: wordEnds, first, tokens: wordTokens } = words;
+      let low = 0, high = wordEnds.length;
+      while (low < high) { const middle = (low + high) >> 1; if (wordEnds[middle] <= candidate) low = middle + 1; else high = middle; }
+      for (let index = low; index < wordStarts.length && wordStarts[index] < end; index++) {
+        if (wordStarts[index] >= candidate && wordEnds[index] <= end) for (let at = first[index]; at < first[index + 1]; at++) note(wordTokens[at]);
+        else for (const token of tokens(lower.slice(Math.max(wordStarts[index], candidate), Math.min(wordEnds[index], end)))) note(token);
       }
     }
     let specific = 0;
