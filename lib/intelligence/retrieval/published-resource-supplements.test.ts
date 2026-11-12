@@ -39,8 +39,10 @@ it("uses only the current public media manifest and an approved indexed parent f
       pages: [parent.href], media, captions, transcript, durationSeconds: 20,
     }));
 
-    expect(await publishedResourceSupplements("dsd", [{ ...parent, status: "retired" }], testRoot)).toEqual([]);
-    const docs = await publishedResourceSupplements("dsd", [parent], testRoot);
+    const readMedia = async (doc: Doc) => (await publishedResourceSupplements("dsd", [doc], testRoot))
+      .filter(item => item.type === "public_media_transcript");
+    expect(await readMedia({ ...parent, status: "retired" })).toEqual([]);
+    const docs = await readMedia(parent);
     expect(docs).toHaveLength(1);
     expect(docs[0]).toMatchObject({
       href: `/learning/course-media/${media}#t=12`,
@@ -50,7 +52,7 @@ it("uses only the current public media manifest and an approved indexed parent f
     });
 
     await unlink(manifest);
-    expect(await publishedResourceSupplements("dsd", [parent], testRoot)).toEqual([]);
+    expect(await readMedia(parent)).toEqual([]);
   } finally {
     if (path.dirname(path.resolve(testRoot)) === path.resolve(tmpdir()) && path.basename(testRoot).startsWith("pac-learning-test-")) {
       await rm(testRoot, { recursive: true, force: true });

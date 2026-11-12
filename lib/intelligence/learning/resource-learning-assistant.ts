@@ -93,9 +93,23 @@ function eligibleDocument(doc: Doc): boolean {
 
 const keyFor = (doc: Pick<Doc, "kind" | "id" | "href">) => JSON.stringify([doc.kind, doc.id, doc.href]);
 
+function projectedResource(doc: Doc, scope: StaffProgramScope, directoryPublished: boolean): Doc[] {
+  const community = doc.href.match(/^\/minnesota-communities\/([a-z0-9-]+)$/)?.[1];
+  if (!community || doc.type !== "community_research") return [doc];
+  const prefix = `profile-${community}-`;
+  const source = doc.evidenceRevisions?.find(revision => revision.sourceId.startsWith(prefix))?.sourceId ?? doc.id;
+  if (!source.startsWith(prefix)) return [doc];
+  const section = source.slice(prefix.length).match(/^([a-z0-9-]+)-\d+$/)?.[1];
+  if (!section || !directoryPublished || (scope === "one-dhs" && community !== "american" && community !== "minnesota")) return [];
+  const anchor = section === "businesses" ? "businesses-and-commercial-life" : section;
+  return [{ ...doc, href: `${doc.href}/profile#profile-${anchor}` }];
+}
+
 async function baseDocuments(scope: StaffProgramScope): Promise<Doc[]> {
   const [staff, program] = await Promise.all([indexedStaffDocs(scope), indexedProgramResources(scope)]);
-  return [...staff.filter(doc => doc.kind !== "brief"), ...program.destinations].filter(eligibleDocument);
+  const directoryPublished = program.destinations.some(doc => doc.href === "/minnesota-communities" && doc.status === "approved");
+  return [...staff.filter(doc => doc.kind !== "brief"), ...program.destinations]
+    .flatMap(doc => projectedResource(doc, scope, directoryPublished)).filter(eligibleDocument);
 }
 
 async function withSupplements(scope: StaffProgramScope, base: Doc[]): Promise<Doc[]> {

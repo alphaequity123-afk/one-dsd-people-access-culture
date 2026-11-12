@@ -1,22 +1,27 @@
 import "server-only";
 
 import { createHash } from "node:crypto";
+import { createReadStream } from "node:fs";
 import { lstat, readFile, realpath } from "node:fs/promises";
 import path from "node:path";
 import { configuredCourseMediaRoot, publicCourseMedia, publishedCourseMedia } from "@/lib/content/course-media";
 import { safeOpen } from "@/lib/content/geffen-volume";
+import { EQUITY_IN_PRACTICE_EXAMPLES } from "@/lib/content/learn-page-copy";
 import { PODCASTS } from "@/lib/content/podcasts";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { waterCompanion, waterLesson, waterModuleId } from "@/lib/content/water-curriculum";
 import { WATER_COURSE_HREF, WATER_MODULES } from "@/lib/content/water-we-swim-in";
 import { formatTime, groupCuesIntoSentences, parseVtt, type Cue } from "@/lib/learning/vtt";
+import equityVideoMedia from "@/lib/program/equity-video-media.json";
 import { curriculumMediaSources } from "./curriculum-media-sources";
 import { publishedRecordingTranscript } from "./podcast-reading";
 import extracts from "./published-resource-text.json";
+import equityCaptions from "./equity-practice-video-captions.json";
 import { publicMediaPassages } from "./public-course-media-docs";
 import type { Doc } from "./search";
 
 const TRAINING_HUB = "/learning/training-companions/index.html";
+const EQUITY_IN_PRACTICE = "/learn/equity-in-practice";
 const MAX_TEXT = 256 * 1024;
 const hash = (value: string | Buffer) => createHash("sha256").update(value).digest("hex");
 const pathOnly = (href: string) => href.split(/[?#]/, 1)[0].replace(/\/+$/, "") || "/";
@@ -37,13 +42,15 @@ async function publicAsset(publicRoot: string, href: string, maxBytes: number) {
 
 const verified = new Map<string, { time: number; size: number; hash: string }>();
 
-async function matchesExtraction(publicRoot: string, href: string, sha256: string) {
-  const asset = await publicAsset(publicRoot, href, 20 * 1024 * 1024);
+async function matchesExtraction(publicRoot: string, href: string, sha256: string, maxBytes = 20 * 1024 * 1024) {
+  const asset = await publicAsset(publicRoot, href, maxBytes);
   if (!asset) return false;
   const cached = verified.get(asset.file);
   if (cached?.time === asset.stat.mtimeMs && cached.size === asset.stat.size) return cached.hash === sha256;
   try {
-    const actual = hash(await readFile(asset.file));
+    const digest = createHash("sha256");
+    for await (const chunk of createReadStream(asset.file)) digest.update(chunk);
+    const actual = digest.digest("hex");
     if (verified.size >= 40) verified.clear();
     verified.set(asset.file, { time: asset.stat.mtimeMs, size: asset.stat.size, hash: actual });
     return actual === sha256;
@@ -66,6 +73,16 @@ function evidenceDoc(scope: StaffProgramScope, key: string, title: string, href:
       { sourceId: id, revisionId: null, payloadHash: hash(JSON.stringify({ href, text, sourceVersion })), scope },
     ],
   };
+}
+
+/** This page is code-defined and renders independently of the editable learning index. */
+function equityInPracticeDocs(scope: StaffProgramScope): Doc[] {
+  return EQUITY_IN_PRACTICE_EXAMPLES.map(example => evidenceDoc(
+    scope, `equity-in-practice:${example.id}`, `People, Access and Culture in Practice — ${example.title}`,
+    `${EQUITY_IN_PRACTICE}#${example.id}`,
+    [example.situation, example.action, `ADSA goals: ${example.goals}`, example.evidence].join("\n"),
+    "learning_reference_section", [EQUITY_IN_PRACTICE], hash(JSON.stringify(example)),
+  ));
 }
 
 /** Extra pages of the original downloads. Parent publications still determine
@@ -109,6 +126,18 @@ function timedDocs(scope: StaffProgramScope, key: string, title: string, href: s
 function timedCaptionDocs(scope: StaffProgramScope, key: string, title: string, href: string, captions: string, related: string[], parent?: Doc) {
   if (!/^(?:\uFEFF)?WEBVTT/.test(captions)) return [];
   return timedDocs(scope, key, title, href, groupCuesIntoSentences(parseVtt(captions)), hash(captions), related, parent);
+}
+
+/** The two published 1080p videos carry their captions inside the video file.
+ * The text projection only applies to the exact file selected by the page. */
+async function equityVideoDocs(scope: StaffProgramScope, publicRoot: string) {
+  const results = await Promise.all(equityCaptions.map(async item => {
+    if ((item.key !== "foundation" && item.key !== "companion") || equityVideoMedia[item.key].src !== item.media) return [];
+    if (!await matchesExtraction(publicRoot, item.media, item.sha256, 64 * 1024 * 1024)) return [];
+    return timedCaptionDocs(scope, `equity-practice-video:${item.key}`, item.title, item.media,
+      item.captions, [EQUITY_IN_PRACTICE, item.media]);
+  }));
+  return results.flat();
 }
 
 async function recordingDocs(scope: StaffProgramScope, docs: readonly Doc[], publicRoot: string) {
@@ -216,12 +245,13 @@ async function volumeMediaDocs(scope: StaffProgramScope, paths: ReadonlyMap<stri
 
 /** Augment the app's current scoped Ask corpus with missing original passages. */
 export async function publishedResourceSupplements(scope: StaffProgramScope, docs: readonly Doc[], publicRoot = path.join(process.cwd(), "public")): Promise<Doc[]> {
-  const paths = new Map(docs.filter(doc => doc.status === "approved" && doc.href.startsWith("/") && !doc.href.startsWith("//"))
+  const practice = equityInPracticeDocs(scope);
+  const paths = new Map([...docs, ...practice].filter(doc => doc.status === "approved" && doc.href.startsWith("/") && !doc.href.startsWith("//"))
     .map(doc => [pathOnly(doc.href), doc]));
   const results = await Promise.all([
     downloadDocs(scope, paths, publicRoot), waterPodcastDocs(scope, paths, publicRoot),
-    recordingDocs(scope, docs, publicRoot), volumeMediaDocs(scope, paths),
+    recordingDocs(scope, docs, publicRoot), volumeMediaDocs(scope, paths), equityVideoDocs(scope, publicRoot),
     ...curriculumMediaSources().map(source => readStaticRecording(scope, source, paths, publicRoot)),
   ]);
-  return results.flat();
+  return [...practice, ...results.flat()];
 }
