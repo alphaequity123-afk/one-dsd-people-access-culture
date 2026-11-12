@@ -1,7 +1,7 @@
 import "server-only";
 
 export type LearningCitation = { id: string; title: string; href: string };
-export type LearningPassage = { citation: LearningCitation; text: string; authority?: string };
+export type LearningPassage = { citation: LearningCitation; text: string; authority?: string; collectionFamily?: string };
 
 export type LearningAnswer = {
   grounded: boolean;
@@ -92,7 +92,7 @@ export async function generateGeminiLearningAnswer(
 ): Promise<LearningAnswer> {
   if (!passages.length) return insufficient;
 
-  const excerpts = passages.map(({ citation, text, authority }, index) => ({ id: String(index + 1), citation, text, authority }));
+  const excerpts = passages.map(({ citation, text, authority, collectionFamily }, index) => ({ id: String(index + 1), citation, text, authority, collectionFamily }));
   const citations = new Map(excerpts.map(({ id, citation }) => [id, citation]));
 
   const result = await requestGeminiLearningJson({
@@ -101,7 +101,7 @@ export async function generateGeminiLearningAnswer(
       task,
       ...context,
       question,
-      excerpts: excerpts.map(({ id, citation, text, authority }) => ({ id, reading: citation.title, text, authority })),
+      excerpts: excerpts.map(({ id, citation, text, authority, collectionFamily }) => ({ id, reading: citation.title, text, authority, collectionFamily })),
     },
     responseSchema: schema([...citations.keys()]),
     maxOutputTokens: 950,

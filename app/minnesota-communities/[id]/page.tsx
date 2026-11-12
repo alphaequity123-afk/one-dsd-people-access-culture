@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CommunityDesignPage } from "@/components/community-design-page";
 import { communityDesignEnabled } from "@/lib/content/community-design";
+import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -66,6 +67,7 @@ export default async function BriefPage({ params, searchParams }: { params: Prom
       {compact ? <header className="wrap brief-intro">
         <p className="kicker">{b.kicker}</p>
         <h1>{b.title}</h1>
+        {briefSurface.available && !raw.tribalGate ? <p>Practice applying culture readings in <Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link>.</p> : null}
         {stringValue(briefSurface.values, "spotlightTitle") ? <section className="brief-spotlight" aria-labelledby="spotlight-title">
           <div>
             <h2 id="spotlight-title">{stringValue(briefSurface.values, "spotlightTitle")}</h2>

@@ -29,14 +29,22 @@ export function chapterImages(lesson: WaterLesson | null): Record<string, WaterI
  * The module podcast, placed directly under the module title and goal so it is found without
  * scrolling. Renders nothing until the release step marks the podcast ready.
  */
-export function WaterLessonPodcast({ lesson, moduleTitle }: { lesson: WaterLesson | null; moduleTitle: string }) {
+export function WaterLessonPodcast({ lesson, moduleTitle, readingHref }: {
+  lesson: WaterLesson | null;
+  moduleTitle: string;
+  readingHref?: string;
+}) {
   const podcast = lesson?.podcast;
   if (!podcast) return null;
   const cues = loadCaptionCues(podcast.captions);
+  const titleId = `water-podcast-title-${lesson!.id}`;
+  const Heading = readingHref ? "h3" : "h2";
   return <div className="water-lesson-opening clas-study">
-    <FeaturedMediaPanel kind="podcast" length={mediaLength(podcast.durationSeconds)}><section aria-labelledby="water-podcast-title" className="water-podcast">
-      <h2 id="water-podcast-title">Listen: {podcast.title}</h2>
-      <p>{podcast.summary} About {Math.max(1, Math.round(podcast.durationSeconds / 60))} minutes. Two colleagues talk the module through; the full text and its sources follow below.</p>
+    <FeaturedMediaPanel kind="podcast" length={mediaLength(podcast.durationSeconds)}><section aria-labelledby={titleId} className="water-podcast">
+      <Heading id={titleId}>Listen: {podcast.title}</Heading>
+      <p>{podcast.summary} About {Math.max(1, Math.round(podcast.durationSeconds / 60))} minutes. {readingHref
+        ? <Link href={readingHref}>Read the original module and its sources</Link>
+        : "Two colleagues talk the module through; the full text and its sources follow below."}</p>
       <SyncedMediaPlayer mediaId={`water:${lesson!.id}`} kind="audio" src={podcast.src} captions={podcast.captions} label={`${moduleTitle} podcast`}
         chapters={podcast.chapters} cues={cues} transcriptTitle="Podcast transcript">
         <p className="water-podcast-links"><a href={podcast.src} download>Download the podcast (MP3)</a> · <a href={podcast.transcript}>Read the transcript</a></p>

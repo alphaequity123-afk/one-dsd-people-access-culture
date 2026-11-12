@@ -1,0 +1,32 @@
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem 2.5rem;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border: 1px solid #b8cfcc;
+  border-inline-start: .35rem solid #176b65;
+  border-radius: .75rem;
+  background: #eef6f4;
+  color: #183247;
+}
+
+.feature h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  font-weight: 650;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.feature p {
+  max-width: 60ch;
+  margin: .75rem 0 0;
+  line-height: 1.65;
+}
+
+.feature a {
+  max-width: 100%;
+  white-space: normal;
+}

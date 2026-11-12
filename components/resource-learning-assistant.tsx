@@ -31,7 +31,10 @@ const modes: { value: StudyMode; label: string; library: string; scoped: string 
   },
 ];
 
-export function ResourceLearningAssistant({ resourcePath }: { resourcePath?: string }) {
+export function ResourceLearningAssistant({ resourcePath, prompts }: {
+  resourcePath?: string;
+  prompts?: Partial<Record<StudyMode, string>>;
+}) {
   const { context } = useProgramContext();
   return <LearningAssistant
     key={`${context}:${resourcePath ?? "library"}`}
@@ -39,11 +42,12 @@ export function ResourceLearningAssistant({ resourcePath }: { resourcePath?: str
     endpoint="/api/learn/resources"
     scope={{ resourcePath }}
     introduction={resourcePath
-      ? "Ask about the selected resource or try one of the starting questions."
+      ? prompts ? "Explore how the readings and toolkit inform the North Crossing case. Try a starting question or ask your own."
+        : "Ask about the selected resource or try one of the starting questions."
       : "Ask across the program’s published resources or try one of the starting questions."}
     privacyNotice="Your question and relevant published excerpts are sent to Google Gemini. Use fictional or anonymized examples and leave out names, case details, and other private information."
     workingMessage="Gemini is working with the sources…"
-    modes={modes.map(({ value, label, library, scoped }) => ({ value, label, prompt: resourcePath ? scoped : library }))}
+    modes={modes.map(({ value, label, library, scoped }) => ({ value, label, prompt: prompts?.[value] ?? (resourcePath ? scoped : library) }))}
     citationAllowed={localStudyHref}
     sourceLabel="Source"
     sourcesHeading="Sources cited"

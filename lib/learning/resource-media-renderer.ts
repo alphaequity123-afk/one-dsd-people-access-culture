@@ -31,6 +31,8 @@ const PAUSE_FRAMES = 8_400;
 const MAX_CLIP_FRAMES = SAMPLE_RATE * 150;
 const MAX_TOTAL_FRAMES = SAMPLE_RATE * 300;
 const MAX_PACKET = 3_000_000;
+// Reviewed year-round interior photography already in both release packages.
+const WORKPLACE_PHOTOS = ["06/image-3.webp", "01/image-4.webp", "04/image-4.webp", "05/image-2.webp", "05/image-4.webp"];
 const execute = promisify(execFile);
 const digest = (value: string | Buffer) => createHash("sha256").update(value).digest("hex");
 const clean = (text: string) => text.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim();
@@ -299,29 +301,29 @@ async function ffmpeg(binary: string, cwd: string, args: string[], signal: Abort
   }
 }
 
-async function chapterCard(file: string, fontfile: string, chapter: string, heading: string, points: string[], readings: string) {
+async function chapterCard(file: string, photo: string, fontfile: string, heading: string, points: string[], readings: string) {
   const { default: sharp } = await import("sharp");
-  // Text is a separate transparent bitmap from the shapes. Use the bundled
-  // font directly so Linux does not need a system font or FFmpeg drawtext.
+  // Pango uses the bundled font so the result does not depend on system fonts.
   async function layer(text: string, top: number, size: number, color: string, height: number) {
+    const width = 480;
     const image = await sharp({ text: {
       text: `<span foreground="${color}">${cueText(text)}</span>`,
-      font: `DejaVu Sans ${size}`, fontfile, width: 1112, wrap: "word-char", rgba: true,
+      font: `DejaVu Sans ${size}`, fontfile, width, wrap: "word-char", rgba: true,
     } }).png().toBuffer();
-    const input = await sharp(image).resize({ width: 1112, height, fit: "inside", withoutEnlargement: true }).png().toBuffer();
-    return { input, top, left: 84 };
+    const input = await sharp(image).resize({ width, height, fit: "inside", withoutEnlargement: true }).png().toBuffer();
+    return { input, top, left: 44 };
   }
-  const text = await Promise.all([
-    layer(chapter, 94, 26, "#B8E1D8", 35),
-    layer(heading, 146, 54, "#FFFFFF", 124),
-    layer(points.slice(0, 4).map(point => "• " + point).join("\n"), 321, 33, "#EDF5FA", 300),
-    layer(readings, 649, 24, "#B8E1D8", 39),
+  const [image, ...labels] = await Promise.all([
+    sharp(photo).resize(712, 720, { fit: "cover", position: "attention" }).removeAlpha().png().toBuffer(),
+    layer(heading, 94, 46, "#FFFFFF", 174),
+    layer(points.slice(0, 3).map(point => "• " + point).join("\n"), 314, 30, "#EDF5FA", 220),
+    layer(readings, 605, 21, "#B8E1D8", 64),
   ]);
   await sharp({ create: { width: 1280, height: 720, channels: 4, background: "#162D43" } })
     .composite([
-      { input: { create: { width: 112, height: 8, channels: 4, background: "#89D5C5" } }, top: 63, left: 84 },
-      { input: { create: { width: 1112, height: 1, channels: 4, background: "#4C6C81" } }, top: 291, left: 84 },
-      ...text,
+      { input: image, top: 0, left: 568 },
+      { input: { create: { width: 80, height: 6, channels: 4, background: "#89D5C5" } }, top: 65, left: 44 },
+      ...labels,
     ])
     .png()
     .toFile(file);
@@ -329,6 +331,7 @@ async function chapterCard(file: string, fontfile: string, chapter: string, head
 
 async function encodeVideo(binary: string, cwd: string, artifact: ResourceArtifact, sections: Section[], clips: Clip[], signal: AbortSignal) {
   const fontfile = path.join(process.cwd(), "lib", "consultant-toolkit", "fonts", "DejaVuSans.ttf");
+  const photos = path.join(process.cwd(), "public", "learning", "water-we-swim-in");
   const ids = new Map(artifact.sources.map((source, index) => [source.id, index + 1]));
   const sceneNames: string[] = [];
   for (let index = 0; index < sections.length; index++) {
@@ -338,7 +341,7 @@ async function encodeVideo(binary: string, cwd: string, artifact: ResourceArtifa
     const sources = [...new Set(section.sources.map(id => ids.get(id)).filter((id): id is number => id !== undefined))];
     const points = section.points.length ? section.points : [artifact.title];
     try {
-      await chapterCard(path.join(cwd, "card.png"), fontfile, `Chapter ${index + 1} of ${sections.length}`, section.heading, points,
+      await chapterCard(path.join(cwd, "card.png"), path.join(photos, WORKPLACE_PHOTOS[index]), fontfile, section.heading, points,
         sources.length ? `Readings ${sources.join(", ")} · See the transcript for links` : "See the transcript for the readings");
     } catch {
       throw new ResourceMediaRenderError("encoding_failed");

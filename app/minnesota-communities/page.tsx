@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CommunityDesignIndex } from "@/components/community-design-index";
 import { communityDesignEnabled } from "@/lib/content/community-design";
+import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import Link from "next/link";
 import { ActionList, Notice, PageIntro } from "@/components/ui";
 import { ROUTES } from "@/lib/constants";
@@ -62,6 +63,7 @@ export default async function CommunitiesPage({ searchParams }: { searchParams: 
   return (
     <EditableSurfaceRegion surface={pageSurface}>
       <PageIntro kicker={stringValue(pageSurface.values, "introKicker")} title={stringValue(pageSurface.values, "introTitle")} lede={stringValue(pageSurface.values, "introLede")}>
+        <p className="mt-4 font-semibold"><Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link></p>
         <p className="notice mt-4 max-w-3xl text-ink" role="note">
           <strong>Privacy: </strong>
           {stringValue(pageSurface.values, "privacyNotice")}

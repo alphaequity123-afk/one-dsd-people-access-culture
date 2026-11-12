@@ -7,6 +7,7 @@ import { getPath } from "@/lib/content/paths";
 import { suggestedReadingFor } from "@/lib/content/knowledge-graph";
 import { communityReading } from "@/lib/content/community-design";
 import { COMMUNITY_QUESTIONS, NATIVE_DEFERENCE_COMMUNITY_IDS, communityReadingGroups } from "@/lib/content/community-presentation";
+import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import { communityReadingSurfaceId } from "@/lib/content/community-reading-surface";
 import type { EditableRichBlock } from "@/lib/content/editable-surface-contract";
 import { applyCommunityBriefValues, communityBriefSurfaceId, stringValue } from "@/lib/content/staff-surface-registry";
@@ -99,6 +100,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   };
   const spotlight = surface ? stringValue(surface.values, "spotlightTitle") : "";
   const available = [surface, readingSurface].every(area => !area || area.available);
+  const collectionLink = available && !native ? <p>Practice applying culture readings in <Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link>.</p> : null;
   const culturalIntelligenceAvailable = available && await culturalIntelligenceHubAvailable();
   const practiceTitle = b?.tribalGate ? "Government-to-government relationships" : "Practice considerations";
   const practice = b ? <section id="community-practice">
@@ -217,6 +219,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
         <article>
           <p className="community-eyebrow">Minnesota Communities</p><h1>{title}</h1>
           {opening ? <p className="community-opening">{opening}</p> : null}
+          {collectionLink}
           {spotlightSection}
           {downloads}
           {reflection}
@@ -237,6 +240,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
       <article>
         <CommunityBreadcrumb id={id} title={title} current={current.label} />
         <p className="community-eyebrow">{title}</p><h1>{current.label}</h1>
+        {collectionLink}
         {downloads}
         <CommunityPartsNav id={id} title={title} parts={parts} current={current.slug} />
         {bodies[current.slug].body}

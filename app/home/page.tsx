@@ -1,3 +1,4 @@
+import { WaterCollectionFeature } from "@/components/water-collection-feature";
 import Image from "next/image";
 import Link from "next/link";
 import { HomeTaskFinder } from "@/components/home-task-finder";
@@ -38,6 +39,8 @@ export default async function HomePage() {
       {upcoming.length ? <ul className="month-list">{upcoming.map(item => <li key={item.id}><Link href={item.href}><span>{shortDateRange(item.start, item.end)}</span>{item.name}</Link></li>)}</ul>
         : <p>See the full calendar for observances across Minnesota communities.</p>}
     </div></section>
+
+    <div className="w"><div className="mb-8"><WaterCollectionFeature /></div></div>
 
     <section className="start" id="start-here" aria-labelledby="finder-title"><div className="w">
       <div className="start-words"><h2 id="finder-title">Find a resource for your work</h2>

@@ -11,6 +11,7 @@ import { EditableSurfaceRegion, prepareEditableSurface } from "./editable-surfac
 import "./community-editorial.css";
 import { ExplainerVideo } from "@/components/explainer-video";
 import { ToolDecisionQuestions } from "@/components/tool-decision-questions";
+import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 
 export async function CommunityDesignIndex({ query = "" }: { query?: string }) {
   const pageSurface = await prepareEditableSurface("communities.index");
@@ -42,7 +43,9 @@ export async function CommunityDesignIndex({ query = "" }: { query?: string }) {
   return <EditableSurfaceRegion surface={pageSurface}><div className="community-editorial">
     <div className="community-index-layout">
       <p className="community-eyebrow">People, place, and perspective</p>
-      <h1>{copy("introTitle", "Minnesota Communities")}</h1><p className="community-opening">{copy("introLede", "Minnesota's communities carry long histories, real contributions and everyday experiences that shape how people meet public services. These briefs offer that context so you can ask better questions and plan for access, never to describe any one person.")}</p><ExplainerVideo id="community-briefs" />
+      <h1>{copy("introTitle", "Minnesota Communities")}</h1><p className="community-opening">{copy("introLede", "Minnesota's communities carry long histories, real contributions and everyday experiences that shape how people meet public services. These briefs offer that context so you can ask better questions and plan for access, never to describe any one person.")}</p>
+      <p className="community-opening"><strong><Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link></strong> brings the American and Minnesota Culture briefs together with the Equity Analysis Toolkit. Start there to practice using culture readings in everyday work.</p>
+      <ExplainerVideo id="community-briefs" />
       <LiveSearchForm action="/minnesota-communities" className="community-search"><label htmlFor="community-query">{copy("searchLabel", "Find a community")}</label><div><input id="community-query" type="search" name="q" defaultValue={query} placeholder={copy("searchExample", "") || undefined} /><button type="submit">{copy("searchButton", "Search")}</button>{normalized ? <Link href="/minnesota-communities">Clear search</Link> : null}</div></LiveSearchForm>
       <p>{normalized ? `${matching.length} matching ${matching.length === 1 ? "brief" : "briefs"}` : `${entries.length} community and place briefs`}</p>
       {normalized ? list(matching) : <><h2>Explore communities</h2>{list(featured)}<details className="community-more"><summary>All other communities and places ({more.length})</summary>{list(more)}</details></>}

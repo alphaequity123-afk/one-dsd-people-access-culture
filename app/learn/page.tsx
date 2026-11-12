@@ -1,3 +1,4 @@
+import { WaterCollectionFeature } from "@/components/water-collection-feature";
 import { podcastMatchesTheme } from "@/lib/content/audio-organization";
 import { COLLABORATION_FOCUSES, collaborationCourses, collaborationHref } from "@/lib/learning/collaboration-collection";
 import collaborationStyles from "./collaboration/collaboration.module.css";
@@ -112,6 +113,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
         </div>
       </header>
       <div className={styles.content}>
+        {!filtered ? <div className="mb-6"><WaterCollectionFeature /></div> : null}
         <ResourceFormatLinks theme={selectedTheme?.id} current="learning" />
         <p className={preview.collectionLinks}><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link><Link href="/library?browse=all">Search the complete library</Link><Link href="/practice">Go straight to guided practice</Link></p>
         {selectedTheme || legacyThemeTitle ? <section id="start-here" className={preview.startHere} aria-labelledby="topic-start-title">
