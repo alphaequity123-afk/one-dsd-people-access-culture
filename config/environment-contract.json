@@ -22,6 +22,13 @@
       "required_when": "optional; defaults to the existing Jev provider"
     },
     {
+      "name": "PAC_OVERVIEW_VOICE_URL",
+      "class": "configuration",
+      "surface": "owner_resource_creation",
+      "example": false,
+      "required_when": "optional private hosted Qwen speech endpoint for audio and video drafts"
+    },
+    {
       "name": "PAC_GEFFEN_PUBLIC_MEDIA_ROOT",
       "class": "configuration",
       "surface": "public_read_aloud_media",

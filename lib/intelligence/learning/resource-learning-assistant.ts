@@ -1,5 +1,6 @@
 import "server-only";
 
+import { createHash } from "node:crypto";
 import { AUTHORITY } from "@/lib/content/types";
 import { PODCASTS } from "@/lib/content/podcasts";
 import { selfDirectedHref } from "@/lib/content/self-directed";
@@ -12,8 +13,9 @@ import { publicRetrievalDocumentEligible } from "@/lib/intelligence/retrieval/pu
 import { publishedResourceSupplements } from "@/lib/intelligence/retrieval/published-resource-supplements";
 import { evidenceForDoc } from "@/lib/intelligence/retrieval/evidence";
 import { focusPdfPageHits, namedPdfPageHits } from "@/lib/intelligence/retrieval/named-pdf";
-import { searchDocs, type Doc, type SearchHit } from "@/lib/intelligence/retrieval/search";
+import { scoreDoc, searchDocs, type Doc, type SearchHit } from "@/lib/intelligence/retrieval/search";
 import { externalResearchGate } from "@/lib/intelligence/safety";
+import type { ArtifactResourceSearch } from "@/lib/learning/resource-artifact-types";
 import {
   generateGeminiLearningAnswer,
   insufficientLearningEvidence,
@@ -266,4 +268,130 @@ export async function resourceLearningAnswer(input: ResourceLearningInput, apiKe
   }
   signal.throwIfAborted();
   return answer;
+}
+
+export type ResourceArtifactContext = {
+  resourcePath: string;
+  title: string;
+  sourceRevision: string;
+  passages: LearningPassage[];
+};
+
+function distinctParts(text: string): string[] {
+  const clean = text.replace(/\s+/g, " ").trim();
+  const chunks: string[] = [];
+  let start = 0;
+  while (start < clean.length) {
+    let end = Math.min(start + 710, clean.length);
+    if (end < clean.length) {
+      const window = clean.slice(start, end);
+      const boundary = Math.max(window.lastIndexOf(". "), window.lastIndexOf("? "), window.lastIndexOf("! "));
+      const word = window.lastIndexOf(" ");
+      end = start + (boundary > 340 ? boundary + 1 : word > 0 ? word : window.length);
+    }
+    chunks.push(clean.slice(start, end).trim());
+    start = end;
+  }
+  return chunks;
+}
+
+function sampleAcross<T>(items: T[], limit: number): T[] {
+  if (items.length <= limit) return items;
+  return Array.from({ length: limit }, (_, index) => items[Math.round(index * (items.length - 1) / (limit - 1))]);
+}
+
+function artifactPassages(docs: Doc[]): LearningPassage[] {
+  const candidates = sampleAcross(docs, 18).map(doc => ({
+    doc,
+    chunks: directoryTypes.has(doc.type) ? [doc.summary] : sampleAcross(distinctParts(doc.text), 12),
+  }));
+  const picked = new Map<string, LearningPassage>();
+  const spans = new Set<string>();
+  for (let round = 0; round < 12 && picked.size < 14; round++) {
+    for (const { doc, chunks } of candidates) {
+      const chunk = chunks[round];
+      if (!chunk) continue;
+      const passage = passageFor(doc, chunk);
+      if (!passage) continue;
+      // A document has one evidence ID. Assign a stable span ID to distinguish
+      // several sections of that same resource in the generated study output.
+      const span = passage.evidence.excerpt;
+      if (spans.has(span.quote)) continue;
+      spans.add(span.quote);
+      const id = createHash("sha256").update(JSON.stringify([passage.evidence.evidenceId, span.start, span.end])).digest("hex");
+      picked.set(id, { ...passage, citation: { ...passage.citation, id } });
+      if (picked.size === 14) break;
+    }
+  }
+  return [...picked.values()];
+}
+
+/** One current published resource and its own indexed parts. A revision
+ * includes every eligible part, even when a long resource is sampled. */
+export async function loadResourceArtifactContext(path: string, trustedScope?: StaffProgramScope): Promise<ResourceArtifactContext | null> {
+  const resourcePath = learningResourcePath(path);
+  if (!resourcePath) return null;
+  const scope = trustedScope ?? await requestedContentScope();
+  const docs = scopedDocuments(await publishedDocuments(scope), resourcePath).sort((left, right) => {
+    const primary = Number(learningResourcePath(right.href) === resourcePath) - Number(learningResourcePath(left.href) === resourcePath);
+    return primary || keyFor(left).localeCompare(keyFor(right));
+  });
+  const title = contextTitle(docs, resourcePath);
+  if (!title) return null;
+  const passages = artifactPassages(docs);
+  if (!passages.length) return null;
+  const revision = createHash("sha256").update(JSON.stringify([scope, resourcePath]));
+  for (const doc of docs) {
+    revision.update(JSON.stringify([keyFor(doc), doc.title, doc.authority, doc.summary, doc.evidenceRevisions, doc.text]));
+  }
+  return { resourcePath, title, sourceRevision: revision.digest("hex"), passages };
+}
+
+function catalogPath(href: string): string | undefined {
+  const podcast = PODCASTS.find(item => item.href === href);
+  return podcast ? `/podcasts/${podcast.id}` : learningResourcePath(href);
+}
+
+function catalogTitle(doc: Doc): string {
+  return doc.title.replace(/\s+—\s+(?:\d{1,3}:\d{2}(?::\d{2})?|PDF page \d+|Slide \d+)$/i, "");
+}
+
+/** Search current eligible sources by title, route, and indexed text. Links
+ * resolve only to other available resources already in the same projection. */
+export async function searchArtifactResources(
+  query: string, offset = 0, trustedScope?: StaffProgramScope,
+): Promise<ArtifactResourceSearch> {
+  const scope = trustedScope ?? await requestedContentScope();
+  const docs = await publishedDocuments(scope);
+  const entries = new Map<string, { doc: Doc; related: Set<string>; rank: number }>();
+  const term = query.trim().slice(0, 200).toLocaleLowerCase();
+  for (const doc of docs) {
+    const resourcePath = catalogPath(doc.href);
+    if (!resourcePath) continue;
+    const current = entries.get(resourcePath);
+    const title = catalogTitle(doc).toLocaleLowerCase();
+    const titleRank = !term ? 0 : title === term ? 100 : title.includes(term) ? 40 : resourcePath.toLocaleLowerCase().includes(term) ? 20 : 0;
+    const rank = term ? titleRank + scoreDoc(term, doc) : 0;
+    const related = current?.related ?? new Set<string>();
+    for (const href of [...(doc.graphRelated ?? []), ...(doc.graphLinks ?? [])]) {
+      const path = catalogPath(href);
+      if (path && path !== resourcePath) related.add(path);
+    }
+    const primary = !current || (current.doc.href.includes("#") && !doc.href.includes("#")) ? doc : current.doc;
+    entries.set(resourcePath, { doc: primary, related, rank: Math.max(current?.rank ?? 0, rank) });
+  }
+  const result = [...entries.entries()].filter(([, item]) => !term || item.rank > 0)
+    .sort(([leftPath, left], [rightPath, right]) => right.rank - left.rank
+      || catalogTitle(left.doc).localeCompare(catalogTitle(right.doc)) || leftPath.localeCompare(rightPath));
+  const start = Number.isSafeInteger(offset) ? Math.max(0, offset) : 0;
+  const pageSize = 24;
+  const resources = result.slice(start, start + pageSize).map(([resourcePath, item]) => {
+    const visible = [...item.related].flatMap(path => {
+      const row = entries.get(path);
+      return row ? [{ resourcePath: path, title: catalogTitle(row.doc) }] : [];
+    }).sort((left, right) => left.title.localeCompare(right.title));
+    return { resourcePath, title: catalogTitle(item.doc), type: item.doc.type, relatedCount: visible.length, related: visible.slice(0, 5) };
+  });
+  const nextOffset = start + resources.length;
+  return { resources, total: result.length, ...(nextOffset < result.length ? { nextOffset } : {}) };
 }

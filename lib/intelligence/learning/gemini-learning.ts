@@ -95,19 +95,39 @@ export async function generateGeminiLearningAnswer(
   const excerpts = passages.map(({ citation, text, authority }, index) => ({ id: String(index + 1), citation, text, authority }));
   const citations = new Map(excerpts.map(({ id, citation }) => [id, citation]));
 
-  const payload = JSON.stringify({
-    systemInstruction: { parts: [{ text: instructions }] },
-    contents: [{ role: "user", parts: [{ text: JSON.stringify({
+  const result = await requestGeminiLearningJson({
+    instructions,
+    data: {
       task,
       ...context,
       question,
       excerpts: excerpts.map(({ id, citation, text, authority }) => ({ id, reading: citation.title, text, authority })),
-    }) }] }],
+    },
+    responseSchema: schema([...citations.keys()]),
+    maxOutputTokens: 950,
+  }, apiKey, signal);
+  return result.blocked ? insufficient : checkedAnswer(result.value, citations, insufficient);
+}
+
+export async function requestGeminiLearningJson(
+  { instructions, data, responseSchema, maxOutputTokens, attemptTimeoutMs = 15_000 }: {
+    instructions: string;
+    data: object;
+    responseSchema: object;
+    maxOutputTokens: number;
+    attemptTimeoutMs?: number;
+  },
+  apiKey: string,
+  signal: AbortSignal,
+): Promise<{ blocked: true } | { blocked: false; value: unknown }> {
+  const payload = JSON.stringify({
+    systemInstruction: { parts: [{ text: instructions }] },
+    contents: [{ role: "user", parts: [{ text: JSON.stringify(data) }] }],
     generationConfig: {
-      maxOutputTokens: 950,
+      maxOutputTokens,
       thinkingConfig: { thinkingLevel: "MINIMAL" },
       responseMimeType: "application/json",
-      responseJsonSchema: schema([...citations.keys()]),
+      responseJsonSchema: responseSchema,
     },
   });
 
@@ -116,7 +136,7 @@ export async function generateGeminiLearningAnswer(
     cache: "no-store",
     redirect: "error",
     headers: { "content-type": "application/json", "x-goog-api-key": apiKey },
-    signal: AbortSignal.any([signal, AbortSignal.timeout(15_000)]),
+    signal: AbortSignal.any([signal, AbortSignal.timeout(attemptTimeoutMs)]),
     body: payload,
   });
   let response = await ask().catch(error => {
@@ -141,10 +161,10 @@ export async function generateGeminiLearningAnswer(
       promptFeedback?: { blockReason?: string };
     };
     const candidate = envelope.candidates?.[0];
-    if (envelope.promptFeedback?.blockReason || candidate?.finishReason === "SAFETY") return insufficient;
+    if (envelope.promptFeedback?.blockReason || candidate?.finishReason === "SAFETY") return { blocked: true };
     if (candidate?.finishReason !== "STOP") throw new GeminiLearningError("invalid");
     const output = candidate.content?.parts?.filter(part => !part.thought).map(part => part.text ?? "").join("") ?? "";
-    return checkedAnswer(JSON.parse(output), citations, insufficient);
+    return { blocked: false, value: JSON.parse(output) as unknown };
   } catch {
     throw new GeminiLearningError("invalid");
   }

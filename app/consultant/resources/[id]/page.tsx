@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageIntro, Notice } from "@/components/ui";
 import { ResourceReleaseClient } from "@/components/resource-release-client";
+import { ResourceCreationLink } from "@/components/resource-creation-link";
 import { ownerPageGuard } from "@/lib/auth/owner-page";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { getPublishedStaffContent } from "@/lib/content/staff-publications";
@@ -50,6 +51,7 @@ export default async function ResourceReleasePage({
             This item is a {kindLabel}; it is edited in its {item.type === "learning_module" ? "course" : "source collection"}, not here. It has no separate release review in this workspace.
           </Notice>
           <p className="mt-4"><Link href={`/library/${encodeURIComponent(item.id)}`}>Open the public page for this {kindLabel}</Link></p>
+          {item.status === "approved" ? <p><ResourceCreationLink resourcePath={`/library/${encodeURIComponent(item.id)}`} /></p> : null}
           <p><Link href="/consultant/resources">Back to resource review</Link></p>
         </div>
       </>
@@ -63,7 +65,9 @@ export default async function ResourceReleasePage({
       kicker="Consultant Workspace"
         title={title}
         lede="Review changes and make a separate, explicit decision about staff availability."
-      />
+      >
+        {release.published ? <p className="mt-4"><ResourceCreationLink resourcePath={`/library/${encodeURIComponent(id)}`} className="font-semibold underline underline-offset-4" /></p> : null}
+      </PageIntro>
       <ResourceReleaseClient initial={release} />
     </>
   );
