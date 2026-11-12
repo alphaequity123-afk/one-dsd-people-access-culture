@@ -103,6 +103,21 @@ export const LEARNING_WITH_OTHERS: readonly { title: string; body: string; href:
   { title: "Find the right person", body: "When a question needs a person who can act on it.", href: "/support/right-person" },
 ];
 
+/**
+ * Free courses elsewhere, for anyone who wants more. Each was checked on the provider's own site in
+ * November 2026. They are optional, they belong to their providers, and nothing about them is recorded here.
+ */
+export const LEARNING_ELSEWHERE: readonly { title: string; provider: string; body: string; href: string }[] = [
+  { title: "Leadership and Influence", provider: "Federal Emergency Management Agency", body: "A short self-paced course on leading from within, trust, influence and change.", href: "https://training.fema.gov/is/courseoverview.aspx?code=IS-240.c" },
+  { title: "Decision Making and Problem Solving", provider: "Federal Emergency Management Agency", body: "A short self-paced course on defining a problem, weighing options and deciding with others.", href: "https://training.fema.gov/is/courseoverview.aspx?code=IS-241.c" },
+  { title: "Effective Communication", provider: "Federal Emergency Management Agency", body: "A short self-paced course on listening, plain messages and reaching everyone in a community.", href: "https://training.fema.gov/is/courseoverview.aspx?code=IS-242.c" },
+  { title: "Partners in Policymaking online courses", provider: "Minnesota Governor's Council on Developmental Disabilities", body: "Five courses on disability history, self-determination, education, employment and making your case, taught from the experience of people with disabilities and their families.", href: "https://partnersonlinecourses.com/" },
+  { title: "Leadership and followership", provider: "The Open University, OpenLearn", body: "About 24 hours over eight weeks on how leaders and the people around them shape each other.", href: "https://www.open.edu/openlearn/education-development/learning/leadership-and-followership" },
+  { title: "An introduction to public leadership", provider: "The Open University, OpenLearn", body: "About 9 hours on leading in public service, partnership and creating public value.", href: "https://www.open.edu/openlearn/money-business/an-introduction-public-leadership/" },
+  { title: "Three principles of a coaching approach", provider: "The Open University, OpenLearn", body: "About 2 hours on rapport, listening, and summarizing and reflecting back.", href: "https://www.open.edu/openlearn/money-business/leadership-management/three-principles-coaching-approach/content-section-overview" },
+  { title: "Exercising Leadership: Foundational Principles", provider: "Harvard University", body: "A self-paced course on leading through change with or without authority, free to take without paying.", href: "https://pll.harvard.edu/course/exercising-leadership-foundational-principles" },
+];
+
 export type StartAnswers = { supervises: boolean; guidesProgram?: boolean; firstYear?: boolean; supervisesSupervisors?: boolean; setsDirection?: boolean };
 
 /**

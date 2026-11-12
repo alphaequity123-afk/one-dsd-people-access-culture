@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LeadingStartChooser } from "@/components/leading-start-chooser";
 import { LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE } from "@/lib/content/collections";
-import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from "@/lib/content/leadership-journey";
+import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from "@/lib/content/leadership-journey";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "@/components/collections.module.css";
 
@@ -73,6 +73,14 @@ export default function LeadingJourneyPage() {
       <p>None of this is required. A conversation with someone you trust can deepen what you notice.</p>
       <ul className={styles.doors}>
         {LEARNING_WITH_OTHERS.map(place => <li key={place.href}><Link className={styles.door} href={place.href}><span className={styles.doorTitle}>{place.title}</span><span>{place.body}</span></Link></li>)}
+      </ul>
+    </section>
+
+    <section className={styles.section} aria-labelledby="journey-elsewhere-title">
+      <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
+      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. They do not count toward required training unless your manager, director or agency leadership approves an exception.</p>
+      <ul className="list-disc pl-6">
+        {LEARNING_ELSEWHERE.map(course => <li key={course.href}><a className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</a>, {course.provider}. {course.body}</li>)}
       </ul>
     </section>
 

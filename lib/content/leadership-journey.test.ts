@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { LEADING_PATHS } from "./collections";
-import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM, suggestedPath } from "./leadership-journey";
+import { LEARNING_ELSEWHERE, END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM, suggestedPath } from "./leadership-journey";
 import { REFLECTION_KINDS } from "@/lib/implementation/records";
 
 const root = process.cwd();
@@ -14,6 +14,7 @@ const everyWord = [
   ...JOURNEY_STEPS.flatMap(step => [step.title, step.body, step.link]),
   ...Object.values(PATH_JOURNEY).flatMap(entry => [entry.question, entry.tryThis, entry.keep]),
   ...WEEKLY_RHYTHM.flatMap(item => [item.what, item.time]),
+  ...LEARNING_ELSEWHERE.flatMap(course => [course.title, course.provider, course.body]),
   ...SIX_WEEKS.flatMap(week => [week.learn, week.reflect, week.apply]),
   ...REFLECTION_PROMPTS.flatMap(prompt => [prompt.kind, prompt.when, ...prompt.questions]),
   ...END_OF_PATH_QUESTIONS,
@@ -76,5 +77,10 @@ describe("the promises the journey keeps", () => {
   it("is written plainly, with no system words and no status words", () => {
     expect(everyWord).not.toMatch(/\b(AI|artificial intelligence|assistant|chatbot|bot|model|module|framework|competenc\w*|diagnostic|coming soon|under construction|beta|pilot|draft|placeholder|TBD)\b/i);
     expect(everyWord).not.toMatch(/\*\*|`|^#/m);
+  });
+  it("lists free courses elsewhere only on secure outside addresses, each once", () => {
+    expect(LEARNING_ELSEWHERE.length).toBeGreaterThan(0);
+    for (const course of LEARNING_ELSEWHERE) expect(course.href).toMatch(/^https:\/\/(?!one-d)/);
+    expect(new Set(LEARNING_ELSEWHERE.map(course => course.href)).size).toBe(LEARNING_ELSEWHERE.length);
   });
 });
