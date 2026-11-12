@@ -1,8 +1,8 @@
 {
  "generatedFrom": "collections-placement.csv",
  "counts": {
-  "rows": 727,
-  "items": 723,
+  "rows": 729,
+  "items": 725,
   "questions": 89
  },
  "items": {
@@ -1234,6 +1234,16 @@
   },
   "gc-knowledge-and-continuity": {
    "title": "Sharing Knowledge and Learning Across Generations",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-disability-led-leadership": {
+   "title": "Learning From Disability-Led Leadership",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-coaching-conversations": {
+   "title": "Coaching Conversations That Help People Grow",
    "kind": "course",
    "minutes": 48
   },
@@ -3792,7 +3802,8 @@
     "dc-l62-reasonable-accommodation-the-supervisor-s-role",
     "sm-deaf-deafblind-hoh",
     "dc-l69-neuroinclusive-leadership",
-    "dc-l70-mental-health-disability-and-workplace-support"
+    "dc-l70-mental-health-disability-and-workplace-support",
+    "gc-disability-led-leadership"
    ],
    "deeper": [
     {
@@ -3897,7 +3908,7 @@
      ]
     }
    ],
-   "itemCount": 60
+   "itemCount": 61
   },
   {
    "id": "services-choice-system",
@@ -4957,9 +4968,10 @@
    ],
    "relatedIds": [
     "dc-s72-bias-in-everyday-decisions",
-    "gc-delegation-and-development"
+    "gc-delegation-and-development",
+    "gc-coaching-conversations"
    ],
-   "itemCount": 39
+   "itemCount": 40
   },
   {
    "slug": "access",
@@ -5513,9 +5525,10 @@
     "dc-t88-managing-power-differences-in-partnerships",
     "gc-leading-without-authority",
     "gc-systems-thinking",
-    "gc-advising-decision-makers"
+    "gc-advising-decision-makers",
+    "gc-disability-led-leadership"
    ],
-   "itemCount": 112
+   "itemCount": 113
   },
   {
    "slug": "keep-going",
@@ -5738,9 +5751,10 @@
     "di-capstone-remove-a-real-barrier",
     "gc-leading-without-authority",
     "gc-systems-thinking",
-    "gc-advising-decision-makers"
+    "gc-advising-decision-makers",
+    "gc-disability-led-leadership"
    ],
-   "minutes": 691
+   "minutes": 739
   },
   {
    "slug": "first-year",
@@ -5776,9 +5790,10 @@
     "gc-sustaining-the-work",
     "sm-your-own-load",
     "gc-accountability-public-service",
-    "gc-delegation-and-development"
+    "gc-delegation-and-development",
+    "gc-coaching-conversations"
    ],
-   "minutes": 1684
+   "minutes": 1732
   },
   {
    "slug": "experienced",
@@ -5801,9 +5816,11 @@
     "dc-t26-recognizing-hidden-and-invisible-work",
     "sm-who-carries-equity-work",
     "gc-delegation-and-development",
-    "gc-knowledge-and-continuity"
+    "gc-knowledge-and-continuity",
+    "gc-disability-led-leadership",
+    "gc-coaching-conversations"
    ],
-   "minutes": 929
+   "minutes": 1025
   },
   {
    "slug": "managers-of-managers",
@@ -5849,9 +5866,10 @@
     "gc-setting-direction",
     "gc-leading-culture-at-scale",
     "gc-foresight-and-stewardship",
-    "gc-knowledge-and-continuity"
+    "gc-knowledge-and-continuity",
+    "gc-disability-led-leadership"
    ],
-   "minutes": 727
+   "minutes": 775
   }
  ],
  "referralIds": [
