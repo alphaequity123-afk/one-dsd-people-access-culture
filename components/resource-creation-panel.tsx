@@ -36,8 +36,8 @@ const formatHelp: Record<ResourceArtifactKind, string> = {
   "mind-map": "A main topic and connected ideas arranged in branches.",
   slides: "An editable PowerPoint with slide content, speaker notes and citations.",
   infographic: "A visual draft with labeled sections, source links and an HTML download.",
-  "audio-overview": "A short discussion in the two approved Qwen voices, with a transcript.",
-  "video-overview": "A narrated video with GEFen, captions and a transcript.",
+  "audio-overview": "A short discussion between two hosts, with a transcript.",
+  "video-overview": "A narrated video with captions and a transcript.",
 };
 const formats = Object.entries(resourceArtifactKinds) as [ResourceArtifactKind, string][];
 

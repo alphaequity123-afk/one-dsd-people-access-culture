@@ -35,8 +35,8 @@ export function WaterLearningAssistant({ unit }: { unit?: string }) {
     endpoint="/api/learn/water-we-swim-in"
     scope={{ unit }}
     introduction="Explore The Water We Swim In and the American and Minnesota Culture briefs. Choose a starting question or ask your own."
-    privacyNotice="Your question is sent to Google Gemini along with relevant course passages. Use fictional or anonymized examples and leave out names, case details, and other private information."
-    workingMessage="Gemini is working with the readings…"
+    privacyNotice="Use fictional examples or remove identifying details. Your question and relevant passages are shared with an outside service to prepare the answer."
+    workingMessage="Checking the readings…"
     modes={modes.map(({ value, label, prompt, modulePrompt }) => ({ value, label, prompt: unit ? modulePrompt : prompt }))}
     citationAllowed={href => /^\/(learn\/water-we-swim-in(?:[\/#]|$)|minnesota-communities\/(american|minnesota)(?:[\/#?]|$))/.test(href)}
   />;

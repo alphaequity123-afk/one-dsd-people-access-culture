@@ -7,7 +7,7 @@ import { ownerFromCookies } from "@/lib/auth/request";
 import { localStudyHref, resourceStudyHref } from "@/lib/client/resource-study-links";
 import { resourceStudyAvailability } from "@/lib/intelligence/learning/resource-learning-assistant";
 
-export const metadata: Metadata = { title: "Study with Gemini" };
+export const metadata: Metadata = { title: "Study the readings" };
 
 export default async function ResourceStudyPage({ searchParams }: {
   searchParams: Promise<{ resource?: string | string[] }>;
@@ -22,7 +22,7 @@ export default async function ResourceStudyPage({ searchParams }: {
   const canCreate = resourcePath && await ownerFromCookies();
 
   return <>
-    <PageIntro title="Study with Gemini" lede={resourcePath ? availability.title ?? "Selected resource" : "Explore published resources with answers that cite their sources."}>
+    <PageIntro title="Study the readings" lede={resourcePath ? availability.title ?? "Selected resource" : "Explore published resources with answers that cite their sources."}>
       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
         <Link href="/ask">Back to Ask</Link>
         {resourcePath ? <Link href={resourcePath}>Back to resource</Link> : null}

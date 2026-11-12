@@ -43,7 +43,7 @@ export default async function WaterModulePage({ params }: { params: Promise<{ mo
       <CourseMediaSlot />
     </>}
     <WaterLessonOpening practice={practice} recall={waterRecall(id)} previousTitle={previous?.title} previousNumber={previous?.number} />
-    <p><a href="#water-learning-assistant">Study this module with the Gemini learning assistant</a></p>
+    <p><a href="#water-learning-assistant">Ask about this module</a></p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this module</summary><ResourceDownloads kind="water-we-swim-in" id={current.slug} noun="module" /></details>
     <WaterModuleBody markdown={current.body} notesKey={`water-we-swim-in-notes-${current.number}`} images={chapterImages(lesson)} />
     <WaterLessonPractice practice={practice} moduleTitle={current.title} moduleNumber={current.number} />
