@@ -34,14 +34,12 @@ app = modal.App(os.environ.get("PAC_VOICE_APP_NAME", "one-dsd-approved-voice"), 
 
 
 @app.cls(
-    gpu="L4", cpu=2, memory=8192,
-    min_containers=0, max_containers=1, scaledown_window=60, timeout=600,
-    enable_memory_snapshot=True,
-    experimental_options={"enable_gpu_snapshot": True},
+    gpu="L40S", cpu=2, memory=8192,
+    min_containers=0, max_containers=1, scaledown_window=300, timeout=600,
 )
 @modal.concurrent(max_inputs=1)
 class ApprovedVoice:
-    @modal.enter(snap=True)
+    @modal.enter()
     def load(self):
         import torch
         from qwen_tts import Qwen3TTSModel
@@ -60,14 +58,14 @@ class ApprovedVoice:
             for kind in ("identity", "style")
         }
         self.prompt = [VoiceClonePromptItem(ref_code=prompts["style"].ref_code, ref_spk_embedding=prompts["identity"].ref_spk_embedding, x_vector_only_mode=False, icl_mode=True, ref_text=profile["style"]["transcript"])]
-        # Include imports, prompt encoding and the first CUDA kernels in the snapshot.
-        # No request text is involved; this avoids repeating warmup for visitors.
+        # Warm CUDA kernels before visitor requests.
         for _ in self.render("Welcome to Ask."):
             pass
         torch.cuda.synchronize()
         torch.cuda.empty_cache()
 
     def render(self, text):
+        import numpy as np
         import soundfile as sf
         import torch
         began = time.monotonic()
@@ -82,8 +80,16 @@ class ApprovedVoice:
                 chunk = " ".join(words[:count]); words = words[count:]; first = False
                 with torch.inference_mode():
                     waves, rate = self.model.generate_voice_clone(text=chunk, language="English", voice_clone_prompt=self.prompt, non_streaming_mode=True, do_sample=True, top_k=20, top_p=.8, temperature=.7, repetition_penalty=1.05, max_new_tokens=min(1100, len(chunk.split()) * 14 + 180))
+                audio = waves[0]
+                # Qwen occasionally adds silence around a correctly spoken segment.
+                # Keep a short natural margin without changing the approved voice.
+                voiced = np.flatnonzero(np.abs(audio) > 0.005)
+                if not len(voiced):
+                    raise RuntimeError("Voice generated an empty segment")
+                margin = int(rate * 0.08)
+                audio = audio[max(0, voiced[0] - margin):min(len(audio), voiced[-1] + margin + 1)]
                 output = io.BytesIO()
-                sf.write(output, waves[0], rate, format="WAV", subtype="PCM_16")
+                sf.write(output, audio, rate, format="WAV", subtype="PCM_16")
                 yield output.getvalue()
 
     @modal.asgi_app(requires_proxy_auth=True)
