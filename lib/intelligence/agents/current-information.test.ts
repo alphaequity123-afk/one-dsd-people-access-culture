@@ -1,0 +1,23 @@
+import { describe, expect, it, vi } from "vitest";
+vi.mock("server-only", () => ({}));
+import { asksForCurrentInformation } from "./ask";
+
+describe("whether a question asks for current public information", () => {
+  it.each([
+    "What is the latest federal guidance on waiver rates?",
+    "What changed this year in the disability waiver rules?",
+    "Is there a new rule about interpreter services?",
+    "What is the current poverty guideline?",
+    "What should we know about the latest rule today?",
+    "Who is the commissioner as of now?",
+  ])("yes: %s", question => expect(asksForCurrentInformation(question)).toBe(true));
+  it.each([
+    "Two people on my team keep clashing in meetings. What can I try this week?",
+    "What should I do today to prepare for a hard conversation?",
+    "How can we make our meetings more accessible this month?",
+    "I want to give better feedback this year. Where do I start?",
+    "How do I support my current team through a change?",
+    "Our recent reorganization left people unsure who decides. What helps?",
+    "How do I plan an accessible meeting?",
+  ])("no: %s", question => expect(asksForCurrentInformation(question)).toBe(false));
+});

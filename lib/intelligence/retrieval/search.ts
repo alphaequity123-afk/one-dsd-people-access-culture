@@ -22,7 +22,18 @@ export function tokens(text: string): string[] {
     .map(stem);
 }
 
+// The same words come up in every question and every passage, so each word is reduced to its stem once.
+const stems = new Map<string, string>();
 function stem(w: string): string {
+  const known = stems.get(w);
+  if (known !== undefined) return known;
+  const reduced = reduceToStem(w);
+  if (stems.size > 100_000) stems.clear();
+  stems.set(w, reduced);
+  return reduced;
+}
+
+function reduceToStem(w: string): string {
   // These forms describe the same leadership concept in natural questions.
   if (/^(?:leader|leaders|leadership)$/.test(w)) return "leadership";
   if (/^accessib(?:le|ility|ilities)$/.test(w)) return "accessible";
@@ -205,15 +216,48 @@ const AUTHORITY_BOOST: Partial<Record<AuthorityLabel, number>> = {
   external_verify: 0.2,
 };
 
-/** The bounded passage shown from `start`: whole sentences where possible, never more than 360 characters. */
-function excerptWindow(clean: string, start: number): string {
-  const normalized = clean.slice(start);
-  if (normalized.length <= 360) return normalized;
-  const window = normalized.slice(0, 361);
+/** Where the bounded passage that starts at `start` ends: whole sentences where possible, never more than 360 characters. */
+function excerptEnd(clean: string, start: number): number {
+  if (clean.length - start <= 360) return clean.length;
+  const window = clean.slice(start, start + 361);
   const sentenceEnd = Math.max(window.lastIndexOf(". "), window.lastIndexOf("? "), window.lastIndexOf("! "));
   const wordEnd = window.lastIndexOf(" ");
-  const end = sentenceEnd >= 160 ? sentenceEnd + 1 : wordEnd >= 160 ? wordEnd : 360;
-  return window.slice(0, end).trim();
+  return start + (sentenceEnd >= 160 ? sentenceEnd + 1 : wordEnd >= 160 ? wordEnd : 360);
+}
+
+/** The bounded passage shown from `start`: whole sentences where possible, never more than 360 characters. */
+function excerptWindow(clean: string, start: number): string {
+  const passage = clean.slice(start, excerptEnd(clean, start));
+  // The closing passage of a text is shown as it stands; a passage cut from the middle loses its edge spaces.
+  return clean.length - start <= 360 ? passage : passage.trim();
+}
+
+/**
+ * A text prepared once for choosing passages: its cleaned form and each word in it with its place.
+ * The words are found by the same rules as `tokens`, so a passage's words can be read off this
+ * list instead of being worked out again for every passage that is considered.
+ */
+type PreparedText = { clean: string; lower: string; words: Array<{ start: number; end: number; token: string | null }> | null };
+const preparedTexts = new Map<string, PreparedText>();
+function preparedText(text: string): PreparedText {
+  const kept = preparedTexts.get(text);
+  if (kept) return kept;
+  const clean = text.replace(/\s+/g, " ").trim();
+  const lower = clean.toLowerCase();
+  // In the rare text whose lower-case form has a different length, places would not line up, so each passage is read directly.
+  let words: PreparedText["words"] = null;
+  if (lower.length === clean.length) {
+    words = [];
+    for (const run of lower.matchAll(/[a-z0-9'-]+/g)) {
+      const [token] = tokens(run[0]);
+      words.push({ start: run.index, end: run.index + run[0].length, token: token ?? null });
+    }
+  }
+  const prepared = { clean, lower, words };
+  // The oldest entries make room, so memory stays bounded however many documents are searched.
+  if (preparedTexts.size >= 4000) for (const key of [...preparedTexts.keys()].slice(0, 1000)) preparedTexts.delete(key);
+  preparedTexts.set(text, prepared);
+  return prepared;
 }
 
 /**
@@ -224,11 +268,10 @@ function excerptWindow(clean: string, start: number): string {
  * remaining question words. Ties keep the earliest passage.
  */
 export function searchExcerpt(text: string, query: string, title = ""): string {
-  const clean = text.replace(/\s+/g, " ").trim();
+  const { clean, lower, words } = preparedText(text);
   if (clean.length <= 360) return clean;
   const terms = new Set(tokens(query));
   const titled = new Set(tokens(title));
-  const lower = clean.toLowerCase();
   const starts = new Set([0]);
   for (const term of terms) {
     let from = 0;
@@ -240,11 +283,25 @@ export function searchExcerpt(text: string, query: string, title = ""): string {
   }
   let start = 0, bestSpecific = -1, bestTotal = -1;
   for (const candidate of starts) {
-    const found = new Set(tokens(excerptWindow(clean, candidate)));
-    const matched = [...terms].filter(term => found.has(term));
-    const specific = matched.filter(term => !titled.has(term)).length;
-    if (specific > bestSpecific || (specific === bestSpecific && matched.length > bestTotal)) {
-      start = candidate; bestSpecific = specific; bestTotal = matched.length;
+    const end = excerptEnd(clean, candidate);
+    // The question words that appear in this passage. A word the passage cuts through is read as the passage shows it.
+    const matched = new Set<string>();
+    const note = (token: string | null | undefined) => { if (token && terms.has(token)) matched.add(token); };
+    if (!words) {
+      for (const token of tokens(clean.slice(candidate, end))) note(token);
+    } else {
+      let low = 0, high = words.length;
+      while (low < high) { const middle = (low + high) >> 1; if (words[middle].end <= candidate) low = middle + 1; else high = middle; }
+      for (let index = low; index < words.length && words[index].start < end; index++) {
+        const word = words[index];
+        if (word.start >= candidate && word.end <= end) note(word.token);
+        else for (const token of tokens(lower.slice(Math.max(word.start, candidate), Math.min(word.end, end)))) note(token);
+      }
+    }
+    let specific = 0;
+    for (const term of matched) if (!titled.has(term)) specific += 1;
+    if (specific > bestSpecific || (specific === bestSpecific && matched.size > bestTotal)) {
+      start = candidate; bestSpecific = specific; bestTotal = matched.size;
     }
   }
   const passage = excerptWindow(clean, start);
@@ -335,6 +392,8 @@ export type SearchOptions = {
   intents?: AskIntent[];
   includeBriefs?: boolean;
   kinds?: Array<"content" | "brief">;
+  /** Only the order of the matches is wanted, so no passage is chosen for each one. */
+  rankOnly?: boolean;
 };
 
 export function searchDocs(query: string, docs: Doc[], opts: SearchOptions = {}): SearchHit[] {
@@ -360,7 +419,7 @@ export function searchDocs(query: string, docs: Doc[], opts: SearchOptions = {})
       status: d.status,
       reviewDate: d.reviewDate,
       scope: d.scope,
-      excerpt: searchExcerpt(d.text || d.summary, q, d.title),
+      excerpt: opts.rankOnly ? "" : searchExcerpt(d.text || d.summary, q, d.title),
       score: Math.round(score * 10) / 10,
     }));
 }

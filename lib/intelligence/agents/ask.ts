@@ -11,9 +11,9 @@ import { EvidenceClaimsSchema, type EvidenceClaim, type SourceEvidence } from "@
 import { citationEvidenceFromDocs, validateEvidenceClaims } from "../retrieval/evidence";
 import { videoScenarioEvidenceHits } from "../retrieval/video-transcript-evidence";
 import { CitedStatementsSchema, GeneratedEvidenceClaimsSchema, resolveCitedStatements, sourceRef } from "../retrieval/generated-evidence";
-import { recentProgramResources, recentStaffDocs } from "../retrieval/ask-library";
+import { currentLibrary, recentProgramResources, recentStaffDocs } from "../retrieval/ask-library";
 import { readStringField } from "./partial-answer";
-import { plainAnswerText } from "@/lib/ask/plain-text";
+import { plainAnswerText, plainLiveText } from "@/lib/ask/plain-text";
 import { reportProgress, type AskProgressSink } from "./ask-progress";
 import { operationalEquityContext } from "@/lib/program/equity";
 import { TRAINING_CREDIT_NOTICE, trainingCreditContext } from "@/lib/program/learning-credit";
@@ -232,6 +232,12 @@ const WANTS_HUMAN = /\b(i (?:want|need|would like) (?:to )?(?:talk|speak|meet)|r
 // Work that carries its own material: arithmetic, or wording help with text the person supplies.
 const SELF_CONTAINED = /^\s*(?:(?:what(?:'s| is)|calculate|compute|how much is)\s+)?[-+(]?\s*\d[\d\s.,]*(?:(?:[-+*/x×÷^%()]|plus|minus|times|multiplied by|divided by|over|percent of|squared|cubed)\s*[\d\s.,()]*)+\??\s*$|^\s*(?:please\s+)?(?:rewrite|rephrase|reword|proofread|shorten|simplify|tighten|translate|summari[sz]e|fix the (?:grammar|spelling|wording)|check the (?:grammar|spelling)|make (?:this|it) (?:shorter|clearer|plainer|warmer|friendlier|more (?:formal|concise|direct)))\b[\s\S]{20,}/i;
 const CURRENT_INFORMATION = /\b(current|currently|latest|recent|today|this (?:week|month|year)|new (?:law|rule|guidance|research)|updated|as of)\b/i;
+// "What can I try this week?" and "my current team" are about the person's own work, not a request for current facts.
+const OWN_PLANS = /\b((?:(?:can|should|could|might|do|will|must|shall)\s+(?:i|we)|(?:i|we)\s+(?:can|should|could|might|must|will|need to|want to|have to|plan to|hope to|am going to|are going to))\b[^.?!\n]*?)\s*\b(?:today|this (?:week|month|year))\b/gi;
+const OWN_SITUATION = /\b(my|our|your|their|his|her)\s+(?:current|recent|latest)\b/gi;
+export function asksForCurrentInformation(question: string): boolean {
+  return CURRENT_INFORMATION.test(question.replace(OWN_PLANS, "$1").replace(OWN_SITUATION, "$1"));
+}
 
 function pathFor(intents: AskIntent[], question: string, pathId?: string): GraduationPath | undefined {
   if (pathId) return getPath(pathId);
@@ -430,7 +436,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // Give reasoning a complete public directory so paraphrases and other languages
   // are not limited to lexical matching. No document bodies or private areas enter it.
   // The directory is long, and only its first part reaches the answer, so the entries closest to the question come first.
-  const directoryOrder = new Map(searchDocs(retrievalQuestion, availableDocs, { limit: 80 }).map((hit, index) => [hit.id, index]));
+  const directoryOrder = new Map(searchDocs(retrievalQuestion, availableDocs, { limit: 80, rankOnly: true }).map((hit, index) => [hit.id, index]));
   const contextIds = new Set([...merged, ...connected].map(hit => hit.id));
   const publicDirectory = Array.from(new Map(availableDocs.filter(doc => !["course_lesson", "community_research", "curriculum"].includes(doc.type)
     || (doc.type === "course_lesson" && contextIds.has(doc.id))
@@ -460,7 +466,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // Where the program has some material but not enough, the routing step's reading decides, so nothing is searched needlessly.
   const localEvidence = assessLocalEvidence(question, merged.filter(hit => !/^https?:\/\//.test(hit.href)));
   // A calculation, or help with wording the person has supplied, needs no outside facts, so nothing is searched for it.
-  const selfContained = SELF_CONTAINED.test(question) && !CURRENT_INFORMATION.test(question) && !wantsCitation(question);
+  const selfContained = SELF_CONTAINED.test(question) && !asksForCurrentInformation(question) && !wantsCitation(question);
   const research = (...args: Parameters<typeof governedResearch>) => {
     const began = Date.now();
     reportProgress(sink, { type: "stage", stage: "checking" });
@@ -468,7 +474,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   };
   const planBegan = Date.now();
   const researchCertain = cloneAgentsEnabled() && (requestedMode === "current_web" || requestedMode === "deep_research" || (requestedMode === "auto" && (
-    (!namedPageHits.length && localEvidence === "absent" && !selfContained) || CURRENT_INFORMATION.test(question) || (!namedPageHits.length && wantsCitation(question))
+    (!namedPageHits.length && localEvidence === "absent" && !selfContained) || asksForCurrentInformation(question) || (!namedPageHits.length && wantsCitation(question))
     || /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question))));
   const [jevPlan, requiredResearch] = await Promise.all([
     cloneAgentsEnabled() ? planWithJev(question, merged.map(hit => ({ title: hit.title, excerpt: hit.excerpt.slice(0, 1200) })), ctx, input.cloneRunId) : null,
@@ -482,7 +488,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     requestedMode === "deep_research" ||
     (requestedMode === "auto" && ((cloneAgentsEnabled() && (!namedPageHits.length && localEvidence === "potentially_sufficient"
       ? jevPlan?.evidence === "research"
-      : !selfContained && (jevPlan?.evidence !== "sufficient" || localEvidence === "absent"))) || CURRENT_INFORMATION.test(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
+      : !selfContained && (jevPlan?.evidence !== "sufficient" || localEvidence === "absent"))) || asksForCurrentInformation(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
       /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question)));
   const researchDepth: ResearchDepth = requestedMode === "deep_research" ? "deep_research" : "current_web";
   let publicResearch: AskAnswer["publicResearch"];
@@ -564,10 +570,10 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // The research service reports "no tool evidence" when a question did not draw on the web
   // at all (a calculation, a rewrite). Any other failure means a check that was wanted did not happen: say so.
   const outsideCheckFailed = publicResearch?.status === "failed" && researchFailureCode !== "research_no_tool_evidence" && researchFailureCode !== "research_search_not_performed";
-  if (outsideCheckFailed && !CURRENT_INFORMATION.test(question)) {
+  if (outsideCheckFailed && !asksForCurrentInformation(question)) {
     limits.push("Public sources could not be checked for this answer just now. Treat dates, amounts, requirements, and other details that change as unverified, or ask again in a moment.");
   }
-  if (CURRENT_INFORMATION.test(question) && publicResearch?.status !== "used") {
+  if (asksForCurrentInformation(question) && publicResearch?.status !== "used") {
     limits.push("Current public information could not be checked for this answer. Treat dates, officeholders, prices, requirements, and other changing details as unverified.");
   }
 
@@ -649,7 +655,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       const onText = showAsWritten ? (raw: string) => {
         const field = readStringField(raw, "shortAnswer");
         if (!field) return;
-        const text = askAnswerText(field.text);
+        // While it is arriving, half-arrived markup is held back so the words on the page only ever grow.
+        const text = field.complete ? askAnswerText(field.text) : plainLiveText(field.text.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, "")).trim();
         const now = Date.now();
         if (text.length <= shown.length || (!field.complete && now - shownAt < 60)) return;
         if (!shown) took.first_text = now - startedAt;
@@ -709,8 +716,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         if (short.length > 0 && !/^\s*[\[{]\s*["\'](?:role|system|provider)["\']\s*:/.test(generatedNarrative)) {
           // Every citation is checked against the current publication, read fresh. One that no longer matches is left out.
           const proposed = parsed.data.evidenceClaims ?? [];
-          const freshDocs = proposed.length
-            ? [...organizationalDocs(), ...await indexedStaffDocs(scope), ...(await indexedProgramResources(scope)).destinations] : [];
+          const current = proposed.length ? await currentLibrary(scope) : undefined;
+          const freshDocs = current ? [...organizationalDocs(), ...current.staff, ...current.program.destinations] : [];
           const checkedClaims = proposed.flatMap(claim => {
             try { return validateEvidenceClaims([claim], sources, freshDocs); }
             catch (error) { if (error instanceof Error && error.message === "generated_evidence_rejected") return []; throw error; }

@@ -12,7 +12,17 @@ export function sourceReviewDue(source: typeof reference.sources[number], now = 
 }
 
 /** Public organizational evidence only. Owner conversations and staff records never enter this index. */
-export function organizationalDocs(now = new Date()): Doc[] {
+export function organizationalDocs(now?: Date): Doc[] {
+  // The reference is fixed and only a source's review date can change the result, so each day's set is built once.
+  if (now) return buildOrganizationalDocs(now);
+  const today = new Date();
+  const day = today.toISOString().slice(0, 10);
+  if (organizationalDocsForDay?.day !== day) organizationalDocsForDay = { day, docs: buildOrganizationalDocs(today) };
+  return organizationalDocsForDay.docs;
+}
+let organizationalDocsForDay: { day: string; docs: Doc[] } | undefined;
+
+function buildOrganizationalDocs(now: Date): Doc[] {
   return reference.entries.map(entry => {
     const sources = entry.sourceIds.map(id => reference.sources.find(source => source.id === id)!);
     const due = sources.some(source => sourceReviewDue(source, now));
