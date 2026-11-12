@@ -170,7 +170,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     const playbackToken = playbackGeneration.current;
     const cancelled = () => token !== generation.current || playbackToken !== playbackGeneration.current || mutedRef.current;
     if (!available.speech) throw new Error("The approved read-aloud voice is not connected right now. The written answer is still here; please try listening again shortly.");
-    setStatus("Preparing the answer…");
+    setStatus("Preparing audio. This may take a minute…");
     if (timing) timing.speechStartedAt = performance.now();
     const controller = new AbortController(); abort.current = controller;
     const response = await fetch("/api/ask/voice", { method: "POST", headers: { "content-type": "application/json" },
@@ -183,7 +183,9 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
     const reader = response.body.getReader();
     const decoder = new TextDecoder(); let pending = ""; let finished = false;
     let playback: Promise<void> = Promise.resolve(); let playbackFailure: Error | null = null;
+    let queuedAudio = 0;
     const enqueue = (encoded: string) => {
+      queuedAudio++;
       playback = playback.then(async () => {
         if (cancelled() || playbackFailure) return;
         const binary = atob(encoded); const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
@@ -203,7 +205,11 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
             player.onerror = () => reject(new Error("The audio could not play, but the written answer is still here."));
             void player.play().catch(() => reject(new Error("Your browser held back the audio. Select Listen to answer to hear it.")));
           });
-        } finally { URL.revokeObjectURL(url); if (audioUrl.current === url) audioUrl.current = null; }
+        } finally {
+          URL.revokeObjectURL(url); if (audioUrl.current === url) audioUrl.current = null;
+          queuedAudio--;
+          if (!queuedAudio && !finished && !cancelled()) setStatus("Preparing the next part of the audio…");
+        }
       }).catch(failure => { playbackFailure = failure instanceof Error ? failure : new Error("The answer could not be played."); controller.abort(); });
     };
     try {
