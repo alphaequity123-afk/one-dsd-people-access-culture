@@ -19,11 +19,12 @@ function clock(seconds: number) {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }
 
-function Player({ item }: { item: Item }) {
+function Player({ item, withinSection = false }: { item: Item; withinSection?: boolean }) {
+  const Heading = withinSection ? "h3" : "h2";
   const ref = useRef<HTMLVideoElement & HTMLAudioElement>(null);
   const seek = (start: number) => { if (ref.current) { ref.current.currentTime = start; void ref.current.play().catch(() => undefined); } };
   return <FeaturedMediaPanel kind={item.kind === "video" ? "video" : "audio"} label={item.kind === "video" ? undefined : "Listen"} length={minutes(item.durationSeconds)}><section className="course-media-item" aria-labelledby={`cm-${item.id}`}>
-    <h2 id={`cm-${item.id}`}>{item.title}</h2>
+    <Heading id={`cm-${item.id}`}>{item.title}</Heading>
     {item.summary ? <p className="calm-muted">{item.summary}</p> : null}
     {item.kind === "video"
       ? <video ref={ref} controls preload="none" poster={item.poster} style={{ width: "100%", maxWidth: "960px", borderRadius: "8px", background: "#000" }}>
@@ -48,16 +49,16 @@ function Player({ item }: { item: Item }) {
  * Where published course media goes on a page: directly under the page's title and its own players,
  * not at the foot of the page. A page marks the spot with this slot; it renders nothing by itself.
  */
-export function CourseMediaSlot() {
-  return <div id="course-media" data-course-media-slot="" />;
+export function CourseMediaSlot({ itemId }: { itemId?: string } = {}) {
+  return itemId ? <div data-course-media-item={itemId} /> : <div id="course-media" data-course-media-slot="" />;
 }
 
 /**
  * Where a page's title area offers a "Watch the video explainer" button for its published course video.
  * Renders nothing by itself; the button appears only when a video is published for the page.
  */
-export function CourseMediaJumpSlot() {
-  return <span data-course-media-jump="" style={{ display: "contents" }} />;
+export function CourseMediaJumpSlot({ label }: { label?: string } = {}) {
+  return <span data-course-media-jump={label ?? ""} style={{ display: "contents" }} />;
 }
 
 /**
@@ -81,8 +82,7 @@ function placeNearTitle(): { target: HTMLElement | null; cleanup?: () => void } 
 export function CourseMediaForPage() {
   const pathname = usePathname();
   const [items, setItems] = useState<Item[]>([]);
-  // undefined: not placed yet; null: no title on the page, so render in place.
-  const [target, setTarget] = useState<HTMLElement | null | undefined>(undefined);
+  const [placement, setPlacement] = useState<{ target: HTMLElement | null; itemTargets: Map<string, HTMLElement> }>();
   useEffect(() => {
     let live = true;
     // A new page starts with no media until its own list arrives.
@@ -96,23 +96,33 @@ export function CourseMediaForPage() {
   useEffect(() => {
     if (!items.length) return;
     const placed = placeNearTitle();
-    // The page's own markup decides the spot, and it exists only after the page has rendered.
+    const itemTargets = new Map<string, HTMLElement>();
+    for (const slot of document.querySelectorAll<HTMLElement>("[data-course-media-item]")) {
+      if (slot.dataset.courseMediaItem) itemTargets.set(slot.dataset.courseMediaItem, slot);
+    }
+    // The slots are available after the page renders.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setTarget(placed.target);
-    return () => { placed.cleanup?.(); setTarget(undefined); };
+    setPlacement({ target: placed.target, itemTargets });
+    return () => { placed.cleanup?.(); setPlacement(undefined); };
   }, [items]);
-  if (!items.length || target === undefined) return null;
+  if (!items.length || !placement) return null;
+  const { target, itemTargets } = placement;
   // Videos first, then audio, each in published order.
-  const ordered = [...items.filter(item => item.kind === "video"), ...items.filter(item => item.kind !== "video")];
+  const pageItems = items.filter(item => !itemTargets.has(item.id));
+  const ordered = [...pageItems.filter(item => item.kind === "video"), ...pageItems.filter(item => item.kind !== "video")];
+  const sectionMedia = items.flatMap(item => {
+    const slot = itemTargets.get(item.id);
+    return slot ? [createPortal(<Player item={item} withinSection />, slot, item.id)] : [];
+  });
   // In a page's own slot the media lines up with the page column; elsewhere it keeps its own margins.
   const inSlot = target?.hasAttribute("data-course-media-slot") ?? false;
   const media = <div className="calm course-media" style={inSlot ? { paddingTop: "1.5rem", paddingBottom: "1.5rem", paddingLeft: 0, paddingRight: 0 } : { paddingTop: "1.5rem", paddingBottom: "1.5rem" }}>
     {ordered.map(item => <Player key={item.id} item={item} />)}
   </div>;
-  const placedMedia = target ? createPortal(media, target) : media;
+  const placedMedia = ordered.length ? (target ? createPortal(media, target) : media) : null;
   // A button in the title area, so the video is found without scrolling (owner rule, 2026-11-10).
   const jump = inSlot ? document.querySelector<HTMLElement>("[data-course-media-jump]") : null;
   const video = ordered.find(item => item.kind === "video");
-  if (!jump || !video) return placedMedia;
-  return <>{placedMedia}{createPortal(<a href="#course-media" className="media-quick-link media-quick-link--video text-white" style={{ background: "#003865", color: "#fff" }}>Watch the lesson</a>, jump)}</>;
+  if (!jump || !video) return <>{placedMedia}{sectionMedia}</>;
+  return <>{placedMedia}{sectionMedia}{createPortal(<a href="#course-media" className="media-quick-link media-quick-link--video text-white" style={{ background: "#003865", color: "#fff" }}>{jump.dataset.courseMediaJump || "Watch the lesson"}</a>, jump)}</>;
 }

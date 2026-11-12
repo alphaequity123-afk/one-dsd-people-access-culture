@@ -84,7 +84,7 @@ const nextConfig: NextConfig = {
   htmlLimitedBots: /.*/,
   // Each build worker holds its own database pool. Bound prerender concurrency
   // so builds and the running service fit the hosted session pooler's budget.
-  experimental: { cpus: 2, webpackMemoryOptimizations: true },
+  experimental: { cpus: 2 },
   allowedDevOrigins: ["127.0.0.1"],
   devIndicators: false,
   turbopack: { root: __dirname },

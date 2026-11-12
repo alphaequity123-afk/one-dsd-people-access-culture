@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { resourcePowerPoint, resourceVisualHtml } from "@/lib/client/resource-creation-exports";
+import { resourceVisualHtml } from "@/lib/client/resource-creation-exports";
 import { localStudyHref } from "@/lib/client/resource-study-links";
 import type { ResourceArtifact } from "@/lib/learning/resource-artifact-types";
 
@@ -93,27 +92,11 @@ function downloadText(content: string, mime: string, fileName: string) {
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-export function ResourceCreationPreview({ artifact }: { artifact: ResourceArtifact }) {
-  const [exporting, setExporting] = useState(false);
-  const [exportError, setExportError] = useState("");
+export function ResourceCreationPreview({ artifact, powerPointHref }: { artifact: ResourceArtifact; powerPointHref?: string }) {
   const blocks = previewBlocks(artifact);
   const sources = artifact.sources.filter(source => localStudyHref(source.href));
   const numberById = new Map(sources.map((source, index) => [source.id, index + 1]));
   const visual = artifact.kind === "mind-map" || artifact.kind === "infographic";
-
-  async function exportPowerPoint() {
-    if (artifact.kind !== "slides" || exporting) return;
-    setExporting(true);
-    setExportError("");
-    try {
-      const pptx = await resourcePowerPoint(artifact, window.location.origin);
-      await pptx.writeFile({ fileName: "learning-slides-draft.pptx", compression: true });
-    } catch {
-      setExportError("The PowerPoint could not be created. Try the download again.");
-    } finally {
-      setExporting(false);
-    }
-  }
 
   function exportHtml() {
     if (artifact.kind === "mind-map" || artifact.kind === "infographic") {
@@ -140,14 +123,12 @@ export function ResourceCreationPreview({ artifact }: { artifact: ResourceArtifa
     <div className="flex flex-wrap items-center justify-between gap-3">
       <h3 className="text-lg font-bold">{artifact.title}</h3>
       <div className="flex flex-wrap gap-2">
-        {artifact.kind === "slides" ? <button type="button" className="btn min-h-11" disabled={exporting} onClick={() => void exportPowerPoint()}>
-          {exporting ? "Preparing PowerPoint…" : "Download editable PowerPoint"}
-        </button> : null}
+        {artifact.kind === "slides" && localStudyHref(powerPointHref)
+          ? <a href={powerPointHref} download className="btn min-h-11">Download editable PowerPoint</a> : null}
         {visual ? <button type="button" className="btn min-h-11" onClick={exportHtml}>Download visual as HTML</button> : null}
         <button type="button" className="btn min-h-11" onClick={exportMarkdown}>Download draft as Markdown</button>
       </div>
     </div>
-    {exportError ? <p role="status" className="mt-2">{exportError}</p> : null}
     <p className="mt-2 whitespace-pre-wrap">{artifact.summary}</p>
     {artifact.kind === "mind-map" ? <p className="mx-auto mt-4 max-w-fit rounded border border-[#18768a] bg-[#e7f2f5] px-4 py-3 text-center font-bold">{artifact.title}</p> : null}
     <div className={visual ? "mt-4 grid grid-cols-[repeat(auto-fit,minmax(min(100%,13rem),1fr))] gap-3" : "mt-4 space-y-4"}>
