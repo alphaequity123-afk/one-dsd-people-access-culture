@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JobAidActions } from "@/components/clas-curriculum/job-aid-actions";
-import { CourseMediaSlot } from "@/components/course-media-for-page";
+import { CourseMediaJumpSlot, CourseMediaSlot } from "@/components/course-media-for-page";
 import { prepareEditableSurface } from "@/components/editable-surface";
 import { GeffenReadAloud } from "@/components/geffen-read-aloud";
 import { ResourceCreationLink } from "@/components/resource-creation-link";
@@ -59,6 +59,7 @@ export default async function WaterCollectionPage() {
         <p>Six self-paced steps. Set aside about 6 to 8 hours for the readings, recordings and practice. You can work through one step at a time.</p>
         <div className={styles.actions}>
           <a className={styles.primary} href="#step-1">Start with step 1</a>
+          <CourseMediaJumpSlot label="Watch the curriculum overview" />
           {studyReady ? <a href="#resource-learning-assistant">Study this collection with Gemini</a> : null}
           {otherBriefs.length || referralPages.length ? <a href="#collection-briefs">Browse the culture briefs</a> : null}
           {owner && studyReady ? <ResourceCreationLink resourcePath={WATER_COLLECTION_HREF} /> : null}
@@ -122,6 +123,7 @@ export default async function WaterCollectionPage() {
           <h2 id={`step-title-${number}`}>{step.title}</h2>
           <p>{step.idea}</p>
         </header>
+        <CourseMediaSlot itemId={`water-collection-bridge-0${number}`} />
         {lesson?.podcast ? <details className={styles.podcast}>
           <summary>Listen to the module {number} podcast</summary>
           <WaterLessonPodcast lesson={lesson} moduleTitle={courseModule.title} readingHref={moduleHref} />

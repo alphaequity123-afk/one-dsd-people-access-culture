@@ -285,7 +285,10 @@ export function ResourceCreationPanel({ resourcePath, resourceTitle }: { resourc
         <p role="status"><strong>{statusText[selected.status]}.</strong> {selected.error}</p>
         {localStudyHref(selected.resourcePath) ? <Link href={selected.resourcePath} className="text-sm underline underline-offset-4">Open source resource</Link> : null}
         {selected.files?.length ? <ResourceCreationMedia files={selected.files} /> : null}
-        {selected.artifact ? <ResourceCreationPreview artifact={selected.artifact} /> : null}
+        {selected.artifact ? <ResourceCreationPreview artifact={selected.artifact} powerPointHref={
+          selected.status === "ready" && selected.artifact.kind === "slides"
+            ? `/api/consultant/resource-creation/${encodeURIComponent(selected.id)}/file?kind=pptx&download=1` : undefined
+        } /> : null}
       </div> : null}
     </section>
   </div>;
