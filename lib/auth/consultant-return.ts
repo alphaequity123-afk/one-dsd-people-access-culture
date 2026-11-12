@@ -7,6 +7,7 @@ const CONSULTANT_EXACT_RETURN_PATHS = new Set([
   "/consultant/orchestrator",
   "/consultant/registry",
   "/consultant/research",
+  "/consultant/resource-creation",
   "/consultant/resources",
   "/consultant/review",
   "/consultant/workforce",

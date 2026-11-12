@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { resourcePowerPoint, resourceVisualHtml } from "@/lib/client/resource-creation-exports";
 import { localStudyHref } from "@/lib/client/resource-study-links";
 import type { ResourceArtifact } from "@/lib/learning/resource-artifact-types";
 
@@ -82,11 +84,44 @@ function markdownText(value: string) {
   return value.replace(/[\\`*_{}[\]<>]/g, "\\$&");
 }
 
+function downloadText(content: string, mime: string, fileName: string) {
+  const url = URL.createObjectURL(new Blob([content], { type: mime }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  link.click();
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 export function ResourceCreationPreview({ artifact }: { artifact: ResourceArtifact }) {
+  const [exporting, setExporting] = useState(false);
+  const [exportError, setExportError] = useState("");
   const blocks = previewBlocks(artifact);
   const sources = artifact.sources.filter(source => localStudyHref(source.href));
   const numberById = new Map(sources.map((source, index) => [source.id, index + 1]));
-  function download() {
+  const visual = artifact.kind === "mind-map" || artifact.kind === "infographic";
+
+  async function exportPowerPoint() {
+    if (artifact.kind !== "slides" || exporting) return;
+    setExporting(true);
+    setExportError("");
+    try {
+      const pptx = await resourcePowerPoint(artifact, window.location.origin);
+      await pptx.writeFile({ fileName: "learning-slides-draft.pptx", compression: true });
+    } catch {
+      setExportError("The PowerPoint could not be created. Try the download again.");
+    } finally {
+      setExporting(false);
+    }
+  }
+
+  function exportHtml() {
+    if (artifact.kind === "mind-map" || artifact.kind === "infographic") {
+      downloadText(resourceVisualHtml(artifact, window.location.origin), "text/html;charset=utf-8", `${artifact.kind}-draft.html`);
+    }
+  }
+
+  function exportMarkdown() {
     const content = [
       `# ${markdownText(artifact.title)}`, markdownText(artifact.summary),
       ...blocks.map(block => [
@@ -99,21 +134,26 @@ export function ResourceCreationPreview({ artifact }: { artifact: ResourceArtifa
       "## Sources",
       sources.map((source, index) => `${index + 1}. ${markdownText(source.title)} — ${new URL(source.href, window.location.origin).href}`).join("\n"),
     ].filter(Boolean).join("\n\n");
-    const url = URL.createObjectURL(new Blob([content], { type: "text/markdown;charset=utf-8" }));
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = `${artifact.kind}-draft.md`;
-    link.click();
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    downloadText(content, "text/markdown;charset=utf-8", `${artifact.kind}-draft.md`);
   }
   return <article className="mt-5 border-t border-line pt-4">
     <div className="flex flex-wrap items-center justify-between gap-3">
       <h3 className="text-lg font-bold">{artifact.title}</h3>
-      <button type="button" className="btn min-h-11" onClick={download}>Download draft as Markdown</button>
+      <div className="flex flex-wrap gap-2">
+        {artifact.kind === "slides" ? <button type="button" className="btn min-h-11" disabled={exporting} onClick={() => void exportPowerPoint()}>
+          {exporting ? "Preparing PowerPoint…" : "Download editable PowerPoint"}
+        </button> : null}
+        {visual ? <button type="button" className="btn min-h-11" onClick={exportHtml}>Download visual as HTML</button> : null}
+        <button type="button" className="btn min-h-11" onClick={exportMarkdown}>Download draft as Markdown</button>
+      </div>
     </div>
+    {exportError ? <p role="status" className="mt-2">{exportError}</p> : null}
     <p className="mt-2 whitespace-pre-wrap">{artifact.summary}</p>
-    <div className="mt-4 space-y-4">
-      {blocks.map((block, index) => <section key={index} className="border-t border-line pt-3">
+    {artifact.kind === "mind-map" ? <p className="mx-auto mt-4 max-w-fit rounded border border-[#18768a] bg-[#e7f2f5] px-4 py-3 text-center font-bold">{artifact.title}</p> : null}
+    <div className={visual ? "mt-4 grid grid-cols-[repeat(auto-fit,minmax(min(100%,13rem),1fr))] gap-3" : "mt-4 space-y-4"}>
+      {blocks.map((block, index) => <section key={index} className={visual
+        ? "min-w-0 break-words rounded border border-t-4 border-line border-t-[#18768a] bg-[#f4f8fa] p-3"
+        : "border-t border-line pt-3"}>
         <h4 className="font-semibold">{block.heading}</h4>
         {block.text ? <p className="mt-2 whitespace-pre-wrap">{block.text}</p> : null}
         {block.points?.length ? <ul className="mt-2 list-disc space-y-1 pl-6">{block.points.map((point, index) => <li key={index}>{point}</li>)}</ul> : null}

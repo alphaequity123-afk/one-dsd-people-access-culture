@@ -34,8 +34,8 @@ const formatHelp: Record<ResourceArtifactKind, string> = {
   quiz: "Questions, answers and explanations.",
   flashcards: "Practice cards with a question on one side and an answer on the other.",
   "mind-map": "A main topic and connected ideas arranged in branches.",
-  slides: "An outline with slide content and speaker notes.",
-  infographic: "Draft text and a visual direction for each part.",
+  slides: "An editable PowerPoint with slide content, speaker notes and citations.",
+  infographic: "A visual draft with labeled sections, source links and an HTML download.",
   "audio-overview": "A short discussion in the two approved Qwen voices, with a transcript.",
   "video-overview": "A narrated video with GEFen, captions and a transcript.",
 };

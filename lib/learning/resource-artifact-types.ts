@@ -3,7 +3,7 @@ export const resourceArtifactKinds = {
   quiz: "Quiz",
   flashcards: "Flashcards",
   "mind-map": "Mind map",
-  slides: "Slide outline",
+  slides: "Slides",
   infographic: "Infographic",
   "audio-overview": "Audio overview",
   "video-overview": "Video overview",

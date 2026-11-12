@@ -2,7 +2,7 @@ import "server-only";
 
 import { execFile } from "node:child_process";
 import { createHash, randomUUID } from "node:crypto";
-import { copyFile, lstat, mkdir, mkdtemp, readFile, realpath, rename, rm, stat, writeFile } from "node:fs/promises";
+import { lstat, mkdir, mkdtemp, readFile, realpath, rename, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 import { requestOverviewVoice } from "@/lib/intelligence/clone/overview-voice";
@@ -299,19 +299,36 @@ async function ffmpeg(binary: string, cwd: string, args: string[], signal: Abort
   }
 }
 
-function abbreviatedLines(text: string, width: number, maximum: number) {
-  const lines = linesAt(text, width);
-  if (lines.length > maximum) lines[maximum - 1] = lines[maximum - 1].slice(0, -1) + "…";
-  return lines.slice(0, maximum).join("\n");
+async function chapterCard(file: string, fontfile: string, chapter: string, heading: string, points: string[], readings: string) {
+  const { default: sharp } = await import("sharp");
+  // Text is a separate transparent bitmap from the shapes. Use the bundled
+  // font directly so Linux does not need a system font or FFmpeg drawtext.
+  async function layer(text: string, top: number, size: number, color: string, height: number) {
+    const image = await sharp({ text: {
+      text: `<span foreground="${color}">${cueText(text)}</span>`,
+      font: `DejaVu Sans ${size}`, fontfile, width: 1112, wrap: "word-char", rgba: true,
+    } }).png().toBuffer();
+    const input = await sharp(image).resize({ width: 1112, height, fit: "inside", withoutEnlargement: true }).png().toBuffer();
+    return { input, top, left: 84 };
+  }
+  const text = await Promise.all([
+    layer(chapter, 94, 26, "#B8E1D8", 35),
+    layer(heading, 146, 54, "#FFFFFF", 124),
+    layer(points.slice(0, 4).map(point => "• " + point).join("\n"), 321, 33, "#EDF5FA", 300),
+    layer(readings, 649, 24, "#B8E1D8", 39),
+  ]);
+  await sharp({ create: { width: 1280, height: 720, channels: 4, background: "#162D43" } })
+    .composite([
+      { input: { create: { width: 112, height: 8, channels: 4, background: "#89D5C5" } }, top: 63, left: 84 },
+      { input: { create: { width: 1112, height: 1, channels: 4, background: "#4C6C81" } }, top: 291, left: 84 },
+      ...text,
+    ])
+    .png()
+    .toFile(file);
 }
 
 async function encodeVideo(binary: string, cwd: string, artifact: ResourceArtifact, sections: Section[], clips: Clip[], signal: AbortSignal) {
-  // This font is already distributed with the app and its license.
-  try {
-    await copyFile(path.join(process.cwd(), "lib", "consultant-toolkit", "fonts", "DejaVuSans.ttf"), path.join(cwd, "font.ttf"));
-  } catch {
-    throw new ResourceMediaRenderError("encoder_unavailable");
-  }
+  const fontfile = path.join(process.cwd(), "lib", "consultant-toolkit", "fonts", "DejaVuSans.ttf");
   const ids = new Map(artifact.sources.map((source, index) => [source.id, index + 1]));
   const sceneNames: string[] = [];
   for (let index = 0; index < sections.length; index++) {
@@ -320,25 +337,15 @@ async function encodeVideo(binary: string, cwd: string, artifact: ResourceArtifa
     const seconds = (clips[index].pcm.length / BYTES_PER_FRAME + PAUSE_FRAMES) / SAMPLE_RATE;
     const sources = [...new Set(section.sources.map(id => ids.get(id)).filter((id): id is number => id !== undefined))];
     const points = section.points.length ? section.points : [artifact.title];
-    await Promise.all([
-      writeFile(path.join(cwd, "scene-title.txt"), abbreviatedLines(section.heading, 32, 2)),
-      writeFile(path.join(cwd, "scene-points.txt"), points.slice(0, 4).map(point => "• " + abbreviatedLines(point, 45, 2)).join("\n")),
-      writeFile(path.join(cwd, "scene-index.txt"), `Chapter ${index + 1} of ${sections.length}`),
-      writeFile(path.join(cwd, "scene-sources.txt"), sources.length ? `Readings ${sources.join(", ")} · See the transcript for links` : "See the transcript for the readings"),
-    ]);
-    const draw = (file: string, y: number, size: number, color: string, spacing: number) =>
-      `drawtext=fontfile=font.ttf:textfile=${file}:expansion=none:x=84:y=${y}:fontsize=${size}:fontcolor=${color}:line_spacing=${spacing}`;
-    const filters = [
-      "drawbox=x=84:y=63:w=112:h=8:color=0x89D5C5:t=fill",
-      draw("scene-index.txt", 94, 26, "0xB8E1D8", 5),
-      draw("scene-title.txt", 146, 54, "0xFFFFFF", 10),
-      "drawbox=x=84:y=291:w=1112:h=1:color=0x4C6C81:t=fill",
-      draw("scene-points.txt", 321, 31, "0xEDF5FA", 7),
-      draw("scene-sources.txt", 649, 24, "0xB8E1D8", 5),
-    ].join(",");
+    try {
+      await chapterCard(path.join(cwd, "card.png"), fontfile, `Chapter ${index + 1} of ${sections.length}`, section.heading, points,
+        sources.length ? `Readings ${sources.join(", ")} · See the transcript for links` : "See the transcript for the readings");
+    } catch {
+      throw new ResourceMediaRenderError("encoding_failed");
+    }
     await ffmpeg(binary, cwd, [
-      "-f", "lavfi", "-i", "color=c=0x162D43:s=1280x720:r=24",
-      "-t", seconds.toFixed(6), "-vf", filters, "-an", "-c:v", "libx264", "-preset", "veryfast",
+      "-protocol_whitelist", "file,pipe", "-f", "image2", "-loop", "1", "-framerate", "24", "-i", "card.png",
+      "-t", seconds.toFixed(6), "-an", "-c:v", "libx264", "-preset", "veryfast",
       "-tune", "stillimage", "-crf", "22", "-pix_fmt", "yuv420p", "-threads", "2", scene,
     ], signal);
     sceneNames.push(scene);
