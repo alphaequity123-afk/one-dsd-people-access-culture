@@ -4,6 +4,24 @@
   "package_manager": "npm@11.9.0",
   "settings": [
     {
+      "name": "GEMINI_API_KEY",
+      "class": "server_secret",
+      "surface": "decision_routing_and_review",
+      "example": false,
+      "required_when": "PAC_DECISION_PROVIDER=gemini"
+    },
+    {
+      "name": "PAC_DECISION_PROVIDER",
+      "class": "configuration",
+      "surface": "decision_routing_and_review",
+      "example": false,
+      "allowed": [
+        "jev",
+        "gemini"
+      ],
+      "required_when": "optional; defaults to the existing Jev provider"
+    },
+    {
       "name": "PAC_GEFFEN_PUBLIC_MEDIA_ROOT",
       "class": "configuration",
       "surface": "public_read_aloud_media",
@@ -15,7 +33,10 @@
       "class": "configuration",
       "surface": "public_read_aloud_media",
       "example": false,
-      "allowed": ["true", "false"],
+      "allowed": [
+        "true",
+        "false"
+      ],
       "default": "false",
       "required_when": "explicitly enable owner-authorized publication to a dedicated public-only Geffen media volume"
     },
@@ -998,7 +1019,14 @@
       "class": "configuration",
       "surface": "private_owner_editing",
       "example": false,
-      "allowed": ["require", "disable", "true", "false", "on", "off"],
+      "allowed": [
+        "require",
+        "disable",
+        "true",
+        "false",
+        "on",
+        "off"
+      ],
       "required_when": "owner database transport requires an explicit SSL mode"
     },
     {
