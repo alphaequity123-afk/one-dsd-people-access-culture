@@ -5,6 +5,8 @@ node_modules/
 .env*
 !.env.example
 *.tsbuildinfo
+cloud/voice/.private-voice/
+cloud/voice/__pycache__/
 
 # Generated complete offline CLAS collection
 public/downloads/clas-curriculum-collection.zip*
