@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _tool: string, fn: () => unknown) => fn() }));
 vi.mock("./ledger", () => ({ recordDecision: () => undefined }));
 
-import { reviewWithJev } from "./jev";
+import { planWithJev, reviewWithJev } from "./jev";
 import type { ToolContext } from "../types";
 
 const ctx = { trace_id: "trace-1" } as unknown as ToolContext;
@@ -15,7 +15,7 @@ const reasonLogged = (warn: { mock: { calls: unknown[][] } }) => {
   return call ? (call[1] as { reason: string }) : undefined;
 };
 
-beforeEach(() => { vi.stubEnv("PAC_CLONE_AGENTS", "on"); vi.stubEnv("TYPESAFE_API_KEY", "test-key"); });
+beforeEach(() => { vi.stubEnv("PAC_CLONE_AGENTS", "on"); vi.stubEnv("PAC_DECISION_PROVIDER", ""); vi.stubEnv("GEMINI_API_KEY", ""); vi.stubEnv("TYPESAFE_API_KEY", "test-key"); });
 afterEach(() => { vi.unstubAllEnvs(); vi.unstubAllGlobals(); vi.restoreAllMocks(); });
 
 describe("answer review outcome", () => {
@@ -45,5 +45,55 @@ describe("answer review outcome", () => {
     const warn = vi.spyOn(console, "warn").mockImplementation(() => undefined);
     await expect(reviewWithJev(QUESTION, ANSWER, ctx)).resolves.toBe("unavailable");
     expect(reasonLogged(warn)?.reason).toBe("jev_unavailable");
+  });
+});
+
+describe("Google decision provider", () => {
+  beforeEach(() => { vi.stubEnv("PAC_DECISION_PROVIDER", "gemini"); vi.stubEnv("GEMINI_API_KEY", "google-test-key"); });
+
+  it("uses the Decisions API for routing and review, with credentials only in headers", async () => {
+    const fetcher = vi.fn().mockResolvedValueOnce(new Response(JSON.stringify({ answers: {
+      route: { type: "choice", choice: "accessibility", confidence: 0.98 },
+      evidence: { type: "choice", choice: "sufficient", confidence: 0.9 },
+    } }))).mockResolvedValueOnce(new Response(JSON.stringify(decision("pass", 0.95))));
+    vi.stubGlobal("fetch", fetcher);
+    const log = vi.spyOn(console, "info").mockImplementation(() => undefined);
+    await expect(planWithJev(QUESTION, [], ctx)).resolves.toEqual({ route: "accessibility", evidence: "sufficient" });
+    await expect(reviewWithJev(QUESTION, ANSWER, ctx)).resolves.toBe("pass");
+    expect(fetcher).toHaveBeenCalledTimes(2);
+    for (const [url, options] of fetcher.mock.calls) {
+      expect(url).toBe("https://generativelanguage.googleapis.com/v1beta/decisions");
+      expect(options.headers).toEqual({ "x-goog-api-key": "google-test-key", "content-type": "application/json" });
+      expect(options.redirect).toBe("error");
+      expect(options.signal).toBeInstanceOf(AbortSignal);
+      const body = JSON.parse(options.body);
+      expect(body.model).toBe("gemini-decision-1");
+      expect(JSON.parse(body.input).question).toBe(QUESTION);
+      expect(body).not.toHaveProperty("state");
+      expect(options.body).not.toContain("google-test-key");
+    }
+    expect(log).toHaveBeenCalledWith("decision_used", expect.objectContaining({ provider: "gemini", stage: "review" }));
+    expect(JSON.stringify(log.mock.calls)).not.toContain(QUESTION);
+  });
+
+  it("does not send a legacy credential when the Google key is absent", async () => {
+    vi.stubEnv("GEMINI_API_KEY", "");
+    const fetcher = vi.fn(); vi.stubGlobal("fetch", fetcher);
+    vi.spyOn(console, "warn").mockImplementation(() => undefined);
+    await expect(reviewWithJev(QUESTION, ANSWER, ctx)).resolves.toBe("unavailable");
+    expect(fetcher).not.toHaveBeenCalled();
+  });
+
+  it("keeps answers available without retries when Google rejects a request", async () => {
+    const fetcher = vi.fn().mockResolvedValue(new Response("quota", { status: 429 }));
+    vi.stubGlobal("fetch", fetcher); vi.spyOn(console, "warn").mockImplementation(() => undefined);
+    await expect(reviewWithJev(QUESTION, ANSWER, ctx)).resolves.toBe("unavailable");
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+
+  it("blocks private identifiers before sending them to Google", async () => {
+    const fetcher = vi.fn(); vi.stubGlobal("fetch", fetcher);
+    await expect(reviewWithJev(QUESTION, "SSN 123-45-6789", ctx)).resolves.toBe("human");
+    expect(fetcher).not.toHaveBeenCalled();
   });
 });
