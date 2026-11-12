@@ -35,6 +35,11 @@ describe("hub pages keep their content in closed panels", () => {
     for (const t of ["The Core 15", "Course series", "Search the collection", "Take it into your work", "Understanding DHS"]) expect(page, t).toContain(t);
     expect(page.indexOf("Search the collection")).toBeLessThan(page.indexOf("The Core 15"));
   });
+  it("finds The Water We Swim In by title", async () => {
+    const page = html(await LearnPage({ searchParams: Promise.resolve({ q: "Water We Swim In" }) }));
+    expect(page).toContain('href="/learn/water-we-swim-in/collection"');
+    expect(page).not.toContain("No matching resources");
+  });
   it("library", async () => {
     const page = html(await LibraryPage({ searchParams: Promise.resolve({}) }));
     for (const t of ["More ways to explore", "Understanding DHS", 'id="find-resource"', 'id="resource-formats"']) expect(page, t).toContain(t);

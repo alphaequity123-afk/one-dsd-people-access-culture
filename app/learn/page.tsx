@@ -1,4 +1,5 @@
 import { WaterCollectionFeature } from "@/components/water-collection-feature";
+import { WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import { podcastMatchesTheme } from "@/lib/content/audio-organization";
 import { COLLABORATION_FOCUSES, collaborationCourses, collaborationHref } from "@/lib/learning/collaboration-collection";
 import collaborationStyles from "./collaboration/collaboration.module.css";
@@ -85,7 +86,11 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
     const published = podcastSurfaces[index];
     return !query.level && published.available && podcastMatchesTheme(podcast.id, query.theme) && podcastMatches(podcast, { ...query, theme: "" }, stringValue(published.values, "title"), stringValue(published.values, "intro")) ? [{ podcast, surface: published }] : [];
   });
-  const totalFound = selected.length + podcasts.length;
+  const searchTerms = query.q.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+  const waterMatch = searchTerms.length > 0 && !query.theme && !query.level
+    && (!query.type || query.type === "learning_module")
+    && searchTerms.every(term => WATER_RESOURCE_COLLECTION_TITLE.toLocaleLowerCase().includes(term));
+  const totalFound = selected.length + podcasts.length + Number(waterMatch);
   const podcastAvailable = podcastSurfaces.some(published => published.available);
   const types = [...new Set(items.map((item) => item.type))];
   const hubText = (key: string) => stringValue(hub.values, key);
@@ -109,27 +114,19 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
           <p className={styles.eyebrow}>{stringValue(copy, "introKicker")}</p>
           <h1>{hub.available ? hubText("title") : stringValue(copy, "introTitle")}</h1>{owner ? <p className="m-0 mt-2"><Link href="/consultant/resources/new" className="btn btn--primary">+ Add a resource</Link></p> : null}
           <p className={styles.intro}>{hub.available ? hubText("intro") : stringValue(copy, "introLede")}</p>
-          <div className={styles.heroLinks}><Link href={filtered && !selectedTheme ? "/learn#start-here" : "#start-here"}>Start here</Link><Link href="#catalog">Browse the collection</Link></div>
+          <div className={styles.heroLinks}><a href="#catalog">Search learning</a><a href={filtered ? "/learn#start-here" : "#start-here"}>Start with recommended courses</a></div>
         </div>
       </header>
       <div className={styles.content}>
         {!filtered ? <div className="mb-6"><WaterCollectionFeature /></div> : null}
-        <ResourceFormatLinks theme={selectedTheme?.id} current="learning" />
-        <p className={preview.collectionLinks}><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link><Link href="/library?browse=all">Search the complete library</Link><Link href="/practice">Go straight to guided practice</Link></p>
-        {selectedTheme || legacyThemeTitle ? <section id="start-here" className={preview.startHere} aria-labelledby="topic-start-title">
-          <p className={styles.eyebrow}>Explore a topic</p><h2 id="topic-start-title">{selectedTheme?.title ?? legacyThemeTitle}</h2><p>{selectedTheme?.description ?? "Explore learning and practical resources related to this topic."}</p>
-          {topicFirst && !selectedTheme ? <div className={preview.topicFirst}><h3>A useful starting point</h3><Link href={itemHref(topicFirst)}>{topicFirst.title}</Link><p>{shortSummary(topicFirst.whyItMatters || topicFirst.summary, 220)}</p></div> : null}
-          <p>Choose the learning or tool that fits your question. You can use a practical resource directly and return to the learning when it helps.</p>
-        </section> : null}
-        {selectedTheme && !query.q && !query.level && !query.type ? <ResourceThemePathway theme={selectedTheme.id} items={items} className={preview.startingPoints} /> : null}
-        <h2 className={preview.collectionTitle}>Search the collection</h2>
         <div id="catalog" className={styles.catalog}>
+          <h2 className={preview.collectionTitle}>Search the collection</h2>
           <EditableSurfaceRegion surface={hub}>
             <form key={`${query.q}:${query.theme}:${query.type}:${query.level}`} action="/learn" method="get" role="search" className={styles.search}>
               <label htmlFor="hub-q">{hubText("searchLabel")}</label>
               <div className={styles.query}><input id="hub-q" name="q" type="search" defaultValue={query.q ?? ""} /><button type="submit">{hubText("searchButton")}</button></div>
               <details className={preview.filterOptions} open={Boolean(query.theme || query.type || query.level)}>
-                <summary>Choose a theme, learning level, or format</summary>
+                <summary>Filter by theme, level, or format</summary>
                 <div className={styles.filters}>
                   <label>Theme<select name="theme" defaultValue={query.theme}><option value="">All themes</option>{legacyThemeTitle ? <option value={query.theme}>{legacyThemeTitle}</option> : null}{RESOURCE_THEMES.map((theme) => <option key={theme.id} value={theme.id}>{theme.title}</option>)}</select></label>
                   <label>Learning level<select name="level" defaultValue={query.level}><option value="">All levels and practical resources</option><option value="foundation">Foundation</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label>
@@ -142,8 +139,23 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
             {expanded ? <p role="status" className={styles.resultCount}>{totalFound} {hubText(totalFound === 1 ? "countSingular" : "countLabel")}</p> : null}
             {!totalFound ? <div><h2>{hubText("emptyTitle")}</h2><p>{hubText("emptyBody")}</p></div> : null}
           </EditableSurfaceRegion>
+          {waterMatch ? <div className="mb-6"><WaterCollectionFeature /></div> : null}
           <EditableSurfaceRegion surface={catalog}>{null}</EditableSurfaceRegion>
-          {!filtered ? <section className={preview.startHere}><CoreFifteen /></section> : null}
+          {selectedTheme || legacyThemeTitle ? <section id="start-here" className={preview.startHere} aria-labelledby="topic-start-title">
+            <p className={styles.eyebrow}>Explore a topic</p><h2 id="topic-start-title">{selectedTheme?.title ?? legacyThemeTitle}</h2><p>{selectedTheme?.description ?? "Explore learning and practical resources related to this topic."}</p>
+            {topicFirst && !selectedTheme ? <div className={preview.topicFirst}><h3>A useful starting point</h3><Link href={itemHref(topicFirst)}>{topicFirst.title}</Link><p>{shortSummary(topicFirst.whyItMatters || topicFirst.summary, 220)}</p></div> : null}
+            <p>Choose the learning or tool that fits your question. You can use a practical resource directly and return to the learning when it helps.</p>
+          </section> : null}
+          {selectedTheme && !query.q && !query.level && !query.type ? <ResourceThemePathway theme={selectedTheme.id} items={items} className={preview.startingPoints} /> : null}
+          {!filtered ? <CoreFifteen /> : null}
+          <Hub2More title="More ways to browse">
+            <ResourceFormatLinks theme={selectedTheme?.id} current="learning" />
+            <p className={preview.collectionLinks}>
+              <Link href="/learn?browse=all#catalog">Browse all learning and resources</Link>
+              <Link href="/library?browse=all">Search the complete library</Link>
+              <Link href="/practice">Open guided practice</Link>
+            </p>
+          </Hub2More>
           {!filtered ? <ResourceThemeNav basePath="/learn" className={preview.themeSection} gridClassName={preview.themeGrid} /> : null}
           {expanded && learning.length ? <section className={styles.section} aria-labelledby="modules-title">
             <div className={styles.sectionHeading}><h2 id="modules-title">{hub.available ? hubText("coursesTitle") : stringValue(copy, "modulesTitle")}</h2><span>{learning.length} to explore</span></div>

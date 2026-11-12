@@ -152,7 +152,6 @@ export function AskClient({
   return (
     <div className={compact ? undefined : styles.askLayout}>
       <div>
-        <button type="button" className="underline text-sm mb-3" disabled={busy} onClick={() => { setSession(EMPTY_SESSION); setQuestion(""); setError(""); }}>Clear this conversation</button>
         {reviewDraft ? (
           <section className="card mb-4" aria-labelledby={`${textId}-analyze`}>
             <h2 id={`${textId}-analyze`} className="text-lg font-bold">Review a draft with Analyze a document</h2>
@@ -186,7 +185,24 @@ export function AskClient({
               {retryQuestion ? <> <button type="button" className="underline" disabled={busy} onClick={() => void sendQuestion(retryQuestion)}>Try again</button></> : null}
             </p>
           ) : null}
-          <p className="ask-box-small" id={`${textId}-research-privacy`}>{copyText(copy, "privacyNotice")} {VOICE_PRIVACY_NOTE}</p>
+          <p className="ask-box-small" id={`${textId}-research-privacy`}>Leave out names and private details. Outside services help answer your question.</p>
+          <div className="mt-2 flex flex-wrap items-start gap-x-5 text-sm">
+            <details>
+              <summary className="min-h-11 cursor-pointer py-2">Privacy</summary>
+              <p className="max-w-prose pb-2">{copyText(copy, "privacyNotice")} {VOICE_PRIVACY_NOTE}</p>
+            </details>
+            {session.turns.length ? <button
+              type="button"
+              className="min-h-11 underline"
+              disabled={busy}
+              onClick={() => {
+                setSession(EMPTY_SESSION);
+                setQuestion("");
+                setError("");
+                document.getElementById(textId)?.focus();
+              }}
+            >Clear conversation</button> : null}
+          </div>
           {copyText(copy, "libraryButton") ? <p className="ask-box-small"><Link href="/library">{copyText(copy, "libraryButton")}</Link></p> : null}
           {path ? (
             <details className="mt-3">
@@ -351,7 +367,7 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
           {answer.publicResearch.answer && answer.publicResearch.answer !== answer.shortAnswer ? <p className="whitespace-pre-wrap break-words">{citedAnswer(answer.publicResearch.answer, answer.publicResearch.sources)}</p> : null}
           <p className="text-sm text-muted">{answer.publicResearch.note}</p>
           {answer.publicResearch.sources.length ? (
-            <details className="mt-2" open>
+            <details className="mt-2">
               <summary>{copyText(copy, "sourcesUsedLabel")} ({answer.publicResearch.sources.length})</summary>
               <ol className="list-decimal pl-6">
                 {answer.publicResearch.sources.slice(0, 10).map((source) => (
@@ -374,12 +390,12 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
         </section>
       ) : null}
 
-      {answer.whyItMatters ? <details className="mt-3" open>
+      {answer.whyItMatters ? <details className="mt-3">
         <summary>{copyText(copy, "whyItMattersLabel")}</summary>
         <p className="whitespace-pre-wrap">{answer.whyItMatters}</p>
       </details> : null}
 
-      {answer.evidenceClaims?.length ? <details className="mt-3" open>
+      {answer.evidenceClaims?.length ? <details className="mt-3">
         <summary>{copyText(copy, "evidencePassagesLabel") || "Passages and interpretation"}</summary>
         {answer.evidenceClaims.map((claim,index) => <div key={index} className="mt-3">
           {claim.kind === "source_excerpt" ? <blockquote className="border-l-2 pl-4 whitespace-pre-wrap">{claim.text}</blockquote> : <p className="whitespace-pre-wrap"><strong>{copyText(copy, "inferenceLabel") || "Suggested interpretation"}: </strong>{claim.text}</p>}
@@ -387,7 +403,7 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
         </div>)}
       </details> : null}
 
-      {programSources.length ? <details className="mt-2" open>
+      {programSources.length ? <details className="mt-2">
         <summary>{copyText(copy, answer.evidenceClaims?.length ? "programSourcesLabel" : "relatedReadingLabel") || "Related program reading"} ({programSources.length})</summary>
         <ul className="list-disc pl-6">
             {programSources.map((s) => (
