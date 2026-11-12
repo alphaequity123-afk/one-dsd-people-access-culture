@@ -25,6 +25,7 @@ type LearningAssistantProps = {
   sourcesHeading?: string;
   sourceLabel?: string;
   maxQuestionLength?: number;
+  embedded?: boolean;
 };
 
 function parseAnswer(value: unknown): StudyAnswer {
@@ -39,7 +40,7 @@ function parseAnswer(value: unknown): StudyAnswer {
 
 export function LearningAssistant({
   panelId, endpoint, scope, introduction, privacyNotice, workingMessage, modes, citationAllowed,
-  sourcesHeading = "Readings cited", sourceLabel = "Reading", maxQuestionLength = 600,
+  sourcesHeading = "Readings cited", sourceLabel = "Reading", maxQuestionLength = 600, embedded = false,
 }: LearningAssistantProps) {
   const id = useId();
   const [question, setQuestion] = useState("");
@@ -106,7 +107,7 @@ export function LearningAssistant({
     .map((reading, index) => [reading.id, { ...reading, number: index + 1 }]));
 
   return <aside id={panelId} className={styles.panel} aria-labelledby={`${id}-heading`}>
-    <h2 id={`${id}-heading`}>Ask about the readings</h2>
+    <h2 id={`${id}-heading`} className={embedded ? "sr-only" : undefined}>Ask about the readings</h2>
     <p>{introduction}</p>
     <form onSubmit={ask}>
       <fieldset disabled={busy} className={styles.controls}>

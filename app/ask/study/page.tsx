@@ -32,7 +32,7 @@ export default async function ResourceStudyPage({ searchParams }: {
     </PageIntro>
     <div className="wrap pb-10">
       {availability.available
-        ? <ResourceLearningAssistant key={resourcePath ?? "library"} resourcePath={resourcePath} />
+        ? <ResourceLearningAssistant key={resourcePath ?? "library"} resourcePath={resourcePath} embedded />
         : <p className="my-6" role="status">{resource === undefined
           ? "The learning assistant is unavailable right now."
           : "This resource is unavailable for study. You can search across the published library instead."}</p>}

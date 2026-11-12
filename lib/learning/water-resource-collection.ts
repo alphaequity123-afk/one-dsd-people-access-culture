@@ -1,5 +1,5 @@
 export const WATER_RESOURCE_COLLECTION_PATH = "/learn/water-we-swim-in/collection";
-export const WATER_RESOURCE_COLLECTION_TITLE = "The Water We Swim In Curriculum Collection";
+export const WATER_RESOURCE_COLLECTION_TITLE = "The Water We Swim In";
 
 export const WATER_RESOURCE_COLLECTION_SOURCES = [
   { family: "water", title: "The Water We Swim In essay", resourcePath: "/learn/water-we-swim-in/essay" },

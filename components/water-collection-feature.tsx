@@ -7,9 +7,9 @@ export function WaterCollectionFeature() {
     <section className={styles.feature} aria-labelledby="water-collection-feature-title">
       <div>
         <h2 id="water-collection-feature-title">{WATER_RESOURCE_COLLECTION_TITLE}</h2>
-        <p>Start here to explore how culture shapes everyday work. Read the American and Minnesota culture briefs, practice with the Equity Analysis Toolkit, and find the other published culture briefs.</p>
+        <p>Explore culture at work through the American and Minnesota briefs and the Equity Analysis Toolkit.</p>
       </div>
-      <Link className="btn btn--primary" href={WATER_RESOURCE_COLLECTION_PATH}>Open the curriculum collection</Link>
+      <Link className="btn btn--primary" href={WATER_RESOURCE_COLLECTION_PATH}>Open the collection</Link>
     </section>
   );
 }

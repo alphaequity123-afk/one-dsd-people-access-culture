@@ -44,7 +44,7 @@ export async function CommunityDesignIndex({ query = "" }: { query?: string }) {
     <div className="community-index-layout">
       <p className="community-eyebrow">People, place, and perspective</p>
       <h1>{copy("introTitle", "Minnesota Communities")}</h1><p className="community-opening">{copy("introLede", "Minnesota's communities carry long histories, real contributions and everyday experiences that shape how people meet public services. These briefs offer that context so you can ask better questions and plan for access, never to describe any one person.")}</p>
-      <p className="community-opening"><strong><Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link></strong> brings the American and Minnesota Culture briefs together with the Equity Analysis Toolkit. Start there to practice using culture readings in everyday work.</p>
+      <p className="community-opening">Start with <Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link>.</p>
       <ExplainerVideo id="community-briefs" />
       <LiveSearchForm action="/minnesota-communities" className="community-search"><label htmlFor="community-query">{copy("searchLabel", "Find a community")}</label><div><input id="community-query" type="search" name="q" defaultValue={query} placeholder={copy("searchExample", "") || undefined} /><button type="submit">{copy("searchButton", "Search")}</button>{normalized ? <Link href="/minnesota-communities">Clear search</Link> : null}</div></LiveSearchForm>
       <p>{normalized ? `${matching.length} matching ${matching.length === 1 ? "brief" : "briefs"}` : `${entries.length} community and place briefs`}</p>

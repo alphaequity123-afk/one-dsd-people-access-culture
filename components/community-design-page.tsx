@@ -100,7 +100,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   };
   const spotlight = surface ? stringValue(surface.values, "spotlightTitle") : "";
   const available = [surface, readingSurface].every(area => !area || area.available);
-  const collectionLink = available && !native ? <p>Practice applying culture readings in <Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link>.</p> : null;
+  const collectionLink = available && !native ? <p>Back to <Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link>.</p> : null;
   const culturalIntelligenceAvailable = available && await culturalIntelligenceHubAvailable();
   const practiceTitle = b?.tribalGate ? "Government-to-government relationships" : "Practice considerations";
   const practice = b ? <section id="community-practice">

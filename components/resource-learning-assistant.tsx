@@ -31,18 +31,20 @@ const modes: { value: StudyMode; label: string; library: string; scoped: string 
   },
 ];
 
-export function ResourceLearningAssistant({ resourcePath, prompts }: {
+export function ResourceLearningAssistant({ resourcePath, prompts, embedded = false }: {
   resourcePath?: string;
   prompts?: Partial<Record<StudyMode, string>>;
+  embedded?: boolean;
 }) {
   const { context } = useProgramContext();
   return <LearningAssistant
     key={`${context}:${resourcePath ?? "library"}`}
     panelId="resource-learning-assistant"
+    embedded={embedded}
     endpoint="/api/learn/resources"
     scope={{ resourcePath }}
     introduction={resourcePath
-      ? prompts ? "Explore how the readings and toolkit inform the North Crossing case. Try a starting question or ask your own."
+      ? prompts ? "Ask a question about the case or readings."
         : "Ask about the selected resource or try one of the starting questions."
       : "Ask across the program’s published resources or try one of the starting questions."}
     privacyNotice="Use fictional examples or remove identifying details. Your question and relevant passages are shared with an outside service to prepare the answer."
