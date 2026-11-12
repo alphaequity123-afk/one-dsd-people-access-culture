@@ -1,9 +1,12 @@
 // @vitest-environment node
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { createHash } from 'node:crypto';
 import { mkdtemp, mkdir, rm, symlink, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { serveGeffenAudio, serveGeffenIndex } from './geffen-volume';
+import { getGeffenPassageRecordings, serveGeffenAudio, serveGeffenIndex } from './geffen-volume';
+
+vi.mock('server-only', () => ({}));
 
 const sha = 'a'.repeat(64);
 const textSha = 'b'.repeat(64);
@@ -42,6 +45,16 @@ describe('public Geffen volume', () => {
     expect((await serveGeffenIndex(get(), '../private.json', root)).status).toBe(404);
     // A well-formed course name with nothing recorded yet answers 204 so pages can check quietly.
     expect((await serveGeffenIndex(get(), 'missing.json', root)).status).toBe(204);
+  });
+  it('returns a static recording only when its index matches the exact passage text', async () => {
+    const passage = { id: record().id, text: 'The current published passage.' };
+    const recording = { ...record(), sourceTextHash: createHash('sha256').update(passage.text).digest('hex') };
+    await writeFile(path.join(root, 'courses', 'self-directed-A01.json'), JSON.stringify({ ...index(), recordings: [recording] }));
+    const matching = await getGeffenPassageRecordings('self-directed-A01', [passage], root);
+    expect(matching.get(passage.id)).toBe(recording.src);
+    const revised = await getGeffenPassageRecordings('self-directed-A01', [{ ...passage, text: passage.text + ' A new sentence.' }], root);
+    expect(revised.has(passage.id)).toBe(false);
+    expect((await getGeffenPassageRecordings('missing', [passage], root)).size).toBe(0);
   });
   it('streams entire files, seek ranges and HEAD accurately', async () => {
     const full = await serveGeffenAudio(get(), [fileName], root);

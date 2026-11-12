@@ -135,6 +135,16 @@ export const WATER_COLLECTION_STEPS: CollectionStep[] = [
   },
 ];
 
+export const WATER_COLLECTION_READ_ALOUD_KEY = "water-we-swim-in-collection";
+
+export const WATER_COLLECTION_READ_ALOUD = [
+  { id: `course/${WATER_COLLECTION_READ_ALOUD_KEY}/appointment-notice`, text: WATER_COLLECTION_CASE },
+  ...WATER_COLLECTION_STEPS.map((step, index) => ({
+    id: `course/${WATER_COLLECTION_READ_ALOUD_KEY}/step-${index + 1}`,
+    text: [step.title, step.idea, step.caseUpdate, ...step.activities, step.output, step.check].join("\n\n"),
+  })),
+];
+
 export const WATER_COLLECTION_PROMPTS = {
   explain: "What do the Water essay and culture briefs help me notice about the assumptions in a short appointment notice? Cite the readings.",
   compare: "Compare what the American and Minnesota Culture briefs say about disability access, then connect one difference to the Equity Analysis Toolkit.",

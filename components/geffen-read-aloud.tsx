@@ -26,7 +26,7 @@ function chunks(text: string) {
   return result;
 }
 
-export function GeffenReadAloud({ text, label }: { text: string; label: string }) {
+export function GeffenReadAloud({ text, label, recordingSrc }: { text: string; label: string; recordingSrc?: string }) {
   const [busy, setBusy] = useState(false);
   const [needsPlay, setNeedsPlay] = useState(false);
   const [status, setStatus] = useState("");
@@ -72,10 +72,8 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
     setBusy(true);
     setStatus("Getting the audio ready.");
 
-    async function playChunk(encoded: string, player: HTMLAudioElement) {
+    async function playSource(src: string, player: HTMLAudioElement, onStart?: () => void) {
       if (controller.signal.aborted) return;
-      const bytes = Uint8Array.from(atob(encoded), character => character.charCodeAt(0));
-      const url = URL.createObjectURL(new Blob([bytes], { type: "audio/wav" }));
       let finish: (() => void) | undefined;
       try {
         await new Promise<void>((resolve, reject) => {
@@ -85,10 +83,11 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
           player.onerror = () => reject(new Error("The audio could not play. Please try again."));
           player.onplaying = () => {
             if (controller.signal.aborted) return;
+            onStart?.();
             setNeedsPlay(false);
             setStatus("Playing audio.");
           };
-          player.src = url;
+          player.src = src;
           void player.play().catch(error => {
             if (controller.signal.aborted) return;
             if (error instanceof DOMException && error.name === "NotAllowedError") {
@@ -101,17 +100,38 @@ export function GeffenReadAloud({ text, label }: { text: string; label: string }
         });
       } finally {
         if (finish) controller.signal.removeEventListener("abort", finish);
-        if (player.getAttribute("src") === url) {
+        if ((!activeRequest.current || activeRequest.current === controller) && player.getAttribute("src") === src) {
           player.onended = null;
           player.onerror = null;
           player.onplaying = null;
           player.removeAttribute("src");
         }
+      }
+    }
+
+    async function playChunk(encoded: string, player: HTMLAudioElement) {
+      const bytes = Uint8Array.from(atob(encoded), character => character.charCodeAt(0));
+      const url = URL.createObjectURL(new Blob([bytes], { type: "audio/wav" }));
+      try {
+        await playSource(url, player);
+      } finally {
         URL.revokeObjectURL(url);
       }
     }
 
     try {
+      if (recordingSrc) {
+        let started = false;
+        try {
+          await playSource(recordingSrc, audio, () => { started = true; });
+          if (!controller.signal.aborted) setStatus("Audio finished.");
+          return;
+        } catch (error) {
+          if (controller.signal.aborted) return;
+          if (started) throw error;
+          setStatus("Getting the audio ready.");
+        }
+      }
       for (const part of chunks(speechText(text))) {
         if (controller.signal.aborted) return;
         const response = await fetch("/api/ask/voice", {

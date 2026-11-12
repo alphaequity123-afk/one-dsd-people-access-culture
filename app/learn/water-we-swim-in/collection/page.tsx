@@ -9,11 +9,12 @@ import { ResourceLearningAssistant } from "@/components/resource-learning-assist
 import { WaterFigure, WaterLessonPodcast } from "@/components/water-curriculum";
 import { ownerFromCookies } from "@/lib/auth/request";
 import { publishedCommunityProfile } from "@/lib/content/community-profile";
+import { getGeffenPassageRecordings } from "@/lib/content/geffen-volume";
 import { getAvailableInterculturalCommunities } from "@/lib/content/intercultural-community-list";
 import { waterLesson, waterModuleId } from "@/lib/content/water-curriculum";
 import {
   WATER_COLLECTION_CASE, WATER_COLLECTION_HREF, WATER_COLLECTION_OUTCOMES, WATER_COLLECTION_PROMPTS,
-  WATER_COLLECTION_STEPS, WATER_COLLECTION_TITLE,
+  WATER_COLLECTION_READ_ALOUD, WATER_COLLECTION_READ_ALOUD_KEY, WATER_COLLECTION_STEPS, WATER_COLLECTION_TITLE,
 } from "@/lib/content/water-learning-collection";
 import { WATER_COURSE_HREF, WATER_ESSAY, WATER_MODULES, WATER_SUPPORT } from "@/lib/content/water-we-swim-in";
 import { WATER_RESOURCE_COLLECTION_SOURCES } from "@/lib/learning/water-resource-collection";
@@ -37,18 +38,20 @@ const workbook = [
 
 export default async function WaterCollectionPage() {
   const scope = await requestedContentScope();
-  const [american, minnesota, toolkit, owner, communities] = await Promise.all([
+  const [american, minnesota, toolkit, owner, communities, recordings] = await Promise.all([
     publishedCommunityProfile("american"),
     publishedCommunityProfile("minnesota"),
     prepareEditableSurface("equity-toolkit.home", { scope, includeOwner: false }).catch(() => ({ available: false })),
     ownerFromCookies(),
     getAvailableInterculturalCommunities(scope).catch(() => []),
+    getGeffenPassageRecordings(WATER_COLLECTION_READ_ALOUD_KEY, WATER_COLLECTION_READ_ALOUD),
   ]);
   const available = { water: true, american: Boolean(american), minnesota: Boolean(minnesota), toolkit: toolkit.available };
   const studyReady = Boolean(process.env.GEMINI_API_KEY?.trim()) && available.american && available.minnesota && available.toolkit;
   const picture = waterLesson("01")?.images.find(image => image.src.endsWith("/image-4.webp"));
   const otherBriefs = communities.filter(brief => brief.id !== "american" && brief.id !== "minnesota" && !brief.standingTribalDeference);
   const referralPages = communities.filter(brief => brief.standingTribalDeference);
+  const [notice, ...stepReadAloud] = WATER_COLLECTION_READ_ALOUD;
 
   return <article className={styles.collection}>
     <header className={styles.hero}>
@@ -91,7 +94,7 @@ export default async function WaterCollectionPage() {
     <section className={styles.case} aria-labelledby="collection-case">
       <h2 id="collection-case">The North Crossing appointment notice</h2>
       <p>{WATER_COLLECTION_CASE}</p>
-      <GeffenReadAloud text={WATER_COLLECTION_CASE} label="North Crossing appointment notice" />
+      <GeffenReadAloud text={notice.text} recordingSrc={recordings.get(notice.id)} label="North Crossing appointment notice" />
     </section>
 
     {studyReady ? <details className={styles.disclosure}>
@@ -115,7 +118,7 @@ export default async function WaterCollectionPage() {
         const section = profile?.sections.find(item => item.id === step.briefChapter);
         return section ? [{ href: `/minnesota-communities/${id}/profile#profile-${section.id}`, label: `${label} · ${section.heading}` }] : [];
       });
-      const voiceText = [step.title, step.idea, step.caseUpdate, ...step.activities, step.output, step.check].join("\n\n");
+      const passage = stepReadAloud[index];
 
       return <section id={`step-${number}`} key={step.title} className={styles.step} aria-labelledby={`step-title-${number}`}>
         <header>
@@ -136,7 +139,7 @@ export default async function WaterCollectionPage() {
             <section aria-labelledby={`apply-${number}`}>
               <h3 id={`apply-${number}`}>Try it at North Crossing</h3>
               <p>{step.caseUpdate}</p>
-              <GeffenReadAloud text={voiceText} label={step.title} />
+              <GeffenReadAloud text={passage.text} recordingSrc={recordings.get(passage.id)} label={step.title} />
               <ol>{step.activities.map(activity => <li key={activity}>{activity}</li>)}</ol>
               <p className={styles.output}><strong>Keep in your workbook</strong> {step.output}</p>
               <p><strong>Check your work</strong> {step.check}</p>
