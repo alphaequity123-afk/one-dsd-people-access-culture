@@ -1,5 +1,6 @@
 """Private, scale-to-zero Qwen read-aloud for the locked GEFen profile."""
 
+from contextlib import closing
 import hashlib
 import io
 import json
@@ -13,6 +14,7 @@ import modal
 MODEL_ID = "Qwen/Qwen3-TTS-12Hz-0.6B-Base"
 MODEL_REVISION = "5d83992436eae1d760afd27aff78a71d676296fc"
 MODEL_DIR = "/opt/voice-model"
+GRAPH_SOURCE = "faster-qwen3-tts @ git+https://github.com/andimarafioti/faster-qwen3-tts.git@a70afc0f81f7f5f8801c3227968f1102f43f211c"
 REFERENCE_DIR = "/opt/approved-voice"
 PROFILE = "approved-geffen-read-aloud-v1"
 CPU_CORES = 2
@@ -52,9 +54,10 @@ def speech_chunks(text):
 
 image = (
     modal.Image.debian_slim(python_version="3.12")
-    .apt_install("libsndfile1", "sox")
+    .apt_install("libsndfile1", "sox", "git")
     .pip_install("torch==2.11.0", "torchaudio==2.11.0", index_url="https://download.pytorch.org/whl/cu128")
     .pip_install("qwen-tts==0.1.1", "transformers==4.57.3", "huggingface-hub==0.36.2", "soundfile==0.14.0", "fastapi==0.115.12")
+    .pip_install(GRAPH_SOURCE, extra_options="--no-deps")
     .run_function(download_model)
     .add_local_file(BUNDLE / "identity.wav", REFERENCE_DIR + "/identity.wav", copy=True)
     .add_local_file(BUNDLE / "profile.json", REFERENCE_DIR + "/profile.json", copy=True)
@@ -64,14 +67,16 @@ image = (
 app = modal.App("one-dsd-approved-voice", image=image)
 
 
-@app.cls(gpu=["L4", "A10", "T4"], cpu=CPU_CORES, memory=8192, min_containers=0, max_containers=1,
-         scaledown_window=20, timeout=600)
+@app.cls(gpu="A10", cpu=CPU_CORES, memory=8192, min_containers=0, max_containers=1,
+         scaledown_window=60, timeout=600, enable_memory_snapshot=True,
+         experimental_options={"enable_gpu_snapshot": True})
 @modal.concurrent(max_inputs=1)
 class ApprovedVoice:
-    @modal.enter()
+    @modal.enter(snap=True)
     def load(self):
+        started = time.monotonic()
         import torch
-        from qwen_tts import Qwen3TTSModel
+        from faster_qwen3_tts import FasterQwen3TTS
 
         reference_root = Path(REFERENCE_DIR)
         profile = json.loads((reference_root / "profile.json").read_text(encoding="utf-8"))
@@ -85,13 +90,25 @@ class ApprovedVoice:
 
         torch.set_num_threads(CPU_CORES)
         torch.set_num_interop_threads(1)
+        imports_and_validation = time.monotonic()
         dtype = torch.bfloat16 if torch.cuda.is_bf16_supported(including_emulation=False) else torch.float16
-        self.model = Qwen3TTSModel.from_pretrained(
-            MODEL_DIR, device_map="cuda:0", dtype=dtype, attn_implementation="sdpa", local_files_only=True,
+        self.model = FasterQwen3TTS.from_pretrained(
+            MODEL_DIR, device="cuda:0", dtype=dtype, attn_implementation="sdpa", max_seq_len=2048, local_files_only=True,
         )
-        self.prompt = self.model.create_voice_clone_prompt(
+        model_loaded = time.monotonic()
+        self.prompt = self.model.model.create_voice_clone_prompt(
             ref_audio=str(reference), ref_text=expected["transcript"], x_vector_only_mode=False,
         )
+        prompt_loaded = time.monotonic()
+        self.model.warmup(prefill_len=100)
+        graph_ready = time.monotonic()
+        startup = {"device": torch.cuda.get_device_name(), "importsAndValidation": round(imports_and_validation-started, 3),
+                   "model": round(model_loaded-imports_and_validation, 3), "prompt": round(prompt_loaded-model_loaded, 3),
+                   "graphWarmup": round(time.monotonic()-prompt_loaded, 3)}
+        with closing(self.render("This short introduction is ready.")) as warmup:
+            next(warmup)
+        startup["fixedClipWarmup"] = round(time.monotonic() - graph_ready, 3)
+        print(json.dumps({"event": "geffen_startup", **startup}), flush=True)
 
     def render(self, text):
         import soundfile
@@ -99,11 +116,12 @@ class ApprovedVoice:
         from torch.nn.functional import cosine_similarity
 
         deadline = time.monotonic() + 530
-        for chunk in speech_chunks(text):
+        for index, chunk in enumerate(speech_chunks(text)):
             for attempt in range(2):
                 if time.monotonic() >= deadline:
                     raise TimeoutError("Voice generation deadline exceeded")
                 seed = int(hashlib.sha256(f"geffen:{chunk}:{attempt}".encode()).hexdigest()[:8], 16)
+                started = time.monotonic()
                 with torch.inference_mode():
                     torch.manual_seed(seed)
                     waves, rate = self.model.generate_voice_clone(
@@ -113,11 +131,16 @@ class ApprovedVoice:
                     )
                     if rate != 24000 or not 0.4 <= len(waves[0]) / rate <= 35:
                         continue
-                    sample = self.model.model.extract_speaker_embedding(waves[0], rate)
+                    generated = time.monotonic()
+                    sample = self.model.model.model.extract_speaker_embedding(waves[0], rate)
                     score = cosine_similarity(sample.float(), self.prompt[0].ref_spk_embedding.float(), dim=0)
                 if score >= 0.93:
+                    verified = time.monotonic()
                     output = io.BytesIO()
                     soundfile.write(output, waves[0], rate, format="WAV", subtype="PCM_16")
+                    print(json.dumps({"event": "geffen_packet", "index": index, "attempt": attempt+1,
+                                      "inference": round(generated-started, 3), "verification": round(verified-generated, 3),
+                                      "encoding": round(time.monotonic()-verified, 3)}), flush=True)
                     yield output.getvalue()
                     break
             else:
