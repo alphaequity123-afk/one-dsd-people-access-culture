@@ -14,7 +14,8 @@ const json = (error: string, status: number) => Response.json({ error }, { statu
 export async function POST(request: NextRequest) {
   if (!cloneAgentsEnabled()) return json("Ask downloads are not available here.", 403);
   if (!isSameOriginMutation(request)) return json("Please download from Ask on this site.", 403);
-  const limit = await consumeRequestLimit(request, { scope: "staff-ask-export", limit: 20, windowSeconds: 600 }).catch(() => null);
+  // Share Ask's existing durable bucket; production also registers scopes in PostgreSQL.
+  const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 }).catch(() => null);
   if (!limit) return json("Downloads are temporarily unavailable. Your draft is still here; please try again.", 503);
   if (!limit.allowed) return Response.json({ error: "Please wait a moment before downloading again." }, { status: 429, headers: rateLimitHeaders(limit) });
   const body = await readBoundedJson(request, 128_000);

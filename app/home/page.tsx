@@ -1,5 +1,4 @@
 
-import { SourceLink } from "@/components/app-link";
 import { WaterCollectionFeature } from "@/components/water-collection-feature";
 import Image from "next/image";
 import Link from "@/components/app-link";
@@ -32,11 +31,8 @@ export default async function HomePage() {
       <HomeTaskFinder />
 
       <section className="pilot-section" aria-labelledby="pilot-explore">
-        <h2 id="pilot-explore">Explore DHS</h2>
-        <div className="pilot-actions">
-          <Link href="/administrations/adsa">Aging and Disability Services Administration</Link>
-          <SourceLink href="https://mn.gov/dhs/partners-and-providers/program-overviews/tribal-and-urban-indian-relations/">Tribal and Urban Indian Relations</SourceLink>
-        </div>
+        <h2 id="pilot-explore"><Link className="pilot-agency-link" href="/understanding-dhs">Explore DHS</Link></h2>
+        <p>People, programs and partnerships across the Department of Human Services.</p>
       </section>
 
       <section className="pilot-section" aria-labelledby="pilot-pathways">
