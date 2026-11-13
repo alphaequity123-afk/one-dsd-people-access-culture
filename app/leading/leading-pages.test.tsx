@@ -24,8 +24,8 @@ const REQUIRED = "Required of all DHS staff";
 const html = (element: Parameters<typeof renderToStaticMarkup>[0]) => renderToStaticMarkup(element).replaceAll("&#x27;", "'").replaceAll("&amp;", "&").replaceAll("&quot;", '"');
 
 describe("supervisor and manager pages render with their data", () => {
-  it("opens the landing page with the question and all nine doors", async () => {
-    const page = html(await LeadingPage());
+  it("keeps the question and all nine doors in the detailed leadership view", async () => {
+    const page = html(await LeadingPage({ searchParams: Promise.resolve({ view: "all" }) }));
     expect(page).toContain("Lead equity in everyday work");
     expect(page).toContain("Explore leadership");
     expect(page).toContain("/one-dsd/leadership#starting-points");
