@@ -4,6 +4,7 @@ import { JobAidActions } from "@/components/clas-curriculum/job-aid-actions";
 import { CourseMediaJumpSlot, CourseMediaSlot } from "@/components/course-media-for-page";
 import { prepareEditableSurface } from "@/components/editable-surface";
 import { GeffenReadAloud } from "@/components/geffen-read-aloud";
+import { PracticeVideo } from "@/components/practice-video";
 import { ResourceCreationLink } from "@/components/resource-creation-link";
 import { ResourceLearningAssistant } from "@/components/resource-learning-assistant";
 import { WaterFigure, WaterLessonPodcast } from "@/components/water-curriculum";
@@ -139,6 +140,7 @@ export default async function WaterCollectionPage() {
             <section aria-labelledby={`apply-${number}`}>
               <h3 id={`apply-${number}`}>Try it at North Crossing</h3>
               <p>{step.caseUpdate}</p>
+              {number === 1 && <PracticeVideo clip="north-crossing" />}
               <GeffenReadAloud text={passage.text} recordingSrc={recordings.get(passage.id)} label={step.title} />
               <ol>{step.activities.map(activity => <li key={activity}>{activity}</li>)}</ol>
               <p className={styles.output}><strong>Keep in your workbook</strong> {step.output}</p>

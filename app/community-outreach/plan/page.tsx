@@ -3,6 +3,7 @@ import Link from "next/link";
 import { EngagementPlan } from "@/components/hub/engagement-plan";
 import { BEFORE_YOU_REACH_OUT, OUTREACH_PRACTICE } from "@/lib/content/hub/before-you-reach-out";
 import { CommunityPractice } from "@/components/community-experience-controls";
+import { PracticeVideo } from "@/components/practice-video";
 import "@/components/community-editorial.css";
 import styles from "../hub.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
@@ -35,6 +36,7 @@ export default function PlanPage() {
     <section className={`${styles.section} ${styles.noPrint}`} aria-labelledby="practice-title">
       <h2 id="practice-title">Practice before you plan</h2>
       <p>Think through each situation, then compare your thinking with the reasoning.</p>
+      <PracticeVideo clip="community-follow-up" />
       <div className="community-editorial">{OUTREACH_PRACTICE.map(item => <CommunityPractice key={item.question} {...item} />)}</div>
     </section>
 
