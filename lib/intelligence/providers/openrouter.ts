@@ -4,6 +4,10 @@ import { strictSchemaForOpenAI, stripInjectedNulls } from "./openai";
 import { logProviderFailure } from "./log";
 import { sseEvents } from "./sse";
 
+export class OpenRouterRequestError extends Error {
+  constructor(code: string, readonly status?: number) { super(code); this.name = "OpenRouterRequestError"; }
+}
+
 /** Read a streamed reply into the same shape as one that was not streamed, passing text on as it arrives. */
 async function streamedChat(response: Response, onText: (textSoFar: string) => void) {
   if (!response.body) throw new Error("openrouter_incomplete");
@@ -12,7 +16,10 @@ async function streamedChat(response: Response, onText: (textSoFar: string) => v
     if (data === "[DONE]") break;
     let chunk: { id?: unknown; error?: unknown; usage?: typeof usage; choices?: Array<{ finish_reason?: unknown; delta?: { content?: unknown; refusal?: unknown } }> };
     try { chunk = JSON.parse(data); } catch { continue; }
-    if (chunk.error) throw new Error("openrouter_incomplete");
+    if (chunk.error) {
+      const status = typeof chunk.error === "object" && "code" in chunk.error && typeof chunk.error.code === "number" ? chunk.error.code : undefined;
+      throw new OpenRouterRequestError(status ? `openrouter_http_${status}` : "openrouter_stream_error", status);
+    }
     id ??= chunk.id;
     if (chunk.usage) usage = chunk.usage;
     const choice = chunk.choices?.[0];
@@ -37,8 +44,12 @@ export class OpenRouterAdapter implements ProviderAdapter {
     if (!key) throw new Error("openrouter_credential_missing");
     if (Buffer.byteLength(req.system + req.user, "utf8") > 220_000) throw new Error("clone_prompt_limit");
     const strict = strictSchemaForOpenAI(req.schema);
+    const remaining = (req.deadlineAt ?? Infinity) - Date.now();
+    if (remaining <= 0) throw new OpenRouterRequestError("provider_deadline_exceeded");
+    const timeoutMs = Math.max(1, Math.min(req.timeoutMs ?? 60_000, 90_000, remaining));
+    const signal = AbortSignal.any([AbortSignal.timeout(timeoutMs), ...(req.signal ? [req.signal] : [])]);
     const response = await this.fetcher("https://openrouter.ai/api/v1/chat/completions", {
-      method: "POST", signal: AbortSignal.timeout(Math.min(req.timeoutMs ?? 60_000, 90_000)),
+      method: "POST", signal,
       headers: { authorization: `Bearer ${key}`, "content-type": "application/json", "X-Title": "People, Access and Culture ASK" },
       body: JSON.stringify({ model: record.provider_model_ref,
         messages: [{ role: "system", content: req.system }, { role: "user", content: req.user }],
@@ -48,12 +59,33 @@ export class OpenRouterAdapter implements ProviderAdapter {
         // Only the stream switch is added: with require_parameters, any extra option could rule out a provider.
         ...(req.onText ? { stream: true } : {}),
       }), cache: "no-store",
+    }).catch((error: unknown) => {
+      const code = signal.aborted ? "openrouter_timeout" : "openrouter_network";
+      logProviderFailure({ provider: "openrouter", model: record.provider_model_ref, reason: code, trace_id: req.trace_id });
+      void error;
+      throw new OpenRouterRequestError(code);
     });
-    if (!response.ok) throw new Error(`openrouter_http_${response.status}`);
-    const data = req.onText ? await streamedChat(response, req.onText) : await response.json();
+    if (!response.ok) {
+      void response.body?.cancel().catch(() => undefined);
+      logProviderFailure({ provider: "openrouter", model: record.provider_model_ref, reason: `openrouter_http_${response.status}`, status: response.status, trace_id: req.trace_id });
+      throw new OpenRouterRequestError(`openrouter_http_${response.status}`, response.status);
+    }
+    const data = await (req.onText ? streamedChat(response, req.onText) : response.json()).catch((error: unknown) => {
+      if (signal.aborted) throw new OpenRouterRequestError("openrouter_timeout");
+      if (error instanceof OpenRouterRequestError) throw error;
+      throw new OpenRouterRequestError(req.onText ? "openrouter_stream_error" : "openrouter_bad_json");
+    });
+    if (data.error) {
+      const status = typeof data.error.code === "number" ? data.error.code : undefined;
+      throw new OpenRouterRequestError(status ? `openrouter_http_${status}` : "openrouter_incomplete", status);
+    }
     const choice = data.choices?.[0];
-    if (choice?.finish_reason !== "stop" || choice.message?.refusal || typeof choice.message?.content !== "string") throw new Error("openrouter_incomplete");
-    const value = stripInjectedNulls(JSON.parse(choice.message.content), strict.schema, strict.schema, strict.injected);
+    if (choice?.message?.refusal || choice?.finish_reason === "content_filter") throw new OpenRouterRequestError("provider_refusal");
+    if (choice?.finish_reason !== "stop" || typeof choice.message?.content !== "string") throw new OpenRouterRequestError("openrouter_incomplete");
+    let parsed: unknown;
+    try { parsed = JSON.parse(choice.message.content); }
+    catch { throw new OpenRouterRequestError("openrouter_output_not_json"); }
+    const value = stripInjectedNulls(parsed, strict.schema, strict.schema, strict.injected);
     const checked = req.schema.safeParse(value);
     if (!checked.success) {
       // Issue paths and codes only: generated text never reaches the log. The ZodError is

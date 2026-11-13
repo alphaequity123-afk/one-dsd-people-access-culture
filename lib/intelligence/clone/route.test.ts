@@ -88,3 +88,25 @@ it("keeps the stop control in force for a page that follows progress", async () 
   expect(lines.at(-1)!.result!.error).toContain("paused");
   expect(lines.at(-1)!.result!.answer).toBeUndefined();
 });
+
+it.each(["program_only", "current_web", "deep_research"])("honors the research choice %s", async researchMode => {
+  await (await POST(request({ question: "Explain seasons.", researchMode }))).json();
+  expect(f.ask.mock.calls[0][0].researchMode).toBe(researchMode);
+});
+
+it.each(["provider_request_failed", "generated_evidence_rejected", "answer_review_failed"])("never releases a failed answer as successful: %s", async failureCode => {
+  f.ask.mockResolvedValue({ kind: "answer", answer: { shortAnswer: "Unrelated fallback.", degraded: true, failureCode } });
+  const body = await (await POST(request({ question: "Explain the requested policy." }))).json();
+  expect(body.error).toBeTruthy();
+  expect(body.answer).toBeUndefined();
+  expect(JSON.stringify(body)).not.toContain("Unrelated fallback");
+  expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "failed");
+});
+
+it("clears partial streamed text when the final answer failed verification", async () => {
+  f.ask.mockResolvedValue({ kind: "answer", answer: { shortAnswer: "Unverified.", degraded: true, failureCode: "generated_evidence_rejected" } });
+  const lines = await progressLines(await POST(progressRequest({ question: "Explain the policy." })));
+  expect(lines.map(line => line.type)).toEqual(["wait", "reset", "done"]);
+  expect(lines.at(-1)?.result?.error).toContain("verify");
+  expect(lines.at(-1)?.result?.answer).toBeUndefined();
+});
