@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "@/components/app-link";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { PageIntro } from '@/components/ui';
 import { EngagementResourceLinks } from '@/components/engagement-resource-links';

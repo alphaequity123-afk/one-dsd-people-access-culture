@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import {TeamResourceSelections} from "@/components/team-resource-selections";
 export const metadata={title:"Team resource selections"};
 export default function Page(){return <div className="wrap max-w-4xl space-y-6 py-10"><p><Link href="/one-dsd/team">Return to the One DSD Team</Link></p><h1>Choose resources together</h1><p>The consultant and the One DSD Team explore the application together and decide which resources belong in SharePoint, Learning Labs, or full Articulate 360 courses for DHS Pathlore.</p><p><Link href="/library">Explore the resource library</Link> · <Link href="/learn/self-directed">Explore the learning series</Link></p><TeamResourceSelections/></div>;}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import {
   allAppliesTo,
   allPrograms,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Plain-language summaries of the Minnesota statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules and reports that shape disability services, each with its official source.",
 };
 
-const PER_PAGE = 20;
+const PER_PAGE = 12;
 const BASE = "/community-outreach/policies";
 
 type Query = { q?: string | string[]; search?: string | string[]; kind?: string | string[]; program?: string | string[]; "applies-to"?: string | string[]; page?: string | string[] };

@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import { WaterCollectionFeature } from "@/components/water-collection-feature";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { notFound } from "next/navigation";
 import { culturalMultidisciplinary } from "@/lib/content/cultural-multidisciplinary";
@@ -132,7 +134,7 @@ export default async function CulturalIntelligencePage() {
             <details className="rounded-xl border border-line p-5">
             <summary className="cursor-pointer font-semibold">Explore sources behind these perspectives</summary>
             <ul className="mt-4 space-y-2">
-              {CULTURAL_INTELLIGENCE_PERSPECTIVE_SOURCES.map(source => <li key={source.href}><a href={source.href} target="_blank" rel="noreferrer" className="underline">{source.title}</a></li>)}
+              {CULTURAL_INTELLIGENCE_PERSPECTIVE_SOURCES.map(source => <li key={source.href}><SourceLink href={source.href} target="_blank" rel="noreferrer" className="underline">{source.title}</SourceLink></li>)}
             </ul>
             </details>
           </div>

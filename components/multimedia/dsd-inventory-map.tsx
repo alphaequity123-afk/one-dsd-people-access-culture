@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 const questions: Record<string, string> = {
   "hcbs-policy": "Where does a policy or authorization step create repeated work?",

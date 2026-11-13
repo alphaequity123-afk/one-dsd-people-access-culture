@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ResourceDownloads } from "@/components/resource-downloads";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { courseHref, courseSummary, publishedCourses } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";

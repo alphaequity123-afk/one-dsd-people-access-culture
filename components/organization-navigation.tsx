@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { organizationTopics, ORGANIZATION_DIRECTORY_URL, ORGANIZATION_NAVIGATION_SOURCE_NOTE } from "@/lib/product/organization-navigation";
 import reference from "@/data/organization/minnesota-dhs.json";
 
@@ -14,7 +16,7 @@ export function OrganizationTopicCards({ ids }: { ids: readonly string[] }) {
     <div className="pb-5">
     <p className="leading-relaxed">{entry.facts}</p>
     <Link href={`/understanding-dhs#${entry.id.replace(/^ext-dhs-org-/, "")}`}>Explore this topic and its connections</Link>
-    <details className="mt-4 border-t border-line pt-3 text-sm"><summary className="cursor-pointer font-semibold">Original sources</summary><ul className="space-y-2 pl-5">{entry.sourceIds.map(id => { const source = reference.sources.find(item => item.id === id)!; return <li key={id}><a href={source.url}>{source.title}</a></li>; })}</ul></details>
+    <details className="mt-4 border-t border-line pt-3 text-sm"><summary className="cursor-pointer font-semibold">Original sources</summary><ul className="space-y-2 pl-5">{entry.sourceIds.map(id => { const source = reference.sources.find(item => item.id === id)!; return <li key={id}><SourceLink href={source.url}>{source.title}</SourceLink></li>; })}</ul></details>
     </div>
   </details>)}</div>;
 }
@@ -24,5 +26,5 @@ export function SharedAgencyResources() {
 }
 
 export function OrganizationSourceNote() {
-  return <p className="mt-10 text-sm text-muted">{ORGANIZATION_NAVIGATION_SOURCE_NOTE} <a href={ORGANIZATION_DIRECTORY_URL}>DHS agencywide directory</a>.</p>;
+  return <p className="mt-10 text-sm text-muted">{ORGANIZATION_NAVIGATION_SOURCE_NOTE} <SourceLink href={ORGANIZATION_DIRECTORY_URL}>DHS agencywide directory</SourceLink>.</p>;
 }

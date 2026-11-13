@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { leadersAllowed } from "@/lib/auth/leaders-access";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { askQuestion, goalMap, headlineNarratives, measures } from "@/lib/content/data/equity-baseline";
 import { readEquityReviewTotals } from "@/lib/practice/equity-review-count-store";
 import { EquityReviewCountSection } from "./review-count-section";

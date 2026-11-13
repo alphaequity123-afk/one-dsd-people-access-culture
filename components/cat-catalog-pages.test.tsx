@@ -23,6 +23,7 @@ import CountyAgenciesPage from "@/app/community-outreach/county-agencies/page";
 import OrganizationDirectory from "@/app/community-outreach/organizations/page";
 import { getPoliciesData, policyHref } from "@/lib/content/hub/dsd-policies";
 import { registerSourcesForStaff, sourceAnchor } from "@/lib/content/source-register";
+import { unavailableExternalUrl } from "@/lib/content/external-readings";
 import { readings, readingHref } from "@/lib/content/reading-collection";
 import { getCountyAgencies } from "@/lib/content/hub/county-agencies";
 import { ORGANIZATIONS, organizationHref } from "@/lib/content/hub/organizations";
@@ -55,15 +56,15 @@ function countOf(html: string, needle: RegExp): number {
 }
 
 describe("paged catalog pages", () => {
-  it("policies: 20 per page, every policy reachable through its own page link", async () => {
+  it("policies: 12 per page, every policy reachable through its own page link", async () => {
     const pages = await allPages(PoliciesPage as Page);
     const policies = getPoliciesData().policies;
-    expect(pages.length).toBe(Math.ceil(policies.length / 20));
-    for (const html of pages) expect(countOf(html, /<li[^>]*id="policy-/g)).toBeLessThanOrEqual(20);
+    expect(pages.length).toBe(Math.ceil(policies.length / 12));
+    for (const html of pages) expect(countOf(html, /<li[^>]*id="policy-/g)).toBeLessThanOrEqual(12);
     const all = pages.join("\n");
     for (const p of policies) expect(all, p.id).toContain(`href="${policyHref(p.id)}"`);
     expect(pages[0]).toContain('role="status"');
-    expect(pages[0]).toContain(`Showing 1–20 of ${policies.length} policies`);
+    expect(pages[0]).toContain(`Showing 1–12 of ${policies.length} policies`);
     expect(pages[0]).toMatch(/<label[^>]*for="policy-q"/);
     expect(pages[0]).toContain('aria-current="page"');
     expect(pages[0]).toContain('data-downloads="policies"');
@@ -82,13 +83,15 @@ describe("paged catalog pages", () => {
     expect(decode(statutes[0])).toContain("kind=statute&page=2");
   });
 
-  it("sources: 25 per page, every outside source reachable, and links to one source find its page", async () => {
-    const expected = registerSourcesForStaff().flatMap(g => g.sources).filter(s => s.kind === "external" && s.href);
+  it("sources: 12 per page, every available outside source reachable, and links to one source find its page", async () => {
+    const outside = registerSourcesForStaff().flatMap(g => g.sources).filter(s => s.kind === "external" && s.href);
+    const expected = outside.filter(s => !unavailableExternalUrl(s.href!));
     const pages = await allPages(SourcesPage as Page);
-    expect(pages.length).toBe(Math.ceil(expected.length / 25));
-    for (const html of pages) expect(countOf(html, /<li[^>]*id="source-/g)).toBeLessThanOrEqual(25);
+    expect(pages.length).toBe(Math.ceil(expected.length / 12));
+    for (const html of pages) expect(countOf(html, /<li[^>]*id="source-/g)).toBeLessThanOrEqual(12);
     const all = pages.join("\n");
     for (const s of expected) expect(all, s.sourceId).toContain(`id="${sourceAnchor(s)}"`);
+    for (const s of outside.filter(s => unavailableExternalUrl(s.href!))) expect(all, s.sourceId).not.toContain(`id="${sourceAnchor(s)}"`);
     const last = expected[expected.length - 1];
     const found = await render(SourcesPage as Page, { find: sourceAnchor(last) });
     expect(found).toContain(`id="${sourceAnchor(last)}"`);
@@ -97,9 +100,9 @@ describe("paged catalog pages", () => {
     expect(pages[0]).toContain('role="status"');
   });
 
-  it("readings: 20 per page, every book reachable through its own page, and the theme filter still works", async () => {
+  it("readings: 12 per page, every book reachable through its own page, and the theme filter still works", async () => {
     const pages = await allPages(ReadingsPage as Page);
-    expect(pages.length).toBe(Math.ceil(readings.length / 20));
+    expect(pages.length).toBe(Math.ceil(readings.length / 12));
     const all = pages.join("\n");
     for (const book of readings) expect(all, book.id).toContain(`href="${readingHref(book.id)}"`);
     for (const html of pages) expect(countOf(html, /<h2/g)).toBeLessThanOrEqual(2);
@@ -119,7 +122,7 @@ describe("paged catalog pages", () => {
       expect(all).toContain(c.sourceUrl.replace(/&/g, "&amp;"));
       if (c.phone) expect(all).toContain(c.phone);
     }
-    for (const html of pages) expect(countOf(html, /id="county-\d/g)).toBeLessThanOrEqual(20);
+    for (const html of pages) expect(countOf(html, /id="county-\d/g)).toBeLessThanOrEqual(12);
     const last = data.counties.slice().sort((a, b) => a.county.localeCompare(b.county))[data.counties.length - 1];
     expect(await render(CountyAgenciesPage as Page, { find: `county-${last.fips}` })).toContain(`id="county-${last.fips}"`);
     const letter = await render(CountyAgenciesPage as Page, { letter: "a" });

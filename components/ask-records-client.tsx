@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useRef, useState } from "react";
 import type { AskResponseRecord, AskRecordsListResult } from "@/lib/intelligence/observability/ask-records";
@@ -13,7 +15,7 @@ const RESEARCH: Record<AskResponseRecord["researchStatus"], string> = {
 };
 function LinkText({ href, children }: { href: string; children: React.ReactNode }) {
   const safe = /^\/(?![\\/])/.test(href) || /^https:\/\//i.test(href);
-  return safe ? <a href={href}>{children}</a> : <span>{children}</span>;
+  return safe ? <SourceLink href={href}>{children}</SourceLink> : <span>{children}</span>;
 }
 function Text({ children }: { children: string }) {
   return <p className="whitespace-pre-wrap break-words">{children}</p>;

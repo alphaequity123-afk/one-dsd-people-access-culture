@@ -1,7 +1,9 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
-import { PageContents } from "@/components/page-contents";
+import { FocusedSections } from "@/components/focused-sections";
 import styles from "@/components/director-toolkit.module.css";
 import {
   DIRECTOR_FIRST_90_DAYS, DIRECTOR_STARTER_PACKAGE, DIRECTOR_TEMPLATES_HREF, DIRECTOR_TOOLKIT_INTRO, DIRECTOR_TOOLKIT_SECTIONS,
@@ -26,7 +28,7 @@ function Item({ item }: { item: ToolkitItem }) {
     {template || item.href || item.url ? <p className={styles.itemLinks}>
       {template ? <Link href={templateHref(template.id)}>Fill in the {template.title.replaceAll("\"", "")} template</Link> : null}
       {item.href ? <Link href={item.href}>Open the related page</Link> : null}
-      {item.url ? <a href={item.url}>Open the published resource</a> : null}
+      {item.url ? <SourceLink href={item.url}>Open the published resource</SourceLink> : null}
     </p> : null}
   </li>;
 }
@@ -72,17 +74,13 @@ function Section({ section }: { section: ToolkitSection }) {
 }
 
 export default function DirectorToolkitPage() {
-  const contents = [
-    { href: "#start-here", label: "Start here" },
-    ...DIRECTOR_TOOLKIT_SECTIONS.map(section => ({ href: `#${section.id}` as const, label: `${section.number}. ${section.title}` })),
-  ] as const;
   return <>
     <PageIntro tone="business" kicker="Equity in practice" title={DIRECTOR_TOOLKIT_INTRO.title} lede={DIRECTOR_TOOLKIT_INTRO.lede}>
       <p className="mt-4 max-w-3xl"><Link href={DIRECTOR_TEMPLATES_HREF}>Open the 14 printable templates</Link></p>
       <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="director-toolkit" noun="toolkit" /></details>
     </PageIntro>
     <div className="wrap py-10">
-      <PageContents items={contents}>
+      <FocusedSections>
         <section aria-labelledby="overview-title">
           <h2 id="overview-title" className="text-2xl font-bold">Overview</h2>
           {DIRECTOR_TOOLKIT_INTRO.summary.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
@@ -92,8 +90,8 @@ export default function DirectorToolkitPage() {
           <h2 id="start-here-title" className="text-2xl font-bold">Start here</h2>
           <p>New to the role, or starting a new equity effort? Begin with two things.</p>
           <ul className="list-disc pl-6">
-            <li><a href="#first-90-days">The first 90 days</a>: what to do in each 30-day period, and what each period should produce.</li>
-            <li><a href="#starter-package">The 12-item priority starter package</a>: three foundational DHS resources and nine practical supports to build with the people responsible for each area.</li>
+            <li><SourceLink href="#first-90-days">The first 90 days</SourceLink>: what to do in each 30-day period, and what each period should produce.</li>
+            <li><SourceLink href="#starter-package">The 12-item priority starter package</SourceLink>: three foundational DHS resources and nine practical supports to build with the people responsible for each area.</li>
             <li><Link href={DIRECTOR_TEMPLATES_HREF}>The printable templates</Link>: fill them in on screen, then print, copy or download. Nothing is saved or sent.</li>
           </ul>
         </section>
@@ -105,7 +103,7 @@ export default function DirectorToolkitPage() {
           <Link href="/operationalizing-equity">Operationalizing Equity</Link>
           <Link href="/support/right-person">Find the person or area responsible</Link>
         </nav>
-      </PageContents>
+      </FocusedSections>
     </div>
   </>;
 }

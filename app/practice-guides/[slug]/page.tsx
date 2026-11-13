@@ -1,5 +1,5 @@
 import { ConnectedWith } from "@/components/connected-with";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { practiceGuides } from "@/lib/program/dsd-practice-guides";

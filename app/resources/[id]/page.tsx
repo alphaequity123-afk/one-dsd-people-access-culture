@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import { ResourceEvidence } from "@/components/source-evidence";
 import styles from "../resource-design.module.css";
 import { relatedPublishedResources } from "@/lib/content/corpus-inventory";
@@ -6,7 +8,7 @@ import { normalizeWorkOrigin, withWorkOrigin } from "@/lib/product/work-origin";
 import { WorkOriginLinks } from "@/components/work-origin-links";
 import { LearningJourneyLink } from "@/components/learning-journey-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound, redirect } from "next/navigation";
 import {selfDirectedHref, SELF_DIRECTED_COURSES} from '@/lib/content/self-directed';
 import { ResourceInlineEditor } from "@/components/resource-inline-editor";
@@ -95,7 +97,7 @@ export default async function ResourcePage({ params, searchParams }: { params: P
 
   return (
     <EditableSurfaceRegion surface={shellSurface} className={styles.page}>
-      <header className={styles.hero}><div className={styles.heroInner}><Link href="/learn" className={styles.back}>Learn</Link><p className={styles.eyebrow}>{CONTENT_TYPE_LABEL[c.type]} · {LAYER_LABEL[c.layer]}</p><h1>{c.title}</h1><p className={styles.lede}>{c.summary}</p><ResourceMediaGallery contentItemId={c.id} owner={owner} /><div className={styles.resourceActions}><a href="#resource-reading" className={`${styles.primaryAction} text-white`}>Read this resource</a>{c.href ? <a href={c.href} rel="noreferrer">Open {c.sourceName || "the original source"}</a> : null}</div><details className={styles.downloadOptions}><summary>Download or share</summary><ResourceDownloads kind="library" id={c.id} scope={scope} share={false} /><ResourceShare title={c.title} href={"/share/library/" + encodeURIComponent(c.id)} /></details>{owner ? <ResourceRemove contentItemId={c.id} title={c.title} /> : null}
+      <header className={styles.hero}><div className={styles.heroInner}><Link href="/learn" className={styles.back}>Learn</Link><p className={styles.eyebrow}>{CONTENT_TYPE_LABEL[c.type]} · {LAYER_LABEL[c.layer]}</p><h1>{c.title}</h1><p className={styles.lede}>{c.summary}</p><ResourceMediaGallery contentItemId={c.id} owner={owner} /><div className={styles.resourceActions}><SourceLink href="#resource-reading" className={`${styles.primaryAction} text-white`}>Read this resource</SourceLink>{c.href ? <SourceLink href={c.href} rel="noreferrer">Open {c.sourceName || "the original source"}</SourceLink> : null}</div><details className={styles.downloadOptions}><summary>Download or share</summary><ResourceDownloads kind="library" id={c.id} scope={scope} share={false} /><ResourceShare title={c.title} href={"/share/library/" + encodeURIComponent(c.id)} /></details>{owner ? <ResourceRemove contentItemId={c.id} title={c.title} /> : null}
       </div></header>
       <div className={styles.content}>
         <WorkOriginLinks origin={origin} />
@@ -109,9 +111,9 @@ export default async function ResourcePage({ params, searchParams }: { params: P
             {c.href ? (
               <>
                 {" "}
-                <a href={c.href} rel="noreferrer">
+                <SourceLink href={c.href} rel="noreferrer">
                   {stringValue(shell, "openSourceLabel")} ({c.sourceName ?? stringValue(shell, "sourceWebsiteLabel")})
-                </a>
+                </SourceLink>
                 .
               </>
             ) : (

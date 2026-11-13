@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_MODULES, WATER_SUPPORT } from "@/lib/content/water-we-swim-in";
 import { WATER_RESOURCE_COLLECTION_PATH } from "@/lib/learning/water-resource-collection";
 import "@/components/community-editorial.css";

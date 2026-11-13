@@ -1,3 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
+import { catPaginate, catParam } from "@/lib/cat-paging";
+import { CatPager, CatResultStatus } from "@/components/cat-list";
 import { WaterCollectionFeature } from "@/components/water-collection-feature";
 import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import { podcastMatchesTheme } from "@/lib/content/audio-organization";
@@ -19,7 +23,7 @@ import { learningStageHref } from "@/lib/content/learning-journey";
 import { DhsReferenceLink } from "@/components/dhs-reference-link";
 import { publishedCourses, courseContentItem, courseSummary, courseHref } from "@/lib/content/courses/published";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { AuthorityPill } from "@/components/ui";
 import { PublishedPodcast } from "@/components/published-podcast";
 import { PODCASTS, podcastMatches } from "@/lib/content/podcasts";
@@ -49,12 +53,12 @@ function shortSummary(text: string, max = 160): string {
   return `${shortened.slice(0, boundary > max * 0.7 ? boundary : max).trimEnd()}…`;
 }
 
-export default async function LearnPage({ searchParams }: { searchParams?: Promise<{ q?: string | string[]; theme?: string | string[]; type?: string | string[]; level?: string | string[]; browse?: string | string[] }> }) {
+export default async function LearnPage({ searchParams }: { searchParams?: Promise<{ q?: string | string[]; theme?: string | string[]; type?: string | string[]; level?: string | string[]; browse?: string | string[]; page?: string | string[] }> }) {
   const rawQuery = await searchParams ?? {};
   const query = { q: typeof rawQuery.q === "string" ? rawQuery.q : "", theme: typeof rawQuery.theme === "string" ? rawQuery.theme : "", type: typeof rawQuery.type === "string" ? rawQuery.type : "", level: typeof rawQuery.level === "string" && ["foundation","foundations","intermediate","advanced"].includes(rawQuery.level.toLowerCase()) ? rawQuery.level.toLowerCase().replace(/^foundations$/,"foundation") : "" };
   const scope = await requestedContentScope();
   const owner = await editingModeFromCookies();
-  if (!owner && !Object.values(query).some(Boolean) && rawQuery.browse !== "all") {
+  if (!owner && !Object.values(query).some(Boolean) && rawQuery.browse !== "all" && !rawQuery.page) {
     const culturalIntelligenceAvailable = await culturalIntelligenceHubAvailable(scope);
     return <div className="pilot-topic">
       <header>
@@ -122,7 +126,9 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
   const types = [...new Set(items.map((item) => item.type))];
   const hubText = (key: string) => stringValue(hub.values, key);
   const filtered = Boolean(query.q || query.theme || query.type || query.level);
-  const expanded = filtered || rawQuery.browse === "all";
+  const expanded = filtered || rawQuery.browse === "all" || Boolean(rawQuery.page);
+  const catalogPage = catPaginate([...learning, ...resources], catParam(rawQuery.page), 12);
+  const visibleIds = new Set(catalogPage.items.map(item => item.id));
   // Foundations come from the published, owner-editable intercultural journey.
   const foundations = journey ? getLearningJourney(journey.values)[0] : null;
   const startingIds = new Set(journey?.available && foundations ? foundations.resourceIds.slice(0, 2) : []);
@@ -141,7 +147,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
           <p className={styles.eyebrow}>{stringValue(copy, "introKicker")}</p>
           <h1>{hub.available ? hubText("title") : stringValue(copy, "introTitle")}</h1>{owner ? <p className="m-0 mt-2"><Link href="/consultant/resources/new" className="btn btn--primary">+ Add a resource</Link></p> : null}
           <p className={styles.intro}>{hub.available ? hubText("intro") : stringValue(copy, "introLede")}</p>
-          <div className={styles.heroLinks}><a href="#catalog">Search learning</a><Link href="/learn/core-15">Start with recommended courses</Link></div>
+          <div className={styles.heroLinks}><SourceLink href="#catalog">Search learning</SourceLink><Link href="/learn/core-15">Start with recommended courses</Link></div>
         </div>
       </header>
       <div className={styles.content}>
@@ -162,7 +168,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
               </details>
               {query.q || query.theme || query.type || query.level ? <Link className={preview.clearFilters} href="/learn">{hubText("clearLabel")}</Link> : null}
             </form>
-            {query.theme === "structural" ? <aside className={styles.readingLinks}><h2>{hubText("readingTitle")}</h2><ul>{linkListValue(hub.values, "readingLinks").map((link) => <li key={link.href}><a href={link.href}>{link.label}</a></li>)}</ul><p>{hubText("readingNote")}</p></aside> : null}
+            {query.theme === "structural" ? <aside className={styles.readingLinks}><h2>{hubText("readingTitle")}</h2><ul>{linkListValue(hub.values, "readingLinks").map((link) => <li key={link.href}><SourceLink href={link.href}>{link.label}</SourceLink></li>)}</ul><p>{hubText("readingNote")}</p></aside> : null}
             {expanded ? <p role="status" className={styles.resultCount}>{totalFound} {hubText(totalFound === 1 ? "countSingular" : "countLabel")}</p> : null}
             {!totalFound ? <div><h2>{hubText("emptyTitle")}</h2><p>{hubText("emptyBody")}</p></div> : null}
           </EditableSurfaceRegion>
@@ -184,12 +190,14 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
             </p>
           </Hub2More>
           {!filtered ? <ResourceThemeNav basePath="/learn" className={preview.themeSection} gridClassName={preview.themeGrid} /> : null}
-          {expanded && learning.length ? <section className={styles.section} aria-labelledby="modules-title">
+          {expanded ? <CatResultStatus page={catalogPage} noun="resource" nouns="resources" /> : null}
+          {expanded && learning.some(item => visibleIds.has(item.id)) ? <section className={styles.section} aria-labelledby="modules-title">
             <div className={styles.sectionHeading}><h2 id="modules-title">{hub.available ? hubText("coursesTitle") : stringValue(copy, "modulesTitle")}</h2><span>{learning.length} to explore</span></div>
-            {renderLearning(learning)}
+            {renderLearning(learning.filter(item => visibleIds.has(item.id)))}
           </section> : null}
           {!expanded && learning.length ? <p className={preview.browseAll}><Link href="/learn?browse=all#modules-title">Browse all {learning.length} courses and learning resources</Link></p> : null}
-          {expanded && hub.available && resources.length ? <section className={styles.section} aria-labelledby="hub-resources-title"><div className={styles.sectionHeading}><h2 id="hub-resources-title">{hubText("resourcesTitle")}</h2><span>{resources.length} resources</span></div><ul className={styles.resourceList}>{resources.map((item) => <li key={item.id} data-hub-resource={item.id}><span className={styles.resourceKind}>{CONTENT_TYPE_LABEL[item.type]}</span><h3><Link href={`/library/${item.id}`}>{item.title}</Link></h3><p>{shortSummary(item.summary)}</p><AuthorityPill authority={item.authority} />{owner ? <> <ResourceRemove contentItemId={item.id} title={item.title} compact /></> : null}</li>)}</ul></section> : null}
+          {expanded && hub.available && resources.some(item => visibleIds.has(item.id)) ? <section className={styles.section} aria-labelledby="hub-resources-title"><div className={styles.sectionHeading}><h2 id="hub-resources-title">{hubText("resourcesTitle")}</h2><span>{resources.length} resources</span></div><ul className={styles.resourceList}>{resources.filter(item => visibleIds.has(item.id)).map((item) => <li key={item.id} data-hub-resource={item.id}><span className={styles.resourceKind}>{CONTENT_TYPE_LABEL[item.type]}</span><h3><Link href={`/library/${item.id}`}>{item.title}</Link></h3><p>{shortSummary(item.summary)}</p><AuthorityPill authority={item.authority} />{owner ? <> <ResourceRemove contentItemId={item.id} title={item.title} compact /></> : null}</li>)}</ul></section> : null}
+          {expanded ? <CatPager page={catalogPage} basePath="/learn" params={{ ...query, browse: "all" }} label="Learning result pages" /> : null}
           {!expanded && hub.available && resources.length ? <p><Link href="/library?browse=all">Looking for a tool, a guide, or further reading? Browse all {resources.length} resources in the library</Link></p> : null}
           {podcasts.length ? <Hub2More headingId="podcasts-title" title="Podcasts" open={filtered}><p>Listen in the audio library, where every episode comes with chapters and a full transcript.</p><ul className={styles.pathList}>{podcasts.map(({ podcast, surface: podcastSurface }) => <li key={podcast.id}><Link href={`/audio-library#podcast-${podcast.id}`}>{stringValue(podcastSurface.values, "title") || podcast.title}</Link></li>)}</ul></Hub2More> : null}
         </div>

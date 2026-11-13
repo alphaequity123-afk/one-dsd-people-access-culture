@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import { FeaturedMediaPanel } from "@/components/featured-media-panel";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import SequenceVideo from "@/app/learn/equity-in-practice/sequence-video";
 import example from "@/lib/program/equity-toolkit-example.json";
 import media from "@/lib/program/equity-toolkit-tutorial-media.json";
@@ -14,7 +16,7 @@ export function EquityToolkitWorkedExample() {
       <h3>{example.title}</h3>
       <p className={styles.runtime}>{media.runtime}</p>
       <SequenceVideo className={styles.player} src={media.src} poster={media.poster} title={example.title} />
-      {media.transcript ? <p className={styles.runtime}><a href={media.transcript}>Read the video transcript</a></p> : null}
+      {media.transcript ? <p className={styles.runtime}><SourceLink href={media.transcript}>Read the video transcript</SourceLink></p> : null}
     </div></FeaturedMediaPanel> : null}
     <p className={styles.note}>Use these five questions to build confidence alongside the Equity Analysis Toolkit training. For an actual review, follow the official toolkit and the approval steps that apply to your work.</p>
     <details className={styles.example}>
@@ -33,8 +35,8 @@ export function EquityToolkitWorkedExample() {
     <div className={styles.next}>
       <h3>Now try a different decision</h3>
       <p>Consider a service team that wants to replace mailed appointment reminders with texts. What might become easier, and who might need another way to respond? Explore the choices below, using the CFSS review as a guide rather than copying its answers.</p>
-      <a href="#toolkit-practice">Try the appointment-reminder example</a>
-      <p className={styles.actualWork}>For your own work, the <a href="#toolkit-draft">working draft</a> starts empty. Keep practice separate from actual work, and leave out identifying or confidential details.</p>
+      <SourceLink href="#toolkit-practice">Try the appointment-reminder example</SourceLink>
+      <p className={styles.actualWork}>For your own work, the <SourceLink href="#toolkit-draft">working draft</SourceLink> starts empty. Keep practice separate from actual work, and leave out identifying or confidential details.</p>
     </div>
     <p className={styles.resources}>Return to the <Link href="/library/ext-dhs-equity-toolkit">official toolkit and access details</Link> and the <Link href="/learn/equity-toolkit/policy-review">equity analysis training</Link> for the broader framework and the review your work requires. For communication choices, use the <Link href="/library/ja-plain-language">plain-language guide</Link> and <Link href="/library/ja-language-access-checklist">language-access checklist</Link>.</p>
   </section>;

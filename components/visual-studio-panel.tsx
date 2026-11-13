@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
@@ -341,9 +343,9 @@ export function VisualStudioPanel() {
                 {selected.failure ? <p className="mb-4 text-sm leading-6 text-[#833c26]">{selected.failure.message}</p> : null}
                 <div className="flex flex-wrap gap-2">
                   <button type="button" className={primaryButton} disabled={!selected.projectAvailable || !localReady || Boolean(pending)} onClick={() => void performAction("open", selected.id)}>{pending === "open" ? "Opening scene…" : "Open scene in Blender"}</button>
-                  {selected.projectAvailable ? <a className={secondaryButton} href={assetUrl(selected, "project")} download>Download .blend</a> : null}
-                  {selected.previewAvailable ? <a className={secondaryButton} href={assetUrl(selected, "preview")} target="_blank" rel="noreferrer">View full preview<span className="sr-only"> (opens in a new tab)</span></a> : null}
-                  <a className={secondaryButton} href={assetUrl(selected, "receipt")} download>Download work receipt</a>
+                  {selected.projectAvailable ? <SourceLink className={secondaryButton} href={assetUrl(selected, "project")} download>Download .blend</SourceLink> : null}
+                  {selected.previewAvailable ? <SourceLink className={secondaryButton} href={assetUrl(selected, "preview")} target="_blank" rel="noreferrer">View full preview<span className="sr-only"> (opens in a new tab)</span></SourceLink> : null}
+                  <SourceLink className={secondaryButton} href={assetUrl(selected, "receipt")} download>Download work receipt</SourceLink>
                 </div>
                 <details className="mt-5 border-t border-[#d7dddf] pt-4">
                   <summary className="cursor-pointer text-sm font-bold text-navy">Read the scene dialogue</summary>

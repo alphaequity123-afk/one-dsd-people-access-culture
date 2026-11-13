@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { ownerPageGuard } from "@/lib/auth/owner-page";
 import { DataExplorationWorkspace } from "@/components/data-exploration-workspace";

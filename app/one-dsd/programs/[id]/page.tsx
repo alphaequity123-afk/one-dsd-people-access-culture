@@ -1,7 +1,7 @@
 import { DsdProgramMedia } from "@/components/multimedia/dsd-program-media";
 import styles from "@/components/dsd-experience.module.css";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/ui";
 import { ResourceDownloads } from "@/components/resource-downloads";

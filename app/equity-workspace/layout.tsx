@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Suspense } from "react";
 import { ConsultantSignIn } from "@/components/consultant-sign-in";
 import { TeamSignIn } from "@/components/team-sign-in";

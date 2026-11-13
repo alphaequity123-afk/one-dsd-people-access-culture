@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useState } from "react";
 import { suggestedPath, type StartAnswers } from "@/lib/content/leadership-journey";
 import styles from "./collections.module.css";

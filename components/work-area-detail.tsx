@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { WORK_AREA_PHOTOS } from "@/lib/product/work-area-presentation";
 import styles from "@/components/workspace-presentation.module.css";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ProgramContextNote } from "@/components/program-context";
 import { libraryHref } from "@/lib/content/work-index";
 import { DOMAIN_SURFACES, WORK_AREA_DOMAINS } from "@/lib/domains/surfaces";

@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useId, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import {
@@ -690,9 +692,9 @@ function Details({
       {!isState ? (() => {
         const agency = agencyForCounty(place.fips);
         return agency ? <p>
-          <strong>County agency:</strong> <a href={`/community-outreach/county-agencies#county-${agency.fips}`}>{agency.agencyName}</a>
-          {agency.phone ? <>, <a href={`tel:${agency.phone.replace(/[^0-9]/g, "")}`}>{agency.phone}</a></> : null}
-          {" · "}<a href={`/community-outreach/providers?county=${encodeURIComponent(place.name)}`}>Providers and designated agencies</a>
+          <strong>County agency:</strong> <SourceLink href={`/community-outreach/county-agencies#county-${agency.fips}`}>{agency.agencyName}</SourceLink>
+          {agency.phone ? <>, <SourceLink href={`tel:${agency.phone.replace(/[^0-9]/g, "")}`}>{agency.phone}</SourceLink></> : null}
+          {" · "}<SourceLink href={`/community-outreach/providers?county=${encodeURIComponent(place.name)}`}>Providers and designated agencies</SourceLink>
         </p> : null;
       })() : null}
       {!isState ? (
@@ -729,7 +731,7 @@ function SourceList({ SubHeading }: { SubHeading: "h3" | "h4" }) {
       <ul>
         {data.sources.map(s => (
           <li key={s.id}>
-            <a href={s.url}>{s.title}</a>. {s.publisher}. {s.date}.
+            <SourceLink href={s.url}>{s.title}</SourceLink>. {s.publisher}. {s.date}.
           </li>
         ))}
       </ul>

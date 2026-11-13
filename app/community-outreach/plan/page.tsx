@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EngagementPlan } from "@/components/hub/engagement-plan";
 import { BEFORE_YOU_REACH_OUT, OUTREACH_PRACTICE } from "@/lib/content/hub/before-you-reach-out";
 import { CommunityPractice } from "@/components/community-experience-controls";

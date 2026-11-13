@@ -1,12 +1,13 @@
 "use client";
 import { GeffenLessonReadAloud } from "./geffen-course-read-aloud";
 import { useEffect, useId, useState, type ReactNode } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { CourseAudioDiscussion, CourseAudioGuidance } from "./course-audio-discussion";
 import { CourseMediaSlot } from "./course-media-for-page";
 import type { Block, Lesson } from "@/lib/content/courses/source-types";
 import { lessonImageOverrides } from "@/lib/content/courses/lesson-image-overrides";
 import { duplicateLessonImageKeys } from "@/lib/content/courses/lesson-image-repeat-suppression";
+import { FocusedSections } from "./focused-sections";
 
 type State={schemaVersion:1;fields:Record<string,string>;submitted:Record<string,boolean>;completed:boolean};
 const blank=():State=>({schemaVersion:1,fields:{},submitted:{},completed:false});
@@ -53,6 +54,19 @@ export function CourseLesson({courseId,lesson,objectives,previous,next,companion
   // five or six full sections. They now share one "Finish this lesson" area with a tab for each
   // part. Every word is still on the page; only one part is open at a time.
   const closingIndexes=lesson.blocks.flatMap((block,index)=>"heading" in block&&typeof block.heading==="string"&&CLOSING_BLOCK_HEADINGS.test(block.heading.trim())?[index]:[]);
+  // Keep supporting images, examples and quotations with their authored topic.
+  // Original block indexes remain the keys for saved answers and audio cues.
+  const topics: Array<{ title: string; indexes: number[] }> = [];
+  lesson.blocks.forEach((block,index) => {
+    if (closingIndexes.includes(index)) return;
+    const title = "heading" in block && block.heading ? block.heading
+      : block.type === "artifact" ? block.title
+      : block.type === "knowledgeCheck" ? "Check your understanding"
+      : block.type === "sorting" ? "Match each example"
+      : block.type === "leaderMove" ? "Put it into practice" : "";
+    if (title || !topics.length) topics.push({ title: title || "Explore the lesson", indexes: [] });
+    topics[topics.length - 1].indexes.push(index);
+  });
   const finishParts:Array<{label:string;body:ReactNode}>=[
     ...(lesson.scenario?[{label:"Try a situation",body:<><Rich text={lesson.scenario.context}/><fieldset><legend>{lesson.scenario.prompt}</legend>{lesson.scenario.options.map((option,i)=><label className="course-choice" key={i}><input type="radio" name={`${uid}-scenario`} checked={state.fields.scenario===String(i)} onChange={()=>field("scenario",String(i))}/><Rich text={option.label}/></label>)}<button disabled={!state.fields.scenario} onClick={()=>submit("scenario")}>Consider your choice</button><button onClick={()=>reset("scenario")}>Try another response</button>{state.submitted.scenario?<div role="status"><Rich text={lesson.scenario.options[Number(state.fields.scenario)]?.response??""}/></div>:null}</fieldset></>}]:[]),
     ...(lesson.learning?.takeaways.length?[{label:"Carry this forward",body:<><ul>{lesson.learning.takeaways.map((item,i)=><li key={i}><Rich text={item}/></li>)}</ul><Rich text={lesson.learning.evidence}/><Rich text={lesson.learning.appliedNextStep}/></>}]:[]),
@@ -62,14 +76,15 @@ export function CourseLesson({courseId,lesson,objectives,previous,next,companion
   const savedFinish=Number(state.fields.finish??0);
   const finishSelected=Number.isInteger(savedFinish)&&savedFinish>=0&&savedFinish<finishParts.length?savedFinish:0;
   const finishId=`${uid}-finish`;
-  return <article className="course-lesson"><p>{lesson.minutes} minutes</p><h1>{lesson.title}</h1><Rich text={lesson.summary}/>{/* Listening comes right under the title, before the objectives and activities. */}<GeffenLessonReadAloud courseId={courseId} lesson={lesson} objectives={objectives} />{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioDiscussion id="gc-structural-racism" /> : null}<CourseMediaSlot /><section><h2>What you’ll be able to do</h2><ul>{objectives.map((objective,i)=><li key={i}>{objective}</li>)}</ul></section><fieldset disabled={!loaded} className="course-activities">{lesson.blocks.map((block,index)=>closingIndexes.includes(index)?null:<div key={index} data-course-block={block.type}>{render(block,index)}{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioGuidance id="gc-structural-racism" afterBlock={index} /> : null}</div>)}
-    {companion}
+  return <article className="course-lesson"><p>{lesson.minutes} minutes</p><h1>{lesson.title}</h1><Rich text={lesson.summary}/>{/* Listening comes right under the title, before the objectives and activities. */}<GeffenLessonReadAloud courseId={courseId} lesson={lesson} objectives={objectives} />{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioDiscussion id="gc-structural-racism" /> : null}<CourseMediaSlot /><section><h2>What you’ll be able to do</h2><ul>{objectives.map((objective,i)=><li key={i}>{objective}</li>)}</ul></section><fieldset disabled={!loaded} className="course-activities"><FocusedSections label="In this lesson">{topics.map((topic,topicIndex)=><section key={topicIndex} id={`lesson-topic-${topicIndex+1}`} data-topic-title={topic.title}>{topic.indexes.map(index=><div key={index} data-course-block={lesson.blocks[index].type}>{render(lesson.blocks[index],index)}{courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioGuidance id="gc-structural-racism" afterBlock={index} /> : null}</div>)}</section>)}
+    {companion ? <section id="lesson-companion" data-topic-title="Explore further">{companion}</section> : null}
     {courseId === "gc-structural-racism" && lesson.id === "gc-structural-racism-1" ? <CourseAudioGuidance id="gc-structural-racism" beforeScenario /> : null}
     {finishParts.length?<section className="course-finish" aria-labelledby={`${finishId}-title`}><h2 id={`${finishId}-title`}>Finish this lesson</h2>
       {finishParts.length>1?<div role="tablist" aria-label="Finish this lesson">{finishParts.map((part,i)=><button key={i} type="button" role="tab" id={`${finishId}-tab-${i}`} aria-controls={`${finishId}-panel-${i}`} aria-selected={finishSelected===i} tabIndex={finishSelected===i?0:-1} onKeyDown={event=>{const count=finishParts.length;const nextIndex=event.key==="ArrowRight"?(i+1)%count:event.key==="ArrowLeft"?(i+count-1)%count:event.key==="Home"?0:event.key==="End"?count-1:undefined;if(nextIndex!==undefined){event.preventDefault();field("finish",String(nextIndex));document.getElementById(`${finishId}-tab-${nextIndex}`)?.focus();}}} onClick={()=>field("finish",String(i))}>{part.label}</button>)}</div>:<h3>{finishParts[0].label}</h3>}
       {finishParts.map((part,i)=><div key={i} className="course-finish-panel" role={finishParts.length>1?"tabpanel":undefined} id={`${finishId}-panel-${i}`} aria-labelledby={finishParts.length>1?`${finishId}-tab-${i}`:undefined} hidden={finishParts.length>1&&finishSelected!==i}>{part.body}</div>)}
       <p className="course-finish-plan"><Link href={`/my-work/action-plan?from=${encodeURIComponent(lesson.title)}`}>Turn this lesson into an action plan</Link>: one change you will try, a first step and a date to look back. It stays on this computer.</p>
     </section>:null}
+    </FocusedSections>
     <p className="notice" role="note">Your activity choices and lesson progress are saved in this browser. Keep any personal reflection notes in your own document.</p>
     <label className="course-choice"><input type="checkbox" checked={state.completed} onChange={event=>save({...state,completed:event.target.checked})}/>Mark this lesson complete</label>
     <button onClick={()=>{if(window.confirm("Clear your answers and progress for this lesson?"))save(blank());}}>Reset this lesson</button></fieldset><p role="status">{message}</p><nav aria-label="Lesson navigation">{previous?<Link href={previous}>Previous lesson</Link>:<Link href={overviewHref}>Course overview</Link>}{next?<Link href={next}>Next lesson</Link>:<Link href={overviewHref}>Back to course</Link>}</nav></article>;

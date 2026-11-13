@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { linkListValue, stringListValue, stringValue } from "@/lib/content/staff-surface-registry";

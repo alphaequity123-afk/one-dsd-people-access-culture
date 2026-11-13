@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { RESOURCE_PATHWAYS, publishedPathwayChoices } from "@/lib/content/resource-pathways";
 import type { ContentItem } from "@/lib/content/types";
 import { selfDirectedHref } from "@/lib/content/self-directed";

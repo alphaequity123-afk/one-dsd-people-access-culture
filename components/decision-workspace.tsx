@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useEffect, useId, useRef, useState } from "react";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";
@@ -226,16 +228,16 @@ export function DecisionWorkspace({ values, scope = "one-dhs" }: { values?: Edit
         </>}
         <nav className={styles.stageActions} aria-label="Continue your analysis"><button className={styles.secondary} type="button" disabled={step === 0} onClick={() => go(step - 1)}>{text("previousLabel")}</button><button className={styles.secondary} type="button" disabled={step === DECISION_STAGES.length - 1} onClick={() => go(step + 1)}>{text("nextLabel")}</button></nav>
       </section>
-      <details className={styles.details}><summary>{text("resourcesTitle")}</summary><p>{text("resourcesHelp")}</p><p className={styles.smallLabel}>Tools open in a new tab so your notes stay here.</p><ul>{resources.map(link => <li key={link.href}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>)}</ul><button type="button" className={styles.textButton} onClick={() => {
+      <details className={styles.details}><summary>{text("resourcesTitle")}</summary><p>{text("resourcesHelp")}</p><p className={styles.smallLabel}>Tools open in a new tab so your notes stay here.</p><ul>{resources.map(link => <li key={link.href}><SourceLink href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</SourceLink></li>)}</ul><button type="button" className={styles.textButton} onClick={() => {
         update(previous => ({ ...previous, resources: [...new Map([...previous.resources, ...resources.map(link => ({ id: link.href, title: link.label, href: link.href }))].map(link => [link.href, link])).values()].slice(0, 50) }));
         setMessage(text("resourcesKept"));
       }}>{text("resourcesKeep")}</button>
-      {notes.resources.length > 0 && <ul className={styles.kept}>{notes.resources.map(resource => <li key={resource.id}><a href={resource.href} target="_blank" rel="noopener noreferrer">{resource.title}</a><button type="button" className={styles.textButton} aria-label={`Remove saved link: ${resource.title}`} onClick={() => update(previous => ({ ...previous, resources: previous.resources.filter(item => item.id !== resource.id) }))}>Remove</button></li>)}</ul>}
+      {notes.resources.length > 0 && <ul className={styles.kept}>{notes.resources.map(resource => <li key={resource.id}><SourceLink href={resource.href} target="_blank" rel="noopener noreferrer">{resource.title}</SourceLink><button type="button" className={styles.textButton} aria-label={`Remove saved link: ${resource.title}`} onClick={() => update(previous => ({ ...previous, resources: previous.resources.filter(item => item.id !== resource.id) }))}>Remove</button></li>)}</ul>}
       </details>
-      <details className={styles.details}><summary>{text("contextTitle")}</summary><p>{text(scope === "dsd" ? "contextDsd" : "contextDhs")}</p><ul>{contextLinks.map(link => <li key={link.href}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a></li>)}</ul></details>
+      <details className={styles.details}><summary>{text("contextTitle")}</summary><p>{text(scope === "dsd" ? "contextDsd" : "contextDhs")}</p><ul>{contextLinks.map(link => <li key={link.href}><SourceLink href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</SourceLink></li>)}</ul></details>
       <div className={styles.saveArea}>
         {dirty && <p className={styles.dirty}>{text("changed")}</p>}
-        <div className={styles.actions}><button className={styles.primary} type="button" disabled={!ready || loadFailed} onClick={save}>{text("saveLabel")}</button><button className={styles.secondary} type="button" onClick={download}>{text("downloadLabel")}</button><button className={styles.textButton} type="button" onClick={printNotes}>{text("printLabel")}</button><button className={styles.textButton} type="button" onClick={startNew}>{text("newLabel")}</button><a href="/my-work" target="_blank" rel="noopener noreferrer">{text("myWorkLabel")}</a></div>
+        <div className={styles.actions}><button className={styles.primary} type="button" disabled={!ready || loadFailed} onClick={save}>{text("saveLabel")}</button><button className={styles.secondary} type="button" onClick={download}>{text("downloadLabel")}</button><button className={styles.textButton} type="button" onClick={printNotes}>{text("printLabel")}</button><button className={styles.textButton} type="button" onClick={startNew}>{text("newLabel")}</button><SourceLink href="/my-work" target="_blank" rel="noopener noreferrer">{text("myWorkLabel")}</SourceLink></div>
         <p className={error ? styles.error : styles.status} role="status" aria-live="polite">{message}</p>
       </div>
     </div>

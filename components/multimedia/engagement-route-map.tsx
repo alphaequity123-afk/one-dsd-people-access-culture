@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "./engagement-diagrams.module.css";
 
 type OrientationDoor = { title: string; href: string; label: string };

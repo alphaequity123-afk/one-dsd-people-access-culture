@@ -1,12 +1,13 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { registerReadingHref, sourcesForResource, type ResourceType } from "@/lib/content/source-register";
+import { unavailableExternalUrl } from "@/lib/content/external-readings";
 
 const REGISTER_PATH = "/learn/sources";
 
 /** Sources behind a library item or reference entry, drawn from the register. */
 export function ResourceEvidence({ resourceType, resourceId, heading = "Further reading" }: { resourceType: ResourceType | ResourceType[]; resourceId: string; heading?: string }) {
   const types = Array.isArray(resourceType) ? resourceType : [resourceType];
-  const sources = types.flatMap(type => sourcesForResource(type, resourceId)).filter(source => source.kind === "external" && source.href);
+  const sources = types.flatMap(type => sourcesForResource(type, resourceId)).filter(source => source.kind === "external" && source.href && !unavailableExternalUrl(source.href));
   if (!sources.length) return null;
   return (
     <section className="source-evidence" aria-labelledby="source-evidence-title">

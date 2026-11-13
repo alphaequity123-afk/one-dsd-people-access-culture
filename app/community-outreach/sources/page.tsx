@@ -1,5 +1,9 @@
+import { catPaginate } from "@/lib/cat-paging";
+import { CatPager, CatResultStatus } from "@/components/cat-list";
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { communityDesignEntries } from "@/lib/content/community-design";
 import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import { SOURCING_CATEGORIES, SOURCING_CHECKED, SOURCING_USES, sourcingEntries } from "@/lib/content/hub/sourcing";
@@ -11,8 +15,8 @@ export const metadata: Metadata = {
   description: "Potential sources for recruitment, outreach and engagement in Minnesota: colleges, workforce programs, associations, media, community places and events.",
 };
 
-export default async function SourcesPage({ searchParams }: { searchParams: Promise<{ category?: string; use?: string; community?: string; q?: string }> }) {
-  const { category = "", use = "", community = "", q = "" } = await searchParams;
+export default async function SourcesPage({ searchParams }: { searchParams: Promise<{ category?: string; use?: string; community?: string; q?: string; page?: string }> }) {
+  const { category = "", use = "", community = "", q = "", page: pageNumber } = await searchParams;
   const titles = new Map(communityDesignEntries().map(entry => [entry.id, entry.title]));
   const all = sourcingEntries();
   const communities = [...new Set(all.flatMap(entry => entry.communities))].filter(id => !isNativeCommunity(id) && titles.has(id))
@@ -23,7 +27,8 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
     (!use || entry.uses.includes(use as (typeof SOURCING_USES)[number])) &&
     (!community || entry.communities.includes(community)) &&
     (!query || `${entry.name} ${entry.alsoKnownAs ?? ""} ${entry.what} ${entry.region} ${(entry.languages ?? []).join(" ")}`.toLowerCase().includes(query)));
-  const groups = SOURCING_CATEGORIES.map(c => ({ ...c, entries: shown.filter(entry => entry.category === c.category) })).filter(c => c.entries.length);
+  const paging = catPaginate(shown, pageNumber ?? "", 8);
+  const groups = SOURCING_CATEGORIES.map(c => ({ ...c, entries: paging.items.filter(entry => entry.category === c.category) })).filter(c => c.entries.length);
   return <div className={styles.page}>
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
     <h1 className={styles.title}>Where to reach people</h1>
@@ -40,14 +45,14 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
       <button className={styles.button} type="submit">Show sources</button>
       {category || use || community || q ? <Link href="/community-outreach/sources">Clear filters</Link> : null}
     </form>
-    <p aria-live="polite">{shown.length} of {all.length} sources</p>
+    <CatResultStatus page={paging} noun="source" nouns="sources" />
 
     {groups.length ? groups.map(group => <section className={styles.section} key={group.category} aria-labelledby={`group-${group.category}`}>
       <h2 id={`group-${group.category}`}>{group.title}</h2>
       <p>{group.intro}</p>
       <ul className={styles.grid} style={{ listStyle: "none", padding: 0 }}>
         {group.entries.map(entry => <li className={styles.card} key={`${entry.name}-${entry.region}`}>
-          <h3>{entry.website ? <a href={entry.website}>{entry.name}</a> : entry.name}</h3>
+          <h3>{entry.website ? <SourceLink href={entry.website}>{entry.name}</SourceLink> : entry.name}</h3>
           <p className={styles.meta}>{[entry.kind, entry.region].filter(Boolean).join(" · ")}</p>
           <div>{entry.uses.map(u => <span className={styles.chip} key={u}>{u}</span>)}</div>
           <p>{entry.what}</p>
@@ -59,5 +64,6 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
         </li>)}
       </ul>
     </section>) : <p>No source matches these filters. <Link href="/community-outreach/sources">Show all sources</Link>.</p>}
+    <CatPager page={paging} basePath="/community-outreach/sources" params={{category,use,community,q}} label="Source pages" />
   </div>;
 }

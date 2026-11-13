@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "./welcome.module.css";
 import { WelcomeClasShare } from "@/components/welcome-clas-share";
 

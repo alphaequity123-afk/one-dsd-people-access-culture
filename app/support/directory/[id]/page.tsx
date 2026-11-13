@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { SUPPORT_SOURCES } from "@/lib/product/support-directory";
 
@@ -23,7 +25,7 @@ export default async function SupportSourcePage({ params }: Props) {
     <section className="space-y-4" aria-label="About this resource">
       <p>{source.purpose}</p>
       <p>{source.limitation}</p>
-      <p><a href={source.href}>View original</a></p>
+      <p><SourceLink href={source.href}>View original</SourceLink></p>
       <p className="text-sm text-muted">Published by {source.publisher}.{source.sourceDate ? ` The source identifies its date as ${source.sourceDate}.` : " No publication date is stated here."}</p>
     </section>
   </article>;

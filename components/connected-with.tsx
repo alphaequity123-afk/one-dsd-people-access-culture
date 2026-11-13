@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { FACETS, facetHref, facetsForHref } from "@/lib/graph/facets";
 
 /** "Connected with": the tasks, roles, standards and communities an item belongs to. Computed from content; stores nothing. */

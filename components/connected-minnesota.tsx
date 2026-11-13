@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { usePathname } from "next/navigation";
 
 /** "Connected across Minnesota": the state agencies the knowledge graph links to this page. Hidden when there are none. */

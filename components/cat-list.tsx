@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { ReactNode } from "react";
 import { catHref, catPageNumbers, type CatPage, type CatParams } from "@/lib/cat-paging";
 import styles from "./cat-list.module.css";

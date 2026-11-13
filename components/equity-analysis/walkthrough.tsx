@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore, type ChangeEvent, type ReactNode } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useRouter } from "next/navigation";
 import { useProgramContext } from "@/components/program-context";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";

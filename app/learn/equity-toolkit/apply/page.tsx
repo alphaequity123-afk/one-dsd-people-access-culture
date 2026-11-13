@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "../../learning-family.module.css";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { redirect } from "next/navigation";

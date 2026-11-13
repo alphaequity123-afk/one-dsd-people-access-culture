@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { WorkOriginLinks } from "@/components/work-origin-links";
 import { normalizeWorkOrigin, type WorkOriginInput } from "@/lib/product/work-origin";
 import { loadPublishedEditableSurfaces } from "@/lib/content/editable-surfaces";
@@ -34,7 +36,7 @@ export default async function RightPersonPage({ searchParams }: { searchParams: 
         <ProgramContextNote />
         <WorkOriginLinks origin={origin} domainAvailable={domainAvailable} />
         <ExplainerVideo id="right-person" />
-        <noscript><p>This helper needs JavaScript. You can still <a href="/support/directory">use the support directory</a> or <Link prefetch={false} href="/library">browse the Library</Link>.</p></noscript>
+        <noscript><p>This helper needs JavaScript. You can still <SourceLink href="/support/directory">use the support directory</SourceLink> or <Link prefetch={false} href="/library">browse the Library</Link>.</p></noscript>
         <RightPersonClient initialArea={supportAreaFromQuery(area, matter)} copy={copy} />
         <SupportQuestionMap />
         <ParticipationNotice surface="support_routing" />

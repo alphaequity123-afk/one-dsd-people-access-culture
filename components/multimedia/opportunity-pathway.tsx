@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 const stages = [
   { title: "Hear about it", question: "Can everyone find the opportunity?", example: "A stretch assignment is mentioned to a few colleagues during a meeting.", change: "Share the same description and response date through channels colleagues can access." },

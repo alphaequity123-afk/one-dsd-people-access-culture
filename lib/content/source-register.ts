@@ -6,6 +6,7 @@
  */
 import register from "@/data/source-register/source-register.json";
 import receiptsFile from "@/data/source-register/verification-receipts.json";
+import { externalReadingHref } from "./external-readings";
 
 export type SourceKind = "external" | "program_route" | "program_document" | "legal_citation" | "placeholder";
 export type ResourceType = "authored_course" | "recovered_course" | "self_directed_course" | "review_resource" | "practice_guide" | "community_brief" | "corpus_item" | "domain_corpus_item" | "equity_framework" | "dhs_reference" | "practice_path" | "editable_surface";
@@ -94,7 +95,10 @@ export function sourceAnchor(source: Pick<RegisterSource, "sourceId">): string {
 
 const READABLE_SOURCES = new Map(SOURCE_REGISTER.sources.filter(source => source.kind === "external" && source.href).map(source => [sourceAnchor(source), source]));
 export function registerReading(id: string): RegisterSource | undefined { return READABLE_SOURCES.get(id); }
-export function registerReadingHref(source: Pick<RegisterSource, "sourceId">): string { return `/source-reading/${sourceAnchor(source)}`; }
+export function registerReadingHref(source: Pick<RegisterSource, "sourceId">): string {
+  const href = SOURCE_BY_ID.get(source.sourceId)?.href;
+  return href ? externalReadingHref(href) ?? href : `/source-reading/${sourceAnchor(source)}`;
+}
 
 export function getSource(sourceId: string): RegisterSource | undefined { return SOURCE_BY_ID.get(sourceId); }
 export function findSourceByHref(href: string | undefined | null): RegisterSource | undefined {

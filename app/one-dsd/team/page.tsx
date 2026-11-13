@@ -3,7 +3,7 @@ import Image from "next/image";
 import { EngagementContributionMap } from "@/components/multimedia/engagement-contribution-map";
 import { ProgramConnections } from "@/components/program-connections";
 import { LearningJourneyLink } from "@/components/learning-journey-link";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { TEAM_SECTIONS } from "@/lib/content/dsd-team";

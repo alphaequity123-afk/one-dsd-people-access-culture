@@ -1,6 +1,6 @@
 import { LearningJourneyLink } from "@/components/learning-journey-link";
 import styles from "@/components/workspace-presentation.module.css";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { WORK_PROFILES, WORK_TASKS, selectWorkLearning } from "@/lib/content/work-learning";
 import { stringValue } from "@/lib/content/staff-surface-registry";

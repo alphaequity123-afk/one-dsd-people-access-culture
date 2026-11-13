@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Block, BoundaryNote, Bullets, PathwayEyebrow, PathwayShell, SectionNav } from "@/components/leadership-styles-pathway";
 import { LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, RACE_SECTION } from "@/lib/content/leadership-styles-pathway";
 import styles from "../leadership-styles.module.css";

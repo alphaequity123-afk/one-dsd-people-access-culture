@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EquityAnalysisLadder } from "@/components/equity-analysis-ladder";
 import { reviewResources, structuralReviewResource } from "@/lib/program/review-resources";
 export const metadata: Metadata = { title: "Review a policy, process, or service change" };

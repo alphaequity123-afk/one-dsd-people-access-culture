@@ -1,4 +1,6 @@
 'use client';
+import { SourceLink } from "@/components/app-link";
+
 import { useEffect, useState } from 'react';
 import { assemblePlan, clearNotes, planText, readAllNotes, readNote, writeNote, type PlanModule } from '@/lib/learning/clas-notes';
 import { downloadText } from './download';
@@ -82,7 +84,7 @@ export function ImprovementPlan({ curriculumTitle, modules, version }: PlanProps
           <article key={s.id}>
             <h3>Part {s.part}: {s.title}</h3>
             <p className="clas-plan-prompt">{s.prompt}</p>
-            {s.note ? <p className="clas-plan-note">{s.note}</p> : <p className="clas-plan-empty">No note yet. <a href={`/learn/clas/curriculum/${s.id}#apply`}>Add one on Part {s.part}</a>.</p>}
+            {s.note ? <p className="clas-plan-note">{s.note}</p> : <p className="clas-plan-empty">No note yet. <SourceLink href={`/learn/clas/curriculum/${s.id}#apply`}>Add one on Part {s.part}</SourceLink>.</p>}
           </article>
         ))}
         <article><h3>Follow-up</h3><p>Voluntary follow-up date: ______. What changed? What evidence do I have? What remains?</p></article>

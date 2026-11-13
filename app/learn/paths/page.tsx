@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { developmentModel, journeyHref } from "@/lib/program/development";
 import { readingPathways } from "@/lib/content/reading-pathways";
 import { PROGRESSION_LEVELS, type ProgressionLevelId } from "@/lib/program/progression-levels";
@@ -47,7 +49,7 @@ export default function LearningPathsPage() {
     <section><h2>Learning with other people</h2><p>A willing colleague can help you examine an assumption, rehearse a conversation, or reflect on an experience. Leaders can make time for practice, respond constructively to questions, and change routines that prevent people from using what they learn.</p><ul className="development-step-links"><li><Link href="/employee-resource-groups">Employee resource groups</Link></li><li><Link href="/one-dsd/team">One DSD Team</Link></li><li><Link href="/support">Find support</Link></li></ul><p>Within the <Link href="/administrations/adsa">Aging and Disability Services Administration</Link>, DSD offers <Link href="/one-dsd/amplify">Amplify Equity</Link> and the <Link href="/one-dsd/team">One DSD Team</Link> for shared learning and contribution in the division.</p></section>
     <details className="development-related"><summary>How learning becomes practice</summary><ol className="development-grid">{developmentModel.stages.map(stage => <li key={stage.id}><h3>{stage.title}</h3><p>{stage.purpose}</p><p><strong>Consider:</strong> {stage.prompt}</p></li>)}</ol></details>
     <details className="development-related"><summary>How the program contributes to change</summary><div className="development-logic"><ol>{developmentModel.logicModel.map(item => <li key={item.title}><strong>{item.title}:</strong> {item.text}</li>)}</ol><p>A resource delivered, an approach used, and an improvement observed are different kinds of evidence. Time, access, support, decision-making authority, and people’s willingness to participate all affect what becomes possible.</p></div></details>
-    <details className="development-related"><summary>Research informing this approach</summary><ul>{developmentModel.sources.map(source => <li key={source.href}><a href={source.href}>{source.title}</a><p>{source.application}</p></li>)}</ul><p>{developmentModel.evidenceNote}</p></details>
+    <details className="development-related"><summary>Research informing this approach</summary><ul>{developmentModel.sources.map(source => <li key={source.href}><SourceLink href={source.href}>{source.title}</SourceLink><p>{source.application}</p></li>)}</ul><p>{developmentModel.evidenceNote}</p></details>
     <p><Link href="/learn">Learn</Link> · <Link href="/library?browse=all">Explore all learning and resources</Link></p>
   </div>;
 }

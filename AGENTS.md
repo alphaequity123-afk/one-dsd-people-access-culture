@@ -7,3 +7,15 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Program writing
+
+Write program-authored pages, navigation, learning materials, explanations, and audio/video scripts in plain, professional language for adults working in human and social services. Aim roughly at grades 10–12 while respecting the reader's experience and judgment. This is guidance for clarity, not a minimum complexity score: keep simple instructions simple.
+
+Use familiar words, direct sentences, short connected paragraphs, and concrete examples. Retain necessary professional terms, explain them when first needed, and preserve evidence, nuance, and qualifications. Keep the tone warm, supportive, honest, and optimistic.
+
+Keep original source documents, policy wording, citations, and quotations accurate. Apply the writing standard to the application's own explanations around those sources; do not silently rewrite the original as though it were the publisher's wording. Preserve the approved GEFen read-aloud voice and approved female/male Qwen podcast voices. User-facing playback labels stay simple: "Listen" and "Watch."
+
+## Outside resources
+
+The program owner chose full in-app copies only for verified public-domain or openly licensed content. Keep other working original links. An accessible website or government domain alone is not an approval for its images, guest material, or third-party publications. Record the specific source, license evidence, attribution, and reviewed content identity in `config/source-republication.json`. Preserve substantive text and source credits in converted readings. If a page cannot be reproduced completely, retain its original destination; do not replace it with an empty or partial reading. Confirmed missing pages are excluded from featured resources.

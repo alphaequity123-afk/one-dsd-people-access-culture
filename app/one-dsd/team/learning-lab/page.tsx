@@ -1,5 +1,5 @@
 import styles from "@/components/dsd-experience.module.css";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EngagementWorkedExample } from "@/components/multimedia/engagement-worked-examples";
 import { AmplifyConversationTool } from "@/components/amplify-tools";
 export const metadata = { title: "Learning Lab | One DSD Team" };

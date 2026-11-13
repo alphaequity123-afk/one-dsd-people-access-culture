@@ -1,6 +1,8 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
 
-import Link from "next/link";
+
+import Link from "@/components/app-link";
 import { useState, useSyncExternalStore, type ReactNode } from "react";
 import {
   boundsNote, CALENDAR_ICS_PATH, calendarDayHref, calendarEntryHref, calendarMonthHref, capDay, chicagoToday, clampMonth, DATE_MARKERS, dateStateText,
@@ -78,7 +80,7 @@ export function CultureCalendar({ entries, initialToday }: { entries: CompactEnt
     </div>
     {note ? <p className={styles.bounds}>{note}</p> : null}
     <p className={styles.srOnly} role="status" aria-live="polite" aria-atomic="true">{announcement}</p>
-    <noscript><p className={styles.bounds}>Moving between months needs JavaScript. Use the <a href={calendarMonthHref(view)}>full calendar</a> to see any month.</p></noscript>
+    <noscript><p className={styles.bounds}>Moving between months needs JavaScript. Use the <SourceLink href={calendarMonthHref(view)}>full calendar</SourceLink> to see any month.</p></noscript>
 
     <table className={styles.grid} aria-labelledby="culture-calendar-month">
       <thead><tr>{WEEKDAY_NAMES.map(name => <th key={name} scope="col"><span aria-hidden="true">{name.slice(0, 3)}</span><span className={styles.srOnly}>{name}</span></th>)}</tr></thead>
@@ -105,6 +107,6 @@ export function CultureCalendar({ entries, initialToday }: { entries: CompactEnt
     {!listedDays.length ? <p className={styles.note}>{entries.length ? "No observances are loaded for this month." : "Dates are not available here right now. Try the full calendar."}</p> : null}
 
     <p className={styles.legend}><span aria-hidden="true">{DATE_MARKERS.expected.symbol}</span> Expected date, not yet confirmed. <span aria-hidden="true">{DATE_MARKERS.moon.symbol}</span> Depends on the moon or on an announcement, so it may shift. No mark means the date is confirmed by a source.</p>
-    <p className={styles.links}><Link prefetch={false} href={calendarMonthHref(view)}>View the full calendar</Link><a href={CALENDAR_ICS_PATH}>Download confirmed dates for your own calendar</a></p>
+    <p className={styles.links}><Link prefetch={false} href={calendarMonthHref(view)}>View the full calendar</Link><SourceLink href={CALENDAR_ICS_PATH}>Download confirmed dates for your own calendar</SourceLink></p>
   </section>;
 }

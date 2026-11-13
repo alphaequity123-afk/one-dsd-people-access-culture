@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Block, BoundaryNote, PathwayEyebrow, PathwayShell } from "@/components/leadership-styles-pathway";
 import { COMMON_SCENARIO, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, LIFECYCLE, leadershipStyle, leadershipStyleHref } from "@/lib/content/leadership-styles-pathway";
 import styles from "../leadership-styles.module.css";
@@ -23,7 +25,7 @@ export default function ConflictLifecyclePage() {
       <div className={styles.tableWrap}><table className={styles.table}>
         <caption>Each stage needs a different behavior. The useful contribution names approaches that help at that stage.</caption>
         <thead><tr><th scope="col">Stage</th><th scope="col">Needed behavior</th><th scope="col">Useful contribution</th></tr></thead>
-        <tbody>{LIFECYCLE.stages.map(stage => <tr key={stage.id}><th scope="row"><a href={`#stage-${stage.id}`}>{stage.stage}</a></th><td>{stage.behavior}</td><td>{stage.contribution}</td></tr>)}</tbody>
+        <tbody>{LIFECYCLE.stages.map(stage => <tr key={stage.id}><th scope="row"><SourceLink href={`#stage-${stage.id}`}>{stage.stage}</SourceLink></th><td>{stage.behavior}</td><td>{stage.contribution}</td></tr>)}</tbody>
       </table></div>
     </Block>
     <Block id="worked-example" title={`Worked example: “${COMMON_SCENARIO.title}”`}>

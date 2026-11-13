@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { communityPartHref, type CommunityPartSlug } from "./cp-community-parts";
 import "./cp-community-parts.css";
 

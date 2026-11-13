@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LEADING_LABEL, LEADING_PRIVACY_SENTENCE, REQUIRED_COURSE_LABEL, TRIBAL_REFERRAL_HREF } from "@/lib/content/collections";
 import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import base from "@/app/learn/collaboration/collaboration.module.css";

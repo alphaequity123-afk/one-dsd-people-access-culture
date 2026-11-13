@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { loadDsdInventory } from "@/lib/dsd/published";
 import { stringValue } from "@/lib/content/staff-surface-registry";
 

@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import styles from "./engagement-diagrams.module.css";
 import Image from "next/image";
 
@@ -126,9 +128,9 @@ export function EngagementWorkedExample({ kind }: { kind: string }) {
 export function EngagementActivitySample({ activityId }: { activityId: string }) {
   if (activityId === "minnesota") return <details className={styles.sampleDetails}><summary>Explore a Minnesota place through a public source</summary><figure className="py-5">
     <Image src="/images/media-minnehaha-nps-dietzman.jpg" width={1000} height={666} sizes="(max-width: 768px) 90vw, 760px" className="h-auto w-full rounded-lg" alt="Water flows beneath a low stone bridge, with trees along the bank and rocks beside the stream." />
-    <figcaption className="mt-3 text-sm leading-6">Minnehaha Falls Regional Park, as identified in the National Park Service collection. Photograph: NPS/Gordon Dietzman, 2016. Public domain. <a href="https://npgallery.nps.gov/AssetDetail/6D680AA3-1DD8-B71B-0B4788AB317C0219">View the original photograph and its record</a>.</figcaption>
+    <figcaption className="mt-3 text-sm leading-6">Minnehaha Falls Regional Park, as identified in the National Park Service collection. Photograph: NPS/Gordon Dietzman, 2016. Public domain. <SourceLink href="https://npgallery.nps.gov/AssetDetail/6D680AA3-1DD8-B71B-0B4788AB317C0219">View the original photograph and its record</SourceLink>.</figcaption>
     <p className="mt-4 leading-7">A photograph offers one view of a place. The park&apos;s history, relationships and accessibility require more context than the image alone provides.</p>
-    <p className="mt-3 leading-7"><a href="https://www.minneapolisparks.org/parks-destinations/parks-lakes/minnehaha_regional_park/">Explore Minnehaha Regional Park&apos;s history and visitor information</a>. What would you like to understand about this place, and whose account would help you learn?</p>
+    <p className="mt-3 leading-7"><SourceLink href="https://www.minneapolisparks.org/parks-destinations/parks-lakes/minnehaha_regional_park/">Explore Minnehaha Regional Park&apos;s history and visitor information</SourceLink>. What would you like to understand about this place, and whose account would help you learn?</p>
   </figure></details>;
   const kind = ({ borrow: "borrow", question: "question", window: "window", friction: "idea" } as Record<string, string>)[activityId];
   if (!kind) return null;

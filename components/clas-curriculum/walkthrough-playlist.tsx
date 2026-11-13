@@ -1,4 +1,6 @@
 'use client';
+import { SourceLink } from "@/components/app-link";
+
 import { useEffect, useMemo, useRef, useState, type SyntheticEvent } from 'react';
 import type { Walkthrough } from '@/lib/learning/clas-walkthrough';
 import { clearPosition, readPosition, readSpeed, resumable, writePosition, writeSpeed, type Speed } from '@/lib/learning/media-storage';
@@ -106,7 +108,7 @@ export function WalkthroughPlaylist({ items }: { items: WalkthroughItem[] }) {
         </p>
       </div>
       <ChapterList label="Walkthrough chapters" chapters={chapters} active={index} onSelect={n => select(n, false)} />
-      <p><a href={current.walkthrough.audio}>Open this chapter's audio</a>{current.walkthrough.captions && <> · <a href={current.walkthrough.captions}>Download its captions</a></>} · <a href={`/learn/clas/curriculum/${current.id}`}>Open Part {index + 1} with the synced transcript</a></p>
+      <p><SourceLink href={current.walkthrough.audio}>Open this chapter's audio</SourceLink>{current.walkthrough.captions && <> · <SourceLink href={current.walkthrough.captions}>Download its captions</SourceLink></>} · <SourceLink href={`/learn/clas/curriculum/${current.id}`}>Open Part {index + 1} with the synced transcript</SourceLink></p>
     </div>
   );
 }

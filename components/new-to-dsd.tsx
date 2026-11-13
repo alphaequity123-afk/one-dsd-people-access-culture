@@ -1,6 +1,6 @@
 import styles from "@/components/dsd-experience.module.css";
 import { LearningJourneyLink } from "@/components/learning-journey-link";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import guideMedia from "@/lib/program/end-user-guide-media.json";
 import { EngagementRouteMap } from "@/components/multimedia/engagement-route-map";
 

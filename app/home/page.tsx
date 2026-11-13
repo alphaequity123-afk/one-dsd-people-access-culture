@@ -1,6 +1,8 @@
+
+import { SourceLink } from "@/components/app-link";
 import { WaterCollectionFeature } from "@/components/water-collection-feature";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { HomeTaskFinder } from "@/components/home-task-finder";
 import { HeroMotion } from "./hero-motion";
 import { publishedCalendar } from "@/lib/content/cultural-calendar";
@@ -33,7 +35,7 @@ export default async function HomePage() {
         <h2 id="pilot-explore">Explore DHS</h2>
         <div className="pilot-actions">
           <Link href="/administrations/adsa">Aging and Disability Services Administration</Link>
-          <a href="https://mn.gov/dhs/partners-and-providers/program-overviews/tribal-and-urban-indian-relations/">Tribal and Urban Indian Relations</a>
+          <SourceLink href="https://mn.gov/dhs/partners-and-providers/program-overviews/tribal-and-urban-indian-relations/">Tribal and Urban Indian Relations</SourceLink>
         </div>
       </section>
 

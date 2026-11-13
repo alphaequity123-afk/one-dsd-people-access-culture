@@ -1,6 +1,8 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { JobAidActions } from "@/components/clas-curriculum/job-aid-actions";
 import { CourseMediaJumpSlot, CourseMediaSlot } from "@/components/course-media-for-page";
 import { prepareEditableSurface } from "@/components/editable-surface";
@@ -66,7 +68,7 @@ export default async function WaterCollectionPage({ searchParams }: { searchPara
         <div className={styles.actions}>
           <Link className="btn btn--primary" href={`${WATER_COLLECTION_HREF}?step=1`}>Start with step 1</Link>
           <CourseMediaJumpSlot label="Watch" />
-          {otherBriefs.length || referralPages.length ? <a href="#collection-briefs">Culture briefs</a> : null}
+          {otherBriefs.length || referralPages.length ? <SourceLink href="#collection-briefs">Culture briefs</SourceLink> : null}
           {owner && studyReady ? <ResourceCreationLink resourcePath={WATER_COLLECTION_HREF} /> : null}
         </div>
       </div>

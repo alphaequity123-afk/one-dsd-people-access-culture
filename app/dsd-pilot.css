@@ -80,3 +80,21 @@ body.dsd-calm main .pilot-topic a.pilot-topic-button,
   --calm-space-4: clamp(36px, 5vw, 64px);
   --calm-space-5: clamp(52px, 7vw, 88px);
 }
+
+.focused-sections { max-width: 52rem; margin-inline: auto; }
+.focused-section-panel { scroll-margin-top: 2rem; }
+.focused-section-panel[hidden] { display: none !important; }
+.focused-section-panel > section { margin-top: 2.5rem; }
+.focused-contents { margin-block: 2.5rem; }
+.focused-contents ol { margin: 0; padding-left: 1.5rem; }
+.focused-contents button { min-height: 44px; padding-block: .6rem; text-align: left; color: #003865; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.focused-contents button[aria-current="page"] { font-weight: 600; color: #172b3c; }
+.focused-contents button:focus-visible { outline: 3px solid #005793; outline-offset: 3px; }
+@media print { .focused-section-panel[hidden] { display: block !important; } .focused-contents, .focused-sections > .source-reading-pagination { display: none; } }
+
+.embedded-tool { width: min(100% - 24px, 960px); margin: 0 auto; padding: 8px 0 20px; }
+.embedded-tool .ask-box textarea { min-height: 12rem; }
+body.dsd-calm main :is(.featured-media-panel--podcast,.featured-media-panel--audio) { background: #e5edf6; border-color: #a9bbce; box-shadow: none; }
+body.dsd-calm main .featured-media-panel .featured-media-label,
+body.dsd-calm main .media-quick-links a.media-quick-link--audio { background: #003865; color: #fff; font-weight: 600; }
+body.dsd-calm main .featured-media-panel { border-top-width: 3px; box-shadow: none; }

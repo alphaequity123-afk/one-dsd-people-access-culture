@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { PageIntro, Notice } from "@/components/ui";
 import { ResourceReleaseClient } from "@/components/resource-release-client";

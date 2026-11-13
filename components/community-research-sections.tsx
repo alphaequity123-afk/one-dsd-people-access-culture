@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import type { ReactNode } from "react";
 import type {
   CommunityResearch,
@@ -20,12 +22,12 @@ function slug(value: string) {
 function Photo({ photo, caption }: { photo: ResearchPhoto; caption?: string }) {
   return <figure className="community-research-figure">
     <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" />
-    <figcaption>{caption ? <span>{caption} </span> : null}<span>{photo.credit}. </span><span>{photo.rights}. </span><a href={photo.sourceHref}>Image source</a></figcaption>
+    <figcaption>{caption ? <span>{caption} </span> : null}<span>{photo.credit}. </span><span>{photo.rights}. </span><SourceLink href={photo.sourceHref}>Image source</SourceLink></figcaption>
   </figure>;
 }
 
 function Sources({ sources }: { sources: ResearchSource[] }) {
-  return <p className="community-research-sources">Sources: {sources.map((source, index) => <span key={`${source.href}-${index}`}>{index > 0 ? "; " : ""}<a href={source.href}>{source.label}</a></span>)}</p>;
+  return <p className="community-research-sources">Sources: {sources.map((source, index) => <span key={`${source.href}-${index}`}>{index > 0 ? "; " : ""}<SourceLink href={source.href}>{source.label}</SourceLink></span>)}</p>;
 }
 
 function Story({ item }: { item: Pick<ResearchPerson, "body" | "keyFacts" | "connectToWork" | "sources" | "photo"> }) {
@@ -71,7 +73,7 @@ function Institutions({ institutions }: { institutions: ResearchInstitution[] })
 }
 
 function Routes({ routes }: { routes: ResearchRoute[] }) {
-  return <ul className="community-research-list">{routes.map(route => <li key={route.name}><a href={route.href}>{route.name}</a><p>{route.purpose}</p></li>)}</ul>;
+  return <ul className="community-research-list">{routes.map(route => <li key={route.name}><SourceLink href={route.href}>{route.name}</SourceLink><p>{route.purpose}</p></li>)}</ul>;
 }
 
 function ContextBlock({ context }: { context: ResearchContext }) {
@@ -101,12 +103,12 @@ function Disability({ research, access }: { research: CommunityResearch; access:
 function DirectoryGroup({ title, entries, pointers, open }: { title: string; entries: ResearchDirectoryEntry[]; pointers: ResearchInstitution[]; open: boolean }) {
   return <Disclosure level={3} title={title} open={open}>
     <ul className="community-research-list">{entries.map(entry => <li key={entry.name}>
-      <a href={entry.href}>{entry.linkLabel ?? entry.name}</a>
+      <SourceLink href={entry.href}>{entry.linkLabel ?? entry.name}</SourceLink>
       {entry.linkLabel ? <p className="community-research-entry-name">{entry.name}</p> : null}
       <p className="community-research-meta">{entry.type} · {entry.location}</p>
       <p>{entry.purpose}</p>
     </li>)}</ul>
-    {pointers.length ? <p>Also see {pointers.map((item, index) => <span key={item.name}>{index > 0 ? ", " : ""}<a href={`#research-institution-${slug(item.name)}`}>{item.name}</a></span>)} under Institutions and history.</p> : null}
+    {pointers.length ? <p>Also see {pointers.map((item, index) => <span key={item.name}>{index > 0 ? ", " : ""}<SourceLink href={`#research-institution-${slug(item.name)}`}>{item.name}</SourceLink></span>)} under Institutions and history.</p> : null}
   </Disclosure>;
 }
 
@@ -137,7 +139,7 @@ function About({ research }: { research: CommunityResearch }) {
     <p>Prepared for One DHS and One DSD People, Access and Culture from the sources listed in each section.</p>
     <p>This page gives context for preparing questions and changing systems. It is not evidence about any individual in planning, eligibility or investigation.</p>
     <p>To send a correction, use <Link href="/support/right-person">Find the right person</Link> and name this page and what needs to change.</p>
-    <Disclosure level={3} title="Main sources for this page"><ul>{research.about.sources.map(source => <li key={source.href}><a href={source.href}>{source.label}</a></li>)}</ul></Disclosure>
+    <Disclosure level={3} title="Main sources for this page"><ul>{research.about.sources.map(source => <li key={source.href}><SourceLink href={source.href}>{source.label}</SourceLink></li>)}</ul></Disclosure>
   </section>;
 }
 
@@ -146,11 +148,11 @@ export function CommunityResearchSections({ research, access }: { research: Comm
   return <div className="community-research">
     {research.communityImage ? <Photo photo={research.communityImage} caption={research.communityImage.caption} /> : null}
     <nav className="community-reading-contents" aria-label="More on this community">
-      {research.people.length ? <a href="#research-people">People and contributions</a> : null}
-      {research.institutions.length ? <a href="#research-institutions">Institutions and history</a> : null}
-      <a href="#research-disability">Disability and access</a>
-      <a href="#research-organizations">Organizations and media</a>
-      <a href="#research-about">About this page</a>
+      {research.people.length ? <SourceLink href="#research-people">People and contributions</SourceLink> : null}
+      {research.institutions.length ? <SourceLink href="#research-institutions">Institutions and history</SourceLink> : null}
+      <SourceLink href="#research-disability">Disability and access</SourceLink>
+      <SourceLink href="#research-organizations">Organizations and media</SourceLink>
+      <SourceLink href="#research-about">About this page</SourceLink>
     </nav>
     {research.people.length ? <People people={research.people} /> : null}
     {research.institutions.length ? <Institutions institutions={research.institutions} /> : null}

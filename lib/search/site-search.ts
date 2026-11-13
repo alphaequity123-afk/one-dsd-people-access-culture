@@ -10,6 +10,7 @@ import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { PUBLIC_BODIES, agencyDisplayName, agencyNodeId, agencyPageHref } from "@/lib/content/state-agencies";
 import { pageArea, type PageArea } from "@/lib/program/page-purpose";
 import { statePageDocs, stateReadingHref } from "@/lib/search/state-pages";
+import { externalReadingHref, unavailableExternalUrl } from "@/lib/content/external-readings";
 
 export type SiteSearchResult = { id: string; title: string; href: string; excerpt: string; area: PageArea | "state"; external: boolean };
 
@@ -46,12 +47,13 @@ export async function siteSearch(query: string, scope: StaffProgramScope, limit 
     .sort((a, b) => b.score - a.score);
   const seen = new Set<string>(), out: SiteSearchResult[] = [];
   for (const hit of hits) {
+    if (unavailableExternalUrl(hit.href)) continue;
     const href = hit.href.split("#")[0];
     if (seen.has(href)) continue;
     seen.add(href);
     const originalIsExternal = /^https?:\/\//.test(hit.href);
     const [kind, id] = hit.id.split(":", 2);
-    const destination = kind === "agency" ? agencyPageHref(id) : kind === "state-page" ? stateReadingHref(id) : hit.href;
+    const destination = kind === "agency" ? agencyPageHref(id) : kind === "state-page" ? stateReadingHref(id) : externalReadingHref(hit.href) ?? hit.href;
     out.push({ id: hit.id, title: hit.title, href: destination, excerpt: hit.excerpt, area: originalIsExternal ? "state" : pageArea(href), external: /^https?:\/\//.test(destination) });
     if (out.length === limit) break;
   }

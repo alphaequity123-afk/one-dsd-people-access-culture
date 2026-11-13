@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Block, BoundaryNote, Bullets, PathwayPages, PathwayShell, SectionNav, StyleCards } from "@/components/leadership-styles-pathway";
 import {
   COMMON_SCENARIO, CONDUCIVE_GROUPS, CONDUCIVE_SUMMARY, FOUNDATIONS, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE,
@@ -18,7 +20,7 @@ export default function LeadershipStylesPathwayPage() {
     eyebrow={<><Link href="/learn">Learn</Link>: leadership development</>}
     title={LEADERSHIP_PATHWAY_TITLE}
     intro={<p>{PATHWAY_INTRO[0]}</p>}
-    links={<><a href="#common-scenario">Start with the common scenario</a><Link href={LEADERSHIP_PATHWAY_PAGES.capstone.href}>Go to the capstone</Link><Link href="/leading">Lead equity in everyday work</Link></>}
+    links={<><SourceLink href="#common-scenario">Start with the common scenario</SourceLink><Link href={LEADERSHIP_PATHWAY_PAGES.capstone.href}>Go to the capstone</Link><Link href="/leading">Lead equity in everyday work</Link></>}
   >
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this pathway</summary><ResourceDownloads kind="leadership-styles" id="home" noun="pathway" /></details>
     <SectionNav label="Pathway sections" items={[
@@ -87,7 +89,7 @@ export default function LeadershipStylesPathwayPage() {
 
     <details id="sources" className={`${styles.prose} rounded-xl border border-line p-5`}>
       <summary className="cursor-pointer font-semibold">Sources for this pathway</summary>
-      <ul className="mt-3 space-y-2">{PATHWAY_SOURCES.map(source => <li key={source.href}><a className="underline" href={source.href} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>
+      <ul className="mt-3 space-y-2">{PATHWAY_SOURCES.map(source => <li key={source.href}><SourceLink className="underline" href={source.href} target="_blank" rel="noreferrer">{source.title}</SourceLink></li>)}</ul>
       <p className="mt-3">Research from one setting does not prove an outcome in another. Use these sources for reflection and discussion alongside applicable policies and responsibilities.</p>
     </details>
   </PathwayShell>;

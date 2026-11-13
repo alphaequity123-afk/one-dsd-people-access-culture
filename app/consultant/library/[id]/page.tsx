@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Notice } from "@/components/ui";
 import { ownerPageGuard } from "@/lib/auth/owner-page";
 import { requestedContentScope } from "@/lib/product/request-context";

@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EngagementReferenceMap } from "@/components/multimedia/engagement-reference-map";
 import { PageIntro } from "@/components/ui";
 import { ResourceDownloads } from "@/components/resource-downloads";
@@ -16,11 +18,11 @@ export default function UnderstandingDhsPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <figure className="m-0 overflow-hidden rounded-xl border border-line bg-white">
             <img src="/images/buildings/andersen.webp" alt="Elmer L. Andersen Human Services Building at the corner of Cedar and 11th Streets in St. Paul" className="aspect-[16/10] w-full object-cover" loading="lazy" />
-            <figcaption className="p-5"><strong>Elmer L. Andersen Human Services Building</strong><br />540 Cedar Street, St. Paul. <a href="https://mn.gov/admin/citizen/buildings-grounds/buildings/andersen.jsp">Photo and building information: Minnesota Department of Administration</a>.</figcaption>
+            <figcaption className="p-5"><strong>Elmer L. Andersen Human Services Building</strong><br />540 Cedar Street, St. Paul. <SourceLink href="https://mn.gov/admin/citizen/buildings-grounds/buildings/andersen.jsp">Photo and building information: Minnesota Department of Administration</SourceLink>.</figcaption>
           </figure>
           <figure className="m-0 overflow-hidden rounded-xl border border-line bg-white">
             <img src="/images/buildings/lafayette-1998.webp" alt="Archival black-and-white photograph of the DHS building at 444 Lafayette Road North in 1998" className="aspect-[16/10] w-full object-cover" loading="lazy" />
-            <figcaption className="p-5"><strong>DHS Lafayette Building, archival view (1998)</strong><br />444 Lafayette Road North, St. Paul. <a href="https://www.lrl.mn.gov/docs/pre2003/other/990473.pdf">Photo: DHS, <cite>Memories of our past</cite>, page 33, via the Minnesota Legislative Reference Library</a>.</figcaption>
+            <figcaption className="p-5"><strong>DHS Lafayette Building, archival view (1998)</strong><br />444 Lafayette Road North, St. Paul. <SourceLink href="https://www.lrl.mn.gov/docs/pre2003/other/990473.pdf">Photo: DHS, <cite>Memories of our past</cite>, page 33, via the Minnesota Legislative Reference Library</SourceLink>.</figcaption>
           </figure>
         </div>
       </div></details>
@@ -34,7 +36,7 @@ export default function UnderstandingDhsPage() {
           <EngagementReferenceMap topicId={entry.id} application={entry.application} />
           <details className="mt-4 border-t border-line pt-3 text-sm">
             <summary className="cursor-pointer font-semibold">Original sources</summary>
-            <ul className="mb-0 space-y-2 pl-5">{entry.sourceIds.map(id=>{const source=reference.sources.find(s=>s.id===id)!;return <li key={id}><a href={source.url}>{source.title}</a></li>;})}</ul>
+            <ul className="mb-0 space-y-2 pl-5">{entry.sourceIds.map(id=>{const source=reference.sources.find(s=>s.id===id)!;return <li key={id}><SourceLink href={source.url}>{source.title}</SourceLink></li>;})}</ul>
           </details>
         </article>)}</div>
       </details>)}</div>

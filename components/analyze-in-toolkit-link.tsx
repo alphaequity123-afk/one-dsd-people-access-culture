@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useEffect, useState } from "react";
 import { linkedSourceAllowed, linkedSourceHref, type LinkedSourceKind } from "@/lib/consultant-toolkit/linked-source";
@@ -24,9 +26,9 @@ export function AnalyzeInToolkitLink({ kind, id }: { kind: LinkedSourceKind; id:
   if (!offered || !allowed) return null;
   return (
     <p className="mt-3 print:hidden" data-consultant-only="true">
-      <a href={linkedSourceHref(kind, id)} className="btn btn--light !min-h-0 !px-3 !py-1 !text-sm">
+      <SourceLink href={linkedSourceHref(kind, id)} className="btn btn--light !min-h-0 !px-3 !py-1 !text-sm">
         Analyze in the Equity Analysis Toolkit
-      </a>
+      </SourceLink>
     </p>
   );
 }

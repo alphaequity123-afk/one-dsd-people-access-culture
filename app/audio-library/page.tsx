@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { ResourceFormatLinks } from "@/components/resource-format-links";
 import { countAudioLibraryEntries, filterAudioShelvesByPublication, listAudioLibraryShelves } from "@/lib/content/audio-library";

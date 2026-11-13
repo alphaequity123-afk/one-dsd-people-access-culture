@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import Image from "next/image";
 
 type HistoryEntry = { date: string; text: string; source: string; sourceTitle: string };
@@ -37,16 +39,16 @@ export function LearningHistory({ courseId, lessonId }: { courseId: string; less
     {history ? <>
       <p className="mt-4 leading-7">{history.introduction}</p>
       <ol className="ml-3 mt-6 list-none space-y-5 border-l-2 border-[#a49175] p-0 pl-6" aria-label="Selected historical timeline">
-        {history.entries.map(entry => <li key={entry.date} className="relative rounded-xl bg-white p-5"><span aria-hidden="true" className="absolute -left-[33px] top-6 h-3 w-3 rounded-full bg-[#005ea8]" /><h3 className="text-lg font-bold">{entry.date}</h3><p className="mt-2 leading-7">{entry.text}</p><a href={entry.source} className="mt-2 inline-block font-semibold underline">{entry.sourceTitle}</a></li>)}
+        {history.entries.map(entry => <li key={entry.date} className="relative rounded-xl bg-white p-5"><span aria-hidden="true" className="absolute -left-[33px] top-6 h-3 w-3 rounded-full bg-[#005ea8]" /><h3 className="text-lg font-bold">{entry.date}</h3><p className="mt-2 leading-7">{entry.text}</p><SourceLink href={entry.source} className="mt-2 inline-block font-semibold underline">{entry.sourceTitle}</SourceLink></li>)}
       </ol>
       {history.note ? <p className="mt-5 border-t border-[#d5cbbd] pt-4 leading-7">{history.note}</p> : null}
-      {courseId === "cultural-intelligence-hmong" ? <a href="https://www.mnhs.org/mnopedia/search/index/hmong-and-hmong-americans-minnesota" className="font-semibold underline">MNopedia: Hmong and Hmong Americans in Minnesota</a> : null}
+      {courseId === "cultural-intelligence-hmong" ? <SourceLink href="https://www.mnhs.org/mnopedia/search/index/hmong-and-hmong-americans-minnesota" className="font-semibold underline">MNopedia: Hmong and Hmong Americans in Minnesota</SourceLink> : null}
       <p className="mt-5 font-semibold leading-7">{history.question}</p>
     </> : isRondo ? <>
       <p className="mt-4 leading-7">Compare an authentic streetscape with the neighborhood’s broad geographic context and MnDOT’s historical parcel map. Each shows a different part of the history.</p>
       <figure className="m-0 mt-5 rounded-xl bg-white p-4">
         <Image src="/images/learning-history/rondo-avenue-c1900.jpg" width={540} height={426} alt="Black-and-white view of Rondo Avenue around 1900, with houses, bare trees, a road and open foreground." className="mx-auto h-auto w-full max-w-[540px]" />
-        <figcaption className="mt-3 text-sm leading-6">Rondo Avenue from the Josiah B. Cheney residence, 604 Rondo Avenue, around 1900. Minnesota Historical Society; listed as public domain. <a href="https://www.mnhs.org/mnopedia/search/index/place/rondo-neighborhood-st-paul" className="underline">Photograph and historical context at MNopedia</a>.</figcaption>
+        <figcaption className="mt-3 text-sm leading-6">Rondo Avenue from the Josiah B. Cheney residence, 604 Rondo Avenue, around 1900. Minnesota Historical Society; listed as public domain. <SourceLink href="https://www.mnhs.org/mnopedia/search/index/place/rondo-neighborhood-st-paul" className="underline">Photograph and historical context at MNopedia</SourceLink>.</figcaption>
       </figure>
       <figure className="m-0 mt-5 rounded-xl bg-white p-4">
         <figcaption className="font-semibold">Geographic orientation — schematic, not a parcel or route-alignment map</figcaption>
@@ -62,16 +64,16 @@ export function LearningHistory({ courseId, lessonId }: { courseId: string; less
           <text x="300" y="171" textAnchor="middle" fill="white" fontSize="18">I-94 divided the neighborhood</text>
           <text x="300" y="231" textAnchor="middle" fontSize="16">Broad orientation only · not to scale</text>
         </svg>
-        <p className="mt-3 text-sm leading-6">MNopedia describes the neighborhood’s rough boundaries as University, Selby, Rice and Lexington, and dates the highway construction that divided it to 1956–1968. <a href="https://www.mnhs.org/mnopedia/search/index/place/rondo-neighborhood-st-paul" className="underline">Read the neighborhood history</a>.</p>
+        <p className="mt-3 text-sm leading-6">MNopedia describes the neighborhood’s rough boundaries as University, Selby, Rice and Lexington, and dates the highway construction that divided it to 1956–1968. <SourceLink href="https://www.mnhs.org/mnopedia/search/index/place/rondo-neighborhood-st-paul" className="underline">Read the neighborhood history</SourceLink>.</p>
       </figure>
-      <div className="mt-5 rounded-xl border border-[#d5cbbd] bg-white p-5"><h3 className="text-lg font-bold">Explore the actual historical parcels</h3><p className="mt-2 leading-7">Use the mapped parcels to examine the relationship between the former neighborhood and the highway. The map opens with its own navigation and source context.</p><a href="https://experience.arcgis.com/experience/da3af29276dc4d54a571e587fc972948" className="font-semibold underline">MnDOT: Historic Rondo Parcels Within I-94</a><p className="mt-2 text-sm">Listed by the <a href="https://www.dot.state.mn.us/library/history.html" className="underline">MnDOT Library</a>.</p></div>
+      <div className="mt-5 rounded-xl border border-[#d5cbbd] bg-white p-5"><h3 className="text-lg font-bold">Explore the actual historical parcels</h3><p className="mt-2 leading-7">Use the mapped parcels to examine the relationship between the former neighborhood and the highway. The map opens with its own navigation and source context.</p><SourceLink href="https://experience.arcgis.com/experience/da3af29276dc4d54a571e587fc972948" className="font-semibold underline">MnDOT: Historic Rondo Parcels Within I-94</SourceLink><p className="mt-2 text-sm">Listed by the <SourceLink href="https://www.dot.state.mn.us/library/history.html" className="underline">MnDOT Library</SourceLink>.</p></div>
       <p className="mt-5 font-semibold leading-7">In this example, a team is choosing a new service location. What evidence about present-day travel and participation would it need, beyond a map, before deciding who benefits and who faces a burden?</p>
     </> : <>
       <p className="mt-4 leading-7">The Census Bureau reports that the White alone, non-Hispanic population was 57.8% of the total U.S. population in the 2020 Census. That is a defined population category, not a percentage of people sharing one culture.</p>
       <div className="mt-5 overflow-x-auto rounded-xl bg-white" role="region" aria-label="Definition of the population statistic" tabIndex={0}><table className="w-full text-left"><caption className="p-4 text-left text-lg font-bold">What must travel with 57.8%</caption><tbody>{[
         ["Source and year", "U.S. Census Bureau · 2020 Census"], ["Geography", "United States"], ["Numerator category", "White alone, non-Hispanic population"], ["Denominator", "Total U.S. population"], ["What it does not measure", "A shared culture, an individual's identity or a language preference"],
       ].map(([label, value]) => <tr key={label} className="border-t border-[#d5cbbd]"><th scope="row" className="p-4 font-semibold">{label}</th><td className="p-4">{value}</td></tr>)}</tbody></table></div>
-      <p className="mt-4"><a className="font-semibold underline" href="https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/release/faqs-race-ethnicity.html">Census Bureau: 2020 race and ethnicity definitions and results</a></p>
+      <p className="mt-4"><SourceLink className="font-semibold underline" href="https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/release/faqs-race-ethnicity.html">Census Bureau: 2020 race and ethnicity definitions and results</SourceLink></p>
       <details className="mt-5 rounded-xl bg-white p-5"><summary className="cursor-pointer font-semibold">Revise this practice claim: “57.8% of Americans share one culture.”</summary><p className="mt-3 leading-7">The statistic describes the specified race and Hispanic-origin category in the 2020 Census. It does not establish cultural uniformity. A usable sentence names the year, geography, category and denominator, then leaves cultural claims to evidence that actually addresses them.</p></details>
     </>}
     <p className="mt-5 leading-7">Use the lesson notes to record one supported observation and one question the source cannot answer.</p>

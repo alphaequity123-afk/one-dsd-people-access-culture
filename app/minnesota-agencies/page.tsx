@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PARTNER_GROUP_LABEL, PUBLIC_PARTNERS, STATE_AGENCIES, STATE_AGENCY_SOURCE, agencyDisplayName, agencyPageHref, type PublicPartner, type StateAgency } from "@/lib/content/state-agencies";
 import { catMatches, catOneLine, catPaginate, catParam, catWords } from "@/lib/cat-paging";
 import { CatList, CatPager, CatResultStatus, CatRow } from "@/components/cat-list";
@@ -43,7 +45,7 @@ export default async function MinnesotaAgenciesPage({ searchParams }: { searchPa
       <CatPager page={page} basePath={base} params={{ q, view: partnerView ? "partners" : "" }} label="Directory result pages" />
     </section>
     <section aria-label="Related directories">
-      {partnerView ? <p><Link href="/community-outreach/county-agencies">Find a county lead agency by county</Link></p> : <p>Directory source: <a href={STATE_AGENCY_SOURCE}>State of Minnesota agencies, boards and commissions</a>.</p>}
+      {partnerView ? <p><Link href="/community-outreach/county-agencies">Find a county lead agency by county</Link></p> : <p>Directory source: <SourceLink href={STATE_AGENCY_SOURCE}>State of Minnesota agencies, boards and commissions</SourceLink>.</p>}
       <p><Link href={partnerView ? "/explore/community/county-lead-agencies" : "/explore/community/state-agencies"}>See connections to program work</Link></p>
     </section>
   </div>;

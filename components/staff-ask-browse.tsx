@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import styles from "@/components/workspace-presentation.module.css";
 import type { StaffAskTopic } from "@/lib/content/staff-ask-topics";

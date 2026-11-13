@@ -1,7 +1,7 @@
 "use client";
 
 /** The Ask page promises that question history can be reviewed or cleared in My work. This is that place. */
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useHydrated, useStored } from "@/lib/client/storage";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
 

@@ -1,6 +1,6 @@
 "use client";
 import {useCallback,useSyncExternalStore} from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 function subscribe(callback:()=>void){window.addEventListener('storage',callback);window.addEventListener('pageshow',callback);return()=>{window.removeEventListener('storage',callback);window.removeEventListener('pageshow',callback);};}
 const serverSnapshot=()=>"[]";

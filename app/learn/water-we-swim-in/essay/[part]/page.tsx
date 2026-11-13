@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { WATER_ESSAY_HREF, WATER_ESSAY_PARTS, WATER_WHOLE_ESSAY_HREF, WaterEssayContents, WaterEssayPager, WaterEssayPartBody } from "@/components/cl-water";
 import { WATER_COURSE_HREF, WATER_COURSE_TITLE } from "@/lib/content/water-we-swim-in";

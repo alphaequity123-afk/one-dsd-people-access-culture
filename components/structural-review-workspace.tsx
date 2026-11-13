@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useEffect, useRef, useState } from "react";
 import { STRUCTURAL_GUIDANCE, STRUCTURAL_STEPS, type StructuralField, type StructuralStepId } from "@/lib/structural-review/content";
 import { freshStructuralDraft, isStructuralCalendarDate, parseStructuralDraft, structuralChecks, structuralProgress, structuralRouteWarning, STRUCTURAL_DRAFT_MAX_BYTES, STRUCTURAL_FIELD_MAX_LENGTH, STRUCTURAL_TABLE_MAX_ROWS, type StructuralDraft, type StructuralValue } from "@/lib/structural-review/draft";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { OneDsdTeamClient } from "@/components/one-dsd-team-client";
 import { Notice, PageIntro } from "@/components/ui";
 import { ParticipationNotice } from "@/components/participation-notice";

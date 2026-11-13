@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import { participationContract, type ParticipationSurface } from "@/lib/participation/contracts";
 import { CONSULTATION_TOMBSTONE_RETENTION_DAYS } from "@/lib/privacy/consultation-terminal-retention";

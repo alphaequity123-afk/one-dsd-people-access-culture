@@ -194,9 +194,9 @@
 
 /* Topic color stays at entry points; long reading and tools keep white surfaces. */
 .page.amplifyPage, .page.teamPage { background: #fff; }
-.page.amplifyPage { --amplify-hero: #fff0b8; --amplify-edge: #c6cfd3; --amplify-accent: #176b65; }
-.page.amplifyPage.amplifyGathering { --amplify-hero: #fff0b8; --amplify-edge: #c6cfd3; --amplify-accent: #b88a35; }
-.page.amplifyPage.amplifyPractical { --amplify-hero: #f4f7f9; --amplify-edge: #c6cfd3; --amplify-accent: #b88a35; }
+.page.amplifyPage { --amplify-hero: #e5edf6; --amplify-edge: #cdd7e2; --amplify-accent: #003865; }
+.page.amplifyPage.amplifyGathering { --amplify-hero: #e5edf6; --amplify-edge: #cdd7e2; --amplify-accent: #003865; }
+.page.amplifyPage.amplifyPractical { --amplify-hero: #f3f5f8; --amplify-edge: #cdd7e2; --amplify-accent: #003865; }
 .page.amplifyPage .hero { background: var(--amplify-hero); border: 1px solid var(--amplify-edge); border-radius: .75rem; }
 .page.amplifyPage .hero::before { width: 4.5rem; background: var(--amplify-accent); }
 .page.amplifyPage .hero h1, .page.amplifyPage :is(h2,h3) { color: #183247; font-weight: 600; }
@@ -207,7 +207,7 @@
 .page.amplifyPage .sectionNav a { background: #fff; border-color: var(--pac-border, #adb9c4); color: #183247; border-radius: .4rem; }
 .page.amplifyPage .sectionNav a:hover { background: var(--pac-white, #ffffff); }
 .page.amplifyPage .sectionNav a[aria-current="page"] { background: var(--pac-action, #005ea8); border-color: var(--pac-action, #005ea8); color: #fff; }
-.page.amplifyPage .entryCards > article { background: #fff0b8; border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-gold, #008eaa); border-radius: .65rem; }
+.page.amplifyPage .entryCards > article { background: #fff; border: 1px solid #cdd7e2; border-top: 2px solid #a9bbce; border-radius: .65rem; }
 .page.amplifyPage .entryCards > article:nth-child(2) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-action, #005ea8); }
 .page.amplifyPage .entryCards > article:nth-child(3) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #008eaa); }
 .page.amplifyPage .entryCards a { color: #145b57; }

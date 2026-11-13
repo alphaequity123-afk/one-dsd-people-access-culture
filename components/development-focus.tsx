@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { developmentModel, developmentJourney, journeyHref, stageGuidance } from "@/lib/program/development";
 
 /** A chosen focus is held only in page memory; no staff writing, profiles, or scores are stored. */

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { leadersAllowed } from "@/lib/auth/leaders-access";
 import { BRIEFS } from "@/lib/content/briefs";
 import { communityDesignEntries } from "@/lib/content/community-design";

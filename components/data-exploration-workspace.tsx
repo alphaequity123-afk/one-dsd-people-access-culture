@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { GOALS, comparePeriods, emptyDataset, parseWorkingCopy, rate, suppressionReason, validateDataset, type Dataset, type Observation } from "@/lib/data-exploration/model";
 import { practiceDataset } from "@/lib/data-exploration/examples";

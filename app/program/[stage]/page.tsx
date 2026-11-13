@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { logicStages } from "@/lib/program/dsd-logic-model";
 import { ResourceDownloads } from "@/components/resource-downloads";

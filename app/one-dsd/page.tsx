@@ -2,7 +2,7 @@ import { DsdInventoryMap } from "@/components/multimedia/dsd-inventory-map";
 import styles from "@/components/dsd-experience.module.css";
 import type { Metadata } from "next";
 import { loadDsdInventory } from "@/lib/dsd/published";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { OneDsdContextPanel } from "@/components/program-context";
 import { PageIntro } from "@/components/ui";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";

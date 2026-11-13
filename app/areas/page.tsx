@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import Image from "next/image";
 import { WORK_AREA_PHOTOS } from "@/lib/product/work-area-presentation";
 import styles from "@/components/workspace-presentation.module.css";

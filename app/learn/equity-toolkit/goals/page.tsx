@@ -5,7 +5,7 @@ import { EquityGoalExperience } from "@/components/equity-goal-experience";
 import { loadStaffContentSnapshot } from "@/lib/content/staff-publications";
 import goalModel from "@/lib/program/equity-goals.json";
 import { requestedContentScope } from "@/lib/product/request-context";
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 export const metadata = { title: "Six equity goals and work plan" };
 const goalResourceIds = new Set(goalModel.goals.flatMap(goal => goal.resources.map(resource => resource.id)));

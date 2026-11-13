@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CommunityDesignIndex } from "@/components/community-design-index";
 import { communityDesignEnabled } from "@/lib/content/community-design";
 import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ActionList, Notice, PageIntro } from "@/components/ui";
 import { ROUTES } from "@/lib/constants";
 import { communities, communityQuery, paused, PAUSED_MESSAGE } from "@/lib/intelligence/orchestrator";

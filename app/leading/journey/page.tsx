@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LeadingStartChooser } from "@/components/leading-start-chooser";
 import { LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE } from "@/lib/content/collections";
 import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from "@/lib/content/leadership-journey";
@@ -80,7 +82,7 @@ export default function LeadingJourneyPage() {
       <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
       <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. They do not count toward required training unless your manager, director or agency leadership approves an exception.</p>
       <ul className="list-disc pl-6">
-        {LEARNING_ELSEWHERE.map(course => <li key={course.href}><a className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</a>, {course.provider}. {course.body}</li>)}
+        {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
       </ul>
     </section>
 

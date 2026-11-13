@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { SUPPORT_DIRECTORY, supportSourcesFor } from "@/lib/product/support-directory";
 import type { ResponsibleDestinationId } from "@/lib/product/work-areas";
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LEADING_LABEL, LEADING_PATHS, REQUIRED_COURSE_LABEL, pathHours } from "@/lib/content/collections";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "@/components/collections.module.css";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { CollectionItemLink } from "@/components/collection-item-link";
 import { ParticipationNotice } from "@/components/participation-notice";
 import { LEADING_DOORS, LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE, REQUIRED_COURSE_ID, TRIBAL_REFERRAL_HREF, pathHours } from "@/lib/content/collections";

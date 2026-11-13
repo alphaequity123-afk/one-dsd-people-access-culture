@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "./sources.module.css";
 import { PageIntro } from "@/components/ui";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
@@ -15,11 +15,12 @@ import { matchesSourceTheme } from "@/lib/content/source-organization";
 import { catHref, catMatches, catPaginate, catParam, catWords } from "@/lib/cat-paging";
 import { CatList, CatPager, CatResultStatus, CatRow } from "@/components/cat-list";
 import { CatHashLocator } from "@/components/cat-hash-locator";
+import { unavailableExternalUrl } from "@/lib/content/external-readings";
 
 export const metadata: Metadata = { title: "Research and sources" };
 export const dynamic = "force-dynamic";
 
-const PER_PAGE = 25;
+const PER_PAGE = 12;
 const BASE = "/learn/sources";
 
 type Query = { theme?: string | string[]; group?: string | string[]; q?: string | string[]; page?: string | string[]; find?: string | string[] };
@@ -34,7 +35,7 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
   const surface = await prepareEditableSurface("sources.page", { scope });
   const copy = surface.values;
   const text = (key: string) => stringValue(copy, key);
-  const allGroups = registerSourcesForStaff().map(({ group, sources }) => ({ group, sources: sources.filter(source => source.kind === "external" && source.href) })).filter(({ sources }) => sources.length);
+  const allGroups = registerSourcesForStaff().map(({ group, sources }) => ({ group, sources: sources.filter(source => source.kind === "external" && source.href && !unavailableExternalUrl(source.href)) })).filter(({ sources }) => sources.length);
   const allCount = allGroups.reduce((count, group) => count + group.sources.length, 0);
   const words = catWords(q);
   const groups = allGroups.map(({ group, sources }) => ({ group, sources: sources.filter(source => matchesSourceTheme(source, theme) && catMatches(words, source.title, source.host)) })).filter(({ sources }) => sources.length);

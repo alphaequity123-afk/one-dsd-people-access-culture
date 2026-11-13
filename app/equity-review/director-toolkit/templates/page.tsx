@@ -1,5 +1,8 @@
+import { FocusedSections } from "@/components/focused-sections";
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { DirectorToolkitTemplate } from "@/components/director-toolkit-template";
 import styles from "@/components/director-toolkit.module.css";
@@ -20,21 +23,21 @@ export default function DirectorToolkitTemplatesPage() {
         <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="templates" noun="set of blank templates" /></details>
       </PageIntro>
     </div>
-    <div className="wrap max-w-5xl space-y-10 py-10">
+    <div className="wrap max-w-5xl space-y-10 py-10"><FocusedSections>
       <section aria-labelledby="templates-about" className={styles.printHide}>
         <h2 id="templates-about" className="text-2xl font-bold">Before you start</h2>
         <p>These templates put the DHS Equity Policy, the DHS Equity Analysis Toolkit and the State of Minnesota Equity Analysis Toolkit into practice. They do not replace them. Adapt each one with the people responsible for the work it covers.</p>
         <p className="notice">These templates run only in your browser. Nothing you type is saved, stored or sent anywhere, and it is gone when you leave the page. {TEMPLATE_KEEP_OUT}</p>
         <h3 className="mt-6 text-xl font-bold">The 14 templates</h3>
-        <ol className={styles.templateIndex}>{DIRECTOR_TEMPLATES.map(template => <li key={template.id}><a href={`#${templateAnchor(template.id)}`}>{template.title}</a></li>)}</ol>
+        <ol className={styles.templateIndex}>{DIRECTOR_TEMPLATES.map(template => <li key={template.id}><SourceLink href={`#${templateAnchor(template.id)}`}>{template.title}</SourceLink></li>)}</ol>
       </section>
-      {DIRECTOR_TEMPLATES.map(template => <DirectorToolkitTemplate key={template.id} template={template} sectionTitle={sectionTitle(template.sectionId)} />)}
+      {DIRECTOR_TEMPLATES.map(template => <section key={template.id} id={`topic-${template.id}`} data-topic-title={template.title}><DirectorToolkitTemplate template={template} sectionTitle={sectionTitle(template.sectionId)} /></section>)}
       <nav aria-label="Related resources" className={`flex flex-wrap gap-6 ${styles.printHide}`}>
         <Link href={DIRECTOR_TOOLKIT_HREF}>Equity Director toolkit</Link>
         <Link href="/equity-review">Equity review tools</Link>
         <Link href="/equity-review/structural">Structural equity analysis</Link>
         <Link href="/practice/measurement">Measurement and evaluation</Link>
       </nav>
-    </div>
+    </FocusedSections></div>
   </>;
 }

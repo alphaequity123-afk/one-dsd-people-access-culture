@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import { downloadHref, type DownloadKind, type DownloadScope } from "@/lib/downloads/catalog";
 import { SharePage } from "@/components/share-page";
 import { DOWNLOAD_FORMATS, DOWNLOAD_FORMAT_DETAILS, FALLBACK_DOWNLOAD_FORMATS, FALLBACK_DOWNLOAD_FORMAT_DETAILS } from "@/lib/downloads/model";
@@ -33,7 +35,7 @@ export function ResourceDownloads({ kind, id, noun = "resource", scope, compact 
     >
       <span className="text-sm font-bold">Download this {noun}:</span>
       {DOWNLOAD_FORMATS.map((format) => (
-        <a
+        <SourceLink
           key={format}
           className={linkClassName}
           href={downloadHref(kind, id, format, scope)}
@@ -41,10 +43,10 @@ export function ResourceDownloads({ kind, id, noun = "resource", scope, compact 
           aria-label={`Download this ${noun} as ${DOWNLOAD_FORMAT_DETAILS[format].label}`}
         >
           {DOWNLOAD_FORMAT_DETAILS[format].label}
-        </a>
+        </SourceLink>
       ))}
       {FALLBACK_DOWNLOAD_FORMATS.map((format) => (
-        <a
+        <SourceLink
           key={format}
           className={linkClassName}
           href={downloadHref(kind, id, format, scope)}
@@ -52,7 +54,7 @@ export function ResourceDownloads({ kind, id, noun = "resource", scope, compact 
           aria-label={`Download this ${noun} as ${FALLBACK_DOWNLOAD_FORMAT_DETAILS[format].label}`}
         >
           {FALLBACK_DOWNLOAD_FORMAT_DETAILS[format].label}
-        </a>
+        </SourceLink>
       ))}
       {share ? <SharePage compact noun={noun} href={shareHref} title={shareTitle} /> : null}
     </div>

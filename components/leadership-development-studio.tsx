@@ -2,7 +2,7 @@
 import { DsdDevelopmentMapExample } from "./multimedia/dsd-development-map-example";
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { DraftResult } from "./amplify-tools";
 import { DEVELOPMENT_ENTRIES, DEVELOPMENT_CAPABILITIES, DEVELOPMENT_MAP_FIELDS, buildDevelopmentMap, type DevelopmentMapValues } from "@/lib/content/leadership-development";
 

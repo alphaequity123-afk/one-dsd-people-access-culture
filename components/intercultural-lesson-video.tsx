@@ -1,4 +1,6 @@
 'use client';
+import { SourceLink } from "@/components/app-link";
+
 
 import { useRef } from 'react';
 import { FeaturedMediaPanel, mediaLength } from './featured-media-panel';
@@ -35,7 +37,7 @@ export default function InterculturalLessonVideo({ id, title, media }: { id: str
       <track kind="captions" src={media.captions} srcLang="en" label="English" default />
       Your browser cannot play this video. The full transcript is below.
     </video>
-    <a href={media.video}>Open the video</a>{' | '}<a href={media.captions}>Download captions</a>
+    <SourceLink href={media.video}>Open the video</SourceLink>{' | '}<SourceLink href={media.captions}>Download captions</SourceLink>
     <details><summary>Go to a chapter</summary><ol>{media.chapters.map((chapter, i) => <li key={`${i}-${chapter.title}`}>
       <button type="button" onClick={() => { if (video.current) { video.current.currentTime = chapter.start; video.current.focus(); } }}>{chapter.title}</button>
     </li>)}</ol></details>

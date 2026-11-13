@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LiveSearchForm } from "./live-search-form";
 import { notFound } from "next/navigation";
 import { communityDesignEntries } from "@/lib/content/community-design";

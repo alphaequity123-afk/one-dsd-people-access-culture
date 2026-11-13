@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { RIGHT_PERSON_HREF, collectionItem, collectionItemHref } from "@/lib/content/collections";
 import styles from "./collections.module.css";
 

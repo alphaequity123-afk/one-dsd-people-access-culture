@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 export function DsdProgramFooter() {
   return <footer className="dsd-footer"><div className="dsd-shell">
     <div><strong>One DSD People, Access and Culture</strong><p>Learning, resources and practical equity guidance for the Disability Services Division.</p></div>

@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import "./globals.css";
 import "./program-design.css";
@@ -9,6 +11,7 @@ import "./area-colors.css";
 import "./inner-theme.css";
 import "./calm-system.css";
 import "./dsd-pilot.css";
+import "./source-readings.css";
 import { InternalPage } from "@/components/internal-page";
 import { OpenDetailsForHash } from "@/components/open-details-for-hash";
 import { CourseMediaForPage } from "@/components/course-media-for-page";
@@ -104,20 +107,20 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           copy={contextSurface.values}
           copyAvailable={contextSurface.available}
         >
-          <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}>
-            <a href="#main" className="skip-link">
+          <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}>
+            <SourceLink href="#main" className="skip-link">
               Skip to main content
-            </a>
+            </SourceLink>
             <PublishedProgramHeader />
           </ChromeGate>
           <main id="main" tabIndex={-1} className="flex-1">
-            <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><DsdResourceActions canCreate={owner} /></ChromeGate>
+            <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}><DsdResourceActions canCreate={owner} /></ChromeGate>
             <InternalPage>{children}</InternalPage>
-            <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}><CourseMediaForPage /></ChromeGate>
+            <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}><CourseMediaForPage /></ChromeGate>
             <OpenDetailsForHash />
 
           </main>
-          <ChromeGate hideOnPrefixes={["/share/"]} hideOnExact={["/"]}>
+          <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}>
             <ConnectedMinnesota />
             <DsdProgramFooter />
             <UniversalEditor owner={owner} />

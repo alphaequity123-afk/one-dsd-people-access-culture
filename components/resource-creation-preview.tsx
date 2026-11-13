@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { resourceVisualHtml } from "@/lib/client/resource-creation-exports";
 import { localStudyHref } from "@/lib/client/resource-study-links";
@@ -74,7 +76,7 @@ export function ResourceCreationMedia({ files }: { files: ResourceCreationFile[]
       {captions ? <track kind="captions" src={captions.href} srcLang="en" label="English" default /> : null}
     </video> : null}
     <ul className="flex flex-wrap gap-x-5 gap-y-2">
-      {usable.map(file => <li key={file.href}><a href={file.href} download className="inline-flex min-h-11 items-center underline underline-offset-4">{fileLabels[file.kind]}</a></li>)}
+      {usable.map(file => <li key={file.href}><SourceLink href={file.href} download className="inline-flex min-h-11 items-center underline underline-offset-4">{fileLabels[file.kind]}</SourceLink></li>)}
     </ul>
   </section>;
 }
@@ -124,7 +126,7 @@ export function ResourceCreationPreview({ artifact, powerPointHref }: { artifact
       <h3 className="text-lg font-bold">{artifact.title}</h3>
       <div className="flex flex-wrap gap-2">
         {artifact.kind === "slides" && localStudyHref(powerPointHref)
-          ? <a href={powerPointHref} download className="btn min-h-11">Download editable PowerPoint</a> : null}
+          ? <SourceLink href={powerPointHref} download className="btn min-h-11">Download editable PowerPoint</SourceLink> : null}
         {visual ? <button type="button" className="btn min-h-11" onClick={exportHtml}>Download visual as HTML</button> : null}
         <button type="button" className="btn min-h-11" onClick={exportMarkdown}>Download draft as Markdown</button>
       </div>
@@ -145,14 +147,14 @@ export function ResourceCreationPreview({ artifact, powerPointHref }: { artifact
         {block.sourceIds.length ? <p className="mt-2 text-sm">
           {Array.from(new Set(block.sourceIds)).map(id => {
             const number = numberById.get(id);
-            return number ? <a key={id} href={sources[number - 1].href} className="mr-2 underline" aria-label={`Source ${number}: ${sources[number - 1].title}`}>[{number}]</a> : null;
+            return number ? <SourceLink key={id} href={sources[number - 1].href} className="mr-2 underline" aria-label={`Source ${number}: ${sources[number - 1].title}`}>[{number}]</SourceLink> : null;
           })}
         </p> : null}
       </section>)}
     </div>
     {sources.length ? <section className="mt-5 border-t border-line pt-3">
       <h4 className="font-semibold">Sources cited</h4>
-      <ol className="mt-2 list-decimal space-y-1 pl-6">{sources.map(source => <li key={source.id}><a href={source.href} className="underline">{source.title}</a></li>)}</ol>
+      <ol className="mt-2 list-decimal space-y-1 pl-6">{sources.map(source => <li key={source.id}><SourceLink href={source.href} className="underline">{source.title}</SourceLink></li>)}</ol>
     </section> : null}
   </article>;
 }

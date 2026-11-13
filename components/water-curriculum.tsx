@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { SyncedMediaPlayer } from "@/components/clas-curriculum/media-player";
 import { KeyPointsPanel } from "@/components/clas-curriculum/key-points";
 import { ChoiceQuestion, OrderingQuestion } from "@/components/clas-curriculum/practice";
@@ -47,7 +49,7 @@ export function WaterLessonPodcast({ lesson, moduleTitle, readingHref }: {
         : "Two colleagues talk the module through; the full text and its sources follow below."}</p>
       <SyncedMediaPlayer mediaId={`water:${lesson!.id}`} kind="audio" src={podcast.src} captions={podcast.captions} label={`${moduleTitle} podcast`}
         chapters={podcast.chapters} cues={cues} transcriptTitle="Podcast transcript">
-        <p className="water-podcast-links"><a href={podcast.src} download>Download the podcast (MP3)</a> · <a href={podcast.transcript}>Read the transcript</a></p>
+        <p className="water-podcast-links"><SourceLink href={podcast.src} download>Download the podcast (MP3)</SourceLink> · <SourceLink href={podcast.transcript}>Read the transcript</SourceLink></p>
       </SyncedMediaPlayer>
     </section></FeaturedMediaPanel>
   </div>;
@@ -123,7 +125,7 @@ export function WaterCompanionPodcast({ companion }: { companion: WaterCompanion
       <p>{podcast.summary} About {Math.max(1, Math.round(podcast.durationSeconds / 60))} minutes, in chapters for each module.</p>
       <SyncedMediaPlayer mediaId="water:companion" kind="audio" src={podcast.src} captions={podcast.captions} label={podcast.title}
         chapters={podcast.chapters} cues={cues} transcriptTitle="Podcast transcript">
-        <p className="water-podcast-links"><a href={podcast.src} download>Download the podcast (MP3)</a> · <a href={podcast.transcript}>Read the transcript</a></p>
+        <p className="water-podcast-links"><SourceLink href={podcast.src} download>Download the podcast (MP3)</SourceLink> · <SourceLink href={podcast.transcript}>Read the transcript</SourceLink></p>
       </SyncedMediaPlayer>
     </section></FeaturedMediaPanel>
   </div>;
@@ -141,7 +143,7 @@ export function WaterCoursePath({ hrefFor }: { hrefFor: (number: number) => stri
     <ol className="water-path-stages">{WATER_STAGES.map((s, i) => <li key={s.stage} className={`water-path-stage water-path-stage-${i + 1}`}>
       <p className="water-path-stage-name"><span>{i + 1}</span>{s.stage}</p>
       <ol className="water-path-modules">{s.modules.map(([n, text]) => <li key={n} value={n}>
-        <a href={hrefFor(n)}><span className="water-path-number">Module {n}</span><span className="water-path-text">{text}</span></a>
+        <SourceLink href={hrefFor(n)}><span className="water-path-number">Module {n}</span><span className="water-path-text">{text}</span></SourceLink>
       </li>)}</ol>
     </li>)}</ol>
   </section>;

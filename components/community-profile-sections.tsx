@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import type { CommunityBusiness, CommunityProfile } from "@/lib/content/community-profile";
 import { Disclosure } from "./community-research-sections";
 import { ResearchMarkdown } from "./research-markdown";
@@ -13,7 +15,7 @@ function Businesses({ businesses }: { businesses: CommunityBusiness[] }) {
     <h3>Businesses named in public sources</h3>
     <p>This list is a starting point, not a recommendation, and it is not complete. Check hours and details with the business.</p>
     <ul className="research-business-list">{businesses.map(business => <li key={`${business.name}-${business.place}`}>
-      {business.href ? <a href={business.href}>{business.name}</a> : <strong>{business.name}</strong>}
+      {business.href ? <SourceLink href={business.href}>{business.name}</SourceLink> : <strong>{business.name}</strong>}
       <p className="research-business-meta">{[business.type, business.place].filter(Boolean).join(" · ")}</p>
       <p>{business.about}</p>
       {BUSINESS_STATUS[business.status] ? <p className="research-business-meta">{BUSINESS_STATUS[business.status]}</p> : null}

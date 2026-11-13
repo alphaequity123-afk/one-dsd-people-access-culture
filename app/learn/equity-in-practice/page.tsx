@@ -1,6 +1,8 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import { ResourceDownloads } from "@/components/resource-downloads";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "./equity-in-practice.module.css";
 import SequenceVideo from "./sequence-video";
 import { CourseMediaSlot } from "@/components/course-media-for-page";
@@ -19,7 +21,7 @@ export default function EquityInPracticePage() {
     <FeaturedMediaPanel kind="video"><section id="understand-the-map" className={styles.videoSection} aria-labelledby="map-title">
       <p className={styles.eyebrow}>Part one · Understand the map</p><h2 id="map-title">Equity Outcome Map</h2><p className={styles.videoDescription}>Explore the shared direction for equity work across the Department of Human Services, the intended outcomes, and why everyday decisions matter.</p><p className={styles.runtime}>{media.foundation.runtime}</p>
       <SequenceVideo className={styles.player} src={media.foundation.src} poster={media.foundation.poster} title="Equity Outcome Map" />
-      <p className={styles.next}><a href="#put-it-into-practice">Continue to the DSD example</a></p>
+      <p className={styles.next}><SourceLink href="#put-it-into-practice">Continue to the DSD example</SourceLink></p>
     </section></FeaturedMediaPanel>
     <FeaturedMediaPanel kind="video"><section id="put-it-into-practice" className={styles.videoSection} aria-labelledby="practice-title">
       <p className={styles.eyebrow}>Part two · Put it into practice</p><h2 id="practice-title">People, Access and Culture in Practice: A Disability Services Division Example</h2><p className={styles.videoDescription}>Follow four situations in Disability Services Division work. See how the six Aging and Disability Services Administration goals, policy, learning, and practical tools can help a team examine a decision and its effects.</p><p className={styles.runtime}>{media.companion.runtime}</p>

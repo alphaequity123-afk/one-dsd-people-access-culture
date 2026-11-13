@@ -5,7 +5,7 @@ import { ResourceDownloads } from "@/components/resource-downloads";
 import { PageContents } from "@/components/page-contents";
 import { EquityAnalysisLadder } from "@/components/equity-analysis-ladder";
 import { requestedContentScope } from "@/lib/product/request-context";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PODCASTS } from "@/lib/content/podcasts";
 import { stringValue } from "@/lib/content/staff-surface-registry";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";

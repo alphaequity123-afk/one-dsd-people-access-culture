@@ -18,12 +18,12 @@ export function matchesExpandedLibraryQuery(query:string,text:string):boolean {
   const q=normalize(query), body=normalize(text);
   return terms.some(([short,long])=>(new RegExp(`\\b${short}\\b`).test(q)&&body.includes(long))||(q.includes(long)&&new RegExp(`\\b${short}\\b`).test(body)));
 }
-export function libraryPage(total:number, raw:unknown, all=false) {
+export function libraryPage(total:number, raw:unknown) {
   const size=12;
   const pages=Math.max(1,Math.ceil(total/size));
   const requested=typeof raw==='string'&&/^\d{1,6}$/.test(raw)?Number(raw):1;
-  const page=all?1:Math.min(pages,Math.max(1,requested));
-  return {page,pages,start:all?0:(page-1)*size,end:all?total:Math.min(total,page*size)};
+  const page=Math.min(pages,Math.max(1,requested));
+  return {page,pages,start:(page-1)*size,end:Math.min(total,page*size)};
 }
 export type DiscoveryLink={href:string;label:string;reason:string};
 export function libraryDestinations(query:string):DiscoveryLink[] {

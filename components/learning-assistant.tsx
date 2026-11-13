@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { GeffenReadAloud } from "@/components/geffen-read-aloud";
@@ -148,14 +150,14 @@ export function LearningAssistant({
         {paragraph.text}
         {Array.from(new Set(paragraph.sourceIds)).map(sourceId => {
           const reading = readings.get(sourceId);
-          return reading && <a key={sourceId} className={styles.citation} href={reading.href} aria-label={`${sourceLabel} ${reading.number}: ${reading.title}`}>[{reading.number}]</a>;
+          return reading && <SourceLink key={sourceId} className={styles.citation} href={reading.href} aria-label={`${sourceLabel} ${reading.number}: ${reading.title}`}>[{reading.number}]</SourceLink>;
         })}
       </p>)}
       {result.grounded && readings.size > 0 && <>
         <GeffenReadAloud text={result.paragraphs.map(paragraph => paragraph.text).join("\n\n")} label="Answer" />
         <h4>{sourcesHeading}</h4>
         <ol>
-          {Array.from(readings.values()).map(reading => <li key={reading.id}><a href={reading.href}>{reading.title}</a></li>)}
+          {Array.from(readings.values()).map(reading => <li key={reading.id}><SourceLink href={reading.href}>{reading.title}</SourceLink></li>)}
         </ol>
       </>}
     </div>}

@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useId, useRef, useState } from "react";
 import { POLICY_LIMITS, type PolicySource } from "@/lib/policy-analysis/contract";
@@ -122,7 +124,7 @@ export function SourcesEditor({ title, onTitle, sources, onSources, context, onC
               <div className={styles.between}>
                 <div style={{ minWidth: 0 }}>
                   <p className="m-0 font-bold" style={{ overflowWrap: "anywhere" }}>{source.title}</p>
-                  <p className={`${styles.muted} m-0`}>{ORIGIN_LABELS[source.origin]} · about {wordCount(source.text).toLocaleString("en-US")} words{source.url ? <> · <a href={source.url}>Link</a></> : null}</p>
+                  <p className={`${styles.muted} m-0`}>{ORIGIN_LABELS[source.origin]} · about {wordCount(source.text).toLocaleString("en-US")} words{source.url ? <> · <SourceLink href={source.url}>Link</SourceLink></> : null}</p>
                 </div>
                 <button type="button" className={`${styles.linkButton} ${styles.danger}`} disabled={locked} aria-label={`Remove ${source.title}`} onClick={() => { onSources(sources.filter(item => item.id !== source.id)); onNotice(`Removed "${source.title}".`); }}>Remove</button>
               </div>

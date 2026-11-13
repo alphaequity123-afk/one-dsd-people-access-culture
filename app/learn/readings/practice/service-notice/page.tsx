@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from "@/components/app-link";
 import { PageIntro } from '@/components/ui';
 import { ReadingPractice } from '@/components/reading-practice';
 import { PracticeVideo } from '@/components/practice-video';
