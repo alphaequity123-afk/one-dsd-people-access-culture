@@ -55,7 +55,7 @@ export function StartClient({ copy }: { copy: EditableSurfaceValues }) {
   }
 
   return (
-    <div className={styles.workGrid}>
+    <div className="pilot-start-flow">
       <form className={styles.formPanel} onSubmit={recommend} noValidate>
         <p className="kicker">{textValue(copy, "formKicker")}</p>
         <h2 className="text-2xl font-extrabold">{textValue(copy, "formTitle")}</h2>
@@ -116,13 +116,12 @@ export function StartClient({ copy }: { copy: EditableSurfaceValues }) {
         <button type="submit" className="btn btn--primary">{textValue(copy, "submitLabel")}</button>
       </form>
 
-      <section className={styles.recommendation} aria-live="polite" aria-labelledby="start-result-title">
+      <div aria-live="polite">
+      {recommendation && <section className={styles.recommendation} aria-labelledby="start-result-title">
         <p className="kicker">{textValue(copy, "resultKicker")}</p>
         <h2 id="start-result-title" className="text-2xl font-extrabold">
-          {recommendation && recommendedArea ? `${textValue(copy, "recommendationPrefix")} ${recommendedArea.label}.` : textValue(copy, "emptyResultTitle")}
+          {`${textValue(copy, "recommendationPrefix")} ${recommendedArea?.label ?? ""}.`}
         </h2>
-        {recommendation ? (
-          <>
             <p>{recommendedArea?.summary}</p>
             <p>{textValue(copy, roleKey(recommendation.role.id, "Guidance"))} {textValue(copy, urgencyKey(recommendation.urgency.id, "Guidance"))}</p>
             <h3 className="text-lg font-bold">{textValue(copy, "workHeading")}</h3>
@@ -141,13 +140,8 @@ export function StartClient({ copy }: { copy: EditableSurfaceValues }) {
                 {textValue(copy, "supportLinkLabel")}
               </Link>
             </div>
-          </>
-        ) : (
-          <p className="text-muted">
-            {textValue(copy, "emptyResultBody")}
-          </p>
-        )}
-      </section>
+      </section>}
+      </div>
     </div>
   );
 }
