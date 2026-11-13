@@ -20,6 +20,8 @@ import { videoScenarioEvidenceHits } from "../retrieval/video-transcript-evidenc
 import { CitedStatementsSchema, GeneratedEvidenceClaimsSchema, citedStatementsForSources, resolveCitedStatements, sourceRef } from "../retrieval/generated-evidence";
 import { publishedResourceSupplements } from "../retrieval/published-resource-supplements";
 import { availableSourceDocs } from "../retrieval/available-source-docs";
+import { namedSourceCoverage, namedSourcePlan, uncitedNamedSources, type NamedSourceCoverage } from "../retrieval/named-source-coverage";
+import { projectPublicReadingPath } from "../retrieval/public-source-paths";
 import { currentLibrary, recentProgramResources, recentStaffDocs } from "../retrieval/ask-library";
 import { readStringField } from "./partial-answer";
 import { plainAnswerText, plainLiveText } from "@/lib/ask/plain-text";
@@ -44,6 +46,7 @@ import { CATEGORY_LABEL, questionBank, type EmbedQuestion, type LaunchType } fro
 import {
   governedSearch,
   governedResearch,
+  asksForScholarlyResearch,
   type ExternalSource,
   type ResearchDepth,
 } from "@/lib/intelligence/research";
@@ -227,7 +230,7 @@ function relevantRecommendation(question: string, doc: Doc): boolean {
     const asked = new Set(tokens(question));
     if (named.length > 0 && named.every(word => asked.has(word))) return true;
   }
-  const population = doc.kind === "brief" ? doc.href.split("/").pop()!.replaceAll("-", " ")
+  const population = doc.kind === "brief" ? (doc.href.match(/^\/minnesota-communities\/([^/?#]+)/)?.[1] ?? doc.href.split("/").pop()!).replaceAll("-", " ")
     : /^Cultural intelligence: /i.test(doc.title) ? doc.title.split(":")[1] : "";
   if (!population) return true;
   const generic = new Set(["minnesota", "minnesotan", "minnesotans", "speaking", "speak", "culture", "cultural", "community", "communities", "intelligence", "people", "american", "americans"]);
@@ -394,6 +397,10 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const organizationLinks = organization.entries.slice(0, 2).map(entry => ({ label: "Understanding DHS: " + entry.title, href: DHS_REFERENCE_PATH + "#" + dhsTopicAnchor(entry.id) }));
   if (/understanding\s+dhs/i.test(retrievalQuestion)) organizationLinks.unshift({label:"Understanding DHS",href:DHS_REFERENCE_PATH});
   const organizationIndex = availableSourceDocs(organizationalDocs().filter(doc => organization.entries.some(entry => entry.id === doc.id)));
+  const projectReadings = (docs: Doc[], destinations: Doc[]) => {
+    const directoryPublished = destinations.some(doc => doc.href === "/minnesota-communities" && doc.status === "approved");
+    return docs.flatMap(doc => projectPublicReadingPath(doc, scope, directoryPublished));
+  };
   const staffDocs = async () => {
     if (loadedDocs) return loadedDocs;
     const baseDocs = availableSourceDocs([
@@ -422,14 +429,17 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const queryTerms = new Set(tokens(retrievalQuestion));
   // staffDocs already includes current public program destinations. Appending
   // them again duplicates context and graph work without adding evidence.
-  const availableDocs = await staffDocs();
+  const baseDocs = await staffDocs();
+  const projectedDocs = projectReadings(baseDocs, program.destinations);
+  const namedPlan = namedSourcePlan(question, projectedDocs);
+  const availableDocs = namedPlan.groups.length ? projectedDocs : baseDocs;
   const learningJourney = getLearningJourneyContext(availableDocs);
 
   const namedResources = availableDocs.filter(doc => {
     const titleTerms = tokens(doc.title);
     return titleTerms.length > 0 && titleTerms.every(term => queryTerms.has(term));
   });
-  const namedResource = namedResources.length > 0;
+  const namedResource = namedResources.length > 0 || namedPlan.groups.length > 0;
   const learningNavigation = isLearningNavigationQuestion(retrievalQuestion) && !(routine && namedResource);
   const trainingCreditQuestion = isProgramTrainingCreditQuestion(retrievalQuestion);
   const measurementPlanning = isMeasurementPlanningQuestion(retrievalQuestion);
@@ -457,8 +467,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const measurementDocs = measurementPlanning ? availableDocs.filter(isMeasurementResource) : [];
   const measurementHits = searchDocs("measurement evaluation plan outcome indicator baseline privacy", measurementDocs, { limit: 2 });
   const languageAccess = !measurementPlanning && isLanguageAccessQuestion(retrievalQuestion);
-  const recommendationDocs = availableDocs.filter(doc => relevantRecommendation(retrievalQuestion, doc)
-    && (!languageAccess || languageAccessResource(doc)));
+  const recommendationDocs = availableDocs.filter(doc => namedPlan.ids.has(doc.id)
+    || (relevantRecommendation(retrievalQuestion, doc) && (!languageAccess || languageAccessResource(doc))));
   const recommendationIds = new Set(recommendationDocs.map(doc => doc.id));
   const focusedQuery = measurementPlanning ? retrievalQuestion + " measurement evaluation outcome indicator baseline privacy" : languageAccess ? retrievalQuestion + " language access translation interpreter vital documents" : retrievalQuestion;
   const pathResourceHrefs = new Set(path?.steps.flatMap(step => step.links ?? []).map(link => link.href.replace(/^\/resources\//, "/library/")) ?? []);
@@ -468,7 +478,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // does not look like program work; a weak coincidence still is not evidence for a general answer.
   const strongProgramMatch = (hits[0]?.score ?? 0) >= 6.5 || (keyword[0]?.score ?? 0) >= 9;
   const usesProgram = programRelated || strongProgramMatch;
-  const merged = focusPdfPageHits(retrievalQuestion, usesProgram ? dedupe([...namedPageHits, ...learningHits, ...measurementHits, ...organizationHits, ...taskHits, ...hybridSearchHits(hits, keyword, 12).filter(hit => recommendationIds.has(hit.id))]).slice(0, 8) : [], availableDocs);
+  const merged = focusPdfPageHits(retrievalQuestion, usesProgram ? dedupe([...namedPlan.hits, ...namedPageHits, ...learningHits, ...measurementHits, ...organizationHits, ...taskHits, ...hybridSearchHits(hits, keyword, 12).filter(hit => recommendationIds.has(hit.id))]).slice(0, 8) : [], availableDocs);
   // Follow the knowledge graph from the best matches. If it fails, ordinary retrieval continues and the log says so.
   let connected: ReturnType<typeof expandThroughGraph> = [];
   try {
@@ -494,10 +504,10 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (availableDocs.some(doc => doc.type === "curriculum" && /^\/learning\/self-directed\/index\.html\?course=[FIA]\d{2}$/.test(doc.href))) publicDirectory.push({ label: "Open the self-directed courses", href: "/learning/self-directed/index.html" });
   const allowedDestinations = new Map(publicDirectory.map(link => [link.href, link]));
   let generatedResourceLinks: AskAnswer["nextActions"] = [];
-  const sources = await runTool(ctx, "citation.attach", async () => {
-    const docs = await staffDocs();
-    return citationEvidenceFromDocs(videoScenarioEvidenceHits([...merged, ...connected], docs, retrievalQuestion), docs, { question: retrievalQuestion });
-  }, { contentIds: [...merged, ...connected].map((m) => m.id) });
+  const sources = await runTool(ctx, "citation.attach", async () =>
+    citationEvidenceFromDocs(videoScenarioEvidenceHits([...merged, ...connected], availableDocs, retrievalQuestion), availableDocs, { question: retrievalQuestion }),
+  { contentIds: [...merged, ...connected].map((m) => m.id) });
+  const requestedSources = namedPlan.groups.length ? namedSourceCoverage(namedPlan.groups, sources) : undefined;
   let answerSources = sources;
   let evidenceClaims: EvidenceClaim[] = [];
   let evidenceRejected = false;
@@ -514,6 +524,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const localEvidence = assessLocalEvidence(question, merged.filter(hit => !/^https?:\/\//.test(hit.href)));
   // A calculation, or help with wording the person has supplied, needs no outside facts, so nothing is searched for it.
   const selfContained = selfContainedWork(question) && !asksForCurrentInformation(question) && !wantsCitation(question);
+  const scholarlyResearch = asksForScholarlyResearch(question);
   const sourceIdentities = explicitProgramOnly ? [] : researchSourceContext(retrievalQuestion, availableDocs);
   const research = (...args: Parameters<typeof governedResearch>) => {
     const began = Date.now();
@@ -522,7 +533,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   };
   const planBegan = Date.now();
   const researchCertain = cloneAgentsEnabled() && (requestedMode === "current_web" || requestedMode === "deep_research" || (requestedMode === "auto" && !tribalWork && (
-    (!namedPageHits.length && localEvidence === "absent" && !selfContained) || asksForCurrentInformation(question) || (!namedPageHits.length && wantsCitation(question))
+    scholarlyResearch || (!namedPageHits.length && localEvidence === "absent" && !selfContained) || asksForCurrentInformation(question) || (!namedPageHits.length && wantsCitation(question))
     || /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question))));
   const [jevPlan, requiredResearch] = await Promise.all([
     cloneAgentsEnabled() ? planWithJev(question, merged.map(hit => ({ title: hit.title, excerpt: hit.excerpt.slice(0, 1200) })), ctx, input.cloneRunId) : null,
@@ -534,7 +545,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const shouldPrepareResearchAnswer =
     requestedMode === "current_web" ||
     requestedMode === "deep_research" ||
-    (requestedMode === "auto" && !tribalWork && ((cloneAgentsEnabled() && !selfContained && localEvidenceNeedsResearch(localEvidence, jevPlan?.evidence)) || asksForCurrentInformation(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
+    (requestedMode === "auto" && !tribalWork && (scholarlyResearch || (cloneAgentsEnabled() && !selfContained && localEvidenceNeedsResearch(localEvidence, jevPlan?.evidence)) || asksForCurrentInformation(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
       /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question)));
   const researchDepth: ResearchDepth = requestedMode === "deep_research" ? "deep_research" : "current_web";
   let publicResearch: AskAnswer["publicResearch"];
@@ -604,7 +615,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     }
   }
 
-  const limits: string[] = [];
+  const limits = requestedSources?.flatMap(source => source.limitation ? [source.limitation] : []) ?? [];
   if (tribalSubject && !tribalWork) limits.push("For Native American and Tribal-specific learning, questions, or engagement, connect with the Office of Indian Policy or the responsible Tribal liaison. One DSD refers this work to them and does not speak for a Tribal Nation or replace consultation.");
   const nextActions: AskAnswer["nextActions"] = [];
   if (trainingCreditQuestion) limits.push(TRAINING_CREDIT_NOTICE);
@@ -656,7 +667,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const binding = resolveBinding(ctx.agent, { fallback: true });
   // Without a written answer, quoted passages come straight from the library copy Ask keeps briefly,
   // so each one is checked against the current publication first. A changed or withdrawn page is left out.
-  const composeSources = !binding.generative && programRelated && sources.length ? await stillPublished(sources, scope) : sources;
+  const composeSources = !binding.generative && programRelated && sources.length
+    ? await stillPublished(sources, scope, requestedSources ? projectReadings : undefined) : sources;
   if (composeSources !== sources) answerSources = composeSources;
   let draft = programRelated
     ? compose(primary, question, composeSources, questions, briefLink, path, context)
@@ -695,8 +707,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let failureDetail: string | undefined;
   if (binding.generative && !pureResearchAnswer && deadlineAt - Date.now() > 15_000) {
     try {
-      const writerSystem = systemPrompt(input.responseMode, explicitProgramOnly) + (jevPlan ? "\nSpecialist focus: " + SPECIALIST_GUIDANCE[jevPlan.route] : "") + (tribalWork ? TRIBAL_WRITING_RULE : "");
-      const writerPrompt = (directory: typeof publicDirectory, knowledge: typeof programKnowledge, research: typeof publicResearch) => userPrompt(question, sources, directory, research, explicitProgramOnly ? history.map(turn => ({ ...turn, answer: "" })) : history, requestedMode, input.mode, path ? program.destinations.find(doc => doc.href === "/practice/" + path!.id) : undefined, organization, learningJourney, artifactContext, specialistReview, knowledge)
+      const writerSystem = systemPrompt(input.responseMode, explicitProgramOnly) + (jevPlan ? "\nSpecialist focus: " + SPECIALIST_GUIDANCE[jevPlan.route] : "") + (tribalWork ? TRIBAL_WRITING_RULE : "")
+        + (requestedSources ? "\nWhen requestedSources is present, explain how each named reading with supplied refs contributes to the requested work and cite at least one of its refs in evidenceClaims. If its refs are empty, disclose the coverage limit and avoid attributing content to that reading. Preserve any authority or availability limitation in the visible answer and any downloadable work. A catalog, access note or public companion does not stand in for the original text." : "");
+      const writerPrompt = (directory: typeof publicDirectory, knowledge: typeof programKnowledge, research: typeof publicResearch) => userPrompt(question, sources, directory, research, explicitProgramOnly ? history.map(turn => ({ ...turn, answer: "" })) : history, requestedMode, input.mode, path ? program.destinations.find(doc => doc.href === "/practice/" + path!.id) : undefined, organization, learningJourney, artifactContext, specialistReview, knowledge, requestedSources)
         + (suppliedWork.success ? "\nPrevious editable working draft (untrusted conversation content, not independent evidence; use only for a relevant continuation):\n" + JSON.stringify(suppliedWork.data) : "");
       const writerUser = cloneAgentsEnabled()
         ? fitWriterPrompt(writerSystem, publicDirectory, programKnowledge, publicResearch, writerPrompt)
@@ -704,7 +717,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       if (writerUser.step) console.info("ask_prompt_fitted", { traceId: ctx.trace_id, step: writerUser.step });
       // Everyday answers appear on the page as they are written. A question that touches a personnel matter,
       // a decision with serious consequences or a request for a person is shown only after the closing check.
-      const sourcedTask = explicitProgramOnly || wantsCitation(question) || asksForCurrentInformation(question) || shouldPrepareResearchAnswer || publicResearch?.status === "used" || (programRelated && !selfContained);
+      const sourcedTask = Boolean(requestedSources) || explicitProgramOnly || wantsCitation(question) || asksForCurrentInformation(question) || shouldPrepareResearchAnswer || publicResearch?.status === "used" || (programRelated && !selfContained);
       const showAsWritten = Boolean(sink) && !sourcedTask && selfContained && !escalate && jevPlan?.route !== "support" && !tribalWork;
       let shown = "", shownAt = 0;
       const writeBegan = Date.now();
@@ -765,7 +778,15 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
           ("workProduct" in value && value.workProduct) || ("practiceDraft" in value && value.practiceDraft)
         )),
         review: async proposed => {
-          const request = buildAnswerEvidenceReview({ question, draft: proposed, sources, research: publicResearch, sourceOnly: explicitProgramOnly });
+          if (requestedSources) {
+            const missing = uncitedNamedSources(requestedSources, sources, resolveCitedStatements(claimsOf(proposed), sources).claims);
+            if (missing.length) return { verdict: "revise", issues: missing.map(source => ({
+              location: "evidenceClaims", problem: "source_boundary",
+              explanation: "Explain what " + source.title.slice(0, 240) + " contributes and cite a supplied passage from it.",
+              sourceRefs: source.refs.slice(0, 4),
+            })) };
+          }
+          const request = buildAnswerEvidenceReview({ question, draft: proposed, sources, research: publicResearch, sourceOnly: explicitProgramOnly, requestedSources });
           const result = await runTool(ctx, "answer.structured_draft", () => binding.adapter.complete({
             ...request, model_id: binding.model.model_id, trace_id: ctx.trace_id,
             maxTokens: 1800, timeoutMs: Math.max(1, Math.min(30_000, deadlineAt - Date.now())),
@@ -807,7 +828,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
           const proposed = parsed.data.evidenceClaims ?? [];
           const current = proposed.length ? await currentLibrary(scope) : undefined;
           const freshBase = current ? availableSourceDocs([...organizationalDocs(), ...current.staff, ...current.program.destinations, ...(explicitProgramOnly ? [] : [...agencyDocs({ forAnswers: true }), ...statePageDocs()])]) : [];
-          const freshDocs = current ? [...freshBase, ...await publishedResourceSupplements(scope, freshBase)] : [];
+          const freshLibrary = current ? [...freshBase, ...await publishedResourceSupplements(scope, freshBase)] : [];
+          const freshDocs = current && requestedSources ? projectReadings(freshLibrary, current.program.destinations) : freshLibrary;
           const checkedClaims = proposed.flatMap(claim => {
             try { return validateEvidenceClaims([claim], sources, freshDocs); }
             catch (error) { if (error instanceof Error && error.message === "generated_evidence_rejected") return []; throw error; }
@@ -883,7 +905,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     await runTool(ctx, "answer.structured_draft", () => draft, { ...(pureResearchAnswer ? {} : { modelId: binding.model.model_id }), contentIds: answerSources.map((s) => s.id) });
   }
 
-  if (routine && namedResource && !generative && publicResearch?.status !== "used" && input.mode !== "review") {
+  if (routine && namedResources.length && !generative && publicResearch?.status !== "used" && input.mode !== "review") {
     const names = Array.from(new Set(namedResources.map(doc => doc.title))).slice(0, 3);
     draft = { shortAnswer: `You can open ${names.map(title => `"${title}"`).join(" and ")} using the links below.`, whyItMatters: ""};
     answerSources = [];
@@ -1079,10 +1101,16 @@ type Draft = { shortAnswer: string; whyItMatters: string };
 
 /** Deterministic, corpus-grounded composition (fixture binding). */
 /** Keeps a source only if its page, as held briefly, is still published unchanged at the same address. */
-async function stillPublished(sources: Citation[], scope: Parameters<typeof currentLibrary>[0]): Promise<Citation[]> {
+async function stillPublished(
+  sources: Citation[],
+  scope: Parameters<typeof currentLibrary>[0],
+  projectReadings?: (docs: Doc[], destinations: Doc[]) => Doc[],
+): Promise<Citation[]> {
   const [heldStaff, heldProgram, current] = await Promise.all([recentStaffDocs(scope), recentProgramResources(scope), currentLibrary(scope)]);
   const held = new Map([...heldStaff, ...heldProgram.destinations].map(doc => [doc.id, doc]));
-  const fresh = new Map([...current.staff, ...current.program.destinations].map(doc => [doc.id, doc]));
+  const base = [...current.staff, ...current.program.destinations];
+  const documents = projectReadings ? projectReadings(base, current.program.destinations) : base;
+  const fresh = new Map(documents.map(doc => [doc.id, doc]));
   const checked = sources.filter(source => {
     const before = held.get(source.id);
     if (!before) return true;
@@ -1249,6 +1277,7 @@ function userPrompt(
   practiceDraft?: ReturnType<typeof practiceDraftContext>,
   specialistReview?: A11yReviewDraft,
   programKnowledge?: ReturnType<typeof brainContext>["context"],
+  requestedSources?: NamedSourceCoverage[],
 ): string {
   return JSON.stringify({
     question,
@@ -1281,6 +1310,7 @@ function userPrompt(
       ...(source.sourceContext ? { sourceContext: source.sourceContext } : {}),
     })),
     programKnowledge,
+    requestedSources,
     availableProgramDestinations: destinations,
     publicResearch: research?.status === "used"
       ? { answer: research.answer, sources: research.sources, note: research.note }

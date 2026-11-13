@@ -9,6 +9,8 @@ import type { ToolContext } from "../types";
 import { errorStatus, providerErrorExcerpt } from "../providers/log";
 import { admitResearch, getResearchPolicy, hashQuery, recordUsage, type Admission } from "./governance";
 import { withResearchSlot } from "./slots";
+import { asksToAvoidWebResearch } from "../research-preference";
+import { asksForScholarlyResearch, CONSENSUS_EVIDENCE_NOTE, consensusQuery, consensusResearchProvider } from "./consensus";
 import { researchIdentityInstruction, type ResearchSourceContext } from "./source-context";
 import {
   resolveResearchProvider,
@@ -89,8 +91,13 @@ function inProgramContext(question: string, sourceContext?: ResearchSourceContex
 }
 
 export async function governedResearch(question: string, depth: ResearchDepth, explicit: boolean, ctx: ToolContext, fetcher?: typeof fetch, sourceContext?: ResearchSourceContext): Promise<GovernedResearchResult> {
+  if (asksToAvoidWebResearch(question)) return { status: "not_admitted", reason: "source_only", message: "The answer uses the requested source restriction." };
   const policy = await getResearchPolicy();
-  const preview = resolveResearchProvider(policy.provider_order);
+  const scholarly = asksForScholarlyResearch(question);
+  const select = (order: typeof policy.provider_order) => scholarly
+    ? (consensusResearchProvider.configured() ? consensusResearchProvider : null)
+    : resolveResearchProvider(order);
+  const preview = select(policy.provider_order);
   if (ctx.dry_run) {
     return {
       status: "not_admitted",
@@ -98,9 +105,22 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
       message: "This check does not look at current public sources.",
     };
   }
-  const admission = await admitResearch(question, depth, explicit, Boolean(preview), ctx.role);
-  if (!admission.ok) return { status: "not_admitted", reason: admission.reason, message: admission.message };
-  const provider = resolveResearchProvider(admission.policy.provider_order);
+  const admission = await admitResearch(question, depth, explicit || scholarly, Boolean(preview), ctx.role);
+  if (!admission.ok) return {
+    status: "not_admitted",
+    reason: admission.reason,
+    message: scholarly && admission.reason === "no_provider_configured"
+      ? "The paper search is unavailable. You can still use the program resources."
+      : admission.message,
+  };
+  if (scholarly) {
+    try {
+      consensusQuery(question);
+    } catch {
+      return { status: "not_admitted", reason: "safety_refused", message: "Keep paper search questions general and remove any private details." };
+    }
+  }
+  const provider = select(admission.policy.provider_order);
   if (!provider) return { status: "not_admitted", reason: "no_provider_configured", message: "Outside research is not available right now. You can still use the answer from program resources." };
 
   const started = Date.now();
@@ -118,7 +138,7 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
       const output = await withResearchSlot(() => runTool(
         ctx,
         toolName,
-        () => provider.run({ question: inProgramContext(question, sourceContext), depth, allowed_domains: currentAdmission.policy.allowed_domains, recency: currentAdmission.policy.recency, trace_id: ctx.trace_id }, fetcher),
+        () => provider.run({ question: scholarly ? question : inProgramContext(question, sourceContext), depth, allowed_domains: currentAdmission.policy.allowed_domains, recency: currentAdmission.policy.recency, trace_id: ctx.trace_id }, fetcher),
         { modelId: provider.modelFor(depth) },
       ));
       await recordUsage({
@@ -141,7 +161,7 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
         trace_id: ctx.trace_id,
         provider_trace_id: output.providerTraceId,
       });
-      return { status: "used", output, provider: provider.id, note: EXTERNAL_EVIDENCE_NOTE };
+      return { status: "used", output, provider: provider.id, note: scholarly ? CONSENSUS_EVIDENCE_NOTE : EXTERNAL_EVIDENCE_NOTE };
     } catch (error) {
       const code = researchFailure(error, { trace_id: ctx.trace_id, provider: provider.id, model: provider.modelFor(depth), depth });
       await recordUsage({
@@ -159,7 +179,7 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
         trace_id: ctx.trace_id,
       });
       const retryable = /^(?:research_(?:unresolved_citation|missing_citation|sources_missing|no_safe_sources|search_not_performed|empty_response|invalid_response|incomplete|timeout)|research_http_(?:408|429|5\d\d))$/.test(code);
-      if (attempt === 0 && retryable && depth === "current_web") {
+      if (!scholarly && attempt === 0 && retryable && depth === "current_web") {
         const latest = await getResearchPolicy();
         const alternate = resolveResearchProvider(latest.provider_order.filter(id => !attempted.has(id) && id !== "fixture"));
         if (alternate) {
@@ -173,6 +193,14 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
             continue;
           }
         }
+      }
+      if (scholarly) {
+        const message = code === "research_consensus_quota"
+          ? "The paper search allowance has been used. You can still use program resources."
+          : code === "research_consensus_no_papers"
+            ? "The paper search did not find papers within the current source filters. Try a more specific question."
+            : "The paper search could not finish just now. You can still use program resources.";
+        return { status: "failed", message, error_code: code };
       }
       return { status: "failed", message: "We couldn't complete the outside research just now. You can still use the answer from program resources below, including its sources and limits.", error_code: code };
     }
@@ -195,7 +223,7 @@ export async function governedSearch(
 ): Promise<GovernedSearchResult> {
   const policy = await getResearchPolicy();
   const selected = resolveResearchProvider(policy.provider_order);
-  if (selected?.id !== "perplexity_agent") {
+  if (asksToAvoidWebResearch(question) || asksForScholarlyResearch(question) || selected?.id !== "perplexity_agent") {
     const result = await governedResearch(question, "current_web", explicit, ctx, fetcher, sourceContext);
     return result.status === "used"
       ? { status: "used", sources: result.output.sources, note: result.note, providerTraceId: result.output.providerTraceId }
@@ -255,4 +283,5 @@ export async function governedSearch(
 }
 
 export { plainText } from "./providers";
+export { asksForScholarlyResearch } from "./consensus";
 export type { ExternalSource, ResearchDepth, ResearchOutput, ResearchProviderId } from "./providers";

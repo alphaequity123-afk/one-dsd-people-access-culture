@@ -4,14 +4,13 @@ import { PROGRAM_LANGUAGE_STYLE } from "@/lib/content/editorial-style";
 import { createHash } from "node:crypto";
 import { AUTHORITY } from "@/lib/content/types";
 import { PODCASTS } from "@/lib/content/podcasts";
-import { selfDirectedHref } from "@/lib/content/self-directed";
-import { WATER_ESSAY } from "@/lib/content/water-we-swim-in";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import type { SourceEvidence } from "@/lib/content/ask-evidence";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { indexedProgramResources } from "@/lib/intelligence/retrieval/program-resources";
 import { indexedStaffDocs } from "@/lib/intelligence/retrieval/staff-search";
 import { publicRetrievalDocumentEligible } from "@/lib/intelligence/retrieval/public-course-boundary";
+import { learningResourcePath, projectPublicReadingPath, publicLearningSourceUrl } from "@/lib/intelligence/retrieval/public-source-paths";
 import { publishedResourceSupplements } from "@/lib/intelligence/retrieval/published-resource-supplements";
 import { evidenceForDoc } from "@/lib/intelligence/retrieval/evidence";
 import { focusPdfPageHits, namedPdfPageHits } from "@/lib/intelligence/retrieval/named-pdf";
@@ -40,11 +39,8 @@ type ResourceLearningInput = { question: string; resourcePath?: string; mode: Re
 type ResourceAvailability = { available: boolean; title?: string };
 type ResourcePassage = LearningPassage & { evidence: SourceEvidence; key: string };
 
-const localBase = "https://local.invalid";
-const protectedPath = /^\/(?:api|_next|admin|consultant|contribute|equity-workspace|intake|my-work|my-view|team-space|toolkit-studio|support\/(?:request|track)|one-dsd\/team\/workspace)(?:\/|$)/i;
 const directoryTypes = new Set(["county_agency", "designated_provider", "community_organization", "community_sources"]);
 const linkedLearningTypes = new Set(["learning_pdf_page", "learning_slide", "public_media_transcript", "learning_reference_section"]);
-const resourceQueryKeys = new Set(["course", "month", "community", "category"]);
 const contactDetails = /\b(?:phone|mobile|email|e-mail|fax|street address|home address|contact person|contact name)\s*:|\b(?:https?:\/\/\S*\?|mailto:|tel:)\S+/i;
 const evidenceLimit = 8;
 const insufficient = insufficientLearningEvidence(
@@ -58,71 +54,23 @@ export class ResourcePublicationChanged extends Error {
   constructor() { super("resource_publication_changed"); }
 }
 
-/** Match only a public local destination. URLs in source text are never fetched. */
-function sourceUrl(href: string): URL | undefined {
-  if (!/^\/(?!\/)/.test(href) || /[\\\s]/.test(href) || /%(?:2f|5c)/i.test(href)
-    || Array.from(href).some(char => char.charCodeAt(0) < 32 || char.charCodeAt(0) === 127)) return undefined;
-  try {
-    const url = new URL(href, localBase);
-    const path = decodeURIComponent(url.pathname);
-    if (url.origin !== localBase || path.includes("\\") || protectedPath.test(path)
-      || Array.from(path).some(char => char.charCodeAt(0) < 32 || char.charCodeAt(0) === 127)) return undefined;
-    if (["next", "redirect", "url", "target", "returnTo"].some(key => url.searchParams.has(key))) return undefined;
-    return url;
-  } catch { return undefined; }
-}
-
-/** Route aliases share one source record. Keep query parameters that choose a published resource. */
-export function learningResourcePath(value: string): string | undefined {
-  if (value.length > 480) return undefined;
-  const url = sourceUrl(value);
-  if (!url) return undefined;
-  const path = url.pathname.replace(/\/$/, "").replace(/^\/share\/(library|courses)(?=\/|$)/, "/$1")
-    .replace(/^\/resources(?=\/|$)/, "/library");
-  if (!path) return undefined;
-  const courseAlias = path.startsWith("/library/self-directed-") ? selfDirectedHref(path.slice("/library/".length)) : undefined;
-  if (courseAlias) return courseAlias;
-  const query = new URLSearchParams();
-  for (const [key, entry] of url.searchParams) {
-    if (resourceQueryKeys.has(key) && /^[-_a-z0-9]{1,80}$/i.test(entry)) query.set(key, entry);
-  }
-  query.sort();
-  const search = query.toString();
-  return search ? `${path}?${search}` : path;
-}
+export { learningResourcePath };
 
 function eligibleDocument(doc: Doc): boolean {
   const describedPerson = doc.evidenceRevisions?.some(revision => /^research-.+-person-\d+$/.test(revision.sourceId))
     || /^research-.+-person-\d+$/.test(doc.id);
   return doc.status === "approved" && (AUTHORITY[doc.authority]?.citeable || doc.type === "source_reading_section")
     && !describedPerson && (!directoryTypes.has(doc.type) || safeDirectorySummary(doc.summary))
-    && acceptableText(doc.title) && !!sourceUrl(doc.href) && publicRetrievalDocumentEligible(doc);
+    && acceptableText(doc.title) && !!publicLearningSourceUrl(doc.href) && publicRetrievalDocumentEligible(doc);
 }
 
 const keyFor = (doc: Pick<Doc, "kind" | "id" | "href">) => JSON.stringify([doc.kind, doc.id, doc.href]);
-
-function projectedResource(doc: Doc, scope: StaffProgramScope, directoryPublished: boolean): Doc[] {
-  if (doc.href === "/learn/water-we-swim-in/essay") {
-    const source = doc.evidenceRevisions?.[0]?.sourceId ?? doc.id;
-    const section = WATER_ESSAY.sections.find(item => source.startsWith(`water-essay-${item.id}-`) && /^\d+$/.test(source.slice(`water-essay-${item.id}-`.length)));
-    if (section) return [{ ...doc, href: `${doc.href}/${section.id}` }];
-  }
-  const community = doc.href.match(/^\/minnesota-communities\/([a-z0-9-]+)$/)?.[1];
-  if (!community || doc.type !== "community_research") return [doc];
-  const prefix = `profile-${community}-`;
-  const source = doc.evidenceRevisions?.find(revision => revision.sourceId.startsWith(prefix))?.sourceId ?? doc.id;
-  if (!source.startsWith(prefix)) return [doc];
-  const section = source.slice(prefix.length).match(/^([a-z0-9-]+)-\d+$/)?.[1];
-  if (!section || !directoryPublished || (scope === "one-dhs" && community !== "american" && community !== "minnesota")) return [];
-  const anchor = section === "businesses" ? "businesses-and-commercial-life" : section;
-  return [{ ...doc, href: `${doc.href}/profile#profile-${anchor}` }];
-}
 
 async function baseDocuments(scope: StaffProgramScope): Promise<Doc[]> {
   const [staff, program] = await Promise.all([indexedStaffDocs(scope), indexedProgramResources(scope)]);
   const directoryPublished = program.destinations.some(doc => doc.href === "/minnesota-communities" && doc.status === "approved");
   return [...staff.filter(doc => doc.kind !== "brief"), ...program.destinations]
-    .flatMap(doc => projectedResource(doc, scope, directoryPublished)).filter(eligibleDocument);
+    .flatMap(doc => projectPublicReadingPath(doc, scope, directoryPublished)).filter(eligibleDocument);
 }
 
 async function withSupplements(scope: StaffProgramScope, base: Doc[]): Promise<Doc[]> {
