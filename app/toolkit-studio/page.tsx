@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { PageIntro } from "@/components/ui";
 import { TOOLKIT_CARDS, TOOLKIT_CATALOG, TOOLKIT_DOWNLOADS, TOOLKIT_STEPS, TOOLKIT_WHY } from "@/lib/content/toolkit-studio";

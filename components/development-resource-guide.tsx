@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { getPublishedStaffContent } from "@/lib/content/staff-publications";
 import { prepareEditableSurface } from "@/components/editable-surface";

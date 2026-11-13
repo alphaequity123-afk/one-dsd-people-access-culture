@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import Image from "next/image";
 import { EQUITY_TOOLKIT_HERO_IMAGE } from "@/lib/content/page-images";
 import styles from "./operationalizing-equity-preview.module.css";

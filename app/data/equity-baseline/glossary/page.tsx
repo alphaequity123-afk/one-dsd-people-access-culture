@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { leadersAllowed } from "@/lib/auth/leaders-access";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { GLOSSARY } from "@/lib/content/data/equity-baseline";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "../equity-baseline.module.css";

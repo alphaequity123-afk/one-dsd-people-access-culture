@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { ContentItem } from "@/lib/content/types";
 
 /** One set of entry links into existing resources; no additional copies of content. */

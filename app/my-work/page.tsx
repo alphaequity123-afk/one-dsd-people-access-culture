@@ -1,6 +1,6 @@
 import { SELF_DIRECTED_COURSES } from "@/lib/content/self-directed";
 import { SelfDirectedContinue } from "@/components/self-directed-continue";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { Metadata } from "next";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { StaffWorkBrowse } from "@/components/staff-work-browse";

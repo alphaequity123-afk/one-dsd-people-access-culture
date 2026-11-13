@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { PUBLIC_BODIES, STATE_AGENCY_SOURCE, agencyDisplayName } from "@/lib/content/state-agencies";
 import { facetValue } from "@/lib/graph/facets";
@@ -24,7 +26,7 @@ export default async function AgencyPage({ params }: Props) {
       <nav className="calm-crumbs" aria-label="Breadcrumb"><Link href={agency.group ? "/minnesota-agencies?view=partners" : "/minnesota-agencies"}>Minnesota agencies and partners</Link></nav>
       <h1>{agencyDisplayName(agency.name)}</h1>
       <p>{agency.description}</p>
-      <p><a href={agency.href}>Visit the official website</a></p>
+      <p><SourceLink href={agency.href}>Visit the official website</SourceLink></p>
     </header>
     {readings.length ? <section className="pilot-topic-themes" aria-labelledby="agency-readings">
       <h2 id="agency-readings">Read in One DSD</h2>
@@ -34,6 +36,6 @@ export default async function AgencyPage({ params }: Props) {
       <h2 id="agency-connections">Connected program work</h2>
       <ul className="pilot-topic-rows"><li><Link href={`/explore/community/agency-${id}`}>Explore related learning, tools, and policies</Link></li></ul>
     </section> : null}
-    {!agency.group ? <p className="mt-8 text-sm">Directory source: <a href={STATE_AGENCY_SOURCE}>State of Minnesota agencies, boards and commissions</a>.</p> : null}
+    {!agency.group ? <p className="mt-8 text-sm">Directory source: <SourceLink href={STATE_AGENCY_SOURCE}>State of Minnesota agencies, boards and commissions</SourceLink>.</p> : null}
   </article>;
 }

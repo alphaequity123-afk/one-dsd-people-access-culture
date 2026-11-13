@@ -1,4 +1,6 @@
 'use client';
+import { SourceLink } from "@/components/app-link";
+
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
 import './cl-tabs.css';
 
@@ -58,7 +60,7 @@ export function ClTabs({ label, tabs }: { label: string; tabs: ClTab[] }) {
   return <div className="cl-tabs">
     {ready
       ? <div role="tablist" aria-label={label}>{tabs.map((tab, index) => <button key={tab.id} type="button" role="tab" id={`${tab.id}-tab`} aria-controls={tab.id} aria-selected={selected === index} tabIndex={selected === index ? 0 : -1} onKeyDown={event => onKeyDown(event, index)} onClick={() => choose(index, false)}>{tab.label}</button>)}</div>
-      : <nav aria-label={`${label}: on this page`} className="cl-tabs-contents"><ul>{tabs.map(tab => <li key={tab.id}><a href={`#${tab.id}`}>{tab.label}</a></li>)}</ul></nav>}
+      : <nav aria-label={`${label}: on this page`} className="cl-tabs-contents"><ul>{tabs.map(tab => <li key={tab.id}><SourceLink href={`#${tab.id}`}>{tab.label}</SourceLink></li>)}</ul></nav>}
     {tabs.map((tab, index) => <div key={tab.id} ref={element => { panels.current[index] = element; }} className="cl-tabs-panel" id={tab.id} role={ready ? 'tabpanel' : undefined} aria-labelledby={ready ? `${tab.id}-tab` : undefined} tabIndex={ready ? 0 : undefined} hidden={ready && selected !== index}>{tab.content}</div>)}
   </div>;
 }

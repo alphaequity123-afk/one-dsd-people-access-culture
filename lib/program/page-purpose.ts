@@ -27,4 +27,4 @@ export function pageArea(path: string): PageArea {
   if (/^\/(learn|collections|courses|paths|journeys|resources|library|audio-library|podcasts)(?:\/|$)/.test(path)) return "learn";
   return "about";
 }
-export function internalPage(path: string) { return path !== "/" && path !== "/home"; }
+export function internalPage(path: string) { return path !== "/" && path !== "/home" && !path.startsWith("/embedded-tools/"); }

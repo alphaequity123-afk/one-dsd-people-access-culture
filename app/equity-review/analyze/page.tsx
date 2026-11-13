@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { AnalyzeWorkspace } from "@/components/analysis/analyze-workspace";
 import { communityDesignEntries } from "@/lib/content/community-design";

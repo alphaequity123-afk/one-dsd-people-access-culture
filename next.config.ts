@@ -84,7 +84,7 @@ const nextConfig: NextConfig = {
   htmlLimitedBots: /.*/,
   // Each build worker holds its own database pool. Bound prerender concurrency
   // so builds and the running service fit the hosted session pooler's budget.
-  experimental: { cpus: 2 },
+  experimental: { cpus: 2, webpackMemoryOptimizations: true },
   allowedDevOrigins: ["127.0.0.1"],
   devIndicators: false,
   turbopack: { root: __dirname },
@@ -103,6 +103,7 @@ const nextConfig: NextConfig = {
   // ASK/ONNX/models excluded. Per-format dynamic imports stay in the
   // route so one missing office file cannot take every binary format down.
   outputFileTracingIncludes: {
+    "/source-reading/*": ["./data/source-readings/*.json"],
     "/api/consultant/toolkit/upload": ["./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
     "/api/consultant/toolkit/export": [...downloadRuntimeIncludes, "./lib/consultant-toolkit/fonts/*.ttf"],
     "/api/consultant/analysis/upload": ["./node_modules/ffmpeg-static/ffmpeg*", "./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"],
@@ -206,6 +207,10 @@ const nextConfig: NextConfig = {
       { source: "/videos/equity-in-practice/:version/video-4k.mp4", headers: [{ key: "Content-Disposition", value: 'attachment; filename="People-Access-Culture-in-Practice-DSD-Example-4K.mp4"' }] },
       { source: "/videos/equity-toolkit-worked-example/:version/video-4k.mp4", headers: [{ key: "Content-Disposition", value: 'attachment; filename="Equity-Analysis-Toolkit-Worked-Example-4K.mp4"' }] },
       { source: "/learning/self-directed/data/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
+      { source: "/embedded-tools/:path*", headers: [
+        { key: "Content-Security-Policy", value: contentSecurityPolicy.replace("frame-ancestors 'none'", "frame-ancestors 'self'") + "; media-src 'self' blob:" },
+        { key: "X-Frame-Options", value: "SAMEORIGIN" },
+      ] },
       // Only these public workspaces may appear inside this app's own pages.
       ...[
         "/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool.html",

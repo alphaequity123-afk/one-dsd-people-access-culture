@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { OrganizationBreadcrumb, OrganizationSourceNote, SharedAgencyResources } from "@/components/organization-navigation";
 import { ADMINISTRATION_NAVIGATION } from "@/lib/product/organization-navigation";

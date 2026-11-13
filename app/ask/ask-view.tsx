@@ -1,5 +1,5 @@
 import { AskClient } from "@/components/ask-client";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { cloneAgentsEnabled } from "@/lib/intelligence/clone/config";
 import { getResearchPolicy } from "@/lib/intelligence/research/governance";
 import styles from "./ask.module.css";

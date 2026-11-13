@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro, Notice } from "@/components/ui";
 import { ownerPageGuard } from "@/lib/auth/owner-page";
 import {

@@ -2,7 +2,7 @@ import { isRetiredCulturalWorkshop } from '@/lib/program/retired-features';
 import styles from "../../course-design.module.css";
 import { LearningJourneyLink } from "@/components/learning-journey-link";
 import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound, redirect } from "next/navigation";
 import { CourseLesson } from "@/components/course-lesson";
 import { ResourceDownloads } from "@/components/resource-downloads";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { GraduationPath } from "@/lib/content/paths";
 
 /** Published checklist for a practice path. Staff do not fill or save notes here. */

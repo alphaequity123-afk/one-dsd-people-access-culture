@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { ReactNode } from "react";
 import styles from "./page-contents.module.css";
 
@@ -9,7 +11,7 @@ export function PageContents({ items, children, className = "" }: {
   children: ReactNode;
   className?: string;
 }) {
-  const links = <ul>{items.map(item => <li key={item.href}><a href={item.href}>{item.label}</a></li>)}</ul>;
+  const links = <ul>{items.map(item => <li key={item.href}><SourceLink href={item.href}>{item.label}</SourceLink></li>)}</ul>;
   return <div className={`${styles.layout} ${className}`}>
     <aside className={styles.rail}>
       <details className={styles.contents}>

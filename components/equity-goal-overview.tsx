@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import model from "@/lib/program/equity-goals.json";
 
 export function EquityGoalOverview() {

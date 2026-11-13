@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { localStudyHref } from "@/lib/client/resource-study-links";
 import { resourceArtifactKinds, type ArtifactResourceLink, type ArtifactResourceSearch, type ResourceArtifact, type ResourceArtifactKind } from "@/lib/learning/resource-artifact-types";

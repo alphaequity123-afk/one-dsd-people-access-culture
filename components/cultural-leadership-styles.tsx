@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 
 import { LeadershipStyleVideo } from "./leadership-style-video";
 
@@ -32,13 +34,13 @@ export function CulturalLeadershipStyles() {
     <details className="max-w-4xl rounded-xl border border-line p-5">
       <summary className="cursor-pointer font-semibold">Sources for leadership learning</summary>
       <ul className="mt-3 space-y-2 leading-7">
-        <li><a className="underline" href="https://greenleaf.org/what-is-servant-leadership/" target="_blank" rel="noreferrer">Greenleaf Center: servant leadership</a></li>
-        <li><a className="underline" href="https://www.journals.uchicago.edu/doi/abs/10.1086/218207" target="_blank" rel="noreferrer">Lippitt: research on authoritarian and democratic group settings</a></li>
-        <li><a className="underline" href="https://doi.org/10.1080/00224545.1939.9713366" target="_blank" rel="noreferrer">Lewin, Lippitt and White: research on different group climates</a></li>
-        <li><a className="underline" href="https://doi.org/10.1016/0090-2616%2890%2990061-S" target="_blank" rel="noreferrer">Bass: transformational leadership</a></li>
-        <li><a className="underline" href="https://eric.ed.gov/?id=EJ898247" target="_blank" rel="noreferrer">Shields: transformative leadership and equity</a></li>
-        <li><a className="underline" href="https://www.sciencedirect.com/science/article/pii/S1048984317300693" target="_blank" rel="noreferrer">Research on charismatic leadership and influence</a></li>
-        <li><a className="underline" href="https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Organizational_Learning_and_Change/Edmondson_1999_Psychological_safety.pdf" target="_blank" rel="noreferrer">Edmondson: psychological safety and learning in teams</a></li>
+        <li><SourceLink className="underline" href="https://greenleaf.org/what-is-servant-leadership/" target="_blank" rel="noreferrer">Greenleaf Center: servant leadership</SourceLink></li>
+        <li><SourceLink className="underline" href="https://www.journals.uchicago.edu/doi/abs/10.1086/218207" target="_blank" rel="noreferrer">Lippitt: research on authoritarian and democratic group settings</SourceLink></li>
+        <li><SourceLink className="underline" href="https://doi.org/10.1080/00224545.1939.9713366" target="_blank" rel="noreferrer">Lewin, Lippitt and White: research on different group climates</SourceLink></li>
+        <li><SourceLink className="underline" href="https://doi.org/10.1016/0090-2616%2890%2990061-S" target="_blank" rel="noreferrer">Bass: transformational leadership</SourceLink></li>
+        <li><SourceLink className="underline" href="https://eric.ed.gov/?id=EJ898247" target="_blank" rel="noreferrer">Shields: transformative leadership and equity</SourceLink></li>
+        <li><SourceLink className="underline" href="https://www.sciencedirect.com/science/article/pii/S1048984317300693" target="_blank" rel="noreferrer">Research on charismatic leadership and influence</SourceLink></li>
+        <li><SourceLink className="underline" href="https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Organizational_Learning_and_Change/Edmondson_1999_Psychological_safety.pdf" target="_blank" rel="noreferrer">Edmondson: psychological safety and learning in teams</SourceLink></li>
       </ul>
     </details>
   </section>;

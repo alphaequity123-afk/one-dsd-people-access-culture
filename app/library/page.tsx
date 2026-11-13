@@ -17,7 +17,7 @@ import { publishedCourses, courseContentItem, courseHref } from "@/lib/content/c
 import { DhsReferenceLink } from "@/components/dhs-reference-link";
 import type { Metadata } from "next";
 import { hasResourceMediaPreview, ResourceMediaPreview } from "@/components/multimedia/resource-media-preview";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { editingModeFromCookies } from "@/lib/auth/request";
 import { ResourceRemove } from "@/components/resource-tools";
 import { AuthorityPill } from "@/components/ui";
@@ -102,7 +102,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
   const clearFiltersHref = retainBrowse(libraryHref({ originArea: filters.originArea }, q));
   const fullCatalogHref = `${libraryHref({ originArea: filters.originArea })}${filters.originArea ? "&" : "?"}browse=all`;
   // Keep the first screen scannable; the full result set remains available below.
-  const paging = libraryPage(q ? hits.length : items.length, libraryQueryValue(sp.page), showAll);
+  const paging = libraryPage(q ? hits.length : items.length, libraryQueryValue(sp.page));
   const visibleHits = hits.slice(paging.start, paging.end);
   const visibleItems = items.slice(paging.start, paging.end);
   const pageHref = (page: number) => {
@@ -112,16 +112,11 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
     params.set("page", String(page));
     return `/library?${params.toString()}#${q ? "results-title" : "all-title"}`;
   };
-  const pagination = !showAll && paging.pages > 1 ? <nav aria-label="Resource result pages" className={styles.recoveryActions}>
+  const pagination = paging.pages > 1 ? <nav aria-label="Resource result pages" className={styles.recoveryActions}>
     {paging.page > 1 ? <Link href={pageHref(paging.page - 1)} rel="prev">Previous resources</Link> : null}
     <span>Page {paging.page} of {paging.pages}</span>
     {paging.page < paging.pages ? <Link href={pageHref(paging.page + 1)} rel="next">Next resources</Link> : null}
   </nav> : null;
-  const browseQuery = new URLSearchParams();
-  if (q) browseQuery.set("q", q);
-  for (const key of LIBRARY_FILTER_KEYS) if (filters[key]) browseQuery.set(key, filters[key]!);
-  browseQuery.set("browse", "all");
-  const browseAllHref = `/library?${browseQuery.toString()}#${q ? "results-title" : "all-title"}`;
   const noResultsBody = stringValue(copy, "noResultsBody") === stringValue(surface.definition.approvedValues, "noResultsBody")
     ? "No resources matched this search and the selected choices."
     : stringValue(copy, "noResultsBody");
@@ -231,7 +226,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
             </div>{hits.length ? <p className={styles.orderNote}>Most relevant first</p> : null}</div>
             <p role="status" className="sr-only">{hits.length} {hits.length === 1 ? "result" : "results"} found.</p>
             {!hits.length ? recovery : null}
-            {hits.length > visibleHits.length ? <p className={styles.moreResults}>Showing {paging.start + 1}–{paging.end} of {hits.length} results. <Link href={browseAllHref}>Browse all {hits.length} results</Link></p> : null}
+            {hits.length > visibleHits.length ? <p className={styles.moreResults}>Showing {paging.start + 1}–{paging.end} of {hits.length} results.</p> : null}
             <ul className={styles.results}>{visibleHits.map(renderHit)}</ul>
             {pagination}
           </section>
@@ -250,7 +245,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
           </div></div>
           <p role="status" className="sr-only">{items.length} {items.length === 1 ? "resource" : "resources"} available.</p>
           {!items.length ? recovery : null}
-          {items.length > visibleItems.length ? <p className={styles.moreResults}>Showing {paging.start + 1}–{paging.end} of {items.length} resources. <Link href={browseAllHref}>Browse all {items.length} resources</Link></p> : null}
+          {items.length > visibleItems.length ? <p className={styles.moreResults}>Showing {paging.start + 1}–{paging.end} of {items.length} resources.</p> : null}
           <ul className={styles.directory}>{visibleItems.map(renderItem)}</ul>
           {pagination}
         </section> : null}

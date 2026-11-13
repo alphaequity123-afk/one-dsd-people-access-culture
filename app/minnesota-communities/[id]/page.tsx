@@ -1,9 +1,11 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import { CommunityDesignPage } from "@/components/community-design-page";
 import { communityDesignEnabled } from "@/lib/content/community-design";
 import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import type { ReactNode } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { Notice, PageIntro } from "@/components/ui";
 import { getBrief } from "@/lib/content/briefs";
@@ -72,7 +74,7 @@ export default async function BriefPage({ params, searchParams }: { params: Prom
           <div>
             <h2 id="spotlight-title">{stringValue(briefSurface.values, "spotlightTitle")}</h2>
             <p>{stringValue(briefSurface.values, "spotlightBody")}</p>
-            <a href={stringValue(briefSurface.values, "spotlightHref")}>{stringValue(briefSurface.values, "spotlightLinkLabel")}</a>
+            <SourceLink href={stringValue(briefSurface.values, "spotlightHref")}>{stringValue(briefSurface.values, "spotlightLinkLabel")}</SourceLink>
           </div>
           <aside>
             <h3>{stringValue(briefSurface.values, "reflectionTitle")}</h3>
@@ -81,7 +83,7 @@ export default async function BriefPage({ params, searchParams }: { params: Prom
         </section> : null}
         <p className="brief-lede">{b.level0.whoAndWhere}</p>
         <nav aria-label={b.title} className="brief-quick-links">
-          <a href="#brief-resources">{stringValue(shellSurface.values, "sourcesKicker")}</a>
+          <SourceLink href="#brief-resources">{stringValue(shellSurface.values, "sourcesKicker")}</SourceLink>
           <Link href="/ask">{stringValue(shellSurface.values, "askLinkLabel")}</Link>
           <Link href="/library/ja-access-checks">{stringValue(shellSurface.values, "accessLinkLabel")}</Link>
           <Link href={supportAction.href}>{supportAction.label}</Link>
@@ -232,7 +234,7 @@ export default async function BriefPage({ params, searchParams }: { params: Prom
             <ul className="list-disc pl-5 text-sm">
               {b.sources.map((s) => (
                 <li key={s.label}>
-                  {s.href ? <a href={s.href} rel="noreferrer">{s.label}</a> : s.label}: {s.note}
+                  {s.href ? <SourceLink href={s.href} rel="noreferrer">{s.label}</SourceLink> : s.label}: {s.note}
                 </li>
               ))}
             </ul>

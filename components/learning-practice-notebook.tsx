@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { LearningStop } from "@/lib/content/learning-journey";
 
 /** F-02: published practice prompts only. Staff do not type or save notes here. */

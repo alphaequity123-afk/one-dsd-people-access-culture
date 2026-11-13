@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { LearningJourneyLink } from "@/components/learning-journey-link";
 import { ParticipationNotice } from "@/components/participation-notice";

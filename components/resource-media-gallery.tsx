@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 import { listResourceMedia, mediaAvailable, videoEmbedUrl, type ResourceMediaItem } from "@/lib/content/media";
 import { ResourceMediaManager } from "@/components/resource-media-manager";
@@ -80,12 +82,12 @@ function MediaBody({ item }: { item: ResourceMediaItem }) {
       );
     }
     if (fileUrl) return <video controls preload="none" src={fileUrl} style={{ width: "100%", borderRadius: 12, background: "#000" }} aria-label={item.title || "Video"} />;
-    if (item.externalUrl) return <a href={item.externalUrl} target="_blank" rel="noreferrer">Watch: {item.title || item.externalUrl}</a>;
+    if (item.externalUrl) return <SourceLink href={item.externalUrl} target="_blank" rel="noreferrer">Watch: {item.title || item.externalUrl}</SourceLink>;
   }
   if (item.kind === "document") {
     const href = fileUrl ?? item.externalUrl ?? "#";
-    return <a className="btn" href={href} target="_blank" rel="noreferrer">Open {item.title || item.fileName || "document"}</a>;
+    return <SourceLink className="btn" href={href} target="_blank" rel="noreferrer">Open {item.title || item.fileName || "document"}</SourceLink>;
   }
-  if (fileUrl) return <a href={fileUrl} target="_blank" rel="noreferrer">Open {item.title || item.fileName || "file"}</a>;
+  if (fileUrl) return <SourceLink href={fileUrl} target="_blank" rel="noreferrer">Open {item.title || item.fileName || "file"}</SourceLink>;
   return null;
 }

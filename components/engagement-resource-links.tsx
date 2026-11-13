@@ -1,4 +1,6 @@
-import Link from 'next/link';
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { ENGAGEMENT_RESOURCES } from '@/lib/content/engagement-resources';
 import { resourceStudyHref } from "@/lib/client/resource-study-links";
 
@@ -13,7 +15,7 @@ export function EngagementResourceLinks({kind='all'}:{kind?:'all'|'engagement'|'
         <h3 className="text-lg font-semibold"><Link href={resourcePath}>{item.title}</Link></h3>
         <p className="mt-2">{item.summary}</p>
         <div className="mt-3 flex flex-wrap items-center gap-x-4">
-          <a className="inline-flex min-h-11 items-center" href={item.nextActions.find(action => action.href.startsWith("/documents/engagement/"))?.href}>Open original PDF</a>
+          <SourceLink className="inline-flex min-h-11 items-center" href={item.nextActions.find(action => action.href.startsWith("/documents/engagement/"))?.href}>Open original PDF</SourceLink>
           {process.env.GEMINI_API_KEY?.trim() ? <Link className="inline-flex min-h-11 items-center font-semibold underline underline-offset-4" href={resourceStudyHref(resourcePath)} prefetch={false} aria-label={`Study ${item.title}`}>Study this document</Link> : null}
         </div>
       </li>;

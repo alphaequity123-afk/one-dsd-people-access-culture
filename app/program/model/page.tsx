@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { WorkExamples } from "@/components/work-examples";
 import { ProgramCommitments } from "@/components/program-commitments";
 import { ProgramRelationshipMap } from "@/components/multimedia/worked-practice-examples";

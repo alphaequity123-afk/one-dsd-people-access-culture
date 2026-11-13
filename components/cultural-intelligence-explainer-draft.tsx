@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 
 import { useState } from "react";
@@ -27,7 +29,7 @@ export function CulturalIntelligenceExplainerDraft({ media = {} }: { media?: Rec
           <track kind="captions" src={media[lesson.id].captions} srcLang="en" label="English" default />
           Your browser cannot play this video. You can read the lesson below.
         </video>
-        <p><a href={media[lesson.id].captions}>Download the captions</a></p>
+        <p><SourceLink href={media[lesson.id].captions}>Download the captions</SourceLink></p>
       </div></FeaturedMediaPanel> : <p>You can read the lesson below.</p>}
       <p>If you’re reading, take a moment to choose your response before continuing.</p>
       <details className="rounded-xl border border-line p-5">

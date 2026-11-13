@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 /** A card that points signed-in consultant and One DSD Team visitors to the Equity workspace tools. */
 export function EquityWorkspaceLinks({ intro }: { intro?: string }) {

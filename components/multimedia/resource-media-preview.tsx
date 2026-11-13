@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 const resourcesWithMedia = new Set([
   "podcast-equity-toolkit",

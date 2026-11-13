@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ExplainerVideo } from "@/components/explainer-video";
 
 /** One way to analyze a decision, scaled by depth. Shared by Practice, the toolkit and equity reviews. */

@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import { Fragment, type ReactNode } from "react";
 import { parseResearchMarkdown, type ResearchBlock } from "@/lib/content/research-markdown";
 import { PrivateNotes } from "./private-notes";
@@ -11,10 +13,10 @@ export function ResearchInline({ text }: { text: string }): ReactNode {
   for (const match of text.matchAll(INLINE)) {
     if (match.index > last) parts.push(text.slice(last, match.index));
     const key = match.index;
-    if (match[1]) parts.push(<a key={key} href={match[2]}><ResearchInline text={match[1]} /></a>);
+    if (match[1]) parts.push(<SourceLink key={key} href={match[2]}><ResearchInline text={match[1]} /></SourceLink>);
     else if (match[3]) parts.push(<strong key={key}><ResearchInline text={match[3]} /></strong>);
     else if (match[4]) parts.push(<em key={key}><ResearchInline text={match[4]} /></em>);
-    else if (match[5]) parts.push(<a key={key} href={match[5]}>{match[5]}</a>);
+    else if (match[5]) parts.push(<SourceLink key={key} href={match[5]}>{match[5]}</SourceLink>);
     last = match.index + match[0].length;
   }
   if (last < text.length) parts.push(text.slice(last));

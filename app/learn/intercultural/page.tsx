@@ -1,6 +1,9 @@
+import { FocusedSections } from "@/components/focused-sections";
+
+import { SourceLink } from "@/components/app-link";
 import { EngagementLearningScene } from "@/components/multimedia/engagement-learning-scenes";
 import styles from "../learning-family.module.css";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
@@ -42,7 +45,7 @@ export default async function InterculturalLearningPage({searchParams}:{searchPa
   const links=connections.filter(link=>available.has(link.href));
   return <EditableSurfaceRegion surface={surface} className={styles.page}>
     <header className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>Learning for everyday work</p><h1>{text("title")}</h1><p className={styles.intro}>{text("intro")}</p></div></header>
-    <div className={`${styles.content} ${styles.journeyBody} space-y-10`}>
+    <div className={`${styles.content} ${styles.journeyBody} space-y-10`}><FocusedSections>
       <Link href="/learn">All learning and resources</Link>
       <details className={styles.journeyDownloads}>
         <summary>Download this learning journey</summary>
@@ -60,7 +63,7 @@ export default async function InterculturalLearningPage({searchParams}:{searchPa
       </details>
       <aside className="rounded-xl border border-line bg-white p-6" aria-labelledby="idi-context">
         <h2 id="idi-context" className="text-xl font-semibold">{text("idiTitle")}</h2><p className="my-3 max-w-4xl leading-7">{text("idiBody")}</p>
-        <a className="underline" href={text("idiLink")}>About the IDI and individual development plans</a>
+        <SourceLink className="underline" href={text("idiLink")}>About the IDI and individual development plans</SourceLink>
       </aside>
       {stops.map((stop,index)=>{
         const resources=selectJourneyResources(stop,items);
@@ -92,6 +95,6 @@ export default async function InterculturalLearningPage({searchParams}:{searchPa
         <p className="mt-4 max-w-3xl leading-7">{text("connectionsIntro")}</p>
         <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{links.map(link=><li key={link.href}><Link className="underline" href={link.href}>{link.label}</Link></li>)}</ul>
       </section>
-    </div>
+    </FocusedSections></div>
   </EditableSurfaceRegion>;
 }

@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 
 import { culturalLeadershipLessons } from "@/lib/content/cultural-leadership-learning";
 import { LEADERSHIP_PATHWAY_HREF } from "@/lib/content/leadership-styles-pathway";
@@ -28,13 +30,13 @@ export function CulturalLeadershipCurriculum() {
     <details className="max-w-4xl rounded-xl border border-line p-5">
       <summary className="cursor-pointer font-semibold">Sources and further learning</summary>
       <ul className="mt-3 space-y-2 leading-7">
-        <li><a className="underline" href="https://eric.ed.gov/?id=EJ898247" target="_blank" rel="noreferrer">Carolyn Shields: transformative leadership and equity</a></li>
-        <li><a className="underline" href="https://doi.org/10.1016/0090-2616%2890%2990061-S" target="_blank" rel="noreferrer">Bernard Bass: transformational leadership and shared vision</a></li>
-        <li><a className="underline" href="https://chicagounbound.uchicago.edu/uclf/vol1989/iss1/8/" target="_blank" rel="noreferrer">Kimberlé Crenshaw: intersectionality and the intersection of race and sex</a></li>
-        <li><a className="underline" href="https://sinsinvalid.org/10-principles-of-disability-justice/" target="_blank" rel="noreferrer">Sins Invalid: principles of disability justice</a></li>
-        <li><a className="underline" href="https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Organizational_Learning_and_Change/Edmondson_1999_Psychological_safety.pdf" target="_blank" rel="noreferrer">Amy Edmondson: psychological safety and learning in teams</a></li>
-        <li><a className="underline" href="https://www.upliftoregon.org/wp-content/uploads/Continuum_AntiRacist.pdf" target="_blank" rel="noreferrer">Crossroads Ministry and collaborators: continuum toward an anti-racist multicultural organization</a></li>
-        <li><a className="underline" href="https://www.eeoc.gov/retaliation" target="_blank" rel="noreferrer">EEOC: retaliation and protected activity</a></li>
+        <li><SourceLink className="underline" href="https://eric.ed.gov/?id=EJ898247" target="_blank" rel="noreferrer">Carolyn Shields: transformative leadership and equity</SourceLink></li>
+        <li><SourceLink className="underline" href="https://doi.org/10.1016/0090-2616%2890%2990061-S" target="_blank" rel="noreferrer">Bernard Bass: transformational leadership and shared vision</SourceLink></li>
+        <li><SourceLink className="underline" href="https://chicagounbound.uchicago.edu/uclf/vol1989/iss1/8/" target="_blank" rel="noreferrer">Kimberlé Crenshaw: intersectionality and the intersection of race and sex</SourceLink></li>
+        <li><SourceLink className="underline" href="https://sinsinvalid.org/10-principles-of-disability-justice/" target="_blank" rel="noreferrer">Sins Invalid: principles of disability justice</SourceLink></li>
+        <li><SourceLink className="underline" href="https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Organizational_Learning_and_Change/Edmondson_1999_Psychological_safety.pdf" target="_blank" rel="noreferrer">Amy Edmondson: psychological safety and learning in teams</SourceLink></li>
+        <li><SourceLink className="underline" href="https://www.upliftoregon.org/wp-content/uploads/Continuum_AntiRacist.pdf" target="_blank" rel="noreferrer">Crossroads Ministry and collaborators: continuum toward an anti-racist multicultural organization</SourceLink></li>
+        <li><SourceLink className="underline" href="https://www.eeoc.gov/retaliation" target="_blank" rel="noreferrer">EEOC: retaliation and protected activity</SourceLink></li>
       </ul>
     </details>
   </section>;

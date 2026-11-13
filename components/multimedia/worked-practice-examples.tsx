@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 const panel = "rounded-xl border border-[#cbd8e0] bg-white p-5";
 const disclosure = "my-5 rounded-xl border border-[#b9cbd7] bg-[#f5f8fa] p-5 md:p-6";

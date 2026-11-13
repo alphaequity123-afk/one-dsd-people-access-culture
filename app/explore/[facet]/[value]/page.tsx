@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { FACETS, KIND_LABEL, KIND_ORDER, facetHref, facetValue, facetsForHref } from "@/lib/graph/facets";

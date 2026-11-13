@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import CountyMap from "./county-map";
 import figures from "@/lib/content/hub/community-figures.json";
 import { COMMUNITY_CROSSWALK_BY_ID, communityFigureGroups, type CommunityFigureGroup } from "@/lib/content/hub/community-crosswalk";
@@ -52,8 +54,8 @@ export function CommunityNumbersSection({ id }: { id: string }) {
         {crosswalk?.match === "approximate" ? <p><strong>How these figures differ from this page:</strong> {crosswalk.note}</p> : null}
         {groups.map(group => <FigureTable key={group.name} group={group} />)}
         <p className="text-sm">{FIGURES_PER_100_NOTE} {figures.comparabilityNote} {figures.periodNote}</p>
-        <p className="text-sm">Source: <a href={SOURCE.url}>{SOURCE.title}</a>, {SOURCE.publisher}, {SOURCE.date}. {SOURCE.dataSource}</p>
-        <p className="text-sm">Disability counts not shown in that report come from <a href={DISABILITY_SOURCE.url}>{DISABILITY_SOURCE.title}</a>, {DISABILITY_SOURCE.publisher}, {DISABILITY_SOURCE.date}.</p>
+        <p className="text-sm">Source: <SourceLink href={SOURCE.url}>{SOURCE.title}</SourceLink>, {SOURCE.publisher}, {SOURCE.date}. {SOURCE.dataSource}</p>
+        <p className="text-sm">Disability counts not shown in that report come from <SourceLink href={DISABILITY_SOURCE.url}>{DISABILITY_SOURCE.title}</SourceLink>, {DISABILITY_SOURCE.publisher}, {DISABILITY_SOURCE.date}.</p>
       </> : <p>{crosswalk?.note ?? "The Minnesota State Demographic Center report does not give separate figures for this community."}</p>}
       {crosswalk?.equityGroup && crosswalk.equityGroup !== "all" ? <>
         <p>The map below shows the broader group that includes this community, county by county. It is a wider group than this page, so read it as context.</p>
@@ -77,7 +79,7 @@ export function CommunityOrganizationsSection({ id, title }: { id: string; title
       </> : <p>No organization with a published record of working with the Disability Services Division names this community in its records. That is a finding about the records, not about the community.</p>}
       {DEPARTMENT_WIDE_GRANTS.some(grant => grant.communities.includes(id)) ? <>
         <h3>Also on record with the Department of Human Services</h3>
-        <ul>{DEPARTMENT_WIDE_GRANTS.filter(grant => grant.communities.includes(id)).map(grant => <li key={grant.organizations}>{grant.organizations}: {grant.program}, {grant.years}. <a href={grant.record.url}>Record</a></li>)}</ul>
+        <ul>{DEPARTMENT_WIDE_GRANTS.filter(grant => grant.communities.includes(id)).map(grant => <li key={grant.organizations}>{grant.organizations}: {grant.program}, {grant.years}. <SourceLink href={grant.record.url}>Record</SourceLink></li>)}</ul>
       </> : null}
       <p><Link href="/community-outreach/organizations">See all organizations</Link></p>
     </section>;

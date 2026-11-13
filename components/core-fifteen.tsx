@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { SELF_DIRECTED_COURSES, selfDirectedHref } from "@/lib/content/self-directed";
 import { ExplainerVideo } from "@/components/explainer-video";
 

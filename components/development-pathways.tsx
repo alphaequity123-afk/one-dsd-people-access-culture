@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { developmentModel, journeyHref } from "@/lib/program/development";
 
 export function DevelopmentPathways({ compact = false }: { compact?: boolean }) {

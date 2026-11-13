@@ -4,6 +4,7 @@ import type { Doc } from "@/lib/intelligence/retrieval/search";
 import { STATE_AGENCIES } from "@/lib/content/state-agencies";
 import { normalizeSourceHref } from "@/lib/content/source-register";
 import catalog from "@/lib/content/state-pages.json";
+import { externalReadingHref, unavailableExternalUrl } from "@/lib/content/external-readings";
 
 type StatePage = typeof catalog.pages[number] & { id: string; agencyId?: string };
 const directory = new Map(STATE_AGENCIES.map(agency => [agency.name, agency]));
@@ -26,9 +27,12 @@ for (const page of catalog.pages) {
 }
 
 export const stateReadingDate = catalog.retrieved;
-export const stateReadingHref = (id: string) => `/source-reading/${id}`;
+export const stateReadingHref = (id: string) => {
+  const url = pages.get(id)?.url;
+  return url ? externalReadingHref(url) ?? url : `/source-reading/${id}`;
+};
 export const stateReading = (id: string) => pages.get(id);
-export const stateReadingsForAgency = (agency: string) => [...(agencyReadings.get(agency) ?? [])].map(id => pages.get(id)!);
+export const stateReadingsForAgency = (agency: string) => [...(agencyReadings.get(agency) ?? [])].map(id => pages.get(id)!).filter(page => !unavailableExternalUrl(page.url));
 
 const readingByUrl = new Map([...pages.values()].map(page => [normalizeSourceHref(page.url), page]));
 export const stateReadingForUrl = (url: string) => readingByUrl.get(normalizeSourceHref(url));

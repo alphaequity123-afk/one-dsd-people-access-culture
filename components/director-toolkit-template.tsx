@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 import { useState } from "react";
 import { CHECKLIST_ANSWERS, TEMPLATE_KEEP_OUT, cellKey, checkKey, sectionHref, templateAnchor, templateText, type DirectorTemplate } from "@/lib/content/director-toolkit";
 import styles from "./director-toolkit.module.css";
@@ -42,7 +44,7 @@ export function DirectorToolkitTemplate({ template, sectionTitle }: { template: 
     <h2 id={`${anchor}-title`} className="text-2xl font-bold">{template.title}</h2>
     <p>{template.purpose}</p>
     <p>{template.howToUse}</p>
-    <p className={`${styles.help} ${styles.noPrint}`}>Part of <a href={sectionHref(template.sectionId)}>{sectionTitle}</a> in the toolkit.</p>
+    <p className={`${styles.help} ${styles.noPrint}`}>Part of <SourceLink href={sectionHref(template.sectionId)}>{sectionTitle}</SourceLink> in the toolkit.</p>
     <form onSubmit={event => event.preventDefault()} aria-describedby={`${anchor}-keep-out`}>
       {template.fields.map(field => {
         const id = `${anchor}-${field.id}`;

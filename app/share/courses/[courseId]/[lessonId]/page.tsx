@@ -1,5 +1,5 @@
 import styles from "../../../../courses/course-design.module.css";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { CourseLesson } from "@/components/course-lesson";
 import { PlainLanguageComparison } from "@/components/multimedia/plain-language-comparison";

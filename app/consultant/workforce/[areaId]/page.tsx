@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { ownerPageGuard } from "@/lib/auth/owner-page";
 import { ORGANIZATIONAL_AREAS } from "@/lib/product/workforce-map";

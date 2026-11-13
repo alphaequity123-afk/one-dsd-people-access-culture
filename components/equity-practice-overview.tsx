@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 export function EquityPracticeOverview() {
   return <section aria-labelledby="equity-practice-overview" className="my-8 rounded-2xl border border-line bg-white p-6 md:p-8">

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useId, useState } from "react";
 
 /** Only supply links resolved as available in the caller's requested scope. */

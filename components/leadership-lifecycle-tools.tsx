@@ -2,7 +2,7 @@
 import { DsdLeadershipMedia } from "./multimedia/dsd-leadership-media";
 import { DsdContinuityExample } from "./multimedia/dsd-development-map-example";
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LEADERSHIP_STAGES } from "@/lib/content/leadership-lifecycle";
 import { DraftResult } from "./amplify-tools";
 const field="mt-2 w-full rounded-lg border border-slate-400 bg-white p-3 text-slate-900";

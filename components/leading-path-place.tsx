@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useEffect, useState } from "react";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
 import styles from "./collections.module.css";

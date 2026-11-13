@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useEffect, useId, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -7,7 +9,7 @@ import "@/components/site-search.css";
 type Result = { id: string; title: string; href: string; excerpt: string; area: string; external: boolean };
 
 /** The search box at the top of every page: suggestions as you type, Enter for the full results page. */
-export function SiteSearch() {
+export function SiteSearch({ embedded = false }: { embedded?: boolean } = {}) {
   const [q, setQ] = useState("");
   const [fetched, setResults] = useState<Result[]>([]);
   const [open, setOpen] = useState(false);
@@ -39,10 +41,12 @@ export function SiteSearch() {
 
   function go(result: Result) {
     setOpen(false);
-    if (result.external) window.open(result.href, "_blank", "noreferrer"); else router.push(result.href);
+    if (result.external) window.open(result.href, "_blank", "noreferrer");
+    else if (embedded && window.parent !== window) window.parent.location.assign(result.href);
+    else router.push(result.href);
   }
 
-  return <form ref={box} action="/search" role="search" className="site-search" onSubmit={event => {
+  return <form ref={box} action="/search" target={embedded ? "_top" : undefined} role="search" className="site-search" onSubmit={event => {
     if (active >= 0 && results[active]) { event.preventDefault(); go(results[active]); }
   }}>
     <label htmlFor={`${id}-q`} className="sr-only">Search the whole program and State of Minnesota agencies</label>
@@ -63,7 +67,7 @@ export function SiteSearch() {
         <strong>{result.title}</strong>
         {result.excerpt ? <span>{result.excerpt}</span> : null}
       </li>)}
-      <li className="site-search-all"><a href={`/search?q=${encodeURIComponent(q.trim())}`}>See all results</a></li>
+      <li className="site-search-all"><SourceLink href={`/search?q=${encodeURIComponent(q.trim())}`}>See all results</SourceLink></li>
     </ul> : null}
   </form>;
 }

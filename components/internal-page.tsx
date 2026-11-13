@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { usePathname } from "next/navigation";
 import { PAGE_AREAS, internalPage, pageArea } from "@/lib/program/page-purpose";
 

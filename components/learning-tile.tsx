@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { selfDirectedPresentation } from "@/lib/content/self-directed-covers";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { AuthorityPill } from "@/components/ui";
 import { resourceLearningLevel } from "@/lib/content/resource-organization";
 import { progressionLabel, resourceProgressionLevel } from "@/lib/content/progression";

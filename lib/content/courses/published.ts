@@ -8,6 +8,7 @@ import { loadPublishedEditableSurfaces } from "../editable-surfaces";
 import { unifiedPublishedCatalogScope, type StaffProgramScope } from "../staff-publications";
 import { withCourseCover } from "./cover-overrides";
 import { coursePackWithoutWikipedia } from "./source-cleanup";
+import { externalReadingHref, unavailableExternalUrl } from "../external-readings";
 
 
 export function courseHref(id:string, lessonId?:string) { return `/courses/${encodeURIComponent(id)}${lessonId?`/${encodeURIComponent(lessonId)}`:""}`; }
@@ -22,6 +23,11 @@ export function courseText(value:unknown):string {
   return "";
 }
 export function courseLink(href:string):string | undefined {
+  if (/^https?:\/\//.test(href)) {
+    const reading = externalReadingHref(href);
+    if (reading) return reading;
+    if (unavailableExternalUrl(href)) return undefined;
+  }
   const retiredDestination = retiredFeatureDestination(href);
   if (retiredDestination) return retiredDestination;
   if(href==="#" || !href) return undefined;

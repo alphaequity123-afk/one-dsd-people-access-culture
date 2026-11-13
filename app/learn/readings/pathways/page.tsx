@@ -1,4 +1,6 @@
-import Link from 'next/link';
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { PageIntro } from '@/components/ui';
 import { readingPathways } from '@/lib/content/reading-pathways';
 import { readingSections } from '@/lib/content/reading-collection';
@@ -10,7 +12,7 @@ export default function ReadingPathwaysPage(){
  <PageIntro kicker="Choose a question that matters to you" title="Put a reading to work" lede="Start with a situation, explore a few perspectives and try a thoughtful next step. There is no required reading order."/>
  <div className={styles.body}><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this reading guide</summary><ResourceDownloads kind="reading" id="pathways" noun="reading guide" /></details><article className={styles.article}>
  <p>Directors, managers, supervisors and staff can use these suggestions individually or with colleagues. Choose by the work you are doing, not by your job title. Use practice examples or information appropriate to share.</p>
- <nav aria-label="Reading questions"><ul>{readingPathways.map(path=><li key={path.section}><a href={`#collection-${path.section}`}>{path.title}</a></li>)}</ul></nav>
+ <nav aria-label="Reading questions"><ul>{readingPathways.map(path=><li key={path.section}><SourceLink href={`#collection-${path.section}`}>{path.title}</SourceLink></li>)}</ul></nav>
  {readingPathways.map(path=><section id={`collection-${path.section}`} key={path.section} className={styles.path}>
  <p className={styles.label}>{readingSections[path.section-1]}</p><h2>{path.title}</h2><p><strong>{path.question}</strong></p>
  <p>{path.tryIt}</p><h3>Check your thinking</h3><p>{path.check}</p>

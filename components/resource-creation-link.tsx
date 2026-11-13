@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 export function ResourceCreationLink({ resourcePath, className }: { resourcePath?: string; className?: string }) {
   const query = resourcePath ? "?" + new URLSearchParams({ resource: resourcePath }) : "";

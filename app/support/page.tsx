@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import styles from "@/components/workspace-presentation.module.css";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ProgramContextNote } from "@/components/program-context";
 import { SupportContextOptions } from "@/components/support-context-options";
 import { PageIntro } from "@/components/ui";

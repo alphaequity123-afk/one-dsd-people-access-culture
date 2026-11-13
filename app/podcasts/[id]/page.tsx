@@ -1,6 +1,6 @@
 import styles from "../../learn/learning-family.module.css";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { prepareEditableSurface } from "@/components/editable-surface";
 import { PublishedPodcast } from "@/components/published-podcast";

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useRef, useState } from "react";
 import { ActionList, Field, Notice } from "@/components/ui";
 import { PROGRAM } from "@/lib/constants";

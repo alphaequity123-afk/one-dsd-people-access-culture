@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { AnalyzePolicyLink } from "@/components/hub/analyze-policy-link";
 import { PrintPageButton } from "@/components/hub/print-page-button";
@@ -41,7 +43,7 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
           <tr><th scope="row">Effective</th><td>{policy.effective ? formatPolicyDate(policy.effective) : "Not stated on the source"}</td></tr>
           <tr><th scope="row">Last updated</th><td>{policy.lastUpdated ? formatPolicyDate(policy.lastUpdated) : "Not shown on the source"}</td></tr>
           <tr><th scope="row">Facts checked</th><td>{formatPolicyDate(policy.checked)}</td></tr>
-          <tr><th scope="row">Source</th><td><a href={policy.source.url}>{policy.source.title}</a>{policy.source.date ? ` (${formatPolicyDate(policy.source.date)})` : ""}<br /><span className={`${styles.small} break-all`} >{policy.source.url}</span></td></tr>
+          <tr><th scope="row">Source</th><td><SourceLink href={policy.source.url}>{policy.source.title}</SourceLink>{policy.source.date ? ` (${formatPolicyDate(policy.source.date)})` : ""}<br /><span className={`${styles.small} break-all`} >{policy.source.url}</span></td></tr>
         </tbody>
       </table>
     </section>
@@ -61,7 +63,7 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
       <h2 id="more-title">Related and sources</h2>
       {policy.relatedSources.length ? <details className="course-more-item">
         <summary id="sources-title">Related sources</summary>
-        <ul className="list-disc pl-6">{policy.relatedSources.map(s => <li key={s.url}><a href={s.url}>{s.title}</a></li>)}</ul>
+        <ul className="list-disc pl-6">{policy.relatedSources.map(s => <li key={s.url}><SourceLink href={s.url}>{s.title}</SourceLink></li>)}</ul>
       </details> : null}
 
       {policy.relatedPages.length ? <details className={`course-more-item ${styles.noPrint}`}>

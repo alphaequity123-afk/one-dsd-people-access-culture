@@ -5,7 +5,7 @@ import { PublishedPodcast } from "@/components/published-podcast";
 import { PODCASTS } from "@/lib/content/podcasts";
 import { stringValue } from "@/lib/content/staff-surface-registry";
 import { requestedContentScope } from "@/lib/product/request-context";
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 export const dynamic = "force-dynamic";
 

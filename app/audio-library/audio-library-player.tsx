@@ -1,6 +1,8 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
 
-import Link from "next/link";
+
+import Link from "@/components/app-link";
 import { useEffect, useRef, useState } from "react";
 import { SharePage } from "@/components/share-page";
 import type { AudioLibraryEntry, AudioLibraryShelf } from "@/lib/content/audio-library";
@@ -78,9 +80,9 @@ function EntryRow({ entry, themes = [], active, playing, position, durationSecon
         <span className="min-w-28 text-sm tabular-nums" aria-hidden="true">
           {formatTime(shown)} / {lengthText}
         </span>
-        <a href={entry.src} download className="underline underline-offset-4" aria-label={`Download ${entry.title}`}>
+        <SourceLink href={entry.src} download className="underline underline-offset-4" aria-label={`Download ${entry.title}`}>
           Download
-        </a>
+        </SourceLink>
       </div>
       {error ? (
         <p id={errorId} role="alert" className="mt-2 font-semibold text-[var(--red-strong)]">

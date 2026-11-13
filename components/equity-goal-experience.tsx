@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import * as React from "react";
 import goalData from "../lib/program/equity-goals.json";
@@ -98,7 +100,7 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
   const shownResources = Array.from(new Map(filteredGoals.flatMap(goal => goal.resources)
     .filter(resource => available.has(resource.id))
     .map(resource => [resource.id, available.get(resource.id)!] as const)).values()).filter(resource => safeHref(resource.href));
-  const resourceList = <ul style={{ paddingLeft: 24, display: "grid", gap: 10 }}>{shownResources.map(resource => <li key={resource.id}><a href={routedHref(resource.href)} style={{ color: navy, textDecoration: "underline", textUnderlineOffset: 3 }}>{resource.title}</a></li>)}</ul>;
+  const resourceList = <ul style={{ paddingLeft: 24, display: "grid", gap: 10 }}>{shownResources.map(resource => <li key={resource.id}><SourceLink href={routedHref(resource.href)} style={{ color: navy, textDecoration: "underline", textUnderlineOffset: 3 }}>{resource.title}</SourceLink></li>)}</ul>;
   const program = scope === "one-dhs" ? "One DHS People, Access and Culture" : "One DSD People, Access and Culture";
 
   function toggleGoal(number: number) {
@@ -231,7 +233,7 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       <div style={{ display: "grid", gap: 24 }}>{goals.filter(goal => selected.includes(goal.number)).map(goal => <fieldset key={goal.number} style={{ padding: 20, border: "1px solid #94a3b8", borderRadius: 4, minWidth: 0 }}>
         <legend style={{ fontWeight: 700, padding: "0 8px" }}>Goal {goal.number}: {goal.title}</legend>
         <p style={paragraph}>{goal.focus}</p>
-        <p style={paragraph}><a href={routedHref(`/program/implementation#goal-${goal.number}`)}>Explore this goal’s action steps, tools and evidence of progress</a></p>
+        <p style={paragraph}><SourceLink href={routedHref(`/program/implementation#goal-${goal.number}`)}>Explore this goal’s action steps, tools and evidence of progress</SourceLink></p>
         <label style={{ display: "grid", gap: 8, marginBottom: 18 }}>
           <strong>Add an applicable ADSA action step to your notes</strong>
           <select value="" onChange={event => {

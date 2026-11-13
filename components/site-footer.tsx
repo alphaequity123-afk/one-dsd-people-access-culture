@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageCopyEditor } from "@/components/page-copy-editor";
 import { editingModeFromCookies } from "@/lib/auth/request";
 import { loadPageBlockEditingState, loadPublishedPageCopy } from "@/lib/content/page-copy";

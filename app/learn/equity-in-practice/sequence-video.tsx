@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import type { SyntheticEvent } from "react";
 
@@ -16,6 +18,6 @@ export default function SequenceVideo({ className, src, poster, title }: Props) 
     });
   }
   return <video data-equity-sequence className={className} controls playsInline preload="metadata" poster={poster} aria-label={`${title} video with captions`} onPlay={playOne} onLoadedMetadata={captionsInPicture}>
-    <source src={src} type="video/mp4" />Your browser does not support video. <a href={src}>Open {title}</a>.
+    <source src={src} type="video/mp4" />Your browser does not support video. <SourceLink href={src}>Open {title}</SourceLink>.
   </video>;
 }

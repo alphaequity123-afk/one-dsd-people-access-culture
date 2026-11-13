@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { fullNames } from "@/lib/consultant-toolkit/auto-route";
 import { getInstrument, getQuestions, type ToolkitQuestion } from "@/lib/consultant-toolkit/instrument";
@@ -22,7 +24,7 @@ export function AnalysisView({ request, result, locked, busy, contextNote, editR
     return <div className={styles.question} key={item.id}>
       <Field label={item.prompt} hint={item.help} value={answer?.text || "No answer recorded."} onChange={value => editAnswer(item.id, value)} disabled={locked || busy || !answer} rows={rows} />
       <p className={styles.muted}>{kindWords(answer?.kind)}</p>
-      {answer?.citations.map((citation, i) => { const source = request.sources.find(entry => entry.id === citation.sourceId); const href = safeHref(source?.url); return <div className={styles.evidence} key={`${citation.sourceId}-${i}`}><strong>{source?.title || "Source"}</strong><blockquote>{citation.excerpt}</blockquote>{href && <a href={href} target="_blank" rel="noopener noreferrer">Open source</a>}</div>; })}
+      {answer?.citations.map((citation, i) => { const source = request.sources.find(entry => entry.id === citation.sourceId); const href = safeHref(source?.url); return <div className={styles.evidence} key={`${citation.sourceId}-${i}`}><strong>{source?.title || "Source"}</strong><blockquote>{citation.excerpt}</blockquote>{href && <SourceLink href={href} target="_blank" rel="noopener noreferrer">Open source</SourceLink>}</div>; })}
     </div>;
   };
   return <>
@@ -45,8 +47,8 @@ export function AnalysisView({ request, result, locked, busy, contextNote, editR
     </section>
     <details className={`${styles.panel} ${styles.analysisDisclosure}`}><summary>Read the complete analysis — {getQuestions(request.track).length} responses and evidence</summary>
       <p className={styles.muted}>Every response is retained in full. Source quotations support examination of the findings; they do not replace your judgment about their accuracy or relevance.</p>
-      <nav className={styles.stageNav} aria-label="Toolkit stages"><a href="#toolkit-preparation">Preparation</a>{instrument.stages.map((stage, index) => <a key={stage.id} href={`#toolkit-${stage.id}`}>{index + 1}. {stage.title}</a>)}</nav>
-      <details className={styles.disclosure}><summary>Sources considered</summary><p className={styles.muted}>Application references provide context. Their source status and review date still need to fit this decision.</p>{request.sources.map(source => <div className={styles.source} key={source.id}><strong>{source.title}</strong>{sourceNotes(source).map(note => <p className={styles.muted} key={note}>{note}</p>)}{safeHref(source.url) && <a href={safeHref(source.url)!} target="_blank" rel="noopener noreferrer">Open source</a>}</div>)}</details>
+      <nav className={styles.stageNav} aria-label="Toolkit stages"><SourceLink href="#toolkit-preparation">Preparation</SourceLink>{instrument.stages.map((stage, index) => <SourceLink key={stage.id} href={`#toolkit-${stage.id}`}>{index + 1}. {stage.title}</SourceLink>)}</nav>
+      <details className={styles.disclosure}><summary>Sources considered</summary><p className={styles.muted}>Application references provide context. Their source status and review date still need to fit this decision.</p>{request.sources.map(source => <div className={styles.source} key={source.id}><strong>{source.title}</strong>{sourceNotes(source).map(note => <p className={styles.muted} key={note}>{note}</p>)}{safeHref(source.url) && <SourceLink href={safeHref(source.url)!} target="_blank" rel="noopener noreferrer">Open source</SourceLink>}</div>)}</details>
       <section id="toolkit-preparation" className={`${styles.panel} ${styles.stage}`}><h2>Prepare the analysis</h2><p>{fullNames(instrument.preparationIntro)}</p>{instrument.preparation.map(item => question(item, 4))}</section>
       {instrument.stages.map((stage, index) => <section className={`${styles.panel} ${styles.stage}`} id={`toolkit-${stage.id}`} key={stage.id}><h2>{index + 1}. {stage.title}</h2><p>{fullNames(stage.description)}</p>{stage.questions.map(item => question(item, 5))}</section>)}
     </details>

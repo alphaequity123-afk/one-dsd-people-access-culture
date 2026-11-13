@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "@/app/learn/equity-in-practice/equity-in-practice.module.css";
 export function EquityVideoFeature() {
   return <section className={`dsd-shell ${styles.feature}`} aria-labelledby="equity-video-feature-title">

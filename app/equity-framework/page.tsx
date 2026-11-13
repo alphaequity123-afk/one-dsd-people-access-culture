@@ -1,5 +1,8 @@
+import { FocusedSections } from "@/components/focused-sections";
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { EQUITY_FRAMEWORK as F, TOOL_STATUS_LABEL, type FrameworkLink, type ToolStatus } from "@/lib/program/equity-framework";
@@ -17,7 +20,7 @@ const STATUS_CLASS: Record<ToolStatus, string> = {
 };
 
 function Links({ links }: { links: readonly FrameworkLink[] }) {
-  if (!links.length) return <span className="text-muted">Not linked yet</span>;
+  if (!links.length) return null;
   return <ul className="m-0 list-none space-y-1 p-0">{links.map((l) => <li key={l.href + l.label}><Link href={l.href}>{l.label}</Link></li>)}</ul>;
 }
 
@@ -64,7 +67,7 @@ export default function EquityFrameworkPage() {
   return (
     <>
       <PageIntro tone="business" kicker={F.kicker} title={F.title} lede={F.lede} />
-      <div className="wrap max-w-6xl py-10 [&_p]:my-3">
+      <div className="wrap max-w-6xl py-10 [&_p]:my-3"><FocusedSections>
         <section aria-labelledby="summary-title" className="mt-8 max-w-4xl">
           <H2 id="summary-title">What this framework is for</H2>
           <p className="text-lg leading-relaxed">{F.summary}</p><p className="mt-3"><Link href="/program-foundation">Read the governing program constitution</Link> or <Link href="/practice/requirements">connect source requirements to a piece of work</Link>.</p>
@@ -78,7 +81,7 @@ export default function EquityFrameworkPage() {
               <Bullets items={F.howToRead} />
               <nav aria-label="On this page" className="mt-5 border-t border-line pt-4">
                 <p className="kicker m-0">On this page</p>
-                <ol className="mt-2 grid list-decimal gap-x-8 gap-y-1 pl-5 text-sm sm:grid-cols-2">{TOC.map(([id, label]) => <li key={id}><a href={`#${id}`}>{label}</a></li>)}</ol>
+                <ol className="mt-2 grid list-decimal gap-x-8 gap-y-1 pl-5 text-sm sm:grid-cols-2">{TOC.map(([id, label]) => <li key={id}><SourceLink href={`#${id}`}>{label}</SourceLink></li>)}</ol>
               </nav>
             </div>
           </details>
@@ -321,7 +324,7 @@ export default function EquityFrameworkPage() {
           </details>
           <p><Link href="/">Return to the program home</Link></p>
         </section>
-      </div>
+      </FocusedSections></div>
     </>
   );
 }

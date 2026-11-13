@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { validPlans, emptyPlans, keepPlanCopies, loadPlans, newPlan, planFields, planText, practicePlanSections, savePlans, type PracticePlan, type PracticePlans, type SavedPlans } from "@/lib/client/dsd-practice-plans";
 
 import { goalPlanHtml, goalPlanWord, type GoalPlanReport } from "@/lib/program/goal-plan-report";

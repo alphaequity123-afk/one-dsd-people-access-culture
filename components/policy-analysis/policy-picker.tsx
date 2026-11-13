@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useId, useMemo, useState } from "react";
 import type { CatalogKind, CatalogPolicy } from "./labels";
@@ -41,7 +43,7 @@ export function PolicyPicker({ catalog, kinds, choice, onChoose, locked, busy, o
         <span className={styles.stepNumber}>Step 1</span>
         <h2 id={`${ids}-title`}>The policy</h2>
         {selected ? <SelectedPolicy policy={selected} /> : choice?.mode === "other" ? (
-          <p className="m-0"><strong>{choice.title}</strong>{choice.url ? <> · <a href={choice.url}>Source</a></> : null}</p>
+          <p className="m-0"><strong>{choice.title}</strong>{choice.url ? <> · <SourceLink href={choice.url}>Source</SourceLink></> : null}</p>
         ) : null}
         <p className={`${styles.muted} mb-0`}>To analyze a different policy, start a new analysis from the saved analyses list.</p>
       </section>
@@ -135,7 +137,7 @@ function SelectedPolicy({ policy }: { policy: CatalogPolicy }) {
       <p className="mt-2 mb-0">{policy.summary}</p>
       <dl className={styles.facts}>
         <dt>Source</dt>
-        <dd><a href={policy.sourceUrl}>{policy.sourceTitle}</a>{policy.sourceDate ? ` (${policy.sourceDate})` : ""}</dd>
+        <dd><SourceLink href={policy.sourceUrl}>{policy.sourceTitle}</SourceLink>{policy.sourceDate ? ` (${policy.sourceDate})` : ""}</dd>
         {policy.programs.length ? <><dt>Programs</dt><dd>{policy.programs.join(", ")}</dd></> : null}
       </dl>
     </div>

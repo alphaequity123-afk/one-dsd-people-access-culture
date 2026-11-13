@@ -1,6 +1,8 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
 
-import Link from "next/link";
+
+import Link from "@/components/app-link";
 import { workOriginForPath, withWorkOrigin, type WorkOrigin } from "@/lib/product/work-origin";
 import { readPracticeValues, practiceNotesText } from "@/lib/client/practice-export";
 import { useMemo, useState } from "react";
@@ -166,7 +168,7 @@ export function PathClient({ path, intakeEnabled, copy, contract = "", origin: i
         {visibleSource ? <details className="mb-4">
           <summary>{copyText(copy, "draftSourceSummary") || "About this draft"}</summary>
           <p>{copyText(copy, "draftOwnershipBody") || "Your changes here are part of your own working notes."}</p>
-          {visibleSource.sources.length ? <ul>{visibleSource.sources.map(source => <li key={source.id}><a href={withWorkOrigin(source.href, origin)}>{source.title}</a></li>)}</ul> : null}
+          {visibleSource.sources.length ? <ul>{visibleSource.sources.map(source => <li key={source.id}><SourceLink href={withWorkOrigin(source.href, origin)}>{source.title}</SourceLink></li>)}</ul> : null}
         </details> : null}
         {path.artifactFields.map((f) => {
           const id = `f-${path.id}-${f.id}`;
@@ -213,7 +215,7 @@ export function PathClient({ path, intakeEnabled, copy, contract = "", origin: i
             {check.requiredFields.some(field => !field.ok) ? (
               <ul className="mt-2 list-disc pl-5">
                 {check.requiredFields.filter(field => !field.ok).map(field => (
-                  <li key={field.id}><a href={"#f-" + path.id + "-" + field.id}>{copyText(copy, "notYetPrefix")}: {field.label}</a></li>
+                  <li key={field.id}><SourceLink href={"#f-" + path.id + "-" + field.id}>{copyText(copy, "notYetPrefix")}: {field.label}</SourceLink></li>
                 ))}
               </ul>
             ) : null}

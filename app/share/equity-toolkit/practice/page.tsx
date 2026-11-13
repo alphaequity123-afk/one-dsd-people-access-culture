@@ -4,7 +4,7 @@ import { DecisionWorkspace } from "@/components/decision-workspace";
 import { EquityToolkitExperience } from "@/components/equity-toolkit-experience";
 import { linkListValue, stringValue } from "@/lib/content/staff-surface-registry";
 import { requestedContentScope } from "@/lib/product/request-context";
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 export const metadata = { title: "Practice with the Equity Analysis Toolkit" };
 export const dynamic = "force-dynamic";

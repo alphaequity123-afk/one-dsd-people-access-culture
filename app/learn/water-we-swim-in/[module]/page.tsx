@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { WaterModuleBody } from "@/components/cl-water";
 import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_MODULES, WATER_SUPPORT } from "@/lib/content/water-we-swim-in";
@@ -43,7 +45,7 @@ export default async function WaterModulePage({ params }: { params: Promise<{ mo
       <CourseMediaSlot />
     </>}
     <WaterLessonOpening practice={practice} recall={waterRecall(id)} previousTitle={previous?.title} previousNumber={previous?.number} />
-    <p><a href="#water-learning-assistant">Ask about this module</a></p>
+    <p><SourceLink href="#water-learning-assistant">Ask about this module</SourceLink></p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this module</summary><ResourceDownloads kind="water-we-swim-in" id={current.slug} noun="module" /></details>
     <WaterModuleBody markdown={current.body} notesKey={`water-we-swim-in-notes-${current.number}`} images={chapterImages(lesson)} />
     <WaterLessonPractice practice={practice} moduleTitle={current.title} moduleNumber={current.number} />

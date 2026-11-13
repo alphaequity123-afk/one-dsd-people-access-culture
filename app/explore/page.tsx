@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { Metadata } from "next";
 import { FACETS, facetHref, groupedFacet } from "@/lib/graph/facets";
 

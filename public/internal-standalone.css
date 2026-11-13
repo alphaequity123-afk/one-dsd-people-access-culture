@@ -51,3 +51,29 @@ body[data-page-purpose="audio"] :is(.audio-size,.count) { color: #43566a; }
 @media print {
  body[data-page-purpose], body[data-page-purpose="audio"] { background: white; }
 }
+
+/* Keep padding inside narrow viewports and give long guides a readable measure. */
+body[data-page-purpose] main, body[data-page-purpose] main * { box-sizing: border-box; }
+body[data-page-purpose] main { overflow-wrap: anywhere; }
+body[data-page-purpose] main > :is(p,ul,ol,dl) { max-width: 68ch; }
+body[data-page-purpose] main > h2 { margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid #a9bbce; }
+
+/* Keep the active analysis step central; navigation and guidance open on request. */
+body.dsd-focused-tool .shell { display: flex; flex-direction: column; max-width: 1040px; margin-inline: auto; }
+body.dsd-focused-tool .shell > main { order: 2; width: calc(100% - 40px); max-width: 52rem; padding: 2.5rem 0 4rem; }
+body.dsd-focused-tool .standalone-tool-steps { order: 0; margin: 2rem 20px 0; padding: 1rem 1.25rem; border: 1px solid #cdd7e2; border-radius: 12px; background: #fff; }
+body.dsd-focused-tool .standalone-tool-steps > summary { min-height: 44px; cursor: pointer; color: #003865; font-weight: 600; }
+body.dsd-focused-tool .rail { position: static; height: auto; border: 0; }
+body.dsd-focused-tool .rail nav { display: block; }
+body.dsd-focused-tool .rail nav button { width: 100%; white-space: normal; min-height: 44px; }
+body.dsd-focused-tool .coach { display: none; order: 1; position: static; width: calc(100% - 40px); max-width: 52rem; height: auto; margin: 1.5rem auto 0; border: 1px solid #cdd7e2; border-radius: 12px; box-shadow: none; font-size: 1rem; }
+body.dsd-focused-tool .coach.open { display: block; position: static; width: calc(100% - 40px); height: auto; box-shadow: none; }
+body.dsd-focused-tool #btnCoach { display: inline-flex; }
+@media print { body.dsd-focused-tool .standalone-tool-steps { display: none; } }
+@media(max-width:700px) {
+ body[data-page-purpose] main { padding-inline: 0; }
+ body[data-page-purpose] main :is(.row,.grid,.form-grid,.cols,.metrics) { min-width: 0; }
+ body[data-page-purpose] main :is(button,select,input,textarea) { max-width: 100%; }
+ body[data-page-purpose] main .row { flex-wrap: wrap; }
+ body[data-page-purpose] main :is(.grid,.metrics) { grid-template-columns: minmax(0,1fr); }
+}

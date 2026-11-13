@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { CollectionItemLink } from "@/components/collection-item-link";
 import { LEADING_HREF, LEADING_LABEL, STAFF_RESOURCES, TRIBAL_REFERRAL_HREF, staffCollection } from "@/lib/content/collections";

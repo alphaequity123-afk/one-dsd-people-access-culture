@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { SupportSourceLinks } from "@/components/support-source-links";
 import styles from "@/components/workspace-presentation.module.css";
 import { useMemo, useRef, useState } from "react";

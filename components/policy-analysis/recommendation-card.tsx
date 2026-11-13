@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useId } from "react";
 import { CHANGE_TYPES, EFFORT, type PolicySource, type Recommendation } from "@/lib/policy-analysis/contract";
 import { Quotes } from "./analysis-view";

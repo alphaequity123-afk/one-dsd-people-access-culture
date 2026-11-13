@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "@/components/workspace-presentation.module.css";
 import { useProgramContext } from "@/components/program-context";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";

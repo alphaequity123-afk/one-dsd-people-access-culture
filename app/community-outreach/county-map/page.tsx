@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import CountyMap from "@/components/hub/county-map";
 import { StatewideServicesChart } from "@/components/hub/statewide-services-chart";
 import { GROUP_IDS, MEASURE_IDS, type GroupId, type MeasureId } from "@/lib/content/hub/county-data";

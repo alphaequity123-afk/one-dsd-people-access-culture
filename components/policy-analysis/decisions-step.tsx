@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useId, useState } from "react";
 import { DECISION_ROLE_LABELS, DECISION_ROLES, POLICY_LIMITS, type DecisionOutcome, type DecisionRoleId, type Recommendation } from "@/lib/policy-analysis/contract";
@@ -102,7 +104,7 @@ export function DecisionsStep({ recommendations, canDecide, busy, decidingAs, on
         {recommendations.map(item => (
           <li key={item.id} className={styles.item}>
             <p className={styles.recType}>{CHANGE_TYPE_LABELS[item.type]}</p>
-            <p className="m-0 font-bold"><a href={`#change-${item.id}`}>{item.title}</a></p>
+            <p className="m-0 font-bold"><SourceLink href={`#change-${item.id}`}>{item.title}</SourceLink></p>
             <div className={`${styles.decision} mt-2`} aria-live="polite">
               {item.decision ? <DecisionSummary decision={item.decision} /> : "No decision yet."}
             </div>

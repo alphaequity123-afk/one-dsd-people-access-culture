@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 import SequenceVideo from "@/app/learn/equity-in-practice/sequence-video";
 import videos from "@/lib/program/explainer-videos.json";
@@ -12,6 +14,6 @@ export function ExplainerVideo({ id, open = false }: { id: string; open?: boolea
     <summary className="cursor-pointer font-semibold">Watch a short explainer: {video.title} <span className="font-normal text-muted">({video.runtime})</span></summary>
     <p className="mt-3">{video.summary}</p>
     <SequenceVideo className="mt-3 block aspect-video w-full rounded-lg bg-white" src={video.src} poster={video.poster} title={video.title} />
-    <p className="mt-3 text-sm"><a href={video.transcript}>Read the transcript</a> · <a href={video.captions}>Download the captions</a></p>
+    <p className="mt-3 text-sm"><SourceLink href={video.transcript}>Read the transcript</SourceLink> · <SourceLink href={video.captions}>Download the captions</SourceLink></p>
   </details></FeaturedMediaPanel>;
 }

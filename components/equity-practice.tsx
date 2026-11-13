@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { loadStaffContentSnapshot } from "@/lib/content/staff-publications";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { stringValue, stringListValue, linkListValue, EDITABLE_SURFACE_REGISTRY } from "@/lib/content/staff-surface-registry";

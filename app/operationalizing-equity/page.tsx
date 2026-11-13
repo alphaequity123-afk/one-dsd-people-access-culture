@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import "./dark-preview.css";
 import { PageIntro } from "@/components/ui";
 import { ResourceDownloads } from "@/components/resource-downloads";
@@ -70,7 +72,7 @@ export default async function OperationalizingEquityPage({ searchParams }: { sea
       </section>
       <section aria-labelledby="foundation-sources" className="mt-12 border-t border-line pt-6">
         <h2 id="foundation-sources" className="text-2xl font-bold">Sources and further reading</h2>
-        <ul className="space-y-3 pl-5">{OPERATIONALIZING_EQUITY.sources.map(source=><li key={source.url}><a href={source.url}>{source.title}</a></li>)}</ul>
+        <ul className="space-y-3 pl-5">{OPERATIONALIZING_EQUITY.sources.map(source=><li key={source.url}><SourceLink href={source.url}>{source.title}</SourceLink></li>)}</ul>
         <p className="text-sm text-muted">This page offers a program interpretation and illustrative examples. Refer to original guidance for applicable responsibilities and requirements.</p>
         <p><Link href="/">Return to the program home</Link></p>
       </section>

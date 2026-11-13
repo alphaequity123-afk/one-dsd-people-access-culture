@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EngagementActivitySample } from "./multimedia/engagement-worked-examples";
 import { AMPLIFY_ACTIVITIES } from "@/lib/content/amplify-experiences";
 

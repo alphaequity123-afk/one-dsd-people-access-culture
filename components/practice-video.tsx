@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 const practiceVideos = {
   "north-crossing": {
     title: "Can I change my appointment?",
@@ -26,7 +28,7 @@ export function PracticeVideo({ clip }: { clip: keyof typeof practiceVideos }) {
       <div className="space-y-3 pb-4">
         <video aria-label={title} className="aspect-video w-full rounded bg-[#102b40]" controls playsInline preload="none" poster={`/videos/practice/${clip}.jpg`}>
           <source src={source} type="video/mp4" />
-          <a href={source}>Open the video</a>
+          <SourceLink href={source}>Open the video</SourceLink>
         </video>
         <details>
           <summary className="min-h-11 cursor-pointer py-2.5">Read the video description</summary>

@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { CALENDAR_TITLES, publishedCalendar, type CalendarDate, type CalendarEntry } from "@/lib/content/cultural-calendar";
 import { calendarMonthHref, CALENDAR_ICS_PATH, dateCovers, dateStateKind, dateStateText, entryAnchor, validDay } from "@/lib/content/culture-calendar-grid";
 import { ResearchInline } from "@/components/research-markdown";
@@ -36,9 +38,9 @@ function Entry({ entry, date, open }: { entry: CalendarEntry; date?: CalendarDat
       {entry.whatItMarks ? <p><strong>What it marks.</strong> {entry.whatItMarks}</p> : null}
       {entry.howCelebrated ? <p><strong>In Minnesota.</strong> {entry.howCelebrated}</p> : null}
       {entry.workplaceNote ? <p><strong>At work.</strong> {entry.workplaceNote}</p> : null}
-      {entry.events.length ? <><p className="community-research-label">Events in Minnesota</p><ul>{entry.events.map((event, index) => <li key={index}>{event.href ? <a href={event.href}>{event.name}</a> : event.name}{event.place ? `, ${event.place}` : ""}{event.dates ? `. ${event.dates}` : ""}</li>)}</ul></> : null}
+      {entry.events.length ? <><p className="community-research-label">Events in Minnesota</p><ul>{entry.events.map((event, index) => <li key={index}>{event.href ? <SourceLink href={event.href}>{event.name}</SourceLink> : event.name}{event.place ? `, ${event.place}` : ""}{event.dates ? `. ${event.dates}` : ""}</li>)}</ul></> : null}
       <p>Communities: {entry.communities.map((id, index) => <span key={id}>{index ? ", " : ""}<Link href={`/minnesota-communities/${id}`}>{CALENDAR_TITLES[id] ?? id}</Link></span>)}</p>
-      {entry.sources.length ? <p className="community-research-sources">Sources: {entry.sources.map((source, index) => <span key={index}>{index ? "; " : ""}<a href={source.href}><ResearchInline text={source.title} /></a></span>)}</p> : null}
+      {entry.sources.length ? <p className="community-research-sources">Sources: {entry.sources.map((source, index) => <span key={index}>{index ? "; " : ""}<SourceLink href={source.href}><ResearchInline text={source.title} /></SourceLink></span>)}</p> : null}
     </div>
   </details>;
 }
@@ -74,7 +76,7 @@ export default async function CulturalCalendarPage({ searchParams }: { searchPar
       <label>Type<select name="kind" defaultValue={kind}><option value="">All types</option>{Object.entries(KINDS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
       <button type="submit" className="btn">Show dates</button>
     </form>
-    <p><a href={CALENDAR_ICS_PATH}>Download confirmed dates for your own calendar</a></p>
+    <p><SourceLink href={CALENDAR_ICS_PATH}>Download confirmed dates for your own calendar</SourceLink></p>
     {day ? <section className="calendar-month"><h2>{formatDate(day)}</h2><p><Link href={backToMonth}>Back to all of {MONTHS[Number(day.slice(5, 7)) - 1]} {year}</Link></p>{dated.map(({ entry, date }) => <Entry key={`${entry.id}-${date.date}`} entry={entry} date={date} open={entry.id === openEntry} />)}{!dated.length ? <p>No dates match these choices on this day.</p> : null}</section> : null}
     {!day ? byMonth.map(group => <section key={group.name} className="calendar-month"><h2>{group.name} {year}</h2>{group.items.map(({ entry, date }) => <Entry key={`${entry.id}-${date.date}`} entry={entry} date={date} open={entry.id === openEntry} />)}</section>) : null}
     {!day && !byMonth.length ? <p>No dates match these choices. Try another month, or choose all months.</p> : null}

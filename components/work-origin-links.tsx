@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { getDomain } from "@/lib/domains";
 import { WORK_AREAS } from "@/lib/product/work-areas";
 import { normalizeWorkOrigin, withWorkOrigin, type WorkOrigin } from "@/lib/product/work-origin";

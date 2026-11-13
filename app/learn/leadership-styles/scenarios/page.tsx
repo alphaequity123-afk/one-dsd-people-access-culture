@@ -1,5 +1,6 @@
+import { FocusedSections } from "@/components/focused-sections";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { Block, BoundaryNote, Bullets, PathwayEyebrow, PathwayShell, SectionNav, Steps } from "@/components/leadership-styles-pathway";
 import TutorPanel from "@/components/tutor-panel";
 import {
@@ -23,7 +24,7 @@ export default function LeadershipScenariosPage() {
     title={page.title}
     intro={<p>Each situation below is fictional, and every line of dialogue is original. For each one, several leadership approaches respond, some in a stronger way and some in a harmful way. Then comes a combined response and questions to discuss.</p>}
   >
-    <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share these scenarios</summary><ResourceDownloads kind="leadership-styles" id="scenarios" noun="lesson" /></details>
+    <FocusedSections><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share these scenarios</summary><ResourceDownloads kind="leadership-styles" id="scenarios" noun="lesson" /></details>
     <SectionNav label="Scenarios" items={[...LEADERSHIP_SCENARIO_FAMILIES.map(family => ({ href: `#scenario-${family.id}`, title: family.title })), { href: "#guided-practice", title: "Practice with Guidance" }]} />
     <p className={styles.prose}>Responses illustrate tendencies and choices. They are not scripts that predict how anyone who uses a style would act, and no response is a judgment about a real person. Check your own response against the <Link className="underline" href={`${LEADERSHIP_PATHWAY_PAGES.capstone.href}#rubric`}>eight-point practice rubric</Link>.</p>
     {LEADERSHIP_SCENARIO_FAMILIES.map(family => <section key={family.id} id={`scenario-${family.id}`} aria-labelledby={`scenario-${family.id}-title`} className={styles.scenario}>
@@ -57,5 +58,5 @@ export default function LeadershipScenariosPage() {
       <Link href={LEADERSHIP_PATHWAY_PAGES.race.href}>Next: {LEADERSHIP_PATHWAY_PAGES.race.title}</Link>
       <Link href={LEADERSHIP_PATHWAY_PAGES.capstone.href}>Go to the capstone</Link>
     </nav>
-  </PathwayShell>;
+  </FocusedSections></PathwayShell>;
 }

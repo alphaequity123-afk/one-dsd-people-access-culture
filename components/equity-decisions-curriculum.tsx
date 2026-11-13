@@ -1,5 +1,7 @@
 'use client';
-import Link from "next/link";
+import { SourceLink } from "@/components/app-link";
+
+import Link from "@/components/app-link";
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import data from '@/lib/content/equity-everyday-decisions.json';
@@ -24,7 +26,7 @@ function download(name: string, text: string) {
 function ResourceList({ resources }: { resources: Resource[] }) {
   if (!resources.length) return null;
   return <ul>{resources.map(resource => <li key={`${resource.href}-${resource.title}`}>
-    <a href={resource.href}>{resource.title}</a>{resource.description && <p>{resource.description}</p>}
+    <SourceLink href={resource.href}>{resource.title}</SourceLink>{resource.description && <p>{resource.description}</p>}
   </li>)}</ul>;
 }
 
@@ -64,7 +66,7 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
   return <div className="equity-decisions-study">
     <nav aria-label="Equity learning">
       <Link prefetch={false} href="/learn/equity-toolkit">Equity Analysis Toolkit</Link>
-      {lesson && <a href={base}>Learning overview</a>}
+      {lesson && <SourceLink href={base}>Learning overview</SourceLink>}
     </nav>
     <header>
       <p className="equity-decisions-eyebrow">SELF-DIRECTED LEARNING</p>
@@ -77,11 +79,11 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
         <p>Use a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a visible transcript, an individual decision to practice, and a prompt for your own work.</p>
         <p>Participation in this learning is voluntary. You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes.</p>
         <p>The learning supports your work. Follow applicable policy and review requirements, and consult the responsible people or offices when a decision needs their approval. A quick check does not replace a full analysis when one is required.</p>
-        <a className="equity-decisions-primary text-white" href={`${base}/01`}>Start the learning</a>{' '}
+        <SourceLink className="equity-decisions-primary text-white" href={`${base}/01`}>Start the learning</SourceLink>{' '}
         <button type="button" onClick={downloadCompanion}>Download the companion working notes</button>
       </section>
       <ol className="equity-decisions-path">{curriculum.modules.map(module => <li key={module.id}>
-        <a href={`${base}/${module.id}`}><span>Part {Number(module.id)}</span><h2>{module.title}</h2></a>
+        <SourceLink href={`${base}/${module.id}`}><span>Part {Number(module.id)}</span><h2>{module.title}</h2></SourceLink>
         <p>{module.deliverable}</p>
         {hasReadyMedia(module) && <p>Video: about {Math.ceil(module.durationSeconds! / 60)} minutes, plus time for your own practice.</p>}
         {completed.includes(module.id) && <p>Marked complete on this browser.</p>}
@@ -99,7 +101,7 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
           <track kind="captions" src={lesson.captions} srcLang="en" label="English" default/>
           Your browser cannot play this video. The full transcript is below.
         </video>
-        <a href={lesson.video}>Open the video</a> · <a href={lesson.captions}>Download captions</a>
+        <SourceLink href={lesson.video}>Open the video</SourceLink> · <SourceLink href={lesson.captions}>Download captions</SourceLink>
         <details><summary>Go to a chapter</summary><ol>{lesson.chapters!.map(chapter => <li key={chapter.title}>
           <button type="button" onClick={() => { if (video.current) { video.current.currentTime = chapter.start; video.current.focus(); } }}>{chapter.title}</button>
         </li>)}</ol></details>
@@ -133,8 +135,8 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
       <details className="course-more-item"><summary><h2>Your next step</h2></summary>
         <button type="button" onClick={complete}>{completed.includes(lesson.id) ? 'Marked complete' : 'Mark this lesson complete'}</button>
         <p role="status">{storageMessage}</p><nav aria-label="Lesson sequence">
-          {index > 0 && <a href={`${base}/${curriculum.modules[index - 1].id}`}>Previous: {curriculum.modules[index - 1].title}</a>}
-          {index < curriculum.modules.length - 1 ? <a href={`${base}/${curriculum.modules[index + 1].id}`}>Next: {curriculum.modules[index + 1].title}</a> : <a href={base}>Return to the learning overview</a>}
+          {index > 0 && <SourceLink href={`${base}/${curriculum.modules[index - 1].id}`}>Previous: {curriculum.modules[index - 1].title}</SourceLink>}
+          {index < curriculum.modules.length - 1 ? <SourceLink href={`${base}/${curriculum.modules[index + 1].id}`}>Next: {curriculum.modules[index + 1].title}</SourceLink> : <SourceLink href={base}>Return to the learning overview</SourceLink>}
         </nav>
       </details>
       {curriculum.sources && curriculum.sources.length > 0 && <details className="course-more-item"><summary><h2>Sources and further guidance</h2></summary><ResourceList resources={curriculum.sources}/></details>}

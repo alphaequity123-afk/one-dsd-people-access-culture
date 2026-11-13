@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { dispositionLabel, KIND_LABEL, workTypeLabel } from "@/lib/equity-analysis/model";
 import { buildDashboard, quarterLabel, type Delta } from "@/lib/equity-analysis/rollups";
 import type { EquityWorkspace } from "@/lib/equity-analysis/records";

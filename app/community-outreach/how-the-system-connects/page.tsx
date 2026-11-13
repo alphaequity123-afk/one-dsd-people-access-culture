@@ -1,5 +1,8 @@
+import { FocusedSections } from "@/components/focused-sections";
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { getSystemConnections } from "@/lib/content/hub/system-connections";
 import styles from "../hub.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
@@ -10,16 +13,16 @@ export const metadata: Metadata = {
 };
 
 const Source = ({ source }: { source: { title: string; url: string; date?: string } }) =>
-  <span className={styles.small}> Source: <a href={source.url}>{source.title}</a>{source.date ? `, ${source.date}` : ""}.</span>;
+  <span className={styles.small}> Source: <SourceLink href={source.url}>{source.title}</SourceLink>{source.date ? `, ${source.date}` : ""}.</span>;
 
 export default function HowTheSystemConnectsPage() {
   const data = getSystemConnections();
-  return <div className={styles.page}>
+  return <div className={styles.page}><FocusedSections>
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
     <h1 className={styles.title}>How the system connects</h1>
     <p className={styles.lede}>Minnesota disability services are state-supervised and county-administered. The Department of Human Services sets policy and pays for services; the Disability Services Division leads the disability programs; lead agencies assess people and manage their services; and licensed providers deliver them. This page shows how those parts connect, with a source for each point.</p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="how-the-system-connects" noun="page" /></details>
-    <nav aria-label="On this page" className={styles.links}><a href="#structure">Inside the department</a><a href="#lead-agencies">Lead agencies</a><a href="#division-roles">The division and lead agencies</a><a href="#department-roles">The department and lead agencies</a><a href="#referrals">How people are referred</a><a href="#tribal">Tribal Nations</a><a href="#glossary">Plain-language glossary</a></nav>
+    <nav aria-label="On this page" className={styles.links}><SourceLink href="#structure">Inside the department</SourceLink><SourceLink href="#lead-agencies">Lead agencies</SourceLink><SourceLink href="#division-roles">The division and lead agencies</SourceLink><SourceLink href="#department-roles">The department and lead agencies</SourceLink><SourceLink href="#referrals">How people are referred</SourceLink><SourceLink href="#tribal">Tribal Nations</SourceLink><SourceLink href="#glossary">Plain-language glossary</SourceLink></nav>
 
     <section className={styles.section} id="structure" aria-labelledby="structure-title">
       <h2 id="structure-title">Inside the Department of Human Services</h2>
@@ -53,7 +56,7 @@ export default function HowTheSystemConnectsPage() {
       <ul className="list-disc space-y-3 pl-6">{data.departmentRoles.map(item => <li key={item.role}>
         <strong>{item.role}.</strong> {item.description}<Source source={item.source} />
       </li>)}</ul>
-      <p><Link href="/equity-review/working-group-plan">Plan a legislatively required working group</Link>: the Waiver Case Management Advisory Working Group's charge turned into a month-by-month plan.</p>
+      <p><Link href="/equity-review/working-group-plan">Plan a legislatively required working group</Link>: the Waiver Case Management Advisory Working Group’s charge turned into a month-by-month plan.</p>
     </section>
 
     <section className={styles.section} id="referrals" aria-labelledby="referrals-title">
@@ -61,7 +64,7 @@ export default function HowTheSystemConnectsPage() {
       <div role="region" aria-label="Referral paths" tabIndex={0} style={{ overflowX: "auto" }}>
         <table className={styles.table}>
           <thead><tr><th scope="col">From</th><th scope="col">To</th><th scope="col">When</th><th scope="col">Source</th></tr></thead>
-          <tbody>{data.referralPaths.map((item, i) => <tr key={i}><td>{item.from}</td><td>{item.to}</td><td>{item.when}</td><td><a href={item.source.url}>{item.source.title}</a></td></tr>)}</tbody>
+          <tbody>{data.referralPaths.map((item, i) => <tr key={i}><td>{item.from}</td><td>{item.to}</td><td>{item.when}</td><td><SourceLink href={item.source.url}>{item.source.title}</SourceLink></td></tr>)}</tbody>
         </table>
       </div>
     </section>
@@ -78,5 +81,5 @@ export default function HowTheSystemConnectsPage() {
       <dl>{data.glossary.map(item => <div key={item.term} style={{ marginBottom: ".5rem" }}><dt><strong>{item.term}</strong></dt><dd>{item.plain}</dd></div>)}</dl>
       <p className={styles.small}>Facts checked on {data.checked}. Organizational structures change; confirm current names with the department.</p>
     </section>
-  </div>;
+  </FocusedSections></div>;
 }

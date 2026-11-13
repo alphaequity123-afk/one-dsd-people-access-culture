@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { RESOURCE_THEMES } from "@/lib/content/resource-organization";
 
 export type ResourceFormatView = "library" | "learning" | "reading" | "listening";

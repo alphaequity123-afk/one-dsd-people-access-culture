@@ -1,7 +1,9 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 /** Typed Ask is explicitly enabled only for the owner-authorized clone pilot. */
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { AskVoice, VOICE_PRIVACY_NOTE } from "./ask-voice";
 import { AskBox } from "@/components/ask-box";
 import { ResourceMediaPreview, mediaResourceIdFromHref } from "@/components/multimedia/resource-media-preview";
@@ -313,7 +315,7 @@ function citedAnswer(text: string, sources: Array<{ title: string; url: string }
     const marker = /^\[(\d+)\]$/.exec(part);
     const source = marker ? sources[Number(marker[1]) - 1] : undefined;
     return source && /^https:\/\//i.test(source.url)
-      ? <a key={index} href={source.url} target="_blank" rel="noreferrer" aria-label={"Source " + marker![1] + ": " + source.title}>{part}</a>
+      ? <SourceLink key={index} href={source.url} target="_blank" rel="noreferrer" aria-label={"Source " + marker![1] + ": " + source.title}>{part}</SourceLink>
       : part;
   });
 }
@@ -372,7 +374,7 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
               <ol className="list-decimal pl-6">
                 {answer.publicResearch.sources.slice(0, 10).map((source) => (
                   <li key={source.url}>
-                    <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                    <SourceLink href={source.url} target="_blank" rel="noreferrer">{source.title}</SourceLink>
                     {source.date ? <span className="text-sm text-muted"> {copyText(copy, "datedPrefix")} {source.date}</span> : null}
                   </li>
                 ))}
@@ -380,7 +382,7 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
               {answer.publicResearch.sources.length > 10 ? <details className="mt-2"><summary>Show the other {answer.publicResearch.sources.length - 10} sources</summary><ol className="list-decimal pl-6" start={11}>
                 {answer.publicResearch.sources.slice(10).map((source) => (
                   <li key={source.url}>
-                    <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+                    <SourceLink href={source.url} target="_blank" rel="noreferrer">{source.title}</SourceLink>
                     {source.date ? <span className="text-sm text-muted"> {copyText(copy, "datedPrefix")} {source.date}</span> : null}
                   </li>
                 ))}

@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { EQUITY_POLICY } from "@/lib/equity-analysis/policy";
 import { ResourceDownloads } from "@/components/resource-downloads";
@@ -14,8 +16,8 @@ export default function EquityPolicyPage() {
     <>
       <PageIntro tone="business" kicker="People, Access and Culture" title={EQUITY_POLICY.title} lede={EQUITY_POLICY.lede}>
         <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm">
-          <div><dt className="text-muted">Official text</dt><dd className="ml-0"><a href={EQUITY_POLICY.href} target="_blank" rel="noreferrer">Read the policy (PDF)</a></dd></div>
-          <div><dt className="text-muted">Method</dt><dd className="ml-0"><a href={EQUITY_POLICY.toolkitHref} target="_blank" rel="noreferrer">Minnesota Equity Analysis Tool</a></dd></div>
+          <div><dt className="text-muted">Official text</dt><dd className="ml-0"><SourceLink href={EQUITY_POLICY.href} target="_blank" rel="noreferrer">Read the policy (PDF)</SourceLink></dd></div>
+          <div><dt className="text-muted">Method</dt><dd className="ml-0"><SourceLink href={EQUITY_POLICY.toolkitHref} target="_blank" rel="noreferrer">Minnesota Equity Analysis Tool</SourceLink></dd></div>
         </dl>
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <Link href="/equity-review" className="btn btn--primary">Review a policy or service change</Link>
@@ -60,7 +62,7 @@ export default function EquityPolicyPage() {
               <p className="kicker m-0">3. See</p>
               <h3 className="m-0 mt-1 text-xl font-bold">Return to the policy</h3>
               <p className="mt-2 text-sm">Use the official policy and Equity Analysis Tool when you need to check the requirements or method.</p>
-              <a href={EQUITY_POLICY.href} target="_blank" rel="noreferrer">Read the policy (PDF)</a>
+              <SourceLink href={EQUITY_POLICY.href} target="_blank" rel="noreferrer">Read the policy (PDF)</SourceLink>
             </li>
           </ol>
         </section>

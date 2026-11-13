@@ -1,6 +1,8 @@
+
+import { SourceLink } from "@/components/app-link";
 import Image from "next/image";
 import { FeaturedMediaPanel } from "@/components/featured-media-panel";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import styles from "../../../courses/course-design.module.css";
 import { notFound } from "next/navigation";
 import { prepareEditableSurface } from "@/components/editable-surface";
@@ -109,7 +111,7 @@ export default async function SharedCoursePage({ params }: { params: Promise<{ c
         <ul>
           {pack.sources.map((source, i) => (
             <li id={`source-${i + 1}`} key={i}>
-              {courseLink(source.href) ? <a href={courseLink(source.href)}>{source.title}</a> : <span>{source.title}</span>}
+              {courseLink(source.href) ? <SourceLink href={courseLink(source.href)}>{source.title}</SourceLink> : <span>{source.title}</span>}
               <p>{source.note}</p>
             </li>
           ))}

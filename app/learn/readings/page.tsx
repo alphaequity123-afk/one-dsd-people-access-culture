@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from "@/components/app-link";
 import { PageIntro } from '@/components/ui';
 import { readings, readingSections, readingHref, searchReadings } from '@/lib/content/reading-collection';
 import { RESOURCE_THEMES } from '@/lib/content/resource-organization';
@@ -7,7 +7,7 @@ import { catOneLine, catPaginate, catParam } from '@/lib/cat-paging';
 import { CatList, CatPager, CatResultStatus, CatRow } from '@/components/cat-list';
 import styles from './reading.module.css';
 export const metadata: Metadata = { title: 'Books and ideas for your work' };
-const PER_PAGE = 20;
+const PER_PAGE = 12;
 const BASE = '/learn/readings';
 type Query = { q?: string | string[]; theme?: string | string[]; section?: string | string[]; page?: string | string[] };
 export default async function ReadingsPage({searchParams}:{searchParams:Promise<Query>}) {

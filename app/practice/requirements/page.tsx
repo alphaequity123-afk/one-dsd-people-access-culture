@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { PageContents } from "@/components/page-contents";
 import { RequirementsCrosswalkWorksheet } from "@/components/requirements-crosswalk";

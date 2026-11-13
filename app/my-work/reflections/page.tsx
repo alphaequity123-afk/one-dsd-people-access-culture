@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { Metadata } from "next";
 import { RecordWorkbench } from "@/components/record-workbench";
 import { REFLECTION_PROMPTS } from "@/lib/content/leadership-journey";

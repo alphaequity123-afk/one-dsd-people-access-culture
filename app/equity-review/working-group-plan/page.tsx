@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PrintPageButton } from "@/components/hub/print-page-button";
 import { CHARGE, CHECKPOINTS, KICKOFF_DECISIONS, LAW, MEETINGS, PROGRAM_SUPPORT, RECOMMENDATION_RECORD, REUSE_STEPS, ROADMAP, TOPICS, TOPIC_METHOD, WORKING_GROUP_PLAN_CHECKED } from "@/lib/content/hub/working-group-plan";
 import styles from "@/app/community-outreach/hub.module.css";
@@ -18,7 +20,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <p className={styles.lede}>When the Legislature creates a working group or task force, the law sets its purpose, members, meetings, duties and report date. This page turns that charge into a month-by-month plan, using the Waiver Case Management Advisory Working Group as the worked example, and shows how to reuse the plan for another group.</p>
     <p className={styles.note}>The charge below is quoted from the law. The workplan, topic method, recommendation record and checkpoints are proposed practice for confirmation by the group and the department, not statutory requirements. Checked on {WORKING_GROUP_PLAN_CHECKED}.</p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="working-group-plan" noun="plan" /></details>
-    {expanded ? <nav aria-label="On this page" className={styles.links}><a href="#charge">The charge</a><a href="#roadmap">Roadmap</a><a href="#meetings">Meetings</a><a href="#method">Each topic</a><a href="#topics">Topic plans</a><a href="#record">Recommendation record</a><a href="#checkpoints">Checkpoints</a><a href="#kickoff">Kickoff</a><a href="#reuse">Reuse this plan</a><a href="#support">What this program supplies</a></nav> : null}
+    {expanded ? <nav aria-label="On this page" className={styles.links}><SourceLink href="#charge">The charge</SourceLink><SourceLink href="#roadmap">Roadmap</SourceLink><SourceLink href="#meetings">Meetings</SourceLink><SourceLink href="#method">Each topic</SourceLink><SourceLink href="#topics">Topic plans</SourceLink><SourceLink href="#record">Recommendation record</SourceLink><SourceLink href="#checkpoints">Checkpoints</SourceLink><SourceLink href="#kickoff">Kickoff</SourceLink><SourceLink href="#reuse">Reuse this plan</SourceLink><SourceLink href="#support">What this program supplies</SourceLink></nav> : null}
 
     <details className="pilot-supporting" id="charge" open={expanded}>
       <summary>The charge, from the law</summary>
@@ -35,7 +37,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
       <p>{CHARGE.report}</p>
       <p className={styles.note}><strong>Scope boundary.</strong> {CHARGE.scopeBoundary}</p>
       <p><strong>Common lens.</strong> {CHARGE.commonLens} For Tribal Nations, membership on a working group is not consultation: contact the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation.</p>
-      <p className={styles.small}>Source: <a href={LAW.url}>{LAW.title}</a>. {LAW.section53} {LAW.section54}</p>
+      <p className={styles.small}>Source: <SourceLink href={LAW.url}>{LAW.title}</SourceLink>. {LAW.section53} {LAW.section54}</p>
       </div>
     </details>
 

@@ -3,7 +3,7 @@ import { WorkOriginLinks } from "@/components/work-origin-links";
 import { normalizeWorkOrigin, withWorkOrigin, type WorkOriginInput } from "@/lib/product/work-origin";
 import type { Metadata } from "next";
 import styles from "@/components/workspace-presentation.module.css";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { PageIntro } from "@/components/ui";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";

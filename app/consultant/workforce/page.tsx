@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { ownerPageGuard } from "@/lib/auth/owner-page";
 import { ORGANIZATIONAL_AREAS, CLASSIFICATION_REFERENCES } from "@/lib/product/workforce-map";
 import { prepareEditableSurface } from "@/components/editable-surface";

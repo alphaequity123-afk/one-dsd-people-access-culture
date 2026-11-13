@@ -18,7 +18,7 @@ describe('Library discovery',()=>{
   expect(seen).toHaveLength(760);expect(new Set(seen).size).toBe(760);
   expect(libraryPage(0,'9')).toEqual({page:1,pages:1,start:0,end:0});
   expect(libraryPage(20,'-5').page).toBe(1);expect(libraryPage(20,'9999').page).toBe(2);
-  expect(libraryPage(760,'2',true).end).toBe(760);
+  expect(libraryPage(760,'2').end).toBe(24);
  });
  it('offers program context without pretending it is a search result or evidence',()=>{
   expect(libraryDestinations('CFSS')[0].href).toBe('/one-dsd/programs');

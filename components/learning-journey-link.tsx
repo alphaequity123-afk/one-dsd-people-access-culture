@@ -1,5 +1,5 @@
 import { DevelopmentResourceGuide } from "./development-resource-guide";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { prepareEditableSurface } from "./editable-surface";
 import { getLearningJourney, journeyText, LEARNING_JOURNEY_HREF } from "@/lib/content/learning-journey";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";

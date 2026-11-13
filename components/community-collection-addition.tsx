@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import "server-only";
 import { createHash } from "node:crypto";
 import additions from "@/lib/content/community-collection-additions.json";
@@ -19,7 +21,7 @@ function Photo({ photo }: { photo: CommunityPhoto }) {
     <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" className="h-auto max-w-full" />
     <figcaption className="mt-2 text-sm leading-6">
       <span>{photo.caption} </span><span>Credit: {photo.credit}. </span>
-      <a href={photo.sourceHref}>Image source</a>{" · "}<a href={photo.licenseHref}>{photo.licenseLabel}</a>
+      <SourceLink href={photo.sourceHref}>Image source</SourceLink>{" · "}<SourceLink href={photo.licenseHref}>{photo.licenseLabel}</SourceLink>
       <span> {photo.cropNotice}</span>
     </figcaption>
   </figure>;
@@ -29,7 +31,7 @@ function ClaimContent({ item }: { item: CommunityClaim }) {
   return <>
     <p>{item.text}</p>
     {item.photo && <Photo photo={item.photo} />}
-    <p>Sources: {item.citations.map((source, index) => <span key={`${source.href}-${index}`}>{index > 0 ? "; " : ""}<a href={source.href}>{source.label}</a></span>)}</p>
+    <p>Sources: {item.citations.map((source, index) => <span key={`${source.href}-${index}`}>{index > 0 ? "; " : ""}<SourceLink href={source.href}>{source.label}</SourceLink></span>)}</p>
   </>;
 }
 
@@ -80,7 +82,7 @@ export async function CommunityCollectionAddition({ id, research = null }: { id:
         <div className="mt-3 space-y-3"><ClaimContent item={item} /></div>
       </details>)}
     </section>}
-    {shown.resource ? <><h3>Community resource</h3><p>{addition.resource.description} <a href={addition.resource.href}>{addition.resource.label}</a></p></> : null}
+    {shown.resource ? <><h3>Community resource</h3><p>{addition.resource.description} <SourceLink href={addition.resource.href}>{addition.resource.label}</SourceLink></p></> : null}
     {hasStories ? <h3>Try it in your work</h3> : null}<p>{addition.practice.question}</p><details><summary>Consider a response</summary><p>{addition.practice.guidance}</p></details>
   </section>;
 }

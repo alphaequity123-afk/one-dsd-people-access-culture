@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { AuthorityPill } from "@/components/ui";
 import { PROGRAM } from "@/lib/constants";
 import type { HeadsUpPacket } from "@/lib/intelligence/consult/schema";

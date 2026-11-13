@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { useEffect, useState } from "react";
 import { FeaturedMediaPanel } from "./featured-media-panel";
@@ -49,6 +51,6 @@ export function LeadershipStyleVideo({ style, title }: { style: LeadershipStyleS
       <track kind="captions" src={media.captions} srcLang="en" label="English" default />
       Your browser cannot play this video. You can read the transcript instead.
     </video>
-    <p><a className="underline" href={media.transcript}>Read the transcript</a></p>
+    <p><SourceLink className="underline" href={media.transcript}>Read the transcript</SourceLink></p>
   </div></FeaturedMediaPanel>;
 }

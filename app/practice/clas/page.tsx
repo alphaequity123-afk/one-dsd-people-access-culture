@@ -1,6 +1,8 @@
+
+import { SourceLink } from "@/components/app-link";
 import { EngagementResourceLinks } from "@/components/engagement-resource-links";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { PageIntro } from "@/components/ui";
 import { PageContents } from "@/components/page-contents";
 import { ClasPlanningWorksheet } from "@/components/clas-planning-worksheet";
@@ -23,7 +25,7 @@ export default async function ClasPlanningPage() {
         <section id="standards-reference" className="space-y-4">
           <h2 className="text-2xl font-semibold">Use the standards with your service</h2>
           <p>CLAS means culturally and linguistically appropriate services. Use the standards as a reference for examining communication, workforce preparation, community participation and service improvement. Confirm which standards are relevant to your work and which separate legal, policy or contract requirements apply; this worksheet does not make every standard binding for every service.</p>
-          <p><a href={CLAS_SOURCE.href}>{CLAS_SOURCE.title}</a> · <Link href="/resources/ja-language-cultural-access-planning">Language and cultural access planning aid</Link></p>
+          <p><SourceLink href={CLAS_SOURCE.href}>{CLAS_SOURCE.title}</SourceLink> · <Link href="/resources/ja-language-cultural-access-planning">Language and cultural access planning aid</Link></p>
         </section>
         <p><Link href="/learn/clas">Explore CLAS courses, checklists and related learning</Link></p>
         <EngagementResourceLinks kind="clas" />

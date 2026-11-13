@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { DsdReflection } from "@/components/dsd-reflection";
 export const metadata = { title: "Practice reflection" };
 export default function ReflectionPage() {

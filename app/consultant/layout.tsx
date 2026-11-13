@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { Suspense } from "react";
 import { PageIntro } from "@/components/ui";
 import { ownerConfigured, ownerKeyIsDevDefault } from "@/lib/auth/owner";
@@ -108,8 +110,8 @@ export default async function ConsultantLayout({ children }: { children: React.R
           <div className="flex flex-wrap items-center gap-3">
             <p className="m-0">
               {editing
-                ? <>Page editing is on for this browser. <a className="font-bold text-white underline" href="/api/consultant/editing?mode=off&next=/consultant/program">Turn it off</a></>
-                : <a className="font-bold text-white underline" href="/api/consultant/editing?mode=on&next=/">Turn on page editing and open the site</a>}
+                ? <>Page editing is on for this browser. <SourceLink className="font-bold text-white underline" href="/api/consultant/editing?mode=off&next=/consultant/program">Turn it off</SourceLink></>
+                : <SourceLink className="font-bold text-white underline" href="/api/consultant/editing?mode=on&next=/">Turn on page editing and open the site</SourceLink>}
             </p>
             <form method="post" action="/api/consultant/logout">
               <button type="submit" className="btn btn--ghost" style={{ minHeight: 32, padding: "0.2rem 0.7rem" }}>

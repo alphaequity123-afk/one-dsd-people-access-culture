@@ -1,4 +1,6 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
+
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -41,7 +43,7 @@ function Player({ item, withinSection = false }: { item: Item; withinSection?: b
         <button type="button" className="course-media-chapter" onClick={() => seek(chapter.start)}>{chapter.title}</button> <span className="calm-muted calm-small">{clock(chapter.start)}</span>
       </li>)}</ol>
     </details> : null}
-    <p className="calm-small"><a href={item.transcript}>Read the full transcript</a> · <a href={item.captions}>Download the captions</a></p>
+    <p className="calm-small"><SourceLink href={item.transcript}>Read the full transcript</SourceLink> · <SourceLink href={item.captions}>Download the captions</SourceLink></p>
   </section></FeaturedMediaPanel>;
 }
 
@@ -124,5 +126,5 @@ export function CourseMediaForPage() {
   const jump = inSlot ? document.querySelector<HTMLElement>("[data-course-media-jump]") : null;
   const video = ordered.find(item => item.kind === "video");
   if (!jump || !video) return <>{placedMedia}{sectionMedia}</>;
-  return <>{placedMedia}{sectionMedia}{createPortal(<a href="#course-media" className="media-quick-link media-quick-link--video text-white" style={{ background: "#003865", color: "#fff" }}>{jump.dataset.courseMediaJump || "Watch the lesson"}</a>, jump)}</>;
+  return <>{placedMedia}{sectionMedia}{createPortal(<SourceLink href="#course-media" className="media-quick-link media-quick-link--video text-white" style={{ background: "#003865", color: "#fff" }}>{jump.dataset.courseMediaJump || "Watch the lesson"}</SourceLink>, jump)}</>;
 }

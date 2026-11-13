@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { cloneElement, isValidElement } from "react";
 import { AUTHORITY, type AuthorityLabel } from "@/lib/content/types";
 

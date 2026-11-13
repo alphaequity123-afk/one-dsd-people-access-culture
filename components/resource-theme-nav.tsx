@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { RESOURCE_THEMES } from "@/lib/content/resource-organization";
 
 export function ResourceThemeNav({ basePath, className, gridClassName }: { basePath: "/learn" | "/library" | "/learn/sources" | "/audio-library"; className?: string; gridClassName?: string }) {

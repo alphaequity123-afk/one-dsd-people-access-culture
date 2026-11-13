@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useMemo, useState } from "react";
 import { ROUTING_SIGNALS } from "@/lib/content/paths";
 import { pathRecommend } from "@/lib/intelligence/agents/graduation";

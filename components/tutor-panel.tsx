@@ -1,4 +1,6 @@
 'use client';
+import { SourceLink } from "@/components/app-link";
+
 import { useState } from 'react';
 import { scoreChoice, tutorItems, type ScoredChoice, type TutorItem } from '@/lib/tutor/items';
 import { chooseStrategy, recordAttempt, recordRound, useStudentModel, type Strategy } from '@/lib/tutor/student-model';
@@ -164,7 +166,7 @@ export default function TutorPanel({ lessonId, items }: Props) {
         </>}
         {reply && reply.grounding.length > 0 && <div className="clas-guidance-links">
           <p>{GUIDANCE_COPY.readMore}</p>
-          <ul>{reply.grounding.map(link => <li key={link.href}><a href={link.href}>{link.title}</a></li>)}</ul>
+          <ul>{reply.grounding.map(link => <li key={link.href}><SourceLink href={link.href}>{link.title}</SourceLink></li>)}</ul>
         </div>}
       </div>
       <p className="clas-guidance-notice">{GUIDANCE_COPY.notice}</p>

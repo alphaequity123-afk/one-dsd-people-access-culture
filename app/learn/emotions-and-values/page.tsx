@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { ResourceDownloads } from "@/components/resource-downloads";
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from "@/components/app-link";
 import { PageIntro } from '@/components/ui';
 import { publishedCourses } from '@/lib/content/courses/published';
 import { requestedContentScope } from '@/lib/product/request-context';

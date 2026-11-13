@@ -1,6 +1,8 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
 
-import Link from "next/link";
+
+import Link from "@/components/app-link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { DECISION_ROLE_LABELS, DECISION_ROLES, policyRefSchema, type DecisionRoleId, type PolicyCase, type PolicyRef, type PolicySource } from "@/lib/policy-analysis/contract";
 import { AnalyzeStep } from "./analyze-step";
@@ -255,7 +257,7 @@ export function PolicyAnalyzer({ catalog, kinds, questions, principleLabels, ini
         {problem ? (
           <div className="notice notice--stop">
             <p className="m-0">{problem.message}</p>
-            {problem.signIn ? <p className="mb-0 mt-2"><a href="/equity-workspace">Sign in again</a></p> : null}
+            {problem.signIn ? <p className="mb-0 mt-2"><SourceLink href="/equity-workspace">Sign in again</SourceLink></p> : null}
           </div>
         ) : null}
       </div>

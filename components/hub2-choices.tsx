@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import type { ReactNode } from "react";
 
 export type Hub2Choice = { href: string; title: string; body: ReactNode; action: string };
@@ -17,7 +19,7 @@ export function Hub2Choices({ label, choices, className = "" }: { label: string;
       </>;
       const card = "block h-full rounded-[10px] border border-[#8ea2b5] bg-white p-5 no-underline hover:border-[#003865] hover:bg-[#f1f5f9] focus-visible:outline-2";
       return <li key={choice.href} className="m-0">
-        {choice.href.startsWith("#") ? <a className={card} href={choice.href}>{inner}</a> : <Link prefetch={false} className={card} href={choice.href}>{inner}</Link>}
+        {choice.href.startsWith("#") ? <SourceLink className={card} href={choice.href}>{inner}</SourceLink> : <Link prefetch={false} className={card} href={choice.href}>{inner}</Link>}
       </li>;
     })}
   </ul>;

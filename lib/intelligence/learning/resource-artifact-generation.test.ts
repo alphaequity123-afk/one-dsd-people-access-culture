@@ -131,7 +131,7 @@ describe("resource artifact generation", () => {
       expect(data.excerpts).toHaveLength(4);
       expect(new Set(data.excerpts.map((item: { collectionFamily: string }) => item.collectionFamily)).size).toBe(4);
       expect(request.contents[0].parts[0].text).not.toContain("unrelated source");
-      expect(request.systemInstruction.parts[0].text).toContain("12th-grade");
+      expect(request.systemInstruction.parts[0].text).toContain("10th to 12th grade");
       expect(request.systemInstruction.parts[0].text).toContain("honest yet optimistic");
       return envelope(fetcher.mock.calls.length === 1 ? quiz : linked);
     });

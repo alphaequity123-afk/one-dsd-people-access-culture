@@ -1,0 +1,31 @@
+.source-reading-page > header h1 { font-size: clamp(1.9rem, 4.4vw, 2.7rem); line-height: 1.18; }
+.source-reading-contents { margin-top: 2rem; }
+.source-reading-contents ol { margin: 0; padding-left: 1.5rem; }
+.source-reading-contents li { padding-block: .45rem; }
+.source-reading-contents a[aria-current="page"] { color: #172b3c; font-weight: 600; }
+.source-reading-body { font-size: 1.05rem; line-height: 1.85; overflow-wrap: anywhere; }
+.source-reading-body :is(p,ul,ol,dl,blockquote,figure,table,details,pre) { margin-block: 1.5rem; }
+.source-reading-body > div:not(:empty) { margin-block: 1rem; }
+.source-reading-body :is(h2,h3,h4,h5,h6) { margin-block: 2.8rem 1.1rem; line-height: 1.35; }
+.source-reading-body > :first-child { margin-top: 0; }
+.source-reading-body :is(ul,ol) { padding-left: 1.6rem; }
+.source-reading-body li { margin-block: .65rem; }
+.source-reading-body img { display: block; max-width: 100%; height: auto; margin-inline: auto; border-radius: 8px; }
+.source-reading-body figure { margin-inline: 0; }
+.source-reading-body figcaption { margin-top: .75rem; color: #43566a; font-size: .95rem; }
+.source-reading-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+.source-reading-body :is(th,td) { padding: .85rem; border: 1px solid #cdd7e2; text-align: start; vertical-align: top; min-width: 6rem; }
+.source-reading-body th { color: #172b3c; background: #e5edf6; font-weight: 600; }
+.source-reading-body :is(blockquote,pre) { padding: 1.25rem; border-left: 3px solid #a9bbce; background: #fff; }
+.source-reading-body pre { overflow-x: auto; }
+.source-reading-body details { border-block: 1px solid #cdd7e2; padding: 1rem 0; }
+.source-reading-body summary { min-height: 44px; cursor: pointer; color: #003865; }
+.source-reading-body :is(a,summary):focus-visible { outline: 3px solid #005793; outline-offset: 4px; }
+.source-reading-pagination { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-block: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #a9bbce; }
+.source-reading-pagination :is(a,button) { min-height: 44px; padding: .5rem .8rem; color: #003865; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.source-reading-pagination button:disabled { color: #687785; cursor: default; text-decoration: none; }
+.source-reading-footer { margin-top: 3rem; color: #43566a; font-size: .9rem; }
+.source-document-sheet { background: white; border: 1px solid #cdd7e2; }
+.source-document-sheet canvas { display: block; width: 100%; height: auto; }
+.source-document-text { white-space: pre-wrap; line-height: 1.8; }
+@media print { .source-reading-contents, .source-reading-pagination { display: none; } }

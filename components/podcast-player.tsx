@@ -1,6 +1,8 @@
 "use client";
+import { SourceLink } from "@/components/app-link";
 
-import Link from "next/link";
+
+import Link from "@/components/app-link";
 import { useRef, useState } from "react";
 import { SharePage } from "@/components/share-page";
 import { podcastShareHref } from "@/lib/product/share-link";
@@ -117,7 +119,7 @@ export function PodcastPlayer({ headingLevel = 3, ownPage = false, id, src, titl
     <Heading id={titleId} className={headingLevel === 1 ? "text-4xl font-semibold" : "text-2xl font-semibold"}>{title}</Heading>
     <p id={detailsId}>{intro}</p>
     <audio id={playerId} ref={player} src={src} controls preload="none" className="w-full max-w-2xl" aria-labelledby={titleId} aria-describedby={`${detailsId}${failed ? ` ${errorId}` : ""}`} onLoadedMetadata={() => { if (pendingSeek.current === null) { const saved = savedPosition(id); if (saved && player.current && saved < player.current.duration - 5) player.current.currentTime = saved; } applyPendingSeek(); }} onPlay={event => { const current = event.currentTarget; current.ownerDocument.querySelectorAll<HTMLMediaElement>("audio, video").forEach(media => { if (media !== current) media.pause(); }); current.ownerDocument.dispatchEvent(new CustomEvent("pac-media-play")); }} onTimeUpdate={event => rememberPosition(id, event.currentTarget.currentTime)} onEnded={() => rememberPosition(id, 0, true)} onError={() => setFailed(true)} onCanPlay={() => { if (pendingSeek.current === null) setFailed(false); }}>
-      <a href={src} download>{downloadLabel}</a>
+      <SourceLink href={src} download>{downloadLabel}</SourceLink>
     </audio>
     <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
       <SharePage title={title} href={podcastShareHref(id)} noun="podcast" compact />

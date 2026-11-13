@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/app-link";
 import type { AnalysisAnswer, AnalysisResponse, AnswerKind, Instrument, InstrumentQuestion } from "@/lib/analysis/contract";
 import styles from "./analyze.module.css";
 

@@ -1,5 +1,8 @@
+import { FocusedSections } from "@/components/focused-sections";
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { getOfficialProviders } from "@/lib/content/hub/official-providers";
 import { ORGANIZATIONS, organizationHref } from "@/lib/content/hub/organizations";
 import { getCountyAgencies } from "@/lib/content/hub/county-agencies";
@@ -18,7 +21,7 @@ export default async function ProvidersPage({ searchParams }: { searchParams: Pr
   const matches = (entryCounties: string[]) => !county || entryCounties.includes("Statewide") || entryCounties.includes(county);
   const licensed = data.licensedProviderCounts;
   const orgSlug = (name?: string) => name ? ORGANIZATIONS.find(org => org.name === name)?.slug : undefined;
-  return <div className={styles.page}>
+  return <div className={styles.page}><FocusedSections>
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
     <h1 className={styles.title}>Providers and designated agencies</h1>
     <p className={styles.lede}>Organizations that the State of Minnesota designates, contracts, licenses or certifies to serve people with disabilities, and which counties each one serves. Each entry names the public record of its designation.</p>
@@ -40,14 +43,14 @@ export default async function ProvidersPage({ searchParams }: { searchParams: Pr
         {category.id === "licensed-providers" ? <p className={styles.small}>{data.licensedProviderCountsNote}</p> : null}
         <p className={styles.small}>Designated by: {category.designatedBy}</p>
         {entries.length ? <ul className={styles.grid} style={{ listStyle: "none", padding: 0 }}>{entries.map(entry => <li className={styles.card} key={entry.name}>
-          <h3>{entry.website ? <a href={entry.website}>{entry.name}</a> : entry.name}</h3>
+          <h3>{entry.website ? <SourceLink href={entry.website}>{entry.name}</SourceLink> : entry.name}</h3>
           {entry.alsoKnownAs?.length ? <p className={styles.meta}>Also known as {entry.alsoKnownAs.join(", ")}</p> : null}
           <p>{entry.what}</p>
           <p className={styles.small}>Counties: {entry.counties.length ? (entry.counties.length > 20 && !county ? `${entry.counties.length} counties` : entry.counties.join(", ")) : "No published county list"}</p>
           {entry.programCounties && county ? <p className={styles.small}>In {county}: {[entry.programCounties.specialNeedsBasicCare.includes(county) ? "Special Needs BasicCare" : "", entry.programCounties.seniorHealthOptions.includes(county) ? "Minnesota Senior Health Options or Senior Care Plus" : ""].filter(Boolean).join("; ") || "not offered"}</p> : null}
           {orgSlug(entry.organizationsName) ? <p className={styles.small}><Link href={organizationHref(orgSlug(entry.organizationsName)!)}>Its record with the Disability Services Division</Link></p> : null}
-          {entry.phone ? <p className={styles.small}>Phone: <a href={`tel:${entry.phone.replace(/[^0-9]/g, "")}`}>{entry.phone}</a></p> : null}
-          <p className={styles.small}>Record: <a href={entry.source.url}>{entry.source.title}</a>{entry.source.date ? `, ${entry.source.date}` : ""}</p>
+          {entry.phone ? <p className={styles.small}>Phone: <SourceLink href={`tel:${entry.phone.replace(/[^0-9]/g, "")}`}>{entry.phone}</SourceLink></p> : null}
+          <p className={styles.small}>Record: <SourceLink href={entry.source.url}>{entry.source.title}</SourceLink>{entry.source.date ? `, ${entry.source.date}` : ""}</p>
         </li>)}</ul> : <p>None listed for {county}.</p>}
       </section>;
     })}
@@ -56,16 +59,16 @@ export default async function ProvidersPage({ searchParams }: { searchParams: Pr
       <h2 id="licensed-title">Finding licensed providers</h2>
       <p>Providers of home and community-based services are licensed under Minnesota Statutes chapter 245D by the Department of Human Services. There are too many to list here; use the official lookups below to find current licensed providers by county and service.</p>
       {licensed ? <>
-        <p>Active licenses by county, from <a href={licensed.source.url}>{licensed.source.title}</a>{licensed.date ? ` (${licensed.date})` : ""}:</p>
+        <p>Active licenses by county, from <SourceLink href={licensed.source.url}>{licensed.source.title}</SourceLink>{licensed.date ? ` (${licensed.date})` : ""}:</p>
         <div role="region" aria-label="Licensed providers by county" tabIndex={0} style={{ overflowX: "auto" }}>
           <table className={styles.table}><thead><tr><th scope="col">County</th><th scope="col">Active licenses</th></tr></thead>
             <tbody>{Object.entries(licensed.byCounty).filter(([name]) => !county || name === county).sort(([a], [b]) => a.localeCompare(b)).map(([name, count]) => <tr key={name}><th scope="row">{name}</th><td>{count.toLocaleString("en-US")}</td></tr>)}</tbody></table>
         </div>
       </> : null}
       <h3 className="mt-4 font-bold">Official lookups</h3>
-      <ul className="list-disc pl-6">{data.lookups.map(lookup => <li key={lookup.url}><a href={lookup.url}>{lookup.name}</a>: {lookup.what}</li>)}</ul>
+      <ul className="list-disc pl-6">{data.lookups.map(lookup => <li key={lookup.url}><SourceLink href={lookup.url}>{lookup.name}</SourceLink>: {lookup.what}</li>)}</ul>
     </section>
 
     <p><Link href="/community-outreach/how-the-system-connects">How the system connects</Link> · <Link href="/community-outreach/county-agencies">County agencies</Link> · <Link href="/community-outreach/county-map">Minnesota county map</Link></p>
-  </div>;
+  </FocusedSections></div>;
 }

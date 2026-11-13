@@ -8,7 +8,7 @@ import { requestedContentScope } from "@/lib/product/request-context";
 import { linkListValue, stringValue } from "@/lib/content/staff-surface-registry";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
 import { ToolDecisionQuestions } from "@/components/tool-decision-questions";
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 export const metadata = { title: "Practice with the Equity Analysis Toolkit" };
 

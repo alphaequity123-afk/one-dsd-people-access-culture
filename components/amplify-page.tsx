@@ -1,10 +1,12 @@
+
+import { SourceLink } from "@/components/app-link";
 import styles from "@/components/dsd-experience.module.css";
 import mentoringStyles from "./mentoring-preview.module.css";
 import { LearningJourneyLink } from "./learning-journey-link";
 import { ProgramConnections } from "./program-connections";
 import Image from "next/image";
 import { EngagementWorkedExample } from "./multimedia/engagement-worked-examples";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { AMPLIFY_PAGES } from "@/lib/content/amplify";
@@ -66,7 +68,7 @@ export async function AmplifyPage({ id }: { id: typeof AMPLIFY_PAGES[number]["id
         {id === "mentoring" && <><EngagementWorkedExample kind="mentoring" /><AmplifyConversationTool mode="mentoring" /></>}
         {id === "ideas" && <><EngagementWorkedExample kind="idea" /><AmplifyConversationTool mode="idea" /></>}
         {id === "materials" && <div className="mt-8 rounded-xl bg-[#eef3f8] p-6"><h2 className="text-2xl font-semibold">Make a useful draft</h2><ul className="mt-4 space-y-4"><li><Link href="/one-dsd/amplify/gatherings#gathering-plan">Create a gathering invitation and plan</Link></li><li><Link href="/one-dsd/amplify/mentoring#mentoring-tool">Prepare a mentoring conversation</Link></li><li><Link href="/one-dsd/amplify/ideas#idea-tool">Shape an idea to discuss</Link></li></ul></div>}
-        {(id === "well-being" || id === "mentoring") && <section className="mt-9 border-t border-line pt-6"><h2 className="text-2xl font-semibold">Explore further</h2><ul className="mt-4 space-y-4">{id === "mentoring" ? <><li><Link href="/resources/pn-mentoring-sponsorship">Mentoring, sponsorship, and reverse mentoring</Link></li><li><Link href="/resources/pn-accessible-leadership-pathways">Accessible leadership pathways</Link></li><li><a href="https://nap.nationalacademies.org/resource/25568/interactive/tools-and-resources.html">National Academies: practical mentoring tools</a><p className="mt-1 text-sm">Research from science and education offers ideas to adapt to different workplaces.</p></li></> : <><li><Link href="/learn?theme=culture">Workplace culture and well-being resources</Link></li><li><Link href="/one-dsd/amplify/ideas">Explore a change that could help</Link></li><li><a href="https://www.hhs.gov/surgeongeneral/reports-and-publications/workplace-well-being/index.html">The Surgeon General&apos;s workplace well-being framework</a></li><li><a href="https://www.cdc.gov/niosh/twh/php/hierarchy/">NIOSH: working conditions and well-being</a></li></>}</ul></section>}
+        {(id === "well-being" || id === "mentoring") && <section className="mt-9 border-t border-line pt-6"><h2 className="text-2xl font-semibold">Explore further</h2><ul className="mt-4 space-y-4">{id === "mentoring" ? <><li><Link href="/resources/pn-mentoring-sponsorship">Mentoring, sponsorship, and reverse mentoring</Link></li><li><Link href="/resources/pn-accessible-leadership-pathways">Accessible leadership pathways</Link></li><li><SourceLink href="https://nap.nationalacademies.org/resource/25568/interactive/tools-and-resources.html">National Academies: practical mentoring tools</SourceLink><p className="mt-1 text-sm">Research from science and education offers ideas to adapt to different workplaces.</p></li></> : <><li><Link href="/learn?theme=culture">Workplace culture and well-being resources</Link></li><li><Link href="/one-dsd/amplify/ideas">Explore a change that could help</Link></li><li><SourceLink href="https://www.hhs.gov/surgeongeneral/reports-and-publications/workplace-well-being/index.html">The Surgeon General&apos;s workplace well-being framework</SourceLink></li><li><SourceLink href="https://www.cdc.gov/niosh/twh/php/hierarchy/">NIOSH: working conditions and well-being</SourceLink></li></>}</ul></section>}
       </div><aside className={styles.sidebar}><h2 className="text-xl font-semibold">{stringValue(copy,"resourcesTitle")}</h2><ul className="mt-4 list-none space-y-5 p-0">{resources.map(link=><li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}<li><Link href="/ask">Ask a question</Link></li><li><Link href="/support">Find support</Link></li></ul></aside></div>}
     </div>
   </EditableSurfaceRegion>;

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "@/components/app-link";
 import { readingsFor } from '@/lib/content/knowledge-graph';
 
 /** Books connected to a course: the chosen connections carry a reason and a practice; the computed ones share the course's ideas. */

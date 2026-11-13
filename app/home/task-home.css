@@ -86,7 +86,7 @@ body.dsd-calm .od.dsd-home {
 
 body.dsd-calm .od.dsd-home{margin-top:0;background:#f3f5f8!important;--collection-surface:#e5edf6;--collection-border:#cdd7e2;--collection-accent:#a9bbce;--od-line:#cdd7e2;--od-soft:#e5edf6;--od-muted:#43566a}
 body.dsd-calm .od .home-hero{background:inherit}
-body.dsd-calm .od .home-title{padding:28px 0 22px}
+body.dsd-calm .od .home-title{padding-block:28px 22px}
 body.dsd-calm .od .home-title h1{margin:0 0 6px;font-family:var(--sans);font-size:clamp(2rem,4.4vw,3rem);font-weight:600;line-height:1.1;letter-spacing:-.02em;color:var(--od-navy)}
 body.dsd-calm .od .home-title p{color:var(--od-muted);font-size:1.12rem;max-width:62ch}
 /* Keep the pilot’s full-width crop for both the photo and video. */

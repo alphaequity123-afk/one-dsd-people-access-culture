@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ResourceDownloads } from "@/components/resource-downloads";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { LearningTile } from "@/components/learning-tile";
 
 import { editingModeFromCookies } from "@/lib/auth/request";

@@ -1,3 +1,5 @@
+
+import { SourceLink } from "@/components/app-link";
 import styles from "../../../resources/resource-design.module.css";
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
@@ -60,9 +62,9 @@ export default async function SharedResourcePage({ params }: { params: Promise<{
             {c.href ? (
               <>
                 {" "}
-                <a href={c.href} rel="noreferrer">
+                <SourceLink href={c.href} rel="noreferrer">
                   {stringValue(shell, "openSourceLabel")} ({c.sourceName ?? stringValue(shell, "sourceWebsiteLabel")})
-                </a>
+                </SourceLink>
                 .
               </>
             ) : (

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { useEffect, useRef, useState } from "react";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
 import { PRACTICE_PLANS_KEY } from "@/lib/client/dsd-practice-plans";

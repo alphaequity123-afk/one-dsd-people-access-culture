@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import type { ReactNode } from "react";
 import {
   LEADERSHIP_PATHWAY_HREF, LEADERSHIP_PATHWAY_PAGES, LEADERSHIP_PATHWAY_TITLE, LEADERSHIP_STYLE_LESSONS, PATHWAY_BOUNDARY,
@@ -28,7 +30,7 @@ export function PathwayEyebrow({ children }: { children?: ReactNode }) {
 }
 
 export function SectionNav({ label, items }: { label: string; items: readonly { href: string; title: string }[] }) {
-  return <nav aria-label={label} className={family.sectionNav}>{items.map(item => <a key={item.href} href={item.href}>{item.title}</a>)}</nav>;
+  return <nav aria-label={label} className={family.sectionNav}>{items.map(item => <SourceLink key={item.href} href={item.href}>{item.title}</SourceLink>)}</nav>;
 }
 
 export function Block({ id, title, children }: { id: string; title: string; children: ReactNode }) {

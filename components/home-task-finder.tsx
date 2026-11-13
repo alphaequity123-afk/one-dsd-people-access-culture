@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import Link from "@/components/app-link";
 
 const tasks = [
   ["/learn/equity-toolkit", "Make a policy or service decision"],

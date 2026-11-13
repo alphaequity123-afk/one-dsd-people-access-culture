@@ -1,4 +1,6 @@
-import Link from "next/link";
+
+import { SourceLink } from "@/components/app-link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { Fragment, type ReactNode } from "react";
 import { Notice } from "./ui";
@@ -32,7 +34,7 @@ function inlineText(text: string): ReactNode {
   return text.split(/(\[[^\]]+\]\(https:\/\/[^\s)]+\))/g).map((part, index) => {
     const link = part.match(/^\[([^\]]+)\]\((https:\/\/[^\s)]+)\)$/);
     const plain = part.replace(/\*\*([^*]+)\*\*/g, "$1").replace(/`([^`]+)`/g, "$1");
-    return link ? <a key={index} href={link[2]}>{link[1]}</a> : <Fragment key={index}>{plain}</Fragment>;
+    return link ? <SourceLink key={index} href={link[2]}>{link[1]}</SourceLink> : <Fragment key={index}>{plain}</Fragment>;
   });
 }
 
@@ -60,7 +62,7 @@ function RichReading({ blocks }: { blocks: EditableRichBlock[] }) {
   return <>{blocks.map((block, i) => {
     if (block.type === "heading") return <h3 key={i}>{block.text}</h3>;
     if (block.type === "paragraph") return <p key={i}>{block.text}</p>;
-    if (block.type === "link-list") return <ul key={i}>{block.items.map((link, n) => <li key={n}><a href={link.href}>{link.label}</a></li>)}</ul>;
+    if (block.type === "link-list") return <ul key={i}>{block.items.map((link, n) => <li key={n}><SourceLink href={link.href}>{link.label}</SourceLink></li>)}</ul>;
     const List = block.type === "numbered-list" ? "ol" : "ul";
     return <List key={i}>{block.items.map((item, n) => <li key={n}>{item}</li>)}</List>;
   })}</>;
@@ -124,7 +126,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   const history = readingGroups.some(group => group.chapters.length) ? <section id="community-history"><h2>History, culture, and life today</h2>{readingGroups.filter(group => group.chapters.length).map(group => <details className="community-reading-theme" key={group.title}><summary>{group.title}</summary><div><Chapters chapters={group.chapters} /></div></details>)}</section> : null;
   const context = b?.level2?.length && recovered ? <section id="community-context"><h2>More context for your work</h2><Chapters chapters={b.level2} /></section> : null;
   const observances = b?.observances?.length ? <section id="community-observances"><h2>Observances at work</h2><div className="community-table" role="region" aria-label="Observances at work" tabIndex={0}><table><thead><tr><th scope="col">Observance</th><th scope="col">When</th><th scope="col">At work</th></tr></thead><tbody>{b.observances.map((o, i) => <tr key={i}><th scope="row">{o.title}</th><td>{o.when}</td><td>{o.atWork}</td></tr>)}</tbody></table></div></section> : null;
-  const sources = b?.sources.length ? <section id="community-sources"><h2>Sources</h2><ul>{b.sources.map((source, index) => <li key={index}>{source.href ? <a href={source.href}>{source.label}</a> : source.label}</li>)}</ul></section> : null;
+  const sources = b?.sources.length ? <section id="community-sources"><h2>Sources</h2><ul>{b.sources.map((source, index) => <li key={index}>{source.href ? <SourceLink href={source.href}>{source.label}</SourceLink> : source.label}</li>)}</ul></section> : null;
   // All recovered chapters remain available in the brief. Learning brings full
   // readings alongside three objectives and a reflection, rather than replacing
   // the source material with short question-only summaries.
@@ -153,7 +155,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   const profile = await publishedCommunityProfile(id);
   const collectionAddition = await CommunityCollectionAddition({ id, research });
   const downloads = available ? <div className="community-download-links"><ResourceDownloads kind="community" id={id} noun="page" appearance="links" /></div> : null;
-  const spotlightSection = spotlight && surface ? <section className="community-spotlight"><h2>{spotlight}</h2><p>{stringValue(surface.values, "spotlightBody")}</p><a href={stringValue(surface.values, "spotlightHref")}>{stringValue(surface.values, "spotlightLinkLabel")}</a></section> : null;
+  const spotlightSection = spotlight && surface ? <section className="community-spotlight"><h2>{spotlight}</h2><p>{stringValue(surface.values, "spotlightBody")}</p><SourceLink href={stringValue(surface.values, "spotlightHref")}>{stringValue(surface.values, "spotlightLinkLabel")}</SourceLink></section> : null;
   const reflection = surface && stringValue(surface.values, "reflectionBody") ? <details className="community-opening-reflection"><summary>{stringValue(surface.values, "reflectionTitle")}</summary><div><p>{stringValue(surface.values, "reflectionBody")}</p></div></details> : null;
   const aside = <aside><Link href="/minnesota-communities">Minnesota Communities</Link><p>History, everyday life, and the connections that shape our work.</p></aside>;
   const wrap = (content: ReactNode) => {
@@ -164,7 +166,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   if (native) {
     // Native community pages render exactly as they always have: one page.
     const overview = <>
-      <nav className="community-reading-contents" aria-label="In this brief">{readingGroups.some(group => group.chapters.length) ? <a href="#community-history">History and culture</a> : null}{b ? <a href="#community-practice">Practice considerations</a> : null}{!isNativeCommunity(id) ? <><a href="#community-numbers">Numbers</a><a href="#community-organizations">Organizations</a><a href="#community-before-outreach">Before you reach out</a></> : null}<a href="#community-connections">Related resources</a></nav>
+      <nav className="community-reading-contents" aria-label="In this brief">{readingGroups.some(group => group.chapters.length) ? <SourceLink href="#community-history">History and culture</SourceLink> : null}{b ? <SourceLink href="#community-practice">Practice considerations</SourceLink> : null}{!isNativeCommunity(id) ? <><SourceLink href="#community-numbers">Numbers</SourceLink><SourceLink href="#community-organizations">Organizations</SourceLink><SourceLink href="#community-before-outreach">Before you reach out</SourceLink></> : null}<SourceLink href="#community-connections">Related resources</SourceLink></nav>
       {communityOverview}
       {history}
       {practice}

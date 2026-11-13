@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "@/components/app-link";
 import {ownerPageGuard} from '@/lib/auth/owner-page';
 import {requestedContentScope} from '@/lib/product/request-context';
 import {loadStaffContentSnapshot} from '@/lib/content/staff-publications';

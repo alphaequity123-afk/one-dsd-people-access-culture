@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { leadersAllowed } from "@/lib/auth/leaders-access";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { EquityBarChart, EquityNumbersTable } from "@/components/equity-chart";
 import { askQuestion, GOALS, goalMap, measure, narrative } from "@/lib/content/data/equity-baseline";

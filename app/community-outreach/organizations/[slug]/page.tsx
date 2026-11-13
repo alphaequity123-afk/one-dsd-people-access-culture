@@ -1,5 +1,7 @@
+
+import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { communityDesignEntries } from "@/lib/content/community-design";
 import { ORGANIZATIONS, getOrganization, relationshipLine } from "@/lib/content/hub/organizations";
@@ -22,9 +24,9 @@ export default async function OrganizationPage({ params }: { params: Promise<{ s
   if (!org) notFound();
   const titles = new Map(communityDesignEntries().map(entry => [entry.id, entry.title]));
   const contact = [
-    org.contact.website ? <a key="w" href={org.contact.website}>{org.contact.website}</a> : null,
+    org.contact.website ? <SourceLink key="w" href={org.contact.website}>{org.contact.website}</SourceLink> : null,
     org.contact.phone ? <span key="p">{org.contact.phone}</span> : null,
-    org.contact.email ? <a key="e" href={`mailto:${org.contact.email}`}>{org.contact.email}</a> : null,
+    org.contact.email ? <SourceLink key="e" href={`mailto:${org.contact.email}`}>{org.contact.email}</SourceLink> : null,
   ].filter(Boolean);
   return <article className={`${styles.page} pilot-reading-width`}>
     <p className={`${styles.kicker} ${styles.noPrint}`}><Link href="/community-outreach">Community Outreach and Engagement</Link> · <Link href="/community-outreach/organizations">Organizations</Link></p>
@@ -71,7 +73,7 @@ export default async function OrganizationPage({ params }: { params: Promise<{ s
 
       <details className="course-more-item">
         <summary>Public records</summary>
-        <ul className="list-disc pl-6">{org.records.map(r => <li key={r.url}>{r.title}{r.date ? `, ${r.date}` : ""}. <a href={r.url}>{r.url.replace(/^https:\/\/(www\.)?/, "").slice(0, 70)}</a></li>)}</ul>
+        <ul className="list-disc pl-6">{org.records.map(r => <li key={r.url}>{r.title}{r.date ? `, ${r.date}` : ""}. <SourceLink href={r.url}>{r.url.replace(/^https:\/\/(www\.)?/, "").slice(0, 70)}</SourceLink></li>)}</ul>
         {org.uncertainties.filter(Boolean).length ? <><h3 className="mt-4 font-bold">Not confirmed</h3><ul className="list-disc pl-6">{org.uncertainties.filter(Boolean).map(u => <li key={u}>{u}</li>)}</ul></> : null}
         <p className={styles.small}>Facts checked against public sources on {org.checked}. Confirm current details with the organization before relying on them.</p>
       </details>
