@@ -7,6 +7,18 @@ import type { Doc } from "./search";
 // visitor-created work. Course records have their own publication checks.
 const pages = [
   {
+    id: "minnesota-agencies", href: "/minnesota-agencies", title: "Minnesota agencies and partners",
+    summary: "Find state agencies, boards, and councils and read their directory entries in One DSD.",
+    detail: "The directory also includes county lead agencies, the Minnesota Legislature, and federal partners. Each entry provides its public description and original website. Directory descriptions identify responsibilities and help locate sources; they do not replace current policy or the publisher's full resources.",
+    links: ["/community-outreach/county-agencies", "/explore/community/state-agencies"], tags: ["agency directory", "state agencies", "boards", "councils", "county", "federal partners"],
+  },
+  {
+    id: "community-outreach-policies", href: "/community-outreach/policies", title: "Policies that shape disability services",
+    summary: "The statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules and reports that decide who gets home and community-based services in Minnesota, what they get, and who is responsible.",
+    detail: "These are summaries written in plain language. The policy itself is the source document: each entry links to it. Check the date on the source before relying on it, because policies change.",
+    links: ["/community-outreach/how-the-system-connects", "/equity-review", "/equity-review/analyze"], tags: ["policy catalog", "statutes", "rules", "manuals", "waivers", "disability services"],
+  },
+  {
     id: "equity-review-analyze", href: "/equity-review/analyze", title: "Analyze a document",
     summary: "Attach or paste a policy, program description, notice or plan and get each question answered as evidence, inference or gap, with next steps in this program.",
     detail: "Choose one of six analysis methods: equity analysis, policy review, program analysis, engagement plan, plain language, or a legislatively required working group plan. Each question gets an answer typed as evidence (a quotation from the material), inference (a conclusion drawn from it) or gap (something the material does not settle), with next steps that point to pages in this program. Nothing uploaded or pasted is stored; the result goes back to the browser only, and can be printed, copied or kept in that browser.",
@@ -38,7 +50,7 @@ const pages = [
   },
   {
     id: "community-outreach-plan", href: "/community-outreach/plan", title: "Plan an engagement",
-    summary: "Answer these questions before you reach out. Then draft your engagement and report-back plan below.",
+    summary: "Prepare for a conversation and draft an engagement and report-back plan.",
     detail: "Questions about your own lens, the decision, the community, who to involve, language and access, compensation, report-back and Tribal Nations, practice situations, and a fill-in engagement and report-back plan. The page saves nothing.",
     links: ["/community-outreach", "/minnesota-communities", "/community-outreach/organizations", "/learn/community-connections"], tags: ["community outreach", "community engagement", "report back", "planning"],
   },

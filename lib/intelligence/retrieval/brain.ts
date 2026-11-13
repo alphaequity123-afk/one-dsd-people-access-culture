@@ -50,7 +50,7 @@ export function relevantPassages(text: string, question: string, maxChars: numbe
 /** Full text for the writer: more for the best matches, less for connected items, always within the budget. */
 export function brainContext(lead: SearchHit[], connected: Array<SearchHit & { via: string }>, docs: Doc[], question: string) {
   const byId = new Map(docs.map(doc => [doc.id, doc]));
-  const context: Array<{ id: string; title: string; href: string; connection?: string; text: string }> = [];
+  const context: Array<{ id: string; title: string; href: string; connection?: string; text: string; sourceContext?: Doc["sourceContext"] }> = [];
   let used = 0, trimmedDocuments = 0, droppedDocuments = 0;
   for (const [hit, room, via] of [...lead.map(hit => [hit, BRAIN_LIMITS.leadChars, undefined] as const), ...connected.map(hit => [hit, BRAIN_LIMITS.connectedChars, hit.via] as const)]) {
     const doc = byId.get(hit.id);
@@ -60,7 +60,7 @@ export function brainContext(lead: SearchHit[], connected: Array<SearchHit & { v
     const passage = relevantPassages(doc.text, question, Math.min(room, remaining));
     if (passage.trimmed) trimmedDocuments++;
     used += passage.text.length;
-    context.push({ id: doc.id, title: doc.title, href: doc.href, connection: via, text: passage.text });
+    context.push({ id: doc.id, title: doc.title, href: doc.href, connection: via, text: passage.text, ...(doc.sourceContext ? { sourceContext: doc.sourceContext } : {}) });
   }
   return { context, usedChars: used, trimmedDocuments, droppedDocuments };
 }

@@ -7,6 +7,7 @@ import { getSystemConnections } from "@/lib/content/hub/system-connections";
 import { getOfficialProviders } from "@/lib/content/hub/official-providers";
 import { getPolicies, policyHref } from "@/lib/content/hub/dsd-policies";
 import { SOURCING_CATEGORIES, SOURCING_CHECKED } from "@/lib/content/hub/sourcing";
+import { externalReadingHref } from "@/lib/content/external-readings";
 import type { Doc } from "./search";
 
 // Organizations connected with the Disability Services Division, as Ask
@@ -145,6 +146,7 @@ export function policyDocs(scope: StaffProgramScope): Doc[] {
       reviewDate: policy.checked, scope: "dsd", summary: policy.summary.slice(0, 360), text,
       tags: ["policy", ...policy.tags.slice(0, 12)], intents: [],
       graphRelated: ["/community-outreach/policies", ...policy.relatedPages.filter(page => page.startsWith("/"))],
+      graphLinks: [policy.source, ...policy.relatedSources].map(source => externalReadingHref(source.url) ?? source.url),
       evidenceRevisions: [{ sourceId: `dsd-policy:${policy.id}`, revisionId: null, payloadHash: createHash("sha256").update(text).digest("hex"), scope }],
     } satisfies Doc;
   });

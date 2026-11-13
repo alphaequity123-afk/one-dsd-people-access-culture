@@ -1,0 +1,39 @@
+{
+  "reviewedOn": "2026-11-13",
+  "classification": "temporarily-unavailable",
+  "decision": "Temporarily exclude these exact failing publisher destinations from featured navigation and returned citation links. Retain catalog entries, source wording and any complete approved local reading. These are not permanently missing findings.",
+  "restoreWhen": "A recheck returns substantive content at the original destination or verifies an exact publisher replacement. Remove the recovered URL from unavailable.json and this temporary list, then regenerate the source link map.",
+  "records": [
+    {
+      "url": "https://www.idrinstitute.org/resources/chapters-on-dmis",
+      "checkedAt": "2026-11-13T15:47:16.727Z",
+      "status": 503,
+      "evidence": "Repeated direct requests returned Service Unavailable. An independent web request to this URL and the publisher's current DMIS index also returned503."
+    },
+    {
+      "url": "https://scholar.harvard.edu/files/monk/files/monk_-_skin_tone_stratification_-_sf.pdf",
+      "checkedAt": "2026-11-13T15:47:16.673Z",
+      "status": 503,
+      "evidence": "Repeated direct requests returned an error page rather than a PDF. Independent web fetch timed out. Search confirms the historical article identity, but does not establish current direct availability."
+    },
+    {
+      "url": "https://www.luxorafricanfilmfestival.com/en/PastEditions/2012/Tribute/Haile%20Gerima",
+      "checkedOn": "2026-11-13",
+      "priorStatus": 500,
+      "latestResult": "request-timeout",
+      "evidence": "Earlier requests returned a server error. A bounded final direct request timed out after18 seconds; independent web access was unsuccessful."
+    },
+    {
+      "url": "https://blog.berlin.bard.edu/nabokov-berlin",
+      "checkedAt": "2026-11-13T15:47:16.668Z",
+      "status": 521,
+      "evidence": "Repeated requests returned the publisher's Cloudflare host-error page stating that the web server is down."
+    },
+    {
+      "url": "https://english.washington.edu/people/pimone-triplett",
+      "checkedAt": "2026-11-13T15:47:17.589Z",
+      "status": 503,
+      "evidence": "Repeated direct requests returned an unexpected-error message. The independent web reader supplied a cached substantive biography from three weeks earlier; that confirms source identity but not current direct availability."
+    }
+  ]
+}

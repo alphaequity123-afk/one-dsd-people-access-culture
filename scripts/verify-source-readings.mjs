@@ -3,13 +3,24 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {parseDocument} from 'htmlparser2';
 import {findAll} from 'domutils';
-import {sourceReadingText,readingAnchors,normalizeUrl} from './source-reading-format.mjs';
+import {sourceReadingText,readingAnchors,normalizeUrl,sourceReadingLink} from './source-reading-format.mjs';
+import {rewriteSourceReadingLinks} from '../lib/content/source-reading-links.mjs';
 
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const hash=text=>createHash('sha256').update(text).digest('hex');
 const manifest=read('data/source-readings/manifest.json');
 const approvals=new Map(read('config/source-republication.json').approvals.map(row=>[normalizeUrl(row.url),row]));
 const unavailable=new Set(read('data/source-readings/unavailable.json').map(normalizeUrl));
+const redirects=new Map(read('data/source-readings/source-redirects.json').map(row=>[normalizeUrl(row.from),row.to]));
+const byUrl=new Map(manifest.flatMap(entry=>[entry.url,entry.original].map(url=>[normalizeUrl(url),entry])));
+function effectiveHref(raw){
+  const replacement=redirects.get(normalizeUrl(raw));
+  const destination=replacement ? replacement+new URL(raw).hash : raw;
+  const entry=byUrl.get(normalizeUrl(raw)) ?? byUrl.get(normalizeUrl(destination));
+  const hash=new URL(raw).hash;let anchor=hash.slice(1);try{anchor=decodeURIComponent(anchor);}catch{ /* Keep literal fragments. */ }
+  if(entry && (!hash || entry.anchors?.[anchor]))return sourceReadingLink(entry,hash);
+  return unavailable.has(normalizeUrl(destination)) ? undefined : destination;
+}
 const bodies=new Map();
 for(const entry of manifest){
   assert.match(entry.id,/^[a-f0-9]{20}$/);
@@ -32,7 +43,10 @@ for(const entry of manifest){
 let sections=0,links=0;
 for(const body of bodies.values())for(const section of body.sections||[]){
   sections++;
-  const dom=parseDocument(section.html);
+  // Stored source text and hashes above remain immutable. Check links after the same rendering transform used by the app.
+  const effectiveHtml=rewriteSourceReadingLinks(section.html,effectiveHref);
+  assert.equal(sourceReadingText(effectiveHtml),sourceReadingText(section.html),'Navigation repair altered source wording');
+  const dom=parseDocument(effectiveHtml);
   assert.equal(findAll(node=>['script','iframe','form','input','button'].includes(node.name)||Object.keys(node.attribs||{}).some(attr=>attr.startsWith('on')),dom.children).length,0,'Publisher script or dead control in reading');
   for(const link of findAll(node=>node.name==='a' && !!node.attribs.href,dom.children)){
     const href=link.attribs.href;

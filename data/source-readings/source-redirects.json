@@ -1,0 +1,44 @@
+[
+  {
+    "from": "https://www.mnhs.org/mnopedia/search/index/vietnamese-community-of-minnesota",
+    "to": "https://www.mnhs.org/mnopedia/search/index/group/vietnamese-community-of-minnesota",
+    "checkedOn": "2026-11-13",
+    "evidence": "https://www.mnhs.org/mnhs-press-newsletter/april-14-2026",
+    "basis": "The publisher's MNopedia article and newsletter identify the same Vietnamese Community of Minnesota article. The corrected group path returned HTTP 200 with the complete article and matching title."
+  },
+  {
+    "from": "https://edocs.mn.gov/forms/DHS-3825-ENG",
+    "to": "https://edocs.dhs.state.mn.us/lfserver/Public/DHS-3825-ENG",
+    "checkedOn": "2026-11-13",
+    "evidence": "https://mn.gov/dhs/assets/PCP_protocol_tcm1053-165509.pdf",
+    "basis": "The DHS relocation notice and current person-centered-practices page identify this exact document address. A direct GET returned HTTP 200, application/pdf, 416019 bytes, and the PDF signature."
+  },
+  {
+    "from": "https://www.medicaid.gov/medicaid/program-integrity/index.html",
+    "to": "https://www.medicaid.gov/medicaid/program-integrity",
+    "checkedOn": "2026-11-13",
+    "evidence": "https://www.medicaid.gov/medicaid/program-integrity",
+    "basis": "The current CMS Program Integrity page has the same subject and publisher; its live page returned HTTP 200 with substantive program-integrity guidance."
+  },
+  {
+    "from": "https://www.racialequityalliance.org/resources/racial-equity-toolkit-opportunity-operationalize-equity",
+    "to": "https://learn.racialequityalliance.org/products/racial-equity-toolkit-an-opportunity-to-operationalize-equity",
+    "checkedOn": "2026-11-13",
+    "evidence": "https://www.racialequityalliance.org/resources/topics/racial-equity-tools-action-plans-and-reports",
+    "basis": "GARE's current learning center lists the same toolkit by title and supplies its public overview. The page returned HTTP 200; the publisher requires registration to download the toolkit."
+  },
+  {
+    "from": "https://www.eeoc.gov/%E2%80%8Blaws/%E2%80%8Bguidance/%E2%80%8Benforcement-guidance-retaliation-and-related-issues",
+    "to": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-retaliation-and-related-issues",
+    "checkedOn": "2026-11-13",
+    "evidence": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-retaliation-and-related-issues",
+    "basis": "Removed encoded zero-width characters from a malformed citation URL. The verified EEOC page is the same 2016 retaliation guidance named in the citation."
+  },
+  {
+    "from": "http://www.w3.org/TR/WAI%E2%80%93WEBCONTENT",
+    "to": "https://www.w3.org/TR/WCAG10/",
+    "checkedOn": "2026-11-13",
+    "evidence": "https://www.w3.org/TR/WCAG10/",
+    "basis": "The old citation contains an en dash in the URL. W3C's WCAG 1.0 document identifies the ASCII WAI-WEBCONTENT address as the same historical recommendation. The destination explicitly labels this version superseded."
+  }
+]

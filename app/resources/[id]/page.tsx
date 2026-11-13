@@ -1,6 +1,7 @@
 
 import { SourceLink } from "@/components/app-link";
 import { ResourceEvidence } from "@/components/source-evidence";
+import { externalReadingHref, externalSourceHref } from "@/lib/content/external-readings";
 import styles from "../resource-design.module.css";
 import { relatedPublishedResources } from "@/lib/content/corpus-inventory";
 import { readingsFor } from "@/lib/content/knowledge-graph";
@@ -14,6 +15,7 @@ import {selfDirectedHref, SELF_DIRECTED_COURSES} from '@/lib/content/self-direct
 import { ResourceInlineEditor } from "@/components/resource-inline-editor";
 import { ResourceRemove, ResourceShare } from "@/components/resource-tools";
 import { ResourceMediaGallery } from "@/components/resource-media-gallery";
+import { ResourceContextPhoto } from "@/components/resource-context-photo";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { ActionList, AuthorityPill, Notice } from "@/components/ui";
 import { progressionLabel, resourceProgressionLevel } from "@/lib/content/progression";
@@ -33,6 +35,7 @@ import { ToolDecisionQuestions } from "@/components/tool-decision-questions";
 import { RESOURCE_DECISION_QUESTIONS } from "@/lib/content/tool-decision-questions";
 
 export const dynamic = "force-dynamic";
+const actionableHref = (href: string) => /^https?:\/\//.test(href) ? externalReadingHref(href) ?? externalSourceHref(href) : href;
 
 const culturalIntelligenceResourceIds = new Set([
   "tool-idi",
@@ -86,9 +89,12 @@ export default async function ResourcePage({ params, searchParams }: { params: P
   const paths = (c.pathIds ?? []).map((p) => getPath(p)).filter(Boolean);
   const isList = c.type === "checklist" || c.type === "question_bank";
   const intakeEnabled = consultationIntakeEnabled();
-  const nextActions = c.nextActions.map((action) =>
-    (()=>{const result=contextualizeSupportAction(action, context, intakeEnabled);return {...result,href:withWorkOrigin(result.href,origin)};})(),
-  );
+  const sourceHref = c.href && actionableHref(c.href);
+  const nextActions = c.nextActions.flatMap(action => {
+    const result = contextualizeSupportAction(action, context, intakeEnabled);
+    const href = actionableHref(result.href);
+    return href ? [{ ...result, href: withWorkOrigin(href, origin) }] : [];
+  });
   const correctionAction = contextualizeSupportAction(
     { label: stringValue(shell, "consultationActionLabel"), href: "/support/right-person" },
     context,
@@ -97,7 +103,7 @@ export default async function ResourcePage({ params, searchParams }: { params: P
 
   return (
     <EditableSurfaceRegion surface={shellSurface} className={styles.page}>
-      <header className={styles.hero}><div className={styles.heroInner}><Link href="/learn" className={styles.back}>Learn</Link><p className={styles.eyebrow}>{CONTENT_TYPE_LABEL[c.type]} · {LAYER_LABEL[c.layer]}</p><h1>{c.title}</h1><p className={styles.lede}>{c.summary}</p><ResourceMediaGallery contentItemId={c.id} owner={owner} /><div className={styles.resourceActions}><SourceLink href="#resource-reading" className={`${styles.primaryAction} text-white`}>Read this resource</SourceLink>{c.href ? <SourceLink href={c.href} rel="noreferrer">Open {c.sourceName || "the original source"}</SourceLink> : null}</div><details className={styles.downloadOptions}><summary>Download or share</summary><ResourceDownloads kind="library" id={c.id} scope={scope} share={false} /><ResourceShare title={c.title} href={"/share/library/" + encodeURIComponent(c.id)} /></details>{owner ? <ResourceRemove contentItemId={c.id} title={c.title} /> : null}
+      <header className={styles.hero}><div className={styles.heroInner}><Link href="/learn" className={styles.back}>Learn</Link><p className={styles.eyebrow}>{CONTENT_TYPE_LABEL[c.type]} · {LAYER_LABEL[c.layer]}</p><h1>{c.title}</h1><p className={styles.lede}>{c.summary}</p><ResourceMediaGallery contentItemId={c.id} owner={owner} visualFallback={<ResourceContextPhoto subject={c.title} />} /><div className={styles.resourceActions}><SourceLink href="#resource-reading" className={`${styles.primaryAction} text-white`}>Read this resource</SourceLink>{sourceHref ? <SourceLink href={sourceHref} rel="noreferrer">Open {c.sourceName || "the original source"}</SourceLink> : null}</div><details className={styles.downloadOptions}><summary>Download or share</summary><ResourceDownloads kind="library" id={c.id} scope={scope} share={false} /><ResourceShare title={c.title} href={"/share/library/" + encodeURIComponent(c.id)} /></details>{owner ? <ResourceRemove contentItemId={c.id} title={c.title} /> : null}
       </div></header>
       <div className={styles.content}>
         <WorkOriginLinks origin={origin} />
@@ -108,17 +114,17 @@ export default async function ResourcePage({ params, searchParams }: { params: P
         {c.authority === "external_verify" ? (
           <Notice tone="warn">
             {stringValue(shell, "outsideSourceNote")}
-            {c.href ? (
+            {sourceHref ? (
               <>
                 {" "}
-                <SourceLink href={c.href} rel="noreferrer">
+                <SourceLink href={sourceHref} rel="noreferrer">
                   {stringValue(shell, "openSourceLabel")} ({c.sourceName ?? stringValue(shell, "sourceWebsiteLabel")})
                 </SourceLink>
                 .
               </>
-            ) : (
+            ) : !c.href ? (
               <> {stringValue(shell, "intranetSourceNote")}</>
-            )}
+            ) : null}
           </Notice>
         ) : null}
         {c.whyItMatters ? (

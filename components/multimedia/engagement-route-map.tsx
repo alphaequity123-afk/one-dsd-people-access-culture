@@ -3,11 +3,11 @@ import styles from "./engagement-diagrams.module.css";
 
 type OrientationDoor = { title: string; href: string; label: string };
 const groups = [
-  { question: "How does the work fit together?", routes: ["/understanding-dhs", "/operationalizing-equity", "/one-dsd"] },
-  { question: "What would I like to learn?", routes: ["/learn", "/minnesota-communities"] },
-  { question: "What could I try in practice?", routes: ["/practice"] },
-  { question: "Where can I connect with colleagues?", routes: ["/one-dsd/amplify", "/employee-resource-groups"] },
-  { question: "How could I contribute or grow?", routes: ["/one-dsd/team", "/one-dsd/leadership"] },
+  { question: "How does the work fit together?", routes: ["/understanding-dhs", "/operationalizing-equity", "/one-dsd/programs"] },
+  { question: "What would I like to learn?", routes: ["/learn", "/learn/readings/pathways", "/minnesota-communities"] },
+  { question: "What could I try in practice?", routes: ["/practice", "/my-work/plan"] },
+  { question: "Where can I connect with colleagues?", routes: ["/employee-resource-groups"] },
+  { question: "How could I contribute or grow?", routes: ["/practice/gp-11"] },
   { question: "Where can I take a question?", routes: ["/ask", "/support"] },
 ];
 

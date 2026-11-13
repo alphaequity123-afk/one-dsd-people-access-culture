@@ -7,7 +7,7 @@ export default defineConfig({
   test:{environment:"jsdom",include:[
     "components/focused-sections.test.tsx","components/cat-catalog-pages.test.tsx",
     "components/course-topic-navigation.test.tsx",
-    "lib/content/refinement.test.ts","lib/content/external-reading-body.test.ts","lib/search/site-search.test.ts",
+    "lib/content/refinement.test.ts","lib/content/external-reading-body.test.ts","lib/content/external-readings.test.ts","lib/search/site-search.test.ts",
     "lib/intelligence/learning/resource-artifact-generation.test.ts",
     "lib/intelligence/learning/resource-learning-assistant.test.ts",
     "components/ask-voice.test.tsx","components/ask-client-sources.test.tsx",

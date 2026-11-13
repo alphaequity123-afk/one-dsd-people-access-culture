@@ -32,6 +32,7 @@ import { ResourceRemove } from "@/components/resource-tools";
 import { editingModeFromCookies } from "@/lib/auth/request";
 import { getLearningTilePresentation } from "@/lib/content/learning-catalog";
 import { selectHubItems } from "@/lib/content/learning-hub";
+import { externalReadingHref, unavailableExternalUrl } from "@/lib/content/external-readings";
 import { CONTENT_TYPE_LABEL, type ContentType } from "@/lib/content/types";
 import { loadStaffContentSnapshot } from "@/lib/content/staff-publications";
 import { GRADUATION_PATHS } from "@/lib/content/paths";
@@ -125,6 +126,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
   const podcastAvailable = podcastSurfaces.some(published => published.available);
   const types = [...new Set(items.map((item) => item.type))];
   const hubText = (key: string) => stringValue(hub.values, key);
+  const featuredReadingLinks = linkListValue(hub.values, "readingLinks").filter(link => externalReadingHref(link.href) || !unavailableExternalUrl(link.href));
   const filtered = Boolean(query.q || query.theme || query.type || query.level);
   const expanded = filtered || rawQuery.browse === "all" || Boolean(rawQuery.page);
   const catalogPage = catPaginate([...learning, ...resources], catParam(rawQuery.page), 12);
@@ -168,7 +170,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
               </details>
               {query.q || query.theme || query.type || query.level ? <Link className={preview.clearFilters} href="/learn">{hubText("clearLabel")}</Link> : null}
             </form>
-            {query.theme === "structural" ? <aside className={styles.readingLinks}><h2>{hubText("readingTitle")}</h2><ul>{linkListValue(hub.values, "readingLinks").map((link) => <li key={link.href}><SourceLink href={link.href}>{link.label}</SourceLink></li>)}</ul><p>{hubText("readingNote")}</p></aside> : null}
+            {query.theme === "structural" && featuredReadingLinks.length ? <aside className={styles.readingLinks}><h2>{hubText("readingTitle")}</h2><ul>{featuredReadingLinks.map((link) => <li key={link.href}><SourceLink href={link.href}>{link.label}</SourceLink></li>)}</ul><p>{hubText("readingNote")}</p></aside> : null}
             {expanded ? <p role="status" className={styles.resultCount}>{totalFound} {hubText(totalFound === 1 ? "countSingular" : "countLabel")}</p> : null}
             {!totalFound ? <div><h2>{hubText("emptyTitle")}</h2><p>{hubText("emptyBody")}</p></div> : null}
           </EditableSurfaceRegion>

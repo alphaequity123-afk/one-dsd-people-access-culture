@@ -1,4 +1,5 @@
-import styles from "@/components/dsd-experience.module.css";
+import styles from "@/components/start-orientation.module.css";
+import Image from "next/image";
 import { LearningJourneyLink } from "@/components/learning-journey-link";
 import Link from "@/components/app-link";
 import guideMedia from "@/lib/program/end-user-guide-media.json";
@@ -19,26 +20,49 @@ const doors = [
 ["Bring your questions", "Ask a question in your own words and get a considered answer, with its sources and limits made clear.", "/ask", "Ask a question"],
 ["Find the right support", "Connect with professional support when a conversation or an extra pair of hands would make the work easier.", "/support", "Explore support"]];
 
+const doorImages: Record<string, string> = {
+  "/understanding-dhs": "/images/program-workplace-conversation.webp",
+  "/operationalizing-equity": "/images/pilot-home/apply-a-tool.jpg",
+  "/one-dsd/programs": "/images/pilot-home/communities.jpg",
+  "/learn": "/images/pilot-home/learn.jpg",
+  "/practice": "/images/one-dsd-planning-together.webp",
+  "/my-work/plan": "/images/pilot-home/apply-a-tool.jpg",
+  "/learn/readings/pathways": "/images/library-reading-and-research.webp",
+  "/employee-resource-groups": "/images/pilot-home/learn.jpg",
+  "/minnesota-communities": "/images/pilot-home/communities.jpg",
+  "/practice/gp-11": "/images/program-workplace-conversation.webp",
+  "/ask": "/images/library-reading-and-research.webp",
+  "/support": "/images/program-workplace-conversation.webp",
+};
+
 function renderDoor([title, body, href, label]: string[]) {
-  return <article key={href} className={styles.orientationItem}><h3 className="text-2xl font-semibold">{title}</h3><p className="my-4 leading-7">{body}</p><Link className="font-semibold" href={href}>{label}</Link></article>;
+  return <article key={href} className={styles.orientationItem}>
+    <Image unoptimized src={doorImages[href]} alt="" width={900} height={600} sizes="(min-width: 800px) 340px, 90vw" className={styles.doorPhoto} />
+    <div className={styles.doorBody}><h3>{title}</h3><p>{body}</p><Link className={styles.action} href={href}>{label}</Link></div>
+  </article>;
 }
 
 export function NewToDsd() {
-  return <section id="new-to-dsd" className={`${styles.orientationPage} scroll-mt-24 space-y-7 border-t border-line pt-8`}>
+  return <section id="new-to-dsd" className={styles.orientationPage}>
     <div>
       <h2 className="text-3xl font-semibold">New to DSD, or taking a fresh look?</h2>
       <p className="mt-4 max-w-3xl text-lg leading-8">Welcome. Whether you joined the division last week or have years of experience behind you, this program is built to meet you where you are. It brings together learning, practical tools, and the people and perspectives that shape disability services in Minnesota. Taking part is voluntary; existing agency requirements, including required equity analysis, still apply.</p>
-      <p className="mt-4 max-w-3xl leading-7">A few ways to get your bearings: <Link href="/user-guide">how to use this site</Link>, <Link href="/program/model#work-examples">everyday examples of the program at work</Link>{guideMedia.ready ? <>, or <Link href="/user-guide#welcome-video">a short video introduction</Link></> : null}.</p>
     </div>
+    <Link className={styles.guideCard} href="/user-guide">
+      <Image unoptimized src="/images/library-reading-and-research.webp" alt="" width={900} height={600} sizes="(min-width: 640px) 220px, 90vw" />
+      <span><strong>How to use this site</strong><span>Find readings, practical tools, and support for your work.</span><span className={styles.guideAction}>Open the guide</span></span>
+    </Link>
+    <p className={styles.relatedLinks}><Link href="/program/model#work-examples">Everyday examples of the program at work</Link>{guideMedia.ready ? <Link href="/user-guide#welcome-video">Watch the introduction</Link> : null}</p>
     <LearningJourneyLink compact />
     <div id="program-directory" className="scroll-mt-24">
-      <h3 className="text-2xl font-semibold">Several doors into the same program</h3>
-      <p className="mt-3 max-w-3xl leading-7">There is no required order. Choose the door that matches your question today; every one of them leads back to the same shared work.</p>
+      <header className={styles.directoryBanner}>
+        <div><h3>Several doors into the same program</h3><p>There is no required order. Choose the door that matches your question today; every one of them leads back to the same shared work.</p></div>
+      </header>
       <EngagementRouteMap doors={doors.map(([title, , href, label]) => ({ title, href, label }))} />
       <div className={styles.orientationDirectory}>{doors.slice(0, 5).map(renderDoor)}</div>
-      <details className="mt-7 border-y border-line py-5"><summary className="cursor-pointer text-xl font-semibold">More ways to connect, lead, and find support</summary><div className={styles.orientationDirectory}>{doors.slice(5).map(renderDoor)}</div></details>
+      <details className={styles.moreDoors}><summary>More ways to connect, lead, and find support</summary><div className={styles.orientationDirectory}>{doors.slice(5).map(renderDoor)}</div></details>
     </div>
-    <div id="find-your-division" className={`${styles.welcomeNote} scroll-mt-24 rounded-xl border border-line p-7`}>
+    <div id="find-your-division" className={styles.welcomeNote}>
       <h3 className="text-2xl font-semibold">Your place in One DSD</h3>
       <p className="mt-4 leading-8">You belong to a division with its own programs, colleagues, and shared commitments. Explore the division’s programs, connect with people through the One DSD Team and Amplify Equity, and use the learning and tools here to strengthen a real piece of work. DSD sits within the Aging and Disability Services Administration at Minnesota DHS, and agency policy and delegated responsibilities continue to guide decisions.</p>
       <p className="mt-4"><Link href="/one-dsd/team">Explore the One DSD Team</Link> · <Link href="/one-dsd/amplify">Amplify Equity</Link></p>

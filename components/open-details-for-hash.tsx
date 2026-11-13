@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { canonicalResourceHref } from "@/lib/product/resource-hrefs";
 
 /**
  * Supporting material (sources, related links, practice prompts) now sits in closed panels.
@@ -9,9 +10,14 @@ import { usePathname } from "next/navigation";
  */
 export function OpenDetailsForHash() {
   const pathname = usePathname();
+  const router = useRouter();
   useEffect(() => {
     function reveal() {
-      const id = decodeURIComponent(window.location.hash.slice(1));
+      const current = window.location.pathname + window.location.search + window.location.hash;
+      const destination = canonicalResourceHref(current);
+      if (destination !== current) { router.replace(destination); return; }
+      let id: string;
+      try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
       if (!id) return;
       const target = document.getElementById(id);
       if (!target) return;
@@ -24,6 +30,6 @@ export function OpenDetailsForHash() {
     reveal();
     window.addEventListener("hashchange", reveal);
     return () => window.removeEventListener("hashchange", reveal);
-  }, [pathname]);
+  }, [pathname, router]);
   return null;
 }

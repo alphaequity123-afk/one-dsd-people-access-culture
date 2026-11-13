@@ -11,6 +11,8 @@ import { StartClient } from "@/components/start-client";
 import { PageIntro } from "@/components/ui";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { stringValue } from "@/lib/content/staff-surface-registry";
+import Image from "next/image";
+import styles from "./start.module.css";
 
 export const metadata: Metadata = { title: "Start" };
 
@@ -19,12 +21,16 @@ export default async function StartPage() {
   const copy = surface.values;
   return (
     <EditableSurfaceRegion surface={surface}>
+      <div className={styles.page}>
+      <div className={styles.hero}>
       <PageIntro
         kicker={stringValue(copy, "introKicker")}
         title={stringValue(copy, "introTitle")}
         lede={stringValue(copy, "introLede")}
       />
-      <div className="wrap space-y-6 py-8">
+      <Image unoptimized src="/images/program-workplace-conversation.webp" alt="" width={1536} height={1024} sizes="(min-width: 900px) 46vw, 100vw" preload />
+      </div>
+      <div className={`wrap ${styles.content}`}>
         <ProgramContextNote />
         <p className="max-w-3xl leading-7">Most people arrive here with a real question: a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone. Start there. If you would like context first, <Link href="/one-dsd/programs">DSD programs and services</Link> shows the work the division does and the people it serves.</p>
         <noscript><p>This helper needs JavaScript. You can still <SourceLink href="/support/directory">use the support directory</SourceLink> or <Link prefetch={false} href="/library">browse the Library</Link>.</p></noscript>
@@ -35,6 +41,7 @@ export default async function StartPage() {
           <Hub2More title="Getting to know the program"><NewToDsd /></Hub2More>
         </div>
         <ParticipationNotice surface="start_routing" />
+      </div>
       </div>
     </EditableSurfaceRegion>
   );

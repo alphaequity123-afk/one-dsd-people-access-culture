@@ -1,11 +1,12 @@
 import { beforeEach, expect, it, vi } from "vitest";
 import type { Doc } from "@/lib/intelligence/retrieval/search";
-const library = vi.hoisted(() => ({ staff: vi.fn(), program: vi.fn() }));
+const library = vi.hoisted(() => ({ staff: vi.fn(), program: vi.fn(), supplements: vi.fn() }));
 vi.mock("@/lib/intelligence/retrieval/ask-library", () => ({ recentStaffDocs: library.staff, recentProgramResources: library.program }));
+vi.mock("@/lib/intelligence/retrieval/published-resource-supplements", () => ({ publishedResourceSupplements: library.supplements }));
 vi.mock("./state-pages", () => ({ statePageDocs: () => [] }));
 import { siteSearch } from "./site-search";
 const course: Doc = { kind: "content", id: "coaching-course", title: "Coaching Conversations That Help People Grow", href: "/courses/gc-coaching-conversations", authority: "learning", type: "program_destination", status: "published", reviewDate: "", scope: "dsd", summary: "Practice coaching conversations.", text: "Coaching conversations help people grow.", tags: ["coaching"], intents: [] };
-beforeEach(() => { library.staff.mockReset().mockResolvedValue([]); library.program.mockReset().mockResolvedValue({ destinations: [course] }); });
+beforeEach(() => { library.staff.mockReset().mockResolvedValue([]); library.program.mockReset().mockResolvedValue({ destinations: [course] }); library.supplements.mockReset().mockResolvedValue([]); });
 it("finds published courses from the same program library as Ask", async () => {
   const hits = await siteSearch("coaching", "dsd");
   expect(hits.some(hit => hit.href === course.href)).toBe(true);
@@ -20,4 +21,14 @@ it("keeps staff results and deduplicates multiple passages at the same destinati
   library.staff.mockResolvedValue([{ ...course, id: "staff-course" }]);
   library.program.mockResolvedValue({ destinations: [course, { ...course, id: "course-anchor", href: course.href + "#practice" }] });
   expect((await siteSearch("coaching", "dsd")).filter(hit => hit.href.split("#")[0] === course.href)).toHaveLength(1);
+});
+it("finds substantive transcript passages and reviewed readings beyond their titles", async () => {
+  const transcript: Doc = { ...course, id: "audio-passage", title: "A learning conversation", href: "/learning/course-media/example.mp3#t=12", type: "public_media_transcript", summary: "A conversation about invitations.", text: "Confirm how people can request interpretation before the invitation is sent.", tags: [] };
+  const reading: Doc = { ...course, id: "reviewed-reading", title: "Communication guidance", href: "/source-reading/example?section=2", type: "source_reading_section", summary: "Reviewed outside reading.", text: "Qualified interpreters support effective communication for companions as well as the person receiving services.", tags: [] };
+  library.supplements.mockResolvedValue([transcript, reading]);
+  expect((await siteSearch("request interpretation", "dsd")).some(hit => hit.href === transcript.href)).toBe(true);
+  expect((await siteSearch("qualified interpreters companions", "dsd")).some(hit => hit.href === reading.href)).toBe(true);
+  expect(library.supplements).toHaveBeenCalledWith("dsd", expect.arrayContaining([course]));
+  library.supplements.mockResolvedValue([]);
+  expect((await siteSearch("request interpretation", "dsd")).some(hit => hit.href === transcript.href)).toBe(false);
 });

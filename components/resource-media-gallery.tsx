@@ -4,12 +4,13 @@ import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 import { listResourceMedia, mediaAvailable, videoEmbedUrl, type ResourceMediaItem } from "@/lib/content/media";
 import { ResourceMediaManager } from "@/components/resource-media-manager";
 import { SyncedAudio } from "@/components/synced-audio";
+import type { ReactNode } from "react";
 
 /**
  * Images, infographics, video, and documents attached to a resource. Shown to
  * everyone. The consultant also sees controls to add and delete items.
  */
-export async function ResourceMediaGallery({ contentItemId, owner }: { contentItemId: string; owner: boolean }) {
+export async function ResourceMediaGallery({ contentItemId, owner, visualFallback }: { contentItemId: string; owner: boolean; visualFallback?: ReactNode }) {
   let items: ResourceMediaItem[] = [];
   // Keep connection diagnostics in logs and owner controls, not staff resource pages.
   let unavailable: "not-connected" | "failed" | null = mediaAvailable() ? null : "not-connected";
@@ -21,14 +22,15 @@ export async function ResourceMediaGallery({ contentItemId, owner }: { contentIt
       console.error("Resource media could not be read.", error instanceof Error ? error.message : error);
     }
   }
-  if (items.length === 0 && !owner) return null;
+  if (items.length === 0 && !owner) return visualFallback ?? null;
   const audio = items.filter((item) => item.kind === "audio");
   const visual = items.filter((item) => item.kind !== "audio");
   const showVisualHeading = visual.length > 0 || owner;
   const headingId = `resource-media-${contentItemId}`;
   const noticeId = `resource-media-notice-${contentItemId}`;
 
-  return (
+  return <>
+    {!items.some(item => item.kind === "image" || item.kind === "video") ? visualFallback : null}
     <section className="mt-6" aria-labelledby={showVisualHeading ? headingId : unavailable ? noticeId : `resource-listen-${contentItemId}`} data-resource-media="true">
       {unavailable ? (
         <p id={noticeId} className="notice notice--warn" role="status" data-resource-media-unavailable={unavailable}>
@@ -63,7 +65,7 @@ export async function ResourceMediaGallery({ contentItemId, owner }: { contentIt
       </div>
       {owner ? <ResourceMediaManager contentItemId={contentItemId} /> : null}
     </section>
-  );
+  </>;
 }
 
 function MediaBody({ item }: { item: ResourceMediaItem }) {

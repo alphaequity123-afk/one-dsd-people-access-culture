@@ -1,6 +1,8 @@
 import { expect, it } from "vitest";
 import { agencyDocs } from "./site-search";
 import { statePageDocs } from "./state-pages";
+import { searchDocs } from "@/lib/intelligence/retrieval/search";
+import { unavailableExternalUrl } from "@/lib/content/external-readings";
 
 it("connects requested agencies to related published program material", () => {
   const docs = agencyDocs({ forAnswers: true });
@@ -16,4 +18,11 @@ it("connects substantive captured agency pages to their publisher and excludes a
   const labor = docs.filter(doc => doc.graphRelated?.includes("http://www.dli.mn.gov/"));
   expect(labor.length).toBeGreaterThan(0);
   expect(docs.every(doc => !/captcha|access denied|just a moment/i.test(doc.title))).toBe(true);
+});
+it("finds the agency names staff commonly use and excludes confirmed unavailable destinations", () => {
+  const docs = agencyDocs({ forAnswers: true });
+  for (const [query, id] of [["DLI", "labor-and-industry-department-of"], ["DEED", "employment-and-economic-development-department"], ["MMB", "minnesota-management-and-budget"]]) {
+    expect(searchDocs(query, docs, { limit: 3 }).some(hit => hit.id === `agency:${id}`), query).toBe(true);
+  }
+  expect([...docs, ...statePageDocs()].every(doc => !unavailableExternalUrl(doc.href))).toBe(true);
 });
