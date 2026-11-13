@@ -41,7 +41,7 @@ describe("truthful identity in open-ended ASK answers", () => {
     source.generative = false;
     source.publicResearch = {
       status: "used", kind: "current_answer", depth: "current_web", answer: identity,
-      sources: [{ title: "Reference", url: "https://example.com/reference" }], note: "",
+      sources: [{ title: "Reference", url: "https://example.com/reference", domain: "example.com" }], note: "",
     };
     const displayed = toStaffAskResult({ kind: "answer", answer: source });
     if (displayed.kind !== "answer") throw new Error("Expected answer");
