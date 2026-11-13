@@ -95,6 +95,8 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
     return { guide, score: guideTerms.reduce((sum, term) => sum + (titleTerms.has(term) ? 3 : bodyTerms.has(term) ? 1 : 0), 0) };
   }).filter(item => !q || item.score > 0).sort((a, b) => b.score - a.score).map(item => item.guide);
   const showAll = libraryQueryValue(sp.browse) === "all";
+  const showDirectory = showAll || hasActiveFilters || Boolean(libraryQueryValue(sp.page));
+  const libraryLanding = !q && !showDirectory;
   const retainBrowse = (href: string) => showAll ? `${href}${href.includes("?") ? "&" : "?"}browse=all` : href;
   const clearSearchHref = retainBrowse(libraryHref(filters));
   const clearFiltersHref = retainBrowse(libraryHref({ originArea: filters.originArea }, q));
@@ -218,13 +220,6 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
             <Link className={styles.clearFilters} href={clearFiltersHref}>{stringValue(copy, "clearFiltersLabel")}</Link>
           </div> : null}
         </form>
-        <nav className={layout.jumpLinks} aria-label="On this page">
-          <a href="#find-resource">Find a resource</a>
-          {!q && !hasActiveFilters ? <a href="#resource-themes-title">Explore by theme</a> : null}
-          {matchedGuides.length ? <a href="#practical-guides">Practical guides ({matchedGuides.length})</a> : null}
-          <a href="#resource-formats">Reading and listening</a>
-        </nav>
-
         {q && destinations.length ? <section className={styles.startingPoints} aria-labelledby="suggested-destinations"><h2 id="suggested-destinations">Go straight to the work</h2><p>These program pages may help alongside the Library results below.</p><ul>{destinations.map(link => <li key={link.href}><Link href={withWorkOrigin(link.href, origin)}>{link.label}</Link><p>{link.reason}</p></li>)}</ul></section> : null}
         {q ? (
           <section className={styles.collection} aria-labelledby="results-title">
@@ -242,11 +237,11 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
           </section>
         ) : null}
 
-        {!q && !hasActiveFilters && !showAll ? <ResourceStartingPoints className={styles.startingPoints} items={published} toolkitAvailable={toolkit.available} /> : null}
+        {libraryLanding ? <details className="pilot-supporting"><summary>Suggested starting points</summary><ResourceStartingPoints className={styles.startingPoints} items={published} toolkitAvailable={toolkit.available} /></details> : null}
         {selectedTheme && !q && !filters.level && !filters.type && !filters.role && !filters.area && !filters.topic && !filters.authority ? <ResourceThemePathway theme={selectedTheme.id} items={published} className={styles.startingPoints} /> : null}
-        {!q && !hasActiveFilters ? <ResourceThemeNav basePath="/library" className={layout.explore} gridClassName={layout.themes} /> : null}
+        {libraryLanding ? <ResourceThemeNav basePath="/library" className={layout.explore} gridClassName={layout.themes} /> : null}
 
-        {!q ? <section className={styles.collection} aria-labelledby="all-title">
+        {!q && showDirectory ? <section className={styles.collection} aria-labelledby="all-title">
           <div className={styles.collectionHeading}><div>
           <p className={styles.resultContext}>{hasActiveFilters ? "Your selected collection" : "Learning, tools, and guidance for your work"}</p>
           <h2 id="all-title" className="text-2xl font-extrabold">
@@ -260,6 +255,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
           {pagination}
         </section> : null}
 
+        {libraryLanding ? <p className="pilot-catalog-link"><Link href={pageHref(1)}>Browse the Library ({items.length} resources)</Link></p> : null}
         {matchedGuides.length ? <details id="practical-guides" className={`${styles.programGuides} ${layout.guides}`} open={Boolean(q)}>
           <summary>Practical guides <span>({matchedGuides.length})</span></summary>
           <p>Connect existing guidance with a practical task, then prepare a next step for your work.</p>
@@ -274,7 +270,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
         <Hub2More headingId="resource-formats" title="More ways to explore">
           <p>Choose a course, a practical resource, something to read, or a recording to listen to.{selectedTheme ? " Your theme stays selected as you move between collections." : ""}</p>
           <ResourceFormatLinks theme={selectedTheme?.id} current="library" />
-          <p className={styles.collectionLinks}><Link href="/library?browse=all">Browse the complete library</Link><Link href="/practice">Go straight to guided practice</Link></p>
+          <p className={styles.collectionLinks}><Link href="/practice">Go straight to guided practice</Link></p>
         </Hub2More>
         <details className="course-more-item"><summary>About these resources</summary><div className={styles.context}><DhsReferenceLink /><ProgramContextNote /></div></details>
       </div>
