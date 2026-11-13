@@ -19,6 +19,7 @@ import extracts from "./published-resource-text.json";
 import equityCaptions from "./equity-practice-video-captions.json";
 import { publicMediaPassages } from "./public-course-media-docs";
 import type { Doc } from "./search";
+import { sourceReadingDocs } from "./source-reading-docs";
 
 const TRAINING_HUB = "/learning/training-companions/index.html";
 const EQUITY_IN_PRACTICE = "/learn/equity-in-practice";
@@ -249,6 +250,7 @@ export async function publishedResourceSupplements(scope: StaffProgramScope, doc
   const paths = new Map([...docs, ...practice].filter(doc => doc.status === "approved" && doc.href.startsWith("/") && !doc.href.startsWith("//"))
     .map(doc => [pathOnly(doc.href), doc]));
   const results = await Promise.all([
+    sourceReadingDocs(),
     downloadDocs(scope, paths, publicRoot), waterPodcastDocs(scope, paths, publicRoot),
     recordingDocs(scope, docs, publicRoot), volumeMediaDocs(scope, paths), equityVideoDocs(scope, publicRoot),
     ...curriculumMediaSources().map(source => readStaticRecording(scope, source, paths, publicRoot)),

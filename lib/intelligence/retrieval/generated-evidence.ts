@@ -83,6 +83,15 @@ export function sourceRef(supplied: Citation[], index: number): string | undefin
   return supplied[index]?.evidence ? `S${index + 1}` : undefined;
 }
 
+/** Constrain generation to the actual labels supplied for this answer. */
+export function citedStatementsForSources(supplied: Citation[]) {
+  const labels = supplied.flatMap((source, index) => source.evidence ? [`S${index + 1}`] : []);
+  if (!labels.length) return CitedStatementsSchema.max(0);
+  return z.array(CitedStatementsSchema.element.extend({
+    refs: z.array(z.enum(labels as [string, ...string[]])).min(1).max(4),
+  })).max(12);
+}
+
 /**
  * Turn the writer's statements into evidence claims. Each statement stands or falls on its own:
  * a label that names no supplied source is left out, and a statement with no valid label is

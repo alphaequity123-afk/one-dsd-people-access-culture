@@ -11,6 +11,7 @@ import { admitResearch, getResearchPolicy, hashQuery, recordUsage, type Admissio
 import { withResearchSlot } from "./slots";
 import {
   resolveResearchProvider,
+  researchFailureUsage,
   searchWithPerplexity,
   UnresolvedCitationError,
   type ExternalSource,
@@ -104,51 +105,78 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
   const started = Date.now();
   const query_hash = await hashQuery(question);
   const toolName = depth === "deep_research" ? "research.deep_search" : "research.current_answer";
-  try {
-    const output = await withResearchSlot(() => runTool(
-      ctx,
-      toolName,
-      () => provider.run({ question: inProgramContext(question), depth, allowed_domains: admission.policy.allowed_domains, recency: admission.policy.recency, trace_id: ctx.trace_id }, fetcher),
-      { modelId: provider.modelFor(depth) },
-    ));
-    await recordUsage({
-      at: new Date().toISOString(),
-      provider: provider.id,
-      model: output.model,
-      depth,
-      query_hash,
-      domains: Array.from(new Set(output.sources.map((s) => s.domain))).slice(0, 20),
-      estimated_usd: output.estimated_usd,
-      reported_usd: output.usage.reported_usd,
-      input_tokens: output.usage.input_tokens,
-      output_tokens: output.usage.output_tokens,
-      search_queries: output.usage.search_queries,
-      web_search_calls: output.usage.web_search_calls,
-      fetch_url_calls: output.usage.fetch_url_calls,
-      tool_calls: output.usage.tool_calls,
-      ok: true,
-      latency_ms: Date.now() - started,
-      trace_id: ctx.trace_id,
-      provider_trace_id: output.providerTraceId,
-    });
-    return { status: "used", output, provider: provider.id, note: EXTERNAL_EVIDENCE_NOTE };
-  } catch (error) {
-    const code = researchFailure(error, { trace_id: ctx.trace_id, provider: provider.id, model: provider.modelFor(depth), depth });
-    await recordUsage({
-      at: new Date().toISOString(),
-      provider: provider.id,
-      model: provider.modelFor(depth),
-      depth,
-      query_hash,
-      domains: [],
-      estimated_usd: 0,
-      ok: false,
-      error_code: code,
-      latency_ms: Date.now() - started,
-      trace_id: ctx.trace_id,
-    });
-    return { status: "failed", message: "We couldn't complete the outside research just now. You can still use the answer from program resources below, including its sources and limits.", error_code: code };
+  const attempted = new Set<ResearchProviderId>();
+  let selected = provider;
+  let currentAdmission = admission;
+  // One alternate, already configured provider may recover a failed search. Each
+  // attempt still passes the owner's admission controls and the citation joiner.
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const provider = selected;
+    attempted.add(provider.id);
+    try {
+      const output = await withResearchSlot(() => runTool(
+        ctx,
+        toolName,
+        () => provider.run({ question: inProgramContext(question), depth, allowed_domains: currentAdmission.policy.allowed_domains, recency: currentAdmission.policy.recency, trace_id: ctx.trace_id }, fetcher),
+        { modelId: provider.modelFor(depth) },
+      ));
+      await recordUsage({
+        at: new Date().toISOString(),
+        provider: provider.id,
+        model: output.model,
+        depth,
+        query_hash,
+        domains: Array.from(new Set(output.sources.map((s) => s.domain))).slice(0, 20),
+        estimated_usd: output.estimated_usd,
+        reported_usd: output.usage.reported_usd,
+        input_tokens: output.usage.input_tokens,
+        output_tokens: output.usage.output_tokens,
+        search_queries: output.usage.search_queries,
+        web_search_calls: output.usage.web_search_calls,
+        fetch_url_calls: output.usage.fetch_url_calls,
+        tool_calls: output.usage.tool_calls,
+        ok: true,
+        latency_ms: Date.now() - started,
+        trace_id: ctx.trace_id,
+        provider_trace_id: output.providerTraceId,
+      });
+      return { status: "used", output, provider: provider.id, note: EXTERNAL_EVIDENCE_NOTE };
+    } catch (error) {
+      const code = researchFailure(error, { trace_id: ctx.trace_id, provider: provider.id, model: provider.modelFor(depth), depth });
+      await recordUsage({
+        at: new Date().toISOString(),
+        provider: provider.id,
+        model: provider.modelFor(depth),
+        depth,
+        query_hash,
+        domains: [],
+        estimated_usd: 0,
+        ...researchFailureUsage(error),
+        ok: false,
+        error_code: code,
+        latency_ms: Date.now() - started,
+        trace_id: ctx.trace_id,
+      });
+      const retryable = /^(?:research_(?:unresolved_citation|missing_citation|sources_missing|no_safe_sources|search_not_performed|empty_response|invalid_response|incomplete|timeout)|research_http_(?:408|429|5\d\d))$/.test(code);
+      if (attempt === 0 && retryable && depth === "current_web") {
+        const latest = await getResearchPolicy();
+        const alternate = resolveResearchProvider(latest.provider_order.filter(id => !attempted.has(id) && id !== "fixture"));
+        if (alternate) {
+          const nextAdmission = await admitResearch(question, depth, explicit, true, ctx.role);
+          if (!nextAdmission.ok) return { status: "not_admitted", reason: nextAdmission.reason, message: nextAdmission.message };
+          // Re-check the provider order returned by admission in case it changed.
+          const admittedAlternate = resolveResearchProvider(nextAdmission.policy.provider_order.filter(id => !attempted.has(id) && id !== "fixture"));
+          if (admittedAlternate) {
+            selected = admittedAlternate;
+            currentAdmission = nextAdmission;
+            continue;
+          }
+        }
+      }
+      return { status: "failed", message: "We couldn't complete the outside research just now. You can still use the answer from program resources below, including its sources and limits.", error_code: code };
+    }
   }
+  return { status: "failed", message: "We couldn't complete the outside research just now. Please use the available program sources or try again later.", error_code: "research_execution_failed" };
 }
 
 export type GovernedSearchResult =

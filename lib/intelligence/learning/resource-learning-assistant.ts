@@ -94,7 +94,7 @@ export function learningResourcePath(value: string): string | undefined {
 function eligibleDocument(doc: Doc): boolean {
   const describedPerson = doc.evidenceRevisions?.some(revision => /^research-.+-person-\d+$/.test(revision.sourceId))
     || /^research-.+-person-\d+$/.test(doc.id);
-  return doc.status === "approved" && AUTHORITY[doc.authority]?.citeable
+  return doc.status === "approved" && (AUTHORITY[doc.authority]?.citeable || doc.type === "source_reading_section")
     && !describedPerson && (!directoryTypes.has(doc.type) || safeDirectorySummary(doc.summary))
     && acceptableText(doc.title) && !!sourceUrl(doc.href) && publicRetrievalDocumentEligible(doc);
 }

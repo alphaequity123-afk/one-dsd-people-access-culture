@@ -8,7 +8,7 @@ vi.mock("./governance", () => ({
 }));
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _tool: string, fn: () => unknown) => fn() }));
 
-import { getResearchProvider, UnresolvedCitationError } from "./providers";
+import { getResearchProvider, UnresolvedCitationError, researchFailureUsage } from "./providers";
 import { governedResearch } from "./index";
 import type { ToolContext } from "../types";
 
@@ -34,6 +34,12 @@ beforeEach(() => vi.stubEnv("PERPLEXITY_API_KEY", "test-key"));
 afterEach(() => { vi.unstubAllEnvs(); vi.restoreAllMocks(); });
 
 describe("research citation joining", () => {
+  it("retains billed usage when an otherwise completed answer fails citation checks", async () => {
+    const reply = { ...agentReply('See [unsupported](https://example.org/page).'), usage: { input_tokens: 80, output_tokens: 40, cost: { total_cost: 0.023 } } };
+    const error = await getResearchProvider('perplexity_agent').run(request, fetcherFor(reply)).catch(error => error);
+    expect(error).toBeInstanceOf(UnresolvedCitationError);
+    expect(researchFailureUsage(error)).toMatchObject({reported_usd: 0.023, estimated_usd: 0.023, input_tokens: 80, output_tokens: 40});
+  });
   it("joins a link to a returned source and keeps the answer", async () => {
     const output = await getResearchProvider("perplexity_agent").run(request, fetcherFor(agentReply(`Services are listed by the department [People we serve](${SOURCE}).`)));
     expect(output.answer).toContain("[1]");

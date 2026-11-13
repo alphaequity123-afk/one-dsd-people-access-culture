@@ -189,7 +189,11 @@ export async function recordUsage(ev: Omit<ResearchUsageEvent, "id">): Promise<R
   if (!/^[a-f0-9]{16}$/.test(ev.query_hash)) {
     throw new Error("Research usage requires a bounded query hash.");
   }
-  const id = `ru_${ev.at.replace(/[^0-9]/g, "").slice(0, 14)}_${ev.query_hash.slice(0, 6)}_${ev.trace_id.slice(-4)}`;
+  // Keep the existing opaque storage contract while distinguishing two provider
+  // attempts for the same question and trace, even within the same second.
+  const providerMask = { perplexity_agent: 0, openai_web: 1, fixture: 2 }[ev.provider];
+  const suffix = (parseInt(ev.trace_id.slice(-4), 16) ^ providerMask).toString(16).padStart(4, "0");
+  const id = `ru_${ev.at.replace(/[^0-9]/g, "").slice(0, 14)}_${ev.query_hash.slice(0, 6)}_${suffix}`;
   const full: ResearchUsageEvent = {
     id,
     ...ev,
