@@ -5,6 +5,7 @@
 .source-reading-contents a[aria-current="page"] { color: #172b3c; font-weight: 600; }
 .source-reading-body { font-size: 1.05rem; line-height: 1.85; overflow-wrap: anywhere; }
 .source-reading-body :is(p,ul,ol,dl,blockquote,figure,table,details,pre) { margin-block: 1.5rem; }
+.source-reading-body > div:not(:empty) { margin-block: 1rem; }
 .source-reading-body :is(h2,h3,h4,h5,h6) { margin-block: 2.8rem 1.1rem; line-height: 1.35; }
 .source-reading-body > :first-child { margin-top: 0; }
 .source-reading-body :is(ul,ol) { padding-left: 1.6rem; }

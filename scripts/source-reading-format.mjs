@@ -26,6 +26,8 @@ export function formatSourceHtml(html, url) {
   // Prefer an outer main so nested landmarks cannot duplicate content.
   const main = mains.find(e => !mains.some(other => other !== e && ancestors(e).includes(other)));
   const body = main || all(e => e.name === 'body')[0] || document;
+  // The ADA publisher's in-page search is an interface, not source content.
+  for (const node of findAll(e => e.name === 'div' && e.children.some(child => child.type === 'text' && child.data.trim() === 'Search this page') && findAll(child => child.attribs?.id === 'clear', e.children).length > 0, body.children)) removeElement(node);
   for (const node of findAll(e => ['script','style','noscript','template','nav','devsite-feedback','devsite-actions'].includes(e.name) || e.attribs?.role === 'navigation' || chrome.test([e.attribs?.id,e.attribs?.class].join(' ')) || e.attribs?.id === 'crt-page--sidenav' || (e.name==='a' && ['#print','#share'].includes(e.attribs?.href) && /^(print(?: this page)?|share)$/i.test(textContent(e).trim())), body.children)) removeElement(node);
   // Site headers/footers are removed only when outside an identified main; article attribution remains.
   if (!main) for (const node of findAll(e => (e.name === 'header' || e.name === 'footer') && !ancestors(e).some(a => a.name === 'article'), body.children)) removeElement(node);
@@ -106,7 +108,7 @@ export function readingSections(html) {
   const dom = parseDocument(html);
   const blocks=[];
   function visit(nodes){for(const node of nodes){
-    if(isNode(node)&&['div','section','article'].includes(node.name)) {
+    if(isNode(node)&&['div','section','article'].includes(node.name) && findAll(child=>['div','section','article','p','h1','h2','h3','h4','h5','h6','ul','ol','dl','table','blockquote','details'].includes(child.name),node.children).length) {
       // An outer publisher ID must not force an entire book into one page.
       // Preserve its anchor while letting the contained topics flow separately.
       if(node.attribs.id) blocks.push(parseDocument(`<span id="${node.attribs.id.replaceAll('&','&amp;').replaceAll('"','&quot;')}"></span>`).children[0]);

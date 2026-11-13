@@ -59,3 +59,15 @@ test('older named anchors survive as reachable footnote targets',()=>{
   assert.ok(source.html.includes('id="_ftn1"'));
   assert.equal(readingAnchors(readingSections(source.html))._ftn1,1);
 });
+
+test('publisher search controls are excluded while metadata remains in separate blocks',()=>{
+  const source=formatSourceHtml('<main><div>Search this page<div><a id="clear" href="#">CLEAR</a></div></div><h1>Guide</h1><div><div>Issue Date</div><div>October 17, 2002</div></div><p>The full explanation.</p></main>','https://www.ada.gov/guide');
+  assert.equal(source.textPreserved,true);
+  assert.ok(!source.html.includes('Search this page'));
+  assert.ok(!source.html.includes('CLEAR'));
+  const sections=readingSections(source.html);
+  const html=sections.map(section=>section.html).join('');
+  assert.ok(html.includes('<div>Issue Date</div>'));
+  assert.ok(html.includes('<div>October 17, 2002</div>'));
+  assert.equal(textContent(parseDocument(html)),textContent(parseDocument(source.html)));
+});
