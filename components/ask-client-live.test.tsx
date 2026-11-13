@@ -109,6 +109,24 @@ it("still accepts a single finished answer", async () => {
   expect(screen.queryByRole("status")).toBeNull();
 });
 
+it("asks a chosen follow-up with the previous context and draft, only after a click", async () => {
+  const workProduct = { title: "Discussion guide", format: "docx", sections: [{ heading: "Opening", paragraphs: ["Invite observations."], headers: [], rows: [] }], sources: [] };
+  const fetcher = vi.fn().mockResolvedValueOnce(Response.json({ kind: "answer", answer: { ...finished("Start by inviting observations.").answer, followUpQuestions: ["How could I adapt this for a smaller group?"], workProduct } }))
+    .mockResolvedValueOnce(Response.json(finished("Invite each person to share one observation.")));
+  vi.stubGlobal("fetch", fetcher);
+  page();
+  await ask("Make a discussion guide.");
+  const suggestion = await screen.findByRole("button", { name: "How could I adapt this for a smaller group?" });
+  expect(fetcher).toHaveBeenCalledTimes(1);
+  await act(async () => { fireEvent.click(suggestion); });
+  await screen.findByText("Invite each person to share one observation.");
+  const request = JSON.parse(fetcher.mock.calls[1][1].body);
+  expect(request.question).toBe("How could I adapt this for a smaller group?");
+  expect(request.history[0].answer).toBe("Start by inviting observations.");
+  expect(request.priorWorkProduct).toEqual(workProduct);
+  expect(screen.queryByRole("button", { name: "How could I adapt this for a smaller group?" })).toBeNull();
+});
+
 it("shows a refusal sent before any work began", async () => {
   vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ error: "Please wait a moment before asking another question." }), { status: 429, headers: { "content-type": "application/json" } })));
   page();

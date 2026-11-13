@@ -41,6 +41,7 @@ const docs: Doc[] = [...pages.values()].map(page => ({
   kind: "content", id: `state-page:${page.id}`, title: page.title || page.agency, href: page.url,
   authority: "external_verify", type: "state_page", status: "published", reviewDate: "", scope: "public",
   summary: page.description, text: [page.agency, page.description, page.text].join(" "), tags: [], intents: [],
+  graphRelated: directory.get(page.agency)?.href ? [directory.get(page.agency)!.href] : [],
 }));
 
 /** Ask cites the publisher. Site Search can open the app's reading copy. */

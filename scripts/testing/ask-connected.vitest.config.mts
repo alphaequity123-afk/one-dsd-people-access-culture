@@ -5,6 +5,11 @@ export default defineConfig({
   root,
   resolve: { alias: { '@': root, 'server-only': fileURLToPath(new URL('./server-only-stub.mjs', import.meta.url)) } },
   test: { environment: 'node', include: [
+    'lib/ask/work-product.test.ts',
+    'lib/ask/export-route.test.ts',
+    'lib/intelligence/research/open-scope.test.ts',
+    'components/ask-client-live.test.tsx',
+    'lib/search/agency-connections.test.ts',
     'lib/intelligence/retrieval/source-reading-docs.test.ts',
     'lib/intelligence/retrieval/generated-evidence.test.ts',
     'lib/intelligence/retrieval/published-resource-supplements.test.ts',
