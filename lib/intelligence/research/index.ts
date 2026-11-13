@@ -9,6 +9,7 @@ import type { ToolContext } from "../types";
 import { errorStatus, providerErrorExcerpt } from "../providers/log";
 import { admitResearch, getResearchPolicy, hashQuery, recordUsage, type Admission } from "./governance";
 import { withResearchSlot } from "./slots";
+import { researchIdentityInstruction, type ResearchSourceContext } from "./source-context";
 import {
   resolveResearchProvider,
   researchFailureUsage,
@@ -83,11 +84,11 @@ export async function governedResearchAvailability(role: "staff" | "owner" = "st
 }
 
 /** Outside research reads the question in its program setting, so a "renewal notice" is a human-services notice, not a subscription. */
-function inProgramContext(question: string): string {
-  return question + " (Answer the actual subject asked about. The reader may work in Minnesota public human services; use that context only when relevant. Research is not limited to that field. Prefer authoritative original sources, including a named organization's own publications when available. Distinguish documented facts from inference, compare plausible explanations where appropriate, and do not infer causation or agency authority from association alone. Check a source's date and scope before treating a pilot, contract, partnership or service as current. An agency's own accessibility or grievance policy does not establish its jurisdiction over other employers or organizations.)";
+function inProgramContext(question: string, sourceContext?: ResearchSourceContext): string {
+  return question + " (Answer the actual subject asked about. The reader may work in Minnesota public human services; use that context only when relevant. Research is not limited to that field. Prefer authoritative original sources, including a named organization's own publications when available. Distinguish documented facts from inference, compare plausible explanations where appropriate, and do not infer causation or agency authority from association alone. Check a source's date and scope before treating a pilot, contract, partnership or service as current. An agency's own accessibility or grievance policy does not establish its jurisdiction over other employers or organizations.)" + researchIdentityInstruction(sourceContext);
 }
 
-export async function governedResearch(question: string, depth: ResearchDepth, explicit: boolean, ctx: ToolContext, fetcher?: typeof fetch): Promise<GovernedResearchResult> {
+export async function governedResearch(question: string, depth: ResearchDepth, explicit: boolean, ctx: ToolContext, fetcher?: typeof fetch, sourceContext?: ResearchSourceContext): Promise<GovernedResearchResult> {
   const policy = await getResearchPolicy();
   const preview = resolveResearchProvider(policy.provider_order);
   if (ctx.dry_run) {
@@ -117,7 +118,7 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
       const output = await withResearchSlot(() => runTool(
         ctx,
         toolName,
-        () => provider.run({ question: inProgramContext(question), depth, allowed_domains: currentAdmission.policy.allowed_domains, recency: currentAdmission.policy.recency, trace_id: ctx.trace_id }, fetcher),
+        () => provider.run({ question: inProgramContext(question, sourceContext), depth, allowed_domains: currentAdmission.policy.allowed_domains, recency: currentAdmission.policy.recency, trace_id: ctx.trace_id }, fetcher),
         { modelId: provider.modelFor(depth) },
       ));
       await recordUsage({
@@ -190,11 +191,12 @@ export async function governedSearch(
   explicit: boolean,
   ctx: ToolContext,
   fetcher?: typeof fetch,
+  sourceContext?: ResearchSourceContext,
 ): Promise<GovernedSearchResult> {
   const policy = await getResearchPolicy();
   const selected = resolveResearchProvider(policy.provider_order);
   if (selected?.id !== "perplexity_agent") {
-    const result = await governedResearch(question, "current_web", explicit, ctx, fetcher);
+    const result = await governedResearch(question, "current_web", explicit, ctx, fetcher, sourceContext);
     return result.status === "used"
       ? { status: "used", sources: result.output.sources, note: result.note, providerTraceId: result.output.providerTraceId }
       : result;
@@ -210,7 +212,7 @@ export async function governedSearch(
     const output = await withResearchSlot(() => runTool(
       ctx,
       "research.web_search",
-      () => searchWithPerplexity({ question: inProgramContext(question), allowed_domains: admission.policy.allowed_domains, recency: admission.policy.recency }, fetcher),
+      () => searchWithPerplexity({ question: inProgramContext(question, sourceContext), allowed_domains: admission.policy.allowed_domains, recency: admission.policy.recency }, fetcher),
       { modelId: "perplexity-search" },
     ));
     await recordUsage({

@@ -29,34 +29,43 @@ function plainTypography(text: string): string {
  * that differs only in typographic marks resolves to the source's exact characters. */
 export function canonicalizeGeneratedEvidenceClaims(value: unknown, supplied: Citation[]): EvidenceClaim[] {
   const claims = GeneratedEvidenceClaimsSchema.parse(value ?? []);
-  const snapshots = new Map(supplied.flatMap(source => source.evidence ? [[source.evidence.evidenceId, source.evidence] as const] : []));
+  const snapshots = supplied.flatMap(source => source.evidence ? [source.evidence] : []);
   const canonical = claims.map(claim => ({ ...claim, references: claim.references.map(reference => {
-    const snapshot = snapshots.get(reference.evidenceId);
-    if (!snapshot) throw new Error("generated_evidence_rejected");
-    const sourceText = snapshot.excerpt.quote;
-    const characters = Array.from(sourceText);
-    const relativeStart = reference.start - snapshot.excerpt.start;
-    const relativeEnd = reference.end - snapshot.excerpt.start;
-    // Preserve references the existing exact-span validator already accepts,
-    // even if identical words occur elsewhere in the supplied excerpt.
-    if (relativeStart >= 0 && relativeEnd <= characters.length && relativeEnd > relativeStart
-      && characters.slice(relativeStart, relativeEnd).join("") === reference.quote) return reference;
-    const offset = sourceText.indexOf(reference.quote);
-    if (offset >= 0) {
-      if (sourceText.indexOf(reference.quote, offset + 1) !== -1) throw new Error("generated_evidence_rejected");
-      const start = snapshot.excerpt.start + Array.from(sourceText.slice(0, offset)).length;
-      return { ...reference, start, end: start + Array.from(reference.quote).length };
+    const windows = snapshots.filter(snapshot => snapshot.evidenceId === reference.evidenceId);
+    if (!windows.length) throw new Error("generated_evidence_rejected");
+    for (const snapshot of windows) {
+      const relativeStart = reference.start - snapshot.excerpt.start;
+      const relativeEnd = reference.end - snapshot.excerpt.start;
+      const characters = Array.from(snapshot.excerpt.quote);
+      if (relativeStart >= 0 && relativeEnd <= characters.length && relativeEnd > relativeStart
+        && characters.slice(relativeStart, relativeEnd).join("") === reference.quote) return reference;
     }
-    // Writers often retype curly quotation marks, apostrophes and dashes as plain
-    // keyboard characters. Find the one passage that differs only in those marks and
-    // cite the source's own characters; any other difference is still rejected.
-    const plainSource = plainTypography(sourceText), plainQuote = plainTypography(reference.quote);
-    const plainOffset = plainSource.indexOf(plainQuote);
-    if (plainOffset < 0 || plainSource.indexOf(plainQuote, plainOffset + 1) !== -1) throw new Error("generated_evidence_rejected");
-    const relative = Array.from(plainSource.slice(0, plainOffset)).length;
-    const quote = characters.slice(relative, relative + Array.from(reference.quote).length).join("");
-    const start = snapshot.excerpt.start + relative;
-    return { ...reference, quote, start, end: start + Array.from(quote).length };
+    const found = windows.flatMap(snapshot => {
+      const sourceText = snapshot.excerpt.quote;
+      const characters = Array.from(sourceText);
+      const offset = sourceText.indexOf(reference.quote);
+      if (offset >= 0) {
+        if (sourceText.indexOf(reference.quote, offset + 1) !== -1) throw new Error("generated_evidence_rejected");
+        const start = snapshot.excerpt.start + Array.from(sourceText.slice(0, offset)).length;
+        return [{ ...reference, start, end: start + Array.from(reference.quote).length }];
+      }
+      // Writers often retype curly quotation marks, apostrophes and dashes as plain
+      // keyboard characters. Find the one passage that differs only in those marks and
+      // cite the source's own characters; any other difference is still rejected.
+      const plainSource = plainTypography(sourceText), plainQuote = plainTypography(reference.quote);
+      const plainOffset = plainSource.indexOf(plainQuote);
+      if (plainOffset < 0) return [];
+      if (plainSource.indexOf(plainQuote, plainOffset + 1) !== -1) throw new Error("generated_evidence_rejected");
+      const relative = Array.from(plainSource.slice(0, plainOffset)).length;
+      const quote = characters.slice(relative, relative + Array.from(reference.quote).length).join("");
+      const start = snapshot.excerpt.start + relative;
+      return [{ ...reference, quote, start, end: start + Array.from(quote).length }];
+    });
+    // Overlapping windows may expose the same exact location twice. Different
+    // locations remain ambiguous and cannot be silently chosen.
+    const distinct = new Map(found.map(match => [`${match.start}:${match.end}:${match.quote}`, match]));
+    if (distinct.size !== 1) throw new Error("generated_evidence_rejected");
+    return [...distinct.values()][0];
   }) })).map(claim => claim.kind === "source_excerpt" && claim.references.length === 1 && claim.text !== claim.references[0].quote
     && plainTypography(claim.text) === plainTypography(claim.references[0].quote) ? { ...claim, text: claim.references[0].quote } : claim)
     // Text that is not the exact passage is a paraphrase of it. Keep it, with its exact

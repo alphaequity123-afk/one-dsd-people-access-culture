@@ -30,6 +30,22 @@ beforeEach(() => {
 });
 afterEach(() => { vi.restoreAllMocks(); vi.unstubAllEnvs(); });
 
+it('passes public identity hints through the same governed call without changing admission or domains', async () => {
+  const primary = vi.spyOn(getResearchProvider('perplexity_agent'), 'run').mockResolvedValue(output);
+  const alternate = vi.spyOn(getResearchProvider('openai_web'), 'run').mockResolvedValue(output);
+  const question = 'How can PACER help with employment transitions?';
+  const identities = [{title: 'PACER: transition planning for families', url: 'https://media.pacer.org/php/php-c157.pdf'}];
+  expect((await governedResearch(question, 'current_web', true, context, undefined, identities)).status).toBe('used');
+  expect(controls.admit).toHaveBeenCalledWith(question, 'current_web', true, true, 'staff');
+  expect(primary).toHaveBeenCalledTimes(1);
+  expect(alternate).not.toHaveBeenCalled();
+  expect(primary.mock.calls[0][0].question).toContain(identities[0].url);
+  expect(primary.mock.calls[0][0].question.startsWith(question)).toBe(true);
+  expect(primary.mock.calls[0][0].allowed_domains).toEqual(['mn.gov']);
+  expect(controls.usage).toHaveBeenCalledTimes(1);
+  expect(JSON.stringify(controls.usage.mock.calls)).not.toContain('PACER');
+});
+
 it('rechecks admission and tries the configured alternate after rejected citations', async () => {
   const primary = vi.spyOn(getResearchProvider('perplexity_agent'), 'run').mockRejectedValue(new Error('research_unresolved_citation'));
   const alternate = vi.spyOn(getResearchProvider('openai_web'), 'run').mockResolvedValue(output);

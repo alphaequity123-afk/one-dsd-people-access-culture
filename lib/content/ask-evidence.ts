@@ -29,10 +29,11 @@ export function rememberContentEvidence(item:object, evidence:EvidenceRevision):
 export function contentEvidence(item:object):EvidenceRevision|undefined { return publishedContentEvidence.get(item); }
 /** References establish which passage was used, not whether an interpretation is true. */
 export function evidenceReferencesMatch(claims:EvidenceClaim[], evidence:SourceEvidence[]):boolean {
-  const available=new Map(evidence.map(source=>[source.evidenceId,source]));
+  const available=new Map<string,SourceEvidence[]>();
+  for(const source of evidence)available.set(source.evidenceId,[...(available.get(source.evidenceId)??[]),source]);
   return claims.every(claim=>claim.references.every(reference=>{
-    const source=available.get(reference.evidenceId);if(!source)return false;
-    return reference.start>=source.excerpt.start && reference.end<=source.excerpt.end &&
-      Array.from(source.excerpt.quote).slice(reference.start-source.excerpt.start,reference.end-source.excerpt.start).join("")===reference.quote;
+    const sources=available.get(reference.evidenceId)??[];
+    return sources.some(source=>reference.start>=source.excerpt.start && reference.end<=source.excerpt.end &&
+      Array.from(source.excerpt.quote).slice(reference.start-source.excerpt.start,reference.end-source.excerpt.start).join("")===reference.quote);
   }));
 }

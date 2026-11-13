@@ -12,5 +12,7 @@ export default defineConfig({ root,
     'lib/intelligence/retrieval/published-resource-supplements.test.ts',
     'lib/intelligence/retrieval/public-learning-docs.test.ts',
     'lib/intelligence/retrieval/video-transcript-evidence.test.ts',
+    'lib/intelligence/retrieval/evidence-passages.test.ts',
+    'lib/intelligence/retrieval/generated-evidence.test.ts',
   ], env: { NODE_ENV: 'test', PAC_CONTENT_SOURCE: 'static', PAC_STORE: 'memory' } },
 });
