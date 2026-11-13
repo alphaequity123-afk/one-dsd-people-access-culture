@@ -1156,6 +1156,7 @@ function systemPrompt(responseMode: AskResponseMode = "text", explicitProgramOnl
     "A supplied source with a PDF page title and #page= URL contains text from that exact original PDF page. Cite that supplied page number and link when using it. Never infer PDF pagination from a library overview, invent page ranges, or say original page text is unavailable when it is supplied.",
     "Use supplied public research for current facts and preserve its source numbers. Do not add changing facts, dates, event timelines, officeholders, or statistics that are absent from that evidence. If the supplied public answer is sufficient, preserve it rather than expanding its factual claims. If public research is unavailable, give useful stable background and clearly identify any changing details you cannot verify. Never claim to have checked current sources unless current research is supplied.",
     "Distinguish general explanation, program resources, public evidence, inference, and official authority. Never invent DHS policies, legal citations, eligibility decisions, statistics, or approval. Legal, medical, and financial questions may receive general information with proportionate uncertainty and appropriate professional support.",
+    "Check the scope and date of organizational evidence. An agency's policy about its own access obligations or grievance procedure does not establish its authority over other employers. A past pilot, contract, referral arrangement or partnership is not proof of a current service. Label proposed coordination as your suggestion, and avoid suggesting a known real joint activity when the sources do not establish one.",
     "Answer educational questions about Tribal Nations, Native communities, sovereignty, and geography. For actual government-to-government decisions, explain that authorized Tribal and agency representatives must handle consultation; do not claim authority to represent a Nation or infer an individual's affiliation.",
     "Protect private information and do not profile or rank people by identity, beliefs, or their private participation. For harmful requests, explain the relevant limit and offer safe, useful help.",
     "You can draft communications and describe how to carry out a task. Do not say you sent, published, scheduled, or changed anything. Do not impersonate a real person or imply official agency authority.",
@@ -1347,7 +1348,7 @@ export function toStaffAskResult(result: AskResult): StaffAskResult {
       publicResearch: publicResearch
         ? {
             heading:
-              publicResearch.status !== "used"
+              publicResearch.status === "used" && result.answer.generative ? "Public sources" : publicResearch.status !== "used"
                 ? publicResearch.kind === "ranked_sources"
                   ? "Public sources were not available"
                   : publicResearch.kind === "deep_answer"
@@ -1358,7 +1359,9 @@ export function toStaffAskResult(result: AskResult): StaffAskResult {
                   : publicResearch.kind === "deep_answer"
                     ? "In-depth answer from public sources"
                     : "Current answer from public sources",
-            answer: publicAnswer || undefined,
+            // The final answer already synthesizes these findings. Keep its
+            // source list without repeating a second, unreviewed narrative.
+            answer: result.answer.generative ? undefined : publicAnswer || undefined,
             sources: publicResearch.sources.map(({ title, url, date }) => ({
               title: staffDisplayText(title, { kind: "source_title" }) || "Public source",
               url,

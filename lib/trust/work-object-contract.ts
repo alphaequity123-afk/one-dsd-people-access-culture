@@ -109,6 +109,7 @@ const RUNTIME_RATE_LIMIT_REQUESTS = {
   "program-invitation-network": { limit: 20, windowSeconds: 900 },
   "program-invitation-code": { limit: 10, windowSeconds: 900 },
   "staff-ask": { limit: 120, windowSeconds: 600 },
+  "staff-ask-export": { limit: 20, windowSeconds: 600 },
   "ask-voice": { limit: 120, windowSeconds: 600 },
   "ask-transcribe": { limit: 80, windowSeconds: 600 },
   "staff-program-outcome": { limit: 10, windowSeconds: 600 },

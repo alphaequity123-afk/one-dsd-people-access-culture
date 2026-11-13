@@ -29,8 +29,24 @@ describe("truthful identity in open-ended ASK answers", () => {
     expect(displayed.kind).toBe("answer");
     if (displayed.kind === "answer") {
       expect(displayed.answer.shortAnswer).toBe(identity);
-      if (fallback) expect(displayed.answer.publicResearch?.answer).toBe(identity);
+      if (fallback) {
+        expect(displayed.answer.publicResearch?.answer).toBeUndefined();
+        expect(displayed.answer.publicResearch?.heading).toBe("Public sources");
+      }
     }
+  });
+
+  it("retains public findings when no synthesized answer was produced", () => {
+    const source = answer("Here are the available findings.");
+    source.generative = false;
+    source.publicResearch = {
+      status: "used", kind: "current_answer", depth: "current_web", answer: identity,
+      sources: [{ title: "Reference", url: "https://example.com/reference" }], note: "",
+    };
+    const displayed = toStaffAskResult({ kind: "answer", answer: source });
+    if (displayed.kind !== "answer") throw new Error("Expected answer");
+    expect(displayed.answer.publicResearch?.answer).toBe(identity);
+    expect(displayed.answer.publicResearch?.sources).toHaveLength(1);
   });
 
   it("keeps resource labels and cited titles while removing unrelated process preambles", () => {
