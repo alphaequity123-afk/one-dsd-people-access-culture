@@ -5,6 +5,8 @@ describe("explicit internal-source preference", () => {
   it.each([
     "Only use sources from this application to explain person-centered planning.",
     "Use only internal sources for my question.",
+    "Use only One DSD sources. Explain accessible meetings.",
+    "Search One DSD’s knowledge base only.",
     "Only the information in this program, please.",
     "Use this site only.",
     "Use internal sources only.",
@@ -29,6 +31,7 @@ describe("explicit internal-source preference", () => {
     "Explain equity in the application and compare it with external research.",
     "What does the application say about external research?",
     "Search the web for current accessibility guidance.",
+    "Use only One DSD sources for the program background and also search the web for updates.",
     "Only one course in this application discusses leadership.",
     "What is person-centered planning?",
     "Do not use only this application; include other research.",

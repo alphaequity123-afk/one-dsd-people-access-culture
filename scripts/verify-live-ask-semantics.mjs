@@ -32,26 +32,31 @@ if (!/^[a-f0-9]{7,40}$/.test(release) || new URL(base).protocol !== 'https:') th
 if (selected.some(id => id !== 'all' && !cases.some(test => test.id === id))) throw Error('Unknown case selection.');
 fs.mkdirSync(output, { recursive: true });
 const save = (name, value) => fs.writeFileSync(path.join(output, name + '.json'), JSON.stringify(value, null, 2));
-const read = id => { const filename = path.join(output, id + '.json'); return fs.existsSync(filename) ? JSON.parse(fs.readFileSync(filename, 'utf8').replace(/^\uFEFF/, '')) : undefined; };
+const read = id => {
+  const filename = path.join(output, id + '.json');
+  if (!fs.existsSync(filename)) return undefined;
+  const record = JSON.parse(fs.readFileSync(filename, 'utf8').replace(/^\uFEFF/, ''));
+  return record.release === release && record.base === base ? record : undefined;
+};
 const wanted = test => selected.includes('all') || selected.includes(test.id);
 let halted = false;
 const records = [];
 async function execute(test) {
   if (!wanted(test)) return;
   let record = read(test.id);
-  if (!record && halted) { console.log(JSON.stringify({ id: test.id, status: 'skipped_after_budget_or_rate_limit' })); return; }
-  if (!record || record.status === 'blocked_by_previous_case') {
+  if ((!record || !record.completedAt) && halted) { console.log(JSON.stringify({ id: test.id, status: 'skipped_after_budget_or_rate_limit' })); return; }
+  if (!record?.completedAt) {
     const prior = test.historyFrom ? read(test.historyFrom) : undefined;
     if (test.historyFrom && !prior?.result?.answer?.shortAnswer) {
       const issues = ['The preceding answer failed, so this follow-up could not be tested.'];
-      record = { id: test.id, release, status: 'blocked_by_previous_case', automatic: { passed: false, issues } };
+      record = { id: test.id, release, base, status: 'blocked_by_previous_case', automatic: { passed: false, issues } };
       save(test.id, record);
       records.push(record);
       console.log(JSON.stringify(record));
       return;
     }
     const input = { question: test.question, researchMode: test.allowAutoResearch ? 'auto' : test.research ? 'current_web' : 'program_only', contextPreference: 'one_dsd', ...(prior ? { history: [{ question: prior.input.question.slice(0, 1000), answer: prior.result.answer.shortAnswer.slice(0, 2500) }] } : {}) };
-    record = { id: test.id, release, input, startedAt: new Date().toISOString(), status: 'started', manualStatus: 'pending' };
+    record = { id: test.id, release, base, input, startedAt: new Date().toISOString(), status: 'started', manualStatus: 'pending' };
     save(test.id, record);
     const started = Date.now();
     try {
@@ -90,7 +95,7 @@ async function execute(test) {
   record.automatic = { passed: issues.length === 0, issues };
   record.manualStatus = 'pending';
   save(test.id, record);
-  if (!read(test.id + '-manual')) save(test.id + '-manual', { id: test.id, status: 'pending', reviewer: null, criteria: test.rubric.map(criterion => ({ criterion, rating: 'pending', evidence: '' })), notes: 'Human semantic review is required. Transport and exact-span integrity do not establish correctness.' });
+  if (!read(test.id + '-manual')) save(test.id + '-manual', { id: test.id, release, base, status: 'pending', reviewer: null, criteria: test.rubric.map(criterion => ({ criterion, rating: 'pending', evidence: '' })), notes: 'Human semantic review is required. Transport and exact-span integrity do not establish correctness.' });
   records.push(record);
   console.log(JSON.stringify({ id: test.id, seconds: record.seconds, status: record.status, automatic: record.automatic, manual: 'pending' }));
 }
