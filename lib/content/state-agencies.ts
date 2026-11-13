@@ -39,3 +39,6 @@ export function agencyDisplayName(name: string): string {
   const m = /^(.+?),\s*(Department of|Office of|Board of|Board on|Council on|Council for|Minnesota Council on|Minnesota Office of|Governor's Council on|Ombudsman for|Minnesota)$/.exec(name);
   return m ? `${m[2]} ${m[1]}`.replace(/^Minnesota (?=[A-Z])/, "Minnesota ") : name;
 }
+
+/** The One DSD directory entry; its official website remains linked on that page. */
+export function agencyPageHref(id: string): string { return `/minnesota-agencies/${encodeURIComponent(id)}`; }

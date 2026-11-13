@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 /** "Connected across Minnesota": the state agencies the knowledge graph links to this page. Hidden when there are none. */
@@ -21,7 +22,7 @@ export function ConnectedMinnesota() {
   if (!agencies.length) return null;
   return <aside className="connected-mn dsd-shell" aria-labelledby="connected-mn-title">
     <h2 id="connected-mn-title">Connected across Minnesota</h2>
-    <ul>{agencies.map(agency => <li key={agency.href}><a href={agency.href} target="_blank" rel="noreferrer">{agency.title}</a></li>)}</ul>
+    <ul>{agencies.map(agency => <li key={agency.href}><Link href={agency.href}>{agency.title}</Link></li>)}</ul>
     <style>{`
       .connected-mn { margin: 2.5rem auto 1.5rem; padding: 18px 22px; background: #f1f5f9; border-top: 4px solid #475569; border-radius: 10px; }
       .connected-mn h2 { margin: 0 0 .6rem; font-size: 1.1rem; color: #1e293b; }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { sourcesForResource, type ResourceType } from "@/lib/content/source-register";
+import { registerReadingHref, sourcesForResource, type ResourceType } from "@/lib/content/source-register";
 
 const REGISTER_PATH = "/learn/sources";
 
@@ -14,7 +14,7 @@ export function ResourceEvidence({ resourceType, resourceId, heading = "Further 
       <ul>
         {sources.map(source => (
           <li key={source.sourceId}>
-            <a href={source.href!} rel="noreferrer">{source.title}</a>
+            <Link href={registerReadingHref(source)}>{source.title}</Link>
           </li>
         ))}
       </ul>

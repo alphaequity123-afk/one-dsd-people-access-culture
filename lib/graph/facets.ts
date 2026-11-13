@@ -14,7 +14,7 @@ import { isNativeCommunity } from "@/lib/content/hub/organizations";
 import clas from "@/lib/content/clas-curriculum.json";
 import { REFERRAL_ONLY_COURSE_IDS } from "@/lib/program/retired-features";
 import { SKILLS, SKILL_COURSES } from "./skills";
-import { PARTNER_GROUP_LABEL, PUBLIC_BODIES, PUBLIC_PARTNERS, STATE_AGENCIES, agencyConnectionText, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
+import { PARTNER_GROUP_LABEL, PUBLIC_BODIES, PUBLIC_PARTNERS, STATE_AGENCIES, agencyConnectionText, agencyDisplayName, agencyNodeId, agencyPageHref } from "@/lib/content/state-agencies";
 
 export type FacetId = "task" | "role" | "standard" | "community" | "skill";
 export type ItemKind = "course" | "resource" | "reading" | "practice" | "brief" | "organization" | "policy" | "lesson" | "agency";
@@ -74,15 +74,15 @@ function itemPool(): Pool {
     items.set(id, { id, kind: "policy", title: policy.title, href: policyHref(policy.id) });
     text.set(id, [policy.title, policy.summary, ...policy.tags, ...policy.programs].join(" "));
   }
-  for (const module of clas.modules) {
-    const id = `clas:${module.id}`;
-    items.set(id, { id, kind: "lesson", title: module.title, href: `/learn/clas/curriculum/${module.id}` });
-    text.set(id, module.title);
+  for (const lesson of clas.modules) {
+    const id = `clas:${lesson.id}`;
+    items.set(id, { id, kind: "lesson", title: lesson.title, href: `/learn/clas/curriculum/${lesson.id}` });
+    text.set(id, lesson.title);
   }
   // State of Minnesota agencies, boards and councils: nodes of the same graph, linked by the work they hold.
   for (const agency of PUBLIC_BODIES) {
     const id = agencyNodeId(agency);
-    items.set(id, { id, kind: "agency", title: agencyDisplayName(agency.name), href: agency.href });
+    items.set(id, { id, kind: "agency", title: agencyDisplayName(agency.name), href: agencyPageHref(agency.id) });
     text.set(id, agencyConnectionText(agency));
   }
   return (pool = { items, text });

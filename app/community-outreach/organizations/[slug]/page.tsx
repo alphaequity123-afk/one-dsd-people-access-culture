@@ -26,7 +26,7 @@ export default async function OrganizationPage({ params }: { params: Promise<{ s
     org.contact.phone ? <span key="p">{org.contact.phone}</span> : null,
     org.contact.email ? <a key="e" href={`mailto:${org.contact.email}`}>{org.contact.email}</a> : null,
   ].filter(Boolean);
-  return <article className={styles.page}>
+  return <article className={`${styles.page} pilot-reading-width`}>
     <p className={`${styles.kicker} ${styles.noPrint}`}><Link href="/community-outreach">Community Outreach and Engagement</Link> · <Link href="/community-outreach/organizations">Organizations</Link></p>
     <p className={styles.kicker}>{org.kind}</p>
     <h1 className={styles.title}>{org.name}</h1>
@@ -36,7 +36,7 @@ export default async function OrganizationPage({ params }: { params: Promise<{ s
     <p className={styles.lede}>{org.summary}</p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="organization" id={org.slug} noun="organization page" /></details>
 
-    <div className={styles.grid}>
+    <div className="mt-8 space-y-8">
       <section><h2 className="text-lg font-bold">Who it serves</h2><p>{org.whoItServes || "Not confirmed in the public records."}</p></section>
       <section><h2 className="text-lg font-bold">What it does</h2>{org.services.length ? <ul className="list-disc pl-6">{org.services.map(s => <li key={s}>{s}</li>)}</ul> : <p>Not confirmed in the public records.</p>}</section>
     </div>
