@@ -224,7 +224,9 @@ export class OpenAIAdapter implements ProviderAdapter {
       text: { format: { type: "json_schema", name: "pac_structured_output", schema: strict.schema, strict: true } },
       // Reasoning tokens count toward this cap on the Responses API; 4000 left
       // medium-effort answers incomplete.
-      max_output_tokens: process.env.PAC_CLONE_AGENTS === "on" ? Math.min(req.maxTokens ?? 8000, 8000) : req.maxTokens ?? 12_000,
+      ...(!req.useProviderOutputLimit && {
+        max_output_tokens: process.env.PAC_CLONE_AGENTS === "on" ? Math.min(req.maxTokens ?? 8000, 8000) : req.maxTokens ?? 12_000,
+      }),
       // Disable API response storage. Provider abuse-monitoring terms still apply.
       store: false,
     };
