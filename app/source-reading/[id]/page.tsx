@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { annotationsFor, registerReading, SOURCE_REGISTER, normalizeSourceHref } from "@/lib/content/source-register";
 import { stateReading } from "@/lib/search/state-pages";
 import { externalReading, externalReadingForUrl, unavailableExternalUrl } from "@/lib/content/external-readings";
-import { loadExternalReading } from "@/lib/content/external-reading-body";
+import { loadExternalReading, readingSectionHtml } from "@/lib/content/external-reading-body";
 import { SourceDocument } from "@/components/source-document";
 
 type Props = { params: Promise<{ id: string }>; searchParams: Promise<{ section?: string }> };
@@ -42,7 +42,7 @@ export default async function SourceReadingPage({ params, searchParams }: Props)
       <p><a href={reading.url} data-original="true">View original</a></p>
     </header>
     {sections.length > 1 ? <details className="pilot-supporting source-reading-contents"><summary>In this reading</summary><nav className="pilot-supporting-body" aria-label="Reading sections"><ol>{sections.map((part, i) => <li key={part.id}><Link href={href(i + 1)} aria-current={i === index ? "page" : undefined}>{part.title === "Continued" ? `Part ${i + 1}` : part.title}</Link></li>)}</ol></nav></details> : null}
-    {reading.format === "pdf" && reading.document ? <section aria-label="Document"><SourceDocument src={reading.document} title={reading.title} /></section> : section ? <section id="reading" className="source-reading-body" tabIndex={-1} dangerouslySetInnerHTML={{ __html: section.html }} /> : null}
+    {reading.format === "pdf" && reading.document ? <section aria-label="Document"><SourceDocument src={reading.document} title={reading.title} /></section> : section ? <section id="reading" className="source-reading-body" tabIndex={-1} dangerouslySetInnerHTML={{ __html: readingSectionHtml(section.html, reading.title, index === 0) }} /> : null}
     {sections.length > 1 ? <nav className="source-reading-pagination" aria-label="Continue reading">
       {index > 0 ? <Link href={href(index)}>Previous</Link> : <span />}
       <span>{index + 1} of {sections.length}</span>

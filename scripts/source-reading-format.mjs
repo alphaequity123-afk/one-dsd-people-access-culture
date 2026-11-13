@@ -26,7 +26,7 @@ export function formatSourceHtml(html, url) {
   // Prefer an outer main so nested landmarks cannot duplicate content.
   const main = mains.find(e => !mains.some(other => other !== e && ancestors(e).includes(other)));
   const body = main || all(e => e.name === 'body')[0] || document;
-  for (const node of findAll(e => ['script','style','noscript','template','nav','devsite-feedback'].includes(e.name) || e.attribs?.role === 'navigation' || chrome.test([e.attribs?.id,e.attribs?.class].join(' ')) || e.attribs?.id === 'crt-page--sidenav' || (e.name==='a' && ['#print','#share'].includes(e.attribs?.href) && /^(print(?: this page)?|share)$/i.test(textContent(e).trim())), body.children)) removeElement(node);
+  for (const node of findAll(e => ['script','style','noscript','template','nav','devsite-feedback','devsite-actions'].includes(e.name) || e.attribs?.role === 'navigation' || chrome.test([e.attribs?.id,e.attribs?.class].join(' ')) || e.attribs?.id === 'crt-page--sidenav' || (e.name==='a' && ['#print','#share'].includes(e.attribs?.href) && /^(print(?: this page)?|share)$/i.test(textContent(e).trim())), body.children)) removeElement(node);
   // Site headers/footers are removed only when outside an identified main; article attribution remains.
   if (!main) for (const node of findAll(e => (e.name === 'header' || e.name === 'footer') && !ancestors(e).some(a => a.name === 'article'), body.children)) removeElement(node);
   const interactive = findAll(e => ['form','iframe','video','audio','canvas'].includes(e.name), body.children).map(e => ({tag:e.name, src:e.attribs.src || e.attribs.action || ''}));
@@ -56,7 +56,8 @@ export function formatSourceHtml(html, url) {
   });
   const after = textOf(clean);
   const blocked = /^(?:Access Denied|Just a moment|Attention Required|Robot or human|Page Not Found|404|Service Unavailable)|captcha|verify you are human|checking your browser/i.test(title) || (after.length < 2500 && /access denied|verify you are human|enable javascript and cookies to continue|the page (?:you|that you).*?(?:not|can't|could not).*?found|page (?:has been moved or |could )?not (?:be )?found|requested (?:url|page) (?:was )?not found/i.test(after));
-  return { title, html: clean, textLength: after.length, sourceTextLength: before.length, textPreserved: before === after, hasMain: !!main, interactive, blocked, images: findAll(e => e.name === 'img', parseDocument(clean).children).map(e => e.attribs.src).filter(Boolean) };
+  const readingTitle=textContent(findAll(e=>e.name==='h1',body.children)[0]||{children:[]}).replace(/\s+/g,' ').trim();
+  return { title:readingTitle||title, html: clean, textLength: after.length, sourceTextLength: before.length, textPreserved: before === after, hasMain: !!main, interactive, blocked, images: findAll(e => e.name === 'img', parseDocument(clean).children).map(e => e.attribs.src).filter(Boolean) };
 }
 function ancestors(node) { const result=[]; for (let p=node.parent;p;p=p.parent) result.push(p); return result; }
 
