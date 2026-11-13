@@ -4,7 +4,8 @@ import path from "node:path";
 import { cache } from "react";
 import { parseDocument } from "htmlparser2";
 import { findAll, getOuterHTML, textContent } from "domutils";
-import { externalReading, type ReadingEntry } from "./external-readings";
+import { externalReading, externalReadingHref, externalSourceHref, type ReadingEntry } from "./external-readings";
+import { rewriteSourceReadingLinks } from "./source-reading-links.mjs";
 
 export type ReadingBody = ReadingEntry & {
   checkedAt: string;
@@ -17,14 +18,17 @@ export type ReadingBody = ReadingEntry & {
 
 /** The original title appears in the page header; keep its in-body anchor. */
 export function readingSectionHtml(html: string, title: string, firstSection: boolean): string {
-  if (!firstSection) return html;
-  const document = parseDocument(html);
-  const heading = findAll(node => node.name === "h2", document.children)[0];
+  const linkedHtml = rewriteSourceReadingLinks(html, original => externalReadingHref(original) ?? externalSourceHref(original));
+  const document = parseDocument(linkedHtml);
+  let changed = false;
+  const heading = firstSection ? findAll(node => node.name === "h2", document.children)[0] : undefined;
   const normalize = (text: string) => text.replace(/\s+/g, " ").trim();
-  if (!heading || normalize(textContent(heading)) !== normalize(title)) return html;
-  heading.name = "span";
-  heading.children = [];
-  return getOuterHTML(document);
+  if (heading && normalize(textContent(heading)) === normalize(title)) {
+    heading.name = "span";
+    heading.children = [];
+    changed = true;
+  }
+  return changed ? getOuterHTML(document) : linkedHtml;
 }
 export const loadExternalReading = cache(async (id: string): Promise<ReadingBody | null> => {
   if (!/^[a-f0-9]{20}$/.test(id) || !externalReading(id)) return null;

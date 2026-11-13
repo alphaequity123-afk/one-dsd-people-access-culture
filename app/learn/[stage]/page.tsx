@@ -1,9 +1,10 @@
 import { notFound, redirect } from "next/navigation";
 import { currentLearningStage } from "@/lib/domains/learning";
+import { learningStageHref } from "@/lib/content/learning-journey";
 
-/** Preserve original stage bookmarks while using the current six-stage learning page. */
+/** Preserve original stage bookmarks at their current learning destinations. */
 export default async function LearningStageAlias({ params }: { params: Promise<{ stage: string }> }) {
   const stage = currentLearningStage((await params).stage);
   if (!stage) notFound();
-  redirect("/learn#" + stage.id);
+  redirect(learningStageHref(stage.id));
 }

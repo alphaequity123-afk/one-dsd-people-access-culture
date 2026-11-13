@@ -61,7 +61,10 @@ async function fallbackFile(document: ResourceDocument, prefer: "html" | "txt" =
   }
 }
 
-export async function GET(request: NextRequest, { params }: { params: Promise<{ kind: string; id: string }> }) {
+type DownloadContext = { params: Promise<{ kind: string; id: string }> };
+
+/** HEAD and GET resolve exactly the same public, published document. */
+async function downloadRequest(request: NextRequest, { params }: DownloadContext): Promise<Response | { document: ResourceDocument; kind: string; format: AnyDownloadFormat }> {
   const { kind, id } = await params;
   if (REFERRAL_ONLY_COURSE_IDS.has(id) || RETIRED_RESOURCE_IDS.has(id)) return problem(410, "This material is no longer offered here. Use the staff support directory for referral guidance.");
   const format = request.nextUrl.searchParams.get("format") ?? "";
@@ -77,6 +80,28 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     return problem(503, "This resource could not be prepared for download.");
   }
   if (!document) return problem(404, "This resource is not available to download.");
+
+  return { document, kind, format };
+}
+
+/** Check the destination without producing a large Office/PDF file. */
+export async function HEAD(request: NextRequest, context: DownloadContext) {
+  const ready = await downloadRequest(request, context);
+  if (ready instanceof Response) return new Response(null, { status: ready.status, headers: ready.headers });
+  const fileName = downloadFileName(ready.document.title, ready.format);
+  return new Response(null, { status: 200, headers: {
+    "content-type": downloadFormatDetails(ready.format).contentType,
+    "content-disposition": `attachment; filename="${fileName}"; filename*=UTF-8''${encodeURIComponent(fileName)}`,
+    "cache-control": "private, no-store",
+    "x-content-type-options": "nosniff",
+    "x-download-readiness": "available",
+  } });
+}
+
+export async function GET(request: NextRequest, context: DownloadContext) {
+  const ready = await downloadRequest(request, context);
+  if (ready instanceof Response) return ready;
+  const { document, kind, format } = ready;
 
   if (format === "html" || format === "txt") {
     try {

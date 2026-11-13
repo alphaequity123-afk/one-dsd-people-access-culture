@@ -1,0 +1,13 @@
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0,1fr); background: #003865; }
+:global(body.dsd-calm main .internal-page) .page .hero :global(.page-intro) { align-self: center; background: #003865; border: 0; color: white; }
+:global(body.dsd-calm main .internal-page) .page .hero :global(.page-intro) :is(h1,p) { color: #fff; }
+:global(body.dsd-calm main .internal-page) .page .hero :global(.page-intro) :global(.kicker) { color: #c3d9eb; }
+:global(body.dsd-calm main .internal-page) .page .hero :global(.page-intro) h1 { font-weight: 500; font-size: clamp(2.25rem, 4vw, 3.4rem); max-width: 15ch; }
+.hero :global(.wrap) { width: 100%; padding: clamp(2rem, 5vw, 4rem); }
+.hero > img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+.content { padding-block: clamp(2rem, 5vw, 3.5rem) 4rem; }
+.content > * + * { margin-top: 2rem; }
+.content > :global(.pilot-start-flow) { max-width: 54rem; margin-block: 2.5rem 3.5rem; }
+.content > :global(.pilot-start-flow) > form { background: #edf3f9; border-color: #8ba3b7; border-top-color: #003865; }
+@media (max-width: 899px) { .hero { grid-template-columns: minmax(0,1fr); } .hero > img { min-height: 0; height: auto; max-height: 300px; aspect-ratio: 16/9; object-position: center 40%; } }
+@media print { .hero { display: block; background: white; } .hero > img { display: none; } :global(body.dsd-calm main .internal-page) .page .hero :global(.page-intro) { background: white; } :global(body.dsd-calm main .internal-page) .page .hero :global(.page-intro) :is(h1,p) { color: black; } }

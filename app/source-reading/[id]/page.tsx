@@ -3,9 +3,10 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { annotationsFor, registerReading, SOURCE_REGISTER, normalizeSourceHref } from "@/lib/content/source-register";
 import { stateReading } from "@/lib/search/state-pages";
-import { externalReading, externalReadingForUrl, unavailableExternalUrl } from "@/lib/content/external-readings";
+import { externalReading, externalReadingForUrl, externalSourceHref } from "@/lib/content/external-readings";
 import { loadExternalReading, readingSectionHtml } from "@/lib/content/external-reading-body";
 import { SourceDocument } from "@/components/source-document";
+import { ResourceContextPhoto } from "@/components/resource-context-photo";
 
 type Props = { params: Promise<{ id: string }>; searchParams: Promise<{ section?: string }> };
 function entryFor(id: string) {
@@ -20,11 +21,14 @@ export default async function SourceReadingPage({ params, searchParams }: Props)
   const entry = entryFor(id);
   if (!entry) {
     const original = registerReading(id)?.href ?? stateReading(id)?.url;
-    if (original && !unavailableExternalUrl(original)) redirect(original);
+    const destination = original && externalSourceHref(original);
+    if (destination) redirect(destination);
     redirect("/learn/sources");
   }
   const reading = await loadExternalReading(entry.id);
-  if (!reading) redirect(entry.original);
+  if (!reading) redirect(externalSourceHref(entry.original) ?? "/learn/sources");
+  const originalHref = externalSourceHref(reading.url);
+  const licenseHref = reading.licenseUrl && externalSourceHref(reading.licenseUrl);
   const source = registerReading(id) ?? SOURCE_REGISTER.sources.find(source => source.href && normalizeSourceHref(source.href) === normalizeSourceHref(reading.url));
   const notes = source ? annotationsFor(source) : [];
   const citations = source ? [...new Map(source.citations.filter(citation => citation.route.startsWith("/") && !citation.route.startsWith("//")).map(citation => [citation.route, citation])).values()] : [];
@@ -39,8 +43,9 @@ export default async function SourceReadingPage({ params, searchParams }: Props)
       <nav className="calm-crumbs" aria-label="Breadcrumb"><Link href="/learn/sources">Research and sources</Link></nav>
       <h1>{reading.title}</h1>
       <p className="source-reading-credit">{new URL(reading.original).hostname.replace(/^www\./, "")}</p>
-      <p><a href={reading.url} data-original="true">View original</a></p>
+      {originalHref ? <p><a href={originalHref} data-original="true">View original</a></p> : null}
     </header>
+    <ResourceContextPhoto subject={`${reading.title} ${section?.title ?? ""}`} />
     {sections.length > 1 ? <details className="pilot-supporting source-reading-contents"><summary>In this reading</summary><nav className="pilot-supporting-body" aria-label="Reading sections"><ol>{sections.map((part, i) => <li key={part.id}><Link href={href(i + 1)} aria-current={i === index ? "page" : undefined}>{part.title === "Continued" ? `Part ${i + 1}` : part.title}</Link></li>)}</ol></nav></details> : null}
     {reading.format === "pdf" && reading.document ? <section aria-label="Document"><SourceDocument src={reading.document} title={reading.title} /></section> : section ? <section id="reading" className="source-reading-body" tabIndex={-1} dangerouslySetInnerHTML={{ __html: readingSectionHtml(section.html, reading.title, index === 0) }} /> : null}
     {sections.length > 1 ? <nav className="source-reading-pagination" aria-label="Continue reading">
@@ -50,6 +55,6 @@ export default async function SourceReadingPage({ params, searchParams }: Props)
     </nav> : null}
     {notes.length ? <details className="pilot-supporting"><summary>Notes from One DSD</summary><div className="pilot-supporting-body space-y-4">{notes.map(note => <p key={note}>{note}</p>)}</div></details> : null}
     {citations.length ? <details className="pilot-supporting"><summary>Where this source is used</summary><div className="pilot-supporting-body"><ul className="pilot-topic-rows">{citations.map(citation => <li key={citation.route}><Link href={citation.route}>{citation.resourceTitle}</Link></li>)}</ul></div></details> : null}
-    <footer className="source-reading-footer">{reading.attribution ? <p>{reading.attribution}{reading.licenseUrl ? <> <a href={reading.licenseUrl}>Use and attribution</a></> : null}</p> : null}<p>Source accessed {new Intl.DateTimeFormat("en-US", {month:"long",day:"numeric",year:"numeric",timeZone:"America/Chicago"}).format(new Date(reading.checkedAt))}.</p></footer>
+    <footer className="source-reading-footer">{reading.attribution ? <p>{reading.attribution}{licenseHref ? <> <a href={licenseHref}>Use and attribution</a></> : null}</p> : null}<p>Source accessed {new Intl.DateTimeFormat("en-US", {month:"long",day:"numeric",year:"numeric",timeZone:"America/Chicago"}).format(new Date(reading.checkedAt))}.</p></footer>
   </article>;
 }

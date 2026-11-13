@@ -81,6 +81,8 @@ export type SearchHit = {
 };
 
 export type Doc = {
+  /** Separately reviewed source-status context; never part of publisher wording. */
+  sourceContext?: { note: string; sourceUrl: string; checkedAt: string };
   evidenceRevisions?: EvidenceRevision[];
   kind: "content" | "brief";
   id: string;
@@ -447,6 +449,7 @@ export function authorityLabelResolve(ids: string[]): Array<{ id: string; author
 }
 
 export type Citation = {
+  sourceContext?: Doc["sourceContext"];
   evidence?: SourceEvidence;
   id: string;
   title: string;
@@ -484,6 +487,7 @@ export function citationAttachFromDocs(hits: SearchHit[], docs: Doc[]): Citation
       authorityLabel: AUTHORITY[doc.authority].label,
       reviewDate: doc.reviewDate,
       excerpt: currentExcerpt,
+      ...(doc.sourceContext ? { sourceContext: doc.sourceContext } : {}),
       citeable: AUTHORITY[doc.authority].citeable,
     }];
   });

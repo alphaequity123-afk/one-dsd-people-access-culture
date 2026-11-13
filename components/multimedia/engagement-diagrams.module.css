@@ -2,7 +2,7 @@
   color: #203542;
   border: 1px solid #cbd5da;
   border-radius: 1rem;
-  background: #faf8f3;
+  background: #e5edf6;
   margin-block: 1.75rem;
   overflow-wrap: anywhere;
 }
@@ -26,7 +26,9 @@
 .workNote dl > div { padding-block: .8rem; border-top: 1px solid #e0e4e5; }
 .workNote dt { color: #003865; font-size: .925rem; font-weight: 700; }
 .workNote dd { margin: .4rem 0 0; font-size: .925rem; line-height: 1.7; }
-.routeMap > summary { padding: 1.1rem 1.4rem; }
+.routeMap > summary { padding: 1.1rem 1.4rem; background: #dce7f2; border-left: 4px solid #003865; border-radius: .9rem .9rem 0 0; font-weight: 500; }
+.routeMap:not([open]) > summary { border-radius: .9rem; }
+.routeMap > summary:hover { background: #ceddeb; }
 .routeMap[open] > summary { border-bottom: 1px solid #d4dde0; }
 .routeContent { padding: 1.25rem clamp(1.15rem, 3vw, 1.75rem) 1.5rem; }
 .routePrompt { display: table; margin: 0 auto; padding: .75rem 1.25rem; border: 1px solid #b9cbd5; border-radius: 2rem; background: #fff; color: #003865; text-align: center; font-weight: 700; }
@@ -45,7 +47,7 @@
 }
 @media (forced-colors: active) { .stepNumber, .returnPath, .branches > li { border: 1px solid CanvasText; } }
 @media print { .example, .routeMap { box-shadow: none; background: #fff; } .flow > li, .returnPath { break-inside: avoid; } }
-.referenceExample { margin-block: 1.2rem; padding: .2rem .85rem .7rem; border: 1px solid #cbd5da; border-radius: .6rem; background: #faf8f3; color: #203542; }
+.referenceExample { margin-block: 1.2rem; padding: .2rem .85rem .7rem; border: 1px solid #9aafc0; border-radius: .6rem; background: #e5edf6; color: #203542; }
 .referenceExample summary { cursor: pointer; color: #003865; font-weight: 650; padding-block: .85rem; min-height: 2.75rem; line-height: 1.5; }
 .referenceExample summary:focus-visible { outline: 3px solid #003865; outline-offset: 3px; }
 .comparison { width: 100%; border-collapse: collapse; text-align: left; font-size: .925rem; line-height: 1.6; }
@@ -59,7 +61,7 @@
 .dialogue li { padding: .85rem 1rem; margin-bottom: .75rem; border-left: 3px solid #7994a5; background: #fff; border-radius: 0 .5rem .5rem 0; font-size: .95rem; line-height: 1.75; }
 .dialogue strong { display: block; color: #003865; }
 .samplePrompt { margin: 1rem 0 0; padding-top: .8rem; border-top: 1px solid #ccd6dc; line-height: 1.7; }
-.sampleDetails { margin-block: 1.25rem; border: 1px solid #cbd5da; border-radius: .6rem; padding: .1rem 1rem; background: #faf8f3; }
+.sampleDetails { margin-block: 1.25rem; border: 1px solid #9aafc0; border-radius: .6rem; padding: .1rem 1rem; background: #e5edf6; }
 .sampleDetails > summary { padding-block: 1rem; min-height: 2.75rem; cursor: pointer; color: #003865; font-weight: 650; }
 .sampleDetails > summary:focus-visible { outline: 3px solid #003865; outline-offset: 3px; }
 .sampleDetails > div { padding-bottom: 1rem; }

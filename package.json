@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev --webpack --hostname 127.0.0.1 --port 8900",
-    "build": "node scripts/ensure-current-release.mjs && node scripts/restore-curriculum-videos.mjs && node scripts/restore-intercultural-videos.mjs && node scripts/verify-completed-course-podcasts.mjs && node scripts/verify-clas-curriculum.mjs && node scripts/verify-equity-everyday.mjs && node scripts/verify-intercultural-curriculum.mjs && node scripts/verify-source-readings.mjs && next build --webpack",
+    "build": "node scripts/ensure-current-release.mjs && node scripts/restore-curriculum-videos.mjs && node scripts/restore-intercultural-videos.mjs && node scripts/verify-completed-course-podcasts.mjs && node scripts/verify-clas-curriculum.mjs && node scripts/verify-equity-everyday.mjs && node scripts/verify-intercultural-curriculum.mjs && node scripts/verify-source-readings.mjs && node --max-old-space-size=6144 node_modules/next/dist/bin/next build --webpack",
     "build:vercel": "node scripts/vercel-build.mjs",
     "start": "next start",
     "lint": "eslint",

@@ -12,7 +12,12 @@
         let url; try { url = new URL(link.href); } catch { continue; }
         if (!/^https?:$/.test(url.protocol) || url.origin === location.origin) continue;
         const fragment = url.hash; url.hash = '';
-        const key = url.href.replace(/\/$/, '');
+        let key = url.href.replace(/\/$/, '');
+        const replacement = map.redirects?.[key];
+        if (replacement && !map.links[key]) {
+          link.href = replacement + fragment;
+          key = new URL(replacement).href.replace(/\/$/, '');
+        }
         if (map.links[key]) {
           let anchor = fragment.slice(1);
           try { anchor = decodeURIComponent(anchor); } catch { /* Keep publisher fragment. */ }

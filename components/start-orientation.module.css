@@ -1,0 +1,43 @@
+.orientationPage { padding-block: 1.5rem 2rem; scroll-margin-top: 6rem; color: #172b3c; }
+.orientationPage > * + * { margin-top: 2.5rem; }
+:global(body.dsd-calm main) .orientationPage :is(h2,h3) { font-weight: 500; line-height: 1.2; }
+.orientationPage p { line-height: 1.8; }
+.guideCard { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); overflow: hidden; border: 1px solid #9aafc0; border-radius: 12px; background: #e5edf6; text-decoration: none; }
+.guideCard > img { width: 100%; height: 100%; min-height: 180px; object-fit: cover; }
+.guideCard > span { align-self: center; padding: clamp(1.25rem, 3vw, 2rem); }
+.guideCard strong { display: block; font-size: 1.45rem; font-weight: 500; color: #003865; }
+.guideCard span > span { display: block; margin-top: .65rem; color: #304b61; line-height: 1.65; }
+.guideCard .guideAction { color: #003865; text-decoration: underline; text-underline-offset: .25em; }
+.guideCard:hover { border-color: #003865; background: #dbe7f3; }
+.relatedLinks { display: flex; flex-wrap: wrap; gap: .75rem 2rem; padding-block: .75rem; }
+.relatedLinks a { text-decoration: underline; text-underline-offset: .25em; }
+.directoryBanner { overflow: hidden; border-radius: 4px 24px 24px 4px; background: #003865; border-left: 5px solid #7fa8c8; }
+.directoryBanner > div { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1.5rem 3rem; padding: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+:global(body.dsd-calm main) .directoryBanner h3 { margin: 0; color: #fff; font-size: clamp(1.65rem, 3vw, 2.35rem); font-weight: 500; }
+.directoryBanner p { margin: 0; color: #e4eef7; }
+.directoryBanner img { width: 100%; height: 100%; min-height: 270px; object-fit: cover; }
+.orientationDirectory { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 2rem; margin-top: 2.5rem; align-items: start; }
+.orientationDirectory > .orientationItem { grid-template-columns: minmax(0,1fr); }
+.orientationDirectory > .orientationItem:first-child { grid-column: 1/-1; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.orientationDirectory > .orientationItem:nth-child(4) { grid-column: 1/-1; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); }
+.orientationDirectory > .orientationItem:nth-child(5) { grid-column: 1/-1; grid-template-columns: minmax(0,.75fr) minmax(0,1.25fr); border-radius: 4px 24px 24px 4px; border-left: 4px solid #003865; }
+.orientationItem { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr); overflow: hidden; background: #fff; border: 1px solid #b5c5d2; border-radius: 12px; }
+.doorPhoto { width: 100%; height: 100%; min-height: 250px; object-fit: cover; }
+.orientationDirectory > .orientationItem:nth-child(2) .doorPhoto { height: auto; aspect-ratio: 4/3; }
+.orientationDirectory > .orientationItem:nth-child(3) .doorPhoto { height: auto; aspect-ratio: 16/9; min-height: 0; }
+.doorBody { align-self: center; padding: clamp(1.5rem, 4vw, 2.5rem); }
+.doorBody h3 { margin: 0; font-size: clamp(1.5rem, 2.6vw, 1.9rem); }
+.doorBody p { margin: 1rem 0 1.5rem; }
+.orientationItem:nth-child(even) { background: #eef3f8; }
+:global(body.dsd-calm main) .orientationPage .action[href] { display: inline-flex; align-items: center; width: fit-content; min-height: 46px; padding: .65rem 1.1rem; border: 1px solid #003865; border-radius: 6px; color: #003865; background: #fff; font-weight: 500; text-decoration: underline; text-underline-offset: .22em; }
+:global(body.dsd-calm main) .orientationPage .action[href]:hover { color: #fff; background: #003865; }
+.moreDoors { margin-top: 2.5rem; border-top: 2px solid #6f8ba1; padding-top: 1rem; }
+.moreDoors > summary { padding: 1rem .25rem; cursor: pointer; color: #003865; font-size: 1.25rem; font-weight: 500; }
+.moreDoors .orientationDirectory { grid-template-columns: minmax(0,1fr); }
+.moreDoors .orientationDirectory > .orientationItem { grid-template-columns: minmax(0, .55fr) minmax(0, 1.45fr); grid-column: auto; border: 1px solid #b5c5d2; border-radius: 12px; }
+.moreDoors .doorPhoto { min-height: 200px; }
+.welcomeNote { padding: clamp(1.5rem, 4vw, 2.5rem); border-left: 4px solid #003865; border-radius: 0 12px 12px 0; background: #e5edf6; scroll-margin-top: 6rem; }
+.orientationPage :is(a,summary):focus-visible { outline: 3px solid #005ea8; outline-offset: 4px; }
+@media (max-width: 799px) { .directoryBanner > div, .orientationDirectory, .orientationDirectory > .orientationItem, .orientationDirectory > .orientationItem:first-child, .orientationDirectory > .orientationItem:nth-child(4), .orientationDirectory > .orientationItem:nth-child(5), .moreDoors .orientationDirectory > .orientationItem { grid-template-columns: minmax(0, 1fr); } .doorPhoto { min-height: 0; height: auto; aspect-ratio: 16/9; } .moreDoors .doorPhoto { min-height: 0; } }
+@media (max-width: 480px) { .guideCard { grid-template-columns: minmax(0, 1fr); } .guideCard > img { height: auto; min-height: 0; aspect-ratio: 2/1; } }
+@media print { .directoryBanner, .orientationItem, .guideCard, .welcomeNote { background: white; color: black; break-inside: avoid; } :global(body.dsd-calm main) .directoryBanner h3, .directoryBanner p { color: black; } .doorPhoto, .directoryBanner img, .guideCard > img { display: none; } .directoryBanner, .orientationItem, .guideCard { display: block; } }
