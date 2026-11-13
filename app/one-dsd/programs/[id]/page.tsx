@@ -36,14 +36,14 @@ export default async function DsdProgramPage({ params }: { params: Promise<{ id:
         <ul className="list-disc space-y-2 pl-6">{stringListValue(copy, "equityEntryPoints").map((point, index) => <li key={index}>{point}</li>)}</ul>
       </section>
       <DsdProgramMedia programId={id} />
-      {domains.length ? <section className="border-t border-line pt-6">
-        <h2 className="text-2xl font-semibold">{stringValue(copy, "areasTitle")}</h2>
+      {domains.length ? <details className="border-t border-line pt-4">
+        <summary className="min-h-11 cursor-pointer font-semibold">{stringValue(copy, "areasTitle")}</summary>
         <ul className="list-disc space-y-2 pl-6">{domains.map(href => <li key={href}><Link href={href}>{destinations.get(href)}</Link></li>)}</ul>
-      </section> : null}
-      {related.length ? <section className="border-t border-line pt-6">
-        <h2 className="text-2xl font-semibold">{stringValue(copy, "scenariosTitle")}</h2>
+      </details> : null}
+      {related.length ? <details className="border-t border-line pt-4">
+        <summary className="min-h-11 cursor-pointer font-semibold">{stringValue(copy, "scenariosTitle")}</summary>
         <ul className="list-disc space-y-2 pl-6">{related.map(scenario => <li key={scenario.id}><Link href={"/one-dsd/scenarios/" + scenario.id}>{destinations.get("/one-dsd/scenarios/" + scenario.id)}</Link></li>)}</ul>
-      </section> : null}
+      </details> : null}
     </div>
   </EditableSurfaceRegion>;
 }

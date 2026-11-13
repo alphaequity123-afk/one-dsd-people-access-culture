@@ -125,6 +125,10 @@
 .page .lessons > li { padding-block: 1.35rem; }
 .jobAid { border-radius: 0; border-inline: 0; }
 @media(max-width:900px) { .lessonLayout { grid-template-columns: minmax(0,1fr); } }
+.page .lessonLayout { grid-template-columns: minmax(0, 1fr); max-width: 52rem; margin-inline: auto; }
+.page .outline { border: 1px solid #cdd7e2; border-radius: 20px; }
+.page .outline summary { cursor: pointer; color: #005793; font-weight: 600; }
+.page .outline nav { margin-top: 12px; }
 
 
 /* Keep the optional recording usable on narrow screens. */

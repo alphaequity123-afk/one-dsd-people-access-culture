@@ -38,7 +38,9 @@ const workbook = [
   ]),
 ].join("\n");
 
-export default async function WaterCollectionPage() {
+export default async function WaterCollectionPage({ searchParams }: { searchParams?: Promise<{ step?: string }> }) {
+  const stepParam = (await searchParams)?.step;
+  const focusedStep = typeof stepParam === "string" && /^[1-6]$/.test(stepParam) ? Number(stepParam) : null;
   const scope = await requestedContentScope();
   const [american, minnesota, toolkit, owner, communities, recordings] = await Promise.all([
     publishedCommunityProfile("american"),
@@ -55,13 +57,14 @@ export default async function WaterCollectionPage() {
   const [notice, ...stepReadAloud] = WATER_COLLECTION_READ_ALOUD;
 
   return <article className={styles.collection}>
+    {focusedStep ? <p className={styles.back}><Link href={WATER_COLLECTION_HREF}>Back to The Water We Swim In</Link></p> : <>
     <header className={styles.hero}>
       <div>
         <p className={styles.back}><Link href={WATER_COURSE_HREF}>Back to the course</Link></p>
         <h1>{WATER_COLLECTION_TITLE}</h1>
         <p className={styles.lede}>Explore how culture shapes everyday work and affects access to services.</p>
         <div className={styles.actions}>
-          <a className="btn btn--primary" href="#step-1">Start with step 1</a>
+          <Link className="btn btn--primary" href={`${WATER_COLLECTION_HREF}?step=1`}>Start with step 1</Link>
           <CourseMediaJumpSlot label="Watch" />
           {otherBriefs.length || referralPages.length ? <a href="#collection-briefs">Culture briefs</a> : null}
           {owner && studyReady ? <ResourceCreationLink resourcePath={WATER_COLLECTION_HREF} /> : null}
@@ -74,8 +77,9 @@ export default async function WaterCollectionPage() {
     <CourseMediaSlot />
 
     <nav className={styles.path} aria-label="Collection steps">
+      <h2>Six steps, in order</h2>
       <ol>{WATER_COLLECTION_STEPS.map((step, index) => <li key={step.title}>
-        <a href={`#step-${index + 1}`}>{step.title}</a>
+        <Link href={`${WATER_COLLECTION_HREF}?step=${index + 1}`}>{step.title}</Link>
         <span>{step.minutes} minutes</span>
       </li>)}</ol>
     </nav>
@@ -104,9 +108,13 @@ export default async function WaterCollectionPage() {
       <summary>Ask about the readings</summary>
       <ResourceLearningAssistant resourcePath={WATER_COLLECTION_HREF} prompts={WATER_COLLECTION_PROMPTS} embedded />
     </details> : null}
+    </>}
 
+    <details className={styles.disclosure} open={Boolean(focusedStep)}>
+    <summary>Read or review the collection steps</summary>
     {WATER_COLLECTION_STEPS.map((step, index) => {
       const number = index + 1;
+      if (focusedStep && number !== focusedStep) return null;
       const courseModule = WATER_MODULES[index];
       const moduleHref = `${WATER_COURSE_HREF}/${courseModule.slug}`;
       const lesson = waterLesson(waterModuleId(number));
@@ -126,10 +134,10 @@ export default async function WaterCollectionPage() {
       return <section id={`step-${number}`} key={step.title} className={styles.step} aria-labelledby={`step-title-${number}`}>
         <header>
           <p className={styles.timing}>Step {number}</p>
-          <h2 id={`step-title-${number}`}>{step.title}</h2>
+          {focusedStep ? <h1 id={`step-title-${number}`}>{step.title}</h1> : <h2 id={`step-title-${number}`}>{step.title}</h2>}
         </header>
         <CourseMediaSlot itemId={`water-collection-bridge-0${number}`} />
-        <details className={styles.disclosure}>
+        <details className={styles.disclosure} open={focusedStep === number}>
           <summary>Read and practice</summary>
           <p className={styles.stepIdea}>{step.idea}</p>
           <div className={styles.stepBody}>
@@ -154,9 +162,14 @@ export default async function WaterCollectionPage() {
             <WaterLessonPodcast lesson={lesson} moduleTitle={courseModule.title} readingHref={moduleHref} />
           </details> : null}
         </details>
+        {focusedStep ? <nav className={styles.actions} aria-label="Collection step navigation">
+          {number > 1 ? <Link href={`${WATER_COLLECTION_HREF}?step=${number - 1}`}>Previous step</Link> : null}
+          {number < WATER_COLLECTION_STEPS.length ? <Link href={`${WATER_COLLECTION_HREF}?step=${number + 1}`}>Next step</Link> : <Link href={`${WATER_COLLECTION_HREF}#collection-next`}>Take one change into your work</Link>}
+        </nav> : null}
       </section>;
     })}
-    <section className={styles.case} aria-labelledby="collection-next">
+    </details>
+    {!focusedStep ? <><section className={styles.case} aria-labelledby="collection-next">
       <h2 id="collection-next">Take one change into your work</h2>
       <p>Share your decision brief with the person responsible for the routine. Ask what a small trial could look like.</p>
       {available.toolkit ? <p><Link href="/learn/equity-toolkit/practice#toolkit-draft">Open the Equity Analysis Toolkit worksheet</Link></p> : null}
@@ -175,5 +188,6 @@ export default async function WaterCollectionPage() {
       <p><Link href="/minnesota-communities">Search the Minnesota Communities directory</Link></p>
     </section> : null}
     <p className={styles.support}>{WATER_SUPPORT}</p>
+    </> : null}
   </article>;
 }

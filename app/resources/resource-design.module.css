@@ -97,6 +97,10 @@
 .reading { max-width: 85ch; padding: clamp(1.25rem,3vw,2.5rem); border: 1px solid var(--pac-border, #adb9c4); border-radius: .75rem; background: #fff; scroll-margin-top: 2rem; }
 
 .reading > h2 { margin: 0 0 1.5rem; font-size: 1.6rem; color: #183247; }
+.followUp { max-width: 85ch; margin-block: 2rem; padding: 0 20px; border: 1px solid #cdd7e2; border-radius: 20px; background: #fff; }
+.followUp > summary { min-height: 44px; padding-block: 10px; color: #005793; font-weight: 600; cursor: pointer; }
+.page .followUp .next { display: block; margin: 0; padding-block: 12px 20px; border: 0; }
+.page .followUp .next > div:last-child { padding: 14px 0 0; border: 0; }
 
 .resourceActions { display: flex; align-items: baseline; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1.5rem; }
 
