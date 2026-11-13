@@ -64,6 +64,36 @@ body.dsd-calm .od .home-title h1{margin:0 0 6px;font-family:var(--sans);font-siz
 body.dsd-calm .od .home-title p{color:var(--od-muted);font-size:1.12rem;max-width:62ch}
 /* Same dimension as the welcome page artwork: full width up to 3840px, 16:9. */
 body.dsd-calm .od .home-hero-image{display:block;width:100%;max-width:3840px;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 40%;margin:0 auto}
+.home-hero-motion { position: relative; max-width: 3840px; margin-inline: auto; }
+.home-hero-frame { overflow: hidden; }
+.home-hero-motion .home-hero-image { animation: home-hero-drift 18s ease-in-out infinite paused; }
+.home-hero-motion[data-playing="true"] .home-hero-image { animation-play-state: running; }
+@keyframes home-hero-drift {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+body.dsd-calm .od .home-hero-motion-control {
+  position: absolute;
+  inset-inline-end: 1rem;
+  inset-block-end: 1rem;
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  background: #003865;
+  color: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-motion .home-hero-image { animation: none; }
+  body.dsd-calm .od .home-hero-motion-control { display: none; }
+}
+@media print {
+  .home-hero-motion .home-hero-image { animation: none; }
+  body.dsd-calm .od .home-hero-motion-control { display: none; }
+}
 body.dsd-calm .od .doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 @media (max-width:860px){body.dsd-calm .od .doors{grid-template-columns:1fr}}
 body.dsd-calm .od .door{display:block;background:var(--pac-white);border:1px solid var(--od-line);border-radius:20px;padding:22px 24px;text-decoration:none;color:var(--od-ink)}
