@@ -40,9 +40,16 @@ async function execute(test) {
   if (!wanted(test)) return;
   let record = read(test.id);
   if (!record && halted) { console.log(JSON.stringify({ id: test.id, status: 'skipped_after_budget_or_rate_limit' })); return; }
-  if (!record) {
+  if (!record || record.status === 'blocked_by_previous_case') {
     const prior = test.historyFrom ? read(test.historyFrom) : undefined;
-    if (test.historyFrom && !prior?.result?.answer?.shortAnswer) throw Error('Missing completed history case: ' + test.historyFrom);
+    if (test.historyFrom && !prior?.result?.answer?.shortAnswer) {
+      const issues = ['The preceding answer failed, so this follow-up could not be tested.'];
+      record = { id: test.id, release, status: 'blocked_by_previous_case', automatic: { passed: false, issues } };
+      save(test.id, record);
+      records.push(record);
+      console.log(JSON.stringify(record));
+      return;
+    }
     const input = { question: test.question, researchMode: test.allowAutoResearch ? 'auto' : test.research ? 'current_web' : 'program_only', contextPreference: 'one_dsd', ...(prior ? { history: [{ question: prior.input.question.slice(0, 1000), answer: prior.result.answer.shortAnswer.slice(0, 2500) }] } : {}) };
     record = { id: test.id, release, input, startedAt: new Date().toISOString(), status: 'started', manualStatus: 'pending' };
     save(test.id, record);

@@ -585,7 +585,18 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       requestedMode === "current_web" || requestedMode === "deep_research",
       ctx,
     );
-    if (result.status === "used") {
+    const rankedRecovery = result.status === "failed" && result.error_code === "research_unresolved_citation"
+      && researchDepth === "current_web" && !scholarlyResearch
+      ? await governedSearch(question, requestedMode === "current_web", ctx, undefined, sourceIdentities) : undefined;
+    if (rankedRecovery?.status === "used" && rankedRecovery.sources.length) {
+      publicResearch = {
+        status: "used",
+        kind: "ranked_sources",
+        depth: "current_web",
+        sources: rankedRecovery.sources,
+        note: rankedRecovery.note,
+      };
+    } else if (result.status === "used") {
       publicResearch = {
         status: "used",
         kind: researchDepth === "deep_research" ? "deep_answer" : "current_answer",
