@@ -787,12 +787,22 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
             })) };
           }
           const request = buildAnswerEvidenceReview({ question, draft: proposed, sources, research: publicResearch, sourceOnly: explicitProgramOnly, requestedSources });
-          const result = await runTool(ctx, "answer.structured_draft", () => binding.adapter.complete({
-            ...request, model_id: binding.model.model_id, trace_id: ctx.trace_id,
+          const completeReview = (correction = "") => runTool(ctx, "answer.structured_draft", () => binding.adapter.complete({
+            ...request, user: request.user + correction, model_id: binding.model.model_id, trace_id: ctx.trace_id,
             useProviderOutputLimit: true, timeoutMs: Math.max(1, deadlineAt - Date.now()),
             deadlineAt, recoveryBudget, beforeAttempt,
           }, binding.model), { modelId: binding.model.model_id, contentIds: sources.map(source => source.id) });
-          return request.validate(result.parsed);
+          const firstReview = await completeReview();
+          try {
+            return request.validate(firstReview.parsed);
+          } catch (error) {
+            const code = error instanceof Error ? error.message : "";
+            if (!/^evidence_review_(?:incomplete_checks|quote_mismatch|nonvisible_qualification|empty_revision)$/.test(code)
+              || deadlineAt - Date.now() < 10_000) throw error;
+            console.warn("ask_evidence_review_retry", { traceId: ctx.trace_id, code });
+            const corrected = await completeReview("\nThe first review failed validation. Return each requested ID exactly once. Copy a short contiguous substring verbatim from the specified source or visible answer unit for each quote. Keep punctuation and spacing exactly as supplied.");
+            return request.validate(corrected.parsed);
+          }
         },
         repair: async (previous, findings) => {
           // A format retry has already consumed the single correction allowance.
