@@ -6,6 +6,8 @@ import path from "node:path";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { researchPlainText } from "@/lib/content/research-markdown";
 import { WATER_COURSE_HREF, WATER_COURSE_TITLE, WATER_ESSAY, WATER_MODULES } from "@/lib/content/water-we-swim-in";
+import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_SOURCES } from "@/lib/learning/water-resource-collection";
+import { WATER_COLLECTION_CASE, WATER_COLLECTION_OUTCOMES, WATER_COLLECTION_STEPS } from "@/lib/content/water-learning-collection";
 import type { Doc } from "./search";
 import clasCurriculum from "@/lib/content/clas-curriculum.json";
 import equityCurriculum from "@/lib/content/equity-everyday-decisions.json";
@@ -141,6 +143,28 @@ export function waterCourseDocs(scope: StaffProgramScope): Doc[] {
   WATER_MODULES.forEach(module => passages(module.body).forEach((text, index) => add(`${module.slug}-${index}`, `${WATER_COURSE_TITLE}: ${module.title}`, `${WATER_COURSE_HREF}/${module.slug}`, text)));
   WATER_ESSAY.sections.forEach(section => passages(section.body).forEach((text, index) => add(`essay-${section.id}-${index}`, `${WATER_COURSE_TITLE} essay: ${section.heading}`, `${WATER_COURSE_HREF}/essay`, text)));
   return out;
+}
+
+/** The collection is a distinct destination from the original six-module course. */
+export function waterCollectionDoc(scope: StaffProgramScope, published: readonly Doc[]): Doc {
+  const paths = new Set(published.filter(item => item.status === "approved").map(item => item.href.split(/[?#]/, 1)[0]));
+  // Profile passages currently cite their community landing page. Their presence
+  // still confirms that the corresponding full profile passed its publication gate.
+  for (const item of published) {
+    if (item.status === "approved" && item.type === "community_research" && /^profile-(american|minnesota)-/.test(item.id)) {
+      paths.add(`${item.href.split(/[?#]/, 1)[0]}/profile`);
+    }
+  }
+  const sources = WATER_RESOURCE_COLLECTION_SOURCES.filter(source => paths.has(source.resourcePath));
+  const title = "The Water We Swim In collection";
+  const summary = "A six-step learning collection connecting culture, access to services, and the DHS Equity Analysis Toolkit through the North Crossing appointment notice.";
+  const text = [title, summary, "Readings and tools in this collection:", ...sources.map(source => source.title),
+    "The collection connects these readings; the original course modules are supporting lessons.",
+    WATER_COLLECTION_CASE, ...WATER_COLLECTION_OUTCOMES, ...WATER_COLLECTION_STEPS.map((step, index) => `${index + 1}. ${step.title}: ${step.idea}`)].join("\n");
+  return doc(scope, { kind: "content", id: "water-collection-hub", title, href: WATER_RESOURCE_COLLECTION_PATH,
+    authority: "learning", type: "learning_navigation", summary, text,
+    tags: ["The Water We Swim In", "curriculum collection", "readings", ...sources.map(source => source.title)],
+    intents: ["intercultural"], graphRelated: [WATER_COURSE_HREF, ...sources.map(source => source.resourcePath)], payload: text });
 }
 
 /** Only the course files selected by the public player are current. Old hashed

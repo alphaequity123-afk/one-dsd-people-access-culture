@@ -12,7 +12,7 @@ import { loadStaffContentSnapshot, type StaffProgramScope } from "@/lib/content/
 import { MEASUREMENT_RESOURCE_ID } from "@/lib/content/measurement-practice";
 import type { Doc } from "./search";
 import { searchDocs, tokens } from "./search";
-import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curriculumDocs, selfDirectedCurriculumDocs, waterCourseDocs } from "./brain-content";
+import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curriculumDocs, selfDirectedCurriculumDocs, waterCourseDocs, waterCollectionDoc } from "./brain-content";
 import { publishedPodcastReadings } from "./podcast-reading";
 import { developmentModel, journeyHref } from "@/lib/program/development";
 import equityGoals from "@/lib/program/equity-goals.json";
@@ -221,6 +221,7 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   } catch (error) {
     console.error("ask_brain_content_unavailable", error instanceof Error ? error.message : "unknown");
   }
+  destinations.push(waterCollectionDoc(scope, destinations));
   // Courses One DSD refers elsewhere are not answer evidence or destinations.
   const index = { communityDocs, destinations: destinations.filter(publicRetrievalDocumentEligible).map(doc => ({ ...doc, id: publicProjectionAuditId(doc.id) })) };
   currentIndexes.set(scope, { key: scopedKey, index });
