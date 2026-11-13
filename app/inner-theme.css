@@ -1,29 +1,30 @@
-/* Inner-page theme (owner decision, 2026-11-08): every inner page takes the look of the
-   standards hub. A pale blue title band with a teal rule, a blue eyebrow line over a navy
-   heading, grey-blue notes with a teal edge, white tiles with a grey-blue border, navy panel
-   bars, and teal in place of the former gold and brown accents. The welcome page, the home
-   page and the government header keep their own presentation; nothing here reaches them. */
+/* Shared reading surfaces, title bands and controls for internal pages. */
 body.dsd-calm main .internal-page {
-  --page-accent: #008eaa;
-  --band: #eef4f8;
-  --note: #f4f7f9;
-  --tile-border: #8ea2b5;
+  background: #f3f5f8;
+  --page-accent: #005793;
+  --page-tint: #e5edf6;
+  --collection-surface: #e5edf6;
+  --collection-border: #cdd7e2;
+  --collection-accent: #a9bbce;
+  --band: #e5edf6;
+  --note: #e5edf6;
+  --tile-border: #cdd7e2;
   --tile-tint: #f1f5f9;
   --tile-selected: #dbe7f3;
-  --divider: #dbe4ec;
-  --color-line: #dbe4ec;
-  --pac-gold: #008eaa;
-  --pac-border: #8ea2b5;
-  --green-strong: #008eaa;
+  --divider: #a9bbce;
+  --color-line: #a9bbce;
+  --pac-gold: #005793;
+  --pac-border: #cdd7e2;
+  --green-strong: #005793;
 }
 
 /* Title band */
-body.dsd-calm main .internal-page .page-intro { background: var(--band); border-bottom: 6px solid var(--page-accent); color: #183247; }
+body.dsd-calm main .internal-page .page-intro { background: var(--band); border-bottom: 2px solid var(--divider); color: #183247; }
 body.dsd-calm main .internal-page .page-intro h1 { color: #003865; }
 body.dsd-calm main .internal-page .page-intro h1::before { display: none; }
 body.dsd-calm main .internal-page .page-intro .kicker { color: #005ea8; font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; margin-bottom: .85rem; }
 body.dsd-calm main .internal-page .page-intro p { color: #183247; }
-body.dsd-calm main .internal-page .dsd-stage[data-dsd-stage] > .dsd-page-heading { background: var(--band); border: 0; border-bottom: 6px solid var(--page-accent); border-radius: 0; }
+body.dsd-calm main .internal-page .dsd-stage[data-dsd-stage] > .dsd-page-heading { background: var(--band); border: 0; border-bottom: 2px solid var(--divider); border-radius: 0; }
 body.dsd-calm main .internal-page .community-editorial .community-eyebrow::before { background: var(--page-accent); }
 body.dsd-calm main .internal-page .community-editorial .community-eyebrow { color: #005ea8; }
 body.dsd-calm main .internal-page .internal-section-nav a[aria-current="page"] { text-decoration-color: var(--page-accent); }
@@ -31,7 +32,7 @@ body.dsd-calm main .internal-page .internal-section-nav a[aria-current="page"] {
 /* Notes and callouts */
 body.dsd-calm main .internal-page :is(.notice:not(.notice--warn):not(.notice--stop), .dsd-reading-note, .dsd-model-note,
   .dsd-guide-example, .development-practice, .brief-spotlight, .community-practice, .community-spotlight, .clas-note) {
-  background: var(--note); border: 0; border-left: 4px solid var(--page-accent); border-radius: 0; color: #183247;
+  background: var(--note); border: 0; border-left: 2px solid var(--page-accent); border-radius: 0; color: #183247;
 }
 body.dsd-calm main .internal-page .notice:not(.notice--warn):not(.notice--stop) { color: #45576a; }
 
@@ -40,10 +41,10 @@ body.dsd-calm main .internal-page :is(.card, .panel, .reading-panel, .dsd-work-c
   .clas-cards article, .community-search, .action-list, .dsd-planner-list, .dsd-planner-status, .dsd-planner-confirm) {
   background: #fff; border: 1px solid var(--tile-border); border-radius: 10px; box-shadow: none;
 }
-body.dsd-calm main .internal-page .dsd-work-card { border-top: 5px solid #003865; }
-body.dsd-calm main .internal-page .dsd-work-card + .dsd-work-card { border-top-color: #005ea8; }
-body.dsd-calm main .internal-page :is(.action-list, .community-search) { border-top: 4px solid var(--page-accent); border-radius: 0 0 10px 10px; }
-body.dsd-calm main .internal-page .dsd-resource-list article { border-left: 4px solid #005ea8; }
+body.dsd-calm main .internal-page .dsd-work-card { border-top: 1px solid var(--tile-border); }
+body.dsd-calm main .internal-page .dsd-work-card + .dsd-work-card { border-top-color: var(--tile-border); }
+body.dsd-calm main .internal-page :is(.action-list, .community-search) { border-top: 2px solid var(--page-accent); border-radius: 0 0 10px 10px; }
+body.dsd-calm main .internal-page .dsd-resource-list article { border-left: 2px solid var(--divider); }
 body.dsd-calm main .internal-page .clas-list { border-top-color: var(--tile-border); }
 body.dsd-calm main .internal-page .clas-list article { border-bottom-color: var(--divider); }
 body.dsd-calm main .internal-page table.data th { background: var(--band); color: #003865; border-bottom-color: var(--tile-border); }
@@ -69,3 +70,14 @@ body.dsd-calm main .internal-page .community-reading-theme > div { border-left-c
 body.dsd-calm main .internal-page .community-opening { border-bottom-color: var(--divider); }
 body.dsd-calm main .internal-page .community-download-links { border-color: var(--divider); }
 body.dsd-calm main .internal-page :is(a[href], button, summary, input, select, textarea, [role=tab]):focus-visible { outline-color: #005ea8; }
+
+/* The document column stays readable on wide displays. */
+body.dsd-calm main .internal-page :is(.reading-panel, .dsd-reading-note, .community-reading-layout) p {
+  max-width: 68ch;
+}
+body.dsd-calm main .internal-page .internal-section-nav a[aria-current="page"] {
+  background: transparent;
+}
+@media print {
+  body.dsd-calm main .internal-page { background: white; }
+}

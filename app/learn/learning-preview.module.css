@@ -1,5 +1,5 @@
 
-.page { background: #fff; }
+.page { background: #f3f5f8; --collection-surface: #e5edf6; --collection-border: #cdd7e2; --collection-accent: #a9bbce; }
 .page .hero > div > p:first-child { border: 0; padding: 0; background: #fff; border-radius: 0; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; color: #45576a; }
 .page .startHere, .page .startingPoints { border-radius: 6px; background: #fff; }
 .page .hero { background: #fff; border-bottom: 1px solid #c6cfd3; }
@@ -55,17 +55,18 @@
 .collectionLinks a { display:inline-flex; align-items:center; min-height:44px; color:#003865; font-weight:600; text-underline-offset:.2em; }
 @media(max-width:850px) { .startingPoints :global(.resource-entry-grid) { grid-template-columns:1fr; } }
 
-.themeSection { margin-block:2rem; }
-.themeSection > h2 { color:#183247; font-size:1.8rem; }
-.themeSection > p { max-width:75ch; line-height:1.7; color:#415966; }
-.themeGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); list-style:none; padding:0; gap:1rem; margin-block:1.5rem; }
-.themeGrid li { padding:1.25rem 1.5rem; background:#fff; border:1px solid #ccd6de; border-left:3px solid #008eaa; border-radius:.4rem; min-width:0; }
-.themeGrid h3 { margin:0; font-size:1.12rem; line-height:1.5; }
-.themeGrid a { color:#003865; text-underline-offset:.2em; }
-.themeGrid p { margin:.65rem 0 0; line-height:1.7; color:#415966; }
-@media(max-width:700px) { .themeGrid { grid-template-columns:1fr; } }
+.themeSection { margin-block: 2rem; }
+.themeSection > h2 { color: #172b3c; font-size: 1.8rem; font-weight: 600; }
+.themeSection > h2::after { content: ""; display: block; width: 36px; height: 2px; margin-top: 9px; border-radius: 1px; background: #005793; }
+.themeSection > p { max-width: 75ch; line-height: 1.7; color: #43566a; }
+.themeGrid { list-style: none; padding: 0; margin-block: 1.5rem; border: 1px solid #cdd7e2; border-radius: 20px; background: #fff; }
+.themeGrid li { padding: 16px; min-width: 0; }
+.themeGrid li + li { border-top: 1px solid #a9bbce; }
+.themeGrid h3 { margin: 0; font-size: 1.0625rem; font-weight: 600; line-height: 1.5; }
+.themeGrid a { color: #003865; text-underline-offset: .2em; }
+.themeGrid p { margin: 3px 0 0; line-height: 1.5; color: #43566a; }
 /* Inner-page theme: the Learn title band matches the standards hub. */
-.page .hero { background: #eef4f8; border-bottom: 6px solid #008eaa; }
+.page .hero { background: #e5edf6; border-bottom: 1px solid #a9bbce; }
 .hero h1::after { display: none; }
 .page .hero > div > p:first-child { background: transparent; color: #005ea8; font-weight: 700; letter-spacing: .15em; font-size: 12px; }
 @media print { .page .hero { background: #fff; border-bottom-width: 1px; } }

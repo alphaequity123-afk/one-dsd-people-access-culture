@@ -8,8 +8,8 @@
 .internal-section-nav a { display: inline-flex; align-items: center; min-height: 44px; padding-block: .5rem; color: #183247; font-size: .94rem; font-weight: 600; text-underline-offset: .3em; text-decoration-thickness: 1px; }
 .internal-section-nav a[aria-current="page"] { text-decoration-thickness: 3px; text-decoration-color: var(--page-accent); }
 body.dsd-calm main .internal-section-nav a[aria-current="page"] { background: #fff; color: #183247; border-color: transparent; }
-body.dsd-calm main .internal-page :is(h1,h2,h3) { font-weight: 650; }
-.internal-page :is(h1,h2,h3) { color: #183247; font-weight: 650; line-height: 1.22; overflow-wrap: break-word; }
+body.dsd-calm main .internal-page :is(h1,h2,h3) { font-weight: 600; }
+.internal-page :is(h1,h2,h3) { color: #183247; font-weight: 600; line-height: 1.22; overflow-wrap: break-word; }
 .internal-page h1 { letter-spacing: -.025em; }
 .internal-page :is(p,li) { line-height: 1.7; }
 .internal-page :is(h2,h3,section)[id] { scroll-margin-top: 2rem; }
@@ -29,16 +29,16 @@ body.dsd-calm main .internal-page :is(h1,h2,h3) { font-weight: 650; }
 .internal-page .dsd-next { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #cbd4dc; }
 .internal-page .action-list { margin-top: 1.5rem; padding: 1.25rem; border: 1px solid #cbd4dc; border-top: 3px solid var(--page-accent); border-radius: 6px; }
 .internal-page .action-list ul { list-style: none; padding: 0; }
-.internal-page .action-list li + li { border-top: 1px solid #dce2e7; margin-top: .5rem; padding-top: .5rem; }
+.internal-page .action-list li + li { border-top: 1px solid #a9bbce; margin-top: .75rem; padding-top: .75rem; }
 .internal-page .action-list a { display: inline-block; padding-block: .35rem; font-weight: 600; }
 .internal-page .field { margin-bottom: 1.25rem; }
-.internal-page .field label { font-weight: 650; }
+.internal-page .field label { font-weight: 600; }
 .internal-page .field :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea) { border-radius: 4px; border-color: #66798a; background: #fff; }
 .internal-page .field textarea { min-height: 8rem; line-height: 1.65; }
 .internal-page .label-pill { border-radius: 3px; font-size: .8rem; }
 .internal-page .notice { border-radius: 4px; line-height: 1.65; }
 .internal-page .community-index-layout { padding-top: 2.5rem; }
-.internal-page .community-editorial h1 { font-size: clamp(2rem,3.5vw,3.2rem); font-weight: 650; }
+.internal-page .community-editorial h1 { font-size: clamp(2rem,3.5vw,3.2rem); font-weight: 600; }
 .internal-page .community-search { border: 1px solid #b8c4cd; border-top: 3px solid #176b65; border-radius: 6px; padding: 1.25rem; }
 .internal-page .community-directory a { padding-inline: 0; font-size: 1.15rem; font-weight: 600; }
 .internal-page .community-reading-layout { gap: 2.5rem; }
