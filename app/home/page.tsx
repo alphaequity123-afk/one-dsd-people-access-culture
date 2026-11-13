@@ -19,6 +19,7 @@ import "./task-home.css";
 export default async function HomePage() {
   const upcoming = await upcomingFromCalendar();
   const ask = await prepareAsk();
+  const heroImage = <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />;
   return <div className="dsd-home od">
     <section className="home-hero" aria-labelledby="home-title">
       <div className="w home-title">
@@ -26,9 +27,7 @@ export default async function HomePage() {
         <p>Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.</p>
         <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site</Link></p>
       </div>
-      <HeroMotion>
-        <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />
-      </HeroMotion>
+      <HeroMotion src="/videos/one-dsd-hero.mp4">{heroImage}</HeroMotion>
     </section>
 
     <section className="blk" aria-label="Main areas"><div className="w doors">
