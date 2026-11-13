@@ -1,15 +1,16 @@
 /* Shared treatment for portable lessons and working documents. */
-body[data-page-purpose] { background: #f3f5f8; color: #172b3c; --blue: #003865; --blue-mid: #005ea8; --green-strong: #005793; --line: #cdd7e2; --radius: 6px; }
-body[data-page-purpose] main { max-width: 1160px; margin-inline: auto; padding-block: 2rem 3rem; min-width: 0; }
+body[data-page-purpose] { background: #f3f5f8; color: #172b3c; font-family: Aptos, "Segoe UI", system-ui, sans-serif; --blue: #003865; --blue-mid: #005ea8; --green-strong: #005793; --line: #cdd7e2; --radius: 6px; }
+body[data-page-purpose] main { max-width: 1160px; margin-inline: auto; padding-block: clamp(30px, 5vw, 56px) clamp(48px, 7vw, 80px); min-width: 0; }
 body[data-page-purpose] main :is(h1,h2,h3) { color: #172b3c; font-weight: 600; line-height: 1.25; overflow-wrap: break-word; }
 body[data-page-purpose] main h1 { font-size: clamp(2rem,3.5vw,3rem); max-width: 30ch; letter-spacing: -.025em; }
 body[data-page-purpose] main :is(p,li) { line-height: 1.7; }
+body[data-page-purpose] main :is(p, li > p) { max-width: 68ch; }
 body[data-page-purpose] main a { text-underline-offset: .24em; }
 body[data-page-purpose] main > nav { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid #a9bbce; }
 body[data-page-purpose] :is(a,button,input,select,textarea,summary):focus-visible { outline: 3px solid #005ea8; outline-offset: 4px; box-shadow: 0 0 0 3px #fff; }
-body[data-page-purpose] main :is(.sheet,.eat-card,.eat-index-card,.card,.panel,.stage) { border-radius: 6px; box-shadow: none; border-color: #cdd7e2; background: #fff; }
-body[data-page-purpose] main :is(.eat-card,.eat-index-card) { border-top: 3px solid #a9bbce; padding: 1.35rem; }
-body[data-page-purpose] main .eat-grid, body[data-page-purpose] main .eat-index-grid { gap: 1.25rem; }
+body[data-page-purpose] main :is(.sheet,.eat-card,.eat-index-card,.card,.panel,.stage) { border-radius: 16px; box-shadow: none; border-color: #cdd7e2; background: #fff; }
+body[data-page-purpose] main :is(.eat-card,.eat-index-card) { border-top: 3px solid #a9bbce; padding: clamp(1.1rem, 2.5vw, 1.75rem); }
+body[data-page-purpose] main .eat-grid, body[data-page-purpose] main .eat-index-grid { gap: clamp(1.25rem, 3vw, 2rem); }
 body[data-page-purpose] main .eat-tag { border-radius: 3px; }
 body[data-page-purpose] main :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea) { max-width: 100%; box-sizing: border-box; border-radius: 4px; border-color: #66798a; color: #183247; background: #fff; font: inherit; }
 body[data-page-purpose] main textarea { line-height: 1.65; resize: vertical; }
@@ -32,7 +33,7 @@ body[data-page-purpose] .dsd-header .dsd-nav a[aria-current] { border-bottom-col
 @media print { body[data-page-purpose] main { max-width: none; padding: 0; width: 100%; } }
 
 
-body[data-page-purpose="audio"] { max-width: 1160px; padding: 1.5rem; margin: auto; font: 17px/1.65 "Segoe UI",Arial,sans-serif; background: #f3f5f8; color: #172b3c; }
+body[data-page-purpose="audio"] { max-width: 1160px; padding: 1.5rem; margin: auto; font: 17px/1.65 Aptos, "Segoe UI", system-ui, sans-serif; background: #f3f5f8; color: #172b3c; }
 .audio-return { display: flex; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 1px solid #cdd7e2; }
 .audio-return a { color: #003865; font-weight: 600; text-underline-offset: .25em; }
 body[data-page-purpose="audio"] :is(.audio-list,.player-table) { border: 1px solid #cdd7e2; border-top: 2px solid #a9bbce; border-radius: 6px; box-shadow: none; }
