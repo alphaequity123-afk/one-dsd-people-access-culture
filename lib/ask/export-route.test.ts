@@ -1,7 +1,13 @@
 import { afterEach, expect, it, vi } from "vitest";
 import { NextRequest } from "next/server";
 vi.mock("@/lib/intelligence/clone/config", () => ({ cloneAgentsEnabled: () => true }));
-vi.mock("@/lib/security/rate-limit", () => ({ consumeRequestLimit: async () => ({ allowed: true }) }));
+vi.mock("@/lib/security/rate-limit", async () => {
+  const { assertRuntimeRateLimitRequest } = await import("@/lib/trust/work-object-contract");
+  return { consumeRequestLimit: async (_request: unknown, options: { scope: string; limit: number; windowSeconds: number }) => {
+    assertRuntimeRateLimitRequest(options.scope, "a".repeat(64), options.limit, options.windowSeconds);
+    return { allowed: true };
+  } };
+});
 vi.mock("@/lib/downloads/render", () => ({
   renderResourceDocument: vi.fn(async () => Buffer.from("test-document")),
   downloadContentType: () => "application/vnd.openxmlformats-officedocument.wordprocessingml.document",

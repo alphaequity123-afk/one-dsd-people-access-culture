@@ -438,12 +438,12 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
         <h3 className="text-base font-medium">Continue exploring</h3>
         <ul className="mt-3 space-y-2 list-none p-0">
           {answer.followUpQuestions.map(question => <li key={question}>
-            <button type="button" disabled={busy} onClick={() => onFollowUp(question)} className="min-h-11 w-full rounded border border-slate-300 px-4 py-3 text-left text-[color:var(--navy)] hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50">{question}</button>
+            <button type="button" disabled={busy} onClick={() => onFollowUp(question)} className="min-h-11 w-full rounded border border-slate-300 px-4 py-3 text-left text-[color:var(--blue)] hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50">{question}</button>
           </li>)}
         </ul>
       </section> : null}
 
-      {answer.practiceArtifact ? <PracticeDraftLink artifact={answer.practiceArtifact} context={context} copy={copy} /> : null}
+      {answer.practiceArtifact && !answer.workProduct ? <PracticeDraftLink artifact={answer.practiceArtifact} context={context} copy={copy} /> : null}
 
       {answer.pathSuggestion ? (
         <p className="mt-3 text-sm">

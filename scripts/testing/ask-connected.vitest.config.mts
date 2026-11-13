@@ -7,6 +7,7 @@ export default defineConfig({
   test: { environment: 'node', include: [
     'lib/ask/work-product.test.ts',
     'lib/ask/export-route.test.ts',
+    'lib/intelligence/clone/identity-answer.test.ts',
     'lib/intelligence/research/open-scope.test.ts',
     'lib/intelligence/research-preference.test.ts',
     'components/ask-client-live.test.tsx',

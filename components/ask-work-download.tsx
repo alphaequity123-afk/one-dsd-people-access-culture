@@ -11,15 +11,16 @@ export function AskWorkDownload({ work }: { work: AskWorkProduct }) {
     try {
       const response = await fetch("/api/ask/export", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(work) });
       if (!response.ok) {
-        const result = await response.json();
-        throw new Error(typeof result.error === "string" ? result.error : "The download could not finish. Please try again.");
+        const result = await response.json().catch(() => null);
+        setError(typeof result?.error === "string" ? result.error : "The download could not finish. Your draft is still here; please try again.");
+        return;
       }
       const url = URL.createObjectURL(await response.blob());
       const link = document.createElement("a");
       link.href = url; link.download = downloadFileName(work.title, work.format);
       document.body.appendChild(link); link.click(); link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 30_000);
-    } catch (error) { setError(error instanceof Error ? error.message : "Please try downloading again."); }
+    } catch { setError("The download could not finish. Your draft is still here; please try again."); }
     finally { setBusy(false); }
   }
   return <section className="my-6 border-y border-slate-300 py-5" aria-label="Your draft">
