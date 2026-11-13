@@ -18,7 +18,7 @@
  */
 import { getStore } from "../memory/store";
 import { getPolicy } from "../policy";
-import type { ResearchProviderId } from "./providers";
+import type { ResearchProviderId, WebResearchProviderId } from "./providers";
 import { assertCanonicalOperationalInstant } from "@/lib/privacy/operational-retention";
 import {
   assertOpaqueTraceId,
@@ -31,7 +31,7 @@ export type ResearchPolicy = {
   enabled: boolean;
   /** Automatic escalation when internal grounding is missing, or only on explicit request. */
   mode: "auto" | "on_request" | "off";
-  provider_order: ResearchProviderId[];
+  provider_order: WebResearchProviderId[];
   daily_request_cap: number;
   monthly_usd_cap: number;
   /** Domain preferences passed to the provider when supported. */
@@ -44,7 +44,7 @@ export type ResearchPolicy = {
 type LegacyResearchProviderId = "perplexity_direct" | "vercel_gateway";
 export type ResearchPolicyPatch = Partial<Omit<ResearchPolicy, "provider_order">> & {
   /** Legacy values are accepted only so an existing stored policy can migrate safely. */
-  provider_order?: Array<ResearchProviderId | LegacyResearchProviderId>;
+  provider_order?: Array<WebResearchProviderId | LegacyResearchProviderId>;
 };
 
 /**
@@ -83,11 +83,11 @@ export const NO_CAP = 0;
 
 const RESEARCH_POLICY_ID = "research_policy";
 
-function normalizeProviderOrder(value: unknown): ResearchProviderId[] {
+function normalizeProviderOrder(value: unknown): WebResearchProviderId[] {
   if (!Array.isArray(value)) return [...DEFAULT_RESEARCH_POLICY.provider_order];
-  const normalized: ResearchProviderId[] = [];
+  const normalized: WebResearchProviderId[] = [];
   for (const raw of value) {
-    const id: ResearchProviderId | null =
+    const id: WebResearchProviderId | null =
       raw === "perplexity_agent" || raw === "perplexity_direct" || raw === "vercel_gateway"
         ? "perplexity_agent"
         : raw === "openai_web"
@@ -195,7 +195,7 @@ export async function recordUsage(ev: Omit<ResearchUsageEvent, "id">): Promise<R
   }
   // Keep the existing opaque storage contract while distinguishing two provider
   // attempts for the same question and trace, even within the same second.
-  const providerMask = { perplexity_agent: 0, openai_web: 1, fixture: 2 }[ev.provider];
+  const providerMask = { perplexity_agent: 0, openai_web: 1, fixture: 2, consensus: 3 }[ev.provider];
   const suffix = (parseInt(ev.trace_id.slice(-4), 16) ^ providerMask).toString(16).padStart(4, "0");
   const id = `ru_${ev.at.replace(/[^0-9]/g, "").slice(0, 14)}_${ev.query_hash.slice(0, 6)}_${suffix}`;
   const full: ResearchUsageEvent = {

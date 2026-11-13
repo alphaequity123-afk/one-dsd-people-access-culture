@@ -19,6 +19,7 @@ export default defineConfig({
     'lib/intelligence/agents/local-evidence.test.ts',
     'lib/intelligence/research/citation-join.test.ts',
     'lib/intelligence/research/fallback.test.ts',
+    'lib/intelligence/research/consensus.test.ts',
     'lib/intelligence/research/source-context.test.ts',
     'lib/intelligence/research/usage-ledger.test.ts',
     'lib/intelligence/learning/resource-learning-assistant.test.ts',

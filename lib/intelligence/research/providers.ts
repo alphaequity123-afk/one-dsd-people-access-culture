@@ -30,7 +30,8 @@ function enforceResearchSourcePolicy(value: unknown): void {
   }
 }
 
-export type ResearchProviderId = "perplexity_agent" | "openai_web" | "fixture";
+export type WebResearchProviderId = "perplexity_agent" | "openai_web" | "fixture";
+export type ResearchProviderId = WebResearchProviderId | "consensus";
 
 /** Log the vendor's status and a redacted error-body excerpt, then throw the finite code. */
 async function failedResearchResponse(provider: string, model: string, response: Response, code: string): Promise<never> {
@@ -480,7 +481,7 @@ function allowedDomain(hostname: string, allowed: string[]): boolean {
   return filters.some((domain) => host === domain || host.endsWith(`.${domain}`));
 }
 
-function externalSource(raw: RawSource, allowed: string[] = []): ExternalSource | null {
+export function externalSource(raw: RawSource, allowed: string[] = []): ExternalSource | null {
   const url = safeUrl(raw.url);
   if (!url || isExcludedResearchUrl(url.toString()) || !allowedDomain(url.hostname, allowed)) return null;
   return {
@@ -1017,18 +1018,18 @@ export class OpenAIWebResearchProvider implements ResearchProvider {
   }
 }
 
-const REGISTRY: Record<ResearchProviderId, ResearchProvider> = {
+const REGISTRY: Record<WebResearchProviderId, ResearchProvider> = {
   perplexity_agent: new PerplexityAgentProvider(),
   openai_web: new OpenAIWebResearchProvider(),
   fixture: new FixtureProvider(),
 };
 
-export function getResearchProvider(id: ResearchProviderId): ResearchProvider {
+export function getResearchProvider(id: WebResearchProviderId): ResearchProvider {
   return REGISTRY[id];
 }
 
 /** First configured provider in the owner's order. */
-export function resolveResearchProvider(order: ResearchProviderId[]): ResearchProvider | null {
+export function resolveResearchProvider(order: WebResearchProviderId[]): ResearchProvider | null {
   for (const id of order) {
     const provider = REGISTRY[id];
     if (provider?.configured()) return provider;

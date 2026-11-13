@@ -13,6 +13,7 @@ export default defineConfig({
     "lib/intelligence/retrieval/verified-draft.test.ts",
     "lib/intelligence/retrieval/generated-evidence.test.ts",
     "lib/intelligence/retrieval/evidence-passages.test.ts",
+    "lib/intelligence/retrieval/named-source-coverage.test.ts",
     "lib/ask/source-links.test.ts",
     "lib/ask/progress-stream.test.ts",
   ], testTimeout: 15000 },

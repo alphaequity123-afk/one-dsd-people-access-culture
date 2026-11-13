@@ -527,7 +527,7 @@ function validResearchUsage(value: ObjectValue): boolean {
     isString(value.id) && RESEARCH_USAGE_ID.test(value.id)
     && isCanonicalUtcInstant(value.at)
     && isString(value.provider)
-    && new Set(["perplexity_agent", "openai_web", "fixture"]).has(value.provider)
+    && new Set(["perplexity_agent", "openai_web", "fixture", "consensus"]).has(value.provider)
     && isResearchModelId(value.model)
     && isString(value.depth)
     && new Set(["current_web", "deep_research"]).has(value.depth)
