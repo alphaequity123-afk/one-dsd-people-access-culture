@@ -27,11 +27,10 @@ describe("evidence-aware final answer review contract", () => {
 
   it("enforces only supplied program and public reference labels in review corrections", () => {
     const request = buildAnswerEvidenceReview({ question: "PACER?", draft: {}, sources, sourceOnly: false, research: { status: "used", answer: "Provider's synthesis", sources: publicSources } });
-    const checks = { unitChecks: [], qualificationChecks: [{ id: "Q1", assessment: "not_applicable", answerQuotes: [], reason: "The ADA condition is outside the PACER question." }] };
     const issue = { location: "evidenceClaims[0]", problem: "wrong_reference", explanation: "The ADA passage does not establish PACER services.", sourceRefs: ["P1"] };
-    expect(request.schema.safeParse({ ...checks, verdict: "revise", issues: [issue] }).success).toBe(true);
-    expect(request.schema.safeParse({ ...checks, verdict: "revise", issues: [{ ...issue, sourceRefs: ["S1"] }] }).success).toBe(false);
-    expect(request.schema.safeParse({ ...checks, verdict: "revise", issues: [{ ...issue, sourceRefs: ["https://invented.gov"] }] }).success).toBe(false);
+    expect(request.schema.safeParse({ verdict: "revise", issues: [issue] }).success).toBe(true);
+    expect(request.schema.safeParse({ verdict: "revise", issues: [{ ...issue, sourceRefs: ["S1"] }] }).success).toBe(false);
+    expect(request.schema.safeParse({ verdict: "revise", issues: [{ ...issue, sourceRefs: ["https://invented.gov"] }] }).success).toBe(false);
     expect(JSON.parse(request.user).publicResearch.sources[0].snippet).toContain("families");
   });
 
@@ -44,9 +43,8 @@ describe("evidence-aware final answer review contract", () => {
 
   it("can review general answers without fabricating reference labels", () => {
     const request = buildAnswerEvidenceReview({ question: "Why are there seasons?", draft: { shortAnswer: "Earth's axial tilt changes sunlight." }, sources: [], sourceOnly: false });
-    const checks = { unitChecks: [{ id: "U1", assessment: "general_knowledge", sourceQuotes: [], finding: "This is stable general knowledge." }], qualificationChecks: [] };
-    expect(request.schema.safeParse({ ...checks, verdict: "pass", issues: [] }).success).toBe(true);
-    expect(request.schema.safeParse({ ...checks, verdict: "revise", issues: [{ location: "shortAnswer", problem: "unsupported_claim", explanation: "Review finding", sourceRefs: ["S1"] }] }).success).toBe(false);
+    expect(request.schema.safeParse({ verdict: "pass", issues: [] }).success).toBe(true);
+    expect(request.schema.safeParse({ verdict: "revise", issues: [{ location: "shortAnswer", problem: "unsupported_claim", explanation: "Review finding", sourceRefs: ["S1"] }] }).success).toBe(false);
   });
 
   it("does not accept a pass that simultaneously reports missing policy conditions", () => {
