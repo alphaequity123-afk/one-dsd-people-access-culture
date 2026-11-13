@@ -1,27 +1,50 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PARTNER_GROUP_LABEL, PUBLIC_PARTNERS, STATE_AGENCIES, agencyDisplayName } from "@/lib/content/state-agencies";
-import { AgencyDirectory } from "@/components/agency-directory";
+import { PARTNER_GROUP_LABEL, PUBLIC_PARTNERS, STATE_AGENCIES, STATE_AGENCY_SOURCE, agencyDisplayName, agencyPageHref, type PublicPartner, type StateAgency } from "@/lib/content/state-agencies";
+import { catMatches, catOneLine, catPaginate, catParam, catWords } from "@/lib/cat-paging";
+import { CatList, CatPager, CatResultStatus, CatRow } from "@/components/cat-list";
 
-export const metadata: Metadata = { title: "State of Minnesota agencies" };
+export const metadata: Metadata = { title: "Minnesota agencies and partners" };
 
-/** Every State of Minnesota agency, board and council, from the state's official directory, linked to its own site. */
-export default function MinnesotaAgenciesPage() {
-  const agencies = STATE_AGENCIES.map(agency => ({
-    id: agency.id, name: agencyDisplayName(agency.name), href: agency.href, description: agency.description,
-    connected: Boolean(agency.topics) && !agency.linkOnly,
+const base = "/minnesota-agencies";
+type Query = { q?: string | string[]; view?: string | string[]; page?: string | string[] };
+
+export default async function MinnesotaAgenciesPage({ searchParams }: { searchParams: Promise<Query> }) {
+  const params = await searchParams;
+  const q = catParam(params.q);
+  const partnerView = catParam(params.view) === "partners";
+  const directory: readonly (StateAgency & { group?: PublicPartner["group"] })[] = partnerView ? PUBLIC_PARTNERS : STATE_AGENCIES;
+  const entries = directory.map(agency => ({
+    ...agency, name: agencyDisplayName(agency.name),
+    group: agency.group ? PARTNER_GROUP_LABEL[agency.group] : undefined,
   })).sort((a, b) => a.name.localeCompare(b.name));
-  const partners = PUBLIC_PARTNERS.map(partner => ({
-    id: partner.id, name: partner.name, href: partner.href, description: partner.description,
-    connected: Boolean(partner.topics), group: PARTNER_GROUP_LABEL[partner.group],
-  }));
-  return <div className="calm">
-    <h1>State of Minnesota agencies</h1>
-    <p className="calm-lede">Every agency, board and council in the state&apos;s official directory, with a link to its own website. Search the list, or open an agency&apos;s connections to see the courses, policies and practices that relate to its work.</p>
-    <AgencyDirectory agencies={agencies} />
-    <h2 id="partners">Counties, the Legislature and federal partners</h2>
-    <p>The county lead agencies that serve people locally, the Minnesota Legislature, and the federal agencies whose rules shape the work. Also see the <Link href="/community-outreach/county-agencies">county agency finder</Link> and <Link href="/explore/community/county-lead-agencies">how the county lead agencies connect to program work</Link>.</p>
-    <AgencyDirectory agencies={partners} grouped label="Find a county or partner" placeholder="For example: Hennepin, Medicaid, civil rights" />
-    <p className="calm-note">The list follows the official directory at <a href="https://mn.gov/portal/government/state/agencies-boards-commissions/">mn.gov</a>. Also see <Link href="/explore/community/state-agencies">how the agencies connect to this program</Link>.</p>
+  const words = catWords(q);
+  const page = catPaginate(entries.filter(agency => catMatches(words, agency.name, agency.description)), catParam(params.page), 14);
+  const noun = partnerView ? "partner" : "agency";
+  const nouns = partnerView ? "partners" : "agencies";
+  return <div className="pilot-topic">
+    <header><h1>{partnerView ? "Counties, the Legislature and federal partners" : "State of Minnesota agencies"}</h1>
+      <p>{partnerView ? "Find county lead agencies, the Minnesota Legislature, and federal partners." : "Find state agencies, boards, and councils and read their directory entries in One DSD."}</p>
+    </header>
+    <section aria-label="Find an agency or partner">
+      <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Agency directory">
+        <Link href={base} aria-current={partnerView ? undefined : "page"}>State agencies</Link>
+        <Link id="partners" href={base + "?view=partners"} aria-current={partnerView ? "page" : undefined}>Counties and partners</Link>
+      </nav>
+      <form className="pilot-topic-search" action={base} role="search">
+        {partnerView ? <input type="hidden" name="view" value="partners" /> : null}
+        <label htmlFor="agency-q">Find a {noun === "agency" ? "state agency" : "partner"}</label>
+        <div><input id="agency-q" name="q" type="search" defaultValue={q} /><button type="submit">Search</button></div>
+      </form>
+      <CatResultStatus page={page} noun={noun} nouns={nouns} of={entries.length} />
+      {page.items.length ? <CatList label={nouns}>{page.items.map(agency => <CatRow key={agency.id}
+        title={<Link href={agencyPageHref(agency.id)}>{agency.name}</Link>}
+        line={catOneLine(agency.description)} meta={agency.group} />)}</CatList> : null}
+      <CatPager page={page} basePath={base} params={{ q, view: partnerView ? "partners" : "" }} label="Directory result pages" />
+    </section>
+    <section aria-label="Related directories">
+      {partnerView ? <p><Link href="/community-outreach/county-agencies">Find a county lead agency by county</Link></p> : <p>Directory source: <a href={STATE_AGENCY_SOURCE}>State of Minnesota agencies, boards and commissions</a>.</p>}
+      <p><Link href={partnerView ? "/explore/community/county-lead-agencies" : "/explore/community/state-agencies"}>See connections to program work</Link></p>
+    </section>
   </div>;
 }

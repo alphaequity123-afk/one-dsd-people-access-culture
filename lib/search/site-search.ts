@@ -7,9 +7,9 @@ import "server-only";
 import { recentStaffDocs, recentProgramResources } from "@/lib/intelligence/retrieval/ask-library";
 import { searchDocs, type Doc } from "@/lib/intelligence/retrieval/search";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
-import { PUBLIC_BODIES, agencyDisplayName, agencyNodeId } from "@/lib/content/state-agencies";
+import { PUBLIC_BODIES, agencyDisplayName, agencyNodeId, agencyPageHref } from "@/lib/content/state-agencies";
 import { pageArea, type PageArea } from "@/lib/program/page-purpose";
-import { statePageDocs } from "@/lib/search/state-pages";
+import { statePageDocs, stateReadingHref } from "@/lib/search/state-pages";
 
 export type SiteSearchResult = { id: string; title: string; href: string; excerpt: string; area: PageArea | "state"; external: boolean };
 
@@ -49,8 +49,10 @@ export async function siteSearch(query: string, scope: StaffProgramScope, limit 
     const href = hit.href.split("#")[0];
     if (seen.has(href)) continue;
     seen.add(href);
-    const external = /^https?:\/\//.test(hit.href);
-    out.push({ id: hit.id, title: hit.title, href: hit.href, excerpt: hit.excerpt, area: external ? "state" : pageArea(href), external });
+    const originalIsExternal = /^https?:\/\//.test(hit.href);
+    const [kind, id] = hit.id.split(":", 2);
+    const destination = kind === "agency" ? agencyPageHref(id) : kind === "state-page" ? stateReadingHref(id) : hit.href;
+    out.push({ id: hit.id, title: hit.title, href: destination, excerpt: hit.excerpt, area: originalIsExternal ? "state" : pageArea(href), external: /^https?:\/\//.test(destination) });
     if (out.length === limit) break;
   }
   return out;

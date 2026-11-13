@@ -1,4 +1,3 @@
-import { courseLink } from "@/lib/content/courses/published";
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./sources.module.css";
@@ -7,7 +6,7 @@ import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/edit
 import { stringValue } from "@/lib/content/staff-surface-registry";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { ProgramContextNote } from "@/components/program-context";
-import { AUTHORITY_GROUP_LABEL, registerSourcesForStaff, sourceAnchor, type AuthorityGroup, type RegisterSource } from "@/lib/content/source-register";
+import { AUTHORITY_GROUP_LABEL, registerReadingHref, registerSourcesForStaff, sourceAnchor, type AuthorityGroup, type RegisterSource } from "@/lib/content/source-register";
 import { ResourceDownloads } from "@/components/resource-downloads";
 import { ResourceFormatLinks } from "@/components/resource-format-links";
 import { ResourceThemeNav } from "@/components/resource-theme-nav";
@@ -89,7 +88,7 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
         <CatResultStatus page={page} noun="source" nouns="sources" of={allCount} />
         {page.items.length ? <CatList label="Sources">
           {page.items.map(({ group, source }) => <CatRow key={source.sourceId} id={sourceAnchor(source)}
-            title={<a href={courseLink(source.href!)} rel="noreferrer">{source.title}</a>}
+            title={<Link href={registerReadingHref(source)}>{source.title}</Link>}
             meta={[source.host?.replace(/^www\./, ""), AUTHORITY_GROUP_LABEL[group]].filter(Boolean).join(" · ")} />)}
         </CatList> : null}
         <CatPager page={page} basePath={BASE} params={choices} label="Source result pages" />

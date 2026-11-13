@@ -23,7 +23,7 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
   const kind = getPolicyKind(policy.kind);
   const related = relatedPolicies(policy);
 
-  return <article className={styles.page}>
+  return <article className={`${styles.page} pilot-reading-width`}>
     <p className={`${styles.kicker} ${styles.noPrint}`}><Link href="/community-outreach">Community Outreach and Engagement</Link> · <Link href="/community-outreach/policies">Policies that shape disability services</Link></p>
     {kind ? <p className={styles.kicker}>{kind.title}</p> : null}
     <h1 className={styles.title}>{policy.title}</h1>
@@ -41,7 +41,7 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
           <tr><th scope="row">Effective</th><td>{policy.effective ? formatPolicyDate(policy.effective) : "Not stated on the source"}</td></tr>
           <tr><th scope="row">Last updated</th><td>{policy.lastUpdated ? formatPolicyDate(policy.lastUpdated) : "Not shown on the source"}</td></tr>
           <tr><th scope="row">Facts checked</th><td>{formatPolicyDate(policy.checked)}</td></tr>
-          <tr><th scope="row">Source</th><td><a href={policy.source.url}>{policy.source.title}</a>{policy.source.date ? ` (${formatPolicyDate(policy.source.date)})` : ""}<br /><span className={styles.small}>{policy.source.url}</span></td></tr>
+          <tr><th scope="row">Source</th><td><a href={policy.source.url}>{policy.source.title}</a>{policy.source.date ? ` (${formatPolicyDate(policy.source.date)})` : ""}<br /><span className={`${styles.small} break-all`} >{policy.source.url}</span></td></tr>
         </tbody>
       </table>
     </section>

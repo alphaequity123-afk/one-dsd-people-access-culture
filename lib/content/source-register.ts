@@ -92,6 +92,10 @@ export function sourceAnchor(source: Pick<RegisterSource, "sourceId">): string {
   return `source-${slug ? slug + "-" : ""}${shortHash(source.sourceId)}`;
 }
 
+const READABLE_SOURCES = new Map(SOURCE_REGISTER.sources.filter(source => source.kind === "external" && source.href).map(source => [sourceAnchor(source), source]));
+export function registerReading(id: string): RegisterSource | undefined { return READABLE_SOURCES.get(id); }
+export function registerReadingHref(source: Pick<RegisterSource, "sourceId">): string { return `/source-reading/${sourceAnchor(source)}`; }
+
 export function getSource(sourceId: string): RegisterSource | undefined { return SOURCE_BY_ID.get(sourceId); }
 export function findSourceByHref(href: string | undefined | null): RegisterSource | undefined {
   const normalized = normalizeSourceHref(href);
