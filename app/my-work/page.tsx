@@ -16,10 +16,23 @@ import { AskHistoryNote } from "@/components/ask-history-note";
 
 export const metadata: Metadata = { title: "My Work" };
 
-export default async function MyWorkPage() {
+export default async function MyWorkPage({ searchParams }: { searchParams?: Promise<{ view?: string }> }) {
   const scope = await requestedContentScope();
   const surface = await prepareEditableSurface("my-work.page");
   const copy = surface.values;
+  if (!surface.canEdit && (await searchParams)?.view !== "workspace") return <EditableSurfaceRegion surface={surface} className="pilot-topic">
+    <header><h1>{stringValue(copy, "introTitle")}</h1><p>Return to a plan, a reflection, or learning you want to continue.</p></header>
+    <section aria-labelledby="pilot-work">
+      <h2 id="pilot-work">Put learning to work</h2>
+      <ul className="pilot-topic-rows">
+        <li><Link href="/my-work/action-plan"><strong>Your action plans</strong><span>Choose a change to try and a time to look back.</span></Link></li>
+        <li><Link href="/my-work/plan"><strong>Your practice plans</strong><span>Keep a plan for each piece of work.</span></Link></li>
+        <li><Link href="/my-work/reflections"><strong>Your reflection notebook</strong><span>Record what happened and what you learned.</span></Link></li>
+        <li><Link href="/my-work/decision-records"><strong>Decision records</strong><span>Record why a decision was made.</span></Link></li>
+        <li><Link href="/my-work?view=workspace"><strong>Your saved work and learning</strong><span>Open saved resources, course progress, and other workspace tools.</span></Link></li>
+      </ul>
+    </section>
+  </EditableSurfaceRegion>;
   return (
     <EditableSurfaceRegion surface={surface}>
       <PageIntro
@@ -28,6 +41,7 @@ export default async function MyWorkPage() {
         lede="Everything you choose to keep lives here: the resources you saved, the plans you are working on, your reflection, and the courses you left off in. It stays on this computer, private to you."
       />
       <div className="wrap space-y-6 py-8">
+        <Link href="/my-work">Back to My Work</Link>
         <ExplainerVideo id="learning-journey" />
         <section aria-labelledby="put-to-work-title">
           <h2 id="put-to-work-title" className="text-2xl font-bold">Put learning to work</h2>

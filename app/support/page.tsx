@@ -11,7 +11,7 @@ import { ExplainerVideo } from "@/components/explainer-video";
 
 export const metadata: Metadata = { title: ROUTES.support.label };
 
-export default async function SupportPage() {
+export default async function SupportPage({ searchParams }: { searchParams?: Promise<{ view?: string }> }) {
   const surface = await prepareEditableSurface("support.page");
   const copy = surface.values;
   const doors = [ROUTES.ask.href, ROUTES.library.href, ROUTES.rightPerson.href, ROUTES.areas.href].map((href, index) => ({
@@ -19,10 +19,26 @@ export default async function SupportPage() {
     title: stringValue(copy, `door${index}Title`),
     description: stringValue(copy, `door${index}Description`),
   })).filter(door => door.href !== ROUTES.ask.href);
+  if ((await searchParams)?.view !== "guidance") return (
+    <EditableSurfaceRegion surface={surface} className="pilot-topic">
+      <header>
+        <h1>{stringValue(copy, "introTitle")}</h1>
+        <p>Find a practical starting point, or connect with the person who can help you take the next step.</p>
+      </header>
+      <section aria-label="Support resources">
+        <ul className="pilot-topic-rows">
+          {doors.map(door => <li key={door.href}><Link href={door.href}><strong>{door.title}</strong><span>{door.description}</span></Link></li>)}
+          <li><Link href="/support/directory"><strong>DHS offices and guidance</strong></Link></li>
+          <li><Link href="/support?view=guidance"><strong>When another team can help</strong><span>Find guidance for referrals, access barriers and questions about support.</span></Link></li>
+        </ul>
+      </section>
+    </EditableSurfaceRegion>
+  );
   return (
     <EditableSurfaceRegion surface={surface}>
-      <PageIntro kicker={stringValue(copy, "introKicker")} title={stringValue(copy, "introTitle")} lede="Find a practical starting point, or connect with the person who can help you take the next step." />
+      <PageIntro title="When another team can help" />
       <div className="wrap space-y-8 py-8">
+        <Link href="/support">Back to Support</Link>
         <ProgramContextNote />
         <ExplainerVideo id="right-person" />
         <ul className={styles.supportDirectory}>

@@ -17,9 +17,12 @@ export function InternalPage({ children }: { children: React.ReactNode }) {
   // The Ask page is a tool, not a section landing page, so it does not repeat the section row (owner decision, 2026-11-11).
   const landing = pathname !== "/ask" && PAGE_AREAS[area].links.some(([, href]) => href.split("#")[0] === pathname);
   return <div className="internal-page" data-page-purpose={area} data-tone={tone}>
-    {!shared && landing && <nav className="internal-section-nav dsd-shell" aria-label={`${PAGE_AREAS[area].label} pages`}>
+    {!shared && landing && <details className="pilot-section-links dsd-shell">
+      <summary>More in {PAGE_AREAS[area].label}</summary>
+      <nav className="internal-section-nav" aria-label={`${PAGE_AREAS[area].label} pages`}>
       {PAGE_AREAS[area].links.map(([label, href]) => <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined}>{label}</Link>)}
-    </nav>}
+      </nav>
+    </details>}
     {children}
   </div>;
 }

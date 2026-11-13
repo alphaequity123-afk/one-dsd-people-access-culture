@@ -1,5 +1,5 @@
 import { WaterCollectionFeature } from "@/components/water-collection-feature";
-import { WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
+import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import { podcastMatchesTheme } from "@/lib/content/audio-organization";
 import { COLLABORATION_FOCUSES, collaborationCourses, collaborationHref } from "@/lib/learning/collaboration-collection";
 import collaborationStyles from "./collaboration/collaboration.module.css";
@@ -54,6 +54,33 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
   const query = { q: typeof rawQuery.q === "string" ? rawQuery.q : "", theme: typeof rawQuery.theme === "string" ? rawQuery.theme : "", type: typeof rawQuery.type === "string" ? rawQuery.type : "", level: typeof rawQuery.level === "string" && ["foundation","foundations","intermediate","advanced"].includes(rawQuery.level.toLowerCase()) ? rawQuery.level.toLowerCase().replace(/^foundations$/,"foundation") : "" };
   const scope = await requestedContentScope();
   const owner = await editingModeFromCookies();
+  if (!owner && !Object.values(query).some(Boolean) && rawQuery.browse !== "all") {
+    const culturalIntelligenceAvailable = await culturalIntelligenceHubAvailable(scope);
+    return <div className="pilot-topic">
+      <header>
+        <h1>Learn</h1>
+        <p>Courses, readings and recordings that build the knowledge behind fair, accessible services and inclusive workplaces.</p>
+      </header>
+      <form className="pilot-topic-search" action="/learn" method="get" role="search">
+        <label htmlFor="pilot-learning-search">Search learning and resources</label>
+        <div><input id="pilot-learning-search" type="search" name="q" /><button type="submit">Search</button></div>
+      </form>
+      <section className="pilot-topic-feature" aria-labelledby="pilot-core">
+        <h2 id="pilot-core">Start with the Core 15</h2>
+        <p>The recommended courses to begin with. Follow them in order or pick the one closest to your work.</p>
+        <Link className="pilot-topic-button" href="/learn/core-15">See the Core 15</Link>
+      </section>
+      <section aria-labelledby="pilot-collections">
+        <h2 id="pilot-collections">Collections</h2>
+        <ul className="pilot-topic-rows">
+          {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence"><strong>Cultural Intelligence</strong><span>Explore your own perspective and learn with people and communities.</span></Link></li>}
+          <li><Link href={WATER_RESOURCE_COLLECTION_PATH}><strong>{WATER_RESOURCE_COLLECTION_TITLE}</strong><span>How culture shapes everyday work and affects access to services.</span></Link></li>
+        </ul>
+      </section>
+      <ResourceThemeNav basePath="/learn" className="pilot-topic-themes" gridClassName={preview.themeGrid} />
+      <p><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link></p>
+    </div>;
+  }
   const [{ items: baseItems }, surface, catalog, hub, toolkit, journey, culturalIntelligenceAvailable, podcastSurfaces, ...pathSurfaces] = await Promise.all([
     loadStaffContentSnapshot({ scope }),
     prepareEditableSurface("learn.page", { scope }),
@@ -114,7 +141,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
           <p className={styles.eyebrow}>{stringValue(copy, "introKicker")}</p>
           <h1>{hub.available ? hubText("title") : stringValue(copy, "introTitle")}</h1>{owner ? <p className="m-0 mt-2"><Link href="/consultant/resources/new" className="btn btn--primary">+ Add a resource</Link></p> : null}
           <p className={styles.intro}>{hub.available ? hubText("intro") : stringValue(copy, "introLede")}</p>
-          <div className={styles.heroLinks}><a href="#catalog">Search learning</a><a href={filtered ? "/learn#start-here" : "#start-here"}>Start with recommended courses</a></div>
+          <div className={styles.heroLinks}><a href="#catalog">Search learning</a><Link href="/learn/core-15">Start with recommended courses</Link></div>
         </div>
       </header>
       <div className={styles.content}>

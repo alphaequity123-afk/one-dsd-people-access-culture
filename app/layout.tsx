@@ -8,6 +8,7 @@ import "./internal-pages.css";
 import "./area-colors.css";
 import "./inner-theme.css";
 import "./calm-system.css";
+import "./dsd-pilot.css";
 import { InternalPage } from "@/components/internal-page";
 import { OpenDetailsForHash } from "@/components/open-details-for-hash";
 import { CourseMediaForPage } from "@/components/course-media-for-page";

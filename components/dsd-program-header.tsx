@@ -50,6 +50,7 @@ function Header({ pathname, culturalIntelligenceAvailable = false, ask }: Header
       (name === "ask" ? askButton : searchButton).current?.focus();
       return;
     }
+    setOpen(false);
     setCompose(true);
     setTool(name);
   }
@@ -82,10 +83,13 @@ function Header({ pathname, culturalIntelligenceAvailable = false, ask }: Header
         <Image src="/images/dhs-logo.png" width={319} height={68} alt="Minnesota Department of Human Services" priority />
         <span><strong>One DSD</strong><span>People, Access and Culture</span></span>
       </Link>
-      <div className="dsd-utilities"><Link href="/my-work" aria-current={pathname === "/my-work" ? "page" : undefined}>My work</Link><Link href="/leading" aria-current={pathname === "/leading" ? "page" : pathname.startsWith("/leading/") ? "location" : undefined} title="For leaders, supervisors, managers, and directors">Leadership</Link>
+      <div className="dsd-utilities">
         {ask ? <button ref={askButton} type="button" className="dsd-tool-button" aria-controls="dsd-ask-panel" aria-expanded={tool === "ask"} onClick={() => toggleTool("ask")}>Ask</button> : <Link className="dsd-tool-link" href="/ask">Ask</Link>}
         <button ref={searchButton} type="button" className="dsd-tool-button" aria-controls="dsd-search-panel" aria-expanded={tool === "search"} onClick={() => toggleTool("search")}>Search</button>
-        <button ref={menu} aria-controls="dsd-navigation" aria-expanded={open} onClick={() => setOpen(!open)} className="dsd-menu">{open ? "Close" : "Menu"}</button>
+        <button ref={menu} type="button" aria-controls="dsd-navigation" aria-expanded={open} onClick={() => {
+          if (tool) { toggleTool(tool); menu.current?.focus(); }
+          setOpen(!open);
+        }} className="dsd-menu">Menu</button>
       </div>
     </div>
     <nav id="dsd-navigation" aria-label="Program" className={`dsd-nav ${open ? "is-open" : ""}`}>
@@ -95,14 +99,14 @@ function Header({ pathname, culturalIntelligenceAvailable = false, ask }: Header
       tabIndex={-1} className="dsd-tool-panel" aria-label="Ask a question"
       data-compose={compose} onSubmitCapture={() => setCompose(false)}>
       {tool === "ask" && ask ? <div className="dsd-shell">
-        <div className="dsd-tool-heading"><h2>Ask a question</h2><button type="button" onClick={() => toggleTool("ask")}>Collapse</button></div>
+        <div className="dsd-tool-heading"><h2>Ask a question</h2><button type="button" onClick={() => toggleTool("ask")}>Close Ask</button></div>
         <AskClient compact initialQuestion={draft} researchAvailable={ask.researchAvailable} intakeEnabled={false} copy={ask.copy} />
       </div> : null}
     </section>
     <section id="dsd-search-panel" ref={tool === "search" ? panel : undefined} hidden={tool !== "search"}
       tabIndex={-1} className="dsd-tool-panel" aria-label="Search One DSD">
       <div className="dsd-shell">
-        <div className="dsd-tool-heading"><h2>Search One DSD</h2><button type="button" onClick={() => toggleTool("search")}>Collapse</button></div>
+        <div className="dsd-tool-heading"><h2>Search resources</h2><button type="button" onClick={() => toggleTool("search")}>Close Search</button></div>
         <SiteSearch />
       </div>
     </section>

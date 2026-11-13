@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const tasks = [
   ["/learn/equity-toolkit", "Make a policy or service decision"],
@@ -15,17 +16,20 @@ const tasks = [
 
 export function HomeTaskFinder() {
   const router = useRouter();
-  return <form className="builder" onSubmit={event => {
+  return <form className="pilot-task" onSubmit={event => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const task = String(data.get("task"));
     if (!tasks.some(([href]) => href === task)) return;
     router.push(task);
   }}>
-    <label htmlFor="home-task">Choose a task</label>
-    <select id="home-task" name="task" defaultValue={tasks[0][0]}>
-      {tasks.map(([href, label]) => <option key={href} value={href}>{label}</option>)}
-    </select>
-    <button type="submit">Go to resource</button>
+    <label htmlFor="home-task">What are you working on?</label>
+    <div className="pilot-task-fields">
+      <select id="home-task" name="task" defaultValue={tasks[0][0]}>
+        {tasks.map(([href, label]) => <option key={href} value={href}>{label}</option>)}
+      </select>
+      <button type="submit" className="pilot-primary">Show resources</button>
+    </div>
+    <Link href="/start#new-to-dsd">New to DSD? Get started here</Link>
   </form>;
 }

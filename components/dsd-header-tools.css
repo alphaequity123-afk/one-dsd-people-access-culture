@@ -5,7 +5,7 @@
   min-height: 44px;
   padding-inline: 12px;
   border: 1px solid #b9cddd;
-  border-radius: 6px;
+  border-radius: 99px;
   background: transparent;
   color: #fff;
   font-weight: 600;
@@ -30,7 +30,7 @@
 .dsd-tool-heading h2 { margin: 0; font-size: 1.25rem; font-weight: 600; }
 .dsd-tool-heading button { min-height: 44px; padding-inline: 8px; text-decoration: underline; cursor: pointer; }
 .dsd-tool-panel[data-compose="true"] .ask-box.ask-box textarea.ask-box-input {
-  min-height: clamp(8rem, 36vh, 24rem);
+  min-height: clamp(7rem, 45dvh, 24rem);
   max-height: 55vh;
 }
 .dsd-tool-panel .site-search { max-width: none; }
@@ -50,3 +50,43 @@
 }
 
 @media print { .dsd-tool-panel { display: none; } }
+.dsd-calm .dsd-header .dsd-shell {
+  width: calc(100% - 40px);
+  max-width: 1000px;
+}
+.dsd-calm .dsd-header .dsd-brand-row {
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 110px;
+  padding-block: 20px;
+}
+.dsd-calm .dsd-header .dsd-brand {
+  flex-direction: row;
+  align-items: center;
+  min-width: 0;
+}
+.dsd-header .dsd-utilities { flex: none; gap: 8px; margin-inline-start: auto; }
+.dsd-calm .dsd-header .dsd-menu { margin: 0; border: 1px solid #b9cddd; border-radius: 99px; }
+.dsd-calm .dsd-header .dsd-nav a.dsd-mobile-utility { display: block; }
+.dsd-calm .dsd-header .dsd-nav > div { flex-wrap: wrap; }
+@media (max-width: 899px) {
+  .dsd-calm .dsd-header .dsd-menu { display: block; }
+  .dsd-calm .dsd-header .dsd-nav:not(.is-open) { display: none; }
+  .dsd-calm .dsd-header .dsd-brand-row { min-height: 90px; padding-block: 14px; }
+  .dsd-calm .dsd-header .dsd-brand { gap: 12px; }
+  .dsd-calm .dsd-header .dsd-brand > img { width: 132px; flex: none; }
+}
+@media print { .dsd-calm .dsd-header .dsd-menu { display: none; } }
+@media (max-width: 560px) {
+  .dsd-calm .dsd-header .dsd-shell { width: calc(100% - 24px); }
+  .dsd-calm .dsd-header .dsd-brand-row { gap: 8px; }
+  .dsd-calm .dsd-header .dsd-brand > img { width: clamp(50px, 18vw, 82px); padding: 5px; }
+  .dsd-calm .dsd-header .dsd-brand { gap: 6px; }
+  .dsd-calm .dsd-header .dsd-brand > span { padding-inline-start: 6px; }
+  .dsd-calm .dsd-header .dsd-brand strong { font-size: clamp(.9rem, 3.5vw, 1.2rem); }
+  .dsd-calm .dsd-header .dsd-brand span span { font-size: .7rem; margin-top: 2px; }
+  .dsd-calm .dsd-header .dsd-utilities { gap: 4px; }
+  .dsd-calm .dsd-header .dsd-menu { padding-inline: 7px; }
+}

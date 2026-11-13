@@ -1,70 +1,97 @@
+/* Landing-page spacing, cards, and colors from the approved pilot. */
+body.dsd-calm .od.dsd-home {
+  --od-navy: #003865;
+  --od-ink: #172b3c;
+  --od-muted: #43566a;
+  --od-link: #005793;
+  --od-line: #cdd7e2;
+  --od-soft: #e5edf6;
+  color: var(--od-ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.55;
+  padding-bottom: 40px;
+}
+.dsd-home .pilot-wrap { max-width: 1040px; margin-inline: auto; padding-inline: 20px; }
+.dsd-home .pilot-section { margin-top: 40px; }
+.dsd-home .pilot-section h2 { margin: 0 0 14px; font-size: 1.5rem; line-height: 1.2; font-weight: 600; }
+.dsd-home .pilot-section-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 12px; }
+.dsd-home .pilot-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+.dsd-home .pilot-actions a, .dsd-home .pilot-section-heading a, .dsd-home .pilot-task > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--od-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.dsd-home .pilot-task {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid var(--od-line);
+  border-radius: 24px;
+  background: #fff;
+}
+.dsd-home .pilot-task label { font-size: 1.125rem; font-weight: 600; }
+.dsd-home .pilot-task-fields { display: grid; gap: 10px; }
+.dsd-home .pilot-task select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 11px 12px;
+  border: 1.5px solid var(--od-muted);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--od-ink);
+  font: inherit;
+}
+.dsd-home .pilot-primary, .dsd-home .pilot-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  border-radius: 99px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dsd-calm main .dsd-home .pilot-primary { min-height: 48px; padding: 10px 24px; background: var(--od-navy); color: #fff; }
+.dsd-calm main .dsd-home .pilot-primary:hover { background: #17527d; color: #fff; }
+.dsd-home .pilot-secondary { min-height: 44px; margin-top: 6px; padding: 8px 20px; border: 1.5px solid var(--od-link); color: var(--od-link); }
+.dsd-home .pilot-secondary:hover { background: var(--od-soft); }
+.dsd-home .pilot-pathways { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+.dsd-home .pilot-pathways li { display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: 1px solid var(--od-line); border-radius: 24px; background: #fff; }
+.dsd-home .pilot-pathways img { display: block; width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; }
+.dsd-home .pilot-pathways li > div { display: grid; gap: 8px; align-content: start; padding: 18px 20px 20px; }
+.dsd-home .pilot-pathways h3 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+.dsd-home .pilot-pathways p, .dsd-home .pilot-section p { margin: 0; color: var(--od-muted); }
+.dsd-home .pilot-list { margin: 0; padding: 0; border: 1px solid var(--od-line); border-radius: 20px; overflow: hidden; background: #fff; list-style: none; }
+.dsd-home .pilot-list li + li { border-top: 1px solid var(--od-line); }
+.dsd-home .pilot-list a { display: grid; align-items: center; gap: 14px; min-height: 60px; padding: 14px 16px; color: var(--od-ink); text-decoration: none; }
+.dsd-home .pilot-list a:hover, .dsd-home .pilot-list a:focus-visible { background: var(--od-soft); }
+.dsd-home .pilot-list a:focus-visible { outline-offset: -4px; }
+.dsd-home .pilot-list a.pilot-calendar-row { grid-template-columns: auto 1fr; }
+.dsd-home .pilot-list strong { display: block; font-weight: 600; }
+.dsd-home .pilot-list strong + span { display: block; color: var(--od-muted); font-size: .9375rem; }
+.dsd-home .pilot-date { width: 52px; padding: 6px 0; border-radius: 12px; background: var(--od-soft); text-align: center; line-height: 1.1; }
+.dsd-home .pilot-date span { font-size: .6875rem; font-weight: 600; color: var(--od-link); }
+.dsd-home .pilot-date strong { font-size: 1.25rem; }
+.dsd-home .home-guide { margin: 8px 0 0; }
+.dsd-home .home-guide-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--od-link); font-size: .95rem; text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 640px) { .dsd-home .pilot-task-fields { grid-template-columns: 1fr auto; } }
+@media (min-width: 760px) { .dsd-home .pilot-pathways { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-/* Landing-page layout scoped to preserve the existing header and hero. */
-body.dsd-calm .od{--od-navy:var(--pac-navy);--od-ink:var(--pac-ink);--od-muted:var(--muted);--od-line:var(--line);--od-soft:#eef2f5;--od-gold:var(--pac-gold);--od-teal:var(--green-strong);
-  color:var(--od-ink);font-family:var(--sans);font-size:17px;line-height:1.65;margin-top:56px}
-body.dsd-calm .od *,body.dsd-calm .od *::before,body.dsd-calm .od *::after{box-sizing:border-box}
-body.dsd-calm .od h2,body.dsd-calm .od h3{margin:0;font-family:var(--sans);font-weight:600;line-height:1.2;color:var(--od-ink);letter-spacing:-.015em}
-body.dsd-calm .od p{margin:0;max-width:none}
-body.dsd-calm .od ul{list-style:none;margin:0;padding:0}
-body.dsd-calm .od .w{width:min(1160px,calc(100% - 64px));max-width:1160px;margin-inline:auto;padding:0}
-@media (max-width:760px){body.dsd-calm .od .w{width:calc(100% - 36px)}}
-body.dsd-calm .od .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-body.dsd-calm .od .blk{padding:64px 0}
-body.dsd-calm .od .sh{font-size:clamp(1.6rem,3vw,2.15rem);margin-bottom:8px}
-body.dsd-calm .od .sd{color:var(--od-muted);margin-bottom:28px;max-width:60ch}
-/* sentence builder band, navy to match the header */
-body.dsd-calm .od .start{background:var(--od-navy);border-bottom:3px solid #b88a35;padding:44px 0;scroll-margin-top:20px}
-body.dsd-calm .od .start h2{color:var(--pac-white);font-size:clamp(1.5rem,2.6vw,1.9rem);margin-bottom:6px}
-body.dsd-calm .od .start p.lead{color:var(--pac-white);opacity:.92;margin-bottom:20px;max-width:56ch}
-body.dsd-calm .od .builder{background:var(--pac-white);color:var(--od-ink);border-radius:6px;padding:20px 22px;max-width:840px;display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;font-size:1.15rem;font-weight:600}
-body.dsd-calm .od .builder select{font:inherit;font-weight:700;color:var(--od-navy);background:var(--od-soft);border:1px solid var(--pac-field);border-radius:4px;padding:7px 10px;max-width:100%}
-body.dsd-calm .od .builder button{font:inherit;font-size:1rem;font-weight:700;background:var(--pac-action);color:var(--pac-white);border:1px solid var(--pac-action);border-radius:4px;padding:10px 20px;cursor:pointer}
-body.dsd-calm .od .builder button:hover{background:var(--pac-action-hover);border-color:var(--pac-action-hover)}
-/* topic cards */
-body.dsd-calm .od .topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media (max-width:900px){body.dsd-calm .od .topics{grid-template-columns:1fr}}
-body.dsd-calm .od .topic{background:var(--pac-white);border:1px solid var(--od-line);border-radius:6px;overflow:hidden}
-body.dsd-calm .od .topic .bar{height:6px;background:var(--od-navy)}
-body.dsd-calm .od .topic:nth-child(2) .bar{background:var(--od-gold)}
-body.dsd-calm .od .topic:nth-child(3) .bar{background:var(--od-teal)}
-body.dsd-calm .od .topic .in{padding:24px}
-body.dsd-calm .od .topic h3{font-size:1.25rem;margin-bottom:4px}
-body.dsd-calm .od .topic p{color:var(--od-muted);font-size:.96rem;margin-bottom:12px}
-body.dsd-calm .od .topic li{border-top:1px solid var(--od-line)}
-body.dsd-calm .od .topic li a{display:block;padding:10px 0;font-weight:600}
-/* text-only feature (replaces the repeated photo) */
-body.dsd-calm .od .band{background:var(--od-soft)}
-body.dsd-calm .od .feature{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start}
-@media (max-width:860px){body.dsd-calm .od .feature{grid-template-columns:1fr}}
-body.dsd-calm .od .feature .kicker{font-size:.85rem;font-weight:700;letter-spacing:.06em;color:var(--od-teal)!important;margin-bottom:10px}
-body.dsd-calm .od .feature h2{font-size:clamp(1.7rem,3vw,2.2rem);margin-bottom:14px}
-body.dsd-calm .od .feature .copy p{color:var(--od-muted);margin-bottom:22px}
-body.dsd-calm .od .btn{display:inline-block;background:var(--pac-action);color:var(--pac-white)!important;font-weight:700;padding:12px 22px;border-radius:4px;text-decoration:none}
-body.dsd-calm .od .btn:hover{background:var(--pac-action-hover)}
-body.dsd-calm .od .pair{display:grid;gap:16px}
-body.dsd-calm .od .pc{display:block;background:var(--pac-white);border:1px solid var(--od-line);border-left:5px solid var(--od-gold);border-radius:6px;padding:20px 22px;text-decoration:none}
-body.dsd-calm .od .pc:nth-child(2){border-left-color:var(--od-teal)}
-body.dsd-calm .od .pc h3{font-size:1.15rem;margin-bottom:4px;color:var(--od-navy)}
-body.dsd-calm .od .pc p{color:var(--od-muted);font-size:.95rem}
-body.dsd-calm .od .pc:hover h3{text-decoration:underline}
-/* program links grid */
-body.dsd-calm .od .links{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media (max-width:900px){body.dsd-calm .od .links{grid-template-columns:1fr 1fr}}@media (max-width:480px){body.dsd-calm .od .links{grid-template-columns:1fr}}
-body.dsd-calm .od .links a{background:var(--pac-white);border:1px solid var(--od-line);border-left:5px solid var(--od-gold);border-radius:6px;padding:16px 18px;font-weight:700;text-decoration:none;color:var(--od-ink)!important}
-body.dsd-calm .od .links a:hover{border-left-color:var(--od-navy);color:var(--od-navy)!important;text-decoration:underline}
-
-body.dsd-calm .od :is(a,select,button):focus-visible{outline:3px solid var(--pac-navy);outline-offset:4px;box-shadow:0 0 0 2px var(--pac-white)}
-@media(max-width:480px){body.dsd-calm .od .builder{padding:18px;gap:12px}body.dsd-calm .od .builder select{width:100%;min-height:44px}body.dsd-calm .od .builder button{min-height:44px}body.dsd-calm .od .blk{padding:44px 0}}
-
-/* 2026-11-08 home redesign: one hero the size of the welcome image, the finder as the main action, three doors, a short calendar preview. */
 body.dsd-calm .od.dsd-home{margin-top:0;background:#f3f5f8!important;--collection-surface:#e5edf6;--collection-border:#cdd7e2;--collection-accent:#a9bbce;--od-line:#cdd7e2;--od-soft:#e5edf6;--od-muted:#43566a}
 body.dsd-calm .od .home-hero{background:inherit}
 body.dsd-calm .od .home-title{padding:28px 0 22px}
 body.dsd-calm .od .home-title h1{margin:0 0 6px;font-family:var(--sans);font-size:clamp(2rem,4.4vw,3rem);font-weight:600;line-height:1.1;letter-spacing:-.02em;color:var(--od-navy)}
 body.dsd-calm .od .home-title p{color:var(--od-muted);font-size:1.12rem;max-width:62ch}
-/* Same dimension as the welcome page artwork: full width up to 3840px, 16:9. */
-body.dsd-calm .od .home-hero-image{display:block;width:100%;max-width:3840px;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 40%;margin:0 auto}
-.home-hero-motion { position: relative; max-width: 3840px; margin-inline: auto; }
+/* Keep the pilot’s full-width crop for both the photo and video. */
+body.dsd-calm .od .home-hero-image{display:block;width:100%;max-width:none;height:auto;aspect-ratio:3840/1748;object-fit:cover;object-position:center;margin:0 auto}
+.home-hero-motion { position: relative; margin-inline: auto; }
 .home-hero-frame { position: relative; }
 .home-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; visibility: hidden; }
 .home-hero-video[data-visible="true"] { visibility: visible; }
@@ -86,66 +113,3 @@ body.dsd-calm .od .home-hero-motion-control {
   .home-hero-video[data-visible="true"] { visibility: hidden; }
   body.dsd-calm .od .home-hero-motion-control { display: none; }
 }
-body.dsd-calm .od .doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-@media (max-width:860px){body.dsd-calm .od .doors{grid-template-columns:1fr}}
-body.dsd-calm .od .door{display:block;background:var(--pac-white);border:1px solid var(--od-line);border-radius:20px;padding:22px 24px;text-decoration:none;color:var(--od-ink)}
-body.dsd-calm .od .door h2{font-size:1.35rem;margin-bottom:6px;color:var(--od-navy)}
-body.dsd-calm .od .door p{color:var(--od-muted);font-size:.98rem}
-body.dsd-calm .od .door:hover h2{text-decoration:underline}
-body.dsd-calm .od .blk.month{padding-top:0}
-body.dsd-calm .od .month-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:14px}
-body.dsd-calm .od .month-head h2{font-size:clamp(1.35rem,2.4vw,1.7rem)}
-body.dsd-calm .od .month-head a{font-weight:600}
-body.dsd-calm .od .month-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-@media (max-width:860px){body.dsd-calm .od .month-list{grid-template-columns:1fr}}
-body.dsd-calm .od .month-list a{display:block;height:100%;border:1px solid var(--od-line);border-radius:14px;padding:14px 16px;background:var(--pac-white);font-weight:600;text-decoration:none;color:var(--od-ink)}
-body.dsd-calm .od .month-list a span{display:block;font-size:.88rem;font-weight:600;color:var(--od-navy);margin-bottom:2px}
-body.dsd-calm .od .month-list a:hover{text-decoration:underline}
-body.dsd-calm .od .blk.leaders{padding-top:0}
-body.dsd-calm .od .leaders p{border-top:1px solid var(--od-line);padding-top:22px;color:var(--od-muted)}
-body.dsd-calm .od .leaders a{font-weight:700;margin-right:8px}
-@media (max-width:760px){body.dsd-calm .od .blk{padding:36px 0}body.dsd-calm .od .blk.month,body.dsd-calm .od .blk.leaders{padding-top:0}}
-/* The user guide, one select away from the landing page. */
-body.dsd-calm .od .home-guide{margin:14px 0 0}
-body.dsd-calm .od .home-guide-link{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 18px;border:2px solid #003865;border-radius:6px;background:#fff;color:#003865;font-weight:700;text-decoration:none}
-body.dsd-calm .od .home-guide-link:hover{background:#003865;color:#fff}
-body.dsd-calm .od .home-guide-link:focus-visible{outline:3px solid #005ea8;outline-offset:3px}
-
-.home-explore { margin: 1.25rem 0 0; color: #52606d; }
-
-/* 2026-11-11: the Ask window on the landing page, under the opening lines. */
-body.dsd-calm .od .home-ask{margin:0;max-width:780px}
-body.dsd-calm .od .blk.home-ask-band{padding:40px 0 44px}
-body.dsd-calm .od .home-ask-title{margin:0 0 8px;font-size:1.15rem;font-weight:650;color:var(--od-navy)}
-body.dsd-calm .od .home-ask .ask-box p{font-size:.9rem;max-width:none}
-body.dsd-calm .od .home-ask p.ask-box-small{margin:8px 2px 0;font-size:.85rem;line-height:1.5;max-width:78ch;color:var(--od-muted)}
-body.dsd-calm .od .home-ask p.ask-box-small.error{color:#8a1c14}
-
-/* 2026-11-11: a compact finder, so it does not take up much of the landing page: the heading beside the choices, in one slim band. */
-body.dsd-calm .od .start{padding:16px 0;border-bottom-width:2px}
-body.dsd-calm .od .start .w{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px}
-body.dsd-calm .od .start h2{font-size:1.15rem;margin:0}
-body.dsd-calm .od .start p.lead{font-size:.88rem;margin:2px 0 0;line-height:1.4}
-body.dsd-calm .od .start .builder{flex:1 1 520px;max-width:none;padding:8px 12px;gap:8px 10px;font-size:.98rem}
-body.dsd-calm .od .start .builder select{min-height:44px;padding:5px 8px;font-size:.95rem}
-body.dsd-calm .od .start .builder button{min-height:44px;padding:6px 16px;font-size:.95rem}
-body.dsd-calm .od .blk.home-ask-band{padding:28px 0 32px}
-@media (min-width:900px){body.dsd-calm .od .start .builder{flex-wrap:nowrap}body.dsd-calm .od .start .builder select{flex:1 1 auto;min-width:0}body.dsd-calm .od .start .builder button{flex:none;white-space:nowrap}}
-
-/* 2026-11-11: less empty space from the Ask window down to the end of the landing page. */
-body.dsd-calm .od .blk.home-ask-band{padding:20px 0 14px}
-body.dsd-calm .od .blk.leaders{padding-bottom:18px}
-body.dsd-calm .od .leaders p{padding-top:12px;font-size:.95rem;line-height:1.5}
-body.dsd-calm:has(.dsd-home) .dsd-footer{padding-top:16px;padding-bottom:16px}
-
-/* 2026-11-11: the user guide link is a quiet text link, not a boxed button. */
-body.dsd-calm .od .home-guide{margin:8px 0 0}
-body.dsd-calm .od .home-guide-link{display:inline;min-height:0;padding:0;border:0;border-radius:0;background:none;color:#33566f;font-size:.95rem;font-weight:500;text-decoration:underline;text-underline-offset:3px}
-body.dsd-calm .od .home-guide-link:hover{background:none;color:#003865}
-
-body.dsd-calm .od.dsd-home .start{background:var(--od-soft);border-bottom:1px solid var(--od-line)}
-body.dsd-calm .od.dsd-home .start h2{color:var(--od-navy)}
-body.dsd-calm .od.dsd-home .start p.lead{color:var(--od-muted);opacity:1}
-body.dsd-calm .od.dsd-home .start a{color:var(--od-navy)}
-body.dsd-calm .od.dsd-home .start .builder{border:1px solid var(--od-line);border-radius:14px}
-body.dsd-calm .od.dsd-home .start .builder button{border-radius:999px;font-weight:600}

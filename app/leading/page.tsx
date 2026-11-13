@@ -17,12 +17,27 @@ export const metadata: Metadata = {
 };
 export const dynamic = "force-dynamic";
 
-export default async function LeadingPage() {
+export default async function LeadingPage({ searchParams }: { searchParams?: Promise<{ view?: string }> }) {
+  if ((await searchParams)?.view !== "all") return <div className="pilot-topic">
+    <header><h1>Lead equity in everyday work</h1><p>Find learning and tools for the decisions and responsibilities in front of you.</p></header>
+    <section aria-labelledby="pilot-leading">
+      <h2 id="pilot-leading">Start where you are</h2>
+      <ul className="pilot-topic-rows">
+        <li><Link href="/one-dsd/leadership#starting-points"><strong>Explore leadership</strong><span>Connect a goal with a chance to practice and get feedback.</span></Link></li>
+        <li id="decision-doors"><Link href="/leading?view=all#decision-doors"><strong>Lead a team or a decision</strong><span>Find questions and tools for a decision in front of you.</span></Link></li>
+        <li><Link href={LEADERSHIP_PATHWAY_HREF}><strong>Compare leadership approaches</strong></Link></li>
+        <li id="paths-title"><Link href="/leading/paths"><strong>Suggested paths</strong></Link></li>
+        <li id="leadership-tools-title"><Link href="/leading?view=all#leadership-tools-title"><strong>Tools for the work</strong></Link></li>
+        <li><Link href="/leading?view=all"><strong>Explore all leadership resources</strong></Link></li>
+      </ul>
+    </section>
+  </div>;
   const scope = await requestedContentScope();
   const published = new Set((await publishedCourses(scope)).map(({ pack }) => pack.course.id));
   const culturalLearningAvailable = await culturalIntelligenceHubAvailable(scope);
   return <div className={base.page}><div className={base.content}>
     <header className={base.intro}>
+      <Link href="/leading">Back to Leadership</Link>
       <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>Lead equity in everyday work</h1>
       <p className={base.lede}>Whether you are exploring leadership, leading a team or shaping direction across the division, find learning and practical tools for the decisions and responsibilities in front of you.</p>
