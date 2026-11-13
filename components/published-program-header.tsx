@@ -1,13 +1,10 @@
 import "server-only";
 import { DsdProgramHeader } from "@/components/dsd-program-header";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
-import { prepareAsk } from "@/app/ask/ask-view";
 
+/** Retain the existing navigation; only the collection entry depends on its publication. */
 export async function PublishedProgramHeader() {
-  const [culturalIntelligenceAvailable, ask] = await Promise.all([
-    culturalIntelligenceHubAvailable(),
-    prepareAsk(),
-  ]);
-  return <DsdProgramHeader culturalIntelligenceAvailable={culturalIntelligenceAvailable}
-    ask={ask.enabled ? { copy: ask.copy, researchAvailable: Boolean(ask.research?.enabled) } : undefined} />;
+  // A failed check keeps existing navigation usable while withholding the collection.
+  const culturalIntelligenceAvailable = await culturalIntelligenceHubAvailable();
+  return <DsdProgramHeader culturalIntelligenceAvailable={culturalIntelligenceAvailable} />;
 }
