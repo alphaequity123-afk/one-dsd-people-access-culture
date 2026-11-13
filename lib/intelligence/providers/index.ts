@@ -8,7 +8,6 @@ import type { ZodType } from "zod";
 import { flagEnabled } from "../registry/flags";
 import { getModel, isCallableInProduction, STAFF_GENERATION_MODEL_ID } from "../registry/models";
 import type { AgentDefinition, ModelRecord } from "../types";
-import { OpenRouterAdapter } from "./openrouter";
 import { OpenAIAdapter } from "./openai";
 import { errorStatus, logProviderFailure } from "./log";
 import { isIsolatedMemoryStore } from "../memory/store";
@@ -109,7 +108,7 @@ export class AnthropicProvider implements ProviderAdapter {
   }
 }
 
-const PROVIDERS: Record<ModelRecord["provider_id"], ProviderAdapter> = {
+const PROVIDERS: Record<Exclude<ModelRecord["provider_id"], "openrouter">, ProviderAdapter> = {
   local: {
     id: "local", generative: false,
     async complete() { throw new Error("embedding_model_cannot_generate_answers"); },
@@ -125,13 +124,11 @@ const PROVIDERS: Record<ModelRecord["provider_id"], ProviderAdapter> = {
   fixture: new FixtureProvider(),
   anthropic: new AnthropicProvider(),
   openai: new OpenAIAdapter(),
-  openrouter: new OpenRouterAdapter(),
 };
 
 function credentialPresent(provider: ModelRecord["provider_id"]): boolean {
   if (provider === "fixture") return true;
   if (provider === "anthropic") return Boolean(process.env.ANTHROPIC_API_KEY);
-  if (provider === "openrouter") return Boolean(process.env.OPENROUTER_API_KEY);
   if (provider === "openai") return Boolean(process.env.OPENAI_API_KEY);
   return false;
 }
@@ -172,11 +169,12 @@ export function resolveBinding(agent: AgentDefinition, options: { fallback?: boo
     // already approved/connected service. Other agents retain selection-only fallback.
     const candidates = candidateModels(agent, options.fallback === true);
     for (const candidate of candidates) {
+      if (candidate.provider_id === "openrouter") continue;
       const adapter = PROVIDERS[candidate.provider_id];
       if (isCallableInProduction(candidate, flagEnabled) && credentialPresent(candidate.provider_id) && adapter.generative) {
         const recover = agent.agent_id === "ask_concierge" && options.fallback === true;
-        const connected = candidates.filter(model => isCallableInProduction(model, flagEnabled) && credentialPresent(model.provider_id) && PROVIDERS[model.provider_id].generative);
-        const selected = recover ? new RecoveringProvider(connected.map(model => ({ model, adapter: PROVIDERS[model.provider_id],
+        const connected = candidates.filter(model => model.provider_id !== "openrouter" && isCallableInProduction(model, flagEnabled) && credentialPresent(model.provider_id) && PROVIDERS[model.provider_id].generative);
+        const selected = recover ? new RecoveringProvider(connected.map(model => ({ model, adapter: PROVIDERS[model.provider_id as Exclude<ModelRecord["provider_id"], "openrouter">],
           available: () => flagEnabled("model.generative_pilot") && isCallableInProduction(model, flagEnabled) && credentialPresent(model.provider_id),
         }))) : adapter;
         return { model: candidate, adapter: selected, generative: true, reason: `generative pilot flag on; ${candidate.provider_id} callable; credential present`, reasonCode: "generative_pilot" };
@@ -184,22 +182,18 @@ export function resolveBinding(agent: AgentDefinition, options: { fallback?: boo
       if (reasonCode !== "pilot_model_not_callable") reasonCode = credentialPresent(candidate.provider_id) ? "pilot_model_not_callable" : "pilot_credential_missing";
     }
   }
-  return { model: primary, adapter: PROVIDERS[primary.provider_id], generative: false, reason: "primary binding (fixture composer)", reasonCode };
+  return { model: primary, adapter: primary.provider_id === "openrouter" ? PROVIDERS.fixture : PROVIDERS[primary.provider_id], generative: false, reason: "primary binding (fixture composer)", reasonCode };
 }
 
 /**
- * Reasoning services in the order they are tried: the preferred one, then OpenAI, Claude,
- * and OpenRouter. Only services the agent is allowed to use are listed, each provider once.
+ * Reasoning services in the order they are tried: the preferred direct connection, then Claude. Only services the agent is allowed to use are listed, each provider once.
  */
 function candidateModels(agent: AgentDefinition, fallback: boolean): ModelRecord[] {
   const preferred = candidatePilotModel(agent);
   if (!preferred) return [];
   if (!fallback) return [preferred];
   const allowed = (id: string) => { const model = getModel(id); return model && model.allowed_agent_ids.includes(agent.agent_id) ? [model] : []; };
-  const viaOpenRouter: ModelRecord = { ...preferred, model_id: "mdl_openrouter_ask", provider_id: "openrouter",
-    provider_model_ref: process.env.PAC_OPENROUTER_MODEL?.trim() || "openai/gpt-4.1", display_name_internal: "OpenRouter synthesis",
-    region_policy: "OpenRouter routes the request to the named model's provider.", retention_notes: "OpenRouter and the routed provider apply their own retention terms; staff public corpus only." };
-  const ordered = [preferred, ...allowed(STAFF_GENERATION_MODEL_ID), ...allowed("mdl_claude_staff_primary"), viaOpenRouter];
+  const ordered = [preferred, ...allowed("mdl_claude_staff_primary")];
   return ordered.filter((model, index) => ordered.findIndex(other => other.provider_id === model.provider_id) === index);
 }
 
@@ -207,17 +201,12 @@ function candidatePilotModel(agent: AgentDefinition): ModelRecord | undefined {
   const pilot = getModel(STAFF_GENERATION_MODEL_ID);
   if (!pilot) return undefined;
   if (!pilot.allowed_agent_ids.includes(agent.agent_id)) return undefined;
-  if (process.env.PAC_CLONE_AGENTS === "on" && process.env.OPENROUTER_API_KEY?.trim() && agent.agent_id === "ask_concierge") {
-    return { ...pilot, model_id: "mdl_openrouter_ask", provider_id: "openrouter",
-      provider_model_ref: process.env.PAC_OPENROUTER_MODEL?.trim() || "openai/gpt-4.1",
-      display_name_internal: "OpenRouter ASK synthesis" };
-  }
   return pilot;
 }
 
 export function generativeStatus(): { pilotFlag: boolean; credential: boolean; active: boolean } {
   const pilotFlag = flagEnabled("model.generative_pilot");
-  const services = (["openai", "anthropic", "openrouter"] as const);
+  const services = (["openai", "anthropic"] as const);
   const credential = services.some(credentialPresent);
   const model = getModel(STAFF_GENERATION_MODEL_ID);
   const callable = Boolean(model && isCallableInProduction(model, flagEnabled) && credential);
