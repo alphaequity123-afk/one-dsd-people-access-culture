@@ -1,23 +1,52 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageIntro } from "@/components/ui";
 import { EquityAnalysisLadder } from "@/components/equity-analysis-ladder";
 import { reviewResources, structuralReviewResource } from "@/lib/program/review-resources";
 export const metadata: Metadata = { title: "Review a policy, process, or service change" };
 export default function EquityReviewPage() {
-  return <>
-    <PageIntro tone="business" kicker="Equity in practice" title="Review a policy, process, or service change" lede="Understand who is affected, bring missing perspectives into the discussion, and compare practical options before deciding.">
-      <p className="mt-4 max-w-3xl">Staff anywhere in DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance, knowledge, and feedback when helpful.</p>
-    </PageIntro>
-    <div className="wrap max-w-6xl space-y-10 py-10">
-      <EquityAnalysisLadder />
-      <section aria-labelledby="analyze-document" className="card"><h2 id="analyze-document" className="text-2xl font-bold">Analyze a document</h2><p className="mt-3">Attach or paste a policy, program description, notice or plan. Choose one of six analysis methods and get each question answered as evidence, inference or gap, with next steps in this program. Nothing you upload or paste is stored.</p><p className="mt-4"><Link href="/equity-review/analyze">Open Analyze a document</Link></p></section>
-      <section aria-labelledby="review-options"><h2 id="review-options" className="text-2xl font-bold">Choose the review that fits your work</h2><div className="mt-5 grid gap-6 md:grid-cols-2">{[...reviewResources.slice(0, 2), structuralReviewResource].map(resource => <article key={resource.id} className="card"><h3 className="text-xl font-bold"><Link href={resource.href}>{resource.title}</Link></h3><p className="mt-3">{resource.summary}</p><p className="mt-5"><Link href={resource.href}>Begin or continue a review</Link></p></article>)}</div></section>
-      <section aria-labelledby="working-group-plan" className="card"><h2 id="working-group-plan" className="text-2xl font-bold">Plan a legislatively required working group</h2><p className="mt-3">Turn a working group's statutory charge into a month-by-month plan: a duty crosswalk, a consistent method for every topic, a recommendation record and checkpoints that protect the report date. The Waiver Case Management Advisory Working Group (2026 to 2027) is the worked example.</p><p className="mt-4"><Link href="/equity-review/working-group-plan">Open the working group plan</Link></p></section>
-      <section aria-labelledby="director-toolkit" className="card"><h2 id="director-toolkit" className="text-2xl font-bold">Equity Director toolkit</h2><p className="mt-3">For Equity Directors and others leading equity work across the Minnesota Department of Human Services: resources for policy, budget, engagement, Tribal consultation, accessibility, language access, workforce, procurement, data and governance. It includes a recommended first 90 days, a 12-item starter package and 14 printable templates. Each item is labeled as an existing DHS resource, Aging and Disability Services Administration guidance, or a project recommendation.</p><p className="mt-4 flex flex-wrap gap-6"><Link href="/equity-review/director-toolkit">Open the Equity Director toolkit</Link><Link href="/equity-review/director-toolkit/templates">Printable templates</Link></p></section>
-      <section aria-labelledby="review-preparation" className="card"><h2 id="review-preparation" className="text-2xl font-bold">Bring evidence and perspectives together</h2><p className="mt-3">Start with the decision, what can change, and who is affected. Record what people have shared, what remains uncertain, and how alternatives would distribute benefits and burdens. A completed form is a starting point for sound judgment, not proof that a decision is equitable.</p><p className="mt-3">When inviting community perspectives, ask about experience, barriers, priorities, and possible improvements. Staff remain responsible for connecting those contributions with policy and service evidence.</p><p className="mt-3">Keep names, case details, personnel information, and other confidential material out of your notes. Drafts are saved on this device and are not submitted to the consultant. Download a copy when you need to keep or share your work.</p></section>
-      <section aria-labelledby="consultant-analysis" className="card"><h2 id="consultant-analysis" className="text-2xl font-bold">Research and policy analysis</h2><p className="mt-3">The consultant workspace brings supplied evidence, affected perspectives, alternatives, and practical actions together. Explore a practice situation, examine gaps, and connect the work to ADSA equity goals when relevant.</p><p className="mt-4"><Link href="/consultant/analysis">Open the consultant workspace</Link></p><p className="mt-2 text-sm">Consultant sign-in is required. Staff can use the reviews above independently.</p></section>
-      <nav aria-label="Related resources" className="flex flex-wrap gap-6"><Link href="/equity-policy">DHS equity policy</Link><Link href="/one-dsd/planning">Planning and reviewing progress</Link><Link href="/support/right-person">Support and guidance</Link></nav>
-    </div>
-  </>;
+  return <div className="pilot-topic">
+    <header>
+      <h1>Review a policy, process, or service change</h1>
+      <p>Understand who is affected, bring missing perspectives into the discussion, and compare practical options before deciding.</p>
+    </header>
+    <section className="pilot-topic-themes" aria-labelledby="review-options">
+      <h2 id="review-options">Choose a review</h2>
+      <ul className="pilot-topic-rows">
+        {[...reviewResources.slice(0, 2), structuralReviewResource].map(resource => <li key={resource.id}>
+          <Link href={resource.href}>{resource.title}<span>{resource.summary}</span></Link>
+        </li>)}
+      </ul>
+    </section>
+    <section className="pilot-topic-themes" aria-labelledby="review-tools">
+      <h2 id="review-tools">Tools for your review</h2>
+      <ul className="pilot-topic-rows">
+        <li id="analyze-document"><Link href="/equity-review/analyze">Analyze a document<span>Use one of six methods to identify evidence, inferences, and gaps.</span></Link></li>
+        <li id="working-group-plan"><Link href="/equity-review/working-group-plan">Plan a legislatively required working group<span>Turn a statutory charge into a work plan.</span></Link></li>
+        <li id="director-toolkit"><Link href="/equity-review/director-toolkit">Equity Director toolkit<span>Find guidance and templates for leading equity work across DHS.</span></Link></li>
+      </ul>
+    </section>
+    <section aria-label="Guidance and support">
+      <details className="pilot-supporting"><summary>How much analysis is enough?</summary><div className="pilot-supporting-body"><EquityAnalysisLadder /></div></details>
+      <details className="pilot-supporting" id="review-preparation"><summary>Prepare for a review</summary>
+        <div className="pilot-supporting-body space-y-3">
+          <p>Start with the decision, what can change, and who is affected. Record what people have shared, what remains uncertain, and how alternatives would distribute benefits and burdens. A completed form is a starting point for sound judgment, not proof that a decision is equitable.</p>
+          <p>When inviting community perspectives, ask about experience, barriers, priorities, and possible improvements. Staff remain responsible for connecting those contributions with policy and service evidence.</p>
+          <p>Keep names, case details, personnel information, and other confidential material out of your notes. Drafts are saved on this device and are not submitted to the consultant. Download a copy when you need to keep or share your work.</p>
+        </div>
+      </details>
+      <details className="pilot-supporting" id="consultant-analysis"><summary>Guidance and related resources</summary>
+        <div className="pilot-supporting-body space-y-4">
+          <p>Staff anywhere in DHS can use the reviews independently. The Equity and Inclusion Operations Consultant offers guidance and feedback.</p>
+          <p>The consultant workspace brings supplied evidence, affected perspectives, alternatives, and practical actions together. Explore a practice situation, examine gaps, and connect the work to ADSA equity goals when relevant.</p>
+          <ul className="pilot-topic-rows">
+            <li><Link href="/consultant/analysis">Research and policy analysis<span>Consultant sign-in required</span></Link></li>
+            <li><Link href="/equity-review/director-toolkit/templates">Printable templates</Link></li>
+            <li><Link href="/equity-policy">DHS equity policy</Link></li>
+            <li><Link href="/one-dsd/planning">Planning and reviewing progress</Link></li>
+            <li><Link href="/support/right-person">Support and guidance</Link></li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </div>;
 }

@@ -1,9 +1,9 @@
 .layout { width: 100%; max-width: 62.5rem; margin-inline: auto; }
 .body { min-width: 0; }
-.body > * + * { margin-top: 2.5rem; }
+.body > * + * { margin-top: clamp(2.5rem, 5vw, 4rem); }
 .body :is(section, h2, h3, div)[id] { scroll-margin-top: 2rem; }
 .body p { max-width: 68ch; }
-.rail { margin-bottom: 2rem; }
+.rail { margin-bottom: clamp(2rem, 4vw, 3rem); }
 .contents { border-block: 1px solid #cdd7e2; }
 .contents summary { min-height: 44px; padding-block: 10px; cursor: pointer; font-weight: 600; color: #005793; }
 .contents ul { margin: 0; padding: 0 0 12px; list-style: none; }
