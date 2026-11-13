@@ -789,10 +789,11 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
           const request = buildAnswerEvidenceReview({ question, draft: proposed, sources, research: publicResearch, sourceOnly: explicitProgramOnly, requestedSources });
           const result = await runTool(ctx, "answer.structured_draft", () => binding.adapter.complete({
             ...request, model_id: binding.model.model_id, trace_id: ctx.trace_id,
-            maxTokens: 1800, timeoutMs: Math.max(1, Math.min(30_000, deadlineAt - Date.now())),
+            maxTokens: Math.min(14_000, 1_600 + 260 * request.requiredCheckCounts.units + 220 * request.requiredCheckCounts.qualifications),
+            timeoutMs: Math.max(1, Math.min(65_000, deadlineAt - Date.now())),
             deadlineAt, recoveryBudget, beforeAttempt,
           }, binding.model), { modelId: binding.model.model_id, contentIds: sources.map(source => source.id) });
-          return result.parsed;
+          return request.validate(result.parsed);
         },
         repair: async (previous, findings) => {
           // A format retry has already consumed the single correction allowance.
