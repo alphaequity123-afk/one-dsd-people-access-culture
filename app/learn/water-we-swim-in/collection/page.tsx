@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { JobAidActions } from "@/components/clas-curriculum/job-aid-actions";
 import { CourseMediaJumpSlot, CourseMediaSlot } from "@/components/course-media-for-page";
@@ -7,7 +8,7 @@ import { GeffenReadAloud } from "@/components/geffen-read-aloud";
 import { PracticeVideo } from "@/components/practice-video";
 import { ResourceCreationLink } from "@/components/resource-creation-link";
 import { ResourceLearningAssistant } from "@/components/resource-learning-assistant";
-import { WaterFigure, WaterLessonPodcast } from "@/components/water-curriculum";
+import { WaterLessonPodcast } from "@/components/water-curriculum";
 import { ownerFromCookies } from "@/lib/auth/request";
 import { publishedCommunityProfile } from "@/lib/content/community-profile";
 import { getGeffenPassageRecordings } from "@/lib/content/geffen-volume";
@@ -49,7 +50,6 @@ export default async function WaterCollectionPage() {
   ]);
   const available = { water: true, american: Boolean(american), minnesota: Boolean(minnesota), toolkit: toolkit.available };
   const studyReady = Boolean(process.env.GEMINI_API_KEY?.trim()) && available.american && available.minnesota && available.toolkit;
-  const picture = waterLesson("01")?.images.find(image => image.src.endsWith("/image-4.webp"));
   const otherBriefs = communities.filter(brief => brief.id !== "american" && brief.id !== "minnesota" && !brief.standingTribalDeference);
   const referralPages = communities.filter(brief => brief.standingTribalDeference);
   const [notice, ...stepReadAloud] = WATER_COLLECTION_READ_ALOUD;
@@ -67,7 +67,9 @@ export default async function WaterCollectionPage() {
           {owner && studyReady ? <ResourceCreationLink resourcePath={WATER_COLLECTION_HREF} /> : null}
         </div>
       </div>
-      {picture ? <WaterFigure image={picture} priority /> : null}
+      <Image className={styles.pilotPhoto} src="/images/pilot-home/water-we-swim-in.jpg"
+        alt="Two staff members meet with a family around a table in a bright room." width={1000} height={667}
+        sizes="(min-width: 1080px) 1040px, 100vw" preload />
     </header>
     <CourseMediaSlot />
 

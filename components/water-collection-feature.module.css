@@ -30,3 +30,18 @@
   max-width: 100%;
   white-space: normal;
 }
+.photoFeature {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid #cdd7e2;
+  border-radius: 24px;
+  background: #e5edf6;
+}
+.photoFeature img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 16px; }
+.photoFeature > div { display: grid; gap: 14px; justify-items: start; }
+.photoFeature p { color: #43566a; max-width: 52ch; }
+@media (min-width: 760px) {
+  .photoFeature { grid-template-columns: 1fr 1fr; align-items: center; gap: 28px; }
+  .photoFeature img { aspect-ratio: 4/3; }
+}

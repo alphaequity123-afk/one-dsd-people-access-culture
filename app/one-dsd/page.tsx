@@ -37,9 +37,27 @@ const PROGRAM_DOORS = [
   },
 ] as const;
 
-export default async function OneDsdPage() {
-  const [surface, areasSurface, amplifySurface, teamSurface, inventorySurface, inventory] = await Promise.all([
-    prepareEditableSurface("one-dsd.page"),
+export default async function OneDsdPage({ searchParams }: { searchParams?: Promise<{ view?: string }> }) {
+  const surface = await prepareEditableSurface("one-dsd.page");
+  if (!surface.canEdit && (await searchParams)?.view !== "overview") return (
+    <EditableSurfaceRegion surface={surface} className="pilot-topic">
+      <header>
+        <h1>{stringValue(surface.values, "introTitle")}</h1>
+        <p>{stringValue(surface.values, "introLede")}</p>
+      </header>
+      <section aria-label="Explore One DSD">
+        <ul className="pilot-topic-rows">
+          <li id="programs"><Link href="/one-dsd/programs"><strong>Programs and services</strong><span>Explore the division’s service areas and responsibilities.</span></Link></li>
+          <li id="people"><Link href="/one-dsd?view=overview#people"><strong>People and connection</strong><span>Find the people and teams behind the work.</span></Link></li>
+          <li id="scenarios"><Link href="/one-dsd/scenarios"><strong>Work situations</strong><span>Explore a situation from everyday DSD work.</span></Link></li>
+          <li><Link href="/one-dsd/planning"><strong>Planning and progress</strong></Link></li>
+          <li><Link href="/one-dsd/leadership"><strong>Equity leadership and growth</strong></Link></li>
+          <li><Link href="/one-dsd?view=overview"><strong>About One DSD</strong><span>See how learning, practice, and support connect to the division’s work.</span></Link></li>
+        </ul>
+      </section>
+    </EditableSurfaceRegion>
+  );
+  const [areasSurface, amplifySurface, teamSurface, inventorySurface, inventory] = await Promise.all([
     prepareEditableSurface("areas.page", { includeOwner: false }),
     prepareEditableSurface("amplify.home", { includeOwner: false }),
     prepareEditableSurface("dsd-team.home", { includeOwner: false }),

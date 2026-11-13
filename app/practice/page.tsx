@@ -29,8 +29,9 @@ const PRACTICE_GROUPS = [
 ] as const;
 const groupedIds = new Set<string>([...DECISION_IDS, ...PRACTICE_GROUPS.flatMap(group => group.ids)]);
 
-export default async function PracticePage({ searchParams }: { searchParams?: Promise<WorkOriginInput> }) {
-  const origin = normalizeWorkOrigin(await searchParams ?? {});
+export default async function PracticePage({ searchParams }: { searchParams?: Promise<WorkOriginInput & { topic?: string }> }) {
+  const query = await searchParams ?? {};
+  const origin = normalizeWorkOrigin(query);
   const scope = await requestedContentScope();
   const [surface, measurement, measurementSources, ...pathSurfaces] = await Promise.all([
     prepareEditableSurface("practice.page", { scope }),
@@ -54,11 +55,24 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
     { title: "Other practices", paths: paths.filter(path => !groupedIds.has(path.id)) },
   ].filter(group => group.paths.length);
   const practiceHref = (id: typeof paths[number]["id"]) => withWorkOrigin(`/practice/${id}`, workOriginForPath(origin, id));
+  const selectedGroup = groups.find(group => group.paths[0]?.id === query.topic);
+
+  if (selectedGroup) return <article className="pilot-topic">
+    <header>
+      <Link href={withWorkOrigin("/practice", origin)}>Back to Practice</Link>
+      <h1>{selectedGroup.title}</h1>
+    </header>
+    <section aria-label="Guided practices">
+      <ul className="pilot-topic-rows">{selectedGroup.paths.map(path => <li key={path.id}>
+        <Link href={practiceHref(path.id)}><strong>{path.title}</strong></Link>
+      </li>)}</ul>
+    </section>
+  </article>;
 
   return (
     <EditableSurfaceRegion surface={surface}>
       <PageIntro title={stringValue(copy, "introTitle")} lede="Choose a practice for the work you’re doing." />
-      <div className="wrap space-y-6 py-8">
+      <div className="pilot-topic space-y-6">
         <WorkOriginLinks origin={origin} />
         <section className={styles.choices} aria-labelledby="practice-choices-title">
           <h2 id="practice-choices-title" className="mb-3 text-2xl font-bold">{stringValue(copy, "choicesTitle")}</h2>
@@ -74,12 +88,11 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
               <p className={styles.related}><Link href={withWorkOrigin("/practice/requirements", origin)}>Check requirements</Link><Link href={withWorkOrigin("/learn/equity-toolkit/practice", origin)}>Open the toolkit worksheet</Link></p>
             </div>
           </details>
-          {groups.map(group => <details key={group.title} className={styles.group}>
-            <summary>{group.title}</summary>
-            <ul className={styles.links}>{group.paths.map(path => <li key={path.id}>
-              <Link href={practiceHref(path.id)}>{path.title}</Link>
-            </li>)}</ul>
-          </details>)}
+          <ul className="pilot-topic-rows">{groups.map(group => <li key={group.title}>
+            <Link href={group.paths.length === 1 ? practiceHref(group.paths[0].id) : withWorkOrigin(`/practice?topic=${group.paths[0].id}`, origin)}>
+              <strong>{group.title}</strong>
+            </Link>
+          </li>)}</ul>
         </section>
 
         <details className={styles.group}>
