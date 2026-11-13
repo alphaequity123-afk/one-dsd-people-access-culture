@@ -19,6 +19,7 @@ export type CompleteRequest = {
   user: string;
   schema: ZodType;
   maxTokens?: number;
+  useProviderOutputLimit?: boolean;
   timeoutMs?: number;
   /** One end-to-end deadline shared by drafting, review and the bounded correction. */
   deadlineAt?: number;
