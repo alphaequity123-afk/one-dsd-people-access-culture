@@ -9,12 +9,14 @@ export function OrganizationBreadcrumb({ items }: { items: { label: string; href
 }
 
 export function OrganizationTopicCards({ ids }: { ids: readonly string[] }) {
-  return <div className="grid items-start gap-6 md:grid-cols-2">{organizationTopics(ids).map(entry => <article key={entry.id} className="rounded-xl border border-line bg-white p-6">
-    <h3 className="m-0 text-xl font-bold">{entry.title}</h3>
+  return <div className="space-y-4">{organizationTopics(ids).map(entry => <details key={entry.id} className="rounded-xl border border-line bg-white px-5">
+    <summary className="min-h-11 cursor-pointer py-3 font-semibold">{entry.title}</summary>
+    <div className="pb-5">
     <p className="leading-relaxed">{entry.facts}</p>
     <Link href={`/understanding-dhs#${entry.id.replace(/^ext-dhs-org-/, "")}`}>Explore this topic and its connections</Link>
     <details className="mt-4 border-t border-line pt-3 text-sm"><summary className="cursor-pointer font-semibold">Original sources</summary><ul className="space-y-2 pl-5">{entry.sourceIds.map(id => { const source = reference.sources.find(item => item.id === id)!; return <li key={id}><a href={source.url}>{source.title}</a></li>; })}</ul></details>
-  </article>)}</div>;
+    </div>
+  </details>)}</div>;
 }
 
 export function SharedAgencyResources() {

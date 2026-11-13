@@ -51,5 +51,7 @@ body.dsd-calm {
 .pilot-topic-rows a:focus-visible { outline-offset: -4px; }
 .pilot-topic-rows span { display: block; color: #43566a; }
 .pilot-topic-themes h2::after { content: ""; display: block; width: 36px; height: 2px; margin-top: 9px; border-radius: 1px; background: #005793; }
+.pilot-start-flow { display: grid; gap: 24px; max-width: 48rem; }
+.pilot-start-flow > form { border-radius: 24px; }
 @media (min-width: 640px) { .pilot-topic-search > div { grid-template-columns: 1fr auto; } }
 @media print { .pilot-section-links { display: none; } }

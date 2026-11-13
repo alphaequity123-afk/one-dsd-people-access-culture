@@ -27,15 +27,15 @@ export default async function CommunityOutreachPage() {
 
       <section className={styles.section} aria-labelledby="tasks-title">
         <h2 id="tasks-title">{text("tasksTitle")}</h2>
-        <ul className={styles.tasks}>
-          {OUTREACH_TASKS.map(task => <li key={task.href}><Link className={styles.task} href={task.href}>
-            <span className={styles.taskTitle}>{task.title}</span><span>{task.body}</span><span className={styles.taskAction}>{task.action}</span>
+        <ul className="pilot-topic-rows">
+          {OUTREACH_TASKS.map(task => <li key={task.href}><Link href={task.href}>
+            <strong>{task.title}</strong><span>{task.body}</span>
           </Link></li>)}
         </ul>
       </section>
 
-      <section className={styles.section} aria-labelledby="cycle-title">
-        <h2 id="cycle-title">{text("cycleTitle")}</h2>
+      <details className={styles.section}>
+        <summary className="min-h-11 cursor-pointer font-semibold" id="cycle-title">{text("cycleTitle")}</summary>
         <p>{text("cycleIntro")}</p>
         <ol className={styles.cycle}>
           {steps.map(step => <li className={styles.step} key={step.key}><div>
@@ -45,14 +45,14 @@ export default async function CommunityOutreachPage() {
             <ul className={styles.links}>{step.links.map(link => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul>
           </div></li>)}
         </ol>
-      </section>
+      </details>
 
-      <section className={styles.section} aria-labelledby="care-title">
-        <h2 id="care-title">Before you use the figures and the directory</h2>
+      <details className={styles.section}>
+        <summary className="min-h-11 cursor-pointer font-semibold" id="care-title">Before you use the figures and the directory</summary>
         <p className={styles.note}>{text("numbersNote")}</p>
         <p>{text("tribalNote")} <Link href="/learn/tribal-referral">Native American and Tribal-specific guidance</Link>.</p>
         <p>{text("privacyNote")}</p>
-      </section>
+      </details>
     </div>
   </EditableSurfaceRegion>;
 }
