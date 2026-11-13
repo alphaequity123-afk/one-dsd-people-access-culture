@@ -6,9 +6,13 @@ import { indexedStaffDocs } from '@/lib/intelligence/retrieval/staff-search';
 import { indexedProgramResources } from '@/lib/intelligence/retrieval/program-resources';
 import { organizationalDocs } from '@/lib/intelligence/memory/organization';
 import { prepareSemanticProjection } from '@/lib/intelligence/retrieval/local-semantic';
+import { publishedResourceSupplements } from '@/lib/intelligence/retrieval/published-resource-supplements';
+import { statePageDocs } from '@/lib/search/state-pages';
+import { agencyDocs } from '@/lib/search/site-search';
 it('prepares the public document projection with actual local inference',async()=>{
  const one:Awaited<ReturnType<typeof indexedStaffDocs>>=[]; // This standalone One DSD release serves only the dsd scope.
- const dsd=[...await indexedStaffDocs('dsd'),...(await indexedProgramResources('dsd')).destinations];
+ const base=[...await indexedStaffDocs('dsd'),...(await indexedProgramResources('dsd')).destinations,...statePageDocs(),...agencyDocs({forAnswers:true})];
+ const dsd=[...base,...await publishedResourceSupplements('dsd',base)];
  const started=Date.now();
  const result=await prepareSemanticProjection([...one,...dsd,...organizationalDocs()],(ready,total)=>console.log(`Prepared ${ready} of ${total} public document vectors.`));
  const bytes=JSON.stringify(result)+'\n';
@@ -17,7 +21,7 @@ it('prepares the public document projection with actual local inference',async()
  const manifest=JSON.parse(await readFile('models/bge-small-en-v1.5/manifest.json','utf8'));
  manifest.vectorProjection={name,sha256:createHash('sha256').update(bytes).digest('hex'),documents:result.vectors.length};
  await writeFile('models/bge-small-en-v1.5/manifest.json',JSON.stringify(manifest,null,2)+'\n');
- await mkdir('evidence/functional-completion-2026-09-08', { recursive: true });
- await writeFile('evidence/functional-completion-2026-09-08/semantic-preparation.json',JSON.stringify({at:new Date().toISOString(),model:manifest.modelId,revision:manifest.revision,scope:'Current static public content in both views and organizational reference',oneDhsDocuments:one.length,dsdDocuments:dsd.length,vectors:result.vectors.length,elapsedMs:Date.now()-started,bytes:Buffer.byteLength(bytes),sha256:manifest.vectorProjection.sha256,privateDataRead:false,externalInferenceCalls:0},null,2));
+ await mkdir('evidence/search-index', { recursive: true });
+ await writeFile('evidence/search-index/semantic-preparation.json',JSON.stringify({at:new Date().toISOString(),model:manifest.modelId,revision:manifest.revision,scope:'Current static One DSD content, reviewed source readings, transcript supplements and organizational reference',oneDhsDocuments:one.length,dsdDocuments:dsd.length,vectors:result.vectors.length,elapsedMs:Date.now()-started,bytes:Buffer.byteLength(bytes),sha256:manifest.vectorProjection.sha256,privateDataRead:false,externalInferenceCalls:0},null,2));
  expect(result.vectors.length).toBeGreaterThan(1000);
 });

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canonicalizeGeneratedEvidenceClaims, CitedStatementsSchema, GeneratedEvidenceClaimsSchema, resolveCitedStatements, sourceRef } from "./generated-evidence";
+import { canonicalizeGeneratedEvidenceClaims, CitedStatementsSchema, GeneratedEvidenceClaimsSchema, citedStatementsForSources, resolveCitedStatements, sourceRef } from "./generated-evidence";
 import { evidenceReferencesMatch } from "@/lib/content/ask-evidence";
 import type { Citation } from "./search";
 
@@ -57,6 +57,14 @@ describe("citing supplied sources by label", () => {
     expect(sourceRef(sources, 0)).toBe("S1");
     expect(sourceRef(sources, 1)).toBeUndefined();
     expect(sourceRef(sources, 5)).toBeUndefined();
+  });
+  it("limits the writer to supplied evidence labels, including gaps in the numbering", () => {
+    const schema = citedStatementsForSources([sources[1], supplied[0]]);
+    expect(schema.safeParse([{text: 'Supported interpretation.', refs: ['S2']}]).success).toBe(true);
+    expect(schema.safeParse([{text: 'Invented reference.', refs: ['S1']}]).success).toBe(false);
+    expect(schema.safeParse([{text: 'Invented reference.', refs: ['S9']}]).success).toBe(false);
+    expect(citedStatementsForSources([]).safeParse([]).success).toBe(true);
+    expect(citedStatementsForSources([]).safeParse([{text: 'No source.', refs: ['S1']}]).success).toBe(false);
   });
   it("attaches the whole supplied passage to a statement, as an inference", () => {
     const statements = [{ text: "Leaders check who gets visible work.", refs: ["S1"] }];

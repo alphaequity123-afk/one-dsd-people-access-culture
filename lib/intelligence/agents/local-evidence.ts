@@ -2,6 +2,11 @@ import { tokens } from "../retrieval/search";
 
 type Passage = { title: string; excerpt: string };
 
+/** Word overlap alone cannot establish that a question has been answered. */
+export function localEvidenceNeedsResearch(evidence: 'absent' | 'insufficient' | 'potentially_sufficient', decision?: 'sufficient' | 'research' | 'clarify' | null): boolean {
+  return evidence === 'absent' || decision !== 'sufficient';
+}
+
 /**
  * Whether the program's own passages plausibly answer the question. Outside research waits for this,
  * so a question the program already answers is not held up by a web search.

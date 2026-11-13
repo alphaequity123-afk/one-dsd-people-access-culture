@@ -5,13 +5,14 @@ import { cloneAgentsEnabled } from "../clone/config";
 import { CONSULTATION_REQUESTS_REMOVED } from "@/lib/program/retired-features";
 import { consultMethodInstruction } from "../practice/consult-method";
 import { planWithJev, reviewWithJev, SPECIALIST_GUIDANCE } from "../clone/jev";
-import { assessLocalEvidence } from "./local-evidence";
+import { assessLocalEvidence, localEvidenceNeedsResearch } from "./local-evidence";
 import { brainContext, expandThroughGraph, fitWriterPrompt } from "../retrieval/brain";
 import { asksForProgramSourcesOnly } from "../research-preference";
 import { EvidenceClaimsSchema, type EvidenceClaim, type SourceEvidence } from "@/lib/content/ask-evidence";
 import { citationEvidenceFromDocs, validateEvidenceClaims } from "../retrieval/evidence";
 import { videoScenarioEvidenceHits } from "../retrieval/video-transcript-evidence";
-import { CitedStatementsSchema, GeneratedEvidenceClaimsSchema, resolveCitedStatements, sourceRef } from "../retrieval/generated-evidence";
+import { CitedStatementsSchema, GeneratedEvidenceClaimsSchema, citedStatementsForSources, resolveCitedStatements, sourceRef } from "../retrieval/generated-evidence";
+import { publishedResourceSupplements } from "../retrieval/published-resource-supplements";
 import { currentLibrary, recentProgramResources, recentStaffDocs } from "../retrieval/ask-library";
 import { readStringField } from "./partial-answer";
 import { plainAnswerText, plainLiveText } from "@/lib/ask/plain-text";
@@ -373,13 +374,18 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const organizationLinks = organization.entries.slice(0, 2).map(entry => ({ label: "Understanding DHS: " + entry.title, href: DHS_REFERENCE_PATH + "#" + dhsTopicAnchor(entry.id) }));
   if (/understanding\s+dhs/i.test(retrievalQuestion)) organizationLinks.unshift({label:"Understanding DHS",href:DHS_REFERENCE_PATH});
   const organizationIndex = organizationalDocs().filter(doc => organization.entries.some(entry => entry.id === doc.id));
-  const staffDocs = async () => (loadedDocs ??= [
-    ...organizationIndex,
-    ...(await staffLoad).filter(doc => doc.kind !== "brief"),
-    ...program.destinations,
-    // State of Minnesota agencies and their public pages: one connected knowledge base with the program.
-    ...(explicitProgramOnly ? [] : [...agencyDocs({ forAnswers: true }), ...statePageDocs()]),
-  ].filter(doc => !explicitProgramOnly || /^\/(?!\/)/.test(doc.href)));
+  const staffDocs = async () => {
+    if (loadedDocs) return loadedDocs;
+    const baseDocs = [
+      ...organizationIndex,
+      ...(await staffLoad).filter(doc => doc.kind !== "brief"),
+      ...program.destinations,
+      // State of Minnesota agencies and their public pages: one connected knowledge base with the program.
+      ...(explicitProgramOnly ? [] : [...agencyDocs({ forAnswers: true }), ...statePageDocs()]),
+    ].filter(doc => !explicitProgramOnly || /^\/(?!\/)/.test(doc.href));
+    const supplements = await publishedResourceSupplements(scope, baseDocs);
+    return loadedDocs = [...new Map([...baseDocs, ...supplements].map(doc => [`${doc.kind}:${doc.id}:${doc.href}`, doc])).values()];
+  };
   let hits: SearchHit[] = [];
   try {
     hits = await runTool(ctx, "corpus.semantic_retrieve", async () =>
@@ -506,9 +512,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const shouldPrepareResearchAnswer =
     requestedMode === "current_web" ||
     requestedMode === "deep_research" ||
-    (requestedMode === "auto" && !tribalWork && ((cloneAgentsEnabled() && (!namedPageHits.length && localEvidence === "potentially_sufficient"
-      ? jevPlan?.evidence === "research"
-      : !selfContained && (jevPlan?.evidence !== "sufficient" || localEvidence === "absent"))) || asksForCurrentInformation(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
+    (requestedMode === "auto" && !tribalWork && ((cloneAgentsEnabled() && !selfContained && localEvidenceNeedsResearch(localEvidence, jevPlan?.evidence)) || asksForCurrentInformation(question) || (!sufficientNamedPdf && wantsCitation(question)) ||
       /\b(search|research|sources?|news|weather|forecast|prices?|stock|exchange rate|schedule|president|governor|mayor|CEO)\b/i.test(question)));
   const researchDepth: ResearchDepth = requestedMode === "deep_research" ? "deep_research" : "current_web";
   let publicResearch: AskAnswer["publicResearch"];
@@ -701,7 +705,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
               // Reasoning models need the remaining request window; the route allows 120 seconds.
               timeoutMs: Math.max(20_000, Math.min(75_000, 110_000 - (Date.now() - startedAt))),
               user: writerUser.user,
-              schema: WriterDraftSchema,
+              schema: WriterDraftSchema.extend({ evidenceClaims: citedStatementsForSources(sources).optional() }),
               trace_id: ctx.trace_id,
               onText,
             },
@@ -743,7 +747,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
           // Every citation is checked against the current publication, read fresh. One that no longer matches is left out.
           const proposed = parsed.data.evidenceClaims ?? [];
           const current = proposed.length ? await currentLibrary(scope) : undefined;
-          const freshDocs = current ? [...organizationalDocs(), ...current.staff, ...current.program.destinations] : [];
+          const freshBase = current ? [...organizationalDocs(), ...current.staff, ...current.program.destinations, ...(explicitProgramOnly ? [] : [...agencyDocs({ forAnswers: true }), ...statePageDocs()])] : [];
+          const freshDocs = current ? [...freshBase, ...await publishedResourceSupplements(scope, freshBase)] : [];
           const checkedClaims = proposed.flatMap(claim => {
             try { return validateEvidenceClaims([claim], sources, freshDocs); }
             catch (error) { if (error instanceof Error && error.message === "generated_evidence_rejected") return []; throw error; }
@@ -931,8 +936,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       generative,
       failureCode,
       failureDetail,
-      // A failed outside search is not news when the answer itself is complete and no outside research was asked for.
-      publicResearch: publicResearch?.status === "failed" && generative && input.researchMode !== "current_web" && input.researchMode !== "deep_research" ? undefined : publicResearch,
+      publicResearch,
     },
   };
 }
@@ -1197,7 +1201,7 @@ function userPrompt(
     availableProgramDestinations: destinations,
     publicResearch: research?.status === "used"
       ? { answer: research.answer, sources: research.sources, note: research.note }
-      : { status: "unavailable", note: research?.note ?? "No public web search was performed for this answer." },
+      : { status: "unavailable", note: research?.note ?? "No public web search was performed for this answer.", instruction: "No outside source was verified for this answer. Do not attribute claims to a named outside publisher, claim its guidance is current, or say you synthesized outside findings. Answer from the supplied program passages, and briefly state the outside-research limitation when relevant." },
   });
 }
 

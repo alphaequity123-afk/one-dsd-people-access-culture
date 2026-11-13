@@ -84,6 +84,13 @@ export type ResearchRequest = {
   trace_id: string;
 };
 
+// A rejected answer may still be billable. Keep its reported usage separate
+// from its unusable evidence so a retry cannot disappear from the budget ledger.
+const failedUsage = new WeakMap<object, { estimated_usd: number; reported_usd?: number; input_tokens?: number; output_tokens?: number }>();
+export function researchFailureUsage(error: unknown) {
+  return error && typeof error === 'object' ? failedUsage.get(error) : undefined;
+}
+
 export interface ResearchProvider {
   readonly id: ResearchProviderId;
   configured(): boolean;
@@ -681,7 +688,16 @@ class PerplexityAgentProvider implements ResearchProvider {
     if (parsed.data.status !== "completed") {
       throw new Error(`research_${parsed.data.status}`);
     }
-    return toOutput(req, parsed.data);
+    try {
+      return toOutput(req, parsed.data);
+    } catch (error) {
+      if (error && typeof error === 'object') {
+        const usage = { reported_usd: parsed.data.usage?.cost?.total_cost ?? undefined,
+          input_tokens: parsed.data.usage?.input_tokens, output_tokens: parsed.data.usage?.output_tokens };
+        failedUsage.set(error, { ...usage, estimated_usd: estimateUsd(req.depth, usage) });
+      }
+      throw error;
+    }
   }
 }
 
