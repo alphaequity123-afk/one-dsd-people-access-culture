@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { asksForProgramSourcesOnly } from "./research-preference";
+import { asksForProgramSourcesOnly, asksToAvoidWebResearch } from "./research-preference";
 
 describe("explicit internal-source preference", () => {
   it.each([
@@ -11,9 +11,6 @@ describe("explicit internal-source preference", () => {
     "Search the program materials only.",
     "Cite this application's sources only.",
     "Use the app documents exclusively.",
-    "Explain the toolkit without searching the web.",
-    "Don't use external research.",
-    "No outside sources, please.",
     "Using only this application, what example does the democratic leadership video give?",
     "Using exclusively this app, explain servant leadership.",
     "Using just the site, summarize the lesson.",
@@ -43,4 +40,24 @@ describe("explicit internal-source preference", () => {
     "Using only the Effective Communication reading in this application, also search the web for new guidance.",
     "Do not use only the Effective Communication reading in this application.",
   ])("leaves normal or external requests on automatic routing: %s", text => expect(asksForProgramSourcesOnly(text)).toBe(false));
+});
+
+describe("research preference and source scope are separate", () => {
+  it.each([
+    "Explain the toolkit without searching the web.",
+    "Don't use external research.",
+    "No outside sources, please.",
+    "Why does Earth have seasons? No web research is needed.",
+  ])("allows general explanation without web research: %s", question => {
+    expect(asksToAvoidWebResearch(question)).toBe(true);
+    expect(asksForProgramSourcesOnly(question)).toBe(false);
+  });
+  it("keeps a strict application-source boundary", () => {
+    expect(asksToAvoidWebResearch("Use only the application sources.")).toBe(true);
+    expect(asksForProgramSourcesOnly("Use only the application sources.")).toBe(true);
+  });
+  it("keeps ordinary and explicit public research available", () => {
+    expect(asksToAvoidWebResearch("Explain seasons.")).toBe(false);
+    expect(asksToAvoidWebResearch("Search the web for current sources.")).toBe(false);
+  });
 });

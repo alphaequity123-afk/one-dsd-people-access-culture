@@ -113,10 +113,22 @@ export async function POST(request: NextRequest) {
   const runId = id;
   const answer = async (onProgress?: AskProgressSink) => {
     try {
-      const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: "auto", cloneRunId: runId, onProgress }, "staff", runId);
+      const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: input.data.researchMode ?? "auto", cloneRunId: runId, onProgress }, "staff", runId);
       if (await paused()) { finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
       if (result.kind === "refusal") { finishRun(db, runId, "refused"); return toStaffAskResult(result); }
       const answer = result.answer;
+      if (answer.failureCode) {
+        finishRun(db, runId, "failed");
+        onProgress?.({ type: "reset" });
+        const evidenceFailure = /evidence|review|source_link/.test(answer.failureCode);
+        return {
+          error: evidenceFailure
+            ? "I couldn’t verify this answer against its sources. Please try again or open the original reading."
+            : "Ask couldn’t finish this answer right now. Your question is still here; please try again shortly.",
+          code: evidenceFailure ? "answer_not_verified" : "answer_unavailable",
+          retryable: true,
+        };
+      }
       finishRun(db, runId, answer.degraded ? "needs_review" : "completed");
       return toStaffAskResult(result);
     } catch (error) {

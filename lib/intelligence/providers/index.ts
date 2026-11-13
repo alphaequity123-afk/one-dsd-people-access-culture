@@ -10,8 +10,9 @@ import { getModel, isCallableInProduction, STAFF_GENERATION_MODEL_ID } from "../
 import type { AgentDefinition, ModelRecord } from "../types";
 import { OpenRouterAdapter } from "./openrouter";
 import { OpenAIAdapter } from "./openai";
-import { errorStatus, logProviderFailure, providerErrorExcerpt } from "./log";
+import { errorStatus, logProviderFailure } from "./log";
 import { isIsolatedMemoryStore } from "../memory/store";
+import { RecoveringProvider } from "./recovery";
 
 export type CompleteRequest = {
   model_id: string;
@@ -20,6 +21,13 @@ export type CompleteRequest = {
   schema: ZodType;
   maxTokens?: number;
   timeoutMs?: number;
+  /** One end-to-end deadline shared by drafting, review and the bounded correction. */
+  deadlineAt?: number;
+  signal?: AbortSignal;
+  /** Reuse this object across the request: no more than one provider switch in total. */
+  recoveryBudget?: { switchesRemaining: number; providerId?: ModelRecord["provider_id"] };
+  /** A denial here is never treated as a provider failure or bypassed by recovery. */
+  beforeAttempt?: (model: ModelRecord) => void | Promise<void>;
   trace_id: string;
   /**
    * When given, the reply is streamed and this receives its raw text so far, each time more arrives.
@@ -73,11 +81,13 @@ export class AnthropicProvider implements ProviderAdapter {
       messages: [{ role: "user", content: req.user }],
       thinking: { type: "adaptive" },
       output_config: { effort: "medium", format: zodOutputFormat(req.schema) },
-    }).catch((error: unknown) => {
-      // The SDK error message carries the vendor's error body (type and message), never the key.
+    }, { signal: req.signal }).catch((error: unknown) => {
+      // Vendor bodies may echo request content. Operational logs retain finite codes only.
       const status = errorStatus(error);
-      logProviderFailure({ provider: "anthropic", model, reason: status ? `anthropic_http_${status}` : "anthropic_request_error", status, body: providerErrorExcerpt(error), trace_id: req.trace_id });
-      throw error;
+      const name = error instanceof Error ? error.name : "";
+      const reason = status ? `anthropic_http_${status}` : req.signal?.aborted || /Timeout|Abort/.test(name) ? "anthropic_timeout" : /Connection/.test(name) ? "anthropic_network" : "anthropic_request_error";
+      logProviderFailure({ provider: "anthropic", model, reason, status, trace_id: req.trace_id });
+      throw Object.assign(new Error(reason), { status });
     });
     if (response.stop_reason === "refusal") {
       logProviderFailure({ provider: "anthropic", model, reason: "provider_refusal", trace_id: req.trace_id });
@@ -158,12 +168,18 @@ export function resolveBinding(agent: AgentDefinition, options: { fallback?: boo
   let reasonCode: BindingReasonCode = "pilot_flag_off";
   if (flagEnabled("model.generative_pilot")) {
     reasonCode = "pilot_model_not_allowed";
-    // The preferred service first; if it has no credential, the next connected one.
-    // The choice is made once per request. A failed request is reported, not retried elsewhere.
-    for (const candidate of candidateModels(agent, options.fallback === true)) {
+    // Ask's public-corpus requests additionally permit one bounded recovery through an
+    // already approved/connected service. Other agents retain selection-only fallback.
+    const candidates = candidateModels(agent, options.fallback === true);
+    for (const candidate of candidates) {
       const adapter = PROVIDERS[candidate.provider_id];
       if (isCallableInProduction(candidate, flagEnabled) && credentialPresent(candidate.provider_id) && adapter.generative) {
-        return { model: candidate, adapter, generative: true, reason: `generative pilot flag on; ${candidate.provider_id} callable; credential present`, reasonCode: "generative_pilot" };
+        const recover = agent.agent_id === "ask_concierge" && options.fallback === true;
+        const connected = candidates.filter(model => isCallableInProduction(model, flagEnabled) && credentialPresent(model.provider_id) && PROVIDERS[model.provider_id].generative);
+        const selected = recover ? new RecoveringProvider(connected.map(model => ({ model, adapter: PROVIDERS[model.provider_id],
+          available: () => flagEnabled("model.generative_pilot") && isCallableInProduction(model, flagEnabled) && credentialPresent(model.provider_id),
+        }))) : adapter;
+        return { model: candidate, adapter: selected, generative: true, reason: `generative pilot flag on; ${candidate.provider_id} callable; credential present`, reasonCode: "generative_pilot" };
       }
       if (reasonCode !== "pilot_model_not_callable") reasonCode = credentialPresent(candidate.provider_id) ? "pilot_model_not_callable" : "pilot_credential_missing";
     }

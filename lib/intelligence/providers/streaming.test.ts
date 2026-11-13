@@ -49,10 +49,10 @@ describe("streamed replies from OpenAI", () => {
     expect(result.parsed).toEqual(answer);
   });
 
-  it("still checks a reply whose closing event never arrived", async () => {
+  it("does not report a syntactically complete fragment as finished without its closing event", async () => {
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
     const fetcher = (async () => sse(deltas)) as unknown as typeof fetch;
-    const result = await new OpenAIAdapter({ fetcher, credential: () => "test-key" }).complete({ ...request, onText: () => undefined }, record);
-    expect(result.parsed).toEqual(answer);
+    await expect(new OpenAIAdapter({ fetcher, credential: () => "test-key" }).complete({ ...request, onText: () => undefined }, record)).rejects.toThrow("openai_stream_error");
   });
 
   it("reports a refusal, a cut-off reply and a stream error as failures", async () => {

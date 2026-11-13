@@ -1,7 +1,7 @@
 import { z, type ZodType } from "zod";
 import type { ModelRecord } from "../types";
 import type { CompleteRequest, CompleteResult, ProviderAdapter } from "./index";
-import { logProviderFailure, providerErrorExcerpt } from "./log";
+import { logProviderFailure } from "./log";
 import { sseEvents } from "./sse";
 
 const OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses";
@@ -176,8 +176,7 @@ async function streamedReply(response: Response, onText: (textSoFar: string) => 
     }
   }
   if (finished) return finished;
-  // The connection closed before the closing event. Whatever text arrived is checked as the reply.
-  if (text) return { status: "completed", output: [{ type: "message", content: [{ type: "output_text", text }] }] };
+  // A syntactically complete fragment is not proof that the provider finished the reply.
   throw new Error("openai_stream_error");
 }
 
@@ -207,11 +206,14 @@ export class OpenAIAdapter implements ProviderAdapter {
     const key = this.credential();
     if (!key) return fail("openai_credential_missing");
     const fetcher = this.opts.fetcher ?? globalThis.fetch;
-    const timeoutMs = this.opts.timeoutMs ?? req.timeoutMs ?? (record.purpose === "eval_judge" ? 120_000 : 60_000);
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const remaining = (req.deadlineAt ?? Infinity) - Date.now();
+    if (remaining <= 0) return fail("provider_deadline_exceeded");
+    const timeoutMs = Math.max(1, Math.min(this.opts.timeoutMs ?? req.timeoutMs ?? (record.purpose === "eval_judge" ? 120_000 : 60_000), remaining));
     if (process.env.PAC_CLONE_AGENTS === "on" && Buffer.byteLength(req.system + req.user, "utf8") > 220_000) return fail("clone_prompt_limit");
     const strict = strictSchemaForOpenAI(req.schema);
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    const signal = AbortSignal.any([controller.signal, ...(req.signal ? [req.signal] : [])]);
 
     const body: Record<string, unknown> = {
       model,
@@ -235,29 +237,24 @@ export class OpenAIAdapter implements ProviderAdapter {
         method: "POST",
         headers: { "content-type": "application/json", authorization: `Bearer ${key}` },
         body: JSON.stringify(body),
-        signal: controller.signal,
+        signal,
       });
     } catch (error) {
       clearTimeout(timer);
-      const timedOut = error instanceof Error && error.name === "AbortError";
-      return fail(timedOut ? "openai_timeout" : "openai_network", { detail: { timeout_ms: timeoutMs, error: providerErrorExcerpt(error, 120) } });
+      const timedOut = signal.aborted || (error instanceof Error && ["AbortError", "TimeoutError"].includes(error.name));
+      return fail(timedOut ? "openai_timeout" : "openai_network", { detail: { timeout_ms: timeoutMs } });
     }
     if (!response.ok) {
       clearTimeout(timer);
-      let errorBody = "";
-      try {
-        errorBody = providerErrorExcerpt(await response.text());
-      } catch {
-        errorBody = "";
-      }
-      return fail(`openai_http_${response.status}`, { status: response.status, body: errorBody });
+      void response.body?.cancel().catch(() => undefined);
+      return fail(`openai_http_${response.status}`, { status: response.status });
     }
 
     let json: unknown;
     try {
       json = req.onText ? await streamedReply(response, req.onText) : await response.json();
     } catch (error) {
-      const timedOut = error instanceof Error && error.name === "AbortError";
+      const timedOut = signal.aborted || (error instanceof Error && ["AbortError", "TimeoutError"].includes(error.name));
       return fail(timedOut ? "openai_timeout" : req.onText ? "openai_stream_error" : "openai_bad_json", { status: response.status });
     } finally {
       clearTimeout(timer);
@@ -265,6 +262,7 @@ export class OpenAIAdapter implements ProviderAdapter {
     const parsedEnvelope = OpenAIResponseSchema.safeParse(json);
     if (!parsedEnvelope.success) return fail("openai_bad_envelope", { status: response.status });
     const env = parsedEnvelope.data;
+    if (env.status === "failed") return fail("openai_service_error", { status: response.status });
     if (env.status === "incomplete") {
       return fail("openai_incomplete", { status: response.status, detail: { incomplete_reason: env.incomplete_details?.reason ?? "unknown" } });
     }
