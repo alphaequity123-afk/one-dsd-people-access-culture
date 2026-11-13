@@ -19,6 +19,7 @@ import { useProgramContext } from "@/components/program-context";
 import type { ProductContextId } from "@/lib/product/federation";
 import { activePracticeArtifact, PracticeArtifactSchema, type PracticeArtifact } from "@/lib/content/practice-artifact";
 import { ASK_PROGRESS_TYPE, readAskProgress, stageLine, type AskStage } from "@/lib/ask/progress-stream";
+import { AskWorkDownload } from "@/components/ask-work-download";
 
 type Turn = { at: string; question: string; result: StaffAskResult; context?: ProductContextId };
 type Session = { id: string; turns: Turn[] };
@@ -110,12 +111,14 @@ export function AskClient({
         answer: turn.result.kind === "answer" ? turn.result.answer.shortAnswer.slice(0, 2500) : "",
       }));
     const priorArtifact = activePracticeArtifact(session.turns, context, q, path?.id);
+    const previousAnswer = session.turns.find(turn => (turn.context ?? context) === context && turn.result.kind === "answer")?.result;
+    const priorWorkProduct = previousAnswer?.kind === "answer" ? previousAnswer.answer.workProduct : undefined;
     try {
       const res = await fetch("/api/ask", {
         method: "POST",
         // Ask for progress as the answer is prepared; a single finished answer is still accepted.
         headers: { "content-type": "application/json", accept: `${ASK_PROGRESS_TYPE}, application/json` },
-        body: JSON.stringify({ question: q, responseMode, pathId: path?.id, mode: initialMode, researchMode, contextPreference: context, history, priorArtifact }),
+        body: JSON.stringify({ question: q, responseMode, pathId: path?.id, mode: initialMode, researchMode, contextPreference: context, history, priorArtifact, priorWorkProduct }),
       });
       const payload = res.ok && res.body && res.headers.get("content-type")?.includes(ASK_PROGRESS_TYPE)
         ? await readAskProgress(res.body, event => setLive(current => !current ? current
@@ -271,6 +274,7 @@ export function AskClient({
                 </div>
               ) : (
                 <AnswerView context={context} answer={t.result.answer} onPrepareConsult={prepareConsult} intakeEnabled={intakeEnabled} dsdContext={context === "one_dsd" && (t.context ?? context) === "one_dsd"} copy={copy}
+                  onFollowUp={i === 0 ? value => { void sendQuestion(value, "text", true); } : undefined} busy={busy}
                   tools={i === 0 ? <span ref={setListenSlot} className="ask-answer-tools" /> : undefined} />
               )}
             </article>
@@ -320,7 +324,8 @@ function citedAnswer(text: string, sources: Array<{ title: string; url: string }
   });
 }
 
-export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext, copy, context, tools }: { context: ProductContextId; answer: StaffAskAnswer; onPrepareConsult: (a: StaffAskAnswer) => void; intakeEnabled: boolean; dsdContext: boolean; copy: EditableSurfaceValues;
+export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext, copy, context, tools, onFollowUp, busy }: { context: ProductContextId; answer: StaffAskAnswer; onPrepareConsult: (a: StaffAskAnswer) => void; intakeEnabled: boolean; dsdContext: boolean; copy: EditableSurfaceValues;
+  onFollowUp?: (question: string) => void; busy?: boolean;
   /** Small controls shown under the answer, such as read aloud. */
   tools?: ReactNode }) {
   // Keep every evidence record for claim references, while listing each
@@ -337,6 +342,7 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
       <h2 className="text-xl font-extrabold">{copyText(copy, "shortAnswerTitle")}</h2>
       <p className="whitespace-pre-wrap break-words">{citedAnswer(answer.shortAnswer, answer.publicResearch?.sources ?? [])}</p>
       {tools}
+      {answer.workProduct ? <AskWorkDownload work={answer.workProduct} /> : null}
       {answer.notice ? <Notice tone="warn">{answer.notice}</Notice> : null}
 
       {Object.keys(grouped).length ? (
@@ -427,6 +433,15 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
       </details> : null}
 
       <ActionList heading={copyText(copy, "actionsHeading")} actions={independent} />
+
+      {onFollowUp && answer.followUpQuestions?.length ? <section className="mt-8 border-t border-slate-300 pt-5" aria-label="Continue exploring">
+        <h3 className="text-base font-medium">Continue exploring</h3>
+        <ul className="mt-3 space-y-2 list-none p-0">
+          {answer.followUpQuestions.map(question => <li key={question}>
+            <button type="button" disabled={busy} onClick={() => onFollowUp(question)} className="min-h-11 w-full rounded border border-slate-300 px-4 py-3 text-left text-[color:var(--navy)] hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50">{question}</button>
+          </li>)}
+        </ul>
+      </section> : null}
 
       {answer.practiceArtifact ? <PracticeDraftLink artifact={answer.practiceArtifact} context={context} copy={copy} /> : null}
 

@@ -117,6 +117,10 @@ export async function getResearchPolicy(): Promise<ResearchPolicy> {
   // Owner decision, 2026-11-11: live research reads government and partner sites only. The scope is a service
   // setting (PAC_RESEARCH_SCOPE=government); a stored list of sites, when the consultant sets one, takes its place.
   if (process.env.PAC_RESEARCH_SCOPE === "government" && !(stored?.allowed_domains?.length)) base.allowed_domains = [...GOVERNMENT_AND_PARTNER_SITES];
+  // Owner decision, 2026-11-13: Ask researches any subject on the public web.
+  // An explicit service setting supersedes the former saved domain restriction,
+  // while enable/disable, spending, admission and citation checks remain intact.
+  if (process.env.PAC_RESEARCH_SCOPE === "open") base.allowed_domains = [];
   const cap = Number(process.env.PAC_RESEARCH_MONTHLY_USD_CAP);
   if (Number.isFinite(cap) && cap > 0 && stored?.monthly_usd_cap === undefined) base.monthly_usd_cap = cap;
   if (storedOrder !== undefined && JSON.stringify(storedOrder) !== JSON.stringify(normalizedOrder)) {

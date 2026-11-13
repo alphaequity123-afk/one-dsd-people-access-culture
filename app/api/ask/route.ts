@@ -10,6 +10,7 @@ import { consumeRequestLimit, rateLimitHeaders } from "@/lib/security/rate-limit
 import { ask, paused } from "@/lib/intelligence/orchestrator";
 import { toStaffAskResult } from "@/lib/intelligence/agents/ask";
 import { PracticeArtifactSchema } from "@/lib/content/practice-artifact";
+import { AskWorkProductSchema } from "@/lib/ask/work-product";
 import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
 import type { AskProgress, AskProgressSink } from "@/lib/intelligence/agents/ask-progress";
 import { ASK_PROGRESS_TYPE } from "@/lib/ask/progress-stream";
@@ -25,6 +26,7 @@ const Input = z.object({
   researchMode: z.enum(["auto", "program_only", "web_results", "current_web", "deep_research"]).optional(),
   history: z.array(z.object({ question: z.string().max(1000), answer: z.string().max(2500) }).strict()).max(4).optional(),
   priorArtifact: PracticeArtifactSchema.optional(),
+  priorWorkProduct: AskWorkProductSchema.optional(),
 }).strict();
 const json = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: { "cache-control": "no-store" } });
 const KEEP_ALIVE_MS = 10_000;
@@ -89,7 +91,7 @@ export async function POST(request: NextRequest) {
   if (!cloneAgentsEnabled()) return staffWriteClosedResponse();
   if (!isSameOriginMutation(request)) return json({ error: "Please use Ask from its page on this site." }, 403);
   if (await paused()) return json({ error: "Ask is paused for now. You can still browse resources." }, 503);
-  const body = await readBoundedJson(request, 32_000);
+  const body = await readBoundedJson(request, 128_000);
   if (!body.ok) return json({ error: body.message }, body.status);
   const input = Input.safeParse(body.value);
   if (!input.success) return json({ error: "Please shorten your question or start a new conversation." }, 400);

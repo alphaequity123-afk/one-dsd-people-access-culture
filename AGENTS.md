@@ -16,6 +16,10 @@ Use familiar words, direct sentences, short connected paragraphs, and concrete e
 
 Keep original source documents, policy wording, citations, and quotations accurate. Apply the writing standard to the application's own explanations around those sources; do not silently rewrite the original as though it were the publisher's wording. Preserve the approved GEFen read-aloud voice and approved female/male Qwen podcast voices. User-facing playback labels stay simple: "Listen" and "Watch."
 
-## Outside resources
+## Ask
+
+Ask's primary function is evidence-based inference and synthesis across relevant application resources, agencies, partners, and the broader public web. It supports any subject, original work products, and optional contextual follow-up questions. Do not confine questions to diversity, equity, human services, or a fixed website list. Distinguish evidence, interpretation, uncertainty, and official authority. Preserve explicit source-only requests, citation integrity, privacy protections, owner stop controls, and existing spending limits. Keep the interface calm and preserve approved voice services.
+
+## Source republication
 
 The program owner chose full in-app copies only for verified public-domain or openly licensed content. Keep other working original links. An accessible website or government domain alone is not an approval for its images, guest material, or third-party publications. Record the specific source, license evidence, attribution, and reviewed content identity in `config/source-republication.json`. Preserve substantive text and source credits in converted readings. If a page cannot be reproduced completely, retain its original destination; do not replace it with an empty or partial reading. Confirmed missing pages are excluded from featured resources.

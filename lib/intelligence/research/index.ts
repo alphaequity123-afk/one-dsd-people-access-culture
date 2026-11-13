@@ -84,7 +84,7 @@ export async function governedResearchAvailability(role: "staff" | "owner" = "st
 
 /** Outside research reads the question in its program setting, so a "renewal notice" is a human-services notice, not a subscription. */
 function inProgramContext(question: string): string {
-  return question + " (Context: the reader works for the Minnesota Department of Human Services, Disability Services Division, in public human services; answer for that setting.)";
+  return question + " (Answer the actual subject asked about. The reader may work in Minnesota public human services; use that context only when relevant. Research is not limited to that field. Prefer authoritative original sources. Distinguish documented facts from inference, compare plausible explanations where appropriate, and do not infer causation or agency authority from association alone.)";
 }
 
 export async function governedResearch(question: string, depth: ResearchDepth, explicit: boolean, ctx: ToolContext, fetcher?: typeof fetch): Promise<GovernedResearchResult> {

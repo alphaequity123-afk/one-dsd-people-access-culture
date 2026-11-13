@@ -11,6 +11,7 @@ import { PUBLIC_BODIES, agencyDisplayName, agencyNodeId, agencyPageHref } from "
 import { pageArea, type PageArea } from "@/lib/program/page-purpose";
 import { statePageDocs, stateReadingHref } from "@/lib/search/state-pages";
 import { externalReadingHref, unavailableExternalUrl } from "@/lib/content/external-readings";
+import { facetValue } from "@/lib/graph/facets";
 
 export type SiteSearchResult = { id: string; title: string; href: string; excerpt: string; area: PageArea | "state"; external: boolean };
 
@@ -30,6 +31,10 @@ function buildAgencyDocs(forAnswers: boolean): Doc[] {
     kind: "content", id: agencyNodeId(agency), title: agencyDisplayName(agency.name), href: agency.href,
     authority: "external_verify", type: "agency", status: "published", reviewDate: "", scope: "public",
     summary: agency.description, text: agency.description, tags: agency.topics.split(/\s+/).filter(Boolean), intents: [],
+    // Reuse the published directory's topical connections. These suggest related
+    // material; they do not assert that an agency owns or endorses it.
+    graphRelated: agency.linkOnly ? [] : (facetValue("community", `agency-${agency.id}`)?.items ?? [])
+      .filter(item => item.id !== agencyNodeId(agency)).map(item => item.href),
   }));
 }
 
