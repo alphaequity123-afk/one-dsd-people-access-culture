@@ -9,6 +9,7 @@ export function asksForProgramSourcesOnly(question: string): boolean {
     || /\b(?:also|additionally|and|plus)\s+(?:please\s+)?(?:search|use|consult|include|consider|check)\s+(?:the\s+)?(?:web|internet|online|external|outside)\b/.test(text)
     || /\b(?:include|use|consult|search|consider)\s+(?:the\s+)?(?:web|internet|online|external|outside)\b.{0,30}\b(?:too|also|as well)\b/.test(text)) return false;
   return /\b(?:using|use|searching|search|consulting|consult|citing|cite|relying on|rely on|based (?:solely |only |exclusively )?on)\s+(?:(?:only|just|solely|exclusively)\s+)?(?:(?:this|the)\s+)?(?:app|application|site|program)\s+(?:only|alone|exclusively)\b/.test(text)
+    || /\b(?:using|use|consult|cite|drawing on|draw on)\s+(?:only|just|solely|exclusively)\s+[^.!?\n]{1,160}\b(?:reading|essay|brief|course|book|chapter|resource|document|material|section|collection)s?\s+(?:from|in|on|within|inside)\s+(?:this|the)\s+(?:application|app|site|program)\b/.test(text)
     || /\b(?:using|use|searching|search|consulting|consult|citing|cite|relying on|rely on|based\s+on)\s+(?:only|just|solely|exclusively)\s+(?:(?:this|the)\s+)(?:app|application|site|program)\b/.test(text)
     || /\b(?:based|drawing)\s+(?:only|solely|exclusively)\s+on\s+(?:(?:this|the)\s+)(?:app|application|site|program)\b/.test(text)
     || /\b(?:from|within|inside|in)\s+(?:only|just|solely|exclusively)\s+(?:(?:this|the)\s+)(?:app|application|site|program)\b/.test(text)

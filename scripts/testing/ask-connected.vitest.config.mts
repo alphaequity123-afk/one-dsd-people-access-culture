@@ -8,6 +8,7 @@ export default defineConfig({
     'lib/ask/work-product.test.ts',
     'lib/ask/export-route.test.ts',
     'lib/intelligence/research/open-scope.test.ts',
+    'lib/intelligence/research-preference.test.ts',
     'components/ask-client-live.test.tsx',
     'lib/search/agency-connections.test.ts',
     'lib/intelligence/retrieval/source-reading-docs.test.ts',
