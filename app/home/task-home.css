@@ -17,7 +17,7 @@ body.dsd-calm .od.dsd-home {
 .dsd-home .pilot-section h2 { margin: 0 0 14px; font-size: 1.5rem; line-height: 1.2; font-weight: 600; }
 .dsd-home .pilot-section-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 12px; }
 .dsd-home .pilot-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
-.dsd-home .pilot-actions a, .dsd-home .pilot-section-heading a, .dsd-home .pilot-task > a {
+.dsd-home .pilot-actions a, .dsd-home .pilot-section-heading a, .dsd-home .pilot-task > a, .dsd-home .pilot-agency-link {
   display: inline-flex;
   align-items: center;
   min-height: 44px;

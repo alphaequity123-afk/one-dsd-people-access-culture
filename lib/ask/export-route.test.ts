@@ -3,10 +3,10 @@ import { NextRequest } from "next/server";
 vi.mock("@/lib/intelligence/clone/config", () => ({ cloneAgentsEnabled: () => true }));
 vi.mock("@/lib/security/rate-limit", async () => {
   const { assertRuntimeRateLimitRequest } = await import("@/lib/trust/work-object-contract");
-  return { consumeRequestLimit: async (_request: unknown, options: { scope: string; limit: number; windowSeconds: number }) => {
+  return { consumeRequestLimit: vi.fn(async (_request: unknown, options: { scope: string; limit: number; windowSeconds: number }) => {
     assertRuntimeRateLimitRequest(options.scope, "a".repeat(64), options.limit, options.windowSeconds);
     return { allowed: true };
-  } };
+  }) };
 });
 vi.mock("@/lib/downloads/render", () => ({
   renderResourceDocument: vi.fn(async () => Buffer.from("test-document")),
@@ -14,6 +14,7 @@ vi.mock("@/lib/downloads/render", () => ({
   downloadFileName: () => "working-draft.docx",
 }));
 import { renderResourceDocument } from "@/lib/downloads/render";
+import { consumeRequestLimit } from "@/lib/security/rate-limit";
 import { POST } from "@/app/api/ask/export/route";
 const work = { title: "Draft", format: "docx", sections: [{ heading: "", paragraphs: ["A useful starting point."], headers: [], rows: [] }], sources: [{ title: "Reading", href: "/learn" }] };
 const request = (body: unknown, origin = "https://public.example") => new NextRequest("http://internal:8080/api/ask/export", { method: "POST", headers: { origin, "content-type": "application/json" }, body: JSON.stringify(body) });
@@ -32,7 +33,17 @@ it("exports without caching and uses public links behind Railway's internal orig
   vi.stubEnv("PAC_PUBLIC_ORIGIN", "https://public.example");
   const response = await POST(request(work));
   expect(response.status).toBe(200);
+  expect(consumeRequestLimit).toHaveBeenCalledWith(expect.any(NextRequest), { scope: "staff-ask", limit: 120, windowSeconds: 600 });
   expect(response.headers.get("cache-control")).toBe("no-store");
   expect(response.headers.get("content-disposition")).toContain("attachment");
   expect(vi.mocked(renderResourceDocument).mock.calls[0][0].sources![0].href).toBe("https://public.example/learn");
+});
+
+it("returns a usable temporary-error response when the durable limiter is unavailable", async () => {
+  vi.stubEnv("PAC_PUBLIC_ORIGIN", "https://public.example");
+  vi.mocked(consumeRequestLimit).mockRejectedValueOnce(new Error("database unavailable"));
+  const response = await POST(request(work));
+  expect(response.status).toBe(503);
+  expect((await response.json()).error).toContain("Your draft is still here");
+  expect(renderResourceDocument).not.toHaveBeenCalled();
 });
