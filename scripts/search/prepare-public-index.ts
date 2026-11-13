@@ -1,4 +1,7 @@
 /** Explicit maintenance build, outside the ordinary regression suite. No private database or questions. */
+// Before release, publish changed vector bytes to the existing content-addressed
+// asset store and update config/github-supplemental-assets.json. Then run
+// scripts/prepare-github-assets.mjs to verify the release transport matches.
 import { it,expect } from 'vitest';
 import { writeFile,readFile,mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
