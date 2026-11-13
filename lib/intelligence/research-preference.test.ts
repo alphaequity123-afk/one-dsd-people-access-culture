@@ -22,6 +22,9 @@ describe("explicit internal-source preference", () => {
     "Based solely on this application, what is in the video?",
     "What can I learn from only this site?",
     "Use only the information from this program.",
+    "Using only the Effective Communication reading in this application, explain what it says about companions and requiring a companion to interpret. Cite that reading.",
+    "Use only The Water We Swim In collection in this application to make a discussion guide.",
+    "Cite exclusively the American Culture brief within the program.",
     "What does the democratic video say from this app only?",
   ])("respects an explicit request: %s", text => expect(asksForProgramSourcesOnly(text)).toBe(true));
 
@@ -37,5 +40,7 @@ describe("explicit internal-source preference", () => {
     "Not only use internal sources, but also search the web.",
     "Using only this application, also search the web for current guidance.",
     "Use only this site and include external sources too.",
+    "Using only the Effective Communication reading in this application, also search the web for new guidance.",
+    "Do not use only the Effective Communication reading in this application.",
   ])("leaves normal or external requests on automatic routing: %s", text => expect(asksForProgramSourcesOnly(text)).toBe(false));
 });
