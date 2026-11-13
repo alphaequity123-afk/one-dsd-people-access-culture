@@ -22,6 +22,17 @@ it("keeps staff results and deduplicates multiple passages at the same destinati
   library.program.mockResolvedValue({ destinations: [course, { ...course, id: "course-anchor", href: course.href + "#practice" }] });
   expect((await siteSearch("coaching", "dsd")).filter(hit => hit.href.split("#")[0] === course.href)).toHaveLength(1);
 });
+it("shows readable course excerpts without leaking HTML or clipped link attributes", async () => {
+  const text = `<p>${"Introductory background. ".repeat(25)}</p><p>For <a href="https://example.org/${"long-destination/".repeat(35)}accessible-meetings">accessible meetings</a>, share notes &amp; offer captions.</p><p>Return an accurate account of decisions.</p>`;
+  const htmlCourse = { ...course, id: "accessible-meetings", title: "Equity in Remote and Hybrid Work", tags: ["accessible meetings"], text };
+  library.program.mockResolvedValue({ destinations: [htmlCourse] });
+  const hit = (await siteSearch("accessible meetings", "dsd")).find(row => row.id === htmlCourse.id);
+  expect(hit?.href).toBe(course.href);
+  expect(hit?.excerpt).toContain("accessible meetings, share notes & offer captions.");
+  expect(hit?.excerpt).toContain("Return an accurate account of decisions.");
+  expect(hit?.excerpt).not.toMatch(/<\/?[a-z]|href=|example\.org|long-destination|&amp;/i);
+  expect(htmlCourse.text).toBe(text);
+});
 it("finds substantive transcript passages and reviewed readings beyond their titles", async () => {
   const transcript: Doc = { ...course, id: "audio-passage", title: "A learning conversation", href: "/learning/course-media/example.mp3#t=12", type: "public_media_transcript", summary: "A conversation about invitations.", text: "Confirm how people can request interpretation before the invitation is sent.", tags: [] };
   const reading: Doc = { ...course, id: "reviewed-reading", title: "Communication guidance", href: "/source-reading/example?section=2", type: "source_reading_section", summary: "Reviewed outside reading.", text: "Qualified interpreters support effective communication for companions as well as the person receiving services.", tags: [] };

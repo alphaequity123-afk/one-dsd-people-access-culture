@@ -9,8 +9,9 @@ import { planWithJev, reviewWithJev, SPECIALIST_GUIDANCE } from "../clone/jev";
 import { assessLocalEvidence, localEvidenceNeedsResearch } from "./local-evidence";
 import { brainContext, expandThroughGraph, fitWriterPrompt } from "../retrieval/brain";
 import { asksForProgramSourcesOnly } from "../research-preference";
+import { researchSourceContext } from "../research/source-context";
 import { EvidenceClaimsSchema, type EvidenceClaim, type SourceEvidence } from "@/lib/content/ask-evidence";
-import { citationEvidenceFromDocs, validateEvidenceClaims } from "../retrieval/evidence";
+import { citationEvidenceFromDocs, referencedEvidenceSources, validateEvidenceClaims } from "../retrieval/evidence";
 import { videoScenarioEvidenceHits } from "../retrieval/video-transcript-evidence";
 import { CitedStatementsSchema, GeneratedEvidenceClaimsSchema, citedStatementsForSources, resolveCitedStatements, sourceRef } from "../retrieval/generated-evidence";
 import { publishedResourceSupplements } from "../retrieval/published-resource-supplements";
@@ -488,7 +489,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let generatedResourceLinks: AskAnswer["nextActions"] = [];
   const sources = await runTool(ctx, "citation.attach", async () => {
     const docs = await staffDocs();
-    return citationEvidenceFromDocs(videoScenarioEvidenceHits([...merged, ...connected], docs, retrievalQuestion), docs);
+    return citationEvidenceFromDocs(videoScenarioEvidenceHits([...merged, ...connected], docs, retrievalQuestion), docs, { question: retrievalQuestion });
   }, { contentIds: [...merged, ...connected].map((m) => m.id) });
   let answerSources = sources;
   let evidenceClaims: EvidenceClaim[] = [];
@@ -506,10 +507,11 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const localEvidence = assessLocalEvidence(question, merged.filter(hit => !/^https?:\/\//.test(hit.href)));
   // A calculation, or help with wording the person has supplied, needs no outside facts, so nothing is searched for it.
   const selfContained = selfContainedWork(question) && !asksForCurrentInformation(question) && !wantsCitation(question);
+  const sourceIdentities = explicitProgramOnly ? [] : researchSourceContext(retrievalQuestion, availableDocs);
   const research = (...args: Parameters<typeof governedResearch>) => {
     const began = Date.now();
     reportProgress(sink, { type: "stage", stage: "checking" });
-    return governedResearch(...args).finally(() => { took.research = Date.now() - began; });
+    return governedResearch(args[0], args[1], args[2], args[3], args[4], sourceIdentities).finally(() => { took.research = Date.now() - began; });
   };
   const planBegan = Date.now();
   const researchCertain = cloneAgentsEnabled() && (requestedMode === "current_web" || requestedMode === "deep_research" || (requestedMode === "auto" && !tribalWork && (
@@ -532,7 +534,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let researchFailureCode: string | undefined;
 
   if (requestedMode === "web_results") {
-    const result = await governedSearch(question, true, ctx);
+    const result = await governedSearch(question, true, ctx, undefined, sourceIdentities);
     if (result.status === "used") {
       publicResearch = {
         status: "used",
@@ -777,8 +779,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
           const work = usableWorkDraft(parsed.data.workProduct);
           if (parsed.data.workProduct && !work) limits.push("A downloadable copy could not be prepared from this answer. Ask for a revised document or spreadsheet.");
           const usedSourceIds = new Set(parsed.data.sourceIds ?? []);
-          const citedEvidenceIds = new Set(checkedClaims.flatMap(claim => claim.references.map(reference => reference.evidenceId)));
-          answerSources = sources.filter(source => source.evidence && citedEvidenceIds.has(source.evidence.evidenceId));
+          answerSources = referencedEvidenceSources(checkedClaims, sources);
           if (work) workProduct = { ...work, sources: Array.from(new Map([
             ...answerSources.map(source => ({ title: source.title, href: source.href })),
             ...(publicResearch?.status === "used" ? publicResearch.sources.map(source => ({ title: source.title, href: source.url })) : []),
@@ -1158,6 +1159,7 @@ function systemPrompt(responseMode: AskResponseMode = "text", explicitProgramOnl
     "A supplied source with a PDF page title and #page= URL contains text from that exact original PDF page. Cite that supplied page number and link when using it. Never infer PDF pagination from a library overview, invent page ranges, or say original page text is unavailable when it is supplied.",
     "Use supplied public research for current facts and preserve its source numbers. Do not add changing facts, dates, event timelines, officeholders, or statistics that are absent from that evidence. If the supplied public answer is sufficient, preserve it rather than expanding its factual claims. If public research is unavailable, give useful stable background and clearly identify any changing details you cannot verify. Never claim to have checked current sources unless current research is supplied.",
     "Distinguish general explanation, program resources, public evidence, inference, and official authority. Never invent DHS policies, legal citations, eligibility decisions, statistics, or approval. Legal, medical, and financial questions may receive general information with proportionate uncertainty and appropriate professional support.",
+    "When explaining a policy, rule, or permission, preserve who it applies to, every material condition, exceptions, and limits. A word limit does not justify dropping a qualification that changes the rule. Distinguish emergency from ordinary circumstances when the source does. Never turn a qualified restriction into an absolute prohibition or an exception into general permission. If the supplied passages do not include the necessary conditions, say what remains unconfirmed instead of completing the rule from memory.",
     "Check the scope and date of organizational evidence. An agency's policy about its own access obligations or grievance procedure does not establish its authority over other employers. A past pilot, contract, referral arrangement or partnership is not proof of a current service. Label proposed coordination as your suggestion, and avoid suggesting a known real joint activity when the sources do not establish one.",
     "Answer educational questions about Tribal Nations, Native communities, sovereignty, and geography. For actual government-to-government decisions, explain that authorized Tribal and agency representatives must handle consultation; do not claim authority to represent a Nation or infer an individual's affiliation.",
     "Protect private information and do not profile or rank people by identity, beliefs, or their private participation. For harmful requests, explain the relevant limit and offer safe, useful help.",
@@ -1167,6 +1169,7 @@ function systemPrompt(responseMode: AskResponseMode = "text", explicitProgramOnl
     "The reader is a Minnesota Department of Human Services staff member in the Disability Services Division; never ask what country, state or employer they are in. For personnel matters such as retaliation, discipline, harassment, grievances or a supervisor's conduct, say plainly that Employee Culture, Human Resources and the civil-rights channel handle them, point the reader to Find the right person, and keep any general guidance brief and supportive rather than legal.",
     "When the reader asks for books, readings or what to read, draw on the reading collection in the supplied sources and directory, name the specific books with their links, and never say the site lacks a book on a subject unless the supplied directory truly has none.",
     "Return evidenceClaims when using a program source: each has text and refs. text is one statement the program material supports, in your own words, or a short exact quotation from it. refs lists the ref labels of the supplied programSources that support it, such as S1. Only a source that carries a ref can be cited, and its passage is attached for you: never copy passages, identifiers or offsets into evidenceClaims. External publicResearch sources have URLs rather than refs: cite their supplied URLs in the answer and never create evidenceClaims for them. Leave evidenceClaims empty when only publicResearch supports the answer. A statement that is not an exact quotation is treated as your reading of the passage, so word paraphrases, recommendations, and interpretations as what the material supports; do not present them as proven facts. These checks establish reference integrity, not factual truth or semantic entailment. Never invent a ref or infer a conflict from the question alone. If no suitable source supports the question, give a useful general explanation with evidenceClaims empty. Do not present general prose as quoted source evidence. sourceIds can suggest related reading but never establish support for a claim.",
+    "A document may have several separately labeled passages. Choose the specific passage or passages that support the actual statement, including its conditions and exceptions; a matching title, generic overview, or related paragraph is not support. Split statements that require different evidence. Use programKnowledge to understand context, but do not cite a programSources ref for a claim supported only elsewhere in that document. If no supplied citable passage supports it, qualify or omit the claim rather than attach an unrelated reference.",
     "Return shortAnswer (the complete answer, with the detail the question needs), whyItMatters (brief useful context, or an empty string when unnecessary), limits (only relevant limitations; an empty list is fine), and resourceHrefs (up to eight exact URLs from the supplied public program directory that help with this question, including paraphrased or multilingual requests; use an empty list when none is useful).",
     "Return followUpQuestions: two or three concise, specific questions or requests the reader could ask next, based on this question, your actual answer, and the conversation. Offer genuinely different useful directions such as examining evidence, comparing an alternative, or making something practical. Phrase each as the reader's request. Do not repeat the original question, presume an emotional state, or advertise capabilities the application lacks. They are optional choices; use an empty list when no continuation would help.",
     "When the reader requests an editable document, report, study guide, plan, worksheet, Excel spreadsheet or table-based work product, return workProduct with a clear title, format docx or xlsx, and complete sections. Use paragraphs for narrative; for a table use headers and equal-width rows. Excel needs at least one actual table with useful columns and rows. Empty headers and rows mean no table. Keep every value plain text; no executable formulas or macros. Explain assumptions and mark examples or invented practice data clearly. Use only evidence available for this answer; do not invent statistics or official authority. Sources are attached separately by the application. The application renders a real downloadable Word or Excel file from this structure. Do not merely say you created a file while leaving workProduct empty. For a relevant revision, update the previous working draft. Do not create an unsolicited file; return null for ordinary questions. Do not claim to run code, send mail, publish changes, or create other file types.",

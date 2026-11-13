@@ -81,6 +81,8 @@ export type SearchHit = {
 };
 
 export type Doc = {
+  /** Named public links from the current publication; safe research identity hints only. */
+  publicResearchSources?: import("../research/source-context").PublicResearchSource[];
   /** Separately reviewed source-status context; never part of publisher wording. */
   sourceContext?: { note: string; sourceUrl: string; checkedAt: string };
   evidenceRevisions?: EvidenceRevision[];

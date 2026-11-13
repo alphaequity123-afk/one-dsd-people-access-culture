@@ -12,6 +12,7 @@ import { loadStaffContentSnapshot, type StaffProgramScope } from "@/lib/content/
 import { MEASUREMENT_RESOURCE_ID } from "@/lib/content/measurement-practice";
 import type { Doc } from "./search";
 import { searchDocs, tokens } from "./search";
+import { publicSourceMetadata } from "../research/source-context";
 import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curriculumDocs, selfDirectedCurriculumDocs, waterCourseDocs, waterCollectionDoc } from "./brain-content";
 import { publishedPodcastReadings } from "./podcast-reading";
 import { developmentModel, journeyHref } from "@/lib/program/development";
@@ -157,6 +158,7 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
       title, href, authority: coursePack ? "learning" : community ? "community_brief" : "practice_note", type: community ? "community_brief" : "program_destination",
       status: "approved", reviewDate: "", scope: scope === "dsd" ? "dsd" : "agencywide",
       evidenceRevisions: [...rows.flatMap(row => row.editorialEvidence), ...readingSupport.map(reading => reading.evidence)],
+      publicResearchSources: rows.flatMap(row => publicSourceMetadata(row.values)),
       graphRelated: href.startsWith("/one-dsd/programs/") || href.startsWith("/one-dsd/scenarios/") ? ["/one-dsd"] : ["/one-dsd/amplify/ideas", "/one-dsd/amplify/materials", "/one-dsd/amplify/gatherings", "/one-dsd/amplify/co-leads"].includes(href) ? ["/one-dsd/amplify"] : href === "/learn/sources" || href === "/my-work/explore" ? ["/learn"] : /^\/areas\/[^/]+$/.test(href) ? ["/areas"] : [],
       summary: [summary, ...readingSupport.map(reading => reading.summary)].join(" "), text: [`${title} ${text}`, goalSupport, ...readingSupport.map(reading => reading.text)].join("\n"), tags: [title, href.replaceAll("/", " "), ...readingSupport.flatMap(reading => reading.tags)], intents: community ? ["intercultural", "access_barriers"] : [],
     };

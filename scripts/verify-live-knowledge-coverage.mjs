@@ -70,7 +70,9 @@ for (const test of askCases.filter(item => selection === 'all' || selection === 
         method: 'POST', headers: { 'content-type': 'application/json', origin: base },
         body: JSON.stringify({ ...test.input, contextPreference: 'one_dsd' }), signal: AbortSignal.timeout(200000),
       });
-      record = { ...record, status: response.status, seconds: (Date.now() - start) / 1000, result: await readJson(response), completedAt: new Date().toISOString() };
+      const headersSeconds = (Date.now() - start) / 1000;
+      const result = await readJson(response);
+      record = { ...record, status: response.status, headersSeconds, seconds: (Date.now() - start) / 1000, result, completedAt: new Date().toISOString() };
     } catch (error) { record = { ...record, seconds: (Date.now() - start) / 1000, error: String(error), completedAt: new Date().toISOString() }; }
   }
   const answer = record.result?.answer;

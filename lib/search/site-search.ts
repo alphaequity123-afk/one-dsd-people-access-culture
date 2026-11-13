@@ -5,7 +5,7 @@ import "server-only";
  * Nothing here records what anyone searches for.
  */
 import { recentStaffDocs, recentProgramResources } from "@/lib/intelligence/retrieval/ask-library";
-import { searchDocs, type Doc } from "@/lib/intelligence/retrieval/search";
+import { searchDocs, searchExcerpt, type Doc } from "@/lib/intelligence/retrieval/search";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { PUBLIC_BODIES, agencyDisplayName, agencyNodeId, agencyPageHref } from "@/lib/content/state-agencies";
 import { pageArea, type PageArea } from "@/lib/program/page-purpose";
@@ -14,6 +14,7 @@ import { externalReadingHref, externalSourceHref, unavailableExternalUrl } from 
 import { facetValue } from "@/lib/graph/facets";
 import { publishedResourceSupplements } from "@/lib/intelligence/retrieval/published-resource-supplements";
 import { availableSourceDocs } from "@/lib/intelligence/retrieval/available-source-docs";
+import { htmlToText } from "@/lib/downloads/html-text";
 
 export type SiteSearchResult = { id: string; title: string; href: string; excerpt: string; area: PageArea | "state"; external: boolean };
 
@@ -56,8 +57,10 @@ async function allDocs(scope: StaffProgramScope): Promise<Doc[]> {
 export async function siteSearch(query: string, scope: StaffProgramScope, limit = 20): Promise<SiteSearchResult[]> {
   const q = query.trim().slice(0, 200);
   if (q.length < 2) return [];
+  const docs = await allDocs(scope);
+  const byIdentity = new Map(docs.map(doc => [`${doc.kind}:${doc.id}`, doc]));
   // Program material leads; State of Minnesota pages follow close behind, weighted a little lower.
-  const hits = searchDocs(q, await allDocs(scope), { limit: limit * 3 })
+  const hits = searchDocs(q, docs, { limit: limit * 3 })
     .map(hit => ({ ...hit, score: /^https?:\/\//.test(hit.href) ? hit.score * 0.7 : hit.score }))
     .sort((a, b) => b.score - a.score);
   const seen = new Set<string>(), out: SiteSearchResult[] = [];
@@ -69,7 +72,14 @@ export async function siteSearch(query: string, scope: StaffProgramScope, limit 
     const originalIsExternal = /^https?:\/\//.test(hit.href);
     const [kind, id] = hit.id.split(":", 2);
     const destination = kind === "agency" ? agencyPageHref(id) : kind === "state-page" ? stateReadingHref(id) : externalReadingHref(hit.href) ?? externalSourceHref(hit.href) ?? hit.href;
-    out.push({ id: hit.id, title: hit.title, href: destination, excerpt: hit.excerpt, area: originalIsExternal ? "state" : pageArea(href), external: /^https?:\/\//.test(destination) });
+    const doc = byIdentity.get(`${hit.kind}:${hit.id}`);
+    const sourceText = doc?.text || doc?.summary || "";
+    // Strip authored HTML before selecting the display window: a window cut
+    // inside a long link attribute cannot be cleaned safely afterwards. Ranking
+    // and evidence continue to use the unchanged source document.
+    const excerpt = /<\/?[a-z][^>]*>/i.test(sourceText)
+      ? searchExcerpt(htmlToText(sourceText), q, hit.title) : hit.excerpt;
+    out.push({ id: hit.id, title: hit.title, href: destination, excerpt, area: originalIsExternal ? "state" : pageArea(href), external: /^https?:\/\//.test(destination) });
     if (out.length === limit) break;
   }
   return out;
