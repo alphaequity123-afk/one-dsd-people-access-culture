@@ -143,7 +143,9 @@ export default async function ResourcePage({ params, searchParams }: { params: P
           )}
         </section>
         {RESOURCE_DECISION_QUESTIONS[id] ? <ToolDecisionQuestions tool={RESOURCE_DECISION_QUESTIONS[id]} className="my-6" /> : null}
-        <div className={styles.next}>
+        <details className={styles.followUp}>
+          <summary>Next steps and related reading</summary>
+          <div className={styles.next}>
           <div>
             <ActionList heading={stringValue(shell, "nextStepsTitle")} actions={nextActions} />
             {paths.length ? (
@@ -168,7 +170,8 @@ export default async function ResourcePage({ params, searchParams }: { params: P
         </div>
         {related.length ? <section className="my-6 border-t border-line pt-5" aria-label="Related resources"><details className={styles.relatedReading}><summary>Related resources ({related.length})</summary><ul className="mt-3 space-y-2">{related.map(item=><li key={item.id}><Link href={withWorkOrigin("/library/"+encodeURIComponent(item.id),origin)}>{item.title}</Link></li>)}</ul></details></section> : null}
         {readingsFor(c.id).length ? <section className="my-6 border-t border-line pt-5" aria-labelledby="books-inform-title"><h2 id="books-inform-title" className="text-xl font-semibold">Books that inform this work</h2><p className="mt-2">Reading notes from the program&apos;s collection, for a deeper look at the ideas behind this resource.</p><ul className="mt-3 space-y-2">{readingsFor(c.id).map(item=><li key={item.id}><Link href={item.href}>{item.title}</Link>{item.why ? <span className="block text-sm text-muted">{item.why}</span> : null}</li>)}</ul></section> : null}
-        {relatedUnavailable ? <p role="status">Related reading is temporarily unavailable. You can continue exploring the Library.</p> : null}
+          {relatedUnavailable ? <p role="status">Related reading is temporarily unavailable. You can continue exploring the Library.</p> : null}
+        </details>
         <details className="my-6 border-t border-line py-4"><summary className="cursor-pointer font-semibold">About this resource</summary><dl className="mt-3 space-y-2"><div><dt className="font-semibold">Responsible team or person</dt><dd>{c.owner || "Not recorded"}</dd></div></dl><p className="mt-3">Check the original source for the decision in front of you.</p></details>
         <ResourceEvidence resourceType={["corpus_item","domain_corpus_item"]} resourceId={c.id} />
         <LearningJourneyLink scope={scope} resourceId={c.id} />
