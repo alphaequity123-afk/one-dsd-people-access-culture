@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HomeTaskFinder } from "@/components/home-task-finder";
 import { HomeAsk } from "@/components/home-ask";
+import { HeroMotion } from "./hero-motion";
 import { prepareAsk } from "@/app/ask/ask-view";
 import { publishedCalendar } from "@/lib/content/cultural-calendar";
 import { CALENDAR_PATH, chicagoToday, compactCalendar, shortDateRange, upcomingObservances } from "@/lib/content/culture-calendar-grid";
@@ -25,7 +26,9 @@ export default async function HomePage() {
         <p>Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.</p>
         <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site</Link></p>
       </div>
-      <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />
+      <HeroMotion>
+        <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />
+      </HeroMotion>
     </section>
 
     <section className="blk" aria-label="Main areas"><div className="w doors">
