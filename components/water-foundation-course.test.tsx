@@ -21,6 +21,9 @@ describe("Accepted foundation course", () => {
     fireEvent.click(screen.getByRole("button", { name: new RegExp(chapter.title) }));
     expect(video.currentTime).toBe(chapter.start);
     expect(screen.getByText(chapter.objective)).toBeTruthy();
+    video.currentTime = chapter.start - 0.000001;
+    fireEvent.seeked(video);
+    expect(screen.getByText(chapter.objective)).toBeTruthy();
     expect(video.paused).toBe(true);
     expect(video.autoplay).toBe(false);
     expect(container.querySelector("track")?.hasAttribute("default")).toBe(false);

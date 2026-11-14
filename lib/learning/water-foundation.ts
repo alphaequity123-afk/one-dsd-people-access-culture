@@ -8,3 +8,8 @@ export const WATER_FOUNDATION = {
 export function courseTime(seconds: number) {
   return `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`;
 }
+
+// Media seeks can round down by a fraction of a frame at a chapter boundary.
+export function chapterAtTime(chapters: readonly { start: number }[], seconds: number) {
+  return Math.max(0, chapters.findLastIndex(chapter => chapter.start <= seconds + 0.05));
+}

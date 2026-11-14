@@ -3,7 +3,7 @@
 import { useRef, useState, type KeyboardEvent } from "react";
 import Link, { SourceLink } from "@/components/app-link";
 import course from "@/lib/content/water-foundation-course.json";
-import { courseTime, WATER_FOUNDATION } from "@/lib/learning/water-foundation";
+import { chapterAtTime, courseTime, WATER_FOUNDATION } from "@/lib/learning/water-foundation";
 import styles from "./water-foundation-course.module.css";
 
 const tabs = ["Overview", "Transcript", "Sources", "Continue learning"] as const;
@@ -15,11 +15,11 @@ export function WaterFoundationCourse() {
   const chapter = course.chapters[chapterIndex];
   function seek(time: number) {
     if (video.current) video.current.currentTime = time;
-    setChapterIndex(Math.max(0, course.chapters.findLastIndex(item => item.start <= time)));
+    setChapterIndex(chapterAtTime(course.chapters, time));
   }
   function updateChapter() {
     const time = video.current?.currentTime ?? 0;
-    setChapterIndex(Math.max(0, course.chapters.findLastIndex(item => item.start <= time)));
+    setChapterIndex(chapterAtTime(course.chapters, time));
   }
   function moveTab(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     let next = index;
