@@ -1,0 +1,19 @@
+{
+  "course": "The Water We Swim In",
+  "chapters": 12,
+  "captionCues": 1124,
+  "durationSeconds": 3649.041666666667,
+  "acceptedBaselineModified": false,
+  "scenes": 48,
+  "route": "/learn/water-we-swim-in/course",
+  "checks": {
+    "browser": "playback, seeking, captions, source links, phone and desktop",
+    "environmentCheck": "pre-existing undocumented PORT setting",
+    "sourceLedger": "passed",
+    "changedFilesLint": "passed",
+    "typecheck": "passed",
+    "focusedTests": "3 passed",
+    "repositoryLint": "17 pre-existing errors outside integration"
+  },
+  "acceptedMediaSha256": "4fc78df0e3996050ee36d5718d86363b78f6f28add1af97193142560d87c13e2"
+}
