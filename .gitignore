@@ -15,3 +15,7 @@ public/downloads/clas-curriculum-collection.zip*
 
 # 4K image siblings ship as release packages (config/current-release-transport.json); sources in image-4k-stage-20261110.
 public/**/*.4k.webp
+
+# Accepted course media restored from the existing verified asset store.
+/public/videos/water-foundation/course.mp4
+/public/images/water-foundation/team.png
