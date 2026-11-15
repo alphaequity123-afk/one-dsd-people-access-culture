@@ -182,7 +182,7 @@ describe("Analyze a document workspace", () => {
     const stored = JSON.parse(localStorage.getItem("one-dsd-analyze-document-v1")!);
     expect(stored.request.sources[0].title).toBe("Sample notice");
     expect(stored.result.summary).toBe(result.summary);
-    expect(document.body.textContent).toContain("kept in this browser only");
+    expect(document.body.textContent).toContain("saved in this browser profile");
     const writeText = vi.fn().mockResolvedValue(undefined);
     Object.assign(navigator, { clipboard: { writeText } });
     await act(async () => { button("Copy as text").click(); });
@@ -190,6 +190,52 @@ describe("Analyze a document workspace", () => {
     expect(writeText.mock.calls[0][0]).toContain("(Sample notice)");
     await act(async () => { button("Forget").click(); });
     expect(localStorage.length).toBe(0);
+  });
+
+  it("clears the storage error after a successful keep retry", async () => {
+    await mount(vi.fn(async () => ({ ok: true, json: async () => response() })) as unknown as typeof fetch);
+    await analyze();
+    const write = vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw Error("Blocked"); });
+    await act(async () => { button("Keep in this browser").click(); });
+    expect(document.querySelector("[role=alert]")?.textContent).toContain("did not allow");
+    write.mockRestore();
+    await act(async () => { button("Keep in this browser").click(); });
+    expect(document.querySelector("[role=alert]")).toBeNull();
+    expect(button("Forget")).toBeTruthy();
+  });
+
+  it("preserves the current result and saved-state controls when removal fails", async () => {
+    await mount(vi.fn(async () => ({ ok: true, json: async () => response() })) as unknown as typeof fetch);
+    await analyze();
+    await act(async () => { button("Keep in this browser").click(); });
+    const saved = localStorage.getItem("one-dsd-analyze-document-v1");
+    const remove = vi.spyOn(Storage.prototype, "removeItem").mockImplementation(() => { throw Error("Blocked"); });
+    await act(async () => { button("Forget").click(); });
+    expect(document.querySelector("[role=alert]")?.textContent).toContain("could not remove");
+    expect(button("Forget")).toBeTruthy();
+    await act(async () => { button("Clear").click(); });
+    expect(document.querySelector("[role=region][aria-label='Analysis result']")).not.toBeNull();
+    expect(localStorage.getItem("one-dsd-analyze-document-v1")).toBe(saved);
+    remove.mockRestore();
+    await act(async () => { button("Clear").click(); });
+    expect(localStorage.getItem("one-dsd-analyze-document-v1")).toBeNull();
+    expect(document.querySelector("[role=region][aria-label='Analysis result']")).toBeNull();
+  });
+
+  it("distinguishes an unsaved new result from the earlier stored copy", async () => {
+    let current = response();
+    await mount(vi.fn(async () => ({ ok: true, json: async () => current })) as unknown as typeof fetch);
+    await analyze();
+    await act(async () => { button("Keep in this browser").click(); });
+    const saved = localStorage.getItem("one-dsd-analyze-document-v1");
+    vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw Error("Blocked"); });
+    current = response({ summary: "A new result." });
+    await act(async () => { button("Analyze").click(); });
+    expect(document.querySelector("[role=alert]")?.textContent).toContain("new result could not be saved");
+    expect(button("Keep in this browser")).toBeTruthy();
+    expect(localStorage.getItem("one-dsd-analyze-document-v1")).toBe(saved);
+    await act(async () => { button("Clear").click(); });
+    expect(localStorage.getItem("one-dsd-analyze-document-v1")).toBeNull();
   });
 });
 

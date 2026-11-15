@@ -10,7 +10,7 @@ import styles from "@/components/collections.module.css";
 
 export const metadata: Metadata = {
   title: `Your leadership journey | ${LEADING_LABEL}`,
-  description: "Grow as a leader at your own pace: learn, reflect, try it in your real work, note what changed, and go around again. Nobody is enrolled and nothing is recorded.",
+  description: "Connect leadership learning with a work decision, reflection and follow-up. This optional path does not enroll you in assigned training; related learning tools explain what they save.",
 };
 
 export default function LeadingJourneyPage() {
@@ -30,7 +30,7 @@ export default function LeadingJourneyPage() {
       <ol className="list-decimal space-y-2 pl-6">
         {JOURNEY_STEPS.map(step => <li key={step.id}><strong>{step.title}.</strong> {step.body} <Link href={step.href}>{step.link}</Link>.</li>)}
       </ol>
-      <p className={styles.plain}>Most of what makes someone a better leader comes from trying things in real work. Some comes from other people: a colleague, a mentor, a team. A small part comes from lessons. So the lessons here are short, and each one leads to something to try.</p>
+      <p className={styles.plain}>Combine structured learning with workplace experience and feedback from colleagues. A lesson can introduce a concept; applying it requires attention to the situation, your authority and the people affected. Review what happened before deciding what to retain or change.</p>
     </section>
 
     <section className={styles.section} aria-labelledby="journey-start-title">
@@ -63,7 +63,7 @@ export default function LeadingJourneyPage() {
 
     <section className={styles.section} aria-labelledby="journey-reflect-title">
       <h2 id="journey-reflect-title">Looking back</h2>
-      <p>Reflection is what turns a lesson into a change. A few lines are enough, and three questions carry most of it: what happened, why it matters, and what you will do next. <Link href="/my-work/reflections">Open your reflection notebook</Link>.</p>
+      <p>Use reflection to compare your intention with what happened. Record the observations, their significance and what remains uncertain, then decide what to retain, revise or refer to someone with the relevant responsibility. <Link href="/my-work/reflections">Open your reflection notebook</Link>.</p>
       <ul className="list-disc space-y-2 pl-6">
         {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(" ")}</li>)}
       </ul>
@@ -80,7 +80,7 @@ export default function LeadingJourneyPage() {
 
     <section className={styles.section} aria-labelledby="journey-elsewhere-title">
       <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
-      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. They do not count toward required training unless your manager, director or agency leadership approves an exception.</p>
+      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Confirm any required-training credit through the agency process responsible for that requirement; do not assume that completing an external course satisfies it.</p>
       <ul className="list-disc pl-6">
         {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
       </ul>
@@ -92,7 +92,7 @@ export default function LeadingJourneyPage() {
       <ul className="list-disc pl-6">
         {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
       </ul>
-      <p className={styles.plain}>There is nothing to submit, and nothing here is counted or rated. If you want something to bring to a development conversation, download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
+      <p className={styles.plain}>This optional path has no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
     </section>
   </div></div>;
 }

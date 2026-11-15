@@ -18,7 +18,7 @@ export default function AnalyzeDocumentPage() {
     <div className="wrap max-w-6xl space-y-10 py-10">
       <details className="card">
         <summary className="min-h-11 cursor-pointer font-semibold">How this works</summary>
-        <p className="mt-3 max-w-3xl">Choose one of six analysis methods, bring in the material, add your question if you have one, and select Analyze. Each question in the method gets an answer typed as evidence (a quotation from your material), inference (a conclusion drawn from it) or gap (something the material does not settle). Gaps come with next steps that point to pages in this program. Nothing you upload or paste is stored, and the result goes back to your browser only.</p>
+        <p className="mt-3 max-w-3xl">Choose one of six analysis methods, bring in the material, add your question if you have one, and select Analyze. Each question in the method gets an answer typed as evidence (a quotation from your material), inference (a conclusion drawn from it) or gap (something the material does not settle). Gaps come with next steps that point to pages in this program. Attaching a file sends it to the service for text extraction. Selecting Analyze sends the text and your question for processing, which may use an outside answer service. Use only public or appropriately de-identified material approved for this purpose. Keeping a result in your browser is optional; review the storage details before saving it.</p>
       </details>
       <AnalyzeWorkspace communities={communities} />
       <details className="card">

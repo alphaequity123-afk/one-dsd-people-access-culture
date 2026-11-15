@@ -1,0 +1,598 @@
+{
+  "commit": "7c3b8a00892b6dbe0d99574944f23e4b95238a82",
+  "deployment": "c2462f3f-30c4-4755-9ca6-e4c0ac415072",
+  "status": "SUCCESS",
+  "registryAndPartialChecks": {
+    "checkedAt": "2026-11-15T16:09:48.041Z",
+    "commit": "7c3b8a0",
+    "results": [
+      {
+        "target": "graduation-path.gp-4",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-4",
+        "status": 200,
+        "expectedFields": 6,
+        "matchedFields": 6,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": [
+          "No allegations or identifying complaint details are included",
+          "Keep allegations and identifying complaint details out of the team plan. Identify responsibility for ordinary practices by role. Use Employee Culture, Human Resources, or the civil-rights channel for a complaint, investigation, or discipline matter.",
+          "Every follow-up has an accountable role",
+          "Identify the role responsible for each follow-up and confirm who will carry it out through the appropriate workplace process."
+        ]
+      },
+      {
+        "target": "graduation-path.gp-5",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-5",
+        "status": 200,
+        "expectedFields": 1,
+        "matchedFields": 1,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": []
+      },
+      {
+        "target": "graduation-path.gp-6",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-6",
+        "status": 200,
+        "expectedFields": 5,
+        "matchedFields": 5,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": [
+          "How do we make each stage accessible and explain how candidates can request an accommodation?"
+        ]
+      },
+      {
+        "target": "graduation-path.gp-7",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-7",
+        "status": 200,
+        "expectedFields": 7,
+        "matchedFields": 7,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": []
+      },
+      {
+        "target": "graduation-path.gp-8",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-8",
+        "status": 200,
+        "expectedFields": 6,
+        "matchedFields": 6,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": [
+          "Every follow-up has an accountable role",
+          "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process."
+        ]
+      },
+      {
+        "target": "graduation-path.gp-9",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-9",
+        "status": 200,
+        "expectedFields": 4,
+        "matchedFields": 4,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": []
+      },
+      {
+        "target": "graduation-path.gp-10",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-10",
+        "status": 200,
+        "expectedFields": 5,
+        "matchedFields": 5,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": []
+      },
+      {
+        "target": "graduation-path.gp-11",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-11",
+        "status": 200,
+        "expectedFields": 9,
+        "matchedFields": 9,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": [
+          "How can we make our lead-worker pathway accessible and explain the appropriate process for individual accommodation requests?"
+        ]
+      },
+      {
+        "target": "graduation-path.gp-12",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-12",
+        "status": 200,
+        "expectedFields": 7,
+        "matchedFields": 7,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": [
+          "Every follow-up has an accountable role",
+          "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process."
+        ]
+      },
+      {
+        "target": "graduation-path.gp-13",
+        "url": "https://one-people-access-culture.up.railway.app/practice/gp-13",
+        "status": 200,
+        "expectedFields": 11,
+        "matchedFields": 11,
+        "missing": [],
+        "passed": true,
+        "sourceOnlyExcluded": [
+          "How can I make this message respectful and helpful while preserving any required notice, deadline, or consequence?",
+          "Every follow-up has an accountable role",
+          "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process."
+        ]
+      },
+      {
+        "target": "resource.tool-idi",
+        "url": "https://one-people-access-culture.up.railway.app/library/tool-idi",
+        "status": 200,
+        "expectedFields": 5,
+        "matchedFields": 0,
+        "missing": [
+          "The Intercultural Development Inventory is a licensed assessment administered by an IDI Qualified Administrator. This program explains its developmental framework but does not administer the assessment, reproduce protected material, or use individual results for employment decisions or access to learning.",
+          "Purpose and model: the IDI places results along the Intercultural Development Continuum, whose five orientations are Denial, Polarization, Minimization, Acceptance and Adaptation. Integration belongs to Bennett's separate Developmental Model of Intercultural Sensitivity, where it concerns identity across cultural worldviews. Community participation in service design is a program practice; it is not a sixth IDI orientation or an assessment result.",
+          "Evidence: review the publisher's research and validation material alongside relevant independent studies. Consider the population, methods, uses and limitations of each study before drawing a conclusion about a particular setting.",
+          "Interpretation: the publisher describes individual and group reports as snapshots of an approach to cultural differences and commonalities. Individual results are discussed with a licensed Qualified Administrator. A result is not a judgment of character or a complete account of workplace behavior; this program does not use it for hiring, promotion or performance evaluation.",
+          "Program use: learn about the framework, consider questions for development, and seek qualified administration if an assessment is appropriate. This program does not administer, score, store or interpret individual results. It does not reproduce protected assessment material. Learning and reflection can begin without taking an assessment."
+        ],
+        "passed": false
+      },
+      {
+        "target": "resource.tool-implicit-association",
+        "url": "https://one-people-access-culture.up.railway.app/library/tool-implicit-association",
+        "status": 200,
+        "expectedFields": 4,
+        "matchedFields": 0,
+        "missing": [
+          "Implicit-association tasks examine associations through response patterns such as reaction times. A single result does not establish someone's character or reliably predict a specific action. This program links to these resources for optional reflection and does not use individual results for workplace decisions.",
+          "Purpose: compare the relative ease of associating concepts, evaluations or stereotypes. Implicit and explicitly reported attitudes may differ; the task does not establish whether a person consciously endorses an association.",
+          "Evidence and limits: Project Implicit describes continuing debate about repeated scores and behavioral prediction. The publisher reports associations with behavior in aggregate, while cautioning against predictions about one person on one occasion. It also cautions against treating one result as a permanent personal characteristic. Use the result as a question for reflection, not a diagnosis.",
+          "Program use: optional reflection without submitting or discussing individual results here. External research sites have their own participation and data-handling terms; read those before deciding whether to use a task. This program does not administer the tests or collect their results."
+        ],
+        "passed": false
+      },
+      {
+        "target": "partial-course.somali-minnesota-brief",
+        "url": "https://one-people-access-culture.up.railway.app/courses/somali-minnesota-brief",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.disability-and-language",
+        "url": "https://one-people-access-culture.up.railway.app/courses/disability-and-language",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.cultural-broker-as-a-role",
+        "url": "https://one-people-access-culture.up.railway.app/courses/cultural-broker-as-a-role",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.language-access-plan",
+        "url": "https://one-people-access-culture.up.railway.app/courses/language-access-plan",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.working-with-an-interpreter",
+        "url": "https://one-people-access-culture.up.railway.app/courses/working-with-an-interpreter",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.language-access-as-a-design",
+        "url": "https://one-people-access-culture.up.railway.app/courses/language-access-as-a-design",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.equal-opportunity-in-employment",
+        "url": "https://one-people-access-culture.up.railway.app/courses/equal-opportunity-in-employment",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.conflict-at-work",
+        "url": "https://one-people-access-culture.up.railway.app/courses/conflict-at-work",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.stay-and-exit-interviews",
+        "url": "https://one-people-access-culture.up.railway.app/courses/stay-and-exit-interviews",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.employee-viewpoint-and-wellbeing-surveys",
+        "url": "https://one-people-access-culture.up.railway.app/courses/employee-viewpoint-and-wellbeing-surveys",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.mobility-acting-promotion",
+        "url": "https://one-people-access-culture.up.railway.app/courses/mobility-acting-promotion",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.career-mentorship-and-sponsorship",
+        "url": "https://one-people-access-culture.up.railway.app/courses/career-mentorship-and-sponsorship",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.performance-and-development",
+        "url": "https://one-people-access-culture.up.railway.app/courses/performance-and-development",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.onboarding-and-first-90-days",
+        "url": "https://one-people-access-culture.up.railway.app/courses/onboarding-and-first-90-days",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.screening-and-selection",
+        "url": "https://one-people-access-culture.up.railway.app/courses/screening-and-selection",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.sourcing-and-outreach",
+        "url": "https://one-people-access-culture.up.railway.app/courses/sourcing-and-outreach",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.job-design-and-the-posting",
+        "url": "https://one-people-access-culture.up.railway.app/courses/job-design-and-the-posting",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.employee-life-cycle-as-a-system",
+        "url": "https://one-people-access-culture.up.railway.app/courses/employee-life-cycle-as-a-system",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.facilitators-guide-equity-inclusion-curriculum",
+        "url": "https://one-people-access-culture.up.railway.app/courses/facilitators-guide-equity-inclusion-curriculum",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.equity-centered-leadership",
+        "url": "https://one-people-access-culture.up.railway.app/courses/equity-centered-leadership",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.equity-champion-contribution-workflow",
+        "url": "https://one-people-access-culture.up.railway.app/courses/equity-champion-contribution-workflow",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.equity-inclusion-leadership-and-systems",
+        "url": "https://one-people-access-culture.up.railway.app/courses/equity-inclusion-leadership-and-systems",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.acceptance-in-dhs-work",
+        "url": "https://one-people-access-culture.up.railway.app/courses/acceptance-in-dhs-work",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.culture-without-theater",
+        "url": "https://one-people-access-culture.up.railway.app/courses/culture-without-theater",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.teams-in-minimization",
+        "url": "https://one-people-access-culture.up.railway.app/courses/teams-in-minimization",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.from-noticing-to-shifting",
+        "url": "https://one-people-access-culture.up.railway.app/courses/from-noticing-to-shifting",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.outcomes-not-intentions",
+        "url": "https://one-people-access-culture.up.railway.app/courses/outcomes-not-intentions",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.how-it-shows-up-in-minnesota-human-services",
+        "url": "https://one-people-access-culture.up.railway.app/courses/how-it-shows-up-in-minnesota-human-services",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.the-record",
+        "url": "https://one-people-access-culture.up.railway.app/courses/the-record",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.what-minimization-does-in-dhs-work",
+        "url": "https://one-people-access-culture.up.railway.app/courses/what-minimization-does-in-dhs-work",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.family-and-natural-support-systems",
+        "url": "https://one-people-access-culture.up.railway.app/courses/family-and-natural-support-systems",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.lgbtq-inclusion-in-disability-services",
+        "url": "https://one-people-access-culture.up.railway.app/courses/lgbtq-inclusion-in-disability-services",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.brain-injury-and-complex-disability",
+        "url": "https://one-people-access-culture.up.railway.app/courses/brain-injury-and-complex-disability",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.neurodiversity-and-cognitive-difference",
+        "url": "https://one-people-access-culture.up.railway.app/courses/neurodiversity-and-cognitive-difference",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.health-wellness-and-safety",
+        "url": "https://one-people-access-culture.up.railway.app/courses/health-wellness-and-safety",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.employment-first-and-economic-inclusion",
+        "url": "https://one-people-access-culture.up.railway.app/courses/employment-first-and-economic-inclusion",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "partial-course.change-management-bringing-people-along",
+        "url": "https://one-people-access-culture.up.railway.app/courses/change-management-bringing-people-along",
+        "status": 200,
+        "expectedFields": 2,
+        "matchedFields": 2,
+        "missing": [],
+        "passed": true
+      }
+    ],
+    "coverageNote": "Practice-path rubric instructions have no live page consumer; Ask starter fields are not supplied to the currently enabled Ask client. Those 13 changed fields are separately source-only, not live-rendered claims."
+  },
+  "artifactChecks": {
+    "checkedAt": "2026-11-15T16:09:56.952Z",
+    "commit": "7c3b8a0",
+    "results": [
+      {
+        "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool.html",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool.html",
+        "status": 200,
+        "expectedSha256": "54c71ffad1810bbd896e86efd23acc0513b5599ced91f4741a5ddc83645aeecc",
+        "actualSha256": "54c71ffad1810bbd896e86efd23acc0513b5599ced91f4741a5ddc83645aeecc",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool.html",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool.html",
+        "status": 200,
+        "expectedSha256": "1a257e62c932b74465c3a04210827d5a597e327448c30035c912c706f470b6d4",
+        "actualSha256": "1a257e62c932b74465c3a04210827d5a597e327448c30035c912c706f470b6d4",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.docx",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.docx",
+        "status": 200,
+        "expectedSha256": "83e49ce29eaa9d895c92b42f218cf865dbeb19cb381946c086edd38ae1ff9cfa",
+        "actualSha256": "83e49ce29eaa9d895c92b42f218cf865dbeb19cb381946c086edd38ae1ff9cfa",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.html",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.html",
+        "status": 200,
+        "expectedSha256": "036ffa370731ce1f74a5fa6f9abd55d778bb51f34439e0973b6f8fd8da05309d",
+        "actualSha256": "036ffa370731ce1f74a5fa6f9abd55d778bb51f34439e0973b6f8fd8da05309d",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.docx",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.docx",
+        "status": 200,
+        "expectedSha256": "3654314b611883145e593dc7e6ee00a0ee153da9dfb0bc5289fa677869dd5929",
+        "actualSha256": "3654314b611883145e593dc7e6ee00a0ee153da9dfb0bc5289fa677869dd5929",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.html",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.html",
+        "status": 200,
+        "expectedSha256": "27f9a84162f5fb445079b1db0642fc1b06a789a8e82c19b22adcb2d62824bc2f",
+        "actualSha256": "27f9a84162f5fb445079b1db0642fc1b06a789a8e82c19b22adcb2d62824bc2f",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.docx",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.docx",
+        "status": 200,
+        "expectedSha256": "5f380d7e3dc1d4ae028f6dca99900e69149de59f53e32c52dab3fa9558493542",
+        "actualSha256": "5f380d7e3dc1d4ae028f6dca99900e69149de59f53e32c52dab3fa9558493542",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.html",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.html",
+        "status": 200,
+        "expectedSha256": "ec18bba9514e9d59da5222ad55b4329e6c45b0799d5c7d940bd3b29dec3ec366",
+        "actualSha256": "ec18bba9514e9d59da5222ad55b4329e6c45b0799d5c7d940bd3b29dec3ec366",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.docx",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.docx",
+        "status": 200,
+        "expectedSha256": "6537ebc9a8a1e0b1890932a1e48cddbcc34c55608aeca6dcc05fc0a4d496bc3d",
+        "actualSha256": "6537ebc9a8a1e0b1890932a1e48cddbcc34c55608aeca6dcc05fc0a4d496bc3d",
+        "passed": true
+      },
+      {
+        "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.html",
+        "url": "https://one-people-access-culture.up.railway.app/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.html",
+        "status": 200,
+        "expectedSha256": "960e71aef55e5e89de6aabf57f9c1cb8afed9f7f1ede5842cfc1e63eceea3a7f",
+        "actualSha256": "960e71aef55e5e89de6aabf57f9c1cb8afed9f7f1ede5842cfc1e63eceea3a7f",
+        "passed": true
+      },
+      {
+        "target": "lib--content--water-we-swim-in--modules-0",
+        "url": "https://one-people-access-culture.up.railway.app/learn/water-we-swim-in/module-1",
+        "expectedParagraphs": 3,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "lib--content--water-we-swim-in--modules-5",
+        "url": "https://one-people-access-culture.up.railway.app/learn/water-we-swim-in/module-6",
+        "expectedParagraphs": 7,
+        "missing": [],
+        "passed": true
+      },
+      {
+        "target": "director-toolkit-ui-privacy",
+        "passed": true
+      }
+    ]
+  },
+  "scope": "Two assessment cards remain pending exact published variants in the seventh release. Dormant fields are excluded explicitly. This receipt does not claim all hardcoded/source-family UI has been verified."
+}

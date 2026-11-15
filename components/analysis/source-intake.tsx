@@ -14,7 +14,7 @@ export type SourceIntakeProps = {
 const ACCEPT = ".pdf,.docx,.pptx,.txt,.csv,.tsv,.xlsx";
 const EXTENSION = /\.(pdf|docx|pptx|txt|csv|tsv|xlsx)$/i;
 const MAX_FILE_BYTES = 20 * 1024 * 1024;
-export const INTAKE_HELP = "PDF with selectable text, Word, PowerPoint, Excel, comma-separated, tab-separated or plain text, up to 20 megabytes each. Scanned pages and images need their text added separately. Files are read into text in this session only and are not stored.";
+export const INTAKE_HELP = "PDF with selectable text, Word, PowerPoint, Excel, comma-separated, tab-separated or plain text, up to 20 megabytes each. Scanned pages and images need their text added separately. Attached files are sent to the service to extract their text and return it to this page. If you later keep an analysis in your browser, its supplied text is saved with the result.";
 
 function newId(prefix: string) {
   const random = typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `${Date.now().toString(16)}-${Math.random().toString(16).slice(2, 10)}`;

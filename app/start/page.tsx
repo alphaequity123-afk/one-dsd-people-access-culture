@@ -32,7 +32,7 @@ export default async function StartPage() {
       </div>
       <div className={`wrap ${styles.content}`}>
         <ProgramContextNote />
-        <p className="max-w-3xl leading-7">Most people arrive here with a real question: a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone. Start there. If you would like context first, <Link href="/one-dsd/programs">DSD programs and services</Link> shows the work the division does and the people it serves.</p>
+        <p className="max-w-3xl leading-7">Start with a question from your work: a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone. If you would like context first, <Link href="/one-dsd/programs">DSD programs and services</Link> shows the work the division does and the people it serves.</p>
         <noscript><p>This helper needs JavaScript. You can still <SourceLink href="/support/directory">use the support directory</SourceLink> or <Link prefetch={false} href="/library">browse the Library</Link>.</p></noscript>
         <StartClient copy={copy} />
         <div>

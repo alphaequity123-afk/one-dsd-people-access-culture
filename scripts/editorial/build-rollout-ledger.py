@@ -10,7 +10,7 @@ accepted.update({'course.'+c['courseId']:len(c['changes']) for c in course if c[
 partial_course=json.loads((p/'lib/content/course-partial-language-revisions.json').read_text(encoding='utf8'))['courses']
 partial={f"course.{c['courseId']}":len(c['changes']) for c in partial_course if c['review']['status']=='accepted'}
 verified=set()
-for f in ['live-first-release-check.json','live-learn-expanded-check.json','live-second-release-check.json','live-third-release-check.json','live-fourth-release-check.json','live-fifth-release-check.json']:
+for f in ['live-first-release-check.json','live-learn-expanded-check.json','live-second-release-check.json','live-third-release-check.json','live-fourth-release-check.json','live-fifth-release-check.json','live-sixth-release-check.json']:
  if (p/'output'/f).exists():
   for r in json.loads((p/'output'/f).read_text(encoding='utf8'))['results']:
    if r['target'].startswith('lesson.'):continue

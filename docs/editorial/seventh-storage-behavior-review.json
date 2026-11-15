@@ -1,0 +1,21 @@
+{
+  "review": {
+    "status": "accepted",
+    "reviewer": "root",
+    "date": "2026-11-15",
+    "scope": "Analyze clear/forget/keep and My Work per-item/Ask failed-storage handling, including source-first path deletion."
+  },
+  "behavior": [
+    "Failed removal preserves displayed saved entries and retry controls.",
+    "Successful keep retry clears the prior storage error.",
+    "Failed replacement distinguishes new unsaved result from the previously stored copy.",
+    "Path source metadata is removed before the visible artifact so failure leaves an item to retry."
+  ],
+  "tests": "66 shared UI/storage tests passed, including three My Work failure/retry cases and three new Analyze failure/retry cases.",
+  "files": [
+    "components/my-view-client.tsx",
+    "components/my-view-client.test.tsx",
+    "components/analysis/analyze-workspace.tsx",
+    "components/analysis/analyze-workspace.test.tsx"
+  ]
+}

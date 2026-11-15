@@ -2,14 +2,14 @@
   "snapshotDate": "2026-11-15",
   "scope": "Registry subtotal only; community/research JSON, source files and hardcoded page/component prose require separate coverage. Accepted fields do not imply re-verification of unchanged facts. Course packs include related lesson and job-aid fields.",
   "registryObjects": 878,
-  "acceptedObjects": 146,
-  "acceptedFields": 2281,
-  "partiallyRevisedCourseObjects": 37,
-  "partialCourseFields": 111,
+  "acceptedObjects": 150,
+  "acceptedFields": 2437,
+  "partiallyRevisedCourseObjects": 36,
+  "partialCourseFields": 108,
   "retainedObjects": 79,
   "excludedDormantObjects": 4,
-  "editoriallyReviewedObjects": 224,
-  "liveVerifiedObjects": 132,
+  "editoriallyReviewedObjects": 228,
+  "liveVerifiedObjects": 142,
   "records": [
     {
       "target": "sources.page",
@@ -746,8 +746,8 @@
       "kind": "course_pack",
       "route": "/courses/disability-and-language",
       "originalSha256": "17424295d47a06ef4c277ebacba0b709b30c7813aa02d4a43d1ac7e1d6f701ad",
-      "review": "accepted_partial_course_fields",
-      "acceptedFieldChanges": 3,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 135,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -7659,7 +7659,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 10,
       "candidateFieldChanges": 3,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-5",
@@ -7669,7 +7669,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 1,
       "candidateFieldChanges": 6,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-6",
@@ -7679,7 +7679,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 6,
       "candidateFieldChanges": 1,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-7",
@@ -7689,7 +7689,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 7,
       "candidateFieldChanges": 7,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-8",
@@ -7699,7 +7699,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 8,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-9",
@@ -7709,7 +7709,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 4,
       "candidateFieldChanges": 2,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-10",
@@ -7719,7 +7719,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 5,
       "candidateFieldChanges": 5,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-11",
@@ -7729,7 +7729,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 10,
       "candidateFieldChanges": 3,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-12",
@@ -7739,7 +7739,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 9,
       "candidateFieldChanges": 2,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-13",
@@ -7749,7 +7749,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 14,
       "candidateFieldChanges": 2,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "community-brief.somali",
@@ -8646,8 +8646,8 @@
       "kind": "staff_resource",
       "route": null,
       "originalSha256": "f3eebcf8232770c130d9ee7ec5abd72490ae61558b3063f02bdc750cc0136675",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 7,
       "candidateFieldChanges": 7,
       "liveVerified": false
     },
@@ -8716,8 +8716,8 @@
       "kind": "staff_resource",
       "route": null,
       "originalSha256": "015edde1077bae47a73d1bdee81122ef343719de36475248278d5696ee2fd46c",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 7,
       "candidateFieldChanges": 7,
       "liveVerified": false
     },
@@ -8726,8 +8726,8 @@
       "kind": "staff_resource",
       "route": null,
       "originalSha256": "ddd2935f85f298eb0bf8c27f926a0fec9999518700de778c5651c2a2ff4504f4",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 7,
       "candidateFieldChanges": 7,
       "liveVerified": false
     },
