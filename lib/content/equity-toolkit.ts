@@ -13,7 +13,7 @@ export const EAT_DRAFT_FIELDS = EAT_STAGES.map(({ id }) => ({ id: `${id}Draft` a
 
 const wording: EditableSurfaceValues = {
   title: "Equity Analysis Toolkit",
-  intro: "Examine how a decision may affect people differently, consider alternatives, and prepare for a conversation about what should happen next.",
+  intro: "This page helps staff of the Disability Services Division (DSD) use the Equity Analysis Toolkit. The toolkit helps you examine how a decision may affect people differently, consider alternatives, and prepare for a conversation about what should happen next.",
   companionNote: "These five steps are a program companion, not the official toolkit sequence. Optional practice does not replace the toolkit, required review, or engagement with affected people.",
   roleLabel: "Your area of work", roleIntro: "Choose an area to connect the example with your responsibilities. You can explore any area.",
   noRoleLabel: "Explore without choosing an area", stageNavLabel: "Toolkit steps",

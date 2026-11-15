@@ -50,7 +50,7 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
   return (
     <EditableSurfaceRegion surface={surface} className={styles.page}>
       <div className="wrap"><Link href="/learn" className={styles.back}>Learn</Link></div>
-      <PageIntro kicker={text("introKicker")} title={text("introTitle")} lede="Explore books, research, guidance and media used across the program. Choose a subject to find reading and references that connect with your work." />
+      <PageIntro kicker={text("introKicker")} title={text("introTitle")} lede="This page helps staff of the Disability Services Division (DSD) find the books, research, guidance, and media behind this site. Choose a subject to find reading and references that connect with your work." />
       <div className="wrap">
         <CatHashLocator prefix="source-" />
         <ResourceFormatLinks theme={selectedTheme?.id} current="reading" />

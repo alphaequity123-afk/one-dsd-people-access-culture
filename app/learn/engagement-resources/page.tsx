@@ -5,7 +5,7 @@ import { EngagementResourceLinks } from '@/components/engagement-resource-links'
 import { ENGAGEMENT_STARTING_STEPS } from '@/lib/content/learn-page-copy';
 export const metadata={title:'Community engagement and cultural access resources'};
 export default function Page(){return <>
-  <PageIntro title="Community engagement and cultural access resources" lede="Move from understanding the approach to planning participation, checking access, and following through." />
+  <PageIntro title="Community engagement and cultural access resources" lede="This page helps staff of the Disability Services Division (DSD) plan community participation. It moves from understanding the approach to planning participation, checking access, and following through." />
   <div className="wrap space-y-8 py-8">
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="engagement-resources" noun="page" /></details>
     <section className="space-y-4"><h2 className="text-2xl font-semibold">Choose a starting point</h2><ol className="list-decimal space-y-3 pl-6">

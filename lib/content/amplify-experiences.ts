@@ -14,7 +14,7 @@ export const AMPLIFY_ACTIVITIES = [
 ] as const;
 
 export const AMPLIFY_EXTENDED_PAGES = [
-  { id: "mentoring", title: "Grow with one another", intro: "A useful conversation can open a door. Find encouragement, exchange practical knowledge, and explore what you want to do next.", sections: [
+  { id: "mentoring", title: "Grow with one another", intro: "This page is for staff of the Disability Services Division (DSD) who want a mentoring conversation. A useful conversation can open a door. Find encouragement, exchange practical knowledge, and explore what you want to do next.", sections: [
     ["Support that fits you", "You might want a single conversation, a peer learning partner, a small circle, or an ongoing mentoring relationship. Different people can help with different questions. Begin with what would be useful to you."],
     ["Several ways to connect", ["A question conversation: ask someone with relevant experience about one thing you are working through.", "A peer exchange: colleagues share approaches and learn from each other across roles or teams.", "A mentoring circle: a small group explores shared interests with room for different goals.", "A continuing relationship: agree together on the purpose, availability, and how you will revisit what helps."]],
     ["Make room for different experiences", "Useful mentoring starts with curiosity. Talk about the support, communication, and opportunities that matter to the person. A familiar route to success may not fit everyone's experience, responsibilities, or circumstances."],
@@ -23,7 +23,7 @@ export const AMPLIFY_EXTENDED_PAGES = [
     ["A relationship you can shape", "Agree on a manageable starting point. You can change the focus, seek another perspective, or finish when the relationship has served its purpose. No one is expected to teach colleagues about an entire community or disclose personal experiences."],
     ["Find a starting point", "Think of a willing colleague, ask the co-leads for help finding a connection, or bring a question to the Equity and Inclusion Operations Consultant. The conversation planner below can help you prepare."],
   ]},
-  { id: "well-being", title: "Room to recharge", intro: "Connection, breathing room, and the way work is organized all shape the working day. Explore what helps you and your colleagues feel supported.", sections: [
+  { id: "well-being", title: "Room to recharge", intro: "This page is for staff of the Disability Services Division (DSD) who want to support their own and their colleagues’ well-being. Connection, breathing room, and the way work is organized all shape the working day. Explore what helps you and your colleagues feel supported.", sections: [
     ["A little room in the day", "Enjoy a quiet moment, a shared interest, or a conversation that has nothing to do with the next task. Choose what works for you. Rest and enjoyment do not need a work product to justify them."],
     ["What helps work feel manageable?", ["Clear priorities and a shared understanding of what can wait.", "Meetings with a purpose and more than one way to contribute.", "Helpful handoffs and information that is easy to find.", "Room to ask questions, seek support, and take available breaks.", "Recognition for the everyday work that helps others succeed."]],
     ["Notice the conditions, too", "A useful pause can help in the moment. A recurring difficulty may also deserve a change in how work is arranged. Colleagues can explore an unclear process or avoidable burden and decide whether to carry an idea forward."],

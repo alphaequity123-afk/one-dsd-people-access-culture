@@ -6,7 +6,7 @@ export const AMPLIFY_PAGES = [
   {
     id: "materials",
     title: "Make it your own",
-    intro: "Starting points for a welcome, a conversation, and staying in touch. Adapt them to the people gathering with you.",
+    intro: "This page gives people who host an Amplify Equity gathering ready-made wording for a welcome, a conversation, and staying in touch. Adapt it to the people gathering with you.",
     sections: [
       ["An invitation", "You are welcome to join an Amplify Equity conversation. We will explore [topic] on [date and time], at [joining details]. Come to share, listen, or ask a question. Participation is voluntary, and no preparation is needed. Contact [co-lead] with questions or to discuss what would help you participate."],
       ["A simple opening", "Welcome. There is room to speak, listen, or pass. Please speak from your own experience and leave room for others. We can question ideas without making assumptions about one another. Please keep names and private stories about other people out of the conversation. Today we are exploring [question]."],
@@ -21,7 +21,7 @@ export const AMPLIFY_PAGES = [
   {
     "id": "home",
     "title": "Amplify Equity",
-    "intro": "Connect with colleagues, explore something new, or bring an idea that could make everyday work better. Find what interests you and take part in a way that fits.",
+    "intro": "Amplify Equity is a place for staff of the Disability Services Division (DSD) to connect with colleagues, explore something new, or bring an idea that could make everyday work better. Find what interests you and take part in a way that fits.",
     "sections": [
       [
         "Come as you are",
@@ -61,7 +61,7 @@ export const AMPLIFY_PAGES = [
   {
     "id": "gatherings",
     "title": "Ideas for gathering",
-    "intro": "Choose a starting point that fits the people and the moment. Leave room for the conversation to take its own shape.",
+    "intro": "This page gives Amplify Equity gathering ideas for staff of the Disability Services Division (DSD). Choose a starting point that fits the people and the moment, and leave room for the conversation to take its own shape.",
     "sections": [
       [
         "Open conversation",
@@ -105,7 +105,7 @@ export const AMPLIFY_PAGES = [
   {
     "id": "co-leads",
     "title": "For co-leads",
-    "intro": "A little preparation gives people room to participate. You do not have to be the expert on every topic.",
+    "intro": "This page is for Amplify Equity co-leads, who organize Amplify with staff input. A little preparation gives people room to participate. You do not have to be the expert on every topic.",
     "sections": [
       [
         "Share the lead",

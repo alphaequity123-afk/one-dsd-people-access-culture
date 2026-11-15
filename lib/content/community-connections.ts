@@ -3,7 +3,7 @@ import { defineEditableSurface } from './editable-surface-contract';
 export const CONNECTION_TOPICS = ['employment', 'housing', 'community', 'evidence'] as const;
 const copy = {
   title: 'Community engagement: from input to action',
-  intro: 'Connect a decision with the people it affects, the knowledge they bring, and the changes that follow.',
+  intro: 'This page helps staff of the Disability Services Division (DSD) plan community engagement. It connects a decision with the people it affects, the knowledge they bring, and the changes that follow.',
   back: 'Equity Analysis Toolkit',
   sourceNote: 'Program-authored practice informed by the ADSA Outreach and Engagement Guide, April 2026. The original guidance remains unchanged. Follow the applicable agency processes for official work.',
   employmentTitle: 'Employment and transitions',

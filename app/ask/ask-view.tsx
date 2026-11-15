@@ -26,7 +26,7 @@ export async function prepareAsk() {
     ...surface.values,
     introKicker: "",
     introTitle: "Ask",
-    introLede: "Ask about your work or find a program resource.",
+    introLede: "Use Ask to put a question about your work or to find a program resource. Ask is for staff of the Disability Services Division (DSD).",
     answerButton: "Ask",
     questionLabel: "Your question",
     questionHelp: "Use your own words.",

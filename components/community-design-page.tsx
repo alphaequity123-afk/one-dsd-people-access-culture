@@ -120,7 +120,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
       <li><Link href="/ask">Ask a question</Link></li>
     </ul>
     {culturalIntelligenceAvailable ? <p><Link href="/learn/cultural-intelligence">Explore the Cultural Intelligence collection</Link></p> : null}
-    {suggestedReadingFor(id).length ? <><h3>Suggested reading</h3><p>Two books chosen to deepen your understanding of this community, with reading notes, key ideas and questions to discuss with your team.</p><ul className="community-link-list">{suggestedReadingFor(id).map(book => <li key={book.id}><Link href={`/learn/readings/${book.id}`}>{book.title}</Link> <span>· {book.authors}</span></li>)}</ul></> : null}
+    {suggestedReadingFor(id).length ? <><h3>Suggested reading</h3><p>Two books can deepen your understanding of this community. Each comes with reading notes, key ideas, and questions to discuss with your team.</p><ul className="community-link-list">{suggestedReadingFor(id).map(book => <li key={book.id}><Link href={`/learn/readings/${book.id}`}>{book.title}</Link> <span>· {book.authors}</span></li>)}</ul></> : null}
   </section>;
   const communityOverview = b ? <section id="community-overview"><h2>Community overview</h2><p>{b.level0.withinGroupDiversity}</p><h3>Names and terms</h3><p>{b.names.preferred.join("; ")}</p>{b.names.alsoUsed.length ? <p>Also used: {b.names.alsoUsed.join("; ")}</p> : null}<p>{b.names.note}</p>{b.names.uncertainty ? <p>{b.names.uncertainty}</p> : null}</section> : null;
   const history = readingGroups.some(group => group.chapters.length) ? <section id="community-history"><h2>History, culture, and life today</h2>{readingGroups.filter(group => group.chapters.length).map(group => <details className="community-reading-theme" key={group.title}><summary>{group.title}</summary><div><Chapters chapters={group.chapters} /></div></details>)}</section> : null;
@@ -157,7 +157,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   const downloads = available ? <div className="community-download-links"><ResourceDownloads kind="community" id={id} noun="page" appearance="links" /></div> : null;
   const spotlightSection = spotlight && surface ? <section className="community-spotlight"><h2>{spotlight}</h2><p>{stringValue(surface.values, "spotlightBody")}</p><SourceLink href={stringValue(surface.values, "spotlightHref")}>{stringValue(surface.values, "spotlightLinkLabel")}</SourceLink></section> : null;
   const reflection = surface && stringValue(surface.values, "reflectionBody") ? <details className="community-opening-reflection"><summary>{stringValue(surface.values, "reflectionTitle")}</summary><div><p>{stringValue(surface.values, "reflectionBody")}</p></div></details> : null;
-  const aside = <aside><Link href="/minnesota-communities">Minnesota Communities</Link><p>History, everyday life, and the connections that shape our work.</p></aside>;
+  const aside = <aside><Link href="/minnesota-communities">Minnesota Communities</Link><p>Briefs for staff of the Disability Services Division (DSD) on history, everyday life, and the connections that shape our work.</p></aside>;
   const wrap = (content: ReactNode) => {
     const readings = readingSurface ? <EditableSurfaceRegion surface={readingSurface}>{content}</EditableSurfaceRegion> : content;
     return surface ? <EditableSurfaceRegion surface={surface}>{readings}</EditableSurfaceRegion> : readings;
