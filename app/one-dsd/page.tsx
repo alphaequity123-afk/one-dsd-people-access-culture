@@ -13,7 +13,7 @@ export const metadata: Metadata = { title: "One DSD" };
 const PROGRAM_DOORS = [
   {
     title: "Understand and learn",
-    description: "Build from a welcoming introduction through intercultural practice, structural analysis, and lasting change.",
+    description: "Start with a welcoming introduction. Then move through intercultural practice, structural analysis, and lasting change.",
     href: "/learn",
     label: "Explore learning",
   },
@@ -25,7 +25,7 @@ const PROGRAM_DOORS = [
   },
   {
     title: "Prepare with community context",
-    description: "Use reviewed, question-led material to plan access and engagement without treating group information as a label for a person.",
+    description: "Use reviewed, question-led material to plan access and engagement. Never treat group information as a label for a person.",
     href: "/minnesota-communities",
     label: "Explore Minnesota Communities",
   },
@@ -47,12 +47,12 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
       </header>
       <section aria-label="Explore One DSD">
         <ul className="pilot-topic-rows">
-          <li id="programs"><Link href="/one-dsd/programs"><strong>Programs and services</strong><span>Explore the division’s service areas and responsibilities.</span></Link></li>
-          <li id="people"><Link href="/one-dsd?view=overview#people"><strong>People and connection</strong><span>Find the people and teams behind the work.</span></Link></li>
-          <li id="scenarios"><Link href="/one-dsd/scenarios"><strong>Work situations</strong><span>Explore a situation from everyday DSD work.</span></Link></li>
-          <li><Link href="/one-dsd/planning"><strong>Planning and progress</strong></Link></li>
-          <li><Link href="/one-dsd/leadership"><strong>Equity leadership and growth</strong></Link></li>
-          <li><Link href="/one-dsd?view=overview"><strong>About One DSD</strong><span>See how learning, practice, and support connect to the division’s work.</span></Link></li>
+          <li id="programs"><Link href="/one-dsd/programs"><strong>Programs and services</strong><span>See the division’s service areas and what each one is responsible for.</span></Link></li>
+          <li id="people"><Link href="/one-dsd?view=overview#people"><strong>People and connection</strong><span>Meet the people and teams behind the work.</span></Link></li>
+          <li id="scenarios"><Link href="/one-dsd/scenarios"><strong>Work situations</strong><span>Read a realistic situation from everyday DSD work and think it through.</span></Link></li>
+          <li><Link href="/one-dsd/planning"><strong>Planning and progress</strong><span>See the division’s equity plan and how progress is reviewed.</span></Link></li>
+          <li><Link href="/one-dsd/leadership"><strong>Equity leadership and growth</strong><span>Build a development map or plan for future leadership.</span></Link></li>
+          <li><Link href="/one-dsd?view=overview"><strong>About One DSD</strong><span>See how learning, practice, and support connect to the division’s work, with all the sections on one page.</span></Link></li>
         </ul>
       </section>
     </EditableSurfaceRegion>
@@ -89,8 +89,9 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
         <OneDsdContextPanel />
         <section className="border-t border-line pt-5" aria-labelledby="division-programs-title">
           <p className="kicker">The division&apos;s work</p>
-          <h2 id="division-programs-title" className="text-2xl font-extrabold">DSD programs, services, and priorities</h2>
-          <p>Explore the eight service areas, division responsibilities, people and partners, contacts, and implementation priorities. Connect each area to practical equity tools and guidance.</p>
+          <h2 id="division-programs-title" className="text-2xl font-extrabold">Eight service areas, each linked to equity tools</h2>
+          <p>This section covers the eight service areas, the division’s responsibilities, its people and partners, contacts, and implementation priorities.</p>
+          <p>Each area connects to practical equity tools and guidance.</p>
           <Link href="/one-dsd/programs">Explore DSD programs and services</Link>
         </section>
         <section aria-labelledby="use-title">
@@ -108,7 +109,7 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
         </section>
 
         {(teamSurface.available || amplifySurface.available) ? <section id="people" aria-labelledby="people-title">
-          <h2 id="people-title" className="text-2xl font-semibold">People and connection</h2>
+          <h2 id="people-title" className="text-2xl font-semibold">People and connection: the teams behind One DSD</h2>
           <div className="mt-4 grid gap-x-12 gap-y-7 md:grid-cols-2">
             {teamSurface.available ? <article className="border-t border-line pt-4">
               <h3 className="text-xl font-semibold"><Link href="/one-dsd/team">{stringValue(teamSurface.values, "title")}</Link></h3>
@@ -122,7 +123,7 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
         </section> : null}
 
         <details className="border-t border-line pt-5">
-          <summary className="cursor-pointer text-xl font-semibold text-[#183247]">How learning and DSD work connect</summary>
+          <summary className="cursor-pointer text-xl font-semibold text-[#183247]">How shared learning and DSD-specific work fit together</summary>
           <div className="mt-6 grid gap-x-12 gap-y-8 lg:grid-cols-2">
             <div>
               <p className="kicker">{stringValue(copy, "sharedKicker")}</p>
@@ -144,7 +145,7 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
         <EditableSurfaceRegion surface={inventorySurface} className="space-y-12">
           {programs.length ? <section id="programs" aria-labelledby="programs-title">
             <h2 id="programs-title" className="text-2xl font-extrabold">{stringValue(inventorySurface.values, "programsTitle")}</h2>
-            <p className="mt-3">Start with a question from your work, or browse the full program list.</p>
+            <p className="mt-3">Start with a question from your work, or browse the full list of programs.</p>
             <DsdInventoryMap programs={programs.map(program => ({ id: program.surfaceId.slice("dsd-program.".length), title: stringValue(program.values, "title") }))} />
             <details className="border-t border-line pt-4">
               <summary className="cursor-pointer text-lg font-semibold text-[#183247]">Browse all {programs.length} programs</summary>
@@ -182,9 +183,12 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
         <section className="grid gap-x-12 gap-y-7 border-t border-line pt-5 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.7fr)]" aria-labelledby="consult-title">
           <div>
             <p className="kicker">{stringValue(copy, "consultKicker")}</p>
-            <h2 id="consult-title" className="text-2xl font-extrabold">Finding support for DSD work</h2>
+            <h2 id="consult-title" className="text-2xl font-extrabold">Prepare with the tools here, then involve the people who decide</h2>
             <p>
-              Use the learning, tools and library to prepare your DSD work. When it needs another perspective or a decision, involve the responsible supervisor, Equity Director or Specialist, policy owner, or other office.
+              Use the learning, tools, and library to prepare your DSD work.
+            </p>
+            <p>
+              When the work needs another perspective or a decision, involve the responsible supervisor, Equity Director or Specialist, policy owner, or other office.
             </p>
             <p className="m-0">
               {stringValue(copy, "consultBoundary")}

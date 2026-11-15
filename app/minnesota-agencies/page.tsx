@@ -26,7 +26,7 @@ export default async function MinnesotaAgenciesPage({ searchParams }: { searchPa
   const nouns = partnerView ? "partners" : "agencies";
   return <div className="pilot-topic">
     <header><h1>{partnerView ? "Counties, the Legislature and federal partners" : "State of Minnesota agencies"}</h1>
-      <p>{partnerView ? "Find county lead agencies, the Minnesota Legislature, and federal partners." : "Find state agencies, boards, and councils and read their directory entries in One DSD."}</p>
+      <p>{partnerView ? "This directory helps DSD staff find county lead agencies, the Minnesota Legislature, and federal partners that work with the Disability Services Division." : "This directory helps DSD staff find Minnesota state agencies, boards, and councils. Each entry gives a short description of what the agency does."}</p>
     </header>
     <section aria-label="Find an agency or partner">
       <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Agency directory">

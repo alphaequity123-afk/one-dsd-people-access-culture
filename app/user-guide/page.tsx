@@ -17,7 +17,7 @@ export default function UserGuide() {
       <p className="mt-4"><SourceLink href={USER_GUIDE.download} download>Download this guide as text</SourceLink></p>
     </PageIntro>
     <div className="wrap space-y-6 py-8">
-      <Hub2Choices label="Where to go" className="lg:grid-cols-3" choices={USER_GUIDE.choices.map(choice => ({ ...choice }))} />
+      <Hub2Choices label="Three places to start" className="lg:grid-cols-3" choices={USER_GUIDE.choices.map(choice => ({ ...choice }))} />
       {guideMedia.ready ? <Hub2More id="welcome-video" title={guideMedia.title}>
         <p className="my-3">{guideMedia.runtime}</p>
         <SequenceVideo className="block aspect-video w-full rounded-lg bg-white" src={guideMedia.src} poster={guideMedia.poster} title={guideMedia.title} />

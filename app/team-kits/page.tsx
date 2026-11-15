@@ -30,17 +30,18 @@ export default function TeamKitsPage() {
   return <div className="calm">
     <p className="calm-kicker">Learn together</p>
     <h1>Team kits</h1>
-    <p className="calm-lede">Ready-to-run sessions for a regular staff meeting. Each one has a time, an agenda, the material to open and what the team keeps afterward. Nothing about who attends is recorded.</p>
+    <p className="calm-lede">This page gives supervisors and team leads at the Disability Services Division (DSD) six ready-to-run sessions for a regular staff meeting. Each one lists a time, an agenda, the material to open, and what the team keeps afterward.</p>
+    <p>Nothing about who attends is recorded.</p>
     {KITS.map(kit => <details key={kit.id} id={kit.id}>
       <summary>{kit.title} <span className="calm-muted calm-small">{kit.minutes} minutes</span></summary>
       <p className="calm-muted">{kit.when}</p>
       <h3 style={{ marginTop: "1rem" }}>Agenda</h3>
       <ol>{kit.agenda.map(step => <li key={step}>{step}</li>)}</ol>
-      <h3 style={{ marginTop: "1rem" }}>Open</h3>
+      <h3 style={{ marginTop: "1rem" }}>Material to open</h3>
       <ul>{kit.materials.map(item => <li key={item.href}><Link href={item.href}>{item.label}</Link></li>)}</ul>
       <h3 style={{ marginTop: "1rem" }}>What the team keeps</h3>
       <p>{kit.record}</p>
     </details>)}
-    <p className="calm-note">Supervisors who want slides can use the editable PowerPoint that comes with each <Link href="/learning/self-directed/index.html">self-directed course</Link>.</p>
+    <p className="calm-note">Want slides? Each <Link href="/learning/self-directed/index.html">self-directed course</Link> comes with an editable PowerPoint that supervisors can use.</p>
   </div>;
 }
