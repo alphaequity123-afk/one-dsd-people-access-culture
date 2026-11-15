@@ -45,7 +45,7 @@ export function RecallSection({ questions, previousTitle, previousPart }: { ques
   return (
     <section aria-labelledby="recall">
       <h2 id="recall">Before you watch: a quick recall from Part {previousPart}</h2>
-      <p>Two short questions from “{previousTitle}”. Answer from memory; the feedback explains the reasoning. Nothing is scored or recorded.</p>
+      <p>Recall the main ideas from “{previousTitle}”, then compare your reasoning with the feedback. These practice responses are not saved or submitted by the exercise.</p>
       {questions.map(q => <ChoiceQuestion key={q.id} id={`recall-${q.id}`} question={q.question} options={q.options} />)}
     </section>
   );

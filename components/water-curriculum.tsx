@@ -64,7 +64,7 @@ export function WaterLessonOpening({ practice, recall, previousTitle, previousNu
     {practice?.outcome && <p className="water-outcome"><strong>What you will be able to do: </strong>{practice.outcome.replace(/^After this module you can\s*/i, "")}</p>}
     {previousTitle && previousNumber && recall.length > 0 && <section aria-labelledby="water-recall-title">
       <h2 id="water-recall-title">Before you start: a quick recall from module {previousNumber}</h2>
-      <p>Two short questions from “{previousTitle}”. Answer from memory; the feedback explains the reasoning. Nothing is scored or recorded.</p>
+      <p>Recall the main ideas from “{previousTitle}”, then compare your reasoning with the feedback. These practice responses are not saved or submitted by the exercise.</p>
       {recall.map(q => <ChoiceQuestion key={q.id} id={`recall-${q.id}`} question={q.question} options={q.options} />)}
     </section>}
     {practice?.keyPoints.length ? <KeyPointsPanel keyPoints={practice.keyPoints} chapters={[]} title="Key points from this module" headingLevel={2} /> : null}
@@ -87,7 +87,7 @@ export function WaterLessonPractice({ practice, moduleTitle, moduleNumber }: { p
     <h2 id="water-practice-title">Practice what this module covers</h2>
     {practice.decisions.length > 0 && <div className="clas-decisions">
       <h3>Decisions to practice</h3>
-      <p>Each situation is made up and about your next decision. Check an answer to read why it is stronger or weaker; you can try again as often as you like.</p>
+      <p>Each fictional situation asks you to weigh a decision in context. Choose a response, read the explanation, and compare the alternatives. You can try again to examine a different line of reasoning.</p>
       {practice.decisions.map(d => <ChoiceQuestion key={d.id} id={`decision-${d.id}`} question={d.question} scenario={d.scenario} options={d.options} />)}
     </div>}
     {practice.ordering && <OrderingQuestion ordering={practice.ordering} />}
@@ -104,7 +104,7 @@ export function WaterLessonPractice({ practice, moduleTitle, moduleNumber }: { p
       </article>
       <JobAidActions fileName={`water-we-swim-in-module-${moduleNumber}-job-aid.txt`} text={jobAidText(aid, moduleTitle)} />
     </details>}
-    <p className="water-practice-note">Nothing here is scored or recorded. <Link href="#top">Back to the top of the module</Link></p>
+    <p className="water-practice-note">These exercises provide feedback without saving or submitting your responses. <Link href="#top">Back to the top of the module</Link></p>
   </section>;
 }
 

@@ -31,7 +31,7 @@ export default function EquityReviewPage() {
         <div className="pilot-supporting-body space-y-3">
           <p>Start with the decision, what can change, and who is affected. Record what people have shared, what remains uncertain, and how alternatives would distribute benefits and burdens. A completed form is a starting point for sound judgment, not proof that a decision is equitable.</p>
           <p>When inviting community perspectives, ask about experience, barriers, priorities, and possible improvements. Staff remain responsible for connecting those contributions with policy and service evidence.</p>
-          <p>Keep names, case details, personnel information, and other confidential material out of your notes. Drafts are saved on this device and are not submitted to the consultant. Download a copy when you need to keep or share your work.</p>
+          <p>Keep names, case details, personnel information and other confidential material out of these learning tools. Check each tool’s storage and processing notice before entering material. Some tools keep an optional browser copy; document analysis sends supplied text for processing. Review any exported copy before sharing it.</p>
         </div>
       </details>
       <details className="pilot-supporting" id="consultant-analysis"><summary>Guidance and related resources</summary>
