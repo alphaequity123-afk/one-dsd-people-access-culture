@@ -115,7 +115,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
       title: "A notice deadline and a translation gap",
       situation: "A program team cannot agree whether to delay a notice to providers so it can be translated. The deadline is in two days. Half the team says the deadline matters most. The other half says the families who most need the notice will not be able to read it.",
       tendency: "A directive leader breaks the deadlock by deciding. The risk is deciding from the leader's own habits, for example releasing in English only because that is how it has always been done.",
-      stronger: "“I'm making the call. The notice goes out on time with a short message, in the languages we most often receive requests for, that says how to get help. Full translations follow within ten business days. I own this decision. In a month we will check whether anyone missed something because of it, and we will change our timeline for the next notice.”",
+      stronger: "“I will confirm the notice requirements and language-access arrangements with the responsible staff before release. We need a plan that meets the deadline and lets affected families understand and act on the notice. If those requirements cannot both be met, I will raise the conflict with the authorized decision-maker now. We will review what happened and improve preparation for the next notice.”",
     },
     promotes: [
       "Directive authority can remove a clear barrier promptly, for example by funding interpreting or stopping a harmful practice.",
@@ -282,7 +282,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
       title: "The informal interpreter",
       situation: "A newer staff member who speaks Karen is asked, informally, to interpret on every call with Karen-speaking families. A longer-serving colleague says it is “just helping out.” The newer staff member is falling behind on their own work and says so quietly.",
       tendency: "A servant leader listens closely and wants to support both people. The risk is smoothing things over to keep harmony, for example by thanking the newer staff member and asking them to keep helping.",
-      stronger: "The leader treats the extra work as real work. They stop routing interpreting to staff unless it is a recognized part of the job, arrange professional interpreting through the usual process, recognize the work already done, and adjust the newer staff member's workload. Then they ask both colleagues what support they need.",
+      stronger: "The leader treats the extra work as real work. They stop informal interpreting assignments, arrange qualified interpreting through the established process, and check whether any staff interpreting role is authorized and appropriately qualified. They recognize the work already done, review the newer staff member's workload, and ask both colleagues what support they need.",
     },
     promotes: [
       "Better support, mentoring and access to resources.",
@@ -526,7 +526,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
       title: "Incomplete documentation",
       situation: "A data review shows that Black and American Indian applicants to a support program are denied more often for “incomplete documentation.” Two managers argue. One says staff just follow the rules. The other says the rule is biased.",
       tendency: "A transformative leader treats the rule itself as a legitimate subject of review, instead of choosing between “the rule is fine” and “the rule is racist.”",
-      stronger: "The leader asks: Where did this documentation rule come from? Which documents are hardest to get, and for whom? What help do applicants get, and when? Who can change the rule? The leader involves applicants and community partners, and follows the Tribal consultation and coordination processes that apply to work affecting American Indian applicants. Then the team tests a change, such as accepting more kinds of documents or giving help earlier, and checks the results.",
+      stronger: "The leader asks: Where did this documentation rule come from? Which documents are hardest to get, and for whom? What help do applicants get, and when? Who can change the rule? The leader involves applicants and community partners and checks with the responsible Tribal-relations office about any consultation or coordination obligations. With the required approval, the team tests an allowed change, such as accepting other permitted documents or providing help earlier, and checks the results.",
     },
     promotes: [
       "Makes racism and institutional power legitimate subjects of analysis, not optional side topics.",
@@ -760,7 +760,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
       title: "Who hears about extra hours",
       situation: "Some staff are always offered extra paid hours. Others never hear about them. A staff member who cares for a parent says the offers always come by text late in the day.",
       tendency: "The leader sets a rule and tracks compliance. The risk is a rule like “first to reply gets the hours,” which rewards whoever can answer fastest.",
-      stronger: "The leader posts openings in one place with a reasonable response window, uses a rotation, and tracks who is offered hours and who accepts them by schedule type. The leader reviews whether “available on short notice” is really required, since it may disadvantage caregivers.",
+      stronger: "The leader checks the applicable scheduling rules and bargaining agreement with Human Resources. Within those requirements, the leader makes openings visible, provides an appropriate response window, and reviews who receives offers and who accepts them. The review asks whether short-notice availability is necessary for the work and how the process affects staff with different schedules or caring responsibilities.",
     },
     promotes: [
       "Clarity and follow-through.",
@@ -864,7 +864,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
     ],
     avoidWhen: [
       "A rule is being used to end a conversation about fairness.",
-      "Following the procedure would delay an urgent access fix.",
+      "A procedure is being used as a reason to leave an urgent access barrier unresolved. Seek an authorized timely response while following applicable requirements.",
     ],
     complements: [
       { slug: "transformative", why: "Examines where rules came from and whom they burden." },
@@ -1027,7 +1027,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
       { slug: "shared", why: "Brings more people into the learning." },
     ],
     safeguards: [
-      "State the reason for any difference in treatment.",
+      "Explain the work-related reasons for differences in support or treatment without disclosing another employee's disability, accommodation, or other private information.",
       "Act now on known harm; learn about the rest.",
       "Set a time limit on any test, with a review.",
     ],

@@ -59,7 +59,7 @@ export const LEADERSHIP_SCENARIO_FAMILIES: readonly ScenarioFamily[] = [
       "The privacy of the staff member who disclosed a disability.",
       "Meeting practices that create the same barriers again and again.",
     ],
-    formal: "Reasonable accommodation requests follow the agency's established accommodation process. A supervisor should not decide whether a disability is real, ask for medical details, or put the question to coworkers. The supervisor's job is to connect the person to the process promptly, keep the disclosure private, and meanwhile remove barriers that can be removed for everyone. Access is not something a team votes on.",
+    formal: "Reasonable accommodation requests follow the agency's established process. A supervisor should not put the request to coworkers or make assumptions about whether a disability is real. Connect the person promptly with the designated decision-maker, explain who needs the information to handle the request, and protect it from unnecessary disclosure. Supporting information belongs in the authorized process. Meanwhile, address access barriers within your authority; a team vote does not decide an individual request.",
     responses: [
       { slug: "participative", kind: "harmful", quote: "“Let's ask the team whether we should allow phone-in options for meetings.”", analysis: "The supervisor turns one person's accommodation request into a group decision and exposes a private disclosure. Participation is the wrong tool here." },
       { slug: "procedural", kind: "stronger", quote: "“Thank you for telling me. I'll connect you with the accommodation process today and keep what you've shared private. In the meantime, I'll send written materials ahead of our meetings for everyone.”", analysis: "The supervisor routes the request correctly, protects privacy and makes an immediate change that helps everyone without singling anyone out." },
@@ -167,7 +167,7 @@ export const LEADERSHIP_SCENARIO_FAMILIES: readonly ScenarioFamily[] = [
       "Whether there are other funding sources or a way to phase both.",
       "The working relationship between the two teams.",
     ],
-    formal: "The Department of Human Services (DHS) Equity Policy and the Equity Analysis Toolkit are existing agency requirements for examining how a budget decision affects people. The person or area with budget authority makes the final decision. Using the toolkit does not decide the answer; it structures the comparison.",
+    formal: "DHS Equity Policy sets requirements for applying an equity lens to budget work; the official Equity Analysis Toolkit supports that review. First confirm any existing language-access, accessibility, or other obligations with the responsible office; a choice between proposed projects does not suspend those duties. The person with budget authority decides among the available lawful options. The Toolkit structures the comparison rather than deciding the answer.",
     responses: [
       { slug: "charismatic", kind: "harmful", quote: "“Let's go with training. I've seen how powerful it can be.”", analysis: "The decision follows the leader's enthusiasm, not criteria or evidence about who benefits." },
       { slug: "participative", kind: "stronger", quote: "“Let's agree on the criteria first, before we argue about the options. Then both teams can make their case against the same criteria.”", analysis: "Agreeing on criteria first turns a contest between people into a comparison of options." },
@@ -238,9 +238,9 @@ export const LEADERSHIP_SCENARIO_FAMILIES: readonly ScenarioFamily[] = [
       "Whether the staff member feels safe raising it.",
       "What the manager will do differently.",
     ],
-    formal: "This is a leadership repair, not usually a formal matter. But if a staff member raises a pattern of treatment based on race or national origin, it should be handled through the authorized process. The manager should not ask the staff member to make the manager feel better.",
+    formal: "Correct the credit and address the repeated name confusion. Repair does not replace any applicable reporting or response obligation when the conduct raises a concern about race or national origin. Use the authorized process rather than deciding that an apology settles the concern. Do not ask the staff member to reassure the manager.",
     responses: [
-      { slug: "charismatic", kind: "harmful", quote: "“I'm terrible with names. Everyone knows that about me!”", analysis: "The mistake becomes a charming quirk. It ignores that the confusion is not random and that it cost someone credit." },
+      { slug: "charismatic", kind: "harmful", quote: "“I'm terrible with names. Everyone knows that about me!”", analysis: "The response treats a repeated mistake as a charming quirk and avoids its effect on professional recognition. The example calls for examining the pattern; it does not establish the manager's motive." },
       { slug: "ethical", kind: "stronger", quote: "“I credited the wrong person for your analysis, and I've confused your names before. That's not acceptable, and I'm sorry. I've corrected the credit with everyone who was at the briefing.”", analysis: "The manager names the mistake specifically, takes responsibility without excuses and corrects it where the harm happened." },
       { slug: "servant", kind: "stronger", quote: "“Is there anything else you'd like me to do to set this right? You don't need to answer now.”", analysis: "The manager offers the staff member a voice in the repair without putting them on the spot." },
       { slug: "directive", kind: "harmful", quote: "“It was an honest mistake. Let's not make a big deal of it.”", analysis: "The manager decides how much the mistake matters. The person harmed is told how to feel about it." },
