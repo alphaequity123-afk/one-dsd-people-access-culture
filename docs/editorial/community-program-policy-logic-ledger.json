@@ -1,0 +1,58 @@
+{
+  "mode": "applied",
+  "reviewedRecords": 12,
+  "changedRecords": 5,
+  "retainedRecords": 7,
+  "changedFields": 7,
+  "changes": [
+    {
+      "id": "lib--program--dsd-logic-model.ts--logicStages-1",
+      "file": "lib/program/dsd-logic-model.ts",
+      "fieldId": 7,
+      "beforeSha256": "6366a73488466c35fb328a80d5c40dcd11cf5098a7d24ca0125a0f22b96e1845",
+      "afterSha256": "60f1d17efdcaf7c46d491b9feefee034d0d67f219608224f8161579c68e7979c"
+    },
+    {
+      "id": "lib--program--dsd-logic-model.ts--logicStages-3",
+      "file": "lib/program/dsd-logic-model.ts",
+      "fieldId": 2,
+      "beforeSha256": "96a793bda78ee4be84e232a84fa7f8f207ab56c1157ea993dda8f3c3f2a71be1",
+      "afterSha256": "eb49d29ab76be660c727ce19e51b57635de1b78e5dded0b9caeeed5e37904e6e"
+    },
+    {
+      "id": "lib--equity-analysis--policy.ts--EQUITY_POLICY-4",
+      "file": "lib/equity-analysis/policy.ts",
+      "fieldId": 0,
+      "beforeSha256": "496a4afd36474f335816d0e417a6ce7c7767580f08315432935cdba54972731d",
+      "afterSha256": "581b94971208dd2a0966c09141c136a5593783f94a12b259e24a7f2b586609f1"
+    },
+    {
+      "id": "lib--equity-analysis--policy.ts--EQUITY_POLICY-5",
+      "file": "lib/equity-analysis/policy.ts",
+      "fieldId": 0,
+      "beforeSha256": "7b9751a4bcdaf6a66d0c49a8e715f2c46910ee9cc31638bd5313d022a374f458",
+      "afterSha256": "d54f5cb29f5894ae5465166a093c980a7f97a8ee696ad259af591df1a593b841"
+    },
+    {
+      "id": "lib--equity-analysis--policy.ts--EQUITY_POLICY-5",
+      "file": "lib/equity-analysis/policy.ts",
+      "fieldId": 1,
+      "beforeSha256": "3506311e2b4bb1b7036eff635ad642b7469a3ec9488d6de2ce63d93dfa1747ad",
+      "afterSha256": "a188f66192dcb5717670b7129bf5bbaebde8a17af0d4da6a6dd4226b0d2e374a"
+    },
+    {
+      "id": "lib--equity-analysis--policy.ts--EQUITY_POLICY-5",
+      "file": "lib/equity-analysis/policy.ts",
+      "fieldId": 2,
+      "beforeSha256": "98ae20b1cb3cf73233e5b67f21300a99908502e000fb03987511cb6f076271eb",
+      "afterSha256": "d74522c4f9004a45aff4cb1107438ed56565a947386ae69fdc3bcc6cd8d6760e"
+    },
+    {
+      "id": "lib--equity-analysis--policy.ts--EQUITY_POLICY-6",
+      "file": "lib/equity-analysis/policy.ts",
+      "fieldId": 2,
+      "beforeSha256": "4d591abd9e043e7520486179005fb0022b5b726e593500bc3363d7096fd722f7",
+      "afterSha256": "2db29a4e13e1b4b557bfdeb8cc97ca135fdcfad7b2c88e8660a786af96be9449"
+    }
+  ]
+}

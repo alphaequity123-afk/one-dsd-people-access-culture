@@ -39,7 +39,7 @@ export const adsaImplementation: ADSAImplementation = {
     {
       "document": 1,
       "title": "ADSA Equity and Inclusion Implementation Plan",
-      "use": "Exact goals and 28 action steps; dated/current adoption status unspecified."
+      "use": "Exact goals and 28 action steps. The supplied source does not specify its date or current adoption status."
     },
     {
       "document": 2,
@@ -190,7 +190,7 @@ export const adsaImplementation: ADSAImplementation = {
             "workProduct": "Decision analysis using the current official Equity Analysis Toolkit, with the problem, evidence, affected perspectives, alternatives and recommendation documented.",
             "evidenceQuestions": [
               "Was the toolkit used while the decision could still change, and which applicable official toolkit version was consulted?",
-              "How did the analysis alter an option or recommendation, and what unresolved question needs the decision owner?"
+              "What did the analysis establish? Did it change an option or recommendation, and what still needs the decision owner's attention?"
             ],
             "missingSpecificSources": []
           }
@@ -362,7 +362,7 @@ export const adsaImplementation: ADSAImplementation = {
             ],
             "workProduct": "Decision-and-feedback account showing community input, the resulting changes, reasons for limits and how participants can correct the account.",
             "evidenceQuestions": [
-              "Can the decision owner trace a community contribution to a changed option or recommendation?",
+              "Can the decision owner explain how community input informed the decision, including any option retained and why?",
               "What could not change and why, and have participants had an accessible opportunity to respond to the account?"
             ],
             "missingSpecificSources": []
@@ -397,7 +397,7 @@ export const adsaImplementation: ADSAImplementation = {
             "workProduct": "Source-based engagement and decision preparation using the applicable Equity Analysis Toolkit and current Community Relations Guide.",
             "evidenceQuestions": [
               "Were the applicable official versions of both guides confirmed rather than treating an application companion as the official guide?",
-              "Which guide questions changed the engagement preparation or decision analysis, and what source remains unavailable?"
+              "Which guide questions helped clarify or revise the engagement preparation or decision analysis, and what source remains unavailable?"
             ],
             "missingSpecificSources": []
           }
@@ -826,7 +826,7 @@ export const adsaImplementation: ADSAImplementation = {
             "workProduct": "Toolkit-based review of current contracting or grant practices, documenting barriers, alternatives and proposed changes for procurement or grant-owner review.",
             "evidenceQuestions": [
               "Which current requirement or contract-cycle decision is being examined and who experiences its burden?",
-              "How did toolkit evidence and affected perspectives change the proposed criteria or monitoring approach?"
+              "How did toolkit evidence and affected perspectives inform the proposed criteria or monitoring approach, and what was retained or revised?"
             ],
             "missingSpecificSources": []
           }
