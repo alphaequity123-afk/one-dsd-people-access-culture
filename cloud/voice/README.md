@@ -1,27 +1,32 @@
 # Hosted approved Qwen voice
 
-Status on 2026-11-12: card-free CPU service deployed and verified to generate the approved voice. Unauthorized access returned 401; authenticated health verified both reference hashes; two streamed requests completed with valid WAV packets. The generated sample transcribed correctly through the live site's transcription service. Railway integration and browser acceptance must also pass before describing the full feature as active. The owner has not authorized additional charges.
+Status on 2026-11-12: card-free CPU service deployed and verified to generate the approved voice (superseded by the GPU setup below). Unauthorized access returned 401; authenticated health verified both reference hashes; two streamed requests completed with valid WAV packets. The generated sample transcribed correctly through the live site's transcription service. Railway integration and browser acceptance must also pass before describing the full feature as active. On 2026-11-15 the owner approved paid GPU time within a monthly budget under $30.
 
 The selected voice is Host 1, the opening speaker in **The Water We Swim In**. Use the locked `permanent-podcast-voices-audio18-balanced-v1` profile. The model is `Qwen/Qwen3-TTS-12Hz-0.6B-Base` at revision `5d83992436eae1d760afd27aff78a71d676296fc`. It uses the approved identity embedding with the approved delivery reference, matching the locally verified sample.
 
 ## Hosting
 
-Modal runs Qwen independently of the user's computer. Its GPU service requires a payment method, so this card-free configuration uses the identical pinned Qwen model and approved hybrid voice prompt on CPU (float32). The app scales to zero after 15 seconds without requests and allows one container handling one request at a time; concurrent visitors queue. The container requests two CPU cores and 8 GiB RAM. This conserves the small free allowance, but introduces a cold start on the next request. Measure cold and warm latency before promising response times.
+Status on 2026-11-15: the owner approved paid GPU time on Modal, a 300 second idle window (`scaledown_window=300`) and a monthly budget under $30. The 2026-11-12 card-free CPU setup is replaced. Before deploying, set that budget in the Modal dashboard; do not raise it without the owner's approval.
 
-The deployed account must remain on Starter without a payment method. On 2026-11-12 its dashboard confirmed **$1 included compute per month and a provider-enforced $1 usage limit**; adding a payment method is required to raise that limit and unlock the advertised $30 credits. With no payment method and usage capped at the included credits, out-of-pocket spending is zero. Do not add a payment method or raise the cap without explicit owner authorization. If the account is later changed, enforce a custom **$0 net spend limit**, separately from its pre-credit usage budget, before continuing. Keep proxy authentication enabled. Exhausting the free allowance must pause speech rather than charge the owner or substitute another voice. This is a limited free service, not unlimited capacity.
+Both Modal voice apps run the pinned Qwen model on one GPU in bfloat16 (float16 on cards without bfloat16), with the fallback list `["L4", "A10", "T4", "L40S"]`: cheapest first, and the wider list waits less when Modal is short of one card type. They scale to zero after 300 seconds without requests, keep one container handling one request at a time, and request two CPU cores and 8 GiB RAM. Idle time inside the window is billed. A cold start still has to wait for a free GPU and load the model.
 
-The resource estimate on 2026-11-12 is $0.158256 per running container-hour for two CPU cores and 8 GiB memory before credits; billing also depends on actual allocation, storage, egress, build usage, and credits. See https://modal.com/pricing and https://modal.com/docs/guide/budgets.
+On 2026-11-13 Modal support confirmed that the 2026-11-12 cold-start stalls came from Modal's GPU capacity, not the workspace quota. When a request has not started responding within 150 seconds, Modal returns HTTP 303 to the same endpoint with one opaque result parameter. The server follows up to three of these with GET, keeping the proxy credentials in headers and refusing any other host, path or parameter (`postToModal` in `lib/intelligence/clone/hosted-voice.ts`). Ask read-aloud and the overview voices share it.
+
+List prices on 2026-11-15, before credits: L4 $0.000222, A10 $0.000306, T4 $0.000164 and L40S $0.000542 per second. Each wake from zero on an L4 bills about $0.07 of idle time with the 300 second window. Starter includes $30 of credits a month. See https://modal.com/pricing and https://modal.com/docs/guide/budgets.
+
+`modal_app.py` (Host 1) and `geffen_public_app.py` (GEFen) both deploy as the Modal app `one-dsd-approved-voice`, so whichever is deployed last serves `PAC_HOSTED_VOICE_URL`. The authenticated `/health` response names the live voice. Deploy only the one the owner wants for Ask.
 
 ## Deployment
 
-1. Authenticate the approved Modal account and verify its card-free $1 credit / $1 hard usage cap (or an explicitly enforced $0 net spend limit). Any account terms or payment entry must be handled through the appropriate user approval flow. Do not activate paid plans or overages.
+1. Authenticate the approved Modal account and confirm the monthly budget above is set. Any account terms or payment entry must be handled through the appropriate user approval flow.
 2. Install `modal==1.6.4` in an isolated deployment environment.
-3. Stage the two approved reference WAV files with `python cloud/voice/prepare_bundle.py --profile <absolute-path-to-approved-profile.lock.json>`. This verifies both hashes. `.private-voice/` is deliberately excluded from Git. This step does not upload files.
-4. Deploy with `modal deploy cloud/voice/modal_app.py`. This uploads the two references into the private image and downloads the pinned model during image build. The service has no dependency on any local file after deployment.
-5. Create a dedicated Modal proxy token for this voice deployment. Do not reuse the Railway local-worker credential or place any credential in source code, browser storage, logs, or client bundles.
-6. Verify the authenticated `/health` endpoint and a streamed `/speech` response. Verify that unauthenticated requests are denied.
+3. Stage the approved reference WAV files with `python cloud/voice/prepare_bundle.py --profile <absolute-path-to-approved-profile.lock.json>` (Host 1) or `prepare_geffen_bundle.py` (GEFen). This verifies the hashes. The bundle folders are deliberately excluded from Git. This step does not upload files.
+4. Deploy the chosen app with `modal deploy cloud/voice/<app>.py`. This uploads the references into the private image and downloads the pinned model during image build. The service has no dependency on any local file after deployment.
+5. Use the dedicated Modal proxy token for this voice deployment. Do not reuse the Railway local-worker credential or place any credential in source code, browser storage, logs, or client bundles.
+6. Verify the authenticated `/health` endpoint and a streamed `/speech` response. Verify that unauthenticated requests are denied. Measure one cold and one warm first-audio time.
 7. Set Railway server environment variables `PAC_HOSTED_VOICE_URL` (the exact HTTPS `.modal.run` URL ending in `/speech`), `PAC_HOSTED_VOICE_KEY`, and `PAC_HOSTED_VOICE_SECRET`. Store values through secure tool input, without printing them.
-8. Deploy the application integration. `GET /api/ask/voice` reports availability from complete hosted configuration without repeatedly waking the GPU. A provider failure returns a readable error; it never changes voice or falls back to the user's computer.
+8. Deploy the application integration. `GET /api/ask/voice` reports availability from complete hosted configuration without waking the GPU. A provider failure returns a readable error; it never changes voice or falls back to the user's computer.
+9. Rollback: redeploy the previous app version in Modal, or point `PAC_HOSTED_VOICE_URL` back at a known-good endpoint.
 
 ## Data handling
 
@@ -33,9 +38,10 @@ Only the selected Host 1 identity and delivery references are packaged; no Host 
 - Unauthenticated provider access returns an authorization error.
 - Cold and warm requests generate valid WAV chunks and a final completion packet.
 - Canceling playback disconnects the stream; no new segments are generated after the current generation segment finishes.
-- The live Ask page handles spoken input, obtains an answer, plays the approved voice, and obeys Stop and Mute. CPU generation is slow: initial cloud tests measured 17.28 seconds to start the model, then 12.34–31.72 seconds to the first audio and 35.84–51.08 seconds to generate an 11-word sample. Longer answers can have gaps between segments.
+- The live Ask page handles spoken input, obtains an answer, plays the approved voice, and obeys Stop and Mute. On GPU, warm requests reached first audio in 2.4–2.8 seconds on 2026-11-12. Cold starts depend on GPU capacity (34.55 seconds on L40S, 107.45 seconds on A10 that day). The earlier CPU setup took 12.34–31.72 seconds to first audio after a 17.28 second model start.
 - Concurrent requests do not mix answers or audio between visitors.
 - With the local worker stopped, voice continues to work; after idle shutdown, a new request starts the cloud worker automatically.
-- Confirm the monthly spending limit in the Modal dashboard.
+- A cold request that waits past 150 seconds is followed through Modal's 303 result redirect and still plays.
+- Confirm the monthly budget under $30 in the Modal dashboard.
 
-Local checks: `python -m unittest discover -s cloud/voice -p 'test_*.py'`, the hosted voice Vitest tests, TypeScript, lint, and importing `modal_app.py` without deploying. Full live browser acceptance is tracked separately from provider verification.
+Local checks: `python -m unittest discover -s cloud/voice -p 'test_*.py'`, the hosted-voice and overview-voice Vitest tests, TypeScript, lint, and importing `modal_app.py` without deploying. Full live browser acceptance is tracked separately from provider verification.

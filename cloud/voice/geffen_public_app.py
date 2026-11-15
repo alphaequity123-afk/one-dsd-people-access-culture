@@ -64,8 +64,9 @@ image = (
 app = modal.App("one-dsd-approved-voice", image=image)
 
 
-@app.cls(gpu=["L4", "A10", "T4"], cpu=CPU_CORES, memory=8192, min_containers=0, max_containers=1,
-         scaledown_window=20, timeout=600)
+# GPU fallback list per Modal support (Nov 13, 2026); scaledown_window=300 approved by the owner on Nov 15, 2026.
+@app.cls(gpu=["L4", "A10", "T4", "L40S"], cpu=CPU_CORES, memory=8192, min_containers=0, max_containers=1,
+         scaledown_window=300, timeout=600)
 @modal.concurrent(max_inputs=1)
 class ApprovedVoice:
     @modal.enter()
