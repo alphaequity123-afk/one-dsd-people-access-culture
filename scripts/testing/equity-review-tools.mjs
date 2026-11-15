@@ -14,7 +14,18 @@ for(const name of ['DSD_Equity_Policy_Analysis_Tool.html','DSD_HCBS_Equity_Polic
  const run=code=>vm.runInContext(code,context);
  assert.equal(run('validateDraft(blank()).toolKind'),name.includes('HCBS')?'hcbs':'general');checks++;
  assert.equal(run('S=blank(); S.meta.type="policy";S.meta.duration="prolonged";S.meta.approval="director";S.meta.prior="yes";track().key'),'full');checks++;
- assert.equal(run('S.meta.unchanged="yes";S.meta.priorCitation="Earlier review";track().key'),'scan');checks++;
+ // Earlier work does not waive the policy criterion or automatically authorize a scan.
+ assert.equal(run('S.meta.unchanged="yes";S.meta.priorCitation="Earlier review";track().key'),'full');checks++;
+ for(const duration of ['temporary','prolonged']){
+  for(const approval of ['none','supervisor','director']){
+   for(const prior of ['yes','no']){
+    const result=run(`S=blank();S.meta.type="${name.includes('HCBS')?'waiver':'budget'}";S.meta.duration=${JSON.stringify(duration)};S.meta.approval=${JSON.stringify(approval)};S.meta.prior=${JSON.stringify(prior)};S.meta.unchanged="yes";S.meta.priorCitation="Earlier assessment";track().key`);
+    assert.equal(result,duration==='prolonged'&&approval!=='none'?'full':'review');checks++;
+   }
+  }
+ }
+ assert.equal(run('S=blank();track()'),null);checks++;
+ assert.equal(run('S.meta.type="policy";S.meta.duration="temporary";S.meta.approval="none";rubricItems()[1][0]'),true);checks++;
  assert.equal(run('S=blank();S.groups=[];rubricItems()[3][0]'),false);checks++;
  assert.equal(run('rubricItems()[4][0]'),false);checks++;
  assert.throws(()=>run('const wrong=blank();wrong.toolKind="other";validateDraft(wrong)'));checks++;
@@ -29,7 +40,7 @@ for(const name of ['DSD_Equity_Policy_Analysis_Tool.html','DSD_HCBS_Equity_Polic
  assert(html.includes('localStorage.setItem')&&html.includes('localStorage.removeItem'));checks++;
  assert(html.includes('Your current work is unchanged.'));checks++;
  assert(html.includes('not an official legislative position'));checks++;
- if(name.includes('HCBS')){assert.equal(run('S=blank();S.sample=true;record().includes("Fictional worked example")'),true);checks++;assert.equal(run('render=()=>{};toast=()=>{};loadExample();validateDraft(S).sample'),true);checks++;}
+ if(name.includes('HCBS')){assert.equal(run('S=blank();S.sample=true;record().includes("Practice example")'),true);checks++;assert.equal(run('render=()=>{};toast=()=>{};loadExample();validateDraft(S).sample'),true);checks++;}
  console.log(`${name}: checks passed`);
 }
 console.log(`${checks} equity review tool checks passed. Browser visual and assistive-technology verification remain separate.`);
