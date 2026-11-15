@@ -1,0 +1,98 @@
+{
+  "mode": "applied",
+  "records": 8,
+  "changedFields": 8,
+  "files": 8,
+  "changes": [
+    {
+      "id": "lib--content--community-research--amharic--disability",
+      "file": "lib/content/community-research/amharic.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "0453c6967964b657fde8ce0ed286d2621e9052c4ce902cf89f84472272b24767",
+      "afterSha256": "fd737360e83a8cdd8dbdeedb4813c8ea04d47dba664478f709f743b669310323"
+    },
+    {
+      "id": "lib--content--community-research--burmese--disability",
+      "file": "lib/content/community-research/burmese.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "d0818896552ec8ea5e9d5b0aa840ba535533cad17a352b08ca11fc185074e03b",
+      "afterSha256": "de4560a71a55478bf67c09b9be511c53bd73255d6c3f8d66b8974565a0a269c5"
+    },
+    {
+      "id": "lib--content--community-research--deaf-deafblind-hard-of-hearing--disability",
+      "file": "lib/content/community-research/deaf-deafblind-hard-of-hearing.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "eb85767b205781e635753fb22b7982281d0bd8eda1b2d1bcd2ea1e1a213e866b",
+      "afterSha256": "f7504acbd9b58ddbee8a7df2a035c167e9ceb64f4f34cab95c289add8d6d1033"
+    },
+    {
+      "id": "lib--content--community-research--french--disability",
+      "file": "lib/content/community-research/french.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "a280c5da7276edac39ebd053b7f9c53b914e3943c67c63efef7a723d881f27f3",
+      "afterSha256": "53ab0536e9fe0898adb7d1e5f80f8b930f06f17da8e3349e82d093698fbd358a"
+    },
+    {
+      "id": "lib--content--community-research--hmong--disability",
+      "file": "lib/content/community-research/hmong.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "440ef08a3b3a2f79234b177662a9a2a7b394b8687aae862d386fb45226977fbf",
+      "afterSha256": "9ed1fba0ad5b1cc5ef248895a76571c389b277a8ca47efe8afe76e71d5339503"
+    },
+    {
+      "id": "lib--content--community-research--khmer--disability",
+      "file": "lib/content/community-research/khmer.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "de053fe6f49a5ecdb4e8bba7d93829e5e709d00f986e4daacb3809023751545a",
+      "afterSha256": "45fccd7adb524bc979788357ab1712971c422626bbb199c91ee69f8e6df4b1a3"
+    },
+    {
+      "id": "lib--content--community-research--korean--disability",
+      "file": "lib/content/community-research/korean.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "7fdc46928d3a3df4ef9e0a145fff4e14d0e5109c39d679c55020e6657da1053c",
+      "afterSha256": "30535a12aa2d22f12c7619bfafd72ae15f8363f1c87653e120934410e5bb6f3e"
+    },
+    {
+      "id": "lib--content--community-research--lebanese--disability",
+      "file": "lib/content/community-research/lebanese.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "0eac60497f314c60d1df0094129b0f66f34866b2801f18bfaaa917fc34080f08",
+      "afterSha256": "cbac3c622306d81a711c4226cb09c459d1d1c78584791f35d959d9033b787a76"
+    }
+  ],
+  "sourceFileHashes": {
+    "lib/content/community-research/amharic.json": "fb56c6c421522f07dc1585ba83c75192ee973425a16b32efd03be80cc28604d3",
+    "lib/content/community-research/burmese.json": "2edcd895bce789b9f77728111d5abb565992a37762c011445f25947824aced0e",
+    "lib/content/community-research/deaf-deafblind-hard-of-hearing.json": "a2f8e31c736dbae70bfc0a3e2c3237fc19d763b8a200a3fc608fdaf3403ceaf0",
+    "lib/content/community-research/french.json": "6e5889769002e0a35563e0d71063c38936d80fa16a650ee6e6ef5ed1108d298a",
+    "lib/content/community-research/hmong.json": "9ca5bc0eb06a07e3bab53042effad3ca45c9c4f81546fec43d7e50f52f543797",
+    "lib/content/community-research/khmer.json": "e1c03bf31c96c0dccdf7e17301ccd591bde2ca88bd25ebcf86d7d30cc71b5e29",
+    "lib/content/community-research/korean.json": "a4f1ce929d5f8a0356825fe5872aff1bf5775f4ab400d6d13c9d40731fa54b78",
+    "lib/content/community-research/lebanese.json": "0ce32ed343be752e4474b08404ff82f3f370e8e35989370a0f573d8b09f3647c"
+  }
+}

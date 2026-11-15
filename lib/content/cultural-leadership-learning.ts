@@ -56,7 +56,7 @@ export const culturalLeadershipApproaches: readonly LeadershipApproach[] = [
     name: "Democratic and participatory leadership",
     description: "A leader involves others in shaping decisions and shares authority in ways that fit the work.",
     possibleUse: "Explain what is open to change, include people affected early, and return to them with what happened to their input.",
-    watchFor: "Inviting people to a meeting is not the same as sharing power. Budget time, interpreting and accessibility, compensate community expertise when appropriate, and be honest about limits.",
+    watchFor: "Inviting people to a meeting is not the same as sharing power. Allocate time and budget for interpreting and accessibility, compensate community expertise when appropriate, and be honest about limits.",
   },
 ];
 

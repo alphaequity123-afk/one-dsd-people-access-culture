@@ -1,0 +1,91 @@
+{
+  "status": "root_review_accepted",
+  "records": [
+    {
+      "id": "lib--content--hub--dsd-policies--policies-0",
+      "file": "lib/content/hub/dsd-policies.json",
+      "path": [
+        "policies",
+        0
+      ],
+      "sourceSha256": "30adbe3aea2e1a60f34aa42eea9bda92c724bfe726d3ce6f6e63e18d64e3689f",
+      "changes": [
+        {
+          "fieldId": 0,
+          "path": [
+            "policies",
+            0,
+            "summary"
+          ],
+          "before": "Following the Task Force on Eliminating Subminimum Wages, the 2023 Legislature required home and community-based services providers that pay people with disabilities less than minimum wage to report information each year to the Department of Human Services, under Minnesota Statutes 256B.4906 and Laws 2023, chapter 61, article 1, section 22. The Department publishes the data on its Employment First dashboards; the report for August 1, 2023 to June 30, 2024 was posted in 2025.",
+          "after": "Following the Task Force on Eliminating Subminimum Wages, the 2023 Legislature established annual reporting for specified home and community-based services providers holding a federal certificate or state permit to pay subminimum wages, under Minnesota Statutes 256B.4906 and Laws 2023, chapter 61, article 1, section 22. The reporting scope depends on the credentials and individuals described in the statute, rather than covering all providers. The Department publishes findings on its Employment First dashboards; the report for August 1, 2023 to June 30, 2024 was posted in 2025. Individually identifiable records submitted under this requirement are private.",
+          "reason": "Clarify statutory provider scope and distinguish published findings from private person-level submissions. Retain announcement chronology and references.",
+          "classification": "authored_prose_review"
+        },
+        {
+          "fieldId": "verified-policy-requirement-0",
+          "path": [
+            "policies",
+            0,
+            "requires",
+            0
+          ],
+          "before": "Since August 1, 2023, home and community-based services providers must report annually to the Department about each person they paid a subminimum wage.",
+          "after": "The specified home and community-based services providers holding a federal certificate or state permit as of August 1, 2023 must report annually about individuals currently paid subminimum wages or paid those wages by the provider as of that date.",
+          "reason": "Source-specific correction: original paraphrase omitted credential and historical cohort conditions. Verified statute paragraph(a); not an official quotation.",
+          "classification": "source_verified_policy_paraphrase"
+        },
+        {
+          "fieldId": 1,
+          "path": [
+            "policies",
+            0,
+            "equityCheck",
+            0
+          ],
+          "before": "Use the report to identify which counties, Tribal Nations and providers still pay subminimum wages and who is affected by disability type and race.",
+          "after": "Use the published findings to examine reported patterns by provider, lead agency and demographic category where the dashboard presents them. Check the period, definitions and limits before drawing conclusions about who is affected.",
+          "reason": "Avoid treating aggregate dashboard findings as a current person-level roster or assuming every disaggregation is published.",
+          "classification": "authored_prose_review"
+        },
+        {
+          "fieldId": 2,
+          "path": [
+            "policies",
+            0,
+            "equityCheck",
+            1
+          ],
+          "before": "For each person on the report, check that their support plan includes a path to competitive, integrated employment if they want one.",
+          "after": "In authorized planning work with a person who receives services, discuss whether their support plan includes a path to competitive, integrated employment if they want one. Use the appropriate individual records and the person’s own goals; do not attempt to identify people from the public dashboard.",
+          "reason": "Separate public evidence review from authorized individual planning; retain person-choice condition rather than require an explicit prior request.",
+          "classification": "authored_prose_review"
+        }
+      ],
+      "status": "accepted_fields",
+      "editorialAcceptance": true,
+      "fieldCount": 3,
+      "acceptanceScope": "Four proposed narrative/paraphrase fields; source-specific legal scope verified, other record fields not newly revalidated"
+    }
+  ],
+  "evidence": [
+    {
+      "url": "https://www.revisor.mn.gov/statutes/cite/256B.4906",
+      "paragraphs": [
+        "a",
+        "d",
+        "e",
+        "f"
+      ],
+      "reviewedAt": "2026-11-15",
+      "findings": "Credential and cohort limits; annual reporting; private identifiable data; annual outcome analysis."
+    },
+    {
+      "url": "https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=MNDHS-069178",
+      "findings": "Original announcement chronology retained; root reviewer verified report period and publication."
+    }
+  ],
+  "protectionNote": "Requires is normally protected pending verification. This field is authored paraphrase rather than statutory quote; exact before recorded and primary statute checked. No numerical/date/link/title/source metadata change.",
+  "reviewedBy": "root independent primary-source review",
+  "acceptanceScope": "Four fields only; statutory and DHS announcement scope verified, remaining metadata not revalidated"
+}

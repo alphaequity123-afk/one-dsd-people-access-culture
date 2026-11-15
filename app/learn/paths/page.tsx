@@ -34,7 +34,7 @@ export default function LearningPathsPage() {
       <p className="development-eyebrow">Understanding. Relationships. Action.</p>
       <h1>Learning paths</h1>
       <p>{developmentModel.direction}</p>
-      <p>Every path begins with a question from real work. The five guided pathways move from a question, through other perspectives, to a change you can make. The nine reading paths put a book or an article to work on a situation you recognize. They are grouped by where you might be in your own development, but that grouping is a guide rather than a gate: follow whichever path speaks to your question today.</p>
+      <p>Begin with a question from your work. The five guided pathways connect that question with other perspectives and a change to consider in practice. The nine reading paths help you apply a book or article to a familiar situation. The groups suggest different starting points for development; they are not prerequisites. Choose the path that addresses your question and the level of analysis you need.</p>
     </header>
     <ExplainerVideo id="learning-journey" />
     {PROGRESSION_LEVELS.map(level => {

@@ -1,0 +1,58 @@
+{
+  "mode": "applied",
+  "records": 1,
+  "changedFields": 4,
+  "files": 1,
+  "changes": [
+    {
+      "id": "lib--content--hub--dsd-policies--policies-0",
+      "file": "lib/content/hub/dsd-policies.json",
+      "path": [
+        "policies",
+        0,
+        "summary"
+      ],
+      "beforeSha256": "328770e58fd04b578200e209768214dbc7f43f32422fae5c05de4b85eeccb9ce",
+      "afterSha256": "3f755b5f0ff19ab2c8f4a09cdb92b118c436052891e7d344905ff554743d5d4b"
+    },
+    {
+      "id": "lib--content--hub--dsd-policies--policies-0",
+      "file": "lib/content/hub/dsd-policies.json",
+      "path": [
+        "policies",
+        0,
+        "requires",
+        0
+      ],
+      "beforeSha256": "b3fc2304f913f4fa3f60fefe75ed9e55324287d18c8ec90f39a8f95ab0d79ed3",
+      "afterSha256": "14fb6da70dbf49f25f7d85197563ca06319c184239683a19d532b70047e7a339"
+    },
+    {
+      "id": "lib--content--hub--dsd-policies--policies-0",
+      "file": "lib/content/hub/dsd-policies.json",
+      "path": [
+        "policies",
+        0,
+        "equityCheck",
+        0
+      ],
+      "beforeSha256": "d279cc35f74a2d986224347ddd905e6084f0b909c88525f5efe04d90b2951311",
+      "afterSha256": "d5d39285d3ae8e3e9f0b31a4f2d9dafb4fdc22d4af3eb2fe5cfeed2e2ff1d361"
+    },
+    {
+      "id": "lib--content--hub--dsd-policies--policies-0",
+      "file": "lib/content/hub/dsd-policies.json",
+      "path": [
+        "policies",
+        0,
+        "equityCheck",
+        1
+      ],
+      "beforeSha256": "43a47b04e25ef5ceb72df325a060bbb1ce28e58aa5d39cb357a66e3e83459850",
+      "afterSha256": "d60cea8c98db25b6001b2de041c99690196cb5a09131f8fb1d63190a95b66c02"
+    }
+  ],
+  "sourceFileHashes": {
+    "lib/content/hub/dsd-policies.json": "d584b827c9615bbe256a89ddd66d66625b269886838b2eba452fb79f533514d9"
+  }
+}

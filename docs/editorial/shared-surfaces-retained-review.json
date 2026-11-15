@@ -1,0 +1,109 @@
+{
+  "records": [
+    {
+      "target": "site.header",
+      "route": "/",
+      "values": {
+        "programName": "One DSD People, Access and Culture",
+        "programSubtitle": "Staff learning and practical support",
+        "programDescriptor": "an independently managed resource for Disability Services Division staff",
+        "primaryNavigation": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Start",
+            "href": "/start"
+          },
+          {
+            "label": "Ask",
+            "href": "/ask"
+          },
+          {
+            "label": "Areas of work",
+            "href": "/areas"
+          },
+          {
+            "label": "Learning and resources",
+            "href": "/learn"
+          },
+          {
+            "label": "Practice",
+            "href": "/practice"
+          },
+          {
+            "label": "Community Outreach and Engagement",
+            "href": "/community-outreach"
+          },
+          {
+            "label": "One DSD",
+            "href": "/one-dsd"
+          },
+          {
+            "label": "Amplify Equity",
+            "href": "/one-dsd/amplify"
+          },
+          {
+            "label": "Support",
+            "href": "/support"
+          }
+        ],
+        "personalNavigation": [
+          {
+            "label": "My Work",
+            "href": "/my-work"
+          }
+        ]
+      },
+      "status": "accepted_retained",
+      "review": "Root read all source fields and candidates plus actual SiteHeader, ProgramContext and /learn/sources route. Retained unchanged; candidate inflation and loss of Engagement rejected. Dormant subtitle/descriptor/context-switcher/sources intro fields not claimed published; no current book-count recertification."
+    },
+    {
+      "target": "site.context",
+      "route": "/",
+      "values": {
+        "switcherLabel": "View",
+        "switcherAriaLabel": "Choose the program view",
+        "oneDhsLabel": "One DHS",
+        "oneDhsDescription": "Start with shared knowledge, tools, and ways to reach the right person for work across DHS.",
+        "oneDsdLabel": "One DSD",
+        "oneDsdDescription": "Use the complete One DSD program: connected learning, evidence, tools, implementation and review for Disability Services Division work.",
+        "choiceAccessNote": "",
+        "oneDhsViewNote": "The unified library includes shared resources and labelled DSD examples. Confirm which division or program requirements apply to your work.",
+        "oneDsdViewNote": "DSD resources and applicable shared DHS guidance are available together. Access to protected work and editing requires separate authorization.",
+        "oneDhsLinkLabel": "Explore One DSD",
+        "oneDsdLinkLabel": "Open the One DSD program map",
+        "oneDsdActiveNote": "The standalone One DSD program includes DSD resources and applicable department-wide learning and tools.",
+        "optionalViewKicker": "Optional view",
+        "optionalViewTitle": "Add the One DSD layer",
+        "optionalViewBody": "Use the DSD resource context to explore Disability Services Division examples and scenarios alongside shared One DHS learning and tools. Your resource preference does not change access to protected work.",
+        "optionalViewButton": "Use the One DSD view"
+      },
+      "status": "accepted_retained",
+      "review": "Root read all source fields and candidates plus actual SiteHeader, ProgramContext and /learn/sources route. Retained unchanged; candidate inflation and loss of Engagement rejected. Dormant subtitle/descriptor/context-switcher/sources intro fields not claimed published; no current book-count recertification."
+    },
+    {
+      "target": "sources.page",
+      "route": "/learn/sources",
+      "values": {
+        "introKicker": "Learning and resources",
+        "introTitle": "Research and sources",
+        "introLede": "Explore outside sources used across the learning and resources in this program.",
+        "readTitle": "How to read this page",
+        "readBody": "Government sources, standards, research, and community organizations can each help answer different questions. Check the original source for the information relevant to your work.",
+        "statesTitle": "",
+        "statesBody": "",
+        "usedInLabel": "Used in",
+        "annotationLabel": "What the program says about this source",
+        "openLabel": "Open the source",
+        "movedLabel": "Newer address",
+        "thinTitle": "",
+        "thinBody": "",
+        "countLabel": "sources across the program"
+      },
+      "status": "accepted_retained",
+      "review": "Root read all source fields and candidates plus actual SiteHeader, ProgramContext and /learn/sources route. Retained unchanged; candidate inflation and loss of Engagement rejected. Dormant subtitle/descriptor/context-switcher/sources intro fields not claimed published; no current book-count recertification."
+    }
+  ]
+}

@@ -1,0 +1,2654 @@
+{
+  "scope": "Extracted text is an inventory aid, not a count of published pages. Shared components may serve multiple routes and need usage review. Tests are excluded. Protected recorded-media text remains exact.",
+  "counts": {
+    "route_template": 185,
+    "shared_component": 185,
+    "test_fixture": 7
+  },
+  "fieldCounts": {
+    "shared_component": 1576,
+    "route_template": 1618,
+    "test_fixture": 13
+  },
+  "records": [
+    {
+      "file": "app/about/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/administrations/adsa/divisions/dsd/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/administrations/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/administrations/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/areas/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/areas/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 21,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/ask/ask-view.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/audio-library/audio-library-player.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/audio-library/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/collections/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/collections/[theme]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/county-agencies/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/county-map/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/how-the-system-connects/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 19,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/organizations/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/organizations/[slug]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/plan/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/policies/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/policies/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/providers/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/community-outreach/sources/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/activation/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 13,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/analysis/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/audit/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/connectors/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/content-review/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 14,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/data/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/layout.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/legacy-requests/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/library/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/library/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/not-found.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/orchestrator/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/program/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 25,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/queue/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/registry/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 31,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/resources/new/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/resources/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/resources/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/review/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/toolkit/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/workforce/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/consultant/workforce/[areaId]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/courses/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/courses/[courseId]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/courses/[courseId]/[lessonId]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/data/equity-baseline/glossary/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/data/equity-baseline/goal/[number]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/data/equity-baseline/layout.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/data/equity-baseline/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/data/equity-baseline/review-count-section.tsx",
+      "kind": "route_template",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/employee-resource-groups/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-framework/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 62,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-policy/analysis/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-policy/analysis/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-policy/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-policy/register/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-review/analyze/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-review/director-toolkit/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 13,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-review/director-toolkit/templates/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-review/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 17,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-review/structural/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-review/working-group-plan/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 22,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-workspace/layout.tsx",
+      "kind": "route_template",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/equity-workspace/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 15,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/error.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/explore/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/explore/[facet]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/explore/[facet]/[value]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/global-error.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/growth/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/growth/[role]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 13,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/home/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/leading/community-coverage/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 18,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/leading/how-this-works/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 26,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/leading/journey/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 18,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/leading/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 45,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/leading/paths/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/leading/paths/[path]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/leading/[door]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/clas/collection/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 19,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/clas/curriculum/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/clas/curriculum/[lesson]/job-aid/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/clas/curriculum/[lesson]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/clas/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 41,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/collaboration/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 14,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/collections/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/collections/[collection]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/community-connections/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/cultural-intelligence/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 26,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/diversity/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/emotions-and-values/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 18,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/engagement-resources/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-in-practice/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 26,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-in-practice/sequence-video.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-toolkit/apply/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-toolkit/curriculum/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-toolkit/curriculum/[lesson]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-toolkit/goals/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-toolkit/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 31,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-toolkit/policy-review/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/equity-toolkit/practice/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/intercultural/curriculum/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/intercultural/curriculum/[lesson]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/intercultural/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 16,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/leadership-styles/capstone/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/leadership-styles/conflict-lifecycle/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/leadership-styles/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 19,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/leadership-styles/race-and-leadership/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/leadership-styles/scenarios/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/leadership-styles/[style]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 16,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 32,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/paths/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 14,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/paths/[journeyId]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/readings/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/readings/pathways/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/readings/practice/service-notice/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 25,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/readings/[readingId]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 20,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/sources/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/tribal-referral/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/water-we-swim-in/collection/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 14,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/water-we-swim-in/essay/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/water-we-swim-in/essay/whole/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/water-we-swim-in/essay/[part]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/water-we-swim-in/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/learn/water-we-swim-in/[module]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/library/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 15,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/minnesota-agencies/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/minnesota-agencies/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/minnesota-communities/calendar/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/minnesota-communities/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/minnesota-communities/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/my-work/action-plan/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/my-work/decision-records/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/my-work/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 18,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/my-work/plan/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/my-work/reflections/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/amplify/ideas/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/amplify/mentoring/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/leadership/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 52,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 16,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/planning/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/programs/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/programs/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/scenarios/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/team/learning-lab/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 13,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/team/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/team/resource-selections/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/one-dsd/team/workspace/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/operationalizing-equity/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 31,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/paths/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/paths/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 17,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/podcasts/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/practice/clas/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/practice/measurement/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/practice/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/practice/requirements/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/practice-guides/[slug]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 13,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/program/implementation/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 19,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/program/model/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 29,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/program/reflection/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/program/[stage]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/program-foundation/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/resources/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/search/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/share/courses/[courseId]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/share/courses/[courseId]/[lessonId]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/share/equity-toolkit/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/share/equity-toolkit/practice/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/share/library/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/site-map/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/source-reading/[id]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/start/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/support/directory/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/support/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/support/right-person/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/support/share-result/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/team-kits/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/team-space/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/toolkit-studio/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/toolkit-studio/[card]/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/understanding-dhs/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 15,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "app/user-guide/page.tsx",
+      "kind": "route_template",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/amplify-page.tsx",
+      "kind": "shared_component",
+      "fieldCount": 31,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/amplify-tools.tsx",
+      "kind": "shared_component",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/analysis/analysis-result.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/analysis/analyze-workspace.test.tsx",
+      "kind": "test_fixture",
+      "fieldCount": 3,
+      "editorialStatus": "excluded_nonpublic_fixture",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/analysis/analyze-workspace.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/analyze-in-toolkit-link.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/ask-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/ask-records-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/ask-voice.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum/job-aid.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum/media-player.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum/practice.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum/transcript.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum/walkthrough-playlist.tsx",
+      "kind": "shared_component",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum.test.tsx",
+      "kind": "test_fixture",
+      "fieldCount": 1,
+      "editorialStatus": "excluded_nonpublic_fixture",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-curriculum.tsx",
+      "kind": "shared_component",
+      "fieldCount": 27,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/clas-planning-worksheet.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/collection-item-link.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-collection-addition.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-design-index.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-design-page.tsx",
+      "kind": "shared_component",
+      "fieldCount": 22,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-experience-controls.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-footer-frame.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-profile-sections.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-research-sections.test.tsx",
+      "kind": "test_fixture",
+      "fieldCount": 1,
+      "editorialStatus": "excluded_nonpublic_fixture",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/community-research-sections.tsx",
+      "kind": "shared_component",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/connected-minnesota.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/connected-with.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/consultant-analysis-workspace.tsx",
+      "kind": "shared_component",
+      "fieldCount": 48,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/consultant-sign-in.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/consultant-toolkit/analysis-view.tsx",
+      "kind": "shared_component",
+      "fieldCount": 14,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/consultant-toolkit/information-needed-panel.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/consultant-toolkit/outputs.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/consultant-toolkit/suggested-setup.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/consultant-toolkit-workspace.tsx",
+      "kind": "shared_component",
+      "fieldCount": 37,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/core-fifteen.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/course-audio-discussion.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/course-lesson.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/cultural-intelligence-explainer-draft.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/cultural-intelligence-work-journey.tsx",
+      "kind": "shared_component",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/cultural-leadership-curriculum.tsx",
+      "kind": "shared_component",
+      "fieldCount": 16,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/cultural-leadership-styles.tsx",
+      "kind": "shared_component",
+      "fieldCount": 17,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/culture-calendar.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/data-exploration-workspace.tsx",
+      "kind": "shared_component",
+      "fieldCount": 31,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/decision-workspace.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/development-focus.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/development-pathways.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/development-resource-guide.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dhs-reference-link.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/director-toolkit-template.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dsd-practice-planner-editor.tsx",
+      "kind": "shared_component",
+      "fieldCount": 13,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dsd-practice-planner.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dsd-program-footer.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dsd-program-header.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dsd-reflection-editor.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dsd-saved-resources.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/dsd-workspace.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/editable-surface-editor.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/engagement-resource-links.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-analysis/dashboard.tsx",
+      "kind": "shared_component",
+      "fieldCount": 20,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-analysis/register.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-analysis/walkthrough.tsx",
+      "kind": "shared_component",
+      "fieldCount": 13,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-analysis-ladder.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-chart.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-decisions-curriculum.tsx",
+      "kind": "shared_component",
+      "fieldCount": 17,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-goal-experience.tsx",
+      "kind": "shared_component",
+      "fieldCount": 61,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-goal-overview.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-practice-overview.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-toolkit-worked-example.tsx",
+      "kind": "shared_component",
+      "fieldCount": 15,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/equity-video-feature.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/evals-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/focused-sections.test.tsx",
+      "kind": "test_fixture",
+      "fieldCount": 1,
+      "editorialStatus": "excluded_nonpublic_fixture",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/geffen-course-read-aloud.test.tsx",
+      "kind": "test_fixture",
+      "fieldCount": 1,
+      "editorialStatus": "excluded_nonpublic_fixture",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/geffen-course-read-aloud.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/guided-start-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/home-ask.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/home-task-finder.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/hub/analyze-policy-link.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/hub/community-hub-sections.tsx",
+      "kind": "shared_component",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/hub/county-map.tsx",
+      "kind": "shared_component",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/hub/statewide-services-chart.tsx",
+      "kind": "shared_component",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/intake-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 30,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/intercultural-curriculum.tsx",
+      "kind": "shared_component",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/intercultural-lesson-video.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leaders-sign-in.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leadership-development-studio.tsx",
+      "kind": "shared_component",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leadership-intercultural-pathway.tsx",
+      "kind": "shared_component",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leadership-lifecycle-tools.tsx",
+      "kind": "shared_component",
+      "fieldCount": 9,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leadership-style-video.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leadership-styles-pathway.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leading-path-place.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/leading-start-chooser.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/learning-audio.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/learning-practice-notebook.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/measurement-worksheet.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/critical-incident-scene.tsx",
+      "kind": "shared_component",
+      "fieldCount": 21,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-access-demonstrations.tsx",
+      "kind": "shared_component",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-data-quality-example.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-development-map-example.tsx",
+      "kind": "shared_component",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-first-contact-audio.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-inventory-map.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-leadership-media.tsx",
+      "kind": "shared_component",
+      "fieldCount": 16,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-policy-burden-map.tsx",
+      "kind": "shared_component",
+      "fieldCount": 22,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/dsd-work-examples.tsx",
+      "kind": "shared_component",
+      "fieldCount": 99,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/engagement-contribution-map.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/engagement-learning-scenes.tsx",
+      "kind": "shared_component",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/engagement-reference-map.tsx",
+      "kind": "shared_component",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/engagement-route-map.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/engagement-toolkit-route.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/engagement-worked-examples.tsx",
+      "kind": "shared_component",
+      "fieldCount": 20,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/learning-dialogue.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/learning-evidence-chart.tsx",
+      "kind": "shared_component",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/learning-history.tsx",
+      "kind": "shared_component",
+      "fieldCount": 37,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/measurement-evidence-example.tsx",
+      "kind": "shared_component",
+      "fieldCount": 26,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/opportunity-pathway.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/plain-language-comparison.tsx",
+      "kind": "shared_component",
+      "fieldCount": 21,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/resource-media-preview.tsx",
+      "kind": "shared_component",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/multimedia/worked-practice-examples.tsx",
+      "kind": "shared_component",
+      "fieldCount": 37,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/my-path.tsx",
+      "kind": "shared_component",
+      "fieldCount": 16,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/my-view-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/new-resource-form.tsx",
+      "kind": "shared_component",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/new-to-dsd.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/one-dsd-team-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/operationalizing-equity-preview.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/orchestrator-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 28,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/organization-navigation.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/packet-view.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/page-copy-editor.tsx",
+      "kind": "shared_component",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/page-edit-controls.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/participation-notice.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/path-browse.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/path-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/podcast-player.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/analysis-view.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/analyze-step.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/case-library.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/decisions-step.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/equity-workspace-links.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/formalize-step.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/policy-analyzer.test.tsx",
+      "kind": "test_fixture",
+      "fieldCount": 5,
+      "editorialStatus": "excluded_nonpublic_fixture",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/policy-analyzer.tsx",
+      "kind": "shared_component",
+      "fieldCount": 12,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/policy-picker.tsx",
+      "kind": "shared_component",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/recommendation-card.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/recommendations-step.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-analysis/sources-editor.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/policy-presentation-reader.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/practice-video.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/private-notes.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/program-connections.tsx",
+      "kind": "shared_component",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/program-context.tsx",
+      "kind": "shared_component",
+      "fieldCount": 3,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/program-outcome-form.tsx",
+      "kind": "shared_component",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/program-work-controls.tsx",
+      "kind": "shared_component",
+      "fieldCount": 46,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/program-work-summary.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/queue-item-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/reading-practice.tsx",
+      "kind": "shared_component",
+      "fieldCount": 11,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/record-workbench.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/related-readings.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/requirements-crosswalk.tsx",
+      "kind": "shared_component",
+      "fieldCount": 8,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/research-controls-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 15,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/research-markdown.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-creation-panel.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-creation-preview.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-inline-editor.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-media-gallery.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-media-manager.tsx",
+      "kind": "shared_component",
+      "fieldCount": 7,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-release-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 17,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-starting-points.tsx",
+      "kind": "shared_component",
+      "fieldCount": 14,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-theme-nav.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/resource-theme-pathway.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/review-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/self-directed-continue.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/site-footer.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/site-header.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/site-search.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/source-evidence.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/staff-ask-browse.tsx",
+      "kind": "shared_component",
+      "fieldCount": 10,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/staff-work-browse.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/structural-review-workspace.tsx",
+      "kind": "shared_component",
+      "fieldCount": 17,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/support-context-options.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/synced-audio.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/team-resource-selections.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/team-sign-in.tsx",
+      "kind": "shared_component",
+      "fieldCount": 1,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/track-client.tsx",
+      "kind": "shared_component",
+      "fieldCount": 6,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/tutor-panel.test.tsx",
+      "kind": "test_fixture",
+      "fieldCount": 1,
+      "editorialStatus": "excluded_nonpublic_fixture",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/universal-editor.tsx",
+      "kind": "shared_component",
+      "fieldCount": 5,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/visual-studio-panel.tsx",
+      "kind": "shared_component",
+      "fieldCount": 22,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/water-collection-feature.tsx",
+      "kind": "shared_component",
+      "fieldCount": 2,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/water-curriculum.tsx",
+      "kind": "shared_component",
+      "fieldCount": 16,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/water-foundation-course.tsx",
+      "kind": "shared_component",
+      "fieldCount": 15,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/water-foundation-feature.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    },
+    {
+      "file": "components/work-examples.tsx",
+      "kind": "shared_component",
+      "fieldCount": 4,
+      "editorialStatus": "pending_full_review",
+      "publicationClaim": false
+    }
+  ]
+}
