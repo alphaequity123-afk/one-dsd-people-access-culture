@@ -1,4 +1,5 @@
 import "server-only";
+import { withProfessionalLanguage } from "./professional-language";
 
 import { cache } from "react";
 import { z } from "zod";
@@ -355,9 +356,10 @@ export async function loadPublishedPageCopy(
   options: PageCopyLoadOptions = {},
 ): Promise<PageBlockCopy | undefined> {
   const source = options.source ?? staffContentSource();
-  if (source === "static") return staticPageCopy(surface as "home") as PageBlockCopy;
+  if (source === "static") return withProfessionalLanguage(`page.${surface}`, staticPageCopy(surface as "home") as PageBlockCopy);
   const scope = options.scope ?? staffProgramScope();
-  return options.store ? options.store.readPublished(surface, scope) : runtimeReadPublished(surface, scope);
+  const published = await (options.store ? options.store.readPublished(surface, scope) : runtimeReadPublished(surface, scope));
+  return published ? withProfessionalLanguage(`page.${surface}`, published) : undefined;
 }
 
 export async function loadPageBlockEditingState<TSurface extends PageBlockSurface>(

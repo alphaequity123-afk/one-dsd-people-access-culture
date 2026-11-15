@@ -1,4 +1,5 @@
 import "server-only";
+import { withProfessionalLanguage } from "./professional-language";
 
 import { cache } from "react";
 import { z } from "zod";
@@ -668,11 +669,15 @@ export async function loadPublishedEditableSurface(
   if (!definition) return undefined;
   const source = options.source ?? editableSurfaceSource(surfaceId);
   const scope = options.scope ?? staffProgramScope();
-  if (source === "static") return staticPublication(definition, scope);
+  if (source === "static") return languagePublication(staticPublication(definition, scope));
   const published = await (options.store ? options.store.readPublished(surfaceId, scope) : runtimeReadPublished(surfaceId, scope));
   // Program-authored surfaces are approved in code; they serve until a database publication exists, which then takes precedence.
   const managed = process.env.PAC_DATABASE_EDITABLE_SURFACES?.split(",").some(id => id.trim() === surfaceId);
-  return published ?? (!managed && CODE_APPROVED_SURFACE_IDS.has(surfaceId) ? staticPublication(definition, scope) : undefined);
+  return languagePublication(published ?? (!managed && CODE_APPROVED_SURFACE_IDS.has(surfaceId) ? staticPublication(definition, scope) : undefined));
+}
+
+function languagePublication(publication: PublishedEditableSurface | undefined): PublishedEditableSurface | undefined {
+  return publication ? { ...publication, values: withProfessionalLanguage(publication.surfaceId, publication.values) } : undefined;
 }
 
 /** Read the same current publications as pages, without one network round trip per area. */
@@ -693,7 +698,7 @@ export async function loadPublishedEditableSurfaces(surfaceIds: string[], scope:
     const publication = definition && staticPublication(definition, scope);
     return publication ? [publication] : [];
   });
-  return [...staticRows, ...databaseRows, ...codeApprovedRows];
+  return [...staticRows, ...databaseRows, ...codeApprovedRows].map(row => languagePublication(row)!);
 }
 
 export async function loadEditableSurfaceEditingState(

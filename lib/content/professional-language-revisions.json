@@ -1,0 +1,469 @@
+{
+  "standard": "2026-11-13",
+  "revisions": [
+    {
+      "target": "about.page",
+      "kind": "surface",
+      "route": "/about",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "People, Access and Culture is an independently managed resource for staff of the Disability Services Division at Minnesota DHS. It brings learning, evidence, practical tools, and ways to reach the right person into one place, and it is honest about what it does and does not hold.",
+          "after": "People, Access and Culture is an independently managed resource that brings professional learning, research, practical tools, and support for Minnesota DHS Disability Services Division work into one place. Use it to examine how organizational decisions affect access, workplace conditions, and the people who use services."
+        },
+        {
+          "path": [
+            "purposeBody"
+          ],
+          "before": "This program has two equally real purposes, not one dressed up as the other. It helps you examine a decision, learn a concept, prepare for a conversation, or serve someone well — and it helps you grow, personally, in how you understand culture, including your own. Examining your own cultural default is real work here, not a detour from it, whatever background you bring to that work. A colleague studying their own German, Norwegian, Irish, or Iron Range background is doing exactly as legitimate a thing here as a colleague building the specific knowledge needed to serve a particular client community well.",
+          "after": "Professional practice and personal cultural understanding develop together. A staff member can use this collection to examine a policy decision, prepare for a difficult conversation, or understand how their own background shapes what feels normal. Studying family, regional, religious, or workplace influences helps make those assumptions visible. Learning about the communities a program serves adds another perspective; direct conversation with the people affected tests whether that knowledge fits the situation."
+        },
+        {
+          "path": [
+            "purposeBoundary"
+          ],
+          "before": "The goal is genuine growth and better service, together. The program does not ask staff to perform agreement, does not rank people, teams, or beliefs, and never turns anyone's personal growth or their place in it into a score, a record, or a label attached to them.",
+          "after": "The purpose is to strengthen judgment, cultural understanding, and service responsiveness. Personal reflection is not evidence of a required belief or a basis for ranking staff, teams, or communities."
+        },
+        {
+          "path": [
+            "sourcesBody"
+          ],
+          "before": "Each item shows its source, who maintains it, what it covers, and its limits. Official sources, program guidance, and outside evidence are kept visibly distinct. A proprietary assessment or toolkit may inform professional practice without being copied, scored, or presented as department-owned.",
+          "after": "Use the source information to distinguish official requirements, program-authored guidance, and outside research. Consider when the material was produced, what question it addresses, and which conclusions it can support. A framework can help organize professional judgment without authorizing its assessment tools or scoring methods to be reproduced."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "start.page",
+      "kind": "surface",
+      "route": "/start",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Tell us your role, the kind of work you are doing, and how soon you need to act. We will point you to a sensible place to begin and explain why it fits. Nothing here is saved or scored; it is simply a way to get oriented.",
+          "after": "Choose your role, the work you are considering, and the time available before a decision. The suggestions connect those choices with relevant learning, practical tools, and responsible offices, so you can begin with the question that needs attention."
+        },
+        {
+          "path": [
+            "formIntro"
+          ],
+          "before": "Pick the closest fit. There are no wrong answers, and you can change any of them as your thinking develops.",
+          "after": "Select the closest match to your current responsibility. You can revise the choices when the task, decision, or available time changes."
+        },
+        {
+          "path": [
+            "roleSupervisorOrManagerGuidance"
+          ],
+          "before": "Consider both the decision and how staff and communities will experience it.",
+          "after": "Examine the decision, the support staff need to carry it out, and how affected people will be able to raise concerns."
+        },
+        {
+          "path": [
+            "rolePolicyProgramOrServiceProfessionalGuidance"
+          ],
+          "before": "Bring equity and access into the work while there is still room to shape it.",
+          "after": "Identify which requirements are fixed, which choices remain open, and whose experience should inform the recommendation."
+        },
+        {
+          "path": [
+            "roleDataResearchOrQualityProfessionalGuidance"
+          ],
+          "before": "Use evidence to answer a decision question while protecting people and small groups.",
+          "after": "Define the decision your evidence will inform, examine missing perspectives, and protect confidential information and small groups when reporting differences."
+        },
+        {
+          "path": [
+            "roleFiscalProcurementOrContractsProfessionalGuidance"
+          ],
+          "before": "Consider who can meet the requirements, who carries the burden, and who benefits.",
+          "after": "Examine who can meet a requirement, what resources participation demands, and how costs or responsibilities shift between the agency and others."
+        },
+        {
+          "path": [
+            "roleEquityDirectorOrSpecialistGuidance"
+          ],
+          "before": "Connect the immediate task to the wider program, responsible partners, and durable follow-through.",
+          "after": "Connect the immediate concern with the relevant program, evidence, decision authority, and responsibility for implementation and review."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "areas.page",
+      "kind": "surface",
+      "route": "/areas",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Come in through the decision or practice you are responsible for. Each area connects what is known, the questions worth asking, the tools, a guided practice and the people who hold the relevant authority.",
+          "after": "Start with the decision or professional responsibility you need to address. Each area brings together relevant evidence, questions for analysis, practical tools, and the offices or partners responsible for action."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "learn.page",
+      "kind": "surface",
+      "route": "/learn",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Courses, readings, and recordings that build the knowledge behind fair, accessible services and inclusive workplaces. Start with the Core 15, follow a series, or search the whole collection.",
+          "after": "Develop the judgment behind accessible services, equitable decisions, and inclusive workplaces. Courses, readings, and recordings connect concepts with Minnesota human services practice, including the evidence and trade-offs involved in applying them."
+        },
+        {
+          "path": [
+            "stagesIntro"
+          ],
+          "before": "Explore foundations, intercultural practice, applied equity, and leadership at a pace that fits your work.",
+          "after": "Choose foundations, intercultural practice, applied equity, or leadership according to the question and level of analysis your work requires."
+        },
+        {
+          "path": [
+            "stageOrientationPurpose"
+          ],
+          "before": "See what the program offers and find an easy place to begin, without needing to be an expert.",
+          "after": "Understand the collection, identify the resources relevant to your responsibility, and distinguish learning support from official decision authority."
+        },
+        {
+          "path": [
+            "stageInterculturalPracticePurpose"
+          ],
+          "before": "Develop the ability to notice different perspectives, work across cultural difference, and adapt behavior with care.",
+          "after": "Examine how cultural expectations shape interpretation, ask people about their experience, and adapt communication or practice in response."
+        },
+        {
+          "path": [
+            "stageSystemsPracticePurpose"
+          ],
+          "before": "Examine patterns, power, burden, disparities, and institutional conditions across more than one decision or team.",
+          "after": "Investigate recurring barriers across teams or decisions, using evidence to connect individual experiences with institutional rules, authority, and resources."
+        },
+        {
+          "path": [
+            "stageLeadershipContinuityPurpose"
+          ],
+          "before": "Sustain change through supervision, mentoring, sponsorship, shared governance, repair, resources, and learning over time.",
+          "after": "Translate an improvement into sustained practice through supervision, shared responsibility, resources, feedback, and a clear process for reviewing results."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "learn.hub",
+      "kind": "surface",
+      "route": "/learn",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Courses, readings, and recordings that build the knowledge behind fair, accessible services and inclusive workplaces. Start with the Core 15, follow a series, or search the whole collection.",
+          "after": "Develop the judgment behind accessible services, equitable decisions, and inclusive workplaces. Courses, readings, and recordings connect concepts with Minnesota human services practice, including the evidence and trade-offs involved in applying them."
+        },
+        {
+          "path": [
+            "interculturalNote"
+          ],
+          "before": "What might you learn by asking someone how they prefer to communicate, rather than assuming that a familiar approach will work for them?",
+          "after": "A familiar communication approach may not make a request or concern clear to another person. Ask how the person understands the exchange, identify any access support needed, and adjust the next step in response."
+        },
+        {
+          "path": [
+            "accessNote"
+          ],
+          "before": "A form may be accurate and still be difficult to use. What would help someone understand it, complete it, and get the service they need?",
+          "after": "An accurate form can still create a barrier if the instructions, language, format, or required response are difficult to use. Examine the task from the service user's perspective and check which changes would make a practical difference."
+        },
+        {
+          "path": [
+            "facilitationNote"
+          ],
+          "before": "After a lunch and learn, what would help people use an idea in their work? Time to practice and a later conversation can help learning continue.",
+          "after": "Plan what participants will be able to examine, practice, and use after a learning session. A later conversation about application can reveal where the idea helped and where the workplace needs additional support."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "learn.cultural-intelligence",
+      "kind": "surface",
+      "route": "/learn/cultural-intelligence",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Explore your own perspective and learn with people and communities. Bring cultural understanding, access and equity into your work.",
+          "after": "Examine how your own cultural expectations and the organization's routines shape interpretation, communication, and service decisions. Use community knowledge, research, and direct engagement to develop a more responsive approach."
+        },
+        {
+          "path": [
+            "foundationBody"
+          ],
+          "before": "Cultural understanding grows through reflection, listening, learning and practice with other people. Notice how your background, workplace and professional assumptions shape your approach. Consider language, disability access, bias, power and the surrounding systems. Ask each person what matters to them instead of making assumptions.",
+          "after": "Cultural understanding requires attention to both personal expectations and institutional power. Consider whose ways of communicating, demonstrating knowledge, or asking for assistance are treated as familiar or credible in Minnesota human services. Community briefs and intercultural frameworks can help you prepare questions, but the person's account remains essential. Identify what the organization can change when a requirement, communication method, or routine limits participation."
+        },
+        {
+          "path": [
+            "applyRoutine"
+          ],
+          "before": "Plan a next step, notice what happens and check with the people affected. Adjust your approach when you learn something new.",
+          "after": "Choose a specific interaction or process to examine, identify the assumption shaping it, and ask affected people what would make participation more useful. Try an appropriate adjustment, review what happened, and record what remains uncertain."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "community-outreach.home",
+      "kind": "surface",
+      "route": "/community-outreach",
+      "changes": [
+        {
+          "path": [
+            "cycleIntro"
+          ],
+          "before": "Good outreach and engagement follow the same order every time. Each step below links to the part of this program that supports it.",
+          "after": "Use these connected steps to prepare, build relationships, involve people in decisions, and explain what follows. Revisit earlier steps when new information changes the question or reveals a participation barrier."
+        },
+        {
+          "path": [
+            "stepUnderstand"
+          ],
+          "before": "Notice your own lens, habits and assumptions before you meet anyone. Your culture shapes what feels normal, polite or clear.",
+          "after": "Identify the professional and cultural expectations you bring to the interaction. Consider how those expectations influence whose knowledge you recognize and what you interpret as clear, respectful, or credible."
+        },
+        {
+          "path": [
+            "stepLearn"
+          ],
+          "before": "Build accurate, specific knowledge from the community pages: history, everyday life, language, and dated figures with their sources.",
+          "after": "Review the community pages for relevant history, language, local context, and dated evidence. Use that information to prepare questions and identify what needs confirmation with the people involved."
+        },
+        {
+          "path": [
+            "stepReport"
+          ],
+          "before": "Tell participants what changed, what did not and why. Then reflect on what you learned and what you would do differently.",
+          "after": "Explain which contributions shaped the decision, what did not change and why, which issues remain unresolved, and who is responsible for follow-up. Give participants an accessible way to correct your account and assess whether it reflects their input."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "practice.page",
+      "kind": "surface",
+      "route": "/practice",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Thirteen guided practices for the work in front of you, each built around a real task: a decision, a draft, a meeting, a hire. Read one, download its checklist, and bring it into your work.",
+          "after": "Use a guided practice to develop a decision, draft, meeting plan, or workforce action. Each practice connects relevant questions and evidence with a work product you can review, adapt, and use in your professional setting."
+        },
+        {
+          "path": [
+            "choicesIntro"
+          ],
+          "before": "Each practice brings together the questions worth asking, the material that informs them, and a checklist you can keep. Nothing here scores or ranks you.",
+          "after": "Choose a task that matches your responsibility. Work through the questions, consider the supporting material, and use the checklist to identify what is ready and what still requires evidence or another person's judgment."
+        },
+        {
+          "path": [
+            "moreBody"
+          ],
+          "before": "These thirteen are a starting set, not the limit. If your work does not fit neatly, browse by area of work or look through the common questions.",
+          "after": "A practice provides a starting structure rather than a complete account of every situation. If the task spans several responsibilities, combine the relevant areas of work and identify who needs to contribute to the decision."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "paths.index",
+      "kind": "surface",
+      "route": "/paths",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Choose from thirteen paths for common work. Each one brings together questions, relevant community context, practical tools, notes you can keep, and a final review of your own work. You do not need a consultation to complete a path.",
+          "after": "Follow a learning path to develop a work product with relevant evidence, community context, practical tools, and a final review. Choose a path that fits your current responsibility and use its questions to identify what you know, what needs verification, and who should be involved."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "ask.page",
+      "kind": "surface",
+      "route": "/ask",
+      "changes": [
+        {
+          "path": [
+            "introKicker"
+          ],
+          "before": "Answers you can rely on",
+          "after": "Questions, evidence, and next steps"
+        },
+        {
+          "path": [
+            "privacyNotice"
+          ],
+          "before": "Browsing here leaves no trace: choosing a topic opens a published answer, and nothing is recorded as a question from you. Please keep names, case details, medical or personnel information and other confidential material out of any notes you take.",
+          "after": "Opening a published answer is different from submitting your own question to Ask. Keep names, case details, medical or personnel information, and other confidential material out of questions and working notes."
+        },
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "The questions staff ask most often, each with a considered answer, its sources and its limits, and a copy you can download. Choose one close to yours; the answer will show you where to go next.",
+          "after": "Use the published answers to examine a work question, locate relevant sources, and identify a practical next step. Read the stated limits before applying an answer to a policy, service, or workforce decision."
+        },
+        {
+          "path": [
+            "reviewDraftHelp"
+          ],
+          "before": "Paste a draft for feedback on equity, access, plain language, sources, and burden. Leave out confidential or personal material.",
+          "after": "Request feedback on the reasoning, evidence, equity implications, access, and usability of a draft. Include the intended audience and purpose, but leave out confidential or identifying information."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "library.page",
+      "kind": "surface",
+      "route": "/library",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Checklists, job aids, question banks, practice notes and learning materials, organized by topic. Start with a theme, or search for the work in front of you.",
+          "after": "Find research, community briefs, job aids, practice guidance, and learning materials relevant to Minnesota human services work. Compare the purpose and authority of each source before using it to support a decision."
+        },
+        {
+          "path": [
+            "noResultsBody"
+          ],
+          "before": "Try different words, browse the list below, or look through the common questions.",
+          "after": "Try the program name, the task, or another term used in the relevant guidance. You can also browse by topic to find related material and refine the question."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "communities.index",
+      "kind": "surface",
+      "route": "/minnesota-communities",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Short briefs that help you ask better questions, check access, involve the right partners and avoid harmful assumptions when your work touches a particular community. Each offers practical guidance; none describes any one person.",
+          "after": "Use the briefs to prepare for work with Minnesota communities by examining history, access, participation, and relevant evidence. Identify questions to ask, partners to consult, and assumptions to check with the people affected by the work."
+        },
+        {
+          "path": [
+            "releasedExplanation"
+          ],
+          "before": "Each brief offers context for better questions, never a profile of a person. Where specialized guidance is needed, a referral page points you to the right office.",
+          "after": "Read each brief for its sources, context, and limits. Community-level findings can inform preparation, but an individual's needs, preferences, and interpretation require direct inquiry. Referral pages identify the responsible office where specialized guidance is needed."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "one-dsd.page",
+      "kind": "surface",
+      "route": "/one-dsd",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "One DSD brings the Program charter, learning, evidence, community perspectives, practical tools and implementation together in one program for the Disability Services Division. Use it to strengthen equity in services, in policy decisions and in the culture of the workplace.",
+          "after": "One DSD connects the Program charter with learning, evidence, community perspectives, and practical methods for Disability Services Division work. Use these resources to examine how policy, service, workforce, and organizational decisions affect access and opportunity."
+        },
+        {
+          "path": [
+            "door0Description"
+          ],
+          "before": "Move from a welcoming introduction through intercultural practice, structural analysis and systems change, at your own pace and without being scored.",
+          "after": "Build from shared concepts to intercultural inquiry, structural analysis, and organizational change. Choose the depth of learning that helps you examine the responsibility or decision in front of you."
+        },
+        {
+          "path": [
+            "door2Description"
+          ],
+          "before": "Reviewed, question-led material for planning access and engagement, written so that what is true of a community is never treated as a label for a person.",
+          "after": "Prepare questions about history, access, participation, and community experience, then check your interpretation with the people affected by the work."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "support.page",
+      "kind": "surface",
+      "route": "/support",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Much of the time, the right resource is enough. When a decision belongs to a person, this page helps you find the supervisor, Equity Director or Specialist, policy owner or office who holds it. One DSD also offers direct consultation for eligible DSD work.",
+          "after": "Identify the supervisor, Equity Director or Specialist, policy owner, or office responsible for a question or decision. Use the learning and practical resources to prepare the issue, explain what remains unresolved, and make the conversation useful."
+        },
+        {
+          "path": [
+            "door0Description"
+          ],
+          "before": "Ask a question in your own words and get a considered answer, with its sources and its limits. No meeting needed.",
+          "after": "Explore a work question with an explanation of the available evidence, its limits, and possible next steps."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "my-work.page",
+      "kind": "surface",
+      "route": "/my-work",
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Everything you choose to keep lives here: the resources you saved, the plans you are working on, your reflection, and the courses you left off in. It stays on this computer, private to you.",
+          "after": "Return to saved resources, working plans, reflection notes, and course progress. These items are stored in this browser on this computer, so someone else using the same browser may be able to see them."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    }
+  ]
+}
