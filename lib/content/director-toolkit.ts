@@ -49,11 +49,11 @@ export const DIRECTOR_TOOLKIT_INTRO = {
   title: "Equity Director toolkit",
   lede: "Tools that Equity Directors at the Minnesota Department of Human Services (DHS) can use to carry out diversity, equity and inclusion work across the agency.",
   summary: [
-    "Equity Directors get the most done through a connected set of tools. These tools link policy analysis, community engagement, workforce practices, accessibility, language access, procurement and clear accountability. Training alone, or a software platform alone, will not do this work.",
-    "The strongest starting point is the DHS Equity Policy and the internal DHS Equity Analysis Toolkit. Add the State of Minnesota Equity Analysis Toolkit, and build practical templates around those resources. The DHS Equity Policy asks employees to look at policies, practices, procedures, rules, budgets and decisions through an equity lens. The goal is to reduce disparities and improve access to human services.",
+    "These tools connect policy analysis, community engagement, workforce practices, accessibility, language access, procurement and accountability. Equity Directors use them with the staff responsible for those decisions. Training and software support the work; staff still need to act on findings and review the results.",
+    "Start with the DHS Equity Policy and the internal DHS Equity Analysis Toolkit. Add the State of Minnesota Equity Analysis Toolkit, and build practical templates around those resources. The DHS Equity Policy requires employees to examine policies, practices, procedures, rules, budgets and decisions through an equity lens. The goal is to reduce disparities and improve access to human services.",
     "This toolkit lists each resource, what it is for, how an Equity Director can use it, and its limits.",
   ],
-  privacy: "The fill-in templates run only in your browser. Nothing you type is saved or sent anywhere. Keep sensitive employee concerns and protected client information out of these templates and out of general-purpose trackers.",
+  privacy: "The app does not autosave or submit your template entries. Copy, download or print them if you need a record, and store that record according to agency requirements. Keep sensitive employee concerns and protected client information out of these templates and out of general-purpose trackers.",
 };
 
 export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
@@ -458,7 +458,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
       { name: "Inclusive team norms and meeting practices", purpose: "Agree how a team works together and makes room for every voice.", use: "Revisit norms when teams change.", limitation: "Norms help only when the team, including its leader, holds to them.", href: "/practice-guides/inclusive-meetings" },
       { name: "Role-based learning plans", purpose: "Learning plans for managers, policy staff, grant managers, analysts and service teams.", use: "Tie each plan to the decisions that role makes.", limitation: "Completion is not the outcome." },
       { name: "Scenario-based exercises tied to actual work", purpose: "Practice on real situations.", use: "Use cases from the team's own work, with details removed.", limitation: "Remove names and case details." },
-      { name: "Follow-up checks", purpose: "Check whether participants changed a practice or process.", use: "Ask a few weeks after learning what changed.", limitation: "Ask about changes in practice, not about how people felt about the session." },
+      { name: "Follow-up checks", purpose: "Check whether participants changed a practice or process.", use: "Ask a few weeks after learning what changed.", limitation: "Ask what participants tried, what happened and what support they still need. Use their experience of the session to improve the learning as well." },
       { name: "Concern-routing guide", purpose: "Tell informal support apart from formal reporting channels.", use: "Make sure staff know where each kind of concern goes.", limitation: "It routes concerns; it does not resolve formal matters.", href: "/support/right-person" },
     ],
     caution: "Formal discrimination, harassment, retaliation and accessibility matters should go to authorized processes rather than being handled only through dialogue, coaching or learning activities.",
@@ -523,7 +523,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     items: [
       { name: "DHS Aging Data Profiles", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Data profiles on older Minnesotans.", use: "Use as background for aging-related reviews.", limitation: "Profiles describe populations; pair them with program and lived-experience evidence." },
       { name: "Long-Term Services and Supports (LTSS) performance measures", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Performance measures for long-term services and supports.", use: "Use as baseline and trend measures for service reviews.", limitation: "Check definitions and denominators before comparing groups." },
-      { name: "LTSS demographic dashboard", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Demographic information on people using long-term services and supports.", use: "Use to see who is and is not reaching services.", limitation: "Interpret with data-quality checks and community context." },
+      { name: "LTSS demographic dashboard", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Demographic information on people using long-term services and supports.", use: "Use it to describe who uses services. Assessing who is missing also requires evidence about the population that could use them.", limitation: "Interpret with data-quality checks and community context." },
       { name: "Vulnerable Adult Protection Dashboard", publisher: "Minnesota Department of Human Services; identified in the ADSA guide", purpose: "Data on adult protection.", use: "Use for context on protection-related work.", limitation: "Interpret with care and privacy review." },
       { name: "Minnesota Olmstead Plan progress reports", publisher: "State of Minnesota; identified in the ADSA guide", purpose: "Progress on Minnesota's Olmstead Plan for people with disabilities.", use: "Connect reviews to statewide integration goals.", limitation: "Statewide progress reports may not break out a single program.", url: "https://mn.gov/dhs/general-public/about-dhs/olmstead/" },
       { name: "Internal person-level database dashboard", publisher: "Identified in the ADSA guide", purpose: "An internal dashboard with person-level data.", use: "Use it inside DHS only. Do not give PDFs or screenshots of it to external partners; work with data staff on what can be shared.", limitation: "The ADSA guide states it is internal-only. Do not give PDFs or screenshots of it to external partners; work with data staff on appropriate sharing." },
@@ -548,7 +548,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
           "Community recommendations receiving a documented response.",
           "Procurement participation and payment experience.",
         ],
-        note: "Choose indicators that fit the service or process being improved. Read them with suitable denominators, community context, data-quality checks and privacy review. The statewide toolkit calls for evidence broken out by group and clear success measures. Connect each measure to the corrective action it should trigger.",
+        note: "Choose indicators that fit the service or process being improved. Read them with suitable denominators, community context, data-quality checks and privacy review. The statewide toolkit calls for evidence broken out by group and clear success measures. Decide what each finding supports: a change, further investigation or continued monitoring.",
       },
     ],
   },
@@ -698,7 +698,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
   {
     id: "intake-triage", title: "Equity review intake and triage", sectionId: "policy-program-budget",
     purpose: "Decide which proposals need a fuller equity review, so teams apply the existing analysis tools in proportion to the stakes.",
-    howToUse: "Fill this in when a proposal is first raised. Triage helps teams use the DHS and statewide toolkits in proportion; it does not replace real analysis with a checkbox.",
+    howToUse: "Fill this in when a proposal is first raised. Confirm the review required by DHS Equity Policy before deciding its scope. Triage helps organize the work; it does not waive a required analysis.",
     fields: [
       { kind: "text", id: "proposal", label: "Decision or proposal" },
       { kind: "text", id: "area", label: "Program or area responsible", help: role },
@@ -846,7 +846,7 @@ export const DIRECTOR_TEMPLATES: readonly DirectorTemplate[] = [
     fields: [
       { kind: "text", id: "process", label: "Process being reviewed" },
       { kind: "checklist", id: "job", label: "Job description", items: ["No credentials that are not needed for the work.", "Essential functions are clear.", "Wording is accessible and plain.", "No requirements unrelated to the work."] },
-      { kind: "checklist", id: "selection", label: "Selection", items: ["Interview questions are the same for every candidate.", "Scoring criteria are related to the job.", "The reason for the selection is written down.", "Applicant-to-interview and interview-to-offer patterns reviewed at group level."] },
+      { kind: "checklist", id: "selection", label: "Selection", items: ["Use consistent, job-related core questions and arrange needed accommodations.", "Scoring criteria are related to the job.", "The reason for the selection is written down.", "Applicant-to-interview and interview-to-offer patterns reviewed at group level."] },
       { kind: "checklist", id: "support", label: "Onboarding, development and retention", items: ["New employees can use required systems and get support.", "Development opportunities are shared openly and are accessible.", "Turnover and promotion differences across job categories reviewed.", "Employee resource group charter guards against unfair unpaid inclusion work."] },
       { kind: "long", id: "findings", label: "Findings and proposed changes" },
       { kind: "checklist", id: "reviews", label: "Reviews before implementation", items: ["Human resources.", "Labor relations.", "Affirmative action.", "Legal counsel."] },
