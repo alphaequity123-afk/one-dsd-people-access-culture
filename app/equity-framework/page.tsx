@@ -49,7 +49,7 @@ const TOC = [
   ["pillars", "Six pillars"],
   ["mapping", "Suggested connections across program functions"],
   ["measures", "How progress is measured"],
-  ["stages", "Three stages, no calendar"],
+  ["stages", "Three stages with readiness conditions"],
   ["outcomes", "Expected outcomes"],
   ["tools", "Resource and tool suite"],
   ["library", "Resource library structure"],
@@ -89,7 +89,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="cycle" className="mt-14">
           <H2 id="cycle">Put the improvement cycle into practice</H2>
-          <p className="max-w-3xl">The framework runs as a continuous cycle: assess, plan, implement, measure, learn, improve. Each stage matches one step of the program’s value sequence,¹¹ and each stage names where the work happens in One DHS and in One DSD. Move to the next stage when the people involved agree, not on a date.</p>
+          <p className="max-w-3xl">The framework runs as a continuous cycle: assess, plan, implement, measure, learn, improve. Each stage matches one step of the program’s value sequence,¹¹ and each stage names where the work happens in One DHS and in One DSD. Use evidence, readiness and the responsible decision-maker’s approval to plan the next stage, while meeting applicable deadlines.</p>
           <ol className="mt-4 flex flex-wrap gap-2 p-0 text-sm font-semibold" aria-label="Cycle stages">{F.cycle.map((c, i) => <li key={c.stage} className="list-none rounded-full border border-line bg-white px-3 py-1">{i + 1}. {c.stage}</li>)}</ol>
           <details className="mt-5 border-t border-line py-3"><summary>Explore the full cycle</summary>
           <div tabIndex={0} className="mt-4 overflow-x-auto rounded border border-line bg-white">
@@ -128,7 +128,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="pillars" className="mt-14">
           <H2 id="pillars">Six pillars</H2>
-          <p className="max-w-3xl">Each pillar has objectives, key initiatives, sample measures and the places in both programs where that work already lives. Together they keep equity in the operating model rather than in training or communications alone.</p>
+          <p className="max-w-3xl">Each pillar connects objectives, suggested actions, sample measures and related program resources. Use those connections to examine how equity considerations enter everyday decisions, responsibilities and review.</p>
           <div className="mt-6 space-y-2">{F.pillars.map((p, i) => (
             <article key={p.id} id={`pillar-${p.id}`} aria-labelledby={`pillar-${p.id}-title`} className="min-w-0 scroll-mt-24 border-t border-line py-5">
               <p className="kicker m-0">Pillar {i + 1}</p>
@@ -173,7 +173,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="measures" className="mt-14">
           <H2 id="measures">How progress is measured</H2>
-          <p className="max-w-3xl">Accountability uses leading, intermediate and lagging indicators so activity is never mistaken for outcome. In this program every count is aggregate and voluntary; the register and dashboard report tool use by quarter and administration and survey results for the department as a whole.</p>
+          <p className="max-w-3xl">Compare activity, intermediate changes and longer-term outcomes, while keeping their different meanings clear. The measures below are planning examples. Confirm which data are available, who may use them, and what their coverage and limitations allow you to conclude.</p>
           <details className="mt-5 border-t border-line py-3"><summary>Explore the measurement framework</summary>
           <div tabIndex={0} className="mt-4 overflow-x-auto rounded border border-line bg-white">
             <table className="data w-full min-w-[40rem] text-sm">
@@ -196,8 +196,8 @@ export default function EquityFrameworkPage() {
         </section>
 
         <section aria-labelledby="stages" className="mt-14">
-          <H2 id="stages">Three stages, no calendar</H2>
-          <p className="max-w-3xl">The work moves through foundations, integration and sustainment. There are no years attached. A stage is complete when its readiness conditions are met and the responsible offices agree; timing is left open.</p>
+          <H2 id="stages">Three stages with readiness conditions</H2>
+          <p className="max-w-3xl">The proposed sequence moves through foundations, integration and sustainment. Set timing with the responsible offices, considering readiness, resources and applicable deadlines. These planning stages do not postpone an existing duty.</p>
           <div className="mt-6 grid gap-6 lg:grid-cols-3">{F.stages.map((s, i) => (
             <article key={s.title} className="card min-w-0">
               <p className="kicker m-0">Stage {i + 1}</p>
@@ -219,7 +219,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="tools" className="mt-14">
           <H2 id="tools">Resource and tool suite</H2>
-          <p className="max-w-3xl">Build a small, integrated toolkit first rather than a large library of disconnected documents. The status column says honestly what this program offers today; nothing here is a promise of what will be built or when.</p>
+          <p className="max-w-3xl">Start with tools that support a defined task and connect to the applicable requirements. Check the status, linked resource and scope before using a tool; a proposed resource does not establish an available service or authority.</p>
           <div tabIndex={0} className="mt-4 overflow-x-auto rounded border border-line bg-white">
             <table className="data w-full min-w-[60rem] text-sm">
               <thead><tr><th scope="col">Tool or resource</th><th scope="col">Primary users</th><th scope="col">What it does</th><th scope="col">Format</th><th scope="col">In this program</th></tr></thead>
@@ -237,13 +237,13 @@ export default function EquityFrameworkPage() {
 
           <h3 className="mt-10 text-2xl font-bold">Governance and planning tools</h3>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Strategic plan scorecard</summary>
-            <p>The central management tool for the whole framework, reviewed by the implementation team and by executive leadership or the Equity Committee at agreed points.</p>
+            <p>A proposed scorecard can bring responsibilities, evidence and unresolved decisions into one review. Confirm who will maintain it, who can make the relevant decisions and when review is needed.</p>
             <Pairs head={["Field", "Purpose"]} rows={F.scorecardFields} />
             <h4 className="mt-4 text-base font-bold">Sample entry</h4>
             <Pairs head={["Field", "Example"]} rows={F.scorecardExample} />
           </details>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Equity Activity Inventory</summary>
-            <p>The central registry of equity work, described in the One DSD proposal as the “central nervous system” for coordination.⁴ Before starting something new, teams check whether related work exists, who owns it, what was learned and whether collaboration is possible.</p>
+            <p>The proposed Equity Activity Inventory is described in the One DSD proposal as the “central nervous system” for coordination.⁴ Before starting something new, teams check whether related work exists, who owns it, what was learned and whether collaboration is possible.</p>
             <div className="grid gap-6 md:grid-cols-2"><div className="min-w-0"><h4 className="m-0 text-base font-bold">Fields</h4><Bullets items={F.inventoryFields} /></div><div className="min-w-0"><h4 className="m-0 text-base font-bold">Operating rules</h4><Bullets items={F.inventoryRules} /></div></div>
           </details>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Governance charter</summary>
@@ -253,23 +253,23 @@ export default function EquityFrameworkPage() {
 
           <h3 className="mt-10 text-2xl font-bold">Equity, accessibility and decision tools</h3>
           <details className="card mt-3" open><summary className="cursor-pointer text-lg font-bold">Equity Analysis Toolkit</summary>
-            <p>Run an equity analysis before a significant decision, not after implementation has begun. The State of Minnesota toolkit and the DHS Equity Policy describe it as a way to examine how decisions affect different groups, prevent unanticipated harm and address persistent racial disparities that routine decisions can otherwise reproduce.⁵ In this program the <Link href="/equity-policy/analysis">guided walkthrough</Link> carries the questions, keeps a record and counts the result on the <Link href="/equity-policy">Equity Policy dashboard</Link>.</p>
+            <p>Run an equity analysis before a significant decision, not after implementation has begun. The State of Minnesota toolkit and the DHS Equity Policy describe it as a way to examine how decisions affect different groups, prevent unanticipated harm and address persistent racial disparities that routine decisions can otherwise reproduce.⁵ Use the <Link href="/equity-policy/analysis">guided walkthrough</Link> to prepare the analysis and read the <Link href="/equity-policy">DHS Equity Policy</Link> for its requirements. Review the tool’s saving and export controls; completing a walkthrough does not itself establish approval or an equitable outcome.</p>
             <div className="grid gap-6 lg:grid-cols-2"><div className="min-w-0"><h4 className="m-0 text-base font-bold">Core questions</h4><ol className="mt-2 list-decimal space-y-1 pl-5 text-sm">{F.analysisQuestions.map((q) => <li key={q}>{q}</li>)}</ol></div><div className="min-w-0"><h4 className="m-0 text-base font-bold">Decision categories</h4><Pairs head={["Decision type", "Minimum review"]} rows={F.decisionCategories} /></div></div>
           </details>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Accessibility review checklist</summary>
-            <p>Accessibility is a design requirement, not a last-minute accommodation. The Americans with Disabilities Act and Section 508 are the legal foundations; this program holds itself to WCAG 2.2 Level AA.⁶</p>
+            <p>Plan accessibility from the start and confirm the standards and obligations that apply to the work. This program uses WCAG 2.2 Level AA as a design goal; that goal is not a claim of verified conformance or a substitute for applicable legal requirements.⁶</p>
             <Pairs head={["Domain", "Example review questions"]} rows={F.accessibilityDomains} />
             <h4 className="mt-4 text-base font-bold">Minimum standard for every major initiative</h4>
             <Bullets items={F.accessibilityMinimum} />
           </details>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Inclusive hiring and workforce equity toolkit</summary>
-            <p>Supports workforce equity, retention, equitable advancement and workplace culture.⁷ Data in this kit is analyzed at the group level; the program holds no personnel records.</p>
+            <p>Supports workforce equity, retention, equitable advancement and workplace culture.⁷ Use only authorized, appropriately aggregated workforce information for this planning exercise. Keep personnel records and confidential case details out of the learning tools.</p>
             <Pairs head={["Tool", "Use"]} rows={F.hiringTools} />
           </details>
 
           <h3 className="mt-10 text-2xl font-bold">Community, learning and culture tools</h3>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Community engagement toolkit</summary>
-            <p>Engagement is reciprocal partnership rather than information extraction: plan early, reduce participation barriers, compensate expertise and show how feedback changed decisions.⁸ <Link href="/minnesota-communities">Minnesota Communities</Link> carries the program’s reviewed community context.</p>
+            <p>Plan engagement early, identify barriers to participation, and confirm the authority and arrangements for compensating expertise. Explain what input changed, what remained unchanged and why.⁸ <Link href="/minnesota-communities">Minnesota Communities</Link> carries the program’s reviewed community context.</p>
             <div className="grid gap-6 lg:grid-cols-2"><div className="min-w-0"><h4 className="m-0 text-base font-bold">Components</h4><Bullets items={F.engagementComponents} /></div><div className="min-w-0"><h4 className="m-0 text-base font-bold">Planning template</h4><Pairs head={["Planning element", "Key question"]} rows={F.engagementPlanning} /></div></div>
           </details>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Learning and development toolkit</summary>
@@ -285,7 +285,7 @@ export default function EquityFrameworkPage() {
           <h3 className="mt-10 text-2xl font-bold">Reporting tools</h3>
           <div className="mt-3 grid gap-6 md:grid-cols-2">
             <div className="card min-w-0"><h4 className="m-0 text-lg font-bold">Progress report</h4><Bullets items={F.progressReport} /></div>
-            <div className="card min-w-0"><h4 className="m-0 text-lg font-bold">Public accountability report</h4><p className="text-sm">Available in accessible, plain-language and community-friendly formats, reporting both achievements and unfinished work.</p><Bullets items={F.publicReport} /></div>
+            <div className="card min-w-0"><h4 className="m-0 text-lg font-bold">Public accountability report</h4><p className="text-sm">Plan accessible formats that the intended audiences can use, reporting achievements, limits and unfinished work.</p><Bullets items={F.publicReport} /></div>
           </div>
 
           <h3 className="mt-10 text-2xl font-bold">Digital tools and professional safeguards</h3>
@@ -308,10 +308,10 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="launch" className="mt-14">
           <H2 id="launch">Minimum launch package</H2>
-          <p className="max-w-3xl">Twelve tools create the operational backbone without overwhelming staff. Start with these; expand when the Foundations readiness conditions are met.</p>
+          <p className="max-w-3xl">Use this proposed set of twelve tools to identify what the work needs, what is available and what requires authorization or development. Expand it when evidence and readiness justify the addition.</p>
           <ol className="mt-4 grid list-decimal gap-2 pl-6 md:grid-cols-2">{F.launchPackage.map((t) => <li key={t.name} className="text-sm">{t.href ? <Link href={t.href}>{t.name}</Link> : t.name} <span className="text-muted">({TOOL_STATUS_LABEL[t.status].toLowerCase()})</span></li>)}</ol>
           <p className="mt-6 max-w-3xl font-semibold">{F.designPrinciple}</p>
-          <p className="max-w-3xl text-sm text-muted">This framework interprets <Link href="/operationalizing-equity">operationalizing equity</Link> for the whole program.¹² Participation is voluntary, and nothing here confers official authority or replaces decisions made by responsible department offices.</p>
+          <p className="max-w-3xl text-sm text-muted">This framework interprets <Link href="/operationalizing-equity">operationalizing equity</Link> for the whole program.¹² Use of this proposed planning framework is voluntary; applicable workplace duties and assigned training remain required. Nothing here confers official authority or replaces decisions made by responsible department offices.</p>
         </section>
 
         <section aria-labelledby="notes" className="mt-14 border-t border-line pt-6">
