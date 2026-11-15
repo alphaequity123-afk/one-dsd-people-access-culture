@@ -10,7 +10,7 @@
       ],
       "sourceSha256": "f69eb2dab2371d16d92f8cc4c55c6dc96e9e81bc4b1a9e3a3964ca036d9dfe8d",
       "fieldCount": 1,
-      "status": "reviewed",
+      "status": "accepted_fields",
       "changes": [
         {
           "fieldId": 0,
@@ -41,7 +41,7 @@
       ],
       "sourceSha256": "ce58948610e56157524a34d728aa429f6e5fc0356e891358bf3ed90a660d3e21",
       "fieldCount": 1,
-      "status": "reviewed",
+      "status": "accepted_fields",
       "changes": [
         {
           "fieldId": 0,
@@ -71,7 +71,7 @@
       ],
       "sourceSha256": "fd0f02c908137066d8fd64f966e716a0d89e8dd7570f222d3133c1447b9a48ea",
       "fieldCount": 25,
-      "status": "reviewed",
+      "status": "accepted_fields",
       "changes": [
         {
           "fieldId": 0,
@@ -101,14 +101,14 @@
       ],
       "sourceSha256": "67197fe30b275b0cfc2cbde02ecb33917fda6834d23ba02da3f7bdbbeb20eea5",
       "fieldCount": 10,
-      "status": "reviewed",
+      "status": "source_verification_pending",
       "changes": [],
       "curationNotes": [
         "Retain existing fields. Model introduced last enslaved people into capsule and changed source singular county to plural accounts. Source attribution and historical detail require source-specific verification; no gain from proposed stylistic changes."
       ],
-      "editorialAcceptance": true,
+      "editorialAcceptance": false,
       "protectedFacts": "all original source metadata, numeric tokens, quotes, names and contact details retained",
-      "acceptanceNote": "Independent parent review accepted these exact bounded changes on 2026-11-15; unchanged source facts were preserved, not newly fact-verified."
+      "acceptanceNote": "No changes activated. Source verification remains pending; this record was not accepted as a completed factual review."
     },
     {
       "id": "lib--content--hub--dsd-policies--policies-0",
@@ -119,14 +119,14 @@
       ],
       "sourceSha256": "30adbe3aea2e1a60f34aa42eea9bda92c724bfe726d3ce6f6e63e18d64e3689f",
       "fieldCount": 3,
-      "status": "reviewed",
+      "status": "source_verification_pending",
       "changes": [],
       "curationNotes": [
         "Retained existing wording pending source-specific review. Model changed if they want one to if requested, which shifts the condition to an explicit request. Model wrongly asserted statutory support without source verification. No legal/obligation rewrite accepted."
       ],
-      "editorialAcceptance": true,
+      "editorialAcceptance": false,
       "protectedFacts": "all original source metadata, numeric tokens, quotes, names and contact details retained",
-      "acceptanceNote": "Independent parent review accepted these exact bounded changes on 2026-11-15; unchanged source facts were preserved, not newly fact-verified."
+      "acceptanceNote": "No changes activated. Source verification remains pending; this record was not accepted as a completed factual review."
     },
     {
       "id": "lib--content--hub--organizations--organizations-0",
@@ -137,7 +137,7 @@
       ],
       "sourceSha256": "03befc463f70e42586c83598f722d4347afd43ed8b2774669dd84a10bb9254a1",
       "fieldCount": 9,
-      "status": "reviewed",
+      "status": "accepted_fields",
       "changes": [
         {
           "fieldId": 0,
@@ -192,7 +192,7 @@
       ],
       "sourceSha256": "57e332cefa189593fd9caed981637144ccd4b42c5acbd8b4a64bd2f5df3ef2ac",
       "fieldCount": 2,
-      "status": "reviewed",
+      "status": "accepted_fields",
       "changes": [
         {
           "fieldId": 0,
@@ -222,7 +222,7 @@
       ],
       "sourceSha256": "56cda4ed12087a051c7307c13b578e74b16cc7351b85bbe4e562ffcc48d7cb59",
       "fieldCount": 21,
-      "status": "reviewed",
+      "status": "accepted_fields",
       "changes": [
         {
           "fieldId": 0,
