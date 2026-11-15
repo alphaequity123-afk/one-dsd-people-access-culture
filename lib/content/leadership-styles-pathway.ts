@@ -177,10 +177,10 @@ export const RACE_SECTION = {
 };
 
 export const LIFECYCLE = {
-  intro: "A strong response to the common scenario combines approaches in sequence. Methods change from stage to stage, but dignity, access, fair process and accountability do not. That is what sophisticated flexibility looks like.",
+  intro: "A strong response to the common scenario combines approaches in sequence. Methods change from stage to stage, but dignity, access, fair process and accountability do not.",
   stages: [
     { id: "immediate", stage: "Immediate response", behavior: "Stop the dismissal and establish expectations.", styles: ["ethical", "directive"], contribution: "Ethical plus bounded directive", example: "In the meeting: “Let's pause. Raising a question about fairness is welcome here. We will not dismiss it. I'll follow up on the substance separately.”" },
-    { id: "concern", stage: "Concern handling", behavior: "Follow appropriate procedures and protect against adverse treatment.", styles: ["procedural", "ethical"], contribution: "Procedural plus accountable", example: "Privately, the same day: “Thank you for raising this. There will be no adverse treatment for it. Here is the process that applies, and here is what I will do next.”" },
+    { id: "concern", stage: "Concern handling", behavior: "Follow appropriate procedures and protect against adverse treatment.", styles: ["procedural", "ethical"], contribution: "Procedural plus accountable", example: "Privately, the same day: “Thank you for raising this. I will follow the applicable process and explain the next steps, including how I will respond if you experience adverse treatment for raising the concern.”" },
     { id: "inquiry", stage: "Inquiry", behavior: "Hear relevant perspectives and examine evidence.", styles: ["inclusive", "participative"], contribution: "Inclusive plus participative", example: "The supervisor gathers the assignment records for the last two years and offers team members a private way to share how they learn about opportunities." },
     { id: "diagnosis", stage: "Diagnosis", behavior: "Examine criteria, power and the history of opportunity.", styles: ["transformative"], contribution: "Transformative", example: "The supervisor asks how “polished” became a criterion, who decided, who has received preparation and sponsorship, and what the records show." },
     { id: "redesign", stage: "Redesign", behavior: "Develop alternatives with the people affected.", styles: ["shared", "adaptive-situational"], contribution: "Shared plus adaptive", example: "A small cross-role group, with time set aside, drafts job-related criteria and a visible rotation, and tests them for one quarter." },
@@ -225,7 +225,7 @@ export const CAPSTONE = {
     { title: "Follow-up that would show improvement", body: "A date to report back to the employee. A review after one or two quarters of who is receiving visible work. A check that no one has been treated worse for raising the concern." },
   ],
   stronger: "“I hear two concerns: access to visible assignments and what happened when you raised the issue. I will follow the appropriate response process. I will also review the criteria and assignment history with the authorized partners, rather than assume the process has been fair. We will clarify what opportunities require, how people can access them, and what support is available. I will explain the next steps and follow up by an agreed date.”",
-  outcome: "That is the central learning outcome for this pathway: choosing a combination of behaviors that addresses the conflict, preserves appropriate procedures, examines inequitable conditions and leads to observable change.",
+  outcome: "That is the central learning outcome for this pathway: choosing a combination of behaviors that addresses the conflict, preserves appropriate procedures, examines inequitable conditions and identifies actions whose effects can be reviewed.",
 };
 
 export const PATHWAY_SOURCES: readonly { title: string; href: string }[] = [
