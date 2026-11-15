@@ -35,7 +35,7 @@ export const logicStages: LogicStage[] = [
       { title: "Operationalizing equity", href: "/operationalizing-equity", description: "Connect equity with everyday decisions, participation, resources, and responsibility for following through." },
       { title: "Work through a decision", href: "/learn/equity-toolkit/practice#toolkit-draft", description: "Start with a real question, bring in relevant tools, compare options, and save your analysis in My Work." },
       { title: "Equity Analysis Toolkit", href: "/learn/equity-toolkit", description: "Explore the toolkit, watch a worked example, and find guidance for your decision." },
-      { title: "Your practice plans", href: "/my-work/plan", description: "Connect learning with a decision, prepare a next step, and return to private drafts saved on this device." },
+      { title: "Your practice plans", href: "/my-work/plan", description: "Connect learning with a decision, prepare a next step, and return to working drafts saved in this browser on this device." },
       { title: "Make participation more accessible", href: "/practice-guides/inclusive-meetings", description: "Prepare a meeting or conversation with usable ways to contribute and a clear return to participants." },
       { title: "Make a process easier to use", href: "/practice-guides/clearer-processes", description: "Review a form, notice, or workflow from the perspective of the people using it." },
       { title: "Intercultural learning", href: "/learn/intercultural", description: "Examine assumptions, make room for different experiences, and adapt communication through reflection and practice." },
@@ -68,7 +68,7 @@ export const logicStages: LogicStage[] = [
     introduction: "Look back at a course, conversation, or decision and consider what happened afterward. What did people do differently, and how did others experience the change? Draw on observations and feedback to understand what helped, what remained difficult, and what you would try next.",
     explanation: "Consider whether participation became more accessible, a decision reflected a wider range of experience, or colleagues could apply learning in another situation. Feedback may also show that an approach needs to change. These observations support program improvement; they are not ratings of individual staff.",
     resources: [
-      { title: "Record an observation", href: "/program/reflection", description: "Keep a private note about a change, the evidence you observed, and what you would retain or revise." },
+      { title: "Record an observation", href: "/program/reflection", description: "Record an observation about a change, the evidence you have and what you would retain or revise. Notes save in this browser on this device." },
       { title: "DSD planning and progress", href: "/one-dsd/planning", description: "Explore division-specific planning and reporting within ADSA; use the applicable responsibilities and measures in your own setting." },
       { title: "Find out what changed in practice", href: "/practice-guides/review-a-change", description: "Distinguish a completed activity from a change in experience, and consider the evidence and its limits." },
       { title: "Return to your work", href: "/my-work", description: "Reopen an analysis or practice plan to record what happened, what remains uncertain, and what you would change." },
