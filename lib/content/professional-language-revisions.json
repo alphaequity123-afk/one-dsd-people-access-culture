@@ -464,6 +464,787 @@
       ],
       "status": "reviewed",
       "reviewNote": "Full-source editorial review accepted after preserving independent ownership, explicit report-back limits, and accurate browser privacy wording. Reviewed November 15, 2026."
+    },
+    {
+      "target": "domain.access-language",
+      "kind": "surface",
+      "route": "/areas/access-language",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Making documents, meetings, forms, systems, and contact points usable by people with disabilities and people who use languages other than English, as a matter of practice rather than exception.",
+          "after": "Build accessibility and language access into documents, meetings, forms, systems, and service contact points. Planning for different languages and access needs helps staff identify barriers before someone has to request an exception."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Inaccessible forms, unclear accessibility ownership, and translation gaps were among the most concrete barriers DSD staff named. Each one has a fix with an owner.",
+          "after": "DSD staff named inaccessible forms, unclear responsibility for accessibility, and translation gaps as concrete barriers. Addressing them requires both a practical change and someone responsible for carrying it through; identifying a barrier alone does not make a service usable."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Retains explicit minimum reporting group size; no new policy obligations or authority claims."
+    },
+    {
+      "target": "domain.community-engagement",
+      "kind": "surface",
+      "route": "/areas/community-engagement",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Engaging communities while a decision can still change, being honest about how much influence people have, and closing the loop on what happened with their input.",
+          "after": "Involve communities while a decision can still change, explain how much influence participants have, and report what happened with their input. A useful report-back includes what changed, what did not change, and why."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "DSD's own engagement review found work that was fragmented, event-based, and repeated without coordination, and found that people rarely heard what changed. Trust is built by fixing those patterns.",
+          "after": "DSD's engagement review described fragmented, event-based work, repeated requests without coordination, and limited reporting on what changed. Coordinating the work and explaining how input affected decisions gives communities a basis for judging whether participation was useful."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Retains explicit minimum reporting group size; no new policy obligations or authority claims."
+    },
+    {
+      "target": "domain.culture-trust",
+      "kind": "surface",
+      "route": "/areas/culture-trust",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Everyday practices that let people speak, disagree, learn across difference, and repair harm, without shame, scoring, or hidden judgment.",
+          "after": "Examine the everyday practices that shape whether people can speak, disagree, learn across differences, and address harm. The focus is on observable changes in team practice, without shame, scoring, or hidden judgment."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "DSD staff described dominant-culture defaults, limited psychological safety, and doubt that input changes decisions. Culture changes through observable practices with owners, not slogans.",
+          "after": "DSD staff described dominant-culture defaults, limited psychological safety, and doubt that input changes decisions. A team can examine these concerns by identifying a practice to change, naming who can act, and checking what colleagues experience afterward."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Retains explicit minimum reporting group size; no new policy obligations or authority claims."
+    },
+    {
+      "target": "domain.leadership-systems",
+      "kind": "surface",
+      "route": "/areas/leadership-systems",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Moving from foundation to integration to institutionalization: decision rights, resources, accountability, and the leadership practices that make equity part of how the organization runs.",
+          "after": "Examine how decision-making authority, resources, and accountability make equity part of routine organizational work. The progression from foundation to integration to institutionalization asks how commitments are established, applied in decisions, and sustained over time."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Approval bottlenecks, diffuse responsibility, and unclear decision rights were named repeatedly. Systems change is leadership work with owners, not an event.",
+          "after": "Approval bottlenecks, diffuse responsibility, and unclear decision-making authority were named repeatedly. Leaders need to identify who can change a process, what resources that person needs, and how follow-through will be reviewed."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Retains explicit minimum reporting group size; no new policy obligations or authority claims."
+    },
+    {
+      "target": "domain.measurement",
+      "kind": "surface",
+      "route": "/areas/measurement",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Telling the difference between a platform that works and a program that improves equity practice, using baselines, mixed methods, disaggregation with protection, and honest limits.",
+          "after": "Distinguish a functioning platform from evidence that a program improves equity practice. Use a baseline, numerical and qualitative evidence, and carefully separated group data to examine change while protecting privacy and explaining the limits of the findings."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Legacy data systems were built for billing and eligibility, not equity analysis. Good measurement protects private learning, refuses invented targets, and reports what the evidence does and does not show.",
+          "after": "Legacy data systems designed for billing and eligibility may not answer an equity question. Begin with the decision the evidence will inform, protect private learning, and explain what the available information can support before setting targets or drawing conclusions."
+        },
+        {
+          "path": [
+            "firstQuestions",
+            1
+          ],
+          "before": "What is the baseline, the denominator, and the smallest group we will report?",
+          "after": "What is the baseline, who is included in the denominator, and what minimum group size will we report to protect people from identification?"
+        },
+        {
+          "path": [
+            "taskEvaluationPlanOutcome"
+          ],
+          "before": "A logic model with baseline, mixed-method evidence, disaggregation rules, small-group protection, and limits stated plainly.",
+          "after": "A logic model with a baseline, numerical and qualitative evidence, rules for comparing groups, small-group privacy protections, and clearly stated limits."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Retains explicit minimum reporting group size; no new policy obligations or authority claims."
+    },
+    {
+      "target": "domain.policy-program-service",
+      "kind": "surface",
+      "route": "/areas/policy-program-service",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Building equity into the decisions that shape who gets what, how, and with what burden: policies, program design, budgets, forms and notices, technology, and service delivery.",
+          "after": "Examine how policies, budgets, forms, technology, and service design distribute benefits and burdens. Bringing equity questions into these decisions helps staff compare alternatives while there is still an opportunity to change the design."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Engagement that arrives after a decision is final cannot change it. The DHS equity policy makes an equity scan or full analysis part of some decisions, and good practice makes it part of all of them.",
+          "after": "Community input can influence a decision only while that decision remains open to change. The DHS equity policy calls for an equity scan or full analysis for some decisions; this collection also supports considering benefits, burdens, and access in everyday design work."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Retains explicit minimum reporting group size; no new policy obligations or authority claims."
+    },
+    {
+      "target": "domain.workforce",
+      "kind": "surface",
+      "route": "/areas/workforce",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Equity in how people are recruited, screened, selected, welcomed, reviewed, paid, promoted, supported, and retained. It covers the whole lifecycle, not a single inclusive-hiring page.",
+          "after": "Examine equity across recruitment, selection, onboarding, review, pay, advancement, support, and retention. Looking across the employment cycle helps connect an immediate concern with the earlier decisions and later opportunities that shape it."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Credential gatekeeping, vague culture-fit judgments, and unclear pathways are among the most consistent barriers DSD staff described. They are also decisions with owners, which means they can change.",
+          "after": "DSD staff described credential gatekeeping, vague culture-fit judgments, and unclear advancement pathways as recurring barriers. Examine who sets these criteria, how they relate to the work, and which changes require HR or labor relations involvement."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Retains explicit minimum reporting group size; no new policy obligations or authority claims."
+    },
+    {
+      "target": "dsd-program.communications-training",
+      "kind": "surface",
+      "route": "/one-dsd/programs/communications-training",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Division learning, internal and external communication, and plain-language practice.",
+          "after": "Connect division learning and internal and external communication with accessible, plain-language practice. Consider how people will find the information, which languages and formats they need, and how staff can take part in voluntary learning."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.contracts-fiscal",
+      "kind": "surface",
+      "route": "/one-dsd/programs/contracts-fiscal",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Contracting, grants, rates, and capacity building for the division's providers and partners.",
+          "after": "Examine contracting, grants, rates, and capacity building for the division's providers and partners. Compare who receives awards, who does not apply, and what reporting shows about the people served; these questions address different parts of access to funding and services."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.data-quality",
+      "kind": "surface",
+      "route": "/one-dsd/programs/data-quality",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Division data, quality assurance, and evaluation of services and outcomes.",
+          "after": "Use division data, quality assurance, and evaluation to examine services and outcomes. Consider what billing systems can show, what people’s experiences add, and how to protect people from identification when comparing groups."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.eidbi-children",
+      "kind": "surface",
+      "route": "/one-dsd/programs/eidbi-children",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Services for children with autism and related conditions and their families.",
+          "after": "Examine access to services for children with autism and related conditions and their families. Questions about family language, cultural context, provider availability, and previous experiences with services can help staff identify what needs closer attention."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.employment",
+      "kind": "surface",
+      "route": "/one-dsd/programs/employment",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Employment-first practice and day service policy.",
+          "after": "Connect employment-first practice and day service policy with questions about access and outcomes. Examine how competitive integrated employment is offered as the first option, how providers work with different communities, and what outcome information shows across disability, race, language, and place."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.hcbs-policy",
+      "kind": "surface",
+      "route": "/one-dsd/programs/hcbs-policy",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Sets policy for waiver and community-based services, including eligibility, service menus, rates, and provider standards.",
+          "after": "Examine how policy for waivers and community-based services shapes eligibility, service options, rates, and provider standards. Consider the burden of documentation and authorization, the usability of notices, and the availability of providers in different communities."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.leadership-strategy",
+      "kind": "surface",
+      "route": "/one-dsd/programs/leadership-strategy",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Division direction, legislative coordination, and the DSD equity implementation plan.",
+          "after": "Connect division direction, legislative coordination, and the DSD equity implementation plan with the decisions needed to carry work forward. Examine who can decide, where commitments have funding and staff, and how colleagues learn what changed."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.mnchoices-access",
+      "kind": "surface",
+      "route": "/one-dsd/programs/mnchoices-access",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Governs how people are assessed for and connected to long-term services and supports.",
+          "after": "Examine how people are assessed for and connected to long-term services and supports. Access includes communication at first contact, participation in the assessment, support for the person’s decisions, and differences in waiting times and follow-up across communities."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.olmstead",
+      "kind": "surface",
+      "route": "/one-dsd/programs/olmstead",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Work toward services in the most integrated setting appropriate to the person.",
+          "after": "Examine progress toward services in the most integrated setting appropriate to the person. Consider how routine practices shape the options offered, whether community capacity differs by place, and what information about transitions can reveal or leave unanswered."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.positive-supports",
+      "kind": "surface",
+      "route": "/one-dsd/programs/positive-supports",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Guidance and oversight for positive support strategies and person-centered planning.",
+          "after": "Connect guidance and oversight for positive supports and person-centered planning with the judgments made in everyday practice. Ask whose behavior is treated as a problem, whether the response provides support or restriction, and how access to positive supports differs across communities."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.support-planning",
+      "kind": "surface",
+      "route": "/one-dsd/programs/support-planning",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Standards and support for the people who plan services with individuals and families.",
+          "after": "Examine standards and support for people who plan services with individuals and families. Consider whether plans reflect the person’s goals, how language and cultural context affect the conversation, and whether caseloads and available time limit responsive planning."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-program.tbi-guardianship",
+      "kind": "surface",
+      "route": "/one-dsd/programs/tbi-guardianship",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Programs for people with brain injury and work related to guardianship and supported decision-making.",
+          "after": "Explore brain injury programs alongside work on guardianship and supported decision-making. Examine assumptions about who can decide, how rights are explained accessibly, and how supported decision-making is considered before guardianship."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full-source editorial review and independent acceptance on 2026-11-15. Intros connect retained entry-point questions; data protection wording explicitly concerns reporting practices."
+    },
+    {
+      "target": "dsd-scenario.dsd-accessible-form",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-accessible-form",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Unclear accessibility ownership was one of the clearest barriers DSD staff named.",
+          "after": "The team has an immediate access problem and an unresolved responsibility. Finding the form owner matters because someone must provide an accessible option now and maintain the corrected form."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "The fix is at the source, and it needs an owner today.",
+          "after": "An accessible alternative addresses the immediate need, but the inaccessible source form still needs correction. Agree who will make that correction and when it will be available."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-accommodation-cliff",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-accommodation-cliff",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Nobody owned the accommodation across the transition.",
+          "after": "The established accommodation did not carry across the assignment change. Review how responsibility for continuity was handled, using the confidential accommodation process for individual details."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "The cohort was not accessible by default, so participation depended on disclosure.",
+          "after": "The kickoff activities created an additional access problem. Designing the cohort for accessible participation reduces the need for people to seek exceptions before they can take part."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "The withdrawal will look like a personal choice in the data, if it appears at all.",
+          "after": "A record of withdrawal alone would not explain the access barrier in this situation. Examine how the pathway can identify problems with participation without recording the person’s identity here."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-advancement-conversation",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-advancement-conversation",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Advancement requirements are unwritten and therefore unequal.",
+          "after": "The employee reports not knowing the requirements for advancement. Check whether those requirements are documented and communicated before concluding that they are unwritten or equally understood."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Visible work is assigned by habit.",
+          "after": "Repeated assignment of visible projects to the same people warrants review. Ask how those assignments were decided and whether other staff had a clear opportunity to be considered."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "This is a pattern with an owner, not a personal failing.",
+          "after": "The concern involves communication and allocation of work, both of which can be examined. Separate changes within the supervisor’s role from classification and pay questions that need HR or labor relations."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-hiring-panel",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-hiring-panel",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The screening criteria may be proxies for the work rather than the work itself.",
+          "after": "Check whether each screening requirement provides evidence of the work the role requires. A degree or interview performance may be relevant, but its relevance needs to be explained rather than assumed."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Fluency and confidence in an interview are being rewarded without a rubric that ties them to the job.",
+          "after": "The selections suggest that fluency and confidence may be carrying considerable weight. Examine the actual rubric and how it was used before deciding whether those qualities displaced job-related evidence."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Internal candidates with lived experience are being screened out at the same stage each time.",
+          "after": "The internal candidates did not advance beyond screening. Review that stage and the experience it recognizes; the scenario alone does not establish why either candidate was screened out."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-policy-change",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-policy-change",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The decision has a real deadline and is still changeable.",
+          "after": "The four-week approval timeline leaves a defined opportunity to examine the proposal. Clarify when the design can still change so engagement and analysis can inform the decision."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "The design goal is legitimate; the burden analysis has not been done.",
+          "after": "Reducing fraud risk is the stated design goal, while the added burden on families has not been examined. Compare alternatives against both concerns instead of assuming that one cancels the other."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-service-redesign",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-service-redesign",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Efficiency for staff can become burden for the people with the least margin.",
+          "after": "Saving staff time does not establish that the new process is easier for the person seeking services. Examine what the online step requires of people who face language, internet, or decision-support barriers."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Person-centered practice and supported decision-making are design requirements, not add-ons.",
+          "after": "Person-centered practice and supported decision-making need a place in the design itself. Identify where people can express their goals, ask questions, and receive the support needed to participate."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "The human alternative must be real, not a fallback nobody staffs.",
+          "after": "A human alternative needs identified staff and a workable route to reach them. Listing an alternative without planning its delivery can leave the original barrier in place."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-engagement-late",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-engagement-late",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The level of influence is inform, not consult, and saying otherwise would damage trust.",
+          "after": "Approval and funding limit the influence participants may have. Establish what remains open to change, including implementation, and describe that scope accurately before calling the sessions consultation."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Prior contacts exist; repeating requests extracts labor.",
+          "after": "Similar questions were asked last year. Review that material and contact the earlier team before asking communities to repeat work whose use has not been explained."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "A report-back on last year's input is still owed.",
+          "after": "The missing report-back is part of the current relationship. Explain what happened with earlier input, including what did not change and why, rather than treating these sessions as a fresh start."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-report-back",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-report-back",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The report-back is the part most often skipped, and the part that builds trust.",
+          "after": "Participants need to understand how the team used what they shared. Connect the report-back to specific decisions and next steps so people can judge the value of their participation."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Honesty about what could not change is more valuable than vague promises.",
+          "after": "Separate changes the team can make from requests it cannot take forward. Explain the relevant constraint instead of replacing an uncertain outcome with a general promise."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Participants' words carry more weight than a summary, with permission and no identification.",
+          "after": "Participants’ own words can preserve meaning that a summary loses. Use them only with permission and without identifying the speaker; a quotation can still reveal identity through its details."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-interpreter-first-contact",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-interpreter-first-contact",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Language access planned per document misses the first phone call.",
+          "after": "Interpretation later in the process does not resolve an English-only first contact. Review the greeting, voicemail, and route to assistance as parts of the same service experience."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Delay is a burden that falls on people who already carry more.",
+          "after": "The wait for a callback adds a barrier for people who need interpretation. Examine the delay and what families must do during it rather than treating interpretation availability alone as sufficient access."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "This is a program-level planning question, not a translation request.",
+          "after": "Changing the wording of a greeting may not resolve staffing or callback arrangements. The intake owner and language access coordinator need to examine the process together."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-team-silence",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-team-silence",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Quiet is being read as agreement.",
+          "after": "Silence does not establish agreement, understanding, or a lack of ideas. Ask how people would prefer to contribute without assigning a communication style based on their background."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Input that changed nothing teaches people to stop offering it.",
+          "after": "One colleague has linked a previous attempt to speak with a lack of visible response. Find out what happened and explain how input is considered, including when it does not change a decision."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Positional power and meeting format are shaping who speaks.",
+          "after": "The meeting format and differences in authority may affect participation. Compare speaking opportunities, other ways to contribute, and how the supervisor responds before deciding what the quiet means."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-repair-after-harm",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-repair-after-harm",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Silence read as endorsement.",
+          "after": "Two colleagues experienced the lack of response as endorsement. Address that reported impact rather than assuming that an unchallenged comment was accepted by everyone."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Unfamiliarity, not intent, is the likely cause, and it still needs repair.",
+          "after": "The speaker’s lack of awareness does not establish their intent or remove the impact. Clarify what happened and what needs to change without guessing why the comment was made."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Repair belongs to the person with more power in the room, not to the staff who were harmed.",
+          "after": "The meeting leader has a role in addressing the incident and setting expectations. The staff who reported harm should not have to carry the explanation or organize the response themselves."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-leadership-bottleneck",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-leadership-bottleneck",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Diffuse responsibility and approval bottlenecks were named repeatedly in DSD listening.",
+          "after": "DSD listening identified unclear responsibility and approval bottlenecks. In this situation, examine the shared approval step and its effect across teams rather than treating each delay as an isolated problem."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "The step is a choice someone made, which means it can be changed.",
+          "after": "The purpose of the step is currently unclear. Establish why it was introduced and who can authorize a change before deciding whether it can be removed or replaced."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Decision rights are unclear, so nothing moves.",
+          "after": "Teams need to know who can decide and what information that person needs. A proposed decision record can connect the original purpose, the cost of delay, and possible alternatives."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
+    },
+    {
+      "target": "dsd-scenario.dsd-small-group-data",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-small-group-data",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Small groups can be identified from aggregate tables.",
+          "after": "An aggregate table can still identify people when counts are small or other details narrow the possibilities. The fact that names are absent does not by itself establish that a report is safe to share."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Suppression protects people and must be explained, not hidden.",
+          "after": "Ask the data owner and privacy lead which suppression rules apply, and explain resulting gaps in the report. The count below ten in this scenario is a reason to check, not a universal reporting threshold."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Qualitative evidence can carry what the numbers cannot.",
+          "after": "People’s accounts may help explain experiences that suppressed figures cannot show. Qualitative material also needs privacy review; a detailed account can identify someone even when a table does not."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Full original scenario read; independent acceptance of these exact whatToNotice revisions on 2026-11-15. Evidence/inference, privacy and decision reasoning reviewed. Unchanged legal/authority claims have not been newly fact-verified."
     }
   ]
 }

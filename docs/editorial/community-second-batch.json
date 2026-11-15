@@ -1,0 +1,303 @@
+{
+  "status": "root_review_accepted",
+  "records": [
+    {
+      "id": "lib--content--community-research--american--disability",
+      "file": "lib/content/community-research/american.json",
+      "path": [
+        "disability"
+      ],
+      "sourceSha256": "5c56321fce2530d0486b7e8df8ce42d3e9eec7d5e084770df911473191ca59ca",
+      "changes": [
+        {
+          "fieldId": 0,
+          "path": [
+            "disability",
+            "intro"
+          ],
+          "before": "This is background for preparing questions. It does not describe any person or family. Here, American means the mainstream U.S. ideas about disability built into the laws, programs and professional training that staff work inside. It is here so you can see that frame as one frame, not a neutral default. Mainstream American is not one community: views differ by generation, region, race, faith, class and disability experience, and many Americans, including many disabled Americans, do not share these ideas. We did not find a Minnesota study of what residents believe about disability, or a national survey on it to use here. Most of the research below is conceptual rehabilitation writing that describes U.S. values by contrast with other cultures. It tells you more about how systems are built than about any person.",
+          "classification": "authored_prose_review",
+          "reason": "Lead with the institutional lens and its purpose, preserving individual variation and every limitation of the evidence below it.",
+          "after": "This section examines mainstream U.S. ideas about disability built into the laws, programs and professional training that staff work within. It makes that cultural frame visible as one perspective rather than a neutral default. Use the background to prepare questions; it does not describe any person or family. Mainstream American is not one community: views differ by generation, region, race, faith, class and disability experience, and many Americans, including many disabled Americans, do not share these ideas. We did not find a Minnesota study of what residents believe about disability, or a national survey on it to use here. Most of the research below is conceptual rehabilitation writing that describes U.S. values by contrast with other cultures. It tells you more about how systems are built than about any person."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 21,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--disability",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "disability"
+      ],
+      "sourceSha256": "8273d00e51aed6bff7d0bea52f41c7be0a2f09b8c722e372c542f789ae48c583",
+      "changes": [
+        {
+          "fieldId": 12,
+          "path": [
+            "disability",
+            "context",
+            1,
+            "body",
+            1
+          ],
+          "before": "A survey of 269 Southern churches, published in 2002, found that Black churches offered significantly more mental health and social programs than white churches, and that few churches had formal links with health or mental health providers (Blank and colleagues). Neither study tells you who helps a particular person. Ask who helps and who should be part of decisions, and involve a pastor or congregation only with the person's consent.",
+          "classification": "authored_prose_review",
+          "reason": "Clarify that the individual chooses who participates; preserve both studies, their scope and the consent condition.",
+          "after": "A survey of 269 Southern churches, published in 2002, found that Black churches offered significantly more mental health and social programs than white churches, and that few churches had formal links with health or mental health providers (Blank and colleagues). Neither study identifies who helps any particular person. Ask each person who helps them and who they want involved in decisions; include a pastor or congregation only with the person's consent."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 20,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--amharic--organizations",
+      "file": "lib/content/community-research/amharic.json",
+      "path": [
+        "organizations"
+      ],
+      "sourceSha256": "fc959f06fd184f7d6aa8e992406ed4e0782d769d2d251218472ad9cfbe5d4838",
+      "changes": [
+        {
+          "fieldId": 0,
+          "path": [
+            "organizations",
+            "intro"
+          ],
+          "before": "Minnesota has no reliable current count of Amharic speakers. The Census Bureau estimated 9,490 Amharic speakers age 5 and older in Minnesota for 2009-2013 (give or take 1,009), seventh among states; since then its standard tables group Amharic with Somali and other Afro-Asiatic languages. Minnesota schools reported 2,379 students with Amharic as their primary home language in 2024-25, 948 of them English learners. MPR reported in 2005 that the State Demographer's office estimated about 7,500 Ethiopian immigrants in the state, and that immigrant groups said the number was about double. An undated project request to the Minnesota House estimates 45,000 to 50,000 people in and around the Twin Cities who identify as Ethiopian or Ethiopian American, but that is a figure from a funding request, and it counts ethnicity and not language. Not every Ethiopian speaks Amharic as a first language, and Oromo, Tigrinya and Anywaa speakers have their own organizations. Worthington's daily newspaper reported on an Ethiopian Orthodox congregation there in 2020 and 2022, under the names Menbere Tsehay Saint Mary and Tsadakane Mariam, and we could not confirm its current address or whether these are one congregation. The list below is starting points for learning. It is not complete, and listing here says nothing about who a person trusts.",
+          "classification": "authored_prose_review",
+          "reason": "Separate language estimates, ethnicity estimates, local verification limits and use of the directory so readers do not conflate their evidence.",
+          "after": "Minnesota has no reliable current count of Amharic speakers. The Census Bureau estimated 9,490 Amharic speakers age 5 and older in Minnesota for 2009-2013 (give or take 1,009), seventh among states; since then its standard tables group Amharic with Somali and other Afro-Asiatic languages. Minnesota schools reported 2,379 students with Amharic as their primary home language in 2024-25, 948 of them English learners. MPR reported in 2005 that the State Demographer's office estimated about 7,500 Ethiopian immigrants in the state, and that immigrant groups said the number was about double.\n\nAn undated project request to the Minnesota House estimates 45,000 to 50,000 people in and around the Twin Cities who identify as Ethiopian or Ethiopian American, but that is a figure from a funding request, and it counts ethnicity and not language. Not every Ethiopian speaks Amharic as a first language, and Oromo, Tigrinya and Anywaa speakers have their own organizations.\n\nWorthington's daily newspaper reported on an Ethiopian Orthodox congregation there in 2020 and 2022, under the names Menbere Tsehay Saint Mary and Tsadakane Mariam, and we could not confirm its current address or whether these are one congregation.\n\nThe list below offers starting points for learning. It is not complete, and listing here says nothing about who a person trusts."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 31,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-1",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        1
+      ],
+      "sourceSha256": "a1f8b24e4edce9277509d0615b2cc41b667ae4aa3b3fc91e03d9f2f03f7d84c3",
+      "changes": [
+        {
+          "fieldId": 3,
+          "path": [
+            "people",
+            1,
+            "body",
+            3
+          ],
+          "before": "She also helped build the organizations that served the community. In 1925 she helped found the Minneapolis chapter of the Urban League, which focused on jobs and housing. In 1930 she became the first woman president of the Minneapolis NAACP, serving nine years. In that role she challenged police brutality, winning a 1937 case for a man beaten by two off-duty detectives, and she led the NAACP protest against a 1940 University of Minnesota showing of the racist film The Birth of a Nation.",
+          "classification": "authored_prose_review",
+          "reason": "Separate two different civil-rights actions; retain the direct description of the racist film.",
+          "after": "She also helped build the organizations that served the community. In 1925 she helped found the Minneapolis chapter of the Urban League, which focused on jobs and housing. In 1930 she became the first woman president of the Minneapolis NAACP, serving nine years. In that role she challenged police brutality, winning a 1937 case for a man beaten by two off-duty detectives. She also led the NAACP protest against a 1940 University of Minnesota showing of the racist film The Birth of a Nation."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 9,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-2",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        2
+      ],
+      "sourceSha256": "148bc42d7c058de571a7d33b8df9cadd14ea2752b79524e990dca8d2260583ea",
+      "changes": [
+        {
+          "fieldId": 0,
+          "path": [
+            "people",
+            2,
+            "body",
+            0
+          ],
+          "before": "In 1935, after a new federal law protected workers' right to organize and after the club had cut food workers' pay from $15.00 to $12.50 a week, an elevator operator at the Minneapolis Athletic Club began signing up her coworkers. Nellie Stone Johnson and her fellow organizers helped unionize downtown hotel workers, and the club's integrated Local 665 of the Hotel and Restaurant Employees union was soon chartered. In 1936 she was elected its vice president. It was the start of a lifetime of organizing.",
+          "classification": "authored_prose_review",
+          "reason": "Name the actor at the beginning and separate the organizing action from its legal and economic context without adding causation.",
+          "after": "In 1935, Nellie Stone Johnson, an elevator operator at the Minneapolis Athletic Club, began signing up her coworkers. A new federal law had protected workers' right to organize, and the club had cut food workers' pay from $15.00 to $12.50 a week. Nellie Stone Johnson and her fellow organizers helped unionize downtown hotel workers, and the club's integrated Local 665 of the Hotel and Restaurant Employees union was soon chartered. In 1936 she was elected its vice president. It was the start of a lifetime of organizing."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 10,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-4",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        4
+      ],
+      "sourceSha256": "1635caa258b6e22a01893c89c7ac44b9335112d9f2df22c0b2469dab3d7a2119",
+      "changes": [
+        {
+          "fieldId": 0,
+          "path": [
+            "people",
+            4,
+            "body",
+            0
+          ],
+          "before": "In 1942, in Washington, D.C., Gordon Parks photographed Ella Watson, a Black government charwoman. She stood in front of an American flag holding a broom and mop. The picture, known as American Gothic after Grant Wood's painting, became one of the most famous images of segregation-era America, a quiet portrait that asked viewers to see the gap between the nation's ideals and Black workers' lives.",
+          "classification": "authored_prose_review",
+          "reason": "Separate the photograph’s historical significance from the interpretation learners are invited to consider.",
+          "after": "In 1942, in Washington, D.C., Gordon Parks photographed Ella Watson, a Black government charwoman. She stood in front of an American flag holding a broom and mop. The picture, known as American Gothic after Grant Wood's painting, became one of the most famous images of segregation-era America. The quiet portrait asked viewers to see the gap between the nation's ideals and Black workers' lives."
+        },
+        {
+          "fieldId": 1,
+          "path": [
+            "people",
+            4,
+            "body",
+            1
+          ],
+          "before": "Parks was born in Fort Scott, Kansas, the youngest of 15 children. After his mother died in 1928, he moved as a teenager to St. Paul, Minnesota, to live with an older sister, but was soon forced out and became homeless. He attended Mechanic Arts High School and then enrolled at Central High School in 1929, but left a few months later as the Great Depression began. In the following years he worked many jobs, and in 1935 he became a porter and waiter on the Northern Pacific Railroad.",
+          "classification": "authored_prose_review",
+          "reason": "Separate the move to Minnesota from the subsequent loss of housing, keeping the original chronology and circumstances.",
+          "after": "Parks was born in Fort Scott, Kansas, the youngest of 15 children. After his mother died in 1928, he moved as a teenager to St. Paul, Minnesota, to live with an older sister. He was soon forced out and became homeless. He attended Mechanic Arts High School and then enrolled at Central High School in 1929, but left a few months later as the Great Depression began. In the following years he worked many jobs, and in 1935 he became a porter and waiter on the Northern Pacific Railroad."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 9,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-11",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        11
+      ],
+      "sourceSha256": "a5e7859d17864b08fe1ab83a601a59fae715285b9cf517bdf0c4178d41b58cdd",
+      "changes": [
+        {
+          "fieldId": 2,
+          "path": [
+            "people",
+            11,
+            "body",
+            2
+          ],
+          "before": "Some context helps here. In the 1920s and 1930s, most American universities did not hire Black scholars. Historically Black colleges and universities, such as Howard, were where Black intellectuals taught, researched and trained the next generation. From 1928 to 1941 Bunche taught at Howard and built its political science department.",
+          "classification": "authored_prose_review",
+          "reason": "Begin directly with the documented institutional barrier rather than announcing that context follows.",
+          "after": "In the 1920s and 1930s, most American universities did not hire Black scholars. Historically Black colleges and universities, such as Howard, were where Black intellectuals taught, researched and trained the next generation. From 1928 to 1941 Bunche taught at Howard and built its political science department."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 11,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-12",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        12
+      ],
+      "sourceSha256": "f85ec5319b7740206ac39b760fb2a6de3047fd34ff0006d1dd613a39f3bc0e9f",
+      "changes": [
+        {
+          "fieldId": 0,
+          "path": [
+            "people",
+            12,
+            "body",
+            0
+          ],
+          "before": "On Easter Sunday, April 9, 1939, a contralto singer stood on the steps of the Lincoln Memorial in Washington, D.C., and sang to a crowd of more than 75,000 people. Howard University had asked to host her at Constitution Hall, owned by the Daughters of the American Revolution, and the request was refused because she was Black. First Lady Eleanor Roosevelt resigned from the DAR in protest. The outdoor concert became one of the defining moments of the early civil rights era.",
+          "classification": "authored_prose_review",
+          "reason": "Identify the person already named by this record and explain the abbreviation used in the next sentence.",
+          "after": "On Easter Sunday, April 9, 1939, contralto Marian Anderson stood on the steps of the Lincoln Memorial in Washington, D.C., and sang to a crowd of more than 75,000 people. Howard University had asked to host her at Constitution Hall, owned by the Daughters of the American Revolution (DAR), and the request was refused because she was Black. First Lady Eleanor Roosevelt resigned from the DAR in protest. The outdoor concert became one of the defining moments of the early civil rights era."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 9,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-13",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        13
+      ],
+      "sourceSha256": "8f688192ab029e00005e22b46643e385f434ea2a9ab2b763b5f8a9956b1466a5",
+      "changes": [
+        {
+          "fieldId": 2,
+          "path": [
+            "people",
+            13,
+            "body",
+            2
+          ],
+          "before": "To understand his career, it helps to know that the U.S. armed forces were segregated until after World War II. Black soldiers were usually kept in separate units, and most were assigned to labor and support roles. The Army Air Corps at first did not train Black pilots at all. Under pressure, the military created a separate flight program at Tuskegee, Alabama.",
+          "classification": "authored_prose_review",
+          "reason": "Connect the career to institutional context directly; retain the source’s statement about pressure and avoid adding an external-pressure claim.",
+          "after": "Davis’s career developed within U.S. armed forces that remained segregated until after World War II. Black soldiers were usually kept in separate units, and most were assigned to labor and support roles. The Army Air Corps at first did not train Black pilots at all. Under pressure, the military created a separate flight program at Tuskegee, Alabama."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 9,
+      "editorialAcceptance": true
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-16",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        16
+      ],
+      "sourceSha256": "2ebe9eb177c107aacf664843c6669ba7091c99fca648e09ba8a22fb678a8446d",
+      "changes": [
+        {
+          "fieldId": 0,
+          "path": [
+            "people",
+            16,
+            "body",
+            0
+          ],
+          "before": "Johnnie Lacy was born in 1937 and spent her childhood in Arkansas and Louisiana during segregation; in 1947, when she was 10, her family moved to California, where she lived in McCloud. She attended Chico State from 1954 to 1956 and was studying toward nursing when she contracted polio in 1956, at 19. From 1958 to 1960 she majored in speech therapy at San Francisco State, a campus that was not accessible; the department head tried to block her enrollment, and she was not allowed to take part in graduation. She worked in anti-poverty programs for the Oakland Economic Development Council from 1965 to 1968. As a Black woman who used a wheelchair, she then faced both racial and disability discrimination in higher education and in employment.",
+          "classification": "authored_prose_review",
+          "reason": "Separate major periods and institutional actions; preserve the broader accessibility issue without narrowing it to physical access.",
+          "after": "Johnnie Lacy was born in 1937 and spent her childhood in Arkansas and Louisiana during segregation. In 1947, when she was 10, her family moved to California, where she lived in McCloud. She attended Chico State from 1954 to 1956 and was studying toward nursing when she contracted polio in 1956, at 19. From 1958 to 1960 she majored in speech therapy at San Francisco State, a campus that was not accessible. The department head tried to block her enrollment, and she was not allowed to take part in graduation. She worked in anti-poverty programs for the Oakland Economic Development Council from 1965 to 1968. As a Black woman who used a wheelchair, Lacy faced both racial and disability discrimination in higher education and in employment."
+        }
+      ],
+      "status": "accepted_fields",
+      "acceptanceScope": "proposed fields only; factual references retained, not newly verified",
+      "fieldCount": 7,
+      "editorialAcceptance": true
+    }
+  ],
+  "curationNotes": [
+    "Rejected needless synonym substitutions and summary/explanation duplication.",
+    "Retained direct descriptions of racism and discrimination; did not soften them as a matter of tone.",
+    "These proposed field edits preserve every original date, quantity, source link, quotation and named entity; additions only identify existing record subjects or expand an existing abbreviation.",
+    "Full source records and per-field ledger remain in inventory.json."
+  ],
+  "acceptanceScope": "11 revised fields across10source records; factual references and unresolved verification limits not newly verified",
+  "changeKinds": {
+    "reasoning_and_scope_clarity": 2,
+    "paragraph_or_sentence_structure": 9
+  }
+}

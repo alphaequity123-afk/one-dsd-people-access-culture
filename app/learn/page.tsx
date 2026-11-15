@@ -60,11 +60,14 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
   const scope = await requestedContentScope();
   const owner = await editingModeFromCookies();
   if (!owner && !Object.values(query).some(Boolean) && rawQuery.browse !== "all" && !rawQuery.page) {
-    const culturalIntelligenceAvailable = await culturalIntelligenceHubAvailable(scope);
+    const [culturalIntelligenceAvailable, introduction] = await Promise.all([
+      culturalIntelligenceHubAvailable(scope),
+      prepareEditableSurface("learn.page", { scope, includeOwner: false }),
+    ]);
     return <div className="pilot-topic">
       <header>
         <h1>Learn</h1>
-        <p>Courses, readings and recordings that build the knowledge behind fair, accessible services and inclusive workplaces.</p>
+        <p>{introduction.available ? stringValue(introduction.values, "introLede") : "Courses, readings and recordings that build the knowledge behind fair, accessible services and inclusive workplaces."}</p>
       </header>
       <form className="pilot-topic-search" action="/learn" method="get" role="search">
         <label htmlFor="pilot-learning-search">Search learning and resources</label>
