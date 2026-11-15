@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { Doc } from "@/lib/intelligence/retrieval/search";
+import { PROGRAM_LANGUAGE_STYLE } from "@/lib/content/editorial-style";
 import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import {
   captureArtifactSourceRevision, generateResourceArtifact, searchArtifactResources, verifyArtifactSources,
@@ -131,7 +132,7 @@ describe("resource artifact generation", () => {
       expect(data.excerpts).toHaveLength(4);
       expect(new Set(data.excerpts.map((item: { collectionFamily: string }) => item.collectionFamily)).size).toBe(4);
       expect(request.contents[0].parts[0].text).not.toContain("unrelated source");
-      expect(request.systemInstruction.parts[0].text).toContain("10th to 12th grade");
+      expect(request.systemInstruction.parts[0].text).toContain(PROGRAM_LANGUAGE_STYLE);
       expect(request.systemInstruction.parts[0].text).toContain("honest yet optimistic");
       return envelope(fetcher.mock.calls.length === 1 ? quiz : linked);
     });

@@ -1,5 +1,7 @@
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
+// The closing evidence check has its own tests (verified-draft.test.ts); here it passes the draft through.
+vi.mock("../retrieval/verified-draft", () => ({ verifyAnswerDraft: async (options: { draft: unknown }) => ({ draft: options.draft, repaired: false, reviewed: true, unresolved: [] }) }));
 const f = vi.hoisted(() => ({ complete: vi.fn(), plan: vi.fn(), research: vi.fn() }));
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: string, fn: () => unknown) => fn(), auditRefusal: async () => {} }));
 vi.mock("./jev", () => ({ reviewWithJev: async () => "pass", planWithJev: f.plan, SPECIALIST_GUIDANCE: { resources: "Use the available evidence." } }));
@@ -63,7 +65,8 @@ describe("named original PDF grounding", () => {
     f.complete.mockImplementation(async (request: { user: string }) => {
       const input = JSON.parse(request.user);
       const pages = input.programSources.filter((source: { href: string }) => source.href.includes(".pdf#page="));
-      expect(pages).toHaveLength(5);
+      // Five passages from each of the two named PDFs.
+      expect(pages).toHaveLength(10);
       expect(pages.some((source: { href: string }) => source.href.endsWith("guide.pdf#page=39"))).toBe(true);
       expect(pages.some((source: { href: string }) => source.href.endsWith("checklist.pdf#page=3"))).toBe(true);
       // Each page is cited by its label; its passage is supplied once and never copied back.
@@ -88,8 +91,8 @@ describe("named original PDF grounding", () => {
         ...pages.slice(0, 2).map((source: { ref: string }) => ({ text: "The original page describes participation supports.", refs: [source.ref.toLowerCase(), source.ref] })),
         { text: "A statement with no supplied source behind it.", refs: ["S99"] },
       ];
-      // Exercise the provider's transport-schema boundary as well as ASK's final schema.
-      return { parsed: request.schema.parse({ shortAnswer: "Plan compensation and participation supports using both original PDFs.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims }) };
+      // A provider that does not enforce the label list can still return a wrong label; ASK leaves it out.
+      return { parsed: { shortAnswer: "Plan compensation and participation supports using both original PDFs.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims } };
     });
     const result = await askConcierge({ question, contextPreference: "one_dsd" }, { agent: getAgent("ask_concierge"), role: "staff", dry_run: false, trace_id: "4cecf283-d438-4528-a884-c7b2cc30b68a" });
     if (result.kind !== "answer") throw Error("Expected validated PDF answer");
