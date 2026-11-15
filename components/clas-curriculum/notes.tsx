@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { assemblePlan, clearNotes, planText, readAllNotes, readNote, writeNote, type PlanModule } from '@/lib/learning/clas-notes';
 import { downloadText } from './download';
 
-export const NOTE_PRIVACY = 'Your note is saved on this computer only and shown again when you return. It stays here until you delete it, which also means anyone else who uses this computer could see it. Nothing is sent, and nothing is shared with supervisors or program staff. Do not include names, case details or other private information.';
+export const NOTE_PRIVACY = 'Your note is saved in this browser profile when browser storage is available. Someone using the same profile may be able to read it. Clearing browser data can remove it; downloaded or printed copies are separate. The working-note feature does not submit your note to supervisors or program staff. Do not include names, case details or other private information.';
 
 type NoteProps = { moduleId: string; title: string; prompt: string; allModuleIds: string[]; onChange?: () => void };
 
@@ -17,31 +17,31 @@ export function WorkingNote({ moduleId, title, prompt, allModuleIds, onChange }:
 
   // Browser storage is unavailable during server rendering; show the saved note after hydration.
   // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => { const saved = readNote(moduleId); setNote(saved); if (saved) setStatus('Your earlier note for this part is shown from this computer.'); }, [moduleId]);
+  useEffect(() => { const saved = readNote(moduleId); setNote(saved); if (saved) setStatus('Your earlier note for this part is shown from this browser profile.'); }, [moduleId]);
 
   function update(text: string) {
     setNote(text);
-    setStatus(writeNote(moduleId, text) ? 'Saved on this computer.' : 'This browser could not save the note. Download it if you want to keep a copy.');
+    setStatus(writeNote(moduleId, text) ? 'Saved in this browser profile.' : 'This browser could not save the note. Download it if you want to keep a copy.');
     onChange?.();
   }
   function clearAll() {
     const cleared = clearNotes(allModuleIds);
     setNote('');
     setConfirming(false);
-    setStatus(cleared ? 'All your notes for the nine parts have been removed from this device.' : 'This browser could not remove the notes.');
+    setStatus(cleared ? 'Your notes for the nine parts have been removed from this browser profile. Downloaded or printed copies are unchanged.' : 'This browser could not remove the notes.');
     onChange?.();
   }
   return (
     <div className="clas-note">
-      <label htmlFor="reflection">Your working note for this part (optional, private)</label>
+      <label htmlFor="reflection">Your working note for this part (optional)</label>
       <textarea id="reflection" rows={6} value={note} onChange={e => update(e.target.value)} aria-describedby="note-privacy" />
       <p id="note-privacy">{NOTE_PRIVACY}</p>
       <p role="status">{status}</p>
       <button type="button" onClick={() => downloadText(`CLAS-part-${moduleId}-notes.txt`, `${title}\n\n${prompt}\n\n${note}`)}>Download my note</button>
       {!confirming
-        ? <button type="button" className="clas-study-secondary" onClick={() => setConfirming(true)}>Clear my notes on this device</button>
+        ? <button type="button" className="clas-study-secondary" onClick={() => setConfirming(true)}>Clear my notes in this browser</button>
         : <span className="clas-note-confirm" role="group" aria-label="Confirm clearing notes">
-          <span>Remove your notes for all nine parts from this device? This cannot be undone.</span>
+          <span>Remove your notes for all nine parts from this browser profile? This cannot be undone. Downloaded or printed copies will remain.</span>
           <button type="button" onClick={clearAll}>Yes, clear all my notes</button>
           <button type="button" className="clas-study-secondary" onClick={() => setConfirming(false)}>Keep my notes</button>
         </span>}
@@ -72,7 +72,7 @@ export function ImprovementPlan({ curriculumTitle, modules, version }: PlanProps
   return (
     <section className="clas-plan" aria-labelledby="plan">
       <h2 id="plan">Your improvement plan</h2>
-      <p>This plan is assembled from the working notes you kept on this device for the nine parts ({written} of {modules.length} parts have a note). Each heading is the lesson's prompt. Edit any part's note on its own page; the plan updates when you return.</p>
+      <p>This plan is assembled from the working notes saved in this browser profile for the nine parts ({written} of {modules.length} parts have a note). Each heading is the lesson's prompt. Edit any part's note on its own page; the plan updates when you return.</p>
       <p>{NOTE_PRIVACY}</p>
       <div className="clas-plan-actions">
         <button type="button" onClick={() => downloadText('CLAS-my-improvement-plan.txt', planText(curriculumTitle, sections))}>Download my plan (.txt)</button>
