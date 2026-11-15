@@ -71,7 +71,7 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
 
   return (
     <EditableSurfaceRegion surface={surface}>
-      <PageIntro title={stringValue(copy, "introTitle")} lede="Choose a practice for the work you’re doing." />
+      <PageIntro title={stringValue(copy, "introTitle")} lede={withoutPublishedSaveClaims(stringValue(copy, "introLede"))} />
       <div className="pilot-topic space-y-6">
         <WorkOriginLinks origin={origin} />
         <section className={styles.choices} aria-labelledby="practice-choices-title">
@@ -98,7 +98,7 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
         <details className={styles.group}>
           <summary>More tools and guidance</summary>
           <div className={`${styles.groupBody} space-y-3`}>
-            <p>{withoutPublishedSaveClaims(stringValue(copy, "introLede"))}</p>
+            <p>{withoutPublishedSaveClaims(stringValue(copy, "moreBody"))}</p>
             <p>{withoutPublishedSaveClaims(stringValue(copy, "choicesIntro"))}</p>
             <ul className={styles.links}>
               <li><Link href="/learn/equity-in-practice">Equity in practice</Link></li>

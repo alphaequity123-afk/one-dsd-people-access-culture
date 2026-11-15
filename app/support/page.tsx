@@ -23,7 +23,7 @@ export default async function SupportPage({ searchParams }: { searchParams?: Pro
     <EditableSurfaceRegion surface={surface} className="pilot-topic">
       <header>
         <h1>{stringValue(copy, "introTitle")}</h1>
-        <p>Find a practical starting point, or connect with the person who can help you take the next step.</p>
+        <p>{stringValue(copy, "introLede")}</p>
       </header>
       <section aria-label="Support resources">
         <ul className="pilot-topic-rows">

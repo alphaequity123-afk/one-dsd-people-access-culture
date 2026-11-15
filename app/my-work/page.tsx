@@ -21,7 +21,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
   const surface = await prepareEditableSurface("my-work.page");
   const copy = surface.values;
   if (!surface.canEdit && (await searchParams)?.view !== "workspace") return <EditableSurfaceRegion surface={surface} className="pilot-topic">
-    <header><h1>{stringValue(copy, "introTitle")}</h1><p>Return to a plan, a reflection, or learning you want to continue.</p></header>
+    <header><h1>{stringValue(copy, "introTitle")}</h1><p>{stringValue(copy, "introLede")}</p></header>
     <section aria-labelledby="pilot-work">
       <h2 id="pilot-work">Put learning to work</h2>
       <ul className="pilot-topic-rows">
@@ -38,7 +38,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
       <PageIntro
         kicker={stringValue(copy, "introKicker")}
         title={stringValue(copy, "introTitle")}
-        lede="Everything you choose to keep lives here: the resources you saved, the plans you are working on, your reflection, and the courses you left off in. It stays on this computer, private to you."
+        lede={stringValue(copy, "introLede")}
       />
       <div className="wrap space-y-6 py-8">
         <Link href="/my-work">Back to My Work</Link>

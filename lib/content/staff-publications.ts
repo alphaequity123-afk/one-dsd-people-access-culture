@@ -1,5 +1,6 @@
 import { rememberContentEvidence } from "./ask-evidence";
 import "server-only";
+import { withProfessionalLanguage } from "./professional-language";
 
 import { cache } from "react";
 import { z } from "zod";
@@ -244,7 +245,7 @@ function parsePayload(row: PublicationRow): ContentItem | null {
   }
   const item = canonicalizeStaffRoutes(parsed.data);
   rememberContentEvidence(item, { sourceId: row.content_item_id, revisionId: row.revision_id, payloadHash: row.payload_sha256, scope: row.scope_id });
-  return item;
+  return withProfessionalLanguage(`resource.${item.id}`, item);
 }
 
 function parseStaticPayload(item: ContentItem): ContentItem {
@@ -255,7 +256,7 @@ function parseStaticPayload(item: ContentItem): ContentItem {
   if (staffReleaseValidationIssues(parsed.data).length > 0) {
     throw new Error(`Published content ${item.id} did not pass the staff presentation contract.`);
   }
-  return canonicalizeStaffRoutes(parsed.data);
+  return withProfessionalLanguage(`resource.${item.id}`, canonicalizeStaffRoutes(parsed.data));
 }
 
 export function contentVisibleInScope(item: Pick<ContentItem, "scope">, requestedScope: StaffProgramScope): boolean {
