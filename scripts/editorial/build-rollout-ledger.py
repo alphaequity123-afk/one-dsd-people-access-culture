@@ -7,8 +7,10 @@ registry=json.loads((p/'lib/content/professional-language-revisions.json').read_
 course=json.loads((p/'lib/content/course-language-revisions.json').read_text(encoding='utf8'))['courses']
 accepted={r['target']:len(r['changes']) for r in registry if r['status']=='reviewed'}
 accepted.update({'course.'+c['courseId']:len(c['changes']) for c in course if c['review']['status']=='accepted'})
+partial_course=json.loads((p/'lib/content/course-partial-language-revisions.json').read_text(encoding='utf8'))['courses']
+partial={f"course.{c['courseId']}":len(c['changes']) for c in partial_course if c['review']['status']=='accepted'}
 verified=set()
-for f in ['live-first-release-check.json','live-learn-expanded-check.json','live-second-release-check.json','live-third-release-check.json','live-fourth-release-check.json']:
+for f in ['live-first-release-check.json','live-learn-expanded-check.json','live-second-release-check.json','live-third-release-check.json','live-fourth-release-check.json','live-fifth-release-check.json']:
  if (p/'output'/f).exists():
   for r in json.loads((p/'output'/f).read_text(encoding='utf8'))['results']:
    if r['target'].startswith('lesson.'):continue
@@ -28,7 +30,7 @@ for receipt in ['workforce-language-review.json','shared-surfaces-retained-revie
 records=[]
 for row in inventory['surfaces']+inventory['resources']:
  surface='surfaceId' in row;target=row['surfaceId'] if surface else 'resource.'+row['id'];values=row['values'] if surface else row;c=candidates.get(target)
- records.append({'target':target,'kind':'course_pack' if target.startswith('course.') else 'editable_surface' if surface else 'staff_resource','route':row.get('route',row.get('href')),'originalSha256':hashlib.sha256(json.dumps(values,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),'review':'accepted_fields' if target in accepted else 'accepted_retained' if target in retained else 'excluded_dormant_surface' if target in excluded else 'candidate_pending_review' if c else 'not_reviewed','acceptedFieldChanges':accepted.get(target,0),'candidateFieldChanges':len(c.get('changes',[])) if c else 0,'liveVerified':target in verified})
-report={'snapshotDate':'2026-11-15','scope':'Registry subtotal only; community/research JSON, source files and hardcoded page/component prose require separate coverage. Accepted fields do not imply re-verification of unchanged facts. Course packs include related lesson and job-aid fields.','registryObjects':len(records),'acceptedObjects':len(accepted),'acceptedFields':sum(accepted.values()),'retainedObjects':len(retained),'excludedDormantObjects':len(excluded),'editoriallyReviewedObjects':len(set(accepted)|retained),'liveVerifiedObjects':sum(r['liveVerified'] for r in records),'records':records}
+ records.append({'target':target,'kind':'course_pack' if target.startswith('course.') else 'editable_surface' if surface else 'staff_resource','route':row.get('route',row.get('href')),'originalSha256':hashlib.sha256(json.dumps(values,ensure_ascii=False,sort_keys=True).encode()).hexdigest(),'review':'accepted_fields' if target in accepted else 'accepted_partial_course_fields' if target in partial else 'accepted_retained' if target in retained else 'excluded_dormant_surface' if target in excluded else 'candidate_pending_review' if c else 'not_reviewed','acceptedFieldChanges':accepted.get(target,partial.get(target,0)),'candidateFieldChanges':len(c.get('changes',[])) if c else 0,'liveVerified':target in verified})
+report={'snapshotDate':'2026-11-15','scope':'Registry subtotal only; community/research JSON, source files and hardcoded page/component prose require separate coverage. Accepted fields do not imply re-verification of unchanged facts. Course packs include related lesson and job-aid fields.','registryObjects':len(records),'acceptedObjects':len(accepted),'acceptedFields':sum(accepted.values()),'partiallyRevisedCourseObjects':len(partial),'partialCourseFields':sum(partial.values()),'retainedObjects':len(retained),'excludedDormantObjects':len(excluded),'editoriallyReviewedObjects':len(set(accepted)|retained),'liveVerifiedObjects':sum(r['liveVerified'] for r in records),'records':records}
 (p/'docs/editorial/registry-rollout-status.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
 print(json.dumps({k:v for k,v in report.items() if k!='records'}))

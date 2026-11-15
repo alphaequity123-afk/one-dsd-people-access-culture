@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { inspectLanguageRevision, type LanguageRevision } from "./professional-language";
+import partialCourses from "./course-partial-language-revisions.json";
 
 const revision: LanguageRevision = { target: "sample", kind: "surface", status: "reviewed", changes: [
   { path: ["body"], before: "Initial explanation", after: "Reviewed explanation with its reason." },
@@ -38,5 +39,20 @@ describe("reviewed professional language", () => {
     const later = { body: "A subsequent owner revision" };
     expect(inspectLanguageRevision("sample", later, revised).value).toBe(later);
     expect(inspectLanguageRevision("sample", later, revised).conflicts).toEqual(["body"]);
+  });
+  it("keeps partial course corrections to their three reviewed instructions", () => {
+    const course = partialCourses.courses[0];
+    const original = { pack: {
+      course: { learning: { appliedNextStep: course.changes[0].before }, governance: { toolkitQuestion: course.changes[1].before }, introTranscript: "Recorded words remain exact", lessons: [{ body: "Unreviewed lesson remains unchanged" }] },
+      jobAid: { use: { doNext: course.changes[2].before } },
+    } };
+    const result = inspectLanguageRevision(`course.${course.courseId}`, original);
+    expect(result.applied).toBe(true);
+    expect(result.value.pack.course.learning.appliedNextStep).toBe(course.changes[0].after);
+    expect(result.value.pack.course.governance.toolkitQuestion).toBe(course.changes[1].after);
+    expect(result.value.pack.jobAid.use.doNext).toBe(course.changes[2].after);
+    expect(result.value.pack.course.introTranscript).toBe(original.pack.course.introTranscript);
+    expect(result.value.pack.course.lessons).toEqual(original.pack.course.lessons);
+    expect(original.pack.jobAid.use.doNext).toBe(course.changes[2].before);
   });
 });

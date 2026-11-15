@@ -1,0 +1,1112 @@
+{
+  "records": [
+    {
+      "target": "graduation-path.gp-8",
+      "kind": "surface",
+      "route": "/practice/gp-8",
+      "original": {
+        "title": "Accessible and culturally responsive meeting",
+        "staffLabel": "I'm planning a meeting everyone can take part in",
+        "signals": [
+          "A team meeting, all-staff, or partner meeting you are running",
+          "A meeting where some people rarely speak",
+          "A meeting with interpretation, captioning, or hybrid participation"
+        ],
+        "startingCompetence": "You are running a meeting and want everyone to be able to take part, contribute, and know what was decided.",
+        "graduatedLooksLike": "By the end, you will have a reusable meeting plan: purpose and materials sent ahead, accommodation offered without disclosure, several ways to contribute, attention to positional power, a plan for repair if harm occurs, decisions with owners, and accessible follow-up.",
+        "askStarters": [
+          "What should I do before, during, and after a team meeting so everyone can actually take part?",
+          "How do I run a hybrid meeting where the people online are not an afterthought?",
+          "What do I do in the moment when a comment lands badly?"
+        ],
+        "artifactTitle": "Accessible meeting plan",
+        "needsWork": [
+          "Captions turned on with nothing else changed",
+          "A round-robin that forces everyone to speak",
+          "Notes sent only to the people who were in the room"
+        ],
+        "readyToUse": [
+          "Materials ahead, several ways to contribute, and decisions with owners",
+          "Repair is the responsibility of the person with more power",
+          "Follow-up is accessible and asks how it worked"
+        ],
+        "privacy": "Do not include names. Your progress is saved only on this computer and is not used to rank anyone.",
+        "step0Title": "Plan for participation",
+        "step0Guidance": "Ask about planning an accessible meeting. Use the meeting plan below to identify the purpose, participation formats, and access arrangements people will need.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-8"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the meeting includes community partners, read the relevant brief for access, timing, and what not to assume.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the accessible meeting guidance and the access checks.",
+        "step2Links": [
+          {
+            "label": "Accessible and culturally responsive meetings",
+            "href": "/resources/ja-accessible-meetings"
+          },
+          {
+            "label": "Access checks before a meeting or outreach",
+            "href": "/resources/ja-access-checks"
+          }
+        ],
+        "step3Title": "Draft your meeting plan",
+        "step3Guidance": "Complete the plan. Your notes are saved only on this computer. Leave out names.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm materials go out ahead, accommodation is offered to everyone, there are several ways to contribute, decisions will have owners, and follow-up is accessible.",
+        "step4Links": [],
+        "step5Title": "Take it further if you want to",
+        "step5Guidance": "If a team pattern keeps recurring, the team climate path can help you examine participation, access, and follow-through. Discuss unresolved concerns with the person responsible for the meeting or team.",
+        "step5Links": [
+          {
+            "label": "Strengthen team climate (Practice path)",
+            "href": "/paths/gp-4"
+          }
+        ],
+        "artifactField0Label": "Meeting name, purpose, and who attends",
+        "artifactField0Help": "The meeting, not individual names.",
+        "artifactField1Label": "What goes out ahead and when",
+        "artifactField1Help": "Purpose, agenda, materials, format, and the accommodation sentence.",
+        "artifactField2Label": "Ways people can contribute",
+        "artifactField2Help": "Speaking, writing ahead, writing during, following up after, and how written input gets the same weight.",
+        "artifactField3Label": "Access arrangements",
+        "artifactField3Help": "Captions, interpretation, room or platform access, pace, materials in accessible formats.",
+        "artifactField4Label": "How you will handle positional power and repair",
+        "artifactField4Help": "Who opens, who speaks last, how you will notice who is not speaking, and what you will do if harm occurs.",
+        "artifactField5Label": "Who helped plan and who will co-facilitate",
+        "artifactField5Help": "",
+        "artifactField6Label": "What you chose not to assume",
+        "artifactField6Help": "About cameras, eye contact, speed, or silence as signs of engagement.",
+        "artifactField7Label": "Who owns each decision and follow-up",
+        "artifactField7Help": "",
+        "artifactField8Label": "Follow-up date",
+        "artifactField8Help": "When accessible notes go out and when you ask how the meeting worked.",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the position, decision, meeting, or contract this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the decision was settled and what role or authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a reusable meeting plan: purpose and materials sent ahead, accommodation offered without disclosure, several ways to contribute, attention to positional power, a plan for repair if harm occurs, decisions with owners, and accessible follow-up.",
+          "after": "Use this path to prepare a meeting plan: purpose and materials shared ahead, accessible participation formats, a clear accommodation-request process, attention to positional power, a response when harm occurs, decisions with accountable roles, and accessible follow-up.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include names. Your progress is saved only on this computer and is not used to rank anyone.",
+          "after": "Describe the meeting and responsible roles without identifying participants or recording personal accommodation information. Keep individual requests in the authorized process and confirm work assignments through the appropriate workplace records.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the plan. Your notes are saved only on this computer. Leave out names.",
+          "after": "Prepare the meeting plan using the downloaded checklist. Describe responsible roles and participation arrangements without names or personal accommodation information.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "readyToUse",
+            1
+          ],
+          "before": "Repair is the responsibility of the person with more power",
+          "after": "The meeting lead has a response plan that accounts for power, the affected person, and any formal reporting duty",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step1Guidance"
+          ],
+          "before": "If the meeting includes community partners, read the relevant brief for access, timing, and what not to assume.",
+          "after": "Use relevant community briefs to prepare questions about access and timing. Confirm arrangements with participants; a brief does not establish what a particular person needs or prefers.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField4Help"
+          ],
+          "before": "Who opens, who speaks last, how you will notice who is not speaking, and what you will do if harm occurs.",
+          "after": "Consider speaking order, ways to contribute without speaking publicly, and how you will check participation barriers without guessing motives. If harm occurs, address the immediate concern, ask what support is needed, and follow any applicable reporting process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-9",
+      "kind": "surface",
+      "route": "/practice/gp-9",
+      "original": {
+        "title": "Reviewing a draft for equity, access, and plain language",
+        "staffLabel": "I'm reviewing a draft before it goes out",
+        "signals": [
+          "A document, notice, web page, or slide deck about to be released",
+          "A draft someone asked you to check for equity or access",
+          "Material that will reach the public or all staff"
+        ],
+        "startingCompetence": "You have a draft and want a structured way to check it for equity, access, plain language, sources, and burden before release.",
+        "graduatedLooksLike": "By the end, you will have a review record for a specific draft: what it asks of people, who may be excluded, access and language findings, source labels, changes made, and what remains for the owner.",
+        "askStarters": [
+          "Can you review this draft notice for plain language, access, and burden?",
+          "What questions should I ask about a draft before it goes to all staff?",
+          "How do I tell the author what needs to change without redoing their work?"
+        ],
+        "artifactTitle": "Draft review record",
+        "needsWork": [
+          "Approved with no findings",
+          "A rewrite that changes the meaning without telling the owner",
+          "A reading-level number with no specific change"
+        ],
+        "readyToUse": [
+          "Findings are specific and tied to who is affected",
+          "Sources are labeled and unsupported claims are flagged",
+          "The owner knows exactly what remains"
+        ],
+        "privacy": "Do not paste confidential, predecisional, or personal material. Your progress is saved only on this computer.",
+        "step0Title": "Examine the draft",
+        "step0Guidance": "Read the draft alongside the review questions below. Record what it asks people to do, where access or language may create a barrier, the evidence for each finding, and questions for the author. Published guidance can help you compare possible changes.",
+        "step0Links": [
+          {
+            "label": "Browse draft-review guidance",
+            "href": "/ask?path=gp-9"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the draft is aimed at or names particular Minnesota communities, read the relevant brief for naming, language, and access.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the plain-language checklist, the language access checklist, and the process burden questions.",
+        "step2Links": [
+          {
+            "label": "Plain language and accessible documents",
+            "href": "/resources/ja-plain-language"
+          },
+          {
+            "label": "Language access checklist",
+            "href": "/resources/ja-language-access-checklist"
+          },
+          {
+            "label": "Journey and burden questions",
+            "href": "/resources/ja-process-burden"
+          }
+        ],
+        "step3Title": "Record your review",
+        "step3Guidance": "Complete the review record. Your notes are saved only on this computer. Do not paste confidential material.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm findings are specific, sources are labeled, access and burden were checked, and the owner knows what remains.",
+        "step4Links": [],
+        "step5Title": "Return it to the owner",
+        "step5Guidance": "The author or content owner decides what changes. Your review helps them; it does not approve the draft.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?matter=accessibility_barrier"
+          }
+        ],
+        "artifactField0Label": "Draft name, owner, and audience",
+        "artifactField0Help": "",
+        "artifactField1Label": "What the draft asks people to do",
+        "artifactField1Help": "Steps, documents, deadlines, and return methods.",
+        "artifactField2Label": "Who may be excluded or burdened",
+        "artifactField2Help": "By language, disability, technology, time, trust, or place.",
+        "artifactField3Label": "Access and plain-language findings",
+        "artifactField3Help": "Structure, reading level, formats, languages, alternative contact.",
+        "artifactField4Label": "Sources and their authority labels",
+        "artifactField4Help": "Label each claim's source. Flag anything cited from memory.",
+        "artifactField5Label": "Changes you suggest",
+        "artifactField5Help": "Specific and short. The owner decides.",
+        "artifactField6Label": "Who else should review",
+        "artifactField6Help": "Language access, accessibility, communications, or the policy owner.",
+        "artifactField7Label": "What you chose not to assume",
+        "artifactField7Help": "About who reads this and how.",
+        "artifactField8Label": "Who owns each remaining change",
+        "artifactField8Help": "",
+        "artifactField9Label": "Date the owner needs it back",
+        "artifactField9Help": "",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the position, decision, meeting, or contract this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the decision was settled and what role or authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "Every source has an authority label and can be verified",
+        "reviewRule6Message": "Please label each source Official, Guidance, or Outside source; check before use. If a citation came from memory, leave it out and ask the policy owner."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a review record for a specific draft: what it asks of people, who may be excluded, access and language findings, source labels, changes made, and what remains for the owner.",
+          "after": "Use this path to prepare a review record for a specific draft: what it asks of people, who may be excluded, access and language findings, source labels, suggested changes, and questions for the owner. Record what you checked even when the evidence supports keeping the draft as written.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "needsWork",
+            0
+          ],
+          "before": "Approved with no findings",
+          "after": "Approval without documenting what was checked or why the draft is suitable",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not paste confidential, predecisional, or personal material. Your progress is saved only on this computer.",
+          "after": "Use a fictional example or material you are authorized to review. Keep confidential, predecisional, and personal material out of Ask and this learning exercise. Store any completed review through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the review record. Your notes are saved only on this computer. Do not paste confidential material.",
+          "after": "Prepare the review record using the downloaded checklist. Document specific findings and reasons for retaining or revising wording. Do not paste confidential material.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-10",
+      "kind": "surface",
+      "route": "/practice/gp-10",
+      "original": {
+        "title": "Procurement or contract equity review",
+        "staffLabel": "I'm shaping a contract, grant, or solicitation",
+        "signals": [
+          "A request for proposals, grant announcement, or contract renewal",
+          "Evaluation criteria being written",
+          "A contract whose reporting does not show who is served"
+        ],
+        "startingCompetence": "You are shaping a contract, grant, or procurement and want equity, accessibility, and language access built into the solicitation, evaluation, terms, and monitoring.",
+        "graduatedLooksLike": "By the end, you will have a procurement equity record: who the service reaches, requirements in the solicitation, evaluation criteria, contract reporting and access terms, monitoring by community, and the partners who own the rules.",
+        "askStarters": [
+          "We are drafting a request for proposals. Where do equity and accessibility requirements belong?",
+          "How do we evaluate proposals for experience with the communities served without excluding smaller providers?",
+          "What reporting should the contract require so we can see who is served?"
+        ],
+        "artifactTitle": "Procurement equity record",
+        "needsWork": [
+          "An equity clause added after award",
+          "Preferences that are never scored",
+          "Reporting that cannot show who was served"
+        ],
+        "readyToUse": [
+          "Requirements and criteria are in the solicitation",
+          "Reporting is disaggregated with protection",
+          "The contracts office reviewed it before release"
+        ],
+        "privacy": "Do not include confidential procurement details or vendor-identifying information. Your progress is saved only on this computer.",
+        "step0Title": "Place the questions in the right stage",
+        "step0Guidance": "Browse published procurement and equity guidance. Use the record below to examine the solicitation, evaluation criteria, contract terms, and monitoring. Your contracts office confirms applicable procurement rules.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-10"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the service reaches particular Minnesota communities, read the relevant briefs for access and trusted partners.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the procurement equity aid and the equity review canvas.",
+        "step2Links": [
+          {
+            "label": "Equity in contracts, grants, and procurement",
+            "href": "/resources/ja-procurement-contract-equity"
+          },
+          {
+            "label": "Operational equity review canvas",
+            "href": "/resources/ja-operational-equity-canvas"
+          }
+        ],
+        "step3Title": "Draft your procurement equity record",
+        "step3Guidance": "Complete the record. Your notes are saved only on this computer. Leave out vendor-identifying and confidential procurement details.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm requirements are in the solicitation, criteria are written, reporting shows who is served with small-group protection, and the contracts office reviewed it.",
+        "step4Links": [],
+        "step5Title": "Take it to the right people",
+        "step5Guidance": "Bring the record to your contracts or procurement office and your Equity Director before the solicitation is final. Use existing workplace contacts for professional guidance when needed.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?matter=procurement_or_contract"
+          }
+        ],
+        "artifactField0Label": "Solicitation or contract name and stage",
+        "artifactField0Help": "",
+        "artifactField1Label": "Who the service reaches and who delivers it",
+        "artifactField1Help": "Communities, languages, disabilities, and places; providers who could deliver but rarely win.",
+        "artifactField2Label": "Requirements in the solicitation",
+        "artifactField2Help": "Accessibility, language access, engagement, and workforce expectations stated as requirements.",
+        "artifactField3Label": "Evaluation criteria",
+        "artifactField3Help": "Written criteria for experience with communities served, accessibility practice, and workforce practice.",
+        "artifactField4Label": "Access in the application process itself",
+        "artifactField4Help": "Plain language, an accessible format, a person to contact, and time to respond.",
+        "artifactField5Label": "Contract reporting and monitoring",
+        "artifactField5Help": "What the contract reports by community with small-group protection, and how access problems get fixed during the term.",
+        "artifactField6Label": "Renewal, corrective action and closeout",
+        "artifactField6Help": "At the relevant stage, compare continuing, changing or ending the arrangement. What evidence and feedback inform that choice? Identify access risks, needed corrections, continuity of services and the responsible review. Mark stages that do not yet apply; do not assume an award or renewal is authorized.",
+        "artifactField7Label": "Who reviewed this",
+        "artifactField7Help": "Contracts office, Equity Director, program owner, and community partners.",
+        "artifactField8Label": "What you chose not to assume",
+        "artifactField8Help": "About who can apply and who is served.",
+        "artifactField9Label": "Sources and their authority labels",
+        "artifactField9Help": "Procurement rules and policy sources, labeled.",
+        "artifactField10Label": "Who owns each follow-up",
+        "artifactField10Help": "",
+        "artifactField11Label": "Monitoring review date",
+        "artifactField11Help": "",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the position, decision, meeting, or contract this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the decision was settled and what role or authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "Every source has an authority label and can be verified",
+        "reviewRule6Message": "Please label each source Official, Guidance, or Outside source; check before use. If a citation came from memory, leave it out and ask the policy owner."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a procurement equity record: who the service reaches, requirements in the solicitation, evaluation criteria, contract reporting and access terms, monitoring by community, and the partners who own the rules.",
+          "after": "Use this path to prepare questions and proposed terms for a procurement equity review: who the service reaches, solicitation requirements, evaluation criteria, reporting, access, and monitoring. The contracts or procurement office confirms applicable rules and the required approval process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "needsWork",
+            1
+          ],
+          "before": "Preferences that are never scored",
+          "after": "Published evaluation criteria applied inconsistently or left out of the assessment",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include confidential procurement details or vendor-identifying information. Your progress is saved only on this computer.",
+          "after": "Keep confidential procurement details and vendor-identifying information out of this learning worksheet and Ask. Use authorized procurement records for actual proposals, evaluations, and decisions.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step1Guidance"
+          ],
+          "before": "If the service reaches particular Minnesota communities, read the relevant briefs for access and trusted partners.",
+          "after": "Use relevant community briefs to identify access questions and possible contacts. Confirm current roles, relevant expertise, and community perspectives; being listed in a brief does not establish that a partner represents or is trusted by everyone.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the record. Your notes are saved only on this computer. Leave out vendor-identifying and confidential procurement details.",
+          "after": "Prepare the review record using the downloaded checklist. Leave out vendor-identifying and confidential procurement details, and mark proposed requirements or approvals as pending until confirmed.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-11",
+      "kind": "surface",
+      "route": "/practice/gp-11",
+      "original": {
+        "title": "Leadership pathway or sponsorship plan for staff with disabilities",
+        "staffLabel": "I'm building a leadership pathway or sponsorship plan",
+        "signals": [
+          "A lead, supervisor, or leadership cohort pathway being designed or reviewed",
+          "Leadership criteria that live in people's heads",
+          "A sponsorship effort for people who are rarely put forward"
+        ],
+        "startingCompetence": "You shape how people move into lead and leadership roles and want the pathway to work for staff with disabilities without asking anyone to disclose.",
+        "graduatedLooksLike": "By the end, you will have a leadership pathway or sponsorship plan: a transparent pathway map, leadership criteria tested for job-relatedness, sponsors with decision power, an owner for accommodations across every transition, cohort events that are accessible every time, program-level measures with suppression, and a review date. No one is identified as disabled anywhere in it.",
+        "askStarters": [
+          "We are redesigning our lead-worker pathway. How do we make it work for staff with disabilities without asking anyone to disclose?",
+          "Which of our leadership criteria are proxies, and what would replace them?",
+          "How do we make sure accommodations carry across a rotation or a cohort?"
+        ],
+        "artifactTitle": "Leadership pathway or sponsorship plan",
+        "needsWork": [
+          "A mentoring program with no sponsorship",
+          "A cohort that is accessible on request",
+          "A plan that lists who is disabled"
+        ],
+        "readyToUse": [
+          "The pathway map is written and public",
+          "Criteria are tied to leadership work",
+          "Accommodations have an owner across every transition and sponsors hold decision power"
+        ],
+        "privacy": "Never record who is disabled or any accommodation history. Describe the pathway, not people. Your progress is saved only on this computer and is not used to rank anyone.",
+        "step0Title": "Test the pathway, not the person",
+        "step0Guidance": "Browse published workforce guidance. Use the plan below to examine advancement criteria, transitions, sponsorship, and evidence of opportunity across your workplace. Identify questions that need leadership, HR, or your Equity Director.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-11"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the pathway also aims to reach staff from particular Minnesota communities, read the relevant brief for what not to assume.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the accessible leadership pathways note, the leadership criteria check, the accommodations-across-transitions aid, and the sponsorship note.",
+        "step2Links": [
+          {
+            "label": "Accessible leadership pathways and sponsorship",
+            "href": "/resources/pn-accessible-leadership-pathways"
+          },
+          {
+            "label": "Leadership criteria: are they job related?",
+            "href": "/resources/ja-leadership-criteria-job-relatedness"
+          },
+          {
+            "label": "Accommodations across transitions",
+            "href": "/resources/ja-accommodation-across-transitions"
+          },
+          {
+            "label": "Mentoring, sponsorship, and reverse mentoring",
+            "href": "/resources/pn-mentoring-sponsorship"
+          }
+        ],
+        "step3Title": "Draft your pathway or sponsorship plan",
+        "step3Guidance": "Complete the plan. Your notes are saved only on this computer. Do not name anyone or record who is disabled.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm the pathway map is written, each criterion is tied to leadership work, accommodations have an owner at every transition, cohort events are accessible every time, sponsors hold decision power, measures use aggregates with suppression, and no individual is identified.",
+        "step4Links": [],
+        "step5Title": "Take it to the right people",
+        "step5Guidance": "Bring the plan to division leadership and your Equity Director. Individual accommodation matters go through the confidential process with HR. Use existing workplace contacts for professional guidance when needed.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?matter=advancement_or_leadership_pathway"
+          }
+        ],
+        "artifactField0Label": "Pathway, cohort, or sponsorship effort and its owner",
+        "artifactField0Help": "The pathway, not a person.",
+        "artifactField1Label": "What the lead or leadership role requires, which experiences count, and how to get them",
+        "artifactField1Help": "Write the pathway map so advancement does not depend on informal networks.",
+        "artifactField2Label": "Leadership criteria and the leadership work each one predicts",
+        "artifactField2Help": "One line per criterion, including unwritten ones. Replace proxies such as executive presence or always-on availability with observable leadership behaviors.",
+        "artifactField3Label": "Transitions and the responsible role or office at each",
+        "artifactField3Help": "Nomination, interview, acting assignment, cohort, new team, return from leave. Identify the responsible role or office at each; keep individual accommodation details in the confidential process.",
+        "artifactField4Label": "Accessible every time",
+        "artifactField4Help": "Materials in advance, captioning, flexible participation formats, no timed or drag-based activities, accommodation offered to everyone in the same sentence as logistics.",
+        "artifactField5Label": "Sponsorship with decision power",
+        "artifactField5Help": "How sponsors are matched with people who want them, what sponsors commit to, and how you will know whether sponsorship leads to assignments, using aggregates only.",
+        "artifactField6Label": "How you heard from disabled staff without forcing disclosure",
+        "artifactField6Help": "Aggregate listening, employee resource groups, trusted intermediaries, and how you will report back.",
+        "artifactField7Label": "Reviewing roles or offices and their authority",
+        "artifactField7Help": "Identify the reviewing roles or offices, such as division leadership, HR, the Equity Director, or an employee resource group. Keep individual names out of these notes.",
+        "artifactField8Label": "What you chose not to assume",
+        "artifactField8Help": "About who is disabled, what accommodation someone needs, or what readiness looks like.",
+        "artifactField9Label": "Role or office responsible for each follow-up",
+        "artifactField9Help": "Use roles or offices, without names or personal accommodation details.",
+        "artifactField10Label": "Review and report-back date",
+        "artifactField10Help": "When you will look at aggregate patterns and tell staff what changed.",
+        "reviewRule0Label": "Every follow-up has a responsible role or office",
+        "reviewRule0Message": "Identify the role or office responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the position, decision, meeting, or contract this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You identified the reviewing roles or offices and their authority",
+        "reviewRule4Message": "List the roles or offices involved before the decision was settled and their authority.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "No names of candidates, employees, or complainants are included",
+        "reviewRule6Message": "Please leave out individual names. Describe the process, not a person."
+      },
+      "changes": [
+        {
+          "path": [
+            "startingCompetence"
+          ],
+          "before": "You shape how people move into lead and leadership roles and want the pathway to work for staff with disabilities without asking anyone to disclose.",
+          "after": "You shape access to leadership roles and want to examine barriers for staff with disabilities. Review the pathway without identifying individuals or asking them to disclose personal information in this learning exercise.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a leadership pathway or sponsorship plan: a transparent pathway map, leadership criteria tested for job-relatedness, sponsors with decision power, an owner for accommodations across every transition, cohort events that are accessible every time, program-level measures with suppression, and a review date. No one is identified as disabled anywhere in it.",
+          "after": "Use this path to prepare a leadership pathway or sponsorship plan: visible criteria tied to the work, access to development opportunities, sponsors with relevant influence, responsibility for access across transitions, and a review date. Plan aggregate measures with privacy safeguards. Keep individual disability and accommodation information in the authorized process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Never record who is disabled or any accommodation history. Describe the pathway, not people. Your progress is saved only on this computer and is not used to rank anyone.",
+          "after": "Do not record individual disability information or accommodation histories in this learning worksheet. Describe the pathway and responsible roles. Individual requests and records belong in the authorized accommodation process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the plan. Your notes are saved only on this computer. Do not name anyone or record who is disabled.",
+          "after": "Prepare the pathway or sponsorship plan using the downloaded checklist. Use roles rather than names and keep individual disability or accommodation information out of the plan.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step4Guidance"
+          ],
+          "before": "Confirm the pathway map is written, each criterion is tied to leadership work, accommodations have an owner at every transition, cohort events are accessible every time, sponsors hold decision power, measures use aggregates with suppression, and no individual is identified.",
+          "after": "Check that the pathway is visible, criteria relate to leadership work, and responsibility for access is clear at each transition. Review participation formats, sponsor commitments, and aggregate measures with appropriate privacy safeguards. Confirm unresolved access questions through the authorized process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField4Help"
+          ],
+          "before": "Materials in advance, captioning, flexible participation formats, no timed or drag-based activities, accommodation offered to everyone in the same sentence as logistics.",
+          "after": "Plan materials in advance, captions and flexible participation formats. Provide alternatives to timed or drag-based activities and explain how to request an accommodation. Confirm individual needs through the appropriate process rather than assuming one arrangement works for everyone.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField10Help"
+          ],
+          "before": "When you will look at aggregate patterns and tell staff what changed.",
+          "after": "Set a date to review aggregate patterns and tell staff what changed, what stayed the same, and why.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "askStarters",
+            0
+          ],
+          "before": "We are redesigning our lead-worker pathway. How do we make it work for staff with disabilities without asking anyone to disclose?",
+          "after": "How can we make our lead-worker pathway accessible and explain the appropriate process for individual accommodation requests?",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "readyToUse",
+            2
+          ],
+          "before": "Accommodations have an owner across every transition and sponsors hold decision power",
+          "after": "Access has a responsible role across transitions, and sponsor commitments fit their influence and authority",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "needsWork",
+            1
+          ],
+          "before": "A cohort that is accessible on request",
+          "after": "A cohort with no planned access arrangements or clear accommodation-request process",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-12",
+      "kind": "surface",
+      "route": "/practice/gp-12",
+      "original": {
+        "title": "Equity Pause for a routine decision",
+        "staffLabel": "I'm making a routine decision and want a quick equity check",
+        "signals": [
+          "A meeting invitation, announcement, or internal notice about to go out",
+          "A small change to a process, schedule, or form",
+          "A routine choice with limited reach that you could still adjust"
+        ],
+        "startingCompetence": "You are about to make a routine decision and want a short, honest check of who it affects and what you might change before it goes out.",
+        "graduatedLooksLike": "By the end, you will have a short record of the decision: who is affected differently, who can change it, the access needs you checked, what you know and do not know yet, one alternative you considered, and your next step with a review date. You can complete routine decisions on your own and recognize when a fuller analysis applies.",
+        "askStarters": [
+          "I am sending a division-wide meeting invitation. What should I check before it goes out?",
+          "Is this small change to our intake schedule something that needs an equity look, or can I go ahead?",
+          "Which routine decisions deserve an equity pause before they go out?"
+        ],
+        "artifactTitle": "Equity Pause",
+        "needsWork": [
+          "A pause completed after the decision already went out",
+          "\"No one is affected\" with no one asked",
+          "A check that never names a next step"
+        ],
+        "readyToUse": [
+          "A specific decision, the people it affects differently, and one thing you changed or kept with a reason",
+          "A clear sense of whether a fuller analysis applies"
+        ],
+        "privacy": "Describe the decision and the people it affects in general terms. Do not include names or case details. Your notes are saved only on this computer and are not used to rank anyone.",
+        "step0Title": "Consider the first question",
+        "step0Guidance": "Ask which questions a decision like yours should raise. Describe your own decision in the record below, identify the people affected, and note what evidence or fuller review it may need.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-12"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the decision reaches particular Minnesota communities, read the relevant brief for access needs and what not to assume.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the plain-language and language access checklists for anything people will read. If the decision turns out to have real reach, the toolkit companion shows what a scan or full analysis asks.",
+        "step2Links": [
+          {
+            "label": "Plain language and accessible documents",
+            "href": "/resources/ja-plain-language"
+          },
+          {
+            "label": "Language access checklist",
+            "href": "/resources/ja-language-access-checklist"
+          },
+          {
+            "label": "Equity Analysis Toolkit companion",
+            "href": "/learn/equity-toolkit"
+          },
+          {
+            "label": "Record this pause in the open register (optional)",
+            "href": "/equity-policy/analysis?kind=pause"
+          }
+        ],
+        "step3Title": "Write your pause",
+        "step3Guidance": "Answer the questions for this decision. Your notes are saved only on this computer, so please leave out names and case details.",
+        "step3Links": [],
+        "step4Title": "Review your pause",
+        "step4Guidance": "Confirm the decision is specific, you checked access, you know who can change it, you noted what you did not assume, and you have a next step with a date. If the reach or the stakes are larger than you first thought, move to the Equity Analysis Toolkit.",
+        "step4Links": [
+          {
+            "label": "Equity analysis for a decision",
+            "href": "/practice/gp-7"
+          }
+        ],
+        "step5Title": "Talk it through (optional)",
+        "step5Guidance": "Most routine decisions do not need a conversation. If a question remains, or the decision affects people more than you expected, a consultation or the right office can help.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person"
+          }
+        ],
+        "artifactField0Label": "The decision, in one sentence",
+        "artifactField0Help": "Name the meeting, notice, change, or choice. Not a person.",
+        "artifactField1Label": "Who this affects, and who it affects differently",
+        "artifactField1Help": "Think about language, disability, schedule, location, technology, trust, and who might miss it entirely.",
+        "artifactField2Label": "Who can change this decision, and who you checked with",
+        "artifactField2Help": "The role that decides, and anyone you asked before settling it.",
+        "artifactField3Label": "Access needs you checked",
+        "artifactField3Help": "Plain language, an accessible format, interpretation or translation, timing, and a way to take part or respond that does not require one channel.",
+        "artifactField4Label": "What you know, and what you do not know yet",
+        "artifactField4Help": "Evidence you have, and the question you would ask if you had five more minutes.",
+        "artifactField5Label": "One alternative that would reduce a barrier",
+        "artifactField5Help": "A different time, format, channel, wording, or usual choice. Note whether you chose it, and why.",
+        "artifactField6Label": "What you chose not to assume",
+        "artifactField6Help": "About the people affected and how they will receive this.",
+        "artifactField7Label": "Your next step, and who is responsible",
+        "artifactField7Help": "One line for each step, including who does it.",
+        "artifactField8Label": "When you will look at this again",
+        "artifactField8Help": "Choose a date after the decision has had an effect.",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the decision, message, or material this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and what you found.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who you checked with or who should look at this, and what role or authority they have.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "No names of employees, clients, or complainants are included",
+        "reviewRule6Message": "Please leave out individual names. Describe the decision and the people it affects in general terms."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a short record of the decision: who is affected differently, who can change it, the access needs you checked, what you know and do not know yet, one alternative you considered, and your next step with a review date. You can complete routine decisions on your own and recognize when a fuller analysis applies.",
+          "after": "Use this path to prepare a short decision record: who may be affected differently, who has authority, access needs, evidence and uncertainty, an alternative, and a next step with a review date. This check does not authorize a decision or determine whether formal equity-analysis requirements apply.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Describe the decision and the people it affects in general terms. Do not include names or case details. Your notes are saved only on this computer and are not used to rank anyone.",
+          "after": "Describe the decision and affected groups in general terms without names or case details. Identify responsible roles in the learning worksheet and use the authorized process for actual assignments and records.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step1Guidance"
+          ],
+          "before": "If the decision reaches particular Minnesota communities, read the relevant brief for access needs and what not to assume.",
+          "after": "Use relevant community briefs to identify questions about access and context. Check needs with the people affected instead of treating the brief as a description of an individual.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step2Guidance"
+          ],
+          "before": "Use the plain-language and language access checklists for anything people will read. If the decision turns out to have real reach, the toolkit companion shows what a scan or full analysis asks.",
+          "after": "Use the plain-language and language-access checklists for material people will read. Review the official equity policy and User Guide, and confirm any required review with the responsible equity office; calling a decision routine does not exempt it from those requirements.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Answer the questions for this decision. Your notes are saved only on this computer, so please leave out names and case details.",
+          "after": "Use the downloaded checklist to record the decision, evidence, uncertainty, and next step. Keep names and case details out of this learning exercise.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step5Guidance"
+          ],
+          "before": "Most routine decisions do not need a conversation. If a question remains, or the decision affects people more than you expected, a consultation or the right office can help.",
+          "after": "Use the person or office responsible for the decision when authority, evidence, access, or review requirements remain unclear. Follow any required consultation or approval process even when the decision initially appears routine.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step5Title"
+          ],
+          "before": "Talk it through (optional)",
+          "after": "Seek guidance when needed",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-13",
+      "kind": "surface",
+      "route": "/practice/gp-13",
+      "original": {
+        "title": "Checking your own material for access, assumptions, and tone",
+        "staffLabel": "I'm checking something I wrote before I share it",
+        "signals": [
+          "A notice, email, web page, slide deck, or training material you wrote",
+          "A job posting or staff guidance you are about to send",
+          "Anything that will reach staff or the public and that you can still change"
+        ],
+        "startingCompetence": "You wrote something and want to check it yourself in three passes before it goes out: whether people can read and reach it, whether it assumes knowledge or norms people may not share, and whether it invites rather than warns.",
+        "graduatedLooksLike": "By the end, you will have a three-part check of your material: what you found and changed for access and plain language, for assumed knowledge and representation, and for tone, along with what remains and when you will look again. You can run this check on your own writing routinely, and you know when to ask a colleague to review a draft instead.",
+        "askStarters": [
+          "Can you check this announcement for reading level, acronyms, and tone before I send it?",
+          "What am I assuming people already know in my guidance?",
+          "How do I say this so it invites people instead of warning them?"
+        ],
+        "artifactTitle": "Three-pass check of your material",
+        "needsWork": [
+          "A reading-level number with nothing changed",
+          "\"Everyone knows what we mean\"",
+          "A warning rewritten in friendlier words that still threatens"
+        ],
+        "readyToUse": [
+          "Specific sentences you shortened, terms you defined, and images you described",
+          "One assumption you made explicit",
+          "A sentence that now tells people how to succeed instead of what happens if they fail"
+        ],
+        "privacy": "Do not paste confidential or predecisional material. Your notes are saved only on this computer.",
+        "step0Title": "Read with three questions in mind",
+        "step0Guidance": "Read your material in three passes: access and plain language, assumed knowledge and representation, and tone. Record a specific finding and revision for each pass below. Ask when you need an example or an explanation.",
+        "step0Links": [
+          {
+            "label": "Browse writing guidance",
+            "href": "/ask?path=gp-13"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If your material is for or names particular Minnesota communities, read the relevant brief for naming, language, and access.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the plain-language and language access checklists, and the two short courses on accessible content and inclusive communication.",
+        "step2Links": [
+          {
+            "label": "Plain language and accessible documents",
+            "href": "/resources/ja-plain-language"
+          },
+          {
+            "label": "Language access checklist",
+            "href": "/resources/ja-language-access-checklist"
+          },
+          {
+            "label": "Accessible content and digital learning",
+            "href": "/courses/di-accessible-content-and-digital-learning"
+          },
+          {
+            "label": "Inclusive communication",
+            "href": "/courses/di-inclusive-communication"
+          }
+        ],
+        "step3Title": "Run the three passes",
+        "step3Guidance": "Record what you found and changed in each pass. Your notes are saved only on this computer. Do not paste confidential material.",
+        "step3Links": [],
+        "step4Title": "Review your check",
+        "step4Guidance": "Confirm each pass names specific changes, you noted what you assumed, you know who else should look, and you have a date to send or revisit it.",
+        "step4Links": [],
+        "step5Title": "Ask a colleague to review it (optional)",
+        "step5Guidance": "A second reader catches what the writer cannot. If you would like someone to review your draft, the draft review path gives them a structure, and the right office can help with language access or accessibility questions.",
+        "step5Links": [
+          {
+            "label": "Reviewing a draft for equity, access, and plain language",
+            "href": "/practice/gp-9"
+          },
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?matter=accessibility_barrier"
+          }
+        ],
+        "artifactField0Label": "What you wrote, and who it is for",
+        "artifactField0Help": "The notice, message, page, or material, and its audience.",
+        "artifactField1Label": "Pass one: access and plain language",
+        "artifactField1Help": "Sentence length and reading level. Acronyms defined the first time they appear. Headings that use real heading styles. Alternative text for images. Color contrast. Links that say where they go. Note what you found and what you changed.",
+        "artifactField2Label": "Pass two: what you assumed people already know",
+        "artifactField2Help": "Deadlines, formats, places, and processes stated in full. Dates that avoid major religious observances or offer an alternative. Languages people may need. Examples that show a range of people without stereotypes. Note what you made explicit.",
+        "artifactField3Label": "Pass three: tone",
+        "artifactField3Help": "Invitational rather than punitive. Person-first or identity-first language as the community prefers. Acknowledges that we are still learning. Strengths and goals rather than deficits. Note the sentences you rewrote.",
+        "artifactField4Label": "Changes you made",
+        "artifactField4Help": "One line each. Specific and short.",
+        "artifactField5Label": "Who else should look at this, and why",
+        "artifactField5Help": "Language access, accessibility, communications, or the owner of the process you describe.",
+        "artifactField6Label": "Who owns each remaining change",
+        "artifactField6Help": "One line for each change that is not yet done, including who does it.",
+        "artifactField7Label": "When you will send it or check it again",
+        "artifactField7Help": "",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the decision, message, or material this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and what you found.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who you checked with or who should look at this, and what role or authority they have.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "No names of employees, clients, or complainants are included",
+        "reviewRule6Message": "Please leave out individual names. Describe the decision and the people it affects in general terms."
+      },
+      "changes": [
+        {
+          "path": [
+            "startingCompetence"
+          ],
+          "before": "You wrote something and want to check it yourself in three passes before it goes out: whether people can read and reach it, whether it assumes knowledge or norms people may not share, and whether it invites rather than warns.",
+          "after": "You wrote something and want to review it in three passes: whether people can access and understand it, whether it assumes knowledge or norms they may not share, and whether its tone is respectful and accurate. Preserve required notices, deadlines, and consequences.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a three-part check of your material: what you found and changed for access and plain language, for assumed knowledge and representation, and for tone, along with what remains and when you will look again. You can run this check on your own writing routinely, and you know when to ask a colleague to review a draft instead.",
+          "after": "Use this path to document a three-part review of your material: access and plain language, assumed knowledge and representation, and tone. Record what you retained or revised, why, what still needs another reviewer, and when you will revisit it.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not paste confidential or predecisional material. Your notes are saved only on this computer.",
+          "after": "Use material you are authorized to review. Keep confidential, predecisional, and personal material out of Ask and this learning exercise. Store completed work through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Read your material in three passes: access and plain language, assumed knowledge and representation, and tone. Record a specific finding and revision for each pass below. Ask when you need an example or an explanation.",
+          "after": "Read in three passes: access and plain language, assumed knowledge and representation, and tone. Record specific observations and reasons to retain or revise the material. Ask for an explanation or example without including confidential details.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Record what you found and changed in each pass. Your notes are saved only on this computer. Do not paste confidential material.",
+          "after": "Use the downloaded checklist to record what each pass found and why you retained or revised the wording. Do not paste confidential material.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step4Guidance"
+          ],
+          "before": "Confirm each pass names specific changes, you noted what you assumed, you know who else should look, and you have a date to send or revisit it.",
+          "after": "Check that each pass records a finding and its reason, assumptions are explicit, and any further review has a responsible role and date. Confirm that edits preserve required information and the original meaning.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step5Guidance"
+          ],
+          "before": "A second reader catches what the writer cannot. If you would like someone to review your draft, the draft review path gives them a structure, and the right office can help with language access or accessibility questions.",
+          "after": "A second reader may notice barriers or ambiguities the writer missed. Use the draft-review path to structure that review, and seek the responsible office for language access, accessibility, or required wording.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField3Help"
+          ],
+          "before": "Invitational rather than punitive. Person-first or identity-first language as the community prefers. Acknowledges that we are still learning. Strengths and goals rather than deficits. Note the sentences you rewrote.",
+          "after": "Use a respectful, direct tone and explain how to act. Preserve accurate requirements and consequences. Ask about person-first or identity-first language when an individual preference is relevant; preferences can differ within a community. Record revisions and the meaning they preserve.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "readyToUse",
+            2
+          ],
+          "before": "A sentence that now tells people how to succeed instead of what happens if they fail",
+          "after": "Clear next steps and a respectful tone, with required notices and consequences preserved",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "askStarters",
+            2
+          ],
+          "before": "How do I say this so it invites people instead of warning them?",
+          "after": "How can I make this message respectful and helpful while preserving any required notice, deadline, or consequence?",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "needsWork",
+            0
+          ],
+          "before": "A reading-level number with nothing changed",
+          "after": "A reading-level number without specific observations or reasons to retain or revise the material",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "readyToUse",
+            0
+          ],
+          "before": "Specific sentences you shortened, terms you defined, and images you described",
+          "after": "Specific observations about sentences, terminology and images, with reasons for keeping or revising them",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process.",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        }
+      ]
+    }
+  ]
+}

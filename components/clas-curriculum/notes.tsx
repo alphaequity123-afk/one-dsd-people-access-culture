@@ -72,7 +72,7 @@ export function ImprovementPlan({ curriculumTitle, modules, version }: PlanProps
   return (
     <section className="clas-plan" aria-labelledby="plan">
       <h2 id="plan">Your improvement plan</h2>
-      <p>This plan is assembled from the working notes saved in this browser profile for the nine parts ({written} of {modules.length} parts have a note). Each heading is the lesson's prompt. Edit any part's note on its own page; the plan updates when you return.</p>
+      <p>This plan is assembled from the working notes saved in this browser profile for the nine parts ({written} of {modules.length} parts have a note). Each heading is the lesson&apos;s prompt. Edit any part&apos;s note on its own page; the plan updates when you return.</p>
       <p>{NOTE_PRIVACY}</p>
       <div className="clas-plan-actions">
         <button type="button" onClick={() => downloadText('CLAS-my-improvement-plan.txt', planText(curriculumTitle, sections))}>Download my plan (.txt)</button>

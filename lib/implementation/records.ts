@@ -11,12 +11,12 @@ export type RecordBook = { version: 1; records: LocalRecord[] };
 export const ACTION_PLAN_FIELDS: RecordField[] = [
   { key: "source", label: "What I learned from", help: "The lesson, practice or reading that prompted this plan." },
   { key: "insight", label: "What I want to carry forward", help: "One idea, in your own words, that you want to act on.", kind: "long" },
-  { key: "commitment", label: "What I will do differently", help: "A specific behavior you can see or hear. Start with a verb: ask, offer, check, invite, write.", kind: "long" },
+  { key: "commitment", label: "What I will do next", help: "Identify a specific step within your responsibility. The evidence may support retaining a practice, making a change, checking a question or seeking the responsible review.", kind: "long" },
   { key: "situation", label: "Where and when it will happen", help: "The meeting, task or moment where you will try it. A real date helps." },
-  { key: "firstStep", label: "My first small step this week", help: "Something you can do in fifteen minutes or less." },
+  { key: "firstStep", label: "My first small step this week", help: "A manageable first step; note any information, support or authorization needed before proceeding." },
   { key: "involve", label: "Who I will involve or tell", help: "A colleague, supervisor or the people affected. Naming a role is enough." },
   { key: "obstacle", label: "What might get in the way, and my plan for it", help: "If this happens, then I will...", kind: "long" },
-  { key: "reviewDate", label: "Review date", help: "Thirty days is a good rhythm. Change it if another date fits.", kind: "date" },
+  { key: "reviewDate", label: "Review date", help: "The form starts with a thirty-day review date. Adjust it to the work and any required timing.", kind: "date" },
   { key: "happened", label: "At review: what happened", help: "What you tried and what you noticed. Leave out client, case, health and personnel details.", kind: "long" },
   { key: "changed", label: "At review: what changed for the people affected", help: "Separate what you observed from what you hope.", kind: "long" },
   { key: "next", label: "At review: keep, adjust or stop", help: "Your next step after the review.", kind: "choice", choices: ["", "Keep doing it", "Adjust it", "Stop and try something else"] },
@@ -44,7 +44,7 @@ export const REFLECTION_FIELDS: RecordField[] = [
   { key: "what", label: "What happened", help: "What you saw, heard or did. Stay with what you observed. Leave out client, case, health and personnel details.", kind: "long" },
   { key: "soWhat", label: "Why it matters", help: "What it shows you about access, fairness or how your team works, and about your own part in it.", kind: "long" },
   { key: "nowWhat", label: "What I will do next", help: "One thing you will keep, change or try. Start with a verb.", kind: "long" },
-  { key: "reviewDate", label: "When I will look back", help: "A week suits a small step. A month shows whether it lasted.", kind: "date" },
+  { key: "reviewDate", label: "When I will look back", help: "The form starts with a one-week review date. Choose a date that lets you examine the experience without assuming a fixed period will establish its effects.", kind: "date" },
   { key: "lookBack", label: "Looking back: what I notice now", help: "Come back on that date. What changed, for whom, and what would you do differently?", kind: "long" },
 ];
 
@@ -108,7 +108,7 @@ function escapeHtml(value: string): string { return value.replace(/&/g, "&amp;")
 export function recordText(record: LocalRecord): string {
   const lines = [`${RECORD_LABEL[record.kind]}: ${record.title}`, `Last updated ${record.updatedAt.slice(0, 10)}`, ""];
   for (const field of FIELDS_FOR[record.kind]) lines.push(field.label, record.fields[field.key]?.trim() || "(not yet written)", "");
-  lines.push("Kept by you. People, Access and Culture keeps no copy of this record.");
+  lines.push("This is an exported copy. Any saved browser or team-space copies are separate; manage each according to the requirements that apply to your work.");
   return lines.join("\n");
 }
 

@@ -20,7 +20,11 @@ const { staticPageCopy } = require(path.join(root, 'lib/content/page-copy-contra
 const { inspectLanguageRevision } = require(path.join(root, 'lib/content/professional-language.ts'));
 const data = JSON.parse(fs.readFileSync(path.join(root, 'lib/content/professional-language-revisions.json'), 'utf8'));
 const courses = JSON.parse(fs.readFileSync(path.join(root, 'lib/content/course-language-revisions.json'), 'utf8'));
-const rows = [...data.revisions, ...courses.courses.map(row => ({ ...row, kind: 'surface', target: `course.${row.courseId}`, changes: row.changes.map(c => ({ ...c, path: ['pack', ...c.path] })) }))];
+const partialCourses = JSON.parse(fs.readFileSync(path.join(root, 'lib/content/course-partial-language-revisions.json'), 'utf8'));
+for (const row of partialCourses.courses) {
+  if (row.scope !== 'three_authored_instruction_fields_only' || row.review?.status !== 'accepted' || row.changes.length !== 3 || new Set(row.changes.map(c => c.path.join('.'))).size !== 3 || row.changes.some(c => !['course.learning.appliedNextStep', 'course.governance.toolkitQuestion', 'jobAid.use.doNext'].includes(c.path.join('.')))) throw Error(`Unreviewed partial course scope: ${row.courseId}`);
+}
+const rows = [...data.revisions, ...partialCourses.courses.map(row => ({ ...row, status: 'reviewed', kind: 'surface', target: `course.${row.courseId}`, changes: row.changes.map(c => ({ ...c, path: ['pack', ...c.path] })) })), ...courses.courses.map(row => ({ ...row, kind: 'surface', target: `course.${row.courseId}`, changes: row.changes.map(c => ({ ...c, path: ['pack', ...c.path] })) }))];
 const seen = new Set(); let fields = 0, reviewed = 0;
 for (const row of rows) {
   if (seen.has(row.target)) throw Error(`Duplicate revision: ${row.target}`);
@@ -48,4 +52,5 @@ for (const row of rows) {
   if (definition) parseEditableSurfaceDocument(definition, { schemaVersion: 1, surfaceId: row.target, scope: definition.scopePolicy === 'dsd' ? 'dsd' : 'one-dhs', values: result.value });
   reviewed++; fields += row.changes.length;
 }
-console.log(`Verified ${reviewed} reviewed page/resource revisions (${fields} fields); originals, protected fields, and current source matches are preserved.`);
+const partialFields = partialCourses.courses.reduce((sum, row) => sum + row.changes.length, 0);
+console.log(`Verified ${reviewed - partialCourses.courses.length} reviewed page/resource objects (${fields - partialFields} fields), plus ${partialCourses.courses.length} partially revised courses (${partialFields} fields); originals, protected fields, and current source matches are preserved.`);
