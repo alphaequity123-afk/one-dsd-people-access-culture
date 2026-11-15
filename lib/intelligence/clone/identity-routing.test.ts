@@ -1,6 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { NextRequest } from "next/server";
 vi.mock("server-only", () => ({}));
+// The closing evidence check has its own tests (verified-draft.test.ts); here it passes the draft through.
+vi.mock("../retrieval/verified-draft", () => ({ verifyAnswerDraft: async (options: { draft: unknown }) => ({ draft: options.draft, repaired: false, reviewed: true, unresolved: [] }) }));
 const f = vi.hoisted(() => ({ index: vi.fn(), research: vi.fn(), complete: vi.fn(), plan: vi.fn(), review: vi.fn(),
   paused: vi.fn(), ask: vi.fn(), admit: vi.fn(), finish: vi.fn(), close: vi.fn(), refusal: vi.fn() }));
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: string, fn: () => unknown) => fn(), auditRefusal: f.refusal }));
@@ -63,7 +65,8 @@ describe("local ASK identity", () => {
 
   it("does not replace a draft review with a self-identity answer", async () => {
     await askConcierge({ question: exactQuestion, mode: "review" }, ctx);
-    expect(f.index).toHaveBeenCalled(); expect(f.research).toHaveBeenCalled();
+    // A draft review reads the program library and stays within it; outside research is not part of a review.
+    expect(f.index).toHaveBeenCalled(); expect(f.research).not.toHaveBeenCalled();
   });
 
   it.each([

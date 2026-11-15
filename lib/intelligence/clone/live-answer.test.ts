@@ -1,5 +1,7 @@
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
+// The closing evidence check has its own tests (verified-draft.test.ts); here it passes the draft through.
+vi.mock("../retrieval/verified-draft", () => ({ verifyAnswerDraft: async (options: { draft: unknown }) => ({ draft: options.draft, repaired: false, reviewed: true, unresolved: [] }) }));
 const f = vi.hoisted(() => ({ complete: vi.fn(), plan: vi.fn(), research: vi.fn(), review: vi.fn() }));
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: string, fn: () => unknown) => fn(), auditRefusal: async () => {} }));
 vi.mock("./jev", () => ({ reviewWithJev: f.review, planWithJev: f.plan, SPECIALIST_GUIDANCE: { resources: "Use the available program evidence.", support: "Point to the responsible person." } }));

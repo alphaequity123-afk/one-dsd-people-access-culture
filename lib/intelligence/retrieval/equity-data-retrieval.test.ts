@@ -10,6 +10,8 @@ import { organizationalBrief, organizationalDocs } from "../memory/organization"
 // only the model adapter, outside research and semantic search replaced. Semantic search
 // returning nothing mirrors production whenever the vector projection is stale.
 const f = vi.hoisted(() => ({ complete: vi.fn() }));
+// The closing evidence check has its own tests (verified-draft.test.ts); here it passes the draft through.
+vi.mock("./verified-draft", () => ({ verifyAnswerDraft: async (options: { draft: unknown }) => ({ draft: options.draft, repaired: false, reviewed: true, unresolved: [] }) }));
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: string, fn: () => unknown) => fn(), auditRefusal: async () => {} }));
 vi.mock("../clone/jev", () => ({ planWithJev: async () => null, SPECIALIST_GUIDANCE: {} }));
 vi.mock("./local-semantic", () => ({ semanticRetrieveForAgent: async () => [], SemanticSearchUnavailable: class extends Error {} }));
@@ -107,7 +109,7 @@ describe("Ask hands the generator the passage with the figure", () => {
   const ctx = () => ({ agent: getAgent("ask_concierge"), role: "staff" as const, dry_run: false, trace_id: "27ee20cc-5384-4e66-af31-9e3ae7e07922" });
   type Source = { id: string; title: string; excerpt: string; href: string; ref?: string };
   let prompts: Array<{ question: string; programSources: Source[] }>;
-  let expected = "";
+  let expected = "", expectedFigure = "";
   beforeEach(() => {
     prompts = [];
     vi.stubEnv("PAC_CLONE_AGENTS", "off"); vi.stubEnv("PAC_STORE", "memory"); vi.stubEnv("PAC_CONTENT_SOURCE", "static");
@@ -115,7 +117,9 @@ describe("Ask hands the generator the passage with the figure", () => {
     f.complete.mockImplementation(async (request: { user: string }) => {
       const payload = JSON.parse(request.user);
       prompts.push(payload);
-      const source = payload.programSources.find((row: Source) => row.id === expected);
+      // A document can supply several passages; a grounded answer quotes the one that holds the figure.
+      const rows = payload.programSources.filter((row: Source) => row.id === expected);
+      const source = rows.find((row: Source) => row.excerpt.includes(expectedFigure)) ?? rows[0];
       const evidenceClaims = source?.ref ? [{ text: source.excerpt, refs: [source.ref] }] : [];
       return { parsed: { shortAnswer: "Answer drafted from the supplied sources.", whyItMatters: "", limits: [], resourceHrefs: [], evidenceClaims } };
     });
@@ -123,12 +127,12 @@ describe("Ask hands the generator the passage with the figure", () => {
   afterEach(() => { vi.unstubAllEnvs(); f.complete.mockReset(); });
   for (const { question, page, figure } of CASES) {
     it(`supplies ${page} for: ${question}`, async () => {
-      expected = equityId(page);
+      expected = equityId(page); expectedFigure = figure;
       const result = await askConcierge({ question, contextPreference: "one_dsd" }, ctx());
       expect(result.kind).toBe("answer");
-      const source = prompts.at(-1)?.programSources.find(row => row.id === expected);
-      expect(source?.href).toBe("/data/equity-baseline/goal/1");
-      expect(source?.excerpt).toContain(figure);
+      const supplied = prompts.at(-1)?.programSources.filter(row => row.id === expected) ?? [];
+      expect(supplied[0]?.href).toBe("/data/equity-baseline/goal/1");
+      expect(supplied.some(row => row.excerpt.includes(figure))).toBe(true);
       if (result.kind === "answer") {
         expect(result.answer.generative).toBe(true);
         expect(result.answer.sources.map(row => row.id)).toContain(expected);

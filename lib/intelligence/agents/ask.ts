@@ -783,7 +783,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       // Everyday answers appear on the page as they are written. A question that touches a personnel matter,
       // a decision with serious consequences or a request for a person is shown only after the closing check.
       const sourcedTask = Boolean(requestedSources) || explicitProgramOnly || wantsCitation(question) || asksForCurrentInformation(question) || shouldPrepareResearchAnswer || publicResearch?.status === "used" || (programRelated && !selfContained);
-      const showAsWritten = Boolean(sink) && !sourcedTask && selfContained && !escalate && jevPlan?.route !== "support" && !tribalWork;
+      const showAsWritten = Boolean(sink) && !escalate && jevPlan?.route !== "support" && !tribalWork;
       let shown = "", shownAt = 0;
       const writeBegan = Date.now();
       const onText = showAsWritten ? (raw: string) => {
