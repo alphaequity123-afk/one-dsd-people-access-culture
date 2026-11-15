@@ -1,0 +1,146 @@
+{
+  "status": "pending_independent_review",
+  "records": [
+    {
+      "kind": "surface",
+      "target": "support.right-person",
+      "route": "/support/right-person",
+      "original": {
+        "introKicker": "When a person needs to decide",
+        "introTitle": "Find the right person",
+        "introLede": "Tell us what kind of work it is. You will get material to begin with on your own, and the roles or offices most likely to own the decision.",
+        "formKicker": "Tell us about the work",
+        "formTitle": "What kind of help do you need?",
+        "formIntro": "Describe the work in general terms. Leave out names, complaints and private case details.",
+        "roleLabel": "Your role in this work",
+        "rolePlaceholder": "Choose a role",
+        "taskLabel": "Area of work",
+        "taskPlaceholder": "Choose an area",
+        "timingLabel": "Timing",
+        "timingPlaceholder": "Choose when you need to act",
+        "dsdQuestion": "Is the work within DSD?",
+        "oneDhsRouteNote": "This points you to the person or office responsible for the work. Consultation requests are not collected on the public learning pages.",
+        "submitLabel": "Show who can help",
+        "resultKicker": "Who can help",
+        "emptyResultTitle": "Who can help will appear here",
+        "emptyResultBody": "Answer the three questions and you will see a place to start on your own, plus the roles or offices most likely to hold the authority you need.",
+        "beginLead": "Begin with the work.",
+        "areaLinkLabel": "Review this area",
+        "libraryLinkLabel": "Find material",
+        "destinationsTitle": "People and offices to consider",
+        "directoryNote": "Use the current DHS staff directory, intranet, or your supervisor to confirm the named contact. Contact details appear here once the responsible office has confirmed them.",
+        "dsdOptionKicker": "One DSD option",
+        "dsdOptionTitle": "Another perspective may help",
+        "dsdOptionBody": "Talk the work through within your existing, authorized workplace arrangements. Learning on this site informs a decision; it does not make one.",
+        "dsdOptionLink": "Find the responsible person",
+        "selectedAreaLabel": "Selected area",
+        "oneDhsDecisionLabel": "Connect with the right person",
+        "oneDhsDecisionBody": "Start with program guidance, then contact the responsible person or office when a person needs to decide.",
+        "oneDsdDecisionLabel": "Request a One DSD consultation",
+        "oneDsdDecisionBody": "After using the support that fits your work, share a general request so it can be confirmed as DSD work.",
+        "roleError": "Choose the role closest to your work.",
+        "taskError": "Choose the area closest to your task.",
+        "timingError": "Choose when you need to act.",
+        "roleStaffMemberLabel": "Staff member",
+        "roleSupervisorOrManagerLabel": "Supervisor or manager",
+        "rolePolicyProgramOrServiceProfessionalLabel": "Policy, program, or service professional",
+        "roleWorkforceOrHumanResourcesProfessionalLabel": "Workforce or Human Resources professional",
+        "roleCommunityEngagementProfessionalLabel": "Community engagement professional",
+        "roleAccessibilityOrLanguageAccessProfessionalLabel": "Accessibility or language access professional",
+        "roleDataResearchOrQualityProfessionalLabel": "Data, research, or quality professional",
+        "roleFiscalProcurementOrContractsProfessionalLabel": "Fiscal, procurement, or contracts professional",
+        "roleCommunicationsProfessionalLabel": "Communications professional",
+        "roleEquityDirectorOrSpecialistLabel": "Equity Director or Equity Specialist",
+        "roleAnotherRoleLabel": "Another role",
+        "areaWorkforceEquityLabel": "Workforce equity",
+        "areaPolicyProgramServiceDesignLabel": "Policy, program, and service design",
+        "areaCommunityEngagementCoDesignLabel": "Community engagement and shared design",
+        "areaAccessibilityLanguageAccessLabel": "Accessibility and language access",
+        "areaCultureTrustRepairLabel": "Culture, trust, and repair",
+        "areaLeadershipSystemsChangeLabel": "Leadership and systems change",
+        "areaDataResearchQualityMeasurementLabel": "Data, research, quality, and measurement",
+        "areaFiscalGrantsProcurementContractsLabel": "Fiscal, grants, procurement, and contracts",
+        "areaCommunicationsPublicInformationLabel": "Communications and public information",
+        "urgencyExploratoryLabel": "I’m planning ahead",
+        "urgencyExploratoryGuidance": "You have room to review sources, involve people early, and shape the work before decisions harden.",
+        "urgencyWithin2WeeksLabel": "I need support within two weeks",
+        "urgencyWithin2WeeksGuidance": "Begin with the next decision and identify who needs to be involved before the two-week point.",
+        "urgencyHardDeadlineLabel": "I have a firm deadline",
+        "urgencyHardDeadlineGuidance": "Name the deadline and the decision that must be made, and leave time for responsible review.",
+        "urgencyLiveUrgentLabel": "The work is already in use and needs prompt attention",
+        "urgencyLiveUrgentGuidance": "Focus first on the immediate effect, who may be affected, and the responsible person who can act.",
+        "eligibilityNotCheckedLabel": "I’m not sure whether this work is within One DSD",
+        "eligibilityNotCheckedDescription": "Find the right person now, or confirm which division owns the work.",
+        "eligibilitySelfAttestedDsdLabel": "This work is within the Disability Services Division",
+        "eligibilitySelfAttestedDsdDescription": "See the people and offices responsible for this DSD work.",
+        "eligibilityNotDsdLabel": "This work is outside the Disability Services Division",
+        "eligibilityNotDsdDescription": "You will see the responsible person or office for your area.",
+        "destinationSupervisorOrManagerLabel": "Your supervisor or manager",
+        "destinationSupervisorOrManagerDescription": "Start here when the next step depends on your team, role, workload, or decision authority.",
+        "destinationAdministrationEquityDirectorLabel": "Your administration Equity Director",
+        "destinationAdministrationEquityDirectorDescription": "Contact the Equity Director responsible for the administration where the work sits.",
+        "destinationEquitySpecialistLabel": "An Equity Specialist supporting your area",
+        "destinationEquitySpecialistDescription": "Ask for practical equity support connected to the program, service, or decision.",
+        "destinationPolicyOrProgramOwnerLabel": "The responsible policy or program owner",
+        "destinationPolicyOrProgramOwnerDescription": "Use the person or team with authority for the policy, program, service, or implementation decision.",
+        "destinationHumanResourcesLabel": "Human Resources",
+        "destinationHumanResourcesDescription": "Use the responsible Human Resources contact for workforce processes and official employment guidance.",
+        "destinationAccessibilityOrLanguageAccessLeadLabel": "The responsible accessibility or language access lead",
+        "destinationAccessibilityOrLanguageAccessLeadDescription": "Use the lead or office responsible for access requirements, interpretation, translation, or accessible formats.",
+        "destinationProcurementOrContractOfficeLabel": "The responsible procurement or contract office",
+        "destinationProcurementOrContractOfficeDescription": "Use the office with authority for grant, procurement, contract, or fiscal requirements.",
+        "destinationDataOrQualityLeadLabel": "The responsible data or quality lead",
+        "destinationDataOrQualityLeadDescription": "Use the lead who can confirm data definitions, protections, quality, and appropriate interpretation.",
+        "destinationCommunityEngagementLeadLabel": "The responsible community engagement lead",
+        "destinationCommunityEngagementLeadDescription": "Use the lead or office responsible for community relationships, participation, and follow-through.",
+        "destinationCivilRightsChannelLabel": "The appropriate civil-rights channel",
+        "destinationCivilRightsChannelDescription": "Use the formal channel for a complaint, investigation, discrimination concern, or protected process.",
+        "destinationOfficeOfIndianPolicyOrTribalLiaisonLabel": "The Office of Indian Policy or the responsible Tribal liaison",
+        "destinationOfficeOfIndianPolicyOrTribalLiaisonDescription": "Use the separate government-to-government or Tribal relations process when it applies.",
+        "destinationCommunicationsOrPublicInformationOfficeLabel": "The responsible communications or public information office",
+        "destinationCommunicationsOrPublicInformationOfficeDescription": "Use the office responsible for the message, its release, the channel, and the public response."
+      },
+      "changes": [
+        {
+          "path": [
+            "introLede"
+          ],
+          "before": "Tell us what kind of work it is. You will get material to begin with on your own, and the roles or offices most likely to own the decision.",
+          "after": "Choose your role, the area of work and when you need to act. This guide suggests learning resources and the roles or offices to contact about the decision.",
+          "reason": "Match instructions to the actual selection-only helper and avoid implying a consultation submission or promised directory update."
+        },
+        {
+          "path": [
+            "formIntro"
+          ],
+          "before": "Describe the work in general terms. Leave out names, complaints and private case details.",
+          "after": "Choose the options that describe your work. This guide identifies possible next steps; it does not send a consultation request.",
+          "reason": "Match instructions to the actual selection-only helper and avoid implying a consultation submission or promised directory update."
+        },
+        {
+          "path": [
+            "directoryNote"
+          ],
+          "before": "Use the current DHS staff directory, intranet, or your supervisor to confirm the named contact. Contact details appear here once the responsible office has confirmed them.",
+          "after": "Confirm the current contact through the DHS staff directory, intranet or your supervisor before sharing information about a particular matter.",
+          "reason": "Match instructions to the actual selection-only helper and avoid implying a consultation submission or promised directory update."
+        },
+        {
+          "path": [
+            "oneDhsDecisionBody"
+          ],
+          "before": "Start with program guidance, then contact the responsible person or office when a person needs to decide.",
+          "after": "Use the suggested resources to prepare your question, then contact the person or office with responsibility for the decision.",
+          "reason": "Match instructions to the actual selection-only helper and avoid implying a consultation submission or promised directory update."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "root",
+        "date": "2026-11-15",
+        "scope": "Four fields independently checked against full source and actual select/radio form behavior; unused consultation fields remain dormant."
+      }
+    }
+  ]
+}

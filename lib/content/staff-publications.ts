@@ -156,11 +156,13 @@ function defaultDatabaseFactory(configuration: {
   };
 }
 
-function canonicalizeStaffRoutes(item: ContentItem): ContentItem {
+function canonicalizeStaffRoutes(item: ContentItem, original: ContentItem): ContentItem {
   return {
     ...item,
-    nextActions: item.nextActions.map((action) => ({
+    nextActions: item.nextActions.map((action, index) => ({
       ...withoutRetiredLinks(action),
+      // Keep an independently reviewed label while still retiring its old route.
+      ...(action.label !== original.nextActions[index]?.label ? { label: action.label } : {}),
       href: canonicalStaffHref(action.href),
     })),
   };
@@ -243,9 +245,9 @@ function parsePayload(row: PublicationRow): ContentItem | null {
   if (!expectedPayloadScope || parsed.data.scope !== expectedPayloadScope) {
     throw new Error(`Published content ${row.content_item_id} has a mismatched publication scope.`);
   }
-  const item = canonicalizeStaffRoutes(parsed.data);
+  const item = canonicalizeStaffRoutes(withProfessionalLanguage(`resource.${parsed.data.id}`, parsed.data), parsed.data);
   rememberContentEvidence(item, { sourceId: row.content_item_id, revisionId: row.revision_id, payloadHash: row.payload_sha256, scope: row.scope_id });
-  return withProfessionalLanguage(`resource.${item.id}`, item);
+  return item;
 }
 
 function parseStaticPayload(item: ContentItem): ContentItem {
@@ -256,7 +258,7 @@ function parseStaticPayload(item: ContentItem): ContentItem {
   if (staffReleaseValidationIssues(parsed.data).length > 0) {
     throw new Error(`Published content ${item.id} did not pass the staff presentation contract.`);
   }
-  return withProfessionalLanguage(`resource.${item.id}`, canonicalizeStaffRoutes(parsed.data));
+  return canonicalizeStaffRoutes(withProfessionalLanguage(`resource.${item.id}`, parsed.data), parsed.data);
 }
 
 export function contentVisibleInScope(item: Pick<ContentItem, "scope">, requestedScope: StaffProgramScope): boolean {

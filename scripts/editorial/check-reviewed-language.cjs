@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const Module = require('node:module');
 const ts = require('typescript');
+const { isAcceptedReferenceRepair } = require('./reference-repair.cjs');
 const root = path.resolve(__dirname, '../..');
 const originalResolve = Module._resolveFilename;
 Module._resolveFilename = function(request, parent, isMain, options) {
@@ -30,8 +31,15 @@ for (const row of rows) {
   const original = definition?.approvedValues ?? resource ?? (row.target.startsWith('page.') ? staticPageCopy(row.target.slice(5)) : undefined);
   if (!original) throw Error(`Missing original: ${row.target}`);
   for (const change of row.changes) {
+    if (change.beforeVariants) {
+      const review = change.beforeVariantReview;
+      if (!Array.isArray(change.beforeVariants) || !change.beforeVariants.length || change.beforeVariants.some(v => typeof v !== 'string' || !v.trim()) ||
+          review?.status !== 'accepted' || !review.reviewer || !review.publishedRevision || !/^[a-f0-9]{64}$/.test(review.publishedSha256 ?? '')) {
+        throw Error(`Published source variant lacks accepted exact-revision evidence: ${row.target}`);
+      }
+    }
     const sourceNote = change.path[0] === 'pack' && change.path[1] === 'sources' && typeof change.path[2] === 'number' && change.path[3] === 'note' && change.path.length === 4;
-    if (!sourceNote && change.path.some(key => typeof key === 'string' && /^(?:sources?|href|url|src|introTranscript|introAudio|transcript|captions|poster|audio|video|id|correct|correctAnswer)$/i.test(key))) throw Error(`Protected field changed: ${row.target} ${change.path.join('.')}`);
+    if (!sourceNote && !isAcceptedReferenceRepair(row, change) && change.path.some(key => typeof key === 'string' && /^(?:sources?|href|url|src|introTranscript|introAudio|transcript|captions|poster|audio|video|id|correct|correctAnswer)$/i.test(key))) throw Error(`Protected field changed: ${row.target} ${change.path.join('.')}`);
     if (definition?.protectedFields?.includes(change.path[0])) throw Error(`Protected surface field changed: ${row.target}`);
     if (/<script|<iframe|javascript:/i.test(change.after)) throw Error(`Unsafe markup: ${row.target}`);
   }

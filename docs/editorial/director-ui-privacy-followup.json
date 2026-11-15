@@ -1,0 +1,13 @@
+{
+  "status": "accepted",
+  "reviewer": "coverage_review",
+  "date": "2026-11-15",
+  "file": "app\\equity-review\\director-toolkit\\page.tsx",
+  "changes": [
+    {
+      "before": "fill them in on screen, then print, copy or download. Nothing is saved or sent.",
+      "after": "fill them in on screen, then print, copy or download a record. The app does not autosave or submit your entries."
+    }
+  ],
+  "basis": "Full DirectorToolkitTemplate read: transient useState, prevented form submission, explicit clipboard/download/print; no app autosave or submission. No behavior change."
+}

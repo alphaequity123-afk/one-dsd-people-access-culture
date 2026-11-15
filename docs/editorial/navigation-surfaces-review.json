@@ -665,6 +665,412 @@
       },
       "status": "accepted_retained",
       "review": "Full source read. Existing professional sequence connects observations, competing explanations, community inquiry, adapted communication, decisions and evidence of results. IDI limits, voluntary entry and exact linkedcourseIDs retained. No recorded content changed."
+    },
+    {
+      "target": "one-dsd.program-overview",
+      "route": "/one-dsd/programs",
+      "values": {
+        "title": "DSD programs and services",
+        "intro": "Understand the services DSD supports, the people and partners involved, and where equity can improve everyday decisions.",
+        "servicesHeading": "Eight ways DSD supports people.",
+        "servicesIntro": "Find the program context, a useful question for your work, and a direct route to guidance.",
+        "responsibilitiesHeading": "What DSD does.",
+        "peopleHeading": "People and partners at the center.",
+        "practiceHeading": "Connect the purpose to practice",
+        "practiceIntro": "The Equity Outcome Map provides the shared foundation. The six ADSA implementation goals connect that purpose to practical work in the Aging and Disability Services Administration.",
+        "engageHeading": "When to engage the division.",
+        "contactsHeading": "Division leadership and subject-matter leads.",
+        "prioritiesHeading": "What needs attention and coordination.",
+        "prioritiesIntro": "The division overview identifies these risks and executive watch items. The questions below help directors, managers, supervisors, and staff connect each priority to people, access, and outcomes.",
+        "people": [
+          "People with disabilities across the lifespan, along with their families, caregivers, and supporters.",
+          "Lead agencies, providers, direct support professionals, advocacy organizations, and other service partners."
+        ],
+        "engage": [
+          "Program or policy concerns related to disability services.",
+          "Legislative issues affecting disability programs or service delivery.",
+          "Federal compliance matters requiring a DHS response or coordination.",
+          "High-impact issues involving people, communities, or partners that need executive awareness or a decision."
+        ],
+        "contacts": [
+          "Division director — Heidi Hamilton",
+          "Division deputy director — Calla Oftedahl",
+          "MnCHOICES, CFSS, and SEIU — Mary Lenertz",
+          "Waiver services and standards — Leigh Ann Ahmad",
+          "EIDBI — Sarah Jones",
+          "Rates Framework and WMS — Sharla Scullen",
+          "Disability Hub MN and E1MN — Lesli Kerkhoff"
+        ],
+        "sourceNote": "Division responsibilities, priorities, and named contacts are drawn from the division overview supplied October 12, 2026. Program links and the CFSS transition guidance were checked October 14, 2026. Use current DHS guidance for program requirements and confirm current staff assignments when routing a question.",
+        "directionTitle": "Policy, services, and legislative direction",
+        "directionItems": [
+          "Set statewide policy direction for HCBS disability waiver and state plan services.",
+          "Oversee eligibility, assessment, support planning, authorization, and support for service delivery.",
+          "Shape legislative and policy changes that strengthen disability services and outcomes."
+        ],
+        "qualityTitle": "Quality, integrity, and person-centered practice",
+        "qualityItems": [
+          "Use data, technical assistance, waiver and state plan compliance, and equity to support quality and program integrity, including prevention of fraud, waste, and abuse.",
+          "Build capacity for person-centered practices and positive supports.",
+          "Advance best practices that improve service quality and outcomes."
+        ],
+        "operationsTitle": "Operations, capacity, and navigation",
+        "operationsItems": [
+          "Manage rates, data, technology, contracts, and collective bargaining.",
+          "Connect people to resources, identify navigation barriers, and bring community insights into improvements.",
+          "Manage the SEIU collective bargaining agreement to support consistent statewide implementation."
+        ],
+        "waiversTitle": "HCBS disability waivers",
+        "waiversIntro": "Developmental Disabilities (DD), Community Alternative Care (CAC), Community Access for Disability Inclusion (CADI), and Brain Injury (BI) waivers support community living through services matched to a person's needs and choices.",
+        "waiversQuestion": "Where do assessment, documentation, authorization, or provider availability create barriers to a person's preferred community life?",
+        "waiversLinks": [
+          {
+            "label": "Waiver policy and equity practice",
+            "href": "/one-dsd/programs/hcbs-policy"
+          },
+          {
+            "label": "DHS waiver information",
+            "href": "https://mn.gov/dhs/disability-aging/home-and-community-services/programs-and-services/hcbs-waivers/"
+          }
+        ],
+        "cdcsTitle": "Consumer-directed community supports (CDCS)",
+        "cdcsIntro": "A self-directed service option within disability waivers. People have greater choice and responsibility in arranging supports that fit their goals. CDCS is also available through the Alternative Care program.",
+        "cdcsQuestion": "Are budget explanations, planning assistance, and accessible information helping people exercise real choice?",
+        "cdcsLinks": [
+          {
+            "label": "Person-centered practice",
+            "href": "/one-dsd/programs/positive-supports"
+          },
+          {
+            "label": "DHS CDCS information",
+            "href": "https://mn.gov/dhs/disability-aging/home-and-community-services/programs-and-services/cdcs/cdcs.jsp"
+          }
+        ],
+        "home_careTitle": "Home care and Community First Services and Supports",
+        "home_careIntro": "Community First Services and Supports (CFSS), home care nursing, and skilled nursing services help people receive needed support at home and in the community.",
+        "home_careQuestion": "Can people understand their next step, access help in a useful format, and maintain services through a transition?",
+        "home_careLinks": [
+          {
+            "label": "CFSS worked example and toolkit practice",
+            "href": "/learn/equity-toolkit/practice#worked-example"
+          },
+          {
+            "label": "DHS CFSS information",
+            "href": "https://mn.gov/dhs/disability-aging/home-and-community-services/programs-and-services/cfss/"
+          },
+          {
+            "label": "DHS home care and nursing services",
+            "href": "https://mn.gov/dhs/disability-aging/home-and-community-services/programs-and-services/home-care/"
+          }
+        ],
+        "eidbiTitle": "Early Intensive Developmental and Behavioral Intervention (EIDBI)",
+        "eidbiIntro": "Early intensive intervention for children and young people with autism and related conditions, with learning and support for families and caregivers.",
+        "eidbiQuestion": "How do language, provider availability, family experience, and referral processes affect timely access?",
+        "eidbiLinks": [
+          {
+            "label": "Children's services and family access",
+            "href": "/one-dsd/programs/eidbi-children"
+          },
+          {
+            "label": "DHS EIDBI information",
+            "href": "https://mn.gov/dhs/partners-and-providers/news-initiatives-reports-workgroups/long-term-services-and-supports/eidbi/eidbi.jsp"
+          }
+        ],
+        "mnchoicesTitle": "MnCHOICES",
+        "mnchoicesIntro": "Minnesota's assessment and support-planning approach helps identify needs and connect people with long-term services and supports. Counties, Tribal Nations, and managed care organizations use it in their work.",
+        "mnchoicesQuestion": "Is the assessment accessible, person-centered, and consistent, and whose experience is missing from the evidence?",
+        "mnchoicesLinks": [
+          {
+            "label": "Assessment and access practice",
+            "href": "/one-dsd/programs/mnchoices-access"
+          },
+          {
+            "label": "DHS assessment and case management resources",
+            "href": "https://mn.gov/dhs/partners-and-providers/news-initiatives-reports-workgroups/long-term-services-and-supports/cm/cm-resources/"
+          }
+        ],
+        "hubTitle": "Disability Hub MN",
+        "hubIntro": "A statewide resource that helps people navigate services, understand options, solve problems, and plan ahead. Community insights can help DSD recognize where navigation is difficult.",
+        "hubQuestion": "Are people reaching useful help, or being sent between offices without a clear next step?",
+        "hubLinks": [
+          {
+            "label": "Clear communication and training",
+            "href": "/one-dsd/programs/communications-training"
+          },
+          {
+            "label": "Visit Disability Hub MN",
+            "href": "https://disabilityhubmn.org/"
+          }
+        ],
+        "guardianshipTitle": "Public guardianship",
+        "guardianshipIntro": "Protective services for eligible adults. Public guardianship includes court appointment of the DHS commissioner as guardian for an adult with a developmental disability.",
+        "guardianshipQuestion": "How are the person's rights, preferences, accessible communication, and supported decision-making considered?",
+        "guardianshipLinks": [
+          {
+            "label": "Guardianship and decision-making practice",
+            "href": "/one-dsd/programs/tbi-guardianship"
+          },
+          {
+            "label": "DHS public guardianship guidance",
+            "href": "https://mn.gov/dhs/partners-and-providers/news-initiatives-reports-workgroups/long-term-services-and-supports/waiver-policy/guardianship-faq.jsp"
+          }
+        ],
+        "technical_assistanceTitle": "Technical assistance",
+        "technical_assistanceIntro": "The Resource Center, Response Center, Regional Resource Specialists, and Partner Technical Assistance Centers help lead agencies and partners work through program questions and strengthen practice.",
+        "technical_assistanceQuestion": "Are questions resolved consistently, and are recurring barriers informing better guidance and training?",
+        "technical_assistanceLinks": [
+          {
+            "label": "Find the responsible person or office",
+            "href": "/support/right-person"
+          },
+          {
+            "label": "DHS lead agency and technical assistance resources",
+            "href": "https://mn.gov/dhs/hcbs-lead-agency-review/resources/"
+          }
+        ],
+        "cfssPriorityTitle": "CFSS transition and service continuity",
+        "cfssPriorityDetail": "Complete the transition from legacy PCA services while maintaining service continuity. The current DHS manual identifies September 30, 2027 as the extended transition deadline; that extension does not apply to people on Alternative Care or extended PCA.",
+        "cfssPriorityQuestion": "Are people receiving clear notices, practical assistance, and coordinated follow-up before a gap in service occurs?",
+        "cfssPriorityLinks": [
+          {
+            "label": "Current DHS transition guidance",
+            "href": "https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=CFSS-000102"
+          },
+          {
+            "label": "Work through the CFSS notice example",
+            "href": "/learn/equity-toolkit/practice#worked-example"
+          }
+        ],
+        "assessmentPriorityTitle": "MnCHOICES reliability and future technology",
+        "assessmentPriorityDetail": "Complete reliability and validity testing while planning the transition to future assessment and support-planning technology.",
+        "assessmentPriorityQuestion": "What evidence shows consistency, accessibility, and meaningful support for person-centered planning?",
+        "assessmentPriorityLinks": [
+          {
+            "label": "Data, quality, and evaluation",
+            "href": "/one-dsd/programs/data-quality"
+          }
+        ],
+        "compliancePriorityTitle": "Federal compliance",
+        "compliancePriorityDetail": "CMS findings and corrective actions may affect operations and federal funding. Coordinate the authorized response and make implementation responsibilities clear.",
+        "compliancePriorityQuestion": "Who owns each action, what evidence is needed, and where could a change affect access or continuity?",
+        "compliancePriorityLinks": [
+          {
+            "label": "Review policy and service changes",
+            "href": "/equity-review"
+          }
+        ],
+        "spendingPriorityTitle": "Waiver spending and sustainability",
+        "spendingPriorityDetail": "Waiver spending growth places pressure on state and federal budgets and long-term program sustainability.",
+        "spendingPriorityQuestion": "How do proposed responses affect service access, people with different support needs, and provider capacity?",
+        "spendingPriorityLinks": [
+          {
+            "label": "Contracts, rates, and capacity practice",
+            "href": "/one-dsd/programs/contracts-fiscal"
+          }
+        ],
+        "reimaginePriorityTitle": "Waiver Reimagine",
+        "reimaginePriorityDetail": "The direction and timing of future waiver changes remain important policy and implementation considerations. Connect planning and communication to current official updates.",
+        "reimaginePriorityQuestion": "What is decided, what remains open, and how will people and partners be included before choices are settled?",
+        "reimaginePriorityLinks": [
+          {
+            "label": "Policy and legislative analysis course",
+            "href": "/learning/self-directed/index.html?course=A21"
+          }
+        ],
+        "capacityPriorityTitle": "Capacity for concurrent changes",
+        "capacityPriorityDetail": "DSD staff, providers, direct support professionals, and lead agencies are managing multiple major changes at once.",
+        "capacityPriorityQuestion": "Are training, staffing, time, and partner support sufficient for the work being requested?",
+        "capacityPriorityLinks": [
+          {
+            "label": "Work together across teams",
+            "href": "/one-dsd/team"
+          }
+        ],
+        "decisionsPriorityTitle": "Clear decision pathways",
+        "decisionsPriorityDetail": "Federal requirements, statewide technology governance, and cross-agency mandates are reshaping decision pathways. DSD expertise needs a clear route into direction and decisions.",
+        "decisionsPriorityQuestion": "Who is authorized to decide, who contributes expertise, and how will the reasons and next steps be communicated?",
+        "decisionsPriorityLinks": [
+          {
+            "label": "Find decision support",
+            "href": "/support/right-person"
+          }
+        ],
+        "workforcePriorityTitle": "Lead agency and partner workforce",
+        "workforcePriorityDetail": "Lead agency case managers and contracted partners need the capacity and support to maintain quality and continuity.",
+        "workforcePriorityQuestion": "Where are workload, handoffs, or staffing shortages affecting people's experience?",
+        "workforcePriorityLinks": [
+          {
+            "label": "Support planning and case management",
+            "href": "/one-dsd/programs/support-planning"
+          }
+        ]
+      },
+      "status": "accepted_retained",
+      "review": "Complete authored surface read. Explanations connect evidence, individual preferences, decision authority and practical next steps without unsupported guarantees. Existing source dates, staff names and program conditions remain source-dependent, not currently recertified. Toolkit practice renders through staged experience; inactive draft fields are not counted as published changes."
+    },
+    {
+      "target": "equity-toolkit.home",
+      "route": "/learn/equity-toolkit",
+      "values": {
+        "title": "Equity Analysis Toolkit",
+        "intro": "Examine how a decision may affect people differently, consider alternatives, and prepare for a conversation about what should happen next.",
+        "companionNote": "These five steps are a program companion, not the official toolkit sequence. Optional practice does not replace the toolkit, required review, or engagement with affected people.",
+        "roleLabel": "Your area of work",
+        "roleIntro": "Choose an area to connect the example with your responsibilities. You can explore any area.",
+        "noRoleLabel": "Explore without choosing an area",
+        "stageNavLabel": "Toolkit steps",
+        "objectivesTitle": "After this step, you can",
+        "scenarioTitle": "Try a practice example",
+        "consequenceTitle": "What this choice brings into view",
+        "practiceLabel": "Optional practice",
+        "workLabel": "Your actual work",
+        "draftTitle": "Your working draft",
+        "draftIntro": "Keep your actual work separate from the practice example. These notes support discussion; they are not an approval or a completed equity review.",
+        "draftPrivacy": "Use a general description of the work. Do not enter names, case details, or other confidential information. Keep any copy only in a location permitted for your work.",
+        "draftRetention": "Your notes disappear when you leave or reload this page. Print or save your draft before leaving if you want to keep a copy.",
+        "backLabel": "Learning and resources",
+        "clearLabel": "Clear my draft",
+        "clearConfirmLabel": "Clear all draft notes",
+        "cancelLabel": "Keep my notes",
+        "clearedMessage": "Your draft notes have been cleared.",
+        "printLabel": "Print or save my draft",
+        "nextLabel": "Next step",
+        "previousLabel": "Previous step",
+        "resourcesTitle": "Toolkit and related resources",
+        "resourcesIntro": "Open resources at any time. You do not need to finish a lesson or practice activity.",
+        "resourceTitle": "Official policy and related resources",
+        "resourceIntro": "The DHS equity policy and toolkit resource are available here without completing the steps. Follow DHS instructions for access to internal materials and any required review. This companion does not submit work to DHS or grant approval. DHS requirements should not be treated as requirements for every Minnesota agency.",
+        "toolkitLabel": "Open the Equity Analysis Toolkit",
+        "briefsLabel": "Explore community briefs",
+        "scenarioNote": "Use this example to compare choices and consider what you would ask before deciding. It does not describe an actual case or predict the results of a particular decision.",
+        "culturalContext": "Community briefs can help you ask more informed questions. They do not tell you what an individual believes, needs, or prefers. Confirm preferences with the person and involve affected communities in real decisions.",
+        "authorityNote": "The people responsible for the decision retain authority. A practice response cannot establish community agreement or replace direct engagement.",
+        "decisionTitle": "Describe the decision",
+        "decisionIntro": "Start with the decision itself: what is changing, what can still be changed, and who can decide. A clear scope helps people contribute while their input can still matter.",
+        "decisionObjectives": [
+          "Write a one-sentence description of the decision.",
+          "Distinguish fixed conditions from choices still open.",
+          "Identify who has decision authority.",
+          "Locate the related questions in the official toolkit."
+        ],
+        "decisionScenario": "A service team is considering replacing mailed appointment reminders with text messages. Alex Rivera works changing shifts and shares one phone with Elena, who helps manage appointments and prefers written information in Spanish. What should the team ask Alex and Elena before changing the reminders?",
+        "decisionChoicea": "Choose text messages now and discuss implementation later.",
+        "decisionConsequencea": "In this practice continuation, Elena raises the shared-phone concern after the proposal has been presented as settled. Ask which choices remain open and whether people can still influence them.",
+        "decisionChoiceb": "Define the reminder decision, its limits, and who can authorize a change.",
+        "decisionConsequenceb": "The team separates the reminder method from rules it has no authority to change. It can now ask people about options that are genuinely open, while confirming applicable requirements with the person responsible.",
+        "decisionChoicec": "Keep the existing process without further discussion.",
+        "decisionConsequencec": "Another practice household reports unreliable mail delivery. Keeping the process also has effects worth examining; the team still needs to understand the problem and its authority to respond.",
+        "decisionDraftLabel": "The decision and its limits",
+        "decisionDraftHelp": "Describe the decision, what can change, and who has authority. Name any requirement that still needs to be confirmed.",
+        "peopleTitle": "Consider who may be affected",
+        "peopleIntro": "Look for differences in access, benefits, and burdens. Separate what the evidence shows from what you are assuming, and identify whose experience is missing.",
+        "peopleObjectives": [
+          "Identify people who may experience the decision differently.",
+          "Separate evidence from assumptions.",
+          "Name an information gap or missing perspective.",
+          "Write a respectful question to learn more."
+        ],
+        "peopleScenario": "The practice records show that a text reached Alex's phone. They do not show whether Elena could read it in time. Another household member uses a screen reader, and a different household prefers mail for privacy. What information would you seek?",
+        "peopleChoicea": "Treat successful delivery as evidence that the reminder was usable.",
+        "peopleConsequencea": "The delivery record answers a narrow question. It cannot establish who read the message, whether it was understandable, or whether using it was private and accessible.",
+        "peopleChoiceb": "Ask staff which reminder method most people prefer.",
+        "peopleConsequenceb": "Staff describe recurring difficulties, which helps identify questions. Their experience does not establish each person's preferences or replace hearing directly from people using the service.",
+        "peopleChoicec": "Combine available records with accessible conversations about preferences and barriers.",
+        "peopleConsequencec": "Elena explains when she can access the shared phone. Other people describe different needs. The team has richer information but still checks who could not participate and avoids treating one family as representative of a community.",
+        "peopleDraftLabel": "People, evidence, and unanswered questions",
+        "peopleDraftHelp": "Note potential differences in experience, the evidence available, and whose perspective you still need. Avoid identifying individual clients.",
+        "optionsTitle": "Compare possible approaches",
+        "optionsIntro": "Compare workable alternatives, including the current approach. Consider who gains convenience, who takes on additional work, and what could make each approach more accessible.",
+        "optionsObjectives": [
+          "Describe at least two feasible approaches.",
+          "Identify a potential benefit and burden of each.",
+          "Explain how an adjustment addresses a specific barrier.",
+          "State what remains uncertain before a choice is made."
+        ],
+        "optionsScenario": "The team considers three approaches. In the practice example, Alex wants texts, Elena needs information she can read in Spanish, and another household relies on paper reminders. Choose an approach to examine, not a final answer.",
+        "optionsChoicea": "Use text messages as the only reminder method.",
+        "optionsConsequencea": "Alex sees a reminder quickly during a break, but Elena cannot access the shared phone when she needs it. The team must examine language, shared-device access, privacy, and alternatives for people who cannot use texts.",
+        "optionsChoiceb": "Continue mailing every reminder.",
+        "optionsConsequenceb": "A household that prefers paper keeps its familiar method. Another household receives a reminder late. Keeping mail does not resolve all access concerns, and the team needs evidence about those remaining barriers.",
+        "optionsChoicec": "Offer a choice of reminder methods and confirm communication preferences.",
+        "optionsConsequencec": "Different households can request different methods. Staff then identify the work needed to record, honor, and update those preferences. Choice deserves examination alongside staffing, accessibility, privacy, and applicable requirements; it is not automatically the best answer in every setting.",
+        "optionsDraftLabel": "Options and tradeoffs",
+        "optionsDraftHelp": "Compare two or more approaches. Include possible benefits, burdens, adjustments, and uncertainties rather than predicting results.",
+        "participationTitle": "Plan participation and action",
+        "participationIntro": "Identify who should help shape the decision and what would make participation possible. Explain what people can influence and how they will hear what happened to their input.",
+        "participationObjectives": [
+          "Identify who should help shape the decision.",
+          "Propose an accessible way to seek participation.",
+          "Assign a responsible person to a proposed action.",
+          "Explain how participants will hear what happened to their input."
+        ],
+        "participationScenario": "Before recommending a reminder approach, the team wants to hear from service users. Alex cannot attend a daytime meeting. Elena would prefer a conversation in Spanish. Which engagement plan would you examine?",
+        "participationChoicea": "Send one English-only online questionnaire.",
+        "participationConsequencea": "In the practice responses, people comfortable with that channel are heard more readily. The team has not established what people excluded by language, disability access, connectivity, or confidence with forms would say.",
+        "participationChoiceb": "Ask an advisory group to speak for every household.",
+        "participationConsequenceb": "The group contributes useful experience and questions. Its members cannot represent every household's circumstances. The team still needs to identify missing perspectives and accessible ways to hear them.",
+        "participationChoicec": "Offer several accessible ways to participate and explain what remains open.",
+        "participationConsequencec": "People have more ways to contribute, and the team plans language and disability access with participants. It still needs time, responsible staff, and a clear account of how input affected the decision. This practice cannot supply actual community agreement.",
+        "participationDraftLabel": "Participation and next actions",
+        "participationDraftHelp": "Identify people to involve, participation supports, decisions they can influence, responsible staff, and how you will report back.",
+        "reviewTitle": "Review and revisit",
+        "reviewIntro": "Plan how people will examine what happens after a decision. Choose information that can reveal problems, name its limits, and agree on when the decision needs another look.",
+        "reviewObjectives": [
+          "Identify an observable signal worth reviewing.",
+          "Explain what that signal cannot establish.",
+          "Name who will review the information.",
+          "Specify a condition that would prompt reconsideration."
+        ],
+        "reviewScenario": "Suppose the responsible decision-makers authorize a limited change after the required review and engagement. The team now needs a follow-up plan. What would you recommend examining?",
+        "reviewChoicea": "Count delivered messages and call the change successful if delivery improves.",
+        "reviewConsequencea": "The count helps assess delivery but does not establish comprehension, access, privacy, or fair outcomes. It could miss a problem even when more messages reach their destinations.",
+        "reviewChoiceb": "Wait for complaints before scheduling a review.",
+        "reviewConsequenceb": "Complaints may reveal an important problem, but some people may not know how or feel able to raise one. Without a planned review, silence could be mistaken for evidence that the approach works for everyone.",
+        "reviewChoicec": "Review several signals with responsible staff and affected people at an agreed time.",
+        "reviewConsequencec": "The team considers delivery, reported usability, staff workload, and people not reached. It names the limits of each source and agrees what would trigger reconsideration. Those observations inform the team's judgment rather than proving that one change caused an outcome.",
+        "reviewDraftLabel": "Review responsibilities and reconsideration",
+        "reviewDraftHelp": "Name useful signals, their limits, a review date, responsible people, and a condition that would prompt another discussion.",
+        "supportingResources": [
+          {
+            "label": "DHS equity policy",
+            "href": "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf"
+          },
+          {
+            "label": "Equity Analysis Toolkit resource and access details",
+            "href": "/library/ext-dhs-equity-toolkit"
+          },
+          {
+            "label": "Minnesota community briefs",
+            "href": "/minnesota-communities"
+          },
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ],
+        "leadershipLabel": "Executive and division leadership",
+        "leadershipContext": "Consider the decision authority, unresolved tradeoffs, and responsibility for follow-through. Ask what evidence and engagement are needed before a direction is approved.",
+        "policyLabel": "Policy and program analysis",
+        "policyContext": "Compare the reminder options, distinguish policy requirements from local choices, and describe uncertainty in the recommendation.",
+        "serviceLabel": "Eligibility and service delivery",
+        "serviceContext": "Consider what a person must do to receive and use a reminder. Record barriers for the responsible decision-maker without assuming authority to change policy.",
+        "managementLabel": "Supervision and management",
+        "managementContext": "Examine staff capacity, consistent practice, and how staff can raise concerns. Identify the support needed to honor communication preferences.",
+        "workforceLabel": "Hiring and workforce development",
+        "workforceContext": "Consider the skills, learning time, and support staff need to provide accessible service. Examine whether expectations create unequal access to development opportunities.",
+        "fiscalLabel": "Budgets, grants, and contracts",
+        "fiscalContext": "Examine implementation costs and work shifted to households or staff. Identify resource questions without inventing cost estimates or assuming the least expensive option is the fairest.",
+        "dataLabel": "Data, research, and quality",
+        "dataContext": "Distinguish message delivery from usable communication. Examine missing information, the limits of comparisons, and whose experiences the available records cannot show.",
+        "engagementLabel": "Community engagement and partnership",
+        "engagementContext": "Plan how affected people can influence the reminder decision. Consider language, disability access, timing, trust, and how participants will hear what changed.",
+        "communicationLabel": "Communication and accessibility",
+        "communicationContext": "Examine whether each reminder is understandable and usable in the needed language and format. Plan appropriate translation, accessibility review, and review with service users.",
+        "equityLabel": "Equity practice and organizational change",
+        "equityContext": "Connect a specific access barrier with the wider decision process. Identify responsible partners and how engagement and follow-through will remain part of the work."
+      },
+      "status": "accepted_retained",
+      "review": "Complete authored surface read. Explanations connect evidence, individual preferences, decision authority and practical next steps without unsupported guarantees. Existing source dates, staff names and program conditions remain source-dependent, not currently recertified. Toolkit practice renders through staged experience; inactive draft fields are not counted as published changes."
     }
   ]
 }

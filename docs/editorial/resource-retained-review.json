@@ -1429,6 +1429,671 @@
       },
       "status": "accepted_retained",
       "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.ref-one-dsd-policy-analysis-presentation",
+      "route": "/library/ref-one-dsd-policy-analysis-presentation",
+      "values": {
+        "id": "ref-one-dsd-policy-analysis-presentation",
+        "title": "Equity analysis for policy review — One DSD presentation",
+        "type": "learning_module",
+        "authority": "program_reference",
+        "layer": "L3",
+        "summary": "This 23-slide presentation covers equity analysis in policy development, the responsibilities of drafting groups, and leadership review. You can read the slides or download an editable copy.",
+        "whyItMatters": "Use it to prepare a policy discussion and identify the questions, participants, and evidence a review needs.",
+        "body": [
+          "The One DSD edition adapts Equity Analysis for Policy Refresh 11-20-24 to the program’s visual style. The original training content, editable diagrams, and speaker notes are retained in the PowerPoint.",
+          "The presentation explores an equity mindset, intent and impact, definitions, an eight-part analysis framework, convening a drafting group, and preparing for leadership review.",
+          "Contacts and submission steps reflect the November 20, 2024 training. Confirm current arrangements with the responsible office before acting; visual restyling does not make historical steps current policy.",
+          "The presentation page offers each slide and its readable text. Download the PowerPoint for editing or presenting, or the PDF for reading and sharing."
+        ],
+        "nextActions": [
+          {
+            "label": "Read the One DSD presentation",
+            "href": "/learn/equity-toolkit/policy-review"
+          },
+          {
+            "label": "Download editable slides (PowerPoint)",
+            "href": "/documents/program-evidence/one-dsd-equity-analysis-policy.pptx"
+          },
+          {
+            "label": "Download slides (PDF)",
+            "href": "/documents/program-evidence/one-dsd-equity-analysis-policy.pdf"
+          },
+          {
+            "label": "Read the DHS policy source",
+            "href": "/equity-policy"
+          }
+        ],
+        "tags": [
+          "policy",
+          "equity analysis",
+          "presentation",
+          "policy review",
+          "drafting",
+          "leadership",
+          "toolkit"
+        ],
+        "intents": [
+          "policy_orientation",
+          "practice_method",
+          "facilitation"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-04",
+        "status": "approved",
+        "scope": "dsd",
+        "accessibility": "pending",
+        "sourceName": "Equity Analysis for Policy Refresh 11-20-24.pptx",
+        "provenance": "Original training dated November 20, 2024. Owner requested a One DSD visual adaptation and app integration on October 4, 2026. Original source retained separately.",
+        "version": "2026-10-04"
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.tool-one-dsd-policy-review",
+      "route": "/library/tool-one-dsd-policy-review",
+      "values": {
+        "id": "tool-one-dsd-policy-review",
+        "title": "Policy, process, and service equity review",
+        "summary": "Examine who is affected, compare alternatives, and record responsibilities and follow-through.",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L2",
+        "body": [
+          "Examine who is affected, compare alternatives, and record responsibilities and follow-through.",
+          "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+          "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office."
+        ],
+        "nextActions": [
+          {
+            "label": "Open the workspace",
+            "href": "/equity-review/general"
+          },
+          {
+            "label": "Open the full-page tool",
+            "href": "/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool.html"
+          }
+        ],
+        "tags": [
+          "equity analysis",
+          "policy",
+          "review",
+          "planning"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-05",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "2026-10-05",
+        "provenance": "Adapted from the owner-supplied complete source package. Original files retained separately."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.tool-one-dsd-hcbs-review",
+      "route": "/library/tool-one-dsd-hcbs-review",
+      "values": {
+        "id": "tool-one-dsd-hcbs-review",
+        "title": "Home and community-based services equity review",
+        "summary": "Explore service access, state choices, provider capacity, and the experiences of people using home and community-based services.",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L2",
+        "body": [
+          "Explore service access, state choices, provider capacity, and the experiences of people using home and community-based services.",
+          "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+          "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office."
+        ],
+        "nextActions": [
+          {
+            "label": "Open the workspace",
+            "href": "/equity-review/hcbs"
+          },
+          {
+            "label": "Open the full-page tool",
+            "href": "/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool.html"
+          }
+        ],
+        "tags": [
+          "equity analysis",
+          "policy",
+          "review",
+          "planning",
+          "HCBS",
+          "home and community-based services"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-05",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "2026-10-05",
+        "provenance": "Adapted from the owner-supplied complete source package. Original files retained separately."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.tool-one-dsd-quarterly-report",
+      "route": "/library/tool-one-dsd-quarterly-report",
+      "values": {
+        "id": "tool-one-dsd-quarterly-report",
+        "title": "Quarterly progress report",
+        "summary": "Bring together aggregate evidence, unanswered questions, and follow-through. Missing figures remain unknown.",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L2",
+        "body": [
+          "Bring together aggregate evidence, unanswered questions, and follow-through. Missing figures remain unknown.",
+          "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+          "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office."
+        ],
+        "nextActions": [
+          {
+            "label": "Open the workspace",
+            "href": "/one-dsd/planning/report"
+          },
+          {
+            "label": "Open the full-page tool",
+            "href": "/library/one-dsd-planning/One_DSD_Quarterly_Report_Dashboard.html"
+          }
+        ],
+        "tags": [
+          "equity analysis",
+          "policy",
+          "review",
+          "planning",
+          "reporting",
+          "progress",
+          "measures"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-05",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "2026-10-05",
+        "provenance": "Adapted from the owner-supplied complete source package. Original files retained separately."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.guide-one-dsd-quarterly-report",
+      "route": "/library/guide-one-dsd-quarterly-report",
+      "values": {
+        "id": "guide-one-dsd-quarterly-report",
+        "title": "Quarterly progress report: Guide",
+        "summary": "Prepare an honest account of progress, separate examples from real evidence, and identify the next action.",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L3",
+        "body": [
+          "Prepare an honest account of progress, separate examples from real evidence, and identify the next action.",
+          "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+          "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office."
+        ],
+        "nextActions": [
+          {
+            "label": "Read the guide",
+            "href": "/library/one-dsd-planning/One_DSD_Quarterly_Report_Dashboard_Guide.html"
+          },
+          {
+            "label": "Download Word document",
+            "href": "/library/one-dsd-planning/One_DSD_Quarterly_Report_Dashboard_Guide.docx"
+          }
+        ],
+        "tags": [
+          "equity analysis",
+          "policy",
+          "review",
+          "planning",
+          "reporting",
+          "progress",
+          "measures"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-05",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "2026-10-05",
+        "provenance": "Adapted from the owner-supplied complete source package. Original files retained separately."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.guide-one-dsd-measures",
+      "route": "/library/guide-one-dsd-measures",
+      "values": {
+        "id": "guide-one-dsd-measures",
+        "title": "Data and measures",
+        "summary": "Use the 21-measure framework to define evidence, its source, its limits, and who can act on it.",
+        "type": "external_reference",
+        "authority": "guidance",
+        "layer": "L3",
+        "body": [
+          "Use the 21-measure framework to define evidence, its source, its limits, and who can act on it.",
+          "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+          "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office."
+        ],
+        "nextActions": [
+          {
+            "label": "Read the guide",
+            "href": "/library/one-dsd-planning/One_DSD_Data_and_Metrics_Framework.html"
+          },
+          {
+            "label": "Download Word document",
+            "href": "/library/one-dsd-planning/One_DSD_Data_and_Metrics_Framework.docx"
+          }
+        ],
+        "tags": [
+          "equity analysis",
+          "policy",
+          "review",
+          "planning",
+          "reporting",
+          "progress",
+          "measures"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-05",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "2026-10-05",
+        "provenance": "Adapted from the owner-supplied complete source package. Original files retained separately."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.guide-one-dsd-work-plan",
+      "route": "/library/guide-one-dsd-work-plan",
+      "values": {
+        "id": "guide-one-dsd-work-plan",
+        "title": "Equity implementation work plan",
+        "summary": "Connect priorities to practical actions, responsible owners, evidence, and review points.",
+        "type": "external_reference",
+        "authority": "guidance",
+        "layer": "L3",
+        "body": [
+          "Connect priorities to practical actions, responsible owners, evidence, and review points.",
+          "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+          "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office."
+        ],
+        "nextActions": [
+          {
+            "label": "Read the guide",
+            "href": "/library/one-dsd-planning/DSD_Equity_Implementation_Work_Plan.html"
+          },
+          {
+            "label": "Download Word document",
+            "href": "/library/one-dsd-planning/DSD_Equity_Implementation_Work_Plan.docx"
+          }
+        ],
+        "tags": [
+          "equity analysis",
+          "policy",
+          "review",
+          "planning"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-05",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "2026-10-05",
+        "provenance": "Adapted from the owner-supplied complete source package. Original files retained separately."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.tool-one-dsd-structural-review",
+      "route": "/library/tool-one-dsd-structural-review",
+      "values": {
+        "id": "tool-one-dsd-structural-review",
+        "title": "Structural equity analysis",
+        "summary": "Trace barriers through a process, examine decision rights and evidence, and plan a change with a responsible role and a review date.",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L2",
+        "body": [
+          "Examine a policy, service, or workplace process anywhere in DHS. Start with the pattern, map decision points, question requirements, identify decision rights, and consider how different experiences combine.",
+          "Review the process history and evidence, including missing information. Plan a change with a responsible role, a review date, a measure, and a way to report back to affected people.",
+          "Work independently or with colleagues. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback. The role responsible for a process carries its decisions and follow-through.",
+          "This interactive workspace provides optional saving on your device, downloadable reports, and a working copy you can reopen. Keep personal and confidential records out of the review. A completed record does not verify an equitable result."
+        ],
+        "nextActions": [
+          {
+            "label": "Open structural equity analysis",
+            "href": "/equity-review/structural"
+          },
+          {
+            "label": "Explore related equity tools",
+            "href": "/equity-review"
+          }
+        ],
+        "tags": [
+          "structural equity",
+          "equity analysis",
+          "policy",
+          "process",
+          "barriers",
+          "decision rights",
+          "intersectionality",
+          "evidence",
+          "follow-through"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions",
+          "access_barriers"
+        ],
+        "owner": "One DSD People, Access and Culture",
+        "reviewDate": "2026-10-05",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "2026-10-05",
+        "provenance": "Adapted from the owner's supplied DSD Structural Analysis Tool HTML. The original is retained in the integration evidence."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.ref-adsa-engagement-guide",
+      "route": "/library/ref-adsa-engagement-guide",
+      "values": {
+        "id": "ref-adsa-engagement-guide",
+        "title": "ADSA Outreach and Engagement Guide",
+        "type": "external_reference",
+        "authority": "program_reference",
+        "layer": "L4",
+        "summary": "The ADSA Equity Committee’s April 2026 guide connects community relationships with planning, accessible participation, outreach, engagement activities, and reporting.",
+        "whyItMatters": "Use the guide to plan who can influence a decision, what participation requires, and how you will report back.",
+        "body": [
+          "Start with the decision, the people affected, and what can change through their participation. The guide describes engagement as a shared responsibility and an approach that may need to change as relationships and circumstances develop.",
+          "Its six planning considerations address trust, relationships and accountability; purpose, roles and resources; multiple perspectives; accessibility and inclusion; outreach and recruitment; and engagement activities.",
+          "Plan for communication access, accessible content, accommodations, compensation, flexible participation, and the resources people need to take part. Ask communities about the approaches that work for them.",
+          "The guide discusses Tribal Nations and American Indian communities, consultation partners, the IAP2 participation spectrum, and the need to clarify how participants can influence decisions. Follow the applicable government-to-government consultation process.",
+          "Complete the engagement cycle by sharing what was learned, explaining how input affected the work, identifying audiences and communication channels, and documenting follow-through.",
+          "This 60-page supplied PDF was written for ADSA staff and retains its original internal-document label. The program owner authorized its inclusion for internal and public audiences on October 24, 2026. Internal contacts and procedures are context for ADSA; public readers should use their established agency contact. Inclusion does not turn every example into an agencywide requirement."
+        ],
+        "nextActions": [
+          {
+            "label": "Read the original guide (PDF, 60 pages)",
+            "href": "/documents/engagement/adsa-outreach-engagement-guide.pdf"
+          },
+          {
+            "label": "Use the planning checklist",
+            "href": "/library/ref-adsa-engagement-checklist"
+          },
+          {
+            "label": "Explore community engagement practice",
+            "href": "/learn/community-connections"
+          }
+        ],
+        "tags": [
+          "ADSA",
+          "community engagement",
+          "outreach",
+          "planning",
+          "trust",
+          "participation",
+          "Tribal Nations",
+          "accessibility",
+          "compensation",
+          "reporting"
+        ],
+        "intents": [
+          "practice_method",
+          "launch_embed",
+          "facilitation",
+          "access_barriers"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-3"
+        ],
+        "owner": "ADSA Equity Committee; Minnesota Department of Human Services",
+        "reviewDate": "2027-04-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "April 2026",
+        "sourceName": "ADSA Equity Committee",
+        "provenance": "Owner-supplied original PDF; publication audience authorized October 24, 2026. Source context and wording preserved. Accessibility has not been independently certified."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.ref-adsa-engagement-checklist",
+      "route": "/library/ref-adsa-engagement-checklist",
+      "values": {
+        "id": "ref-adsa-engagement-checklist",
+        "title": "ADSA Outreach and Engagement Consideration Checklist",
+        "type": "checklist",
+        "authority": "program_reference",
+        "layer": "L2",
+        "summary": "A three-page June 2026 companion for preparing, carrying out, and reporting on community engagement.",
+        "whyItMatters": "Use this checklist during planning and again before engagement begins to identify missing responsibilities, resources, and access arrangements.",
+        "body": [
+          "Before beginning, define the purpose, goals, timeline, expectations, available resources, responsibilities, potential barriers, and mitigation steps. Review existing information and identify gaps.",
+          "Consult appropriate teams and partners. Clarify the level of participation using the IAP2 spectrum, and consider an advisory group or subject-matter group when useful.",
+          "Check accessible content, accommodation, communication access, and inclusive language. Plan outreach messages, channels, frequency, and timing with input from the people you hope to reach.",
+          "Design activities together where appropriate; plan compensation, flexibility, translation, interpretation, transportation, childcare, and supporting resources according to the engagement and applicable processes.",
+          "Identify who needs the findings and how they will receive them. Combine appropriate qualitative and quantitative information, explain how to stay informed, and document engagement and follow-through.",
+          "The original checklist includes internal ADSA reporting routes. Public readers can use the planning questions with their own contacts and processes. The guide provides fuller context; a checked box alone does not demonstrate meaningful participation."
+        ],
+        "nextActions": [
+          {
+            "label": "Open the original checklist (PDF, 3 pages)",
+            "href": "/documents/engagement/adsa-engagement-checklist.pdf"
+          },
+          {
+            "label": "Read the companion guide",
+            "href": "/library/ref-adsa-engagement-guide"
+          },
+          {
+            "label": "Plan how to learn from results",
+            "href": "/practice/measurement"
+          }
+        ],
+        "tags": [
+          "ADSA",
+          "community engagement",
+          "outreach",
+          "checklist",
+          "planning",
+          "accessibility",
+          "IAP2",
+          "follow-through"
+        ],
+        "intents": [
+          "practice_method",
+          "launch_embed",
+          "next_actions",
+          "access_barriers"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-3"
+        ],
+        "owner": "Minnesota Department of Human Services / ADSA",
+        "reviewDate": "2027-06-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "June 2026",
+        "sourceName": "ADSA",
+        "provenance": "Owner-supplied original PDF, last updated June 2026; authorized for internal and public audiences October 24, 2026."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.ref-adsa-engagement-presentation",
+      "route": "/library/ref-adsa-engagement-presentation",
+      "values": {
+        "id": "ref-adsa-engagement-presentation",
+        "title": "ADSA Outreach and Engagement Guide: presentation",
+        "type": "learning_module",
+        "authority": "learning",
+        "layer": "L1",
+        "summary": "A 33-slide PDF introducing the ADSA engagement guide for team learning and discussion.",
+        "whyItMatters": "Use the presentation to orient a team before applying the detailed guide and checklist to a real engagement plan.",
+        "body": [
+          "The presentation introduces the ADSA Equity Committee, the guide’s sources, when engagement is needed, planning considerations, and dissemination and reporting.",
+          "Engagement activators include decisions affecting people’s lives or access to services, differing impacts across groups, the need for sustained participation, and gaps in understanding lived experience.",
+          "Discuss a real or fictional project: what can participants influence, who is missing, what participation barriers need attention, and how will the team report back?",
+          "Use the guide for detail and the checklist for planning. The supplied file is a PDF presentation, not an editable PowerPoint. Its cover contains April and June 2026 session dates; the slide footers are dated June 22, 2026."
+        ],
+        "nextActions": [
+          {
+            "label": "Open the presentation (PDF, 33 slides)",
+            "href": "/documents/engagement/adsa-engagement-presentation.pdf"
+          },
+          {
+            "label": "Read the full guide",
+            "href": "/library/ref-adsa-engagement-guide"
+          },
+          {
+            "label": "Use the engagement checklist",
+            "href": "/library/ref-adsa-engagement-checklist"
+          }
+        ],
+        "tags": [
+          "ADSA",
+          "community engagement",
+          "outreach",
+          "presentation",
+          "team learning",
+          "facilitation"
+        ],
+        "intents": [
+          "facilitation",
+          "practice_method",
+          "launch_embed"
+        ],
+        "pathIds": [
+          "gp-3"
+        ],
+        "owner": "ADSA Equity Committee",
+        "reviewDate": "2027-06-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "June 2026 supplied presentation",
+        "sourceName": "ADSA Equity Committee",
+        "provenance": "Owner-supplied original slide PDF; authorized for internal and public audiences October 24, 2026."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
+    },
+    {
+      "target": "resource.ref-clas-implementation-checklist",
+      "route": "/library/ref-clas-implementation-checklist",
+      "values": {
+        "id": "ref-clas-implementation-checklist",
+        "title": "National CLAS Standards: implementation checklist and action worksheet",
+        "type": "checklist",
+        "authority": "program_reference",
+        "layer": "L2",
+        "summary": "An HHS Office of Minority Health handout for reviewing culturally and linguistically appropriate services and choosing practical implementation actions.",
+        "whyItMatters": "Connect cultural and language access goals to organizational practices, named responsibilities, and a realistic next set of actions.",
+        "body": [
+          "CLAS means culturally and linguistically appropriate services: services responsive to people’s cultural and communication needs, including preferred languages and health literacy.",
+          "The checklist organizes practices under governance, leadership and workforce; communication and language assistance; and engagement, continuous improvement and accountability.",
+          "For each practice, record whether it is currently implemented, planned, or not planned at this time. Use the assessment to identify practical gaps rather than treating it as certification.",
+          "The action worksheet asks the organization to choose three planned practices, set timeframes, and identify concrete steps, challenges, staff, and supporting resources.",
+          "Use the supplied checklist alongside the program’s cultural and language access planning worksheet. Confirm which standards and separate policy, legal, or contract requirements apply to the service.",
+          "This supplied copy contains eight PDF pages and ends with the action worksheet. Its contents page mentions testimonials beyond page eight, but those pages are not included in this copy."
+        ],
+        "nextActions": [
+          {
+            "label": "Open the original handout (PDF, 8 pages)",
+            "href": "/documents/engagement/clas-implementation-checklist.pdf"
+          },
+          {
+            "label": "Prepare cultural and language access notes",
+            "href": "/practice/clas"
+          },
+          {
+            "label": "Use the language access checklist",
+            "href": "/library/ja-language-access-checklist"
+          }
+        ],
+        "tags": [
+          "CLAS",
+          "cultural access",
+          "language access",
+          "implementation",
+          "checklist",
+          "action plan",
+          "workforce",
+          "communication",
+          "accountability"
+        ],
+        "intents": [
+          "access_barriers",
+          "intercultural",
+          "practice_method",
+          "next_actions"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-2"
+        ],
+        "owner": "U.S. HHS Office of Minority Health",
+        "reviewDate": "2027-04-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "version": "Owner-supplied eight-page copy",
+        "sourceName": "HHS Office of Minority Health",
+        "provenance": "Owner-supplied original PDF integrated October 24, 2026. The original source and limitations of this eight-page copy are preserved."
+      },
+      "status": "accepted_retained",
+      "review": "Full resource read for editorial clarity and practical boundaries. Purpose, user action, source context and limitations are clear. Original document details and source authority retained; this review does not recertify current policies, counts, accessibility or external-source claims."
     }
   ]
 }
