@@ -138,7 +138,7 @@ export function ProgramContextNote() {
   const { copy, copyAvailable } = useProgramContext();
   if (!copyAvailable) return null;
   return <aside className="scope-note" aria-label="Resource context in One DSD">
-    <details><summary>Resource context: One DSD</summary><p>This program connects learning and practical equity work in the Disability Services Division. Department-wide resources remain available alongside DSD examples. Resource access follows the applicable source and authorization boundaries; choosing a resource does not grant authority to change a policy or service.</p></details>
+    <details><summary>Resource context: One DSD</summary><p>One DSD is the equity program of the Disability Services Division (DSD). It connects learning with practical equity work in the division.</p><p>Department-wide DHS resources are also here, next to DSD examples.</p><p>Who can open or change a resource depends on its source and on your authorization. Choosing a resource does not give you authority to change a policy or service.</p></details>
     <p><Link href="/one-dsd">{textValue(copy, "oneDsdLinkLabel") || "DSD programs and services"}</Link> · <Link href="/program/model">How the program works</Link></p>
   </aside>;
 }

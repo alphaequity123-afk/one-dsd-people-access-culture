@@ -30,6 +30,6 @@ export function HomeTaskFinder() {
       </select>
       <button type="submit" className="pilot-primary">Show resources</button>
     </div>
-    <Link href="/start#new-to-dsd">New to DSD? Get started here</Link>
+    <Link href="/start#new-to-dsd">New to the Disability Services Division (DSD)? Start here</Link>
   </form>;
 }

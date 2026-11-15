@@ -316,7 +316,7 @@ export const STATIC_HOME_COPY: HomePageCopy = HomePageCopySchema.parse({
 
 export const STATIC_FOOTER_COPY: FooterCopy = FooterCopySchema.parse({
   identityKicker: "One DSD People, Access and Culture",
-  identityText: "A resource for DHS staff, run by the program. It is not connected to DHS information technology, case, or personnel systems. Its guidance supports everyday work and does not replace policy, legal advice, formal processes, or decisions made by responsible DHS offices. Authority labels show what each item can and cannot establish.",
+  identityText: "This site is a resource for staff of DHS, the Minnesota Department of Human Services. It is run by One DSD, the equity program of the Disability Services Division. It is not connected to DHS information technology, case, or personnel systems. Its guidance supports everyday work. It does not replace policy, legal advice, formal processes, or decisions made by responsible DHS offices. Authority labels show what each item can and cannot establish.",
   helpHeading: "Find your next step",
   askLabel: "Ask a question",
   askHref: "/ask",
@@ -332,7 +332,7 @@ export const STATIC_FOOTER_COPY: FooterCopy = FooterCopySchema.parse({
   escalationLabel: "Find the right person or office",
   escalationHref: "/support/right-person",
   privacyHeading: "Privacy and access",
-  privacyText: "Please leave out case, medical, personnel, complaint, and identifying details anywhere in this program. Notes you write are saved only on this computer, so another person who uses it could see them. If any part of the program is hard to use with assistive technology, Support explains how to tell us.",
+  privacyText: "Please leave out case, medical, personnel, complaint, and identifying details anywhere in this program. Notes you write are saved only on this computer, so anyone else who uses it could see them. If part of the program is hard to use with assistive technology, the Support page explains how to tell us.",
 });
 
 export function pageCopySchema(surface: PageBlockSurface) {
