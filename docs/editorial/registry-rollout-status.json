@@ -2,12 +2,14 @@
   "snapshotDate": "2026-11-15",
   "scope": "Registry subtotal only; community/research JSON, source files and hardcoded page/component prose require separate coverage. Accepted fields do not imply re-verification of unchanged facts. Course packs include related lesson and job-aid fields.",
   "registryObjects": 878,
-  "acceptedObjects": 134,
-  "acceptedFields": 2198,
+  "acceptedObjects": 146,
+  "acceptedFields": 2281,
+  "partiallyRevisedCourseObjects": 37,
+  "partialCourseFields": 111,
   "retainedObjects": 79,
   "excludedDormantObjects": 4,
-  "editoriallyReviewedObjects": 213,
-  "liveVerifiedObjects": 100,
+  "editoriallyReviewedObjects": 224,
+  "liveVerifiedObjects": 132,
   "records": [
     {
       "target": "sources.page",
@@ -217,7 +219,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 1,
       "candidateFieldChanges": 5,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "community-connections.home",
@@ -627,7 +629,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 4,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "support.track.available",
@@ -687,15 +689,15 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 264,
       "candidateFieldChanges": 0,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "course.somali-minnesota-brief",
       "kind": "course_pack",
       "route": "/courses/somali-minnesota-brief",
       "originalSha256": "a7077ad4533709aafa1ca0702c500ea225d4064a02963f13133fbc116ffaa07e",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -717,7 +719,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 136,
       "candidateFieldChanges": 0,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "course.intercultural-conflict-styles",
@@ -727,7 +729,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 141,
       "candidateFieldChanges": 0,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "course.intercultural-competence-without-a-score",
@@ -744,8 +746,8 @@
       "kind": "course_pack",
       "route": "/courses/disability-and-language",
       "originalSha256": "17424295d47a06ef4c277ebacba0b709b30c7813aa02d4a43d1ac7e1d6f701ad",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -754,8 +756,8 @@
       "kind": "course_pack",
       "route": "/courses/cultural-broker-as-a-role",
       "originalSha256": "c25245d384ecbbb1fd435f8dad238087be729dee0b32b2c5917a74b7da18e16e",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -764,8 +766,8 @@
       "kind": "course_pack",
       "route": "/courses/language-access-plan",
       "originalSha256": "ecc9337a49e1a30397c52968d58e708c5bb9e656b4b5deab8b75304ba079bf66",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -784,8 +786,8 @@
       "kind": "course_pack",
       "route": "/courses/working-with-an-interpreter",
       "originalSha256": "3ebe357f5f32cae323ad800caa8942a6c530ebd11a93a48c8cc9ef2875627c4d",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -794,8 +796,8 @@
       "kind": "course_pack",
       "route": "/courses/language-access-as-a-design",
       "originalSha256": "f7c913390d73d1c3d2687ec70c69fe339ae029d04b0c3174fd130cbf02ae72a8",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -804,8 +806,8 @@
       "kind": "course_pack",
       "route": "/courses/equal-opportunity-in-employment",
       "originalSha256": "698bdf00ebeb2d5bf0f2c79bfb34933d224df7a1055ad81a0328dd48611b80c6",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -814,8 +816,8 @@
       "kind": "course_pack",
       "route": "/courses/conflict-at-work",
       "originalSha256": "cef31a0981ac88c8e62ccef302a7cf81f3a9ae233e91263453d559426999e306",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -824,8 +826,8 @@
       "kind": "course_pack",
       "route": "/courses/stay-and-exit-interviews",
       "originalSha256": "e20ec0d68329b98c3dc972c6b858cbc1450e5a2221702865c9741efd0c20df72",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -834,8 +836,8 @@
       "kind": "course_pack",
       "route": "/courses/employee-viewpoint-and-wellbeing-surveys",
       "originalSha256": "1cde057a3046e9c4ca42f6bbfeaaac3f7df5305a3c06d11cd9c8a40ad8fdd926",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -844,8 +846,8 @@
       "kind": "course_pack",
       "route": "/courses/mobility-acting-promotion",
       "originalSha256": "618e0138a63c7320dddd58483f265b2a582353e51a180996c7f1d31c6ee2c015",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -854,8 +856,8 @@
       "kind": "course_pack",
       "route": "/courses/career-mentorship-and-sponsorship",
       "originalSha256": "d611b40964ce1c794e120de39ad8637ac2caa0b8bb537acfeb03e2d47b2da534",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -864,8 +866,8 @@
       "kind": "course_pack",
       "route": "/courses/performance-and-development",
       "originalSha256": "eec0efd681560d31d80954770c00af872b2e9dd2765f06b352719ef083898de1",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -874,8 +876,8 @@
       "kind": "course_pack",
       "route": "/courses/onboarding-and-first-90-days",
       "originalSha256": "632f5cfd29c06892ec22872cd0e2b924a4c65eb391eb462dc61c090b07bcc5c8",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -884,8 +886,8 @@
       "kind": "course_pack",
       "route": "/courses/screening-and-selection",
       "originalSha256": "f0ccd483a1839b0a3d819d345517fcdaaf48efeafc28a432b57c4128ab0b27c9",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -894,8 +896,8 @@
       "kind": "course_pack",
       "route": "/courses/sourcing-and-outreach",
       "originalSha256": "9e370f915166c688b0404c93731c13747b2a943058e44b58c6c2968204b8795e",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -904,8 +906,8 @@
       "kind": "course_pack",
       "route": "/courses/job-design-and-the-posting",
       "originalSha256": "a431b599f8d8c88e4fd8fa5c4b5240e742214f482c39af0c60cfd5dc584a8bd5",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -914,8 +916,8 @@
       "kind": "course_pack",
       "route": "/courses/employee-life-cycle-as-a-system",
       "originalSha256": "2de6b60030402fcac4cca4bca731586cef86409caa46fd4eac5efc3014cfd8c4",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -924,8 +926,8 @@
       "kind": "course_pack",
       "route": "/courses/facilitators-guide-equity-inclusion-curriculum",
       "originalSha256": "c64108bbf82affdfd4527bd431063c01279b175ec6ae914404b89144937737ad",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -934,8 +936,8 @@
       "kind": "course_pack",
       "route": "/courses/equity-centered-leadership",
       "originalSha256": "203384266ff2a374d44a3fdd0d1c3bfe029071d7b56a88a23a4735758530ff2d",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -944,8 +946,8 @@
       "kind": "course_pack",
       "route": "/courses/equity-champion-contribution-workflow",
       "originalSha256": "0d4262716f6df2591a7e1c4a9c0716e20bf52bfbdae7376db8fa2c99a36c3e38",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -954,8 +956,8 @@
       "kind": "course_pack",
       "route": "/courses/equity-inclusion-leadership-and-systems",
       "originalSha256": "0156bfeda31697841aba412bba57e2330a2069f6998f2c9a58bed121fa62707c",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -964,8 +966,8 @@
       "kind": "course_pack",
       "route": "/courses/acceptance-in-dhs-work",
       "originalSha256": "550c990e8f025178cb42eaa47094f9d77ea49d7b6651c30a7d3b66e50f0ea297",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -974,8 +976,8 @@
       "kind": "course_pack",
       "route": "/courses/culture-without-theater",
       "originalSha256": "6f35edfc3fa5bc006a30d5ee4553a83a9b2e328b1a57e4e8f4dd86c80414b037",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -984,8 +986,8 @@
       "kind": "course_pack",
       "route": "/courses/teams-in-minimization",
       "originalSha256": "a8cd62d12043db6ffeef542d569a7e04d9540f32ed2d86f3b2b4023b65366ea4",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -994,8 +996,8 @@
       "kind": "course_pack",
       "route": "/courses/from-noticing-to-shifting",
       "originalSha256": "6cc9fa3c9872010439ec137aba810f541999391e972771be540b9e97cc571ede",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1004,8 +1006,8 @@
       "kind": "course_pack",
       "route": "/courses/outcomes-not-intentions",
       "originalSha256": "caacf97142329684e0627806459914d97a092e252028543852b9f28877031c77",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1014,8 +1016,8 @@
       "kind": "course_pack",
       "route": "/courses/how-it-shows-up-in-minnesota-human-services",
       "originalSha256": "ad5973c3c644dec3fd7f263ec3d9cfa7de75dacb872fc602d05caa28654d5233",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1024,8 +1026,8 @@
       "kind": "course_pack",
       "route": "/courses/the-record",
       "originalSha256": "f9996d992712e908166853fbf77ce2fbac038f5e330809f308e07047449c99c4",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1034,8 +1036,8 @@
       "kind": "course_pack",
       "route": "/courses/what-minimization-does-in-dhs-work",
       "originalSha256": "4bf1fb3150ae3cc455ef220d9f96d8731dd26ee989d966722fdba97cb7033983",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1054,8 +1056,8 @@
       "kind": "course_pack",
       "route": "/courses/family-and-natural-support-systems",
       "originalSha256": "669b6a7225b00816fb62117db713e2c9af837c70571692a0c58dcf43e6ba33a4",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1064,8 +1066,8 @@
       "kind": "course_pack",
       "route": "/courses/lgbtq-inclusion-in-disability-services",
       "originalSha256": "04c02c6cc6421915802560ebd79479f2504e8d9244b3adbc53bbb64e20c027e5",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1074,8 +1076,8 @@
       "kind": "course_pack",
       "route": "/courses/brain-injury-and-complex-disability",
       "originalSha256": "665383306a1e7c7dcabf3e98d940fbbc602b2475203f643b0030623deb51f88a",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1084,8 +1086,8 @@
       "kind": "course_pack",
       "route": "/courses/neurodiversity-and-cognitive-difference",
       "originalSha256": "a6c577062a9e6db3746b9f8c7d3fbe11bee4a5046a773407d8fb044a862aeb3d",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1094,8 +1096,8 @@
       "kind": "course_pack",
       "route": "/courses/health-wellness-and-safety",
       "originalSha256": "c75d622bacef9cfc2f17b69c5cc379e8af1be40794ec2a97738689e57d62e21a",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1104,8 +1106,8 @@
       "kind": "course_pack",
       "route": "/courses/employment-first-and-economic-inclusion",
       "originalSha256": "debdb531f5461ad060436c9df18443812ca1e3033f08c1ad02bac6660b46de8c",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -1114,8 +1116,8 @@
       "kind": "course_pack",
       "route": "/courses/change-management-bringing-people-along",
       "originalSha256": "201613f8d80f6b8bd8b56b98fbb53bfc37b80c9835e20684314f52e3428828cd",
-      "review": "not_reviewed",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_partial_course_fields",
+      "acceptedFieldChanges": 3,
       "candidateFieldChanges": 0,
       "liveVerified": false
     },
@@ -7627,7 +7629,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 4,
       "candidateFieldChanges": 2,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-2",
@@ -7637,7 +7639,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 3,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-3",
@@ -7647,15 +7649,15 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 20,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "graduation-path.gp-4",
       "kind": "editable_surface",
       "route": "/practice/gp-4",
       "originalSha256": "cb5503557918a4f6803233c7fca5d998d1cd5b7e188024f28dde14cc0fe1eeac",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 10,
       "candidateFieldChanges": 3,
       "liveVerified": false
     },
@@ -7664,8 +7666,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-5",
       "originalSha256": "6ebae908d1634b9eca15412fa7dc236a87c59adcf794700a1aaf1096bd723945",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 1,
       "candidateFieldChanges": 6,
       "liveVerified": false
     },
@@ -7674,8 +7676,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-6",
       "originalSha256": "e01f14a63c47bb18b7e658132cbbf0d2e1b158a3a435ffc72c4da0745a93dd61",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 6,
       "candidateFieldChanges": 1,
       "liveVerified": false
     },
@@ -7684,8 +7686,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-7",
       "originalSha256": "0ca77dae3a52b0a600cf31e62852478ccdcb6b113bdae49b6e56d9becbaf09eb",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 7,
       "candidateFieldChanges": 7,
       "liveVerified": false
     },
@@ -7694,8 +7696,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-8",
       "originalSha256": "5f30b40bf705ea18d6868b201683ebe6a17c9cb8a1f0ff06fef83e7b3a00d282",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 8,
       "candidateFieldChanges": 8,
       "liveVerified": false
     },
@@ -7704,8 +7706,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-9",
       "originalSha256": "335d894465313b53cb91fe52bce6b7708558c83ed294f4f727bb028bdf2fe930",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 4,
       "candidateFieldChanges": 2,
       "liveVerified": false
     },
@@ -7714,8 +7716,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-10",
       "originalSha256": "cb4147991a7975fb73c11957751559fadd5bbf5192b16e97332878d744f05aeb",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 5,
       "candidateFieldChanges": 5,
       "liveVerified": false
     },
@@ -7724,8 +7726,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-11",
       "originalSha256": "940994c30468930cccb1690de86eb5117bd74c961f0001d594484f1a30f879f3",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 10,
       "candidateFieldChanges": 3,
       "liveVerified": false
     },
@@ -7734,8 +7736,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-12",
       "originalSha256": "b6d9fc9bf39c37ac57acfbdd4a9b64098fed2fba638aed6e50338b6c3626b692",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 9,
       "candidateFieldChanges": 2,
       "liveVerified": false
     },
@@ -7744,8 +7746,8 @@
       "kind": "editable_surface",
       "route": "/practice/gp-13",
       "originalSha256": "08ba93a5c2a65d206339df13238966e348399a786aee3166c8314f919e8bc1d5",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 14,
       "candidateFieldChanges": 2,
       "liveVerified": false
     },
@@ -7967,7 +7969,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 2,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-stakeholder-map",
@@ -8017,7 +8019,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 7,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.pn-intercultural-method",
@@ -8047,7 +8049,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 1,
       "candidateFieldChanges": 6,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-form-notice-change",
@@ -8307,7 +8309,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 4,
       "candidateFieldChanges": 7,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.lm-intersectionality-foundations",
@@ -8337,7 +8339,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 7,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.pn-role-aware-entry",
@@ -8364,8 +8366,8 @@
       "kind": "staff_resource",
       "route": "https://www.idiinventory.com/",
       "originalSha256": "eebde447386aabc87f9807133c14c8f945331345b4c100a3ff1061b05c6f40c2",
-      "review": "candidate_pending_review",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 5,
       "candidateFieldChanges": 2,
       "liveVerified": false
     },
@@ -8414,8 +8416,8 @@
       "kind": "staff_resource",
       "route": "https://implicit.harvard.edu/implicit/",
       "originalSha256": "3d647caced24348e3e1f4693c7fac2042d5837157646e1193c1aa67de29f4e37",
-      "review": "accepted_retained",
-      "acceptedFieldChanges": 0,
+      "review": "accepted_fields",
+      "acceptedFieldChanges": 4,
       "candidateFieldChanges": 5,
       "liveVerified": false
     },
@@ -8447,7 +8449,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 3,
       "candidateFieldChanges": 4,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.pn-accessible-leadership-pathways",
@@ -8457,7 +8459,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 7,
       "candidateFieldChanges": 15,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-leadership-criteria-job-relatedness",
@@ -8477,7 +8479,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 4,
       "candidateFieldChanges": 9,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ref-one-dsd-policy-analysis-presentation",
@@ -8607,7 +8609,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 3,
       "candidateFieldChanges": 9,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-fair-assignments",
@@ -8617,7 +8619,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-rating-and-what-follows",
@@ -8627,7 +8629,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-corrective-action",
@@ -8637,7 +8639,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 1,
       "candidateFieldChanges": 10,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-hiring-decisions",
@@ -8657,7 +8659,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 4,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-leave-and-return",
@@ -8667,7 +8669,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 1,
       "candidateFieldChanges": 10,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-budget-cuts-separation",
@@ -8677,7 +8679,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 7,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-your-own-load",
@@ -8687,7 +8689,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-who-carries-equity-work",
@@ -8697,7 +8699,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 9,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-deaf-deafblind-hoh",
@@ -8707,7 +8709,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 1,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-rules-fall-2026",
@@ -8737,7 +8739,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 1,
       "candidateFieldChanges": 7,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-calibration",
@@ -8747,7 +8749,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-reading-patterns",
@@ -8757,7 +8759,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 8,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-fair-oversight",
@@ -8767,7 +8769,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 9,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-senior-leader-sessions",
@@ -8777,7 +8779,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 3,
       "candidateFieldChanges": 6,
-      "liveVerified": false
+      "liveVerified": true
     },
     {
       "target": "resource.ja-sm-facilitator-guide",
@@ -8787,7 +8789,7 @@
       "review": "accepted_fields",
       "acceptedFieldChanges": 2,
       "candidateFieldChanges": 7,
-      "liveVerified": false
+      "liveVerified": true
     }
   ]
 }

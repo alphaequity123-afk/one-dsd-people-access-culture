@@ -554,8 +554,9 @@
       "file": "app/leading/page.tsx",
       "kind": "route_template",
       "fieldCount": 45,
-      "editorialStatus": "pending_full_review",
-      "publicationClaim": false
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
+      "publicationClaim": false,
+      "reviewScope": "Full source context read; bounded independently accepted changes. Dynamic content and untouched privacy/authority claims remain separately scoped."
     },
     {
       "file": "app/leading/paths/page.tsx",
@@ -904,8 +905,9 @@
       "file": "app/library/page.tsx",
       "kind": "route_template",
       "fieldCount": 15,
-      "editorialStatus": "pending_full_review",
-      "publicationClaim": false
+      "editorialStatus": "accepted_retained_hardcoded",
+      "publicationClaim": false,
+      "reviewScope": "Hardcoded search, filter, results, recovery, pagination and navigation copy read in full. Resource/course/guide bodies loaded here remain separately reviewed records."
     },
     {
       "file": "app/minnesota-agencies/page.tsx",
@@ -946,7 +948,7 @@
       "file": "app/my-work/action-plan/page.tsx",
       "kind": "route_template",
       "fieldCount": 3,
-      "editorialStatus": "pending_full_review",
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
       "publicationClaim": false
     },
     {
@@ -960,7 +962,7 @@
       "file": "app/my-work/page.tsx",
       "kind": "route_template",
       "fieldCount": 18,
-      "editorialStatus": "pending_full_review",
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
       "publicationClaim": false
     },
     {
@@ -1086,7 +1088,7 @@
       "file": "app/paths/[id]/page.tsx",
       "kind": "route_template",
       "fieldCount": 17,
-      "editorialStatus": "pending_full_review",
+      "editorialStatus": "accepted_retained_hardcoded",
       "publicationClaim": false
     },
     {
@@ -1114,8 +1116,9 @@
       "file": "app/practice/page.tsx",
       "kind": "route_template",
       "fieldCount": 2,
-      "editorialStatus": "pending_full_review",
-      "publicationClaim": false
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
+      "publicationClaim": false,
+      "reviewScope": "Full source context read; bounded independently accepted changes. Dynamic content and untouched privacy/authority claims remain separately scoped."
     },
     {
       "file": "app/practice/requirements/page.tsx",
@@ -1170,7 +1173,7 @@
       "file": "app/resources/[id]/page.tsx",
       "kind": "route_template",
       "fieldCount": 8,
-      "editorialStatus": "pending_full_review",
+      "editorialStatus": "accepted_retained_hardcoded",
       "publicationClaim": false
     },
     {
@@ -1387,7 +1390,7 @@
       "file": "components/clas-curriculum/notes.tsx",
       "kind": "shared_component",
       "fieldCount": 6,
-      "editorialStatus": "pending_full_review",
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
       "publicationClaim": false
     },
     {
@@ -1576,7 +1579,7 @@
       "file": "components/course-lesson.tsx",
       "kind": "shared_component",
       "fieldCount": 6,
-      "editorialStatus": "pending_full_review",
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
       "publicationClaim": false
     },
     {
@@ -2220,8 +2223,9 @@
       "file": "components/participation-notice.tsx",
       "kind": "shared_component",
       "fieldCount": 5,
-      "editorialStatus": "pending_full_review",
-      "publicationClaim": false
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
+      "publicationClaim": false,
+      "reviewScope": "Full source context read; bounded independently accepted changes. Dynamic content and untouched privacy/authority claims remain separately scoped."
     },
     {
       "file": "components/path-browse.tsx",
@@ -2360,8 +2364,9 @@
       "file": "components/program-context.tsx",
       "kind": "shared_component",
       "fieldCount": 3,
-      "editorialStatus": "pending_full_review",
-      "publicationClaim": false
+      "editorialStatus": "accepted_retained_hardcoded",
+      "publicationClaim": false,
+      "reviewScope": "Context note and client behavior read in full; root had independently retained actual note. Dormant ContextSwitcher returns null."
     },
     {
       "file": "components/program-outcome-form.tsx",
@@ -2402,7 +2407,7 @@
       "file": "components/record-workbench.tsx",
       "kind": "shared_component",
       "fieldCount": 6,
-      "editorialStatus": "pending_full_review",
+      "editorialStatus": "accepted_bounded_hardcoded_changes",
       "publicationClaim": false
     },
     {
@@ -2650,5 +2655,6 @@
       "editorialStatus": "pending_full_review",
       "publicationClaim": false
     }
-  ]
+  ],
+  "reviewedHardcodedFiles": 12
 }

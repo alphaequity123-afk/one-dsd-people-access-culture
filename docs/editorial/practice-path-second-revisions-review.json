@@ -1,0 +1,659 @@
+{
+  "records": [
+    {
+      "target": "graduation-path.gp-4",
+      "kind": "surface",
+      "route": "/practice/gp-4",
+      "original": {
+        "title": "Workplace culture and team climate",
+        "staffLabel": "I'm strengthening team climate",
+        "signals": [
+          "Participation, candor, or equitable people practices on a team",
+          "A supervisor preparing a climate conversation"
+        ],
+        "startingCompetence": "You have noticed a concern with participation or team climate and want practical ways to improve everyday team practices.",
+        "graduatedLooksLike": "By the end, you will have a team climate plan with observable practices, clear responsibilities, and a follow-up date. Complaints, investigations, and discipline continue through the appropriate formal channels.",
+        "askStarters": [
+          "People on my team do not speak up in meetings. What practices could change that?",
+          "How do I write team norms that people will actually use?",
+          "Where is the line between a climate plan and an HR matter?"
+        ],
+        "artifactTitle": "Team climate action plan",
+        "needsWork": [
+          "A one-time conversation with no follow-up",
+          "Using the plan to investigate a named person"
+        ],
+        "readyToUse": [
+          "Observable practices, responsible people, and a follow-up date",
+          "Complaint concerns are directed to the appropriate formal channel"
+        ],
+        "privacy": "Please do not include names, complaint details, or discipline information. Teams are not ranked. Your progress is saved only on this computer.",
+        "step0Title": "Consider everyday team practices",
+        "step0Guidance": "Ask about participation and team climate. Consider which everyday practices your team can change. Complaints and concerns about a named person’s conduct belong in the appropriate formal channel.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-4"
+          }
+        ],
+        "step1Title": "Consider community context when helpful",
+        "step1Guidance": "Use a community brief only when intercultural context is directly relevant to the team's work.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Review the team climate basics and use the action plan template.",
+        "step2Links": [
+          {
+            "label": "Team climate basics",
+            "href": "/library/lm-workplace-climate"
+          },
+          {
+            "label": "Team climate action plan template",
+            "href": "/library/ja-climate-action-plan"
+          }
+        ],
+        "step3Title": "Draft your team climate action plan",
+        "step3Guidance": "Describe the practices, participation agreements, responsible people, and a follow-up date. Please leave out names and complaint details.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm that the practices are observable, each one has a responsible person and date, and the plan contains no complaint details.",
+        "step4Links": [],
+        "step5Title": "Find the right person when needed",
+        "step5Guidance": "For help preparing a team conversation, find the responsible supervisor or equity lead. Complaints and investigations belong with Employee Culture, Human Resources, or the civil-rights channel.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?area=culture_trust_repair"
+          }
+        ],
+        "artifactField0Label": "Team",
+        "artifactField0Help": "Use the team or unit name, not the names of individual people.",
+        "artifactField1Label": "Three to five observable practices",
+        "artifactField1Help": "Describe something a team member could see happening in everyday work.",
+        "artifactField2Label": "Access at work",
+        "artifactField2Help": "Captions on every time, materials in advance, flexible participation formats.",
+        "artifactField3Label": "Who helped shape this plan",
+        "artifactField3Help": "Include team input and the Equity Director when relevant, without naming anyone as the problem.",
+        "artifactField4Label": "What you chose not to assume",
+        "artifactField4Help": "Consider what you may not know about why people are quiet, absent, or disengaged.",
+        "artifactField5Label": "Who is responsible for each practice",
+        "artifactField5Help": "Name a responsible person for each practice.",
+        "artifactField6Label": "Follow-up conversation date",
+        "artifactField6Help": "Within a quarter.",
+        "artifactField7Label": "Workgroup scope, participation and decisions",
+        "artifactField7Help": "If a workgroup will carry this work, describe its purpose and limits, how people can participate accessibly, whose perspectives are missing, and which decisions it can recommend or make under existing authority. Identify the responsible role, how participants will hear what happened to their input, and when the group will review its scope and usefulness. Do not treat joining a group as consent to speak for a community or authorize a change.",
+        "artifactField8Label": "Expertise brief: the question and knowledge needed",
+        "artifactField8Help": "If additional expertise would help, describe the question, what staff and affected participants already know, and which knowledge or skill is missing. Consider relevant internal expertise first. State why additional help is needed without claiming that a particular person or vendor is qualified.",
+        "artifactField9Label": "Expertise brief: scope, deliverables and responsibility",
+        "artifactField9Help": "Describe the proposed contribution, practical deliverables, boundaries and accountable internal role. Distinguish advice from an authorized decision. Identify how professional credentials or experience, source quality and conflicting interests would be checked by the responsible office before relying on the work.",
+        "artifactField10Label": "Expertise brief: access, permission and review",
+        "artifactField10Help": "Consider accessibility, language and cultural needs, time and cost, sourcing or procurement requirements, privacy and permission to share information. Record approvals as pending unless verified. Plan how the contribution will be evaluated, how affected people will hear what was used or could not be used and why, and how questions will return for review. Use the responsible program, procurement, legal, human-resources or accessibility office as applicable; this brief does not select a provider or authorize spending.",
+        "artifactField11Label": "How the team will know the practice is helping",
+        "artifactField11Help": "Look for changes in the team's experience without ranking or scoring people.",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the program, notice, session, or team this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the design was settled and what role or decision-making authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "No names or complaint details are included",
+        "reviewRule6Message": "Please leave out names and complaint details. Complaints, investigations, and discipline matters belong with Employee Culture, Human Resources, or the civil-rights channel."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a team climate plan with observable practices, clear responsibilities, and a follow-up date. Complaints, investigations, and discipline continue through the appropriate formal channels.",
+          "after": "Use this path to prepare a team climate plan with observable practices, clear responsibilities, and a follow-up date. The plan addresses everyday working conditions; complaints, investigations, and discipline continue through the appropriate formal channels.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Please do not include names, complaint details, or discipline information. Teams are not ranked. Your progress is saved only on this computer.",
+          "after": "Keep allegations, complaint details, and information about a person involved in a complaint out of this learning worksheet. Identify responsibility by role when planning team practices. Use the appropriate formal channel for a concern about conduct; this activity does not investigate or rank team members.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Ask about participation and team climate. Consider which everyday practices your team can change. Complaints and concerns about a named person’s conduct belong in the appropriate formal channel.",
+          "after": "Examine participation and team climate without guessing why someone is quiet or absent. Identify practices the team can change and what further input would help. A concern about a named person's conduct belongs in the appropriate formal channel.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Describe the practices, participation agreements, responsible people, and a follow-up date. Please leave out names and complaint details.",
+          "after": "Describe the practices, participation agreements, responsible roles, and a follow-up date. Keep allegations and identifying complaint details out of this planning exercise.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "reviewRule6Label"
+          ],
+          "before": "No names or complaint details are included",
+          "after": "No allegations or identifying complaint details are included",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "reviewRule6Message"
+          ],
+          "before": "Please leave out names and complaint details. Complaints, investigations, and discipline matters belong with Employee Culture, Human Resources, or the civil-rights channel.",
+          "after": "Keep allegations and identifying complaint details out of the team plan. Identify responsibility for ordinary practices by role. Use Employee Culture, Human Resources, or the civil-rights channel for a complaint, investigation, or discipline matter.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField5Help"
+          ],
+          "before": "Name a responsible person for each practice.",
+          "after": "Identify the role accountable for each practice and confirm assignments through the appropriate workplace process.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm who will carry it out through the appropriate workplace process.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        },
+        {
+          "path": [
+            "step4Guidance"
+          ],
+          "before": "Confirm that the practices are observable, each one has a responsible person and date, and the plan contains no complaint details.",
+          "after": "Confirm that each practice is observable, has an accountable role and review date, and contains no allegations or identifying complaint details.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-5",
+      "kind": "surface",
+      "route": "/practice/gp-5",
+      "original": {
+        "title": "Planning a learning or facilitation session",
+        "staffLabel": "I'm planning a session",
+        "signals": [
+          "A training, huddle, or equity-at-work session you are running",
+          "A session that must produce application, not attendance"
+        ],
+        "startingCompetence": "You have a session to lead and want participants to leave with something they can use in their work.",
+        "graduatedLooksLike": "By the end, you will have a reusable session plan with a clear objective, an activity based on real work, something useful participants can take with them, and access arrangements made in advance.",
+        "askStarters": [
+          "How do I plan a 60-minute session that produces something participants use?",
+          "What access arrangements should be in place before a session?",
+          "What should participants leave with that they can use in their work?"
+        ],
+        "artifactTitle": "Session plan",
+        "needsWork": [
+          "Slides without time to practice",
+          "No useful work for participants to take with them",
+          "Controls or directions shown only with icons"
+        ],
+        "readyToUse": [
+          "A clear objective, practice with real work, and notes on assistive technology and plain language"
+        ],
+        "privacy": "Do not record or score individual participants' beliefs. If you gather feedback, report only combined results that cannot identify anyone.",
+        "step0Title": "Begin with what participants will use",
+        "step0Guidance": "Ask about learning and facilitation. Identify what participants should understand or practice, then record how the session will help them use it.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-5"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the session centers Minnesota communities, use the relevant brief with care and stay within its stated limits.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the session plan template, facilitation learning guide, and access checklist as needed.",
+        "step2Links": [
+          {
+            "label": "Session plan template",
+            "href": "/library/ja-facilitation-session-plan"
+          },
+          {
+            "label": "Facilitation that leads to practical use",
+            "href": "/library/lm-facilitation-application"
+          },
+          {
+            "label": "Access checks before a session",
+            "href": "/library/ja-access-checks"
+          }
+        ],
+        "step3Title": "Draft your session plan",
+        "step3Guidance": "Include the objective, activity, work participants will complete, accessibility arrangements, and follow-up.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm that participants will leave with something useful, the access arrangements are specific, and the follow-up has a date.",
+        "step4Links": [],
+        "step5Title": "Find the right person when needed",
+        "step5Guidance": "If another person should help you plan the session, use Find the right person to identify the responsible role or office.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?area=community_engagement_co_design"
+          }
+        ],
+        "artifactField0Label": "Session title and audience",
+        "artifactField0Help": "",
+        "artifactField1Label": "Choosing an external learning opportunity",
+        "artifactField1Help": "When using an outside course or facilitator, examine the subject and intended audience, relevant expertise and evidence, and fit with this piece of work. Confirm accessibility, participation formats, time and costs through the responsible process. Plan how participants can apply the learning and later assess whether it helped; attendance alone is not evidence of an equitable result. Leave this blank when no external learning is involved.",
+        "artifactField2Label": "Learning objective (one sentence, observable)",
+        "artifactField2Help": "",
+        "artifactField3Label": "Activity with participants' real work",
+        "artifactField3Help": "",
+        "artifactField4Label": "Useful work participants will leave with",
+        "artifactField4Help": "Describe what they will complete and how they will use it next.",
+        "artifactField5Label": "Accessibility arrangements",
+        "artifactField5Help": "Consider captions or CART, materials shared in advance, alternatives to dragging or timed activities, plain-language slides, and text labels for every control.",
+        "artifactField6Label": "Who helped shape or will co-facilitate",
+        "artifactField6Help": "",
+        "artifactField7Label": "What you chose not to assume about participants",
+        "artifactField7Help": "Note what you still need to learn about participants' needs and experience.",
+        "artifactField8Label": "Who is responsible for follow-up",
+        "artifactField8Help": "Name who will learn whether participants were able to use what they completed.",
+        "artifactField9Label": "Follow-up date",
+        "artifactField9Help": "",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the program, notice, session, or team this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the design was settled and what role or decision-making authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "Participants leave with something they can use",
+        "reviewRule6Message": "Please add the work participants will complete and explain how they can use it afterward."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a reusable session plan with a clear objective, an activity based on real work, something useful participants can take with them, and access arrangements made in advance.",
+          "after": "Use this path to prepare a session plan with a clear objective, an activity based on real work, something useful participants can take with them, and access arrangements to confirm before the session.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-6",
+      "kind": "surface",
+      "route": "/practice/gp-6",
+      "original": {
+        "title": "Inclusive hiring and selection",
+        "staffLabel": "I'm hiring or designing a role",
+        "signals": [
+          "A position description being written or revised",
+          "A hiring panel, rubric, or interview plan",
+          "A screening process that keeps producing the same result"
+        ],
+        "startingCompetence": "You are responsible for a hiring process and want it to find capable people the current process may be screening out.",
+        "graduatedLooksLike": "By the end, you will have an inclusive hiring plan for a specific position: job-related requirements with alternatives, accessible outreach, a structured rubric and interviews, accommodation offered to everyone, a bias check built into deliberation, and a plan to review stage-by-stage outcomes with your HR partner.",
+        "askStarters": [
+          "We are rewriting a position description. How do we test whether the degree requirement is really job related?",
+          "What should be in our interview rubric so we are not relying on culture fit?",
+          "How do we offer accommodation at every stage without making anyone disclose a disability?"
+        ],
+        "artifactTitle": "Inclusive hiring plan",
+        "needsWork": [
+          "A diversity statement added to an unchanged posting",
+          "Removing every qualification without testing what the work requires",
+          "A panel chosen for appearance and given no rubric"
+        ],
+        "readyToUse": [
+          "Each requirement is tied to the work with an alternative named",
+          "The rubric is written and used",
+          "Outcomes will be reviewed stage by stage with HR"
+        ],
+        "privacy": "Do not include candidate or employee names. Describe the process, not a person. Your progress is saved only on this computer and is not used to rank anyone.",
+        "step0Title": "Test what the work requires",
+        "step0Guidance": "Ask about hiring guidance and check the sources it gives you. In the hiring plan below, record the position’s relevant requirements, evaluation criteria, and outreach choices. Your HR partner confirms applicable hiring requirements.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-6"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If outreach names particular Minnesota communities, read the relevant brief for how to reach people and what not to assume.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the eight-stage lifecycle, the job-relatedness check, and the accessible meeting guidance for interviews.",
+        "step2Links": [
+          {
+            "label": "Inclusive hiring lifecycle",
+            "href": "/resources/ja-inclusive-hiring-lifecycle"
+          },
+          {
+            "label": "Is this requirement job related?",
+            "href": "/resources/ja-job-relatedness-check"
+          },
+          {
+            "label": "Accessible and culturally responsive meetings",
+            "href": "/resources/ja-accessible-meetings"
+          }
+        ],
+        "step3Title": "Draft your inclusive hiring plan",
+        "step3Guidance": "Complete the plan for this position. Your notes are saved only on this computer. Leave out candidate and employee names.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm that each requirement is tied to the work, accommodation is offered to everyone, the rubric is written, the panel is prepared, and outcomes will be reviewed with HR.",
+        "step4Links": [],
+        "step5Title": "Take it to the right people",
+        "step5Guidance": "Bring the plan to your HR partner and hiring panel. Use existing workplace contacts when another professional perspective would help.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?matter=hiring_or_workforce"
+          }
+        ],
+        "artifactField0Label": "Position title and unit",
+        "artifactField0Help": "The position, not a person.",
+        "artifactField1Label": "Requirements and what work each one predicts",
+        "artifactField1Help": "One line per requirement: the requirement, the work it predicts, and the credible alternative that shows the same ability.",
+        "artifactField2Label": "Where and how you will reach people outside your usual networks",
+        "artifactField2Help": "Include community partners, plain-language posting, visible salary range, and the accommodation statement.",
+        "artifactField3Label": "Screening and interview rubric",
+        "artifactField3Help": "The written criteria applied the same way to every candidate. Replace culture fit with specific behaviors the team needs.",
+        "artifactField4Label": "Accommodation and access at each stage",
+        "artifactField4Help": "How accommodation is offered to everyone, and how each stage is accessible without disclosure.",
+        "artifactField5Label": "Panel, HR partner, and others involved",
+        "artifactField5Help": "Who is on the panel, how they were prepared, and which partners reviewed the plan.",
+        "artifactField6Label": "What you chose not to assume",
+        "artifactField6Help": "About candidates' paths, communication styles, or what confidence looks like.",
+        "artifactField7Label": "Who owns each follow-up",
+        "artifactField7Help": "Including who will review stage-by-stage outcomes with HR.",
+        "artifactField8Label": "Outcome review date",
+        "artifactField8Help": "When you will look at who applied, advanced, and was hired.",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the position, decision, meeting, or contract this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the decision was settled and what role or authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "No names of candidates, employees, or complainants are included",
+        "reviewRule6Message": "Please leave out individual names. Describe the process, not a person."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have an inclusive hiring plan for a specific position: job-related requirements with alternatives, accessible outreach, a structured rubric and interviews, accommodation offered to everyone, a bias check built into deliberation, and a plan to review stage-by-stage outcomes with your HR partner.",
+          "after": "Use this path to prepare an inclusive hiring plan for a specific position. Examine job-related requirements and credible alternatives, outreach, evaluation criteria, interview access, panel deliberation, and stage-by-stage outcomes. Confirm requirements and proposed changes with your HR partner before using the plan.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include candidate or employee names. Describe the process, not a person. Your progress is saved only on this computer and is not used to rank anyone.",
+          "after": "Keep candidate names, employee information, and individual selection assessments out of this learning worksheet. Describe the hiring process and responsible roles. Use the authorized hiring process and records systems for decisions about individual candidates.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Ask about hiring guidance and check the sources it gives you. In the hiring plan below, record the position’s relevant requirements, evaluation criteria, and outreach choices. Your HR partner confirms applicable hiring requirements.",
+          "after": "Identify the work the position requires and the evidence candidates can provide. Use published hiring guidance to examine requirements, evaluation criteria, and outreach choices. Record questions for your HR partner, who confirms the applicable hiring requirements.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the plan for this position. Your notes are saved only on this computer. Leave out candidate and employee names.",
+          "after": "Prepare the plan for this position using the downloaded checklist. Leave out candidate information and use the responsible roles to describe who will review or carry out each step.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField4Help"
+          ],
+          "before": "How accommodation is offered to everyone, and how each stage is accessible without disclosure.",
+          "after": "Describe accessible interview and assessment arrangements, how all candidates will learn how to request an accommodation, and which authorized process handles individual requests. Do not ask candidates to disclose medical information to the panel.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "askStarters",
+            2
+          ],
+          "before": "How do we offer accommodation at every stage without making anyone disclose a disability?",
+          "after": "How do we make each stage accessible and explain how candidates can request an accommodation?",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-7",
+      "kind": "surface",
+      "route": "/practice/gp-7",
+      "original": {
+        "title": "Equity analysis for a decision",
+        "staffLabel": "I'm making or shaping a decision that needs an equity look",
+        "signals": [
+          "A policy or program change going to leadership",
+          "A budget, rule, or service decision with real reach",
+          "A decision the DHS equity policy may require an analysis for"
+        ],
+        "startingCompetence": "You own or shape a decision and want to build equity into it while it can still change, and to know whether an equity scan or a full analysis is required.",
+        "graduatedLooksLike": "By the end, you will have an equity analysis record for a specific decision: the decision and its deadline, affected people and who is missing, evidence and its limits, benefits and burdens, alternatives, engagement, implementation owners, and follow-up. It supports the DHS process; the official record lives with the policy owner.",
+        "askStarters": [
+          "We are changing a program rule that goes to leadership. Does this need an equity scan or a full analysis, and what goes in it?",
+          "Who benefits and who carries the burden in a budget reduction, and how do we find out?",
+          "What alternatives should we compare before we settle a service change?"
+        ],
+        "artifactTitle": "Equity analysis record",
+        "needsWork": [
+          "An equity section written after the decision was made",
+          "Engagement scheduled after the deadline",
+          "A single option presented as the analysis"
+        ],
+        "readyToUse": [
+          "The decision is stated with its real deadline",
+          "At least two alternatives are compared on benefits and burdens",
+          "Owners, follow-up, and report-back are dated"
+        ],
+        "privacy": "Do not include names or case details. This record supports a required DHS process but is not the official record; keep the official copy where your division keeps decision records. Your progress here is saved only on this computer.",
+        "step0Title": "Clarify the decision and what applies",
+        "step0Guidance": "Browse published policy guidance. Identify the decision, what evidence is needed, and whether the applicable requirements call for a scan or fuller analysis. Record your reasoning below; the policy owner confirms what is required.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-7"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the decision affects particular Minnesota communities, read the relevant briefs and plan engagement while the decision is open.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the scan-or-full-analysis aid, the equity review canvas, the Minnesota Equity Analysis Toolkit, and the equity impact questions.",
+        "step2Links": [
+          {
+            "label": "Equity scan or full analysis: what goes in",
+            "href": "/resources/ja-equity-scan-or-full-analysis"
+          },
+          {
+            "label": "Operational equity review canvas",
+            "href": "/resources/ja-operational-equity-canvas"
+          },
+          {
+            "label": "Minnesota Equity Analysis Toolkit",
+            "href": "/resources/ext-dhs-equity-toolkit"
+          }
+        ],
+        "step3Title": "Draft your equity analysis record",
+        "step3Guidance": "Complete the record for this decision. Your notes are saved only on this computer. Leave out names and case details.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm the decision is stated, affected people and who is missing are named, evidence and limits are recorded, at least two alternatives are compared, owners are named, and follow-up is dated.",
+        "step4Links": [],
+        "step5Title": "Take it to the right people",
+        "step5Guidance": "Bring the record to the policy owner and your Equity Director. Identify any remaining question that needs their professional judgment.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?matter=policy_or_program_decision"
+          }
+        ],
+        "artifactField0Label": "Decision name and owner",
+        "artifactField0Help": "What is being decided and who owns the decision.",
+        "artifactField1Label": "Scan or full analysis, and who confirmed it",
+        "artifactField1Help": "Which applies under the DHS equity policy, and which policy owner or Equity Director confirmed it.",
+        "artifactField2Label": "When the decision stops being changeable",
+        "artifactField2Help": "The real date choices close.",
+        "artifactField3Label": "Who benefits, who carries the burden, and who is missing",
+        "artifactField3Help": "By community, language, disability, age, place, and the people who deliver the service.",
+        "artifactField4Label": "Evidence and what it does not show",
+        "artifactField4Help": "Data by group with small-group protection, what people who use the service say, and the limits.",
+        "artifactField5Label": "Alternatives compared",
+        "artifactField5Help": "At least two, including not proceeding, with who each helps and burdens.",
+        "artifactField6Label": "Access and burden in implementation",
+        "artifactField6Help": "Languages, formats, a person people can reach, and burden you can remove.",
+        "artifactField7Label": "Who was involved and with what influence",
+        "artifactField7Help": "Team, data owners, staff who deliver the service, communities, and the level of influence they had.",
+        "artifactField8Label": "What you chose not to assume",
+        "artifactField8Help": "About people's access, time, documents, technology, or trust.",
+        "artifactField9Label": "Sources and their authority labels",
+        "artifactField9Help": "Label each source Official, Guidance, or Outside source; check before use.",
+        "artifactField10Label": "Who owns each part of implementation and follow-up",
+        "artifactField10Help": "People, not units.",
+        "artifactField11Label": "Follow-up and report-back date",
+        "artifactField11Help": "When you will look at what happened and tell the people who gave input.",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the position, decision, meeting, or contract this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the decision was settled and what role or authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "Every source has an authority label and can be verified",
+        "reviewRule6Message": "Please label each source Official, Guidance, or Outside source; check before use. If a citation came from memory, leave it out and ask the policy owner."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have an equity analysis record for a specific decision: the decision and its deadline, affected people and who is missing, evidence and its limits, benefits and burdens, alternatives, engagement, implementation owners, and follow-up. It supports the DHS process; the official record lives with the policy owner.",
+          "after": "Use this path to prepare an equity analysis for a specific decision: its deadline, affected people and missing perspectives, evidence and limits, benefits and burdens, alternatives, engagement, implementation responsibilities, and follow-up. Confirm the required approach and official recordkeeping with the policy owner and responsible equity office.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include names or case details. This record supports a required DHS process but is not the official record; keep the official copy where your division keeps decision records. Your progress here is saved only on this computer.",
+          "after": "Keep names and case details out of this learning worksheet. If you complete a downloaded copy, store the decision record in the authorized location and follow the applicable records requirements. This page does not determine which document is the official record.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Browse published policy guidance. Identify the decision, what evidence is needed, and whether the applicable requirements call for a scan or fuller analysis. Record your reasoning below; the policy owner confirms what is required.",
+          "after": "Identify the decision and review the official policy and User Guide. Determine what evidence is needed, then confirm the review approach with the policy owner and responsible equity office. An earlier analysis or the type of decision alone does not establish that a scan is sufficient.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the record for this decision. Your notes are saved only on this computer. Leave out names and case details.",
+          "after": "Prepare the record for this decision using the downloaded checklist. Leave out names and case details, identify unresolved questions, and confirm the authorized location for the completed decision record.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField1Label"
+          ],
+          "before": "Scan or full analysis, and who confirmed it",
+          "after": "Review approach and who confirmed it",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField1Help"
+          ],
+          "before": "Which applies under the DHS equity policy, and which policy owner or Equity Director confirmed it.",
+          "after": "Record the approach confirmed through the official policy, User Guide, and responsible equity office. Keep an unconfirmed choice marked as pending.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField10Help"
+          ],
+          "before": "People, not units.",
+          "after": "Identify the accountable role for each part. Confirm individual assignments in the appropriate official records.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "accepted",
+    "reviewer": "coverage_review",
+    "date": "2026-11-15",
+    "manifestSha256": "3d6c97b4afc85d3626ed5008bf74190dbf8f97ad54850dea193fa532f245127c"
+  }
+}

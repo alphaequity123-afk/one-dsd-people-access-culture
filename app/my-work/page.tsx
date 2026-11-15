@@ -25,7 +25,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
     <section aria-labelledby="pilot-work">
       <h2 id="pilot-work">Put learning to work</h2>
       <ul className="pilot-topic-rows">
-        <li><Link href="/my-work/action-plan"><strong>Your action plans</strong><span>Choose a change to try and a time to look back.</span></Link></li>
+        <li><Link href="/my-work/action-plan"><strong>Your action plans</strong><span>Prepare a next step and a date to review what happened.</span></Link></li>
         <li><Link href="/my-work/plan"><strong>Your practice plans</strong><span>Keep a plan for each piece of work.</span></Link></li>
         <li><Link href="/my-work/reflections"><strong>Your reflection notebook</strong><span>Record what happened and what you learned.</span></Link></li>
         <li><Link href="/my-work/decision-records"><strong>Decision records</strong><span>Record why a decision was made.</span></Link></li>
@@ -46,7 +46,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
         <section aria-labelledby="put-to-work-title">
           <h2 id="put-to-work-title" className="text-2xl font-bold">Put learning to work</h2>
           <ul className="calm-choices">
-            <li><Link className="calm-choice" href="/my-work/action-plan"><h3>Your action plans</h3><p>One change you will try, a first step and a thirty-day look back.</p></Link></li>
+            <li><Link className="calm-choice" href="/my-work/action-plan"><h3>Your action plans</h3><p>A next step within your responsibility, with a review date you can adjust.</p></Link></li>
             <li><Link className="calm-choice" href="/my-work/reflections"><h3>Your reflection notebook</h3><p>A few lines on what happened, why it matters and what you will do next, with a date to look back.</p></Link></li>
             <li><Link className="calm-choice" href="/my-work/decision-records"><h3>Decision records</h3><p>Write down why a consequential decision was made. Share one with the team space if you choose.</p></Link></li>
             <li><Link className="calm-choice" href="/growth"><h3>Growth paths</h3><p>Start, apply and lead, suggested by role.</p></Link></li>

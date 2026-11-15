@@ -44,12 +44,13 @@ describe("reflections", () => {
     expect(validRecord({ ...reflection, kind: "badge" })).toBe(false);
     expect(loadBook(JSON.stringify({ version: 1, records: [reflection] })).records).toHaveLength(1);
   });
-  it("downloads in plain words, saying no copy is kept", () => {
+  it("distinguishes the exported copy from saved browser and team copies", () => {
     const reflection = emptyRecord("reflection", "r1", now, { what: "I asked instead of assuming." });
     const text = recordText(reflection);
     expect(text).toContain("Reflection: My reflection");
     expect(text).toContain("What happened\nI asked instead of assuming.");
-    expect(text).toContain("keeps no copy of this record");
+    expect(text).toContain("Any saved browser or team-space copies are separate");
+    expect(text).not.toContain("keeps no copy");
   });
 });
 

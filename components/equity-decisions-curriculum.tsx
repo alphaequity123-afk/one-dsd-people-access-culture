@@ -122,7 +122,7 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
       <section aria-labelledby="apply"><h2 id="apply">Bring it into your work</h2>
         {lesson.practice.artifact && <p><strong>Take forward:</strong> {lesson.practice.artifact}</p>}
         <p>{lesson.practice.reflection}</p>
-        <label htmlFor="reflection">Optional private working note</label>
+        <label htmlFor="reflection">Optional working note</label>
         <textarea id="reflection" rows={6} value={notes} onChange={event => setNotes(event.target.value)} aria-describedby="note-privacy"/>
         <p id="note-privacy">This note is not sent or automatically saved. Download it if you want to keep a copy. Do not include names, case details, health or personnel information, or other confidential information.</p>
         <button type="button" onClick={() => download(`equity-decisions-part-${lesson.id}-notes.txt`, `${lesson.title}\n\n${lesson.practice.reflection}\n\n${notes}`)}>Download my note</button>{' '}

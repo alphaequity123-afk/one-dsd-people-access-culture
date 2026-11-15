@@ -1,6 +1,6 @@
-/** The owner's program-wide rule: everything here is voluntary and no training credits are offered. */
+/** No program training credits; distinguish optional learning from official work and training duties. */
 export const TRAINING_CREDIT_NOTICE =
-  "Everything in this program is voluntary, and it does not offer training credits. The one exception is the Equity Analysis Toolkit, which is required.";
+  "This program does not offer training credits. Optional learning here supports DHS responsibilities under the Equity Policy, including applicable equity-analysis requirements and assigned agency training. Complete required training through the agency's designated process.";
 
 /** Shared reasoning context; staff receive the concise notice when they ask about credit. */
 export function trainingCreditContext(): string {

@@ -3465,6 +3465,856 @@
       ],
       "status": "reviewed",
       "reviewNote": "Independent full-context editorial acceptance by coverage_review, 2026-11-15; source-sensitive retained fields are not factually recertified."
+    },
+    {
+      "target": "graduation-path.gp-4",
+      "kind": "surface",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a team climate plan with observable practices, clear responsibilities, and a follow-up date. Complaints, investigations, and discipline continue through the appropriate formal channels.",
+          "after": "Use this path to prepare a team climate plan with observable practices, clear responsibilities, and a follow-up date. The plan addresses everyday working conditions; complaints, investigations, and discipline continue through the appropriate formal channels.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Please do not include names, complaint details, or discipline information. Teams are not ranked. Your progress is saved only on this computer.",
+          "after": "Keep allegations, complaint details, and information about a person involved in a complaint out of this learning worksheet. Identify responsibility by role when planning team practices. Use the appropriate formal channel for a concern about conduct; this activity does not investigate or rank team members.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Ask about participation and team climate. Consider which everyday practices your team can change. Complaints and concerns about a named person’s conduct belong in the appropriate formal channel.",
+          "after": "Examine participation and team climate without guessing why someone is quiet or absent. Identify practices the team can change and what further input would help. A concern about a named person's conduct belongs in the appropriate formal channel.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Describe the practices, participation agreements, responsible people, and a follow-up date. Please leave out names and complaint details.",
+          "after": "Describe the practices, participation agreements, responsible roles, and a follow-up date. Keep allegations and identifying complaint details out of this planning exercise.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "reviewRule6Label"
+          ],
+          "before": "No names or complaint details are included",
+          "after": "No allegations or identifying complaint details are included",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "reviewRule6Message"
+          ],
+          "before": "Please leave out names and complaint details. Complaints, investigations, and discipline matters belong with Employee Culture, Human Resources, or the civil-rights channel.",
+          "after": "Keep allegations and identifying complaint details out of the team plan. Identify responsibility for ordinary practices by role. Use Employee Culture, Human Resources, or the civil-rights channel for a complaint, investigation, or discipline matter.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField5Help"
+          ],
+          "before": "Name a responsible person for each practice.",
+          "after": "Identify the role accountable for each practice and confirm assignments through the appropriate workplace process.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm who will carry it out through the appropriate workplace process.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        },
+        {
+          "path": [
+            "step4Guidance"
+          ],
+          "before": "Confirm that the practices are observable, each one has a responsible person and date, and the plan contains no complaint details.",
+          "after": "Confirm that each practice is observable, has an accountable role and review date, and contains no allegations or identifying complaint details.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "Full source context read; 24 bounded authored fields across four practice paths accepted. Linked materials not recertified."
+      },
+      "route": "/practice/gp-4"
+    },
+    {
+      "target": "graduation-path.gp-5",
+      "kind": "surface",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a reusable session plan with a clear objective, an activity based on real work, something useful participants can take with them, and access arrangements made in advance.",
+          "after": "Use this path to prepare a session plan with a clear objective, an activity based on real work, something useful participants can take with them, and access arrangements to confirm before the session.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "Full source context read; 24 bounded authored fields across four practice paths accepted. Linked materials not recertified."
+      },
+      "route": "/practice/gp-5"
+    },
+    {
+      "target": "graduation-path.gp-6",
+      "kind": "surface",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have an inclusive hiring plan for a specific position: job-related requirements with alternatives, accessible outreach, a structured rubric and interviews, accommodation offered to everyone, a bias check built into deliberation, and a plan to review stage-by-stage outcomes with your HR partner.",
+          "after": "Use this path to prepare an inclusive hiring plan for a specific position. Examine job-related requirements and credible alternatives, outreach, evaluation criteria, interview access, panel deliberation, and stage-by-stage outcomes. Confirm requirements and proposed changes with your HR partner before using the plan.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include candidate or employee names. Describe the process, not a person. Your progress is saved only on this computer and is not used to rank anyone.",
+          "after": "Keep candidate names, employee information, and individual selection assessments out of this learning worksheet. Describe the hiring process and responsible roles. Use the authorized hiring process and records systems for decisions about individual candidates.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Ask about hiring guidance and check the sources it gives you. In the hiring plan below, record the position’s relevant requirements, evaluation criteria, and outreach choices. Your HR partner confirms applicable hiring requirements.",
+          "after": "Identify the work the position requires and the evidence candidates can provide. Use published hiring guidance to examine requirements, evaluation criteria, and outreach choices. Record questions for your HR partner, who confirms the applicable hiring requirements.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the plan for this position. Your notes are saved only on this computer. Leave out candidate and employee names.",
+          "after": "Prepare the plan for this position using the downloaded checklist. Leave out candidate information and use the responsible roles to describe who will review or carry out each step.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField4Help"
+          ],
+          "before": "How accommodation is offered to everyone, and how each stage is accessible without disclosure.",
+          "after": "Describe accessible interview and assessment arrangements, how all candidates will learn how to request an accommodation, and which authorized process handles individual requests. Do not ask candidates to disclose medical information to the panel.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "askStarters",
+            2
+          ],
+          "before": "How do we offer accommodation at every stage without making anyone disclose a disability?",
+          "after": "How do we make each stage accessible and explain how candidates can request an accommodation?",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "Full source context read; 24 bounded authored fields across four practice paths accepted. Linked materials not recertified."
+      },
+      "route": "/practice/gp-6"
+    },
+    {
+      "target": "graduation-path.gp-7",
+      "kind": "surface",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have an equity analysis record for a specific decision: the decision and its deadline, affected people and who is missing, evidence and its limits, benefits and burdens, alternatives, engagement, implementation owners, and follow-up. It supports the DHS process; the official record lives with the policy owner.",
+          "after": "Use this path to prepare an equity analysis for a specific decision: its deadline, affected people and missing perspectives, evidence and limits, benefits and burdens, alternatives, engagement, implementation responsibilities, and follow-up. Confirm the required approach and official recordkeeping with the policy owner and responsible equity office.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include names or case details. This record supports a required DHS process but is not the official record; keep the official copy where your division keeps decision records. Your progress here is saved only on this computer.",
+          "after": "Keep names and case details out of this learning worksheet. If you complete a downloaded copy, store the decision record in the authorized location and follow the applicable records requirements. This page does not determine which document is the official record.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Browse published policy guidance. Identify the decision, what evidence is needed, and whether the applicable requirements call for a scan or fuller analysis. Record your reasoning below; the policy owner confirms what is required.",
+          "after": "Identify the decision and review the official policy and User Guide. Determine what evidence is needed, then confirm the review approach with the policy owner and responsible equity office. An earlier analysis or the type of decision alone does not establish that a scan is sufficient.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the record for this decision. Your notes are saved only on this computer. Leave out names and case details.",
+          "after": "Prepare the record for this decision using the downloaded checklist. Leave out names and case details, identify unresolved questions, and confirm the authorized location for the completed decision record.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField1Label"
+          ],
+          "before": "Scan or full analysis, and who confirmed it",
+          "after": "Review approach and who confirmed it",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField1Help"
+          ],
+          "before": "Which applies under the DHS equity policy, and which policy owner or Equity Director confirmed it.",
+          "after": "Record the approach confirmed through the official policy, User Guide, and responsible equity office. Keep an unconfirmed choice marked as pending.",
+          "reason": "Align guidance with the published reading/download path, individual inquiry, authorized decisions, and accurate privacy boundaries."
+        },
+        {
+          "path": [
+            "artifactField10Help"
+          ],
+          "before": "People, not units.",
+          "after": "Identify the accountable role for each part. Confirm individual assignments in the appropriate official records.",
+          "reason": "Independent reviewer follow-up: make adjacent instructions consistent without weakening formal responsibilities."
+        }
+      ],
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "Full source context read; 24 bounded authored fields across four practice paths accepted. Linked materials not recertified."
+      },
+      "route": "/practice/gp-7"
+    },
+    {
+      "target": "graduation-path.gp-8",
+      "kind": "surface",
+      "route": "/practice/gp-8",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a reusable meeting plan: purpose and materials sent ahead, accommodation offered without disclosure, several ways to contribute, attention to positional power, a plan for repair if harm occurs, decisions with owners, and accessible follow-up.",
+          "after": "Use this path to prepare a meeting plan: purpose and materials shared ahead, accessible participation formats, a clear accommodation-request process, attention to positional power, a response when harm occurs, decisions with accountable roles, and accessible follow-up.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include names. Your progress is saved only on this computer and is not used to rank anyone.",
+          "after": "Describe the meeting and responsible roles without identifying participants or recording personal accommodation information. Keep individual requests in the authorized process and confirm work assignments through the appropriate workplace records.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the plan. Your notes are saved only on this computer. Leave out names.",
+          "after": "Prepare the meeting plan using the downloaded checklist. Describe responsible roles and participation arrangements without names or personal accommodation information.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "readyToUse",
+            1
+          ],
+          "before": "Repair is the responsibility of the person with more power",
+          "after": "The meeting lead has a response plan that accounts for power, the affected person, and any formal reporting duty",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step1Guidance"
+          ],
+          "before": "If the meeting includes community partners, read the relevant brief for access, timing, and what not to assume.",
+          "after": "Use relevant community briefs to prepare questions about access and timing. Confirm arrangements with participants; a brief does not establish what a particular person needs or prefers.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField4Help"
+          ],
+          "before": "Who opens, who speaks last, how you will notice who is not speaking, and what you will do if harm occurs.",
+          "after": "Consider speaking order, ways to contribute without speaking publicly, and how you will check participation barriers without guessing motives. If harm occurs, address the immediate concern, ask what support is needed, and follow any applicable reporting process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "50 bounded fields across six complete practice-path contexts; linked materials not recertified."
+      }
+    },
+    {
+      "target": "graduation-path.gp-9",
+      "kind": "surface",
+      "route": "/practice/gp-9",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a review record for a specific draft: what it asks of people, who may be excluded, access and language findings, source labels, changes made, and what remains for the owner.",
+          "after": "Use this path to prepare a review record for a specific draft: what it asks of people, who may be excluded, access and language findings, source labels, suggested changes, and questions for the owner. Record what you checked even when the evidence supports keeping the draft as written.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "needsWork",
+            0
+          ],
+          "before": "Approved with no findings",
+          "after": "Approval without documenting what was checked or why the draft is suitable",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not paste confidential, predecisional, or personal material. Your progress is saved only on this computer.",
+          "after": "Use a fictional example or material you are authorized to review. Keep confidential, predecisional, and personal material out of Ask and this learning exercise. Store any completed review through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the review record. Your notes are saved only on this computer. Do not paste confidential material.",
+          "after": "Prepare the review record using the downloaded checklist. Document specific findings and reasons for retaining or revising wording. Do not paste confidential material.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "50 bounded fields across six complete practice-path contexts; linked materials not recertified."
+      }
+    },
+    {
+      "target": "graduation-path.gp-10",
+      "kind": "surface",
+      "route": "/practice/gp-10",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a procurement equity record: who the service reaches, requirements in the solicitation, evaluation criteria, contract reporting and access terms, monitoring by community, and the partners who own the rules.",
+          "after": "Use this path to prepare questions and proposed terms for a procurement equity review: who the service reaches, solicitation requirements, evaluation criteria, reporting, access, and monitoring. The contracts or procurement office confirms applicable rules and the required approval process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "needsWork",
+            1
+          ],
+          "before": "Preferences that are never scored",
+          "after": "Published evaluation criteria applied inconsistently or left out of the assessment",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include confidential procurement details or vendor-identifying information. Your progress is saved only on this computer.",
+          "after": "Keep confidential procurement details and vendor-identifying information out of this learning worksheet and Ask. Use authorized procurement records for actual proposals, evaluations, and decisions.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step1Guidance"
+          ],
+          "before": "If the service reaches particular Minnesota communities, read the relevant briefs for access and trusted partners.",
+          "after": "Use relevant community briefs to identify access questions and possible contacts. Confirm current roles, relevant expertise, and community perspectives; being listed in a brief does not establish that a partner represents or is trusted by everyone.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the record. Your notes are saved only on this computer. Leave out vendor-identifying and confidential procurement details.",
+          "after": "Prepare the review record using the downloaded checklist. Leave out vendor-identifying and confidential procurement details, and mark proposed requirements or approvals as pending until confirmed.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "50 bounded fields across six complete practice-path contexts; linked materials not recertified."
+      }
+    },
+    {
+      "target": "graduation-path.gp-11",
+      "kind": "surface",
+      "route": "/practice/gp-11",
+      "changes": [
+        {
+          "path": [
+            "startingCompetence"
+          ],
+          "before": "You shape how people move into lead and leadership roles and want the pathway to work for staff with disabilities without asking anyone to disclose.",
+          "after": "You shape access to leadership roles and want to examine barriers for staff with disabilities. Review the pathway without identifying individuals or asking them to disclose personal information in this learning exercise.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a leadership pathway or sponsorship plan: a transparent pathway map, leadership criteria tested for job-relatedness, sponsors with decision power, an owner for accommodations across every transition, cohort events that are accessible every time, program-level measures with suppression, and a review date. No one is identified as disabled anywhere in it.",
+          "after": "Use this path to prepare a leadership pathway or sponsorship plan: visible criteria tied to the work, access to development opportunities, sponsors with relevant influence, responsibility for access across transitions, and a review date. Plan aggregate measures with privacy safeguards. Keep individual disability and accommodation information in the authorized process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Never record who is disabled or any accommodation history. Describe the pathway, not people. Your progress is saved only on this computer and is not used to rank anyone.",
+          "after": "Do not record individual disability information or accommodation histories in this learning worksheet. Describe the pathway and responsible roles. Individual requests and records belong in the authorized accommodation process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the plan. Your notes are saved only on this computer. Do not name anyone or record who is disabled.",
+          "after": "Prepare the pathway or sponsorship plan using the downloaded checklist. Use roles rather than names and keep individual disability or accommodation information out of the plan.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step4Guidance"
+          ],
+          "before": "Confirm the pathway map is written, each criterion is tied to leadership work, accommodations have an owner at every transition, cohort events are accessible every time, sponsors hold decision power, measures use aggregates with suppression, and no individual is identified.",
+          "after": "Check that the pathway is visible, criteria relate to leadership work, and responsibility for access is clear at each transition. Review participation formats, sponsor commitments, and aggregate measures with appropriate privacy safeguards. Confirm unresolved access questions through the authorized process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField4Help"
+          ],
+          "before": "Materials in advance, captioning, flexible participation formats, no timed or drag-based activities, accommodation offered to everyone in the same sentence as logistics.",
+          "after": "Plan materials in advance, captions and flexible participation formats. Provide alternatives to timed or drag-based activities and explain how to request an accommodation. Confirm individual needs through the appropriate process rather than assuming one arrangement works for everyone.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField10Help"
+          ],
+          "before": "When you will look at aggregate patterns and tell staff what changed.",
+          "after": "Set a date to review aggregate patterns and tell staff what changed, what stayed the same, and why.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "askStarters",
+            0
+          ],
+          "before": "We are redesigning our lead-worker pathway. How do we make it work for staff with disabilities without asking anyone to disclose?",
+          "after": "How can we make our lead-worker pathway accessible and explain the appropriate process for individual accommodation requests?",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "readyToUse",
+            2
+          ],
+          "before": "Accommodations have an owner across every transition and sponsors hold decision power",
+          "after": "Access has a responsible role across transitions, and sponsor commitments fit their influence and authority",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "needsWork",
+            1
+          ],
+          "before": "A cohort that is accessible on request",
+          "after": "A cohort with no planned access arrangements or clear accommodation-request process",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "50 bounded fields across six complete practice-path contexts; linked materials not recertified."
+      }
+    },
+    {
+      "target": "graduation-path.gp-12",
+      "kind": "surface",
+      "route": "/practice/gp-12",
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a short record of the decision: who is affected differently, who can change it, the access needs you checked, what you know and do not know yet, one alternative you considered, and your next step with a review date. You can complete routine decisions on your own and recognize when a fuller analysis applies.",
+          "after": "Use this path to prepare a short decision record: who may be affected differently, who has authority, access needs, evidence and uncertainty, an alternative, and a next step with a review date. This check does not authorize a decision or determine whether formal equity-analysis requirements apply.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Describe the decision and the people it affects in general terms. Do not include names or case details. Your notes are saved only on this computer and are not used to rank anyone.",
+          "after": "Describe the decision and affected groups in general terms without names or case details. Identify responsible roles in the learning worksheet and use the authorized process for actual assignments and records.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step1Guidance"
+          ],
+          "before": "If the decision reaches particular Minnesota communities, read the relevant brief for access needs and what not to assume.",
+          "after": "Use relevant community briefs to identify questions about access and context. Check needs with the people affected instead of treating the brief as a description of an individual.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step2Guidance"
+          ],
+          "before": "Use the plain-language and language access checklists for anything people will read. If the decision turns out to have real reach, the toolkit companion shows what a scan or full analysis asks.",
+          "after": "Use the plain-language and language-access checklists for material people will read. Review the official equity policy and User Guide, and confirm any required review with the responsible equity office; calling a decision routine does not exempt it from those requirements.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Answer the questions for this decision. Your notes are saved only on this computer, so please leave out names and case details.",
+          "after": "Use the downloaded checklist to record the decision, evidence, uncertainty, and next step. Keep names and case details out of this learning exercise.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step5Guidance"
+          ],
+          "before": "Most routine decisions do not need a conversation. If a question remains, or the decision affects people more than you expected, a consultation or the right office can help.",
+          "after": "Use the person or office responsible for the decision when authority, evidence, access, or review requirements remain unclear. Follow any required consultation or approval process even when the decision initially appears routine.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step5Title"
+          ],
+          "before": "Talk it through (optional)",
+          "after": "Seek guidance when needed",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "50 bounded fields across six complete practice-path contexts; linked materials not recertified."
+      }
+    },
+    {
+      "target": "graduation-path.gp-13",
+      "kind": "surface",
+      "route": "/practice/gp-13",
+      "changes": [
+        {
+          "path": [
+            "startingCompetence"
+          ],
+          "before": "You wrote something and want to check it yourself in three passes before it goes out: whether people can read and reach it, whether it assumes knowledge or norms people may not share, and whether it invites rather than warns.",
+          "after": "You wrote something and want to review it in three passes: whether people can access and understand it, whether it assumes knowledge or norms they may not share, and whether its tone is respectful and accurate. Preserve required notices, deadlines, and consequences.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a three-part check of your material: what you found and changed for access and plain language, for assumed knowledge and representation, and for tone, along with what remains and when you will look again. You can run this check on your own writing routinely, and you know when to ask a colleague to review a draft instead.",
+          "after": "Use this path to document a three-part review of your material: access and plain language, assumed knowledge and representation, and tone. Record what you retained or revised, why, what still needs another reviewer, and when you will revisit it.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not paste confidential or predecisional material. Your notes are saved only on this computer.",
+          "after": "Use material you are authorized to review. Keep confidential, predecisional, and personal material out of Ask and this learning exercise. Store completed work through the appropriate workplace process.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Read your material in three passes: access and plain language, assumed knowledge and representation, and tone. Record a specific finding and revision for each pass below. Ask when you need an example or an explanation.",
+          "after": "Read in three passes: access and plain language, assumed knowledge and representation, and tone. Record specific observations and reasons to retain or revise the material. Ask for an explanation or example without including confidential details.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Record what you found and changed in each pass. Your notes are saved only on this computer. Do not paste confidential material.",
+          "after": "Use the downloaded checklist to record what each pass found and why you retained or revised the wording. Do not paste confidential material.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step4Guidance"
+          ],
+          "before": "Confirm each pass names specific changes, you noted what you assumed, you know who else should look, and you have a date to send or revisit it.",
+          "after": "Check that each pass records a finding and its reason, assumptions are explicit, and any further review has a responsible role and date. Confirm that edits preserve required information and the original meaning.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "step5Guidance"
+          ],
+          "before": "A second reader catches what the writer cannot. If you would like someone to review your draft, the draft review path gives them a structure, and the right office can help with language access or accessibility questions.",
+          "after": "A second reader may notice barriers or ambiguities the writer missed. Use the draft-review path to structure that review, and seek the responsible office for language access, accessibility, or required wording.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "artifactField3Help"
+          ],
+          "before": "Invitational rather than punitive. Person-first or identity-first language as the community prefers. Acknowledges that we are still learning. Strengths and goals rather than deficits. Note the sentences you rewrote.",
+          "after": "Use a respectful, direct tone and explain how to act. Preserve accurate requirements and consequences. Ask about person-first or identity-first language when an individual preference is relevant; preferences can differ within a community. Record revisions and the meaning they preserve.",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "readyToUse",
+            2
+          ],
+          "before": "A sentence that now tells people how to succeed instead of what happens if they fail",
+          "after": "Clear next steps and a respectful tone, with required notices and consequences preserved",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "askStarters",
+            2
+          ],
+          "before": "How do I say this so it invites people instead of warning them?",
+          "after": "How can I make this message respectful and helpful while preserving any required notice, deadline, or consequence?",
+          "reason": "Full-source editorial review: align preparation with actual download behavior, preserve authority and formal duties, avoid guarantees or assumptions about people."
+        },
+        {
+          "path": [
+            "needsWork",
+            0
+          ],
+          "before": "A reading-level number with nothing changed",
+          "after": "A reading-level number without specific observations or reasons to retain or revise the material",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "readyToUse",
+            0
+          ],
+          "before": "Specific sentences you shortened, terms you defined, and images you described",
+          "after": "Specific observations about sentences, terminology and images, with reasons for keeping or revising them",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Label"
+          ],
+          "before": "Every follow-up has a named owner",
+          "after": "Every follow-up has an accountable role",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        },
+        {
+          "path": [
+            "reviewRule0Message"
+          ],
+          "before": "Please name the person responsible for each follow-up.",
+          "after": "Identify the role responsible for each follow-up and confirm individual assignments through the appropriate workplace process.",
+          "reason": "Independent review follow-up: resolve adjacent contradictions while preserving formal responsibilities."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "50 bounded fields across six complete practice-path contexts; linked materials not recertified."
+      }
+    },
+    {
+      "target": "resource.tool-idi",
+      "kind": "resource",
+      "route": "/library/tool-idi",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Qualified administrators give this proprietary, licensed assessment for individual and group intercultural development. You may describe it, refer to qualified administration, and discuss developmental orientations generally, but never reproduce protected content or use results for selection, performance, access, or profiling.",
+          "after": "The Intercultural Development Inventory is a licensed assessment administered by an IDI Qualified Administrator. This program explains its developmental framework but does not administer the assessment, reproduce protected material, or use individual results for employment decisions or access to learning.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Purpose: describes a developmental orientation toward cultural difference along a continuum from monocultural to intercultural mindsets. This program's continuum draws on both: the licensed IDI instrument describes five orientations — Denial, Polarization, Minimization, Acceptance, and Adaptation — and the program's sixth, Integration, comes from Bennett's Developmental Model of Intercultural Sensitivity and the program's own application; it is not an IDI orientation. In this program, Integration means the people a process affects help design it; in Bennett's model, where the name comes from, it describes identity across cultures. The full continuum moves from not noticing cultural difference, through judging it, through treating it as unimportant next to human sameness, toward genuinely valuing, adapting to, and integrating multiple cultural frames. Used for coaching, group development, and planning.",
+          "after": "Purpose and model: the IDI places results along the Intercultural Development Continuum, whose five orientations are Denial, Polarization, Minimization, Acceptance and Adaptation. Integration belongs to Bennett's separate Developmental Model of Intercultural Sensitivity, where it concerns identity across cultural worldviews. Community participation in service design is a program practice; it is not a sixth IDI orientation or an assessment result.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Evidence base: published validity research by the instrument's developers and independent studies; check current literature.",
+          "after": "Evidence: review the publisher's research and validation material alongside relevant independent studies. Consider the population, methods, uses and limitations of each study before drawing a conclusion about a particular setting.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Limits: describes orientation, not competence or character. Results depend on honest self-report and on qualified debrief. It is not a hiring, promotion, or evaluation instrument.",
+          "after": "Interpretation: the publisher describes individual and group reports as snapshots of an approach to cultural differences and commonalities. Individual results are discussed with a licensed Qualified Administrator. A result is not a judgment of character or a complete account of workplace behavior; this program does not use it for hiring, promotion or performance evaluation.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Program use: this program may describe the IDI and route to qualified administration. It does not administer, score, store, or interpret individual results, and it does not reproduce licensed material. The owner's source record keeps the phrase IBI orientation as an alias for supplied IDI material.",
+          "after": "Program use: learn about the framework, consider questions for development, and seek qualified administration if an assessment is appropriate. This program does not administer, score, store or interpret individual results. It does not reproduce protected assessment material. Learning and reflection can begin without taking an assessment.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "Nine bounded fields; publisher primary evidence and full original cards read."
+      }
+    },
+    {
+      "target": "resource.tool-implicit-association",
+      "kind": "resource",
+      "route": "/library/tool-implicit-association",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "These public research tools demonstrate automatic associations, supporting individual reflection on how bias can operate without awareness. They are not a measure of a person’s bias, do not predict behavior on their own, and are never a workplace assessment.",
+          "after": "Implicit-association tasks examine associations through response patterns such as reaction times. A single result does not establish someone's character or reliably predict a specific action. This program links to these resources for optional reflection and does not use individual results for workplace decisions.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Purpose: demonstrate that automatic associations exist and can differ from stated beliefs.",
+          "after": "Purpose: compare the relative ease of associating concepts, evaluations or stereotypes. Implicit and explicitly reported attitudes may differ; the task does not establish whether a person consciously endorses an association.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Evidence base and limits: substantial research on the existence of implicit associations; considerable debate about individual-level reliability and prediction of behavior. Treat results as a reflection prompt, not a diagnosis.",
+          "after": "Evidence and limits: Project Implicit describes continuing debate about repeated scores and behavioral prediction. The publisher reports associations with behavior in aggregate, while cautioning against predictions about one person on one occasion. It also cautions against treating one result as a permanent personal characteristic. Use the result as a question for reflection, not a diagnosis.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Program use: reference for voluntary private reflection only. The program does not administer, store, or discuss individual results.",
+          "after": "Program use: optional reflection without submitting or discussing individual results here. External research sites have their own participation and data-handling terms; read those before deciding whether to use a task. This program does not administer the tests or collect their results.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        }
+      ],
+      "status": "reviewed",
+      "review": {
+        "status": "accepted",
+        "reviewer": "coverage_review",
+        "date": "2026-11-15",
+        "scope": "Nine bounded fields; publisher primary evidence and full original cards read."
+      }
     }
   ]
 }

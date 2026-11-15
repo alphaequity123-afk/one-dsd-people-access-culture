@@ -34,7 +34,9 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
     if (Object.keys(wanted).length) {
       const record = emptyRecord(kind, newId(), new Date(), wanted);
       loaded.records.unshift(record);
-      write(kind, loaded);
+      // Report the browser-only initialization result alongside the restored draft.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (!write(kind, loaded)) setStatus("This browser could not save the new record. Keep this page open and download a copy before leaving.");
       setActiveId(record.id);
       // A reload must not start a second copy of the same plan.
       try { window.history.replaceState(null, "", window.location.pathname); } catch { /* keep going */ }
@@ -54,7 +56,7 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
   function update(change: Partial<LocalRecord> & { fields?: Record<string, string> }) {
     if (!active) return;
     const record = { ...active, ...change, fields: { ...active.fields, ...(change.fields ?? {}) }, updatedAt: new Date().toISOString() };
-    commit({ version: 1, records: book.records.map(item => item.id === record.id ? record : item) }, "Saved on this computer.");
+    commit({ version: 1, records: book.records.map(item => item.id === record.id ? record : item) }, "Saved in this browser profile.");
   }
   function startNew() {
     const record = emptyRecord(kind, newId(), new Date());
@@ -62,9 +64,9 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
     setActiveId(record.id);
   }
   function remove() {
-    if (!active || !window.confirm(`Remove "${active.title}" from this computer? This cannot be undone.`)) return;
+    if (!active || !window.confirm(`Remove "${active.title}" from this browser profile? Exported or shared copies will remain.`)) return;
     const records = book.records.filter(item => item.id !== active.id);
-    commit({ version: 1, records }, "Removed from this computer.");
+    commit({ version: 1, records }, "Removed from this browser profile.");
     setActiveId(records[0]?.id ?? null);
   }
   async function saveToTeam() {
@@ -74,10 +76,10 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
     try {
       const response = await fetch("/api/team-space/decision-records", { method: active.teamRecordId ? "PUT" : "POST", headers: { "content-type": "application/json" }, body });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok) { setStatus(result.error ?? "The team space could not save this record. It is still on your computer."); return; }
+      if (!response.ok) { setStatus(result.error ?? "The team space could not save this record. Your current work remains on this page; check its saved status or download a copy before leaving."); return; }
       update({ teamRecordId: `${result.record.id}@${result.record.version}` });
-      setStatus("Saved to the team space for the One DSD Team and the consultant. Your copy stays here too.");
-    } catch { setStatus("The team space could not be reached. Your record is still on your computer."); }
+      setStatus("Saved to the team space for the One DSD Team and the consultant. This confirmation applies to the shared copy.");
+    } catch { setStatus("The team space could not be reached. Your current work remains on this page; check its saved status or download a copy before leaving."); }
   }
 
   if (!ready) return <p className="calm-muted">Opening your saved work...</p>;
@@ -94,7 +96,7 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
       <ul>{due.slice(0, 6).map(record => <li key={record.id}><button type="button" className="calm-button calm-button--quiet" onClick={() => setActiveId(record.id)}>{record.title}</button></li>)}</ul>
     </div> : null}
     {!active ? <p className="calm-muted">Nothing saved yet. Start one when you are ready.</p> : <form className="calm-form" onSubmit={event => event.preventDefault()}>
-      <p className="calm-note">Leave out client, case, health and personnel details. This stays on this computer unless you choose otherwise.</p>
+      <p className="calm-note">Leave out client, case, health and personnel details. Entries save automatically in this browser profile, where others using the profile may see them. Downloaded, printed or shared copies are separate.</p>
       <div className="calm-field"><label htmlFor="record-title">Title</label><input id="record-title" value={active.title} maxLength={160} onChange={event => update({ title: event.target.value })} /></div>
       {fields.map(field => <div className="calm-field" key={field.key}>
         <label htmlFor={`field-${field.key}`}>{field.label}</label>
@@ -110,7 +112,7 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
         {teamSpace ? <button type="button" className="calm-button calm-button--quiet" onClick={saveToTeam}>{active.teamRecordId ? "Update the team space copy" : "Save to the team space"}</button> : null}
         <button type="button" className="calm-button calm-button--quiet" onClick={remove}>Remove</button>
       </div>
-      {teamSpace ? <p className="calm-muted calm-small">Saving to the team space is your choice. It shares this one record with the One DSD Team and the Equity and Inclusion Operations Consultant, so leadership can follow the reasoning. Nothing else you do here is shared.</p> : null}
+      {teamSpace ? <p className="calm-muted calm-small">Saving to the team space is your choice. It shares this one record with the One DSD Team and the Equity and Inclusion Operations Consultant, so leadership can follow the reasoning. This button shares only the selected record.</p> : null}
     </form>}
     <p role="status" aria-live="polite" className="calm-muted calm-small">{status}</p>
   </div>;

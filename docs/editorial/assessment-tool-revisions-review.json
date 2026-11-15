@@ -1,0 +1,194 @@
+{
+  "records": [
+    {
+      "target": "resource.tool-idi",
+      "kind": "resource",
+      "route": "/library/tool-idi",
+      "original": {
+        "id": "tool-idi",
+        "title": "Tool card: Intercultural Development Inventory (IDI)",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "Qualified administrators give this proprietary, licensed assessment for individual and group intercultural development. You may describe it, refer to qualified administration, and discuss developmental orientations generally, but never reproduce protected content or use results for selection, performance, access, or profiling.",
+        "body": [
+          "Owner and publisher: IDI, LLC. Status: proprietary and licensed. Required qualification: qualified administrator.",
+          "Purpose: describes a developmental orientation toward cultural difference along a continuum from monocultural to intercultural mindsets. This program's continuum draws on both: the licensed IDI instrument describes five orientations — Denial, Polarization, Minimization, Acceptance, and Adaptation — and the program's sixth, Integration, comes from Bennett's Developmental Model of Intercultural Sensitivity and the program's own application; it is not an IDI orientation. In this program, Integration means the people a process affects help design it; in Bennett's model, where the name comes from, it describes identity across cultures. The full continuum moves from not noticing cultural difference, through judging it, through treating it as unimportant next to human sameness, toward genuinely valuing, adapting to, and integrating multiple cultural frames. Used for coaching, group development, and planning.",
+          "Evidence base: published validity research by the instrument's developers and independent studies; check current literature.",
+          "Limits: describes orientation, not competence or character. Results depend on honest self-report and on qualified debrief. It is not a hiring, promotion, or evaluation instrument.",
+          "Misuse risks: treating a stage as a rating, comparing people, using results as personnel data, reproducing licensed content, building hidden profiles.",
+          "Program use: this program may describe the IDI and route to qualified administration. It does not administer, score, store, or interpret individual results, and it does not reproduce licensed material. The owner's source record keeps the phrase IBI orientation as an alias for supplied IDI material.",
+          "Related tools: implicit-association resources, cultural humility practice, CLAS standards."
+        ],
+        "nextActions": [
+          {
+            "label": "The IDI and other tools as inputs to practice",
+            "href": "/resources/pn-idi-and-tool-registry"
+          }
+        ],
+        "tags": [
+          "IDI",
+          "tool card",
+          "intercultural",
+          "assessment",
+          "proprietary",
+          "personal growth",
+          "own culture",
+          "self-reflection"
+        ],
+        "intents": [
+          "intercultural",
+          "policy_orientation",
+          "boundary_refusal"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://www.idiinventory.com/",
+        "sourceName": "IDI, LLC",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Qualified administrators give this proprietary, licensed assessment for individual and group intercultural development. You may describe it, refer to qualified administration, and discuss developmental orientations generally, but never reproduce protected content or use results for selection, performance, access, or profiling.",
+          "after": "The Intercultural Development Inventory is a licensed assessment administered by an IDI Qualified Administrator. This program explains its developmental framework but does not administer the assessment, reproduce protected material, or use individual results for employment decisions or access to learning.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Purpose: describes a developmental orientation toward cultural difference along a continuum from monocultural to intercultural mindsets. This program's continuum draws on both: the licensed IDI instrument describes five orientations — Denial, Polarization, Minimization, Acceptance, and Adaptation — and the program's sixth, Integration, comes from Bennett's Developmental Model of Intercultural Sensitivity and the program's own application; it is not an IDI orientation. In this program, Integration means the people a process affects help design it; in Bennett's model, where the name comes from, it describes identity across cultures. The full continuum moves from not noticing cultural difference, through judging it, through treating it as unimportant next to human sameness, toward genuinely valuing, adapting to, and integrating multiple cultural frames. Used for coaching, group development, and planning.",
+          "after": "Purpose and model: the IDI places results along the Intercultural Development Continuum, whose five orientations are Denial, Polarization, Minimization, Acceptance and Adaptation. Integration belongs to Bennett's separate Developmental Model of Intercultural Sensitivity, where it concerns identity across cultural worldviews. Community participation in service design is a program practice; it is not a sixth IDI orientation or an assessment result.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Evidence base: published validity research by the instrument's developers and independent studies; check current literature.",
+          "after": "Evidence: review the publisher's research and validation material alongside relevant independent studies. Consider the population, methods, uses and limitations of each study before drawing a conclusion about a particular setting.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Limits: describes orientation, not competence or character. Results depend on honest self-report and on qualified debrief. It is not a hiring, promotion, or evaluation instrument.",
+          "after": "Interpretation: the publisher describes individual and group reports as snapshots of an approach to cultural differences and commonalities. Individual results are discussed with a licensed Qualified Administrator. A result is not a judgment of character or a complete account of workplace behavior; this program does not use it for hiring, promotion or performance evaluation.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Program use: this program may describe the IDI and route to qualified administration. It does not administer, score, store, or interpret individual results, and it does not reproduce licensed material. The owner's source record keeps the phrase IBI orientation as an alias for supplied IDI material.",
+          "after": "Program use: learn about the framework, consider questions for development, and seek qualified administration if an assessment is appropriate. This program does not administer, score, store or interpret individual results. It does not reproduce protected assessment material. Learning and reflection can begin without taking an assessment.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        }
+      ]
+    },
+    {
+      "target": "resource.tool-implicit-association",
+      "kind": "resource",
+      "route": "/library/tool-implicit-association",
+      "original": {
+        "id": "tool-implicit-association",
+        "title": "Tool card: implicit-association resources",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "These public research tools demonstrate automatic associations, supporting individual reflection on how bias can operate without awareness. They are not a measure of a person’s bias, do not predict behavior on their own, and are never a workplace assessment.",
+        "body": [
+          "Owner and publisher: research collaborations such as Project Implicit. Status: public research tools with their own terms.",
+          "Purpose: demonstrate that automatic associations exist and can differ from stated beliefs.",
+          "Evidence base and limits: substantial research on the existence of implicit associations; considerable debate about individual-level reliability and prediction of behavior. Treat results as a reflection prompt, not a diagnosis.",
+          "Misuse risks: labeling a person as biased, using results in hiring or evaluation, treating a single result as stable.",
+          "Program use: reference for voluntary private reflection only. The program does not administer, store, or discuss individual results."
+        ],
+        "nextActions": [
+          {
+            "label": "The IDI and other tools as inputs to practice",
+            "href": "/resources/pn-idi-and-tool-registry"
+          }
+        ],
+        "tags": [
+          "implicit bias",
+          "implicit association",
+          "tool card",
+          "reflection",
+          "personal growth",
+          "own culture",
+          "self-reflection"
+        ],
+        "intents": [
+          "intercultural",
+          "boundary_refusal"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://implicit.harvard.edu/implicit/",
+        "sourceName": "Project Implicit",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "These public research tools demonstrate automatic associations, supporting individual reflection on how bias can operate without awareness. They are not a measure of a person’s bias, do not predict behavior on their own, and are never a workplace assessment.",
+          "after": "Implicit-association tasks examine associations through response patterns such as reaction times. A single result does not establish someone's character or reliably predict a specific action. This program links to these resources for optional reflection and does not use individual results for workplace decisions.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Purpose: demonstrate that automatic associations exist and can differ from stated beliefs.",
+          "after": "Purpose: compare the relative ease of associating concepts, evaluations or stereotypes. Implicit and explicitly reported attitudes may differ; the task does not establish whether a person consciously endorses an association.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Evidence base and limits: substantial research on the existence of implicit associations; considerable debate about individual-level reliability and prediction of behavior. Treat results as a reflection prompt, not a diagnosis.",
+          "after": "Evidence and limits: Project Implicit describes continuing debate about repeated scores and behavioral prediction. The publisher reports associations with behavior in aggregate, while cautioning against predictions about one person on one occasion. It also cautions against treating one result as a permanent personal characteristic. Use the result as a question for reflection, not a diagnosis.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Program use: reference for voluntary private reflection only. The program does not administer, store, or discuss individual results.",
+          "after": "Program use: optional reflection without submitting or discussing individual results here. External research sites have their own participation and data-handling terms; read those before deciding whether to use a task. This program does not administer the tests or collect their results.",
+          "reason": "Clarify the separate models, research limits and program boundaries using the identified primary sources; remove internal drafting provenance."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.idiinventory.com/idc",
+    "https://www.idiinventory.com/assessment-and-reports",
+    "https://www.idrinstitute.org/dmis/",
+    "https://implicit.harvard.edu/implicit/faqs.html"
+  ],
+  "basis": "Read original tool cards, publisher IDC and assessment pages, Project Implicit FAQ, and indexed primary Bennett DMIS model page after direct site timeout. No assessment items reproduced; no pricing or effectiveness guarantees added."
+}
