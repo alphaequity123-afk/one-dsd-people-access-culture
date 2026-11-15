@@ -8,8 +8,12 @@ course=json.loads((p/'lib/content/course-language-revisions.json').read_text(enc
 accepted={r['target']:len(r['changes']) for r in registry if r['status']=='reviewed'}
 accepted.update({'course.'+c['courseId']:len(c['changes']) for c in course if c['review']['status']=='accepted'})
 verified=set()
-for f in ['live-first-release-check.json','live-learn-expanded-check.json','live-second-release-check.json','live-third-release-check.json']:
- if (p/'output'/f).exists():verified.update(r['target'] for r in json.loads((p/'output'/f).read_text(encoding='utf8'))['results'] if r['passed'] and not r['target'].startswith('lesson.'))
+for f in ['live-first-release-check.json','live-learn-expanded-check.json','live-second-release-check.json','live-third-release-check.json','live-fourth-release-check.json']:
+ if (p/'output'/f).exists():
+  for r in json.loads((p/'output'/f).read_text(encoding='utf8'))['results']:
+   if r['target'].startswith('lesson.'):continue
+   if r['passed']:verified.add(r['target'])
+   else:verified.discard(r['target'])
 candidates={}
 for f in (p/'output/noncourse-candidates').glob('*.json'):
  if f.name=='run-status.json':continue

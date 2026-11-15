@@ -259,7 +259,7 @@ const DEFAULT_GROUPS = [
 
 const STEPS = [
  {id:"s0",title:"Set up and triage",short:"What is being decided and which review is required",
-  coach:{anchor:"DHS Equity Policy, Procedures: 'A formal equity analysis is required for all actions that have prolonged and/or long-term impact scheduled for approval by a supervisor, manager, director, assistant or deputy commissioner, or commissioner.' An equity scan is appropriate only when a formal analysis was already completed and its results integrated.",
+  coach:{anchor:"DHS Equity Policy, Procedures: 'A formal equity analysis is required for all actions that have prolonged and/or long-term impact scheduled for approval by a supervisor, manager, director, assistant or deputy commissioner, or commissioner.' Use the official DHS Equity Analysis Toolkit User Guide and consult the responsible equity office to choose the appropriate review. The policy permits a DHS Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director.",
    prompts:["Name the decision in one sentence a community member would understand.","Who signs this? That person is the accountable decision-maker, not the analyst.","If this is a bill, record the file number, author and the stage (introduced, committee, conference)."],
    strong:"Decision, decision-maker, date and review track are all named before any analysis starts.",weak:"'We'll see what the analysis says' with no owner or date; a short timeline used as the reason to skip a full analysis.",
    pitfalls:["Treating 'we don't have time' as a reason for a scan. The policy ties the track to impact and approval level, not to the calendar.","Leaving the decision-maker blank. Every recommendation in Step 9 needs a person authorized to act on it."]}},
@@ -366,10 +366,10 @@ const RESOURCES = `
 <dt>Disparity</dt><dd>A group systematically faring worse than another for reasons not due to the group's needs, eligibility or preferences.</dd>
 <dt>Access</dt><dd>The timely ability to use resources and services to achieve the best outcomes.</dd>
 <dt>Engagement</dt><dd>Collaboration and inclusion in which entities build ongoing relationships to apply a collective vision to complex problems.</dd>
-<dt>Equity scan</dt><dd>Used only when the action already went through a formal analysis and those results were integrated.</dd>
+<dt>Equity scan</dt><dd>Use the official DHS Equity Analysis Toolkit User Guide and consult the responsible equity office to choose the appropriate review. The policy permits a DHS Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director.</dd>
 </dl>
 <h3>Privacy</h3>
-<div class="anchor">Keep case, medical, personnel, complaint and identifying details out of this tool. Nothing is sent anywhere or stored on this computer unless you save a draft; use Save draft to keep your work.</div>
+<div class="anchor">Keep case, medical, personnel, complaint and identifying details out of this tool. Entries are saved automatically in this browser when browser storage is available. This tool does not submit the review. Other people who can use the same browser profile may be able to read the saved draft. Downloaded copies are unencrypted; use Clear browser draft when appropriate.</div>
 `;
 </script>
 <script>
@@ -403,12 +403,10 @@ function filled(v){return typeof v==="string"?v.trim().length>0:Array.isArray(v)
 function track(){
   const m=S.meta;
   if(!m.type||!m.duration||!m.approval) return null;
-  if(m.prior==="yes" && m.unchanged==="yes" && filled(m.priorCitation)) return {key:"scan",title:"Equity scan may be sufficient",text:"A prior formal analysis exists and its results were integrated. Use the scan to confirm nothing material changed; if it did, run the full analysis."};
   const lasting = m.duration==="prolonged";
   const approval = m.approval!=="none";
-  if(lasting && approval) return {key:"full",title:"Formal equity analysis required",text:"Lasting impact and approval at supervisor level or above. The completed analysis must accompany the action when it goes for approval."};
-  if(["legislative","bill","budget","contract","policy"].includes(m.type)) return {key:"full",title:"Formal equity analysis expected",text:"This action type is a named use of the toolkit. Use the full review to examine the effects and confirm any required policy review paths."};
-  return {key:"scan",title:"Equity scan likely sufficient",text:"Based on the selected answers, a lighter review may be useful. Confirm any remaining uncertainties and required review paths. Complete the steps at a lighter depth and keep the record; if the scope grows, upgrade to a full analysis."};
+  if(lasting && approval) return {key:"full",title:"Policy review required",text:"The action has prolonged or long-term impact and is scheduled for approval at supervisor level or above. The policy requires a formal equity analysis and permits an Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director to accompany the action. Use the official User Guide and responsible equity office to confirm the approach."};
+  return {key:"review",title:"Confirm review requirements",text:"These answers do not establish which review approach applies. Continue applying the equity lens and consult the official User Guide and responsible equity office. The action type or existence of an earlier analysis alone does not determine whether a scan is appropriate."};
 }
 
 /* ---------------- field builders ---------------- */
@@ -443,7 +441,7 @@ const R = {
   ${radios("meta.duration","How long will the effects last?","",[["prolonged","Prolonged or long-term (a policy, rule, budget, contract, service design or anything that outlives the project)"],["short","Short-lived and reversible (a one-time event, a pilot with a fixed end and no lasting rule)"]])}
   ${radios("meta.approval","Highest approval level this needs","",[["supervisor","Supervisor or manager"],["director","Director or division director"],["ac","Assistant or deputy commissioner"],["commissioner","Commissioner or legislature"],["none","No approval beyond the team"]])}
   ${radios("meta.prior","Has this action already been through a formal equity analysis whose results were integrated?","",[["no","No, or not sure"],["yes","Yes, and I can attach or cite it"]])}
-  ${radios("meta.unchanged","If a prior review exists, has anything material changed?","Consider the people affected, proposal, evidence and unresolved concerns.",[["yes","No material changes identified"],["no","Changed or not yet determined"]])}${tx("meta.priorCitation","Prior review reference","Title, date or location; do not enter confidential information.")} ${t?`<div class="note ${t.key==="full"?"req":"ok"}"><strong>${t.title}.</strong> ${t.text}</div>`:`<div class="note">Answer the questions above to see a suggested review approach. Confirm policy requirements with the responsible office.</div>`}
+  ${radios("meta.unchanged","If a prior review exists, has anything material changed?","Consider the people affected, proposal, evidence and unresolved concerns.",[["yes","No material changes identified"],["no","Changed or not yet determined"]])}${tx("meta.priorCitation","Prior review reference","Title, date or location; do not enter confidential information.")} ${t?`<div class="note ${"req"}"><strong>${t.title}.</strong> ${t.text}</div>`:`<div class="note">Answer the questions above to see a suggested review approach. Confirm policy requirements with the responsible office.</div>`}
   <details class="example"><summary>Worked example</summary><p><em>What:</em> Revise the DSD provider enrollment procedure to require electronic signature. <em>Type:</em> procedure. <em>Decider:</em> DSD Director, approval 2027-03-15. <em>Duration:</em> prolonged. <em>Approval:</em> director. <em>Prior analysis:</em> no → formal equity analysis required.</p></details>`;
  },
  s1(){
@@ -540,7 +538,7 @@ function rubricItems(){
   const g=S.groups;
   return [
    [filled(S.meta.decider)&&filled(S.meta.decideBy),"Decision-maker and decision date are named",0],
-   [!!track(),"Review track determined from impact and approval level",0],
+   [!!track(),"Review questions answered; confirm the approach with the responsible office",0],
    [filled(S.s1.outcomes)&&filled(S.s1.measure),"Outcomes stated for people affected, with a measure",1],
    [g.length>0&&g.every(x=>filled(x.name)&&x.eff&&x.eff!=="unknown"),"Every listed group assessed, with no unresolved unknown effects",2],
    [g.some(x=>x.eff&&x.eff!=="none")&&g.filter(x=>x.eff&&x.eff!=="none").every(x=>filled(x.how)&&filled(x.evidence)),"Every affected group has an effect description and evidence reference",2],

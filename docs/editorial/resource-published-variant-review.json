@@ -1,0 +1,515 @@
+{
+  "status": "accepted",
+  "reviewer": "root",
+  "date": "2026-11-15",
+  "records": [
+    {
+      "target": "resource.ext-emerging-leaders-institute",
+      "publishedRevision": "1a040f48-8e93-45c2-b9f5-2a796390dac1",
+      "publishedSha256": "3fe07f780e1de56feb553b401b05c842b55f0b99ced97b668009556f98b06145",
+      "publishedOriginal": {
+        "id": "ext-emerging-leaders-institute",
+        "body": [
+          "What it is: a State leadership development program for employees, administered by Minnesota Management and Budget.",
+          "Why it is here: leadership pathways should connect to programs that exist. Correcting the record matters; an earlier draft described a DHS-owned Emerging Leaders program that public evidence does not support.",
+          "How to use it: check eligibility, timing, and the nomination process at the source. Supervisors can use sponsorship to make sure people from underrepresented communities know about it and are nominated."
+        ],
+        "href": "https://mn.gov/mmb/",
+        "tags": [
+          "leadership",
+          "Emerging Leaders",
+          "MMB",
+          "development"
+        ],
+        "type": "external_reference",
+        "layer": "L4",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "State of Minnesota Emerging Leaders Institute",
+        "status": "approved",
+        "intents": [
+          "policy_orientation",
+          "next_actions"
+        ],
+        "summary": "The verified public leadership program is the State of Minnesota Emerging Leaders Institute, administered by Minnesota Management and Budget. Public evidence does not document a DHS-owned program by that name. Check eligibility and the current cycle at the source.",
+        "version": "0.2.0",
+        "authority": "external_verify",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "reviewDate": "2027-03-01",
+        "sourceName": "Minnesota Management and Budget",
+        "nextActions": [
+          {
+            "href": "/resources/pn-mentoring-sponsorship",
+            "label": "Mentoring, sponsorship, and reverse mentoring"
+          }
+        ],
+        "accessibility": "pending"
+      },
+      "variants": [
+        {
+          "path": [
+            "summary"
+          ],
+          "staticBefore": "Minnesota Management and Budget administers the State of Minnesota Emerging Leaders Institute, the verified public leadership program; public evidence does not document a DHS-owned program by that name. Check eligibility and the current cycle at the source.",
+          "publishedBefore": "The verified public leadership program is the State of Minnesota Emerging Leaders Institute, administered by Minnesota Management and Budget. Public evidence does not document a DHS-owned program by that name. Check eligibility and the current cycle at the source.",
+          "after": "Minnesota Management and Budget offers the Emerging Leaders Institute for Minnesota state employees preparing for future leadership responsibilities. Check the current eligibility, application cycle, and agency process before planning to apply."
+        }
+      ]
+    },
+    {
+      "target": "resource.ja-accommodation-across-transitions",
+      "publishedRevision": "029c3319-58ca-43b5-a541-c7eaabdbb213",
+      "publishedSha256": "80ea5c6376f1ce34eb588a8df777c10621cd909531009a545db64d58ad9d522c",
+      "publishedOriginal": {
+        "id": "ja-accommodation-across-transitions",
+        "body": [
+          "Transitions to plan for: nomination and application, interview or selection event, acting or stretch assignment, leadership cohort or program, new team or new supervisor, and return from leave.",
+          "For each transition, name one owner responsible for carrying existing accommodations forward and for offering accommodation to everyone entering it. The owner is a person, not a process.",
+          "Carry the accommodation, not the diagnosis. The receiving supervisor or program needs to know what works, not why. The accommodation process holds the confidential record.",
+          "Offer accommodation to everyone at every transition, in the same sentence used for logistics, so no one has to disclose to receive it.",
+          "Design cohort events accessible by default: materials in advance, captioning, flexible participation formats, no timed or drag-based activities, and time to rest.",
+          "Check after the transition. Ask everyone, not only people who requested something, whether the arrangements worked, and fix what did not.",
+          "Boundaries. Accommodation decisions and disputes belong to Human Resources and the accommodation process. This aid is about pathway design and ownership; it does not decide any accommodation."
+        ],
+        "tags": [
+          "accommodation",
+          "transition",
+          "disability",
+          "leadership cohort",
+          "rotation",
+          "acting assignment"
+        ],
+        "type": "job_aid",
+        "layer": "L2",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "Accommodations across transitions: closing the accommodation cliff",
+        "status": "approved",
+        "intents": [
+          "access_barriers",
+          "practice_method",
+          "escalation"
+        ],
+        "pathIds": [
+          "gp-11"
+        ],
+        "summary": "Accommodations that work in the current role are often lost during a rotation, an acting assignment, a leadership cohort, or an interview process because nobody owns them across the transition. This aid names the transitions, the owner for each, and what to carry.",
+        "version": "0.2.0",
+        "authority": "guidance",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "reviewDate": "2027-03-01",
+        "nextActions": [
+          {
+            "href": "/resources/pn-accessible-leadership-pathways",
+            "label": "Accessible leadership pathways and sponsorship"
+          },
+          {
+            "href": "/resources/ja-accessible-meetings",
+            "label": "Accessible and culturally responsive meetings"
+          },
+          {
+            "href": "/support/right-person?matter=advancement_or_leadership_pathway",
+            "label": "Find the right person"
+          }
+        ],
+        "whyItMatters": "The cliff is invisible to the people who design pathways and very visible to the people who fall off it. Naming an owner for accommodations across each transition is a small change that removes a structural barrier.",
+        "accessibility": "pending"
+      },
+      "variants": [
+        {
+          "path": [
+            "summary"
+          ],
+          "staticBefore": "Accommodations that work in a current role are often lost in a rotation, acting assignment, leadership cohort, or interview process because no one owns them across the transition. This aid names each transition, its owner, and what to carry forward.",
+          "publishedBefore": "Accommodations that work in the current role are often lost during a rotation, an acting assignment, a leadership cohort, or an interview process because nobody owns them across the transition. This aid names the transitions, the owner for each, and what to carry.",
+          "after": "A change in role, supervisor, assignment, or learning program can disrupt access arrangements if responsibilities are unclear. Identify who will coordinate the transition and check with the person and the authorized accommodation process about what is needed in the new setting."
+        }
+      ]
+    },
+    {
+      "target": "resource.ja-equity-impact-questions",
+      "publishedRevision": "e3c4868d-2e29-49a9-bb17-2462b41688dc",
+      "publishedSha256": "d93ea89ab67f0b91a0d6479ac6b4d3235592e0d023e82876e8e59ffc6010ae0f",
+      "publishedOriginal": {
+        "id": "ja-equity-impact-questions",
+        "body": [
+          "Policy: Which laws, rules, rights, and required safeguards apply? Who benefits, who carries added work or risk, and whose needs are missing? Which rules or routine practices shape the result? What can your team change, and what must be reviewed by the person with authority to decide?",
+          "Budget: Which costs cover interpreting, translation, accessible formats, and payment for community partners? Which costs have been treated as free? If funding is reduced, whose services would be affected first?",
+          "Technology: Are accessibility requirements written into the specifications and tested by people who use assistive technology? What information is collected? Could it be used to sort, rank, or profile people?",
+          "Procurement: Do the selection criteria give real weight to accessibility, language access, and community knowledge? Do the requirements create unnecessary barriers for small providers or community organizations?"
+        ],
+        "tags": [
+          "policy",
+          "budget",
+          "technology",
+          "procurement",
+          "contract",
+          "equity impact",
+          "high stakes",
+          "vendor"
+        ],
+        "type": "question_bank",
+        "layer": "L3",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "Equity impact questions for policy, budget, technology, and procurement",
+        "status": "approved",
+        "intents": [
+          "launch_embed",
+          "policy_orientation",
+          "escalation"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-2"
+        ],
+        "summary": "Use this short question set for high-stakes decisions. Consider which authority and rights apply, who benefits, who carries the burden, which assumptions shape the outcome, what can change, and what must stay with the responsible official.",
+        "version": "0.1.0",
+        "authority": "guidance",
+        "reviewDate": "2027-03-01",
+        "nextActions": [
+          {
+            "href": "/paths/gp-2",
+            "label": "Policy, form, or notice change path"
+          },
+          {
+            "href": "/support/request",
+            "label": "Request a consultation for high-stakes decisions"
+          }
+        ],
+        "whyItMatters": "These questions can help frame a decision, but they are not legal advice and do not make the decision for you. After working through them, seek guidance from the appropriate person if a high-stakes procurement, budget, or policy decision has a significant equity impact and no official guidance.",
+        "accessibility": "reviewed"
+      },
+      "variants": []
+    },
+    {
+      "target": "resource.lm-facilitation-application",
+      "publishedRevision": "21c27a1d-a6ba-4c25-8f48-ad1273b51b3b",
+      "publishedSha256": "de389823fab08727658916b7fe57426ce7fd2ea2ce49f72c4646a52d8d5bdadb",
+      "publishedOriginal": {
+        "id": "lm-facilitation-application",
+        "body": [
+          "Keep the session connected to practice: limit presentation time so participants can spend at least half the session working with the ideas themselves.",
+          "Bring real work: ask participants to bring a notice, a plan, or a meeting they own. Practice on that.",
+          "Facilitator role: participants know their own programs. Your role is to offer useful questions, guide the conversation, and keep the group on time.",
+          "Access: ask in advance what participants need. Arrange captions, spoken-language or sign-language interpretation, translated or accessible materials, and alternatives to dragging or timed activities. Build access into the session from the beginning.",
+          "Follow-up: schedule a short check-in to learn whether participants were able to use what they completed."
+        ],
+        "tags": [
+          "facilitation",
+          "learning",
+          "session design",
+          "application",
+          "practice",
+          "adult learning"
+        ],
+        "type": "learning_module",
+        "layer": "L2",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "Facilitation that participants can use in their work",
+        "status": "approved",
+        "intents": [
+          "facilitation",
+          "practice_method"
+        ],
+        "pathIds": [
+          "gp-5"
+        ],
+        "summary": "A useful session helps participants make a meaningful change in their own work. Begin with what they should leave able to do, keep presentations focused, and give them substantial time to practice with real materials.",
+        "version": "0.1.0",
+        "authority": "learning",
+        "reviewDate": "2027-03-01",
+        "nextActions": [
+          {
+            "href": "/resources/ja-facilitation-session-plan",
+            "label": "Session plan template"
+          },
+          {
+            "href": "/paths/gp-5",
+            "label": "Facilitation path"
+          }
+        ],
+        "accessibility": "reviewed"
+      },
+      "variants": [
+        {
+          "path": [
+            "summary"
+          ],
+          "staticBefore": "The best sessions leave participants ready to make a meaningful change in their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials.",
+          "publishedBefore": "A useful session helps participants make a meaningful change in their own work. Begin with what they should leave able to do, keep presentations focused, and give them substantial time to practice with real materials.",
+          "after": "Design sessions so participants can apply a specific skill to their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials."
+        }
+      ]
+    },
+    {
+      "target": "resource.lm-power-and-positional-authority",
+      "publishedRevision": "a729cf6a-0160-4ddd-b06e-6b44ffc1ea15",
+      "publishedSha256": "4937be0e66de97f73c116e3c6e7dcc5582e9e69db68c19ca5654d526e562ebe1",
+      "publishedOriginal": {
+        "id": "lm-power-and-positional-authority",
+        "body": [
+          "Where power sits. Role, tenure, credential, language fluency, familiarity with the organization, race, disability, and who the process was designed for all shape who is heard.",
+          "What it does. People with less power wait to be asked, soften disagreement, and stop offering ideas that were ignored once. People with more power mistake that quiet for agreement.",
+          "What to do with it. Speak last. Ask the newest and the quietest first. Credit ideas to the person who had them. Change the format so contribution does not depend on speaking fast in English.",
+          "In supervision. Ask what the person needs from you rather than telling them what you need. Make expectations explicit so people do not have to guess the unwritten rules.",
+          "Across difference. Cultural humility means assuming you do not know how your habits land and asking. The Intercultural Development Inventory can help a person see their own orientation; it is one tool, used by qualified administrators, and never a label or a rating."
+        ],
+        "tags": [
+          "power",
+          "positional authority",
+          "supervision",
+          "intercultural",
+          "cultural humility",
+          "personal growth",
+          "self-reflection"
+        ],
+        "type": "learning_module",
+        "layer": "L3",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "Positional power: seeing it, naming it, and using it well",
+        "status": "approved",
+        "intents": [
+          "intercultural",
+          "workplace_culture",
+          "practice_method"
+        ],
+        "summary": "Supervisors, managers, and people with expertise or tenure hold power that shapes who speaks, who is believed, and whose time counts. Seeing it is the first intercultural skill; using it deliberately is the second.",
+        "version": "0.2.0",
+        "authority": "learning",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "reviewDate": "2027-03-01",
+        "nextActions": [
+          {
+            "href": "/resources/pn-intercultural-method",
+            "label": "Prepare for intercultural work without making assumptions"
+          },
+          {
+            "href": "/resources/pn-idi-and-tool-registry",
+            "label": "The IDI and the tool registry"
+          }
+        ],
+        "whyItMatters": "Dominant-culture defaults feel like neutrality to the people they serve. Naming positional power lets a leader change a room instead of asking others to adapt to it.",
+        "accessibility": "pending"
+      },
+      "variants": [
+        {
+          "path": [
+            "summary"
+          ],
+          "staticBefore": "Supervisors, managers, and people with expertise or tenure hold power that shapes who speaks, who is believed, and whose time counts. The first intercultural skill is seeing that power; the second is using it deliberately.",
+          "publishedBefore": "Supervisors, managers, and people with expertise or tenure hold power that shapes who speaks, who is believed, and whose time counts. Seeing it is the first intercultural skill; using it deliberately is the second.",
+          "after": "Supervisors, managers, and people with expertise or tenure can influence whose ideas are heard, whose account is believed, and whose time is treated as important. Intercultural practice includes examining that influence and using authority to make participation more accessible."
+        }
+      ]
+    },
+    {
+      "target": "resource.pn-accessible-leadership-pathways",
+      "publishedRevision": "02ae29ea-0007-46f9-b7a5-ceec9b5b37c3",
+      "publishedSha256": "0d7f22ed043f8f2ef87f85bbb6db9993b159e4c27fb733b75666e9e67172cc5a",
+      "publishedOriginal": {
+        "id": "pn-accessible-leadership-pathways",
+        "body": [
+          "Engagement without forced disclosure. Work through anonymous aggregate listening, disability employee resource groups, and trusted intermediaries, with small-group suppression in any reporting. Ask about the pathway, not the person: what does it take to be seen as ready for a lead role here, who explains it, and what happens when someone asks for an accommodation during a stretch assignment or interview.",
+          "Close the loop publicly. Disabled staff in particular have watched accessibility promises go unfunded. Report what changed, what did not, and who owns the next step.",
+          "Examine the pipeline stage by stage: nomination to leadership programs, selection for visible projects, acting assignments, interview formats, and promotion outcomes. Disability is often absent from disaggregated workforce data, so the first finding may be that the organization cannot see the pattern at all. Say so.",
+          "Test the job-relatedness of leadership criteria. Executive presence, quick verbal response, travel, long hours, and always-on availability screen out many disabled staff and are rarely tied to what leaders actually do.",
+          "Look for the accommodation cliff. Accommodations that exist for the current role are often lost during a rotation, a leadership cohort, or an interview process because nobody owns them across the transition. Name an owner for accommodations across every transition.",
+          "Sponsorship, not just mentoring. Mentoring gives advice; sponsorship puts someone's name forward. Pair disabled staff who want it with sponsors who hold decision power, and track at the program level whether sponsorship leads to assignments.",
+          "Reverse mentoring, where disabled staff advise leaders on what accessible leadership looks like, with compensation or recognized time and never as a standing expectation.",
+          "Accessible leadership programs by default: materials in advance, captioning, flexible participation formats, no timed or drag-based activities, and accommodations carried across every cohort event. The State of Minnesota Emerging Leaders Institute run by Minnesota Management and Budget is the verified public program; DHS-level pathways should be reviewed against the same standard.",
+          "Transparent pathway maps that say what a lead or supervisor role requires, which experiences count, and how to get them, so advancement does not depend on informal networks.",
+          "Structured leadership interviews with rubrics tied to the work, accommodations offered without asking why, and panel preparation on disability bias.",
+          "Stay conversations that ask about growth and access together, and exit patterns reviewed at an appropriate level.",
+          "Boundaries this program keeps. No guessing about disability: the program never guesses who is disabled from behavior, accommodation history, or participation. No individual tracking: private learning and reflection stay private, and program-level measures use aggregates with suppression. Accommodation requests, complaints, and personnel decisions go to the confidential channels, never into this program.",
+          "Who owns what. ADA and accommodation decisions belong to Human Resources and the accommodation process. Pathway design belongs to leadership and the equity practice. Take each to its owner."
+        ],
+        "tags": [
+          "disability",
+          "leadership pathways",
+          "sponsorship",
+          "advancement",
+          "accommodation",
+          "reverse mentoring",
+          "disclosure"
+        ],
+        "type": "practice_note",
+        "layer": "L3",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "Accessible leadership pathways and sponsorship for staff with disabilities",
+        "status": "approved",
+        "intents": [
+          "workplace_culture",
+          "practice_method",
+          "access_barriers",
+          "escalation"
+        ],
+        "pathIds": [
+          "gp-11",
+          "gp-4"
+        ],
+        "summary": "For staff with disabilities, advancement barriers are usually structural and often invisible to the people who run leadership pathways. This note adapts the engagement, analysis, and applied-practice sequence to that reality: hear from disabled staff without forcing disclosure, examine the pipeline stage by stage, and build sponsorship, transparent pathway maps, and accessible leadership programs by default.",
+        "version": "0.2.0",
+        "authority": "practice_note",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "reviewDate": "2027-03-01",
+        "nextActions": [
+          {
+            "href": "/paths/gp-11",
+            "label": "Build a leadership pathway or sponsorship plan (Practice path)"
+          },
+          {
+            "href": "/resources/ja-leadership-criteria-job-relatedness",
+            "label": "Leadership criteria: are they job related?"
+          },
+          {
+            "href": "/resources/ja-accommodation-across-transitions",
+            "label": "Accommodations across transitions"
+          },
+          {
+            "href": "/resources/pn-mentoring-sponsorship",
+            "label": "Mentoring, sponsorship, and reverse mentoring"
+          }
+        ],
+        "whyItMatters": "Disclosure is a cost. Many staff will not identify as disabled to a supervisor or a program, so pathway design cannot depend on knowing who is disabled. It has to be accessible to everyone and honest about what leadership roles actually require.",
+        "accessibility": "pending"
+      },
+      "variants": [
+        {
+          "path": [
+            "summary"
+          ],
+          "staticBefore": "Advancement barriers for disabled staff are usually structural and often invisible to those running leadership pathways. Hear from disabled staff without forcing disclosure, examine each pipeline stage, and build sponsorship, transparent pathway maps, and accessible leadership programs by default.",
+          "publishedBefore": "For staff with disabilities, advancement barriers are usually structural and often invisible to the people who run leadership pathways. This note adapts the engagement, analysis, and applied-practice sequence to that reality: hear from disabled staff without forcing disclosure, examine the pipeline stage by stage, and build sponsorship, transparent pathway maps, and accessible leadership programs by default.",
+          "after": "Leadership pathways can create barriers through nomination rules, interview formats, access arrangements, and informal judgments of readiness. Invite disabled staff to describe those processes without requiring personal disclosure in a learning discussion. Examine each stage and plan accessible development, sponsorship, and clear information about requirements."
+        }
+      ]
+    },
+    {
+      "target": "resource.pn-idi-and-tool-registry",
+      "publishedRevision": "8e60b902-9d55-47b9-b1a6-ca595f3b3b48",
+      "publishedSha256": "62cd5013c357abb253eabdb1fd0d212ce9428b56eab0946afcfd8e3ea4bd2d21",
+      "publishedOriginal": {
+        "id": "pn-idi-and-tool-registry",
+        "body": [
+          "What the IDI is. A licensed intercultural assessment administered by qualified administrators. It describes a developmental orientation toward cultural difference and is used for individual and group development.",
+          "What it is not. It is not a measure of competence for selection, promotion, or performance. A result or an inferred orientation must never become an employee record, an access gate, or a hidden label in this program.",
+          "What this program does with it. Describes it, names its owner and license, and routes people to qualified administration if their division offers it. Protected content is not reproduced.",
+          "The same discipline applies to every tool. The Minnesota Equity Analysis Toolkit, the GARE Racial Equity Toolkit, CLAS, LifeCourse, implicit-association resources, accessibility methods, and engagement frameworks each have an owner, an evidence base, a license or public status, required qualifications, limits, and permitted uses. The tool cards in the Library record them.",
+          "Practical application is decided through the consultant-led, equity-professional-informed practice, in collaboration with Equity Directors, Specialists, and committee members. No tool decides it."
+        ],
+        "tags": [
+          "IDI",
+          "intercultural",
+          "tool registry",
+          "assessment",
+          "license",
+          "governance",
+          "personal growth",
+          "own culture",
+          "self-reflection"
+        ],
+        "type": "practice_note",
+        "layer": "L3",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "The IDI and other tools: inputs to practice, not the practice itself",
+        "status": "approved",
+        "intents": [
+          "intercultural",
+          "policy_orientation",
+          "boundary_refusal"
+        ],
+        "summary": "The Intercultural Development Inventory is one proprietary assessment among many tools. It can inform qualified professional practice. It does not define this program, its results are never personnel data, and its protected content is not reproduced here.",
+        "version": "0.2.0",
+        "authority": "practice_note",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "reviewDate": "2027-03-01",
+        "nextActions": [
+          {
+            "href": "/resources/tool-idi",
+            "label": "Tool card: Intercultural Development Inventory"
+          },
+          {
+            "href": "/resources/tool-implicit-association",
+            "label": "Tool card: Implicit-association resources"
+          },
+          {
+            "href": "/resources/lm-power-and-positional-authority",
+            "label": "Positional power"
+          }
+        ],
+        "whyItMatters": "A single instrument can quietly become the program's definition of competence. That is a governance risk. A registry of tools with owners, evidence, limits, and permitted uses keeps every tool in its place.",
+        "accessibility": "pending"
+      },
+      "variants": [
+        {
+          "path": [
+            "summary"
+          ],
+          "staticBefore": "The Intercultural Development Inventory is one proprietary assessment among many that can inform qualified professional practice. It does not define this program, its results are never personnel data, and its protected content is not reproduced here.",
+          "publishedBefore": "The Intercultural Development Inventory is one proprietary assessment among many tools. It can inform qualified professional practice. It does not define this program, its results are never personnel data, and its protected content is not reproduced here.",
+          "after": "The Intercultural Development Inventory is one proprietary assessment that can inform qualified developmental practice. This program does not use individual results for personnel decisions or reproduce protected assessment content. Learning here can also begin without an assessment."
+        }
+      ]
+    },
+    {
+      "target": "resource.pn-when-to-escalate",
+      "publishedRevision": "698e27ea-1905-4631-a247-da90d86491a0",
+      "publishedSha256": "0870d925a5b8971381a2f714098a03788559c2742a84b78b9e10a30ab0afbf94",
+      "publishedOriginal": {
+        "id": "pn-when-to-escalate",
+        "body": [
+          "Start with the available resources: search Resources, open a relevant community brief, or use a checklist. These options may give you what you need without a meeting.",
+          "Employee Culture, Human Resources, civil rights, or accommodation: use the appropriate established process for a complaint, investigation, grievance, discipline matter, or accommodation decision about a named person. Keep names and case details out of this program.",
+          "Policy or legal owner: contact this person when two sources conflict, a statute or rule needs interpretation, or no official source is available. If you cannot confirm the source, say that clearly and ask the policy or legal owner. Do not create or quote a citation from memory.",
+          "Office of Indian Policy or Tribal liaison: any work touching a Tribal Nation, Native children, Tribal data, services, or land. Consultation is government-to-government and comes first.",
+          "Equity Director: contact the Equity Director for questions about an administration's pilot, local guidance, or proposed content.",
+          "Equity and Inclusion Operations Consultant: consider a consultation when an early program idea or high-stakes decision needs another perspective. A consultation may also help when available guidance does not fully address community-specific work. Go to Support to request a consultation or first review what information you would share. A meeting is optional."
+        ],
+        "tags": [
+          "escalate",
+          "human",
+          "complaint",
+          "HR",
+          "employee culture",
+          "legal",
+          "policy owner",
+          "tribal",
+          "consult",
+          "who to contact"
+        ],
+        "type": "practice_note",
+        "layer": "L1",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "scope": "agencywide",
+        "title": "When to seek additional guidance, and where to begin",
+        "status": "approved",
+        "intents": [
+          "escalation",
+          "uncertainty_authority",
+          "boundary_refusal"
+        ],
+        "summary": "Many questions can be answered with a checklist, job aid, or other resource. Use the established Employee Culture, Human Resources, civil-rights, or accommodation process for complaints, investigations, discipline, and accommodation decisions. Ask the policy or legal owner when official guidance conflicts or is missing. If the work may affect a Tribal Nation, contact the Office of Indian Policy or designated Tribal liaison before planning engagement. A consultation may help with a new program idea, a high-stakes decision, or a community question that remains unresolved.",
+        "version": "0.1.0",
+        "authority": "practice_note",
+        "reviewDate": "2027-03-01",
+        "nextActions": [
+          {
+            "href": "/support/request",
+            "label": "Request a consultation"
+          },
+          {
+            "href": "/support",
+            "label": "Support home"
+          }
+        ],
+        "accessibility": "reviewed"
+      },
+      "variants": []
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import surfaceData from "./professional-language-revisions.json";
 import courseData from "./course-language-revisions.json";
 
-export type LanguageChange = { path: (string | number)[]; before: string; after: string };
+export type LanguageChange = { path: (string | number)[]; before: string; after: string; beforeVariants?: string[] };
 export type LanguageRevision = { target: string; kind: string; changes: LanguageChange[]; status: string };
 type CourseRevision = { courseId: string; changes: LanguageChange[]; status: string };
 const revisions: LanguageRevision[] = [
@@ -17,7 +17,7 @@ export function inspectLanguageRevision<T>(target: string, value: T, revision = 
   if (!revision || revision.status !== "reviewed") return { value, applied: false, conflicts: [] };
   const conflicts = revision.changes.filter(change => {
     const current = at(value, change.path);
-    return current !== change.before && current !== change.after;
+    return current !== change.before && current !== change.after && !change.beforeVariants?.includes(current as string);
   }).map(change => change.path.join("."));
   if (conflicts.length) return { value, applied: false, conflicts };
   const copy = structuredClone(value);

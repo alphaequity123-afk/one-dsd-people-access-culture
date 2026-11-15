@@ -32,4 +32,11 @@ describe("reviewed professional language", () => {
     const original = { body: revision.changes[0].after, items: [revision.changes[1].after] };
     expect(inspectLanguageRevision("sample", original, revision).value).toEqual(original);
   });
+  it("accepts an explicitly reviewed published variant but preserves any other owner wording", () => {
+    const revised: LanguageRevision = { ...revision, changes: [{ ...revision.changes[0], beforeVariants: ["Earlier published explanation"] }] };
+    expect(inspectLanguageRevision("sample", { body: "Earlier published explanation" }, revised).value.body).toBe(revision.changes[0].after);
+    const later = { body: "A subsequent owner revision" };
+    expect(inspectLanguageRevision("sample", later, revised).value).toBe(later);
+    expect(inspectLanguageRevision("sample", later, revised).conflicts).toEqual(["body"]);
+  });
 });

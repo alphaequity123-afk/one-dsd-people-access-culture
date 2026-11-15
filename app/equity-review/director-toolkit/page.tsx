@@ -92,7 +92,7 @@ export default function DirectorToolkitPage() {
           <ul className="list-disc pl-6">
             <li><SourceLink href="#first-90-days">The first 90 days</SourceLink>: what to do in each 30-day period, and what each period should produce.</li>
             <li><SourceLink href="#starter-package">The 12-item priority starter package</SourceLink>: three foundational DHS resources and nine practical supports to build with the people responsible for each area.</li>
-            <li><Link href={DIRECTOR_TEMPLATES_HREF}>The printable templates</Link>: fill them in on screen, then print, copy or download. Nothing is saved or sent.</li>
+            <li><Link href={DIRECTOR_TEMPLATES_HREF}>The printable templates</Link>: fill them in on screen, then print, copy or download a record. The app does not autosave or submit your entries.</li>
           </ul>
         </section>
         {DIRECTOR_TOOLKIT_SECTIONS.map(section => <Section key={section.id} section={section} />)}
