@@ -1,0 +1,142 @@
+{
+  "mode": "applied",
+  "records": 10,
+  "changedFields": 11,
+  "files": 3,
+  "changes": [
+    {
+      "id": "lib--content--community-research--american--disability",
+      "file": "lib/content/community-research/american.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "460935667082459177028412ed90f3641d058a3d5c698f568de7215148e905cf",
+      "afterSha256": "5fae1d7712f9d8c09aa639cadb814bf5c02b03260217f96a7a29d4eeaa4dd33e"
+    },
+    {
+      "id": "lib--content--community-research--african-american--disability",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "disability",
+        "context",
+        1,
+        "body",
+        1
+      ],
+      "beforeSha256": "1a116fc47b3decee8cc476b29987c99634da5a0917aa798324c26a648355f868",
+      "afterSha256": "b8f040d0d5edaab79027df6f4b3781cc7ef4a14396b05cee6c2c55c991ffed40"
+    },
+    {
+      "id": "lib--content--community-research--amharic--organizations",
+      "file": "lib/content/community-research/amharic.json",
+      "path": [
+        "organizations",
+        "intro"
+      ],
+      "beforeSha256": "6aa0952ce5b1fffeb8ddf2e826ec05fc5afd3b1dca59c585d8a10c1264b54086",
+      "afterSha256": "117752c9dfafba946fd600f8dace1a09e2e82debb20b9871b1b4e59ec457d265"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-1",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        1,
+        "body",
+        3
+      ],
+      "beforeSha256": "0190a19638019c77244a2091a4b40379dd423e96b0f5bd493eebe4de3aafa96f",
+      "afterSha256": "1fb6fd001c98ab1191e42118b9ec85a818ff79627d312c5a17c23cc5d3f2a1bb"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-2",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        2,
+        "body",
+        0
+      ],
+      "beforeSha256": "5af8a58dedb1fd68bb59797d15f307df5a4aa137a71c836e024b32227abbe8af",
+      "afterSha256": "18907bdea48caa48b751475944bd032c5808b519aaedce5005ffd2d3eba73d2d"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-4",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        4,
+        "body",
+        0
+      ],
+      "beforeSha256": "5eaee5ff67f75e71a9b5c225b8fc2c400a0a7e97577f88738d13554fea6a762b",
+      "afterSha256": "5e6d50d60290594e4b41e1c1b7afe6e9ea4b5f3b2e1df39f9de5620b257e7794"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-4",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        4,
+        "body",
+        1
+      ],
+      "beforeSha256": "b4b0b674e15bd5a7bd49842e33c48b289dd53a1516b7961878126f75ef5bf48c",
+      "afterSha256": "8877d15d11b819e9aeee5e8ac84d8e53e08bb96da97ca876e00ef1d162de7e75"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-11",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        11,
+        "body",
+        2
+      ],
+      "beforeSha256": "f7944b106696ea0fb58984da23a7f3275ecb57824c52cd7542f5df3b437b4dba",
+      "afterSha256": "ae4b1ece66dd1b5be3a730bba50bb00be3086dc8a17d6354f3f7a69fb693de3e"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-12",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        12,
+        "body",
+        0
+      ],
+      "beforeSha256": "e4625cfcd1c4d7a85306088aeb8fa7f34c55ec87910e8282caad335fc6187045",
+      "afterSha256": "ac1bddfe1379e03ee4f6a8b9db789bd82c621e775783ad77c081312256463bd0"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-13",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        13,
+        "body",
+        2
+      ],
+      "beforeSha256": "a328fe957ac69b4d38fbf28e762f3e21044f629b876a2538f65285c6c23789de",
+      "afterSha256": "c673648efa9bbb4b8e77903336ca592a52f64fcd1d533aadcf4ed60f3c8f91e0"
+    },
+    {
+      "id": "lib--content--community-research--african-american--people-16",
+      "file": "lib/content/community-research/african-american.json",
+      "path": [
+        "people",
+        16,
+        "body",
+        0
+      ],
+      "beforeSha256": "ccd760c670fed98a73383a165e93349cfd6e83086bc8909997fda3903accae09",
+      "afterSha256": "5d12cd1ef93b3965692484b3ca92dbbad268a8c18e0c312aa05159bb8912ad67"
+    }
+  ],
+  "sourceFileHashes": {
+    "lib/content/community-research/american.json": "ac3d3dc82ba41b456c3b85cce3fd05d30449044b71caa6e3ba6e897076230e17",
+    "lib/content/community-research/african-american.json": "a95c7aeed97be84001585c9746cbb4bd04a44694ccae9ed96775ae99072316be",
+    "lib/content/community-research/amharic.json": "12dee8367ad322dc9ac2265489af11193c948da15ece62c1a963e06ed7abb57d"
+  }
+}
