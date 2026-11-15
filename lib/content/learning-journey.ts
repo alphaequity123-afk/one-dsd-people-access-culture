@@ -70,16 +70,16 @@ const stops: LearningStop[] = [
 
 const copy = {
   title: "Intercultural learning in everyday work",
-  intro: "Explore how culture, experience, and access shape everyday work—and how your learning can inform a conversation, a decision, or a change.",
-  choice: "Begin with a question that matters to you. Follow the path from the foundations, choose a useful starting point, or return whenever you want another perspective.",
+  intro: "This learning path helps staff of the Disability Services Division (DSD) see how culture, experience, and access shape everyday work. You can use what you learn in a conversation, a decision, or a change.",
+  choice: "Begin with a question that matters to you. You can follow the path from the foundations, pick a starting point, or return any time.",
   previewTitle: "Find a path from learning to practice",
   previewBody: "Begin with curiosity, explore different experiences, adapt your approach, and put what you learn to use.",
   previewLink: "Explore intercultural learning",
-  idiTitle: "Building on your IDI experience",
-  idiBody: "If you have an Intercultural Development Inventory (IDI) profile and development plan, use the goals you explored in your debrief to choose useful learning here. You can also begin without an assessment. These activities support reflection and practice; they do not assess your orientation or replace your individual development plan.",
+  idiTitle: "Already have an IDI profile? Use it to choose your learning",
+  idiBody: "If you have an Intercultural Development Inventory (IDI) profile and development plan, use the goals from your debrief to choose learning here. You can also begin without an assessment. These activities support reflection and practice. They do not assess your orientation or replace your individual development plan.",
   idiLink: "https://www.idiinventory.com/products-and-services",
-  connectionsTitle: "Keep the learning connected",
-  connectionsIntro: "A question may lead to reading, a practical tool, a conversation, or a change in your work. These spaces offer different kinds of support.",
+  connectionsTitle: "A question can lead to reading, a tool, or a conversation",
+  connectionsIntro: "These spaces offer different kinds of support. Choose the one that fits your question.",
 };
 const approvedValues: EditableSurfaceValues = { ...copy, relatedLinks: [
   { label: "Program orientation", href: "/start#new-to-dsd" },

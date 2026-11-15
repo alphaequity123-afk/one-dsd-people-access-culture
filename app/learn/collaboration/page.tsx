@@ -35,8 +35,9 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
       <header className={styles.intro}>
         <p className={styles.eyebrow}>Work better together</p>
         <h1>Teams and Cross-Collaboration</h1>
-        <p className={styles.lede}>Good collaboration helps people contribute, understand one another, and carry shared work forward. Explore learning for your team, work across the Disability Services Division and the Aging and Disability Services Administration, and relationships with partners.</p>
-        <p>Choose the situation that fits your work. Each course brings together explanation, examples, reflection, and practice you can return to when it is useful.</p><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="collaboration" noun="collection" scope={scope} /></details>
+        <p className={styles.lede}>This collection helps staff of the Disability Services Division (DSD) work better together. It covers your own team, work across the division and the Aging and Disability Services Administration (ADSA), and relationships with partners.</p>
+        <p>Good collaboration helps people contribute, understand one another, and carry shared work forward.</p>
+        <p>Choose the situation that fits your work. Each course includes explanation, examples, reflection, and practice you can return to when it is useful.</p><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="collaboration" noun="collection" scope={scope} /></details>
       </header>
 
       <nav className={styles.paths} aria-label="Choose your collaboration focus">
@@ -51,8 +52,9 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
       </nav>
 
       <section className={styles.selection} aria-labelledby="choose-level-title">
-        <div className={styles.selectionHeading}><h2 id="choose-level-title">Choose your depth</h2>{filters.focus ? <Link href={collaborationHref({ level: filters.level })}>See all three paths</Link> : null}</div>
-        <p>Foundation builds understanding. Intermediate offers practice with situations. Advanced explores more complex shared responsibilities. These describe learning depth, not job rank. Directors, managers, supervisors, and staff can begin wherever the learning helps.</p>
+        <div className={styles.selectionHeading}><h2 id="choose-level-title">Choose your depth: Foundation, Intermediate, or Advanced</h2>{filters.focus ? <Link href={collaborationHref({ level: filters.level })}>See all three paths</Link> : null}</div>
+        <p>Foundation builds understanding. Intermediate offers practice with situations. Advanced explores more complex shared responsibilities.</p>
+        <p>These levels describe learning depth, not job rank. Directors, managers, supervisors, and staff can begin wherever the learning helps.</p>
         <nav className={styles.levels} aria-label="Learning level">
           <Link href={collaborationHref({ focus: filters.focus })} aria-current={!filters.level ? "page" : undefined}>All levels</Link>
           {COLLABORATION_LEVELS.map(level => <Link key={level.id} href={collaborationHref({ ...filters, level: level.id })} aria-current={filters.level === level.id ? "page" : undefined}>{level.title}</Link>)}

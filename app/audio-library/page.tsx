@@ -31,7 +31,7 @@ export default async function AudioLibraryPage({ searchParams }: { searchParams?
   const podcasts = PODCASTS.flatMap((podcast, index) => podcastSurfaces[index].available && podcastMatchesTheme(podcast.id, selectedTheme?.id) ? [{ podcast, surface: podcastSurfaces[index] }] : []);
   const courseListening = listCourseListening(courses.map(({ pack }) => pack), selfDirectedItems()).filter(course => !selectedTheme || course.themes.includes(selectedTheme.id));
   return <>
-    <PageIntro kicker="Learning and resources" title="Audio library" lede="Explore podcasts and courses with recordings. Choose a theme, listen at your own pace, or read the accompanying text.">
+    <PageIntro kicker="Learning and resources" title="Audio library" lede="This page gathers the podcasts and course recordings for staff of the Disability Services Division (DSD). Choose a theme, listen at your own pace, or read the matching text.">
       <p className="mt-3 text-sm">{count === 1 ? "1 recording" : `${count} recordings`} in this collection{courseListening.length ? `, plus ${courseListening.length} courses with listening` : ""}.</p>
     </PageIntro>
     <div className="wrap max-w-5xl py-10">
