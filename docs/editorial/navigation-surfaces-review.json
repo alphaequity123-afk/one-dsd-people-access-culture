@@ -1,0 +1,670 @@
+{
+  "records": [
+    {
+      "target": "learn.catalog",
+      "route": "/learn",
+      "values": {
+        "climateImage": "/images/covers/culture-without-theater.jpg",
+        "climateImageAlt": "A woman working at a desk in an office.",
+        "climateSummary": "Explore how meetings, supervision, and recognition shape participation and fair opportunities.",
+        "facilitationImage": "/images/covers/facilitators-guide.jpg",
+        "facilitationImageAlt": "A facilitator speaking with a small group beside a whiteboard.",
+        "facilitationSummary": "Plan accessible sessions that give participants time to practice and apply what they learn.",
+        "interpreterImage": "/images/covers/catalog/other-P801.webp",
+        "interpreterImageAlt": "A county worker talks with a Karen man through an in-person interpreter seated beside him.",
+        "interpreterSummary": "Prepare for conversations with a qualified interpreter and support clear, respectful communication.",
+        "staffGuideTitle": "Staff guide",
+        "staffGuideIntro": "Information about using the program and saving your notes.",
+        "participationDetailsLabel": "Participation and privacy"
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "practice.path-shell",
+      "route": "/practice/[id]",
+      "values": {
+        "handoffTitle": "Bring your ASK draft into this practice",
+        "handoffBody": "You can review and edit it here. Notes you have already changed stay yours.",
+        "handoffUseLabel": "Use this draft",
+        "draftSourceSummary": "About this draft",
+        "draftPreparedPrefix": "Prepared with ASK on",
+        "draftOwnershipBody": "Your changes here are part of your own working notes.",
+        "introKicker": "Learning path",
+        "outcomeLead": "By the end, you will be able to",
+        "pathKicker": "Your path",
+        "stepsTitle": "Six steps to work through in order",
+        "requiredLabel": "Needed for this optional worksheet",
+        "optionalLabel": "If relevant",
+        "meaningKicker": "Make the work meaningful",
+        "meaningTitle": "What a useful result looks like",
+        "needsWorkLabel": "Still needs work",
+        "readyLabel": "Ready to use",
+        "privacyLabel": "Privacy",
+        "confidentialRouteNote": "Complaints, investigations, and discipline about a named person belong with Employee Culture, Human Resources, or the civil-rights office, not this path.",
+        "notesKicker": "Your working notes",
+        "artifactPrivacy": "Your practice notes are saved in this browser on this computer. Someone else using this computer may be able to see them. Please leave out client names, case numbers, and medical details.",
+        "requiredFieldSuffix": "required",
+        "listPlaceholder": "One per line",
+        "openingNotes": "Opening your saved notes.",
+        "saveNotesLabel": "Save these notes",
+        "reviewWorkLabel": "Review my work",
+        "deleteNotesLabel": "Delete these notes",
+        "savedPrefix": "Saved at",
+        "unsavedLabel": "Unsaved changes.",
+        "reviewCompleteTitle": "Your review is complete",
+        "detailsNeededTitle": "A few details are still needed",
+        "donePrefix": "Done",
+        "notYetPrefix": "Not yet",
+        "readyLead": "Your notes are ready to use for this work.",
+        "readyOpenBody": "You can return to this approach next time and request a consultation only if the stakes are high or another perspective would help.",
+        "readyPreviewBody": "You can return to this approach next time. If another perspective would help, Support shows other ways to get help, including what a consultation request would look like.",
+        "missingDetailsBody": "Add the missing owners and review date, then review your work again. The review uses the information in your notes as well as the steps you marked complete.",
+        "progressKicker": "Your saved progress",
+        "reviewStatusPrefix": "Your review is",
+        "completeStatus": "complete",
+        "incompleteStatus": "not yet complete",
+        "browserStorageBody": "Progress is saved in this browser on this computer, where someone else using this computer may be able to see it.",
+        "dsdConsultKicker": "Optional DSD consultation",
+        "humanSupportKicker": "When you want another perspective",
+        "supportOneDhsBody": "If another perspective would help, find the responsible person or office for this work. Your working notes are not sent with you.",
+        "supportDsdOpenBody": "If you would like another perspective after these steps, you can request a DSD consultation. Your notes will carry over so you do not have to enter the same information again.",
+        "supportDsdPreviewBody": "You can see what a DSD consultation request and its summary would include. Nothing is submitted or saved for the Equity and Inclusion Operations Consultant yet.",
+        "supportOneDhsLabel": "Find the right person",
+        "supportDsdOpenLabel": "Request a DSD consultation",
+        "supportDsdPreviewLabel": "Preview a DSD consultation request"
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "Current practice route renders headings and checklist; legacy save/review/consultation fields are dormant and are not claimed live."
+    },
+    {
+      "target": "library.resource-shell",
+      "route": "/library/[id]",
+      "values": {
+        "preparedByLabel": "Prepared by",
+        "forLabel": "For",
+        "outsideSourceNote": "This reference comes from outside the program. Check the original source for the current version before relying on it.",
+        "openSourceLabel": "Open the source",
+        "sourceWebsiteLabel": "source website",
+        "intranetSourceNote": "Find the current version on the DHS intranet.",
+        "whyKicker": "Why this matters",
+        "nextStepsTitle": "Continue from here",
+        "pathsTitle": "Use this resource in a learning path",
+        "questionsKicker": "Questions or corrections",
+        "correctionsLead": "If something is missing or does not seem right, tell your Equity Director or",
+        "consultationActionLabel": "ask for support"
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "my-view.page",
+      "route": "/my-view",
+      "values": {
+        "introKicker": "Saved on this computer",
+        "introTitle": "My View",
+        "introLede": "Return to your practice notes, learning progress, recent Ask history, and saved consultation references. Someone else using this computer may be able to see them. You can remove them at any time."
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "my-work.client",
+      "route": "*",
+      "values": {
+        "openingLabel": "Opening your saved work.",
+        "deleteAllConfirmation": "Delete all practice notes, path progress, saved consultation references, and recent Ask questions from this computer? This does not delete submitted requests or any separately retained records from earlier versions.",
+        "notesTitle": "Working notes",
+        "notesEmpty": "No working notes yet. Start a learning path when you are ready.",
+        "progressTitle": "Path progress",
+        "progressEmpty": "No path progress yet.",
+        "requestsTitle": "Saved consultation references",
+        "requestsEmpty": "No consultation references are saved on this computer.",
+        "askTitle": "Recent Ask questions",
+        "askCountSingular": "recent question",
+        "askCountPlural": "recent questions",
+        "askEmpty": "No recent Ask questions.",
+        "clearAskLabel": "Clear recent Ask questions",
+        "forPrefix": "For",
+        "startedLabel": "Started",
+        "completeLabel": "Path review complete",
+        "inProgressLabel": "In progress",
+        "updatedPrefix": "updated",
+        "savedDeviceLabel": "Saved on this device",
+        "availableTabLabel": "Available in this tab",
+        "submittedPrefix": "submitted",
+        "deleteItemLabel": "Delete",
+        "deletingKicker": "Your privacy and choices",
+        "intakeOpenBeforeRole": "A submitted consultation request is separate from the reference saved here. The",
+        "intakeOpenAfterRole": "can see the submitted request so they can prepare and respond.",
+        "intakePreviewBeforeRole": "Consultation requests are not open yet. Nothing you enter is sent or saved for the",
+        "intakePreviewAfterRole": ".",
+        "deleteReferenceBody": "Removing a saved reference clears its reference number and access key from this computer. It does not withdraw a request that was already submitted.",
+        "deleteAllLabel": "Delete everything saved here"
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "podcast.equity-toolkit",
+      "route": "/learn/equity-toolkit#podcast-equity-toolkit",
+      "values": {
+        "title": "DHS equity policy and toolkit",
+        "intro": "Listen to the podcast about DHS equity policy and the toolkit.",
+        "downloadLabel": "Download the recording",
+        "retryLabel": "Try playback again",
+        "errorMessage": "This recording could not be played. Please try again."
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "podcast.anti-racism-public-service",
+      "route": "/learn#podcast-anti-racism-public-service",
+      "values": {
+        "title": "Fair access in public service: the rules we inherit",
+        "intro": "Two colleagues talk through how the rules, forms and systems we inherit shape who gets fair access to public services, and what staff can check, measure and fix in their own work.",
+        "downloadLabel": "Download the recording",
+        "retryLabel": "Try playback again",
+        "errorMessage": "This recording could not be played. Please try again."
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "one-dsd.inventory",
+      "route": "/one-dsd",
+      "values": {
+        "programsTitle": "Where equity shows up in DSD work",
+        "scenariosTitle": "Situations DSD staff actually face"
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "dsd-team.home",
+      "route": "/one-dsd/team",
+      "values": {
+        "title": "One DSD Team",
+        "intro": "Colleagues working together to make equity part of everyday decisions, programs, and services.",
+        "backLabel": "One DSD",
+        "linksTitle": "Connected work",
+        "links": [
+          {
+            "label": "Open the team space",
+            "href": "https://teams.live.com/l/community/FAAZGnsBn1D-N8ExQ"
+          },
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          },
+          {
+            "label": "Learning and resources",
+            "href": "/learn"
+          },
+          {
+            "label": "Amplify Equity",
+            "href": "/one-dsd/amplify"
+          },
+          {
+            "label": "Practical tools",
+            "href": "/practice"
+          }
+        ],
+        "heading0": "Different experience, shared work",
+        "body0": "The One DSD Team brings colleagues' knowledge of policy, programs, eligibility, and everyday operations into the division's equity work. Members work with the Equity and Inclusion Operations Consultant to identify barriers, examine practices, and develop useful improvements.",
+        "heading1": "Begin with a real question",
+        "body1": "Choose a decision or practice that matters to staff or people receiving services. Describe what happens now, who experiences it differently, and what the team needs to understand. Use an example without private or identifying information.",
+        "heading2": "Contribute where your experience helps",
+        "body2": "Members can explain a process, review a resource, question an assumption, try an improvement, or connect the work with colleagues who need to be involved. Agree on a manageable contribution rather than expecting every member to do every task.",
+        "heading3": "Learn, examine, try, and return",
+        "body3": "Use relevant learning and evidence to examine the question. Develop a small improvement with the responsible people, agree what would indicate progress, and return to what happened. Keep useful changes and revise what did not work. A meeting is part of the work, not its final result.",
+        "heading4": "Know who can decide",
+        "body4": "The team develops advice and practical contributions. The person responsible for a policy, budget, service, or staffing decision retains that authority. Agree who will receive a recommendation and who can authorize a trial before promising a change.",
+        "heading5": "Meetings and open hours",
+        "body5": "A monthly rhythm is planned from January 2027, once the program is ready, alternating practical team work with open conversations and shared learning. The consultant or members can bring a topic. Participation is voluntary, with room to listen, ask questions, and explore more deeply when helpful. Confirmed arrangements belong in the team's collaboration space.",
+        "heading6": "Stay connected with Amplify Equity",
+        "body6": "Amplify offers voluntary conversation, connection, and shared learning. Its co-leads can bring forward questions participants agree to share and return updates. The One DSD Team considers the work that needs further attention without directing Amplify's everyday conversations.",
+        "heading7": "Make resources fit the work",
+        "body7": "When reviewing a resource, ask whose work it supports, which task it helps with, what is missing, and whether the example reflects practice. A policy analyst, a supervisor, and an eligibility worker may need different ways into the same subject.",
+        "heading8": "A useful work note",
+        "body8": "Record the question, the practice being examined, relevant evidence, the proposed improvement, and the person responsible for the next decision. Include the next agreed check-in and what changed. Keep personal disclosures and individual case details out of shared notes.",
+        "heading9": "Keep the work manageable",
+        "body9": "Choose a small number of shared priorities. Make room to decline or renegotiate a contribution. Periodically ask whether the work is useful, whose perspective is missing, and what support members need. Preserve unfinished questions when membership or responsibilities change."
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "work-learning.home",
+      "route": "/my-work/explore",
+      "values": {
+        "title": "Learning for your work",
+        "intro": "Different responsibilities call for different examples and tools. Explore a starting point that fits what you are doing today.",
+        "roleLabel": "Your area of work",
+        "taskLabel": "What are you working on?",
+        "anyRole": "Explore without choosing a role",
+        "anyTask": "Explore this area",
+        "submit": "Explore",
+        "back": "My Work",
+        "all": "All learning and resources",
+        "purposeTitle": "A useful starting point",
+        "resultsTitle": "Related learning and tools",
+        "empty": "There are no published matches for this selection yet. The full learning collection remains available.",
+        "choice": "These choices are optional. They do not change your access, and you can explore any area.",
+        "taskNote": "The task you choose comes first; related material for your area of work follows.",
+        "leadershipLabel": "Executive and division leadership",
+        "leadershipPurpose": "Examine the effects of a proposed direction, identify who can act, and plan how to check results.",
+        "leadershipIds": [
+          "ext-dhs-equity-toolkit",
+          "ja-equity-impact-questions",
+          "pn-embed-early"
+        ],
+        "policyLabel": "Policy and program analysis",
+        "policyPurpose": "Examine who benefits from a rule, where it creates burden, and what evidence could support a better alternative.",
+        "policyIds": [
+          "ext-dhs-equity-toolkit",
+          "ja-process-burden",
+          "ja-equity-impact-questions"
+        ],
+        "serviceLabel": "Eligibility and service delivery",
+        "servicePurpose": "Look at the steps people must navigate, communication needs, and opportunities to make access easier.",
+        "serviceIds": [
+          "ja-process-burden",
+          "ja-access-checks",
+          "pn-intercultural-method"
+        ],
+        "managementLabel": "Supervision and management",
+        "managementPurpose": "Connect fair decisions with the conditions that help staff contribute, raise concerns, and do their work well.",
+        "managementIds": [
+          "lm-workplace-climate",
+          "ja-climate-action-plan",
+          "ja-access-checks"
+        ],
+        "workforceLabel": "Hiring and workforce development",
+        "workforcePurpose": "Examine requirements, access to opportunity, and the employee experience beyond the initial hiring decision.",
+        "workforceIds": [
+          "ext-dhs-equity-toolkit",
+          "ja-equity-impact-questions",
+          "lm-workplace-climate"
+        ],
+        "fiscalLabel": "Budgets, grants, and contracts",
+        "fiscalPurpose": "Consider who can meet the requirements, where costs and burdens fall, and how the decision will be reviewed.",
+        "fiscalIds": [
+          "ja-equity-impact-questions",
+          "ja-process-burden",
+          "pn-embed-early"
+        ],
+        "dataLabel": "Data, research, and quality",
+        "dataPurpose": "Define the decision question, examine what the evidence can show, and identify whose experience may be missing.",
+        "dataIds": [
+          "ja-equity-impact-questions",
+          "ja-stakeholder-map",
+          "pn-self-check"
+        ],
+        "engagementLabel": "Community engagement and partnership",
+        "engagementPurpose": "Consider who can influence a decision, what participation requires, and how people will hear what happened next.",
+        "engagementIds": [
+          "pn-partnership-spine",
+          "ja-stakeholder-map",
+          "pn-intercultural-method"
+        ],
+        "communicationLabel": "Communication and accessibility",
+        "communicationPurpose": "Examine whether people can find, understand, and use information in the form they need.",
+        "communicationIds": [
+          "ja-access-checks",
+          "ja-process-burden",
+          "pn-intercultural-method"
+        ],
+        "equityLabel": "Equity practice and organizational change",
+        "equityPurpose": "Connect a specific barrier with the wider process, responsible partners, and a change that can be sustained.",
+        "equityIds": [
+          "ext-dhs-equity-toolkit",
+          "pn-embed-early",
+          "ja-launch-embed-checklist"
+        ],
+        "taskreviewLabel": "Review a policy or process",
+        "taskreviewIds": [
+          "ja-process-burden",
+          "ext-dhs-equity-toolkit",
+          "ja-equity-impact-questions"
+        ],
+        "taskmeetingLabel": "Plan a meeting or learning session",
+        "taskmeetingIds": [
+          "ja-access-checks",
+          "ja-facilitation-session-plan",
+          "lm-facilitation-application"
+        ],
+        "taskpartnershipLabel": "Involve people in a decision",
+        "taskpartnershipIds": [
+          "ja-stakeholder-map",
+          "pn-partnership-spine",
+          "pn-intercultural-method"
+        ],
+        "taskchangeLabel": "Put an improvement into practice",
+        "taskchangeIds": [
+          "pn-embed-early",
+          "ja-launch-embed-checklist",
+          "ja-climate-action-plan"
+        ]
+      },
+      "status": "accepted_retained",
+      "review": "Full registry prose read and retained by DSD reviewer on 2026-11-15. Clear task-specific headings, instructions, responsibilities and privacy limits retained; model expansions added length without useful meaning. This is editorial review, not re-verification of every current role, date or external fact.",
+      "usageNote": "No blanket live-field verification claimed."
+    },
+    {
+      "target": "support.request.one-dhs",
+      "route": "/support/request",
+      "values": {
+        "introKicker": "One DSD service",
+        "introTitle": "Direct consultation is for DSD work",
+        "introLede": "The consultation form is available in the One DSD view for work within the Disability Services Division. Choosing that view lets you see how a consultation works. It does not confirm eligibility or submit anything.",
+        "supportKicker": "Agencywide support",
+        "supportTitle": "Find the responsible person or office",
+        "supportBody": "If the work is outside DSD, use Find the right person to identify the supervisor, Equity Director or Specialist, policy owner, or office responsible for it.",
+        "supportLink": "Find the right person or office"
+      },
+      "status": "excluded_dormant_surface",
+      "review": "Full text read. app/support/request and app/support/track both redirect to /support/right-person; no current renderer references these IDs. No dormant wording activated and no live publication claim."
+    },
+    {
+      "target": "support.request.dsd",
+      "route": "/support/request",
+      "values": {
+        "openKicker": "When guidance is not enough",
+        "previewKicker": "A look before requests open",
+        "openTitle": "Find support for your work",
+        "previewTitle": "Find the responsible person or office",
+        "openLede": "Share a few details so the Equity and Inclusion Operations Consultant can understand what you need and prepare. You can receive support without a live meeting. This form does not schedule a meeting or send a calendar invitation.",
+        "previewLede": "See what information a consultation request would include and review the summary it would create. Requests are not open yet, so nothing is created, stored, or sent to the Equity and Inclusion Operations Consultant.",
+        "privacyKicker": "Please keep this general.",
+        "openPrivacyNote": "Leave out names, case details, medical or personnel information, complaints, and anything else that should remain private. After you submit, only the consultant and people authorized to support this service can see the request.",
+        "previewPrivacyNote": "Leave out names and private details. What you enter stays on this page and is not saved or sent to the consultant.",
+        "retentionLead": "Submitted details are kept for",
+        "retentionTail": "calendar days so the request can be reviewed and answered."
+      },
+      "status": "excluded_dormant_surface",
+      "review": "Full text read. app/support/request and app/support/track both redirect to /support/right-person; no current renderer references these IDs. No dormant wording activated and no live publication claim."
+    },
+    {
+      "target": "support.track.available",
+      "route": "/support/track",
+      "values": {
+        "introKicker": "Your requests",
+        "introTitle": "Check a request",
+        "introLede": "Enter the reference number and access key from your confirmation to see the latest update. You can withdraw a request while its status is Received or “We have your request.”",
+        "privacyKicker": "Keep your access key private.",
+        "privacyNote": "Your reference number and access key work together to protect the request. Only you and the people authorized to support the consultation service can see it."
+      },
+      "status": "excluded_dormant_surface",
+      "review": "Full text read. app/support/request and app/support/track both redirect to /support/right-person; no current renderer references these IDs. No dormant wording activated and no live publication claim."
+    },
+    {
+      "target": "support.track.unavailable",
+      "route": "/support/track",
+      "values": {
+        "introKicker": "Temporarily unavailable",
+        "introTitle": "Check a request",
+        "introLede": "Checking a request is not available right now.",
+        "availabilityNote": "When it is available again, you can use the reference number and access key from your confirmation."
+      },
+      "status": "excluded_dormant_surface",
+      "review": "Full text read. app/support/request and app/support/track both redirect to /support/right-person; no current renderer references these IDs. No dormant wording activated and no live publication claim."
+    },
+    {
+      "target": "community-brief.tribal-nations",
+      "route": "/minnesota-communities/tribal-nations",
+      "values": {
+        "title": "Tribal Nations of Minnesota",
+        "kicker": "Sovereignty and consultation",
+        "owner": "Equity and Inclusion Operations Consultant",
+        "languages": [
+          "Ojibwe",
+          "Dakota",
+          "English"
+        ],
+        "whoAndWhere": "Eleven federally recognized Tribal Nations share geography with Minnesota. Each is a sovereign government with its own name, laws, leadership, and consultation process. Urban Native people also live throughout the state. This page explains when staff should seek government-to-government guidance; it does not provide Nation-specific guidance.",
+        "whyItMatters": "When work may affect a Tribal Nation, Native children, Tribal data, services, or land, contact the designated Tribal relations office or liaison before planning consultation or engagement. A general community meeting is not government-to-government consultation.",
+        "withinGroupDiversity": "Each Nation is distinct. Do not infer a person's Tribal citizenship, community ties, language, or residence.",
+        "preferredNames": [
+          "The Nation's own name (for example Red Lake Nation, Lower Sioux Indian Community)"
+        ],
+        "alsoUsedNames": [
+          "American Indian",
+          "Native American",
+          "Indigenous"
+        ],
+        "nameNote": "Name the Nation. Do not use a demographic count as a substitute for a government.",
+        "nameUncertainty": "",
+        "whatToAsk": [
+          "Could this work affect a Tribal Nation, Native children, Tribal data, services, or land? If so, contact the designated Tribal relations office or liaison before planning consultation or engagement."
+        ],
+        "accessChecks": [
+          "This referral page does not provide Nation-specific access guidance. Ask the designated Tribal relations office or liaison which process and contacts apply."
+        ],
+        "whoToInvolve": [
+          "Before planning consultation or engagement, contact the Office of Indian Policy or current designated Tribal relations office or liaison and follow the required process.",
+          "Work with the Nation's government through the process it designates."
+        ],
+        "whatNotToAssume": [
+          "Do not infer Tribal citizenship or community ties.",
+          "Do not place a sovereign Nation in a general community partner list.",
+          "Do not use general cultural information as a substitute for consultation with the Nation."
+        ],
+        "spotlightTitle": "Relationships begin with sovereignty",
+        "spotlightBody": "Tribal Nations are contemporary governments as well as communities with distinct histories and cultures. Minnesota Indian Affairs offers a starting point for learning about those government relationships. Respect includes recognizing each Nation’s authority to speak and make decisions for itself.",
+        "spotlightLinkLabel": "Explore Minnesota Indian Affairs",
+        "spotlightHref": "https://mn.gov/indian-affairs/",
+        "reflectionTitle": "A different starting point",
+        "reflectionBody": "Before shaping a proposal, whose governmental authority and designated consultation process must guide the next step?",
+        "source0Label": "DHS Tribal and Urban Indian Relations",
+        "source0Note": "Use the current DHS contact and guidance before planning consultation or engagement.",
+        "source0Href": "https://mn.gov/dhs/partners-and-providers/program-overviews/tribal-and-urban-indian-relations/"
+      },
+      "status": "accepted_retained",
+      "review": "Root and independent coverage reviewer read full original brief and shell with13revised briefs. Retained unchanged editorially; no blanket source/statistical revalidation."
+    },
+    {
+      "target": "communities.brief-shell",
+      "route": "/minnesota-communities/[id]",
+      "values": {
+        "maintainedByLabel": "Maintained by",
+        "appliesToLabel": "Applies to",
+        "languagesLabel": "Languages named in this brief",
+        "tribalKicker": "Tribal sovereignty",
+        "tribalTitle": "Begin with the designated Tribal relations contact",
+        "tribalActionHeading": "If your work may affect a Tribal Nation",
+        "notAssumeHeading": "What not to assume",
+        "tribalLinkLabel": "See who to contact",
+        "whyKicker": "Why it matters for Department of Human Services work",
+        "variationKicker": "People and experiences vary",
+        "namesKicker": "Names and terms",
+        "preferredLabel": "Preferred",
+        "alsoUsedLabel": "Also used",
+        "uncertaintyLabel": "What is still unclear",
+        "workKicker": "Use this in your work",
+        "workTitle": "What to ask, access checks, who to involve, what not to assume",
+        "whatToAskTitle": "What to ask",
+        "accessChecksTitle": "Access checks",
+        "involveTitle": "Who to involve",
+        "notAssumeTitle": "What not to assume",
+        "antiProfileNote": "Use this guidance to prepare, never to label a person. Ask what each person needs, check access, and be clear with partners about why and how they are being involved.",
+        "deeperTitle": "Deeper context (optional)",
+        "hideDeeperLabel": "Hide deeper context",
+        "noDeeperBody": "More context is not available yet. Confirm important details with the appropriate people before using this brief in a decision.",
+        "showDeeperLabel": "Show deeper context",
+        "showDeeperNote": "Open this when history or important qualifications would help you prepare.",
+        "observancesTitle": "Observances at work",
+        "observanceColumn": "Observance",
+        "whenColumn": "When",
+        "atWorkColumn": "At work",
+        "sourcesKicker": "Sources",
+        "nextKicker": "Where to go next",
+        "askLinkLabel": "Ask a question about your work",
+        "accessLinkLabel": "Access checks before a meeting or outreach",
+        "consultLinkLabel": "Find the responsible person or office"
+      },
+      "status": "accepted_retained",
+      "review": "Root and independent coverage reviewer read full original brief and shell with13revised briefs. Retained unchanged editorially; no blanket source/statistical revalidation."
+    },
+    {
+      "target": "learn.intercultural",
+      "route": "/learn/intercultural",
+      "values": {
+        "title": "Intercultural learning in everyday work",
+        "intro": "Explore how culture, experience, and access shape everyday work—and how your learning can inform a conversation, a decision, or a change.",
+        "choice": "Begin with a question that matters to you. Follow the path from the foundations, choose a useful starting point, or return whenever you want another perspective.",
+        "previewTitle": "Find a path from learning to practice",
+        "previewBody": "Begin with curiosity, explore different experiences, adapt your approach, and put what you learn to use.",
+        "previewLink": "Explore intercultural learning",
+        "idiTitle": "Building on your IDI experience",
+        "idiBody": "If you have an Intercultural Development Inventory (IDI) profile and development plan, use the goals you explored in your debrief to choose useful learning here. You can also begin without an assessment. These activities support reflection and practice; they do not assess your orientation or replace your individual development plan.",
+        "idiLink": "https://www.idiinventory.com/products-and-services",
+        "connectionsTitle": "Keep the learning connected",
+        "connectionsIntro": "A question may lead to reading, a practical tool, a conversation, or a change in your work. These spaces offer different kinds of support.",
+        "relatedLinks": [
+          {
+            "label": "Program orientation",
+            "href": "/start#new-to-dsd"
+          },
+          {
+            "label": "Minnesota Communities",
+            "href": "/minnesota-communities"
+          },
+          {
+            "label": "Equity Analysis Toolkit",
+            "href": "/learn/equity-toolkit"
+          },
+          {
+            "label": "Guided practice",
+            "href": "/practice"
+          },
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          },
+          {
+            "label": "Amplify Equity",
+            "href": "/one-dsd/amplify"
+          },
+          {
+            "label": "One DSD Team",
+            "href": "/one-dsd/team"
+          },
+          {
+            "label": "People, Access and Culture leadership in DSD",
+            "href": "/one-dsd/leadership"
+          }
+        ],
+        "foundationsTitle": "Begin with curiosity",
+        "foundationsPurpose": "A useful place to begin when you want shared language for culture, equity, and access. Our experience shapes what feels normal; another person's experience can reveal something we have not noticed.",
+        "foundationsObjectives": [
+          "Separate an observation from an interpretation in a workplace example.",
+          "Identify one familiar expectation that may not work equally well for everyone.",
+          "Frame a respectful question that leaves room for the person's own explanation."
+        ],
+        "foundationsExample": "A colleague pauses before answering. You notice the pause; you do not yet know whether they are considering their words, need more context, or prefer another way to contribute. A question gives you better information than a label.",
+        "foundationsPractice": "Choose a routine interaction. Write what you actually observed, what you initially thought it meant, and a question that could help you understand it. Consider other explanations before deciding what to do.",
+        "foundationsReflection": "Which part was evidence, and which part came from my own expectations?",
+        "foundationsEvidence": "An observation, more than one plausible explanation, and a question you can use.",
+        "foundationsNextStep": "Explore whose perspective could add something to your understanding.",
+        "foundationsIds": [
+          "course-cultural-humility-vs-checklist",
+          "course-intercultural-competence-without-a-score",
+          "course-idi-denial",
+          "course-idi-polarization",
+          "pn-idi-and-tool-registry",
+          "pn-intercultural-method"
+        ],
+        "perspectivesTitle": "Make room for different experiences",
+        "perspectivesPurpose": "Explore this when a familiar approach seems fair, but people experience it differently. Shared needs and meaningful differences can both matter. Learning about a community offers context; listening helps you understand the individual.",
+        "perspectivesObjectives": [
+          "Explain how the same process can place different burdens on people.",
+          "Identify a perspective missing from a decision and a useful way to invite it.",
+          "Revise an initial interpretation in light of another person's account."
+        ],
+        "perspectivesExample": "A team offers everyone the same opportunity to speak at a fast-moving meeting. Some colleagues contribute more fully after reading a question or thinking it through. A shared invitation may need more than one way to participate.",
+        "perspectivesPractice": "Take one meeting, notice, or service step. Consider who it works well for, who may face a barrier, and whose experience could help you check that understanding. Invite input without asking someone to speak for an entire community.",
+        "perspectivesReflection": "What did I understand differently after considering another perspective?",
+        "perspectivesEvidence": "A revised question or participation approach, with the reason for the change.",
+        "perspectivesNextStep": "Try an approach that responds to what you have learned.",
+        "perspectivesIds": [
+          "course-what-minimization-does-in-dhs-work",
+          "course-acceptance-in-dhs-work",
+          "ja-stakeholder-map",
+          "pn-partnership-spine"
+        ],
+        "communicationTitle": "Adapt how you communicate",
+        "communicationPurpose": "Useful when you want to turn awareness into a more responsive conversation. Adaptation begins with the situation, the person, and the communication task. It includes checking preferences, making access possible, and adjusting after feedback.",
+        "communicationObjectives": [
+          "Ask about communication preferences without assuming them from identity.",
+          "Adapt a question, format, or conversation approach to a stated need.",
+          "Check whether the revised approach helped someone understand or contribute."
+        ],
+        "communicationExample": "A service conversation becomes difficult to follow. Rather than speaking louder or repeating the same explanation, you check what would help: a clearer question, a written summary, accessible information, or qualified language support.",
+        "communicationPractice": "Choose a conversation or explanation you can improve. Ask what would make it easier to follow, adapt one part, and check understanding through the task itself. For interpreter-supported conversations, use the language-access resources.",
+        "communicationReflection": "What did the other person's response tell me about the change?",
+        "communicationEvidence": "A revised explanation or conversation plan and a specific way to check its usefulness.",
+        "communicationNextStep": "Look at the process around the conversation as well as your own approach.",
+        "communicationIds": [
+          "course-intercultural-conflict-styles",
+          "course-working-with-an-interpreter",
+          "course-disability-and-language",
+          "course-idi-adaptation",
+          "lm-interpreter",
+          "ja-language-access-checklist"
+        ],
+        "decisionsTitle": "Carry learning into a decision",
+        "decisionsPurpose": "Begin here when a policy, service, workplace practice, or resource decision is open to change. Connect what people experience with the rules, steps, and choices that shape those experiences. Consider alternatives with the people affected.",
+        "decisionsObjectives": [
+          "Identify a decision that could change an access or participation barrier.",
+          "Compare alternatives using evidence and the perspectives of affected people.",
+          "Describe a practical change, the responsibility needed, and what would indicate it helped."
+        ],
+        "decisionsExample": "People repeatedly struggle with a renewal notice. A clearer explanation may help, but the team also examines the documentation burden, available formats, and steps required to respond. The improvement may involve both communication and process.",
+        "decisionsPractice": "Use the Equity Analysis Toolkit companion to examine a current decision. Describe the barrier, compare options, identify who can shape the choice, and agree how its effects could be checked. Use the original policy and toolkit for applicable requirements.",
+        "decisionsReflection": "Did the proposed change address the source of the barrier, and whose knowledge shaped it?",
+        "decisionsEvidence": "A reasoned option or draft analysis that names the change, available evidence, and questions still open.",
+        "decisionsNextStep": "After a change is tried, revisit what happened with the people affected.",
+        "decisionsIds": [
+          "course-from-noticing-to-shifting",
+          "course-dhs-equity-analysis-toolkit",
+          "ja-equity-impact-questions",
+          "ja-process-burden",
+          "pn-embed-early"
+        ],
+        "reflectionTitle": "Learn from what happens next",
+        "reflectionPurpose": "Return here after trying an idea, or when you want another perspective. A useful reflection connects what you intended, what actually happened, and what you will keep or change. Conversation with a willing colleague can deepen that learning.",
+        "reflectionObjectives": [
+          "Distinguish a completed activity from an observed change in the work.",
+          "Describe feedback or an observation without overstating what it proves.",
+          "Choose a specific adjustment or a question for further learning."
+        ],
+        "reflectionExample": "You offered a written way to contribute before a meeting. More ideas arrived, but that alone does not establish that people had more influence. You also examine which ideas shaped the decision and invite feedback about the experience.",
+        "reflectionPractice": "Return to your practice note. Describe what you tried, what you observed, and what remains uncertain. Keep a useful change, adjust it, or seek another perspective. Bring a question to a peer conversation if that would help.",
+        "reflectionReflection": "What would I repeat, what would I change, and what do I still need to understand?",
+        "reflectionEvidence": "A brief account of application, feedback or observations, and a next adjustment.",
+        "reflectionNextStep": "Revisit any part of this path as your work and questions change.",
+        "reflectionIds": [
+          "course-critical-incidents-in-the-work",
+          "course-outcomes-not-intentions",
+          "course-idi-integration",
+          "pn-self-check",
+          "ja-facilitation-session-plan",
+          "lm-facilitation-application"
+        ]
+      },
+      "status": "accepted_retained",
+      "review": "Full source read. Existing professional sequence connects observations, competing explanations, community inquiry, adapted communication, decisions and evidence of results. IDI limits, voluntary entry and exact linkedcourseIDs retained. No recorded content changed."
+    }
+  ]
+}

@@ -1574,6 +1574,1249 @@
       ],
       "status": "reviewed",
       "reviewNote": "Full original page and proposed fields independently reviewed and accepted by root on 2026-11-15. Voluntary participation, participant control, role and privacy boundaries retained."
+    },
+    {
+      "target": "practice.measurement",
+      "kind": "surface",
+      "route": "/practice/measurement",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Develop an evaluation plan that connects an equity question with meaningful evidence and a practical next decision.",
+          "after": "Develop an evaluation plan that connects an equity question with evidence and a practical next decision. Define what would count as an improvement, whose experience can inform the judgment, and what the evidence can and cannot establish."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "These notes are not saved. Copy or download what you want to keep before leaving. Use program-level examples and responsible roles; leave out names, private learning records, and confidential case details.",
+          "after": "The app does not autosave or submit these notes. Copy or download what you want to keep before leaving. Use program-level examples and responsible roles; leave out names, private learning records, and confidential case details."
+        }
+      ],
+      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+    },
+    {
+      "target": "community-connections.home",
+      "kind": "surface",
+      "route": "/learn/community-connections",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "return"
+          ],
+          "before": "Participants receive an accessible summary of what changed, what remains unresolved, and who will follow up. They can correct the summary and explain whether it reflects their contributions.",
+          "after": "Participants receive an accessible summary of what changed, what did not change and why, what remains unresolved, and who will follow up. They can correct the summary and explain whether it reflects their contributions."
+        }
+      ],
+      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+    },
+    {
+      "target": "resource.ja-equity-impact-questions",
+      "kind": "resource",
+      "route": "/library/ja-equity-impact-questions",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "These questions can help frame a decision, but they are not legal advice and do not make the decision for you. After working through them, seek guidance from the appropriate person if a high-stakes procurement, budget, or policy decision has a significant equity impact and no official guidance.",
+          "after": "Use these questions to identify the evidence, affected interests, and authority needed for a decision. They do not provide legal advice or replace the responsible official. If a procurement, budget, or policy decision has significant equity implications that the available guidance does not resolve, seek advice from the appropriate policy, legal, or operational role."
+        },
+        {
+          "path": [
+            "nextActions",
+            1,
+            "label"
+          ],
+          "before": "Request a consultation for high-stakes decisions",
+          "after": "Find guidance for high-stakes decisions"
+        }
+      ],
+      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+    },
+    {
+      "target": "resource.pn-intercultural-method",
+      "kind": "resource",
+      "route": "/library/pn-intercultural-method",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Applying information about a group to an individual is profiling and can lead to worse service. A respectful approach is direct: ask the person, confirm what they need, and address the access barriers within your control.",
+          "after": "Treating group-level information as evidence of an individual's preferences can lead to inaccurate judgments and poorer service. Use community context to prepare questions, then ask the person what matters to them and address access barriers within your control."
+        }
+      ],
+      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+    },
+    {
+      "target": "resource.pn-when-to-escalate",
+      "kind": "resource",
+      "route": "/library/pn-when-to-escalate",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Equity and Inclusion Operations Consultant: consider a consultation when an early program idea or high-stakes decision needs another perspective. A consultation may also help when available guidance does not fully address community-specific work. Go to Support to request a consultation or first review what information you would share. A meeting is optional.",
+          "after": "Equity and Inclusion Operations Consultant: another perspective may help with an early program idea, a high-stakes decision, or community-specific work that the available guidance does not fully address. Use Support to identify the responsible person or office and the appropriate contact route. Staff consultation request forms are currently closed."
+        },
+        {
+          "path": [
+            "nextActions",
+            0,
+            "label"
+          ],
+          "before": "Request a consultation",
+          "after": "Find the responsible person or office"
+        }
+      ],
+      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+    },
+    {
+      "target": "community-brief.somali",
+      "kind": "surface",
+      "route": "/minnesota-communities/somali",
+      "changes": [
+        {
+          "path": [
+            "nameNote"
+          ],
+          "before": "Naming follows a given name, father's name, and grandfather's name. Many people do not use a family surname the way a database expects one. Do not invent a last name because a field requires it.",
+          "after": "A name may include a given name, a father's name, and a grandfather's name rather than the family surname a database expects. Ask how the person's name appears on their documents and how it should be recorded; do not invent a surname to satisfy a form."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which language and dialect should we book: Standard Somali, Maay, or Benadiri?",
+          "after": "Which language and variety would you like for this conversation: Standard Somali, Maay, Benadiri, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.hmong",
+      "kind": "surface",
+      "route": "/minnesota-communities/hmong",
+      "changes": [
+        {
+          "path": [
+            "whoAndWhere"
+          ],
+          "before": "The United States ran a Secret War in Laos; Hmong forces allied with the CIA. After 1975 came persecution, camps in Thailand, and refugee resettlement. St. Paul is a national hub. Most Hmong Minnesotans live in the Twin Cities; many are second and third generation.",
+          "after": "Hmong forces allied with the CIA during the United States' Secret War in Laos. After 1975, persecution, camps in Thailand, and refugee resettlement shaped the history of Hmong communities in Minnesota. St. Paul became a national hub, and most Hmong Minnesotans live in the Twin Cities. Many are now second- or third-generation Minnesotans."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Traditional healing and Christianity are both widespread. Elders and U.S.-born youth may differ sharply on language and family authority. Clan matters for some families and not for others.",
+          "after": "Traditional healing and Christianity are both widespread, but neither describes every household. Language preferences and views about family authority may differ across generations and within a family. Ask what role, if any, clan relationships have in the support this person wants."
+        },
+        {
+          "path": [
+            "whatNotToAssume",
+            3
+          ],
+          "before": "Do not assume deportation or profiling anxiety is folklore; it is current structure for some families.",
+          "after": "Do not dismiss concerns about deportation or profiling. Ask what, if anything, the person wants you to understand about how those concerns affect access to services."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which Hmong should we book: White Hmong or Green Hmong?",
+          "after": "Which language and variety would you like for this conversation: White Hmong, Green Hmong, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.karen",
+      "kind": "surface",
+      "route": "/minnesota-communities/karen",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Baptist and Buddhist streams both live here. Literacy in the language of the form is not guaranteed.",
+          "after": "Karen Minnesotans include Baptist and Buddhist communities. Religious affiliation does not tell you how a person wants to receive information, and a translated form may not be readable for everyone who speaks that language. Ask which spoken and written formats would help."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            3
+          ],
+          "before": "Do you agree with this plan? Please tell me if not.",
+          "after": "Which parts of this plan work for you, and what would you like changed or explained?"
+        },
+        {
+          "path": [
+            "accessChecks",
+            1
+          ],
+          "before": "Church networks are often the real information channel; a mailed notice may not be.",
+          "after": "Ask which information channels the person uses, including any church or community network they name. Check that notices reach them rather than relying on mail alone."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "S'gaw or Pwo Karen?",
+          "after": "Which language would you like for this conversation: S'gaw Karen, Pwo Karen, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.oromo",
+      "kind": "surface",
+      "route": "/minnesota-communities/oromo",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Islam, Christianity, and Waaqeffanna all live here; do not assume a Somali religious pattern. U.S.-born children may have never lived in Oromia.",
+          "after": "Oromo Minnesotans include people who practice Islam, Christianity, and Waaqeffanna. U.S.-born children may never have lived in Oromia. Learn about the person's own beliefs and experiences rather than assuming a religious pattern from another East African community."
+        },
+        {
+          "path": [
+            "nameNote"
+          ],
+          "before": "Book Afaan Oromoo on the interpreter line. Ask how names appear on documents.",
+          "after": "Confirm the person's preferred language and request Afaan Oromoo when that is the language they need. Ask how names appear on their documents so the record reflects the person accurately."
+        },
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Afaan Oromoo, not Amharic or Somali, on the request.",
+          "after": "Confirm the requested language. When the person needs Afaan Oromoo, do not substitute Amharic or Somali."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Should we book Afaan Oromoo?",
+          "after": "Which language would you like for this conversation: Afaan Oromoo, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.african-american",
+      "kind": "surface",
+      "route": "/minnesota-communities/african-american",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Color-blind approaches can hide the unequal results a process continues to produce, including disproportionate out-of-home placement. Minnesota law on African American family preservation requires active efforts and family cultural values in case planning; a training is not a substitute.",
+          "after": "An approach described as color-blind can overlook unequal results, including disproportionate out-of-home placement. Minnesota's African American Family Preservation and Child Welfare Disproportionality Act establishes active-efforts responsibilities and attention to family social and cultural values. Check the Act's implementation guidance and the requirements that apply to the case; completing a training does not replace the required practice."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            1
+          ],
+          "before": "What has happened before with this agency or with police-involved referrals that we should know?",
+          "after": "What, if anything, would you like us to know about previous experiences with this agency or police-involved referrals?"
+        },
+        {
+          "path": [
+            "deeper0Body"
+          ],
+          "before": "State figures for 2023 cite 17 percent of the child population and 27 percent of child protection cases (Minnesota Department of Children, Youth, and Families). The Minnesota African American Family Preservation and Child Welfare Disproportionality Act requires active efforts and incorporation of the family's social and cultural values in case planning and reunification. Statewide implementation begins January 1, 2027, and lawmakers passed $15 million for it in May 2026. That is statute; verify the current text with the policy owner.",
+          "after": "DCYF's 2026 interim report analyzes child protection involvement in 2023. Using an African American/Black category that includes children identified as that race alone or with another race, the figures round to 17 percent of Minnesota's child population and 27 percent of children involved in child protection. Here, involvement means a child was named as an alleged victim in a screened-in maltreatment report with a completed assessment or investigation; each child was counted once. These figures describe disproportionate involvement, not a finding about any individual family.\n\nThe Minnesota African American Family Preservation and Child Welfare Disproportionality Act establishes active-efforts responsibilities and attention to family social and cultural values. Statewide implementation begins January 1, 2027. In 2026, the Legislature appropriated $15 million in one-time county funding for that implementation. Check current implementation guidance and the requirements that apply to the case with the policy owner."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Historical2023statistic definition independently verified by root against DCYF report page105, with two originalbrief source entries added."
+    },
+    {
+      "target": "community-brief.latino",
+      "kind": "surface",
+      "route": "/minnesota-communities/latino",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "'Spanish' on a form is one language among many, and some households speak an Indigenous language first. Immigration status fear shapes help-seeking even for citizens in mixed-status families. Greater Minnesota distance and shift work are access facts.",
+          "after": "A Spanish-language option may not meet the needs of a household whose preferred language is an Indigenous language. Fear about immigration status can also affect help-seeking within mixed-status families, including for citizens. Ask about language, distance, and work schedules so the service can respond to the person's circumstances rather than a broad label."
+        },
+        {
+          "path": [
+            "nameUncertainty"
+          ],
+          "before": "Term preference is contested and generational; ask.",
+          "after": "People differ in the identity terms they use, including across generations. Ask which term the person prefers rather than choosing one from age or appearance."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which language, and is Spanish the first language?",
+          "after": "Which language would you prefer for this conversation, and would an interpreter help?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.vietnamese",
+      "kind": "surface",
+      "route": "/minnesota-communities/vietnamese",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Elders may need Vietnamese for vital conversations while younger relatives use English; do not let a child interpret. Name order (family name first) breaks forms that assume otherwise.",
+          "after": "An older adult may want Vietnamese for a service conversation even when younger relatives use English. Ask the person directly and arrange interpretation rather than assigning that responsibility to a child. Check name order against the person's documents, because a form built around a different order can create record errors."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Buddhist, Catholic, and secular households; refugee-era and later arrivals; wide generational differences.",
+          "after": "Vietnamese Minnesotans include Buddhist, Catholic, and secular households, people who arrived as refugees, and later arrivals. Language preferences and experiences may differ across generations. These histories help frame questions; they do not establish what a particular person believes or needs."
+        },
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Professional interpreter, not a family member.",
+          "after": "Arrange qualified interpretation when needed. Do not expect a family member to provide it.",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.khmer",
+      "kind": "surface",
+      "route": "/minnesota-communities/khmer",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "War and genocide trauma can sit alongside mental-health stigma; older adults may need Khmer for vital conversations. Do not press for history.",
+          "after": "Experiences of war and genocide, and concerns about mental-health stigma, may affect how someone approaches services. They do not establish this person's history or needs. Ask whether a Khmer interpreter would help with the conversation, and allow the person to decide what personal history to share."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Buddhist temples are central for some families and not others; generations differ sharply on language.",
+          "after": "Buddhist temples are important to some families and not to others. Language use may also differ across generations. Ask which relationships and ways of communicating matter to the person instead of inferring them from Cambodian or Khmer identity."
+        },
+        {
+          "path": [
+            "nameNote"
+          ],
+          "before": "Khmer names may be listed family-name first; ask.",
+          "after": "Khmer names may be listed with the family name first. Ask how the person's documents list the name and how they want to be addressed."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Khmer interpreter for this conversation?",
+          "after": "Which language would you prefer for this conversation, and would an interpreter help?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        },
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Interpreter booked; no family interpreting.",
+          "after": "Arrange qualified interpretation when needed. Do not expect a family member to provide it.",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.lao",
+      "kind": "surface",
+      "route": "/minnesota-communities/lao",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "'Laotian' on a form can mean Lao, Hmong, or other groups; book the actual language.",
+          "after": "A national label such as Laotian does not identify the language a person needs. It may refer to Lao, Hmong, or other communities with different languages. Confirm the person's language before arranging an interpreter so a broad category does not determine the service offered."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Buddhist and Christian households; generations differ on language.",
+          "after": "Lao Minnesotans include Buddhist and Christian households, and language use may differ across generations. Ask about the person's preferred language and chosen supports rather than assuming that a religious or national label answers those questions."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified."
+    },
+    {
+      "target": "community-brief.russian-speaking",
+      "kind": "surface",
+      "route": "/minnesota-communities/russian-speaking",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Jewish, Orthodox Christian, evangelical, and secular households; national identities that may be in conflict.",
+          "after": "Russian-speaking Minnesotans include Jewish, Orthodox Christian, evangelical, and secular households, with different national identities. Those identities may carry tensions that a shared language does not reveal. Let people describe their own affiliations without expecting agreement about politics or history."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which language should we book: Russian or Ukrainian?",
+          "after": "Which language would you like us to arrange for this conversation: Russian, Ukrainian, or another language?"
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified."
+    },
+    {
+      "target": "community-brief.arabic-speaking",
+      "kind": "surface",
+      "route": "/minnesota-communities/arabic-speaking",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Arabic varieties differ enough that an interpreter from one region may not serve another well; Arabic is also a religious language for many non-Arab Muslims, which is not the same as a household language.",
+          "after": "An interpreter who uses one regional variety of Arabic may not communicate effectively with every Arabic-speaking person. Confirm the variety needed for the conversation. Arabic also has religious uses among many non-Arab Muslims, so religious affiliation alone does not identify a household's preferred language."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Muslim, Christian, and secular households; national identities and dialects vary widely.",
+          "after": "Arabic-speaking Minnesotans include Muslim, Christian, and secular households, with different national identities and dialects. Treat Arabic-speaking as a language description, not a complete account of a person's culture, beliefs, or service needs."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified."
+    },
+    {
+      "target": "community-brief.deaf-deafblind-hard-of-hearing",
+      "kind": "surface",
+      "route": "/minnesota-communities/deaf-deafblind-hard-of-hearing",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Effective communication is a legal obligation. Exchanging written notes is not equally effective for a Deaf person who uses sign language, and a family member is not an interpreter. Your process must work with video relay and captioned phone calls.",
+          "after": "Effective communication is a legal obligation. Ask which communication aid or service the person needs and give primary consideration to their request. Written notes may work for some exchanges but may not provide effective access to a complex service conversation. Do not make a family member the default interpreter. Telephone processes must also accept relay calls; work with the accessibility coordinator to arrange effective communication."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "ASL users, oral communicators, cochlear implant users, late-deafened elders, DeafBlind people, and Deaf people from immigrant communities who use other sign languages.",
+          "after": "This community includes ASL users, people who communicate through speech, cochlear implant users, late-deafened older adults, DeafBlind people, and immigrants who use other sign languages. A device, diagnosis, or shared identity does not determine the communication support someone needs."
+        },
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Qualified ASL interpreter or CART booked in advance; not a family member.",
+          "after": "Arrange the aid or service needed for effective communication, giving primary consideration to the person's request. Do not require them to bring someone to interpret.",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified. Nine individual language/access follow-up fields independently accepted by root after coverage review, same date."
+    },
+    {
+      "target": "community-brief.rural",
+      "kind": "surface",
+      "route": "/minnesota-communities/rural",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Iron Range, prairie, forest, and border towns are not one region. Name the town.",
+          "after": "The Iron Range, prairie, forest, and border communities have different local conditions. Name the town or area involved and examine its services, distances, and relationships rather than treating rural Minnesota as one uniform place."
+        },
+        {
+          "path": [
+            "accessChecks",
+            2
+          ],
+          "before": "Open the people brief for the household together with this place brief.",
+          "after": "Use relevant community briefs alongside this place brief to prepare questions. Ask the people involved how local conditions and community connections affect their access."
+        },
+        {
+          "path": [
+            "whatNotToAssume",
+            0
+          ],
+          "before": "Do not romanticize or pathologize.",
+          "after": "Do not portray rural life as uniformly idyllic or as a collection of problems. Examine the specific place, its strengths, and the barriers people describe."
+        }
+      ],
+      "status": "reviewed",
+      "reviewNote": "Root read full original brief; independent coverage reviewer read all14briefs and accepted exact30field set on 2026-11-15. Historical source qualifiers, individual inquiry, protected recordings preserved. Unchanged figures and source statements not blanket reverified."
+    },
+    {
+      "target": "resource.ja-inclusive-hiring-lifecycle",
+      "kind": "resource",
+      "route": "/library/ja-inclusive-hiring-lifecycle",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Credential gatekeeping and vague culture-fit judgments were among the clearest advancement barriers DSD staff described. Each stage of hiring is a decision with an owner, so each can be changed.",
+          "after": "Credential gatekeeping and vague culture-fit judgments were among the clearest advancement barriers DSD staff described. Examine the decisions at each stage with the responsible hiring and Human Resources partners to identify which requirements are necessary and where the process could change."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Stage 4. Normalize accommodations without forcing disclosure. Offer accommodation for every stage in the same sentence you use for scheduling. Make the offer to everyone so no one has to identify as disabled to receive it.",
+          "after": "Stage 4. Explain how to request an accommodation for the hiring process. Tell every applicant what each stage involves and how to contact the designated accommodation office. Route individual requests through the authorized process rather than asking the interview panel to gather medical details. The authorized office may need supporting information to assess an individual request."
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "Stage 8. Examine stage-by-stage outcomes and improve the process. With your HR partner, look at who applied, who advanced at each stage, and who was hired, at a level that protects small groups. Change the stage where people drop out.",
+          "after": "Stage 8. Examine stage-by-stage outcomes and improve the process. With your HR partner, look at who applied, who advanced at each stage, and who was hired, at a level that protects small groups. Investigate where people leave the process and what might explain the pattern before proposing a change."
+        }
+      ],
+      "reviewNote": "Root independently read full resource, exact changes, share-link behavior and EEOC Job Applicants and ADA Q7/11/14; accepted 2026-11-15 with clearer supporting-information wording. Original source URLs and formal process boundaries preserved.",
+      "sources": [
+        "https://www.eeoc.gov/laws/guidance/job-applicants-and-ada"
+      ]
+    },
+    {
+      "target": "resource.lm-facilitation-application",
+      "kind": "resource",
+      "route": "/library/lm-facilitation-application",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "The best sessions leave participants ready to make a meaningful change in their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials.",
+          "after": "Design sessions so participants can apply a specific skill to their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials."
+        }
+      ],
+      "reviewNote": "Root independently read full resource, exact changes, share-link behavior and EEOC Job Applicants and ADA Q7/11/14; accepted 2026-11-15 with clearer supporting-information wording. Original source URLs and formal process boundaries preserved.",
+      "sources": []
+    },
+    {
+      "target": "resource.lm-how-this-program-works",
+      "kind": "resource",
+      "route": "/library/lm-how-this-program-works",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Sharing: the Share control at the top of every page copies a link that opens that page or resource only, in the program view you are using. If you share from the One DSD view, the person who opens the link sees the One DSD view. Nothing from My Work or from your own questions travels with the link.",
+          "after": "Sharing: the Share control copies a link to a page or resource in the program view you are using. On learning and resource search pages, the link can include search terms and filters. Private working notes and Ask questions are not included. Check the link before sharing it."
+        }
+      ],
+      "reviewNote": "Root independently read full resource, exact changes, share-link behavior and EEOC Job Applicants and ADA Q7/11/14; accepted 2026-11-15 with clearer supporting-information wording. Original source URLs and formal process boundaries preserved.",
+      "sources": []
+    },
+    {
+      "target": "resource.pn-pay-classification-advancement",
+      "kind": "resource",
+      "route": "/library/pn-pay-classification-advancement",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "DSD staff described inconsistent recognition of work and lived experience, classification and pay concerns, and unclear pathways. These are patterns, not individual failings, and they respond to practice.",
+          "after": "DSD staff described inconsistent recognition of work and lived experience, classification and pay concerns, and unclear pathways. Examine these as patterns in how work and opportunities are organized. Some changes are within a supervisor's responsibility; others require formal review by Human Resources, labor relations, or leadership."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "What needs a partner. Classification questions, reclassification requests, pay equity reviews, and anything governed by a labor agreement go to Human Resources and labor relations. Bring the pattern you noticed and the people affected in general terms, not a case for one person.",
+          "after": "What needs a partner. Classification questions, reclassification requests, pay equity reviews, and matters governed by a labor agreement need Human Resources and labor relations. Describe broader patterns without identifying people in shared learning notes. Use the appropriate authorized channel when an individual position or employment matter needs review."
+        }
+      ],
+      "reviewNote": "Root read all4full originals and accepted exact9field changes on 2026-11-15. Authority, authorized individual review and privacy limits retained; no blanket source revalidation."
+    },
+    {
+      "target": "resource.pn-mentoring-sponsorship",
+      "kind": "resource",
+      "route": "/library/pn-mentoring-sponsorship",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "People who are new to an organization's informal rules often get plenty of advice and very little sponsorship. Advancement usually depends on the second.",
+          "after": "Advice can help a person understand informal rules, while sponsorship can create access to assignments and decision-makers. Examine who receives each form of support and how opportunities are allocated. Neither replaces the qualifications and selection process for a role."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Sponsorship. A leader names a person for a stretch assignment, a panel, a project lead role, or a promotion conversation, and stands behind that recommendation. Sponsorship is where advancement actually happens. Track, at a level that protects individuals, who gets sponsored.",
+          "after": "Sponsorship. A leader recommends a person for a stretch assignment, a panel, a project lead role, or a promotion conversation, and explains the work-related basis for that recommendation. Examine who receives these opportunities at a level that protects individuals. Sponsorship can support development; it does not guarantee advancement."
+        }
+      ],
+      "reviewNote": "Root read all4full originals and accepted exact9field changes on 2026-11-15. Authority, authorized individual review and privacy limits retained; no blanket source revalidation."
+    },
+    {
+      "target": "resource.pn-stay-interviews-and-retention",
+      "kind": "resource",
+      "route": "/library/pn-stay-interviews-and-retention",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Exit patterns arrive too late to act on. Stay conversations surface barriers while there is still time, and they signal that a person's experience matters.",
+          "after": "Stay conversations can reveal barriers while a person is still in the team. Their value depends on whether the supervisor listens, explains what can change, and follows through. Exit patterns can also inform later decisions, but they cannot address a concern before the person leaves."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "After. Choose one thing you can change and tell the person what it is. If a pattern appears across several conversations, take the pattern, not the names, to your leadership or Equity Director.",
+          "after": "After. Discuss what you can act on, what needs another decision-maker, and what cannot change at present. Agree how you will follow up. If a pattern appears across several conversations, bring the pattern to leadership or the Equity Director without identifying people in a shared learning summary."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Boundaries. If the conversation raises a complaint about a named person, harassment, or discrimination, stop and connect the person to the confidential channel. Do not investigate and do not record it here.",
+          "after": "Boundaries. If the conversation raises a complaint about a named person, harassment, or discrimination, follow the appropriate reporting process and explain the applicable privacy limits. Do not investigate or record the complaint in this program."
+        }
+      ],
+      "reviewNote": "Root read all4full originals and accepted exact9field changes on 2026-11-15. Authority, authorized individual review and privacy limits retained; no blanket source revalidation."
+    },
+    {
+      "target": "resource.ja-procurement-contract-equity",
+      "kind": "resource",
+      "route": "/library/ja-procurement-contract-equity",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "In the solicitation. State accessibility, language access, and community-engagement expectations as requirements, not preferences. Make the application process itself accessible and plain, with a human contact.",
+          "after": "In the solicitation. Work with the responsible contracts or grants office to confirm applicable accessibility, language-access, and community-engagement requirements and state them clearly. Make the application process accessible and understandable, with a human contact."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "In evaluation. Score demonstrated experience with the communities served, accessibility practice, and workforce practice, using written criteria applied the same way to every proposal.",
+          "after": "In evaluation. Work with the responsible office to define authorized, work-related criteria for relevant community experience, accessibility practice, and workforce practice before proposals are assessed. Apply the published criteria consistently to every proposal."
+        }
+      ],
+      "reviewNote": "Root read all4full originals and accepted exact9field changes on 2026-11-15. Authority, authorized individual review and privacy limits retained; no blanket source revalidation."
+    },
+    {
+      "target": "resource.ja-engagement-influence-ladder",
+      "kind": "resource",
+      "route": "/library/ja-engagement-influence-ladder",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "The most common harm in engagement is asking for input that cannot change anything. Naming the level of influence protects trust and tells people what their time is worth.",
+          "after": "Asking for input when a decision cannot change can leave participants unclear about why they were invited. Explain what is open to influence, who decides, and how input will be used so people can decide whether and how to participate."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.ja-report-back",
+      "kind": "resource",
+      "route": "/library/ja-report-back",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "DSD's engagement review found that people rarely learned what happened after they gave input. Closing that loop is the difference between engagement and extraction.",
+          "after": "Reporting back lets participants examine how their contributions were represented, what influenced the decision, and which questions remain unresolved."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.pn-cultural-humility-briefs-as-questions",
+      "kind": "resource",
+      "route": "/library/pn-cultural-humility-briefs-as-questions",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Generalizations about literacy, oral traditions, health beliefs, or family roles become stereotypes the moment they are applied to a person. The safeguard is a habit: ask, then plan.",
+          "after": "A report about literacy, oral traditions, health beliefs, or family roles does not establish an individual's preferences or needs. Use it to prepare relevant questions, then plan with the person rather than treating the report as a personal profile."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Read a brief for what to ask, not what to conclude. Turn every statement into a question you could ask the person or the community partner.",
+          "after": "Use a brief to understand relevant history and prepare questions about access, preferences, and participation. Ask what matters to the situation rather than turning cultural generalizations into a checklist for the person."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Notice the diversity inside every community. Immigration history, faith, language, disability, age, and class differ within a community as much as between communities.",
+          "after": "Notice diversity within a community. Immigration history, faith, language, disability, age, and class can shape different experiences among people who share a community identity."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.lm-plain-language-carries-complexity",
+      "kind": "resource",
+      "route": "/library/lm-plain-language-carries-complexity",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Staff are educated adults doing hard work. Talking down to them costs trust. Burying them costs time. Plain language done well respects both.",
+          "after": "Staff need explanations that make complex decisions easier to understand without removing uncertainty, competing interests, or the limits of the evidence. Clear structure and precise wording help readers find the action and examine the reasoning behind it."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "One idea per sentence. About twenty words. Prefer the common word unless the precise term matters, and then define it once.",
+          "after": "Give each sentence a clear purpose and keep related ideas connected. Prefer familiar words; when a technical term adds precision, explain it. Vary sentence length to preserve the reasoning rather than cutting important qualifications to meet a word count."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.lm-psychological-safety-and-repair",
+      "kind": "resource",
+      "route": "/library/lm-psychological-safety-and-repair",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Separate unfamiliarity from intentional harm. Most harm at work comes from not knowing. Respond to unfamiliarity with information and a chance to change. Respond to intentional harm through the confidential channel.",
+          "after": "Respond to the concern and its impact before assuming intent. Clarify what happened and what support is needed within your role. A lack of knowledge may call for explanation and learning, but it does not erase harm or determine whether a formal reporting process applies."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "None of this replaces the confidential channel. Complaints, harassment, and discrimination go to Employee Culture, Human Resources, or the civil-rights channel.",
+          "after": "These practices do not replace established reporting processes. Use the appropriate Employee Culture, Human Resources, or civil-rights channel for complaints, harassment, or discrimination, and explain the applicable privacy limits."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Make disagreement normal. Ask for the strongest case against your own idea before deciding. Thank the person who raised the concern, in front of others.",
+          "after": "Invite disagreement before deciding, including questions about your own proposal. Acknowledge the contribution in a way that respects the person's preferences and the sensitivity of the concern. Public recognition may be welcome, but should not expose a person who raised a private concern."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected. Independent reviewer accepted four bounded follow-up fields, preserving contributor choice and authorized access responsibility."
+    },
+    {
+      "target": "resource.lm-power-and-positional-authority",
+      "kind": "resource",
+      "route": "/library/lm-power-and-positional-authority",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Supervisors, managers, and people with expertise or tenure hold power that shapes who speaks, who is believed, and whose time counts. The first intercultural skill is seeing that power; the second is using it deliberately.",
+          "after": "Supervisors, managers, and people with expertise or tenure can influence whose ideas are heard, whose account is believed, and whose time is treated as important. Intercultural practice includes examining that influence and using authority to make participation more accessible."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "What it does. People with less power wait to be asked, soften disagreement, and stop offering ideas that were ignored once. People with more power mistake that quiet for agreement.",
+          "after": "What it can do. Unequal influence may make people cautious about disagreeing or offering ideas, particularly when earlier concerns were ignored. Silence does not establish agreement, and directness does not establish hostility. Ask what would help people contribute without assuming why someone is quiet."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "What to do with it. Speak last. Ask the newest and the quietest first. Credit ideas to the person who had them. Change the format so contribution does not depend on speaking fast in English.",
+          "after": "What to do with it. Leave room for other views before stating your conclusion. Invite contributions without putting a person on the spot, and offer written or later input as well as discussion. Credit ideas to their contributors and avoid making participation depend on speaking quickly in English."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "In supervision. Ask what the person needs from you rather than telling them what you need. Make expectations explicit so people do not have to guess the unwritten rules.",
+          "after": "In supervision. Explain the work expectations and decisions within your responsibility, and ask what information, access, or support the person needs. Make expectations explicit so people do not have to infer unwritten rules."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected. Independent reviewer accepted four bounded follow-up fields, preserving contributor choice and authorized access responsibility."
+    },
+    {
+      "target": "equity.practice",
+      "route": "/about#equity-in-practice",
+      "kind": "surface",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "throughLine"
+          ],
+          "before": "Engagement surfaces what staff and communities experience, the analysis turns that into evidence about the system, and applied practice changes a specific decision with a specific owner. The program measures whether that cycle happened, not how any individual scored.",
+          "after": "Engagement brings staff and community experience into the work. Analysis examines those accounts alongside other evidence to understand the process, and applied practice develops a specific response with the responsible decision-maker. Review what was tried and what changed without scoring individual learners."
+        },
+        {
+          "path": [
+            "characteristic4Detail"
+          ],
+          "before": "Start before the decision is fixed, be honest about inform versus consult versus designing together, compensate participants, and report back what changed. Tribal consultation is a separate government-to-government route.",
+          "after": "Begin while choices remain open, explain whether participants are being informed, consulted, or invited to design with staff, and plan compensation through approved arrangements. Report what changed, what did not, and why. Tribal consultation follows a separate government-to-government process."
+        },
+        {
+          "path": [
+            "characteristic9Detail"
+          ],
+          "before": "Foundation, integration, then institutionalization, where equity is simply how the organization runs. This describes the division as a whole, never individual staff; you can follow it under One DSD planning and progress.",
+          "after": "Foundation, integration, and institutionalization describe proposed stages for division-level planning. Use them to examine how equity practices become part of routine decisions; they are not labels for individual staff or evidence that a stage has already been achieved."
+        },
+        {
+          "path": [
+            "engagementPoints",
+            1
+          ],
+          "before": "Engagement is voluntary, private, and non-shaming. Staff learn on their own time, reflect without being recorded, and are never scored or profiled. That is why participation classes are labeled on every experience.",
+          "after": "Learning and reflection in this program are voluntary. Staff can choose a pace and starting point that fit their needs. Personal learning is not used to score or profile staff. Some activities let you save notes on your device; check the privacy information for the activity and keep identifying information out of shared work."
+        },
+        {
+          "path": [
+            "uncoveringPoints",
+            2
+          ],
+          "before": "Question what is treated as immovable. Approval bottlenecks, diffuse decision rights, credential gatekeeping, and legacy data built for billing are choices someone made and can remake.",
+          "after": "Examine approval bottlenecks, unclear decision rights, credential requirements, and data systems built for billing. Ask which features reflect necessary requirements, which are inherited practices, and who has authority to consider a change."
+        },
+        {
+          "path": [
+            "uncoveringPoints",
+            4
+          ],
+          "before": "Distinguish unfamiliarity from intentional harm, and distinguish individual conduct, which belongs in a confidential HR channel, from a systemic pattern, which belongs in the equity practice.",
+          "after": "Respond to reported harm without deciding in advance whether it was intentional. Use the appropriate Human Resources or other established channel for an individual concern and explain its privacy limits. A concern may also reveal a wider pattern, but equity analysis does not replace the formal process."
+        },
+        {
+          "path": [
+            "appliedPoints",
+            2
+          ],
+          "before": "Accessibility, language access, and plain language are default practices with owners, not accommodations granted on request.",
+          "after": "Build accessibility, language access, and plain language into routine work, with responsibility for implementation. Individual accommodation requests still need the appropriate established process; accessible design does not replace that responsibility."
+        },
+        {
+          "path": [
+            "appliedPoints",
+            4
+          ],
+          "before": "Change is staged from foundation to integration to institutionalization, and it is funded, staffed, and reviewed rather than only stated.",
+          "after": "Use the proposed stages of foundation, integration, and institutionalization to plan the work. Identify the resources, responsible people, and review needed at each stage rather than treating a stated intention as an implemented change."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.ext-emerging-leaders-institute",
+      "kind": "resource",
+      "route": "/library/ext-emerging-leaders-institute",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Minnesota Management and Budget administers the State of Minnesota Emerging Leaders Institute, the verified public leadership program; public evidence does not document a DHS-owned program by that name. Check eligibility and the current cycle at the source.",
+          "after": "Minnesota Management and Budget offers the Emerging Leaders Institute for Minnesota state employees preparing for future leadership responsibilities. Check the current eligibility, application cycle, and agency process before planning to apply."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Why it is here: leadership pathways should connect to programs that exist. Correcting the record matters; an earlier draft described a DHS-owned Emerging Leaders program that public evidence does not support.",
+          "after": "Why it is here: this state program provides a leadership-development option to consider alongside learning and practice in People, Access and Culture."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "How to use it: check eligibility, timing, and the nomination process at the source. Supervisors can use sponsorship to make sure people from underrepresented communities know about it and are nominated.",
+          "after": "How to use it: review the current program information and ask your agency Human Resources or learning and development team about the application process. Supervisors can help staff learn about the opportunity and discuss support for an application; nomination and selection follow the published process."
+        }
+      ],
+      "sources": [
+        "https://mn.gov/mmb/etd/skills-development-courses/open-enrollment-courses/?id=1059-202968",
+        "https://mn.gov/mmb/etd/enrollment/apply-for-program.jsp"
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.pn-measurement-without-surveillance",
+      "kind": "resource",
+      "route": "/library/pn-measurement-without-surveillance",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Invented targets, composite scores without validation, and individualized learning surveillance destroy trust and prove nothing. Good measurement is possible and protects people.",
+          "after": "Useful measurement connects a clear question with appropriate evidence and an explanation of its limits. Unjustified targets, unvalidated combined scores, or monitoring individual learning can mislead decisions and undermine trust. Plan the review with the data owner and people affected."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Baselines first. No causal claim without a baseline. If there is no baseline, say so and start one.",
+          "after": "Baselines. Describe the starting conditions and observation period so readers can interpret change. If a baseline is missing, say so and plan how to establish an appropriate comparison. A baseline alone does not establish that an intervention caused a result."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Mixed methods. Numbers show patterns; people's accounts show why. Use both, and give qualitative evidence equal standing.",
+          "after": "Mixed methods. Quantitative data can show patterns, and people's accounts can help explain experiences and possible reasons. Interpret both in context, including whose experience is missing and whether other explanations remain plausible."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Protect private learning. Learning, reflection, Ask, and practice paths are private. Report only combined totals that cannot identify anyone, and never use them for supervision or evaluation.",
+          "after": "Protect personal learning. Do not use individual learning, reflection, Ask, or practice records for supervision or evaluation. If reporting program-level participation, work with the data owner to assess whether combined information could identify someone. Some activities save notes on the user's device; follow the privacy guidance for the activity."
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "State the limits. Every report says what the evidence does not show. That sentence is what makes the rest trustworthy.",
+          "after": "State the limits. Explain what each report can support, what it cannot establish, and which questions need further evidence. Acknowledging a limit helps readers judge the findings; it does not by itself validate the rest of the analysis."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.pn-accessible-leadership-pathways",
+      "kind": "resource",
+      "route": "/library/pn-accessible-leadership-pathways",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Advancement barriers for disabled staff are usually structural and often invisible to those running leadership pathways. Hear from disabled staff without forcing disclosure, examine each pipeline stage, and build sponsorship, transparent pathway maps, and accessible leadership programs by default.",
+          "after": "Leadership pathways can create barriers through nomination rules, interview formats, access arrangements, and informal judgments of readiness. Invite disabled staff to describe those processes without requiring personal disclosure in a learning discussion. Examine each stage and plan accessible development, sponsorship, and clear information about requirements."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Close the loop publicly. Disabled staff in particular have watched accessibility promises go unfunded. Report what changed, what did not, and who owns the next step.",
+          "after": "Report back on access commitments. Explain what changed, what did not, why, and who is responsible for the next decision. This lets people examine the response to their concerns rather than having to rely on a general promise."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Test the job-relatedness of leadership criteria. Executive presence, quick verbal response, travel, long hours, and always-on availability screen out many disabled staff and are rarely tied to what leaders actually do.",
+          "after": "Test leadership criteria against the work. Ask what executive presence, quick verbal response, travel, long hours, or constant availability are intended to demonstrate. Examine whether each requirement is necessary and what other ways could demonstrate the relevant capability."
+        },
+        {
+          "path": [
+            "body",
+            9
+          ],
+          "before": "Structured leadership interviews with rubrics tied to the work, accommodations offered without asking why, and panel preparation on disability bias.",
+          "after": "Use structured leadership interviews with criteria tied to the work. Tell candidates how to request accommodation through the designated process, and prepare the panel to assess relevant evidence without making assumptions about disability."
+        },
+        {
+          "path": [
+            "body",
+            11
+          ],
+          "before": "Boundaries this program keeps. No guessing about disability: the program never guesses who is disabled from behavior, accommodation history, or participation. No individual tracking: private learning and reflection stay private, and program-level measures use aggregates with suppression. Accommodation requests, complaints, and personnel decisions go to the confidential channels, never into this program.",
+          "after": "Boundaries this program keeps. Do not infer disability from behavior, accommodation history, or participation. Do not track individual learning for personnel decisions. Review any program-level reporting for identification risk, including small groups. Use the authorized processes for accommodation requests, complaints, and personnel matters; keep those records out of this program."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Look for the accommodation cliff. Accommodations that exist for the current role are often lost during a rotation, a leadership cohort, or an interview process because nobody owns them across the transition. Name an owner for accommodations across every transition.",
+          "after": "Plan access across transitions. Before a rotation, leadership cohort, interview, or change of supervisor, confirm who will coordinate access arrangements with the person and the authorized accommodation process. Check what will continue and what needs review in the new setting."
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "Accessible leadership programs by default: materials in advance, captioning, flexible participation formats, no timed or drag-based activities, and accommodations carried across every cohort event. The State of Minnesota Emerging Leaders Institute run by Minnesota Management and Budget is the verified public program; DHS-level pathways should be reviewed against the same standard.",
+          "after": "Design leadership programs for accessible participation: provide materials in advance, captioning, flexible formats, and alternatives to timed or drag-based activities. Review access arrangements across cohort events. Minnesota Management and Budget offers the Emerging Leaders Institute; use the current program information when considering this option."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected. Independent reviewer accepted four bounded follow-up fields, preserving contributor choice and authorized access responsibility."
+    },
+    {
+      "target": "resource.ja-leadership-criteria-job-relatedness",
+      "kind": "resource",
+      "route": "/library/ja-leadership-criteria-job-relatedness",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Leadership criteria are rarely written down and rarely tested. The ones that live in people's heads tend to reward a narrow style of presence and stamina rather than the work of leading.",
+          "after": "Unwritten or loosely defined criteria can reward a familiar style of speaking or working rather than the capability a role requires. Make the criteria explicit, examine their relationship to the work, and review alternatives with the responsible hiring partners."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Ask who each criterion screens out. Quick verbal response screens out people who process or communicate differently. Travel and long hours screen out people with energy, mobility, or care constraints. Always-on availability screens out most people with a disability and many without one.",
+          "after": "Ask whom a criterion could exclude and why. Speed of verbal response, travel, long hours, or constant availability can create barriers related to communication, energy, mobility, or caring responsibilities. Examine the actual role and candidate evidence rather than assuming capability from disability or another identity."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Offer accommodation for every stage in the same sentence you use for scheduling, to everyone, without asking why.",
+          "after": "Explain the process and how to request accommodation to every candidate when scheduling. Route individual requests to the designated accommodation office rather than asking the panel to gather medical details."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.ja-accommodation-across-transitions",
+      "kind": "resource",
+      "route": "/library/ja-accommodation-across-transitions",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Accommodations that work in a current role are often lost in a rotation, acting assignment, leadership cohort, or interview process because no one owns them across the transition. This aid names each transition, its owner, and what to carry forward.",
+          "after": "A change in role, supervisor, assignment, or learning program can disrupt access arrangements if responsibilities are unclear. Identify who will coordinate the transition and check with the person and the authorized accommodation process about what is needed in the new setting."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "The cliff is invisible to the people who design pathways and very visible to the people who fall off it. Naming an owner for accommodations across each transition is a small change that removes a structural barrier.",
+          "after": "Planning responsibilities before a transition can prevent gaps in access. The arrangements that worked in one setting may need review in another, so confirm what will continue, what needs adjustment, and who can decide."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "For each transition, name one owner responsible for carrying existing accommodations forward and for offering accommodation to everyone entering it. The owner is a person, not a process.",
+          "after": "For each transition, identify the person responsible for coordinating access arrangements with the individual and the designated accommodation office. Confirm what can continue and what requires review before the new activity begins."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Offer accommodation to everyone at every transition, in the same sentence used for logistics, so no one has to disclose to receive it.",
+          "after": "Tell everyone entering the activity how to request accommodation. Keep requests within the authorized process. The designated office may need supporting information to assess an individual request."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+    },
+    {
+      "target": "resource.lm-intersectionality-foundations",
+      "kind": "resource",
+      "route": "/library/lm-intersectionality-foundations",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Legacy data and program rules were built around single categories. Intersectional thinking changes what you disaggregate, who you engage, and which burdens you notice.",
+          "after": "Reviewing one category at a time can leave important combinations of barriers unexplored. Intersectional analysis helps staff examine which experiences a data breakdown or engagement approach may miss and how those gaps affect a decision."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "In data. Ask the data owner what can be disaggregated by more than one category with small-group protection. Where numbers are too small, use qualitative evidence and say so.",
+          "after": "In data. Ask the data owner which combined categories can be examined responsibly. Where small numbers limit reporting, consider how people's accounts could inform the question without making them identifiable. Qualitative evidence also needs consent, careful interpretation, and privacy protection."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full source/context and accepted exact seven-field set on 2026-11-15. Preserves qualitative privacy, responsible tool use, source URLs and authority limits."
+    },
+    {
+      "target": "resource.lm-structural-racism-and-institutions",
+      "kind": "resource",
+      "route": "/library/lm-structural-racism-and-institutions",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Institutions reproduce what they do not examine. Defaults persist because they work for the people who set them. Examination is a practice: who benefits, who is burdened, what would change if we chose differently.",
+          "after": "Examine institutional routines. A default can continue without its effects being reconsidered. Ask who benefits, who carries the burden, how the practice developed, and which alternatives the responsible decision-makers can consider."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "What to do. Connect the analysis to a decision with an owner. Use the equity review canvas, the data owner, and the community's own account. Change the rule, the default, or the resource, and look again.",
+          "after": "What to do. Connect the analysis to a decision and the people authorized to make it. Use the equity review canvas, work with the data owner, and include the perspectives of people affected. Compare possible changes to the rule, routine, or resources, then review the effects of any change that is implemented."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full source/context and accepted exact seven-field set on 2026-11-15. Preserves qualitative privacy, responsible tool use, source URLs and authority limits."
+    },
+    {
+      "target": "resource.pn-idi-and-tool-registry",
+      "kind": "resource",
+      "route": "/library/pn-idi-and-tool-registry",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "The Intercultural Development Inventory is one proprietary assessment among many that can inform qualified professional practice. It does not define this program, its results are never personnel data, and its protected content is not reproduced here.",
+          "after": "The Intercultural Development Inventory is one proprietary assessment that can inform qualified developmental practice. This program does not use individual results for personnel decisions or reproduce protected assessment content. Learning here can also begin without an assessment."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Practical application is decided through the consultant-led, equity-professional-informed practice, in collaboration with Equity Directors, Specialists, and committee members. No tool decides it.",
+          "after": "Choose how to use a tool with the people responsible for the work, drawing on equity professionals and other relevant expertise. A tool can structure inquiry, but it does not confer authority or make the decision."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full source/context and accepted exact seven-field set on 2026-11-15. Preserves qualitative privacy, responsible tool use, source URLs and authority limits."
+    },
+    {
+      "target": "resource.pn-role-aware-entry",
+      "kind": "resource",
+      "route": "/library/pn-role-aware-entry",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Generic awareness training rarely changes a decision. Support that recognizes what you are trying to do can.",
+          "after": "A work-specific starting point connects learning with a decision or task the reader can examine. Choose resources that help clarify the question, consider other perspectives, and identify the next step within the responsible process."
+        }
+      ],
+      "reviewNote": "Independent coverage reviewer read full source/context and accepted exact seven-field set on 2026-11-15. Preserves qualitative privacy, responsible tool use, source URLs and authority limits."
     }
   ]
 }

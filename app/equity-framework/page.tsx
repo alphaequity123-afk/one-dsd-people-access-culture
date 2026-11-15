@@ -10,7 +10,7 @@ import { programFunctions } from "@/lib/program/model";
 
 export const metadata: Metadata = {
   title: "Equity Strategic Framework",
-  description: "An adapted planning companion under the One DHS program constitution: six practice pillars, an improvement cycle and practical resources.",
+  description: "A proposed planning companion for People, Access and Culture: six practice pillars, an improvement cycle and practical resources.",
 };
 
 const STATUS_CLASS: Record<ToolStatus, string> = {
@@ -70,7 +70,7 @@ export default function EquityFrameworkPage() {
       <div className="wrap max-w-6xl py-10 [&_p]:my-3"><FocusedSections>
         <section aria-labelledby="summary-title" className="mt-8 max-w-4xl">
           <H2 id="summary-title">What this framework is for</H2>
-          <p className="text-lg leading-relaxed">{F.summary}</p><p className="mt-3"><Link href="/program-foundation">Read the governing program constitution</Link> or <Link href="/practice/requirements">connect source requirements to a piece of work</Link>.</p>
+          <p className="text-lg leading-relaxed">{F.summary}</p><p className="mt-3"><Link href="/program-foundation">Read the proposed program charter</Link> or <Link href="/practice/requirements">connect source requirements to a piece of work</Link>.</p>
           <details className="mt-7 border-t border-line py-4">
             <summary className="cursor-pointer font-semibold">Download the framework in another format</summary>
             <div className="mt-4"><ResourceDownloads kind="equity-framework" id="framework" noun="framework" compact /></div>

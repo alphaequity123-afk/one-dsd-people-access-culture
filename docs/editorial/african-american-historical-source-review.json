@@ -1,0 +1,29 @@
+{
+  "target": "community-brief.african-american",
+  "changes": [
+    {
+      "path": [
+        "deeper0Body"
+      ],
+      "before": "State figures for 2023 cite 17 percent of the child population and 27 percent of child protection cases (Minnesota Department of Children, Youth, and Families). The Minnesota African American Family Preservation and Child Welfare Disproportionality Act requires active efforts and incorporation of the family's social and cultural values in case planning and reunification. Statewide implementation begins January 1, 2027, and lawmakers passed $15 million for it in May 2026. That is statute; verify the current text with the policy owner.",
+      "after": "DCYF's 2026 interim report analyzes child protection involvement in 2023. Using an African American/Black category that includes children identified as that race alone or with another race, the figures round to 17 percent of Minnesota's child population and 27 percent of children involved in child protection. Here, involvement means a child was named as an alleged victim in a screened-in maltreatment report with a completed assessment or investigation; each child was counted once. These figures describe disproportionate involvement, not a finding about any individual family.\n\nThe Minnesota African American Family Preservation and Child Welfare Disproportionality Act establishes active-efforts responsibilities and attention to family social and cultural values. Statewide implementation begins January 1, 2027. In 2026, the Legislature appropriated $15 million in one-time county funding for that implementation. Check current implementation guidance and the requirements that apply to the case with the policy owner."
+    }
+  ],
+  "baseSourceAdditions": [
+    {
+      "label": "DCYF, MAAFPCWDA Statewide Workgroup Interim Report 2026, Table 1, page 105",
+      "note": "2023 involvement and population figures; alone-or-in-combination race categories. Source definitions distinguish children from reports.",
+      "href": "https://www.lrl.mn.gov/docs/2025/mandated/252002.pdf"
+    },
+    {
+      "label": "DCYF, MAAFPCWDA overview and implementation",
+      "note": "Statewide implementation January 1, 2027 and 2026 one-time county funding. Its newer 2025 statistics are not combined with the 2023 historical figures here.",
+      "href": "https://dcyf.mn.gov/MAAFPCWDA"
+    }
+  ],
+  "implementationNote": "Add source entries to original brief.sources array so dynamic registry and applyCommunityBriefValues include them. Existing two source entries retained. Do not insert undeclared source2/source3 fields into strict surface schema without base array additions.",
+  "status": "root_review_accepted",
+  "baseFile": "lib\\content\\briefs.ts",
+  "baseBeforeSha256": "cab784f8e0142d54dabb388c7bd7ca31102c93436ccca663a334707920323809",
+  "implementationStatus": "Applied exact historical prose via reviewed overlay; appended actual originalbrief sources array entries; current live brief confirmed static with no persisted owner revision before change."
+}

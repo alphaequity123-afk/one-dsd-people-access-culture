@@ -1,0 +1,1434 @@
+{
+  "records": [
+    {
+      "target": "resource.ja-process-burden",
+      "route": "/library/ja-process-burden",
+      "values": {
+        "id": "ja-process-burden",
+        "title": "Questions about the steps, time, and effort a process requires",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L3",
+        "summary": "From the person’s point of view, count the steps, documents, trips, and hours away from work, and notice when a deadline, mailed notice, or login becomes a barrier. At each step, keep staff help reachable without the online option.",
+        "body": [
+          "First contact: how does a person learn that the service exists? Which languages and ways of reaching people are used?",
+          "Access at each step: can people complete it with a screen reader, keyboard, interpreter, captioning, or an alternate format?",
+          "Each document: what must they already have, and what happens if they do not?",
+          "Each wait: how long, and what happens to their service meanwhile?",
+          "Each decision: who decides, how is it explained, and can it be appealed in plain language?",
+          "Each notice: mailed, emailed, or in an account? Who never sees it?",
+          "When the process breaks down: who is left carrying the burden—the person, a family member, a county worker, or a community organization?",
+          "Removal: which steps could be removed, combined, or done by the agency instead of the person?"
+        ],
+        "nextActions": [
+          {
+            "label": "Equity and access checklist for new work",
+            "href": "/resources/ja-launch-embed-checklist"
+          },
+          {
+            "label": "Equity impact questions for policy, budget, technology, and procurement",
+            "href": "/resources/ja-equity-impact-questions"
+          }
+        ],
+        "tags": [
+          "journey",
+          "burden",
+          "process",
+          "administrative burden",
+          "steps",
+          "documents",
+          "renewal",
+          "eligibility process"
+        ],
+        "intents": [
+          "launch_embed",
+          "access_barriers",
+          "practice_method"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-2"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Retained clear task questions, actionable criteria and role boundaries. This is editorial retention, not recertification of official guidance or dates."
+    },
+    {
+      "target": "resource.ja-stakeholder-map",
+      "route": "/library/ja-stakeholder-map",
+      "values": {
+        "id": "ja-stakeholder-map",
+        "title": "Planning with partners: who to involve",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Before the design is settled, plan who to involve and why, their role, whether they are paid, and when they will hear how input was used. Use trusted, reviewed lists and groups affected people name, not a web search alone.",
+        "body": [
+          "Inside DHS: begin with the Equity Director for the administration and the people responsible for accessibility and language access. Involve communications, the policy or rule owner, procurement, and county or provider partners when the work requires their knowledge or authority.",
+          "Community: begin with organizations named by the person or family and existing groups of people with lived experience. Be clear about what you are asking, how their input will be used, and whether they will be paid.",
+          "Tribal Nations: if the work touches a Nation, Native children, Tribal data, services, or land, contact the Office of Indian Policy or follow the Tribal liaison process first. Consultation is government-to-government and is distinct from stakeholder engagement.",
+          "For each partner, record the purpose, how they will take part, whether they will be paid, who maintains the relationship, and when you will report back."
+        ],
+        "nextActions": [
+          {
+            "label": "Open a community brief for partner guidance",
+            "href": "/minnesota-communities"
+          },
+          {
+            "label": "Community engagement path",
+            "href": "/paths/gp-3"
+          }
+        ],
+        "tags": [
+          "stakeholder",
+          "partners",
+          "involve",
+          "map",
+          "advisory",
+          "community organization",
+          "engagement"
+        ],
+        "intents": [
+          "launch_embed",
+          "intercultural",
+          "practice_method"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-3"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Retained clear task questions, actionable criteria and role boundaries. This is editorial retention, not recertification of official guidance or dates."
+    },
+    {
+      "target": "resource.pn-equity-in-practice",
+      "route": "/library/pn-equity-in-practice",
+      "values": {
+        "id": "pn-equity-in-practice",
+        "title": "Equity in Practice: six perspectives and seven questions",
+        "type": "practice_note",
+        "authority": "practice_note",
+        "layer": "L3",
+        "summary": "Look at a decision from six perspectives: compliance and civil rights, diversity and representation, hearts and minds, inclusion and belonging, organizational learning, and social justice. Seven questions then help you choose a thoughtful response.",
+        "body": [
+          "Compliance and civil rights: start with the rights, protections, and required procedures that apply. Equity work must respect due process.",
+          "Diversity and representation: who is present, absent, promoted, heard, and contracted with.",
+          "Hearts and minds: notice bias, fear, gaps in knowledge, empathy, and everyday behavior. Question an assumption and consider another person's experience.",
+          "Inclusion and belonging: whether people can take part, disagree, contribute, and be themselves without penalty.",
+          "Organizational learning: what the team needs to learn, reconsider, or change because important voices were left out earlier.",
+          "Social justice: who is harmed, what fairness requires, and what responsibility DHS holds.",
+          "Seven questions: What are we deciding or creating? What authority, rights, and obligations apply? Who benefits, carries the burden, faces the risk, or is missing? What assumptions, rules, and routines shape who is affected? What evidence and community knowledge are needed? What can we change or redesign, and what must go to the responsible decision-maker? What changed, how will we know, and how will we report back?"
+        ],
+        "nextActions": [
+          {
+            "label": "Use the seven questions in a learning path",
+            "href": "/paths"
+          },
+          {
+            "label": "Equity impact questions",
+            "href": "/resources/ja-equity-impact-questions"
+          }
+        ],
+        "tags": [
+          "equity in practice",
+          "perspectives",
+          "seven questions",
+          "decision",
+          "reflection",
+          "civil rights",
+          "belonging"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "workplace_culture"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-2",
+          "gp-4"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "provenance": "Adapted from the owner-authored One DHS source (one-dhs-equity-resource, commit 3aed646, src/lib/program/public.ts). The original source and this revised program version are retained separately.",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Retained clear task questions, actionable criteria and role boundaries. This is editorial retention, not recertification of official guidance or dates."
+    },
+    {
+      "target": "resource.lm-workplace-climate",
+      "route": "/library/lm-workplace-climate",
+      "values": {
+        "id": "lm-workplace-climate",
+        "title": "Team climate basics: participation, honest conversation, and fair opportunities",
+        "type": "learning_module",
+        "authority": "learning",
+        "layer": "L2",
+        "summary": "Team climate is what people experience in everyday meetings, supervision, and decisions, including whether they can speak openly, disagree, get credit, and have fair access to opportunities. Supervisors can improve it with specific practices and regular follow-up.",
+        "whyItMatters": "This resource supports everyday team-climate work. For a complaint, investigation, accommodation, or discipline matter, use the appropriate Employee Culture, Human Resources, civil rights, or accommodation process.",
+        "body": [
+          "Participation: who speaks first and most; whether agendas go out in advance; whether written input counts as much as spoken input.",
+          "Speaking honestly: can people disagree with a supervisor without being punished or losing opportunities? Are mistakes discussed as problems in the work rather than flaws in a person?",
+          "Credit and chances: who gets stretch assignments, visible work, and development time; whether that pattern tracks race, disability, language, or tenure.",
+          "Norms: a few written team agreements about meetings, interruptions, and follow-through, revisited on a date.",
+          "Access at work: captions on by default, materials in advance, flexible formats for participation, no reliance on informal networks for information.",
+          "If the situation involves a complaint, investigation, discipline, or accommodation decision about a named person, follow the established Employee Culture, Human Resources, civil-rights, or accommodation process. A team climate plan cannot replace it."
+        ],
+        "nextActions": [
+          {
+            "label": "Team climate action plan template",
+            "href": "/resources/ja-climate-action-plan"
+          },
+          {
+            "label": "Workplace culture learning path",
+            "href": "/paths/gp-4"
+          }
+        ],
+        "tags": [
+          "climate",
+          "team",
+          "supervisor",
+          "participation",
+          "candor",
+          "psychological safety",
+          "meetings",
+          "norms",
+          "belonging",
+          "workplace culture"
+        ],
+        "intents": [
+          "workplace_culture"
+        ],
+        "pathIds": [
+          "gp-4"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Retained clear task questions, actionable criteria and role boundaries. This is editorial retention, not recertification of official guidance or dates."
+    },
+    {
+      "target": "resource.ja-climate-action-plan",
+      "route": "/library/ja-climate-action-plan",
+      "values": {
+        "id": "ja-climate-action-plan",
+        "title": "Team climate action plan template",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Choose three to five actions team members can see and experience, naming for each an owner, a start date, a revisit date, and a way to tell whether it helps. Omit names tied to complaints, and never score individual employees.",
+        "body": [
+          "Practice: describe something a team member could see happening, such as sharing the agenda 48 hours ahead, rotating who opens the meeting, reading written input aloud, or turning captions on.",
+          "Responsibility: name the supervisor or volunteer responsible for the action. The supervisor remains accountable for the team's practices.",
+          "Dates: choose a start date and a follow-up conversation within three months.",
+          "Evidence: describe what the team would notice, without ranking people. This might include a short anonymous check-in or a review of who received assignments.",
+          "Use this plan to improve team practices. Follow the established process for complaints, investigations, discipline, and accommodation decisions."
+        ],
+        "nextActions": [
+          {
+            "label": "Workplace culture path",
+            "href": "/paths/gp-4"
+          },
+          {
+            "label": "When to seek additional guidance",
+            "href": "/resources/pn-when-to-escalate"
+          }
+        ],
+        "tags": [
+          "climate",
+          "action plan",
+          "team",
+          "supervisor",
+          "norms",
+          "follow-up"
+        ],
+        "intents": [
+          "workplace_culture",
+          "next_actions"
+        ],
+        "pathIds": [
+          "gp-4"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Retained clear task questions, actionable criteria and role boundaries. This is editorial retention, not recertification of official guidance or dates."
+    },
+    {
+      "target": "resource.ja-facilitation-session-plan",
+      "route": "/library/ja-facilitation-session-plan",
+      "values": {
+        "id": "ja-facilitation-session-plan",
+        "title": "Session plan: purpose, activity, practical use, and access",
+        "type": "tool",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Plan each session around what participants can use afterward: one clear learning goal, an activity based on their own work, something useful to take with them, and access arranged in advance.",
+        "body": [
+          "Learning goal: write one sentence describing something participants will be able to do, such as drafting the access section of their own notice.",
+          "Activity: give participants time to work with their own materials, in pairs or small groups, within a clear amount of time.",
+          "Practical use: name what each person will leave with and how they will use it next, such as a program checklist, notice plan, or team climate plan.",
+          "Access: arrange captions or real-time captioning, send materials in accessible formats ahead of time, and offer an alternative to activities that require dragging items or working under a time limit. Arrange language interpretation or translated materials when participants need them. Use plain-language slides with built-in headings. Do not rely on icons alone.",
+          "Follow-up: choose a date and a way to learn whether participants were able to use what they completed."
+        ],
+        "nextActions": [
+          {
+            "label": "Facilitation path",
+            "href": "/paths/gp-5"
+          },
+          {
+            "label": "Access checks before a session",
+            "href": "/resources/ja-access-checks"
+          }
+        ],
+        "tags": [
+          "facilitation",
+          "session",
+          "training",
+          "huddle",
+          "agenda",
+          "application task",
+          "learning objective",
+          "slides"
+        ],
+        "intents": [
+          "facilitation",
+          "next_actions"
+        ],
+        "pathIds": [
+          "gp-5"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Clear practical sequence and protected role/official-source limits retained. This is editorial review, not a new legal/current-policy verification."
+    },
+    {
+      "target": "resource.ja-form-notice-change",
+      "route": "/library/ja-form-notice-change",
+      "values": {
+        "id": "ja-form-notice-change",
+        "title": "Checklist for changing a form, notice, or letter",
+        "type": "checklist",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "When changing staff- or public-facing text or a process, note who is affected; language, disability, and communication access; effort required; each rule’s current source; who owns each barrier; and review timing. Never cite a law, rule, or policy from memory.",
+        "body": [
+          "Impact: who receives this; what they must do; what happens if they cannot; which communities, languages, disabilities, and places are most affected.",
+          "Language: is it a vital document; which languages; translation with human review scheduled.",
+          "Access: complete a plain-language review, follow the current accessible-document standard, provide requested formats, and offer help by phone or in person.",
+          "Burden: deadlines, required documents, and return methods examined; what can be removed or done by the agency.",
+          "Sources: link to the current rule or policy whenever possible. If you cannot confirm it, say so and ask the person responsible for that policy. Do not cite a law, rule, or policy from memory.",
+          "Responsibilities and review: who will address each barrier, by when, and the next date the team will review the work."
+        ],
+        "nextActions": [
+          {
+            "label": "Policy, form, or notice change path",
+            "href": "/paths/gp-2"
+          },
+          {
+            "label": "Plain language and accessible documents checklist",
+            "href": "/resources/ja-plain-language"
+          }
+        ],
+        "tags": [
+          "form",
+          "notice",
+          "letter",
+          "policy change",
+          "impact",
+          "packet",
+          "citation",
+          "statute",
+          "authority"
+        ],
+        "intents": [
+          "access_barriers",
+          "uncertainty_authority",
+          "policy_orientation"
+        ],
+        "pathIds": [
+          "gp-2"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Clear practical sequence and protected role/official-source limits retained. This is editorial review, not a new legal/current-policy verification."
+    },
+    {
+      "target": "resource.lm-interpreter",
+      "route": "/library/lm-interpreter",
+      "values": {
+        "id": "lm-interpreter",
+        "title": "Working with a spoken-language interpreter",
+        "type": "learning_module",
+        "authority": "learning",
+        "layer": "L2",
+        "summary": "Book the right language and dialect and brief the interpreter beforehand; then speak to the person, use short sentences, and check understanding. Never ask a family member, a child, or a bilingual colleague pulled from their job to interpret.",
+        "body": [
+          "Before the conversation: specify the language, dialect, format, and any request for a gender-matched interpreter. Send materials in advance and allow enough time.",
+          "During the conversation: explain the interpreter's role, speak directly to the person in the first person, pause often, and avoid idioms. Check understanding by asking the person to describe the next step in their own words.",
+          "After the conversation: note any concerns the interpreter raised about terms or forms, and arrange for needed corrections.",
+          "For a vital conversation, use a qualified professional interpreter rather than a child, family member, untrained bilingual coworker, or machine translation."
+        ],
+        "nextActions": [
+          {
+            "label": "Language access checklist",
+            "href": "/resources/ja-language-access-checklist"
+          },
+          {
+            "label": "Community brief for the household's language",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "tags": [
+          "interpreter",
+          "language access",
+          "dialect",
+          "phone interpreting",
+          "video",
+          "learning"
+        ],
+        "intents": [
+          "access_barriers",
+          "intercultural"
+        ],
+        "pathIds": [
+          "gp-2",
+          "gp-3"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "provenance": "Adapted from the One DHS course 'Working with an interpreter.' The original course and this revised program outline are retained separately.",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Clear practical sequence and protected role/official-source limits retained. This is editorial review, not a new legal/current-policy verification."
+    },
+    {
+      "target": "resource.pn-self-check",
+      "route": "/library/pn-self-check",
+      "values": {
+        "id": "pn-self-check",
+        "title": "A final review for your working plan",
+        "type": "practice_note",
+        "authority": "practice_note",
+        "layer": "L1",
+        "summary": "Before you finish, check that your plan names who is responsible, when it will be reviewed, which access needs you considered, who you involved, and what you chose not to assume. Completed boxes matter only if follow-up is clear.",
+        "body": [
+          "Responsibilities: every follow-up has a named person.",
+          "Review date: choose a specific date within a reasonable window and place it on the calendar.",
+          "Access: language and disability/communication access considered for this specific work, not in general.",
+          "Who was involved: who took part before the plan was final, what role they had, and how their input was used.",
+          "Assumptions avoided: what you chose not to assume about the people affected.",
+          "Open questions: note what you still do not know and where you will take it next: Resources, a partner, the person responsible for the policy, or a consultation."
+        ],
+        "nextActions": [
+          {
+            "label": "Choose a learning path",
+            "href": "/paths"
+          }
+        ],
+        "tags": [
+          "final review",
+          "working plan",
+          "responsibilities",
+          "review date",
+          "follow-through"
+        ],
+        "intents": [
+          "practice_method",
+          "next_actions"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "reviewed",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Clear practical sequence and protected role/official-source limits retained. This is editorial review, not a new legal/current-policy verification."
+    },
+    {
+      "target": "resource.ja-job-relatedness-check",
+      "route": "/library/ja-job-relatedness-check",
+      "values": {
+        "id": "ja-job-relatedness-check",
+        "title": "Is this requirement job related? A short check before you keep it",
+        "type": "checklist",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Before keeping any degree, experience, screening, or interview requirement, ask five questions: what work it predicts, what evidence supports that, who it screens out, what alternative shows the same ability, and who signed off.",
+        "whyItMatters": "Federal guidance on employee selection expects employers to examine procedures that produce adverse impact and to have evidence that they are job related. This check helps you ask those questions before a posting goes out, without removing qualifications the work really needs.",
+        "body": [
+          "Question 1. What part of the work does this requirement predict? Write the specific tasks. If you cannot name them, the requirement may be a proxy.",
+          "Question 2. What evidence do we have that it predicts that work? Consider whether current strong performers all meet it, and whether people without it have done the work well elsewhere.",
+          "Question 3. Who does this requirement screen out? Think about communities, first-generation professionals, people who built skills outside formal education, and people with disabilities who took different paths.",
+          "Question 4. What alternative shows the same ability? Consider a work sample, a portfolio, described experience, a certification, or a structured question in the interview.",
+          "Question 5. Who reviewed and signed off? Note the hiring manager, the HR partner, and, where practice calls for it, the Equity Director. Keep the reasoning with the posting.",
+          "Do not remove qualifications categorically. Some work requires a license or a specific credential. The point is to know what the work genuinely requires and which credible forms of experience demonstrate capability."
+        ],
+        "nextActions": [
+          {
+            "label": "Read the eight-stage inclusive hiring lifecycle",
+            "href": "/resources/ja-inclusive-hiring-lifecycle"
+          },
+          {
+            "label": "Check the federal selection guidelines summary",
+            "href": "/resources/tool-eeoc-uniform-guidelines"
+          }
+        ],
+        "tags": [
+          "hiring",
+          "qualifications",
+          "job related",
+          "adverse impact",
+          "credentials"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation",
+          "next_actions"
+        ],
+        "pathIds": [
+          "gp-6"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer on 2026-11-15. Clear practical sequence and protected role/official-source limits retained. This is editorial review, not a new legal/current-policy verification."
+    },
+    {
+      "target": "resource.ja-operational-equity-canvas",
+      "route": "/library/ja-operational-equity-canvas",
+      "values": {
+        "id": "ja-operational-equity-canvas",
+        "title": "Operational equity review canvas: eight steps for any decision",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "This eight-step pattern works for policies, forms, services, contracts, budgets, communications, technology, and program design. Clarify the decision, identify affected people, examine evidence, name assumptions and risks, compare options, choose accountable owners, define accessible implementation, and schedule follow-up.",
+        "whyItMatters": "Equity cannot be confined to awareness content. This canvas turns it into the working steps of an actual decision while the decision can still change.",
+        "body": [
+          "Step 1. Clarify the decision. What exactly is being decided, by whom, and by when? What is already fixed and what is still open?",
+          "Step 2. Identify affected people. Who benefits, who carries the burden, and who is missing from the room? Consider community, language, disability, age, place, and the people who deliver the service.",
+          "Step 3. Examine evidence. What do we know by community, language, disability, and place? What do people who use the service say? What does the evidence not show?",
+          "Step 4. Name assumptions and risks. What are we assuming about people's access, time, documents, technology, or trust? What could go wrong for the people with the least margin?",
+          "Step 5. Compare options. Lay out at least two alternatives and compare who each helps and burdens. Include the option of not proceeding.",
+          "Step 6. Choose accountable owners. Who owns each part of implementation and each follow-up? Name people, not units.",
+          "Step 7. Define accessible implementation. How will people learn about the change, in which languages and formats, with what human alternative? What burden can still be removed?",
+          "Step 8. Schedule follow-up. When will you look at what happened, what will you look at, and who will report back to the people who gave input?",
+          "Any figures used as examples in training materials are illustrations, not DSD evidence. Use the real data owners for real numbers."
+        ],
+        "nextActions": [
+          {
+            "label": "Equity analysis for a decision (Practice path)",
+            "href": "/paths/gp-7"
+          },
+          {
+            "label": "Equity scan or full analysis: what goes in",
+            "href": "/resources/ja-equity-scan-or-full-analysis"
+          },
+          {
+            "label": "Equity impact questions",
+            "href": "/resources/ja-equity-impact-questions"
+          }
+        ],
+        "tags": [
+          "equity review",
+          "decision",
+          "canvas",
+          "policy",
+          "budget",
+          "program",
+          "implementation"
+        ],
+        "intents": [
+          "practice_method",
+          "launch_embed",
+          "next_actions"
+        ],
+        "pathIds": [
+          "gp-7",
+          "gp-1",
+          "gp-10"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer. Retain clear question/action structure, applicable authority and source-confirmation limits. Official/legal summary statements remain a separate source-verification scope; editorial retention does not establish current applicability."
+    },
+    {
+      "target": "resource.ja-equity-scan-or-full-analysis",
+      "route": "/library/ja-equity-scan-or-full-analysis",
+      "values": {
+        "id": "ja-equity-scan-or-full-analysis",
+        "title": "Equity scan or full equity analysis: what goes in and who decides which applies",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Learn how an equity scan differs from a full analysis under the DHS equity policy, what each contains, and how to use the Minnesota Equity Analysis Toolkit while the decision can still change. The policy owner decides which applies.",
+        "whyItMatters": "The policy verifies mandatory equity analysis for prolonged or long-term actions going to leadership and other named uses. Doing it well means engaging while choices are open, not documenting after they close.",
+        "body": [
+          "Supports a required process. This page helps you do the analysis well. It is not the official record. The completed analysis is kept where your division or the policy owner keeps decision records. Check the current policy and toolkit version with the policy owner before relying on this summary.",
+          "Determine whether a scan or a full analysis applies. A scan is a brief, structured check for decisions with limited reach. A full analysis is the complete process for prolonged or long-term actions and decisions that go to leadership. When in doubt, ask the policy owner or your Equity Director.",
+          "Form the right team. Include the decision owner, the people who hold relevant data, staff who deliver the service, and the equity professional for your area. Plan community engagement early enough to change the decision.",
+          "Define the decision and the outcomes you want. Write the decision in one sentence and the outcomes in terms of people, not process.",
+          "Use quantitative, qualitative, and community evidence. Disaggregate by community, language, disability, and place where the data allows, protect small groups, and record what the evidence does not show.",
+          "Identify benefits and burdens. Who gains, who pays, and how do burdens fall on people who already carry more?",
+          "Develop alternatives. At least two, compared on benefits and burdens. Include the alternative of not proceeding.",
+          "Plan implementation, communication, monitoring, and evaluation. Name owners, languages and formats, the human alternative, what you will watch, and when you will look again.",
+          "Report back. Tell the people who gave input what changed and what did not, and why."
+        ],
+        "nextActions": [
+          {
+            "label": "Equity analysis for a decision (Practice path)",
+            "href": "/paths/gp-7"
+          },
+          {
+            "label": "Minnesota Equity Analysis Toolkit",
+            "href": "/resources/ext-dhs-equity-toolkit"
+          },
+          {
+            "label": "Operational equity review canvas",
+            "href": "/resources/ja-operational-equity-canvas"
+          }
+        ],
+        "tags": [
+          "equity analysis",
+          "equity scan",
+          "equity policy",
+          "toolkit",
+          "leadership decision",
+          "compliance"
+        ],
+        "intents": [
+          "policy_orientation",
+          "practice_method",
+          "launch_embed"
+        ],
+        "pathIds": [
+          "gp-7"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer. Retain clear question/action structure, applicable authority and source-confirmation limits. Official/legal summary statements remain a separate source-verification scope; editorial retention does not establish current applicability."
+    },
+    {
+      "target": "resource.lm-disability-rights-and-service-delivery",
+      "route": "/library/lm-disability-rights-and-service-delivery",
+      "values": {
+        "id": "lm-disability-rights-and-service-delivery",
+        "title": "Disability rights and service delivery: the frameworks DSD works within",
+        "type": "learning_module",
+        "authority": "learning",
+        "layer": "L3",
+        "summary": "This orientation covers person-centered planning, supported decision-making, LifeCourse, the ADA and Olmstead, home and community-based services, employment-first practice, and positive supports, and explains what each asks of a service design.",
+        "whyItMatters": "Equity in disability services is inseparable from disability rights. A redesign that adds steps, removes choice, or assumes incapacity can be inaccessible and inequitable at once.",
+        "body": [
+          "Person-centered planning. The person directs the plan; the system organizes around their goals, relationships, and preferences. Ask how a process lets the person lead rather than respond.",
+          "Supported decision-making. People have the right to make their own decisions with support they choose. Ask whether a process assumes incapacity or offers support.",
+          "LifeCourse. A framework for thinking about a good life across a lifetime, using the person's vision and a mix of supports. Useful for planning conversations; it is one framework among several.",
+          "ADA and Olmstead. The Americans with Disabilities Act and the Olmstead decision require services in the most integrated setting appropriate. Ask whether a design steers people toward segregated settings by default.",
+          "Home and community-based services and employment-first practice. Services in the community and competitive, integrated employment as the first option. Ask whether eligibility, assessment, and authorization steps make the community option harder than the institutional one.",
+          "Positive supports. Approaches that build skills and quality of life rather than relying on restriction. Ask whether a process responds to behavior with support or with control.",
+          "Each legal or policy claim above needs the current source. Use the external references in the Library and the policy owner for anything that affects a person's eligibility, rights, or services."
+        ],
+        "nextActions": [
+          {
+            "label": "ADA Title II reference",
+            "href": "/resources/ext-ada"
+          },
+          {
+            "label": "Operational equity review canvas",
+            "href": "/resources/ja-operational-equity-canvas"
+          },
+          {
+            "label": "One DSD area",
+            "href": "/one-dsd"
+          }
+        ],
+        "tags": [
+          "disability rights",
+          "person-centered",
+          "supported decision-making",
+          "LifeCourse",
+          "Olmstead",
+          "HCBS",
+          "employment first",
+          "positive supports"
+        ],
+        "intents": [
+          "policy_orientation",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read by DSD reviewer. Retain clear question/action structure, applicable authority and source-confirmation limits. Official/legal summary statements remain a separate source-verification scope; editorial retention does not establish current applicability."
+    },
+    {
+      "target": "resource.ja-accessible-meetings",
+      "route": "/library/ja-accessible-meetings",
+      "values": {
+        "id": "ja-accessible-meetings",
+        "title": "Accessible and culturally responsive meetings: before, during, and after",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Send the purpose and materials ahead, offer accommodation without forcing disclosure, and give people several ways to take part. Watch positional power, repair harm when it occurs, end with clear decisions and owners, and follow up accessibly.",
+        "whyItMatters": "Meetings are where participation is won or lost. Camera use, eye contact, speed, and silence are not universal evidence of engagement, and treating them that way excludes people.",
+        "body": [
+          "Before. Send the purpose, agenda, and materials at least a few working days ahead in an accessible format. Include the accommodation sentence in every invitation: tell us what you need to take part fully. Turn captions on by default. Check the room or platform for physical, sensory, and technology access.",
+          "During. Open with the purpose and how decisions will be made. Offer several ways to contribute: speaking, writing in advance, writing in chat, or following up afterward. Rotate who opens and who summarizes. Read written input aloud so it carries the same weight. Watch who is speaking and who is not, and notice positional power in the room. Slow down when interpretation or captioning is in use.",
+          "When harm occurs. Name it, pause, and make repair the responsibility of the person with more power in the room. Do not ask the person harmed to explain or to fix it. Follow up privately with the people involved.",
+          "Ending. State each decision, its owner, and its date. Say what happens to input that was not used.",
+          "After. Send accessible notes with decisions and owners in the same channels people used. Ask how the meeting worked for people and change the next one.",
+          "Notice periods, captioning accuracy claims, and accommodation instructions should follow your division's current accessibility guidance. Check with your accessibility lead."
+        ],
+        "nextActions": [
+          {
+            "label": "Plan an accessible meeting (Practice path)",
+            "href": "/paths/gp-8"
+          },
+          {
+            "label": "Access checks before a meeting or outreach",
+            "href": "/resources/ja-access-checks"
+          },
+          {
+            "label": "Team climate basics",
+            "href": "/resources/lm-workplace-climate"
+          }
+        ],
+        "tags": [
+          "meetings",
+          "accessibility",
+          "captions",
+          "participation",
+          "positional power",
+          "repair",
+          "facilitation"
+        ],
+        "intents": [
+          "access_barriers",
+          "workplace_culture",
+          "facilitation"
+        ],
+        "pathIds": [
+          "gp-8",
+          "gp-4",
+          "gp-5"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read. Retain practical sequence, individualized access questions and instruction to confirm current accessibility/language guidance. Legal or formal authority characterization remains outside editorial verification; no blanket revalidation."
+    },
+    {
+      "target": "resource.ja-language-cultural-access-planning",
+      "route": "/library/ja-language-cultural-access-planning",
+      "values": {
+        "id": "ja-language-cultural-access-planning",
+        "title": "Language and cultural access planning aid for a program or contact point",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Plan language, format, messenger, communication mode, and program design together, framed by the CLAS standards. Consider who the program reaches, the languages and formats they need, interpreter access at first contact, vital documents, and who reviews translations.",
+        "whyItMatters": "Language access decided one document at a time produces gaps at the first phone call. Planning at the program level puts interpreter availability, translation, and trusted messengers where people actually arrive.",
+        "body": [
+          "Who the program reaches. Use the data owner's information and community partners to name the languages and communities, and note what the data does not show.",
+          "First contact. How does a person who does not use English reach a human, in their language, on the first try? Phone, front desk, web, and mail each need an answer.",
+          "Vital documents. Identify documents that affect eligibility, rights, benefits, or safety. These need translation and human review before release. Machine translation alone is not enough for vital documents.",
+          "Formats. Plain language, large print, accessible electronic documents, audio, and in-person explanation. Ask which formats people use, not which are easiest to produce.",
+          "Trusted messengers. Who do people in each community already trust for information? Partner with them and compensate the work.",
+          "Cultural responsiveness. Use community material as questions. Check assumptions about family roles, health beliefs, and literacy with the community, not from a guide.",
+          "Review and owners. Name who owns the plan, who reviews translations, and when the plan is checked again.",
+          "The CLAS standards and DHS language access practice are the authority for these decisions. Check current guidance with your language access coordinator."
+        ],
+        "nextActions": [
+          {
+            "label": "Language access checklist",
+            "href": "/resources/ja-language-access-checklist"
+          },
+          {
+            "label": "CLAS standards reference",
+            "href": "/resources/ext-clas"
+          },
+          {
+            "label": "Working with an interpreter",
+            "href": "/resources/lm-interpreter"
+          }
+        ],
+        "tags": [
+          "language access",
+          "CLAS",
+          "interpreter",
+          "translation",
+          "vital documents",
+          "trusted messenger",
+          "cultural responsiveness"
+        ],
+        "intents": [
+          "access_barriers",
+          "intercultural",
+          "launch_embed"
+        ],
+        "pathIds": [
+          "gp-1",
+          "gp-2"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full original resource read. Retain practical sequence, individualized access questions and instruction to confirm current accessibility/language guidance. Legal or formal authority characterization remains outside editorial verification; no blanket revalidation."
+    },
+    {
+      "target": "resource.ext-clas",
+      "route": "/library/ext-clas",
+      "values": {
+        "id": "ext-clas",
+        "title": "National CLAS Standards (culturally and linguistically appropriate services)",
+        "type": "external_reference",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "Published by the U.S. Office of Minority Health, these national standards describe culturally and linguistically appropriate services in health and health care. Use them as a reference and confirm the current text at the source.",
+        "body": [
+          "Fifteen standards under governance, leadership, and workforce; communication and language assistance; and engagement, continuous improvement, and accountability.",
+          "This program links to the current HHS text, dated June 2025 by its file name. It does not paraphrase the standards as policy. Older copies, including DHS's 2017 policy, quote 2013 wording that HHS has since changed."
+        ],
+        "nextActions": [
+          {
+            "label": "Language access checklist",
+            "href": "/resources/ja-language-access-checklist"
+          }
+        ],
+        "tags": [
+          "CLAS",
+          "standards",
+          "culturally appropriate",
+          "language assistance",
+          "external"
+        ],
+        "intents": [
+          "policy_orientation",
+          "uncertainty_authority"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://thinkculturalhealth.hhs.gov/clas/standards",
+        "sourceName": "U.S. Department of Health and Human Services, Office of Minority Health",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.ext-mn-accessibility",
+      "route": "/library/ext-mn-accessibility",
+      "values": {
+        "id": "ext-mn-accessibility",
+        "title": "Minnesota digital accessibility standard (MNIT)",
+        "type": "external_reference",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "Minnesota IT Services publishes the state’s digital accessibility standard and guidance on accessible documents. Check the current version at the source before you cite it.",
+        "body": [
+          "Minnesota's current digital accessibility standard uses WCAG 2.1 Level AA. Check the current state standard before citing it.",
+          "Before releasing Word documents, PDFs, or slides, follow Minnesota's current guidance for accessible documents."
+        ],
+        "nextActions": [
+          {
+            "label": "Plain language and accessible documents checklist",
+            "href": "/resources/ja-plain-language"
+          }
+        ],
+        "tags": [
+          "accessibility",
+          "WCAG",
+          "Minnesota",
+          "MNIT",
+          "standard",
+          "documents",
+          "external"
+        ],
+        "intents": [
+          "policy_orientation",
+          "access_barriers",
+          "uncertainty_authority"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://mn.gov/mnit/government/policies/accessibility/",
+        "sourceName": "Minnesota IT Services",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.ext-ada",
+      "route": "/library/ext-ada",
+      "values": {
+        "id": "ext-ada",
+        "title": "ADA Title II (state and local government services)",
+        "type": "external_reference",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "Title II of the Americans with Disabilities Act covers state and local government services, including rules on effective communication and web accessibility. Confirm the current rule and its dates at the source.",
+        "body": [
+          "This program does not interpret the ADA. For a specific obligation, contact the appropriate accessibility coordinator or legal counsel."
+        ],
+        "nextActions": [
+          {
+            "label": "Access checks before a meeting or session",
+            "href": "/resources/ja-access-checks"
+          }
+        ],
+        "tags": [
+          "ADA",
+          "Title II",
+          "disability",
+          "effective communication",
+          "external",
+          "law"
+        ],
+        "intents": [
+          "policy_orientation",
+          "uncertainty_authority"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://www.ada.gov/law-and-regs/regulations/title-ii-2010-regulations/",
+        "sourceName": "U.S. Department of Justice",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.ext-title-vi-lep",
+      "route": "/library/ext-title-vi-lep",
+      "values": {
+        "id": "ext-title-vi-lep",
+        "title": "Title VI and language access for people with limited English proficiency",
+        "type": "external_reference",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "As of October 2026, Title VI still bars national-origin discrimination in federally funded programs, but federal language-access direction has changed. Executive Order 14224 (March 2025) revoked Executive Order 13166, the Department of Justice rescinded its 2002 guidance for funding recipients, and lep.gov is suspended pending review.",
+        "body": [
+          "The Section 1557 rule (45 CFR 92.201) requires reasonable steps toward meaningful access in covered health programs, and Minnesota Health Care Programs directs providers to arrange interpreters. HHS has signaled changes to the Section 1557 rule, so check the date of anything you rely on.",
+          "This program does not interpret Title VI. Before releasing a vital document, follow the current language-access requirements for qualified human review and confirm them with the person responsible for language access in your program."
+        ],
+        "nextActions": [
+          {
+            "label": "Language access checklist",
+            "href": "/resources/ja-language-access-checklist"
+          }
+        ],
+        "tags": [
+          "Title VI",
+          "LEP",
+          "language access",
+          "federal",
+          "external",
+          "law"
+        ],
+        "intents": [
+          "policy_orientation",
+          "uncertainty_authority",
+          "access_barriers"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://www.justice.gov/crt/limited-english-proficiency",
+        "sourceName": "U.S. Department of Justice, Federal Coordination and Compliance Section",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.ext-dhs-equity-toolkit",
+      "route": "/library/ext-dhs-equity-toolkit",
+      "values": {
+        "id": "ext-dhs-equity-toolkit",
+        "title": "DHS Equity Analysis Toolkit",
+        "type": "external_reference",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "Use the DHS Equity Analysis Toolkit to consider who is affected, what evidence is available, which barriers and alternatives matter, and how access, responsibility, and review are handled, working from the current DHS version.",
+        "body": [
+          "The checklist and impact questions in this program can help you prepare, but they do not replace the DHS Equity Analysis Toolkit. Confirm the current toolkit and any required process with the appropriate DHS contact."
+        ],
+        "nextActions": [
+          {
+            "label": "Equity and access checklist for new work",
+            "href": "/resources/ja-launch-embed-checklist"
+          },
+          {
+            "label": "Equity impact questions",
+            "href": "/resources/ja-equity-impact-questions"
+          }
+        ],
+        "tags": [
+          "toolkit",
+          "equity analysis",
+          "DHS",
+          "scan",
+          "full analysis",
+          "external"
+        ],
+        "intents": [
+          "policy_orientation",
+          "practice_method",
+          "uncertainty_authority"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "sourceName": "Minnesota DHS (intranet)",
+        "version": "0.1.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.tool-gare-racial-equity-toolkit",
+      "route": "/library/tool-gare-racial-equity-toolkit",
+      "values": {
+        "id": "tool-gare-racial-equity-toolkit",
+        "title": "Tool card: GARE Racial Equity Toolkit",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "The Government Alliance on Race and Equity describes racial equity tools as structured ways to integrate explicit consideration of racial equity into decisions, policies, practices, programs, and budgets. Cite, link, or adapt this public method with attribution.",
+        "body": [
+          "Owner and publisher: Government Alliance on Race and Equity (GARE). Status: public resource; check reuse terms before reproducing text.",
+          "Purpose: a step-by-step process for analyzing a proposal's racial equity impacts, engaging communities, developing strategies, and evaluating results.",
+          "Evidence base: practice-based, used across many jurisdictions; the Minnesota Equity Analysis Toolkit is in this lineage.",
+          "Limits: a process, not a data source. Quality depends on engagement and evidence. Race-explicit by design; combine with disability, language, and place analysis.",
+          "Program use: cite and adapt the method through the equity review canvas and the equity analysis path."
+        ],
+        "nextActions": [
+          {
+            "label": "Operational equity review canvas",
+            "href": "/resources/ja-operational-equity-canvas"
+          },
+          {
+            "label": "Minnesota Equity Analysis Toolkit",
+            "href": "/resources/ext-dhs-equity-toolkit"
+          }
+        ],
+        "tags": [
+          "GARE",
+          "tool card",
+          "racial equity",
+          "toolkit",
+          "decision"
+        ],
+        "intents": [
+          "policy_orientation",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://www.racialequityalliance.org/",
+        "sourceName": "Government Alliance on Race and Equity",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.tool-mn-equity-toolkit",
+      "route": "/library/tool-mn-equity-toolkit",
+      "values": {
+        "id": "tool-mn-equity-toolkit",
+        "title": "Tool card: Minnesota Equity Analysis Toolkit",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "Minnesota Management and Budget publishes the State of Minnesota’s official equity analysis toolkit, which is used with the DHS Equity Policy. This public tool may be cited, linked, and followed; the policy owner determines when it is required.",
+        "body": [
+          "Owner and publisher: Minnesota Management and Budget. Status: official State resource.",
+          "Purpose: a structured process for state agencies to analyze the equity effects of decisions, engage affected communities, compare alternatives, and plan implementation and evaluation.",
+          "Relationship to DHS: the DHS Equity Policy requires equity analysis for named decisions and uses this toolkit. The policy owner and your Equity Director confirm which version and process applies.",
+          "Limits: a process. It does not supply data or community relationships; those come from the data owner and engagement.",
+          "Program use: the equity analysis path and the scan-or-full-analysis aid follow it. This program is not the official record."
+        ],
+        "nextActions": [
+          {
+            "label": "Equity scan or full analysis: what goes in",
+            "href": "/resources/ja-equity-scan-or-full-analysis"
+          },
+          {
+            "label": "Minnesota Equity Analysis Toolkit reference",
+            "href": "/resources/ext-dhs-equity-toolkit"
+          }
+        ],
+        "tags": [
+          "Minnesota",
+          "equity analysis",
+          "toolkit",
+          "tool card",
+          "MMB"
+        ],
+        "intents": [
+          "policy_orientation",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://mn.gov/mmb/",
+        "sourceName": "Minnesota Management and Budget",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.tool-clas-standards",
+      "route": "/library/tool-clas-standards",
+      "values": {
+        "id": "tool-clas-standards",
+        "title": "Tool card: National CLAS Standards",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "The U.S. Department of Health and Human Services Office of Minority Health publishes the National Standards for Culturally and Linguistically Appropriate Services. These public standards may be cited, linked, and followed as a frame for language and cultural access planning.",
+        "body": [
+          "Owner and publisher: U.S. Department of Health and Human Services, Office of Minority Health. Status: public federal standards. Current HHS text, dated June 2025 by its file name; it no longer uses the 2013 wording on equitable care and a diverse workforce.",
+          "Purpose: fifteen standards for governance, workforce, communication and language assistance, and engagement, continuous improvement, and accountability.",
+          "Limits: standards, not a plan. Fidelity depends on local implementation and ongoing work with the communities served. Cultural material still needs sourcing and humility.",
+          "Program use: the language and cultural access planning aid uses the standards as its frame."
+        ],
+        "nextActions": [
+          {
+            "label": "CLAS standards reference",
+            "href": "/resources/ext-clas"
+          },
+          {
+            "label": "Language and cultural access planning aid",
+            "href": "/resources/ja-language-cultural-access-planning"
+          }
+        ],
+        "tags": [
+          "CLAS",
+          "tool card",
+          "language access",
+          "cultural responsiveness"
+        ],
+        "intents": [
+          "access_barriers",
+          "policy_orientation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://thinkculturalhealth.hhs.gov/clas",
+        "sourceName": "HHS Office of Minority Health",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.tool-lifecourse",
+      "route": "/library/tool-lifecourse",
+      "values": {
+        "id": "tool-lifecourse",
+        "title": "Tool card: Charting the LifeCourse",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "From the University of Missouri Kansas City Institute for Human Development, this framework helps people with disabilities and families plan a good life across the lifespan. Some materials are licensed; cite, link, and use published tools within their terms.",
+        "body": [
+          "Owner and publisher: LifeCourse Nexus, University of Missouri Kansas City Institute for Human Development. Status: published framework; some tools carry use terms.",
+          "Purpose: person-centered planning across life domains using the person's vision, trajectory, and an integrated mix of supports.",
+          "Limits: one planning framework among several. Quality depends on the person leading the conversation.",
+          "Program use: referenced in service-delivery orientation and in DSD planning scenarios. Tools are linked, not reproduced."
+        ],
+        "nextActions": [
+          {
+            "label": "Disability rights and service delivery",
+            "href": "/resources/lm-disability-rights-and-service-delivery"
+          }
+        ],
+        "tags": [
+          "LifeCourse",
+          "tool card",
+          "person-centered",
+          "planning",
+          "disability"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://www.lifecoursetools.com/",
+        "sourceName": "LifeCourse Nexus",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.tool-implicit-association",
+      "route": "/library/tool-implicit-association",
+      "values": {
+        "id": "tool-implicit-association",
+        "title": "Tool card: implicit-association resources",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "These public research tools demonstrate automatic associations, supporting individual reflection on how bias can operate without awareness. They are not a measure of a person’s bias, do not predict behavior on their own, and are never a workplace assessment.",
+        "body": [
+          "Owner and publisher: research collaborations such as Project Implicit. Status: public research tools with their own terms.",
+          "Purpose: demonstrate that automatic associations exist and can differ from stated beliefs.",
+          "Evidence base and limits: substantial research on the existence of implicit associations; considerable debate about individual-level reliability and prediction of behavior. Treat results as a reflection prompt, not a diagnosis.",
+          "Misuse risks: labeling a person as biased, using results in hiring or evaluation, treating a single result as stable.",
+          "Program use: reference for voluntary private reflection only. The program does not administer, store, or discuss individual results."
+        ],
+        "nextActions": [
+          {
+            "label": "The IDI and other tools as inputs to practice",
+            "href": "/resources/pn-idi-and-tool-registry"
+          }
+        ],
+        "tags": [
+          "implicit bias",
+          "implicit association",
+          "tool card",
+          "reflection",
+          "personal growth",
+          "own culture",
+          "self-reflection"
+        ],
+        "intents": [
+          "intercultural",
+          "boundary_refusal"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://implicit.harvard.edu/implicit/",
+        "sourceName": "Project Implicit",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.tool-eeoc-uniform-guidelines",
+      "route": "/library/tool-eeoc-uniform-guidelines",
+      "values": {
+        "id": "tool-eeoc-uniform-guidelines",
+        "title": "Tool card: Uniform Guidelines on Employee Selection Procedures (EEOC)",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "These federal selection guidelines, with the U.S. Equal Employment Opportunity Commission’s questions and answers, call for careful attention to adverse impact and to evidence of job relatedness and validity. Cite and link these public sources; HR and legal partners interpret.",
+        "body": [
+          "Owner and publisher: U.S. Equal Employment Opportunity Commission and partner agencies. Status: public federal guidance.",
+          "Purpose: guidance on how selection procedures should be examined for adverse impact and supported by evidence of job relatedness.",
+          "Limits: guidance, applied by HR and legal partners. Do not remove qualifications categorically on the basis of this card; determine what the work requires.",
+          "Program use: the job-relatedness check and the inclusive hiring lifecycle follow its questions in practice terms."
+        ],
+        "nextActions": [
+          {
+            "label": "Is this requirement job related?",
+            "href": "/resources/ja-job-relatedness-check"
+          },
+          {
+            "label": "Inclusive hiring lifecycle",
+            "href": "/resources/ja-inclusive-hiring-lifecycle"
+          }
+        ],
+        "tags": [
+          "EEOC",
+          "selection",
+          "adverse impact",
+          "job related",
+          "tool card"
+        ],
+        "intents": [
+          "policy_orientation",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines",
+        "sourceName": "U.S. Equal Employment Opportunity Commission",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    },
+    {
+      "target": "resource.tool-mn-accessibility-standard",
+      "route": "/library/tool-mn-accessibility-standard",
+      "values": {
+        "id": "tool-mn-accessibility-standard",
+        "title": "Tool card: State of Minnesota accessibility standard",
+        "type": "tool",
+        "authority": "external_verify",
+        "layer": "L4",
+        "summary": "The State of Minnesota’s public digital accessibility standard is currently Section 508 plus WCAG 2.1 Level A and AA, with accompanying guidance on accessible documents. This program keeps WCAG 2.2 Level AA as its own stronger release target.",
+        "body": [
+          "Owner and publisher: Minnesota IT Services and Minnesota Management and Budget. Status: official State standard.",
+          "Purpose: the accessibility floor for State digital content, systems, and documents.",
+          "Program posture: WCAG 2.2 Level AA is this program's release target, which is stronger than the current State floor.",
+          "Program use: accessible document and meeting guidance follow it. Check the current version with your accessibility lead."
+        ],
+        "nextActions": [
+          {
+            "label": "Minnesota accessibility reference",
+            "href": "/resources/ext-mn-accessibility"
+          },
+          {
+            "label": "Plain language and accessible documents",
+            "href": "/resources/ja-plain-language"
+          }
+        ],
+        "tags": [
+          "accessibility",
+          "WCAG",
+          "Section 508",
+          "Minnesota",
+          "tool card"
+        ],
+        "intents": [
+          "access_barriers",
+          "policy_orientation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2027-03-01",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "href": "https://mn.gov/mnit/about-mnit/accessibility/",
+        "sourceName": "Minnesota IT Services",
+        "provenance": "Drafted September 5, 2026 from the reconstruction decision baseline and the content recovery report; owner item-level review recorded in the domain release manifest.",
+        "version": "0.2.0"
+      },
+      "status": "accepted_retained",
+      "review": "Full reference card read for editorial clarity. Official source names, URLs, dated claims and legal/standard summaries retained without editorial expansion. This is NOT current legal, vendor, standards or licensing verification; consult the linked authority for applicability."
+    }
+  ]
+}

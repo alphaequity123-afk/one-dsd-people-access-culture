@@ -1,0 +1,161 @@
+{
+  "status": "root_review_accepted",
+  "revisions": [
+    {
+      "target": "community-brief.somali",
+      "kind": "surface",
+      "route": "/minnesota-communities/somali",
+      "changes": [
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which language and dialect should we book: Standard Somali, Maay, or Benadiri?",
+          "after": "Which language and variety would you like for this conversation: Standard Somali, Maay, Benadiri, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    },
+    {
+      "target": "community-brief.hmong",
+      "kind": "surface",
+      "route": "/minnesota-communities/hmong",
+      "changes": [
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which Hmong should we book: White Hmong or Green Hmong?",
+          "after": "Which language and variety would you like for this conversation: White Hmong, Green Hmong, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    },
+    {
+      "target": "community-brief.karen",
+      "kind": "surface",
+      "route": "/minnesota-communities/karen",
+      "changes": [
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "S'gaw or Pwo Karen?",
+          "after": "Which language would you like for this conversation: S'gaw Karen, Pwo Karen, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    },
+    {
+      "target": "community-brief.oromo",
+      "kind": "surface",
+      "route": "/minnesota-communities/oromo",
+      "changes": [
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Should we book Afaan Oromoo?",
+          "after": "Which language would you like for this conversation: Afaan Oromoo, English, or another language?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    },
+    {
+      "target": "community-brief.latino",
+      "kind": "surface",
+      "route": "/minnesota-communities/latino",
+      "changes": [
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which language, and is Spanish the first language?",
+          "after": "Which language would you prefer for this conversation, and would an interpreter help?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    },
+    {
+      "target": "community-brief.khmer",
+      "kind": "surface",
+      "route": "/minnesota-communities/khmer",
+      "changes": [
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Khmer interpreter for this conversation?",
+          "after": "Which language would you prefer for this conversation, and would an interpreter help?",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        },
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Interpreter booked; no family interpreting.",
+          "after": "Arrange qualified interpretation when needed. Do not expect a family member to provide it.",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    },
+    {
+      "target": "community-brief.vietnamese",
+      "kind": "surface",
+      "route": "/minnesota-communities/vietnamese",
+      "changes": [
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Professional interpreter, not a family member.",
+          "after": "Arrange qualified interpretation when needed. Do not expect a family member to provide it.",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    },
+    {
+      "target": "community-brief.deaf-deafblind-hard-of-hearing",
+      "kind": "surface",
+      "route": "/minnesota-communities/deaf-deafblind-hard-of-hearing",
+      "changes": [
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Qualified ASL interpreter or CART booked in advance; not a family member.",
+          "after": "Arrange the aid or service needed for effective communication, giving primary consideration to the person's request. Do not require them to bring someone to interpret.",
+          "reason": "Ask individual preference and arrange effective support; examples are open, and family interpretation is not an assumed responsibility."
+        }
+      ],
+      "status": "ready_for_root_review"
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "url": "https://www.ada.gov/resources/effective-communication/",
+      "scope": "TitleII primary consideration and public entity responsibility; companion interpreter must not be required. Does not establish language-access policy for all spoken-language situations."
+    }
+  ],
+  "reviewNotes": [
+    "Spoken-language interpretation wording describes staff-arranged support rather than a categorical legal ban on every family contribution.",
+    "No implied need for an interpreter solely because of community identity.",
+    "Existing brief sources and names retained. Core30 accepted revisions do not overlap these paths."
+  ]
+}

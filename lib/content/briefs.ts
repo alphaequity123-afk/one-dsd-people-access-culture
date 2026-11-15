@@ -334,6 +334,8 @@ export const BRIEFS: CommunityBrief[] = [
     sources: [
       { label: "Minnesota African American Family Preservation and Child Welfare Disproportionality Act", note: "Verify current statute text with the policy owner; this program does not interpret it.", href: "https://www.revisor.mn.gov/statutes/cite/260.61" },
       { label: "Minnesota Compass, Black or African American profile", note: "Include the source date when citing this information.", href: "https://www.mncompass.org/topics/demographics/cultural-communities/african-american" },
+      {"label": "DCYF, MAAFPCWDA Statewide Workgroup Interim Report 2026, Table 1, page 105", "note": "2023 involvement and population figures; alone-or-in-combination race categories. Source definitions distinguish children from reports.", "href": "https://www.lrl.mn.gov/docs/2025/mandated/252002.pdf"},
+      {"label": "DCYF, MAAFPCWDA overview and implementation", "note": "Statewide implementation January 1, 2027 and 2026 one-time county funding. Its newer 2025 statistics are not combined with the 2023 historical figures here.", "href": "https://dcyf.mn.gov/MAAFPCWDA"},
     ],
     observances: [{ title: "Juneteenth", when: "June 19", atWork: "Observed as a holiday; do not schedule required sessions." }],
     relatedPathIds: ["gp-3", "gp-2", "gp-1"],
