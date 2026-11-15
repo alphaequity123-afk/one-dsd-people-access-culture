@@ -510,7 +510,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const requestedSources = namedPlan.groups.length ? namedSourceCoverage(namedPlan.groups, sources) : undefined;
   let answerSources = sources;
   let evidenceClaims: EvidenceClaim[] = [];
-  let evidenceRejected = false;
+  const evidenceRejected = false;
 
 
   // With no relevant internal evidence, automatic research is already required
@@ -715,6 +715,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   let workProduct: AskWorkProduct | undefined;
   let degraded = !binding.generative && publicResearch?.status !== "used";
   let failureCode: string | undefined;
+  let writtenDraft: unknown;
   let failureDetail: string | undefined;
   if (binding.generative && !pureResearchAnswer && deadlineAt - Date.now() > 15_000) {
     try {
@@ -778,6 +779,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         return writeDraft("\nReturn only the requested JSON fields.");
       });
       took.write = Date.now() - writeBegan;
+      writtenDraft = out.parsed;
       reportProgress(sink, { type: "stage", stage: "finishing" });
       const reviewStarted = Date.now();
       const verified = await verifyAnswerDraft({
@@ -814,13 +816,16 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         },
       });
       out = { ...out, parsed: verified.draft };
+      writtenDraft = verified.draft;
+      if (verified.unresolved.length || !verified.reviewed) limits.push("Some references could not be confirmed against the current sources and were left out. Open the listed sources to confirm details.");
       took.evidence_review = Date.now() - reviewStarted;
       console.info("ask_evidence_review", { traceId: ctx.trace_id, repaired: verified.repaired, writerModelId: out.model_id });
       const writerParsed: unknown = out.parsed;
       // Each supported statement stands or falls on its own. A statement whose sources cannot be
       // resolved from what was supplied is left out; nothing is repaired, and nothing is written twice.
       const cited = resolveCitedStatements(claimsOf(writerParsed), sources);
-      if (cited.dropped) throw new Error("generated_evidence_rejected");
+      // An unconfirmed reference is left out; the written answer stays.
+      if (cited.dropped) limits.push("Some references could not be confirmed against the current sources and were left out. Open the listed sources to confirm details.");
       const generatedDraft = writerParsed && typeof writerParsed === "object"
         ? { ...(writerParsed as object), evidenceClaims: cited.claims.length ? cited.claims : undefined }
         : writerParsed;
@@ -845,7 +850,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
             try { return validateEvidenceClaims([claim], sources, freshDocs); }
             catch (error) { if (error instanceof Error && error.message === "generated_evidence_rejected") return []; throw error; }
           });
-          if (checkedClaims.length < proposed.length) throw new Error("generated_evidence_rejected");
+          if (checkedClaims.length < proposed.length) limits.push("Some references could not be confirmed against the current sources and were left out. Open the listed sources to confirm details.");
           evidenceClaims = checkedClaims;
           draft = { shortAnswer: short, whyItMatters: why };
           followUpQuestions = cleanFollowUps(parsed.data.followUpQuestions ?? [], question);
@@ -884,10 +889,6 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       reportProgress(sink, { type: "reset" });
       const code = error instanceof Error && /^[a-z][a-z0-9_]{0,79}$/.test(error.message) ? error.message : undefined;
       const known = code && ["provider_refusal", "provider_incomplete", "generated_answer_rejected", "generated_evidence_rejected", "answer_review_failed"].includes(code) ? code : "provider_request_failed";
-      if (known === "generated_evidence_rejected") {
-        evidenceRejected = true; evidenceClaims = []; answerSources = []; practiceArtifact = undefined;
-        draft = { shortAnswer: "I couldn’t match the answer’s references to the current source material. Please try again for an answer using the current version.", whyItMatters: ""};
-      }
       failureCode = known;
       failureDetail = code ?? (error instanceof Error ? error.name : "unknown_error");
       console.error("ask_generation_failed", {
@@ -901,18 +902,32 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         ...(code ? {} : { error: providerErrorExcerpt(error, 200) }),
       });
       degraded = true;
-      generative = false; evidenceClaims = []; answerSources = []; workProduct = undefined; practiceArtifact = undefined; followUpQuestions = [];
-      draft = { shortAnswer: "Ask could not finish a verified answer. Please try again shortly.", whyItMatters: "" };
-      limits.push("We could not finish a full answer. Any program material or public research we found is still shown.");
+      generative = false; evidenceClaims = []; workProduct = undefined; practiceArtifact = undefined; followUpQuestions = [];
+      // A person who asks always gets an answer in words, never a stock notice. What was written is
+      // given without its unconfirmed references; failing that, the answer composed from the program's
+      // own sources above stands.
+      const written = writtenDraft && typeof writtenDraft === "object" ? writtenDraft as { shortAnswer?: unknown; whyItMatters?: unknown } : undefined;
+      const writtenShort = typeof written?.shortAnswer === "string" ? askAnswerText(written.shortAnswer) : "";
+      if (writtenShort && !/^\s*[\[{]\s*["'](?:role|system|provider)["']\s*:/.test(writtenShort)) {
+        draft = { shortAnswer: writtenShort, whyItMatters: typeof written?.whyItMatters === "string" ? askAnswerText(written.whyItMatters) : "" };
+        answerSources = [];
+        limits.push("Some references could not be confirmed against the current sources and were left out. Open the listed sources to confirm details.");
+        failureCode = undefined; failureDetail = undefined;
+      } else if (programRelated && input.mode !== "review" && draft.shortAnswer.trim()) {
+        // The composed answer and its sources remain in place.
+        failureCode = undefined; failureDetail = undefined;
+      }
     }
   } else {
     degraded = publicResearch?.status !== "used";
-    if (degraded && !binding.generative) {
+    // An answer composed from the program's own sources is a real answer; it is not reported as a failure.
+    const composedAnswer = programRelated && input.mode !== "review" && Boolean(draft.shortAnswer.trim());
+    if (degraded && !binding.generative && !composedAnswer) {
       failureCode = "generation_unavailable";
       failureDetail = binding.reasonCode ?? "primary_binding";
       console.warn("ask_generation_unavailable", { traceId: ctx.trace_id, modelId: binding.model.model_id, reason: failureDetail });
     }
-    if (binding.generative && !pureResearchAnswer) { failureCode = "provider_request_failed"; failureDetail = "provider_deadline_exceeded"; degraded = true; }
+    if (binding.generative && !pureResearchAnswer) { degraded = true; if (!composedAnswer) { failureCode = "provider_request_failed"; failureDetail = "provider_deadline_exceeded"; } }
     await runTool(ctx, "answer.structured_draft", () => draft, { ...(pureResearchAnswer ? {} : { modelId: binding.model.model_id }), contentIds: answerSources.map((s) => s.id) });
   }
 
