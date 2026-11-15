@@ -1,0 +1,36 @@
+{
+  "records": [
+    {
+      "file": "app/equity-review/director-toolkit/templates/page.tsx",
+      "sourceSha256": "6809934d69e70ddb2e6b2666726c27dab5e5d1557d2c5c7462a492b670339d96",
+      "status": "accepted_fields",
+      "review": "Root independently read full component behavior and accepted bounded privacy wording, 2026-11-15. No behavior change. Sensitive-data exclusion retained.",
+      "changes": [
+        {
+          "before": "Nothing you type is saved or sent.",
+          "after": "The app does not autosave or submit template entries."
+        },
+        {
+          "before": "These templates run only in your browser. Nothing you type is saved, stored or sent anywhere, and it is gone when you leave the page.",
+          "after": "These templates run in your browser. The app does not autosave or submit your entries. Copy, download or print if you need a record before leaving this page."
+        }
+      ]
+    },
+    {
+      "file": "components/director-toolkit-template.tsx",
+      "sourceSha256": "b8254d17e36a3099c5131edefbaef2d07bc0f50576afe138c599eb054f4cd7f9",
+      "status": "accepted_fields",
+      "review": "Root independently read full component behavior and accepted bounded privacy wording, 2026-11-15. No behavior change. Sensitive-data exclusion retained.",
+      "changes": [
+        {
+          "before": "Nothing you type here is saved or sent. Print, copy or download before you leave this page.",
+          "after": "The app does not autosave or submit your entries. Copy, download or print if you need a record before leaving this page."
+        },
+        {
+          "before": "One printable fill-in template. Everything stays in this browser tab: nothing is saved, stored or sent.",
+          "after": "One printable fill-in template with transient entries and explicit copy, download and print actions."
+        }
+      ]
+    }
+  ]
+}

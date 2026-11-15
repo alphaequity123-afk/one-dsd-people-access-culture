@@ -5,7 +5,7 @@ import { useState } from "react";
 import { CHECKLIST_ANSWERS, TEMPLATE_KEEP_OUT, cellKey, checkKey, sectionHref, templateAnchor, templateText, type DirectorTemplate } from "@/lib/content/director-toolkit";
 import styles from "./director-toolkit.module.css";
 
-/** One printable fill-in template. Everything stays in this browser tab: nothing is saved, stored or sent. */
+/** One printable fill-in template with transient entries and explicit copy, download and print actions. */
 export function DirectorToolkitTemplate({ template, sectionTitle }: { template: DirectorTemplate; sectionTitle: string }) {
   const [values, setValues] = useState<Record<string, string>>({});
   const [rowCounts, setRowCounts] = useState<Record<string, number>>({});
@@ -68,7 +68,7 @@ export function DirectorToolkitTemplate({ template, sectionTitle }: { template: 
         </div>;
       })}
     </form>
-    <p id={`${anchor}-keep-out`} className={`notice ${styles.keepOut}`}>{TEMPLATE_KEEP_OUT} Nothing you type here is saved or sent. Print, copy or download before you leave this page.</p>
+    <p id={`${anchor}-keep-out`} className={`notice ${styles.keepOut}`}>{TEMPLATE_KEEP_OUT} The app does not autosave or submit your entries. Copy, download or print if you need a record before leaving this page.</p>
     <div className={styles.actions}>
       <button type="button" className="btn btn--primary" onClick={print}>Print this template</button>
       <button type="button" className="btn btn--light" onClick={copy}>Copy as text</button>

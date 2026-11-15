@@ -11,7 +11,7 @@ import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Equity Director toolkit templates",
-  description: "Fourteen printable fill-in templates for equity reviews at the Minnesota Department of Human Services. Nothing you type is saved or sent.",
+  description: "Fourteen printable fill-in templates for equity reviews at the Minnesota Department of Human Services. The app does not autosave or submit template entries.",
 };
 
 export default function DirectorToolkitTemplatesPage() {
@@ -27,7 +27,7 @@ export default function DirectorToolkitTemplatesPage() {
       <section aria-labelledby="templates-about" className={styles.printHide}>
         <h2 id="templates-about" className="text-2xl font-bold">Before you start</h2>
         <p>These templates put the DHS Equity Policy, the DHS Equity Analysis Toolkit and the State of Minnesota Equity Analysis Toolkit into practice. They do not replace them. Adapt each one with the people responsible for the work it covers.</p>
-        <p className="notice">These templates run only in your browser. Nothing you type is saved, stored or sent anywhere, and it is gone when you leave the page. {TEMPLATE_KEEP_OUT}</p>
+        <p className="notice">These templates run in your browser. The app does not autosave or submit your entries. Copy, download or print if you need a record before leaving this page. {TEMPLATE_KEEP_OUT}</p>
         <h3 className="mt-6 text-xl font-bold">The 14 templates</h3>
         <ol className={styles.templateIndex}>{DIRECTOR_TEMPLATES.map(template => <li key={template.id}><SourceLink href={`#${templateAnchor(template.id)}`}>{template.title}</SourceLink></li>)}</ol>
       </section>
