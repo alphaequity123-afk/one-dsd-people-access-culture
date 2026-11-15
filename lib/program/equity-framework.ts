@@ -51,9 +51,9 @@ export const EQUITY_FRAMEWORK = {
   title: "Equity Strategic Framework",
   kicker: "People, Access and Culture · Adapted planning companion",
   lede:
-    "An adapted planning framework for connecting six practice pillars, an improvement cycle, measures and practical resources. The program constitution is the operational spine and governing source; these pillars support its application and do not replace its duties, roles or requirements.",
+    "This adapted planning framework connects six practice pillars, an improvement cycle, measures and practical resources. Use it alongside the proposed program charter. Neither document replaces applicable law, official DHS policy or the authority of the people responsible for a decision.",
   summary:
-    "The Equity Strategic Framework makes equity, access and belonging a sustained part of leadership practice, workforce systems, service delivery, community relationships and decision-making. It moves the organization from isolated activities toward coordinated, measurable and accountable equity work.¹ Use its pillars and improvement cycle as optional planning aids under the program constitution. Confirm applicable policy, source authority and responsible decisions for the work; a suggested pillar or measure does not establish a requirement.",
+    "The Equity Strategic Framework is intended to connect leadership, workforce practices, service delivery, community relationships and decisions with sustained equity work.¹ Its pillars and improvement cycle are optional planning aids. Confirm applicable policy, source authority and responsibility for each decision. A suggested activity or measure does not create a new agency requirement or demonstrate that an outcome has improved.",
   howToRead: [
     "There are no years, phases by date or fixed cadences on this page. Stages are entered when readiness conditions are met, and review points are agreed with the people involved.",
     "Measures describe program practice and organizational patterns. Nothing on this page measures an individual employee, and the program holds no personnel records.",
@@ -107,7 +107,7 @@ export const EQUITY_FRAMEWORK = {
       question: "What was delivered, what was applied, and what changed?",
       programStep: "Apply it in the work through the responsible person.",
       oneDhs: [
-        { label: "Equity Policy dashboard", href: "/equity-policy" },
+        { label: "DHS Equity Policy", href: "/equity-policy" },
         { label: "Plan how to learn from results", href: "/practice/measurement" },
       ],
       oneDsd: [
@@ -174,7 +174,7 @@ export const EQUITY_FRAMEWORK = {
       initiatives: [
         "Establish or strengthen an Equity Committee, a steering group and unit-level equity teams.",
         "Create an Equity Activity Inventory to document ongoing equity work, prevent duplication, identify gaps and coordinate across departments.",
-        "Require an equity impact review for significant policies, programs, contracts, budget decisions and organizational changes.",
+        "Use current DHS Equity Policy and the official Toolkit to determine the review required for policies, programs, contracts, budgets and organizational changes.",
         "Include equity goals and expectations in executive and manager performance plans, where the responsible offices adopt them.",
         "Maintain a leadership view of progress, barriers, risks and decisions requiring executive action.",
         "Keep a governance calendar for planning, reporting, review and accountability, with dates set by the people involved.",
@@ -212,7 +212,7 @@ export const EQUITY_FRAMEWORK = {
         "Audit job descriptions for unnecessary degree requirements, inaccessible language, biased criteria and barriers to nontraditional candidates.",
         "Make job postings, application systems, interviews and onboarding materials accessible.",
         "Prepare hiring managers and interview panels in structured interviewing, bias mitigation, disability inclusion and equitable selection.",
-        "Use trained interview panels that rotate members, ask the same job-related questions and score against the same written criteria.",
+        "Use trained interview panels, consistent job-related core questions and written scoring criteria, with needed accommodations. Arrange panel participation with the hiring authority.",
         "Develop transparent advancement pathways and competency-based career ladders.",
         "Offer mentorship and sponsorship open to every employee, and check that people who have been left out of informal networks hear about it and can take part.",
         "Strengthen employee resource groups and other engagement structures, keeping membership open to every employee.",
@@ -268,7 +268,7 @@ export const EQUITY_FRAMEWORK = {
       oneDhs: [
         { label: "Intercultural learning pathway", href: "/learn/intercultural" },
         { label: "Courses", href: "/courses" },
-        { label: "Culture survey results on the Equity Policy dashboard", href: "/equity-policy" },
+        { label: "DHS Equity Policy and learning resources", href: "/equity-policy" },
       ],
       oneDsd: [
         { label: "Amplify Equity gatherings", href: "/one-dsd/amplify/gatherings" },
@@ -331,7 +331,7 @@ export const EQUITY_FRAMEWORK = {
         "Establish a Community Advisory Board or strengthen existing advisory structures, with open recruitment and outreach wide enough that people across the communities served, including people with disabilities and people who use other languages, hear about it and can take part.",
         "Adopt a community-engagement standard that defines when, how and why community input is required.",
         "Create a stipend and compensation process for community members and presenters.",
-        "Formalize Tribal consultation processes and make sure staff complete appropriate consultation training.",
+        "Follow established government-to-government consultation procedures with the authorized Tribal relations office, and confirm the appropriate training for staff.",
         "Fund translation and interpretation in engagement planning.",
         "Close the feedback loop: what was heard, what was decided, what changed and why.",
       ],
@@ -368,7 +368,7 @@ export const EQUITY_FRAMEWORK = {
         "Prepare progress reports for leadership, staff and governance bodies at agreed review points.",
         "Publish a public accountability report summarizing accomplishments, gaps, disparity trends, lessons learned and next priorities.",
         "Review the plan at agreed points and update priorities from data, community feedback, organizational conditions and emerging needs.",
-        "Require corrective-action plans when targets are not met or disparities worsen.",
+        "Review missed targets or worsening disparities with the responsible offices, examine the evidence and agree on any corrective action required.",
         "Integrate equity results into organizational planning, where the responsible offices adopt them.",
         "Maintain a data-governance approach that protects privacy while enabling meaningful disaggregation.",
       ],
@@ -382,7 +382,7 @@ export const EQUITY_FRAMEWORK = {
       programFunctions: ["evaluation", "resources", "program_coordination"],
       workAreas: [{ label: "Data, research, quality, and measurement", href: "/areas/work/data_research_quality_measurement" }],
       oneDhs: [
-        { label: "Equity Policy dashboard", href: "/equity-policy" },
+        { label: "DHS Equity Policy", href: "/equity-policy" },
         { label: "Register, follow-ups and change history", href: "/equity-policy/register" },
         { label: "Plan how to learn from results", href: "/practice/measurement" },
       ],
@@ -451,17 +451,17 @@ export const EQUITY_FRAMEWORK = {
   ],
 
   coreTools: [
-    { name: "Strategic plan scorecard", users: "Executive sponsors, Equity Committee, division leaders", does: "Tracks goals, initiatives, milestones, owners, risks, measures and progress across all six pillars.", format: "Shared list or spreadsheet with workflow fields", status: "partly_in_program", where: [{ label: "Equity Policy dashboard", href: "/equity-policy" }], note: "Tool-use and survey measures are counted; a full six-pillar scorecard is not yet built." },
+    { name: "Strategic plan scorecard", users: "Executive sponsors, Equity Committee, division leaders", does: "Tracks goals, initiatives, milestones, owners, risks, measures and progress across all six pillars.", format: "Shared list or spreadsheet with workflow fields", status: "partly_in_program", where: [{ label: "DHS Equity Policy", href: "/equity-policy" }], note: "The policy page explains requirements and links to learning resources. It does not display survey results or provide a complete six-pillar scorecard." },
     { name: "Equity Activity Inventory", users: "Equity lead, unit equity teams, Equity Committee", does: "One authoritative list of equity work; reduces duplication, identifies gaps and supports coordination.", format: "Shared database or spreadsheet", status: "partly_in_program", where: [{ label: "Register of analyses", href: "/equity-policy/register" }, { label: "One DSD Team work", href: "/one-dsd/team/workspace" }], note: "Analyses and Team work are recorded; an inventory across all initiatives is not yet built." },
     { name: "Equity Analysis Toolkit", users: "Leaders, policy staff, program managers, procurement staff", does: "Assesses possible disparate impacts and accessibility barriers before major decisions are final.", format: "Guided form with a saved record", status: "in_program", where: [{ label: "Guided walkthrough", href: "/equity-policy/analysis" }, { label: "Toolkit companion", href: "/learn/equity-toolkit" }], note: "Full analysis and equity scan, with teaching notes, a record and follow-ups." },
-    { name: "Initiative implementation checklist", users: "Project leads, managers, consultants", does: "Converts equity commitments into concrete planning and implementation requirements.", format: "One-page checklist in the project charter or intake", status: "partly_in_program", where: [{ label: "Practice", href: "/practice" }], note: "Practice offers work-specific checklists; a single intake checklist is not yet built." },
+    { name: "Initiative implementation checklist", users: "Project leads, managers, consultants", does: "Helps teams turn commitments into planning and implementation steps. Applicable requirements still come from authorized sources.", format: "One-page checklist in the project charter or intake", status: "partly_in_program", where: [{ label: "Practice", href: "/practice" }], note: "Practice offers work-specific checklists; a single intake checklist is not yet built." },
     { name: "Accessibility review checklist", users: "Communications, technology, training and program teams", does: "Reviews documents, websites, meetings, digital tools, forms and service processes for barriers.", format: "Checklist, audit log and remediation tracker", status: "partly_in_program", where: [{ label: "Accessibility and language access", href: "/areas/work/accessibility_language_access" }, { label: "Library", href: "/library" }], note: "Guidance and tool cards exist; a remediation tracker is not yet built." },
-    { name: "Inclusive hiring toolkit", users: "Human resources, hiring managers, interview panels", does: "Reduces barriers in job descriptions, recruitment, interviews, selection, onboarding and advancement.", format: "Hiring-manager guide, structured interview templates, job-description checklist", status: "partly_in_program", where: [{ label: "Workforce equity", href: "/areas/work/workforce_equity" }], note: "Area guidance exists; templates are not yet assembled as a kit." },
-    { name: "Community engagement toolkit", users: "Program teams, community liaisons, leaders", does: "Standardizes reciprocal, accessible, culturally responsive and compensated engagement.", format: "Planning template, stipend process, advisory-board guide, feedback-loop template", status: "partly_in_program", where: [{ label: "Minnesota Communities", href: "/minnesota-communities" }, { label: "Community engagement and shared design", href: "/areas/work/community_engagement_co_design" }], note: "Community briefs and questions exist; stipend and advisory-board templates are not yet built." },
+    { name: "Inclusive hiring toolkit", users: "Human resources, hiring managers, interview panels", does: "Reduces barriers in job descriptions, recruitment, interviews, selection, onboarding and advancement.", format: "Hiring-manager guide, structured interview templates, job-description checklist", status: "partly_in_program", where: [{ label: "Workforce equity", href: "/areas/work/workforce_equity" }], note: "Workforce guidance and director toolkit templates are available. Confirm their suitability with HR; they are not an approved replacement for agency hiring procedures." },
+    { name: "Community engagement toolkit", users: "Program teams, community liaisons, leaders", does: "Supports reciprocal, accessible and culturally responsive engagement. Confirm authority and procedures for compensation before making a commitment.", format: "Planning template, stipend process, advisory-board guide, feedback-loop template", status: "partly_in_program", where: [{ label: "Minnesota Communities", href: "/minnesota-communities" }, { label: "Community engagement and shared design", href: "/areas/work/community_engagement_co_design" }], note: "Community briefs and questions exist; stipend and advisory-board templates are not yet built." },
     { name: "Workforce culture survey", users: "Human resources, equity team, leadership", does: "Measures belonging, psychological safety, fairness, trust, accessibility, inclusion and voice.", format: "Confidential survey with disaggregation safeguards", status: "not_yet", where: [{ label: "Plan a review of results", href: "/practice/measurement" }], note: "Review combined survey findings with the appropriate human resources or equity team. This application does not collect survey responses or display survey results." },
     { name: "Learning pathway", users: "All staff, managers, leaders, facilitators", does: "Role-based foundational, applied and advanced learning that builds usable skills.", format: "Courses, facilitator guides, job aids, scenario modules", status: "in_program", where: [{ label: "Learning and resources", href: "/learn" }, { label: "Intercultural pathway", href: "/learn/intercultural" }, { label: "Courses", href: "/courses" }], note: "" },
-    { name: "Equity dashboard", users: "Leaders, Equity Committee, program managers", does: "Displays workforce, culture, accessibility, service and community data to identify patterns and disparities.", format: "Secure internal reporting page", status: "partly_in_program", where: [{ label: "Equity Policy dashboard", href: "/equity-policy" }], note: "Tool use and culture survey pages exist; workforce, service and community pages depend on data the program does not hold." },
-    { name: "Progress report", users: "Executive sponsors, staff, community partners", does: "Communicates what is complete, what is delayed, what outcomes are emerging and what comes next.", format: "Standard report template and dashboard summary", status: "not_yet", where: [], note: "The register download supplies the analysis section; a report template is not yet built." },
+    { name: "Equity dashboard", users: "Leaders, Equity Committee, program managers", does: "Displays workforce, culture, accessibility, service and community data to identify patterns and disparities.", format: "Secure internal reporting page", status: "partly_in_program", where: [{ label: "DHS Equity Policy", href: "/equity-policy" }], note: "The linked policy page provides guidance, not a dashboard of survey, workforce or service results. Proposed reporting views require approved data and responsible review." },
+    { name: "Progress report", users: "Executive sponsors, staff, community partners", does: "Communicates what is complete, what is delayed, what outcomes are emerging and what comes next.", format: "Standard report template and dashboard summary", status: "not_yet", where: [], note: "Division planning and reporting resources are available. They do not establish a complete or approved organization-wide six-pillar report." },
     { name: "Public accountability report", users: "Leadership, employees, communities, governing bodies", does: "Transparent reporting on accomplishments, gaps, trends, outcomes, lessons and next priorities.", format: "Accessible document, web page, plain-language summary, community presentation", status: "not_yet", where: [], note: "" },
   ] satisfies CoreTool[],
 
@@ -522,10 +522,10 @@ export const EQUITY_FRAMEWORK = {
     "Who is responsible for monitoring results and taking corrective action?",
   ],
   decisionCategories: [
-    ["Routine operational decision", "Short equity and accessibility screening checklist."],
-    ["New program, policy, contract or communication campaign", "Standard equity analysis and accessibility review. In this program, the equity scan."],
-    ["High-impact decision involving service access, eligibility, funding, technology, staffing or enforcement", "Full equity analysis, community engagement plan, leadership review and post-implementation monitoring. In this program, the full analysis."],
-    ["Urgent decision", "Expedited screening, documented rationale and a required retrospective review at an agreed point."],
+    ["Routine operational decision", "Use applicable policy and the official Toolkit to determine the review needed; a routine label alone does not establish that screening is sufficient."],
+    ["New program, policy, contract or communication campaign", "Confirm the required analysis or scan using current DHS Equity Policy, the official Toolkit and its User Guide. Include relevant accessibility review."],
+    ["High-impact decision involving service access, eligibility, funding, technology, staffing or enforcement", "Confirm the required analysis and authorized review. Plan relevant community engagement, accessibility work and monitoring with the responsible offices."],
+    ["Urgent decision", "Urgency does not by itself reduce required review. Confirm the applicable process with the responsible authority, document the decision and agree on any follow-up."],
   ],
 
   accessibilityDomains: [
@@ -574,17 +574,17 @@ export const EQUITY_FRAMEWORK = {
     ["Application", "Did participants use the learning in their work by the agreed follow-up point?"],
     ["Organizational impact", "Did the learning contribute to better decisions, experiences, access or outcomes?"],
   ],
-  applicationQuestions: ["What is one practice you will change next?", "What organizational barrier could prevent you from applying this learning?", "What support do you need from your supervisor or team?", "How will you know whether your changed practice improved inclusion, access or equity?", "What should be added to the learning based on real workplace conditions?"],
+  applicationQuestions: ["What practice will you examine, and what would justify retaining or changing it?", "What organizational barrier could prevent you from applying this learning?", "What support do you need from your supervisor or team?", "What evidence would help you judge whether the approach improves inclusion, access or equity?", "What should be added to the learning based on real workplace conditions?"],
 
   surveyDomains: ["Belonging and inclusion", "Psychological safety", "Trust in leadership", "Fairness in workload, recognition, advancement and performance management", "Ability to raise concerns without retaliation", "Experiences of bias, microaggressions, harassment, exclusion or discrimination", "Accessibility of systems, technology, communications, meetings and accommodations", "Inclusive leadership practice", "Learning and development access", "Employee voice and influence", "Intent to stay and reasons for considering departure"],
   surveyItems: ["I feel respected by colleagues and leaders in my work environment.", "I can raise concerns about bias, exclusion or accessibility without fear of negative consequences.", "My supervisor demonstrates inclusive and equitable leadership practices.", "I have equitable access to career development and advancement opportunities.", "The organization provides the accommodations, accessibility and flexibility I need to do my job effectively.", "Leaders communicate clearly about how employee feedback leads to action.", "I believe the organization is making meaningful progress on its equity commitments."],
-  surveyRule: "A culture survey is confidential, repeated at points the organization sets and paired with visible action. Do not survey employees without a plan to share results, explain limits, prioritize action and report progress. Results are reported for the department as a whole, never as a finding about a unit or a person.",
+  surveyRule: "Before a culture survey, explain who can access responses, how small groups will be protected and how results will be used. Agree on when to repeat it and how staff will hear the findings and proposed actions. Use aggregate reporting with the responsible HR or data team; do not infer an individual employee's experience from a group result.",
 
   measurementDomains: [
     ["Leadership and governance", "Equity analyses completed; equity goals in leader plans; committee participation", "Timely resolution of barriers; sustained cross-unit implementation"],
     ["Workforce equity", "Inclusive job descriptions reviewed; hiring-manager preparation completed", "Representation, hiring, promotion, retention and leadership trends"],
     ["Workplace culture", "Learning completion; manager action plans; resource-group participation", "Belonging, psychological safety, fairness, trust and retention"],
-    ["Accessibility", "Audits completed; barriers logged; materials remediated", "Fewer accessibility complaints; better experience; timely accommodations"],
+    ["Accessibility", "Audits completed; barriers logged; materials remediated", "Accessible service experience and timely accommodations, with complaint patterns interpreted alongside other evidence rather than treating fewer complaints as proof of improvement."],
     ["Service delivery", "Programs reviewed; translation and interpretation use", "Improved access, timeliness, satisfaction, quality and reduced disparities"],
     ["Community partnership", "Engagement events; paying community members; advisory participation", "Community trust, perception of influence and recommendations adopted"],
     ["Accountability", "Progress reports submitted; corrective actions completed", "Progress toward targets and reduction of priority gaps"],
@@ -603,7 +603,7 @@ export const EQUITY_FRAMEWORK = {
   publicReport: ["Message from executive leadership and the Equity Committee", "Vision, commitments and strategic framework", "Accomplishments by pillar", "Workforce, culture, accessibility, service and community data", "Progress on priority disparity-reduction goals", "Community and employee perspectives", "Accessibility improvements and remaining barriers", "Major policy, practice or system changes", "Corrective actions and lessons learned", "Priorities and targets for the next period", "How employees and community members can continue to participate"],
 
   digitalTools: [
-    ["Intake form and workflow", "Routes new initiatives through activity registration, equity review, accessibility review and approval.", "The equity lead reviews completeness and sets the level of analysis."],
+    ["Intake form and workflow", "Routes new initiatives through activity registration, equity review, accessibility review and approval.", "The responsible offices confirm the required review under current policy and the official Toolkit; an equity lead can advise on its scope."],
     ["Job-description review aid", "Flags unnecessary degree requirements, exclusionary language, unclear essential functions and accessibility issues.", "Human resources and the hiring manager make final edits and confirm job relevance."],
     ["Contract and procurement checklist", "Prompts staff to assess vendor range, accessibility, language access, community impact and equity requirements.", "Procurement and legal staff verify requirements and contract language."],
     ["Plain-language aid", "Helps draft clearer public-facing materials.", "Communications and accessibility staff confirm readability, accuracy, tone and accessibility."],
@@ -638,7 +638,7 @@ export const EQUITY_FRAMEWORK = {
     { name: "Measurement framework and baseline dashboard", status: "partly_in_program" as ToolStatus, href: "/practice/measurement" },
     { name: "Progress report template", status: "not_yet" as ToolStatus, href: "" },
   ],
-  designPrinciple: "Every tool has a clear owner, a required point of use in an existing workflow, a manageable completion time, accessibility review, version control and a feedback mechanism. A template that is not embedded in a real decision, hiring, planning, procurement, service or reporting process rarely creates durable change.",
+  designPrinciple: "For each tool, identify its owner, where it helps an existing workflow, the time it takes, its accessibility review, version and route for feedback. Explain how people can use it in a real decision or task. Only an authorized requirement can make its use mandatory.",
 
   /** Chicago-style notes. Superscript numerals in the page text refer to these. */
   notes: [

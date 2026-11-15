@@ -1,0 +1,1624 @@
+{
+  "status": "root_review_accepted",
+  "records": [
+    {
+      "id": "lib--program--constitution.ts--foundationStatusLabels-0",
+      "file": "lib/program/constitution.ts",
+      "source": "\"available-with-limits\": \"Resources available; further work remains\"",
+      "sourceSha256": "a80808749b031cfef1c250b7d6362d1dba82d18aaa92b9a5953a8be361698e8a",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationStatusLabels-2",
+      "file": "lib/program/constitution.ts",
+      "source": "deferred: \"Excluded from current delivery\"",
+      "sourceSha256": "83efce2a64c7f85a3b92739f3df8315894cca0da74a1f85a2c5ccfdc3be6e98c",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-0",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"1.1\",\r\n    \"article\": 1,\r\n    \"title\": \"Mission\",\r\n    \"summary\": \"Help staff across DHS embed equity in their work and workplace by connecting learning, community knowledge, evidence, practical recommendations, authorized decisions and results. Administration and division resources connect this shared purpose to their own responsibilities and context.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Explore work areas\",\r\n        \"href\": \"/areas\"\r\n      }\r\n    ],\r\n    \"gap\": \"Learning and practice resources exist; a connected priorities-to-results record requires further work and agreed measures.\"\r\n  }",
+      "sourceSha256": "f54ecfeb3e02c181bf257d83c39e084ae4babb87a403d4aa001b06d6a64cb542",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-1",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"1.2\",\r\n    \"article\": 1,\r\n    \"title\": \"Definition of operationalizing equity\",\r\n    \"summary\": \"Consider equity in how work is designed, decided, resourced, implemented, evaluated and revised.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Explore work areas\",\r\n        \"href\": \"/areas\"\r\n      }\r\n    ],\r\n    \"gap\": \"Learning and practice resources exist; a connected priorities-to-results record requires further work and agreed measures.\"\r\n  }",
+      "sourceSha256": "6195abd028537c8905c0414ae28126b6f289d7c6edf571db418e8a8d63b19490",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-2",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"1.3\",\r\n    \"article\": 1,\r\n    \"title\": \"Measures of application success\",\r\n    \"summary\": \"Examine changes in barriers, access, participation and experience alongside evidence of follow-through.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Explore work areas\",\r\n        \"href\": \"/areas\"\r\n      }\r\n    ],\r\n    \"gap\": \"Learning and practice resources exist; a connected priorities-to-results record requires further work and agreed measures.\"\r\n  }",
+      "sourceSha256": "d48123ebeb42b7fee732d4bd0b4dd4c9f0aead9b6a28e2037834d525bc56f789",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-3",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"2.1\",\r\n    \"article\": 2,\r\n    \"title\": \"Governing hierarchy\",\r\n    \"summary\": \"Follow applicable law and binding agency requirements before program guidance or learning examples.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Equity Toolkit companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Current policy applicability and actual decision routes must be confirmed before official use.\"\r\n  }",
+      "sourceSha256": "e5ae750e9f33c31ab76f28545aefeab1c294f94c8df23e8a7658c6b991518bce",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-4",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"2.2\",\r\n    \"article\": 2,\r\n    \"title\": \"Required alignment\",\r\n    \"summary\": \"Confirm connections to applicable DHS priorities, DHS Equity Policy, the Toolkit and relevant agency standards, including current DSD priorities when the work concerns that division.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Equity Toolkit companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Current policy applicability and actual decision routes must be confirmed before official use.\"\r\n  }",
+      "sourceSha256": "e4830ac51059cfa7f46750c8bb1ce644b9439ae70cdafcf30430eb9299e4782f",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-5",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"2.3\",\r\n    \"article\": 2,\r\n    \"title\": \"Human decision authority\",\r\n    \"summary\": \"Keep official decisions with the people and offices holding the relevant authority.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Equity Toolkit companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Current policy applicability and actual decision routes must be confirmed before official use.\"\r\n  }",
+      "sourceSha256": "2b02ebb579dbbb75a42d1c8017cd02f645eafd2a2a45531380b14c41f2c7bc00",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-6",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"2.4\",\r\n    \"article\": 2,\r\n    \"title\": \"Explicit non-substitution rule\",\r\n    \"summary\": \"Distinguish a practice draft from an approved policy, completed official review or demonstrated result.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Equity Toolkit companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Current policy applicability and actual decision routes must be confirmed before official use.\"\r\n  }",
+      "sourceSha256": "1588fcc56dd59022b84192e86ce745ac037904d51e03f2332397fb7392a94db3",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-7",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.1\",\r\n    \"article\": 3,\r\n    \"title\": \"Equity is integral to ordinary work\",\r\n    \"summary\": \"Consider equity while decisions remain open and proposals can still change.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "5acc07bbc3ef4ebb7542012c05edda08c8799184f478173fa080968f79884f90",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-8",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.2\",\r\n    \"article\": 3,\r\n    \"title\": \"Examine systems before assigning individual blame\",\r\n    \"summary\": \"Examine rules, resources, incentives and decision rights before interpreting a problem as an individual deficit.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "17828f49ab30907b01d165aad767d4682e478549189cf2492880d322a12fc6ab",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-9",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.3\",\r\n    \"article\": 3,\r\n    \"title\": \"Affected people contribute knowledge and influence\",\r\n    \"summary\": \"Identify missing perspectives, the influence participants can have and what changed after engagement.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "e14946948fa2e011a5d19d71b141406a6b858b3e9a68c7d238a543d48407bf42",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-10",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.4\",\r\n    \"article\": 3,\r\n    \"title\": \"Accessibility and language access are design conditions\",\r\n    \"summary\": \"Make resources available without learning prerequisites, disability disclosure or inaccessible steps.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "16be49994827e5b774cfd047deb92b91643dc55af4ffe1d4970cea6d2ba4645f",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-11",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.5\",\r\n    \"article\": 3,\r\n    \"title\": \"Evidence and uncertainty remain visible\",\r\n    \"summary\": \"Distinguish verified facts, user information, interpretation, recommendations, practice examples and unanswered questions.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "1498ba788eb3bc8d8f555d67652685a0bdb6574dc235ab8fbdd15d48632d7010",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-12",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.6\",\r\n    \"article\": 3,\r\n    \"title\": \"Responsibility is distributed\",\r\n    \"summary\": \"Support substantive consultant leadership while retaining managers’ and work owners’ implementation responsibilities.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "bea3c2bf60def4e9a26da2073d44e0bf7879272026a503d491aea68e82b73b15",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-13",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.7\",\r\n    \"article\": 3,\r\n    \"title\": \"Learning must support application\",\r\n    \"summary\": \"Help learning lead to a decision, revised work, improved process or consequential conversation.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "31b9b3bc8bf20648417dfb1bfb6010f778da7529059d9d8c1608b051f5d693dd",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-14",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"3.8\",\r\n    \"article\": 3,\r\n    \"title\": \"Participation shall not become surveillance\",\r\n    \"summary\": \"Keep private reflection and voluntary learning separate from undisclosed employee scoring or monitoring.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Intercultural learning\",\r\n        \"href\": \"/learn/intercultural\"\r\n      }\r\n    ],\r\n    \"gap\": \"Principles appear in existing resources; complete content, accessibility and information-use review is still needed.\"\r\n  }",
+      "sourceSha256": "aacab14c1a4ab22a4e7e13f5fec0d7be2453def8de69ff69428d7958e8037500",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-15",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"4.1\",\r\n    \"article\": 4,\r\n    \"title\": \"Primary-duty priority\",\r\n    \"summary\": \"Prioritize policy and operational analysis, implementation, accountability, measurement and staff capacity.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"DSD example: One DSD Team choices\",\r\n        \"href\": \"/one-dsd/team/resource-selections\"\r\n      },\r\n      {\r\n        \"label\": \"Connect analysis, action and results\",\r\n        \"href\": \"/program/model\"\r\n      },\r\n      {\r\n        \"label\": \"Requirements and review evidence\",\r\n        \"href\": \"/practice/requirements\"\r\n      },\r\n      {\r\n        \"label\": \"Measurement and evaluation\",\r\n        \"href\": \"/practice/measurement\"\r\n      }\r\n    ],\r\n    \"gap\": \"Resources support these responsibilities; full operational capability and ownership are not established by a course or worksheet.\"\r\n  }",
+      "sourceSha256": "7f505903356605c4f13eea0b009d0746721d541ac9494ddbd2c977ea57aadb82",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-16",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"4.2\",\r\n    \"article\": 4,\r\n    \"title\": \"Research-to-practice responsibility\",\r\n    \"summary\": \"Review new research for evidence strength, DSD relevance, changed guidance and maintenance responsibility.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"DSD example: One DSD Team choices\",\r\n        \"href\": \"/one-dsd/team/resource-selections\"\r\n      },\r\n      {\r\n        \"label\": \"Connect analysis, action and results\",\r\n        \"href\": \"/program/model\"\r\n      },\r\n      {\r\n        \"label\": \"Requirements and review evidence\",\r\n        \"href\": \"/practice/requirements\"\r\n      },\r\n      {\r\n        \"label\": \"Measurement and evaluation\",\r\n        \"href\": \"/practice/measurement\"\r\n      }\r\n    ],\r\n    \"gap\": \"Resources support these responsibilities; full operational capability and ownership are not established by a course or worksheet.\"\r\n  }",
+      "sourceSha256": "acf9772faf76951885f79d62bdd8f631b712892c94c27aff0ef50aa1a5ddba80",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-17",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"5.1\",\r\n    \"article\": 5,\r\n    \"title\": \"Common lifecycle\",\r\n    \"summary\": \"Connect a work question to evidence, analysis, options, review, action and learning from results.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Guided practice\",\r\n        \"href\": \"/paths\"\r\n      }\r\n    ],\r\n    \"gap\": \"Practice paths prepare drafts; continuity, shared operational records and authorized follow-through need verification.\"\r\n  }",
+      "sourceSha256": "fcda7f2c441c44f7cc813473a3747a4981c50364aeed6d6972b1e0e262a9bdc9",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-18",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"5.2\",\r\n    \"article\": 5,\r\n    \"title\": \"Proportionate depth\",\r\n    \"summary\": \"Match the depth of review to the significance, uncertainty and potential effects of the decision.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Guided practice\",\r\n        \"href\": \"/paths\"\r\n      }\r\n    ],\r\n    \"gap\": \"Practice paths prepare drafts; continuity, shared operational records and authorized follow-through need verification.\"\r\n  }",
+      "sourceSha256": "99ccbeb1600d2e37998727ba877345b2ce68e4ffff6b0bbf37b80b1fa01637ad",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-19",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"5.3\",\r\n    \"article\": 5,\r\n    \"title\": \"Minimum work record\",\r\n    \"summary\": \"Record enough context to understand the issue, evidence, decision, responsibility and next step.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Guided practice\",\r\n        \"href\": \"/paths\"\r\n      }\r\n    ],\r\n    \"gap\": \"Practice paths prepare drafts; continuity, shared operational records and authorized follow-through need verification.\"\r\n  }",
+      "sourceSha256": "d5b94c3f15f3042310942c4fe5a210f91559d37fe799342e663c12b09b6c55ec",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-20",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"5.4\",\r\n    \"article\": 5,\r\n    \"title\": \"Status integrity\",\r\n    \"summary\": \"Describe accurately whether work is a draft, reviewed, decided, implemented or awaiting action.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Guided practice\",\r\n        \"href\": \"/paths\"\r\n      }\r\n    ],\r\n    \"gap\": \"Practice paths prepare drafts; continuity, shared operational records and authorized follow-through need verification.\"\r\n  }",
+      "sourceSha256": "3485ed394a9d5a18f71c4be0838fb07aca484d2a161d04677f5e0e782f9ce0fb",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-21",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"6.1\",\r\n    \"article\": 6,\r\n    \"title\": \"Consultation intake\",\r\n    \"summary\": \"Consultation intake is described in the proposed charter but excluded from the current application.\",\r\n    \"state\": \"deferred\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published answers\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"No consultation intake, triage, booking or response promises are being introduced. Existing specialist routes remain distinct.\"\r\n  }",
+      "sourceSha256": "8bc78229106e5ebd20dfeb7f5812fd70bd44aef8b2e7820109db17436e9eef93",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-22",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"6.2\",\r\n    \"article\": 6,\r\n    \"title\": \"Triage factors\",\r\n    \"summary\": \"Request triage is excluded while consultation intake remains deferred.\",\r\n    \"state\": \"deferred\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published answers\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"No consultation intake, triage, booking or response promises are being introduced. Existing specialist routes remain distinct.\"\r\n  }",
+      "sourceSha256": "b6de5b5d8823e40d397fee9d736a31bea35a45f3b30e42562597b0f48f93687d",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-23",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"6.3\",\r\n    \"article\": 6,\r\n    \"title\": \"Service commitments\",\r\n    \"summary\": \"Do not offer consultation response-time commitments that are not supported by confirmed arrangements.\",\r\n    \"state\": \"deferred\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published answers\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"No consultation intake, triage, booking or response promises are being introduced. Existing specialist routes remain distinct.\"\r\n  }",
+      "sourceSha256": "3144cfed4ec8629af839ee8cdc14e5050ade219c899f97dadbcb9a811b869a50",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-24",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"6.4\",\r\n    \"article\": 6,\r\n    \"title\": \"Escalation and scope boundaries\",\r\n    \"summary\": \"Preserve existing specialist and authorized decision routes without establishing a new consultation queue.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published answers\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"No consultation intake, triage, booking or response promises are being introduced. Existing specialist routes remain distinct.\"\r\n  }",
+      "sourceSha256": "fac97c919bec317615dbbc1014982d997b562d34f3f23d27e2b09bc6307440d1",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-25",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"6.5\",\r\n    \"article\": 6,\r\n    \"title\": \"Reusable knowledge\",\r\n    \"summary\": \"Share reviewed, de-identified knowledge from practice only when its use and publication are appropriate.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published answers\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"No consultation intake, triage, booking or response promises are being introduced. Existing specialist routes remain distinct.\"\r\n  }",
+      "sourceSha256": "2b4cad144cb9adea154ae8418db0457ec01ca41cfecca7cf4ce137830c08639d",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-26",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"7.1\",\r\n    \"article\": 7,\r\n    \"title\": \"Policy and procedure review\",\r\n    \"summary\": \"Examine policy and procedures through their language, effects, evidence and implementation requirements.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Policy review companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Review resources exist; source currency and authorized routing require confirmation for actual policy or contract work.\"\r\n  }",
+      "sourceSha256": "dc6f65562fdca2da9c064ecc6702269889618a0fa8ba1324fb92ff8965914f2b",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-27",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"7.2\",\r\n    \"article\": 7,\r\n    \"title\": \"Grants and contract lifecycle\",\r\n    \"summary\": \"Consider equity through requirements, selection, implementation, monitoring and corrective action in grants and contracts.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Policy review companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Review resources exist; source currency and authorized routing require confirmation for actual policy or contract work.\"\r\n  }",
+      "sourceSha256": "cfdcd948d0d58a61066ebc55dff235ab1cb6e0100ef7b60480df54fcd6318d5b",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-28",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"7.3\",\r\n    \"article\": 7,\r\n    \"title\": \"Common reporting elements\",\r\n    \"summary\": \"Prepare a report that makes findings, options, implications, limits and needed decisions understandable.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Policy review companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Review resources exist; source currency and authorized routing require confirmation for actual policy or contract work.\"\r\n  }",
+      "sourceSha256": "1602f76e020644fc52fc4387d88200b1d5e6430360ba404e7dd64ab102b9c0fa",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-29",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"7.4\",\r\n    \"article\": 7,\r\n    \"title\": \"CLAS integration\",\r\n    \"summary\": \"Consider relevant CLAS standards in service design, language access and culturally responsive practice.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Policy review companion\",\r\n        \"href\": \"/learn/equity-toolkit/policy-review\"\r\n      }\r\n    ],\r\n    \"gap\": \"Review resources exist; source currency and authorized routing require confirmation for actual policy or contract work.\"\r\n  }",
+      "sourceSha256": "59f9e3c0fd743ef80bc7206cdefa0fcf0e70802b1bd8342cba3afc93e77e3aac",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-30",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"8.1\",\r\n    \"article\": 8,\r\n    \"title\": \"Workforce lifecycle\",\r\n    \"summary\": \"Examine recruitment, onboarding, development, assignments, retention and succession as connected working conditions.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Workforce resources\",\r\n        \"href\": \"/areas/workforce\"\r\n      }\r\n    ],\r\n    \"gap\": \"Workforce and Team resources exist; personnel decisions and approved responsibilities remain outside practice activities.\"\r\n  }",
+      "sourceSha256": "8660f7b3498f9a47fd2d8cd4aa85e1bc283c7f1b3907106bb17c71c4d3119d97",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-31",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"8.2\",\r\n    \"article\": 8,\r\n    \"title\": \"Consistent onboarding\",\r\n    \"summary\": \"Make expectations, resources and opportunities understandable to new employees.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Workforce resources\",\r\n        \"href\": \"/areas/workforce\"\r\n      }\r\n    ],\r\n    \"gap\": \"Workforce and Team resources exist; personnel decisions and approved responsibilities remain outside practice activities.\"\r\n  }",
+      "sourceSha256": "581b1d0c09262df81057b5eb99e107f5c74138d6c65df613590e797af4c88c37",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-32",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"8.3\",\r\n    \"article\": 8,\r\n    \"title\": \"Culture-change work groups\",\r\n    \"summary\": \"Support shared culture-change discussion with meaningful decisions and follow-through.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Workforce resources\",\r\n        \"href\": \"/areas/workforce\"\r\n      }\r\n    ],\r\n    \"gap\": \"Workforce and Team resources exist; personnel decisions and approved responsibilities remain outside practice activities.\"\r\n  }",
+      "sourceSha256": "f69cbb9bdd0bfe9575b6322c80e07bb24d7191336f9d81616fca95c11b37045d",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-33",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"8.4\",\r\n    \"article\": 8,\r\n    \"title\": \"Feedback protections\",\r\n    \"summary\": \"Protect candid feedback and avoid unnecessary disclosure of personal or sensitive information.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Workforce resources\",\r\n        \"href\": \"/areas/workforce\"\r\n      }\r\n    ],\r\n    \"gap\": \"Workforce and Team resources exist; personnel decisions and approved responsibilities remain outside practice activities.\"\r\n  }",
+      "sourceSha256": "a0c6e8490012ec4bbe168e47bc2a4c142656863b7c093ecb93b5e74f0cf9b5c4",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-34",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"8.5\",\r\n    \"article\": 8,\r\n    \"title\": \"Recognition\",\r\n    \"summary\": \"Recognize useful contributions without making participation coercive or implying unsupported outcomes.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Workforce resources\",\r\n        \"href\": \"/areas/workforce\"\r\n      }\r\n    ],\r\n    \"gap\": \"Workforce and Team resources exist; personnel decisions and approved responsibilities remain outside practice activities.\"\r\n  }",
+      "sourceSha256": "a431f19f2d0adf17bc24f9c7e4b963c240a0ffd11aede2fea5ec09680a666e65",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-35",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"9.1\",\r\n    \"article\": 9,\r\n    \"title\": \"Measurement partnership\",\r\n    \"summary\": \"Work with appropriate DSD data partners to agree definitions, analysis and interpretation.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Measurement practice\",\r\n        \"href\": \"/practice/measurement\"\r\n      }\r\n    ],\r\n    \"gap\": \"A measurement worksheet supports preparation; approved definitions, data partnerships and actual result evidence need confirmation.\"\r\n  }",
+      "sourceSha256": "a7ca1951035910f3b577508c6b9dd81d27c630032248f2f154b65a047c343680",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-36",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"9.2\",\r\n    \"article\": 9,\r\n    \"title\": \"Indicator requirements\",\r\n    \"summary\": \"Define each measure, its source, baseline, limitations and responsible data arrangements.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Measurement practice\",\r\n        \"href\": \"/practice/measurement\"\r\n      }\r\n    ],\r\n    \"gap\": \"A measurement worksheet supports preparation; approved definitions, data partnerships and actual result evidence need confirmation.\"\r\n  }",
+      "sourceSha256": "ac77483648a0e7331eeda4a365c1b085260245455a2b996c51e25b08124e67cc",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-37",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"9.3\",\r\n    \"article\": 9,\r\n    \"title\": \"Balanced measurement\",\r\n    \"summary\": \"Look across implementation, access, participation and outcomes rather than relying on activity counts.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Measurement practice\",\r\n        \"href\": \"/practice/measurement\"\r\n      }\r\n    ],\r\n    \"gap\": \"A measurement worksheet supports preparation; approved definitions, data partnerships and actual result evidence need confirmation.\"\r\n  }",
+      "sourceSha256": "36d1f352959578e89eab847706e9ce5e947a6f6b8de8a77316cbc7c99609a3a0",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-38",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"9.4\",\r\n    \"article\": 9,\r\n    \"title\": \"Interpretation safeguards\",\r\n    \"summary\": \"Explain uncertainty and avoid conclusions that the available evidence cannot support.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Measurement practice\",\r\n        \"href\": \"/practice/measurement\"\r\n      }\r\n    ],\r\n    \"gap\": \"A measurement worksheet supports preparation; approved definitions, data partnerships and actual result evidence need confirmation.\"\r\n  }",
+      "sourceSha256": "3a4079bda8e7173616580f09dce24f222adc841b9ca0d6a05e0a18b98a88e837",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-39",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"9.5\",\r\n    \"article\": 9,\r\n    \"title\": \"Targets and corrective action\",\r\n    \"summary\": \"Agree meaningful targets and examine what corrective action is needed when progress falls short.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Measurement practice\",\r\n        \"href\": \"/practice/measurement\"\r\n      }\r\n    ],\r\n    \"gap\": \"A measurement worksheet supports preparation; approved definitions, data partnerships and actual result evidence need confirmation.\"\r\n  }",
+      "sourceSha256": "0bee634f9bf7fd108b7e9738b990f0f55bacf910fcd0a8d75028eda257c61916",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-40",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"10.1\",\r\n    \"article\": 10,\r\n    \"title\": \"Learning architecture\",\r\n    \"summary\": \"Offer direct entry through role, work area, task, goal, question and guided practice.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Course library\",\r\n        \"href\": \"/courses\"\r\n      },\r\n      {\r\n        \"label\": \"Self-directed courses\",\r\n        \"href\": \"/learn/self-directed\"\r\n      }\r\n    ],\r\n    \"gap\": \"The collection is extensive; course depth, learning-to-work transfer and review evidence are being assessed. The audio pilot remains limited to 72 self-directed courses.\"\r\n  }",
+      "sourceSha256": "768a5667a669e7d93b069caf5d352160e882b47b1c2b9b9527de447a1094611d",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-41",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"10.2\",\r\n    \"article\": 10,\r\n    \"title\": \"Applied learning outputs\",\r\n    \"summary\": \"Help learning produce an appropriate draft communication, analysis, plan or next action.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Course library\",\r\n        \"href\": \"/courses\"\r\n      },\r\n      {\r\n        \"label\": \"Self-directed courses\",\r\n        \"href\": \"/learn/self-directed\"\r\n      }\r\n    ],\r\n    \"gap\": \"The collection is extensive; course depth, learning-to-work transfer and review evidence are being assessed. The audio pilot remains limited to 72 self-directed courses.\"\r\n  }",
+      "sourceSha256": "18e663526917322e792c43540ce693229c9cc554b1f7120d74d7c5713356c7cc",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-42",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"10.3\",\r\n    \"article\": 10,\r\n    \"title\": \"Awareness and capacity assessment\",\r\n    \"summary\": \"Distinguish confidence from demonstrated understanding while keeping developmental learning separate from personnel evaluation.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Course library\",\r\n        \"href\": \"/courses\"\r\n      },\r\n      {\r\n        \"label\": \"Self-directed courses\",\r\n        \"href\": \"/learn/self-directed\"\r\n      }\r\n    ],\r\n    \"gap\": \"The collection is extensive; course depth, learning-to-work transfer and review evidence are being assessed. The audio pilot remains limited to 72 self-directed courses.\"\r\n  }",
+      "sourceSha256": "eab7ca578fd92c5a097ab82e3d6b94f9f06265f07ec222a92bfd636430981e94",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-43",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"10.4\",\r\n    \"article\": 10,\r\n    \"title\": \"External training\",\r\n    \"summary\": \"Scope external learning to a real need, accessible participation and useful application afterward.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Course library\",\r\n        \"href\": \"/courses\"\r\n      },\r\n      {\r\n        \"label\": \"Self-directed courses\",\r\n        \"href\": \"/learn/self-directed\"\r\n      }\r\n    ],\r\n    \"gap\": \"The collection is extensive; course depth, learning-to-work transfer and review evidence are being assessed. The audio pilot remains limited to 72 self-directed courses.\"\r\n  }",
+      "sourceSha256": "46346bda6f44d1e065a0fe8734b485f49b02ef0b7ecbfb1664af21929c59074d",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-44",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"11.1\",\r\n    \"article\": 11,\r\n    \"title\": \"Accessibility baseline\",\r\n    \"summary\": \"Treat accessibility as a condition of the experience and verify applicable agency requirements.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Accessibility resources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed.\"\r\n  }",
+      "sourceSha256": "a7b6d0c55a5c24241ef304f070a880de8fb36bf08b54d9890a556fb03f744dda",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-45",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"11.2\",\r\n    \"article\": 11,\r\n    \"title\": \"Required experience characteristics\",\r\n    \"summary\": \"Provide usable navigation, readable explanations and meaningful alternatives to audio and visual material.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Accessibility resources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed.\"\r\n  }",
+      "sourceSha256": "1a7da595a00171c68c2213e8990868ffa8160b85865f5e15f9b87bbe40baaa94",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-46",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"11.3\",\r\n    \"article\": 11,\r\n    \"title\": \"Translation and interpretation\",\r\n    \"summary\": \"Use appropriate translation and interpretation arrangements rather than assuming a translated document ensures understanding.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Accessibility resources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed.\"\r\n  }",
+      "sourceSha256": "d86b746bbdaaba866bb8f372187c1f3487f21f4bf4238847d62fe726d28fee02",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-47",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"11.4\",\r\n    \"article\": 11,\r\n    \"title\": \"Participatory validation\",\r\n    \"summary\": \"Include people with relevant access needs in validating the experience.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Accessibility resources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed.\"\r\n  }",
+      "sourceSha256": "8525120debbc74506d76aee885849275c777799e4922e503a73071a99bfdeb06",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-48",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"12.1\",\r\n    \"article\": 12,\r\n    \"title\": \"Separate information environments\",\r\n    \"summary\": \"Separate public learning, private reflection and authorized operational information.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Prepare a practice plan\",\r\n        \"href\": \"/my-work/plan\"\r\n      }\r\n    ],\r\n    \"gap\": \"Saving differs by tool. Local browser drafts are not shared records; approved retention and access arrangements require confirmation.\"\r\n  }",
+      "sourceSha256": "fd8b74552edae486745e5195f1088190525c3c7dfc27d55ae9dba7ed6418a739",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-49",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"12.2\",\r\n    \"article\": 12,\r\n    \"title\": \"Persistence must be explained accurately\",\r\n    \"summary\": \"Explain where a draft is saved, how to recover it and what may be lost.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Prepare a practice plan\",\r\n        \"href\": \"/my-work/plan\"\r\n      }\r\n    ],\r\n    \"gap\": \"Saving differs by tool. Local browser drafts are not shared records; approved retention and access arrangements require confirmation.\"\r\n  }",
+      "sourceSha256": "34285596230be3395a0f56db26aa112254f24facc435660331c7e6cf1c06cf04",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-50",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"12.3\",\r\n    \"article\": 12,\r\n    \"title\": \"Data minimization\",\r\n    \"summary\": \"Collect only information needed for the stated purpose; avoid case and personnel details in practice.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Prepare a practice plan\",\r\n        \"href\": \"/my-work/plan\"\r\n      }\r\n    ],\r\n    \"gap\": \"Saving differs by tool. Local browser drafts are not shared records; approved retention and access arrangements require confirmation.\"\r\n  }",
+      "sourceSha256": "9816d3ae3bec9a2a29d592d1f5395d96d4168e96496d64835a2b87ebd09a2f11",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-51",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"12.4\",\r\n    \"article\": 12,\r\n    \"title\": \"Protection of operational records\",\r\n    \"summary\": \"Protect operational records according to confirmed access, classification and retention arrangements.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Prepare a practice plan\",\r\n        \"href\": \"/my-work/plan\"\r\n      }\r\n    ],\r\n    \"gap\": \"Saving differs by tool. Local browser drafts are not shared records; approved retention and access arrangements require confirmation.\"\r\n  }",
+      "sourceSha256": "90d63f54ad9f93b00c67f8c41b8fc8543a9aa14733559170942a4a5636c00a13",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-52",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"12.5\",\r\n    \"article\": 12,\r\n    \"title\": \"Purpose limitation\",\r\n    \"summary\": \"Do not reuse information for an unrelated purpose without the appropriate authority and transparency.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Prepare a practice plan\",\r\n        \"href\": \"/my-work/plan\"\r\n      }\r\n    ],\r\n    \"gap\": \"Saving differs by tool. Local browser drafts are not shared records; approved retention and access arrangements require confirmation.\"\r\n  }",
+      "sourceSha256": "efb0d95c74a004247aaae6cf44839b6b045a438a0d4974c7f514648951bb6601",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-53",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"13.1\",\r\n    \"article\": 13,\r\n    \"title\": \"Permitted supporting functions\",\r\n    \"summary\": \"Use Ask to support research, drafting and analysis, within clear limits.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published guidance\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"Published answers are available now. Nothing on this page gives live advice, takes action outside the site, or makes an official decision.\"\r\n  }",
+      "sourceSha256": "9b25dd67331d841ecd56c79022d33ff1cd0ef6a64ad9c564c3d820da4420b584",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-54",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"13.2\",\r\n    \"article\": 13,\r\n    \"title\": \"Decisions Ask does not make\",\r\n    \"summary\": \"Ask never makes official eligibility, personnel, legal, procurement or other decisions that belong to the people responsible for them.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published guidance\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"Published answers are available now. Nothing on this page gives live advice, takes action outside the site, or makes an official decision.\"\r\n  }",
+      "sourceSha256": "d246916d1032569896caddaf1303977b7a88216698be6928e58ea0687a75ca3d",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-55",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"13.3\",\r\n    \"article\": 13,\r\n    \"title\": \"Sources stay visible\",\r\n    \"summary\": \"Keep sources in view, and keep the difference between evidence and Ask's interpretation clear.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published guidance\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"Published answers are available now. Nothing on this page gives live advice, takes action outside the site, or makes an official decision.\"\r\n  }",
+      "sourceSha256": "e3838c923732f88c6cf9d0878eb480227be4b72e540cb429b0467bc3880140f5",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-56",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"13.4\",\r\n    \"article\": 13,\r\n    \"title\": \"Review by a responsible person\",\r\n    \"summary\": \"Have a responsible person review Ask's suggestions before relying on them in official work.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published guidance\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"Published answers are available now. Nothing on this page gives live advice, takes action outside the site, or makes an official decision.\"\r\n  }",
+      "sourceSha256": "abf55b437f7d920b2597a9de3515c8e5a38d945f90e98bdac0b8e481100bcd5f",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-57",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"13.5\",\r\n    \"article\": 13,\r\n    \"title\": \"External actions\",\r\n    \"summary\": \"Require explicit authorization before sending, publishing or taking an external action.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published guidance\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"Published answers are available now. Nothing on this page gives live advice, takes action outside the site, or makes an official decision.\"\r\n  }",
+      "sourceSha256": "d3836934b41da728143fa57d1c0e5dc7cbea7486555e8ccba4af7bead6c66f17",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-58",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"13.6\",\r\n    \"article\": 13,\r\n    \"title\": \"Security boundary\",\r\n    \"summary\": \"Treat untrusted source material as information, not permission to change rules or expose data.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Published guidance\",\r\n        \"href\": \"/ask\"\r\n      }\r\n    ],\r\n    \"gap\": \"Published answers are available now. Nothing on this page gives live advice, takes action outside the site, or makes an official decision.\"\r\n  }",
+      "sourceSha256": "980dcf3b9ac1a78b1a8d6559f1522ea975805002620203e87af43dcc8a31a200",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-59",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"14.1\",\r\n    \"article\": 14,\r\n    \"title\": \"One connected system\",\r\n    \"summary\": \"Connect program sections around substantive DSD work and directly accessible resources.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Work areas\",\r\n        \"href\": \"/areas\"\r\n      },\r\n      {\r\n        \"label\": \"Guided practice\",\r\n        \"href\": \"/paths\"\r\n      }\r\n    ],\r\n    \"gap\": \"Sections and practical paths exist; useful work-product continuity is incomplete and should be tested through actual examples.\"\r\n  }",
+      "sourceSha256": "86b7830fe83bc36873090ad8f72d1097096a62ca07e80dcb0a90d8b3959b3183",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-60",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"14.2\",\r\n    \"article\": 14,\r\n    \"title\": \"Continuity without duplication\",\r\n    \"summary\": \"Carry appropriate context forward through an explicit choice while preserving edits, provenance and privacy.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Work areas\",\r\n        \"href\": \"/areas\"\r\n      },\r\n      {\r\n        \"label\": \"Guided practice\",\r\n        \"href\": \"/paths\"\r\n      }\r\n    ],\r\n    \"gap\": \"Sections and practical paths exist; useful work-product continuity is incomplete and should be tested through actual examples.\"\r\n  }",
+      "sourceSha256": "1abd1d80aa66251315bd5a4503205cb9275a96a47262ee29c9a014ca95b52eab",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-61",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"14.3\",\r\n    \"article\": 14,\r\n    \"title\": \"No dead-end experiences\",\r\n    \"summary\": \"End significant work with a useful draft, next action, referral, review, decision or follow-up.\",\r\n    \"state\": \"available-with-limits\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Work areas\",\r\n        \"href\": \"/areas\"\r\n      },\r\n      {\r\n        \"label\": \"Guided practice\",\r\n        \"href\": \"/paths\"\r\n      }\r\n    ],\r\n    \"gap\": \"Sections and practical paths exist; useful work-product continuity is incomplete and should be tested through actual examples.\"\r\n  }",
+      "sourceSha256": "38383f2cde7d4893d1a16d31c1050037d0a49c946c3735a112a8bab4c624de0e",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-62",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"15.1\",\r\n    \"article\": 15,\r\n    \"title\": \"Governance roles\",\r\n    \"summary\": \"Confirm actual program stewardship and decision responsibilities rather than inventing organizational assignments.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Resources and sources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Publication and review mechanisms exist; current release evidence and stewardship assignments need confirmation.\"\r\n  }",
+      "sourceSha256": "77019e6a35695cffc7c24555526081240e1bb405489b62d89f0ee88c6762f6b2",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-63",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"15.2\",\r\n    \"article\": 15,\r\n    \"title\": \"Content governance\",\r\n    \"summary\": \"Maintain publication, source, review, version and retirement information for resources.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Resources and sources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Publication and review mechanisms exist; current release evidence and stewardship assignments need confirmation.\"\r\n  }",
+      "sourceSha256": "406b641dfa061d3349daedf489a0a0e7340b22ce101ea1ee7d22b139ad826a22",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-64",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"15.3\",\r\n    \"article\": 15,\r\n    \"title\": \"Release gate\",\r\n    \"summary\": \"Verify evidence, accessibility, information handling and boundaries before operational release.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Resources and sources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Publication and review mechanisms exist; current release evidence and stewardship assignments need confirmation.\"\r\n  }",
+      "sourceSha256": "e4ab1fde1aaac7604aa07e3025bea411e40e184d92e00f059ac0db5d03c15fba",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-65",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"15.4\",\r\n    \"article\": 15,\r\n    \"title\": \"Operational review\",\r\n    \"summary\": \"Review usefulness, problems and outcomes and make proportionate improvements.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Resources and sources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Publication and review mechanisms exist; current release evidence and stewardship assignments need confirmation.\"\r\n  }",
+      "sourceSha256": "04adb170fd36cdab776c6eb5c28103ed6c0fbaa58173950231aa38897bd653d0",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-66",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"15.5\",\r\n    \"article\": 15,\r\n    \"title\": \"Exceptions and amendments\",\r\n    \"summary\": \"Document exceptions and material changes while preserving binding requirements.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Resources and sources\",\r\n        \"href\": \"/library\"\r\n      }\r\n    ],\r\n    \"gap\": \"Publication and review mechanisms exist; current release evidence and stewardship assignments need confirmation.\"\r\n  }",
+      "sourceSha256": "9f3ac60f43c2f78d26c1972281891ca3c2fb9162b84093d533650b2cb7c7c3a6",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-67",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"16.1\",\r\n    \"article\": 16,\r\n    \"title\": \"Conditions for adoption\",\r\n    \"summary\": \"Obtain the necessary authorized review before treating the proposed charter as adopted.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Program model\",\r\n        \"href\": \"/program/model\"\r\n      }\r\n    ],\r\n    \"gap\": \"This charter remains proposed. Adoption requirements and operational acceptance are not represented as completed.\"\r\n  }",
+      "sourceSha256": "51290dd817756d773d5dce4536dcdc51464ecaa2b21b64224b510f8b93ff5810",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-68",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"16.2\",\r\n    \"article\": 16,\r\n    \"title\": \"Foundational implementation priorities\",\r\n    \"summary\": \"Strengthen trust, sources, useful work records and learning-to-practice connections before expanding features; intake remains excluded.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Program model\",\r\n        \"href\": \"/program/model\"\r\n      }\r\n    ],\r\n    \"gap\": \"This charter remains proposed. Adoption requirements and operational acceptance are not represented as completed.\"\r\n  }",
+      "sourceSha256": "5a8d2dbdd226f537642e5157a142882c99565f1685e97bba72eaaafc1a5d5c0e",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationProvisions-69",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"id\": \"16.3\",\r\n    \"article\": 16,\r\n    \"title\": \"Constitutional acceptance test\",\r\n    \"summary\": \"A significant capability should explain its purpose, decision authority, evidence, access, information use and intended effects.\",\r\n    \"state\": \"proposed\",\r\n    \"resources\": [\r\n      {\r\n        \"label\": \"Program model\",\r\n        \"href\": \"/program/model\"\r\n      }\r\n    ],\r\n    \"gap\": \"This charter remains proposed. Adoption requirements and operational acceptance are not represented as completed.\"\r\n  }",
+      "sourceSha256": "27e3987172199d5c25f3a6790df0ce9cc1dff2e54545a9c4d9cb0231f6cf5f28",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-0",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Advise leadership and staff on DEIA\",\r\n    \"output\": \"Decision brief identifying the issue, evidence, options, recommendation, owner, and next step\",\r\n    \"currentPosition\": \"Consultation intake, triage and queue are explicitly deferred under current direction; advisory resources and proactive consultant work remain\"\r\n  }",
+      "sourceSha256": "21f413351eee08c6a413d5e0588fb7ba9ad532535f726c7959902e1dbca78fde",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-1",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Guide policy development, implementation, and compliance\",\r\n    \"output\": \"Proposed revisions, rationale, implementation implications, and unresolved questions\",\r\n    \"currentPosition\": \"Review tools and learning exist; who handles each review and how current each source is need confirmation\"\r\n  }",
+      "sourceSha256": "73001fb0b4e193af441990facce0f9cfd4013402de697e4619ee418792bae218",
+      "fieldCount": 2,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-2",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Lead work groups and organizational culture change\",\r\n    \"output\": \"Charter, decision record, named action owners, and review dates\",\r\n    \"currentPosition\": \"Team local selection records are not shared charters/action registers\"\r\n  }",
+      "sourceSha256": "665bd630660a42f172df01612f59cfb3d41304d05b5c3dbdba0d96789f8d15a9",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 39399,
+          "end": 39470,
+          "before": "Team local selection records are not shared charters/action registers",
+          "sourceLiteral": "\"Team local selection records are not shared charters/action registers\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "Selections saved by a team in this browser do not create a shared charter or a record of agreed actions."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-3",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Establish benchmarks and targets\",\r\n    \"output\": \"Approved baseline, measure definition, target, data owner, and reporting schedule\",\r\n    \"currentPosition\": \"Measurement worksheet lacks governed indicator registry and approval evidence\"\r\n  }",
+      "sourceSha256": "1cd50acaa33e097e44de8b03919219bf1673e55d6d4ac883a650facc70cec7cd",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 39656,
+          "end": 39735,
+          "before": "Measurement worksheet lacks governed indicator registry and approval evidence",
+          "sourceLiteral": "\"Measurement worksheet lacks governed indicator registry and approval evidence\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "The measurement worksheet does not establish an approved set of measures, who maintains them or who approved their use."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-4",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Build staff and manager capacity\",\r\n    \"output\": \"Applied work product or documented next action\",\r\n    \"currentPosition\": \"Large collection and practice tools exist; depth and transfer must be checked by topic\"\r\n  }",
+      "sourceSha256": "eda8052de428affa771e3d59efbba9bf7b70b082f6543e71114f47fbe0bd4f5c",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 39886,
+          "end": 39974,
+          "before": "Large collection and practice tools exist; depth and transfer must be checked by topic",
+          "sourceLiteral": "\"Large collection and practice tools exist; depth and transfer must be checked by topic\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "Courses and practice tools are available. Review each topic for depth and whether people can use the learning in their work."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-5",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Support DHS Equity Policy implementation\",\r\n    \"output\": \"Traceable evidence for authorized staff; no automatic compliance certification\",\r\n    \"currentPosition\": \"Historical adapted materials do not constitute current policy requirements crosswalk\"\r\n  }",
+      "sourceSha256": "8d0445f3426713e229f17047373440bb9f4a342f4667e74aa1d1d2b42576d9f2",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 40165,
+          "end": 40251,
+          "before": "Historical adapted materials do not constitute current policy requirements crosswalk",
+          "sourceLiteral": "\"Historical adapted materials do not constitute current policy requirements crosswalk\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "Adapted historical materials do not show whether each current policy requirement is covered. Check them against current official sources."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-6",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Promote inclusive recruitment and succession\",\r\n    \"output\": \"Process recommendations reviewed with hiring managers and HR\",\r\n    \"currentPosition\": \"Workforce pathways exist; HR review and implementation ownership not established by app\"\r\n  }",
+      "sourceSha256": "e0d09d3a95a0f5b49b3526b8bd75c4f7287ca8e58db9dd9d54ea5aa055736a02",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 40428,
+          "end": 40517,
+          "before": "Workforce pathways exist; HR review and implementation ownership not established by app",
+          "sourceLiteral": "\"Workforce pathways exist; HR review and implementation ownership not established by app\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "Workforce pathways are available. The app does not establish HR approval or assign responsibility for putting recommendations into practice."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-7",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Coordinate external expertise\",\r\n    \"output\": \"Defined need, deliverables, owner, access needs, and evaluation criteria\",\r\n    \"currentPosition\": \"Reference directory is not scoped expert engagement record\"\r\n  }",
+      "sourceSha256": "a2f24c2e0cb52d537ea5e3557018ae6ace14ca471d0e44c593f1294fe6e57cc0",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 40691,
+          "end": 40751,
+          "before": "Reference directory is not scoped expert engagement record",
+          "sourceLiteral": "\"Reference directory is not scoped expert engagement record\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "A directory identifies possible resources. It does not establish an agreement with an expert about the work, responsibilities or expected results."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-8",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Integrate CLAS and culturally responsive services\",\r\n    \"output\": \"Applicability analysis and proposed language-access/cultural-responsiveness actions\",\r\n    \"currentPosition\": \"Resources and practice prompts exist; grants/waiver applicability needs current authority\"\r\n  }",
+      "sourceSha256": "86c4712ee3899a14ec96b7a7c92d50bf493d19183756607008fafd03fa255792",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 40956,
+          "end": 41047,
+          "before": "Resources and practice prompts exist; grants/waiver applicability needs current authority",
+          "sourceLiteral": "\"Resources and practice prompts exist; grants/waiver applicability needs current authority\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "Resources and practice questions are available. Confirm which current requirements apply to the grant or waiver being considered."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-9",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Support legislative equity analysis\",\r\n    \"output\": \"Draft analysis, evidence limitations, review questions, and submission route\",\r\n    \"currentPosition\": \"Twelve-course curriculum is learning; actual bill-analysis workspace and official submission route need validation\"\r\n  }",
+      "sourceSha256": "93680972ee27e74c02c0bb82ea99b4c311ac624a7f9668839b35a01ababc3bf0",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 41231,
+          "end": 41347,
+          "before": "Twelve-course curriculum is learning; actual bill-analysis workspace and official submission route need validation",
+          "sourceLiteral": "\"Twelve-course curriculum is learning; actual bill-analysis workspace and official submission route need validation\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "The twelve-course curriculum supports learning. Confirm the workspace and official submission route before using it for an actual bill analysis."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-10",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Build internal accountability\",\r\n    \"output\": \"Commitment record, progress status, blockers, and evidence of results\",\r\n    \"currentPosition\": \"Local plans are not shared action register, escalation or approved reporting\"\r\n  }",
+      "sourceSha256": "6ed0bbc71f43813fe309bfec69d172546c53adf6cac9f07355c1a08e0d7cfe29",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 41518,
+          "end": 41596,
+          "before": "Local plans are not shared action register, escalation or approved reporting",
+          "sourceLiteral": "\"Local plans are not shared action register, escalation or approved reporting\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "Plans saved in this browser do not create a shared record of actions, a route for unresolved issues or an approved report."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-11",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Collaborate with DSD data staff and FARM\",\r\n    \"output\": \"Validated analysis and interpretation with limitations\",\r\n    \"currentPosition\": \"Named collaboration requirement is proposed; current FARM mandate and governed requests not verified\"\r\n  }",
+      "sourceSha256": "970ef1048b984c222ee2c82387ef4b6184769142a906e97738bc6462a13693b3",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 41763,
+          "end": 41865,
+          "before": "Named collaboration requirement is proposed; current FARM mandate and governed requests not verified",
+          "sourceLiteral": "\"Named collaboration requirement is proposed; current FARM mandate and governed requests not verified\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "The proposed charter names collaboration with FARM. Its current responsibilities and the process for requesting its work still need confirmation."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-12",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Embed equity across contracts and grants\",\r\n    \"output\": \"Requirements, scoring considerations, monitoring measures, and corrective actions\",\r\n    \"currentPosition\": \"Procurement path exists; connected lifecycle checkpoints and monitor/correct workflows to be confirmed\"\r\n  }",
+      "sourceSha256": "5d9ee55a13a7ffaf9a05479650e745f858c74ae133f9981407d4e57dccd70040",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 42059,
+          "end": 42163,
+          "before": "Procurement path exists; connected lifecycle checkpoints and monitor/correct workflows to be confirmed",
+          "sourceLiteral": "\"Procurement path exists; connected lifecycle checkpoints and monitor/correct workflows to be confirmed\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "The procurement pathway is available. Confirm how reviews connect across stages and who monitors results and addresses problems."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--constitution.ts--foundationResponsibilities-13",
+      "file": "lib/program/constitution.ts",
+      "source": "{\r\n    \"title\": \"Support engagement and representation\",\r\n    \"output\": \"Participation plan and “what we heard / what changed / what could not change” record\",\r\n    \"currentPosition\": \"Engagement preparation exists; maintained participation/report-back records and brief review need evidence\"\r\n  }",
+      "sourceSha256": "046d9e70bb0e24ae7c9f963941f8907772ae4d2c07f1f567bfafd2e17aa7fdf5",
+      "fieldCount": 2,
+      "changes": [
+        {
+          "file": "lib/program/constitution.ts",
+          "start": 42357,
+          "end": 42465,
+          "before": "Engagement preparation exists; maintained participation/report-back records and brief review need evidence",
+          "sourceLiteral": "\"Engagement preparation exists; maintained participation/report-back records and brief review need evidence\"",
+          "classification": "authored_prose_review",
+          "reason": "Replace compressed technical status wording with complete sentences while retaining the stated capability limit.",
+          "fieldId": 1,
+          "after": "Resources support engagement preparation. Evidence is still needed that participation and follow-up records are maintained and briefs are reviewed."
+        }
+      ],
+      "status": "reviewed_changed",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--structuralReviewResource-2",
+      "file": "lib/program/review-resources.ts",
+      "source": "summary: \"Trace barriers through a process, examine decision rights and evidence, and plan a change with a responsible role and a review date.\"",
+      "sourceSha256": "3ef72135b8414515cc144ef2485d0114fe86edfe252fab8f3500f0ae822853fe",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-0",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"tool-one-dsd-policy-review\", title: \"Policy, process, and service equity review\", summary: \"Examine who is affected, compare alternatives, and record responsibilities and follow-through.\", href: \"/equity-review/general\", file: \"/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool.html\", kind: \"tool\" }",
+      "sourceSha256": "3420633c17e4098fd82e0fd6c4f46942a3d32b0faff06f434274026e3e04ff79",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-1",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"tool-one-dsd-hcbs-review\", title: \"Home and community-based services equity review\", summary: \"Explore service access, state choices, provider capacity, and the experiences of people using home and community-based services.\", href: \"/equity-review/hcbs\", file: \"/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool.html\", kind: \"tool\" }",
+      "sourceSha256": "25d14eadbf59e920d247c673e22bd8f6d481ec698b96e462d04eb3cd8d4a51f5",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-2",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-policy-review\", title: \"Policy equity review: Staff guide\", summary: \"Prepare and use an equity review independently, with optional guidance from the consultant.\", href: \"/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.html\", file: \"/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.docx\", kind: \"job_aid\" }",
+      "sourceSha256": "8f2d723932242319b138095bd3fc64df052a1e60792db63f0015d1640739700b",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-3",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-policy-facilitation\", title: \"Policy equity review: Facilitator guide\", summary: \"Support a thoughtful team discussion of evidence, affected perspectives, alternatives, and decisions.\", href: \"/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.html\", file: \"/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.docx\", kind: \"job_aid\" }",
+      "sourceSha256": "ec51326224d9ec317c4cf0b77ed2acbe53afacaf20a312162416ae0b5c52697c",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-4",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-hcbs-review\", title: \"Home and community-based services equity review: Staff guide\", summary: \"Work through the home and community-based services review and its service-specific questions.\", href: \"/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.html\", file: \"/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.docx\", kind: \"job_aid\" }",
+      "sourceSha256": "d408db915c2474ff1a301ee0a8cda706d0d3b948600b7d3abee6cc8feacf487b",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-5",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-hcbs-companion\", title: \"Home and community-based services equity review: Companion\", summary: \"Connect service-specific questions with evidence, participation, practical options, and review.\", href: \"/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Companion.html\", file: \"/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Companion.docx\", kind: \"job_aid\" }",
+      "sourceSha256": "6a06cb9628b275e41b2d2adf0dbfb8aea3dae870ae33352a6c3b9281e013f1c1",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-6",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-hcbs-walkthrough\", title: \"Home and community-based services equity review: Walkthrough\", summary: \"Follow a practice example to understand the review without treating sample figures as real evidence.\", href: \"/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.html\", file: \"/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.docx\", kind: \"job_aid\" }",
+      "sourceSha256": "ac06e3feca8d28135b8a6fa3c49ac0d2192f49941ad19029ebb9bf1f83b5430d",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-7",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"tool-one-dsd-quarterly-report\", title: \"Quarterly progress report\", summary: \"Bring together aggregate evidence, unanswered questions, and follow-through. Missing figures remain unknown.\", href: \"/one-dsd/planning/report\", file: \"/library/one-dsd-planning/One_DSD_Quarterly_Report_Dashboard.html\", kind: \"tool\" }",
+      "sourceSha256": "9463df243275ac4508be2e69551a953b3a9e9411eca72d8eda3e2f33582e8e2b",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-8",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-quarterly-report\", title: \"Quarterly progress report: Guide\", summary: \"Prepare an honest account of progress, separate examples from real evidence, and identify the next action.\", href: \"/library/one-dsd-planning/One_DSD_Quarterly_Report_Dashboard_Guide.html\", file: \"/library/one-dsd-planning/One_DSD_Quarterly_Report_Dashboard_Guide.docx\", kind: \"job_aid\" }",
+      "sourceSha256": "f830958ca190e0577d793823941b227b1afff89ec38233ada2f3aa039803bd77",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-9",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-measures\", title: \"Data and measures\", summary: \"Use the 21-measure framework to define evidence, its source, its limits, and who can act on it.\", href: \"/library/one-dsd-planning/One_DSD_Data_and_Metrics_Framework.html\", file: \"/library/one-dsd-planning/One_DSD_Data_and_Metrics_Framework.docx\", kind: \"external_reference\" }",
+      "sourceSha256": "d7fe608c546dc7be98d997352dfde338c17f1d3bbed28d821bea3bfa7259baaf",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    },
+    {
+      "id": "lib--program--review-resources.ts--reviewResources-10",
+      "file": "lib/program/review-resources.ts",
+      "source": "{ id: \"guide-one-dsd-work-plan\", title: \"Equity implementation work plan\", summary: \"Connect priorities to practical actions, responsible owners, evidence, and review points.\", href: \"/library/one-dsd-planning/DSD_Equity_Implementation_Work_Plan.html\", file: \"/library/one-dsd-planning/DSD_Equity_Implementation_Work_Plan.docx\", kind: \"external_reference\" }",
+      "sourceSha256": "6e699fefc0da866c7e92cbaaa6056126beb0c15dcc40770dddfd9cd349997415",
+      "fieldCount": 1,
+      "changes": [],
+      "status": "reviewed_unchanged",
+      "editorialAcceptance": true,
+      "acceptanceScope": "Full editorial read of authored summaries and linked resource descriptions. Current capability states, official adoption and referenced document bodies not newly verified.",
+      "reviewNotes": [
+        "Keep proposed charter status and official authority boundaries explicit. Preserve public evidence limitations rather than changing states to complete.",
+        "Reference description review does not review the underlying linked HTML/DOCX body."
+      ]
+    }
+  ],
+  "reviewLimits": [
+    "No current-capability or formal-charter-adoption certification.",
+    "Source labels, IDs, counts, links and states unchanged."
+  ],
+  "acceptanceScope": "Independent full-record editorial review by coverage_review; changed pairs accepted by root. Not comprehensive factual revalidation or current capability certification."
+}

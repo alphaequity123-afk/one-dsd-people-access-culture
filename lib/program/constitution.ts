@@ -1116,61 +1116,61 @@ export const foundationResponsibilities: { title: string; output: string; curren
   {
     "title": "Lead work groups and organizational culture change",
     "output": "Charter, decision record, named action owners, and review dates",
-    "currentPosition": "Team local selection records are not shared charters/action registers"
+    "currentPosition": "Selections saved by a team in this browser do not create a shared charter or a record of agreed actions."
   },
   {
     "title": "Establish benchmarks and targets",
     "output": "Approved baseline, measure definition, target, data owner, and reporting schedule",
-    "currentPosition": "Measurement worksheet lacks governed indicator registry and approval evidence"
+    "currentPosition": "The measurement worksheet does not establish an approved set of measures, who maintains them or who approved their use."
   },
   {
     "title": "Build staff and manager capacity",
     "output": "Applied work product or documented next action",
-    "currentPosition": "Large collection and practice tools exist; depth and transfer must be checked by topic"
+    "currentPosition": "Courses and practice tools are available. Review each topic for depth and whether people can use the learning in their work."
   },
   {
     "title": "Support DHS Equity Policy implementation",
     "output": "Traceable evidence for authorized staff; no automatic compliance certification",
-    "currentPosition": "Historical adapted materials do not constitute current policy requirements crosswalk"
+    "currentPosition": "Adapted historical materials do not show whether each current policy requirement is covered. Check them against current official sources."
   },
   {
     "title": "Promote inclusive recruitment and succession",
     "output": "Process recommendations reviewed with hiring managers and HR",
-    "currentPosition": "Workforce pathways exist; HR review and implementation ownership not established by app"
+    "currentPosition": "Workforce pathways are available. The app does not establish HR approval or assign responsibility for putting recommendations into practice."
   },
   {
     "title": "Coordinate external expertise",
     "output": "Defined need, deliverables, owner, access needs, and evaluation criteria",
-    "currentPosition": "Reference directory is not scoped expert engagement record"
+    "currentPosition": "A directory identifies possible resources. It does not establish an agreement with an expert about the work, responsibilities or expected results."
   },
   {
     "title": "Integrate CLAS and culturally responsive services",
     "output": "Applicability analysis and proposed language-access/cultural-responsiveness actions",
-    "currentPosition": "Resources and practice prompts exist; grants/waiver applicability needs current authority"
+    "currentPosition": "Resources and practice questions are available. Confirm which current requirements apply to the grant or waiver being considered."
   },
   {
     "title": "Support legislative equity analysis",
     "output": "Draft analysis, evidence limitations, review questions, and submission route",
-    "currentPosition": "Twelve-course curriculum is learning; actual bill-analysis workspace and official submission route need validation"
+    "currentPosition": "The twelve-course curriculum supports learning. Confirm the workspace and official submission route before using it for an actual bill analysis."
   },
   {
     "title": "Build internal accountability",
     "output": "Commitment record, progress status, blockers, and evidence of results",
-    "currentPosition": "Local plans are not shared action register, escalation or approved reporting"
+    "currentPosition": "Plans saved in this browser do not create a shared record of actions, a route for unresolved issues or an approved report."
   },
   {
     "title": "Collaborate with DSD data staff and FARM",
     "output": "Validated analysis and interpretation with limitations",
-    "currentPosition": "Named collaboration requirement is proposed; current FARM mandate and governed requests not verified"
+    "currentPosition": "The proposed charter names collaboration with FARM. Its current responsibilities and the process for requesting its work still need confirmation."
   },
   {
     "title": "Embed equity across contracts and grants",
     "output": "Requirements, scoring considerations, monitoring measures, and corrective actions",
-    "currentPosition": "Procurement path exists; connected lifecycle checkpoints and monitor/correct workflows to be confirmed"
+    "currentPosition": "The procurement pathway is available. Confirm how reviews connect across stages and who monitors results and addresses problems."
   },
   {
     "title": "Support engagement and representation",
     "output": "Participation plan and “what we heard / what changed / what could not change” record",
-    "currentPosition": "Engagement preparation exists; maintained participation/report-back records and brief review need evidence"
+    "currentPosition": "Resources support engagement preparation. Evidence is still needed that participation and follow-up records are maintained and briefs are reviewed."
   }
 ];
