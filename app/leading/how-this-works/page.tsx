@@ -23,14 +23,14 @@ export default function LeadingHowThisWorksPage() {
       <p>{LEADING_PRIVACY_SENTENCE}</p>
       <ul>
         <li>There is no sign-in for this space. All of it is public, and staff can read every page.</li>
-        <li>There is no team view, no assignments and no scores.</li>
-        <li>A supervisor cannot see who opened a course, how far they got or what they answered. Neither can you.</li>
+        <li>This leadership area does not give supervisors a learner scoreboard or assign these optional courses.</li>
+        <li>This area does not provide supervisors with individual course visits, progress or answers. Anyone using the same browser profile may still see information saved there.</li>
       </ul>
       <h2>What stays in your browser</h2>
       <ul>
-        <li>Your progress stays in your browser. That includes your place on a suggested path, your lesson progress and your practice answers.</li>
-        <li>Nothing is sent to a supervisor or employer.</li>
-        <li>Anyone using the same computer and browser could see it. You can clear it at any time.</li>
+        <li>Features that save a place on a suggested path, lesson progress or practice answers keep those items in this browser profile when storage is available.</li>
+        <li>The learning-progress feature does not send those saved items to supervisors or program staff. Exporting or sharing a copy is a separate action.</li>
+        <li>Anyone using the same browser profile may see saved items. Use the relevant feature to clear them; downloaded, printed or shared copies remain separate.</li>
       </ul>
       <h2>What happens to a question in Ask</h2>
       <ul>
@@ -44,9 +44,9 @@ export default function LeadingHowThisWorksPage() {
         <li>It is general information, not legal advice. For a real situation, ask Human Resources, labor relations or your ADA coordinator.</li>
         <li>It does not make or record any personnel, accommodation or complaint decision.</li>
       </ul>
-      <h2>The one exception to voluntary use</h2>
+      <h2>Required responsibilities and optional learning</h2>
       <p>{TRAINING_CREDIT_NOTICE}</p>
-      <p>The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status, so it is marked &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; wherever it is listed here. This app does not assign it or report on who has taken it. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
+      <p>The label &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; refers to the agency responsibility associated with the Equity Analysis Toolkit. This local companion course does not assign or certify required agency training. Follow the designated agency process for training and the applicable policy requirements for equity analysis. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
       <h2>Using the learning</h2>
       <p>Use these courses as guidance for your work, alongside current policy and the people and offices responsible for a decision.</p>
       <h2>Tribal and Native American learning</h2>

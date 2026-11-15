@@ -90,12 +90,13 @@ export function MyViewClient({ intakeEnabled, copy, courses = NO_COURSES, learni
   }, [all, copy, courses, learningFoci]);
 
   function remove(key: string) {
+    let removed = false;
     if (key.startsWith("learning-note:")) {
       const practice = all["local:" + BROWSER_STORAGE_KEYS.learningPracticeNotes] as { version: number; notes: Record<string, unknown> } | undefined;
       if (!practice?.notes) return;
       const notes = { ...practice.notes };
       delete notes[key.slice("learning-note:".length)];
-      writeStored("local", BROWSER_STORAGE_KEYS.learningPracticeNotes, Object.keys(notes).length ? { ...practice, notes } : null);
+      removed = writeStored("local", BROWSER_STORAGE_KEYS.learningPracticeNotes, Object.keys(notes).length ? { ...practice, notes } : null);
     } else if (key.startsWith("req:")) {
       const [, area, id] = key.split(":");
       const storageArea = area === "session" ? "session" : "local";
@@ -103,29 +104,31 @@ export function MyViewClient({ intakeEnabled, copy, courses = NO_COURSES, learni
         ? BROWSER_STORAGE_KEYS.recentConsultationReferences
         : BROWSER_STORAGE_KEYS.savedConsultationReferences;
       const list = ((all[`${storageArea}:${storageKey}`] as Array<{ id: string }> | null | undefined) ?? []).filter((x) => x.id !== id);
-      writeStored(storageArea, storageKey, list);
+      removed = writeStored(storageArea, storageKey, list);
     } else {
-      const removed = writeStored("local", key, null);
       const path = GRADUATION_PATHS.find(item => BROWSER_STORAGE_KEYS.pathArtifact(item.id) === key);
-      if (removed && path) writeStored("local", BROWSER_STORAGE_KEYS.pathArtifactSource(path.id), null);
+      const sourceRemoved = !path || writeStored("local", BROWSER_STORAGE_KEYS.pathArtifactSource(path.id), null);
+      removed = sourceRemoved && writeStored("local", key, null);
     }
+    setClearNotice(removed ? "The selected saved item has been removed from this browser profile." : "The selected item could not be fully removed. Saved information may remain in this browser profile. Please try again.");
   }
 
   function clearAsk() {
-    writeStored("session", BROWSER_STORAGE_KEYS.askSession, null);
+    const removed = writeStored("session", BROWSER_STORAGE_KEYS.askSession, null);
+    setClearNotice(removed ? "The Ask conversation has been cleared from this tab." : "The Ask conversation could not be cleared from this tab. Please try again.");
   }
 
   function clearEverything() {
-    if (!confirm(`${copyText(copy, "deleteAllConfirmation")} This also removes your private practice plans, structural-review draft, practice reflection, saved resources, and saved places in the self-directed courses from this browser. Downloaded files and protected operational records are not deleted.`)) return;
+    if (!confirm(`${copyText(copy, "deleteAllConfirmation")} This also removes the practice plans, structural-review draft, practice reflection, saved resources and course places managed by My work from this browser profile. Other features may have separate notes or records to clear. Downloaded files and operational records are not deleted.`)) return;
     const result = clearRegisteredPrivateBrowserData(writeStored);
-    setClearNotice(result.ok ? "Your saved learning information and practice drafts have been removed from this browser. Downloaded files and protected operational records are unchanged." : "Some saved information could not be deleted. It may still be in this browser. Downloaded files and protected operational records are unchanged. Please try again.");
+    setClearNotice(result.ok ? "The saved items managed by My work have been removed from this browser profile. Other features may retain separate notes. Downloaded files and operational records are unchanged." : "Some saved items could not be deleted and may remain in this browser profile. Downloaded files and operational records are unchanged. Please try again.");
   }
 
   if (!hydrated) return <p className="text-muted">{copyText(copy, "openingLabel")}</p>;
 
   return (
     <div className={styles.notebook}>
-      {data.unreadable ? <p role="status">Some saved information could not be opened. It is still on this device. You can try opening the related page again or remove the saved information here.</p> : null}
+      {data.unreadable ? <p role="status">Some saved information could not be opened. It remains in this browser profile. Try the related page again or use the available removal controls.</p> : null}
       <Section title={copyText(copy, "notesTitle")} entries={data.artifacts} empty={copyText(copy, "notesEmpty")} onRemove={remove} deleteLabel={copyText(copy, "deleteItemLabel")} />
       <Section title={copyText(copy, "progressTitle")} entries={data.progress} empty={copyText(copy, "progressEmpty")} onRemove={remove} deleteLabel={copyText(copy, "deleteItemLabel")} />
       <Section title={copyText(copy, "requestsTitle")} entries={data.requests} empty={copyText(copy, "requestsEmpty")} onRemove={remove} deleteLabel={copyText(copy, "deleteItemLabel")} />
@@ -143,7 +146,7 @@ export function MyViewClient({ intakeEnabled, copy, courses = NO_COURSES, learni
         <ul className="list-disc pl-6 text-sm">
           <li>{intakeEnabled ? `${copyText(copy, "intakeOpenBeforeRole")} ${PROGRAM.practiceOwnerRole} ${copyText(copy, "intakeOpenAfterRole")}` : `${copyText(copy, "intakePreviewBeforeRole")} ${PROGRAM.practiceOwnerRole}${copyText(copy, "intakePreviewAfterRole")}`}</li>
           <li>{copyText(copy, "deleteReferenceBody")}</li>
-          <li>Deleting all private information also removes your practice plans, practice reflection, and saved resources from this browser. Files you have downloaded remain on your device.</li>
+          <li>This control removes the saved learning and practice items managed by My work from this browser profile. Some features, including CLAS working notes, have their own clearing controls. Downloaded, printed and shared copies are unchanged.</li>
         </ul>
         <button type="button" className="btn btn--light mt-2" onClick={clearEverything}>
           {copyText(copy, "deleteAllLabel")}
