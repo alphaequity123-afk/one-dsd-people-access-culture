@@ -1,0 +1,60 @@
+{
+  "status": "root_review_accepted",
+  "sourceFileSha256": "deade1c4eab0a3ed8ebda615baff76ab740dc169023bfaffe984427fcb0d794d",
+  "source": "'use client';\nimport { SourceLink } from \"@/components/app-link\";\n\nimport { useEffect, useState } from 'react';\nimport { assemblePlan, clearNotes, planText, readAllNotes, readNote, writeNote, type PlanModule } from '@/lib/learning/clas-notes';\nimport { downloadText } from './download';\n\nexport const NOTE_PRIVACY = 'Your note is saved on this computer only and shown again when you return. It stays here until you delete it, which also means anyone else who uses this computer could see it. Nothing is sent, and nothing is shared with supervisors or program staff. Do not include names, case details or other private information.';\n\ntype NoteProps = { moduleId: string; title: string; prompt: string; allModuleIds: string[]; onChange?: () => void };\n\n/** The lesson's working note, kept in this browser under one key per part, with a clear-all control. */\nexport function WorkingNote({ moduleId, title, prompt, allModuleIds, onChange }: NoteProps) {\n  const [note, setNote] = useState('');\n  const [status, setStatus] = useState('');\n  const [confirming, setConfirming] = useState(false);\n\n  // Browser storage is unavailable during server rendering; show the saved note after hydration.\n  // eslint-disable-next-line react-hooks/set-state-in-effect\n  useEffect(() => { const saved = readNote(moduleId); setNote(saved); if (saved) setStatus('Your earlier note for this part is shown from this computer.'); }, [moduleId]);\n\n  function update(text: string) {\n    setNote(text);\n    setStatus(writeNote(moduleId, text) ? 'Saved on this computer.' : 'This browser could not save the note. Download it if you want to keep a copy.');\n    onChange?.();\n  }\n  function clearAll() {\n    const cleared = clearNotes(allModuleIds);\n    setNote('');\n    setConfirming(false);\n    setStatus(cleared ? 'All your notes for the nine parts have been removed from this device.' : 'This browser could not remove the notes.');\n    onChange?.();\n  }\n  return (\n    <div className=\"clas-note\">\n      <label htmlFor=\"reflection\">Your working note for this part (optional, private)</label>\n      <textarea id=\"reflection\" rows={6} value={note} onChange={e => update(e.target.value)} aria-describedby=\"note-privacy\" />\n      <p id=\"note-privacy\">{NOTE_PRIVACY}</p>\n      <p role=\"status\">{status}</p>\n      <button type=\"button\" onClick={() => downloadText(`CLAS-part-${moduleId}-notes.txt`, `${title}\\n\\n${prompt}\\n\\n${note}`)}>Download my note</button>\n      {!confirming\n        ? <button type=\"button\" className=\"clas-study-secondary\" onClick={() => setConfirming(true)}>Clear my notes on this device</button>\n        : <span className=\"clas-note-confirm\" role=\"group\" aria-label=\"Confirm clearing notes\">\n          <span>Remove your notes for all nine parts from this device? This cannot be undone.</span>\n          <button type=\"button\" onClick={clearAll}>Yes, clear all my notes</button>\n          <button type=\"button\" className=\"clas-study-secondary\" onClick={() => setConfirming(false)}>Keep my notes</button>\n        </span>}\n    </div>\n  );\n}\n\ntype PlanProps = { curriculumTitle: string; modules: PlanModule[]; version: number };\n\n/**\n * Part 9 assembles the nine working notes into the learner's improvement plan, with each lesson's\n * reflection prompt as a heading. Downloadable as .txt and printable on its own.\n */\nexport function ImprovementPlan({ curriculumTitle, modules, version }: PlanProps) {\n  const [notes, setNotes] = useState<Record<string, string>>({});\n  // eslint-disable-next-line react-hooks/set-state-in-effect\n  useEffect(() => { setNotes(readAllNotes(modules.map(m => m.id))); }, [modules, version]);\n  const sections = assemblePlan(modules, notes);\n  const written = sections.filter(s => s.note).length;\n  function print() {\n    const root = document.querySelector('.clas-study');\n    root?.setAttribute('data-print', 'plan');\n    const done = () => root?.removeAttribute('data-print');\n    window.addEventListener('afterprint', done, { once: true });\n    window.print();\n    setTimeout(done, 2000);\n  }\n  return (\n    <section className=\"clas-plan\" aria-labelledby=\"plan\">\n      <h2 id=\"plan\">Your improvement plan</h2>\n      <p>This plan is assembled from the working notes you kept on this device for the nine parts ({written} of {modules.length} parts have a note). Each heading is the lesson's prompt. Edit any part's note on its own page; the plan updates when you return.</p>\n      <p>{NOTE_PRIVACY}</p>\n      <div className=\"clas-plan-actions\">\n        <button type=\"button\" onClick={() => downloadText('CLAS-my-improvement-plan.txt', planText(curriculumTitle, sections))}>Download my plan (.txt)</button>\n        <button type=\"button\" className=\"clas-study-secondary\" onClick={print}>Print my plan</button>\n      </div>\n      <div className=\"clas-plan-body\">\n        <p className=\"clas-plan-title\">{curriculumTitle}: my improvement plan</p>\n        {sections.map(s => (\n          <article key={s.id}>\n            <h3>Part {s.part}: {s.title}</h3>\n            <p className=\"clas-plan-prompt\">{s.prompt}</p>\n            {s.note ? <p className=\"clas-plan-note\">{s.note}</p> : <p className=\"clas-plan-empty\">No note yet. <SourceLink href={`/learn/clas/curriculum/${s.id}#apply`}>Add one on Part {s.part}</SourceLink>.</p>}\n          </article>\n        ))}\n        <article><h3>Follow-up</h3><p>Voluntary follow-up date: ______. What changed? What evidence do I have? What remains?</p></article>\n      </div>\n    </section>\n  );\n}\n",
+  "changes": [
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "Your note is saved on this computer only and shown again when you return. It stays here until you delete it, which also means anyone else who uses this computer could see it. Nothing is sent, and nothing is shared with supervisors or program staff. Do not include names, case details or other private information.",
+      "after": "Your note is saved in this browser profile when browser storage is available. Someone using the same profile may be able to read it. Clearing browser data can remove it; downloaded or printed copies are separate. The working-note feature does not submit your note to supervisors or program staff. Do not include names, case details or other private information.",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "Your earlier note for this part is shown from this computer.",
+      "after": "Your earlier note for this part is shown from this browser profile.",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "Saved on this computer.",
+      "after": "Saved in this browser profile.",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "All your notes for the nine parts have been removed from this device.",
+      "after": "Your notes for the nine parts have been removed from this browser profile. Downloaded or printed copies are unchanged.",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "Your working note for this part (optional, private)",
+      "after": "Your working note for this part (optional)",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "Clear my notes on this device",
+      "after": "Clear my notes in this browser",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "Remove your notes for all nine parts from this device? This cannot be undone.",
+      "after": "Remove your notes for all nine parts from this browser profile? This cannot be undone. Downloaded or printed copies will remain.",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    },
+    {
+      "file": "components/clas-curriculum/notes.tsx",
+      "before": "This plan is assembled from the working notes you kept on this device for the nine parts",
+      "after": "This plan is assembled from the working notes saved in this browser profile for the nine parts",
+      "reason": "Match actual localStorage browser-profile scope; remove absolute privacy and persistence claims; explain separate exports."
+    }
+  ],
+  "basis": "Full notes.tsx and lib/learning/clas-notes.ts read. Notes use localStorage per module; no submission calls. Clearing deletes only nine localStorage keys. Print/download creates separate copies.",
+  "editorialAcceptance": true,
+  "acceptedChangedFieldCount": 8,
+  "reviewer": "coverage_review full behavior read; root independent full original and exact-pair review",
+  "afterFileSha256": "2da7d932c2970e412accbde326acfb0371c5602b31bea9d73eab91d335d7a0cf"
+}
