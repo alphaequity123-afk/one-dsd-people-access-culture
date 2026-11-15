@@ -1,0 +1,105 @@
+{
+  "mode": "applied",
+  "records": 8,
+  "changedFields": 8,
+  "files": 6,
+  "changes": [
+    {
+      "id": "lib--content--community-360--american--sections-0",
+      "file": "lib/content/community-360/american.json",
+      "path": [
+        "sections",
+        0,
+        "body"
+      ],
+      "beforeSha256": "7d34a3fecb5ce9544b6a10c90b19660e8a67288311a792b91e309179421794da",
+      "afterSha256": "2e9495d137650cc70e36a1026474482201b0b06becb4dba58bbd0d077bd82fe8"
+    },
+    {
+      "id": "lib--content--community-360--minnesota--sections-1",
+      "file": "lib/content/community-360/minnesota.json",
+      "path": [
+        "sections",
+        1,
+        "body"
+      ],
+      "beforeSha256": "be5c213ca05875823fb5a27817de76508486e6fadbf5d702dad60b2bb026c2eb",
+      "afterSha256": "ddc57811d786877f89a0686e4646cd82de6f777a44b4a35cb39caa5b5b9814fd"
+    },
+    {
+      "id": "lib--content--community-research--somali--disability",
+      "file": "lib/content/community-research/somali.json",
+      "path": [
+        "disability",
+        "intro"
+      ],
+      "beforeSha256": "47145b386357c519b882b11f07f5a2db01e21cf7f320897cd72da7503ca9fdfe",
+      "afterSha256": "65f9bd2d036ddb9a40c3164511c2d1260f92949c60dbbfd70ba45cdeb11e1879"
+    },
+    {
+      "id": "lib--content--hub--organizations--organizations-0",
+      "file": "lib/content/hub/organizations.json",
+      "path": [
+        "organizations",
+        0,
+        "summary"
+      ],
+      "beforeSha256": "bd8e3faee7d6d896343567f4741a422d6834558cfd92bc6eadbec00b8dc74f1c",
+      "afterSha256": "b12d13db31b6b45bd66799bda334feeeb61c53c8f4e03ca54aaf1f654b25c7d3"
+    },
+    {
+      "id": "lib--content--hub--organizations--organizations-0",
+      "file": "lib/content/hub/organizations.json",
+      "path": [
+        "organizations",
+        0,
+        "whoItServes"
+      ],
+      "beforeSha256": "cfc6e3957c30ee3d4bb6aabaee732d16939588d7b841276153d66d6d1f041869",
+      "afterSha256": "0d33d5bb21a4515aa87e056cd20745ea14b3d2c8a27a8f19252c5200d264c464"
+    },
+    {
+      "id": "lib--content--hub--organizations--organizations-0",
+      "file": "lib/content/hub/organizations.json",
+      "path": [
+        "organizations",
+        0,
+        "whereItWorks"
+      ],
+      "beforeSha256": "6ea2f84f1bdc4a1693271a9e673eb62708f25fd98b3f34874ba4aeaecef00a25",
+      "afterSha256": "658c678fe7b0f2c83d6ac98c35845930b7ce91da7b2618146273ae364cf81992"
+    },
+    {
+      "id": "lib--content--hub--system-connections--structure-0",
+      "file": "lib/content/hub/system-connections.json",
+      "path": [
+        "structure",
+        0,
+        "whatItDoesForDisabilityServices"
+      ],
+      "beforeSha256": "db4609a25feef0c572b6b82499a8c73048fe9482e76f844cea086c31579e9685",
+      "afterSha256": "c523e26977c52915adbd0a2a5d37ac99a121943f31e1ebfd379a44c702fbdee4"
+    },
+    {
+      "id": "lib--content--reading-collection--0",
+      "file": "lib/content/reading-collection.json",
+      "path": [
+        0,
+        "overview",
+        0
+      ],
+      "beforeSha256": "885b0ce6d77121f7374b9d04c7e7a86407e5c7e3bb3d39a4b0c830574ca92ab0",
+      "afterSha256": "318997f29398ac9f0b67760189ee745708965a37a47bc1b7b861fb90d204f8ef"
+    }
+  ],
+  "sourceFileHashes": {
+    "lib/content/community-360/american.json": "6b887c8723cb72d888011661738024be55b9130923004c68482ef9709243893d",
+    "lib/content/community-360/minnesota.json": "e9276feb728026dd6d7c01e7bfd3950e5fa9489136192337d8a6629798fa4e37",
+    "lib/content/community-research/somali.json": "5e8c579d9bdc5ad1d28f72d2cdcf6e36c2b558da9151f99ff1c341e63c3ff328",
+    "lib/content/cultural-calendar.json": "7b29b20a0049e0c03eee78474da5fb254dc8db62b1759f15d67895a48c002cc0",
+    "lib/content/hub/dsd-policies.json": "d584b827c9615bbe256a89ddd66d66625b269886838b2eba452fb79f533514d9",
+    "lib/content/hub/organizations.json": "45385c43f0a73a1abb0fe15bb63ac077681dd69cfd85a4b67954c1701480a1af",
+    "lib/content/hub/system-connections.json": "b3c65d8e5eb4b3721d81398cd07f46f1e160456406d26f6e42423ee7f083d83d",
+    "lib/content/reading-collection.json": "1412f42f2eb5f7017078494c73bb55c91c3477501aaa278a6a3d3e271024464c"
+  }
+}
