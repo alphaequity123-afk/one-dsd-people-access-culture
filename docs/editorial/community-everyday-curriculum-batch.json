@@ -1,0 +1,1175 @@
+{
+  "status": "independent_review_accepted",
+  "records": [
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-0",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        0
+      ],
+      "source": {
+        "id": "01",
+        "title": "Start with a decision and the people it affects",
+        "deliverable": "Name the decision, its purpose, affected people and the choice still open",
+        "resources": [
+          {
+            "title": "Equity analysis for your work",
+            "href": "/learn/equity-toolkit",
+            "description": "Explore the existing toolkit and a worked example."
+          },
+          {
+            "title": "People, Access and Culture in Practice",
+            "href": "/learn/equity-in-practice",
+            "description": "See examples of decisions in DSD work."
+          }
+        ],
+        "practice": {
+          "id": "01",
+          "question": "A team is considering replacing mailed appointment reminders with text messages only. Which is the strongest way to start?",
+          "options": [
+            {
+              "text": "Use the same wording in a text and proceed if the new method costs less.",
+              "feedback": "Cost and familiar wording matter, but they do not establish whether people can receive, understand or use the reminder. Frame the decision and examine access first."
+            },
+            {
+              "text": "Define the decision and its purpose, identify who may be affected, and clarify what is still open.",
+              "correct": true,
+              "feedback": "This creates a useful starting point without assuming the result. Next, check the applicable review and whose experience can inform the decision."
+            },
+            {
+              "text": "Ask the staff who send reminders which method is easiest, then choose that method.",
+              "feedback": "Staff experience is useful, but the decision can also affect the people receiving reminders. Identify those perspectives and questions before settling on a method."
+            }
+          ],
+          "reflection": "Name a non-sensitive decision, its purpose, the choice still open, the people who may be affected and one question about authority.",
+          "artifact": "Decision and purpose"
+        },
+        "example": {
+          "id": "01",
+          "title": "Start with the reminder proposal",
+          "situation": "A team is considering replacing mailed appointment reminders with text messages only.",
+          "response": "Frame the proposed communication change, who it may affect, and what remains open.",
+          "reason": "The proposal is a starting question; no option or impact is established."
+        },
+        "sections": [
+          {
+            "title": "Welcome to your learning",
+            "paragraphs": [
+              "Welcome. Equity becomes practical when we look closely at a decision: what it is meant to accomplish, who may experience it, and what could make that experience more or less fair. You do not have to solve every problem at once. You can begin with one question in your own work.",
+              "This learning is self-directed. You can pause, revisit a section and use the activities at your own pace. You may work with the continuing example or choose a non-sensitive piece of your own work. Participation in this learning path is voluntary. Follow the policies, required analyses and training that apply to your work separately.",
+              "The lessons are a companion to the existing Equity Analysis Toolkit and other One DSD resources. They help you prepare and practice. They do not replace the official tool, required review, or the judgment of the people and offices responsible for a decision."
+            ]
+          },
+          {
+            "title": "An everyday decision",
+            "paragraphs": [
+              "Consider an appointment reminder. A team is thinking about replacing mailed reminders with text messages only. The team hopes a text might be a useful way to reach people. No change has been approved, and the team has not yet established which options people can use or prefer.",
+              "At first, this can look like a question about how to send a message. For the person receiving it, the question is larger: Will I receive the reminder in a way I can use? Will I understand it? Can I act on it or ask for help? Those questions bring the intended experience into view.",
+              "There may be benefits to texting. There may also be concerns about access, language, shared phones, privacy, disability-related needs, or a change in contact information. Treat these as questions to investigate, not assumptions about any person or community."
+            ]
+          },
+          {
+            "title": "Put the decision into words",
+            "paragraphs": [
+              "A clear decision statement names the choice under consideration and the purpose it is supposed to serve. For this example, the question is whether and how to offer appointment reminders, including whether a text-only approach should replace mailed reminders.",
+              "Notice what that statement does not decide. It does not change eligibility, appointment requirements or an individual's services. It also does not assume that a new communication method has already been authorized. Those boundaries help the right people review the right question.",
+              "If your work involves a form, a meeting process, a contract, a hiring practice or a service handoff, the same habit applies. State what may change, what is staying outside the proposal, and who has authority to decide. If a boundary is uncertain, write the question down rather than guessing."
+            ]
+          },
+          {
+            "title": "Look beyond one experience",
+            "paragraphs": [
+              "The people affected may include those receiving reminders, staff who prepare them, people who provide communication support, and partners responsible for the service. Their roles and perspectives differ. A convenient process for one person may require more effort from another.",
+              "Equity does not mean assuming that a particular group will respond in a particular way. Ask what could affect access and whose experience would help you understand it. Be attentive to differences without turning a person's identity into a prediction about their needs.",
+              "You may not have direct contact with the people affected. Your contribution might be to examine the proposal, notice a missing question, consult the appropriate colleagues, or help bring existing information into the review. Good work begins within your role and makes room for the knowledge of others."
+            ]
+          },
+          {
+            "title": "Try a first decision",
+            "paragraphs": [
+              "In the activity below, consider how to frame the proposed reminder change before anyone settles on a method. Choose the response you think creates the best starting point. After you choose, read the feedback and compare the reasoning. You can change your answer and try again.",
+              "There is no need to enter personal information. The activity is for practice; it does not make a decision for an actual person or approve a change."
+            ]
+          },
+          {
+            "title": "Begin a working note",
+            "paragraphs": [
+              "If you would like, write a brief note about a decision you can examine safely. Name its purpose, the choice that is still open, the people who may be affected and a question about your authority or next review. You can also stay with the reminder example throughout the series.",
+              "Keep names, case details, health information, personnel records and other confidential information out of learning notes. Follow the instructions beside any tool you use to understand whether its notes are saved, downloaded or kept only for the current visit.",
+              "Next, we will consider how much review the decision needs. A useful first question is not simply how quickly a decision can be made. It is what the work requires and what could happen if an important perspective is missed."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/01/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/01/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/01/poster.png",
+        "durationSeconds": 298.77064814814804,
+        "chapters": [
+          {
+            "title": "Welcome to your learning",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "An everyday decision",
+            "start": 59.18546296296296
+          },
+          {
+            "title": "Put the decision into words",
+            "start": 115.40694444444443
+          },
+          {
+            "title": "Look beyond one experience",
+            "start": 167.1098611111111
+          },
+          {
+            "title": "Try a first decision",
+            "start": 218.78856481481478
+          },
+          {
+            "title": "Begin a working note",
+            "start": 248.01652777777772
+          }
+        ]
+      },
+      "sourceSha256": "e55edad7e9f44184e543a229893787e6f6559e38df969051cc1898af4d9d313c",
+      "changes": [],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 0
+    },
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-1",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        1
+      ],
+      "source": {
+        "id": "02",
+        "title": "Choose the right depth of review",
+        "deliverable": "Identify the review question, relevant requirements and appropriate next contact",
+        "resources": [
+          {
+            "title": "Analyze a decision at the right depth",
+            "href": "/learn/equity-toolkit#equity-analysis",
+            "description": "Compare the quick check, analysis and in-depth review."
+          },
+          {
+            "title": "DHS Equity Policy",
+            "href": "/equity-policy",
+            "description": "Read the policy and find the official source."
+          },
+          {
+            "title": "Equity Pause",
+            "href": "/practice/gp-12",
+            "description": "Use a brief check when appropriate."
+          }
+        ],
+        "practice": {
+          "id": "02",
+          "question": "Before moving to text-only reminders, the team does not yet know the applicable review requirement or how people would experience the change. What is the most responsible next step?",
+          "options": [
+            {
+              "text": "Complete an Equity Pause, then treat it as the required DHS Equity Scan because both are brief.",
+              "feedback": "The application’s Equity Pause is a learning aid. Do not assume it is the official DHS Equity Scan or substitutes for the applicable required process. Check the current policy and user guide."
+            },
+            {
+              "text": "Check current requirements and consult the person responsible while identifying people, potential effects and evidence needed.",
+              "correct": true,
+              "feedback": "This keeps the review tied to the actual work and its requirements. The appropriate tool and level of review should be confirmed with the responsible office."
+            },
+            {
+              "text": "Use response patterns from the current method to choose an option, then determine review after the change.",
+              "feedback": "Existing patterns may inform the analysis, but review and meaningful inquiry belong before an option is finalized. Confirm applicable requirements and ask what the evidence can and cannot show."
+            }
+          ],
+          "reflection": "Describe the proposed change, its possible reach, the requirements to check, and the person or office who can help determine the appropriate review.",
+          "artifact": "Review and requirements question"
+        },
+        "example": {
+          "id": "02",
+          "title": "Choose a responsible review",
+          "situation": "A text-only reminder proposal could change how people receive information.",
+          "response": "Check current policy and the official tool; ask the person responsible what review is required.",
+          "reason": "A quick check cannot replace a required full analysis, even when work is urgent."
+        },
+        "sections": [
+          {
+            "title": "Begin with the work and its requirements",
+            "paragraphs": [
+              "Some decisions are routine and contained. Others can change a policy, service, budget, opportunity or process for many people. Equity analysis should be useful at either scale, but the amount of review and the people involved can differ.",
+              "Begin by checking the current DHS equity policy, the official Equity Analysis Toolkit and the procedures that apply to your work. The published DHS policy requires a formal equity analysis for actions with prolonged or long-term impact that are scheduled for approval by a supervisor, manager, director, assistant or deputy commissioner, or commissioner.",
+              "The policy says those actions must be accompanied by the DHS Equity Analysis or DHS Equity Scan in the toolkit, or a customized tool developed in consultation with an equity director. Confirm the current policy and user guide with the responsible office. The brief Equity Pause in this application is an additional learning aid; do not assume it is the official DHS Equity Scan or that it satisfies a required process.",
+              "If a full analysis or another review is required, follow that requirement. A quick check does not replace a required full analysis, and a short deadline does not by itself decide what is sufficient.",
+              "The choices in this lesson help you think about a starting point. They are not a separate approval rule. When the right path is unclear, identify the question and ask the responsible person or office."
+            ]
+          },
+          {
+            "title": "A quick check can surface a question",
+            "paragraphs": [
+              "An Equity Pause is a brief way to examine a routine decision before it is settled. You might ask who could benefit, who could face an obstacle, what you know, what you do not know and whether someone else should be involved.",
+              "For example, a team changing the time of an internal meeting might use a short check to consider access, schedules and participation. If a barrier appears, the response may require more inquiry or another person's review. The value of the pause is the question it opens, not the speed with which a form is finished.",
+              "A brief check does not establish that every person has been reached or that a change is equitable. It also does not authorize someone to make a decision outside their responsibilities. Use the appropriate process when a requirement or an emerging concern calls for more."
+            ]
+          },
+          {
+            "title": "When a fuller analysis helps",
+            "paragraphs": [
+              "An analysis gives you room to examine the decision, the people affected, evidence, alternatives, participation, implementation and follow-up. It is especially useful when the proposed change could alter how people reach information, services or opportunities.",
+              "Return to the reminder example. Replacing mailed reminders with text-only messages could change the way people receive information and act on an appointment. Before choosing a direction, the team needs to understand the applicable requirements, seek relevant experience and compare options. The official tool and the people responsible guide what the work requires.",
+              "An analysis does not have to begin with a perfect data set. It can identify what is known, what is uncertain and how to learn more. Be honest about those limits, particularly when an alternative could create a new burden while removing another."
+            ]
+          },
+          {
+            "title": "When the issue reaches across a process",
+            "paragraphs": [
+              "Sometimes a concern points beyond the immediate decision. A reminder may be only one part of an appointment process that also includes scheduling, language support, transportation information, rescheduling and follow-up. If an obstacle appears across several steps, a more sustained review may be needed.",
+              "That review can involve the people affected and the offices responsible for the process while meaningful choices remain open. A staff member can help by describing what they observed, bringing forward evidence and identifying where the question needs to go. They need not claim authority over the entire process.",
+              "More review is not automatically better if it delays an urgent response without purpose. Follow any applicable immediate procedure, address what you are authorized to address, and identify the appropriate review for the broader question."
+            ]
+          },
+          {
+            "title": "Try a decision about review",
+            "paragraphs": [
+              "In the activity below, consider the proposed text-only reminder change. Choose the most responsible next step when you do not yet know the applicable review requirement or how people would experience the change. After choosing, read the feedback. You can compare all three responses.",
+              "The practice is about preparing for a decision, not declaring a final result. Do not enter information about an actual person's appointment or services."
+            ]
+          },
+          {
+            "title": "Carry the decision forward",
+            "paragraphs": [
+              "For your own example, note the proposed change, who may be affected, the likely consequences if access differs, and the policy or procedure you need to check. Identify what you know, what you need to confirm and who can help determine the required review.",
+              "The existing analysis tools offer a quick check, a standard analysis and an in-depth review. Their labels help you find support; current requirements and responsible review determine what your work must include. In the next lesson, we will make those requirements and decision roles visible before comparing options."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/02/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/02/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/02/poster.png",
+        "durationSeconds": 321.519398148148,
+        "chapters": [
+          {
+            "title": "Begin with the work and its requirements",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "A quick check can surface a question",
+            "start": 94.43425925925925
+          },
+          {
+            "title": "When a fuller analysis helps",
+            "start": 152.57509259259257
+          },
+          {
+            "title": "When the issue reaches across a process",
+            "start": 207.3476388888888
+          },
+          {
+            "title": "Try a decision about review",
+            "start": 258.0920833333332
+          },
+          {
+            "title": "Carry the decision forward",
+            "start": 285.7013888888888
+          }
+        ]
+      },
+      "sourceSha256": "77eab58df9c3f6140f03799c121d16f30679197062540b9d4097759ca57c508a",
+      "changes": [],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 0
+    },
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-2",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        2
+      ],
+      "source": {
+        "id": "03",
+        "title": "Identify requirements and decision roles",
+        "deliverable": "Record applicable sources, questions about authority and needed review",
+        "resources": [
+          {
+            "title": "Requirements and review evidence",
+            "href": "/practice/requirements",
+            "description": "Connect sources, decisions and review needs."
+          },
+          {
+            "title": "Equity analysis for policy review",
+            "href": "/learn/equity-toolkit/policy-review",
+            "description": "Explore policy work and responsible review."
+          },
+          {
+            "title": "Find the right person",
+            "href": "/support/right-person",
+            "description": "Identify the office to consult."
+          }
+        ],
+        "practice": {
+          "id": "03",
+          "question": "The team is unsure whether text-only reminders meet applicable requirements. What should it do next?",
+          "options": [
+            {
+              "text": "Use a similar program’s previous approval as sufficient for this new proposal.",
+              "feedback": "A prior approval may suggest questions, but the applicable requirements and decision authority may differ. Confirm them for this proposal."
+            },
+            {
+              "text": "Record the uncertain requirement and consult the office responsible for interpretation and approval.",
+              "correct": true,
+              "feedback": "This keeps the question visible while seeking an authoritative answer. Use current policy and applicable review processes."
+            },
+            {
+              "text": "Assume every agency process is identical and use a different program’s answer without checking.",
+              "feedback": "Another process may provide useful questions, but its requirements and authority may differ. Confirm what applies to this decision."
+            }
+          ],
+          "reflection": "Name one governing source, one decision that remains open and one question for the person responsible.",
+          "artifact": "Requirements and roles"
+        },
+        "example": {
+          "id": "03",
+          "title": "Clarify a requirement",
+          "situation": "The team does not yet know which rules and approvals govern reminder methods.",
+          "response": "Record the source and open question, and consult the responsible office.",
+          "reason": "A question still awaiting interpretation is not a confirmed requirement or approval."
+        },
+        "sections": [
+          {
+            "title": "Know what you are deciding",
+            "paragraphs": [
+              "Before comparing options, make the decision and its boundaries clear. What is being considered? What needs to stay in place? Who can recommend a change, who reviews it, and who can approve it? Those questions protect good ideas from being mistaken for decisions already made.",
+              "In our continuing example, a team is considering how to send appointment reminders. The team has not decided to remove mail. Its task is to examine options for reminders, not to change an individual's eligibility or the appointment rules. The people responsible for those matters remain responsible for them.",
+              "Your own role may be to prepare a question, provide information, review a draft, coordinate input, or make a recommendation. A useful analysis makes those contributions visible without implying that one person holds every responsibility."
+            ]
+          },
+          {
+            "title": "Start with the governing source",
+            "paragraphs": [
+              "Look for the sources that actually govern the work. These might include applicable law, current agency policy, service requirements, delegated procedures or a contract. A learning example, a summary or a proposed improvement is not automatically a governing requirement.",
+              "The published DHS Equity Policy and the official Equity Analysis Toolkit are available from the existing toolkit and policy pages. Confirm the current policy, instructions and local review process for the decision you are working on. Where a required full analysis applies, a brief pause does not replace it.",
+              "Do not settle a question of legal or policy interpretation simply because a source seems relevant. Record what you found, where you found it, what remains uncertain and the office that can interpret or confirm it. Separate a requirement that is verified from one that still needs review."
+            ]
+          },
+          {
+            "title": "What remains open?",
+            "paragraphs": [
+              "Some parts of a proposal may be required; others may be choices. In the reminder example, the team should confirm what information must be communicated, whether a particular method is required, what consent or privacy rules apply and who is responsible for approving any change.",
+              "Until the responsible people confirm those points, they are questions, not facts. There may be more than one way to meet a requirement. Ask which options can still be considered rather than assuming that a constraint makes every other choice impossible.",
+              "The same distinction matters in a hiring process, a contract or a notice. Preserve binding requirements, and keep any proposed change clearly identified as a proposal until the appropriate decision is made."
+            ]
+          },
+          {
+            "title": "Make responsibility visible",
+            "paragraphs": [
+              "Identify roles rather than putting one person in charge of everything. Who owns the work? Who understands the governing requirements? Who can arrange meaningful participation? Who will review accessibility, privacy or communications when those subjects arise? Who can make the final decision?",
+              "Formal processes, including those for civil rights, Tribal consultation, labor relations or other matters when applicable, remain in place. An equity analysis can inform them; it does not replace them. Ask the responsible office which processes apply rather than assuming they all apply to every example.",
+              "The requirements crosswalk can help you keep the source, the work it affects, the evidence and the person responsible together. Its notes support preparation; completing a worksheet is not itself an approval."
+            ]
+          },
+          {
+            "title": "Try a question about authority",
+            "paragraphs": [
+              "In the activity below, consider what to do when the reminder team is unsure whether a text-only approach meets the applicable requirements. Select a response, then read the feedback and compare the reasoning. You may revisit your choice.",
+              "For practice, use general information. Do not include a person's appointment details, health information or other confidential records."
+            ]
+          },
+          {
+            "title": "Carry the questions forward",
+            "paragraphs": [
+              "For your own work example, identify one governing source, one part of the decision that remains open and one question that needs a responsible review. If you do not know a source or a role, it is useful to write that down as unknown.",
+              "Next, we will consider whose experience can help answer the decision question, what existing evidence can show and what still needs to be learned."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/03/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/03/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/03/poster.png",
+        "durationSeconds": 256.3722685185184,
+        "chapters": [
+          {
+            "title": "Know what you are deciding",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "Start with the governing source",
+            "start": 51.459351851851864
+          },
+          {
+            "title": "What remains open?",
+            "start": 107.9462037037037
+          },
+          {
+            "title": "Make responsibility visible",
+            "start": 154.793287037037
+          },
+          {
+            "title": "Try a question about authority",
+            "start": 205.22282407407403
+          },
+          {
+            "title": "Carry the questions forward",
+            "start": 229.49231481481473
+          }
+        ]
+      },
+      "sourceSha256": "92bc6274138c7dbee6709d27f2f12e39c17a7e5f81777e235301e981df6db777",
+      "changes": [],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 0
+    },
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-3",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        3
+      ],
+      "source": {
+        "id": "04",
+        "title": "Learn from people and evidence",
+        "deliverable": "Identify whose experience is needed, what is known and what remains uncertain",
+        "resources": [
+          {
+            "title": "Community engagement",
+            "href": "/learn/community-connections",
+            "description": "Plan participation and report back."
+          },
+          {
+            "title": "Engagement and report-back plan",
+            "href": "/practice/gp-3",
+            "description": "Prepare accessible, meaningful participation."
+          }
+        ],
+        "practice": {
+          "id": "04",
+          "question": "The team knows reminders are currently mailed. What can it responsibly conclude about people’s communication preferences?",
+          "options": [
+            {
+              "text": "Use response rates from the existing reminders to choose the most convenient new method before asking people.",
+              "feedback": "Response patterns are useful information, but they do not establish communication preferences or why individuals responded. Seek appropriate perspectives before deciding."
+            },
+            {
+              "text": "Mail is currently used; people’s ability to receive, understand and use different methods still needs inquiry.",
+              "correct": true,
+              "feedback": "This separates the observation from what remains unknown and points to appropriate evidence and participation."
+            },
+            {
+              "text": "Use staff experience as the complete account because staff see the process every day.",
+              "feedback": "Staff experience offers valuable insight, but it does not replace learning how people who receive reminders encounter and use them."
+            }
+          ],
+          "reflection": "List what is known, its source, a missing perspective and an appropriate way to learn more.",
+          "artifact": "People and evidence"
+        },
+        "example": {
+          "id": "04",
+          "title": "Ask what is known",
+          "situation": "The team knows its current method but has not established everyone’s preferences or access.",
+          "response": "Separate the observation from the assumption and plan appropriate inquiry.",
+          "reason": "One person’s experience or a response count cannot establish every person’s needs."
+        },
+        "sections": [
+          {
+            "title": "Start with curiosity",
+            "paragraphs": [
+              "An equity analysis asks more than whether a change sounds reasonable to the people proposing it. It asks how the decision may be experienced by people who use, carry out or are otherwise affected by the work.",
+              "In the reminder example, the team can begin by asking which methods people can receive and use, whether the information is understandable and whether there is a usable way to ask for help. These are questions to explore. They are not conclusions about a person because of their age, disability, language, location or community.",
+              "If you are using your own example, identify the people affected by the decision and the people who help carry it out. Their perspectives may be different, and no single person represents every experience."
+            ]
+          },
+          {
+            "title": "Separate what you know from what you think",
+            "paragraphs": [
+              "The team may know that it currently sends reminders by mail and is considering another method. It may know what information appears on a public reminder. It does not automatically know whether a particular person has a phone, reads texts, shares a device, understands a message or prefers mail.",
+              "A response count can be useful, but it does not explain a person's reason for responding or not responding. Keep observations, interpretations and questions separate. For example: the team recorded that a reminder was sent; it still needs to learn whether the person received and could use it.",
+              "Look for existing information that you are authorized to use. Describe its source, period and limits. If information is missing, say so. Do not fill a gap with a confident-sounding guess."
+            ]
+          },
+          {
+            "title": "Invite useful participation",
+            "paragraphs": [
+              "Ask which choices can still be influenced before seeking input. Explain the purpose of the question, the options under consideration and any known limits. Use the established engagement process and involve the people or offices responsible for arranging participation.",
+              "Consider what makes participation usable: clear language, accessible materials, appropriate language assistance, timing, a choice of ways to respond and support where needed. The right arrangements depend on the people and the work. Ask rather than assume.",
+              "Be clear about what happens next. Who will review the input? How will people hear what was considered, what changed or did not change, and why? Meaningful participation includes a way to close that loop, even when every suggestion cannot be adopted."
+            ]
+          },
+          {
+            "title": "Use information responsibly",
+            "paragraphs": [
+              "An individual learner does not need to collect sensitive information to practice. Keep learning notes general and leave out names, appointment details, case information, health information and personnel records.",
+              "For actual work, use approved sources, permissions and privacy practices. Ask the responsible data owner about access, reporting and small groups before using or sharing information. The goal is to learn enough to make a better decision, not to gather more detail than the work calls for.",
+              "When evidence is incomplete, say what it can and cannot support. A few experiences can reveal important questions without proving how every person experiences a service. Missing perspectives are a reason to plan further inquiry, not a reason to pretend the analysis is complete."
+            ]
+          },
+          {
+            "title": "Try a question about evidence",
+            "paragraphs": [
+              "In the activity below, consider what the reminder team can reasonably conclude from its current information. Choose a response and then read the feedback. Compare the options and notice the difference between an observation and an assumption.",
+              "You can pause here and make a brief note about your own example. What do you know, where did it come from, whose perspective is missing and who can help you seek it appropriately?"
+            ]
+          },
+          {
+            "title": "Carry the learning forward",
+            "paragraphs": [
+              "The next step is to compare options, not to treat the first attractive idea as the only choice. Bring the information you have, identify what remains uncertain, and keep the people affected in view as you consider the tradeoffs."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/04/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/04/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/04/poster.png",
+        "durationSeconds": 240.89893518518517,
+        "chapters": [
+          {
+            "title": "Start with curiosity",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "Separate what you know from what you think",
+            "start": 49.556250000000006
+          },
+          {
+            "title": "Invite useful participation",
+            "start": 99.35569444444445
+          },
+          {
+            "title": "Use information responsibly",
+            "start": 148.34300925925928
+          },
+          {
+            "title": "Try a question about evidence",
+            "start": 195.95773148148146
+          },
+          {
+            "title": "Carry the learning forward",
+            "start": 225.66879629629628
+          }
+        ]
+      },
+      "sourceSha256": "78409f0199f0070e2b2c3d0599b39a13d97a044ade41212704cd83d112c8a604",
+      "changes": [],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 0
+    },
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-4",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        4
+      ],
+      "source": {
+        "id": "05",
+        "title": "Compare options and tradeoffs",
+        "deliverable": "Compare feasible alternatives, potential benefits, burdens, costs and uncertainties",
+        "resources": [
+          {
+            "title": "Practice with the Equity Analysis Toolkit",
+            "href": "/learn/equity-toolkit/practice",
+            "description": "Use the worked example and decision workspace."
+          },
+          {
+            "title": "Cultural and language access planning",
+            "href": "/practice/clas",
+            "description": "Consider communication and access."
+          }
+        ],
+        "practice": {
+          "id": "05",
+          "question": "Which comparison gives the people responsible the most useful basis for considering appointment reminders?",
+          "options": [
+            {
+              "text": "Recommend multiple reminder methods immediately because offering choice sounds most inclusive.",
+              "feedback": "Multiple methods may be promising, but first compare possible burdens, requirements, resources and uncertainties before recommending an approach."
+            },
+            {
+              "text": "Compare the current method and other feasible options, their possible benefits and burdens, requirements and unanswered questions.",
+              "correct": true,
+              "feedback": "This makes the tradeoffs visible without inventing evidence or treating a proposal as approved."
+            },
+            {
+              "text": "Keep the current method as the only option because it is already in place.",
+              "feedback": "The current approach is useful for comparison, but examining other feasible options can reveal improvements and tradeoffs."
+            }
+          ],
+          "reflection": "Compare two approaches, including a possible benefit, burden and evidence or question for each.",
+          "artifact": "Options and tradeoffs"
+        },
+        "example": {
+          "id": "05",
+          "title": "Compare practical choices",
+          "situation": "Mail, text only, and offering more than one method are possibilities to compare; permission and approval remain unconfirmed.",
+          "response": "Compare benefits, burdens, feasibility, requirements and evidence gaps.",
+          "reason": "Potential impacts are questions to examine, not conclusions about particular people."
+        },
+        "sections": [
+          {
+            "title": "Make the alternatives visible",
+            "paragraphs": [
+              "Once the decision is clear and you have begun gathering relevant perspectives, compare more than one practical option. Include the current approach when it is a meaningful alternative. A comparison helps you see what each choice makes easier, what it may make harder and what you still need to learn.",
+              "For the reminder example, consider three possibilities: keep mail as it is; replace mail with text only; or offer more than one method with a usable route for help. These are options for analysis, not a claim that every option is permitted, approved or ready to implement.",
+              "Before recommending any of them, confirm the requirements, decision authority and resources. Where additional information or review is needed, mark that need rather than presenting a preference as an approved plan."
+            ]
+          },
+          {
+            "title": "Compare benefits and burdens",
+            "paragraphs": [
+              "A text message might be convenient for someone who can receive and use it. Mail might be more accessible or private for another person in a particular situation. Multiple methods may support choice but require staff time, reliable contact information and a plan to maintain each option.",
+              "These possibilities need inquiry. Do not assign a communication preference to someone based on identity, disability, language, income or age. Ask what the available evidence and appropriate engagement reveal, and identify whose experience is still missing.",
+              "Consider burdens as well as benefits. Does an option ask a person to obtain a device, navigate a difficult process, share information they would rather keep private or find help on their own? Does it increase effort for staff or partners in a way that needs planning?"
+            ]
+          },
+          {
+            "title": "Check feasibility without losing the purpose",
+            "paragraphs": [
+              "Feasibility includes more than whether a method can be purchased or launched. Check whether the information can be delivered accessibly, whether language assistance and disability-related needs can be addressed, and whether the relevant offices can support the proposed process.",
+              "Also consider timing, resources, maintenance, privacy and what happens when a message is not received. A backup route matters. A choice can be technically possible and still leave a person without a usable next step.",
+              "Do not invent costs, response rates or access needs to complete the comparison. Mark them as unknown and identify how the responsible people can learn more. A sound recommendation can include an uncertainty and a next question."
+            ]
+          },
+          {
+            "title": "Test the reasoning",
+            "paragraphs": [
+              "The Equity Analysis Toolkit's decision workspace can help organize alternatives, benefits, burdens, risks and evidence. Use the official tool and any required process alongside it. Follow the workspace's own instructions when saving to My Work or downloading notes; do not assume another worksheet saves information the same way.",
+              "For a recommendation, explain why an option is being considered, what it would require and what could still go wrong. If people affected have not yet had a meaningful opportunity to inform an open choice, identify that gap and the next appropriate step.",
+              "The aim is not to find a perfect answer in isolation. It is to make the reasoning clear enough for the people who hold the decision to weigh evidence, responsibilities and alternatives."
+            ]
+          },
+          {
+            "title": "Try a comparison",
+            "paragraphs": [
+              "In the activity below, compare proposed approaches to the reminder decision. Select the response that gives the people responsible the most useful basis for further work. Read the feedback after choosing, and compare the reasoning across the options.",
+              "If you are using your own example, name at least two possible approaches and one possible benefit, burden or question for each. Keep the note general and free of confidential details."
+            ]
+          },
+          {
+            "title": "Carry the comparison forward",
+            "paragraphs": [
+              "In the next lesson, we will bring the decision, information, alternatives and remaining questions together in a recommendation. The goal is a clear request for the appropriate review, not a statement that the change has already been approved."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/05/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/05/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/05/poster.png",
+        "durationSeconds": 241.8937037037037,
+        "chapters": [
+          {
+            "title": "Make the alternatives visible",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "Compare benefits and burdens",
+            "start": 50.46495370370371
+          },
+          {
+            "title": "Check feasibility without losing the purpose",
+            "start": 104.0575462962963
+          },
+          {
+            "title": "Test the reasoning",
+            "start": 148.9772685185185
+          },
+          {
+            "title": "Try a comparison",
+            "start": 199.3348611111111
+          },
+          {
+            "title": "Carry the comparison forward",
+            "start": 226.83212962962963
+          }
+        ]
+      },
+      "sourceSha256": "3914e987ea989c865d7cbbdcd0d62e2d401904001147b94e65968e9ff49ddc03",
+      "changes": [],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 0
+    },
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-5",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        5
+      ],
+      "source": {
+        "id": "06",
+        "title": "Prepare a recommendation for review",
+        "deliverable": "Summarize the reasoning, open questions, responsible roles and needed approvals",
+        "resources": [
+          {
+            "title": "Standard equity analysis",
+            "href": "/practice/gp-7",
+            "description": "Work through an analysis."
+          },
+          {
+            "title": "In-depth review",
+            "href": "/equity-review",
+            "description": "Find additional review when needed."
+          },
+          {
+            "title": "Equity analysis for policy review",
+            "href": "/learn/equity-toolkit/policy-review",
+            "description": "Connect the recommendation to policy work."
+          }
+        ],
+        "practice": {
+          "id": "06",
+          "question": "Which draft recommendation best supports responsible review of the reminder proposal?",
+          "options": [
+            {
+              "text": "Present staff observations as sufficient evidence of people’s preferences while consultation is still being planned.",
+              "feedback": "Staff observations can help frame questions, but they do not establish the preferences of people affected. Identify the missing perspective and the planned engagement."
+            },
+            {
+              "text": "Explain the purpose, options, available evidence and uncertainties, and identify the people responsible and the decision owner.",
+              "correct": true,
+              "feedback": "This presents a proposal and its reasoning while preserving the roles and approvals that govern the decision."
+            },
+            {
+              "text": "Recommend the preferred option and describe outstanding approvals as routine details that can be handled after launch.",
+              "feedback": "Review and approval are part of the decision, not merely a task after launch. Make the responsible roles and pending questions visible."
+            }
+          ],
+          "reflection": "Draft a proposed action, the reason, one important uncertainty and the role that should review it.",
+          "artifact": "Recommendation and review"
+        },
+        "example": {
+          "id": "06",
+          "title": "Prepare a recommendation",
+          "situation": "The team has considered options and identified questions that still need review.",
+          "response": "Summarize the purpose, evidence, options, uncertainty and the people responsible.",
+          "reason": "A recommendation requests a decision; it is not proof that the decision is approved."
+        },
+        "sections": [
+          {
+            "title": "Bring the reasoning together",
+            "paragraphs": [
+              "A useful recommendation helps another person understand the decision, the people affected, the evidence and the options. It also makes open questions visible. Its purpose is to support the responsible review, not to make uncertainty disappear.",
+              "In the reminder example, a draft might explain why the team is considering a change, what is currently known, which communication methods are being compared and what the team still needs to learn. It should identify the relevant requirements and the people or offices responsible for reviewing the proposal.",
+              "If participation, privacy, accessibility or feasibility questions remain open, name them. Do not write that people prefer a method unless the information supports that statement. A recommendation can responsibly ask for further review or a limited, authorized test."
+            ]
+          },
+          {
+            "title": "Show how you reached the recommendation",
+            "paragraphs": [
+              "Begin with the purpose and the choice that is still open. Then describe who may benefit or experience a burden and where the information came from. Distinguish what people actually shared, what existing evidence shows and what the team is considering as a possibility.",
+              "Summarize the alternatives, including the current approach when relevant. Describe the tradeoffs and the practical support each option would need. Explain why the proposed direction deserves consideration, and describe any remaining access, privacy, resource or implementation questions.",
+              "If an option appears to reduce one barrier but might create another, say so. The people responsible need an honest account of the tradeoffs, including those that may be difficult to resolve."
+            ]
+          },
+          {
+            "title": "Route the work to the right review",
+            "paragraphs": [
+              "Identify the decision owner and any others who must weigh in. Depending on the work, this may include program leadership, policy, communications, accessibility, privacy, civil rights, Tribal consultation, labor relations, contracting or other responsible offices. Confirm what applies instead of treating the list as an automatic requirement for every decision.",
+              "Use the current official Equity Analysis Toolkit and any required agency process. The One DSD resources can help you prepare and practice; they do not substitute for required approvals. A completed learning activity or worksheet does not authorize a change.",
+              "If you cannot identify the right person, record the question and seek help from a supervisor or the responsible office. You can make a meaningful contribution by preparing a clear question even when someone else owns the final decision."
+            ]
+          },
+          {
+            "title": "Describe the next step accurately",
+            "paragraphs": [
+              "Use words that match the actual status of the work. A proposed approach is proposed. An item waiting for review is not approved. A plan to ask people about an option is not evidence that people have already supported it.",
+              "For the reminder example, a suitable next step might be to ask the responsible program and communication staff to examine requirements, participation and available methods before a decision. The appropriate next step in an actual case depends on the current process and the people authorized to act.",
+              "Keep learning notes free of personal and confidential details. For real work, use the approved records and review channels. Follow each tool's instructions about whether a draft is saved, downloaded or retained only during the visit."
+            ]
+          },
+          {
+            "title": "Try a recommendation",
+            "paragraphs": [
+              "In the activity below, choose the recommendation that best communicates what is known, what is still open and what review is needed. Read the feedback after choosing. You can compare the alternatives and revise your answer.",
+              "For your own example, draft a short recommendation with a proposed action, the reason for considering it, one important uncertainty and the role that should review it."
+            ]
+          },
+          {
+            "title": "Prepare for what follows",
+            "paragraphs": [
+              "The next lesson begins after the appropriate people have authorized a change. Until then, keep the recommendation and any required review separate from implementation. That distinction helps the work remain accountable and understandable."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/06/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/06/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/06/poster.png",
+        "durationSeconds": 242.27736111111108,
+        "chapters": [
+          {
+            "title": "Bring the reasoning together",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "Show how you reached the recommendation",
+            "start": 53.104814814814816
+          },
+          {
+            "title": "Route the work to the right review",
+            "start": 100.65185185185186
+          },
+          {
+            "title": "Describe the next step accurately",
+            "start": 154.94833333333332
+          },
+          {
+            "title": "Try a recommendation",
+            "start": 202.46129629629627
+          },
+          {
+            "title": "Prepare for what follows",
+            "start": 228.0884722222222
+          }
+        ]
+      },
+      "sourceSha256": "90aaeb8995b3576511dcb825ca128509d0b1df273c0a0082ba05913ea2c2bffc",
+      "changes": [],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 0
+    },
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-6",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        6
+      ],
+      "source": {
+        "id": "07",
+        "title": "Carry out an authorized change",
+        "deliverable": "Plan responsibilities, accessible communication, resources and follow-through",
+        "resources": [
+          {
+            "title": "People, Access and Culture in Practice",
+            "href": "/learn/equity-in-practice",
+            "description": "Explore service and workplace examples."
+          },
+          {
+            "title": "Teams and cross-collaboration",
+            "href": "/learn/collaboration",
+            "description": "Plan clear handoffs and responsibilities."
+          }
+        ],
+        "practice": {
+          "id": "07",
+          "question": "An authorized reminder change is ready for planning. What is the strongest implementation step?",
+          "options": [
+            {
+              "text": "Plan responsibilities, accessible communication, the help route, necessary resources and what happens if the method does not work.",
+              "correct": true,
+              "feedback": "This connects the authorized decision to a usable process and makes the handoffs and remaining questions visible."
+            },
+            {
+              "text": "Prepare launch communications while assuming the proposed approach will be approved.",
+              "feedback": "You can prepare questions, but before implementing a change confirm what was actually authorized, by whom and under which requirements."
+            },
+            {
+              "text": "Train staff to send reminders, then address any access problems only if a complaint arrives.",
+              "feedback": "Staff preparation matters, but a usable process also needs an accessible help route, maintenance and a plan for exceptions before launch."
+            }
+          ],
+          "reflection": "Identify an action within your role, one handoff needing coordination and an unresolved implementation question.",
+          "artifact": "Implementation plan"
+        },
+        "example": {
+          "id": "07",
+          "title": "Plan an authorized change",
+          "situation": "The responsible people have authorized a specific reminder approach for the exercise.",
+          "response": "Plan the roles, communication, assistance route, follow-through and maintenance.",
+          "reason": "Implementation must match the actual authorization and current process."
+        },
+        "sections": [
+          {
+            "title": "Start after the right decision",
+            "paragraphs": [
+              "An analysis can inform a decision, but it does not make the decision by itself. Before putting a change into practice, confirm what has been authorized, by whom, under which requirements and with what resources. If the status is unclear, pause and ask the responsible office.",
+              "For our reminder example, imagine the responsible people have reviewed the options and authorized a particular approach. The exercise does not assume that text-only reminders were approved or that a real program has changed its process. Your task is to plan the work that would be needed for the approach actually authorized.",
+              "For your own example, identify what you may do within your role, what requires coordination and what another person or office must decide. Use the applicable implementation process rather than treating the learning activity as approval."
+            ]
+          },
+          {
+            "title": "Plan the work people will experience",
+            "paragraphs": [
+              "Write down the steps that bring the authorized change into everyday use. Who prepares the information? Who checks required wording, accessibility, language and privacy? Who maintains contact information through approved channels? Who responds when a reminder is not received or a person needs help?",
+              "Also ask what happens at the handoff. If a message directs someone to call a number, the people answering need to know the purpose, available options and where to route a question. A change is not fully prepared if its next step is unclear.",
+              "Use roles and proposed responsibilities without inventing commitments. If a resource, responsible person or deadline has not been confirmed, record it as open and identify who can resolve it."
+            ]
+          },
+          {
+            "title": "Communicate in ways people can use",
+            "paragraphs": [
+              "Explain what is changing, what stays the same and what people can do next. Consider accessible formats, understandable wording, appropriate language support and a way to ask questions. Confirm those arrangements with the responsible people and use current requirements.",
+              "The method used to communicate about a change should not quietly recreate the barrier the change was meant to address. For example, if access to text messages is uncertain, a text-only announcement about the new reminder process may leave some people without a usable explanation.",
+              "Do not promise that every person will have the same experience. Check whether the communication and assistance route work in practice, and provide a responsible path for raising a concern."
+            ]
+          },
+          {
+            "title": "Prepare for problems and continuity",
+            "paragraphs": [
+              "Every option needs a plan for exceptions and maintenance. What happens if a message fails, a contact method changes, an interpreter or accessible format is needed, or a person asks to use another available route? Identify the appropriate process instead of promising an outcome you cannot authorize.",
+              "Make sure someone is responsible for keeping the information current. If a notice is revised, who updates its other approved formats and checks that the help route still works? If a handoff changes, who makes sure the next person has the information needed to respond?",
+              "Keep private records in their approved locations. Learning notes should contain no names, case details, health information or personnel records. A general implementation plan can identify responsible roles without reproducing confidential information."
+            ]
+          },
+          {
+            "title": "Try an implementation decision",
+            "paragraphs": [
+              "In the activity below, consider the team preparing an authorized reminder change. Choose the response that best supports people using the process, then read the feedback. You can compare the choices without recording a personal experience.",
+              "For your own example, write one action within your role, one handoff that needs coordination and one unresolved question. If a decision is still pending, record the review needed before implementation rather than treating the proposal as authorized."
+            ]
+          },
+          {
+            "title": "Prepare to learn from the result",
+            "paragraphs": [
+              "Implementation is not the end of the decision. In the final lesson, we will distinguish a completed activity from evidence of a useful result and identify who will review what happened and what may need to change."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/07/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/07/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/07/poster.png",
+        "durationSeconds": 246.8871759259259,
+        "chapters": [
+          {
+            "title": "Start after the right decision",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "Plan the work people will experience",
+            "start": 54.285972222222235
+          },
+          {
+            "title": "Communicate in ways people can use",
+            "start": 101.77462962962964
+          },
+          {
+            "title": "Prepare for problems and continuity",
+            "start": 148.86726851851853
+          },
+          {
+            "title": "Try an implementation decision",
+            "start": 201.8199537037037
+          },
+          {
+            "title": "Prepare to learn from the result",
+            "start": 231.93523148148145
+          }
+        ]
+      },
+      "sourceSha256": "febbb7d01ef703d98dfbd5c558de4e500c1dff83c0d337a287455fa77ffaecaa",
+      "changes": [
+        {
+          "path": [
+            "modules",
+            6,
+            "practice",
+            "options",
+            1,
+            "text"
+          ],
+          "before": "Prepare launch communications while assuming the proposed approach will be approved.",
+          "after": "Treat authorization of the reminder approach as approval of every implementation detail and launch without checking the conditions.",
+          "reason": "Make the distractor consistent with the question, which already states that a change is authorized."
+        },
+        {
+          "path": [
+            "modules",
+            6,
+            "practice",
+            "options",
+            1,
+            "feedback"
+          ],
+          "before": "You can prepare questions, but before implementing a change confirm what was actually authorized, by whom and under which requirements.",
+          "after": "Authorization has a scope and conditions. Confirm which implementation details, resources and assistance arrangements are covered, and resolve outstanding requirements before launch.",
+          "reason": "Explain the specific error without falsely suggesting the scenario has no authorization."
+        }
+      ],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 2
+    },
+    {
+      "id": "lib--content--equity-everyday-decisions--modules-7",
+      "file": "lib/content/equity-everyday-decisions.json",
+      "path": [
+        "modules",
+        7
+      ],
+      "source": {
+        "id": "08",
+        "title": "Learn from results and reconsider",
+        "deliverable": "Choose useful evidence, protect privacy and identify when to revisit the decision",
+        "resources": [
+          {
+            "title": "Plan how to learn from results",
+            "href": "/practice/measurement",
+            "description": "Develop an evaluation plan."
+          },
+          {
+            "title": "Equity analysis for your work",
+            "href": "/learn/equity-toolkit",
+            "description": "Return to the toolkit and next steps."
+          }
+        ],
+        "practice": {
+          "id": "08",
+          "question": "After an authorized reminder change, a team sees a higher response count. What can it reasonably conclude?",
+          "options": [
+            {
+              "text": "Treat the higher response count as evidence that the change worked, and revisit access only if complaints increase.",
+              "feedback": "A higher count may be encouraging, but it does not establish a cause or access for everyone. Review context and missing perspectives as well."
+            },
+            {
+              "text": "The count is worth reviewing with other appropriate evidence, its limits and people’s experience before deciding what it means.",
+              "correct": true,
+              "feedback": "This uses the information without overstating it. Identify the people responsible and protect privacy."
+            },
+            {
+              "text": "The result has no use unless it proves the change was the only possible cause.",
+              "feedback": "Imperfect evidence can still guide inquiry when its limitations are explicit. A later decision may require additional information."
+            }
+          ],
+          "reflection": "Write a process question, an experience question, a possible source and a role to review it; mark unagreed details as questions.",
+          "artifact": "Learning and follow-up plan"
+        },
+        "example": {
+          "id": "08",
+          "title": "Return to the result",
+          "situation": "Suppose a team later notices a higher response count after an authorized change.",
+          "response": "Examine the count with appropriate context and experience, and agree a next review.",
+          "reason": "A count alone does not establish a cause or show whether access improved for everyone."
+        },
+        "sections": [
+          {
+            "title": "Return to the purpose",
+            "paragraphs": [
+              "The original goal was not simply to send a reminder. It was to help a person receive information they can understand and use to take the next step. That purpose should guide how the team learns from an authorized change.",
+              "A count of reminders sent tells you that an activity occurred. It does not by itself show that messages were received, understood, accessible or useful. Those are different questions, and each may need a different source of information.",
+              "For your own work, return to the purpose you named at the beginning. What experience or result did the change aim to improve? What would you need to learn before saying that it helped, and for whom?"
+            ]
+          },
+          {
+            "title": "Choose useful questions and sources",
+            "paragraphs": [
+              "Consider a process question: were reminders prepared and sent using the authorized method? Consider an experience question: could people understand the message and find help? Consider an outcome question: did people have a usable opportunity to take the intended next step?",
+              "You may not have answers to all three. Identify what is available, the period it covers, who is responsible for it and whether you are authorized to use it. Where a starting point or comparison has not been established, record that as a gap instead of creating a number.",
+              "The evaluation-plan worksheet can help connect a question, source, responsible role, review point and possible next decision. Its notes are not automatically saved; copy or download them if you want to keep a general working note. Follow the instructions shown in the worksheet."
+            ]
+          },
+          {
+            "title": "Interpret results carefully",
+            "paragraphs": [
+              "Suppose a team later sees a higher response count. That could be worth exploring, but the count alone cannot establish that a particular communication change caused it or that everyone could participate. Timing, outreach, the number of people contacted and other conditions could also matter.",
+              "Look at both numbers and people's accounts where those sources are appropriate and authorized. Ask who may be missing from the information and what the evidence cannot show. Do not infer an individual's identity or treat a small group as anonymous without the responsible data owner's guidance.",
+              "Protect private information. Agree reporting, access and disclosure rules with the responsible office before gathering or sharing data. Do not paste names, appointment details, case information, health information or personnel records into learning notes."
+            ]
+          },
+          {
+            "title": "Decide who will act and when to return",
+            "paragraphs": [
+              "Identify the role responsible for reviewing the information, the proposed time to return to it and the decision that the review could inform. These are plans to confirm, not commitments to invent on someone else's behalf.",
+              "For the reminder example, the team might agree to look at delivery and assistance questions after an authorized change, while also seeking appropriate feedback about whether the message was usable. If a help route remains unclear or an authorized method is not working, the team can bring that concern back to the people responsible.",
+              "Share what can appropriately be shared with people who contributed: what was learned, what changed, what did not change and what remains unresolved. Report-back is part of respectful participation, not a promise to accept every suggestion."
+            ]
+          },
+          {
+            "title": "Try a question about results",
+            "paragraphs": [
+              "In the activity below, consider what a change in the reminder count can and cannot establish. Choose a response, then read the feedback and compare the reasoning. The activity is a learning aid; it does not make a conclusion about an actual service.",
+              "For your own example, write one process question, one question about experience, a possible information source and the role that could review it. If any source, comparison or review date is not yet agreed, mark it as a question to resolve."
+            ]
+          },
+          {
+            "title": "Bring the path together",
+            "paragraphs": [
+              "You began by defining a decision and its purpose. You considered the appropriate depth, requirements, affected people, evidence and alternatives. You prepared a recommendation for the responsible review, planned an authorized change and identified how to learn from the result.",
+              "Return to the existing toolkit, policy, engagement resources and evaluation plan whenever they are useful. The point is not to complete every form. It is to make a responsible decision more understandable, inclusive and open to improvement through the people and processes that actually govern the work."
+            ]
+          }
+        ],
+        "mediaReady": true,
+        "video": "/learning/equity-everyday-decisions/08/lesson.mp4",
+        "captions": "/learning/equity-everyday-decisions/08/captions.vtt",
+        "poster": "/learning/equity-everyday-decisions/08/poster.png",
+        "durationSeconds": 269.4838888888888,
+        "chapters": [
+          {
+            "title": "Return to the purpose",
+            "start": 0.2777777777777778
+          },
+          {
+            "title": "Choose useful questions and sources",
+            "start": 46.38490740740741
+          },
+          {
+            "title": "Interpret results carefully",
+            "start": 99.11777777777777
+          },
+          {
+            "title": "Decide who will act and when to return",
+            "start": 151.25722222222223
+          },
+          {
+            "title": "Try a question about results",
+            "start": 201.74537037037035
+          },
+          {
+            "title": "Bring the path together",
+            "start": 235.03652777777774
+          }
+        ]
+      },
+      "sourceSha256": "de914dddf4f90558fe772a00b357391765ab754e55b1ad4246831166f94dac9a",
+      "changes": [],
+      "status": "reviewed",
+      "reviewScope": "Full authored written module, examples and assessment reasoning read. Media/captions unchanged and not synchronously revalidated; no blanket certification of linked policies.",
+      "editorialAcceptance": true,
+      "reviewer": "coverage_review full eight written modules and renderer read; root independent three exact-string changes",
+      "acceptedChangedFieldCount": 0
+    }
+  ],
+  "uiChanges": [
+    {
+      "file": "components/equity-decisions-curriculum.tsx",
+      "sourceSha256": "5adead8808531da6acf4eb2473c6872b09a99fa3fdc756876bfff7f039624e74",
+      "before": "Optional private working note",
+      "after": "Optional working note",
+      "reason": "Avoid an absolute privacy label; adjacent notice accurately states no autosave or submission."
+    }
+  ],
+  "basis": "Full eight modules and complete renderer read. Measurement worksheet is useState with copy/download only; decision workspace has explicit My Work save. Module2 policy condition matches previously verified DHS Equity Policy (prolonged/long-term impact AND scheduled designated approval); official analysis/scan/custom-tool roles preserved. Optional participation separate from required training.",
+  "scope": "Eight full written module records reviewed; seven retained, two assessment strings corrected in one. One adjacent UI privacy label corrected. Media, captions and lesson sections unchanged; no synchronized media review claimed.",
+  "verification": {
+    "exactBeforePassed": true,
+    "otherJsonValuesUnchanged": true,
+    "beforeFileSha256": "4b64c569f7455ffe695a9f6c7bf5906fc277292c8f1d7189a30c090dcfec5757",
+    "afterFileSha256": "be5ca49570ae4b469ebc696e31f8f7531cfd16fef909d876c7388aa29121b532"
+  }
+}
