@@ -24,7 +24,7 @@ const questions = [
 ];
 export default async function OperationalizingEquityPage({ searchParams }: { searchParams: Promise<{ appearance?: string }> }) {
   const dark = (await searchParams).appearance === "dark";
-  return <><span hidden data-equity-dark-preview={dark ? "true" : undefined} /><PageIntro tone="business" kicker="People, Access and Culture" title="Operationalizing equity" lede="Connecting equity to everyday decisions, workplace practices, policies and services." />
+  return <><span hidden data-equity-dark-preview={dark ? "true" : undefined} /><PageIntro tone="business" kicker="People, Access and Culture" title="Operationalizing equity" lede="This page explains how staff of the Disability Services Division (DSD) can connect equity to everyday decisions, workplace practices, policies, and services." />
     <div className="wrap max-w-6xl py-10 [&_p]:my-3">
       <details className="max-w-4xl border-b border-line pb-3 print:hidden">
         <summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download this page</summary>

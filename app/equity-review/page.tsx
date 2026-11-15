@@ -7,7 +7,7 @@ export default function EquityReviewPage() {
   return <div className="pilot-topic">
     <header>
       <h1>Review a policy, process, or service change</h1>
-      <p>These reviews help staff of the Disability Services Division (DSD) and the Minnesota Department of Human Services (DHS) check a decision before it is made.</p>
+      <p>These reviews help staff of the Disability Services Division and the Minnesota Department of Human Services check a decision before it is made.</p>
       <p>Each review helps you understand who is affected, bring missing perspectives into the discussion, and compare practical options.</p>
     </header>
     <section className="pilot-topic-themes" aria-labelledby="review-options">

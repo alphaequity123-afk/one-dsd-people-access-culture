@@ -17,7 +17,7 @@ export default async function TeamSpacePage() {
     <nav className="calm-crumbs" aria-label="Breadcrumb"><Link href="/equity-workspace">Equity workspace</Link></nav>
     <p className="calm-kicker">One DSD Team and the consultant</p>
     <h1>Team space: decision records</h1>
-    <p className="calm-lede">Decision records that people chose to share for leadership review. Each one stays on its author&apos;s computer too. Nothing else from anyone&apos;s learning is kept here.</p>
+    <p className="calm-lede">This page holds decision records that people chose to share for leadership review. It is for the One DSD team and the consultant, the Equity and Inclusion Operations Consultant. Each one stays on its author&apos;s computer too. Nothing else from anyone&apos;s learning is kept here.</p>
     <p><Link className="calm-button calm-button--quiet" href="/my-work/decision-records">Write a decision record</Link></p>
     {!role ? <p>Sign in to the Equity workspace to read shared records.</p>
       : !available ? <p className="calm-note">The team space is not available right now. Records on people&apos;s own computers are unaffected.</p>

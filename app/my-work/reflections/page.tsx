@@ -14,7 +14,7 @@ export default async function ReflectionsPage({ searchParams }: Props) {
     <nav className="calm-crumbs" aria-label="Breadcrumb"><Link href="/my-work">My work</Link></nav>
     <p className="calm-kicker">Look back and learn</p>
     <h1>Your reflection notebook</h1>
-    <p className="calm-lede">A few honest lines after a lesson, a hard moment or a finished piece of work. Three questions carry most of it: what happened, why it matters, and what you will do next.</p>
+    <p className="calm-lede">This notebook is a place to write a few honest lines after a lesson, a hard moment, or a finished piece of work. Three questions carry most of it: what happened, why it matters, and what you will do next.</p>
     <details>
       <summary>Questions for each kind of reflection</summary>
       <ul className="list-disc space-y-2 pl-6">

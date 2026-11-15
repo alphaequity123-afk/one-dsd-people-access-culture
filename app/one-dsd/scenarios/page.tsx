@@ -12,7 +12,7 @@ export default async function DsdScenariosPage() {
     <header>
       <Link href="/one-dsd">Back to One DSD</Link>
       <h1>DSD work situations</h1>
-      <p>Choose a situation from everyday DSD work.</p>
+      <p>These situations come from everyday work in the Disability Services Division (DSD). Choose one that is close to your work.</p>
     </header>
     <section aria-label="Work situations">
       {scenarios.length ? <ul className="pilot-topic-rows">{scenarios.map(scenario => <li key={scenario.surfaceId}>

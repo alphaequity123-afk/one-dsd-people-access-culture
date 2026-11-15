@@ -21,7 +21,7 @@ const TODAY = "2026-11-05";
 export default async function CommunityCoveragePage() {
   if (!(await leadersAllowed())) return <div className={styles.page}>
     <h1 className={styles.title}>Community coverage</h1>
-    <p>This page is for managers, supervisors and the consultant. <Link href="/leading">Return to the leaders&apos; space</Link>.</p>
+    <p>This page is for managers, supervisors, and the consultant, the Equity and Inclusion Operations Consultant. <Link href="/leading">Return to the leaders&apos; space</Link>.</p>
   </div>;
   const rows = communityDesignEntries().filter(entry => !isNativeCommunity(entry.id)).map(entry => {
     const brief = BRIEFS.find(b => b.id === entry.id);

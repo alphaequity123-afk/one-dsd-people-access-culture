@@ -9,7 +9,7 @@ export default function GrowthPage() {
   return <div className="calm">
     <p className="calm-kicker">Professional growth</p>
     <h1>Growth paths by role</h1>
-    <p className="calm-lede">A suggested order for building skill over time, in three steps: start, apply and lead. Nothing here is required or recorded. Take it at your own pace and skip what you already know.</p>
+    <p className="calm-lede">This page suggests an order for building skill over time, by role, in three steps: start, apply, and lead. Nothing here is required or recorded. Take it at your own pace and skip what you already know.</p>
     <ul className="calm-choices">
       {roles.map(role => <li key={role.id}><Link className="calm-choice" href={`/growth/${role.id}`}><h2 style={{ fontSize: "1.15rem" }}>{role.title}</h2><p>{role.items.filter(item => item.kind === "practice").length} practices, {role.items.filter(item => item.kind === "course").length} courses</p></Link></li>)}
     </ul>

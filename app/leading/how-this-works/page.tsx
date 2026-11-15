@@ -16,7 +16,7 @@ export default function LeadingHowThisWorksPage() {
     <header className={base.intro}>
       <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>How this works</h1>
-      <p className={base.lede}>What is recorded, what is not, and what this space does not do.</p>
+      <p className={base.lede}>This page explains the leaders’ space for staff of the Disability Services Division (DSD): what is recorded, what is not, and what this space does not do.</p>
     </header>
     <div className={styles.plain}>
       <h2>There is no team view</h2>

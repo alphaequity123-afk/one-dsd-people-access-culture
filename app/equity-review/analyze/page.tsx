@@ -14,7 +14,7 @@ export default function AnalyzeDocumentPage() {
   const excluded = new Set<string>(NATIVE_DEFERENCE_COMMUNITY_IDS);
   const communities = communityDesignEntries().filter(community => !excluded.has(community.id));
   return <>
-    <PageIntro tone="business" kicker="Equity in practice" title="Analyze a document" lede="Attach or paste a policy, program description, notice or plan and get each question answered as evidence, inference or gap, with next steps in this program." />
+    <PageIntro tone="business" kicker="Equity in practice" title="Analyze a document" lede="This tool helps staff of the Disability Services Division review a document. Attach or paste a policy, program description, notice or plan and get each question answered as evidence, inference or gap, with next steps in this program." />
     <div className="wrap max-w-6xl space-y-10 py-10">
       <details className="card">
         <summary className="min-h-11 cursor-pointer font-semibold">How this works</summary>

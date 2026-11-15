@@ -22,7 +22,7 @@ export default async function ProgramModel() {
   return <article className="pilot-topic">
     <header>
       <h1>How the program works</h1>
-      <p>Start with a question, a decision, or something you want to understand more fully. Choose the part of the program that can help you now.</p>
+      <p>This page explains how One DSD, the equity program of the Disability Services Division (DSD), is organized. Start with a question, a decision, or something you want to understand more fully. Then choose the part of the program that can help you now.</p>
     </header>
     <section className="pilot-topic-themes" aria-labelledby="work-start">
       <h2 id="work-start">What are you working on?</h2>

@@ -20,7 +20,7 @@ export default function LeadingJourneyPage() {
     <header className={base.intro}>
       <p className={base.eyebrow}>Optional</p>
       <h1>Your leadership journey</h1>
-      <p className={base.lede}>A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.</p>
+      <p className={base.lede}>This page is for staff of the Disability Services Division (DSD) who want to grow as leaders at their own pace, from a first interest in leading to setting direction for others.</p>
       <p>There is no nomination, no group to join and no deadline. You choose where to start and how fast to go. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
     </header>
 

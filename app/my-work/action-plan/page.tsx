@@ -13,7 +13,7 @@ export default async function ActionPlanPage({ searchParams }: Props) {
     <nav className="calm-crumbs" aria-label="Breadcrumb"><Link href="/my-work">My work</Link></nav>
     <p className="calm-kicker">Put it into practice</p>
     <h1>Your action plan</h1>
-    <p className="calm-lede">Turn one idea into one change you can see at work. Name a small first step, a real moment to try it, and a date thirty days out to look back.</p>
+    <p className="calm-lede">This page helps you turn one idea into one change you can see at work. Name a small first step, a real moment to try it, and a date thirty days out to look back.</p>
     <details>
       <summary>Why a plan this small works</summary>
       <p>Change sticks when it is specific, tied to a moment you already face and reviewed soon after. A single behavior you try three times teaches more than a long list you never start. The review questions help you separate what you observed from what you hoped, and decide whether to keep, adjust or stop.</p>
