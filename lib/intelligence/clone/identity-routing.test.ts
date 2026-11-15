@@ -8,7 +8,7 @@ vi.mock("../retrieval/program-resources", () => ({ indexedProgramResources: f.in
 vi.mock("../retrieval/staff-search", () => ({ indexedStaffDocs: async () => [] }));
 vi.mock("../retrieval/local-semantic", () => ({ semanticRetrieveForAgent: async () => [], SemanticSearchUnavailable: class extends Error {} }));
 vi.mock("../providers", () => ({ resolveBinding: () => ({ generative: true, model: { model_id: "synthetic-identity" }, adapter: { complete: f.complete } }) }));
-vi.mock("../research", () => ({ governedResearch: f.research, governedSearch: f.research }));
+vi.mock("../research", () => ({ asksForScholarlyResearch: () => false, governedResearch: f.research, governedSearch: f.research }));
 vi.mock("./jev", () => ({ planWithJev: f.plan, reviewWithJev: f.review, SPECIALIST_GUIDANCE: { general: "Answer the actual question." } }));
 vi.mock("../orchestrator", () => ({ paused: f.paused, ask: f.ask, contextFor: () => ctx }));
 vi.mock("./ledger", () => ({ openLedger: () => ({ close: f.close }), admitRun: f.admit, finishRun: f.finish }));

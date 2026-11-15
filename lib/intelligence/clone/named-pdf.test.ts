@@ -5,7 +5,7 @@ vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: strin
 vi.mock("./jev", () => ({ reviewWithJev: async () => "pass", planWithJev: f.plan, SPECIALIST_GUIDANCE: { resources: "Use the available evidence." } }));
 vi.mock("../retrieval/local-semantic", () => ({ semanticRetrieveForAgent: async () => [], SemanticSearchUnavailable: class extends Error {} }));
 vi.mock("../providers", () => ({ resolveBinding: () => ({ generative: true, model: { model_id: "synthetic-pdf" }, adapter: { complete: f.complete } }) }));
-vi.mock("../research", () => ({ governedResearch: f.research, governedSearch: async () => { throw Error("Unexpected search"); } }));
+vi.mock("../research", () => ({ asksForScholarlyResearch: () => false, governedResearch: f.research, governedSearch: async () => { throw Error("Unexpected search"); } }));
 import { ENGAGEMENT_RESOURCES } from "@/lib/content/engagement-resources";
 import { engagementPdfDocs } from "../retrieval/engagement-pdf-docs";
 import { docsFromStaffContent, citationAttachFromDocs } from "../retrieval/search";

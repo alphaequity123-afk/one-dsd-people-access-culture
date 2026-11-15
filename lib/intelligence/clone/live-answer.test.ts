@@ -5,7 +5,7 @@ vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: strin
 vi.mock("./jev", () => ({ reviewWithJev: f.review, planWithJev: f.plan, SPECIALIST_GUIDANCE: { resources: "Use the available program evidence.", support: "Point to the responsible person." } }));
 vi.mock("../retrieval/local-semantic", () => ({ semanticRetrieveForAgent: async () => [], SemanticSearchUnavailable: class extends Error {} }));
 vi.mock("../providers", () => ({ resolveBinding: () => ({ generative: true, model: { model_id: "synthetic-live" }, adapter: { id: "openai", complete: f.complete } }) }));
-vi.mock("../research", () => ({ governedResearch: f.research, governedSearch: async () => { throw new Error("Unexpected search"); } }));
+vi.mock("../research", () => ({ asksForScholarlyResearch: () => false, governedResearch: f.research, governedSearch: async () => { throw new Error("Unexpected search"); } }));
 import { askConcierge, type AskInput } from "../agents/ask";
 import type { AskProgress } from "../agents/ask-progress";
 import { getAgent } from "../registry/agents";
