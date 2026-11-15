@@ -1,0 +1,313 @@
+{
+  "status": "root_review_accepted",
+  "records": [
+    {
+      "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool.html",
+      "sourceSha256": "e24f23f0db57d3f6cafbe74123edcc7589a87ed83ce8e09c77359e571e23c21c",
+      "changes": [
+        {
+          "before": "function track(){\n  const m=S.meta;\n  if(!m.type||!m.duration||!m.approval) return null;\n  if(m.prior===\"yes\" && m.unchanged===\"yes\" && filled(m.priorCitation)) return {key:\"scan\",title:\"Equity scan may be sufficient\",text:\"A prior formal analysis exists and its results were integrated. Use the scan to confirm nothing material changed; if it did, run the full analysis.\"};\n  const lasting = m.duration===\"prolonged\";\n  const approval = m.approval!==\"none\";\n  if(lasting && approval) return {key:\"full\",title:\"Formal equity analysis required\",text:\"Lasting impact and approval at supervisor level or above. The completed analysis must accompany the action when it goes for approval.\"};\n  if([\"legislative\",\"bill\",\"budget\",\"contract\",\"policy\"].includes(m.type)) return {key:\"full\",title:\"Formal equity analysis expected\",text:\"This action type is a named use of the toolkit. Use the full review to examine the effects and confirm any required policy review paths.\"};\n  return {key:\"scan\",title:\"Equity scan likely sufficient\",text:\"Based on the selected answers, a lighter review may be useful. Confirm any remaining uncertainties and required review paths. Complete the steps at a lighter depth and keep the record; if the scope grows, upgrade to a full analysis.\"};\n}",
+          "after": "function track(){\n  const m=S.meta;\n  if(!m.type||!m.duration||!m.approval) return null;\n  const lasting = m.duration===\"prolonged\";\n  const approval = m.approval!==\"none\";\n  if(lasting && approval) return {key:\"full\",title:\"Policy review required\",text:\"The action has prolonged or long-term impact and is scheduled for approval at supervisor level or above. The policy requires a formal equity analysis and permits an Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director to accompany the action. Use the official User Guide and responsible equity office to confirm the approach.\"};\n  return {key:\"review\",title:\"Confirm review requirements\",text:\"These answers do not establish which review approach applies. Continue applying the equity lens and consult the official User Guide and responsible equity office. The action type or existence of an earlier analysis alone does not determine whether a scan is appropriate.\"};\n}",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Used only when the action already went through a formal analysis and those results were integrated.",
+          "after": "Use the official DHS Equity Analysis Toolkit User Guide and consult the responsible equity office to choose the appropriate review. The policy permits a DHS Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director.",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "t.key===\"full\"?\"req\":\"ok\"",
+          "after": "\"req\"",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "[!!track(),\"Review track determined from impact and approval level\",0]",
+          "after": "[!!track(),\"Review questions answered; confirm the approach with the responsible office\",0]",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Nothing is sent anywhere or stored on this computer unless you save a draft; use Save draft to keep your work.",
+          "after": "Entries are saved automatically in this browser when browser storage is available. This tool does not submit the review. Other people who can use the same browser profile may be able to read the saved draft. Downloaded copies are unencrypted; use Clear browser draft when appropriate.",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "An equity scan is appropriate only when a formal analysis was already completed and its results integrated.",
+          "after": "Use the official DHS Equity Analysis Toolkit User Guide and consult the responsible equity office to choose the appropriate review. The policy permits a DHS Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director.",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "54c71ffad1810bbd896e86efd23acc0513b5599ced91f4741a5ddc83645aeecc"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool.html",
+      "sourceSha256": "cc8af721f18435614097eaeba8980fb13bcfc7f636ac6fcf3e5bdc82b5afc5d8",
+      "changes": [
+        {
+          "before": "function track(){\n  const m=S.meta;\n  if(!m.type||!m.duration||!m.approval) return null;\n  if(m.prior===\"yes\" && m.unchanged===\"yes\" && filled(m.priorCitation)) return {key:\"scan\",title:\"Equity scan may be sufficient\",text:\"A prior formal analysis exists and its results were integrated. Use the scan to confirm nothing material changed; if it did, run the full analysis.\"};\n  const lasting = m.duration===\"prolonged\";\n  const approval = m.approval!==\"none\";\n  if(lasting && approval) return {key:\"full\",title:\"Formal equity analysis required\",text:\"Lasting impact and approval at supervisor level or above. The completed analysis must accompany the action when it goes for approval.\"};\n  if([\"waiver\",\"spa\",\"bulletin\",\"rate\",\"licensing\",\"assessment\",\"leadagency\",\"selfdirect\",\"system\",\"olmstead\",\"legislative\",\"bill\",\"contract\"].includes(m.type)) return {key:\"full\",title:\"Formal equity analysis expected\",text:\"This action type is a named use of the toolkit. Use the full review to examine the effects and confirm any required policy review paths.\"};\n  return {key:\"scan\",title:\"Equity scan likely sufficient\",text:\"Based on the selected answers, a lighter review may be useful. Confirm any remaining uncertainties and required review paths. Complete the steps at a lighter depth and keep the record; if the scope grows, upgrade to a full analysis.\"};\n}",
+          "after": "function track(){\n  const m=S.meta;\n  if(!m.type||!m.duration||!m.approval) return null;\n  const lasting = m.duration===\"prolonged\";\n  const approval = m.approval!==\"none\";\n  if(lasting && approval) return {key:\"full\",title:\"Policy review required\",text:\"The action has prolonged or long-term impact and is scheduled for approval at supervisor level or above. The policy requires a formal equity analysis and permits an Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director to accompany the action. Use the official User Guide and responsible equity office to confirm the approach.\"};\n  return {key:\"review\",title:\"Confirm review requirements\",text:\"These answers do not establish which review approach applies. Continue applying the equity lens and consult the official User Guide and responsible equity office. The action type or existence of an earlier analysis alone does not determine whether a scan is appropriate.\"};\n}",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Used only when the action already went through a formal analysis and those results were integrated.",
+          "after": "Use the official DHS Equity Analysis Toolkit User Guide and consult the responsible equity office to choose the appropriate review. The policy permits a DHS Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director.",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "t.key===\"full\"?\"req\":\"ok\"",
+          "after": "\"req\"",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "[!!track(),\"Review track determined from impact and approval level\",0]",
+          "after": "[!!track(),\"Review questions answered; confirm the approach with the responsible office\",0]",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Nothing is sent anywhere or stored on this computer unless you save a draft.",
+          "after": "Entries are saved automatically in this browser when browser storage is available. This tool does not submit the review. Other people who can use the same browser profile may be able to read the saved draft. Downloaded copies are unencrypted; use Clear browser draft when appropriate.",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Answer the three triage questions. The tool tells you whether a formal equity analysis or an equity scan is required. Do not argue with the calendar; argue with the Equity Director if you think the track is wrong.",
+          "after": "Answer the triage questions. The tool identifies the policy criterion for prolonged or long-term actions scheduled for leadership approval. Confirm the appropriate review with the official User Guide and responsible equity office; the tool does not approve a scan.",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Save a draft now and after each step. Nothing is kept on the computer unless you save.",
+          "after": "Entries are saved automatically in this browser when storage is available. Download a draft to keep a separate copy. Keep confidential information out, and clear the browser draft when appropriate.",
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "1a257e62c932b74465c3a04210827d5a597e327448c30035c912c706f470b6d4"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.docx",
+      "sourceSha256": "ef4335eb68fffcea7d3edbd6366e8d0a0b7482d35b19b70bfc11ae2bb732436d",
+      "changes": [
+        {
+          "before": "Step 0 of the tool determines the review track from two facts the policy names: how long the effects last, and the highest approval level the action needs. Lasting effect plus supervisor-or-above approval means a formal equity analysis is required and must accompany the action when it goes for approval. An equity scan is appropriate only when the action already went through a formal analysis and those results were integrated. A short timeline is never, by itself, a reason to scan. When in doubt, ask the ADSA Equity Director; the policy gives that role the authority to advise and to provide an approved analysis for the administration.",
+          "after": "Step 0 identifies the policy criterion from the expected duration of the effects and the approval level. An action with prolonged or long-term impact scheduled for approval at supervisor level or above requires formal equity analysis. The policy allows a DHS Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director to accompany the action. Use the official Toolkit User Guide and consult the responsible equity office to determine the appropriate approach. A short timeline or a prior analysis alone does not settle that choice. The tool does not approve the review or replace these responsibilities.",
+          "exactOccurrences": 1,
+          "fieldId": 10,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Decision-maker and decision date are named, and the review track was determined from impact and approval level.",
+          "after": "Decision-maker and decision date are named, and review questions are answered. Confirm the appropriate review with the official User Guide and responsible equity office.",
+          "fieldId": 205,
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "83e49ce29eaa9d895c92b42f218cf865dbeb19cb381946c086edd38ae1ff9cfa"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_Facilitator_Guide.html",
+      "sourceSha256": "4d7eaa0931c51ec2d778fb046139eee84c24db496ce741563e9247a255c8b969",
+      "changes": [
+        {
+          "before": "Step 0 of the tool determines the review track from two facts the policy names: how long the effects last, and the highest approval level the action needs. Lasting effect plus supervisor-or-above approval means a formal equity analysis is required and must accompany the action when it goes for approval. An equity scan is appropriate only when the action already went through a formal analysis and those results were integrated. A short timeline is never, by itself, a reason to scan. When in doubt, ask the ADSA Equity Director; the policy gives that role the authority to advise and to provide an approved analysis for the administration.",
+          "after": "Step 0 identifies the policy criterion from the expected duration of the effects and the approval level. An action with prolonged or long-term impact scheduled for approval at supervisor level or above requires formal equity analysis. The policy allows a DHS Equity Analysis, an Equity Scan, or a customized tool developed in consultation with the equity director to accompany the action. Use the official Toolkit User Guide and consult the responsible equity office to determine the appropriate approach. A short timeline or a prior analysis alone does not settle that choice. The tool does not approve the review or replace these responsibilities.",
+          "exactOccurrences": 1,
+          "fieldId": 32,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Decision-maker and decision date are named, and the review track was determined from impact and approval level.",
+          "after": "Decision-maker and decision date are named, and review questions are answered. Confirm the appropriate review with the official User Guide and responsible equity office.",
+          "fieldId": 227,
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "036ffa370731ce1f74a5fa6f9abd55d778bb51f34439e0973b6f8fd8da05309d"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.docx",
+      "sourceSha256": "39ff2731482fcdb94f9d248909895f10ad17469dee823fe7fbd917611729a21c",
+      "changes": [
+        {
+          "before": "Step 0 asks what you are analyzing, what kind of action it is, who is responsible, who will decide, and when. Then three questions determine the review track: how long the effects last, the highest approval level, and whether a formal analysis was already done. As soon as all three are answered, a box appears stating the track: a formal equity analysis required, or an equity scan likely sufficient. The same track appears in the left column so it stays visible on every step. Changing any of the three answers updates it at once.",
+          "after": "Step 0 records the action, responsible people, decision date, expected duration and approval level, together with any earlier review. Once the action type, duration and approval level are entered, the tool identifies whether the policy criterion for a prolonged or long-term action scheduled for leadership approval is met. Otherwise it prompts you to confirm review requirements. It does not decide that an equity scan is sufficient. Use the official Toolkit User Guide and responsible equity office to confirm the appropriate approach. The review message stays visible in the left column and updates when the action type, duration or approval level changes.",
+          "exactOccurrences": 1,
+          "fieldId": 52,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "If Open draft says \"That file is not a draft from this tool\", you chose a file that was not saved by this tool, or the file was edited and broken. Pick the correct .json file.",
+          "after": "If Open draft says \"This draft could not be opened. Your current work is unchanged.\", check that you selected a compatible .json draft saved by this tool. An incompatible or damaged file will not replace your current work.",
+          "exactOccurrences": 1,
+          "fieldId": 66,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a gold box shows the review track the policy requires.",
+          "after": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a review message identifies the policy criterion or prompts you to confirm review requirements.",
+          "fieldId": 25,
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "3654314b611883145e593dc7e6ee00a0ee153da9dfb0bc5289fa677869dd5929"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_Equity_Policy_Analysis_Tool_User_Guide.html",
+      "sourceSha256": "a9f561cb12da7048309c3ea91af0bc6049f5aca54ce226f03cc7f28a39cfebc8",
+      "changes": [
+        {
+          "before": "Step 0 asks what you are analyzing, what kind of action it is, who is responsible, who will decide, and when. Then three questions determine the review track: how long the effects last, the highest approval level, and whether a formal analysis was already done. As soon as all three are answered, a box appears stating the track: a formal equity analysis required, or an equity scan likely sufficient. The same track appears in the left column so it stays visible on every step. Changing any of the three answers updates it at once.",
+          "after": "Step 0 records the action, responsible people, decision date, expected duration and approval level, together with any earlier review. Once the action type, duration and approval level are entered, the tool identifies whether the policy criterion for a prolonged or long-term action scheduled for leadership approval is met. Otherwise it prompts you to confirm review requirements. It does not decide that an equity scan is sufficient. Use the official Toolkit User Guide and responsible equity office to confirm the appropriate approach. The review message stays visible in the left column and updates when the action type, duration or approval level changes.",
+          "exactOccurrences": 1,
+          "fieldId": 74,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "If Open draft says \"That file is not a draft from this tool\", you chose a file that was not saved by this tool, or the file was edited and broken. Pick the correct .json file.",
+          "after": "If Open draft says \"This draft could not be opened. Your current work is unchanged.\", check that you selected a compatible .json draft saved by this tool. An incompatible or damaged file will not replace your current work.",
+          "exactOccurrences": 1,
+          "fieldId": 88,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a gold box shows the review track the policy requires.",
+          "after": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a review message identifies the policy criterion or prompts you to confirm review requirements.",
+          "fieldId": 47,
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "27f9a84162f5fb445079b1db0642fc1b06a789a8e82c19b22adcb2d62824bc2f"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.docx",
+      "sourceSha256": "66e0efb554cf96713120b87b6a2cfc4b07b6a94db9aa6532ca8d1a2eb656700f",
+      "changes": [
+        {
+          "before": "Step 0 asks what you are analyzing, what kind of action it is, who is responsible, who will decide, and when. Then three questions determine the review track: how long the effects last, the highest approval level, and whether a formal analysis was already done. As soon as all three are answered, a box appears stating the track: a formal equity analysis required, or an equity scan likely sufficient. The same track appears in the left column so it stays visible on every step. Changing any of the three answers updates it at once.",
+          "after": "Step 0 records the action, responsible people, decision date, expected duration and approval level, together with any earlier review. Once the action type, duration and approval level are entered, the tool identifies whether the policy criterion for a prolonged or long-term action scheduled for leadership approval is met. Otherwise it prompts you to confirm review requirements. It does not decide that an equity scan is sufficient. Use the official Toolkit User Guide and responsible equity office to confirm the appropriate approach. The review message stays visible in the left column and updates when the action type, duration or approval level changes.",
+          "exactOccurrences": 1,
+          "fieldId": 55,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "If Open draft says \"That file is not a draft from this tool\", you chose a file that was not saved by this tool, or the file was edited and broken. Pick the correct .json file.",
+          "after": "If Open draft says \"This draft could not be opened. Your current work is unchanged.\", check that you selected a compatible .json draft saved by this tool. An incompatible or damaged file will not replace your current work.",
+          "exactOccurrences": 1,
+          "fieldId": 69,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a gold box shows the review track the policy requires.",
+          "after": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a review message identifies the policy criterion or prompts you to confirm review requirements.",
+          "fieldId": 27,
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "5f380d7e3dc1d4ae028f6dca99900e69149de59f53e32c52dab3fa9558493542"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_User_Guide.html",
+      "sourceSha256": "eef1d47628cb4229972cf8e90e38eecd3aa81d95a20f0297393e47103fe50f8e",
+      "changes": [
+        {
+          "before": "Step 0 asks what you are analyzing, what kind of action it is, who is responsible, who will decide, and when. Then three questions determine the review track: how long the effects last, the highest approval level, and whether a formal analysis was already done. As soon as all three are answered, a box appears stating the track: a formal equity analysis required, or an equity scan likely sufficient. The same track appears in the left column so it stays visible on every step. Changing any of the three answers updates it at once.",
+          "after": "Step 0 records the action, responsible people, decision date, expected duration and approval level, together with any earlier review. Once the action type, duration and approval level are entered, the tool identifies whether the policy criterion for a prolonged or long-term action scheduled for leadership approval is met. Otherwise it prompts you to confirm review requirements. It does not decide that an equity scan is sufficient. Use the official Toolkit User Guide and responsible equity office to confirm the appropriate approach. The review message stays visible in the left column and updates when the action type, duration or approval level changes.",
+          "exactOccurrences": 1,
+          "fieldId": 77,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "If Open draft says \"That file is not a draft from this tool\", you chose a file that was not saved by this tool, or the file was edited and broken. Pick the correct .json file.",
+          "after": "If Open draft says \"This draft could not be opened. Your current work is unchanged.\", check that you selected a compatible .json draft saved by this tool. An incompatible or damaged file will not replace your current work.",
+          "exactOccurrences": 1,
+          "fieldId": 91,
+          "reviewStatus": "root_review_accepted"
+        },
+        {
+          "before": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a gold box shows the review track the policy requires.",
+          "after": "Each step is a button; click any step at any time. The circle shows progress: empty means not started, gold means partly done, green means complete. \"Complete\" is judged by the quality check in the last step, not by whether every box has something in it. Below the list, a bar shows how many steps are complete, and once Step 0 is answered a review message identifies the policy criterion or prompts you to confirm review requirements.",
+          "fieldId": 49,
+          "exactOccurrences": 1,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "ec18bba9514e9d59da5222ad55b4329e6c45b0799d5c7d940bd3b29dec3ec366"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.docx",
+      "sourceSha256": "28b6a3ebf53e9f1e9bc4cc5cd85e0572ee39e3f00f90655e3d5a3c9269f7c55d",
+      "changes": [
+        {
+          "before": "5. Answer the three triage questions. The tool tells you whether a formal equity analysis or an equity scan is required. Confirm the review approach with the appropriate policy or equity contact if the proposed route is unclear.",
+          "after": "5. Answer the triage questions. The tool identifies the policy criterion for prolonged or long-term actions scheduled for leadership approval. Confirm the appropriate review with the official User Guide and responsible equity office; the tool does not approve a scan.",
+          "exactOccurrences": 1,
+          "fieldId": 17,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "6537ebc9a8a1e0b1890932a1e48cddbcc34c55608aeca6dcc05fc0a4d496bc3d"
+    },
+    {
+      "file": "public/library/equity-review-tools/DSD_HCBS_Equity_Policy_Analysis_Tool_Walkthrough.html",
+      "sourceSha256": "24e86bd086f366d5a35235541c89d666dbcc4a358071083764ec4672abbf1f0a",
+      "changes": [
+        {
+          "before": "5. Answer the three triage questions. The tool tells you whether a formal equity analysis or an equity scan is required. Confirm the review approach with the appropriate policy or equity contact if the proposed route is unclear.",
+          "after": "5. Answer the triage questions. The tool identifies the policy criterion for prolonged or long-term actions scheduled for leadership approval. Confirm the appropriate review with the official User Guide and responsible equity office; the tool does not approve a scan.",
+          "exactOccurrences": 1,
+          "fieldId": 39,
+          "reviewStatus": "root_review_accepted"
+        }
+      ],
+      "status": "root_review_accepted",
+      "finalSha256": "960e71aef55e5e89de6aabf57f9c1cb8afed9f7f1ede5842cfc1e63eceea3a7f"
+    }
+  ],
+  "scope": "31 bounded routing, privacy and matching instruction corrections across ten files. No whole-file editorial or factual certification.",
+  "evidence": [
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf"
+  ],
+  "reason": "Policy AND condition retained. Scan eligibility is not inferred from an unverified older guide. Actual browser autosave and invalid-draft behavior are described accurately. Existing draft schema and official quotation are unchanged.",
+  "review": {
+    "reviewer": "root",
+    "scope": "Root accepted initial 25 pairs and six follow-up pairs; final triage completion label reflects answered questions, not approval."
+  },
+  "verification": {
+    "exactGuardedChanges": 31,
+    "files": 10,
+    "behaviorChecksPassed": 66,
+    "domDraftRecovery": "Both tools preserve unreadable prior drafts and permit explicit clear.",
+    "wordPagesVisuallyInspected": 39,
+    "wordPageCounts": {
+      "facilitator": 11,
+      "generalUser": 5,
+      "hcbsUser": 6,
+      "walkthrough": 17
+    },
+    "docxOtherZipPartsUnchanged": true,
+    "limitations": "Existing content and factual claims outside changed fields remain pending comprehensive review. Existing dense Word layout retained; text remains readable and tables not clipped. No comprehensive browser or assistive-technology certification."
+  }
+}
