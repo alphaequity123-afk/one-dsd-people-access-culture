@@ -17,7 +17,7 @@ export default async function NewResourcePage() {
       <PageIntro
         kicker="Consultant Workspace"
         title="Add a resource"
-        lede="Write a new resource and publish it. It appears in the library and learning pages right away, and in Ask."
+        lede="This page lets the consultant write a new resource and publish it. It appears in the library and learning pages right away, and in Ask."
       />
       <div className="wrap py-8">
         <p><Link href="/consultant/resources">Resource review</Link></p>

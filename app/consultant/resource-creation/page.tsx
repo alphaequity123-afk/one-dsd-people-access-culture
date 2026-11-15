@@ -16,7 +16,7 @@ export default async function ResourceCreationPage({ searchParams }: {
   const resourcePath = localStudyHref(resource) ? resource : "";
   const availability = resourcePath ? await resourceStudyAvailability(resourcePath) : undefined;
   return <>
-    <PageIntro title="Create from a resource" lede="Choose a published resource and a format. Review your draft here before sharing it." />
+    <PageIntro title="Create from a resource" lede="This page helps the consultant create a draft from a published resource. Choose a published resource and a format, then review your draft here before sharing it." />
     <ResourceCreationPanel resourcePath={resourcePath} resourceTitle={availability?.title} />
   </>;
 }

@@ -45,7 +45,7 @@ export default async function ConnectorsPage({ searchParams }: { searchParams: P
 
   return (
     <>
-      <PageIntro kicker="This computer" title="Connected services" lede="Connect drafting and public research services for this copy of the program. Reading and learning remain available without these services. Connected features need internet access." />
+      <PageIntro kicker="This computer" title="Connected services" lede="This page helps the consultant connect drafting and public research services for this copy of the program. Reading and learning remain available without these services. Connected features need internet access." />
       <div className="wrap max-w-3xl space-y-6 py-8">
         {saved ? <p role="status" className="rounded border border-line bg-[#eef2f5] p-4">Saved. The program is restarting to use these settings. If a page does not load, wait a few seconds and refresh.</p> : null}
         {errorCode ? <p role="alert" className="rounded border border-[#b42318] bg-[#fef3f2] p-4">{CONNECTOR_ERRORS[errorCode]}</p> : null}

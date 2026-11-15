@@ -26,7 +26,7 @@ export default async function OrchestratorPage() {
   const summary = clone ? ledgerSummary() : [];
   return (
     <>
-      <PageIntro kicker="You set the boundaries" title="Program reviews" lede="A program review can organize consultation requests, update heads-up packets, point out content that may be out of date, check accessibility, and prepare changes for your decision. You can reverse changes from a review. Use Stop program reviews for an immediate pause, or choose a lower work level to narrow what may happen." />
+      <PageIntro kicker="You set the boundaries" title="Program reviews" lede="This page is for the consultant to run program reviews. A program review can organize consultation requests, update heads-up packets, point out content that may be out of date, check accessibility, and prepare changes for your decision. You can reverse changes from a review. Use Stop program reviews for an immediate pause, or choose a lower work level to narrow what may happen." />
       <div className="wrap py-8">
         {clone ? <section className="mb-8 rounded-xl border p-5 space-y-3" aria-labelledby="clone-agents-heading">
           <h2 id="clone-agents-heading" className="text-xl font-bold">Ask pilot</h2>

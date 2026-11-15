@@ -162,7 +162,7 @@ export default async function ActivationStatusPage() {
       <PageIntro
         kicker={PROGRAM.practiceOwnerRole}
         title="Activation status"
-        lede="See which features are ready and what still needs attention. Checking this page does not change any settings. Setup details are available when needed; private access keys are never shown."
+        lede="This page shows the consultant which features are ready and what still needs attention. Checking this page does not change any settings. Setup details are available when needed; private access keys are never shown."
       />
       <div className="wrap space-y-10 py-8">
         <section aria-labelledby="consultation-intake-heading">

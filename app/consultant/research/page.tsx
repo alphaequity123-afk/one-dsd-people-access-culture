@@ -14,7 +14,7 @@ export default async function ResearchControlsPage() {
   const providers = providerStatus();
   return (
     <>
-      <PageIntro kicker="Current public sources" title="External research" lede="Manage public research for program questions. See which services are connected, choose research options, and review usage. Unsuccessful searches are recorded so you can see what needs attention." />
+      <PageIntro kicker="Current public sources" title="External research" lede="This page helps the consultant manage public research for program questions. See which services are connected, choose research options, and review usage. Unsuccessful searches are recorded so you can see what needs attention." />
       <div className="wrap py-8">
         <ResearchControlsClient policy={policy} summary={summary} usage={usage} providers={providers} researchStopEnv={process.env.PAC_RESEARCH_KILL_SWITCH === "on"} />
       </div>

@@ -22,7 +22,7 @@ export default async function EvalsPage() {
   const counts = CASES.reduce<Record<string, number>>((acc, c) => ((acc[c.suite] = (acc[c.suite] ?? 0) + 1), acc), {});
   return (
     <>
-      <PageIntro kicker="Required before release" title="Readiness checks" lede="Check Ask, Minnesota Communities, consultation requests, learning paths, and content review with sample information. These checks do not change staff content or send anything. A failed check stops the release. When a check needs people to take part, it remains open until that review is complete." />
+      <PageIntro kicker="Required before release" title="Readiness checks" lede="These checks are for the consultant to run before a release. Check Ask, Minnesota Communities, consultation requests, learning paths, and content review with sample information. These checks do not change staff content or send anything. A failed check stops the release. When a check needs people to take part, it remains open until that review is complete." />
       <div className="wrap py-8">
         <p className="text-sm text-muted">Checks ready to run: {Object.entries(counts).map(([k, v]) => `${CHECK_GROUP[k] ?? k.replace(/_/g, " ")}: ${v}`).join(" · ")}.</p>
         <EvalsClient past={past} />

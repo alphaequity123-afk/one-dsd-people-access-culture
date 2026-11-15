@@ -21,7 +21,7 @@ export default async function ResourceReviewPage() {
       <PageIntro
       kicker="Consultant Workspace"
         title="Resource review"
-        lede="Review draft changes, record each required decision, and choose what staff can use."
+        lede="This page helps the consultant review draft changes to resources. Record each required decision, and choose what staff can use."
       />
       <div className="wrap py-8">
         <p><Link href="/consultant/resources/new" className="btn btn--primary">+ Add a resource</Link></p>

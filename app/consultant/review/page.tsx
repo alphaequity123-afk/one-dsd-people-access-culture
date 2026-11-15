@@ -12,7 +12,7 @@ export default async function ReviewPage() {
   const flags = await stale();
   return (
     <>
-      <PageIntro kicker="Before you publish" title="Content review" lede="Use one review to suggest how a resource should be described and organized. Use the other to examine plain language and accessibility. You make every final decision. These checks can point out concerns, but they do not certify that a draft meets every accessibility standard." />
+      <PageIntro kicker="Before you publish" title="Content review" lede="These reviews help the consultant check a resource before it is published. Use one review to suggest how a resource should be described and organized. Use the other to examine plain language and accessibility. You make every final decision. These checks can point out concerns, but they do not certify that a draft meets every accessibility standard." />
       <div className="wrap py-8">
         <ReviewClient />
         <section className="mt-10" aria-labelledby="stale">

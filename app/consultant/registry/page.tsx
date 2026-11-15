@@ -129,7 +129,7 @@ export default async function RegistryPage() {
 
   return (
     <>
-      <PageIntro kicker="Consultant oversight" title="Program settings" lede="See what the program can use now, what is still being tested, and where your approval is needed. This page shows the current settings; looking at it changes nothing." />
+      <PageIntro kicker="Consultant oversight" title="Program settings" lede="This page shows the consultant what the program can use now, what is still being tested, and where your approval is needed. This page shows the current settings; looking at it changes nothing." />
       <div className="wrap space-y-10 py-8">
         <section className="grid gap-4 md:grid-cols-3" aria-label="Current program setting summary">
           <div className="panel">

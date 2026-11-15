@@ -6,7 +6,7 @@ import { defineEditableSurface } from "../editable-surface-contract";
 const copy = {
   kicker: "Community Outreach and Engagement",
   title: "Community Outreach and Engagement",
-  lede: "This page helps staff of the Disability Services Division (DSD) work with Minnesota communities. You can prepare for the work, find connected organizations, involve people in decisions, and report back on what changed.",
+  lede: "This page helps staff of the Disability Services Division work with Minnesota communities. You can prepare for the work, find connected organizations, involve people in decisions, and report back on what changed.",
   tasksTitle: "Where would you like to start?",
   cycleTitle: "One cycle, five steps",
   cycleIntro: "Good outreach and engagement follow the same order every time. Each step below links to the part of this program that supports it.",
