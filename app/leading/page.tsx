@@ -98,7 +98,7 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
     </section>
     <Hub2More title="Keep exploring">
       {culturalLearningAvailable && <p><Link href="/learn/cultural-intelligence#leaders">Explore leadership approaches, power and inclusive practice</Link></p>}
-      <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/support/right-person">Find the right person or office</Link><Link href="/learn/collections">Collections for all staff</Link><Link href="/one-dsd/leadership">Equity leadership and growth</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
+      <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/support/right-person">Find the person or area responsible</Link><Link href="/learn/collections">Collections for all staff</Link><Link href="/one-dsd/leadership">Equity leadership and growth</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
     </Hub2More>
     <details className={base.credit}><summary>About participation and privacy</summary><p>Please do not type anyone&apos;s name or details into Ask. Use general work questions and examples without confidential details. {LEADING_PRIVACY_SENTENCE}</p><ParticipationNotice surface="learning" /></details>
   </div></div>;

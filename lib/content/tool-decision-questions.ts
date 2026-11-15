@@ -17,7 +17,7 @@ export const TOOL_DECISION_QUESTIONS = {
       { when: "When you decide what would have to change", question: "Who has been doing the adapting so far? Name the process you could change: a form, an appointment or no-show rule, interpreter scheduling, who counts as a contact or natural support. That says more than a better tone in the same process." },
       { when: "When the timeline or fairness is challenged", question: "Is a grant or legislative timeline shorter than the problem? If staff object to a targeted approach, what fairness value are they holding, and how will you answer it honestly?" },
     ],
-    note: "The Toolkit remains the required process; follow current guidance and the responsible office.",
+    note: "The Toolkit remains the required process; follow current guidance and the person or area responsible.",
   },
   "equity-toolkit-practice": {
     title: "Before you save your analysis",

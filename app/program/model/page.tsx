@@ -64,7 +64,7 @@ export default async function ProgramModel() {
           <details className="pilot-supporting">
             <summary>Use related resources together</summary>
             <div className="pilot-supporting-body space-y-3">
-              <p>For a policy or service question, begin with the applicable requirements and available evidence. <Link href="/equity-policy">DHS equity policy</Link> provides policy context; the responsible office clarifies which requirements apply to the work.</p>
+              <p>For a policy or service question, begin with the applicable requirements and available evidence. <Link href="/equity-policy">DHS equity policy</Link> provides policy context; the person or area responsible clarifies which requirements apply to the work.</p>
               <p><Link href="/minnesota-communities">Community knowledge</Link> can help you prepare thoughtful questions and identify perspectives to seek. Use the <Link href="/equity-review">equity review tools</Link> to examine effects, compare alternatives and prepare a recommendation that makes uncertainties and needed decisions visible.</p>
               <p>After the appropriate decision and implementation, <Link href="/practice/measurement">measurement guidance</Link> and <Link href="/program/reflection">practice reflection</Link> help you distinguish what was done from what changed. Return what you learn to the people who contributed and to the next analysis. No tool substitutes for their participation or for authorized review.</p>
             </div>

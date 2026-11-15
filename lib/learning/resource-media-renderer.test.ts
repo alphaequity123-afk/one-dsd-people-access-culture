@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
 import { beforeEach, expect, it, vi } from "vitest";
+import { statSync } from "node:fs";
 import { requestOverviewVoice } from "@/lib/intelligence/clone/overview-voice";
 import type { ResourceArtifact } from "./resource-artifact-types";
 import { renderResourceMedia } from "./resource-media-renderer";
@@ -94,7 +95,9 @@ it("encodes both approved podcast hosts, times the captions, and reuses verified
   expect(requestOverviewVoice).toHaveBeenCalledTimes(4);
 }), 15_000);
 
-it("encodes a GEFen narrated video with accessible caption and audio tracks", async () => withJob(async directory => {
+// The chapter photos are fetched when the site is built. A checkout that holds only their small placeholders cannot encode.
+const photosPresent = (() => { try { return statSync(path.join(process.cwd(), "public/learning/water-we-swim-in/06/image-3.webp")).size > 2000; } catch { return false; } })();
+it.skipIf(!photosPresent)("encodes a GEFen narrated video with accessible caption and audio tracks", async () => withJob(async directory => {
   const video: ResourceArtifact = {
     ...shared, kind: "video-overview",
     sections: [1, 2, 3].map(index => ({

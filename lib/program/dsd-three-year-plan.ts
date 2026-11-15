@@ -402,7 +402,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
         "Helps leaders think through who should own each goal and area, and what time each owner needs.",
         "Coaches goal leads as they plan their first steps, and helps them use the program's resources.",
         "Shows people how to use the equity review tools, and sits in on early practice sessions when invited.",
-        "Connects owners with the right offices (Human Resources, the Tribal Liaison, accessibility, legal, contracts).",
+        "Connects owners with the people or areas responsible (Human Resources, the Tribal Liaison, accessibility, legal, contracts).",
         "Helps the One DSD Team get started when asked.",
         "Helps pull the first quarterly report together from what owners send."
       ],

@@ -569,14 +569,14 @@ export const BRIEFS: CommunityBrief[] = [
     languages: ["Ojibwe", "Dakota", "English"],
     level0: {
       whoAndWhere: "Eleven federally recognized Tribal Nations share geography with Minnesota. Each is a sovereign government with its own name, laws, leadership, and consultation process. Urban Native people also live throughout the state. This page explains when staff should seek government-to-government guidance; it does not provide Nation-specific guidance.",
-      whyItMattersForDhsWork: "When work may affect a Tribal Nation, Native children, Tribal data, services, or land, contact the designated Tribal relations office or liaison before planning consultation or engagement. A general community meeting is not government-to-government consultation.",
+      whyItMattersForDhsWork: "When work may affect a Tribal Nation, Native children, Tribal data, services, or land, contact the person or area responsible for Tribal relations or liaison before planning consultation or engagement. A general community meeting is not government-to-government consultation.",
       withinGroupDiversity: "Each Nation is distinct. Do not infer a person's Tribal citizenship, community ties, language, or residence.",
     },
     names: { preferred: ["The Nation's own name (for example Red Lake Nation, Lower Sioux Indian Community)"], alsoUsed: ["American Indian", "Native American", "Indigenous"], note: "Name the Nation. Do not use a demographic count as a substitute for a government." },
     level1: {
-      whatToAsk: ["Could this work affect a Tribal Nation, Native children, Tribal data, services, or land? If so, contact the designated Tribal relations office or liaison before planning consultation or engagement."],
-      accessChecks: ["This referral page does not provide Nation-specific access guidance. Ask the designated Tribal relations office or liaison which process and contacts apply."],
-      whoToInvolve: ["Before planning consultation or engagement, contact the Office of Indian Policy or current designated Tribal relations office or liaison and follow the required process.", "Work with the Nation's government through the process it designates."],
+      whatToAsk: ["Could this work affect a Tribal Nation, Native children, Tribal data, services, or land? If so, contact the person or area responsible for Tribal relations or liaison before planning consultation or engagement."],
+      accessChecks: ["This referral page does not provide Nation-specific access guidance. Ask the person or area responsible for Tribal relations or liaison which process and contacts apply."],
+      whoToInvolve: ["Before planning consultation or engagement, contact the Office of Indian Policy or current the person or area responsible for Tribal relations or liaison and follow the required process.", "Work with the Nation's government through the process it designates."],
       whatNotToAssume: ["Do not infer Tribal citizenship or community ties.", "Do not place a sovereign Nation in a general community partner list.", "Do not use general cultural information as a substitute for consultation with the Nation."],
     },
     sources: [{ label: "DHS Tribal and Urban Indian Relations", note: "Use the current DHS contact and guidance before planning consultation or engagement.", href: "https://mn.gov/dhs/partners-and-providers/program-overviews/tribal-and-urban-indian-relations/" }],

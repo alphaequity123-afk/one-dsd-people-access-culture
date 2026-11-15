@@ -311,12 +311,12 @@ export const STATIC_HOME_COPY: HomePageCopy = HomePageCopySchema.parse({
   commitmentsLinkLabel: "Learn how the program works",
   commitmentsLinkHref: "/about",
   privacyLabel: "Protect your privacy.",
-  privacyText: "Please do not enter case, medical, personnel, complaint, or identifying details anywhere in this program. Guidance shows its sources and limits. It does not replace official policy, legal advice, Human Resources, civil-rights processes, Tribal consultation, or another responsible office.",
+  privacyText: "Please do not enter case, medical, personnel, complaint, or identifying details anywhere in this program. Guidance shows its sources and limits. It does not replace official policy, legal advice, Human Resources, civil-rights processes, Tribal consultation, or another the person or area responsible.",
 });
 
 export const STATIC_FOOTER_COPY: FooterCopy = FooterCopySchema.parse({
   identityKicker: "One DSD People, Access and Culture",
-  identityText: "A resource for DHS staff, run by the program. It is not connected to DHS information technology, case, or personnel systems. Its guidance supports everyday work and does not replace policy, legal advice, formal processes, or decisions made by responsible DHS offices. Authority labels show what each item can and cannot establish.",
+  identityText: "A resource for DHS staff, run by the program. It is not connected to DHS information technology, case, or personnel systems. Its guidance supports everyday work and does not replace policy, legal advice, formal processes, or decisions made by the people or areas responsible in DHS. Authority labels show what each item can and cannot establish.",
   helpHeading: "Find your next step",
   askLabel: "Ask a question",
   askHref: "/ask",
@@ -329,7 +329,7 @@ export const STATIC_FOOTER_COPY: FooterCopy = FooterCopySchema.parse({
   requestHref: "/support",
   trackLabel: "Check a DSD consultation request",
   trackHref: "/support/track",
-  escalationLabel: "Find the right person or office",
+  escalationLabel: "Find the person or area responsible",
   escalationHref: "/support/right-person",
   privacyHeading: "Privacy and access",
   privacyText: "Please leave out case, medical, personnel, complaint, and identifying details anywhere in this program. Notes you write are saved only on this computer, so another person who uses it could see them. If any part of the program is hard to use with assistive technology, Support explains how to tell us.",

@@ -17,7 +17,7 @@ const RUNGS = [
   {
     level: "In-depth review", time: "Several sessions", href: "/equity-review", label: "Choose an in-depth review",
     who: "Best for policies, HCBS service changes, and barriers that run through an entire process.",
-    next: "Involve the people affected and the responsible office before the decision is final.",
+    next: "Involve the people affected and the person or area responsible before the decision is final.",
   },
 ] as const;
 

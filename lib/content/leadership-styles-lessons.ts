@@ -526,7 +526,7 @@ export const LEADERSHIP_STYLE_LESSONS: readonly StyleLesson[] = [
       title: "Incomplete documentation",
       situation: "A data review shows that Black and American Indian applicants to a support program are denied more often for “incomplete documentation.” Two managers argue. One says staff just follow the rules. The other says the rule is biased.",
       tendency: "A transformative leader treats the rule itself as a legitimate subject of review, instead of choosing between “the rule is fine” and “the rule is racist.”",
-      stronger: "The leader asks: Where did this documentation rule come from? Which documents are hardest to get, and for whom? What help do applicants get, and when? Who can change the rule? The leader involves applicants and community partners and checks with the responsible Tribal-relations office about any consultation or coordination obligations. With the required approval, the team tests an allowed change, such as accepting other permitted documents or providing help earlier, and checks the results.",
+      stronger: "The leader asks: Where did this documentation rule come from? Which documents are hardest to get, and for whom? What help do applicants get, and when? Who can change the rule? The leader involves applicants and community partners and checks with the person or area responsible for Tribal relations about any consultation or coordination obligations. With the required approval, the team tests an allowed change, such as accepting other permitted documents or providing help earlier, and checks the results.",
     },
     promotes: [
       "Makes racism and institutional power legitimate subjects of analysis, not optional side topics.",

@@ -135,7 +135,7 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
               <p className="kicker">{stringValue(copy, "dsdKicker")}</p>
               <h2 className="text-2xl font-semibold">{stringValue(copy, "dsdTitle")}</h2>
               <ul className="mt-3 list-disc pl-6">
-                {stringListValue(copy, "dsdItems").map((item) => <li key={item}>{item.toLowerCase().includes("direct consultation") ? "Ways to find the responsible person or office for DSD work" : item}</li>)}
+                {stringListValue(copy, "dsdItems").map((item) => <li key={item}>{item.toLowerCase().includes("direct consultation") ? "Ways to find the person or area responsible for DSD work" : item}</li>)}
               </ul>
             </div>
           </div>

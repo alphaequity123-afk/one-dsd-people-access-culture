@@ -62,7 +62,7 @@ describe('jobAidText', () => {
     const text = jobAidText('Start with the person and the purpose', practiceModule(content, '01')!.jobAid!);
     expect(text).toContain('Start with the person: a one-page job aid\nStart with the person and the purpose');
     expect(text).toContain('BEFORE\n- Write the notice\'s purpose in one sentence.');
-    expect(text).toContain('WHO TO ASK\n- The responsible office for the notice.');
+    expect(text).toContain('WHO TO ASK\n- The person or area responsible for the notice.');
   });
 });
 

@@ -10,7 +10,7 @@ export function CulturalLeadershipCurriculum() {
   return <section aria-labelledby="leadership-learning-title" className="space-y-5 border-t border-line pt-8">
     <h3 id="leadership-learning-title" className="text-2xl font-semibold">Leadership learning: from awareness to accountable action</h3>
     <p className="max-w-4xl leading-7">These four connected lessons are for leaders, supervisors, managers and directors. Explore them in any order. Each uses a fictional DSD example to consider leadership, power, access and organizational change. Take notes in your own preferred format; this page does not collect responses or score people. Do not include identifiable case, medical or personnel details in an informal exercise.</p>
-    <p className="max-w-4xl leading-7">This learning supports your judgment and responsibilities; it does not replace current policy, a person&apos;s choices, consultation with the responsible office, or required organizational processes.</p>
+    <p className="max-w-4xl leading-7">This learning supports your judgment and responsibilities; it does not replace current policy, a person&apos;s choices, consultation with the person or area responsible, or required organizational processes.</p>
     <div className="space-y-4">{culturalLeadershipLessons.map(lesson => <details key={lesson.id} id={lesson.id} className="rounded-xl border border-line p-5">
       <summary className="cursor-pointer text-lg font-semibold">{lesson.title}</summary>
       <div className="mt-4 max-w-4xl space-y-4 leading-7">

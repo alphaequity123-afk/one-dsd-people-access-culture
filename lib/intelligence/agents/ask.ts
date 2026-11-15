@@ -418,7 +418,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // Outside research, downloadable documents, draft review, practice drafts and work with Tribal Nations
   // keep the full path below, which also takes over if anything here fails.
   const fastEligible = fastAnswerEnabled() && input.mode !== "review" && !input.pathId && !suppliedArtifact.success && !suppliedWork.success
-    && (input.researchMode ?? "auto") === "auto" && !explicitProgramOnly && !explicitNewPractice
+    && (input.researchMode ?? "auto") === "auto" && !explicitProgramOnly
     && !needsFullAnswerPath(question) && !asksForCurrentInformation(question) && !asksForScholarlyResearch(question)
     && !HIGH_STAKES.test(question) && !(TRIBAL_SUBJECT.test(retrievalQuestion) && TRIBAL_WORK.test(retrievalQuestion))
     && !isProgramTrainingCreditQuestion(retrievalQuestion) && !isLearningNavigationQuestion(retrievalQuestion) && !isMeasurementPlanningQuestion(retrievalQuestion);

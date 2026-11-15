@@ -61,7 +61,7 @@ export const LEARNING_COMPANIONS: readonly LearningCompanionSpec[] = [
       { title: "Receive the request", text: "A person asks for language support while arranging an appointment.", annotation: "Confirm what they are requesting and the preferred way to communicate about the arrangement. Record only what the process needs." },
       { title: "Arrange the support", text: "The responsible role uses the appropriate booking process.", annotation: "Name that role and the backup. A plan should be usable when the usual person is unavailable." },
       { title: "Confirm it works", text: "The team checks the arrangement, connection, materials and meeting time.", annotation: "Confirm the details with the person, including how to report a problem. A sent booking request is not yet a completed arrangement." },
-      { title: "Respond to a failure", text: "If the support is unavailable or unusable, someone owns the next step.", annotation: "Use the responsible office or process to resolve the failure and communicate what happens next. Then review what the channel needs to change." },
+      { title: "Respond to a failure", text: "If the support is unavailable or unusable, someone owns the next step.", annotation: "Use the person or area responsible or process to resolve the failure and communicate what happens next. Then review what the channel needs to change." },
     ],
     practice: "Imagine the usual booking contact is away when the request arrives. At which step does your current plan stop giving a usable answer?",
     workProduct: "Write the actual channel, responsible role, backup and confirmation method in the lesson notes."
@@ -165,7 +165,7 @@ export const LEARNING_COMPANIONS: readonly LearningCompanionSpec[] = [
     {
       "title": "A bounded sample to review",
       "text": "Use a focused task that demonstrates the required skill, with clear criteria, a stated time expectation and confirmed access arrangements.",
-      "annotation": "Check the proposed design with the responsible hiring office. Consider whether a shorter or scheduled task could produce the needed evidence and how any compensation question should be handled."
+      "annotation": "Check the proposed design with the person or area responsible for hiring. Consider whether a shorter or scheduled task could produce the needed evidence and how any compensation question should be handled."
     }
   ],
   "practice": "What evidence does your proposed sample actually need to produce? Identify one demand that may not help assess that skill.",

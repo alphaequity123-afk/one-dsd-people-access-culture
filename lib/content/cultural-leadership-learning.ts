@@ -106,7 +106,7 @@ export const culturalLeadershipLessons: readonly LeadershipLesson[] = [
     reading: [
       "A policy, meeting or service can look neutral to the people who designed it while depending on their own assumptions about language, time, mobility, communication, work schedules or family support. Ask who designed the default, who has to work around it and who can change it. Power includes control over an agenda, budget, deadline, access and the final decision.",
       "Intersectionality helps examine how systems affecting race, gender and other dimensions interact; it is not a way to add up a person's identities or predict their needs. Disability justice emphasizes the leadership of people most affected, collective access and the full lives and expertise of disabled people. Ask people what works for them, and do not ask one person to represent an entire community.",
-      "Leaders, supervisors, managers and directors should follow applicable accessibility, accommodation, employment and Tribal-relations processes and clarify their respective responsibilities. This learning does not decide an individual request or replace the responsible office. Offer useful ways to participate without asking a person to disclose private medical or personnel information in a public discussion.",
+      "Leaders, supervisors, managers and directors should follow applicable accessibility, accommodation, employment and Tribal-relations processes and clarify their respective responsibilities. This learning does not decide an individual request or replace the person or area responsible. Offer useful ways to participate without asking a person to disclose private medical or personnel information in a public discussion.",
     ],
     scenario: "For the notice, the team proposes one virtual meeting during the workday and an English-only written comment form. A Deaf colleague and community members who use interpreters or cannot attend at that time may encounter different barriers. The team has not yet asked what participation methods would work.",
     practice: [
@@ -128,7 +128,7 @@ export const culturalLeadershipLessons: readonly LeadershipLesson[] = [
     reading: [
       "People may hesitate to ask a question, report a mistake or challenge a decision when they fear humiliation or consequences. Psychological safety concerns the shared belief that interpersonal risks such as speaking up are possible. Inviting feedback is a beginning; people also notice whether a leader listens, acts, shares credit and responds fairly afterward.",
       "Cultural safety, workplace psychological safety and organizational safety culture are related but different. A person's experience of respect and power, a team's ability to raise concerns, and the organization's systems for reporting and responding each need attention. Do not assume one survey or training session measures all three.",
-      "Use existing reporting and accommodation channels when a concern involves a person's rights or safety. Explain what you can keep private, what you must route to an authorized office, and what will happen next. Avoid asking colleagues to make personal disclosures or to carry the work of educating others because of their identities.",
+      "Use existing reporting and accommodation channels when a concern involves a person's rights or safety. Explain what you can keep private, what you must route to a person or area responsible, and what will happen next. Avoid asking colleagues to make personal disclosures or to carry the work of educating others because of their identities.",
     ],
     scenario: "In a team meeting, a staff member says the notice may be inaccessible and that a previous concern was ignored. A supervisor is worried about the deadline; a manager and director oversee the work and its resources. Another colleague interrupts, saying the meeting is not the place to question the plan.",
     practice: [
@@ -155,7 +155,7 @@ export const culturalLeadershipLessons: readonly LeadershipLesson[] = [
     scenario: "The team says it values input and accessibility. Its notice is ready, but interpreters are not funded, comments close before the next community meeting, and no one has been assigned to report back. A supervisor and manager must identify what they can change and what to bring to a director or other responsible decision-maker.",
     practice: [
       "Name one change the team can make, one decision that requires higher authority, and one question that must be shaped with the people affected.",
-      "Create a small action plan: responsible person or office, resources and access supports, decision date, how people can respond, and when you will report back.",
+      "Create a small action plan: the person or area responsible, resources and access supports, decision date, how people can respond, and when you will report back.",
       "Choose one process indicator and one way to hear whether the change helped. Say what each measure cannot tell you and how you will protect privacy.",
     ],
     check: "If nothing changed after input was gathered, who would know, who could challenge it, and what would happen next?",

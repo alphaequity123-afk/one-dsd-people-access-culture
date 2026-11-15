@@ -398,6 +398,8 @@ const PASTED_NONPUBLIC =
 
 /** The person's own contact details count as private too ("email me at ...", "my number is ..."). */
 const OWN_CONTACT = /\b(?:my|me at|reach me|call me|text me|email me|contact me)\b/i;
+/** Another person's contact details count too ("reach them at ...", "her phone number is ..."). */
+const PERSON_CONTACT = /\b(?:reach|contact|call|text|e-?mail|write to)\s+(?:him|her|them|the\s+(?:applicant|client|participant|recipient|employee|worker|person|family|parent|guardian|caregiver|member))\b|\b(?:his|her|their)\s+(?:personal\s+)?(?:e-?mail|phone|cell|mobile|number|home address|address)\b/i;
 
 /** Identifiers of a person that are never sent on, wherever they appear (question, history, or an earlier draft). */
 export function askHardIdentifierGate(text: string): SafetyResult {
@@ -424,7 +426,7 @@ export function askPrivacyGate(text: string): SafetyResult {
     return refuseSpecificPerson(text ?? "");
   }
   // A phone number, address or e-mail is private only when it is tied to a person. An agency's public contact is not.
-  if (named || specific || OWN_CONTACT.test(t)) {
+  if (named || specific || OWN_CONTACT.test(t) || PERSON_CONTACT.test(t)) {
     for (const item of [...HARD_IDENTIFIERS.filter(h => h.cls === "Phone number" || h.cls === "Street address"), ...OUTBOUND_IDENTIFIERS.filter(o => o.cls === "Email address")]) {
       if (item.re.test(t)) return refusePii(item.cls);
     }

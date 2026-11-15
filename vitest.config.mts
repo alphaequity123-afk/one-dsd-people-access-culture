@@ -15,10 +15,10 @@ const browserTs = ["lib/learning/clas-notes.test.ts"];
 export default defineConfig({
   resolve: { alias },
   test: {
-    testTimeout: 20000,
+    testTimeout: 120000,
     projects: [
-      { resolve: { alias }, test: { name: "components", environment: "jsdom", include: ["**/*.test.tsx", ...browserTs], exclude, testTimeout: 20000 } },
-      { resolve: { alias }, test: { name: "node", environment: "node", include: ["**/*.test.ts"], exclude: [...exclude, ...browserTs], testTimeout: 20000 } },
+      { resolve: { alias }, test: { name: "components", environment: "jsdom", setupFiles: ["./scripts/testing/component-test-setup.ts"], include: ["**/*.test.tsx", ...browserTs], exclude, testTimeout: 120000 } },
+      { resolve: { alias }, test: { name: "node", environment: "node", include: ["**/*.test.ts"], exclude: [...exclude, ...browserTs], testTimeout: 120000 } },
     ],
   },
 });

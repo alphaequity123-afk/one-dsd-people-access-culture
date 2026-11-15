@@ -53,7 +53,7 @@ export default async function LeadingDoorPage({ params }: { params: Promise<{ do
     <Hub2More headingId="whom-to-ask-title" title="Whom to ask, by role">
       <p>Names change, so these are roles. Keep the contacts for your own division where you can reach them.</p>
       <dl className={styles.facts}>{DOOR_ASK[door.slug].map(entry => <div key={entry.role} style={{ display: "contents" }}><dt>{entry.role}</dt><dd>{entry.forWhat}</dd></div>)}</dl>
-      <p><Link href={RIGHT_PERSON_HREF}>Find the right person or office</Link></p>
+      <p><Link href={RIGHT_PERSON_HREF}>Find the person or area responsible</Link></p>
     </Hub2More>
     <Hub2More title="Keep exploring">
       <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/leading">All nine decisions</Link><Link href="/leading/paths">Suggested paths</Link><Link href="/leading/how-this-works">How this works</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>

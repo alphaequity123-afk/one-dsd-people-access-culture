@@ -75,7 +75,7 @@ export function CriticalIncidentScene() {
           <li><strong>What happened?</strong> Record the arrival time and request without assigning a motive.</li>
           <li><strong>Who did this process work for?</strong> Consider the expectation that people can read a revised paper summary immediately. Treat your explanation as something to check.</li>
           <li><strong>Who had a harder time?</strong> Describe the unmet request for a file and reading time. Ask what support would help; a person’s appearance does not answer that question.</li>
-          <li><strong>What should happen next?</strong> Propose a change while the decision is open, name who would follow through and choose a review date. If a formal requirement is involved, use the appropriate office or process.</li>
+          <li><strong>What should happen next?</strong> Propose a change while the decision is open, name who would follow through and choose a review date. If a formal requirement is involved, use the person or area responsible or process.</li>
         </ol>
         <p className="mb-0 mt-4 leading-7">You might test sharing a usable version earlier and agreeing on reading time before the decision. Ask participants whether that change would meet their needs.</p>
       </div>
