@@ -14,7 +14,7 @@ vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _name: strin
 vi.mock("../clone/jev", () => ({ planWithJev: async () => null, SPECIALIST_GUIDANCE: {} }));
 vi.mock("./local-semantic", () => ({ semanticRetrieveForAgent: async () => [], SemanticSearchUnavailable: class extends Error {} }));
 vi.mock("../providers", () => ({ resolveBinding: () => ({ generative: true, model: { model_id: "synthetic-equity-data" }, adapter: { complete: f.complete } }) }));
-vi.mock("../research", () => ({
+vi.mock("../research", () => ({ asksForScholarlyResearch: () => false,
   governedResearch: async () => ({ status: "failed", error_code: "research_timeout", message: "Outside research could not finish." }),
   governedSearch: async () => { throw new Error("Unexpected ranked search"); },
 }));

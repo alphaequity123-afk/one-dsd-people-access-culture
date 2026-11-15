@@ -8,7 +8,7 @@ vi.mock("../retrieval/local-semantic", () => ({ semanticRetrieveForAgent: async 
 vi.mock("../retrieval/program-resources", () => ({ indexedProgramResources: async () => ({ destinations: f.docs, communityDocs: [] }), programResourceLinks: () => [] }));
 vi.mock("../retrieval/staff-search", () => ({ indexedStaffDocs: async () => [] }));
 vi.mock("../providers", () => ({ resolveBinding: () => ({ generative: true, model: { model_id: "synthetic-leadership" }, adapter: { complete: f.complete } }) }));
-vi.mock("../research", () => ({ governedResearch: f.research, governedSearch: async () => { throw Error("Unexpected search"); } }));
+vi.mock("../research", () => ({ asksForScholarlyResearch: () => false, governedResearch: f.research, governedSearch: async () => { throw Error("Unexpected search"); } }));
 import { askConcierge } from "../agents/ask";
 import { getAgent } from "../registry/agents";
 import { leadershipStylesPathwayDocs } from "../retrieval/leadership-styles-pathway-docs";

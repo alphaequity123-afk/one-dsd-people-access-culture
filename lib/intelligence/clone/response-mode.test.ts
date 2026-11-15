@@ -6,7 +6,7 @@ vi.mock("./jev", () => ({ reviewWithJev: async () => "pass", planWithJev: async 
 vi.mock("../retrieval/local-semantic", () => ({ semanticRetrieveForAgent: async () => [], SemanticSearchUnavailable: class extends Error {} }));
 vi.mock("../providers", () => ({ resolveBinding: () => ({ generative: true,
   model: { model_id: "synthetic-response-mode" }, adapter: { complete: f.complete } }) }));
-vi.mock("../research", () => ({
+vi.mock("../research", () => ({ asksForScholarlyResearch: () => false,
   governedResearch: async () => { throw new Error("Unexpected external research in internal-source fixture"); },
   governedSearch: async () => { throw new Error("Unexpected search in internal-source fixture"); },
 }));
