@@ -71,13 +71,13 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
 
   return (
     <EditableSurfaceRegion surface={surface}>
-      <PageIntro title={stringValue(copy, "introTitle")} lede="Choose a practice for the work you’re doing." />
+      <PageIntro title={stringValue(copy, "introTitle")} lede="This page helps staff of the Disability Services Division (DSD) turn learning into action. Choose a guided practice for the work you are doing now." />
       <div className="pilot-topic space-y-6">
         <WorkOriginLinks origin={origin} />
         <section className={styles.choices} aria-labelledby="practice-choices-title">
           <h2 id="practice-choices-title" className="mb-3 text-2xl font-bold">{stringValue(copy, "choicesTitle")}</h2>
           <details className={styles.group} id="equity-analysis">
-            <summary>Analyze a decision</summary>
+            <summary>Analyze a decision: three levels, from a quick check to an in-depth review</summary>
             <div className={styles.groupBody}>
               <ul className={styles.links}>
                 {byId.has("gp-12") ? <li><Link href={practiceHref("gp-12")}>Quick check</Link><span className={styles.context}>Routine decisions</span></li> : null}
@@ -96,7 +96,7 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
         </section>
 
         <details className={styles.group}>
-          <summary>More tools and guidance</summary>
+          <summary>More tools and guidance for practice</summary>
           <div className={`${styles.groupBody} space-y-3`}>
             <p>{withoutPublishedSaveClaims(stringValue(copy, "introLede"))}</p>
             <p>{withoutPublishedSaveClaims(stringValue(copy, "choicesIntro"))}</p>

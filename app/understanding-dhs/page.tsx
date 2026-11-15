@@ -9,12 +9,14 @@ import reference from "@/data/organization/minnesota-dhs.json";
 import { DHS_REFERENCE_GROUPS, dhsTopicAnchor } from "@/lib/content/dhs-reference";
 export const metadata: Metadata = {title:"Understanding DHS",description:"People, programs and partnerships across Minnesota DHS, including Disability Services, county and Tribal relationships, and original sources."};
 export default function UnderstandingDhsPage() {
-  return <><PageIntro kicker="People, Access and Culture" title="Understanding DHS" lede="People, programs and partnerships across Minnesota DHS, with a closer look at Disability Services and the work we share." />
+  return <><PageIntro kicker="People, Access and Culture" title="Understanding DHS" lede="This page helps DSD staff see how the Minnesota Department of Human Services (DHS) is organized. It covers DHS people, programs, and partnerships, with a closer look at Disability Services and the work we share." />
     <div className="pilot-topic pilot-reading-width">
-      <p className="mt-0 max-w-3xl">Good work connects people across teams and organizations. This reference brings together their responsibilities, services and relationships so it is easier to see how your work fits into the wider picture.</p>
+      <p className="mt-0 max-w-3xl">Good work connects people across teams and organizations. This reference brings together their responsibilities, services, and relationships.</p>
+      <p className="max-w-3xl">Use it to see how your own work fits into the wider picture.</p>
       <details className="pilot-supporting">
-        <summary>Two places in our DHS story</summary><div className="pilot-supporting-body space-y-4">
-        <p className="max-w-3xl">These are real DHS buildings in St. Paul. The Lafayette photograph is an archival view from 1998; the buildings are shown here for orientation and connection to the department, not as a current visitor guide.</p>
+        <summary>Photos of two DHS buildings in St. Paul</summary><div className="pilot-supporting-body space-y-4">
+        <p className="max-w-3xl">These are real DHS buildings in St. Paul. They are shown to help you connect with the department, not as a current visitor guide.</p>
+        <p className="max-w-3xl">The Lafayette photograph is an archival view from 1998.</p>
         <div className="grid gap-6 md:grid-cols-2">
           <figure className="m-0 overflow-hidden rounded-xl border border-line bg-white">
             <img src="/images/buildings/andersen.webp" alt="Elmer L. Andersen Human Services Building at the corner of Cedar and 11th Streets in St. Paul" className="aspect-[16/10] w-full object-cover" loading="lazy" />
@@ -40,6 +42,6 @@ export default function UnderstandingDhsPage() {
           </details>
         </article>)}</div>
       </details>)}</div>
-      <footer className="mt-12 border-t border-line pt-6"><p className="text-sm text-muted">Program summaries accompany the original sources, which carry current policy and contact information.</p><p><Link href="/ask">Ask a question</Link> <span aria-hidden="true"> · </span> <Link href="/learn">Learning and resources</Link></p></footer>
+      <footer className="mt-12 border-t border-line pt-6"><p className="text-sm text-muted">The summaries on this page are short. The original sources carry current policy and contact information.</p><p><Link href="/ask">Ask a question</Link> <span aria-hidden="true"> · </span> <Link href="/learn">Learning and resources</Link></p></footer>
     </div></>;
 }

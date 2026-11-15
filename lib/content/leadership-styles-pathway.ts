@@ -46,7 +46,7 @@ export const LEGACY_STYLE_TO_PATHWAY: Record<LeadershipStyleSlug, string> = {
 };
 
 export const PATHWAY_INTRO = [
-  "Leadership development should help people recognize how leadership behavior affects power, conflict, access, opportunity and outcomes. It is not about finding your preferred “style.”",
+  "This pathway is for staff of the Disability Services Division (DSD) who want to understand leadership. It helps you see how leadership behavior affects power, conflict, access, opportunity, and outcomes. It is not about finding your preferred “style.”",
   "The most important distinction is behavior: what a leader does when challenged, when someone reports exclusion, when resources are scarce, and when a familiar process produces unequal results. A leader can use participative language while keeping every important decision. A decisive leader can also use authority responsibly to remove an access barrier.",
   "The scenarios in this pathway are fictional and the sample dialogue is original.",
 ];

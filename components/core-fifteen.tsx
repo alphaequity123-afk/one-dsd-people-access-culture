@@ -19,7 +19,7 @@ export function CoreFifteen({ standalone = false }: { standalone?: boolean }) {
     }),
   }));
   const content = <div id="start-here" className="scroll-mt-24 space-y-4">
-      <p className="max-w-3xl">Fifteen recommended courses for staff. Choose a course that fits your work and learn at your own pace.</p>
+      <p className="max-w-3xl">These 15 courses are recommended for all staff. Choose one that fits your work and learn at your own pace.</p>
       <div className={standalone ? "space-y-8" : "grid gap-6 md:grid-cols-3"}>
         {groups.map(group => <div key={group.title}>
           <h3 className="text-lg font-bold">{group.title}</h3>
@@ -27,11 +27,11 @@ export function CoreFifteen({ standalone = false }: { standalone?: boolean }) {
           <ol className="mt-2 list-decimal space-y-1 pl-5">{group.courses.map(course => <li key={course.number}><Link href={course.href}>{course.title}</Link></li>)}</ol>
         </div>)}
       </div>
-      <p><Link href="/learn/self-directed">See all 72 courses in the self-directed series</Link></p>
+      <p>The Core 15 comes from a larger set. <Link href="/learn/self-directed">See all 72 courses in the self-directed series</Link>.</p>
       <ExplainerVideo id="core-fifteen" />
     </div>;
   return standalone ? content : <details className="course-more-item" suppressHydrationWarning>
-    <summary><h2 id="core-fifteen-title">The Core 15</h2></summary>
+    <summary><h2 id="core-fifteen-title">The Core 15: 15 recommended courses</h2></summary>
     {content}
   </details>;
 }

@@ -19,16 +19,16 @@ export const dynamic = "force-dynamic";
 
 export default async function LeadingPage({ searchParams }: { searchParams?: Promise<{ view?: string }> }) {
   if ((await searchParams)?.view !== "all") return <div className="pilot-topic">
-    <header><h1>Lead equity in everyday work</h1><p>Find learning and tools for the decisions and responsibilities in front of you.</p></header>
+    <header><h1>Lead equity in everyday work</h1><p>This page is for leaders, supervisors, managers, and directors at the Disability Services Division (DSD), and for anyone thinking about leading. It helps you find learning and tools for the decision in front of you.</p></header>
     <section aria-labelledby="pilot-leading">
-      <h2 id="pilot-leading">Start where you are</h2>
+      <h2 id="pilot-leading">Start where you are: six ways into leadership learning</h2>
       <ul className="pilot-topic-rows">
-        <li><Link href="/one-dsd/leadership#starting-points"><strong>Explore leadership</strong><span>Connect a goal with a chance to practice and get feedback.</span></Link></li>
-        <li id="decision-doors"><Link href="/leading?view=all#decision-doors"><strong>Lead a team or a decision</strong><span>Find questions and tools for a decision in front of you.</span></Link></li>
-        <li><Link href={LEADERSHIP_PATHWAY_HREF}><strong>Compare leadership approaches</strong></Link></li>
-        <li id="paths-title"><Link href="/leading/paths"><strong>Suggested paths</strong></Link></li>
-        <li id="leadership-tools-title"><Link href="/leading?view=all#leadership-tools-title"><strong>Tools for the work</strong></Link></li>
-        <li><Link href="/leading?view=all"><strong>Explore all leadership resources</strong></Link></li>
+        <li><Link href="/one-dsd/leadership#starting-points"><strong>Explore leadership</strong><span>Match a goal with a chance to practice and get feedback.</span></Link></li>
+        <li id="decision-doors"><Link href="/leading?view=all#decision-doors"><strong>Lead a team or a decision</strong><span>Pick a decision, such as hiring or feedback, and open plain questions and a course to start with.</span></Link></li>
+        <li><Link href={LEADERSHIP_PATHWAY_HREF}><strong>Compare leadership approaches</strong><span>See how sixteen leadership approaches handle conflict.</span></Link></li>
+        <li id="paths-title"><Link href="/leading/paths"><strong>Suggested paths</strong><span>Follow a set of courses made for first-year supervisors, program leads, and others.</span></Link></li>
+        <li id="leadership-tools-title"><Link href="/leading?view=all#leadership-tools-title"><strong>Tools for the work</strong><span>Prepare for a real conversation or decision.</span></Link></li>
+        <li><Link href="/leading?view=all"><strong>Explore all leadership resources</strong><span>See every option on one page.</span></Link></li>
       </ul>
     </section>
   </div>;
@@ -40,12 +40,13 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
       <Link href="/leading">Back to Leadership</Link>
       <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>Lead equity in everyday work</h1>
-      <p className={base.lede}>Whether you are exploring leadership, leading a team or shaping direction across the division, find learning and practical tools for the decisions and responsibilities in front of you.</p>
-      <p>Everything here is public, and anyone can use it. You can start anywhere and skip anything. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
+      <p className={base.lede}>This page is for leaders, supervisors, managers, and directors at the Disability Services Division (DSD), and for anyone exploring leadership. It helps you find learning and practical tools for the decisions in front of you.</p>
+      <p>Everything here is public, and anyone can use it. You can start anywhere and skip anything.</p>
+      <p>{LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
     </header>
     <section className={styles.section} aria-labelledby="leadership-start-title">
-      <h2 id="leadership-start-title">Start where you are</h2>
-      <p>Leadership can begin before a formal role. Choose a starting point that fits your work; these are invitations, not assignments or assessments.</p>
+      <h2 id="leadership-start-title">Start where you are: leadership can begin before a formal role</h2>
+      <p>Choose a starting point that fits your work. These are invitations, not assignments or assessments.</p>
       <ul className={styles.doors}>
         <li><Link className={styles.door} href="/one-dsd/leadership#starting-points"><span className={styles.doorTitle}>Explore leadership</span><span>Connect an interest or aspiration with an accessible opportunity to practice, support and feedback.</span><span className={styles.doorAction}>Make a development map</span></Link></li>
         <li><Link className={styles.door} href="#decision-doors"><span className={styles.doorTitle}>Lead a team or a decision</span><span>Find questions and resources for hiring, access, feedback, team culture and policy.</span><span className={styles.doorAction}>Choose a decision</span></Link></li>
@@ -58,8 +59,8 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
       </ul>
     </section>
     <section id="decision-doors" className={styles.section} aria-labelledby="decision-doors-title">
-    <h2 id="decision-doors-title">What are you deciding?</h2>
-    <p>Each decision opens with practical questions, a course, a job aid where available, and people or offices who may help.</p>
+    <h2 id="decision-doors-title">What are you deciding? Pick one of nine kinds of decision</h2>
+    <p>Each decision opens with practical questions and a course. Where one exists, it also has a job aid, plus the people or offices who may help.</p>
     <ul className={styles.doors} aria-label="Decisions">
       {LEADING_DOORS.map(door => <li key={door.slug}><Link className={styles.door} href={`/leading/${door.slug}`}>
         <span className={styles.doorTitle}>{door.title}</span>
@@ -69,12 +70,12 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
     </ul>
     </section>
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
-      <h2 id="required-course-title">One course is required</h2>
+      <h2 id="required-course-title">One course is required: the Equity Analysis Toolkit</h2>
       <p><CollectionItemLink id={REQUIRED_COURSE_ID} published={published} /></p>
       <p>The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status. Everything else here is voluntary.</p>
     </aside>
     <section className={styles.section} aria-labelledby="paths-title">
-      <h2 id="paths-title">Suggested paths</h2>
+      <h2 id="paths-title">Suggested paths: sets of courses for six kinds of leaders</h2>
       <p>These are suggestions. Nobody is enrolled, and nobody else can see where you are.</p>
       <ul className={styles.doors}>
         {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
@@ -86,17 +87,18 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
       <p><Link href="/leading/paths">All suggested paths</Link></p>
     </section>
     <section className={styles.section} aria-labelledby="leadership-tools-title">
-      <h2 id="leadership-tools-title">Tools for the work</h2>
-      <p>Use a tool to prepare for a real conversation or decision. Include the people affected, follow the applicable policy and work with the office responsible for the decision.</p>
+      <h2 id="leadership-tools-title">Four tools to prepare for a real conversation or decision</h2>
+      <p>Include the people affected. Follow the applicable policy, and work with the office responsible for the decision.</p>
       <ul className={styles.doors}>
         <li><Link className={styles.door} href="/learn/equity-toolkit"><span className={styles.doorTitle}>Examine a decision</span><span>Consider effects, evidence, alternatives and who needs to be involved.</span><span className={styles.doorAction}>Equity Analysis Toolkit</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#life-cycle"><span className={styles.doorTitle}>Practice across the employee life cycle</span><span>Explore role design, development, advancement, retention, succession and transitions.</span><span className={styles.doorAction}>Open the life-cycle explorer</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/amplify/mentoring#mentoring-tool"><span className={styles.doorTitle}>Prepare a mentoring conversation</span><span>Name a question, consider the support you need and choose a useful next step.</span><span className={styles.doorAction}>Prepare a conversation</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Plan for continuity</span><span>Connect critical work, a development opportunity, knowledge sharing and follow-up.</span><span className={styles.doorAction}>Create a succession draft</span></Link></li>
       </ul>
-      <p>Development and continuity drafts stay on their page until you copy or download them. Do not enter names or private personnel details. They do not replace the applicable Human Resources or selection process.</p>
+      <p>Development and continuity drafts stay on their page until you copy or download them. Do not enter names or private personnel details.</p>
+      <p>These drafts do not replace the applicable Human Resources or selection process.</p>
     </section>
-    <Hub2More title="Keep exploring">
+    <Hub2More title="Keep exploring leadership resources">
       {culturalLearningAvailable && <p><Link href="/learn/cultural-intelligence#leaders">Explore leadership approaches, power and inclusive practice</Link></p>}
       <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/support/right-person">Find the right person or office</Link><Link href="/learn/collections">Collections for all staff</Link><Link href="/one-dsd/leadership">Equity leadership and growth</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
     </Hub2More>

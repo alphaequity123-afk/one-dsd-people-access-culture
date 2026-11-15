@@ -33,7 +33,7 @@ export default function LearningPathsPage() {
     <header>
       <p className="development-eyebrow">Understanding. Relationships. Action.</p>
       <h1>Learning paths</h1>
-      <p>{developmentModel.direction}</p>
+      <p>This page helps staff of the Disability Services Division (DSD) choose a learning path. {developmentModel.direction}</p>
       <p>Every path begins with a question from real work. The five guided pathways move from a question, through other perspectives, to a change you can make. The nine reading paths put a book or an article to work on a situation you recognize. They are grouped by where you might be in your own development, but that grouping is a guide rather than a gate: follow whichever path speaks to your question today.</p>
     </header>
     <ExplainerVideo id="learning-journey" />

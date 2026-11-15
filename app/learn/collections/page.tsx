@@ -22,20 +22,21 @@ export default async function CollectionsPage() {
     <header className={base.intro}>
       <p className={base.eyebrow}>Learn</p>
       <h1>Collections</h1>
-      <p className={base.lede}>All the learning, on eight shelves named by subject. Each one opens with where to start.</p>
+      <p className={base.lede}>This page helps staff of the Disability Services Division (DSD) find courses by subject. All the learning is sorted into eight shelves, and each shelf opens with where to start.</p>
     </header>
     <aside className={styles.requiredNote} aria-labelledby="all-format-collections-title">
-      <h2 id="all-format-collections-title">Explore all formats by theme</h2>
-      <p>Find related learning, tools, sources, readings and available listening together, then return to the course shelves below whenever you need them.</p>
+      <h2 id="all-format-collections-title">Prefer one theme across every format? Browse by theme</h2>
+      <p>A theme page gathers related learning, tools, sources, readings, and recordings in one place. You can return to the course shelves below at any time.</p>
       <p><Link href="/collections">Explore themes across the program</Link></p>
     </aside>
     <aside className={styles.requiredNote} aria-labelledby="clas-collection-title">
-      <h2 id="clas-collection-title">CLAS curriculum collection</h2>
-      <p>Nine connected lessons with videos, discussion audio, practice and planning resources. Share one link to the collection.</p>
+      <h2 id="clas-collection-title">CLAS collection: nine lessons on cultural and language access</h2>
+      <p>CLAS stands for Culturally and Linguistically Appropriate Services. The nine connected lessons come with videos, discussion audio, practice, and planning resources.</p>
+      <p>You can share one link to the whole collection.</p>
       <p><Link href="/learn/clas/collection">Open or share the CLAS collection</Link></p>
     </aside>
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
-      <h2 id="required-course-title">One course is required</h2>
+      <h2 id="required-course-title">One course is required: the Equity Analysis Toolkit</h2>
       <p><CollectionItemLink id={REQUIRED_COURSE_ID} published={published} /></p>
       <p>The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status. Everything else here is voluntary.</p>
     </aside>
@@ -47,7 +48,7 @@ export default async function CollectionsPage() {
       </Link></li>)}
     </ul>
     <aside className={base.continue}>
-      <h2>Keep exploring</h2>
+      <h2>Keep exploring: leaders, all courses, and paths</h2>
       <p><Link href={LEADING_HREF}>{LEADING_LABEL}</Link><Link href="/courses">All courses</Link><Link href="/learn/paths">Paths</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
     </aside>
     <ParticipationNotice surface="learning" />

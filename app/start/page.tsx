@@ -31,15 +31,16 @@ export default async function StartPage() {
       <Image unoptimized src="/images/program-workplace-conversation.webp" alt="" width={1536} height={1024} sizes="(min-width: 900px) 46vw, 100vw" preload />
       </div>
       <div className={`wrap ${styles.content}`}>
-        <ProgramContextNote />
-        <p className="max-w-3xl leading-7">Most people arrive here with a real question: a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone. Start there. If you would like context first, <Link href="/one-dsd/programs">DSD programs and services</Link> shows the work the division does and the people it serves.</p>
+        <p className="max-w-3xl leading-7">Most people arrive here with a real question: a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone. Start there.</p>
+        <p className="max-w-3xl leading-7">If you want background first, <Link href="/one-dsd/programs">DSD programs and services</Link> shows the work the Disability Services Division does and the people it serves.</p>
         <noscript><p>This helper needs JavaScript. You can still <SourceLink href="/support/directory">use the support directory</SourceLink> or <Link prefetch={false} href="/library">browse the Library</Link>.</p></noscript>
         <StartClient copy={copy} />
         <div>
           {/* Moved below the finder. A link to /start#new-to-dsd still opens its panel. */}
-          <Hub2More title="Guided pathways into practice"><DevelopmentPathways compact /></Hub2More>
-          <Hub2More title="Getting to know the program"><NewToDsd /></Hub2More>
+          <Hub2More title="Step-by-step guided pathways for common work"><DevelopmentPathways compact /></Hub2More>
+          <Hub2More title="New to DSD? Learn how the program works"><NewToDsd /></Hub2More>
         </div>
+        <ProgramContextNote />
         <ParticipationNotice surface="start_routing" />
       </div>
       </div>

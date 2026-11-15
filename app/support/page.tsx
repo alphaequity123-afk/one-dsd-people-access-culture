@@ -23,20 +23,20 @@ export default async function SupportPage({ searchParams }: { searchParams?: Pro
     <EditableSurfaceRegion surface={surface} className="pilot-topic">
       <header>
         <h1>{stringValue(copy, "introTitle")}</h1>
-        <p>Find a practical starting point, or connect with the person who can help you take the next step.</p>
+        <p>This page helps staff of the Disability Services Division (DSD) find a practical starting point, or reach the person who can help with the next step.</p>
       </header>
       <section aria-label="Support resources">
         <ul className="pilot-topic-rows">
           {doors.map(door => <li key={door.href}><Link href={door.href}><strong>{door.title}</strong><span>{door.description}</span></Link></li>)}
-          <li><Link href="/support/directory"><strong>DHS offices and guidance</strong></Link></li>
-          <li><Link href="/support?view=guidance"><strong>When another team can help</strong><span>Find guidance for referrals, access barriers and questions about support.</span></Link></li>
+          <li><Link href="/support/directory"><strong>DHS offices and guidance</strong><span>Look up the DHS office or guidance that covers your question.</span></Link></li>
+          <li><Link href="/support?view=guidance"><strong>When another team can help</strong><span>Find out where to send a referral, report an access barrier, or ask a question about support.</span></Link></li>
         </ul>
       </section>
     </EditableSurfaceRegion>
   );
   return (
     <EditableSurfaceRegion surface={surface}>
-      <PageIntro title="When another team can help" />
+      <PageIntro title="When another team can help" lede="This page lists ways to get support for DSD work. Use it to find the right person, the right office, or the right resource." />
       <div className="wrap space-y-8 py-8">
         <Link href="/support">Back to Support</Link>
         <ProgramContextNote />
@@ -63,7 +63,7 @@ export default async function SupportPage({ searchParams }: { searchParams?: Pro
         </div>
         <details className={styles.resultInvitation}>
           <summary className="cursor-pointer font-semibold">About support</summary>
-          <p>Use the Library, common questions, or Find the right person for guidance with your work.</p>
+          <p>For help with your work, use the Library, the common questions, or Find the right person.</p>
         </details>
       </div>
     </EditableSurfaceRegion>

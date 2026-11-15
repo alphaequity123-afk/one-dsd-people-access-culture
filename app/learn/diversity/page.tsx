@@ -19,11 +19,11 @@ export default async function DiversityCoursesPage() {
   const groups = groupDiversityCourses(published.map(row => row.pack));
   const firstCourse = groups[0]?.courses[0];
   return <div className={styles.page}>
-    <header className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>People, Access and Culture</p><h1>Diversity: understanding and practice</h1><p className={styles.intro}>Explore identity, culture, privilege, bias, and belonging through explanation, realistic situations, reflection, and practice.</p></div></header>
+    <header className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>People, Access and Culture</p><h1>Diversity: understanding and practice</h1><p className={styles.intro}>These courses help staff of the Disability Services Division (DSD) explore identity, culture, privilege, bias, and belonging. Each one uses explanation, realistic situations, reflection, and practice.</p></div></header>
     <div className="wrap space-y-10 py-10">
       <p><Link href="/learn">Learn</Link></p><details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="diversity" noun="collection" scope={scope} /></details>
       <p>Choose a course that speaks to a question or experience you want to explore. Foundation, Intermediate, and Advanced describe the depth of the material. They do not label you or restrict where you can begin. Each course includes four lessons, activities with feedback, a practical job aid, and sources for further reading.</p>
-      {firstCourse ? <section className={styles.topicStart}><h2>Start here</h2><p>{courseSummary(firstCourse)}</p><Link className={styles.primaryAction} href={courseHref(firstCourse.course.id)}>{firstCourse.course.title}</Link></section> : null}
+      {firstCourse ? <section className={styles.topicStart}><h2>Start here: the first course in the series</h2><p>{courseSummary(firstCourse)}</p><Link className={styles.primaryAction} href={courseHref(firstCourse.course.id)}>{firstCourse.course.title}</Link></section> : null}
       {groups.map((group, index) => <section key={group.id} id={group.id} className={styles.section} aria-label={`${group.title} courses`}>
         <details className={styles.courseGroup} open={index === 0}>
           <summary className={styles.courseGroupSummary}>

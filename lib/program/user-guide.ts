@@ -5,7 +5,7 @@ export const USER_GUIDE = {
   "short": "One DSD",
   "date": "20261108",
   "title": "How to use One DSD",
-  "lede": "A short guide to finding what you need, reading pages that open in sections, and saving, sharing and returning to your work.",
+  "lede": "This short guide shows staff of the Disability Services Division (DSD) how to find what they need on this site, read pages that open in sections, and save, share, and return to their work.",
   "download": "/documents/one-dsd-user-guide-20261108.txt",
   "choices": [
     {

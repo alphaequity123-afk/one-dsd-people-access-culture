@@ -20,7 +20,7 @@ export default async function ReadingsPage({searchParams}:{searchParams:Promise<
   const choices={q,theme,section};
   return <div className={styles.page}>
     <div className={styles.body}><Link href="/learn/sources" className={styles.back}>Books and research</Link></div>
-    <PageIntro kicker="Read, reflect and put ideas to work" title="Books and ideas for your work" lede="Find a perspective that helps you understand a situation, ask a better question or try a different approach. Explore at your own pace." />
+    <PageIntro kicker="Read, reflect and put ideas to work" title="Books and ideas for your work" lede="This page helps staff of the Disability Services Division (DSD) find a book or idea that fits a situation at work. Use it to understand a situation, ask a better question, or try a different approach, at your own pace." />
     <div className={styles.body}>
       <p><Link href="/learn/readings/pathways">Find a reading path for a question in your work</Link></p>
       <details className="course-more-item">

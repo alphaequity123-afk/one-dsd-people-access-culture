@@ -11,10 +11,10 @@ export default function ThemeCollectionsPage() {
     <header className={base.intro}>
       <p className={base.eyebrow}>One DSD People, Access and Culture</p>
       <h1>Explore by theme</h1>
-      <p className={base.lede}>Choose a subject to find related learning, practical resources, reading, research and listening together.</p>
-      <p>Topics overlap. A resource may appear under more than one theme when it helps with different kinds of work; each link opens the same resource.</p>
+      <p className={base.lede}>This page helps staff of the Disability Services Division (DSD) find learning, practical resources, reading, research, and recordings on one subject in one place.</p>
+      <p>Topics overlap, so a resource may appear under more than one theme. Each link opens the same resource.</p>
     </header>
-    <aside className={base.continue}><h2>CLAS curriculum collection</h2><p>Nine connected lessons, with videos, discussion audio, practice and planning resources in one shareable collection.</p><p><Link href="/learn/clas/collection">Open the collection</Link></p></aside>
+    <aside className={base.continue}><h2>CLAS collection: nine lessons on cultural and language access</h2><p>CLAS stands for Culturally and Linguistically Appropriate Services. The nine connected lessons come with videos, discussion audio, practice, and planning resources in one shareable collection.</p><p><Link href="/learn/clas/collection">Open the collection</Link></p></aside>
     <ul className={styles.doors} aria-label="Themes">{RESOURCE_THEMES.map(theme => <li key={theme.id}>
       <Link className={styles.door} href={`/collections/${theme.id}`}><span className={styles.doorTitle}>{theme.title}</span><span>{theme.description}</span><span className={styles.doorAction}>Explore this theme</span></Link>
     </li>)}</ul>

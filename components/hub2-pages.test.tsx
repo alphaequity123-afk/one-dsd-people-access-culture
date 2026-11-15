@@ -32,8 +32,8 @@ describe("hub pages keep their content in closed panels", () => {
   });
   it("learn", async () => {
     const page = html(await LearnPage({ searchParams: Promise.resolve({}) }));
-    for (const t of ["The Core 15", "Course series", "Search the collection", "Take it into your work", "Understanding DHS"]) expect(page, t).toContain(t);
-    expect(page.indexOf("Search the collection")).toBeLessThan(page.indexOf("The Core 15"));
+    for (const t of ["The Core 15", "Course series", "Search all learning and resources", "Put learning into practice at work", "Understanding DHS"]) expect(page, t).toContain(t);
+    expect(page.indexOf("Search all learning and resources")).toBeLessThan(page.indexOf("The Core 15"));
   });
   it("finds The Water We Swim In by title", async () => {
     const page = html(await LearnPage({ searchParams: Promise.resolve({ q: "Water We Swim In" }) }));
@@ -49,7 +49,7 @@ describe("hub pages keep their content in closed panels", () => {
   });
   it("start", async () => {
     const page = html(await StartPage());
-    for (const t of ['id="new-to-dsd"', "From learning to equity in practice", "Getting to know the program"]) expect(page, t).toContain(t);
+    for (const t of ['id="new-to-dsd"', "Follow a pathway from a question to a real change", "New to DSD? Learn how the program works"]) expect(page, t).toContain(t);
     expect(visible(page)).not.toContain('id="new-to-dsd"');
     expect(page.indexOf("data-start-finder")).toBeLessThan(page.indexOf('id="new-to-dsd"'));
   });
