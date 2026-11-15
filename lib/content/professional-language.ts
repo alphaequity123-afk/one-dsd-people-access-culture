@@ -1,6 +1,7 @@
 import surfaceData from "./professional-language-revisions.json";
 import courseData from "./course-language-revisions.json";
 import partialCourseData from "./course-partial-language-revisions.json";
+import { withResponsibleWording } from "./responsible-wording";
 
 export type LanguageChange = { path: (string | number)[]; before: string; after: string; beforeVariants?: string[] };
 export type LanguageRevision = { target: string; kind: string; changes: LanguageChange[]; status: string };
@@ -37,5 +38,6 @@ export function inspectLanguageRevision<T>(target: string, value: T, revision = 
 }
 
 export function withProfessionalLanguage<T>(target: string, value: T): T {
-  return inspectLanguageRevision(target, value).value;
+  // After the reviewed wording is applied, the owner's rule for naming who is responsible holds everywhere.
+  return withResponsibleWording(inspectLanguageRevision(target, value).value);
 }

@@ -70,7 +70,9 @@ describe("privacy gate", () => {
     expect(f.runTool).not.toHaveBeenCalled();
   });
   it("refuses a context holding a personal email address", () => {
-    expect(privacyRefusal(request({ context: "Send the result to someone@example.org" }))).toContain("email address");
+    // An e-mail address is private when it is tied to a person: the asker's own, or someone else's.
+    expect(privacyRefusal(request({ context: "Email me the result at someone@example.org" }))).toContain("email address");
+    expect(privacyRefusal(request({ context: "Reach the applicant at someone@example.org" }))).toContain("email address");
     expect(privacyRefusal(request())).toBeUndefined();
     // Known organization names are not a person's name: the division's name beside "disability" passes.
     expect(privacyRefusal(request({ context: "The Disability Services Division is considering adopting this guide. Does it fit the division's equity analysis expectations?" }))).toBeUndefined();

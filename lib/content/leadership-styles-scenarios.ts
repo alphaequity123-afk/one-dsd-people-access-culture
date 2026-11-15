@@ -167,7 +167,7 @@ export const LEADERSHIP_SCENARIO_FAMILIES: readonly ScenarioFamily[] = [
       "Whether there are other funding sources or a way to phase both.",
       "The working relationship between the two teams.",
     ],
-    formal: "DHS Equity Policy sets requirements for applying an equity lens to budget work; the official Equity Analysis Toolkit supports that review. First confirm any existing language-access, accessibility, or other obligations with the responsible office; a choice between proposed projects does not suspend those duties. The person with budget authority decides among the available lawful options. The Toolkit structures the comparison rather than deciding the answer.",
+    formal: "DHS Equity Policy sets requirements for applying an equity lens to budget work; the official Equity Analysis Toolkit supports that review. First confirm any existing language-access, accessibility, or other obligations with the person or area responsible; a choice between proposed projects does not suspend those duties. The person with budget authority decides among the available lawful options. The Toolkit structures the comparison rather than deciding the answer.",
     responses: [
       { slug: "charismatic", kind: "harmful", quote: "“Let's go with training. I've seen how powerful it can be.”", analysis: "The decision follows the leader's enthusiasm, not criteria or evidence about who benefits." },
       { slug: "participative", kind: "stronger", quote: "“Let's agree on the criteria first, before we argue about the options. Then both teams can make their case against the same criteria.”", analysis: "Agreeing on criteria first turns a contest between people into a comparison of options." },

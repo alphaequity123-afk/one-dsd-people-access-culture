@@ -96,7 +96,7 @@ export const EQUITY_FRAMEWORK = {
       oneDhs: [
         { label: "Guided equity analysis walkthrough", href: "/equity-policy/analysis" },
         { label: "Practice", href: "/practice" },
-        { label: "Find the right person or office", href: "/support/right-person" },
+        { label: "Find the person or area responsible", href: "/support/right-person" },
       ],
       oneDsd: [
         { label: "Amplify Equity", href: "/one-dsd/amplify" },
@@ -175,7 +175,7 @@ export const EQUITY_FRAMEWORK = {
         "Establish or strengthen an Equity Committee, a steering group and unit-level equity teams.",
         "Create an Equity Activity Inventory to document ongoing equity work, prevent duplication, identify gaps and coordinate across departments.",
         "Use current DHS Equity Policy and the official Toolkit to determine the review required for policies, programs, contracts, budgets and organizational changes.",
-        "Include equity goals and expectations in executive and manager performance plans, where the responsible offices adopt them.",
+        "Include equity goals and expectations in executive and manager performance plans, where the people or areas responsible adopt them.",
         "Maintain a leadership view of progress, barriers, risks and decisions requiring executive action.",
         "Keep a governance calendar for planning, reporting, review and accountability, with dates set by the people involved.",
       ],
@@ -331,7 +331,7 @@ export const EQUITY_FRAMEWORK = {
         "Establish a Community Advisory Board or strengthen existing advisory structures, with open recruitment and outreach wide enough that people across the communities served, including people with disabilities and people who use other languages, hear about it and can take part.",
         "Adopt a community-engagement standard that defines when, how and why community input is required.",
         "Create a stipend and compensation process for community members and presenters.",
-        "Follow established government-to-government consultation procedures with the authorized Tribal relations office, and confirm the appropriate training for staff.",
+        "Follow established government-to-government consultation procedures with the person or area responsible for Tribal relations, and confirm the appropriate training for staff.",
         "Fund translation and interpretation in engagement planning.",
         "Close the feedback loop: what was heard, what was decided, what changed and why.",
       ],
@@ -368,8 +368,8 @@ export const EQUITY_FRAMEWORK = {
         "Prepare progress reports for leadership, staff and governance bodies at agreed review points.",
         "Publish a public accountability report summarizing accomplishments, gaps, disparity trends, lessons learned and next priorities.",
         "Review the plan at agreed points and update priorities from data, community feedback, organizational conditions and emerging needs.",
-        "Review missed targets or worsening disparities with the responsible offices, examine the evidence and agree on any corrective action required.",
-        "Integrate equity results into organizational planning, where the responsible offices adopt them.",
+        "Review missed targets or worsening disparities with the people or areas responsible, examine the evidence and agree on any corrective action required.",
+        "Integrate equity results into organizational planning, where the people or areas responsible adopt them.",
         "Maintain a data-governance approach that protects privacy while enabling meaningful disaggregation.",
       ],
       measures: [
@@ -415,7 +415,7 @@ export const EQUITY_FRAMEWORK = {
     {
       title: "Integration",
       aim: "Integrate equity into core business systems, deepen capability and expand partnership and accountability structures.",
-      enterWhen: "Enter when the Foundations readiness conditions are met and the responsible offices agree.",
+      enterWhen: "Enter when the Foundations readiness conditions are met and the people or areas responsible agree.",
       workstreams: [
         { title: "Performance management", items: ["Equity responsibilities and measurable objectives in leader and manager performance plans, where adopted.", "Inclusive leadership behaviors in feedback, coaching, promotion and succession.", "Managers review workforce, climate and service-equity data as part of business planning.", "Corrective-action procedures for missed goals or worsening disparities."] },
         { title: "Mentorship and leadership development", items: ["Mentorship and sponsorship open to every employee, with outreach to people who have been left out of informal networks.", "Transparent leadership-development pathways.", "Cohort-based development for supervisors and managers.", "Leader capability in conflict navigation, inclusive decision-making, accessibility, community engagement and equity-focused change."] },
@@ -429,7 +429,7 @@ export const EQUITY_FRAMEWORK = {
     {
       title: "Sustainment",
       aim: "Institutionalize equity as a durable organizational capability, demonstrate measurable outcomes and prepare the next framework.",
-      enterWhen: "Enter when the Integration readiness conditions are met and the responsible offices agree.",
+      enterWhen: "Enter when the Integration readiness conditions are met and the people or areas responsible agree.",
       workstreams: [
         { title: "Culture", items: ["Equity, accessibility and inclusive leadership as standard elements of policy, planning, supervision, onboarding, evaluation, recognition and improvement.", "Every division maintains a current equity action plan aligned with enterprise priorities.", "Peer learning, communities of practice and internal champions.", "Proactive culture-building alongside responsive accountability processes."] },
         { title: "Sustainability framework", items: ["Permanent staffing, governance, budget, data, learning and technology needs clarified.", "Planning, reporting and review cycles defined by the people involved.", "Equity responsibilities in position descriptions, leadership expectations and procedures.", "Succession plans so progress does not depend on one leader, consultant, committee or funding source.", "The resource library, activity inventory and tool suite maintained."] },
@@ -524,7 +524,7 @@ export const EQUITY_FRAMEWORK = {
   decisionCategories: [
     ["Routine operational decision", "Use applicable policy and the official Toolkit to determine the review needed; a routine label alone does not establish that screening is sufficient."],
     ["New program, policy, contract or communication campaign", "Confirm the required analysis or scan using current DHS Equity Policy, the official Toolkit and its User Guide. Include relevant accessibility review."],
-    ["High-impact decision involving service access, eligibility, funding, technology, staffing or enforcement", "Confirm the required analysis and authorized review. Plan relevant community engagement, accessibility work and monitoring with the responsible offices."],
+    ["High-impact decision involving service access, eligibility, funding, technology, staffing or enforcement", "Confirm the required analysis and authorized review. Plan relevant community engagement, accessibility work and monitoring with the people or areas responsible."],
     ["Urgent decision", "Urgency does not by itself reduce required review. Confirm the applicable process with the responsible authority, document the decision and agree on any follow-up."],
   ],
 
@@ -603,7 +603,7 @@ export const EQUITY_FRAMEWORK = {
   publicReport: ["Message from executive leadership and the Equity Committee", "Vision, commitments and strategic framework", "Accomplishments by pillar", "Workforce, culture, accessibility, service and community data", "Progress on priority disparity-reduction goals", "Community and employee perspectives", "Accessibility improvements and remaining barriers", "Major policy, practice or system changes", "Corrective actions and lessons learned", "Priorities and targets for the next period", "How employees and community members can continue to participate"],
 
   digitalTools: [
-    ["Intake form and workflow", "Routes new initiatives through activity registration, equity review, accessibility review and approval.", "The responsible offices confirm the required review under current policy and the official Toolkit; an equity lead can advise on its scope."],
+    ["Intake form and workflow", "Routes new initiatives through activity registration, equity review, accessibility review and approval.", "The people or areas responsible confirm the required review under current policy and the official Toolkit; an equity lead can advise on its scope."],
     ["Job-description review aid", "Flags unnecessary degree requirements, exclusionary language, unclear essential functions and accessibility issues.", "Human resources and the hiring manager make final edits and confirm job relevance."],
     ["Contract and procurement checklist", "Prompts staff to assess vendor range, accessibility, language access, community impact and equity requirements.", "Procurement and legal staff verify requirements and contract language."],
     ["Plain-language aid", "Helps draft clearer public-facing materials.", "Communications and accessibility staff confirm readability, accuracy, tone and accessibility."],

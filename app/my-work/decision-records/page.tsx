@@ -12,7 +12,7 @@ export default function DecisionRecordsPage() {
     <p className="calm-lede">A short, plain record of a consequential decision: who it affects, what was heard, the options weighed and why one was chosen. Someone reading it next year should be able to follow the reasoning.</p>
     <details>
       <summary>When to keep a decision record</summary>
-      <p>Use a decision record when others need to understand the reasons for a policy, form, notice, budget, hiring or service choice. Follow the applicable agency process for the official record. If equity analysis is required, identify where the authorized analysis is kept. This learning tool supports preparation; the responsible person or office still makes the decision.</p>
+      <p>Use a decision record when others need to understand the reasons for a policy, form, notice, budget, hiring or service choice. Follow the applicable agency process for the official record. If equity analysis is required, identify where the authorized analysis is kept. This learning tool supports preparation; the person or area responsible still makes the decision.</p>
       <p><Link href="/team-space">See records saved to the team space</Link></p>
     </details>
     <RecordWorkbench kind="decision-record" teamSpace />

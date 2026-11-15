@@ -98,7 +98,7 @@ export function StaffAskBrowse({
             <li>Choose a common question to read its answer or download a copy.</li>
             <li>Choosing a question does not save a personal response.</li>
             <li>If the topic is not listed, browse the Library or Areas of work.</li>
-            <li>Decisions stay with the responsible person or office.</li>
+            <li>Decisions stay with the person or area responsible.</li>
           </ul>
         </div>
         <div className={styles.railNote}>

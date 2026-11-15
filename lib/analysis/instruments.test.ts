@@ -5,7 +5,7 @@ import { INSTRUMENT_IDS, nextStepSchema, type Instrument } from "@/lib/analysis/
 import { getQuestions as getToolkitQuestions } from "@/lib/consultant-toolkit/instrument";
 import { INSTRUMENTS, getInstrument, instrumentQuestions, matchGuidance } from "@/lib/analysis/instruments";
 
-const ROOT = "C:/Users/garyb/Projects/one-dsd-community-hub-20261105";
+const ROOT = process.cwd();
 
 const ALLOWED_HREFS = [
   "/community-outreach/county-map",

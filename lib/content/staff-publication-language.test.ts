@@ -1,3 +1,4 @@
+import { responsibleWording } from "./responsible-wording";
 import { describe, expect, it } from "vitest";
 import { PostgresStaffPublicationReader, type StaffPublicationDatabase } from "./staff-publications";
 import { contentEvidence } from "./ask-evidence";
@@ -21,7 +22,8 @@ describe("reviewed publication presentation", () => {
       const revision = revisions.revisions.find(r => r.target === `resource.${item.id}`)!;
       for (const change of revision.changes) {
         const actual = change.path.reduce<unknown>((value, key) => (value as Record<string | number, unknown>)[key], item);
-        expect(actual).toEqual(change.after);
+        // The reviewed wording is shown with the owner's rule for naming who is responsible applied on top.
+        expect(actual).toEqual(responsibleWording(change.after));
       }
       expect(contentEvidence(item)).toEqual({ sourceId: item.id, revisionId: record.publishedRevision, payloadHash: record.publishedSha256, scope: "one-dhs" });
       expect(item.nextActions?.every(action => !action.href.startsWith("/support/request"))).toBe(true);

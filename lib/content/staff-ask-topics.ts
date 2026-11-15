@@ -77,7 +77,7 @@ const PROGRAM_TOPICS: StaffAskTopic[] = [
   {
     id: "support-directory",
     facet: "Support",
-    title: "Find the right office",
+    title: "Find the person or area responsible",
     question: "Who should handle this if it is not a learning question?",
     answer:
       "The Equity and Inclusion Operations Consultant is a resource for equity questions in DSD work. Use the DHS offices and guidance directory or Find the right person to identify support for your question.",

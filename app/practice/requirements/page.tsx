@@ -28,7 +28,7 @@ export default function RequirementsPage() {
             <li><Link href="/practice/gp-2">Policy, form or notice change</Link></li>
             <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li>
             <li><Link href="/practice/measurement">Plan evidence of results</Link></li>
-            <li><Link href="/support/right-person">Find the responsible person or office</Link></li>
+            <li><Link href="/support/right-person">Find the person or area responsible</Link></li>
           </ul></nav>
         </section>
       </PageContents>

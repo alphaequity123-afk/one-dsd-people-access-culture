@@ -37,7 +37,7 @@ export default async function ClasPlanningPage() {
             <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li>
             {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Explore cultural context for your planning</Link></li>}
             <li><Link href="/practice/measurement">Plan how to learn from results</Link></li>
-            <li><Link href="/support/right-person">Find the responsible person or office</Link></li>
+            <li><Link href="/support/right-person">Find the person or area responsible</Link></li>
           </ul></nav>
         </section>
       </PageContents>

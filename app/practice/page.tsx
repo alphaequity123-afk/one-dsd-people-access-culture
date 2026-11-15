@@ -84,7 +84,7 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
                 {byId.has("gp-7") ? <li><Link href={practiceHref("gp-7")}>Standard analysis</Link><span className={styles.context}>Changes that affect access</span></li> : null}
                 <li><Link href={withWorkOrigin("/equity-review", origin)}>In-depth review</Link><span className={styles.context}>Policy or system changes</span></li>
               </ul>
-              <p>These starting points help organize your review. Confirm the required approach through the official policy, User Guide, and responsible equity office.</p>
+              <p>These starting points help organize your review. Confirm the required approach through the official policy, User Guide, and the person or area responsible for equity.</p>
               <p className={styles.related}><Link href="/learn/equity-toolkit#equity-analysis">Compare review options</Link><Link href="/equity-policy">Equity analysis policy</Link></p>
               <p className={styles.related}><Link href={withWorkOrigin("/practice/requirements", origin)}>Check requirements</Link><Link href={withWorkOrigin("/learn/equity-toolkit/practice", origin)}>Open the toolkit worksheet</Link></p>
             </div>

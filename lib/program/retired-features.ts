@@ -37,7 +37,7 @@ export function withoutRetiredLinks<T>(value: T): T {
   const result = Object.fromEntries(Object.entries(record).map(([key, entry]) => [key, withoutRetiredLinks(entry)]));
   if (destination) {
     result.href = destination;
-    if (typeof record.label === "string") result.label = destination === "/support/right-person" ? "Find the right person or office" : destination === "/courses/cv-understanding-your-lens" ? "Explore cultural values" : "Explore One DSD";
+    if (typeof record.label === "string") result.label = destination === "/support/right-person" ? "Find the person or area responsible" : destination === "/courses/cv-understanding-your-lens" ? "Explore cultural values" : "Explore One DSD";
   }
   return result as T;
 }

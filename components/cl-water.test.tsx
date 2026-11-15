@@ -49,16 +49,19 @@ describe('essay part pages', () => {
 });
 
 describe('module contents', () => {
-  it.each(WATER_MODULES.map(module => [module.slug, module] as const))('%s keeps every word and adds an anchored contents list', (_slug, module) => {
+  it.each(WATER_MODULES.map(module => [module.slug, module] as const))('%s keeps every word and adds a contents list with one choice per section', (_slug, module) => {
     const view = render(<WaterModuleBody markdown={module.body} />);
     const headings = [...module.body.matchAll(/^##\s+(.+)$/gm)].map(match => match[1]);
-    const nav = view.getByRole('navigation', { name: 'In this module' });
-    const links = within(nav).getAllByRole('link');
-    expect(links.map(link => link.textContent)).toEqual(headings.map(heading => researchPlainText(heading).trim()));
-    for (const link of links) expect(document.getElementById(link.getAttribute('href')!.slice(1))?.tagName).toBe('SECTION');
-    expect(view.getAllByRole('heading', { level: 2 }).length).toBe(headings.length + 1);
-    // Same text, in the same order, as the module rendered before the contents list was added.
+    // The module shows one section at a time: the contents list holds a button for each section, in order.
+    const nav = view.getByRole('navigation', { name: 'In this module', hidden: true });
+    const choices = within(nav).getAllByRole('button', { hidden: true });
+    expect(choices.map(choice => choice.textContent)).toEqual(headings.map(heading => researchPlainText(heading).trim()));
+    expect(view.container.querySelectorAll('section.cl-water-part').length).toBe(headings.length);
+    expect(view.getAllByRole('heading', { level: 2, hidden: true }).length).toBe(headings.length);
+    // Same text, in the same order, as the module rendered before the contents list and the pager were added.
     const before = render(<div data-testid="before"><ResearchMarkdown markdown={module.body} /></div>).getByTestId('before').textContent!;
-    expect(view.container.textContent!.replace(nav.textContent!, '')).toBe(before);
+    const pager = view.getByRole('navigation', { name: 'Page topics', hidden: true });
+    const contents = view.container.querySelector('details.focused-contents')!;
+    expect(view.container.textContent!.replace(contents.textContent!, '').replace(pager.textContent!, '')).toBe(before);
   });
 });

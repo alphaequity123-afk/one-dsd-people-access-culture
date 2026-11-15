@@ -185,7 +185,7 @@ const serviceSteps: Step[] = [
   {
     id: "decision", title: "Examine the decision",
     question: "What is being decided, who might be affected differently, and what level of review applies?",
-    guidance: "Check current DHS policy and the Equity Analysis Toolkit user guide, and consult the responsible office or your equity director about what applies. The Toolkit supports the required process. The decision workspace can help you prepare; use the required official process for review and documentation. A brief learning check does not replace a required review. Compare options and identify what you still need to learn. Leaders can bring the same questions to policy, program and resource decisions.",
+    guidance: "Check current DHS policy and the Equity Analysis Toolkit user guide, and consult the person or area responsible or your equity director about what applies. The Toolkit supports the required process. The decision workspace can help you prepare; use the required official process for review and documentation. A brief learning check does not replace a required review. Compare options and identify what you still need to learn. Leaders can bring the same questions to policy, program and resource decisions.",
     practices: [
       "The less familiar the setting, the slower you should be to settle on a judgment. Pause and consider what information may be missing.",
       "Compare your plan with what you would usually do, and ask someone who knows the setting to read it.",

@@ -17,9 +17,10 @@ it("shows a short menu: Leadership, no Themes and collections or Community Outre
   expect(readFileSync(path.join(process.cwd(), "app/learn/cultural-intelligence/page.tsx"), "utf8")).toContain('href="/community-outreach"');
 });
 
-it("orders the landing page: cards, then the finder, then the Ask window, and does not speak as 'us'", () => {
+it("orders the landing page: cards, then the finder, and does not speak as 'us'", () => {
   const home = readFileSync(path.join(process.cwd(), "app/home/page.tsx"), "utf8");
   expect(home.indexOf('className="w doors"')).toBeLessThan(home.indexOf("<HomeTaskFinder />"));
-  expect(home.indexOf("<HomeTaskFinder />")).toBeLessThan(home.indexOf("<HomeAsk "));
+  // Ask opens from the banner on every page (since 2026-11-12), so the landing page itself holds the finder only.
+  expect(home).toContain("<HomeTaskFinder />");
   expect(home).not.toMatch(/Tell us|we&apos;ll|we'll/);
 });

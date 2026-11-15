@@ -197,7 +197,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="stages" className="mt-14">
           <H2 id="stages">Three stages with readiness conditions</H2>
-          <p className="max-w-3xl">The proposed sequence moves through foundations, integration and sustainment. Set timing with the responsible offices, considering readiness, resources and applicable deadlines. These planning stages do not postpone an existing duty.</p>
+          <p className="max-w-3xl">The proposed sequence moves through foundations, integration and sustainment. Set timing with the people or areas responsible, considering readiness, resources and applicable deadlines. These planning stages do not postpone an existing duty.</p>
           <div className="mt-6 grid gap-6 lg:grid-cols-3">{F.stages.map((s, i) => (
             <article key={s.title} className="card min-w-0">
               <p className="kicker m-0">Stage {i + 1}</p>
@@ -311,7 +311,7 @@ export default function EquityFrameworkPage() {
           <p className="max-w-3xl">Use this proposed set of twelve tools to identify what the work needs, what is available and what requires authorization or development. Expand it when evidence and readiness justify the addition.</p>
           <ol className="mt-4 grid list-decimal gap-2 pl-6 md:grid-cols-2">{F.launchPackage.map((t) => <li key={t.name} className="text-sm">{t.href ? <Link href={t.href}>{t.name}</Link> : t.name} <span className="text-muted">({TOOL_STATUS_LABEL[t.status].toLowerCase()})</span></li>)}</ol>
           <p className="mt-6 max-w-3xl font-semibold">{F.designPrinciple}</p>
-          <p className="max-w-3xl text-sm text-muted">This framework interprets <Link href="/operationalizing-equity">operationalizing equity</Link> for the whole program.¹² Use of this proposed planning framework is voluntary; applicable workplace duties and assigned training remain required. Nothing here confers official authority or replaces decisions made by responsible department offices.</p>
+          <p className="max-w-3xl text-sm text-muted">This framework interprets <Link href="/operationalizing-equity">operationalizing equity</Link> for the whole program.¹² Use of this proposed planning framework is voluntary; applicable workplace duties and assigned training remain required. Nothing here confers official authority or replaces decisions made by the people or areas responsible in the department.</p>
         </section>
 
         <section aria-labelledby="notes" className="mt-14 border-t border-line pt-6">
