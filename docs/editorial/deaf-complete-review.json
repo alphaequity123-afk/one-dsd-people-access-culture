@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-deaf-minnesota",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eight source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "5cd183a80a86e88c85115fc823eb070a3c8b0280b471a005d44ee743049b6c9f",
+  "specSha256": "39d1034b2c127c939a724169a094cd59492005b7a42cd05b646fa7d7c16b4ae0",
+  "findings": [
+    "Identity and communication methods are individual; ASL is not universal.",
+    "Interim typing is limited to the effective short scheduling exchange in the case, not a substitute for access during assessment.",
+    "Privacy, authorized records and changing preferences are addressed.",
+    "Academy history is sourced; interpreter workforce counts from 2020 are not current estimates.",
+    "Formal burden decisions require the public entity head or designee, program resources and written reasons.",
+    "Companion exceptions, effective VRI and appeal deadline protections are explicit.",
+    "Employment accommodations are distinguished from public-service Title II guidance."
+  ],
+  "diagnostics": [
+    {
+      "title": "Deaf as a culture and ASL as a language",
+      "teaching": {
+        "words": 351,
+        "sents": 20,
+        "asl": 17.55,
+        "fk": 10.584984330484332,
+        "fog": 12.945925925925927,
+        "smog": 12.340626583579944,
+        "poly": 14.814814814814815,
+        "long": 31.33903133903134,
+        "short": 10,
+        "ease": 50.432006410256406
+      }
+    },
+    {
+      "title": "Deaf, DeafBlind, hard of hearing and late deafened",
+      "teaching": {
+        "words": 355,
+        "sents": 24,
+        "asl": 14.791666666666666,
+        "fk": 10.621003521126763,
+        "fog": 12.339201877934272,
+        "smog": 11.93303328291395,
+        "poly": 16.056338028169016,
+        "long": 33.80281690140845,
+        "short": 20.833333333333332,
+        "ease": 45.26089495305166
+      }
+    },
+    {
+      "title": "Deaf Minnesota: history and institutions",
+      "teaching": {
+        "words": 312,
+        "sents": 17,
+        "asl": 18.352941176470587,
+        "fk": 13.42790346907994,
+        "fog": 16.315535444947212,
+        "smog": 14.721396884518768,
+        "poly": 22.435897435897434,
+        "long": 36.85897435897436,
+        "short": 5.882352941176471,
+        "ease": 31.479841628959292
+      }
+    },
+    {
+      "title": "Communication access in practice: ADA duties and interpreters",
+      "teaching": {
+        "words": 536,
+        "sents": 29,
+        "asl": 18.482758620689655,
+        "fk": 13.34700720535255,
+        "fog": 16.04981986618631,
+        "smog": 14.554592549557764,
+        "poly": 21.64179104477612,
+        "long": 34.32835820895522,
+        "short": 17.24137931034483,
+        "ease": 32.291044776119435
+      }
+    }
+  ],
+  "diagnosticJudgment": "Read all four lessons and generated overview and job aid. Flesch-Kincaid ranges from 10.6 to 13.4; institutional names and legal terms raise complexity. Short questions and instructions remain short where combining them would reduce clarity. Scores are diagnostic rather than a reason to inflate wording.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioAccessAndDecisionAuthorityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-deaf-guidance-review.json",
+  "sources": [
+    "https://nad.org/knowledge-hub/american-sign-language/community-and-culture-frequently-asked-questions/",
+    "https://www.nidcd.nih.gov/health/american-sign-language",
+    "https://www.ada.gov/resources/effective-communication/",
+    "https://mn.gov/deaf-commission/",
+    "https://mn.gov/deaf-commission/news/?id=1063-445006",
+    "https://mn.gov/deaf-hard-of-hearing/about-us/index.jsp",
+    "https://www.lrl.mn.gov/agencies/detail?AgencyID=1133",
+    "https://www.ecfr.gov/current/title-28/chapter-I/part-35/subpart-E"
+  ],
+  "readings": [
+    {
+      "slug": "gc-deaf-minnesota",
+      "readingSha256": "52eb2b4c68ae9b6538476cbb04e415ed811df939ac25fd4d80ce6c4b5c4c8dd6"
+    },
+    {
+      "slug": "gc-deaf-minnesota--deaf-as-a-culture-and-asl-as-a-language",
+      "readingSha256": "747b79b707c9af60efbf15bbf3df6fd8d8b03840a00af1079c2b64eaeff12be3"
+    },
+    {
+      "slug": "gc-deaf-minnesota--deaf-deafblind-hard-of-hearing-and-late-deafened",
+      "readingSha256": "348b7628a8aa29d52cbed2dcc61ddff5f52239bd0f01b61060a2acdc60544d52"
+    },
+    {
+      "slug": "gc-deaf-minnesota--deaf-minnesota-history-and-institutions",
+      "readingSha256": "218042ef2e09c6c54aff1e9c0ccb5c10eff2419f6ef27122352fe8bab3a69805"
+    },
+    {
+      "slug": "gc-deaf-minnesota--communication-access-in-practice-ada-duties-and-in",
+      "readingSha256": "ab6479ebbedec18c1bbb6cc4ed111f6f06d3bdf7ead4aa8b265c51bf5197ce46"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
