@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-coaching-conversations",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, full job aid and ten source notes. Recorded media are outside this acceptance.",
+  "method": "Read the complete final canonical spec and generated overview/job aid, checked coaching, reporting and accommodation distinctions against primary sources, compared assessment answers with the pre-pass spec reconstructed from exact field history, and verified all serialized lesson readings against the current pack.",
+  "sourcePackSha256": "8800c5306808e6353b8b06a8ebecd243291328fa40451313326ca97a23fa9632",
+  "specSha256": "e04578c9f31a89d2a5e968b7ae45361bd7ef77bc9457ea75c980d8013660f5e7",
+  "findings": [
+    "Federal coaching guidance is distinguished from Minnesota policy.",
+    "Coaching is not a prerequisite for required reporting or performance procedures.",
+    "A learning conversation cannot promise secrecy or a particular emotional response.",
+    "Communication preferences do not establish capability or cultural cause.",
+    "Program continuum illustrations do not assess or label colleagues.",
+    "Fair access can involve different supports; uneven responses require context.",
+    "Private learning reflections do not replace required supervisory records.",
+    "Hardship disclosure is not a condition of development."
+  ],
+  "diagnostics": [
+    {
+      "title": "What coaching is, and what it is not",
+      "teaching": {
+        "words": 404,
+        "sents": 28,
+        "asl": 14.428571428571429,
+        "fk": 8.671796322489392,
+        "fog": 11.315983026874116,
+        "smog": 11.20814326018867,
+        "poly": 13.861386138613861,
+        "long": 27.97029702970297,
+        "short": 17.857142857142858,
+        "ease": 58.589009900990106
+      }
+    },
+    {
+      "title": "A five-step coaching conversation",
+      "teaching": {
+        "words": 413,
+        "sents": 28,
+        "asl": 14.75,
+        "fk": 7.448214285714283,
+        "fog": 10.064648910411623,
+        "smog": 10.20856025484994,
+        "poly": 10.411622276029055,
+        "long": 19.612590799031477,
+        "short": 14.285714285714286,
+        "ease": 67.93396791767556
+      }
+    },
+    {
+      "title": "Listening and questions that help someone think",
+      "teaching": {
+        "words": 436,
+        "sents": 31,
+        "asl": 14.064516129032258,
+        "fk": 8.515344776561115,
+        "fog": 10.855164249778042,
+        "smog": 10.875528500678815,
+        "poly": 13.073394495412844,
+        "long": 26.376146788990827,
+        "short": 25.806451612903224,
+        "ease": 59.06226842261026
+      }
+    },
+    {
+      "title": "Coaching fairly and knowing when to hand off",
+      "teaching": {
+        "words": 405,
+        "sents": 26,
+        "asl": 15.576923076923077,
+        "fk": 11.404506172839508,
+        "fog": 14.132003798670466,
+        "smog": 13.149919865122353,
+        "poly": 19.753086419753085,
+        "long": 39.75308641975309,
+        "short": 7.6923076923076925,
+        "ease": 41.042200854700866
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching averages 14.1–15.6 words per sentence. Flesch–Kincaid estimates range from 7.4–11.4 and Fog from 10.1–14.1. Short quoted coaching questions and procedural instructions contribute to lower estimates. Connected the repetitive explanations of communication preferences and fair access, while retaining simple usable questions instead of inflating their reading level.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "knowledgeCheckFeedbackQualified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-coaching-guidance-review.json",
+  "sources": [
+    "https://training.fema.gov/emiweb/is/is240b/ig%20files/ig_complete.pdf",
+    "https://training.fema.gov/EMIWeb/IS/IS242b/Student%20Manual/SM_Complete.pdf",
+    "https://training.fema.gov/is/courseoverview.aspx?code=IS-240.c",
+    "https://www.opm.gov/chcoc/transmittals/2018/coaching-federal-government_09-10-2018_508.pdf",
+    "https://www.idiinventory.com/idc",
+    "https://www.ccl.org/articles/leading-effectively-articles/influence-personal-life-leadership/",
+    "https://www.open.edu/openlearn/money-business/leadership-management/three-principles-coaching-approach/",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-coaching-conversations",
+      "readingSha256": "4e8bb363505971545817bb327a1c16a4672b0acc7729baf591b771371caf396f"
+    },
+    {
+      "slug": "gc-coaching-conversations--what-coaching-is-and-what-it-is-not",
+      "readingSha256": "a3140b2405ec8c0cb3513da80d7be90853446e7d451951cb3c9e1c35427ff026"
+    },
+    {
+      "slug": "gc-coaching-conversations--a-five-step-coaching-conversation",
+      "readingSha256": "48a63ad06d56f7d3c7d5e8a337e6a16b760ff8ee1b2516a9aa471f8ba2e69e6a"
+    },
+    {
+      "slug": "gc-coaching-conversations--listening-and-questions-that-help-someone-think",
+      "readingSha256": "5fd29c5fa423d1b3c91169929f17322a8dd2a14c08dbe4b6bec1d1bae696fe00"
+    },
+    {
+      "slug": "gc-coaching-conversations--coaching-fairly-and-knowing-when-to-hand-off",
+      "readingSha256": "1a40bff4801b41e0dd1e6e67e86b2b8bf0f986ffb6bfe50bc9fb89dc88c750b3"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
