@@ -1,0 +1,574 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-co-occurring-substance-use",
+  "status": "reviewed_guidance_revision",
+  "countsAsCompleteCourseReview": false,
+  "sourceSha256": "974e4f0613173a2c5d1a9de22c6d12acc730cd2918170a4f02e7312cea7d4fb9",
+  "revisedSha256": "6c75d3d11ea1f96ac252043ce9c79738463ad79d602dc3316139031352c99528",
+  "changes": [
+    {
+      "path": [
+        "lessons",
+        0,
+        "teaching"
+      ],
+      "before": "A federal advisory from the Substance Abuse and Mental Health Services Administration, or SAMHSA, reports that people with physical and cognitive disabilities have a higher prevalence of serious mental illness and substance use disorders, and lower treatment rates for both, than people without these disabilities. The advisory notes several paths into substance use: some people begin using to cope with chronic pain, isolation, stigma or trauma, including physical or sexual abuse. Unemployment and impulsivity are also risk factors. For others, substance use came first and contributed to the injury that caused a disability.\n\nThe same advisory lists barriers that come from treatment programs themselves: inaccessible parking, entrances and rooms; policies that exclude people with disabilities, such as a rule that clients must be able to evacuate a building unassisted; counseling that is not adapted for people with cognitive disabilities; no materials in Braille, large print or electronic formats; and staff who do not know how to communicate with people who are deaf. It also describes a pattern familiar to many case managers: disability departments saying people with serious mental illness are not their responsibility, and mental health departments saying the same about people with disabilities. Providers may also overestimate how accessible they are.\n\nSome disabilities are not obvious. SAMHSA cautions that behavior linked to cognitive disabilities can be mistaken for willful nonadherence or lack of motivation. Reduced stamina can look like laziness, memory problems can look like not caring, and impaired judgment can look like rebellion. A person may also say they understand more than they do, to avoid embarrassment. When a person with a disability keeps missing appointments or breaking program rules, ask whether the program fits them before concluding they are not ready.\n\nDisability services staff are well placed to notice these gaps. You do not diagnose substance use disorders, and you do not decide whether someone needs treatment. You can notice when substance use is affecting a person's goals, ask whether they want help, and make sure that when they seek treatment, their disability is part of the conversation from the first call. Treat evidence on prevalence as a reason to be alert, not as a prediction about any one person.",
+      "after": "A 2019 advisory comes from the Substance Abuse and Mental Health Services Administration, or SAMHSA. It reports higher rates of serious mental illness and substance use disorders among people with physical and cognitive disabilities. It also reports lower treatment rates for both conditions than among people without these disabilities. The advisory notes several paths into substance use: some people begin using to cope with chronic pain, isolation, stigma or trauma, including physical or sexual abuse. Unemployment and impulsivity are also risk factors. For others, substance use came first and contributed to the injury that caused a disability.\n\nThe advisory also identifies barriers within treatment programs. Parking, entrances and rooms may be inaccessible. A rule requiring clients to evacuate a building without help can exclude people with disabilities. Counseling may not meet cognitive access needs. Materials may lack Braille, large-print or electronic versions. Staff may not know how to communicate with people who are deaf. It also describes departments passing responsibility back and forth. Disability departments may turn away people with serious mental illness, while mental health departments turn away people with disabilities. Providers may also overestimate how accessible they are.\n\nSome disabilities are not obvious. SAMHSA cautions that behavior linked to cognitive disabilities can be mistaken for willful nonadherence or lack of motivation. Reduced stamina can look like laziness, memory problems can look like not caring, and impaired judgment can look like rebellion. A person may also say they understand more than they do, to avoid embarrassment. When a person with a disability keeps missing appointments or breaking program rules, ask whether the program fits them before concluding they are not ready.\n\nDisability services staff are well placed to notice these gaps. This course does not qualify staff to diagnose a substance use disorder, determine clinical need or direct treatment. Staff who hold a clinical credential still act within their professional role and applicable procedures. You can notice when substance use is affecting a person's goals, ask whether they want help, and help them raise the access needs they want addressed. Confirm authorization before sharing health or disability information, including during an initial referral call. Treat evidence on prevalence as a reason to be alert, not as a prediction about any one person.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "keyPoint"
+      ],
+      "before": "People with disabilities face higher rates of substance use disorders and lower treatment rates, often because programs are not built for them. Ask whether a program fits the person before deciding the person is not ready.",
+      "after": "The 2019 advisory identifies treatment-access barriers and differences in population-level rates. Examine the person’s actual needs without predicting a disorder, motivation or treatment outcome from disability.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "example"
+      ],
+      "before": "Lucia is a care coordinator for Andre, who uses a wheelchair after a spinal cord injury and receives waiver services. Andre tells her he has been drinking more to manage pain and loneliness and wants to cut back. The first outpatient program she calls says its groups meet on a second floor with no elevator, and the intake worker suggests Andre wait until a spot opens in a program across the county, three months away.",
+      "after": "Fictional practice case: Lucia is a care coordinator for Andre, who uses a wheelchair after a spinal cord injury and receives waiver services. Andre tells her he has been drinking more to manage pain and loneliness and wants to cut back. The first outpatient program she calls says its groups meet on a second floor with no elevator, and the intake worker suggests Andre wait until a spot opens in a program across the county, three months away.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "feedback",
+        2
+      ],
+      "before": "This is the strongest response. It treats the stairs as an access problem to solve, not a reason to exclude Andre, and keeps other options moving so he gets timely care.",
+      "after": "This is the strongest response. It investigates access options with Andre while checking other available services. Confirm availability and appropriate clinical follow-up; an inquiry does not guarantee timely admission.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "check",
+        "feedback"
+      ],
+      "before": "SAMHSA warns that memory problems, reduced stamina or impaired judgment can look like not caring or not trying. Recognizing this helps staff ask for adaptations instead of discharging people for problems the program could have addressed.",
+      "after": "The advisory warns that cognitive barriers can be mistaken for poor motivation. Ask what the person is experiencing and have qualified staff consider the possibilities; missed appointments alone do not establish disability, motivation or an appropriate discharge decision.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "teaching"
+      ],
+      "before": "Disability rights laws, including the ADA and Section 504, generally require treatment programs to give people with disabilities an equal opportunity to take part in and benefit from services, with limited exceptions. SAMHSA's advisory notes that clients often do not know that programs have the ability, and often the legal responsibility, to meet physical, communication and program access needs, so they do not ask. It recommends that front-line staff tell every potential client at first contact that the program can meet a range of access needs, give examples and act on requests. It also recommends a client pathway analysis: walking through the program from the perspective of people with different disabilities, with help from people with disabilities and groups such as Centers for Independent Living.\n\nThe law has some nuances. SAMHSA notes that a history of opioid use disorder is generally considered a disability, that some protections do not apply to a person currently using drugs illegally in certain situations, and that people with serious mental illness are protected. It also notes that programs may violate the law if they exclude people who take FDA-approved medications for opioid use disorder as prescribed. Those are legal questions. If a person may have been turned away because of a disability or a medication, route it to your supervisor, legal counsel or the appropriate civil rights office rather than deciding it yourself.\n\nIn Minnesota, the usual starting point for publicly funded treatment is a comprehensive assessment, which looks at a person's substance use and needs and informs the level of care, using the ASAM criteria that providers certify against. The DHS provider manual notes that a licensed program can begin services before the comprehensive assessment is finished, as long as the assessment is completed within the timeframe in chapter 245G. Covered services include outpatient and residential treatment, withdrawal management, treatment coordination and peer recovery support. People with Medical Assistance or MinnesotaCare use those programs. People without that coverage may qualify for the Behavioral Health Fund, with financial and clinical eligibility determined by their county or Tribe.\n\nRules and access points change, so check current DHS information or ask your county or Tribal substance use disorder contact before advising. Your most useful role is practical: help the person find a program, raise access needs at the first call, and stay involved so their disability supports and treatment work together.",
+      "after": "Disability rights laws include the ADA and Section 504. These laws generally require equal access to treatment programs for people with disabilities, with limited exceptions. SAMHSA's advisory says clients may not know what access supports programs can provide. They may also be unaware of programs' legal duties, so they do not ask. It recommends explaining available access supports to each potential client at first contact. Staff should give examples and act on requests. It also recommends a client pathway analysis. This means walking through each step of a program to find access barriers. Involve people with disabilities and groups such as Centers for Independent Living.\n\nDisability protections depend on the applicable law and circumstances. DOJ guidance distinguishes prescribed medication for opioid use disorder from current illegal drug use. Current illegal use does not itself permit denial of health or rehabilitation services to which a person is otherwise entitled. Treatment programs can still have rules about illegal use while taking part. A blanket ban on prescribed treatment medication can violate the ADA. Route a possible denial to the responsible civil-rights or legal staff without delaying appropriate care.\n\nMinnesota’s July 2026 provider manual distinguishes assessment, service coverage and funding eligibility. A comprehensive assessment informs clinical eligibility and level of care. Certain licensed facilities may begin covered services before the assessment is complete. They must finish it within the required timeframe. This exception does not apply to every provider or service. The manual separately describes outpatient and residential treatment, withdrawal management, coordination and peer support. Coverage and access still depend on the service, provider and person’s program. For managed care, check the health plan’s process.\n\nPeople without Medicaid who need treatment may qualify for the Behavioral Health Fund. The county or Tribe determines financial eligibility; clinical eligibility is established through a comprehensive assessment, subject to the manual’s withdrawal-management exceptions. Help the person identify the appropriate assessment, coverage and referral contacts rather than promising payment or a placement. Use the current manual and responsible program staff when the situation is unclear.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "keyPoint"
+      ],
+      "before": "Treatment programs generally must provide equal access, and people often do not know they can ask. In Minnesota, a comprehensive assessment usually opens the door to publicly funded treatment, and the Behavioral Health Fund can help people without Medical Assistance.",
+      "after": "Ask about usable communication and access supports, then check assessment and coverage requirements separately. For the Behavioral Health Fund, county or Tribal financial eligibility and the clinical assessment have distinct roles.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "example"
+      ],
+      "before": "Hamid, a lead agency case manager, supports Grace, who is Deaf and uses American Sign Language. Grace has asked for help with her methamphetamine use. The residential program Grace chose tells Hamid it can offer group counseling in English only and suggests Grace read the workbook on her own. Grace has Medical Assistance and has already scheduled her comprehensive assessment with an assessor who says an interpreter will be provided.",
+      "after": "Fictional practice case: Hamid, a lead agency case manager, supports Grace, who is Deaf and uses American Sign Language. Grace has asked for help with her methamphetamine use. The residential program Grace chose tells Hamid it can offer group counseling in English only and suggests Grace read the workbook on her own. Grace has Medical Assistance and has already scheduled her comprehensive assessment with an assessor who says an interpreter will be provided.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "choices",
+        1
+      ],
+      "before": "Help Grace make a written request to the program for qualified interpreters and accessible materials, explain her communication needs, and ask his supervisor to route the question to legal or civil rights staff if the program refuses.",
+      "after": "With Grace’s agreement, help her request effective communication, including qualified interpreters and usable materials. Document the request through an accessible process and route an unresolved refusal to the responsible supervisor or civil-rights staff.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "feedback",
+        1
+      ],
+      "before": "This is the strongest response. It supports Grace's choice, uses the access request process, documents the request and routes a refusal to the offices that decide legal questions.",
+      "after": "This is the strongest response. It supports Grace’s chosen communication method and documents what the program will provide. Do not make a written request a new barrier; ask the program to respond through a process Grace can use.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "action"
+      ],
+      "before": "Write a short script you can use when calling a treatment program on someone's behalf that names the person's access needs and asks how the program will meet them.",
+      "after": "Using Grace’s fictional case, draft an access inquiry that does not identify a real person. Separate general questions about program accessibility from information that would require consent or another lawful basis to share.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "check",
+        "correct"
+      ],
+      "before": "They may qualify for the Behavioral Health Fund, with eligibility determined by their county or Tribe.",
+      "after": "They may qualify for the Behavioral Health Fund: the county or Tribe determines financial eligibility, and a comprehensive assessment establishes clinical eligibility, subject to applicable exceptions.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "check",
+        "feedback"
+      ],
+      "before": "The DHS provider manual describes the Behavioral Health Fund for people with treatment needs who are not enrolled in Medical Assistance, with financial and clinical eligibility determined by the county or Tribe. Check current rules with your local contact.",
+      "after": "The current provider manual separates financial eligibility, determined by the county or Tribe, from clinical eligibility through assessment. Withdrawal-management exceptions and the person’s coverage matter; neither a referral nor a diagnosis alone guarantees payment.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "teaching"
+      ],
+      "before": "Brain injury and substance use are closely linked. The Ohio Valley Center for Brain Injury Prevention and Rehabilitation notes that many people who have a traumatic brain injury had a substance use problem before the injury, and that others develop problems after it. People hospitalized for brain injury tend to drink more heavily than their peers. SAMHSA's advisory adds that people with brain injury, fetal alcohol spectrum disorder, intellectual disability, autism and other conditions that affect thinking make up a significant share of people in substance use treatment, even when their disability is not documented.\n\nThat matters because standard treatment asks a lot of memory, attention, reading and abstract thinking. SAMHSA lists adaptations that help: appointment and activity reminders by phone call, alarm or app; simplified handouts and forms; adjusted group and individual counseling; and staff who understand that a person may say they understand more than they do. It recommends that programs offer voluntary brief cognitive screening at intake when cognitive impairment is not already documented, and explain that the purpose is to make sure treatment fits the person. The screening is a clinical task for trained providers, not something disability services staff administer.\n\nSAMHSA also flags medication interactions. Some medications used for seizures, which people with brain injury or developmental disabilities may take, can interact with methadone. That is a question for prescribers and pharmacists, but case managers can help by making sure each provider has an accurate, current medication list, with the person's consent.\n\nCase managers and waiver teams can do a great deal to make treatment workable. With the person's agreement, you might help set up reminders, arrange transportation that matches appointment times, share a one-page summary of how the person learns best, or connect independent living skills support with recovery goals. Keep the person in charge: ask what has helped them in the past, what has not, and who they want involved. A person with a brain injury who drops out of a program that never adapted to them has not failed treatment. The fit failed.",
+      "after": "Brain injury and substance use are closely linked. The Ohio Valley Center for Brain Injury Prevention and Rehabilitation notes that many people who have a traumatic brain injury had a substance use problem before the injury, and that others develop problems after it. People hospitalized for brain injury tend to drink more heavily than their peers. SAMHSA's advisory adds that people with brain injury, fetal alcohol spectrum disorder, intellectual disability, autism and other conditions that affect thinking make up a significant share of people in substance use treatment, even when their disability is not documented.\n\nThat matters because standard treatment asks a lot of memory, attention, reading and abstract thinking. SAMHSA lists adaptations that help: appointment and activity reminders by phone call, alarm or app; simplified handouts and forms; adjusted group and individual counseling; and staff who understand that a person may say they understand more than they do. It recommends that programs offer voluntary brief cognitive screening at intake when cognitive impairment is not already documented, and explain that the purpose is to make sure treatment fits the person. The screening is a clinical task for trained providers, not something disability services staff administer.\n\nSAMHSA also flags medication interactions. Some medications used for seizures, which people with brain injury or developmental disabilities may take, can interact with methadone. That is a question for prescribers and pharmacists, while case managers can help the person coordinate an accurate medication list through authorized channels. Do not independently advise stopping, starting or changing a medicine.\n\nCase managers and waiver teams can do a great deal to make treatment workable. With the person's agreement, you might help set up reminders, arrange transportation that matches appointment times, share a one-page summary of how the person learns best, or connect independent living skills support with recovery goals. Keep the person in charge: ask what has helped them in the past, what has not, and who they want involved. A dropout warrants review of barriers and clinical needs; it does not prove the cause or justify blaming the person. Assess possible explanations with the person and qualified treatment staff.\n\nBefore exchanging treatment information, confirm who may receive it, for what purpose and under which authorization. Records covered by 42 CFR Part 2 have specific confidentiality requirements, with the updated rule’s compliance date of February 16, 2026. A valid consent can cover treatment, payment and health care operations, but separately maintained substance-use counseling notes require specific consent. Ask privacy staff to resolve applicability and exceptions rather than assuming that membership on a support team permits disclosure.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "keyPoint"
+      ],
+      "before": "Brain injury and substance use often occur together, and standard treatment can be hard for people with cognitive disabilities. Simple adaptations and coordinated supports can make the difference between dropping out and staying in.",
+      "after": "Explore access supports with the person and treatment team, then check whether they help. Keep clinical decisions with qualified staff and confirm disclosure authority before coordinating treatment information.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "example"
+      ],
+      "before": "Nadia, a CADI waiver case manager, supports Curtis, who has a traumatic brain injury from a car crash and is in outpatient treatment for alcohol use. His counselor reports that Curtis keeps forgetting homework, arrives late and nods through groups but cannot repeat what was discussed. The counselor is considering discharging him for not engaging. Curtis tells Nadia he wants to stay but feels lost.",
+      "after": "Fictional practice case: Nadia, a CADI waiver case manager, supports Curtis, who has a traumatic brain injury from a car crash and is in outpatient treatment for alcohol use. His counselor reports that Curtis keeps forgetting homework, arrives late and nods through groups but cannot repeat what was discussed. The counselor is considering discharging him for not engaging. Curtis tells Nadia he wants to stay but feels lost.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "feedback",
+        0
+      ],
+      "before": "This is the strongest response. It uses Curtis's consent, gives the counselor useful context and brings in the kinds of adaptations SAMHSA recommends so he can stay in treatment.",
+      "after": "This is the strongest response. It explores supports with Curtis and the counselor while confirming valid consent and applicable privacy requirements. Check whether the adaptations help; they do not guarantee that a particular program remains appropriate.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "feedback",
+        1
+      ],
+      "before": "Discharge would treat a predictable effect of brain injury as a lack of motivation. Curtis wants to continue, and the program has not yet tried to adapt.",
+      "after": "The case provides reasons to examine learning and access needs before drawing a conclusion about engagement. Discharge decisions require appropriate clinical review and program procedures, not an inference from forgotten work alone.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "action"
+      ],
+      "before": "For one person you support who has a cognitive disability, draft a one-page summary, with their input and consent, of how they learn best that they can choose to share with a treatment provider.",
+      "after": "Using Curtis’s fictional case, draft a short learning-support summary without real personal information. State what the person would choose to share, which authorization would need checking and how the team would review whether the supports help.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "teaching"
+      ],
+      "before": "Harm reduction means meeting people where they are and lowering the risks of substance use, whether or not a person is ready to stop. It sits comfortably alongside recovery: keeping someone alive and connected keeps the door to recovery open. In disability services, harm reduction can look like talking openly about safer use, making sure the person knows how to get help in an overdose, and not making services conditional on abstinence unless a program rule truly requires it.\n\nNaloxone is a core harm reduction tool. The Minnesota Department of Health describes naloxone as a lifesaving medication that can reverse an opioid overdose in minutes. MDH notes that it is harmless if given to someone having a different health emergency, although it works only on opioids. People can ask their pharmacy whether it carries naloxone, and MDH points to syringe service programs and harm reduction organizations for free naloxone. MDH advises giving naloxone in any suspected overdose and calling 911 right away, and notes that Minnesota's Good Samaritan law offers legal protections for people who give naloxone and call 911 in good faith. Details of legal protections are for legal counsel. Whether staff carry or give naloxone in a particular setting follows your agency's and the provider's policies and training.\n\nWords shape whether people seek help. The National Institute on Drug Abuse recommends person-first language, such as a person with a substance use disorder rather than addict or user, because it shows that the person has a condition rather than is the problem. NIDA suggests in recovery or in remission instead of clean, testing positive instead of dirty, and medication treatment for opioid use disorder instead of terms that suggest medication is a crutch. NIDA notes that stigma can make people less willing to seek treatment.\n\nLanguage in records matters especially, because case notes and provider reports follow people for years. A note that says a person was using again and noncompliant tells the next reader less than one that says what happened, what the person said they wanted and what support was offered. Neutral, specific language is more accurate and more respectful, and it avoids closing doors to services.",
+      "after": "Harm reduction means meeting people where they are and lowering the risks of substance use, whether or not a person is ready to stop. It sits comfortably alongside recovery: keeping someone alive and connected keeps the door to recovery open. In disability services, harm reduction can look like talking openly about safer use, making sure the person knows how to get help in an overdose, and checking the actual authority and requirements before any proposed service restriction. A local preference or an unsupported assumption about substance use is not enough.\n\nNaloxone is a core harm reduction tool. The Minnesota Department of Health describes naloxone as a lifesaving medication that can reverse an opioid overdose in minutes. MDH describes it as harmless in another health emergency, and FDA says it generally does not cause additional harm when opioids are absent. It reverses opioid effects, not every cause of unconsciousness; it can also cause withdrawal when opioids are present. People can ask their pharmacy whether it carries naloxone, and MDH points to syringe service programs and harm reduction organizations for free naloxone. For a suspected overdose, call 911 immediately and give available naloxone according to its product instructions and emergency guidance. Its effect is temporary, so stay with the person until help arrives; further doses may be needed. Prepare through appropriate training and workplace procedures, but do not delay emergency help to resolve an administrative question. Minnesota’s Good Samaritan provisions have specific conditions and limits; they do not promise immunity from every charge or consequence.\n\nWords shape whether people seek help. The National Institute on Drug Abuse recommends person-first language, such as a person with a substance use disorder rather than addict or user, because it shows that the person has a condition rather than is the problem. NIDA suggests in recovery or in remission instead of clean, testing positive instead of dirty, and medication treatment for opioid use disorder instead of terms that suggest medication is a crutch. NIDA notes that stigma can make people less willing to seek treatment.\n\nLanguage in records matters especially, because case notes and provider reports follow people for years. A note that says a person was using again and noncompliant tells the next reader less than one that says what happened, what the person said they wanted and what support was offered. Neutral, specific wording supports accurate communication, but it does not determine service eligibility or eliminate every barrier. Preserve attributed statements and required clinical detail. Correct an existing record only through the authorized amendment process, without silently rewriting its history.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "example"
+      ],
+      "before": "Kai supervises a team of case managers. Reviewing notes, Kai sees phrases like 'addict,' 'dirty UA' and 'refuses sobriety' in files for several people, including Selam, who has an intellectual disability and uses opioids. Selam's roommate recently had an overdose that was reversed with naloxone by a neighbor. Selam's provider has asked whether it should keep naloxone in the home, and staff are unsure what they are allowed to do.",
+      "after": "Fictional practice case: Kai supervises a team of case managers. Reviewing notes, Kai sees phrases like 'addict,' 'dirty UA' and 'refuses sobriety' in files for several people, including Selam, who has an intellectual disability and uses opioids. Selam's roommate recently had an overdose that was reversed with naloxone by a neighbor. Selam's provider has asked whether it should keep naloxone in the home, and staff are unsure what they are allowed to do.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "choices",
+        1
+      ],
+      "before": "Coach the team on person-first language for future notes, share MDH information on naloxone with Selam and her provider, and ask the provider to check its own policy and training on keeping and using naloxone.",
+      "after": "Coach staff on accurate, person-first wording for future notes; share current naloxone information with Selam and the provider; and clarify preparation, supplies and staff training before an emergency. Preserve existing records through authorized correction procedures.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "feedback",
+        1
+      ],
+      "before": "This is the strongest response. It improves records going forward, gives Selam and her provider authoritative information about naloxone and respects the provider's responsibility for its own policy and training.",
+      "after": "This is the strongest response. It improves future documentation and emergency preparation while respecting record integrity. During a suspected overdose, seek emergency help immediately rather than waiting for policy review.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "check",
+        "question"
+      ],
+      "before": "According to the Minnesota Department of Health, what happens if naloxone is given to someone who is not having an opioid overdose?",
+      "after": "What do MDH and FDA explain about giving naloxone when an opioid overdose is suspected?",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "check",
+        "correct"
+      ],
+      "before": "It is harmless, although it works only on opioid overdoses.",
+      "after": "Give available naloxone and call 911. It generally causes no additional harm when opioids are absent, but it does not treat every emergency.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "check",
+        "feedback"
+      ],
+      "before": "MDH describes naloxone as harmless when given to someone experiencing another health episode, and advises giving it in any suspected overdose and calling 911 immediately. Waiting to confirm opioids can cost precious time.",
+      "after": "Do not wait for a test to seek emergency help. Naloxone reverses opioid effects temporarily; it can cause withdrawal when opioids are present. Follow product instructions and emergency guidance, and stay until help arrives.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "cards",
+        2,
+        "back"
+      ],
+      "before": "Minnesota funding for substance use disorder treatment for people not enrolled in Medical Assistance who meet financial and clinical eligibility determined by their county or Tribe.",
+      "after": "Possible funding for eligible people with treatment needs who are not enrolled in Medicaid. County or Tribal financial eligibility is distinct from clinical eligibility through assessment; applicable exceptions and coverage must be checked.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "cards",
+        3,
+        "back"
+      ],
+      "before": "A medication that can reverse an opioid overdose in minutes. MDH says it is harmless if given to someone having a different emergency. Give it and call 911.",
+      "after": "An emergency medicine that temporarily reverses opioid effects. For a suspected overdose, call 911, give available naloxone according to instructions and stay until help arrives. It does not replace emergency care.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "aid",
+        0,
+        "items",
+        2
+      ],
+      "before": "Tell the program about access needs at the first call and ask how it will meet them.",
+      "after": "Ask general access questions first; agree with the person what needs to be shared for their referral.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "aid",
+        0,
+        "items",
+        3
+      ],
+      "before": "Confirm the person's consent before sharing disability or health information.",
+      "after": "Confirm valid consent or another lawful basis and applicable Part 2 requirements before sharing treatment information.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "aid",
+        1,
+        "items",
+        4
+      ],
+      "before": "A current medication list for every prescriber and pharmacist, with consent.",
+      "after": "Coordinate a medication list through authorized channels; leave medication decisions to prescribers and pharmacists.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "aid",
+        2,
+        "items",
+        1
+      ],
+      "before": "In a suspected overdose, give naloxone if available and trained, and call 911.",
+      "after": "For a suspected overdose, call 911 immediately, give available naloxone according to instructions and stay until help arrives.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "aid",
+        2,
+        "items",
+        2
+      ],
+      "before": "Follow your agency's and provider's policies on naloxone and training.",
+      "after": "Prepare supplies and training under applicable procedures before an emergency; do not delay emergency help for administrative review.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "aid",
+        2,
+        "items",
+        3
+      ],
+      "before": "Avoid making disability services conditional on abstinence unless a rule truly requires it.",
+      "after": "Verify legal and program authority before a service restriction; do not treat abstinence as an invented eligibility condition.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        0,
+        "href"
+      ],
+      "before": "https://library.samhsa.gov/product/advisory-mental-and-substance-use-disorder-treatment-people-physical-and-cognitive",
+      "after": "https://store.samhsa.gov/sites/default/files/pep19-02-00-002.pdf",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        2,
+        "note"
+      ],
+      "before": "Supports what naloxone does, that it is harmless in other emergencies, where to get it, the advice to call 911, and the existence of Minnesota's Good Samaritan protections. Legal specifics go to counsel.",
+      "after": "Supports opioid overdose reversal, access to naloxone, calling 911 and Minnesota's Good Samaritan provisions. Read alongside FDA guidance about effects when opioids are absent and the statutes defining legal protections.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        3,
+        "title"
+      ],
+      "before": "National Institute on Drug Abuse — Words Matter: Preferred Language for Talking About Addiction",
+      "after": "NIDA archive — Words Matter handout",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        3,
+        "href"
+      ],
+      "before": "https://nida.nih.gov/research-topics/addiction-science/words-matter-preferred-language-talking-about-addiction",
+      "after": "https://archives.nida.nih.gov/sites/default/files/words_matter_handout.pdf",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        3,
+        "note"
+      ],
+      "before": "Supports the person-first and stigma-free language guidance and the link between stigma and willingness to seek treatment.",
+      "after": "Official archived handout supports person-first wording and nonstigmatizing descriptions. The current article presented a verification challenge, so this reviewed source is linked instead.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        5,
+        "note"
+      ],
+      "before": "Supports the framing of recovery as a process of change for people with mental health and substance use conditions, used alongside harm reduction in Lesson 4.",
+      "after": "Recovery framework reference retained; direct retrieval was unavailable during this review. No detailed clinical recommendation is based solely on this page.",
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        6
+      ],
+      "after": {
+        "title": "DOJ — ADA and opioid use disorder",
+        "href": "https://www.ada.gov/resources/opioid-use-disorder/",
+        "note": "Distinguishes prescribed medication, current illegal use, otherwise-entitled health services and treatment-program rules."
+      },
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        7
+      ],
+      "after": {
+        "title": "HHS — Updated Part 2 confidentiality rule fact sheet",
+        "href": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html",
+        "note": "February 16, 2026 compliance date; valid treatment/payment/operations consent and specific consent for separate counseling notes."
+      },
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        8
+      ],
+      "after": {
+        "title": "FDA — Access to naloxone",
+        "href": "https://www.fda.gov/consumers/consumer-updates/access-naloxone-can-save-life-during-opioid-overdose",
+        "note": "Temporary overdose reversal, emergency help and qualified explanation of effects when opioids are absent."
+      },
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        9
+      ],
+      "after": {
+        "title": "Minnesota Statutes 604A.04 — Overdose prevention",
+        "href": "https://www.revisor.mn.gov/statutes/cite/604A.04",
+        "note": "Authority and defined good-faith protections for administering an opiate antagonist."
+      },
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    },
+    {
+      "path": [
+        "sources",
+        10
+      ],
+      "after": {
+        "title": "Minnesota Statutes 604A.05 — Overdose medical assistance",
+        "href": "https://www.revisor.mn.gov/statutes/cite/604A.05",
+        "note": "Conditions and limits on immunity when seeking overdose medical assistance; no blanket protection."
+      },
+      "reason": "Clarify dated evidence, eligibility roles, individual needs, privacy and emergency response without promising outcomes."
+    }
+  ],
+  "sources": [
+    "https://store.samhsa.gov/sites/default/files/pep19-02-00-002.pdf",
+    "https://www.dhs.state.mn.us/id_008949/",
+    "https://www.health.state.mn.us/communities/overdose/harmreduce/naloxone.html",
+    "https://archives.nida.nih.gov/sites/default/files/words_matter_handout.pdf",
+    "https://wexnermedical.osu.edu/neurological-institute/neuroscience-research-institute/research-centers/ohio-valley-center-for-brain-injury-prevention-and-rehabilitation/for-professionals/substance-use-and-tbi",
+    "https://www.samhsa.gov/substance-use/recovery",
+    "https://www.ada.gov/resources/opioid-use-disorder/",
+    "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html",
+    "https://www.fda.gov/consumers/consumer-updates/access-naloxone-can-save-life-during-opioid-overdose",
+    "https://www.revisor.mn.gov/statutes/cite/604A.04",
+    "https://www.revisor.mn.gov/statutes/cite/604A.05"
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://store.samhsa.gov/sites/default/files/pep19-02-00-002.pdf",
+      "evidence": "Official archived PDF retrieved after library route failed. Read relevant prevalence/barrier, access, screening and medication sections. It is 2019 guidance, not a legal compliance determination."
+    },
+    {
+      "url": "https://www.dhs.state.mn.us/id_008949/",
+      "evidence": "July 31, 2026 manual: county/Tribe financial eligibility distinct from assessment-based clinical eligibility, managed-care routes and provider-specific pre-assessment exceptions."
+    },
+    {
+      "url": "https://www.health.state.mn.us/communities/overdose/harmreduce/naloxone.html",
+      "evidence": "MDH September 2025 page: temporary opioid reversal, withdrawal, emergency help and access routes; did not reproduce its dose interval as universal instructions."
+    },
+    {
+      "url": "https://archives.nida.nih.gov/sites/default/files/words_matter_handout.pdf",
+      "evidence": "Official NIDA archived handout supports language alternatives. Current page required robot verification; no attempt to bypass it."
+    },
+    {
+      "url": "https://wexnermedical.osu.edu/neurological-institute/neuroscience-research-institute/research-centers/ohio-valley-center-for-brain-injury-prevention-and-rehabilitation/for-professionals/substance-use-and-tbi",
+      "evidence": "Ohio State source describes population association between TBI and substance use; not evidence for an individual dropout cause."
+    },
+    {
+      "url": "https://www.samhsa.gov/substance-use/recovery",
+      "evidence": "Direct page unavailable. Retained framework link with retrieval limitation; no detailed new clinical claim attributed solely to it."
+    },
+    {
+      "url": "https://www.ada.gov/resources/opioid-use-disorder/",
+      "evidence": "DOJ guidance questions 2–5 distinguish prescribed medication, current illegal use, health services otherwise entitled and program participation rules."
+    },
+    {
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html",
+      "evidence": "January 2026 HHS fact sheet: February 16, 2026 compliance, valid TPO consent and specific counseling-note consent."
+    },
+    {
+      "url": "https://www.fda.gov/consumers/consumer-updates/access-naloxone-can-save-life-during-opioid-overdose",
+      "evidence": "FDA current consumer guidance: temporary effects, repeat doses may be needed, call 911 and stay; generally no additional harm without opioids."
+    },
+    {
+      "url": "https://www.revisor.mn.gov/statutes/cite/604A.04",
+      "evidence": "Read defined good-faith administration protections."
+    },
+    {
+      "url": "https://www.revisor.mn.gov/statutes/cite/604A.05",
+      "evidence": "Read assistance-immunity conditions and exceptions; no promise of blanket immunity."
+    }
+  ],
+  "assessmentNote": "Lesson 2 correct answer distinguishes financial and clinical eligibility. Lesson 4 question and correct answer use qualified FDA/MDH guidance; wrong options retained. Scenario recommended choices in lessons 2 and 4 clarified, indices retained.",
+  "remainingReview": [
+    "Final generated overview and job aid, diagnostics and serialized readings."
+  ],
+  "readings": [
+    {
+      "slug": "dsd-co-occurring-substance-use",
+      "readingSha256": "7948c675db38f073eefe889091f5a6840ba83c5d36a3e5997be514c50d51e1bb"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--why-co-occurring-substance-use-deserves-attention",
+      "readingSha256": "82bcd6a4180bf15c8270104cf567f435af364a81d135a91ae557ae616ab198b8"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--accessible-treatment-and-minnesota-s-substance-use",
+      "readingSha256": "d04986a65b0c06876b1864734746c478ea6329c08320ccafeb861efdda8042f5"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--brain-injury-cognitive-disability-and-substance-us",
+      "readingSha256": "ec280d920f4c26553771bb3ffb36c288eb12397a8b01383ebccc96bfa202f927"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--harm-reduction-naloxone-and-stigma-free-language",
+      "readingSha256": "a42341d63d332cf9ed920c3736c47525835f4aea91416d68e1148dc38a3b36ab"
+    }
+  ]
+}
