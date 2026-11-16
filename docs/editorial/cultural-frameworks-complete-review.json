@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-16",
+  "courseId": "cq-cluster-frameworks-foundations",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, eight source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise observation, assessment, evidence, privacy and policy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "a916999680426cb831f3bce1d5887ef2007e0c1aae0dba4799e656924e4343e6",
+  "specSha256": "92f954b9c243bc7a8917fecbc85fa75b8bef40b041288c3a9008308d4ffbd472",
+  "findings": [
+    "Distinguishes the 2004 study scope from the 2002 clustering article and describes literature-informed proposed groupings.",
+    "Sample size alone does not establish representativeness or reliability.",
+    "The broad program approach is distinct from the specific four-dimension CQ model.",
+    "Stereotypes can derive from misapplied findings or unsupported beliefs; research labels do not justify individual judgments.",
+    "Permitted hiring follow-ups and accommodations follow Human Resources guidance.",
+    "Meeting participation alone does not establish psychological safety or explain prior silence.",
+    "Formal Tribal consultation is distinct from routine planning or liaison participation.",
+    "Historical samples and community briefs do not substitute for individual perspectives."
+  ],
+  "diagnostics": [
+    {
+      "title": "What regional frameworks are, and what they say nothing about",
+      "teaching": {
+        "words": 420,
+        "sents": 26,
+        "asl": 16.153846153846153,
+        "fk": 11.612857142857145,
+        "fog": 14.556776556776555,
+        "smog": 13.458324689796793,
+        "poly": 20.238095238095237,
+        "long": 34.285714285714285,
+        "short": 3.8461538461538463,
+        "ease": 40.57598901098902
+      }
+    },
+    {
+      "title": "Cultural intelligence: questions for context, power and access",
+      "teaching": {
+        "words": 205,
+        "sents": 19,
+        "asl": 10.789473684210526,
+        "fk": 10.203260590500644,
+        "fog": 13.291399229781772,
+        "smog": 12.017980161545424,
+        "poly": 22.4390243902439,
+        "long": 35.609756097560975,
+        "short": 31.57894736842105,
+        "ease": 41.12758664955072
+      }
+    },
+    {
+      "title": "The ecological fallacy: group averages do not predict individuals",
+      "teaching": {
+        "words": 321,
+        "sents": 20,
+        "asl": 16.05,
+        "fk": 11.733051401869162,
+        "fog": 15.641183800623054,
+        "smog": 14.117786864225405,
+        "poly": 23.052959501557634,
+        "long": 35.51401869158879,
+        "short": 10,
+        "ease": 39.529296728971985
+      }
+    },
+    {
+      "title": "Turning a cluster pattern into questions in everyday work",
+      "teaching": {
+        "words": 376,
+        "sents": 26,
+        "asl": 14.461538461538462,
+        "fk": 8.691489361702132,
+        "fog": 10.678232405891983,
+        "smog": 10.727762888450027,
+        "poly": 12.23404255319149,
+        "long": 23.404255319148938,
+        "short": 3.8461538461538463,
+        "ease": 58.5065384615385
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 8.7–11.8; retain clear practical instructions without increasing their complexity to meet a numerical target.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lesson 3 recommended choice clarifies permitted follow-ups and accommodations with Human Resources; all indices and other scenario choices remain unchanged.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/cq-cluster-frameworks-foundations.webp",
+    "sha256": "60b16132cf762f280ba3bf77ecb2b6d56cc9b941b7ba90deccccacd63932e2f0",
+    "alt": "Five colleagues gather around a laptop, notebooks and colorful cards on a table.",
+    "method": "Direct local image inspection: five colleagues around a laptop, notebooks and colorful cards."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-cultural-frameworks-guidance-review.json",
+  "sources": [
+    "https://culturalq.com/wp-content/uploads/2016/06/Sample_EYB.pdf",
+    "https://www.sciencedirect.com/science/article/abs/pii/S1090951601000700",
+    "https://openstax.org/books/principles-management/pages/6-3-the-globe-framework",
+    "https://culturalq.com/wp-content/uploads/2019/12/CQ-FAQs_v.2.19.pdf",
+    "https://soonang.com/wp-content/uploads/2011/04/2007-MOR-CQ-Ang_manuscript.pdf",
+    "https://www.stat.berkeley.edu/~census/ecofall.txt",
+    "https://globeproject.com/study_2004_2007",
+    "https://www.revisor.mn.gov/statutes/cite/10.65"
+  ],
+  "readings": [
+    {
+      "slug": "cq-cluster-frameworks-foundations",
+      "readingSha256": "40caf879f29faaf9901dee47d8eab52c6d5a9b9cecfd536e3393ebf15b333fbc"
+    },
+    {
+      "slug": "cq-cluster-frameworks-foundations--what-regional-frameworks-are-and-what-they-say-not",
+      "readingSha256": "bac3f1ae1608f876f98f3395c5cf1762374a253c1d63a7b89cf396eefe8b62f3"
+    },
+    {
+      "slug": "cq-cluster-frameworks-foundations--cultural-intelligence-questions-for-context-power",
+      "readingSha256": "7a1c033b630d60672953f39d110e9b199ed87ca3fa9999377801e1c5e387de24"
+    },
+    {
+      "slug": "cq-cluster-frameworks-foundations--the-ecological-fallacy-group-averages-do-not-predi",
+      "readingSha256": "399aa957ba7d5935df534127136bd69efc59a1c6a5970185ba7708f04c3d201e"
+    },
+    {
+      "slug": "cq-cluster-frameworks-foundations--turning-a-cluster-pattern-into-questions-in-everyd",
+      "readingSha256": "06f01973eb7413311a9de9e845a85f7c383bd723a13886066cde5b64bdecff74"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
