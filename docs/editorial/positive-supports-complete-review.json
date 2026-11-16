@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-positive-supports",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, five source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise reporting scope, conditional timelines, approval authority and learning boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "874a3b1072685738c671bbb24a7f06cdddb2401c3b61167d189323b8911e7ac1",
+  "specSha256": "5f98538787b43459d636120fb4f1ccc57a30aee6b3b2d900fd7c4869c4b5b08a",
+  "findings": [
+    "Twenty-four-hour verbal notice precedes later written reviews; required reporting does not wait for informal inquiry.",
+    "Required corrective action and external reporting documentation are included.",
+    "Service-start and repeated-use plan triggers are distinguished; later triggers do not restart an assumed clock.",
+    "A plan, request or committee recommendation does not grant commissioner approval.",
+    "The medication-reporting summary identifies the rule’s exception and refers to full criteria.",
+    "No report count or observed pattern proves a cause, compliance or quality of life.",
+    "Learning exercises use fictional cases or approved summaries and do not authorize restraint or access to personal records."
+  ],
+  "diagnostics": [
+    {
+      "title": "Why Minnesota moved to positive supports",
+      "teaching": {
+        "words": 348,
+        "sents": 23,
+        "asl": 15.130434782608695,
+        "fk": 11.605122438780612,
+        "fog": 14.672863568215895,
+        "smog": 13.445107506277086,
+        "poly": 21.551724137931036,
+        "long": 38.2183908045977,
+        "short": 17.391304347826086,
+        "ease": 38.80864317841082
+      }
+    },
+    {
+      "title": "Recognizing prohibited procedures, including subtle ones",
+      "teaching": {
+        "words": 415,
+        "sents": 22,
+        "asl": 18.863636363636363,
+        "fk": 12.495010952902518,
+        "fog": 15.352683461117199,
+        "smog": 14.090754383266322,
+        "poly": 19.518072289156628,
+        "long": 35.18072289156626,
+        "short": 4.545454545454546,
+        "ease": 39.077806681270545
+      }
+    },
+    {
+      "title": "Emergency use of manual restraint and reporting",
+      "teaching": {
+        "words": 534,
+        "sents": 32,
+        "asl": 16.6875,
+        "fk": 11.755952715355807,
+        "fog": 15.289232209737827,
+        "smog": 13.95886086127944,
+        "poly": 21.53558052434457,
+        "long": 36.329588014981276,
+        "short": 12.5,
+        "ease": 40.50055828651688
+      }
+    },
+    {
+      "title": "Transition plans and person-centered positive behavior support",
+      "teaching": {
+        "words": 467,
+        "sents": 28,
+        "asl": 16.678571428571427,
+        "fk": 11.836270266136435,
+        "fog": 15.8363107984093,
+        "smog": 14.296647515009727,
+        "poly": 22.91220556745182,
+        "long": 36.83083511777302,
+        "short": 3.5714285714285716,
+        "ease": 39.90881959314777
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 11.6–12.5; retain necessary legal and service terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lesson 2 recommended choice explicitly preserves prompt safety action and reporting without waiting for informal questions.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/dsd-positive-supports.webp",
+    "sha256": "4e5469c25288fbcfc0a7fb55ea7c52eba28ea79080a50fb2a4d24a1aef373ab2",
+    "alt": "Four colleagues view a room with soft seating, sensory lights and activity materials.",
+    "method": "Direct local image inspection: four colleagues viewing a room with soft seating, sensory lights and activity materials."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-positive-supports-guidance-review.json",
+  "sources": [
+    "https://www.revisor.mn.gov/rules/9544/",
+    "https://www.revisor.mn.gov/statutes/cite/245D.06",
+    "https://www.revisor.mn.gov/statutes/cite/245D.061",
+    "https://mn.gov/dhs/partners-and-providers/program-overviews/long-term-services-and-supports/positive-supports/",
+    "https://mnpsp.org/positive-supports/positive-behavior-support/learn-more-about-positive-behavior-support/"
+  ],
+  "readings": [
+    {
+      "slug": "dsd-positive-supports",
+      "readingSha256": "fce762036d121a04312ad4c79ed578fd4b51e6b450eac49aa015339c2511bb82"
+    },
+    {
+      "slug": "dsd-positive-supports--why-minnesota-moved-to-positive-supports",
+      "readingSha256": "795a2f7a105d8b44b756a3cd6b605ad6c0af14364b1b79a4f9cd72e61ace3471"
+    },
+    {
+      "slug": "dsd-positive-supports--recognizing-prohibited-procedures-including-subtle",
+      "readingSha256": "10ea71573ac16e768fcc354b3a437de0a70d79885f580c692e70cd8c55b20feb"
+    },
+    {
+      "slug": "dsd-positive-supports--emergency-use-of-manual-restraint-and-reporting",
+      "readingSha256": "9846f3ed7a933aed1b9c30b5698be74fcb995d96d91356c92177b096516d4fa0"
+    },
+    {
+      "slug": "dsd-positive-supports--transition-plans-and-person-centered-positive-beha",
+      "readingSha256": "e4f284b42e8823273f8d63af6890ba061d06ae90d08bb50b1d7c713eeb4555b8"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
