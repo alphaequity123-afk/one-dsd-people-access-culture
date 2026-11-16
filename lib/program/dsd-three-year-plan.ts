@@ -59,7 +59,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
   "groundRules": [
     "The consultant leads the program. Owners carry out the work for their goals, decisions, and services. Leaders address gaps in implementation responsibility and make sure owners have the support they need.",
     "Checkpoint reviews guide priorities for the next phase. Delays are reported in the quarterly report.",
-    "Totals only. We count patterns across the division. We never rate, score or track any one person, and the program keeps no personnel records.",
+    "No counts of learning or use. Evidence is what people choose to record or share: decisions, plans, reviews and before-and-after work. No one is rated, scored or tracked, and the program keeps no personnel records.",
     "Using the program is a choice. The Equity Policy is not. Staff choose whether to use the program's resources. The DHS rule that certain decisions get an equity review first applies to everyone.",
     "Start small. Get the basic tools working well before adding new ones.",
     "Write it down. Changes only last if they are written into roles, routines, job expectations and contracts.",
@@ -259,9 +259,9 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
             },
             {
               "area": "D",
-              "action": "Basic learning assigned to all staff.",
+              "action": "Basic learning offered to all staff.",
               "owner": "Goal 4 lead and supervisors",
-              "evidence": "Learning completed"
+              "evidence": "Learning offered; plans for applying it"
             },
             {
               "area": "I",
@@ -333,13 +333,13 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
               "area": "F",
               "action": "Staff survey designed. Listening sessions held. A clear way to raise concerns about bias, exclusion or access agreed.",
               "owner": "The Team and Human Resources",
-              "evidence": "Participation"
+              "evidence": "Themes shared back with staff"
             },
             {
               "area": "D",
               "action": "Learning group for supervisors and hiring managers begins.",
               "owner": "Goal 4 lead",
-              "evidence": "Participation"
+              "evidence": "Plans for applying it, shared by the group"
             },
             {
               "area": "H",
@@ -411,7 +411,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
         "The leaders' group and the Team are formed and meeting.",
         "The list of all DSD equity work is complete.",
         "Starting numbers on equity and access are in place.",
-        "Basic learning is available and assigned.",
+        "Basic learning is available to all staff.",
         "The quarterly report is in use, and at least one full report has been delivered.",
         "The communication plan is working.",
         "The DSD action plan has been reviewed with owners.",
@@ -447,7 +447,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
             },
             {
               "area": "D",
-              "action": "Learning about working across cultures and hands-on courses in use.",
+              "action": "Learning about working across cultures and hands-on courses offered and applied to real work.",
               "owner": "Goal 4 lead",
               "evidence": "Learning put into practice"
             },
@@ -467,7 +467,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
               "area": "E",
               "action": "Amplify Equity mentoring running. Conversations with staff about why they stay, shared as totals. Paths to move up written down.",
               "owner": "Goal 3 lead and the Team",
-              "evidence": "Participation; staff staying"
+              "evidence": "Paths written down; staff staying"
             },
             {
               "area": "F",
@@ -515,11 +515,11 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
               "area": "D",
               "action": "Learning group for division and unit leaders: fair decision-making, handling conflict, reading equity numbers.",
               "owner": "Goal 4 lead",
-              "evidence": "Completion"
+              "evidence": "Before-and-after decisions shared by leaders"
             },
             {
               "area": "A",
-              "action": "Review of the program: what is offered, what is used and what helps. Results used to improve it.",
+              "action": "Review of the program: what is offered, what people applied in their work and what helped. Results used to improve it.",
               "owner": "Upkeep contacts, with the Team",
               "evidence": "Improvements made"
             }
@@ -560,7 +560,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
       "checkpoint": [
         "Equity expectations are in performance plans where adopted.",
         "Mentoring and leadership learning are running.",
-        "Hands-on learning is available and used.",
+        "Hands-on learning is available and applied in real work.",
         "The expanded quarterly report and warning signs are working.",
         "The advisory group and the way to pay community members are in place.",
         "Equity and access checks are part of contracts, policy, communications and planning.",
@@ -702,7 +702,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
       ]
     }
   ],
-  "measurementIntroduction": "We look for three kinds of signs. Early on we look for signs the work is happening. Then signs that how we work is changing. By Year 3, signs that results are improving. All numbers are totals; no person is named or scored.",
+  "measurementIntroduction": "The plan looks for three kinds of signs. Early on, signs the work is happening. Then signs that how DSD works is changing. By Year 3, signs that results are improving. Learning and use of the program are never counted; evidence is what people choose to record or share. No person is named or scored.",
   "measurements": [
     {
       "area": "Leadership",
@@ -712,14 +712,14 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
     },
     {
       "area": "Hiring and keeping staff",
-      "year1": "Job descriptions and hiring steps reviewed; hiring managers trained",
-      "year2": "Mentoring participation; hiring results by group where available; what staff say about staying",
+      "year1": "Job descriptions and hiring steps reviewed; hiring panels using the fair-hiring standard",
+      "year2": "Development and mentoring opportunities by group (Human Resources data); hiring results by group where available; what staff say about staying",
       "year3": "Who stays and who moves up, by group; how well staff reflect the communities we serve"
     },
     {
       "area": "Workplace culture",
-      "year1": "Learning completed; listening sessions held; concern process in place",
-      "year2": "Learning used on the job; survey changes; concerns handled on time",
+      "year1": "Learning offered; listening sessions held; concern process in place",
+      "year2": "Learning applied on the job (before-and-after examples staff share); survey changes; concerns handled on time",
       "year3": "Belonging, safety to speak up, trust and fairness, by group"
     },
     {
