@@ -30,6 +30,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
         <li><Link href="/my-work/reflections"><strong>Your reflection notebook</strong><span>Record what happened and what you learned.</span></Link></li>
         <li><Link href="/my-work/decision-records"><strong>Decision records</strong><span>Record why a decision was made.</span></Link></li>
         <li><Link href="/my-work?view=workspace"><strong>Your saved work and learning</strong><span>Open saved resources, course progress, and other workspace tools.</span></Link></li>
+        <li><Link href="/my-work/transfer"><strong>Move your work</strong><span>Bring your plans and notes from another address or browser.</span></Link></li>
       </ul>
     </section>
   </EditableSurfaceRegion>;
@@ -42,6 +43,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
       />
       <div className="wrap space-y-6 py-8">
         <Link href="/my-work">Back to My Work</Link>
+        <Link href="/my-work/transfer">Move your work to another address or browser</Link>
         <ExplainerVideo id="learning-journey" />
         <section aria-labelledby="put-to-work-title">
           <h2 id="put-to-work-title" className="text-2xl font-bold">Put learning to work</h2>
