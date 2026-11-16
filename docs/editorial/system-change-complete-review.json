@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-leading-system-change",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, eleven source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise dated status, legal scope, participation and evidence claims, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "6a1d6d8934ed21abdc8eddc207706eceae8090731d799bef36e83b301994fab4",
+  "specSha256": "ff3e55e95337261c4626096d7d934c3c5a46b5f69944bb597dd9019ce26609c5",
+  "findings": [
+    "October 29, 2026 update rules out a 2027 launch; July conditions remain explicitly dated.",
+    "Olmstead qualifications, the June 2026 executive-branch interpretation and Minnesota plan are distinguished.",
+    "A prior review does not establish compliance when new evidence raises concerns.",
+    "Participation and compensation follow applicable authority; no promise of payment is implied.",
+    "Exercises use fictional or approved summaries; comparisons require disclosure controls and do not establish causation.",
+    "The MnCHOICES source now uses its current destination."
+  ],
+  "diagnostics": [
+    {
+      "title": "The frame for system change: Olmstead, settings and standards",
+      "teaching": {
+        "words": 487,
+        "sents": 34,
+        "asl": 14.323529411764707,
+        "fk": 12.021227805290497,
+        "fog": 14.353641744172002,
+        "smog": 13.168323590204455,
+        "poly": 21.560574948665298,
+        "long": 41.68377823408624,
+        "short": 23.529411764705884,
+        "ease": 34.388198755888425
+      }
+    },
+    {
+      "title": "Leading a major redesign under uncertainty: Waiver Reimagine",
+      "teaching": {
+        "words": 348,
+        "sents": 21,
+        "asl": 16.571428571428573,
+        "fk": 11.658489326765189,
+        "fog": 13.755008210180627,
+        "smog": 12.94502277883236,
+        "poly": 17.816091954022987,
+        "long": 35.91954022988506,
+        "short": 19.047619047619047,
+        "ease": 40.99258620689659
+      }
+    },
+    {
+      "title": "Designing with self-advocates, counties and Tribal Nations",
+      "teaching": {
+        "words": 394,
+        "sents": 22,
+        "asl": 17.90909090909091,
+        "fk": 12.149367789570835,
+        "fog": 14.371758191047531,
+        "smog": 13.391826843910795,
+        "poly": 18.02030456852792,
+        "long": 35.53299492385787,
+        "short": 13.636363636363637,
+        "ease": 39.855749884633155
+      }
+    },
+    {
+      "title": "Provider quality oversight and measuring outcomes that matter",
+      "teaching": {
+        "words": 435,
+        "sents": 25,
+        "asl": 17.4,
+        "fk": 11.703586206896556,
+        "fog": 14.040459770114943,
+        "smog": 13.154929023078342,
+        "poly": 17.701149425287355,
+        "long": 37.93103448275862,
+        "short": 16,
+        "ease": 42.14503448275863
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 11.7–12.2; retain necessary legal and service-system terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": false,
+    "explicitKnowledgeChanges": [
+      "Lesson 1 correct answer includes the decision qualifications; distractors remain incorrect.",
+      "Lesson 2 question dates its July source; all answers unchanged."
+    ],
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lesson 1 rejects both presumed compliance and immediate enforcement from incomplete evidence; lesson 2 uses the October update; lesson 3 qualifies payment arrangements.",
+    "unlistedScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/dsd-leading-system-change.webp",
+    "sha256": "c6aae61569fc602a24ccd28fd36c53cb7a8f83fb27e5bf2a5e4e31bd5f323721",
+    "alt": "Three colleagues discuss colored notes on a process-mapping board.",
+    "method": "Direct local image inspection: three colleagues discussing colored notes on a process board."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-system-change-guidance-review.json",
+  "sources": [
+    "https://mn.gov/olmstead/",
+    "https://mn.gov/dhs/disability-waiver-program/",
+    "https://mn.gov/dhs/partners-and-providers/news-initiatives-reports-workgroups/long-term-services-and-supports/waiver-reimagine/wr-july-2026-update.jsp",
+    "https://acl.gov/programs/hcbs-settings-rule",
+    "https://www.revisor.mn.gov/statutes/cite/245D",
+    "https://mn.gov/dhs/disability-aging/home-and-community-services/programs-and-services/mnchoices/",
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://mn.gov/dhs/disability-waiver-program/resources/oct-2026-updates.jsp",
+    "https://www.govinfo.gov/content/pkg/USREPORTS-527/pdf/USREPORTS-527-581.pdf",
+    "https://www.justice.gov/olc/opinion/application-rehabilitation-act-and-americans-disabilities-act-state",
+    "https://www.revisor.mn.gov/rules/9544/"
+  ],
+  "readings": [
+    {
+      "slug": "dsd-leading-system-change",
+      "readingSha256": "cd934636e91c00fd013c4bb49e1940876810990889322dad1f09d9716b4ab792"
+    },
+    {
+      "slug": "dsd-leading-system-change--the-frame-for-system-change-olmstead-settings-and",
+      "readingSha256": "0e39c05677a5776b4e23e55f5214ca7593de073787a6ad18b6566c89c505909b"
+    },
+    {
+      "slug": "dsd-leading-system-change--leading-a-major-redesign-under-uncertainty-waiver",
+      "readingSha256": "9fb3f3d30658d57eff247dcba80892bbf7f6f5ce6fcd32fbfc3dea1a2f98c2dc"
+    },
+    {
+      "slug": "dsd-leading-system-change--designing-with-self-advocates-counties-and-tribal",
+      "readingSha256": "8b9836fc4f36d406623e633aeb9d1ad7c43f475905d5d1a2c48ba2ec2234312a"
+    },
+    {
+      "slug": "dsd-leading-system-change--provider-quality-oversight-and-measuring-outcomes",
+      "readingSha256": "2d75f8928f202e0e8d1b17e19a8bb48aeaaee24c2ad53917f2bba5748760f2d3"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
