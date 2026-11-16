@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-16",
+  "status": "reviewed_exact_baseline_reconciliation",
+  "method": "Read-only database snapshot and full live-page comparisons identified older published summaries. Explicitly recognize only those exact summaries; retain existing all-or-nothing conflict protection for unrecognized edits. The reviewed final static source records and imported agency readings are unchanged.",
+  "publishedSnapshotSha256": "837230d1ebee27ed99d8e8194947ec5888b9590e7c3706999c74797011830e63",
+  "changes": [
+    {
+      "id": "ja-access-checks",
+      "action": "Recognize exact published baseline",
+      "published": "Before meeting with people, confirm the language and dialect and arrange captioning, interpreting, and alternate formats. Check the physical and online spaces, along with timing, transportation, child care, trust, and any process burden you can remove.",
+      "after": "Before meeting with people, ask about language and communication needs and arrange effective assistance. Check the space, timing, transportation and child care. Explain how input will be used and remove unnecessary steps within your authority.",
+      "revisionId": "35f57740-34ed-4ffe-9a08-e66232f46870",
+      "payloadSha256": "f4946118d44d74cbaafce7bf06ad1349fc1b49cfd5b2acc4dbb7e6f9492faff8"
+    },
+    {
+      "id": "ja-climate-action-plan",
+      "action": "Recognize exact published baseline",
+      "published": "Choose three to five actions that team members can see and experience. For each action, name the person responsible, when it will begin, when the team will revisit it, and how the team will know whether it is helping. Do not include names connected to complaints or score individual employees.",
+      "after": "Choose three to five actions team members can observe, with a responsible person, start date, review date and way to assess each action. Keep complaint details and identifying information out of this shared plan; use it to improve practices, not rank employees.",
+      "revisionId": "ebade4dc-b070-4f19-80cf-6421f1fbd857",
+      "payloadSha256": "1768fe369f179153d32c82602ddf112c06a2fea06be84354a74690ed58d18331"
+    },
+    {
+      "id": "ja-engagement-influence-ladder",
+      "action": "Recognize exact published baseline",
+      "published": "Five levels of influence, from informing people about a decision to designing it with them. Choose one honestly, say it plainly, and match the supports, compensation, and report-back to it.",
+      "after": "This planning aid describes five ways people can influence a decision, from receiving information to designing with the agency. Explain what is open to change, who has authority and how input will be used. Plan access, approved payment arrangements and follow-up.",
+      "revisionId": "d4f74e7c-7879-4885-b19f-77a2a272a431",
+      "payloadSha256": "594aac37beb11a7a01014628ca304f04ae9a78657a6f96ef8bfa028be7b1a02b"
+    },
+    {
+      "id": "ja-equity-impact-questions",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Use this short question set for high-stakes decisions. Consider which authority and rights apply, who benefits, who carries the burden, which assumptions shape the outcome, what can change, and what must stay with the responsible official.",
+      "after": "For high-stakes decisions, this short question set asks which authority and rights apply, who benefits, who carries the burden, which assumptions shape the outcome, what can change, and what must stay with the responsible official.",
+      "revisionId": "e3c4868d-2e29-49a9-bb17-2462b41688dc",
+      "payloadSha256": "d93ea89ab67f0b91a0d6479ac6b4d3235592e0d023e82876e8e59ffc6010ae0f"
+    },
+    {
+      "id": "ja-facilitation-session-plan",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Plan the session around what participants will be able to use afterward. Set one clear learning goal, use an activity based on their work, offer something useful to take with them, and arrange access in advance.",
+      "after": "Plan each session around what participants can use afterward: one clear learning goal, an activity based on their own work, something useful to take with them, and access arranged in advance.",
+      "revisionId": "638f1194-87e3-4f63-a8eb-0f670c1a278c",
+      "payloadSha256": "94d6b05272c228e63b5b38bcfa10a15d10bf45d9eda1134c8897246060d004a9"
+    },
+    {
+      "id": "ja-form-notice-change",
+      "action": "Recognize exact published baseline",
+      "published": "When changing staff- or public-facing text or a process, record who is affected and how. Consider language, disability and communication access, the effort required of people, the current source for every rule or policy, who will address each barrier, and when the work will be reviewed. Never cite a law, rule, or policy from memory.",
+      "after": "When changing a form, notice or process, identify who is affected and what they must do. Review language and disability access, required effort, current authority and responsibility for each barrier. Confirm the rules with the responsible program staff before release.",
+      "revisionId": "e15510ba-1e42-4040-8401-bb9e4b0cfcce",
+      "payloadSha256": "dc8c8da42970f6a6e7101733187bba33343991275f184c74a2213fa69dcd14c1"
+    },
+    {
+      "id": "ja-language-access-checklist",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Start by identifying the languages people need and the vital documents that require translation and human review. Make a qualified interpreter available at first contact, and make each request specific about language, dialect, requested gender match, and meeting format.",
+      "after": "Begin by identifying the languages people need and the vital documents that require translation and human review. Have a qualified interpreter available at first contact, and make each request specific about language, dialect, requested gender match, and meeting format.",
+      "revisionId": "22218f03-2cba-4b6f-9f36-e37f4a377e1d",
+      "payloadSha256": "ce97d8a232287cba34bc6092bfc60e315d30a80ff89b33912aa5320d83e33582"
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "A one-page checklist for a new program, service, or digital application. It covers people and purpose, access, language, the effort required of people, evidence, partners, decision responsibility, and review.",
+      "after": "This one-page checklist for a new program, service, or digital application covers people and purpose, access, language, the effort asked of people, evidence, partners, decision responsibility, and review.",
+      "revisionId": "2a9b4eb7-ad10-4842-9301-413a811679c2",
+      "payloadSha256": "d4c6b2f6dfb401b3fd7a0b5f9121a7838a4d5f50dda171670ac57d81eeceb3d8"
+    },
+    {
+      "id": "ja-plain-language",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Use short sentences, everyday words, one idea per paragraph, built-in heading styles, descriptive links, useful alternative text, and accessible tables. Before release, follow the current state guidance for accessible documents and ask someone outside the team to read the document.",
+      "after": "Write with short sentences, everyday words, one idea per paragraph, built-in heading styles, descriptive links, useful alternative text, and accessible tables. Before release, follow the current state guidance for accessible documents and ask someone outside the team to read it.",
+      "revisionId": "0e053d02-3baa-4e75-9af0-9a46608f96b4",
+      "payloadSha256": "d3b0964dbcc9a08fc3c14ae2622937a1609c8c0bbed1b18b375852d83a1f354f"
+    },
+    {
+      "id": "ja-process-burden",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Look at the process from the person's point of view. Count the steps, documents, trips, and hours away from work. Notice when a deadline, mailed notice, or login becomes a barrier. At each step, make sure a person can reach staff for help without using the online option.",
+      "after": "From the person’s point of view, count the steps, documents, trips, and hours away from work, and notice when a deadline, mailed notice, or login becomes a barrier. At each step, keep staff help reachable without the online option.",
+      "revisionId": "989bed11-79f4-4cf3-a5ac-6788588670e3",
+      "payloadSha256": "d0544852d19804b4377a7231b7a720840345c0f0fdab2638c1175a4bf5f3d126"
+    },
+    {
+      "id": "ja-report-back",
+      "action": "Recognize exact published baseline",
+      "published": "A short, accessible record for the people who gave input: what they said in their words, what changed because of it, what could not change and why, and what happens next with a named contact.",
+      "after": "Give participants an accessible account of the main themes, changes made, limits and next steps. Protect personal information and explain how people can correct a misunderstanding or contact the person responsible for follow-up.",
+      "revisionId": "39642eaa-ecc7-48ec-bfab-86bb1519a357",
+      "payloadSha256": "067c6bd7a250cffdc75972b9cef21256765881485db8a2a9944227532911c7de"
+    },
+    {
+      "id": "ja-stakeholder-map",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Plan who should be involved before the design is settled. Note why their involvement matters, what role they will have, whether they will be paid, and when they will hear how their input was used. Begin with trusted, reviewed partner lists and organizations named by the people affected. Do not choose partners from a quick web search alone.",
+      "after": "Before the design is settled, plan who to involve and why, their role, whether they are paid, and when they will hear how input was used. Use trusted, reviewed lists and groups affected people name, not a web search alone.",
+      "revisionId": "79848d26-7cf8-4988-b351-02ca9187c3ba",
+      "payloadSha256": "c252043bb53a8eefde0041c5a7ae94f4e00e01c44402dd37db8bfd78d1c366fc"
+    },
+    {
+      "id": "lm-how-this-program-works",
+      "action": "Recognize exact published baseline",
+      "published": "Start with Ask or Resources. Read a community brief when Minnesota communities or partners are part of the work. Use a learning path to create a checklist or plan for your own work, then review it. After using the available guidance, visit Support when the stakes are high, important questions remain, or another perspective would help.",
+      "after": "Begin with Ask or Resources and use community context when it helps you frame questions about your work. A learning path can help you develop and review a checklist or plan. Use Support for guidance, and follow the designated agency route for urgent matters or required reporting.",
+      "revisionId": "419be100-4384-448f-a761-1c127c0a9403",
+      "payloadSha256": "5803b9172152d19a422402b6026b990f9ba70c53560dda172fd6928835221af1"
+    },
+    {
+      "id": "lm-interpreter",
+      "action": "Recognize exact published baseline",
+      "published": "Book the right language and dialect, and brief the interpreter before the conversation. Speak to the person, use short sentences, and check understanding. Do not use a family member, a child, or a bilingual colleague pulled from their job as an interpreter.",
+      "after": "Arrange a qualified interpreter for the person's language and brief them through an approved channel. Speak directly to the person, pause for interpretation and check understanding. Use the program's language-access process to resolve interpreter needs and any proposed exception.",
+      "revisionId": "f5f6082d-9ad2-499d-adb5-e03a4fd83ac2",
+      "payloadSha256": "4635c2631ef8be4a1f1d7fa80d40beec08696cc73d0336a16f714aaa5512a611"
+    },
+    {
+      "id": "lm-plain-language-carries-complexity",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Plain language helps readers find, understand, and use information. It reduces the work of reading, not the depth of the content. Use progressive disclosure: an immediate answer, why it matters, questions to consider, a practical tool, evidence and sources, and deeper theory for those who want it.",
+      "after": "Plain language reduces the work of reading, not the depth of the content. Use progressive disclosure: an immediate answer, why it matters, questions to consider, a practical tool, evidence and sources, and deeper theory for those who want it.",
+      "revisionId": "be23eff9-d957-4a07-957e-770b96f31e4a",
+      "payloadSha256": "1eb8f092343c60ba8460c8fd09f698c3a71be6e40e708e853159231d5fa11195"
+    },
+    {
+      "id": "lm-workplace-climate",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Team climate is what people experience in everyday meetings, supervision, and decisions: whether they can speak openly, disagree, receive credit, and have fair access to opportunities. Supervisors can improve it through specific practices and regular follow-up.",
+      "after": "Team climate is what people experience in everyday meetings, supervision, and decisions, including whether they can speak openly, disagree, get credit, and have fair access to opportunities. Supervisors can improve it with specific practices and regular follow-up.",
+      "revisionId": "a350e9b9-859c-426d-ae2d-0e25cf315c59",
+      "payloadSha256": "8a045e074bfa5afe31da3e31a575dd2fb0ba54d0f90017863474a21153bb0c6b"
+    },
+    {
+      "id": "pn-cultural-humility-briefs-as-questions",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "A community brief or cultural guide is a starting point for respectful inquiry. It can help you ask better questions and plan access. It cannot tell you what any one person wants, believes, or needs.",
+      "after": "Treat a community brief or cultural guide as a starting point for respectful inquiry that helps you ask better questions and plan access. It cannot tell you what any one person wants, believes, or needs.",
+      "revisionId": "dcf9255f-fcfa-4c93-bf2a-e304e7e4c533",
+      "payloadSha256": "341587916f44a00ef6fbc5daf9ccc2c6cedd668e67b71b35b76527b296266333"
+    },
+    {
+      "id": "pn-embed-early",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Equity is easier to shape while an idea is still taking form. Before the design is settled, name who it is for, who may carry the burden, and which access needs may have been assumed. Also name who should be involved, who is responsible for the decision, and when the work will be reviewed.",
+      "after": "Shape equity while an idea is still forming: before the design is settled, name who it serves, who may carry the burden, which access needs may be assumed, who should be involved, who decides, and when it will be reviewed.",
+      "revisionId": "e9e60087-72ec-4df0-bc10-defdd2aedf32",
+      "payloadSha256": "cc71301f90b9505abb7f78d26c9a3b1685dec1fbc06e2854ea11f77171c0206c"
+    },
+    {
+      "id": "pn-equity-in-practice",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Consider a decision from six perspectives: compliance and civil rights, diversity and representation, hearts and minds, inclusion and belonging, organizational learning, and social justice. Then use seven questions to choose a thoughtful response.",
+      "after": "Look at a decision from six perspectives: compliance and civil rights, diversity and representation, hearts and minds, inclusion and belonging, organizational learning, and social justice. Seven questions then help you choose a thoughtful response.",
+      "revisionId": "76ac693b-8159-48b2-9a29-389d80dc0015",
+      "payloadSha256": "ec26be93cd6f2aa0f71bb21af0149b8daf0768391e43682f2bbc6f9d7d6e6365"
+    },
+    {
+      "id": "pn-intercultural-method",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "A community brief can help you prepare for Minnesota work, but it cannot describe any one person. Use it to ask better questions, check access, and involve the right partners. People within every community have different experiences. Each person is the authority on their own life.",
+      "after": "A community brief can help you prepare for Minnesota work, but it cannot describe any one person. Use it to ask better questions, check access, and involve the right partners, remembering each person is the authority on their own life.",
+      "revisionId": "4fb97e60-9274-46da-92d1-16b39ebed748",
+      "payloadSha256": "9037cb0bfa123e7464a573006830c09f41da055d3f9839c4f151193b2a63289a"
+    },
+    {
+      "id": "pn-measurement-without-surveillance",
+      "action": "Recognize exact published baseline",
+      "published": "Tell the difference between a platform that works and a program that improves equity. Use a logic model, baselines, mixed methods, disaggregation with small-group protection, and honest limits. Never use individual learning, participation, or assessment results as performance data.",
+      "after": "Distinguish a functioning platform from a program that improves practice or outcomes. Use a logic model, baselines, quantitative evidence and people's accounts, with privacy protections and clear limits. Keep this program's individual learning, reflection, Ask and practice records out of performance evaluation.",
+      "revisionId": "19f0bf74-eff9-4ebd-afb7-85ab5f5e5f2c",
+      "payloadSha256": "87f1d5eebca360d5607b869ab964e14c2e958aeb89d54f7746c1c908ec55e0d7"
+    },
+    {
+      "id": "pn-partnership-spine",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "Equity is everyone's work. Build on the people, standards, and relationships already in place. Center lived experience. Follow the evidence. Build trust over time. Work in partnership.",
+      "after": "Six commitments guide this partnership work: equity is everyone’s work; build on the people, standards, and relationships already in place; center lived experience; follow the evidence; build trust over time; and work in partnership.",
+      "revisionId": "393eda59-b01a-48d5-bf2a-796deee42c9f",
+      "payloadSha256": "85372512811698c1e5a1acffa66ef86571e9a08f9113bbafcd82126ac4b64936"
+    },
+    {
+      "id": "pn-role-aware-entry",
+      "action": "Recognize exact published baseline",
+      "published": "A policy analyst designing a program, a hiring manager planning recruitment, a fiscal analyst shaping a budget, and a supervisor preparing a hard conversation need different doors into the same equity knowledge. This program organizes by task and role so you do not have to learn the whole subject to do the next piece well.",
+      "after": "Start with the task you are working on and explore resources connected to your role. These entry points offer practical suggestions across the same knowledge base; they do not limit which topics you can study or replace the responsibilities and procedures of your position.",
+      "revisionId": "609da78f-7862-42c4-ae73-8ffa34ad91b8",
+      "payloadSha256": "c6622f16ccbd752b19ae874d713d3be274a896d4e5a1f1a2ac77e74cecb6aa83"
+    },
+    {
+      "id": "pn-self-check",
+      "action": "Apply reviewed summary to exact published baseline",
+      "published": "A useful working plan names who is responsible, when it will be reviewed, which access needs you considered, who you involved, and what you chose not to assume. Completing the boxes matters only when the follow-up is clear.",
+      "after": "Before you finish, check that your plan names who is responsible, when it will be reviewed, which access needs you considered, who you involved, and what you chose not to assume. Completed boxes matter only if follow-up is clear.",
+      "revisionId": "2c0815fd-c98e-41e4-9c2a-dc2d6c816bc8",
+      "payloadSha256": "5c729edb6937e66ed8218fa980da3deb4dc39b346407d7dd8730a302f7d06c93"
+    },
+    {
+      "id": "pn-when-to-escalate",
+      "action": "Recognize exact published baseline",
+      "published": "Many questions can be answered with a checklist, job aid, or other resource. Use the established Employee Culture, Human Resources, civil-rights, or accommodation process for complaints, investigations, discipline, and accommodation decisions. Ask the policy or legal owner when official guidance conflicts or is missing. If the work may affect a Tribal Nation, contact the Office of Indian Policy or designated Tribal liaison before planning engagement. A consultation may help with a new program idea, a high-stakes decision, or a community question that remains unresolved.",
+      "after": "Use the established process for complaints, investigations, discipline and accommodation decisions. Take conflicting or missing guidance to the responsible policy staff or legal counsel. Contact the agency Tribal liaison early when proposed work may have Tribal implications.",
+      "revisionId": "698e27ea-1905-4631-a247-da90d86491a0",
+      "payloadSha256": "0870d925a5b8971381a2f714098a03788559c2742a84b78b9e10a30ab0afbf94"
+    }
+  ]
+}

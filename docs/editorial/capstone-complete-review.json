@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-16",
+  "courseId": "ipe-capstone-intercultural-practice",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection/action instructions, five flashcards, complete job aid, six source notes and cover description. Recordings are outside this acceptance.",
+  "method": "Read the complete source and final generated overview/job aid, review all amendments against primary sources, inspect the cover image, measure clarity, verify assessment distinctions and serialized readings.",
+  "sourcePackSha256": "b6a58b27c810faa60d021bc2f0cffc66913ec5a967a217596193c3028d3e5d92",
+  "specSha256": "5b381639201e75435f29aeac01d2d00b1baed3f3319eaf8df18dc55df87102c9",
+  "findings": [
+    "A voluntary learning exercise does not authorize service changes.",
+    "An approved project or fictional example can support the same practice.",
+    "Confirm funding and approval before promising compensation.",
+    "Protect private records and use authorized summaries.",
+    "A pattern or before-and-after comparison does not establish causation.",
+    "Participation promises require actual decision authority.",
+    "Formal Tribal consultation is distinct from community engagement.",
+    "A proposal may be approved, revised, deferred or declined.",
+    "The cover description now states the visible office activity."
+  ],
+  "diagnostics": [
+    {
+      "title": "Choose a real process and the people it affects",
+      "teaching": {
+        "words": 424,
+        "sents": 25,
+        "asl": 16.96,
+        "fk": 11.730060377358491,
+        "fog": 15.085886792452833,
+        "smog": 13.847162063638184,
+        "poly": 20.754716981132077,
+        "long": 33.0188679245283,
+        "short": 20,
+        "ease": 41.17154339622644
+      }
+    },
+    {
+      "title": "Map assumptions and evidence with the Equity Analysis Toolkit",
+      "teaching": {
+        "words": 406,
+        "sents": 24,
+        "asl": 16.916666666666668,
+        "fk": 12.631145320197046,
+        "fog": 15.239573070607555,
+        "smog": 13.943154165760404,
+        "poly": 21.182266009852217,
+        "long": 34.72906403940887,
+        "short": 16.666666666666668,
+        "ease": 34.63404146141218
+      }
+    },
+    {
+      "title": "Design the change with the people affected",
+      "teaching": {
+        "words": 397,
+        "sents": 25,
+        "asl": 15.88,
+        "fk": 12.538716372795971,
+        "fog": 15.11774307304786,
+        "smog": 13.786089987796743,
+        "poly": 21.91435768261965,
+        "long": 37.02770780856423,
+        "short": 16,
+        "ease": 33.450301259445865
+      }
+    },
+    {
+      "title": "Write the plan and present the decision request",
+      "teaching": {
+        "words": 449,
+        "sents": 22,
+        "asl": 20.40909090909091,
+        "fk": 12.29025814942296,
+        "fog": 14.93423769993926,
+        "smog": 13.747043046817236,
+        "poly": 16.92650334075724,
+        "long": 32.962138084632514,
+        "short": 13.636363636363637,
+        "ease": 43.29839188094758
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK ranges from 11.73 to 12.64. Preserve necessary authority and evidence terms, with short practical questions where useful.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lesson 3 recommended choice now requires payment approval before commitments; its intended distinction remains.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/ipe-capstone-intercultural-practice.webp",
+    "sha256": "75ac526b0b0e570e3859ea4c30132d910bba286ef6762ea64b0e5208f8996f87",
+    "alt": "Four colleagues review colored notes and a schedule on an office whiteboard.",
+    "method": "Direct visual inspection of local cover image."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-capstone-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://thinkculturalhealth.hhs.gov/clas/standards",
+    "https://nccc.georgetown.edu/foundations/framework.php",
+    "https://cdn.ymaws.com/www.iap2.org/resource/resmgr/pillars/spectrum_8.5x11_print.pdf",
+    "https://www.ada.gov/resources/effective-communication/"
+  ],
+  "readings": [
+    {
+      "slug": "ipe-capstone-intercultural-practice",
+      "readingSha256": "6087ce7ce99bc64fa4d77fdd4e6d9b7f5f3b049415bd33df458e2a910b3592d5"
+    },
+    {
+      "slug": "ipe-capstone-intercultural-practice--choose-a-real-process-and-the-people-it-affects",
+      "readingSha256": "7102accc29edc4d3cc663213ce081a1f8f35b14d747089b137165ffb9768876b"
+    },
+    {
+      "slug": "ipe-capstone-intercultural-practice--map-assumptions-and-evidence-with-the-equity-analy",
+      "readingSha256": "e308a0a19128113b6cba070c6d9d502ca1d712c7d9c25fef8b1e4e11873cfa58"
+    },
+    {
+      "slug": "ipe-capstone-intercultural-practice--design-the-change-with-the-people-affected",
+      "readingSha256": "71d23b74a99c217b7147dddb4359445b17fd4540ed1074588e04c92d0ab4d647"
+    },
+    {
+      "slug": "ipe-capstone-intercultural-practice--write-the-plan-and-present-the-decision-request",
+      "readingSha256": "f056ab2e79f3f765728de3c7eb2dbfb255343a5298fb6f1d18716cb1f4acc9cb"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
