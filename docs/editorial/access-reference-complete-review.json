@@ -1,0 +1,306 @@
+{
+  "date": "2026-11-16",
+  "status": "accepted_complete_reference_review",
+  "scope": "Five complete program-authored access reference items: titles, summaries, explanations, body lists, next-action labels and destinations, authority labels and imported reading text. Not an accessibility certification of the application.",
+  "method": "Read original source records, existing accepted field revisions, complete generated resources and imported readings. Check source guidance, revise substantive authority and privacy boundaries, measure clarity and verify canonical/reading agreement.",
+  "findings": [
+    "Qualified bilingual staff may assist when assigned and competent; bilingual identity alone is insufficient.",
+    "Do not require clients to supply interpreters or assume exceptions for companions or emergencies.",
+    "Ask individual language preferences and confirm requested matches.",
+    "Share only necessary information through approved channels and preserve record history.",
+    "Arrange effective disability communication through the responsible process.",
+    "Confirm compensation and authority before promises or process changes.",
+    "Protect notice requirements, appeal rights and deadlines.",
+    "Use current Tribal liaison and government-to-government consultation processes."
+  ],
+  "sourceLimits": "The MHCP manual is used for operational interpreter competence and arrangements, not as a statement that its older federal disparate-impact citations remain current. Program-specific exceptions require the responsible language-access process. State statutes distinguish duties, encouragement and scope; the review does not claim every translated document is statutorily mandatory.",
+  "sources": [
+    "https://www.revisor.mn.gov/statutes/cite/256.01#stat.256.01.16",
+    "https://www.revisor.mn.gov/statutes/cite/15.441",
+    "https://www.ada.gov/resources/effective-communication/",
+    "https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=DHS16_157632",
+    "https://mn.gov/dhs/partners-and-providers/program-overviews/tribal-and-urban-indian-relations/",
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://mn.gov/mnit/government/policies/accessibility/"
+  ],
+  "changes": [
+    {
+      "id": "ja-language-access-checklist",
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Languages: use current contact data for the people your program serves. Record the language and dialect each person requests rather than relying on an agencywide list.",
+      "after": "Languages: use current service data and ask each person which language or variety they need. Record their preference through the approved process; do not infer it from their name, nationality or an agencywide list."
+    },
+    {
+      "id": "ja-language-access-checklist",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Interpreters: use qualified professional interpreters rather than family members, children, or bilingual staff pulled away from their own work. Bilingual colleagues should not be expected to serve as on-demand interpreters.",
+      "after": "Interpreters: arrange a qualified interpreter through the approved service. A staff member may assist only when qualified and assigned to that role; being bilingual alone is not enough. Do not make people supply their own interpreter or pull an untrained colleague from another job."
+    },
+    {
+      "id": "ja-language-access-checklist",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Requests: write the language and dialect, such as Standard Somali or Maay, White Hmong or Green Hmong, or S'gaw or Pwo Karen. Also note any requested interpreter gender and whether the meeting is in person, by phone, or by video.",
+      "after": "Requests: record the language or variety the person names, the meeting format and any interpreter preference. Confirm a suitable match rather than promising one before checking availability. Ask the language-access lead to resolve difficulties without delaying urgent assistance."
+    },
+    {
+      "id": "ja-language-access-checklist",
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Point of contact: a person should reach an interpreter at the first contact, not after a failed attempt in English.",
+      "after": "First contact: offer language assistance promptly and explain how to obtain it without requiring an English-only request. Use the current program plan for free, timely assistance and escalate gaps to the responsible language-access lead."
+    },
+    {
+      "id": "ja-access-checks",
+      "path": [
+        "summary"
+      ],
+      "before": "Before meeting with people, confirm the language and dialect and arrange captioning, interpreting, and alternate formats. Check physical and online spaces, timing, transportation, child care, and trust, and remove any process burden you can.",
+      "after": "Before meeting with people, ask about language and communication needs and arrange effective assistance. Check the space, timing, transportation and child care. Explain how input will be used and remove unnecessary steps within your authority."
+    },
+    {
+      "id": "ja-access-checks",
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Disability and communication access: arrange captions or real-time captioning, sometimes called CART. Provide a qualified sign-language interpreter when requested, send accessible materials in advance, and make sure both the room and online meeting are usable.",
+      "after": "Disability and communication access: ask what assistance the person needs and involve the accessibility coordinator in arranging effective communication. Give primary consideration to a person's requested aid in public services. Confirm captions, qualified interpreters and accessible materials as needed, and check that both the room and online meeting work for participants."
+    },
+    {
+      "id": "ja-access-checks",
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Time and effort: avoid unnecessary registration, forms that ask for more information than you need, or identity-document requirements for a listening session.",
+      "after": "Time and effort: collect only information needed for the session and approved purpose. Remove unnecessary registration or identity-document requirements within your authority, and refer required steps to the responsible program staff for review."
+    },
+    {
+      "id": "ja-access-checks",
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Payment and follow-up: explain whether people will be paid and when they will hear what happened with their input. Include changes made, decisions that remained the same, and the reasons, so participants can understand the response.",
+      "after": "Payment and follow-up: confirm approved payment arrangements before inviting people or promising compensation. Explain when participants will hear what happened with their input, including changes made, decisions that stayed the same and the reasons."
+    },
+    {
+      "id": "ja-stakeholder-map",
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Community: begin with organizations named by the person or family and existing groups of people with lived experience. Be clear about what you are asking, how their input will be used, and whether they will be paid.",
+      "after": "Community: begin with organizations named by the person or family and existing groups of people with lived experience. Explain what participants can influence and how their input will be used. Confirm any approved payment arrangements before promising compensation."
+    },
+    {
+      "id": "ja-stakeholder-map",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Tribal Nations: if the work touches a Nation, Native children, Tribal data, services, or land, contact the Office of Indian Policy or follow the Tribal liaison process first. Consultation is government-to-government and is distinct from stakeholder engagement.",
+      "after": "Tribal Nations: when proposed work may have Tribal implications, contact the agency Tribal liaison early to identify the required consultation process. DHS Tribal and Urban Indian Relations can help identify the appropriate contact. Government-to-government consultation is distinct from public engagement and is not replaced by talking with a community organization."
+    },
+    {
+      "id": "ja-form-notice-change",
+      "path": [
+        "summary"
+      ],
+      "before": "When changing staff- or public-facing text or a process, note who is affected; language, disability, and communication access; effort required; each rule’s current source; who owns each barrier; and review timing. Never cite a law, rule, or policy from memory.",
+      "after": "When changing a form, notice or process, identify who is affected and what they must do. Review language and disability access, required effort, current authority and responsibility for each barrier. Confirm the rules with the responsible program staff before release."
+    },
+    {
+      "id": "ja-form-notice-change",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Access: complete a plain-language review, follow the current accessible-document standard, provide requested formats, and offer help by phone or in person.",
+      "after": "Access: review plain language, follow the current state accessibility standard and arrange effective assistance and needed formats. Check the document with appropriate tools and manual review. Help by phone or in person does not automatically excuse an inaccessible document."
+    },
+    {
+      "id": "ja-form-notice-change",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Burden: deadlines, required documents, and return methods examined; what can be removed or done by the agency.",
+      "after": "Burden: examine deadlines, required documents and return methods with the responsible program staff. Remove or simplify steps only with the necessary authority. Preserve required notices, appeal rights and deadlines, and obtain policy or legal review before changing them."
+    },
+    {
+      "id": "lm-interpreter",
+      "path": [
+        "summary"
+      ],
+      "before": "Book the right language and dialect and brief the interpreter beforehand; then speak to the person, use short sentences, and check understanding. Never ask a family member, a child, or a bilingual colleague pulled from their job to interpret.",
+      "after": "Arrange a qualified interpreter for the person's language and brief them through an approved channel. Speak directly to the person, pause for interpretation and check understanding. Use the program's language-access process to resolve interpreter needs and any proposed exception."
+    },
+    {
+      "id": "lm-interpreter",
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Before the conversation: specify the language, dialect, format, and any request for a gender-matched interpreter. Send materials in advance and allow enough time.",
+      "after": "Before the conversation: confirm the person's language or variety, meeting format and any interpreter preference. Check qualifications, confidentiality and possible conflicts of interest. Share only necessary materials through an approved channel and allow enough time; do not promise a requested match before confirming it."
+    },
+    {
+      "id": "lm-interpreter",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "After the conversation: note any concerns the interpreter raised about terms or forms, and arrange for needed corrections.",
+      "after": "After the conversation: ask about unclear terms or communication difficulties and arrange follow-up through the responsible staff. Make needed record corrections through the authorized process, preserving the original record and required history. Record only information needed for the approved purpose."
+    },
+    {
+      "id": "lm-interpreter",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "For a vital conversation, use a qualified professional interpreter rather than a child, family member, untrained bilingual coworker, or machine translation.",
+      "after": "Use qualified language assistance for vital conversations. Do not plan to rely on children, family members, untrained coworkers or machine translation. Qualified staff assigned to language assistance may help within their role. Ask the language-access lead about applicable rules for a person's chosen companion or an emergency; do not assume an exception applies or delay urgent assistance while arranging help."
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "ja-language-access-checklist",
+      "body": {
+        "words": 245,
+        "sents": 16,
+        "asl": 15.3125,
+        "fk": 11.910854591836738,
+        "fog": 14.614795918367347,
+        "smog": 13.427899808715576,
+        "poly": 21.224489795918366,
+        "long": 37.55102040816327,
+        "short": 6.25,
+        "ease": 36.94097576530612
+      }
+    },
+    {
+      "id": "ja-access-checks",
+      "body": {
+        "words": 236,
+        "sents": 14,
+        "asl": 16.857142857142858,
+        "fk": 13.034285714285716,
+        "fog": 15.386924939467313,
+        "smog": 14.03260196037952,
+        "poly": 21.610169491525422,
+        "long": 38.983050847457626,
+        "short": 0,
+        "ease": 31.63771186440681
+      }
+    },
+    {
+      "id": "ja-stakeholder-map",
+      "body": {
+        "words": 154,
+        "sents": 9,
+        "asl": 17.11111111111111,
+        "fk": 13.687229437229437,
+        "fog": 15.415873015873016,
+        "smog": 14.06817628641468,
+        "poly": 21.428571428571427,
+        "long": 33.76623376623377,
+        "short": 11.11111111111111,
+        "ease": 27.408780663780675
+      }
+    },
+    {
+      "id": "ja-form-notice-change",
+      "body": {
+        "words": 167,
+        "sents": 12,
+        "asl": 13.916666666666666,
+        "fk": 10.399176646706586,
+        "fog": 12.033732534930142,
+        "smog": 11.698219412168324,
+        "poly": 16.167664670658684,
+        "long": 28.74251497005988,
+        "short": 0,
+        "ease": 45.292816866267486
+      }
+    },
+    {
+      "id": "lm-interpreter",
+      "body": {
+        "words": 180,
+        "sents": 12,
+        "asl": 15,
+        "fk": 12.680000000000003,
+        "fog": 15.111111111111112,
+        "smog": 13.6886701853816,
+        "poly": 22.77777777777778,
+        "long": 38.333333333333336,
+        "short": 25,
+        "ease": 30.870000000000033
+      }
+    }
+  ],
+  "diagnosticJudgment": "Body FK ranges from 10.40 to 13.69. The partner guide retains necessary agency and consultation terms. Short interpreter instructions are purposeful and are not padded to meet a running-prose sentence distribution.",
+  "items": [
+    {
+      "id": "ja-language-access-checklist",
+      "sourceRecordSha256": "1e2d1165464a34510f27c9467a2ad741afe2423ab694fb22385100c609462458",
+      "title": "Language access checklist"
+    },
+    {
+      "id": "ja-access-checks",
+      "sourceRecordSha256": "a005176c9753a2faf73326ad9765073c697c912f1170789c4d4c349dbcf54014",
+      "title": "Access checks before a meeting, outreach, or session"
+    },
+    {
+      "id": "ja-stakeholder-map",
+      "sourceRecordSha256": "5b36b1f8feafb4dfbca255e49057945704106eb4801fa2b0a8f3d7fb28ebbe28",
+      "title": "Planning with partners: who to involve"
+    },
+    {
+      "id": "ja-form-notice-change",
+      "sourceRecordSha256": "a1bc7c392d5d0991aa052a1e06bfeb945d8f15c9f961972afe69c5cbb42c9814",
+      "title": "Checklist for changing a form, notice, or letter"
+    },
+    {
+      "id": "lm-interpreter",
+      "sourceRecordSha256": "9637984dd55cd1ca98b1e784d32857f3c869bc895463ec17f405d05954ea8df4",
+      "title": "Working with a spoken-language interpreter"
+    }
+  ],
+  "readings": [
+    {
+      "slug": "language-access-checklist",
+      "readingSha256": "6cbf25ee97db88b24c4dc4ccb1d7dc26444e4b881db203ba39cdb0af9d75390e"
+    },
+    {
+      "slug": "access-checks-before-a-meeting-outreach-or-session",
+      "readingSha256": "3cbd4affe583266cde2a7dfd871453a21d8a6c55fa2e0451bf41d2160799b3ae"
+    },
+    {
+      "slug": "planning-with-partners-who-to-involve",
+      "readingSha256": "4e725925f84a00558eb28682ca78e6bff43b1c7a51628fd23db44c7c6d4ee563"
+    },
+    {
+      "slug": "checklist-for-changing-a-form-notice-or-letter",
+      "readingSha256": "28fac6b89ce7ffa20916d3ab75eddc71bfaee78b315b2730de2fd330045a246c"
+    },
+    {
+      "slug": "working-with-a-spoken-language-interpreter",
+      "readingSha256": "81ac2974a520ad72b3c2f8f4990d46310584a4eb0e35d7a32371e53d202edf8e"
+    }
+  ],
+  "publication": "pending deployment and live verification"
+}
