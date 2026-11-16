@@ -246,7 +246,7 @@
         "correct": "The task requires accurate field review; mouse use is the current method whose alternatives should be examined.",
         "wrong": [
           "Mouse use is essential simply because everyone uses it now.",
-          "A diagnosis tells us whether the person can review a report.",
+          "A diagnosis shows whether the person can review a report.",
           "The employee’s preferred tool automatically changes every job requirement."
         ],
         "feedbackCorrect": "Yes. This identifies the required result and leaves room to examine an effective method through the proper process.",
@@ -438,7 +438,7 @@
       },
       "next": "The next lesson compares options against the shared work purpose instead of treating a familiar option as automatically effective.",
       "scenario": {
-        "context": "In this example, an employee voluntarily emails medical information to a supervisor during the discussion. The supervisor is unsure what to do with it.",
+        "context": "In this example, an employee, without being asked, emails medical information to a supervisor during the discussion. The supervisor is unsure what to do with it.",
         "prompt": "What is the appropriate response?",
         "options": [
           "Forward it to every colleague so they understand the request.",
@@ -585,7 +585,7 @@
             "category": "Unanswered question"
           },
           {
-            "text": "A condition’s name tells us which tool every person needs.",
+            "text": "A condition’s name shows which tool every person needs.",
             "category": "Unsupported shortcut"
           }
         ]

@@ -11,8 +11,8 @@ export const DEIA_CATALOG_LEVELS = [
 
 /** The four catalogs the topics come from, in catalog order. */
 export const DEIA_CATALOG_SERIES = [
-  { id: "leader", series: "Leader DEIA", title: "Leadership" },
-  { id: "staff", series: "Staff DEIA", title: "For all staff" },
+  { id: "leader", series: "Leadership", title: "Leadership" },
+  { id: "staff", series: "For all staff", title: "For all staff" },
   { id: "team", series: "Team and collaboration", title: "Teams and collaboration" },
   { id: "intercultural", series: "Intercultural", title: "Intercultural learning" },
 ] as const;
