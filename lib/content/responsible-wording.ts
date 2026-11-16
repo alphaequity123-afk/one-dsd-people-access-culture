@@ -6,7 +6,7 @@
  */
 const ROLE = "responsible|appropriate|right|proper|designated|authorized|relevant|applicable|correct";
 const PATTERN = new RegExp(
-  `(?<![-\\w])((?:the|a|an|your|their|its|our|each|that|this|any)\\s+)?((?:${ROLE})(?:\\s+(?:${ROLE}))?)\\s+((?:[A-Za-z][A-Za-z-]*\\s+){0,3}?)(offices?)\\b`,
+  `(?<![-\\w])((?:the|a|an|your|their|its|our|each|that|this|any|other)\\s+)?((?:${ROLE})(?:\\s+(?:${ROLE}))?)\\s+((?:[A-Za-z][A-Za-z-]*\\s+){0,3}?)(offices?)\\b`,
   "gi",
 );
 
