@@ -1,0 +1,25 @@
+flowchart TD
+  d1-the-sentence["What do you say instead?"]
+  d1-the-sentence -->|"Ask what next step the sentence suggests to her. Then put the web sent"| d2-at-your-desk
+  d1-the-sentence -->|"Thank her for a great catch, say you will check it with the communicat"| r1-still-in-review
+  d1-the-sentence -->|"Explain that the sentence went through two rounds of review with the p"| r1-still-in-review
+  d1-the-sentence -->|"Agree right away and change the sentence to match the training script,"| r1-still-in-review
+  d2-at-your-desk["How do you respond?"]
+  d2-at-your-desk -->|"Thank her for telling you and say it was not okay. Ask what she wants,"| d3-the-team-meeting
+  d2-at-your-desk -->|"Offer to have a quiet word with the colleague yourself, peer to peer, "| r2-her-choice
+  d2-at-your-desk -->|"Tell her you are going to forward this to HR today, because conduct li"| r2-her-choice
+  d2-at-your-desk -->|"Tell her he probably does not mean anything by it, suggest she let him"| r2-her-choice
+  d3-the-team-meeting["How do you tell the story?"]
+  d3-the-team-meeting -->|"Check with her first about being credited. Then tell the team what she"| end_node
+  d3-the-team-meeting -->|"Open by thanking the training specialist in front of everyone for her "| end_node
+  d3-the-team-meeting -->|"Keep it short and technical: the corrected wording for the page and sc"| end_node
+  d3-the-team-meeting -->|"Say the miss came from late guidance from the program area, not from a"| end_node
+  r1-still-in-review["Second chance: What do you do now?"]
+  r1-still-in-review -->|"Say, “I brushed past your question. Can you show me what you saw?” The"| d2-at-your-desk
+  r1-still-in-review -->|"Send her a message during the meeting thanking her and saying you will"| d2-at-your-desk
+  r1-still-in-review -->|"Leave it. The meeting has moved on, the lead will catch anything serio"| d2-at-your-desk
+  r2-her-choice["Second chance: What do you say before she goes?"]
+  r2-her-choice -->|"Say, “That’s your decision, not mine. What would help right now?” Then"| d3-the-team-meeting
+  r2-her-choice -->|"Send her a link to the respectful workplace policy page this afternoon"| d3-the-team-meeting
+  r2-her-choice -->|"Let her go. She asked you not to tell anyone, and saying more now migh"| d3-the-team-meeting
+  end_node(["Reflection and action plan"])

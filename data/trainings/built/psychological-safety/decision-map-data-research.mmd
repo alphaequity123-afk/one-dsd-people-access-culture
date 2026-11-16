@@ -1,0 +1,25 @@
+flowchart TD
+  d1-the-error["What do you do with the error?"]
+  d1-the-error -->|"Tell your research manager today: the figure the director quoted, the "| d2-the-review
+  d1-the-error -->|"Correct the query and send the director a revised table yourself today"| r1-same-day
+  d1-the-error -->|"Before telling anyone, rerun every table you have sent out this year t"| r1-same-day
+  d1-the-error -->|"Go with the peer analyst’s plan. The corrected figure will be in next "| r1-same-day
+  d2-the-review["What do you contribute to the review?"]
+  d2-the-review -->|"Say the template’s join and your own choice to skip a row-count check "| d3-the-score
+  d2-the-review -->|"Say the error was yours alone and the template is fine. Promise to dou"| r2-ten-minutes
+  d2-the-review -->|"Agree with the peer analyst that the template caused it, so the review"| r2-ten-minutes
+  d2-the-review -->|"Let your manager and the peer analyst work it out. You already admitte"| r2-ten-minutes
+  d3-the-score["How do you respond to the request?"]
+  d3-the-score -->|"Propose tracking whether questions and errors reached a decision and g"| end_node
+  d3-the-score -->|"Build the score by Friday but report only team averages, so nobody is "| end_node
+  d3-the-score -->|"Tell your manager the request is a bad idea and you will not build it,"| end_node
+  d3-the-score -->|"Build it as asked. The director owns the report, and raising doubts ab"| end_node
+  r1-same-day["Second chance: What do you do now?"]
+  r1-same-day -->|"Walk over to your research manager and say, “I found an error in the t"| d2-the-review
+  r1-same-day -->|"Email the director directly with the corrected table and a plain expla"| d2-the-review
+  r1-same-day -->|"Go with the peer analyst’s footnote plan, but note in the team’s revie"| d2-the-review
+  r2-ten-minutes["Second chance: What do you say?"]
+  r2-ten-minutes -->|"Say one fix is worth leaving with: a row-count check before and after "| d3-the-score
+  r2-ten-minutes -->|"Suggest a refresher training on joins for all analysts next month, so "| d3-the-score
+  r2-ten-minutes -->|"Say nothing else. The review has been uncomfortable enough, and closin"| d3-the-score
+  end_node(["Reflection and action plan"])

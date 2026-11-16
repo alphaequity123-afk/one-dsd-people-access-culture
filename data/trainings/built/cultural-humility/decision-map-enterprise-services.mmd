@@ -1,0 +1,25 @@
+flowchart TD
+  d1-opening["How do you open the hearing?"]
+  d1-opening -->|"Read the standard opening script in full, so every required point is c"| r1-who-are-you
+  d1-opening -->|"Check that the appellant can hear the interpreter clearly. In plain wo"| d2-testimony
+  d1-opening -->|"Ask the appellant if she agrees, then let her sister answer the questi"| r1-who-are-you
+  d1-opening -->|"The interpreter is from the approved vendor and the delay seems minor,"| r1-who-are-you
+  d2-testimony["What do you do?"]
+  d2-testimony -->|"Note what she said, not how she said it. Ask a plain follow-up about w"| d3-decision
+  d2-testimony -->|"Note that her answers were indirect, and switch to short yes or no que"| r2-she-was-answering
+  d2-testimony -->|"Tell the county representative that telling the story first is how peo"| r2-she-was-answering
+  d2-testimony -->|"Say nothing to the county representative and move to the next question"| r2-she-was-answering
+  d3-decision["How do you write the decision?"]
+  d3-decision -->|"Describe her testimony in her terms and how it was weighed, state the "| end_node
+  d3-decision -->|"Use the standard decision template and its legal language. It is what "| end_node
+  d3-decision -->|"Rule fully for the appellant on every task. The interpretation problem"| end_node
+  d3-decision -->|"Write a clear, plain decision that describes her testimony in her term"| end_node
+  r1-who-are-you["Second chance: What do you do?"]
+  r1-who-are-you -->|"Pause the hearing. Explain your role in plain words, check that the in"| d2-testimony
+  r1-who-are-you -->|"Read the role section of the opening script again, more slowly this ti"| d2-testimony
+  r1-who-are-you -->|"Tell her the written decision will explain everyone’s role and the out"| d2-testimony
+  r2-she-was-answering["Second chance: How do you respond?"]
+  r2-she-was-answering -->|"Acknowledge the point: “You’re right, I should hear her own words.” In"| d3-decision
+  r2-she-was-answering -->|"Thank her sister for the point, note in the record that the appellant "| d3-decision
+  r2-she-was-answering -->|"Remind her sister, politely, that she is not testifying right now and "| d3-decision
+  end_node(["Reflection and action plan"])

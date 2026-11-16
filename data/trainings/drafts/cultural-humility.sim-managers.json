@@ -1,0 +1,406 @@
+{
+  "intro_by": "C5",
+  "intro": "If you run a program, a plan crosses your desk long before anyone feels its effects. In this version you turn a new law into a notice, weigh two supervisors’ views on one budget, and report on how the launch went. Watch the difference between an arrangement on paper and help that people can actually use.",
+  "cast": [
+    {"role": "call-line-supervisor", "label": "the call-line supervisor", "portrait": "C6"},
+    {"role": "notices-supervisor", "label": "the notices supervisor", "portrait": "C8"},
+    {"role": "county-relations-supervisor", "label": "the county relations supervisor", "portrait": "C1"},
+    {"role": "county-eligibility-supervisor", "label": "the county eligibility supervisor", "portrait": "C2"},
+    {"role": "division-director", "label": "your director", "portrait": "C4"}
+  ],
+  "version": "managers",
+  "level": "intermediate",
+  "title": "Turning a new law into a notice people can use",
+  "learner_role": "You are a Human Services Manager. You run a statewide program and supervise three supervisors. You turn legislative requirements into services, decide how staff time and budget are used, and sign off on implementation plans.",
+  "background": "The legislature changed your program. In six months, everyone enrolled must get a reassessment notice 60 days before their eligibility review, and the notice must explain how to ask for help. You have a fixed amount of new money. Your implementation plan is due to your division director in three weeks. Three supervisors report to you: the call-line supervisor; the notices supervisor, who leads notices and policy; and the county relations supervisor, who works with counties and lead agencies. The plan includes an equity analysis and a language-access checklist.",
+  "start": "d1-the-checked-box",
+  "decisions": [
+    {
+      "id": "d1-the-checked-box",
+      "recovery": false,
+      "setup": "In the plan review, the notices supervisor walks through the checklist. Next to “People are informed about interpreter services,” the box is checked. The note says, “Interpreter contract in place.” The call-line supervisor frowns. Call-line staff hear from people who did not know they could ask for an interpreter, he says, and some calls end before the person reaches one. The notices supervisor says the contract covers every language the program sees. Both are describing something real.",
+      "prompt": "The checklist says met. Your call-line supervisor says people cannot use it. What do you do with that line before you sign the plan?",
+      "choices": [
+        {
+          "id": "leave-it-checked",
+          "text": "Leave the box checked. The contract covers every language the program sees, which meets the requirement, and the call-line issue is a training question for the call-line team to handle.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The plan is on track to reach your director on time. The call-line supervisor tells his staff to remind callers about interpreter help. The notice still says nothing about it. The notices supervisor moves on to the next line. The call-line supervisor says little for the rest of the review. He came with a real pattern from the phones, and it was filed as his team’s problem.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Contracts and checklists feel solid, and deadlines push toward signing. But a contract shows an arrangement, not that people can get the help. The checklist was asking a question the contract does not answer."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with keeping the contract information and asking how requests work in practice. That takes a week. It finds the gap before launch, not after."
+            }
+          ],
+          "next": "r1-the-call-notes"
+        },
+        {
+          "id": "ask-how-it-works",
+          "text": "Keep the contract details, but mark the line not yet supported. Ask the call-line and notices supervisors how a request works on a real call, and name who checks by when.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The notices supervisor is a little stung, then interested. The contract is real; no one had asked her how it works on the phones. The call-line supervisor pulls two weeks of call notes. They show that the current notice never mentions interpreter help, and that staff transfer callers to the interpreter line without explaining the wait. The county relations supervisor adds that counties field the same confusion. The plan now has a named gap, an owner and a date, instead of a checked box.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You kept what is known, the contract, while making the evidence gap visible. That is what a checklist is for: pointing to questions, not settling them. Build on it by asking people who call the line how the help worked for them."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the notices supervisor, being told her line was wrong would have felt like blame. Being asked how it works in practice let her help find the answer."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which checked boxes in your current plans rest on an arrangement, and which rest on evidence that people can use it?"
+            }
+          ],
+          "next": "d2-the-budget-call"
+        },
+        {
+          "id": "drop-the-checklist",
+          "text": "Drop the checklist from the plan. If a checked box cannot show whether people actually get help, it is not worth the time, and cutting it frees time for the work that matters.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The notices supervisor removes the checklist. The plan is shorter. The call-line supervisor’s concern is still there, but now nothing in the plan asks about language access at all. The question that might have led your team to the notice wording leaves with the form.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You saw the limit of a checked box, which is real. The stronger move keeps the tool and asks for the evidence behind it. A checklist can still point to a useful question."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Next time, ask: “What would show that this line is true for the people calling?” Keep the line open until someone can answer."
+            }
+          ],
+          "next": "r1-the-call-notes"
+        },
+        {
+          "id": "fund-a-fix-now",
+          "text": "Act on the call-line concern now. Direct the notices supervisor to translate the notice into ten more languages and add a second interpreter vendor before launch, without waiting for more information.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The notices supervisor starts the translation work, which would use most of the new money. The call-line supervisor points out that what his staff hear most is not about the notice language. Callers do not know they can ask for an interpreter, and transfers end without explanation. The money is close to committed before anyone has checked what the barrier is.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Acting fast on an access concern comes from a good place. But a change made before the concern is examined can miss what people actually face."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A stronger move asks the call-line supervisor what the call notes show first. The evidence may support translation, or something closer to the barrier and less costly."
+            }
+          ],
+          "next": "r1-the-call-notes"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-budget-call",
+      "recovery": false,
+      "setup": "Now the budget. The new money covers one of two options. Option one adds call-line staff for the months around review dates. Option two rewrites the notice in plain language, adds a line about free interpreter help, and tests the draft with people who receive it. The notices supervisor would add one line about interpreter help and keep the rest of the notice. “The same words for everyone is fair,” she says. “Consistency protects people.” The call-line supervisor wants staff. The law requires certain content and the 60-day timing. It does not require the current wording.",
+      "prompt": "Your supervisors disagree, and the money covers one option. How do you make the call?",
+      "choices": [
+        {
+          "id": "requirement-or-habit",
+          "text": "Separate what the law requires from habit. Honor the notices supervisor’s value of consistency, ask whether the same words give people the same chance to act, and say how you will decide.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You list the legal requirements on the whiteboard: certain content, 60-day timing, how to ask for help. Everything else is open. You tell the notices supervisor that consistency matters, and ask whether the current wording, full of terms only staff use, gives people an equal chance to act. She looks at the call notes and says, “Probably not.” The county relations supervisor suggests testing a draft with county workers and a few people who get the notice. You choose the rewrite, keep a small amount for peak staffing, and explain your reasons to both supervisors. The call-line supervisor is disappointed. He also knows his evidence shaped the choice.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You separated a real requirement from an avoidable habit, and you treated the notices supervisor’s value as worth keeping, not wrong. That let her reconsider without losing face. Build on it by telling the team how the test results could change the plan."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the notices supervisor, consistency is a way to protect people from unfair treatment. Asking whether equal wording gives equal access respects that value and widens it."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which parts of your program’s routines are required, and which are habits that feel required because they are familiar?"
+            }
+          ],
+          "next": "d3-no-complaints"
+        },
+        {
+          "id": "rewrite-without-asking",
+          "text": "Choose the notice rewrite now. The call notes already point clearly to the notice, so there is no need to reopen the debate with the notices supervisor or spend another meeting on it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The rewrite is funded. The notices supervisor carries it out, but she still believes the old wording was fairer, and she drops the test with readers to save time. The new notice reads better to staff. No one knows yet whether it reads better to the people who get it.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The evidence did point to the notice. Skipping the notices supervisor’s value left her carrying out a change she did not believe in, and the test that would show the effect fell away."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the notices supervisor, consistency is a way to protect people from unfair treatment. Being skipped told her that value did not count, so she had little reason to protect the parts of the plan she did not choose."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When the evidence seems to settle a choice, whose reasons do you still need to hear before you decide?"
+            }
+          ],
+          "next": "d3-no-complaints"
+        },
+        {
+          "id": "defer-to-policy-lead",
+          "text": "Go with the notices supervisor’s view. She leads notices and policy, the notice is her area, and she knows the wording rules better than anyone else at the table.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The notices supervisor adds the interpreter line and keeps the rest of the notice as is, and the money goes to call-line staff. The call-line supervisor notices how the choice was made: the call notes about confusing terms never came up. He takes it as a sign that call-line knowledge does not count in policy choices. In his next staff meeting, he stops raising caller patterns. The disagreement is settled, and an important source of knowledge goes quiet.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "To the call-line supervisor, deferring to the policy lead says that role decides whose knowledge counts. If only expert accounts count, barriers that front-line staff see can stay outside decisions."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Relying on the person whose area it is can feel like good delegation. It works best when that person’s view has been tested against what others know."
+            }
+          ],
+          "next": "d3-no-complaints"
+        },
+        {
+          "id": "split-the-money",
+          "text": "Split the money evenly between the two options, so neither supervisor feels overruled and both of their concerns get at least some of the new funding this year.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "Each supervisor gets half. Half is not enough to staff the peak months or to test a new notice. The notices supervisor makes small wording edits without testing them. The call-line supervisor adds one part-time worker. Neither change is big enough to tell whether it helped. The decision avoided the conflict, and the access question with it.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Splitting the difference avoids choosing, but it also avoids asking which option meets the barrier. A clear decision with stated reasons respects both supervisors more than a split that serves neither."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Next time, try: “Here is what the law requires. Here is what the evidence shows. Here is my decision and why. Tell me what I might be missing.”"
+            }
+          ],
+          "next": "d3-no-complaints"
+        }
+      ]
+    },
+    {
+      "id": "r1-the-call-notes",
+      "recovery": true,
+      "setup": "After the meeting, the call-line supervisor stops by with a printout of call notes. One reads: “Caller asked if someone could explain the letter in her language. Did not know to ask for an interpreter. Transfer dropped.” Another: “Caller’s son interpreted. Unsure of review date.” He says, “This is what the box doesn’t show.”",
+      "prompt": "You have the plan in front of you and new information from the call line. What do you do now?",
+      "choices": [
+        {
+          "id": "trace-one-call",
+          "text": "Reopen the language-access line. Ask the call-line and notices supervisors to trace one call together, from notice to interpreter, and name who checks the fix by when.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "medium"
+          },
+          "consequence": "The two supervisors spend an afternoon walking through a single call. They find that the notice says nothing about free interpreter help, and that transfers have no warm handoff. They also flag the call where a caller’s son interpreted: if the notice and the call line made interpreter help clear, no one would need to rely on family for a review date. The plan now names two fixes, who owns each, and a date to check whether callers reach help. The box stays unchecked until then.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You let a concrete account change a plan you had settled. Tracing one real path is often faster than debating the whole system. Next, decide how you will hear from callers after the change."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the call-line supervisor, bringing the notes was a risk. Seeing them change the plan tells him it was worth it."
+            }
+          ],
+          "next": "d2-the-budget-call"
+        },
+        {
+          "id": "add-a-monitor-note",
+          "text": "Thank the call-line supervisor for the notes and add a line to the plan: “Call-line staff report some confusion; monitor after launch.” That records the concern without holding up the deadline.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The line is accurate and asks nothing of anyone. No one owns the monitoring, and no date is set. The call-line supervisor files the printout. The dropped transfers will keep happening after launch, now with a note in the plan saying the agency knew.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A note that names a concern without an owner or a date hears it without acting on it. Naming who will check, what, and when turns it into follow-through."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try asking both supervisors: “Can the two of you own this? What would you need to check it by the end of next month?”"
+            }
+          ],
+          "next": "d2-the-budget-call"
+        },
+        {
+          "id": "target-a-group",
+          "text": "Ask the call-line supervisor which caller groups seem most confused, so the plan can target outreach and translated materials to those communities and make the most of a tight budget.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The call-line supervisor hesitates. The notes show individual callers who did not know they could ask for help. They do not show that a group is confused. A fix built on a guess about which communities struggle would miss the people the guess leaves out, and it would not touch the notice or the transfers.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to target effort makes sense with a tight budget. But a few individual accounts do not make a group profile. These notes point to a process problem: the notice and the transfer."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you hear a few accounts, how quickly do you turn them into a statement about a group?"
+            }
+          ],
+          "next": "d2-the-budget-call"
+        }
+      ]
+    },
+    {
+      "id": "d3-no-complaints",
+      "recovery": false,
+      "setup": "Four months after launch, your director asks for an update. The notices supervisor’s draft report says, “No complaints received. Notice rollout successful.” The same week, the county relations supervisor forwards an email from a county eligibility supervisor. Her workers still get calls from people who do not understand what the notice asks them to do. She writes, “Maybe it’s just our county.”",
+      "prompt": "The report says success. A county partner says otherwise. What goes to your director?",
+      "choices": [
+        {
+          "id": "report-what-is-known",
+          "text": "Report what was done and what is still unknown. Ask the county eligibility supervisor what her workers hear, ask for call-line patterns, and say when she will hear back.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your update says the notice went out on time, no formal complaints were filed, and early county reports suggest some people still do not understand the next step. It names a check: the call-line team will sample calls, and the county relations supervisor will ask three counties what workers hear. Results go to your director in six weeks. You call the county eligibility supervisor yourself. She says it helps to be asked directly. Her answer points to one confusing sentence about where to send forms.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You kept what was done, what was heard, and what is still unknown as separate claims. No complaints is missing information, not proof. Calling the county eligibility supervisor closed the loop with the person who raised it. Build on it by telling her what changed because of her email."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the county eligibility supervisor, “Maybe it’s just our county” was a way to raise a concern without seeming to complain. Your call told her a county account counts as evidence."
+            },
+            {
+              "style": "feed-forward",
+              "text": "In updates to your director, try three parts: “Here is what was done. Here is what is known about the effect. Here is how and when the agency will learn more.”"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "send-the-success-report",
+          "text": "Send the notices supervisor’s report. No complaints after four months is a good sign, the notice went out on time, and one county’s email is not enough to change the story.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Your director shares the report upward. The county eligibility supervisor does not hear back. Three months later, completed reviews drop in several counties, and staff trace it to the same unclear sentence about where to send forms. The report that said success is the record leaders relied on.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "It is natural to trust a clean report after a hard launch. But no feedback does not show a barrier is gone. People who struggle with a notice often do not file complaints."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with reporting what is known and what is not, and asking the county eligibility supervisor what she sees. One county is not proof of a statewide problem. It is a reason to look."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "call-it-an-exception",
+          "text": "Add the county email to the report as an exception, so the county concern is on record, and keep the overall finding of success that the lack of complaints supports.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The report now says success, with one county reporting issues. Your director reads it as a local problem. The county eligibility supervisor gets a thank-you email from the county relations supervisor. No one checks whether other counties see the same thing, so the confusing sentence stays in the notice.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Naming the county concern was better than leaving it out. Labeling it an exception decides what it means before anyone checks. A stronger update keeps the effect open and says how you will find out."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When one partner raises a problem, how do you decide whether it is local or a sign of something wider?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "ask-county-to-survey",
+          "text": "Ask the county eligibility supervisor to survey her workers and the people they serve, and send you a full analysis before you report anything, so the update rests on real evidence.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The county eligibility supervisor’s team is already stretched. She replies that she cannot run a survey for a state program. Your update to the director slips. The county’s knowledge reached you, and the request to do the agency’s analysis pushed it back out.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting solid evidence before you report is responsible. But asking a partner to do your team’s analysis shifts staff work onto them."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Ask her one focused question, such as: “What do workers hear most often about the notice?” Then have your own team do the checking."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Treating a checked box as a question that needs evidence, not as proof of access",
+    "Telling an arrangement, like an interpreter contract, apart from whether people can use it",
+    "Separating what a law requires from habits that grew around it",
+    "Asking whether the same words give people the same chance to act",
+    "Weighing front-line and county knowledge alongside policy expertise",
+    "Reporting what was done, what is known, and what is still unknown"
+  ],
+  "this_week": [
+    "Pick one checked line in a current plan. Write down the evidence behind it, and what would show it holds for the people it is meant to reach.",
+    "Ask a call-line or county partner one focused question about a notice or process your program runs: what do people find hardest to use?",
+    "In your next budget or staffing choice, list what the law requires and what is habit before you compare options.",
+    "Look at your most recent status report. Does any line treat “no complaints” as proof that something works?"
+  ],
+  "sources": [
+    "cultural-humility-vs-checklist",
+    "cultural-humility-vs-checklist--when-the-checklist-is-the-right-tool",
+    "cultural-humility-vs-checklist--ask-then-date",
+    "cultural-humility-in-professional-judgment",
+    "cultural-humility-in-everyday-public-service",
+    "dc-i26-cultural-humility-in-depth--build-partnership-without-deciding-for-people",
+    "dc-i26-cultural-humility-in-depth--keep-learning-and-follow-through-connected",
+    "dc-i27-cultural-humility-vs-cultural-competence"
+  ]
+}

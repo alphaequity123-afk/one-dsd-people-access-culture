@@ -1,0 +1,25 @@
+flowchart TD
+  d1-the-incompletes["What do you do with the panelist’s question?"]
+  d1-the-incompletes -->|"Ask the chair to hold the item for a minute: a question came in about "| d2-the-summary
+  d1-the-incompletes -->|"Let the item close, then forward the panelist’s email to the chair aft"| r1-before-the-list
+  d1-the-incompletes -->|"Unmute and say, “I think one of the panelists had a concern about the "| r1-before-the-list
+  d1-the-incompletes -->|"Check the workbook yourself, confirm the narrative is on tab two, and "| r1-before-the-list
+  d2-the-summary["What do you do with the summary?"]
+  d2-the-summary -->|"Say the summary can list the decisions and the second-tab question, bu"| d3-the-debrief
+  d2-the-summary -->|"Before writing it, go around the call and ask each reviewer by name, t"| r2-before-it-goes
+  d2-the-summary -->|"Write it as the chair asked. He runs the panel, the reviewers had nine"| r2-before-it-goes
+  d2-the-summary -->|"Write “unanimous” as asked, but send the person responsible for the so"| r2-before-it-goes
+  d3-the-debrief["How do you respond to the director’s question?"]
+  d3-the-debrief -->|"Ask the director which two instructions conflicted, read them together"| end_node
+  d3-the-debrief -->|"Apologize that the instructions were hard to follow, then walk the dir"| end_node
+  d3-the-debrief -->|"Back the chair. The solicitation was public, other applicants managed "| end_node
+  d3-the-debrief -->|"Tell the director you agree the instructions conflict and promise that"| end_node
+  r1-before-the-list["Second chance: What do you do now?"]
+  r1-before-the-list -->|"Ask for one more minute for a question about a narrative on a second t"| d2-the-summary
+  r1-before-the-list -->|"Note the question in the panel summary so the person responsible for t"| d2-the-summary
+  r1-before-the-list -->|"Let it go. The chair wants to finish in ninety minutes, the panelist h"| d2-the-summary
+  r2-before-it-goes["Second chance: What do you do before people leave?"]
+  r2-before-it-goes -->|"Say the summary will list decisions and open questions, not “unanimous"| d3-the-debrief
+  r2-before-it-goes -->|"Leave the call as it is, then quietly change “unanimous” to “consensus"| d3-the-debrief
+  r2-before-it-goes -->|"Send the summary as it stands. The chair has signed off, and the award"| d3-the-debrief
+  end_node(["Reflection and action plan"])

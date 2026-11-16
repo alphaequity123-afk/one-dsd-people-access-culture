@@ -1,0 +1,407 @@
+{
+  "intro_by": "C3",
+  "intro": "If you write policy or guidance, your words become what staff do in thousands of meetings you will never see. In this version you draft a bulletin with a workgroup that includes a self-advocate who uses services. Watch for the moment when background information starts to answer a question only the person can answer.",
+  "cast": [
+    {"role": "self-advocate", "label": "the self-advocate", "portrait": "C7"},
+    {"role": "team-lead", "label": "your lead", "portrait": "C8"},
+    {"role": "county-lead", "label": "the county lead", "portrait": "C2"},
+    {"role": "advocate-from-listed-community", "label": "the advocate from a listed community", "portrait": "C5"},
+    {"role": "plain-language-advocate", "label": "the advocate who asked for plain language", "portrait": "C6"}
+  ],
+  "version": "policy-program",
+  "level": "intermediate",
+  "title": "A bulletin about who is in the room",
+  "learner_role": "You are a Human Services Program Consultant. You draft policy bulletins and guidance for county and lead-agency case managers, lead a workgroup of partners, and carry the equity analysis for your drafts. Your words become the instructions case managers follow in thousands of planning meetings.",
+  "background": "Your team is writing a bulletin for case managers about support planning meetings for people with disabilities. It tells case managers how to ask whom the person wants at their meeting, and how to document that choice. Person-centered practice and informed choice are at its center. A workgroup reviews your drafts: county and lead-agency staff, two advocates, and a self-advocate who uses services. You send drafts to the workgroup in the format each member asked for, the self-advocate included. Your lead wants the bulletin out before the next planning cycle, six weeks away. The documentation fields live in a statewide system, and changing a field label takes months.",
+  "start": "d1-the-fact-sheet",
+  "decisions": [
+    {
+      "id": "d1-the-fact-sheet",
+      "recovery": false,
+      "setup": "At the second workgroup meeting, the county lead suggests adding a section called “Cultural considerations.” It would list which communities tend to prefer family-led decisions, so case managers know when to invite family. She has a fact sheet ready. Others nod. It would be quick to add. You notice it would tell case managers what to expect from a person before they ask.",
+      "prompt": "The county lead’s idea comes from care and would be easy to add. What do you do with it in the bulletin?",
+      "choices": [
+        {
+          "id": "questions-not-answers",
+          "text": "Thank the county lead, and use the knowledge to shape questions, not answers. Draft guidance that has case managers ask each person whom they want involved and what would help.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You say, “This could help case managers prepare. I want to use it so they ask better questions, not so they assume the answer.” The county lead is unsure at first, then helps rewrite. The new section says family can matter a great deal to many people, and a person may still want one conversation alone. It gives case managers sample questions: “Who would you like at your meeting?” and “Is there anything you would like to talk about privately?” The self-advocate says it is the first draft that sounds written for him.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You kept the county lead’s knowledge and changed its job, from predicting to preparing. At bulletin scale, that choice reaches every planning meeting. Build on it by checking that the documentation guidance records what the person said, not a group expectation."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the county lead, the fact sheet was a way to help case managers do right by families. Rewriting it with her, rather than cutting it, kept her in the work."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Where in your own guidance does background information tell staff what to expect, instead of what to ask?"
+            }
+          ],
+          "next": "d2-the-field-label"
+        },
+        {
+          "id": "add-the-section",
+          "text": "Add the section as the county lead proposed. Case managers keep asking for practical guidance, the fact sheet is well sourced, and it would help them know when to invite family.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The section goes into the draft. The self-advocate reads it during the meeting and goes quiet. A general statement in a state bulletin is about to become a default in thousands of meetings, and no one has said so out loud.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Practical, sourced guidance is what case managers ask for, so this is an easy yes. But a fact sheet about a group cannot tell you what one person wants. At bulletin scale, it becomes the expectation."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with using the same knowledge to write better questions. Case managers still get practical help, and the person still decides."
+            }
+          ],
+          "next": "r1-the-email"
+        },
+        {
+          "id": "cut-all-culture",
+          "text": "Thank the county lead, but remove all mention of culture and family from the bulletin, so no case manager can read any part of it as stereotyping the people they serve.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The draft is neutral and thin. The county lead feels her contribution was rejected. Case managers will still walk into meetings with their own assumptions about family, just without guidance on how to ask. The risk you wanted to avoid is still there, unaddressed.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Avoiding the subject keeps the bulletin from stereotyping, but it also leaves case managers without a way to ask. Knowledge used to prepare questions is different from knowledge used to predict."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When a topic feels risky, do you tend to cut it or reframe it? What does each cost?"
+            }
+          ],
+          "next": "r1-the-email"
+        },
+        {
+          "id": "ask-an-advocate-to-write-it",
+          "text": "Ask the advocate from a listed community, the only workgroup member from one of those communities, to write the section, so it is accurate and draws on lived knowledge.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The advocate from a listed community says she can share her own experience but cannot describe what a whole community prefers. She is an advocate with her own job, not a state policy writer. She agrees reluctantly, and the section is delayed. She tells another advocate she was invited for her knowledge, then handed the agency’s work because of who she is.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "To the advocate from a listed community, this asked her to represent a community and do staff work at once. Her knowledge is valuable. It is not a population profile, and the writing is your job."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A stronger path writes guidance that asks each person, then invites her to review a draft if she wants, with clarity about what her review can change."
+            }
+          ],
+          "next": "r1-the-email"
+        }
+      ]
+    },
+    {
+      "id": "r1-the-email",
+      "recovery": true,
+      "setup": "After the meeting, the self-advocate sends you a short email. “I keep thinking about the family part. My family matters to me. But some things I want to talk about alone. If the bulletin tells my case manager what people like me want, or tells her nothing at all, she might not ask me.”",
+      "prompt": "The self-advocate has named exactly what the guidance could do. What do you do with his email?",
+      "choices": [
+        {
+          "id": "change-it-and-credit-the-point",
+          "text": "Reply to the self-advocate with what you will change and when. Rewrite the guidance so it prepares questions and tells case managers to ask the person, and credit his point.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You write back, “You are right that it could stop the question. Here is how I will change it, and you will see the draft before the next meeting.” The rewrite keeps a short note that family can matter to many people, then tells case managers to ask the person whom they want involved and whether any part should be private. At the next meeting, you say the change came from the self-advocate’s email. The county lead agrees the new version still helps case managers prepare. If you had asked the advocate from a listed community to write the section, you also tell her it is now staff’s to write, and ask whether she would like to review the draft, with a clear note of what her review can change.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You let one specific account change a draft that had support in the room. Telling the self-advocate what will change, and crediting his point, shows that input shapes the work. Next, make sure the documentation guidance matches."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the self-advocate, that email took effort. Seeing his words change the bulletin tells him the workgroup is more than a sign-off."
+            }
+          ],
+          "next": "d2-the-field-label"
+        },
+        {
+          "id": "consider-it-later",
+          "text": "Thank the self-advocate warmly for writing, and tell him his concern will be considered in a later version of the bulletin, once this one is out and case managers have used it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The self-advocate does not reply. The draft stays as it is. At the next workgroup meeting, he says less. His concern was heard and parked.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Being thanked is not the same as being able to influence an open choice. This draft is still open now. A stronger reply says what can change in this version."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you say “it will be considered,” what does the person hear about what can change?"
+            }
+          ],
+          "next": "d2-the-field-label"
+        },
+        {
+          "id": "ask-about-his-background",
+          "text": "Ask the self-advocate to tell you about his cultural background, so you can understand which groups the guidance affects and make sure the rewrite covers people like him.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The self-advocate replies that his background is not the point. He is asking that his case manager ask him. Your question made his concern about him, and asked for personal history he did not offer. He is less sure the workgroup is a place to be honest.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to understand is a good impulse. Curiosity still needs a purpose tied to the task. The self-advocate’s point does not depend on his background, and making disclosure the price of being heard adds a burden."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Ask about the work instead: “Which part of the section worries you most?”"
+            }
+          ],
+          "next": "d2-the-field-label"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-field-label",
+      "recovery": false,
+      "setup": "The next draft adds documentation guidance. One field records a person’s choice about who attends. The system offers two labels: “Family invited” or “Person declined family involvement.” The labels are fixed for this planning cycle. The self-advocate says, “‘Declined’ makes it sound like I refused my family. The next case manager will read that and think I’m difficult.” Your lead confirms the labels cannot change in time.",
+      "prompt": "The self-advocate has corrected how the field reads. The labels are fixed for now. What do you do?",
+      "choices": [
+        {
+          "id": "use-what-is-open",
+          "text": "Name the problem without defending the label. Say what is fixed and what is open, have case managers record the person’s own words in notes, and request a new label.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You say, “You are right. ‘Declined’ can travel forward as a judgment. The label is fixed until the next system update. What I can change now is the guidance.” The bulletin now tells case managers to use the notes field for the person’s own words, such as “wants to discuss housing privately; wants sister at the rest of the meeting,” and not to describe a person as unwilling. You file a request for a new label with the system owners and tell the workgroup when it comes up for review. The self-advocate is not fully satisfied. He says the guidance is a real change.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You separated what is fixed from what is open, and used the open part. You also followed the label downstream to the next case manager who will read it. Build on it by checking how case managers use the notes field after release."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the self-advocate, honesty about the fixed label matters as much as the change. He knows what to expect and what his point did."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which words in your current drafts will be read by someone months from now? What will they assume?"
+            }
+          ],
+          "next": "d3-closing-the-loop"
+        },
+        {
+          "id": "defend-the-label",
+          "text": "Explain to the self-advocate that the label is technically accurate. If he did not want his family invited, he declined, and a careful case manager will read the field neutrally.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The self-advocate says, “That is the problem. It is accurate, and it is not what happened.” The room goes quiet. The guidance goes out with nothing about the field. A year later, case managers in three counties tell you they read “declined family involvement” as a sign the person is hard to work with.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A label can be accurate on paper and still mislead in use, like a correct address with an unclear entrance. Asking where the label travels would show what it does."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Defending accuracy is natural when you know a system well. A correction is information your first reading missed, not an attack on your work."
+            }
+          ],
+          "next": "d3-closing-the-loop"
+        },
+        {
+          "id": "promise-a-new-label",
+          "text": "Tell the self-advocate you will push hard for a better label, and promise him the label will change before the bulletin goes out, so his concern is fixed at the source.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The self-advocate is relieved. After the meeting, your lead reminds you the system cannot change for months. Now you hold a promise you cannot keep. Because you were counting on the label changing, the guidance never addresses the notes field. When the bulletin goes out with the old label, the self-advocate feels misled.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to fix a problem right away is a caring response. But a promise you cannot keep can hurt trust more than an honest limit."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A stronger move says what is fixed and what can change now, then changes what is open. The self-advocate gets real change and an honest timeline."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “The label is fixed until the next update. Here is what I can change in this bulletin, and here is when the label comes up again.”"
+            }
+          ],
+          "next": "d3-closing-the-loop"
+        },
+        {
+          "id": "thank-and-keep",
+          "text": "Thank the self-advocate for his perspective and keep the guidance as drafted. The field is out of your control, and the bulletin has to go out before the next planning cycle starts.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The self-advocate is thanked and nothing changes. The bulletin says nothing about the notes field. You were right that the label was fixed. But the guidance around it was open, and that is where his point could have mattered.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The label was out of your hands. The guidance was not. Listening is valuable, and it is different from letting a concern shape something that is still open."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When part of a decision is fixed, how do you find the part that is still open?"
+            }
+          ],
+          "next": "d3-closing-the-loop"
+        }
+      ]
+    },
+    {
+      "id": "d3-closing-the-loop",
+      "recovery": false,
+      "setup": "The bulletin is ready. Your lead wants to mark the equity analysis complete and send a thank-you to the workgroup. Her draft says, “Thank you for your partnership. The bulletin reflects your input.” Some input did change the bulletin. Some did not: an advocate asked for a plain-language version for people who use services, and there is no budget this cycle. No one has checked yet how case managers will use the new guidance.",
+      "prompt": "How do you close the loop with the workgroup, and with the analysis, before release?",
+      "choices": [
+        {
+          "id": "report-back-plainly",
+          "text": "Report back plainly: what changed, what did not and why, and who will check how the guidance works after release. Keep the open questions in the equity analysis.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your message lists three changes from the workgroup, including the notes-field guidance from the self-advocate. It says the plain-language version was not funded this cycle, why, and whom you have asked about next year. It names a check: in three months, your team will review a sample of plans for how choices are documented, and share what it finds with the workgroup. The advocate who asked for plain language replies that he is disappointed but glad to know where it stands. The self-advocate asks to see the results.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You told people what their input did, including what it did not do and why. That is follow-through, not just thanks. A named check and a date make it real. Build on it by sending the results when you said you would."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the advocate who asked for plain language, a clear no with a reason respects his time more than “reflects your input.” He knows what to push for next."
+            },
+            {
+              "style": "feed-forward",
+              "text": "In future report-backs, try three headings: what changed, what did not change and why, and what happens next and when."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "send-the-thank-you",
+          "text": "Send your lead’s thank-you and mark the analysis complete. The workgroup did shape the bulletin, the deadline is close, and a warm note is how most workgroups are closed out.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The email goes out. The advocate who asked for plain language reads that the bulletin reflects his input and knows it does not. He stops attending. The equity analysis says engagement is complete. No one plans to check how case managers use the guidance.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A thank-you and a completed form do not show that a concern informed the decision. Telling people what changed and what did not is the part that builds trust."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Closing with thanks is common, especially under deadline. It treats acknowledgment as resolution. The harder, more useful step is an honest account."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "hold-for-everything",
+          "text": "Hold the bulletin until the plain-language version is funded, so everyone’s input is reflected and the advocate who asked for it is not left out of the release.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "Release slips past the planning cycle. Case managers go into another round of meetings with the old guidance, which has no prompt to ask the person whom they want involved. The plain-language version is still unfunded. Waiting for every request delayed the changes people did win.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Not wanting to leave anyone’s input behind is a good instinct. But partnership does not mean every request is adopted before anything moves."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A stronger path releases what is ready and tells people honestly what is still open."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "call-it-co-designed",
+          "text": "Send the thank-you, and add that the bulletin was co-designed with people who use services, so the self-advocate and the advocates get public credit for the work they did.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The self-advocate reads “co-designed” and writes back. He reviewed drafts and changed one section. He did not design the bulletin, and he does not want his name behind choices he argued against. The claim was meant as credit. It reads as using his participation as an endorsement.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "To the self-advocate, “co-designed” turns his feedback into an endorsement of the whole bulletin. Taking part is not approval."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A specific account, naming what his input changed, gives real credit without overstating it."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Using community knowledge to prepare questions, not to predict a person’s choice",
+    "Writing guidance that has staff ask the person whom they want involved",
+    "Letting one specific account change a draft, and saying so",
+    "Separating what is fixed from what is open, and changing the open part",
+    "Following a label or record downstream to the next person who will read it",
+    "Reporting back what changed, what did not and why, and when the effect will be checked"
+  ],
+  "this_week": [
+    "Read one bulletin or guidance draft you own. Find any sentence that tells staff what a group prefers, and rewrite it as a question to ask.",
+    "Pick one documentation field or label in your program. Ask how it reads to the next person who opens the record.",
+    "Before your next workgroup meeting, write down what is fixed and what is open, and say both at the start.",
+    "Draft a report-back for your last round of input: what changed, what did not and why, and what happens next."
+  ],
+  "sources": [
+    "cultural-humility-vs-checklist--when-a-fact-sheet-is-a-trap",
+    "cultural-humility-vs-checklist--ask-then-date",
+    "cultural-humility-in-everyday-public-service",
+    "cultural-humility-in-professional-judgment",
+    "dc-i26-cultural-humility-in-depth--build-partnership-without-deciding-for-people",
+    "dc-i26-cultural-humility-in-depth--respond-when-your-interpretation-is-corrected",
+    "dc-s31-cultural-humility-in-public-service--be-curious-without-requiring-disclosure",
+    "dc-s31-cultural-humility-in-public-service--notice-how-your-role-shapes-the-encounter",
+    "dc-i27-cultural-humility-vs-cultural-competence--let-knowledge-improve-the-question"
+  ]
+}

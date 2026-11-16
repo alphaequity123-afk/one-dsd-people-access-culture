@@ -1,0 +1,243 @@
+{
+  "intro_by": "C1",
+  "intro": "If you license, investigate or audit, your notes outlast the visit and shape how the next person reads a provider. In this version you run a licensing review, write the record, and hold an exit interview. Keep the standard clear, and keep your own reading of the person out of the record.",
+  "cast": [
+    {"role": "provider", "label": "the provider", "portrait": "C3"},
+    {"role": "providers-daughter", "label": "the provider’s daughter", "portrait": "C8"},
+    {"role": "licensing-supervisor", "label": "your supervisor", "portrait": "C4"}
+  ],
+  "version": "licensing-integrity",
+  "level": "intermediate",
+  "title": "A licensing visit and the record that follows it",
+  "learner_role": "You are a licensor in the Inspector General’s licensing area. You visit licensed programs, interview providers, review records against the standards, and write correction orders. Your notes and orders are read by other licensors, by investigators, and sometimes by the public.",
+  "background": "Today you have a licensing review at a small licensed program that the provider has owned and run for eleven years. She supports a few adults with disabilities, and her last two reviews found no violations. When you scheduled the visit by phone, she asked whether an interpreter could join for the exit interview. On your team, your supervisor reviews correction orders before they go out. Voice note for recording: the provider speaks with a natural, confident delivery and no performed accent. She is competent and precise.",
+  "start": "d1-the-interpreter-request",
+  "decisions": [
+    {
+      "id": "d1-the-interpreter-request",
+      "recovery": false,
+      "setup": "The provider greets you in English. The walkthrough goes easily, and she answers your questions about the program. The interpreter you asked for was never booked. The scheduler’s note says, “Provider speaks English fine.” Next come the record review and the exit interview, where you will explain any violations and what she must do.",
+      "prompt": "The provider asked for an interpreter for the exit interview. None is booked, and she seems at ease in English. What do you do?",
+      "choices": [
+        {
+          "id": "go-by-what-she-asked",
+          "text": "Go by her request, not the small talk. Ask what she needs for the exit interview, and bring in a qualified phone interpreter or set another time for that part.",
+          "measures": { "learning": "high", "trust": "high", "engagement": "high" },
+          "consequence": "You say, “You asked for an interpreter for this part. I want to make sure you have one. Would a phone interpreter work, or would you rather finish on another day?” The provider says a phone interpreter is fine. She explains that everyday English is easy for her, but rules and orders are where she wants to be sure. The interpreter joins in twenty minutes, and you use the wait to start the record review. When you later explain a records issue, she asks two precise questions.",
+          "feedback": [
+            { "style": "affirm-extend", "text": "You trusted what she told you over what you heard in small talk. Asking what she needed, and arranging qualified help, kept her able to understand and answer the parts with real stakes. Build on it by telling the scheduler how the booking note missed her request." },
+            { "style": "another-perspective", "text": "For the provider, conversational English and the language of a correction order are different things. She knew that ahead of time and said so." },
+            { "style": "reflective-prompt", "text": "When someone tells you what they need, what makes you second-guess it?" }
+          ],
+          "next": "d2-the-medication-record"
+        },
+        {
+          "id": "proceed-in-english",
+          "text": "Proceed in English. She has handled every question easily so far, and setting another time would delay her license. You can speak slowly and check that she follows.",
+          "measures": { "learning": "low", "trust": "low", "engagement": "medium" },
+          "consequence": "You begin the record review in English. The provider answers in short phrases and nods often. When you start explaining the medication standard, you are not sure she is following, and she does not ask questions. Whatever you write next, she may not fully understand what it will ask of her.",
+          "feedback": [
+            { "style": "normalize-reframe", "text": "It is easy to judge someone’s language needs by how a casual conversation goes. But she asked ahead of time, for the part where rules and stakes come in. Her request is the evidence." },
+            { "style": "compare-coach", "text": "Compare this with asking what she needs and arranging a phone interpreter. That costs twenty minutes. It protects her ability to understand an order she is responsible for meeting." }
+          ],
+          "next": "d2-the-medication-record"
+        },
+        {
+          "id": "use-her-daughter",
+          "text": "Ask the provider’s adult daughter, who is visiting and offers to help, to interpret for the exit interview. Her mother trusts her, and no one has to wait for a phone line.",
+          "measures": { "learning": "low", "trust": "medium", "engagement": "medium" },
+          "consequence": "The provider’s daughter agrees. She translates quickly, sometimes summing up. When you explain the medication standard, mother and daughter talk for a while, and the provider’s daughter says, “She understands.” You do not know what was said. The provider’s daughter is family, not a qualified interpreter, and this is the part of the visit where the provider learns what she must fix.",
+          "feedback": [
+            { "style": "compare-coach", "text": "Using family is quick and can feel natural. But good intentions do not make someone a qualified interpreter, and you cannot check what was conveyed. A qualified interpreter protects the provider and the accuracy of your visit." },
+            { "style": "another-perspective", "text": "For the provider’s daughter, carrying a regulatory conversation about her mother’s license is a lot to ask. For the provider, it may change what she feels able to ask in front of her daughter." }
+          ],
+          "next": "d2-the-medication-record"
+        },
+        {
+          "id": "ask-why-she-needs-one",
+          "text": "Ask the provider, kindly, why she wants an interpreter when her English sounds so good, so you can decide whether it is worth delaying the exit interview.",
+          "measures": { "learning": "low", "trust": "low", "engagement": "low" },
+          "consequence": "The provider’s face tightens. “The rules and the order,” she says. “That is where I want to be sure. I asked for this when you scheduled.” The question made her defend a reasonable request. She agrees to go on in English so she does not seem difficult. The visit continues with less trust than it started with.",
+          "feedback": [
+            { "style": "normalize-reframe", "text": "The question may come from real surprise. But it asks her to justify a need she already named, and puts her in the position of proving it." },
+            { "style": "feed-forward", "text": "Ask about the task instead: “What would help you most for the exit interview?”" }
+          ],
+          "next": "d2-the-medication-record"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-medication-record",
+      "recovery": false,
+      "setup": "In the record review, two weeks of medication entries for one resident are not in the medication record you expected to see. The provider says the entries are in a notebook her pharmacy gave her, which she has used for years. She brings it. The entries are there. One dose has no initials, and three entries do not show the time the dose was given. Whether the notebook itself can serve as the required record is a question for the current standard. The missing initials and times are not. Your draft visit note reads, “Provider was evasive about medication records and resistant to licensing requirements.”",
+      "prompt": "Some entries are missing required details. Your draft note describes the provider’s attitude. What goes in the note?",
+      "choices": [
+        {
+          "id": "write-what-you-saw",
+          "text": "Write only what you saw: the pharmacy notebook, one dose without initials, three without times. Cite that, and ask the person or area responsible whether the notebook can serve as the record.",
+          "measures": { "learning": "high", "trust": "high", "engagement": "high" },
+          "consequence": "Your note now reads: “Medication entries for two weeks were kept in a pharmacy-supplied notebook. One dose on the 14th had no initials. Three entries did not show the time given.” The correction order cites the missing initials and times. You email the person or area responsible for the medication standard to ask whether the notebook can serve as the required record. Your supervisor reviews the note and the order and has no questions. A licensor who visits in two years will see what happened, not your read of the provider’s attitude.",
+          "feedback": [
+            { "style": "affirm-extend", "text": "You cited what is clearly required and wrote only what you saw. “One dose had no initials” is an observation. “Evasive” adds a reason she never gave. Asking whether the notebook can count, instead of deciding it yourself, keeps a real requirement apart from a habit. Build on it by reading your notes the way the next licensor will." },
+            { "style": "another-perspective", "text": "To the next licensor, or an investigator, a word like “resistant” becomes the starting point. The provider would carry it into every future visit." },
+            { "style": "reflective-prompt", "text": "Which words in your recent notes describe what happened, and which describe what you thought it meant?" }
+          ],
+          "next": "d3-the-exit-interview"
+        },
+        {
+          "id": "keep-the-draft-note",
+          "text": "Keep the note as drafted. The entries were not where you expected, the record has real gaps, and your professional judgment of how a provider responds is part of what a visit note records.",
+          "measures": { "learning": "low", "trust": "low", "engagement": "low" },
+          "consequence": "You send the note and the correction order to your supervisor. The order is accurate. But the first thing anyone will read in the provider’s file is that she was evasive and resistant. An investigator looking at an unrelated complaint later would start from that frame. The provider, who brought the notebook as soon as you asked, would never see why her file reads that way.",
+          "feedback": [
+            { "style": "normalize-reframe", "text": "After a hard review, a quick summary of how it felt is natural. But the record outlasts the feeling. Words like “evasive” add a motive you did not observe." },
+            { "style": "compare-coach", "text": "Compare “evasive” with “one dose had no initials; three entries did not show the time given.” The second holds the same violation and tells the next reader only what is known." }
+          ],
+          "next": "r1-the-supervisors-question"
+        },
+        {
+          "id": "skip-the-citation",
+          "text": "Do not cite it. She has kept these entries faithfully for years in the pharmacy notebook, and the missing initials and times look like small gaps in an otherwise careful record.",
+          "measures": { "learning": "low", "trust": "medium", "engagement": "low" },
+          "consequence": "The provider is relieved. But the standard exists so every dose can be traced, and some of these doses cannot be fully traced. You send your draft note, still containing “evasive,” to your supervisor with no correction order. Respect for her experience did not change what the standard requires, and the note still describes her attitude.",
+          "feedback": [
+            { "style": "compare-coach", "text": "You were trying to respect her experience, and that matters. But you can reconsider an assumption while keeping necessary standards clear. The stronger move cites the missing initials and times plainly, with no words about her attitude, and checks the notebook question with the person or area responsible." },
+            { "style": "another-perspective", "text": "For the residents in the provider’s care, a complete medication record is a safety protection. Leaving the gap unaddressed does not serve them, or her." }
+          ],
+          "next": "r1-the-supervisors-question"
+        },
+        {
+          "id": "ask-about-her-background",
+          "text": "Before you write anything, ask the provider about her cultural background, so the note can explain why she keeps her medication records differently from other providers.",
+          "measures": { "learning": "low", "trust": "low", "engagement": "medium" },
+          "consequence": "The provider looks puzzled. “The pharmacy gave me the notebook,” she says. “It is easier.” The question had nothing to do with the record, and it suggested her background was the problem. You send your supervisor the draft note as it was, with the order.",
+          "feedback": [
+            { "style": "normalize-reframe", "text": "Wanting to understand the reason for a practice is reasonable. But curiosity needs a purpose tied to the task. Her answer, that it was easier, was there to hear by asking about the notebook." },
+            { "style": "feed-forward", "text": "Try: “Can you show me how you have been using this notebook?” That asks about the practice, not about her." }
+          ],
+          "next": "r1-the-supervisors-question"
+        }
+      ]
+    },
+    {
+      "id": "r1-the-supervisors-question",
+      "recovery": true,
+      "setup": "Your supervisor calls you before the exit interview. “The missing initials and times are a clear violation. They need to be cited. And this note says ‘evasive.’ What did she do that was evasive?” You think back. She brought the notebook as soon as you asked.",
+      "prompt": "Your supervisor has asked you to back up a word in your record. What do you do?",
+      "choices": [
+        {
+          "id": "say-what-you-observed",
+          "text": "Tell your supervisor what you actually saw. Rewrite the note to describe what happened, cite the missing initials and times, and check whether the same word went anywhere else.",
+          "measures": { "learning": "high", "trust": "high", "engagement": "medium" },
+          "consequence": "You say, “She did not hide anything. I wrote what it felt like, not what happened.” You rewrite the note: the pharmacy notebook, the missing initials, the missing times. You find “resistant” also appears in your visit notes in the case system, and you fix that too. You ask the person or area responsible whether the notebook can serve as the required record. Your supervisor clears the correction order. The record now says what happened.",
+          "feedback": [
+            { "style": "affirm-extend", "text": "You took the question as a chance to check your account, not defend it. Following the word into the case system shows that a private change of mind is not enough when the old account has traveled. Next, notice what made that word come so easily." },
+            { "style": "another-perspective", "text": "For your supervisor, clearing an order means standing behind it. A note he can defend with facts protects him, you, and the provider." }
+          ],
+          "next": "d3-the-exit-interview"
+        },
+        {
+          "id": "stand-by-it",
+          "text": "Tell your supervisor it is a judgment call. You were in the room and he was not, and a licensor’s read of a visit is part of the record for a reason.",
+          "measures": { "learning": "low", "trust": "low", "engagement": "low" },
+          "consequence": "Your supervisor asks you to name the facts. You struggle to find any. He asks you to remove the word and cite the violation, and he clears the order once you do. The note changes, but only because he insisted. The habit that produced the word is untouched.",
+          "feedback": [
+            { "style": "compare-coach", "text": "Standing by a judgment you cannot support with an observation is different from professional confidence. A stronger answer says what you saw." },
+            { "style": "reflective-prompt", "text": "When someone asks you to back up a word, how do you tell a judgment from an impression?" }
+          ],
+          "next": "d3-the-exit-interview"
+        },
+        {
+          "id": "soften-the-word",
+          "text": "Agree the word is strong. Change “evasive” to “reluctant,” which is gentler and closer to how the review felt, cite the violation, and send the note back to him.",
+          "measures": { "learning": "medium", "trust": "medium", "engagement": "low" },
+          "consequence": "Your supervisor reads the new word and sighs. “Reluctant” still describes her attitude, not what happened. She brought the notebook as soon as you asked. The note comes back to you a second time, and the exit interview starts late.",
+          "feedback": [
+            { "style": "compare-coach", "text": "A softer word still adds a motive she did not give. The fix is not a gentler label. It is no label, just the observation." },
+            { "style": "feed-forward", "text": "Try writing the sentence a camera could have captured: what was in the notebook, which dose lacked initials, and which entries lacked times." }
+          ],
+          "next": "d3-the-exit-interview"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-exit-interview",
+      "recovery": false,
+      "setup": "At the exit interview, you explain the correction order: every dose must be initialed and show the time given. The provider listens, then says, “In the review you said I did not keep the record. I kept every entry. They are in the other book. Eleven years, and no problems. You make me sound careless.” She is upset. The violation is real. Her account of what she did is also real. Whether an interpreter is on the line depends on what you arranged earlier. This is the part the provider asked for help with.",
+      "prompt": "The provider has corrected how you described her. The violation still stands. How do you respond?",
+      "choices": [
+        {
+          "id": "correct-the-word-keep-the-order",
+          "text": "Name the specific thing you got wrong: she kept every entry. Keep the order. Explain what it asks, what she can choose, and how she can request a review.",
+          "measures": { "learning": "high", "trust": "high", "engagement": "high" },
+          "consequence": "You say, “You are right. You kept every entry. I said you did not keep the record, and that was not accurate. The order is about the missing initials and times.” You tell her you will find out whether the notebook can serve as the required record, and let her know. She asks whether the order goes in her file. You say yes, and explain how she can request a review if she disagrees, and whom to contact. If no interpreter has joined, you offer to set a short follow-up call with one, so she can ask about the order in the language she chose. You ask what would make initials and times easier to record. She says she will initial and time each dose as she gives it. She is still unhappy about the order. She also says, “Thank you for saying that.”",
+          "feedback": [
+            { "style": "affirm-extend", "text": "You named the specific inaccuracy without asking her to make you feel better, and you did not give up the standard to smooth things over. Explaining her review route, in a language she can use, respects her rights in the process. Build on it by bringing her the answer about the notebook, and checking at follow-up that each dose is initialed and timed." },
+            { "style": "another-perspective", "text": "For the provider, eleven years of care is part of who she is as a provider. Hearing you correct the specific word matters, even with the order in place." },
+            { "style": "reflective-prompt", "text": "When a provider corrects your account, how do you keep the correction and the standard both in view?" }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "it-is-not-personal",
+          "text": "Explain calmly that the order is not personal. You are doing your job, the standard applies to every provider the same way, and her long history is not in question here.",
+          "measures": { "learning": "low", "trust": "low", "engagement": "medium" },
+          "consequence": "The provider says, “I know it applies to everyone. I am saying what you said about me was not true.” You repeat that it is not personal. She says nothing more and signs where you show her. The order is accurate. Her correction was never answered.",
+          "feedback": [
+            { "style": "compare-coach", "text": "The standard does apply to everyone, and saying so is true. But she was correcting a specific description, not disputing the rule. Answering the rule instead of the correction leaves her point unheard." },
+            { "style": "normalize-reframe", "text": "Under pushback, “it is not personal” can feel calming. Here it skips the part that was personal: a word about her." }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "withdraw-the-order",
+          "text": "Withdraw the correction order. Her eleven-year record is strong, the gaps are small, and repairing the relationship now will do more for the residents than a citation will.",
+          "measures": { "learning": "low", "trust": "medium", "engagement": "low" },
+          "consequence": "The provider is relieved. Your supervisor is not. He reminds you that one dose has no initials and three entries have no times. The order is reissued the next week, now with a note that it was withdrawn and issued again. The provider is more confused than before, and the repair you meant to offer has become a second surprise.",
+          "feedback": [
+            { "style": "normalize-reframe", "text": "Wanting to make things right with a provider who feels judged is understandable. But the standard and her feelings are separate. You can correct an inaccurate word without dropping a real violation." },
+            { "style": "compare-coach", "text": "A stronger response corrects your description and keeps the order. That repairs what was inaccurate without creating a new problem." }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "ask-for-forgiveness",
+          "text": "Apologize warmly and at length for any offense you caused, tell her how much her work matters, and ask whether she can forgive you before you leave today.",
+          "measures": { "learning": "medium", "trust": "low", "engagement": "low" },
+          "consequence": "The provider says it is fine, because you seem to need her to say so. The conversation is now about how you feel. She still does not know what you got wrong, or how to ask for a review of the order. You leave with her reassurance and without giving her the answer she needed.",
+          "feedback": [
+            { "style": "compare-coach", "text": "A broad apology that asks for forgiveness puts the work of repair on her. Naming the specific inaccuracy gives her less to manage and more to rely on." },
+            { "style": "feed-forward", "text": "Try: “You kept every entry. I said you did not, and that was not accurate. Here is what the order asks, and here is how you can ask for a review.”" }
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Going by a person’s stated communication need, and arranging qualified help",
+    "Writing what you observed instead of a motive you inferred",
+    "Citing what a standard clearly requires, and checking a format question with the person or area responsible",
+    "Holding a clear standard while reconsidering your read of the person",
+    "Asking about a practice, not about a person’s background",
+    "Following an inaccurate word to everywhere it went in the record",
+    "Correcting your description of a provider without giving up a real violation"
+  ],
+  "this_week": [
+    "Reread your last three visit notes. Mark any word that describes a provider’s attitude, and ask what you actually saw.",
+    "Check how interpreter requests made at scheduling reach you before a visit, and who to tell when one is missed.",
+    "Before your next exit interview, write one sentence that states the violation plainly and one that explains how the provider can ask for a review.",
+    "When a provider corrects you this week, try naming the specific thing you got wrong before you explain anything else."
+  ],
+  "sources": [
+    "cultural-humility-vs-checklist",
+    "cultural-humility-vs-checklist--when-the-checklist-is-the-right-tool",
+    "cultural-humility-in-professional-judgment",
+    "cultural-humility-in-everyday-public-service",
+    "dc-s31-cultural-humility-in-public-service--examine-the-meaning-you-add",
+    "dc-s31-cultural-humility-in-public-service--notice-how-your-role-shapes-the-encounter",
+    "dc-s31-cultural-humility-in-public-service--be-curious-without-requiring-disclosure",
+    "dc-i26-cultural-humility-in-depth--respond-when-your-interpretation-is-corrected",
+    "dc-i27-cultural-humility-vs-cultural-competence--develop-skills-without-claiming-complete-understan"
+  ]
+}

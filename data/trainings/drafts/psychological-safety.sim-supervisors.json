@@ -1,0 +1,243 @@
+{
+  "intro_by": "C6",
+  "intro": "If you supervise a team, the small moments in a huddle or a one-to-one teach people whether a question is worth the risk. I have learned that my first reply says more than any open-door promise. Here a newer team member’s question gets brushed off, a team member brings you her own mistake, and someone pushes back on your plan.",
+  "cast": [
+    {"role": "newer-team-member", "label": "the newer team member", "portrait": "C7"},
+    {"role": "senior-team-member", "label": "the senior team member", "portrait": "C5"},
+    {"role": "team-member-with-the-mistake", "label": "the team member who sent the old step", "portrait": "C2"},
+    {"role": "team-member-who-pushes-back", "label": "the team member who pushes back", "portrait": "C1"},
+    {"role": "case-manager", "label": "the case manager", "portrait": "C8"},
+    {"role": "your-manager", "label": "your manager", "portrait": "C3"}
+  ],
+  "version": "supervisors",
+  "level": "intermediate",
+  "title": "The Shared Inbox",
+  "learner_role": "You are a Human Services Supervisor with eight staff. Your team answers policy questions from county and lead-agency case managers through a shared inbox. You run a daily huddle, hold one-to-ones, assign the inbox and decide how team time is used.",
+  "background": "The team answers from a set of standard reply templates. A newer team member joined two months ago. A senior team member has been on the team for years and wrote many of the templates. The inbox is behind, and your manager has asked you to bring the backlog down this month. Once a week, the team takes an hour to talk through hard questions before answering them; this is the team’s own practice.",
+  "start": "d1-the-huddle",
+  "decisions": [
+    {
+      "id": "d1-the-huddle",
+      "recovery": false,
+      "setup": "In the morning huddle, the newer team member asks, “How do the two templates on service changes fit together? One says the case manager sends the form first. The other says the notice goes first.” The senior team member laughs and says, “Everyone else understands it. Stop overthinking.” A couple of people smile. The newer team member looks down at his notes.",
+      "prompt": "You run the huddle. What do you do in the next minute?",
+      "choices": [
+        {
+          "id": "back-to-the-templates",
+          "text": "Ask him which two lines he means, then ask the senior team member which order applies. If it is still unclear, send it to whoever is responsible for the templates.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "He points to the two lines. The senior team member reads them, pauses, and says the second template was written for an older process. Neither is sure which order applies now. You send the question to the person responsible for the templates and say the huddle will hear the answer. One of the people who smiled says she has been answering it both ways.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You moved the attention from who asked to what was asked, and the question turned out to matter. You did not correct anyone in front of the team; you made the templates the topic. Build on it by bringing the answer back to the huddle."},
+            {"style": "another-perspective", "text": "For the senior team member, being asked which order applies was a chance to look again, not a reprimand. Experience stayed useful because it was pointed at the work."},
+            {"style": "reflective-prompt", "text": "On your team, whose questions get answered, and whose get compared to “everyone else”?"}
+          ],
+          "next": "d2-the-one-to-one"
+        },
+        {
+          "id": "talk-later",
+          "text": "Move the huddle along to stay on time, then talk privately with the senior team member this afternoon about how the comment came across, so no one is embarrassed.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "The huddle moves to the next item. The question about the two templates stays where it was. The newer team member writes something in his notes and does not look up. What the team saw was that the comment worked: the question went away.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Not wanting to embarrass anyone in public is considerate, and a private word may still help. But the question itself was left unanswered, and the team saw that."},
+            {"style": "compare-coach", "text": "Compare this with returning to the two lines. That corrects nothing about the senior team member in public; it simply answers the question."}
+          ],
+          "next": "r1-never-mind"
+        },
+        {
+          "id": "pair-him-up",
+          "text": "Smile, say he will pick it up with time, and pair him with the senior team member for a week so he learns the templates the way the team uses them.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "medium"},
+          "consequence": "The room relaxes. The newer team member nods. His question has become a sign that he is new, and the person he will learn from is the one who just dismissed it. The two templates still give different orders.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Pairing can help a newcomer. Here it turned a gap in the templates into a gap in him. The templates still disagree."},
+            {"style": "another-perspective", "text": "To the newer team member, this said his question was about him, not about the work. The next confusing line, he may keep to himself."}
+          ],
+          "next": "r1-never-mind"
+        },
+        {
+          "id": "correct-in-public",
+          "text": "Tell the senior team member, in front of everyone, that the comment was disrespectful, then ask the newer team member to repeat his question so the team can hear it properly.",
+          "measures": {"learning": "medium", "trust": "low", "engagement": "low"},
+          "consequence": "The senior team member goes red. The newer team member, now at the center of a confrontation he did not start, looks at the table. Nobody speaks. The two templates still give different orders, and the one person who knows their history has stopped talking.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Wanting to stop a dismissive comment on the spot is a good instinct. Correcting someone publicly raises the stakes for everyone, including the person you meant to protect."},
+            {"style": "compare-coach", "text": "Returning to the two lines answers the question and shows the comment did not settle it, without making anyone the lesson."}
+          ],
+          "next": "r1-never-mind"
+        }
+      ]
+    },
+    {
+      "id": "r1-never-mind",
+      "recovery": true,
+      "setup": "Before the huddle ends, the newer team member says quietly, “Never mind, it’s fine.” The two templates still give different orders, and the team will answer inbox questions with them this afternoon. You have a few minutes left.",
+      "prompt": "He has withdrawn his question. What do you do with the minutes left?",
+      "choices": [
+        {
+          "id": "reopen-the-work",
+          "text": "Say you let his question get brushed past and want to return to it now. Ask which two lines he meant, and who here answers that kind of question most.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "medium"},
+          "consequence": "You say, “I let that get brushed past. It’s a real question, and these templates go out this afternoon.” He points to the lines. Two people say they answer that question often, and one has been doing it both ways. You send it to the person responsible for the templates and ask the team to hold that reply until the answer comes back. You do not ask the newer team member, in front of everyone, whether he is okay.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You named your own part and went back to the work, which took the weight off him. The person with more power led the repair. Build on it by telling the huddle when the answer arrives."},
+            {"style": "another-perspective", "text": "For the newer team member, “never mind” was a way out of the spotlight. Reopening the work question, rather than asking how he felt, let him stay out of it while his question did its job."}
+          ],
+          "next": "d2-the-one-to-one"
+        },
+        {
+          "id": "take-him-at-his-word",
+          "text": "Take him at his word for now and check in with him privately tomorrow morning; pushing a newer person to keep going in front of the team could embarrass him more.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "The huddle ends. That afternoon, the team answers case managers in two different orders. Your check-in tomorrow can ask how he is; it cannot pull back this afternoon’s replies. The newer team member has learned the cost of asking in the huddle, and the team has learned that a laugh closes a question.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Respecting his wish not to be pushed is thoughtful, and a check-in can still help. But his question was about the templates, not about him. You could have reopened the work without putting him back on the spot."},
+            {"style": "feed-forward", "text": "Next time, try: “I let that get brushed past. Let’s look at the two lines now; they go out this afternoon.”"}
+          ],
+          "next": "d2-the-one-to-one"
+        },
+        {
+          "id": "open-door-speech",
+          "text": "Tell the team your door is always open and no question is a bad question, so the newer team member knows he can bring anything to you privately.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "People nod. The statement is sincere. It does not answer the two templates, and it moves the next question out of the huddle, where the team could learn from it, and into a private conversation with you.",
+          "feedback": [
+            {"style": "compare-coach", "text": "An open-door statement is only as good as the response behind it. The huddle just showed what happens to a question; a speech does not change that, but answering it would."},
+            {"style": "reflective-prompt", "text": "How many questions have come through your open door this month, and what might that number not tell you?"}
+          ],
+          "next": "d2-the-one-to-one"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-one-to-one",
+      "recovery": false,
+      "setup": "Two days later, in your one-to-one, a team member says, “I need to tell you something. Last week I answered a case manager with an old contact step from a template I didn’t check. She’s already shared it with two families.” The team member who sent the old step looks tense. The case manager has not complained. This team member is respected and rarely makes errors.",
+      "prompt": "She has brought you her own mistake. What do you do?",
+      "choices": [
+        {
+          "id": "fix-then-examine",
+          "text": "Thank her for bringing it. Ask her to send the case manager a correction today for the two families, then look together at how the old step reached her reply.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "She sends the correction within the hour and asks the case manager to pass it to the two families. The case manager replies that she will. When you look at how it happened, the template folder holds an old copy and a new one with nearly the same name, and she picked the first. You agree she will check the date line on templates before using them, and you ask the person responsible for the templates to remove the old copy. You do not tell her mistakes don’t matter. You tell her that bringing it early kept the fix small.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You put the families first and the learning second, and you treated the mistake as information, not a verdict. Build on it by checking that the old copy is gone, so the next person does not pick it."},
+            {"style": "another-perspective", "text": "For her, telling her supervisor about her own error was a risk. Being thanked, then given a clear task, tells her the next one is worth bringing early too."},
+            {"style": "reflective-prompt", "text": "What happens on your team to the person who reports their own mistake first?"}
+          ],
+          "next": "d3-the-push-back"
+        },
+        {
+          "id": "reassure-her",
+          "text": "Tell her warmly that mistakes don’t matter here and that you would rather she bring you ten errors than hide one. The template update next month will take care of the old step.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "She relaxes. The case manager and the two families still have the old contact step, and next month’s template update is weeks away. The second half of your message was the one she needed. The first half told her the families’ problem was not urgent.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Wanting her to feel safe bringing errors is the right aim, and relief is a fair thing to offer. But this mistake does matter: two families have the old step. Safety is not a lower standard; it is making the standard safe to meet."},
+            {"style": "compare-coach", "text": "Compare this with thanking her, correcting it today, and then looking at the template folder. She gets the same relief, and the families get the current step."}
+          ],
+          "next": "d3-the-push-back"
+        },
+        {
+          "id": "note-in-her-file",
+          "text": "Thank her, then write it up as a performance note so her record is accurate, and remind her to check templates against the current source before sending any reply.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "medium"},
+          "consequence": "She says, “Okay,” and leaves. The correction to the case manager has not been discussed. The old copy is still in the template folder. She has learned that the first person to report a mistake gets a note in her file. Next time, she may wait to see whether anyone notices.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A first, self-reported error usually calls for a fix and a look at the process, not a record. Writing her up for coming forward teaches the opposite of what you want."},
+            {"style": "another-perspective", "text": "To her, the note says honesty costs more than silence. The template folder that set her up stays as it was."}
+          ],
+          "next": "d3-the-push-back"
+        },
+        {
+          "id": "teach-the-team",
+          "text": "Plan to walk the team through her mistake at the next team meeting, step by step, so everyone learns to check their templates, and let her know it’s coming.",
+          "measures": {"learning": "medium", "trust": "low", "engagement": "medium"},
+          "consequence": "She goes quiet, then says she would rather you didn’t. The families still have the old step, and the team meeting is next week. Her error has turned into a lesson about her, planned without asking whether she wanted that.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Team learning from an error can be valuable. It does not come before the current correction, and it does not need her at the center. The old copy in the template folder is the lesson."},
+            {"style": "another-perspective", "text": "For her, a walk-through of her mistake in front of peers is exposure she did not choose. The teaching value of her error is not yours to spend."}
+          ],
+          "next": "d3-the-push-back"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-push-back",
+      "recovery": false,
+      "setup": "At the next team meeting, you lay out your plan for the backlog: for the rest of the month, the weekly hour for hard questions becomes inbox time. A team member says, “I want to push back on that. That hour is where people ask what they don’t want to ask in writing. If it goes, I think mistaken answers go out faster.” Your manager has asked for the backlog to come down. You had not expected disagreement.",
+      "prompt": "A team member has disagreed with your plan in front of the team. How do you respond?",
+      "choices": [
+        {
+          "id": "examine-and-decide",
+          "text": "Thank him for saying it in the room. Ask what he has seen come out of that hour, explain the backlog pressure, and say you will decide by Friday.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "The team member who pushes back names two errors the hour caught last month before replies went out. Another team member says the hour is also when she learns the reasons behind templates. You explain the pressure from your manager. You decide by Friday: for the rest of the month, the hour becomes thirty protected minutes, and you tell your manager why. At the next huddle, you say what changed because he spoke up, and what did not.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You treated disagreement with your plan as information, and you kept the decision yours. The plan changed partway, and you said why. Build on it by checking at month’s end whether the shorter time still catches what the full hour did."},
+            {"style": "another-perspective", "text": "For the team, watching a direct challenge to the supervisor get a real answer is a lesson in what is safe to say. For your manager, a reasoned change is easier to accept than a missed target with no explanation."},
+            {"style": "reflective-prompt", "text": "Where on your team is there still time to think, and to say no?"}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "keep-it-as-is",
+          "text": "Agree on the spot to keep the full hour, so the team sees that disagreeing with you changes things, and tell your manager the backlog will take longer than planned.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "medium"},
+          "consequence": "The team is pleased. The team member who pushes back looks surprised it was that easy. You have not asked what the hour actually catches, and your manager hears about a missed target without the reasons. The next disagreement may expect the same result whatever its evidence.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Showing that disagreement can change things is valuable. Agreeing before you know what the hour catches skips the evidence. A reasoned decision, even a partial one, shows the same thing more credibly."},
+            {"style": "normalize-reframe", "text": "Leaders sometimes give way quickly to show openness. Safety and standards go together: a challenge deserves examination, not automatic agreement."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "not-the-place",
+          "text": "Say the team meeting is not the place to question a plan your manager asked for, and offer him a one-to-one on Friday if he still has concerns.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "He says, “Okay,” and does not take up the Friday one-to-one. The meeting moves on, and the hour becomes inbox time. Two weeks later, a reply goes out with an error of the kind the hour used to catch. The team has learned that a plan, once announced, is not open to question in the room.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A private follow-up suits some topics. This disagreement was about team time, and the team had a stake in hearing the answer. Closing it in the room told everyone where the line is."},
+            {"style": "another-perspective", "text": "For the team member who pushed back, a team meeting was a fitting place to question a team plan. Being told it was not turns a contribution into a breach."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "noted",
+          "text": "Thank him, say his point is noted and you will think about it, then convert the hour to inbox time as planned, since the decision has to be made this week.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The thanks sound welcoming. The plan does not change, and no one hears whether his point was considered or why it was not adopted. The next time someone doubts a plan, they will remember that “noted” meant nothing happened.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A polite thank-you followed by no examination can look welcoming while leaving the issue untouched. You might still convert the hour. Saying why, after asking what it catches, makes the decision credible."},
+            {"style": "feed-forward", "text": "Next time, try: “I hear you. What has the hour caught lately? I’ll decide by Friday and tell you why.”"}
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Turning a dismissed question back to the work, without making anyone the lesson",
+    "Naming your own part when you let a question get brushed past, and reopening it",
+    "Correcting a mistake for the people affected first, then looking at how it happened",
+    "Keeping a self-reported error out of a file and out of a public example unless the person agrees",
+    "Treating disagreement with your plan as information, and explaining what you decided and why",
+    "Protecting time for thinking when the work is urgent"
+  ],
+  "this_week": [
+    "In your next huddle, when a question gets a quick reply, ask once: “Which line are you looking at?”",
+    "Look at your team’s shared templates or files for old copies sitting next to current ones, and ask who is responsible for clearing them.",
+    "Think of the last mistake someone brought you. Did they leave knowing what to fix and that bringing it was worth it?",
+    "Before you cut a team routine to save time, ask the team what it catches."
+  ],
+  "sources": [
+    "dc-t12-psychological-safety-for-team-members--recognize-the-risk-in-an-ordinary-question",
+    "psychological-safety-respect-and-speaking-up",
+    "dc-t12-psychological-safety-for-team-members--discuss-a-mistake-and-keep-responsibility-clear",
+    "dc-l74-building-psychological-safety-on-teams--respond-to-a-concern-by-examining-its-content",
+    "gc-respectful-workplace--psychological-safety-as-team-practices",
+    "psychological-safety-and-repair-practices-not-personality",
+    "the-fearless-organization-creating-psychological-safety-in-the-workplace-for-lea"
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "intro_by": "C5",
+  "intro": "If you work the front desk or the phones, you are often the first person someone meets at DHS. I know how easy it is to trust the email, the file or the usual routine over what the person in front of you is saying. In this version, you greet a visitor who could not find the door, set up his next visit and decide what to do about the directions.",
+  "cast": [
+    {
+      "role": "visitor",
+      "label": "the visitor",
+      "portrait": "C7"
+    },
+    {
+      "role": "staff-member",
+      "label": "the staff member",
+      "portrait": "C2"
+    },
+    {
+      "role": "coworker",
+      "label": "your coworker",
+      "portrait": "C8"
+    }
+  ],
+  "version": "admin-support",
+  "level": "intermediate",
+  "title": "The Front Desk",
+  "learner_role": "You are a Customer Service Specialist at the front desk of a DHS building. You greet visitors, book meetings with program staff, arrange interpreters and other supports, and keep visitor records up to date. You can propose changes to the confirmation email, but the template belongs to the person or area responsible for building communications.",
+  "background": "Every visitor gets the same confirmation email before a meeting. It gives the street address and the meeting time. The building has four sets of doors facing the street; only one is the public entrance, and it is not marked from the sidewalk. Today a visitor is booked to meet a program staff member about a service his family uses. Your coworker is at the desk with you. The next visitor is due in twenty minutes.",
+  "start": "d1-at-the-desk",
+  "decisions": [
+    {
+      "id": "d1-at-the-desk",
+      "recovery": false,
+      "setup": "The visitor arrives twenty-five minutes late, out of breath. He says the email gave the address, but he walked around the building twice and every door he tried was locked or marked staff only. Your coworker says quietly, “The address is right there on the email.” The staff member has another meeting in twenty minutes.",
+      "prompt": "What do you do first?",
+      "choices": [
+        {
+          "id": "point-to-address",
+          "text": "Agree that the address is correct, show the visitor exactly where it is on the email so he has it for next time, then check whether the staff member can still see him today.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The visitor says, “I know the address.” He sounds more frustrated than when he walked in, and you have not yet called the staff member. Her next meeting is getting closer.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The address was correct, and that was never his question. The readings use almost this exact moment: an accurate address and a usable route are different things. Asking which part of the directions did not help would have found the gap."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the visitor’s side, he did everything the email said and still could not get in. Being shown the address again tells him the problem is him."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "When you walk through the right door every day, it is hard to picture not finding it. That is insider knowledge, and it is exactly what a newcomer does not have."
+            }
+          ],
+          "next": "r1-the-door"
+        },
+        {
+          "id": "hear-and-help",
+          "text": "Say you are sorry it was hard to find and ask which part of the directions did not help. Call the staff member about the time left, and let the visitor choose.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The visitor says the email never said which doors are public, and the locked ones look like the front. The staff member can see him for fifteen minutes now. The visitor chooses to use the fifteen minutes and book a longer follow-up. You write down the entrance problem in his words: “Could not tell which doors are public. Tried two locked sets first.”",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You heard the specific difficulty instead of defending the email, and you gave him a real choice inside a real limit. Writing down his exact words means his knowledge can travel to the people who can fix the directions."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To your coworker, the email looked complete. The visitor’s account shows her something about the building she cannot see from behind the desk."
+            }
+          ],
+          "next": "d2-next-visit"
+        },
+        {
+          "id": "promise-full-hour",
+          "text": "Tell the visitor not to worry and that it was not his fault: the staff member will still see him for the full hour, and you will let her know he is here.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The visitor relaxes. Then the staff member comes down and explains she has fifteen minutes before her next meeting. The visitor looks at you. The promise was yours, but the time was not.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Wanting to fix it for him was kind. The promise came before checking. Calling the staff member first, then giving the visitor the real options, would have kept your word good."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “Let me call the staff member right now and find out what time she has. Then you can decide what works best.”"
+            }
+          ],
+          "next": "r1-the-door"
+        },
+        {
+          "id": "late-rule",
+          "text": "Explain this desk’s practice: visitors more than fifteen minutes late reschedule, so staff calendars stay on track. Apologize for the trouble, and offer the visitor the next opening.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The visitor says he was here on time, outside. He picks up his coat. The staff member, who might have had time to see him briefly, does not know he is here. Nothing about the doors has reached anyone.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "This desk’s lateness practice may serve a real purpose, like protecting staff schedules, but it is a habit of the desk, not a requirement handed down. The stronger choice checks what is actually possible today and asks why he was late before applying it."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which of the front desk’s rules come from a requirement, and which are habits that grew up around one?"
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the visitor’s side, the building kept him out, and then the desk did too."
+            }
+          ],
+          "next": "r1-the-door"
+        }
+      ]
+    },
+    {
+      "id": "d2-next-visit",
+      "recovery": false,
+      "setup": "The visitor wants a longer follow-up next week. The booking form asks whether an interpreter is needed. His visitor record, from an old form someone else filled in years ago, lists a preferred language other than English. Your coworker says, “It’s in his file. Just book the interpreter.” The visitor has been speaking English with you the whole time. He also mentions, without detail, that standing for a long time is hard for him.",
+      "prompt": "How do you set up his next visit?",
+      "choices": [
+        {
+          "id": "ask-the-visitor",
+          "text": "Ask how he wants to communicate and whether he wants an interpreter, in which language. Offer a seat near the entrance and a call when it is time, without asking why.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The visitor says he wants to meet in English, but would like his wife to be able to join by phone, and she would like an interpreter in the language on the old form. He takes the seat and the call. He does not explain the standing, and you do not ask. Booking takes three minutes longer. The visit is now built on what he told you, not on a file.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You asked instead of reading his needs from a file, from how he speaks or from a comment about standing. You also offered support without making a reason the price of it. His answer was something no one could have guessed: the interpreter was for someone else."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep the question open-ended and the same for everyone: “Is there anything that would make this visit work better for you?” It lets people tell you what matters without being singled out."
+            }
+          ],
+          "next": "d3-the-routine"
+        },
+        {
+          "id": "book-from-file",
+          "text": "Book the interpreter in the language from the file, as your coworker suggests. It is in his record, and it is better to have one there and not need it than the reverse.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "You book it. As you read the confirmation back, the visitor frowns: “An interpreter? For me?” He asks what else his file says about him. Nobody has asked who else might join.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Booking from the record feels safe, and it is meant kindly. But an old entry filled in by someone else is a guess about the visitor, not his answer. The readings ask you to check how language support works in practice, starting with asking the person."
+            },
+            {
+              "style": "compare-coach",
+              "text": "One question, “Would you like an interpreter, and in which language?”, would have caught both the wrong booking and the right one for his wife."
+            }
+          ],
+          "next": "r2-the-booking"
+        },
+        {
+          "id": "skip-interpreter",
+          "text": "Skip the interpreter and leave the language field blank. He clearly speaks English well, the old form is out of date, and booking one he does not need wastes a slot.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "You book it without support. As he turns to go, the visitor asks whether his wife could join by phone, and whether she could have an interpreter. Nothing in the booking allows for that.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You were right not to trust the old file. The stronger move replaces one guess with a question, not with a different guess based on how he speaks."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you decide someone does not need a support, what are you usually basing it on?"
+            }
+          ],
+          "next": "r2-the-booking"
+        },
+        {
+          "id": "ask-condition",
+          "text": "Ask the visitor, kindly, what health condition makes standing hard, so you can note it for the staff member and staff can plan the right support for his visit.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The visitor says, “I’d rather not get into that.” The desk goes quiet. You have not yet offered the seat, and the language question has not come up.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A seat near the entrance and a call when the staff member is ready do not need a diagnosis. Practical help should not depend on sharing a personal history."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the visitor’s side, a passing comment has turned into a health question at a public desk, in front of a coworker."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Offer the support and let the person choose: “Would a seat near the entrance help, with a call when the staff member is ready?”"
+            }
+          ],
+          "next": "r2-the-booking"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-routine",
+      "recovery": false,
+      "setup": "The visit is booked. The visitor is not the first person to arrive late and lost; you remember at least two others this month. The confirmation email template still gives only the street address. The visitor’s record still shows the old language entry.",
+      "prompt": "What do you do now that the visit is set?",
+      "choices": [
+        {
+          "id": "fix-the-route",
+          "text": "Update the visitor’s record, send his words and a clearer entrance line to the person or area responsible for the template, and ask the next visitors whether they found the door.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You confirm with the visitor what his record should say. It now reads English for him, with an interpreter by phone for the person joining him, as he asked. The communications team adds “The public entrance is the glass doors facing the parking lot” to the template, and a request for a clearer sign goes to facilities. You send the visitor the clearer directions now. Over the next two weeks, you ask visitors how they found the door. Most say it was easy. One still tried the side doors first. You pass that on too, and treat the fix as untested until more visitors say it works.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You followed the problem past the desk: the record, the template and the next visitors. And you kept your claim honest. A clearer line is an action; whether people can find the door is a separate question you went and asked."
+            },
+            {
+              "style": "another-perspective",
+              "text": "The visitor who still tried the side doors matters. One improvement does not settle everyone’s experience, and you kept listening after the fix."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "edit-template",
+          "text": "Edit the confirmation template yourself to name the glass doors facing the parking lot, so this does not happen again, and tell your supervisor the problem is fixed.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Your wording is clearer. Two days later, the communications team changes it back, because template changes go through their review. Your supervisor reports the problem fixed in a meeting. The visitor’s record still lists the old language entry.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You saw a real fix. The stronger choice sends it through the person or area responsible so it lasts, and does not call it fixed until visitors can actually find the door."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What is the difference between changing the email and knowing the change helped?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "note-confused",
+          "text": "Add “visitor confused by directions” to the visitor’s record, so the next person at the desk knows to explain the entrance to him, and move on to the next visitor.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The next person to open the visitor’s record reads that he gets confused. The template does not change. Next week, another visitor arrives late and lost.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "“Confused” puts the problem in the visitor. His account put it in the directions. Compare: “Could not tell which doors are public.” One labels the visitor; the other names the gap."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Picture the visitor’s next visit. Whoever greets him may now speak to him slowly and simply, because of one word in a record."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "just-this-visitor",
+          "text": "Update the visitor’s record and send him a personal email with clear directions to the glass doors. Leave the template alone, since templates belong to communications and are not part of your job.",
+          "measures": {
+            "learning": "medium",
+            "trust": "high",
+            "engagement": "low"
+          },
+          "consequence": "The visitor writes back thanking you, and arrives on time next week. The template still gives only the address. The other visitors this month never get the email you sent him.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You did right by the visitor. The stronger choice also passes his account to the person or area responsible, because the barrier is in a routine every visitor meets."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When the same problem comes up twice, write a two-line note to whoever owns the routine: what people said, and a suggested fix."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-the-door",
+      "recovery": true,
+      "setup": "The visitor says, “I was here. I just couldn’t find the door.” Your coworker looks at you.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "ask-which-part",
+          "text": "Say “That makes sense. Which doors did you try?” Listen, call the staff member about the time left, and let him choose how to use it.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The visitor describes the two locked sets of doors. The staff member still has a short window. He takes it and books a longer follow-up. You write down which doors he tried.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You let his correction change your response, and you asked about the specific difficulty instead of repeating the address."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Your coworker heard it too. The visitor’s account is now something the whole desk knows."
+            }
+          ],
+          "next": "d2-next-visit"
+        },
+        {
+          "id": "apologize-reschedule",
+          "text": "Apologize warmly for the trouble, tell him the building is confusing for a lot of people, and offer him the first open time on the staff member’s calendar.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The visitor takes a new time. The few minutes the staff member had today go unused. The doors he tried are not written down anywhere.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The apology helps. Asking which doors he tried, and checking the staff member’s time, would have turned it into something useful for him and for the next visitor."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Pair every apology at the desk with one question about what happened."
+            }
+          ],
+          "next": "d2-next-visit"
+        },
+        {
+          "id": "point-to-sign",
+          "text": "Point out the small sign by the parking lot, say most people find it without trouble, and suggest he look for it when he comes back next time.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The visitor says he did not see a sign. He is quiet for the rest of the check-in.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Most people finding it does not mean everyone can. One person’s account can show a gap that others found a way around."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you defend a sign or a form, who are you picturing using it?"
+            }
+          ],
+          "next": "d2-next-visit"
+        }
+      ]
+    },
+    {
+      "id": "r2-the-booking",
+      "recovery": true,
+      "setup": "The visitor’s answer tells you the booking was built on an assumption, or that a question went further than he wanted. The visit is still a week away.",
+      "prompt": "How do you set it right?",
+      "choices": [
+        {
+          "id": "ask-and-rebook",
+          "text": "Ask the visitor how he wants to communicate, who will join and what would help. Change the booking to match, without asking for a reason.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The visitor explains that the interpreter would be for his wife, joining by phone. You rebook it that way and offer the seat near the entrance and a call when the staff member is ready. He takes both, without having to explain why, and thanks you for asking.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You replaced the assumption with his answer, and kept practical help separate from any personal explanation."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Ask the same supports question of every visitor, so no one is singled out by it."
+            }
+          ],
+          "next": "d3-the-routine"
+        },
+        {
+          "id": "cancel-quietly",
+          "text": "Fix the booking quietly: adjust what you set up, apologize for the mix-up, and ask nothing more, so the visitor is not put on the spot again.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The booking is tidier, and the visitor does not have to explain anything. But no one asks what he does want, so who joins the meeting, in which language, and the seat near the entrance all stay unsettled.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Removing a wrong guess helps. Asking what he does want would have found the support that was actually needed."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What did you learn about the visitor just now, and what do you still not know?"
+            }
+          ],
+          "next": "d3-the-routine"
+        },
+        {
+          "id": "explain-file",
+          "text": "Explain where the setup came from: his visitor record and what the desk usually does, so he knows it was not personal and the desk followed its process.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The visitor says the record was filled in by someone else years ago, and nobody asked him then either. The conversation is now about the desk’s process, not about his visit.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Explaining where a decision came from is a natural reaction. It defends the booking instead of fixing it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the visitor, an old record is being taken over what he is saying in front of you."
+            }
+          ],
+          "next": "d3-the-routine"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Hearing a visitor’s specific difficulty instead of defending accurate directions",
+    "Checking what is possible before making a promise, then giving the person the choice",
+    "Asking how a person wants to communicate instead of reading it from a file or from how they speak",
+    "Offering practical support without making a personal reason the price of it",
+    "Writing down a person’s own words so their knowledge can reach the person or area responsible",
+    "Treating a fix as untested until the people it is meant for say it works"
+  ],
+  "this_week": [
+    "Ask the next three visitors who arrive late what part of getting here was hard, and write down their words.",
+    "Before booking an interpreter or support from a record, ask the visitor what they want for this visit.",
+    "Read the confirmation email as someone who has never been to the building, and send one suggested change to the person or area responsible."
+  ],
+  "sources": [
+    "cultural-humility-in-professional-judgment",
+    "cultural-humility-in-everyday-public-service",
+    "dc-i26-cultural-humility-in-depth",
+    "dc-s31-cultural-humility-in-public-service",
+    "cultural-humility-vs-checklist"
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "intro_by": "C3",
+  "intro": "If you manage a statewide program, your choices reach every county and every team under you. I have seen how the first response to an error decides whether the next one surfaces early. Here a guidance error reaches counties, a project staff member brings you an early warning and a harder concern, and you decide what changes in the work.",
+  "cast": [
+    {"role": "policy-analyst", "label": "the policy analyst", "portrait": "C7"},
+    {"role": "team-supervisor", "label": "the team supervisor", "portrait": "C6"},
+    {"role": "project-staff-member", "label": "the project staff member", "portrait": "C1"},
+    {"role": "county-representative", "label": "the county representative", "portrait": "C4"},
+    {"role": "division-director", "label": "your division director", "portrait": "C2"}
+  ],
+  "version": "managers",
+  "level": "intermediate",
+  "title": "The Guidance Error",
+  "learner_role": "You are a Human Services Manager running a statewide program. You turn legislative requirements into guidance and services, decide how staff time and budget are used, and manage two supervisors and their teams.",
+  "background": "Your program recently sent a guidance bulletin to every county and lead agency about a requirement the legislature changed. A policy analyst drafted it, the analyst’s team supervisor reviewed it, and you approved it. A project staff member on a temporary appointment works on the same team. Your division director has asked to hear about anything that goes wrong in county guidance.",
+  "start": "d1-the-error",
+  "decisions": [
+    {
+      "id": "d1-the-error",
+      "recovery": false,
+      "setup": "The county representative calls. The bulletin’s eligibility note uses the threshold from before the legislative change, and county workers are already applying it. You confirm it: the policy analyst drafted from a stale copy of the source, and the team supervisor’s review checked the draft against that same copy. At your managers’ meeting, the team supervisor says, “Nobody is to blame here. The system caused this.” Another supervisor says the analyst should have known better.",
+      "prompt": "Counties are applying an outdated threshold today. How do you lead the response?",
+      "choices": [
+        {
+          "id": "correct-then-examine",
+          "text": "Correct the bulletin to counties today through the usual route. Then trace the source check with the policy analyst and the team supervisor, and keep any performance question separate.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "The correction reaches counties that afternoon, and the county representative thanks you for the speed. In the review, the policy analyst explains that he pulled the source from a shared folder that still held the old version beside the new one. The team supervisor reviewed against the same file. Each assumed the other had checked the current source. No one is labeled. The open question is whose job the current-source check is, and right now the answer is no one’s.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You put the current harm first and the learning second, and you did not let either replace the other. Tracing the handoff found a gap that blame would have hidden. Build on it by naming who owns the current-source check before the next bulletin."},
+            {"style": "another-perspective", "text": "For the county representative and the workers applying the note, a same-day correction mattered more than any review. For the policy analyst, being asked how the work happened, rather than told what he is, makes the next error more likely to surface early."},
+            {"style": "reflective-prompt", "text": "When an error reaches the public, what do you reach for first: the fix, the explanation or the person?"}
+          ],
+          "next": "d2-the-warning"
+        },
+        {
+          "id": "no-one-to-blame",
+          "text": "Agree with the team supervisor that nobody is to blame and the system caused it, so staff see that admitting errors is safe. Send the correction once the template is fixed.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "Staff are relieved. The template fix takes four days, and counties apply the old threshold for those four days. When you look for who will check sources on the next bulletin, there is no answer, because the account you gave says no one had a part in this one.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Wanting staff to feel safe admitting errors is a good aim. But a system cause does not mean no one had a responsibility, and the correction never needed to wait for the template."},
+            {"style": "compare-coach", "text": "Compare this with correcting today and then tracing the handoff. The analyst and the supervisor both had a part, and so did the shared folder. Naming that is accountability without a verdict."}
+          ],
+          "next": "d2-the-warning"
+        },
+        {
+          "id": "name-the-analyst",
+          "text": "Tell the division in your update that the policy analyst drafted from an outdated source, so everyone understands what went wrong and checks their own sources more carefully from now on.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The correction goes out that day, and so does the update. The policy analyst reads it at his desk. Two other analysts start rereading their own drafts alone instead of asking anyone. The review step that used the same stale file is not mentioned anywhere.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Naming one person’s step publicly answered who, not how. It hid the review gap and made the error about a person. Tracing the handoff would have found both."},
+            {"style": "another-perspective", "text": "For the policy analyst, a division-wide update is a public verdict. For everyone else, it is a lesson about what happens to the person whose error is found."}
+          ],
+          "next": "d2-the-warning"
+        },
+        {
+          "id": "review-first",
+          "text": "Hold a learning review with the whole team next week before anything changes, so the correction to counties reflects everything it finds in one message.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "The review is thoughtful when it happens. Until then, county workers keep applying the old threshold, and the county representative calls again to ask whether a correction is coming. One message to counties was neater. It was also a week late for the people being assessed in the meantime.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A learning review is worth doing. It cannot do the current work. The correction counties needed today did not depend on knowing how the error happened."},
+            {"style": "another-perspective", "text": "For the county representative, the delay looks like the state knew and waited. That shapes whether the county calls quickly next time."}
+          ],
+          "next": "d2-the-warning"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-warning",
+      "recovery": false,
+      "setup": "The next morning, the project staff member asks for a few minutes with you. He says, “Two weeks before the bulletin went out, I told my supervisor the eligibility note looked like it came from an old source. He said it wasn’t my place. When I raised it again, he made a joke about my disability in front of the team. I’m on a temporary appointment, and he decides my next assignment. I wasn’t sure who else to tell.”",
+      "prompt": "He has raised a work warning and a disability-related comment by his supervisor. What do you do?",
+      "choices": [
+        {
+          "id": "report-and-separate",
+          "text": "Thank him, and say you must report the disability comment to human resources this morning and will not investigate it yourself. Ask what he needs to feel safe at work.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "You say, “Thank you for telling me. Because I manage this area, I have to report the comment about your disability to human resources or the Equal Opportunity and Access Division right away. I won’t look into it or talk to your supervisor about it myself. The people who receive it will contact you. I can’t keep this between us, but I can tell you what happens next.” You ask what he needs now. He asks to sit apart from his supervisor at this week’s team meeting, and you arrange it. You tell him retaliation is prohibited and that you will watch for any change in his assignments. You make the report that morning. Separately, you note his earlier warning about the source as a work fact about how the error happened.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You were honest about your duty before he had to ask, you did not investigate, and you asked what he needed instead of deciding for him. Build on it by keeping his work warning in view: it is a separate question that still deserves an answer."},
+            {"style": "another-perspective", "text": "For a temporary staff member whose next assignment depends on the person he is reporting, the risk of speaking was high. Being told plainly what happens next, and that retaliation is watched for, makes that risk easier to carry."},
+            {"style": "reflective-prompt", "text": "Do you know, today, how to reach the person in human resources who receives these reports for your area?"}
+          ],
+          "next": "d3-the-fix"
+        },
+        {
+          "id": "handle-it-quietly",
+          "text": "Promise to keep it between the two of you and talk to his supervisor yourself, so the joke stops quickly, his assignment is protected, and nobody has to go through a formal process.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "He looks relieved and thanks you. You have promised something you cannot keep. As a manager, you have to report a disability-related comment by a supervisor, and talking to the supervisor yourself is the start of an informal investigation. Before he leaves, you realize the promise and the duty cannot both stand.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Wanting to protect him and fix it fast is a caring instinct. Under Policy 1436, managers and supervisors immediately report protected-class allegations to human resources or the agency Affirmative Action Officer and follow agency procedures. A private talk cannot replace that, or come first."},
+            {"style": "another-perspective", "text": "If the informal talk goes badly, his supervisor will know exactly who spoke. He trusted your promise to manage that risk; the formal route exists partly to manage it better."}
+          ],
+          "next": "r2-what-happens-now"
+        },
+        {
+          "id": "bring-them-together",
+          "text": "Suggest a conversation with him and his supervisor together this week, so each can hear the other, and decide afterward whether the comment needs to go to human resources at all.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "He hesitates and says, “With him in the room?” The suggestion puts a temporary staff member across the table from the person who controls his next assignment, as the price of being heard. It also makes a repair conversation the gate to a report you are required to make immediately.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Repair may matter later. It cannot come first, and it cannot decide whether a required report happens. The stronger move reports now and asks him what he needs."},
+            {"style": "another-perspective", "text": "To him, this offer means facing his supervisor before anyone with authority to act has heard what happened."}
+          ],
+          "next": "r2-what-happens-now"
+        },
+        {
+          "id": "ask-the-team",
+          "text": "Before deciding anything, quietly ask two people on the team whether they heard the joke, so you know what actually happened and can tell human resources something solid.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "You tell him you plan to ask a couple of people what they heard. He goes still. Asking teammates is the start of an investigation that is not yours to run. It can spread private information, weaken a fair process and tell the team who spoke up.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Wanting solid facts is reasonable. Gathering them belongs to the people who receive the report. A referral does not depend on whether you believe the account."},
+            {"style": "another-perspective", "text": "For him, colleagues being asked about the joke means the team learns he reported it, before any protection is in place."}
+          ],
+          "next": "r2-what-happens-now"
+        }
+      ]
+    },
+    {
+      "id": "r2-what-happens-now",
+      "recovery": true,
+      "setup": "He is still sitting across from you. He asks, “So what happens now with what I told you about the comment?” Nothing has been reported or said to anyone yet.",
+      "prompt": "He has asked what happens next. What do you tell him?",
+      "choices": [
+        {
+          "id": "explain-the-duty-now",
+          "text": "Say you spoke too soon. You must report the comment to human resources immediately and will not look into it yourself. Ask what he needs in the meantime.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "medium"},
+          "consequence": "You say, “I spoke too soon. I can’t keep this between us or handle it myself. I have to report it to human resources or the Equal Opportunity and Access Division now, and the people who receive it will contact you.” He is quiet, then asks whether his supervisor will know it came from him. You say you cannot promise that, that retaliation is prohibited, and that you will watch for it. He asks to sit apart from his supervisor at this week’s team meeting, and you arrange it. You make the report before lunch.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You took back your first answer quickly and plainly, before it shaped what he did next. Honesty about what you cannot promise is part of what makes the report usable for him. Build on it by checking in after human resources makes contact."},
+            {"style": "another-perspective", "text": "Hearing a manager take back an offer could feel like a loss. Hearing why, and what will happen instead, lets him decide his own next steps with full information."}
+          ],
+          "next": "d3-the-fix"
+        },
+        {
+          "id": "keep-the-offer",
+          "text": "Keep your first answer for now, and tell him you will check back with him in two weeks and report only if the joke has happened again.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "He thanks you. The comment goes unreported for at least two weeks. If it happens again, there will be no record that a manager knew the first time. His trust rests on a promise that leaves him less protected, not more.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Trust matters, and it is why the honest answer matters. Checking back in two weeks sounds attentive, but a manager’s duty to report a protected-class comment does not wait two weeks, or for it to happen again."},
+            {"style": "normalize-reframe", "text": "Not wanting to break a confidence is a decent impulse. The duty exists so that protection does not depend on one manager’s judgment of whether a comment counts."}
+          ],
+          "next": "d3-the-fix"
+        },
+        {
+          "id": "let-him-decide",
+          "text": "Ask him whether he wants it reported. If he says no, respect that, since he knows the situation best and should stay in control of what happens to his own account.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "He says he is not sure and needs to think. Control over his own account matters, and for a coworker who had only witnessed the joke, it would come first. For a manager, though, the report is not his to waive. Leaving the choice with him puts the weight of your duty on the person with the least power in this story.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Asking what someone wants is the right move for a coworker who saw something. A manager’s report of a protected-class comment is a duty, not a choice to hand over. You can still ask what he needs, and tell him what to expect."},
+            {"style": "another-perspective", "text": "To him, being asked to decide may feel respectful, and also like being asked to choose whether his supervisor gets reported. That is a hard choice to give someone on a temporary appointment."}
+          ],
+          "next": "d3-the-fix"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-fix",
+      "recovery": false,
+      "setup": "Ten days later, the corrected bulletin is out. Your division director asks what you are changing so county guidance does not repeat the error, and whether you need another position. Looking back, two things are clear: no one owned the current-source check, and an early warning about the source never reached the bulletin.",
+      "prompt": "What do you change, and what do you ask for?",
+      "choices": [
+        {
+          "id": "proportionate-change",
+          "text": "Add a line in each bulletin packet for open source questions, make the current-source check one named person’s job, and review after the next two bulletins whether it catches anything.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "The change is small enough to use. On the next bulletin, the policy analyst lists two open source questions; the person checking sources answers one and sends the other to the person responsible for the requirement. When you tell the division about the change, you describe the gap in the source check and do not say who raised what. Your division director asks you to report back after the second bulletin.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "The change fits the gap you found: no one owned the source check. It is small, testable and has a review point. Build on it by saying, after the second bulletin, what it did and did not catch."},
+            {"style": "another-perspective", "text": "For the project staff member, his warning shaped the fix without his name attached, while the human resources matter is still open. Keeping the warning out of the announcement protects him and the process."},
+            {"style": "reflective-prompt", "text": "When you fix a process, how do you check that the fix fits the gap, not just the worry?"}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "review-everything-yourself",
+          "text": "Add your own sign-off as a second review on every bulletin and guidance document from now on, so nothing reaches counties without a manager’s check, and ask for a position to cover the load.",
+          "measures": {"learning": "medium", "trust": "low", "engagement": "low"},
+          "consequence": "Guidance slows. Your review checks the draft, not the source, so it would not have caught this error. Analysts begin waiting for your sign-off before raising source doubts, since you will see the draft anyway. The position request goes to your division director with a cost and no evidence that it addresses the gap.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Wanting nothing to slip past again is understandable. A new approval layer on every document does not match a gap in who checks the source. A named source check does."},
+            {"style": "normalize-reframe", "text": "Adding oversight after an error is a common reflex for managers. It can look like accountability while moving responsibility away from the people closest to the work."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "remind-everyone",
+          "text": "Send all staff a reminder on Monday, signed by your division director, to double-check sources before any bulletin goes out and to speak up if something looks off.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "People read it, and the division director’s name gets their attention. The shared folder still holds the old source next to the new one, and no one owns the current-source check. The reminder asks people to speak up when something looks off, which someone already did.",
+          "feedback": [
+            {"style": "compare-coach", "text": "“Be more careful” leaves the same invisible assumption in place, and a senior signature makes it louder, not more specific. The gap was in who checks the source, and a reminder does not assign it."},
+            {"style": "another-perspective", "text": "For the project staff member, being told to speak up when something looks off, after he did exactly that, may land badly."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "error-dashboard",
+          "text": "Ask supervisors to track each analyst’s errors in county guidance on a shared dashboard, so patterns show early and your division director can see which teams need more coaching.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The dashboard fills slowly, because people stop mentioning small errors they catch themselves. The policy analyst has the only entry. The gap in who checks the source does not appear on the dashboard at all.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Counting errors by person shows who got caught, not how the work failed. Better teams often report more errors because they can talk about them; a ranking can push those reports out of sight."},
+            {"style": "another-perspective", "text": "For analysts, a shared error count turns every catch into a mark against them. The safest move becomes not mentioning what they find."}
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Correcting a public-facing error first, then examining how it happened",
+    "Keeping learning about an error separate from any performance question, without erasing responsibility",
+    "Reporting a protected-class comment immediately, without investigating it yourself",
+    "Being honest about what you cannot keep confidential, and watching for retaliation",
+    "Matching a process change to the gap you found, with a review point",
+    "Keeping a private concern out of a team announcement while a formal matter is open"
+  ],
+  "this_week": [
+    "Pick one piece of guidance your area sends out. Write down who checks its source, by role. If no one does, name someone.",
+    "Find out who in human resources receives protected-class reports for your area, and save that contact where you can reach it quickly.",
+    "At your next managers’ meeting, when an error comes up, ask first what the people affected need today.",
+    "Tell your teams one thing that changed because someone raised a concern, after checking with that person how they want it handled."
+  ],
+  "sources": [
+    "dc-l74-building-psychological-safety-on-teams--learn-from-a-mistake-without-replacing-accountabil",
+    "dc-t13-creating-psychological-safety-as-a-leader--lead-learning-after-a-work-error",
+    "dc-t13-creating-psychological-safety-as-a-leader--respond-to-an-uncomfortable-concern-with-care",
+    "dc-l74-building-psychological-safety-on-teams--recognize-hierarchy-and-keep-the-right-concern-rou",
+    "gc-respectful-workplace--reporting-routes-route-do-not-investigate",
+    "gc-respectful-workplace--bystander-action-the-five-ds-at-work",
+    "the-fearless-organization-creating-psychological-safety-in-the-workplace-for-lea",
+    "psychological-safety-and-repair-practices-not-personality"
+  ]
+}

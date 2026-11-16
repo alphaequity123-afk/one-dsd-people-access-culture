@@ -1,0 +1,484 @@
+{
+  "intro_by": "C8",
+  "intro": "If you work in legal, HR, communications, training or appeals, you are often the expert in the room, and your drafts reach a lot of people. I have noticed that the moment someone questions my work is the moment I most want to explain instead of listen. Here, you receive a challenge to your own draft, a colleague’s private concern, and the chance to tell the team what changed.",
+  "cast": [
+    {
+      "role": "training-specialist",
+      "label": "the training specialist",
+      "portrait": "C3"
+    },
+    {
+      "role": "communications-lead",
+      "label": "the communications lead",
+      "portrait": "C1"
+    }
+  ],
+  "version": "enterprise-services",
+  "level": "intermediate",
+  "title": "The Launch Draft",
+  "learner_role": "You are a communications specialist. You write public web content and the scripts for staff training about program changes. You are not a supervisor. The communications lead approves final content, and what a policy requires belongs to the person or area responsible for that policy.",
+  "background": "A program change takes effect in three weeks. You have spent two weeks on the public web page and the matching staff training script, and the content review is this afternoon. The training specialist joined the team six weeks ago and has read both drafts. In the review, with the communications lead and four colleagues present, she says one sentence on the web page may tell people the wrong next step. You wrote that sentence carefully, and you are tired.",
+  "start": "d1-the-sentence",
+  "decisions": [
+    {
+      "id": "d1-the-sentence",
+      "recovery": false,
+      "setup": "She reads the sentence aloud: “Call your county to update your information.” Then she says, “The training script says to update online first. Which one do people actually do?” You feel the two weeks of work in your chest. The words “You’d understand if you’d been here longer” are already halfway out.",
+      "prompt": "What do you say instead?",
+      "choices": [
+        {
+          "id": "ask-her-reading",
+          "text": "Ask what next step the sentence suggests to her. Then put the web sentence and the training line side by side, and ask who confirms which one the policy supports.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "She says a reader would think calling the county is the only way. You put both lines on screen. They do not match, and you are not sure which is right. The communications lead says the question goes to the person or area responsible for the policy, and asks you to send it today. The training specialist adds that she might be wrong about the online route. “Maybe,” you say. “That’s what the check is for.”",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You caught the defensive sentence before it landed and asked one question first. That kept two weeks of effort from becoming the answer to a question about one sentence. You also did not agree just to smooth things over. Build on it: keep a clarifying question ready for the next time your work is questioned in a room."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Six weeks into a team, questioning an experienced colleague’s draft in front of the lead carries a real risk. How you answered just told her, and the four colleagues watching, whether that risk was worth taking."
+            }
+          ],
+          "next": "d2-at-your-desk"
+        },
+        {
+          "id": "great-catch",
+          "text": "Thank her for a great catch, say you will check it with the communications lead after the meeting, and move on to the training script.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "She nods. The review moves on. Nobody compares the two lines, and “great catch” hangs in the air with nothing attached to it. The communications lead marks the web page approved, pending your check.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Thanking her was a good start. But a welcoming phrase followed by moving on can leave the question outside the work. Two lines on a screen would have taken about a minute."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you say “great question” and move on, what does the person who asked actually get?"
+            }
+          ],
+          "next": "r1-still-in-review"
+        },
+        {
+          "id": "explain-history",
+          "text": "Explain that the sentence went through two rounds of review with the program area before she joined, so the wording is settled, and offer to walk her through the history later.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "She says, “Okay,” and looks down at her notes. Two colleagues who had marked the same sentence close their laptops. The history you offered answers whether the sentence was reviewed, not whether it tells people the right next step.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You did not say the tenure line, but this was a polite version of it. Review history and length of service cannot show whether a sentence is clear. Tenure does not determine a sentence’s meaning or accuracy."
+            },
+            {
+              "style": "another-perspective",
+              "text": "The two colleagues who closed their laptops had the same question. Your answer to her was also an answer to them."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Defending work you invested in is one of the most human reactions there is. Noticing the urge is the first step; asking one question before explaining is the second."
+            }
+          ],
+          "next": "r1-still-in-review"
+        },
+        {
+          "id": "change-it-now",
+          "text": "Agree right away and change the sentence to match the training script, since she is probably right and arguing over a draft in front of the team is not worth it.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "You start retyping the sentence to match the script. Then a colleague asks which route the policy actually supports. Nobody knows. You stop with the edit half done, and the two versions may both be off.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Taking her seriously was right. Agreeing without checking is a different thing. Welcoming a question does not decide its answer; the sentence still needed its source."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “Good question. I’m not sure which is right either. Let’s check it with whoever owns the policy before either version goes out.”"
+            }
+          ],
+          "next": "r1-still-in-review"
+        }
+      ]
+    },
+    {
+      "id": "d2-at-your-desk",
+      "recovery": false,
+      "setup": "After the review, the training specialist asks if you have a minute. She says something else has been on her mind. For a month, a colleague on another team has called her by a shortened name she has asked him not to use, joking that her name is too hard to say. Yesterday, in a group chat, he mocked her accent. She asks you not to tell anyone. She just wanted someone to know.",
+      "prompt": "How do you respond?",
+      "choices": [
+        {
+          "id": "listen-and-routes",
+          "text": "Thank her for telling you and say it was not okay. Ask what she wants, name the routes she could use, and be honest about what you can keep private.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "She says she does not know yet; she did not want to make it a big thing. You tell her she does not have to decide whether it counts as harassment before raising it; sorting that out belongs to HR and the Equal Opportunity and Access Division. You name her options: her supervisor, HR, that division, her union representative, the Employee Assistance Program. You tell her that reporting is encouraged and that any of these routes is hers to use. You say that since you are not her supervisor, this stays with you unless she decides otherwise, and you offer to go with her if she reports. You ask whether she wants you to write down what she told you; she says yes, just for her. You do not go to the colleague.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You listened without judging how serious it was, and you kept the choice with her. Being honest about what you could keep private, and offering company rather than taking over, is what a colleague who is not a supervisor can do. Build on it: check in with her in a few days, without pressing for a decision."
+            },
+            {
+              "style": "another-perspective",
+              "text": "She came to you, not her supervisor. That may be because a supervisor has a duty to report, and she wanted time to think. Respecting that is part of why she trusted you."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Know the routes before you need them. Find the current contacts for your HR business partner, the Equal Opportunity and Access Division and the Employee Assistance Program, and keep them where you can find them."
+            }
+          ],
+          "next": "d3-the-team-meeting"
+        },
+        {
+          "id": "talk-to-him",
+          "text": "Offer to have a quiet word with the colleague yourself, peer to peer, so the name-calling stops without her having to file anything or make it into something formal.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "She hesitates, then says she is not sure she wants him to know she said anything. You realize your plan would put her name in his ear before she has chosen anything at all.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to fix it fast, and spare her the stress of a process, comes from care. But a quiet word is a decision about her situation, made for her. Ask the targeted person what they want before acting."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare “I’ll talk to him” with “What would you like to happen? Here are the routes you could use.” The second keeps her in control."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you want to protect someone, how do you check that the help you have in mind is the help they want?"
+            }
+          ],
+          "next": "r2-her-choice"
+        },
+        {
+          "id": "report-it-for-her",
+          "text": "Tell her you are going to forward this to HR today, because conduct like this has to be reported and she should not have to carry the weight of it alone.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Her face changes. She asks you not to, and says she came to you because you are not her supervisor. You realize you were about to take her decision away from her.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You took the conduct seriously, which matters. But the duty to report immediately belongs to managers and supervisors. As a colleague, your part is to ask her first and encourage her to use a route, not to decide for her."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From her side, telling one trusted colleague turned, in one sentence, into a report she did not choose. That can make her less likely to tell anyone next time."
+            }
+          ],
+          "next": "r2-her-choice"
+        },
+        {
+          "id": "probably-nothing",
+          "text": "Tell her he probably does not mean anything by it, suggest she let him know the name matters to her, and say that in your experience these things usually blow over.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "She says she has told him twice. She thanks you and stands up to go. The routes she could use were never mentioned.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Reassurance can feel kind, but here it judged the conduct as minor on her behalf. Deliberately mispronouncing a name and mocking an accent are examples the state policies name, and it is not your job to judge whether a concern is serious enough."
+            },
+            {
+              "style": "another-perspective",
+              "text": "She had already asked him to stop, twice. Your suggestion asked her to do again what had not worked."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Next time, start with: “Thank you for telling me. That’s not okay. What would help?”"
+            }
+          ],
+          "next": "r2-her-choice"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-team-meeting",
+      "recovery": false,
+      "setup": "Two days later, before final approval, the policy answer is in: people can update online or by phone, and the county route applies only in some cases. Both the web page and the training script need to change. At the next team meeting, the communications lead asks you to walk the team through what happened with the sentence. You have a few minutes before it starts.",
+      "prompt": "How do you tell the story?",
+      "choices": [
+        {
+          "id": "credit-with-consent",
+          "text": "Check with her first about being credited. Then tell the team what she asked, what the check found, what changes, and anything in your own response that slowed it.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "She says she is fine being named for the question about the sentence. In the meeting you say the training specialist asked which step people actually take, the check found a third answer, and both pieces are changing. You say in one sentence how you first responded to her question. The communications lead adds a step: web and training drafts will be checked against each other before review. Nothing else she told you comes up.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You showed the team that a question changed something, and you asked her first how she wanted to be credited. You kept her private concern completely out of it. Build on it: in a month, say whether the new cross-check caught anything."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the four colleagues who were in the review, hearing that a newer colleague’s question changed a launch page says more about this team than any invitation to speak up."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "praise-her-courage",
+          "text": "Open by thanking the training specialist in front of everyone for her courage in speaking up, and say the whole team should feel safe to do the same from now on.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "She smiles tightly. “Courage” draws looks; two colleagues glance at her as if something else had happened. The changes to the page and script get two minutes at the end.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Public thanks can be welcome. But praising her as brave makes her the topic instead of the sentence. Thanks land better when they name the specific contribution. Public recognition should never expose someone who has also raised a private concern."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Swap “courage” for content: “She asked which step people actually take, and it turned out the answer was neither of ours.”"
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Whose comfort does it serve to announce that everyone should feel safe from now on?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "just-the-fixes",
+          "text": "Keep it short and technical: the corrected wording for the page and script, the new review step and the launch date, without saying who raised what.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The fixes are clear and the meeting moves fast. Nobody hears that a colleague’s question caught the problem. The next time someone has doubts about a draft, nothing in this meeting suggests that asking changed anything.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The facts were accurate. What was missing was the link between the question and the change. Saying what changed because someone spoke up is how a team learns that asking works."
+            },
+            {
+              "style": "another-perspective",
+              "text": "The training specialist sat through a summary of changes her question caused, without her question in it."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "blame-the-timing",
+          "text": "Say the miss came from late guidance from the program area, not from anyone on the team, so nobody feels blamed and the meeting can stay focused on the launch.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The guidance was not late; nobody had asked for it until the review. The team leaves thinking the sentence was someone else’s problem, and the question that caught it is not part of the story.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to protect the team from blame is understandable. Removing every responsibility from the account can leave the next task without an owner, and here it also rewrote what happened."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare “the program area was late” with “the two drafts were never checked against each other, and a question caught it.” The second protects people and keeps the lesson."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-still-in-review",
+      "recovery": true,
+      "setup": "The review is still going. Neither line has been checked against the policy. You can see that your answer has shaped the room, and the training specialist is waiting to see what happens to her question.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "go-back",
+          "text": "Say, “I brushed past your question. Can you show me what you saw?” Then put both lines on screen and ask who confirms which one the policy supports.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "She looks up, then shows you. The two lines do not match. The communications lead says the question goes to the person or area responsible for the policy and asks you to send it today. Two colleagues lean in to look.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You named your own response in one sentence and returned to the work. You did not ask her to reassure you. Build on it: a short repair in the same room where the brush-off happened does more than a private apology later."
+            },
+            {
+              "style": "another-perspective",
+              "text": "A repair in front of others also tells everyone watching what will happen the next time one of them questions a draft."
+            }
+          ],
+          "next": "d2-at-your-desk"
+        },
+        {
+          "id": "message-during",
+          "text": "Send her a message during the meeting thanking her and saying you will check both lines with the policy owner afterward and copy her on whatever answer comes back.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "She replies with a thumbs-up. The question now has a plan, but only she knows about it. The rest of the room saw the question set aside.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Following up is real, and copying her keeps her in the loop. But the moment that shaped the room was public. The stronger choice repairs it where it happened."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What did the other people in the review learn from how the question was handled?"
+            }
+          ],
+          "next": "d2-at-your-desk"
+        },
+        {
+          "id": "leave-it",
+          "text": "Leave it. The meeting has moved on, the lead will catch anything serious at final approval, and reopening it now would make too much of it.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The review ends with the sentence and the script still disagreeing. That evening the communications lead, checking the approval list, sends the question to the person or area responsible for the policy himself.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Counting on a later check is common when a meeting has momentum. But the person best placed to answer the question was you, and the person who asked it now knows how it went."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try one sentence before the meeting ends: “Before we close, I want to go back to the sentence question.”"
+            }
+          ],
+          "next": "d2-at-your-desk"
+        }
+      ]
+    },
+    {
+      "id": "r2-her-choice",
+      "recovery": true,
+      "setup": "She is still at your desk, about to leave. She has not decided anything, and she has not heard what routes she has.",
+      "prompt": "What do you say before she goes?",
+      "choices": [
+        {
+          "id": "her-call",
+          "text": "Say, “That’s your decision, not mine. What would help right now?” Then name the routes she could use, and ask whether she wants a note of what she said.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "She sits back down. She says she wants to think about it, and asks for the list of routes. She asks you to write a short note of what she said, dated, and keep it unless she asks for it. You say you will, and that you will not share it without her say-so.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You handed the decision back to her in one sentence, without a long apology, and gave her what she needed to choose. Build on it: check in once in the next few days, and let her decide whether to talk."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From her side, hearing “that’s your decision” after a misstep can restore more trust than any explanation of why you meant well."
+            }
+          ],
+          "next": "d3-the-team-meeting"
+        },
+        {
+          "id": "send-a-link",
+          "text": "Send her a link to the respectful workplace policy page this afternoon, with a kind note saying you are there if she ever wants to talk more about any of it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "She reads it later and replies, “Thanks.” The link explains the policy but not which route might fit her, or what each one involves.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A link is something, and the kind note matters. But a policy page is not the same as naming the routes with her and asking what she wants."
+            },
+            {
+              "style": "feed-forward",
+              "text": "If you send something afterward, add the specific routes and one line: “Any of these is yours to choose, or none.”"
+            }
+          ],
+          "next": "d3-the-team-meeting"
+        },
+        {
+          "id": "let-her-go",
+          "text": "Let her go. She asked you not to tell anyone, and saying more now might feel like extra pressure on top of everything else.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "She leaves. She still does not know what she could do, or that you would go with her if she chose to.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Respecting a request for privacy is right. But privacy and information are not opposites. You can keep her confidence and still make sure she knows her options."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What is the difference between pressure and making sure someone knows their choices?"
+            }
+          ],
+          "next": "d3-the-team-meeting"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Asking one clarifying question before defending your own draft",
+    "Examining a challenge against the source instead of agreeing or citing tenure",
+    "Repairing your own brush-off briefly, in the room where it happened",
+    "Receiving a colleague’s private concern without judging it, and keeping the choice with her",
+    "Naming the routes and being honest about what a colleague who is not a supervisor can keep private",
+    "Crediting a question with the person’s agreement, without exposing anything private"
+  ],
+  "this_week": [
+    "The next time someone questions your work, ask “What does this suggest to you?” before you explain anything.",
+    "Look up and save the current contacts for your HR business partner, the Equal Opportunity and Access Division and the Employee Assistance Program.",
+    "In your next team update, name one thing that changed because someone asked a question, and check with that person first about being named."
+  ],
+  "sources": [
+    "dc-t12-psychological-safety-for-team-members--respond-when-someone-questions-your-work",
+    "gc-respectful-workplace--bystander-action-the-five-ds-at-work",
+    "gc-respectful-workplace--reporting-routes-route-do-not-investigate",
+    "gc-respectful-workplace--what-harassment-and-a-respectful-workplace-mean",
+    "gc-respectful-workplace--psychological-safety-as-team-practices",
+    "psychological-safety-and-repair-practices-not-personality",
+    "psychological-safety-respect-and-speaking-up"
+  ]
+}

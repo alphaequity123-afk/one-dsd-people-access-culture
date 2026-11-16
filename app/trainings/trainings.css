@@ -1,0 +1,44 @@
+/*
+ * Narrated branching trainings (/trainings/[id] and its facilitator guide). Ported from the One DHS build's
+ * globals.css (.training*, .slide*, .scene, .on-screen, .cast-strip, .sim-*, .coach, .versions, .reflect) and scoped
+ * to .training-page so nothing here reaches other pages. Colors come from the app's tokens.
+ */
+.training-page { padding-bottom: 2.5rem; }
+.training-page h1 { margin: .3rem 0 .4rem; }
+.training-page h2 { margin: 1.4rem 0 .5rem; }
+.training-crumbs { font-size: .92rem; margin: 0 0 .5rem; color: var(--muted); }
+.training-lede { font-size: 1.15rem; max-width: 46rem; margin: 0 0 .5rem; }
+.training-page .training-meta, .training-page .meta { color: var(--muted); font-size: .9rem; }
+.training-reading, .training-page .reading { max-width: 46rem; }
+.training-reading ul, .training-page .reading ul { padding-left: 1.2rem; list-style: disc; }
+.training-reading p, .training-page .reading p { margin: 0 0 1rem; }
+.training-page .button { font: inherit; border: 0; border-radius: 6px; padding: .6rem 1.1rem; background: var(--blue); color: #fff; cursor: pointer; text-decoration: none; display: inline-block; margin-top: .6rem; }
+.training-page .button:hover { background: var(--blue-dark); }
+.training-page .button.secondary { background: #fff; color: var(--blue); border: 1px solid var(--blue); }
+
+.training-hero { display: block; width: 100%; max-width: 65rem; height: auto; aspect-ratio: 3/2; object-fit: cover; border-radius: 14px; margin: .8rem 0 1rem; }
+.training-segment { border-top: 1px solid var(--line); margin-top: 1.6rem; padding-top: 1rem; }
+.training-page .scene { max-width: 48rem; margin: .7rem 0; }
+.training-page .on-screen { list-style: none; padding: .6rem .9rem; margin: 0 0 .5rem; border-left: 3px solid var(--line); background: #fafaf7; }
+.training-page .reflect, .training-check { max-width: 48rem; margin-top: 1rem; }
+.training-page .reflect ul { padding-left: 1.2rem; list-style: disc; }
+.training-page .simulation { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; max-width: 48rem; }
+.training-page .sim-choices { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.training-page .sim-choice { width: 100%; text-align: left; font: inherit; padding: .7rem .9rem; border: 1px solid var(--line); border-radius: 10px; background: #fff; cursor: pointer; color: inherit; }
+.training-page .sim-choice:hover, .training-page .sim-choice:focus-visible, .training-page .sim-choice[aria-pressed="true"] { border-color: #333; }
+.training-page .coach { border-left: 3px solid var(--line); padding: .2rem 0 .2rem .8rem; margin: .7rem 0; }
+.training-page .coach h4 { margin: 0 0 .2rem; font-size: .95rem; }
+.training-page .sim-step summary { cursor: pointer; }
+.training-page .sim-result h4 { font-weight: 700; margin: 1rem 0 .25rem; color: var(--blue-dark); }
+.training-page .sim-end ul { padding-left: 1.2rem; list-style: disc; }
+.training-page .versions { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0 1.2rem; max-width: 52rem; }
+.training-page .versions a { padding: .3rem .7rem; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-size: .92rem; }
+.training-page .versions a[aria-current="page"] { background: var(--blue-dark); color: #fff; border-color: var(--blue-dark); }
+.training-page .slide { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: start; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem 0; max-width: 52rem; }
+.training-page .slide-text { padding-bottom: 1rem; }
+.training-page .slide-label { font-variant: small-caps; letter-spacing: .06em; color: var(--muted); margin: 0 0 .3rem; font-size: .9rem; }
+.training-page .slide-figure { width: 120px; height: auto; align-self: start; position: sticky; top: 1rem; }
+@media (max-width: 700px) { .training-page .slide-figure { width: 80px; } }
+.training-page .cast-strip { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .8rem; margin: 1rem 0; max-width: 52rem; }
+.training-page .cast-strip li { display: flex; align-items: center; gap: .4rem; font-size: .92rem; }
+.training-page .cast-strip img { width: 48px; height: auto; }

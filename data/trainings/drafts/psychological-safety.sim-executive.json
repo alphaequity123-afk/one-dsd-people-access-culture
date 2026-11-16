@@ -1,0 +1,243 @@
+{
+  "intro_by": "C7",
+  "intro": "If you lead an administration, people read your first reaction more closely than anything you say about openness. I have watched one sentence from the head of the table decide whether a question lives or dies. Here you take a concern in a senior briefing, ask county directors for input on a proposal, and decide what the summary to the deputy commissioner says.",
+  "cast": [
+    {"role": "program-manager", "label": "the program manager", "portrait": "C3"},
+    {"role": "division-director", "label": "the division director", "portrait": "C8"},
+    {"role": "county-director", "label": "the county director", "portrait": "C1"},
+    {"role": "deputy-commissioner", "label": "the deputy commissioner", "portrait": "C5"}
+  ],
+  "version": "executive",
+  "level": "intermediate",
+  "title": "The Cost Estimate",
+  "learner_role": "You are an assistant commissioner. You set direction for an administration, carry budget and legislative proposals to the commissioner, and answer for how your programs work. Most people in the room when you speak report to someone who reports to you.",
+  "background": "Your administration is preparing a legislative proposal that moves intake for a statewide program from state staff to counties. On this proposal’s own timeline, the cost estimate locks in ten days, and the proposal goes to the deputy commissioner at the end of the month. The estimate assumes counties can take on the new intake work without added staff. A program manager who works closely with counties has doubts. A division director has led the estimate and wants it settled.",
+  "start": "d1-the-briefing",
+  "decisions": [
+    {
+      "id": "d1-the-briefing",
+      "recovery": false,
+      "setup": "In the senior briefing, the program manager says, “I need to raise something. The estimate assumes counties can absorb the new intake work. Two county directors told me last week they cannot.” The room goes quiet. The division director says, “That has been discussed. Let’s stay positive and focus on making this work.” Everyone looks at you. The estimate is still open for ten more days.",
+      "prompt": "You are the most senior person in the room. What do you say next?",
+      "choices": [
+        {
+          "id": "keep-it-open",
+          "text": "Say the question matters to the estimate. Ask which step the county directors described, who can check it before the estimate locks, and when the room will hear back.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "You say, “That question matters, and the estimate is still open. Which step did the county directors describe?” The program manager names it: intake interviews now done by state staff would move to county workers. The division director explains what the estimate assumed. Neither of them knows yet which picture is accurate. You ask the division director to check the assumption with two counties before the estimate locks, with the program manager’s help, and to bring the answer to next week’s briefing. Around the table, people start writing again.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "Your first reply came from the most senior chair in the room, and it kept a doubt inside the decision instead of outside it. You did not agree in advance; you made the question checkable. Build on it by saying, at the next briefing, what the check found."},
+            {"style": "another-perspective", "text": "For the division director, a challenge to the estimate in front of peers could feel like a verdict on months of work. Asking for a check, rather than siding with either person, kept the director responsible for the estimate and free to look again."},
+            {"style": "reflective-prompt", "text": "When a concern lands in a meeting you chair, what do your face and your first sentence usually tell the room?"}
+          ],
+          "next": "d2-the-county-meeting"
+        },
+        {
+          "id": "take-it-offline",
+          "text": "Thank the program manager warmly, ask her for a short memo by Friday, and say you will decide after reading it whether the estimate needs a check.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "The program manager says she will have it to you by Friday. The division director moves to the next slide. Around the table, people look down at their papers. The memo will reach you after the briefing, but the room will not hear what happens to the question, and the estimate locks in ten days.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Moving a concern offline is a common way to protect a full agenda, and your thanks were sincere. A memo with a date is a real route, but it runs only to you. Nobody else in the room learns whether the question can still change the estimate."},
+            {"style": "compare-coach", "text": "Compare this with asking, in the room, which step is in question and who will check it. That takes two minutes and shows everyone the question can still change the work."},
+            {"style": "another-perspective", "text": "The others in the room were watching what happened to the first person who spoke. What they saw was a polite exit, not an answer."}
+          ],
+          "next": "r1-before-the-next-item"
+        },
+        {
+          "id": "back-the-director",
+          "text": "Agree with the division director that the assumption was settled earlier, and remind the room that the proposal needs everyone pulling in the same direction now that the deadline is close.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The division director moves on. The program manager stops taking notes. Two other managers who had planned to ask about county staffing close their notebooks. The estimate still assumes counties can absorb the work, and the one person who checked with counties has just seen what happens when she says so.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Unity matters on a proposal. A call for everyone to pull together, made right after a concern, can turn a question into disloyalty. The stronger move keeps the direction and still checks the assumption."},
+            {"style": "normalize-reframe", "text": "Wanting to protect a deadline is common at your level. But the leader’s reaction to the first person who speaks up shapes whether anyone else will, and the deadline does not make the county answer go away."},
+            {"style": "reflective-prompt", "text": "If the assumption does not hold, who will find out first, and how will that news reach you?"}
+          ],
+          "next": "r1-before-the-next-item"
+        },
+        {
+          "id": "overrule-on-the-spot",
+          "text": "Tell the room the program manager is right, and direct the division director to rebuild the estimate around full county staffing costs, so counties see their concern is taken seriously.",
+          "measures": {"learning": "medium", "trust": "low", "engagement": "medium"},
+          "consequence": "The program manager looks surprised. The division director goes quiet, then asks what figures the new estimate should use. No one knows yet; two county directors have spoken, not every county. The concern has gone from a question to a decision with no evidence in between, and the division director has been overruled in front of the people who built the estimate.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Taking the concern seriously does not mean adopting it before it is checked. Asking which step is in question and who can check it respects both the concern and the evidence."},
+            {"style": "another-perspective", "text": "For the division director, this was a public reversal with no chance to explain what the estimate assumed. The next time the director has a doubt about a proposal, the lesson may be to protect it rather than test it."}
+          ],
+          "next": "d2-the-county-meeting"
+        }
+      ]
+    },
+    {
+      "id": "r1-before-the-next-item",
+      "recovery": true,
+      "setup": "The briefing has not moved to the next item yet. The program manager has stopped taking notes. Nobody has been named to check the county question, and the room has not heard whether it can still change the estimate. You still have the floor.",
+      "prompt": "You can still change what happens to the concern. What do you do?",
+      "choices": [
+        {
+          "id": "name-it-and-return",
+          "text": "Say you moved past her question too quickly. Ask which step the county directors described, name who checks it before the estimate locks, and when the room hears back.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "medium"},
+          "consequence": "You say, “I moved past that too fast. The estimate is still open. Which step did the county directors describe?” The program manager names the intake interviews. You ask the division director to check the assumption with two counties and bring the answer to next week’s briefing. You do not ask the program manager to tell you she is fine. Others at the table start writing again.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You named your own response, in the room where it happened, and went back to the work question. The repair came from the person with the most power. Build on it by reporting the answer at the next briefing, whatever it turns out to be."},
+            {"style": "another-perspective", "text": "For the program manager, hearing the most senior person say “I moved past that too fast” changes what speaking up cost her, without asking her to reassure anyone."}
+          ],
+          "next": "d2-the-county-meeting"
+        },
+        {
+          "id": "check-in-afterward",
+          "text": "After the briefing, find the program manager, tell her you value her candor, and ask whether she feels comfortable raising concerns with you, so you know where things stand between you.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "She says she is comfortable and thanks you. You feel better. The county question still has no one checking it, and the estimate locks in ten days. Asking how she feels made her answer about your relationship, not about the work she raised.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Checking in can matter. Asking her to confirm she is comfortable puts her in the position of reassuring you. Returning to the question, in the room, would have shown her the concern counts."},
+            {"style": "feed-forward", "text": "Next time, try: “I moved past your question too fast. Here is who will check it, and when you will hear back.”"}
+          ],
+          "next": "d2-the-county-meeting"
+        },
+        {
+          "id": "let-it-ride",
+          "text": "Let it ride. The division director owns the estimate, and stepping in now would undercut the director. Raise the county question with the director privately next week.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "You make a note to raise it privately. The briefing moves on. The program manager does not know about your plan. From where she sits, she spoke and nothing happened. The estimate keeps its assumption for now.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Not wanting to undercut a director in public is a fair instinct. But asking who will check an assumption does not overrule anyone. It keeps the director responsible and the question alive."},
+            {"style": "another-perspective", "text": "To the program manager and everyone watching, private follow-up is invisible. What they will remember is that the concern stopped in the room."}
+          ],
+          "next": "d2-the-county-meeting"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-county-meeting",
+      "recovery": false,
+      "setup": "Two days later, you join the regular meeting with county human services directors. The workload estimate and the start date are both still open. The direction itself, moving intake to counties, has already been set with the commissioner. The county director who chairs the counties’ side says, “The last time the state asked for our comments, the proposal had already gone forward. Is this real, or is it notice?”",
+      "prompt": "The county director wants to know whether input can still change anything. How do you answer?",
+      "choices": [
+        {
+          "id": "say-what-is-open",
+          "text": "Say plainly that moving intake to counties is decided. The workload estimate and start date are open: the program manager takes comments this week, and you will come back with results.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "You say, “The move to county intake is decided. The workload estimate and the start date are not. The program manager will receive your comments this week, before the estimate locks, and I will come back to this meeting with what changed, what did not, and why.” The county director says it is the first time anyone has drawn that line for them. Two directors offer intake numbers from their own counties. One asks whether the direction could still change. You say no, and explain who made that call.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You were honest about what was settled and specific about what was not. That is what made the invitation believable. Build on it by keeping the promise to come back, including on the suggestions you do not adopt."},
+            {"style": "another-perspective", "text": "For county directors, spending staff time on comments that cannot matter is a real cost. Hearing where influence ends lets them decide what is worth sending."},
+            {"style": "reflective-prompt", "text": "When you ask for input, do you say what is already decided, or do you leave people to discover it later?"}
+          ],
+          "next": "d3-the-cover-note"
+        },
+        {
+          "id": "promise-it-shapes",
+          "text": "Tell the county directors that their input will shape the final proposal, and that the administration wants to rebuild the trust the last round lost. Invite them to send any concerns at all.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "medium"},
+          "consequence": "The directors are pleased. Several send long comments, including on whether intake should move to counties at all. That part is already decided, and the directors who wrote about it will find out when the proposal goes forward unchanged on that point. The workload comments, the ones that can still matter, are mixed in with the rest, and no one has been named to sort them before the estimate locks.",
+          "feedback": [
+            {"style": "compare-coach", "text": "The warmth was real, and rebuilding trust is a good aim. A promise wider than your actual influence spends that trust. Naming what is open and what is not is less exciting and more credible."},
+            {"style": "normalize-reframe", "text": "Leaders often widen an invitation to show good faith. But an invitation is tested by what happens when someone responds. If the answer was already fixed, the wide invitation becomes the next story counties tell."}
+          ],
+          "next": "d3-the-cover-note"
+        },
+        {
+          "id": "listening-session-later",
+          "text": "Promise a listening session the first week of next month, with the program manager there to answer questions once details are final, and keep today to the update you prepared.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The county director says, “So it is notice.” The meeting ends on schedule. The program manager will be at the session to answer questions, but by then the workload estimate will have locked without county numbers in it. A session after that can explain the proposal, but it cannot change it.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A session after the decision closes can only explain, not inform. Inviting input while the estimate is still open, with a named reviewer, gives it a real path."},
+            {"style": "another-perspective", "text": "To the county director, this answered the question exactly. It confirmed the pattern the counties had already named."},
+            {"style": "reflective-prompt", "text": "Which of your current invitations arrive after the part people care about is already settled?"}
+          ],
+          "next": "d3-the-cover-note"
+        },
+        {
+          "id": "anonymous-form",
+          "text": "Set up an anonymous online form for county staff to send concerns, so frontline workers can speak freely without their directors seeing, and promise nothing they write will be traced.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "medium"},
+          "consequence": "Comments arrive, some of them useful. No one has checked whether the form can keep the promise of anonymity, and no one is named to read the comments against the estimate before it locks. The county director’s question, whether input is real, has not been answered. It has been moved to a form.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A private route can help. Promising anonymity before you know what the tool and its handling allow can mislead people. And any route needs a reader before the decision closes."},
+            {"style": "another-perspective", "text": "For a county worker, writing something critical on the promise it cannot be traced is a real risk. If the promise does not hold, the cost lands on them, not on you."}
+          ],
+          "next": "d3-the-cover-note"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-cover-note",
+      "recovery": false,
+      "setup": "The proposal is ready to go to the deputy commissioner. The division director drafts a cover note that ends, “The administration has a strong speak-up culture. Every concern raised during development was resolved.” You know the record is mixed. There was the county workload question in the briefing, there were the county directors’ questions about whether input was real, and a few questions arrived after the estimate locked. Some have answers. At least one does not. The deputy commissioner reads these notes closely.",
+      "prompt": "What do you send with the proposal?",
+      "choices": [
+        {
+          "id": "say-what-changed",
+          "text": "Rewrite the note: which concerns changed the proposal, which were not adopted and why, and which remain open and with whom. Drop the claim about everyone’s experience and the word “resolved.”",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "The note is shorter on praise and longer on facts. It credits the county workload question raised in the briefing, says where that question stands now, and lists the late questions and who now holds them. The division director worries it looks weaker. The deputy commissioner asks one follow-up question, about the open item, and puts it on the next agenda. The program manager sees her question in the note.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You kept the progress and the gaps in the same account, and you let the record speak instead of a claim about how people feel. Build on it by telling the people who raised concerns what happened to them, not only the deputy commissioner."},
+            {"style": "another-perspective", "text": "To the deputy commissioner, an open item stated plainly is useful. A note that says everything was resolved leaves the next surprise to be found later, by someone else."},
+            {"style": "reflective-prompt", "text": "What does it cost, at your level, to report a mixed result as a clean one?"}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "keep-the-upbeat-note",
+          "text": "Keep the division director’s note mostly as written. The legislative session is close, a confident summary protects the proposal’s momentum, and the open items can be handled quietly at the division level.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "The proposal goes up with a clean summary. Inside the administration, the people who raised the open items read that every concern was resolved. Theirs was not. The note has told them something about what happens to a concern after it leaves the room.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Protecting momentum before a session is a real pressure, and a confident note can feel like support for the team. But a claim the record does not support is not confidence. The people who raised the open items will know."},
+            {"style": "compare-coach", "text": "Compare this with a note that says what changed, what did not and why, and what remains open. It is less polished and more useful to the person who has to defend the proposal."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "rank-divisions",
+          "text": "Add a table ranking each division by how many concerns its staff raised this quarter, so the deputy commissioner can see where people speak up and where leaders need coaching.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The table is easy to read. It cannot tell whether a low count means a clear process, few chances to speak, or people who have stopped trying. Division directors start asking how to raise their numbers. One suggests asking staff to log every question as a concern.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Counts of concerns have several explanations. A rise can mean more access or a new problem; a fall can mean improvement or silence. Tracing what happened to particular concerns tells you more."},
+            {"style": "another-perspective", "text": "For division directors, a ranking turns speaking up into a target. Staff may notice their questions are now being counted, which is not the same as being answered."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "leave-it-out",
+          "text": "Cut the closing lines and send only the proposal. Tell the division director to brief the deputy commissioner on any open items at next month’s review, once the numbers are approved.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "The overstated claim is gone, which matters. So is any written record of what changed because someone spoke up. The open items will reach the deputy commissioner next month, but only after the numbers are approved without knowing which parts of them are still open.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Removing the overstated claim was a good instinct, and naming who will brief the open items is a start. A briefing after approval arrives too late to shape it; the deputy commissioner needs the open items in hand before deciding."},
+            {"style": "reflective-prompt", "text": "Where, at your level, do you say what changed because someone spoke up? If nowhere, how would staff know?"}
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Using your first response, from the most senior chair, to keep a concern inside a decision",
+    "Naming your own response when you moved past a question, and returning to it in the same room",
+    "Saying plainly what is decided and what is still open before asking partners for input",
+    "Giving every input route a named reader, a timeline and a return",
+    "Reporting a mixed record, open items included, without claiming how everyone feels"
+  ],
+  "this_week": [
+    "Before your next briefing, write down which part of the decision is still open, and say it at the start.",
+    "The next time a concern lands in a meeting you chair, ask one question about its substance before anyone responds to its tone.",
+    "Reread the last summary you sent up. Replace any sentence that claims how people feel with what happened to a concern.",
+    "Tell one group you asked for input what changed because of it, what did not, and why."
+  ],
+  "sources": [
+    "dc-t13-creating-psychological-safety-as-a-leader--notice-what-your-response-makes-possible",
+    "dc-t13-creating-psychological-safety-as-a-leader--design-participation-before-the-decision-closes",
+    "dc-t13-creating-psychological-safety-as-a-leader--review-your-leadership-response-and-refine-it",
+    "dc-l74-building-psychological-safety-on-teams--review-speaking-up-practices-without-ranking-emplo",
+    "the-fearless-organization-creating-psychological-safety-in-the-workplace-for-lea",
+    "gc-respectful-workplace--psychological-safety-as-team-practices",
+    "psychological-safety-and-repair-practices-not-personality"
+  ]
+}

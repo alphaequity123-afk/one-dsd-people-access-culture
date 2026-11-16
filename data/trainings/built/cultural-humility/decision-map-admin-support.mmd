@@ -1,0 +1,25 @@
+flowchart TD
+  d1-at-the-desk["What do you do first?"]
+  d1-at-the-desk -->|"Agree that the address is correct, show the visitor exactly where it i"| r1-the-door
+  d1-at-the-desk -->|"Say you are sorry it was hard to find and ask which part of the direct"| d2-next-visit
+  d1-at-the-desk -->|"Tell the visitor not to worry and that it was not his fault: the staff"| r1-the-door
+  d1-at-the-desk -->|"Explain this desk’s practice: visitors more than fifteen minutes late "| r1-the-door
+  d2-next-visit["How do you set up his next visit?"]
+  d2-next-visit -->|"Ask how he wants to communicate and whether he wants an interpreter, i"| d3-the-routine
+  d2-next-visit -->|"Book the interpreter in the language from the file, as your coworker s"| r2-the-booking
+  d2-next-visit -->|"Skip the interpreter and leave the language field blank. He clearly sp"| r2-the-booking
+  d2-next-visit -->|"Ask the visitor, kindly, what health condition makes standing hard, so"| r2-the-booking
+  d3-the-routine["What do you do now that the visit is set?"]
+  d3-the-routine -->|"Update the visitor’s record, send his words and a clearer entrance lin"| end_node
+  d3-the-routine -->|"Edit the confirmation template yourself to name the glass doors facing"| end_node
+  d3-the-routine -->|"Add “visitor confused by directions” to the visitor’s record, so the n"| end_node
+  d3-the-routine -->|"Update the visitor’s record and send him a personal email with clear d"| end_node
+  r1-the-door["Second chance: What do you do now?"]
+  r1-the-door -->|"Say “That makes sense. Which doors did you try?” Listen, call the staf"| d2-next-visit
+  r1-the-door -->|"Apologize warmly for the trouble, tell him the building is confusing f"| d2-next-visit
+  r1-the-door -->|"Point out the small sign by the parking lot, say most people find it w"| d2-next-visit
+  r2-the-booking["Second chance: How do you set it right?"]
+  r2-the-booking -->|"Ask the visitor how he wants to communicate, who will join and what wo"| d3-the-routine
+  r2-the-booking -->|"Fix the booking quietly: adjust what you set up, apologize for the mix"| d3-the-routine
+  r2-the-booking -->|"Explain where the setup came from: his visitor record and what the des"| d3-the-routine
+  end_node(["Reflection and action plan"])

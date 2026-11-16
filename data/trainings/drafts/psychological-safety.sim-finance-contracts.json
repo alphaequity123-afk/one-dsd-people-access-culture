@@ -1,0 +1,484 @@
+{
+  "intro_by": "C3",
+  "intro": "If you work in grants or contracts, much of your influence happens in meetings where someone else sets the pace. I have learned that a scoring call can move fast enough to leave a good question behind. Here, you support a review panel and decide how a careful written question reaches the decision, what the panel summary can honestly say, and how to answer an applicant who asks why the instructions did not add up.",
+  "cast": [
+    {
+      "role": "panel-chair",
+      "label": "the chair",
+      "portrait": "C4"
+    },
+    {
+      "role": "panelist",
+      "label": "the panelist",
+      "portrait": "C6"
+    },
+    {
+      "role": "applicant-director",
+      "label": "the organization’s director",
+      "portrait": "C7"
+    }
+  ],
+  "version": "finance-contracts",
+  "level": "intermediate",
+  "title": "The Consensus Call",
+  "learner_role": "You are a grants coordinator. You support review panels: you send materials, keep the scoring record and write the panel summary. You do not score proposals or decide awards. How the solicitation’s rules apply, and any award decision, belong to the person or area responsible for the solicitation.",
+  "background": "A grant solicitation for community outreach drew twenty-three proposals, many from small organizations. Three reviewers scored them separately. Today’s video call is the consensus meeting, and the chair, a senior contract manager, wants it done in ninety minutes. Last night the panelist, a grants specialist on his first panel, emailed you a carefully written question: one small organization’s proposal was marked incomplete for a missing budget narrative, but the narrative seems to sit inside its budget workbook, on a second tab. He did not copy the chair.",
+  "start": "d1-the-incompletes",
+  "decisions": [
+    {
+      "id": "d1-the-incompletes",
+      "recovery": false,
+      "setup": "Forty minutes in, the chair says, “Incompletes are out. Moving to the funded list unless anyone objects.” This panel’s practice is that an item is closed once the chair moves on. The panelist’s camera is on; he has not spoken. You have his email open in another window.",
+      "prompt": "What do you do with the panelist’s question?",
+      "choices": [
+        {
+          "id": "hold-the-item",
+          "text": "Ask the chair to hold the item for a minute: a question came in about a narrative on a second tab. Offer to share the screen and ask who rules on it.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The chair sighs but says, “One minute.” You share the workbook. The narrative is there, on tab two. The panelist unmutes and says the question was his, and that he was not sure it mattered. The chair says whether a narrative in the workbook counts is not the panel’s call; it goes to the person responsible for the solicitation. The item is marked pending, and the call moves on.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You brought the question in before the item closed, which is when it could still inform the decision. You did not name the panelist, so he could choose to claim it, and he did. You also asked who rules, instead of settling it yourself. Build on it: the next time you send panel materials, invite written questions with a date before the consensus call."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the panelist, a careful email that reached the decision tells him something about this panel: preparing a question is a real way in, not a way of being left out."
+            }
+          ],
+          "next": "d2-the-summary"
+        },
+        {
+          "id": "forward-after",
+          "text": "Let the item close, then forward the panelist’s email to the chair after the call, so it gets a careful answer without putting a new panelist on the spot in front of everyone.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The chair says, “Closed.” As the funded list starts to load, you realize that once this item is closed, the panelist’s question can only ask to reopen a decision, not inform one. His camera is still on. The next screen has not come up yet.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Protecting a new panelist from the spotlight is a kind instinct. Timing matters: a question invited after the choice closes makes correction harder, even when it is handled with care."
+            },
+            {
+              "style": "compare-coach",
+              "text": "You can protect someone and still bring the question in. Raising it as “a question came in” keeps the panelist unnamed while giving the decision a chance to use it."
+            }
+          ],
+          "next": "r1-before-the-list"
+        },
+        {
+          "id": "call-on-him",
+          "text": "Unmute and say, “I think one of the panelists had a concern about the incompletes. Do you want to raise it now?” so the panelist can speak for himself.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Every camera turns. After a pause, the panelist says it was probably nothing. The chair says, “Okay. Moving on.” The question is now smaller than it was in the email, and the panelist has said, in front of the chair, that it does not matter.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "He chose to write to you rather than speak on the call. Calling on him turned his written question into a test of whether he would challenge a senior contract manager live."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare calling on him with carrying the question yourself: “A question came in about one narrative.” The substance reaches the decision, and he can join in if he chooses."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which way of contributing do you tend to treat as the real one: speaking up live, or a prepared note?"
+            }
+          ],
+          "next": "r1-before-the-list"
+        },
+        {
+          "id": "fix-the-record",
+          "text": "Check the workbook yourself, confirm the narrative is on tab two, and quietly move the proposal from incomplete back into the scored list in the record before the chair closes it.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "You find the narrative. As you change the record, you realize you have just decided a solicitation question nobody asked you to decide, in a record three reviewers rely on. The chair is about to move to the funded list.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your instinct to check the evidence was sound. The leap was deciding it. A staff contribution can identify a gap without taking over the decision; whether a tab counts belongs to the person responsible for the solicitation."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When you find evidence that changes a decision you do not own, bring it to the people who do: “Here is what I found. Who rules on it?”"
+            }
+          ],
+          "next": "r1-before-the-list"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-summary",
+      "recovery": false,
+      "setup": "At minute eighty-five, the chair says, “I take it silence means everyone’s on board,” and asks you to write in the summary: “Unanimous consensus. No concerns raised.” Two of the reviewers have said almost nothing for an hour. The second-tab question still has no ruling.",
+      "prompt": "What do you do with the summary?",
+      "choices": [
+        {
+          "id": "accurate-summary",
+          "text": "Say the summary can list the decisions and the second-tab question, but not “no concerns.” Offer everyone a written route to you by end of day, for the chair.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The chair pauses, then says, “Fine. End of day.” That evening one reviewer writes that the chair’s early comments set the tone and she scored two proposals lower than she meant to; she asks whether that can be noted. The other sends nothing. Your summary lists the decisions, the second-tab question and where it stands, and one reviewer’s written comment, and says the other did not send one. It does not say “unanimous.”",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You declined to turn silence into agreement, and you gave people a real way in that reached the decision before it closed. Your summary describes what happened instead of how the meeting felt. Build on it: say at the start of the next panel how written comments will be received and when."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the reviewer who wrote that evening, the call was not the place she could say it. The route you offered is where her knowledge entered the record."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep a summary template with three parts: decisions, open questions, and comments received. It makes “no concerns raised” a claim someone has to check."
+            }
+          ],
+          "next": "d3-the-debrief"
+        },
+        {
+          "id": "round-robin",
+          "text": "Before writing it, go around the call and ask each reviewer by name, the panelist last, whether they agree with the funded list, so that silence is not simply taken as agreement.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "Each reviewer says yes in turn, the panelist last. Agreement given one at a time, on camera, to a senior contract manager they will work with again, is still not the same as a chance to disagree. The chair says, “There you go. Unanimous.”",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Asking each person directly is better than reading silence as agreement. But a yes-or-no question asked in front of the chair invites a yes. The stronger choice offered a route that did not depend on disagreeing live."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you ask people to agree one by one in front of a senior colleague, what are you actually measuring?"
+            }
+          ],
+          "next": "r2-before-it-goes"
+        },
+        {
+          "id": "write-as-told",
+          "text": "Write it as the chair asked. He runs the panel, the reviewers had ninety minutes to speak, and a coordinator correcting a senior manager’s summary would be overstepping.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "You type “Unanimous consensus. No concerns raised.” The second-tab question is in your inbox and not in the summary. The chair thanks everyone and begins to say goodbye.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Deferring to the person who runs the meeting is a reasonable habit, especially across a gap in rank. But the summary is your work product. Silence does not prove a team agrees or that concerns were absent."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the person responsible for the solicitation, “no concerns raised” reads as a fact. Someone downstream will rely on it."
+            }
+          ],
+          "next": "r2-before-it-goes"
+        },
+        {
+          "id": "side-note",
+          "text": "Write “unanimous” as asked, but send the person responsible for the solicitation a private note saying you are not sure it was, without mentioning it to the chair.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "You start typing “unanimous” in the summary and a separate note in another window. Two versions of the same meeting now exist, and the person who receives both will not know which to trust. The chair is saying goodbye.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You noticed the summary was not accurate, which matters. But a back channel leaves the official record unchanged and puts you in a quiet dispute with the chair. Saying it on the call fixes the record where it lives."
+            },
+            {
+              "style": "feed-forward",
+              "text": "If saying it to the chair feels risky, frame it as accuracy, not disagreement: “I’ll list the decisions and the open question, so the record is complete.”"
+            }
+          ],
+          "next": "r2-before-it-goes"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-debrief",
+      "recovery": false,
+      "setup": "Six weeks later, awards are out. You join a debrief call for a small organization that was not funded; the chair joins too. The organization’s director asks why the budget instructions said one thing on page four of the solicitation and another in the workbook. Before you answer, the chair says, “It was all in the solicitation. Applicants are expected to read it.” The director goes quiet.",
+      "prompt": "How do you respond to the director’s question?",
+      "choices": [
+        {
+          "id": "read-it-together",
+          "text": "Ask the director which two instructions conflicted, read them together on the call, say what you can and cannot answer, and take the conflict to the solicitation writers.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The director shares his screen. Page four asks for the narrative as a separate file; the workbook has a tab labeled “Narrative.” The chair looks and says, more slowly, “That is confusing.” You say you cannot change this round’s award, and you mean it. You can take the two instructions, in the director’s words, to the person responsible for the next solicitation, and you tell him when he will hear what happened to them. He says it is the first debrief where someone looked at the page with him.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You answered the question that was asked, by looking at the actual instructions instead of debating who should have read them. You were honest about what you could not change and specific about what you would carry. Build on it: when you report back, tell him what the solicitation writers did with his point, even if the answer is “not this round.”"
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the director’s side, questioning the agency that just declined his proposal carried a real risk. Seeing staff look at the page with him changed what that risk felt like."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep the director’s account at its scope: one organization found the two instructions confusing. That is worth checking. It does not tell you how every applicant read them."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "explain-kindly",
+          "text": "Apologize that the instructions were hard to follow, then walk the director through what the solicitation required, step by step, so the organization is ready for the next round.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "Your explanation is accurate and kind, and the director thanks you. You never looked at the two instructions side by side, so nobody learns that they conflict. The next solicitation goes out with the same workbook.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your warmth repaired some of the chair’s rebuke. But an explanation of the rules answers a different question from the one he asked. He said the instructions conflicted; checking that would have taught the agency something."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When an applicant says the instructions were unclear, how often do you check the instructions before explaining them?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "back-the-chair",
+          "text": "Back the chair. The solicitation was public, other applicants managed it, and agreeing in front of an applicant that it was unclear could open the agency to a dispute.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The director says, “Understood,” and the call ends early. He does not mention the workbook again. The organization does not apply in the next round, and nobody at the agency knows why.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "From the director’s side, the agency asked for feedback in a debrief and answered it with a rebuke, twice. Repeated rebukes can suppress the very knowledge needed to improve a process."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Worrying about saying something that could be used against the agency is understandable. Looking at two instructions together is not an admission. It is how you find out whether there is anything to fix."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When a colleague rebukes a question, you can turn back to it without contradicting them: “Can you show me which two instructions you mean?”"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "promise-a-fix",
+          "text": "Tell the director you agree the instructions conflict and promise that the next solicitation will be fixed, so the organization knows its feedback made a real difference.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The director sounds relieved. But you do not write solicitations, and the person who does never hears the specific conflict. When the next solicitation comes out with the same workbook, the director emails you to ask what happened.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You heard him and wanted his point to matter. Promising that every part of a process can change rarely holds; an honest scope and a specific route keep trust longer than a promise you cannot keep."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “I can’t promise the change, but I can take these two instructions to the people who write the solicitation, and I’ll tell you what they decide.”"
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-before-the-list",
+      "recovery": true,
+      "setup": "The funded list has not started yet. The second-tab question has not had a clear hearing, and once the list starts, the item is closed for good. You have about a minute.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "reopen-briefly",
+          "text": "Ask for one more minute for a question about a narrative on a second tab. Share the tab, say what the record shows, and ask who rules on it.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The chair says, “Quickly.” You share the tab and say plainly what the scoring record shows now and how it got that way. The chair says whether the tab counts is for the person responsible for the solicitation. The item is marked pending, with the record showing only what the reviewers decided. The panelist nods once.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You reopened the moment while it could still matter, and you were plain about what the record showed. That kept the record trustworthy and the decision with its owner. Build on it by bringing questions in before an item closes next time."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the chair, a short, specific request is easy to grant. A minute now is cheaper than a reopened award later."
+            }
+          ],
+          "next": "d2-the-summary"
+        },
+        {
+          "id": "note-in-summary",
+          "text": "Note the question in the panel summary so the person responsible for the solicitation sees it later, and let the call move on to the funded list now.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "You make a note to include it. The funded list loads. The question will reach someone, but only after the panel has made its decision.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Writing it into the summary keeps it from disappearing, which matters. The stronger choice also lets it inform the panel’s decision, not just follow it."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What is the difference, for the applicant, between a question that informs a decision and one that asks to reopen it?"
+            }
+          ],
+          "next": "d2-the-summary"
+        },
+        {
+          "id": "let-it-pass",
+          "text": "Let it go. The chair wants to finish in ninety minutes, the panelist has said nothing on the call, and one proposal is unlikely to change the funded list anyway.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The funded list loads. Nobody on the panel has ruled on the second tab, and the question stays in your inbox.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Time pressure in a consensus call is real. Constant urgency silences people. Here it silenced a question that had already been written down for you."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the small organization’s side, its proposal never got a minute of the panel’s time, because of where a page sat in a workbook."
+            }
+          ],
+          "next": "d2-the-summary"
+        }
+      ]
+    },
+    {
+      "id": "r2-before-it-goes",
+      "recovery": true,
+      "setup": "The call is still open, and the chair is saying goodbye. The chair’s wording, “Unanimous consensus. No concerns raised,” is still the plan for the summary, and nobody has a way to add anything after the call ends.",
+      "prompt": "What do you do before people leave?",
+      "choices": [
+        {
+          "id": "say-it-now",
+          "text": "Say the summary will list decisions and open questions, not “unanimous,” and that anyone can send you a written comment by end of day for the chair.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The chair shrugs. “If you think it matters.” One reviewer sends a short note that evening. The summary goes out accurate, if less tidy.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You used the last minute of the call to fix the record where it lives, in front of the chair, without making it a challenge. Build on it: next time, set up the written route at the start, not the end."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What made it possible to say this at the last minute, when it was harder earlier?"
+            }
+          ],
+          "next": "d3-the-debrief"
+        },
+        {
+          "id": "reword-later",
+          "text": "Leave the call as it is, then quietly change “unanimous” to “consensus reached on the funded list” in the summary before you send it to the person responsible.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The new wording is closer to the truth. Nobody had a way to add anything, so the summary is accurate about the decisions and silent about whether anyone held back.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Softer wording is more accurate, and that counts. But the reviewers who said nothing still had no route. The stronger choice changed the record and the opportunity."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For a reviewer who held back on the call, a changed word in a summary they never see does not change what they could say."
+            }
+          ],
+          "next": "d3-the-debrief"
+        },
+        {
+          "id": "send-as-is",
+          "text": "Send the summary as it stands. The chair has signed off, and the awards process has its own later checks if anything was missed.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The summary goes out: unanimous, no concerns. Downstream, nobody has reason to ask.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Trusting later checks is common when a meeting has run long. But later reviewers can only check what the record tells them is there."
+            },
+            {
+              "style": "feed-forward",
+              "text": "One sentence would have done it: “I’ll list the decisions and the open questions instead of ‘unanimous.’”"
+            }
+          ],
+          "next": "d3-the-debrief"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Bringing a written question into a decision before it closes, without singling out the person who wrote it",
+    "Routing a rule question to the person responsible instead of settling it yourself",
+    "Refusing to treat silence as agreement, and offering a route that does not depend on disagreeing live",
+    "Writing a summary that separates decisions, open questions and comments received",
+    "Answering an applicant’s question by checking the actual instructions with them",
+    "Being honest about what you cannot change while carrying what you can"
+  ],
+  "this_week": [
+    "For your next panel or review, send materials with a date for written questions that falls before the decision meeting, and say who will receive them.",
+    "Reread one recent summary you wrote. Find any line like “no concerns raised” and ask what evidence it rests on.",
+    "In your next applicant conversation, when someone says an instruction was unclear, ask them to show you the exact lines before you explain."
+  ],
+  "sources": [
+    "dc-l74-building-psychological-safety-on-teams--invite-useful-input-before-the-decision-closes",
+    "dc-l74-building-psychological-safety-on-teams--recognize-hierarchy-and-keep-the-right-concern-rou",
+    "dc-t12-psychological-safety-for-team-members--understand-different-meanings-of-speaking-up",
+    "dc-t13-creating-psychological-safety-as-a-leader--design-participation-before-the-decision-closes",
+    "psychological-safety-respect-and-speaking-up",
+    "psychological-safety-and-repair-practices-not-personality"
+  ]
+}

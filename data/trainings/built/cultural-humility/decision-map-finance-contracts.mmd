@@ -1,0 +1,25 @@
+flowchart TD
+  d1-the-question["How do you answer?"]
+  d1-the-question -->|"Answer that the requirements apply to every applicant equally, so chan"| r1-should-not-bother
+  d1-the-question -->|"Find out which requirements come from grants policy or law and which w"| d2-the-panel
+  d1-the-question -->|"Tell the director the audit requirement looks like a holdover from the"| r1-should-not-bother
+  d1-the-question -->|"Suggest the director partner with a larger organization as the lead ap"| r1-should-not-bother
+  d2-the-panel["How do you guide the panel?"]
+  d2-the-panel -->|"Bring the panel back to the published criteria. Ask both reviewers, cr"| d3-the-debrief
+  d2-the-panel -->|"Let each reviewer score independently, as the panel process expects. S"| r2-the-scores
+  d2-the-panel -->|"Agree with the second reviewer. She knows the community well, and her "| r2-the-scores
+  d2-the-panel -->|"Let the discussion go to keep the panel on schedule, then quietly rais"| r2-the-scores
+  d3-the-debrief["How do you respond, and what happens to his point?"]
+  d3-the-debrief -->|"Acknowledge his point without defending the process. Explain each crit"| end_node
+  d3-the-debrief -->|"Explain that every applicant was held to the same criteria and the sam"| end_node
+  d3-the-debrief -->|"Tell him you agree, and promise that the next round will score communi"| end_node
+  d3-the-debrief -->|"Listen closely without arguing, thank him for the feedback, explain hi"| end_node
+  r1-should-not-bother["Second chance: What do you do now?"]
+  r1-should-not-bother -->|"Tell him it is a fair question, find out which requirements are fixed "| d2-the-panel
+  r1-should-not-bother -->|"Forward his email to your supervisor with a note that the requirements"| d2-the-panel
+  r1-should-not-bother -->|"Reply politely with the solicitation attached again, the date question"| d2-the-panel
+  r2-the-scores["Second chance: What do you do before scores are final?"]
+  r2-the-scores -->|"Following the panel process, ask the reviewers to return to Proposal 1"| d3-the-debrief
+  r2-the-scores -->|"Flag the comments to your supervisor in writing, with the criteria the"| d3-the-debrief
+  r2-the-scores -->|"Average the two scores and move on. Far-apart scores happen on every p"| d3-the-debrief
+  end_node(["Reflection and action plan"])

@@ -1,0 +1,21 @@
+flowchart TD
+  d1-the-feedback-draft["What do you write about her participation, and how do you decide?"]
+  d1-the-feedback-draft -->|"Check the work need and her actual contributions first. In your one-to"| d2-the-case-review
+  d1-the-feedback-draft -->|"Keep the sentence. Speaking up in meetings is part of the job here, th"| r1-the-correction
+  d1-the-feedback-draft -->|"Leave participation out of the feedback so you do not risk being unfai"| r1-the-correction
+  d1-the-feedback-draft -->|"Write, kindly, that her quietness likely reflects her cultural backgro"| r1-the-correction
+  r1-the-correction["Second chance: The newer team member has corrected your account. How do you respond?"]
+  r1-the-correction -->|"Name the specific thing you got wrong, and thank her for saying it. As"| d2-the-case-review
+  r1-the-correction -->|"Explain that you meant well. The feedback was written to help her grow"| d2-the-case-review
+  r1-the-correction -->|"Apologize warmly for any hurt the draft caused, tell her you value her"| d2-the-case-review
+  d2-the-case-review["The presenting reviewer has used a general statement about a community"]
+  d2-the-case-review -->|"Thank the presenting reviewer for raising it, then ask what the person"| d3-the-one-to-one-request
+  d2-the-case-review -->|"Let it pass. The presenting reviewer is drawing on real knowledge of t"| d3-the-one-to-one-request
+  d2-the-case-review -->|"Tell the presenting reviewer plainly, in front of the team, that his c"| d3-the-one-to-one-request
+  d2-the-case-review -->|"Ask the second reviewer, who shares a background with the family, whet"| d3-the-one-to-one-request
+  d3-the-one-to-one-request["She has asked for written updates and connected it to her hearing. Wha"]
+  d3-the-one-to-one-request -->|"Treat it as a request tied to her hearing. Forward it today, tell her "| end_node
+  d3-the-one-to-one-request -->|"Ask her about her diagnosis and whether she has documentation from a d"| end_node
+  d3-the-one-to-one-request -->|"Bring it to the team meeting. Say someone asked for written updates be"| end_node
+  d3-the-one-to-one-request -->|"Tell her you will ask the longtime team member to speak louder and slo"| end_node
+  end_node(["Reflection and action plan"])

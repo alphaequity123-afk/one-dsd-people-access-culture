@@ -1,0 +1,25 @@
+flowchart TD
+  d1-the-huddle["What do you say?"]
+  d1-the-huddle -->|"Say the desk aid’s income-proof line reads differently from the curren"| d2-the-answer
+  d1-the-huddle -->|"Keep it out of the huddle and message the lead worker afterward. The d"| r1-still-open
+  d1-the-huddle -->|"Tell the huddle that the desk aid is wrong on income proof and has bee"| r1-still-open
+  d1-the-huddle -->|"Stay quiet for now. The lead worker has far more experience, the manua"| r1-still-open
+  d2-the-answer["What do you do now?"]
+  d2-the-answer -->|"Say, “It may well be fine. Can I paste both lines in the chat?” Then a"| d3-your-cases
+  d2-the-answer -->|"Leave the line for now and message the newer worker privately: tell he"| r2-before-it-closes
+  d2-the-answer -->|"Say that this is not the first time questions get laughed off in this "| r2-before-it-closes
+  d2-the-answer -->|"Thank the lead worker for the context, call it a great question, and a"| r2-before-it-closes
+  d3-your-cases["What do you do about your own six cases?"]
+  d3-your-cases -->|"Bring your supervisor the six case numbers, what you requested and wha"| end_node
+  d3-your-cases -->|"Send the six people corrected requests yourself today, using the manua"| end_node
+  d3-your-cases -->|"Hold off on raising your six cases until the desk aid question is sett"| end_node
+  d3-your-cases -->|"Raise it at the next huddle as a lesson for everyone: say you made the"| end_node
+  r1-still-open["Second chance: What do you add?"]
+  r1-still-open -->|"Unmute and add what you found: the desk aid line, the current manual p"| d2-the-answer
+  r1-still-open -->|"Say the line seems worth a second look, but leave the manual page out,"| d2-the-answer
+  r1-still-open -->|"Let the lead worker handle it. The question is out now, and adding you"| d2-the-answer
+  r2-before-it-closes["Second chance: How do you keep the question from closing with the huddle?"]
+  r2-before-it-closes -->|"Ask your supervisor directly: “Can the income-proof line go to whoever"| d3-your-cases
+  r2-before-it-closes -->|"After the huddle, send the lead worker both lines with a short, neutra"| d3-your-cases
+  r2-before-it-closes -->|"Let it go for today. The huddle has moved on, the lead worker seemed a"| d3-your-cases
+  end_node(["Reflection and action plan"])

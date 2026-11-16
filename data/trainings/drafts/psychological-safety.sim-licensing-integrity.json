@@ -1,0 +1,241 @@
+{
+  "intro_by": "C5",
+  "intro": "If you license, investigate or review programs, people often weigh what it will cost them to tell you something. I have learned that the minute after someone hesitates matters more than anything I planned to say. Here a provider’s staff member hesitates during a licensing visit, a parent corrects your account of what she said, and a newer licensor brings you a doubt about a draft correction order.",
+  "cast": [
+    {"role": "direct-support-staff-member", "label": "the direct support staff member", "portrait": "C6"},
+    {"role": "mother", "label": "the mother", "portrait": "C8"},
+    {"role": "lead-licensor", "label": "the lead licensor", "portrait": "C7"},
+    {"role": "newer-licensor", "label": "the newer licensor", "portrait": "C4"},
+    {"role": "licensing-supervisor", "label": "your licensing supervisor", "portrait": "C1"}
+  ],
+  "version": "licensing-integrity",
+  "level": "intermediate",
+  "title": "The Licensing Visit",
+  "learner_role": "You are a licensor, classified as a Human Services Program Representative. You conduct licensing visits, talk with people who receive services and their families, and help prepare correction orders. You do not decide what goes into an order on your own.",
+  "background": "This week your team is reviewing a licensed day program for adults with disabilities. You, the lead licensor and a newer licensor make the visit together. On this team, the lead licensor drafts any correction order and your licensing supervisor reviews it before it goes out. The review also includes conversations with families, as this team does for reviews like this one. The draft order is due to your licensing supervisor on Friday.",
+  "start": "d1-the-visit",
+  "decisions": [
+    {
+      "id": "d1-the-visit",
+      "recovery": false,
+      "setup": "During the visit, you walk through the program with the direct support staff member while the lead licensor reviews records. He stops and asks, “Can I ask you something about the medication log? Last time someone asked a licensor a question, it ended up in the report, and our manager was upset with all of us.” He waits to see what you say.",
+      "prompt": "He wants to ask, and he is weighing the risk. What do you say?",
+      "choices": [
+        {
+          "id": "honest-about-limits",
+          "text": "Tell him plainly you cannot promise his question stays out of the review. Explain what the visit is for, answer what you can, and say where he can ask later.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "You say, “I can’t promise a question won’t come up in the review. I can tell you the visit is about how the program works for the people here, not about catching anyone out. What’s your question?” He thinks, then asks what the log should show when a person refuses a dose. You answer what you can from the standard you are reviewing against. He says several staff have been unsure. You note that staff are unsure about the log, not which staff member asked. Before you move on, you tell him how to reach your team with questions later.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You were honest about what you could not promise, and you still made the question worth asking. Noting the pattern, not the person, kept his risk small. Build on it by checking whether the uncertainty about the log shows up elsewhere in the program."},
+            {"style": "another-perspective", "text": "For the direct support staff member, a licensor is someone whose report can affect his job and his coworkers. A plain answer about limits is easier to trust than a reassurance he has reason to doubt."},
+            {"style": "reflective-prompt", "text": "On your visits, what do people seem to fear will happen if they ask you something?"}
+          ],
+          "next": "d2-the-call"
+        },
+        {
+          "id": "promise-off-the-record",
+          "text": "Reassure him that nothing he asks today will go into the report, so he can speak freely, and that you are there to help the program, not to get anyone in trouble.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "medium"},
+          "consequence": "He relaxes and asks about refused doses. Several staff are unsure, he says. That is something the review needs to look at, and you cannot now use it without breaking the promise you just made. He gave you useful information on terms you did not have the authority to offer.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Wanting him to speak freely is the right aim. Promising secrecy you cannot keep puts both of you in a bind the moment he says something that matters. Honest limits plus a real answer works better."},
+            {"style": "another-perspective", "text": "For the direct support staff member, a broken promise from a licensor would confirm what he feared, and his coworkers would hear about it."}
+          ],
+          "next": "d2-the-call"
+        },
+        {
+          "id": "go-through-his-manager",
+          "text": "Tell him procedure questions should go through his manager, who can raise them at the exit meeting, and continue the walk-through so the visit stays on time.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "He says, “Okay,” and the walk-through continues. The question about the log goes back up the chain he was worried about. Whatever staff are unsure about stays unknown to the review.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Keeping a visit on schedule matters. Sending the question back through his manager adds exactly the risk he named. Answering what you can, honestly, costs a few minutes."},
+            {"style": "another-perspective", "text": "To the direct support staff member, this confirmed that questions to licensors travel upward. The next staff member may not ask at all."}
+          ],
+          "next": "d2-the-call"
+        },
+        {
+          "id": "answer-and-move-on",
+          "text": "Answer quickly that the log needs to be complete and accurate, thank him, and move to the next room before he says more, so nothing he adds puts him in a difficult position.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "He nods. You protected him from saying too much, and you also kept the review from hearing what staff do not understand about the log. Your answer was true, and it did not answer his question.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Protecting someone from saying too much is a caring instinct. But deciding for him what he can afford to say takes the choice away from him and leaves his question unanswered."},
+            {"style": "compare-coach", "text": "Compare this with telling him plainly what you cannot promise, then answering. He decides what to say with the facts in hand."}
+          ],
+          "next": "d2-the-call"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-call",
+      "recovery": false,
+      "setup": "Two days later, as part of the review, you call the mother of a man who attends the program. At the end of the call, you read back your summary: “You said staff left your son alone for most of an afternoon.” She says, “That’s not what I said. I said they were short-staffed that week, and he was in a room with one staff member for a long time. Please don’t write that they left him alone.”",
+      "prompt": "She has corrected your account of what she said. How do you respond?",
+      "choices": [
+        {
+          "id": "ask-and-revise",
+          "text": "Thank her for stopping you. Ask what she saw that afternoon, read back a revised summary in her words, and explain how her account will be used in the review.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "You say, “Thank you for stopping me. I want this to say what you saw.” She explains that her son was in a room with one staff member and three other people for most of the afternoon. She does not know whether that met the program’s staffing plan. You read back the new summary, and she says, “Yes, that’s it.” You tell her that her account will be weighed with the program’s records, and that you cannot tell her the outcome today. She thanks you for reading it back.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You treated her correction as information, not as a challenge to your notes, and the revised summary is more precise and more useful. Build on it by reading back every summary before you end a call."},
+            {"style": "another-perspective", "text": "For a parent, correcting a state licensor can feel risky; she may worry about how the program will treat her son. Being thanked for it makes it easier for her to keep telling you what she sees."},
+            {"style": "reflective-prompt", "text": "When someone corrects your account, what is your first instinct: to check, or to explain?"}
+          ],
+          "next": "d3-the-message"
+        },
+        {
+          "id": "keep-both-versions",
+          "text": "Add her clarification at the end, but keep your original summary too, since notes written during the call are usually the most accurate record of what was actually said.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "medium"},
+          "consequence": "You tell her you will add her note. She is quiet for a moment, then says, “So it’ll still say they left him alone?” Your summary now holds two accounts, and the one in your words is the one a reader sees first.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Care with records is part of the job. Here, the person whose words you summarized is telling you what she said. Defending your first reading over hers puts your account ahead of her experience."},
+            {"style": "another-perspective", "text": "For the mother, a summary that still says “left alone” could shape how the program sees her and her son, whatever note follows it."}
+          ],
+          "next": "r2-on-the-line"
+        },
+        {
+          "id": "only-internal",
+          "text": "Reassure her that the summary is only internal working notes and will not be shared with the program, so the exact wording does not really matter and she should not worry about it.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "She says, “But it matters to me.” You have also told her something you are not sure is true: you do not decide who sees the review notes. The summary still says something she did not say.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Trying to ease her worry is kind. Telling her the wording does not matter, and promising who will see the notes, both move away from her correction. Fixing the summary would have eased it more."},
+            {"style": "another-perspective", "text": "To the mother, “it doesn’t really matter” says her words count for less than your convenience."}
+          ],
+          "next": "r2-on-the-line"
+        },
+        {
+          "id": "whatever-she-prefers",
+          "text": "Tell her you will change the summary to whatever she prefers, so she feels heard, and that she can call you back by Friday to change it again if anything comes to mind.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "She thanks you. You have not asked what she actually saw, so the new summary says only that she objected to the old one. A reader will learn less from it than from either version. Feeling heard and being accurately recorded are not the same thing.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Taking her correction seriously is the right instinct. Agreeing to any wording without asking what she saw skips the step that makes the record useful. Ask, then read it back."},
+            {"style": "another-perspective", "text": "For whoever reads the review, a summary shaped to avoid upset, rather than to describe what happened, is hard to rely on."}
+          ],
+          "next": "d3-the-message"
+        }
+      ]
+    },
+    {
+      "id": "r2-on-the-line",
+      "recovery": true,
+      "setup": "She is still on the line. She says, “I’m starting to wish I hadn’t said anything. I don’t want this to come back on him.” Your summary still says her son was left alone.",
+      "prompt": "She is reconsidering whether to speak at all. What do you do?",
+      "choices": [
+        {
+          "id": "fix-it-now",
+          "text": "Say you will fix the summary now, while she is on the line. Ask what she saw, read the new version back, and tell her plainly what you can and cannot promise.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "medium"},
+          "consequence": "You say, “You were right to stop me. Let me fix it now.” She describes the afternoon: her son and three other people in a room with one staff member. You read it back, and she agrees. You tell her you cannot promise how the program will react, and you give her a way to reach you if anything changes for her son.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You repaired the record while she was still on the line, and you were honest about what you cannot control. Build on it by reading back your summary before anyone has to correct it."},
+            {"style": "another-perspective", "text": "For the mother, “I wish I hadn’t said anything” was a real weighing of risk. A fixed summary and an honest limit gave her a reason to keep talking."}
+          ],
+          "next": "d3-the-message"
+        },
+        {
+          "id": "reassure-only",
+          "text": "Reassure her that everything will be fine, that the program will never know what she said, and that she did the right thing by calling, so she does not regret it.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "She thanks you, a little uncertainly. You have promised two things you cannot know, and the summary still says something she did not say.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Comfort without a fix leaves the problem where it was. Fixing the summary, and saying honestly what you cannot promise, is more reassuring than a guarantee."},
+            {"style": "normalize-reframe", "text": "Wanting to make a worried parent feel better is natural. Reassurance you cannot back up moves the risk onto her later."}
+          ],
+          "next": "d3-the-message"
+        },
+        {
+          "id": "sort-it-out-later",
+          "text": "Tell her you understand, that you will review your notes after the call and sort out the wording yourself, and thank her for her time so she does not feel pressured to continue.",
+          "measures": {"learning": "medium", "trust": "low", "engagement": "low"},
+          "consequence": "The call ends politely. You fix the wording from memory. She never hears the new summary and does not know what the review now says she said.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Not pressuring her is considerate. But the only person who can confirm the summary is her, and she is on the line now. Reading it back takes a minute."},
+            {"style": "feed-forward", "text": "Next time, try: “Let me fix that now and read it back to you. Tell me if it’s still not right.”"}
+          ],
+          "next": "d3-the-message"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-message",
+      "recovery": false,
+      "setup": "On Thursday, the newer licensor messages you privately: “The draft correction order says the program could not show training records for two staff. I wrote down that the program showed them to me at the end of the visit, while you and the lead were in another room. I don’t want to contradict the lead in front of the team tomorrow. The lead has been doing this for fifteen years.” The draft goes to your licensing supervisor on Friday.",
+      "prompt": "A newer colleague has a doubt about a senior colleague’s draft and is hesitant to raise it. What do you do?",
+      "choices": [
+        {
+          "id": "help-it-reach-the-order",
+          "text": "Tell him it matters before Friday. Offer to go to the lead licensor together, or to look over a note he sends today, and keep his hesitation private.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "He chooses to send a short note himself and asks you to look at it first. It says what he saw, when, and where his notes are. It does not say the order is mistaken; it asks the lead licensor to check. The lead licensor calls the program that afternoon and confirms the records exist. The finding comes out of the draft before it reaches your licensing supervisor. At the team meeting, the lead licensor thanks him for catching it before it went out.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You helped his observation reach the decision before it closed, and you left the choice of how with him. Keeping his hesitation private let the note stand on the evidence. Build on it by asking, at a team meeting, how late observations should reach a draft order."},
+            {"style": "another-perspective", "text": "For the lead licensor, a specific note with a source is easy to act on. Finding out from the program, after the order went out, would have been far harder."},
+            {"style": "reflective-prompt", "text": "On your team, how does an observation from the newest person reach a decision the most senior person is making?"}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "raise-it-yourself",
+          "text": "Raise it yourself with the lead licensor as your own observation, so he does not have to take the risk of contradicting someone senior so early in his time on the team.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "The lead licensor asks when you saw the records. You did not; you were in another room. You explain that someone else saw them, and the lead licensor asks who. The observation is now secondhand, and the newer licensor’s name comes up anyway, without his say in how.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Shielding a newer colleague is kind, and the risk he named is real. Taking his observation as your own weakens the evidence and can still expose him. Helping him bring it, with your support, keeps both the evidence and his choice."},
+            {"style": "another-perspective", "text": "For the newer licensor, having his observation carried for him may feel like protection, and also like a sign that he cannot speak for his own work here."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "let-it-go",
+          "text": "Tell him to let the order go as drafted, since the program will object if the finding is wrong, and the lead licensor has far more experience.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The order goes to your licensing supervisor with a finding the newer licensor’s notes contradict. When the program objects, his notes surface. He has learned that what he saw counted for less than who saw it, and that a peer told him so.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Experience is valuable. It does not settle what the program showed someone else at the end of the visit. His notes are evidence, and the order is still open until Friday."},
+            {"style": "another-perspective", "text": "For the program, an order whose finding its own records contradict can feel like the review was not listening, which shapes what it shares on the next visit."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "explain-his-nerves",
+          "text": "Tell him you will bring it up at tomorrow’s team meeting and explain that he was too nervous to contradict the lead licensor, so everyone sees why newer staff need encouragement.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "medium"},
+          "consequence": "He writes back, “Please don’t say that part.” You have offered to share his private reason in front of the team he was worried about. The observation about the records could stand on its own; his hesitation was not yours to share.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Wanting the team to understand what newer staff face is a fair aim. Sharing his hesitation without asking makes him the example. The records observation was enough to raise."},
+            {"style": "another-perspective", "text": "For the newer licensor, having his nervousness described to the team would cost more than contradicting the lead licensor would have."}
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Being honest about what you cannot promise, and still making a question worth asking",
+    "Recording a pattern without naming the person who raised it",
+    "Treating a correction to your account as information, and reading the revised account back",
+    "Repairing a record while the person is still there to confirm it",
+    "Helping a newer colleague’s observation reach a decision before it closes, without speaking for them or sharing their hesitation"
+  ],
+  "this_week": [
+    "On your next visit or interview, when someone hesitates, tell them plainly what you can and cannot promise before they decide what to say.",
+    "Read back your summary at the end of your next call with a family member or provider, and change it if they correct you.",
+    "Ask your team how a late observation from one licensor reaches a draft order before it goes out.",
+    "Think of the newest person on your team. What would make it easier for them to tell the most senior person they saw something different?"
+  ],
+  "sources": [
+    "psychological-safety-respect-and-speaking-up",
+    "dc-t12-psychological-safety-for-team-members--respond-when-someone-questions-your-work",
+    "dc-t12-psychological-safety-for-team-members--raise-a-precise-question-within-your-role",
+    "dc-l74-building-psychological-safety-on-teams--recognize-hierarchy-and-keep-the-right-concern-rou",
+    "dc-l74-building-psychological-safety-on-teams--understand-what-the-team-learning-concept-does-and",
+    "3-speaking-up-psychological-safety-and-accountability",
+    "psychological-safety-and-repair-practices-not-personality"
+  ]
+}

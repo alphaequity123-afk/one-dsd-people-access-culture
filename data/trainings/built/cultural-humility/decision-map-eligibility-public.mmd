@@ -1,0 +1,25 @@
+flowchart TD
+  d1-opening["How do you open the conversation?"]
+  d1-opening -->|"Offer an interpreter right away in the language you guess from her acc"| r1-regain
+  d1-opening -->|"Ask the caller which language she wants, whether she wants a free inte"| d2-the-facts
+  d1-opening -->|"Read the note, then explain the renewal and the letter clearly and in "| r1-regain
+  d1-opening -->|"Her son answers quickly and speaks easily, so direct your questions to"| r1-regain
+  d2-the-facts["What do you ask next?"]
+  d2-the-facts -->|"Ask only what the renewal needs: her income and which proof she can ge"| d3-the-note
+  d2-the-facts -->|"Ask the caller to tell you more about what was going on at home, so yo"| r2-redirect
+  d2-the-facts -->|"Tell the caller you will get the case reopened today, so she does not "| r2-redirect
+  d2-the-facts -->|"Explain each way she can send proof, such as uploading or mailing it, "| r2-redirect
+  d3-the-note["What do you write, and what do you do with what the caller told you?"]
+  d3-the-note -->|"Write what she asked and how she chose to communicate, correct the int"| end_node
+  d3-the-note -->|"Write a short, helpful note for the next worker: “Caller confused by n"| end_node
+  d3-the-note -->|"Leave the old note as it is and add “Renewal explained.” The call is o"| end_node
+  d3-the-note -->|"Write an accurate note in plain terms: what she asked, how she chose t"| end_node
+  r1-regain["Second chance: What do you do now?"]
+  r1-regain -->|"Name the misstep in one sentence, then ask how she wants to continue: "| d2-the-facts
+  r1-regain -->|"Say nothing about the misstep, but slow down, speak more gently and le"| d2-the-facts
+  r1-regain -->|"Apologize at length, explain that you only meant well and that the que"| d2-the-facts
+  r2-redirect["Second chance: How do you bring the call back to what she needs?"]
+  r2-redirect -->|"Accept what she has chosen to share, and return to the practical quest"| d3-the-note
+  r2-redirect -->|"Explain that knowing why the form was late would help you help her and"| d3-the-note
+  r2-redirect -->|"Offer to mail the form again with a list of the proof it needs, and te"| d3-the-note
+  end_node(["Reflection and action plan"])

@@ -1,0 +1,25 @@
+flowchart TD
+  d1-the-finding["How do you write the finding?"]
+  d1-the-finding -->|"Keep the colleague’s sentence. It is a fair short summary of both resu"| r1-rewrite
+  d1-the-finding -->|"Report what the data shows, fewer returns and a lower share who unders"| d2-the-session
+  d1-the-finding -->|"Keep the observed facts, and add context from a published community br"| r1-rewrite
+  d1-the-finding -->|"Remove the non-English results from the main tables. The numbers are s"| r1-rewrite
+  d2-the-session["How do you run the session?"]
+  d2-the-session -->|"Say what is fixed, the data and the date, and what is still open: word"| d3-the-report
+  d2-the-session -->|"Present the findings as written and ask for sign-off by the end of the"| r2-whats-it-for
+  d2-the-session -->|"Agree on the spot to split the combined category and re-run every tabl"| r2-whats-it-for
+  d2-the-session -->|"Ask the first partner to explain how people in her community feel abou"| r2-whats-it-for
+  d3-the-report["What does the report say, and what do you tell the partners?"]
+  d3-the-report -->|"Report the letter as an action whose effect is not yet known, and say "| end_node
+  d3-the-report -->|"Use the program manager’s sentence. It is her program’s report, the ou"| end_node
+  d3-the-report -->|"Remove any statement about outreach, and say the data cannot support c"| end_node
+  d3-the-report -->|"Write the report accurately, naming the letter as an action with an un"| end_node
+  r1-rewrite["Second chance: What do you change?"]
+  r1-rewrite -->|"Rewrite the finding as what was observed, add the survey’s language li"| d2-the-session
+  r1-rewrite -->|"Keep the structure but soften the claim: change “were less engaged” to"| d2-the-session
+  r1-rewrite -->|"Keep the draft as it is. This is how findings are usually written, and"| d2-the-session
+  r2-whats-it-for["Second chance: How do you answer?"]
+  r2-whats-it-for -->|"Answer plainly: the data and date are fixed; wording, limits, how cate"| d3-the-report
+  r2-whats-it-for -->|"Apologize that the purpose was not clear, and promise a follow-up emai"| d3-the-report
+  r2-whats-it-for -->|"Give the partners the draft and ask them to rewrite the parts they dis"| d3-the-report
+  end_node(["Reflection and action plan"])

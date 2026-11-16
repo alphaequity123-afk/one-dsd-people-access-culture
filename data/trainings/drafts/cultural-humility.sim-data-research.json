@@ -1,0 +1,495 @@
+{
+  "intro_by": "C6",
+  "intro": "If you choose categories, run the numbers or write findings, your words travel further than you do. I have seen one sentence in a report become the way a whole group is described for years. In this version, you write a finding, run a results session with community partners and decide what the report can honestly claim.",
+  "cast": [
+    {
+      "role": "program-manager",
+      "label": "the program manager",
+      "portrait": "C8"
+    },
+    {
+      "role": "colleague",
+      "label": "a colleague",
+      "portrait": "C4"
+    },
+    {
+      "role": "first-partner",
+      "label": "the first partner",
+      "portrait": "C5"
+    },
+    {
+      "role": "second-partner",
+      "label": "the second partner",
+      "portrait": "C7"
+    },
+    {
+      "role": "third-partner",
+      "label": "the third partner",
+      "portrait": "C2"
+    }
+  ],
+  "version": "data-research",
+  "level": "intermediate",
+  "title": "What the Numbers Can Say",
+  "learner_role": "You are a research analyst in a DHS research and evaluation unit. You choose how results are grouped, write the findings and their limits, and present them to the program that asked for the study. The program’s decisions, and the data rules your unit follows, belong to the person or area responsible.",
+  "background": "A program that oversees in-home support services asked for an analysis of a statewide survey. The survey asked people whether they can reach their case manager and whether they understand their service plan. You are reporting results by race, ethnicity and preferred language. The survey was offered online and by phone in English and one other language, and on paper in English only. Far fewer surveys came back from people whose preferred language is not English. The program manager needs findings for a report to the Legislature in three weeks. Three partners, one from each of three community organizations, have agreed to a results session next week.",
+  "start": "d1-the-finding",
+  "decisions": [
+    {
+      "id": "d1-the-finding",
+      "recovery": false,
+      "setup": "A colleague’s draft of the key finding reads: “People whose preferred language is not English were less engaged with the survey and less satisfied with their case managers.” What the data shows: fewer surveys returned from that group, and among those who did respond, a lower share said they understand their service plan. The methods checklist says “Language access: yes.”",
+      "prompt": "How do you write the finding?",
+      "choices": [
+        {
+          "id": "keep-draft",
+          "text": "Keep the colleague’s sentence. It is a fair short summary of both results, the program asked for plain findings, and the Legislature report is three weeks out.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The program manager likes the clarity and plans to quote the sentence in a briefing. A community partner reads the advance copy and writes back: “Less engaged? The survey was never offered in the language most of our members read.” The finding now carries a reason no one in the data supplied.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "“Fewer surveys were returned” is an observation. “Less engaged” adds a reason. The readings use this exact distinction: the form not returned is a fact; “not interested” is an inference. The stronger draft keeps them apart."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the people behind those numbers, “less engaged” becomes a description of them in a legislative document, when the barrier may have been the survey itself."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "In your last report, which words described what the data showed, and which supplied a motive?"
+            }
+          ],
+          "next": "r1-rewrite"
+        },
+        {
+          "id": "observation-and-questions",
+          "text": "Report what the data shows, fewer returns and a lower share who understand their plan, with counts and limits. Name the survey’s two languages. List possible reasons as open questions.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your finding is longer but harder to misread. The program manager asks why the reasons are questions instead of answers. You explain that several reasons fit the data, including the survey’s own reach, and that the partner session can help sort them out. She agrees to bring the questions to the session.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You kept the observation, the limits and the open questions distinct, which is what lets evidence that does not fit the first account stay visible. Extend it to the checklist too: “Language access: yes” should say what was actually offered."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When you list open questions, write them so the answer could change your interpretation, for example: “Did people receive the survey in a language they read well?”"
+            }
+          ],
+          "next": "d2-the-session"
+        },
+        {
+          "id": "add-brief",
+          "text": "Keep the observed facts, and add context from a published community brief saying some communities are less comfortable rating professionals, so readers understand why the gap in the results might appear.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The sentence reads as expert context. Reading the advance copy, a partner points out that the brief describes one study in another state, and that people she works with rate services all the time when they are asked in a usable way. The brief has become an explanation for people it never described.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Reaching for published context is a good research habit. The readings draw the line here: a brief can prepare better questions, but it cannot supply the answer for a person or a group in your data. Keep a source’s time, place and purpose visible."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare using the brief to write a question, such as “Is comfort rating professionals part of this gap?”, with using it as the answer. The first invites partners to correct you; the second closes the inquiry."
+            }
+          ],
+          "next": "r1-rewrite"
+        },
+        {
+          "id": "drop-results",
+          "text": "Remove the non-English results from the main tables. The numbers are small, small numbers can mislead, and your unit’s caution about unstable estimates points the same way.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The report is cleaner. It now says nothing about the people the survey reached least. The program manager reads the totals and concludes there is no meaningful difference by language. Reading the advance copy, a partner asks where their members went.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Caution about small numbers is sound, and your unit’s small-number rules still apply. The stronger choice reports what can be shown within those rules and says plainly whose experience the data could not reach."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When a group drops out of a table, where does the reader learn that it happened and why?"
+            }
+          ],
+          "next": "r1-rewrite"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-session",
+      "recovery": false,
+      "setup": "At the results session, the program manager asks you to “walk them through it and get their sign-off by the end of the hour.” The first partner says the combined category in your tables groups together communities whose experiences of services are very different. The second partner says many people he works with got the survey in a language they read poorly. The third partner has not spoken yet. The data is already collected; the report date is fixed.",
+      "prompt": "How do you run the session?",
+      "choices": [
+        {
+          "id": "explain-whats-open",
+          "text": "Say what is fixed, the data and the date, and what is still open: wording, limits, how categories are shown and the next survey. Then ask what they see.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You add that no one is there to speak for a whole community. The partners relax once they know what their input can shape. The first partner suggests showing the combined category with a note on what it hides. The second partner offers wording for the limits section. The third partner says the questions about “understanding your plan” assume a written plan she has rarely seen people receive. That is a point no one on your team had raised.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You made the invitation honest. People can contribute well when they know what can change and what cannot. The third partner’s point shows why: partnership can change the question itself, not just the wording of the answer."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the partners’ side, an hour of their time now has a purpose they can see. They were asked to inform choices, not to approve a finished product."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Before the session ends, read back what you heard and which part of the report each point could affect. It shows the input landed somewhere."
+            },
+            {
+              "style": "feed-forward",
+              "text": "If someone has not spoken, offer a route that does not put them on the spot: “Anyone who would rather send thoughts after today can write to me by Friday.”"
+            }
+          ],
+          "next": "d3-the-report"
+        },
+        {
+          "id": "seek-signoff",
+          "text": "Present the findings as written and ask for sign-off by the end of the hour, as the program manager asked. Log every concern the partners raise so it shapes the next survey.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The partners listen politely. The first partner says she cannot sign off on categories that erase her members. The second partner asks what the meeting is for if nothing can change. Forty minutes are gone, and the concerns are headed for a file for a survey that is two years away.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Asking for approval of a finished draft is a request for endorsement, not partnership. The readings describe this exactly: a contribution heard, but given no relevant choice to affect."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Deadlines push toward sign-off. That pressure is real. But some things in this report are still open, and saying which ones is what makes the hour worth the partners’ time."
+            }
+          ],
+          "next": "r2-whats-it-for"
+        },
+        {
+          "id": "promise-rerun",
+          "text": "Agree on the spot to split the combined category and re-run every table for this report, so the partners can see right away that their concerns are taken seriously.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The room warms. Then you check the codebook on your laptop: the survey did not collect detail at that level, and your unit’s small-number rules would block most split tables anyway. You will have to take the promise back. The second partner sees your face change.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Responding fast felt like respect, but the promise came before checking what was possible. The stronger move separates the real limit, what the data holds, from what can still change, like how the category is labeled and explained."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “I don’t know yet whether the data can be split that way. I will check, and I will tell you by Friday what is possible and what is not.”"
+            }
+          ],
+          "next": "r2-whats-it-for"
+        },
+        {
+          "id": "ask-to-represent",
+          "text": "Ask the first partner to explain how people in her community feel about their case managers, so the report can include a community view alongside the numbers.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The first partner pauses, then says she can share what members have told her, but she cannot speak for everyone, and people in her community do not all feel the same way. The third partner still has not spoken. The session has turned into a request for a community’s opinion through one person.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "From the first partner’s side, she came to help interpret data and was asked to stand in for a whole community. One person’s account can inform the analysis; it cannot represent everyone."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What question could you ask the first partner about the data that uses what she knows without making her a spokesperson?"
+            }
+          ],
+          "next": "r2-whats-it-for"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-report",
+      "recovery": false,
+      "setup": "Two weeks later, the program manager points out that the program sent a new outreach letter halfway through the survey period, and no complaints have come in since. The letter went out in English only. She wants the report to say: “Outreach improved understanding of service plans for all groups.” You also owe the partners an account of what happened to their input.",
+      "prompt": "What does the report say, and what do you tell the partners?",
+      "choices": [
+        {
+          "id": "accurate-claims",
+          "text": "Report the letter as an action whose effect is not yet known, and say whose experience the survey missed. Tell partners what their input changed and what did not.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The program manager pushes back, then agrees when you point out that the letter reached people in one language, and that no complaints is missing information, not proof. The report now names the outreach, its unknown effect and the survey’s limits. Your note to partners lists each point they raised, what it changed, and the tables that could not be split, with the reason. The second partner replies that this is the first time a study told them what happened afterward.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You kept three things separate that are easy to blur: an action, its effect and the silence after it. That honesty protects the program as much as the partners. Keep doing the follow-up note; it is what turns a session into partnership."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Think of a legislator reading the report. A claim of improvement for all groups would invite a decision the data cannot support. Your version lets them see what is known and what is not."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "use-managers-line",
+          "text": "Use the program manager’s sentence. It is her program’s report, the outreach letter probably helped, and with the Legislature deadline close, a clear message is what she needs.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The report goes forward with the improvement claim. The partners read it and see none of their points. When the next survey shows the same gap, the program has already told the Legislature it was fixed.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "No complaints does not show the barrier disappeared. The readings say missing feedback cannot be labeled satisfaction. The stronger draft names the outreach as an action and its effect as unknown."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Deferring to the program owner is often right on program choices. The wording of an evidence claim, though, is part of your work, and accuracy is the thing you bring."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try offering the program manager a sentence she can live with: “The program sent an outreach letter during the survey period; the survey cannot yet show its effect.”"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "claim-nothing",
+          "text": "Remove any statement about outreach, and say the data cannot support conclusions about anything for people whose preferred language is not English, given how few surveys returned.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The report is cautious to the point of saying little. The partners’ work on the limits section, and the finding about understanding service plans, both disappear into a general warning. The program manager has nothing to act on.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Caution can turn into dismissing what is known. The readings warn against saying nothing useful happened because an outcome was not measured. The data does show a gap in reach and in understanding, with limits."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What can this data honestly say, even if it cannot say everything?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "accurate-no-followup",
+          "text": "Write the report accurately, naming the letter as an action with an unknown effect, and leave it to the program manager, who owns the partner relationships, to decide whether and when to contact them.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The report is careful and fair. The program manager is busy, and no note goes to the partners. Months later, the first partner’s organization declines an invitation to the next study, saying they never heard what came of the last one.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The report itself is sound. The stronger choice also closes the loop, because an opportunity to speak does not show the concern informed anything unless people hear what happened."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Draft the partner note yourself and offer it to the program manager: what was heard, what changed, what did not and why, who to contact next."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-rewrite",
+      "recovery": true,
+      "setup": "A partner’s comment on the advance copy is in front of you. The session is next week, and the draft can still change. You read the finding again: is it saying what the data shows, or something more?",
+      "prompt": "What do you change?",
+      "choices": [
+        {
+          "id": "rewrite-observation",
+          "text": "Rewrite the finding as what was observed, add the survey’s language limits, and turn the reasons into open questions for the session.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The new draft keeps every group in view within your unit’s rules, says fewer surveys returned, names the two languages and lists three possible reasons as questions. The program manager agrees to bring them to the partners.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You let a second look change the finding, not just its tone. That is self-examination applied to your own draft."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep a short list of words that add motive, like “engaged”, “reluctant” or “uninterested”, and search your drafts for them."
+            }
+          ],
+          "next": "d2-the-session"
+        },
+        {
+          "id": "soften-words",
+          "text": "Keep the structure but soften the claim: change “were less engaged” to “may have been less engaged,” and add a line noting the survey’s language limits.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The limits line helps, but the sentence still points to the people, not the survey. When you send the revision, the partner replies that the motive is still there, just quieter.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "“May have been” softens the inference but keeps it. The stronger rewrite removes the motive and reports what was observed."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "If the survey had been offered in more languages, would the finding still read this way?"
+            }
+          ],
+          "next": "d2-the-session"
+        },
+        {
+          "id": "defend-standard",
+          "text": "Keep the draft as it is. This is how findings are usually written, and the partners can raise their concerns at the session next week, where there is time.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The partners arrive having read “less engaged.” The first twenty minutes of the session go to that sentence.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "From the partners’ side, the session now starts with defending their communities instead of interpreting results."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Standard phrasing feels safe because it is familiar. Familiar is not the same as accurate."
+            }
+          ],
+          "next": "d2-the-session"
+        }
+      ]
+    },
+    {
+      "id": "r2-whats-it-for",
+      "recovery": true,
+      "setup": "The second partner asks, “So what are we here for?” The program manager looks at you. There are twenty minutes left.",
+      "prompt": "How do you answer?",
+      "choices": [
+        {
+          "id": "say-whats-open",
+          "text": "Answer plainly: the data and date are fixed; wording, limits, how categories are shown and the next survey are open. Then ask about each one.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The tone changes. The first partner proposes a note under the combined category. The third partner raises her question about written service plans. You leave with three concrete changes and one item to check.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You answered a hard question with an honest map of what can change. That is what made the remaining twenty minutes useful."
+            },
+            {
+              "style": "another-perspective",
+              "text": "The second partner’s question was not hostility. It was a request to know whether his knowledge could matter."
+            }
+          ],
+          "next": "d3-the-report"
+        },
+        {
+          "id": "follow-up-email",
+          "text": "Apologize that the purpose was not clear, and promise a follow-up email by Friday with next steps, what can still change and what cannot.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The partners accept, but the session ends without their input attached to any decision. The email will have to carry what the hour did not.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A follow-up is useful, but the open choices could have been named now, while people were in the room to respond."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When asked “what are we here for?”, try answering in the moment with one fixed item and one open item."
+            }
+          ],
+          "next": "d3-the-report"
+        },
+        {
+          "id": "hand-them-draft",
+          "text": "Give the partners the draft and ask them to rewrite the parts they disagree with before the report goes in, so the final wording is truly theirs.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The partners take the draft, but it is your work, and they were not asked or paid to write it. Two send edits; one does not reply.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Partnership values what people know without assigning them staff work. The analysis stays yours; their input informs it."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What is the difference between asking for someone’s knowledge and asking them to do your job?"
+            }
+          ],
+          "next": "d3-the-report"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Separating an observation in the data from a reason the writer added",
+    "Using a published brief to write a better question, not to explain people in the data",
+    "Reporting a group the data reached poorly instead of letting it drop out of view",
+    "Telling partners what is fixed and what their input can still shape",
+    "Hearing one partner’s knowledge without asking them to speak for a whole community",
+    "Keeping an action, its effect and missing feedback distinct in a finding",
+    "Telling partners what happened to their input, including what did not change and why"
+  ],
+  "this_week": [
+    "Read one finding you wrote recently and mark each word that describes what was observed and each word that supplies a motive.",
+    "Find one “yes” on a methods checklist and write one sentence on the evidence behind it.",
+    "Before your next results session, write down what is fixed and what is still open, and say both at the start."
+  ],
+  "sources": [
+    "cultural-humility-in-professional-judgment",
+    "cultural-humility-vs-checklist",
+    "cultural-humility-in-everyday-public-service",
+    "dc-i26-cultural-humility-in-depth",
+    "dc-i27-cultural-humility-vs-cultural-competence",
+    "dc-s31-cultural-humility-in-public-service"
+  ]
+}

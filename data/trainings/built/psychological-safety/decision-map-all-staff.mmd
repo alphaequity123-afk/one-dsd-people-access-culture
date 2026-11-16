@@ -1,0 +1,23 @@
+flowchart TD
+  d1-huddle["What do you do in this moment?"]
+  d1-huddle -->|"“Before we move on, can we look at that? I'm not sure how those two fi"| d2-number
+  d1-huddle -->|"Say nothing now, since the huddle is short and the team lead is alread"| r1-anything-else
+  d1-huddle -->|"“I think it's in last month's huddle notes. I can send you the link af"| r1-anything-else
+  d1-huddle -->|"“Good catch. The training sheet is newer, so the guide must be out of "| d2-number
+  r1-anything-else["Second chance: Do you say anything before the huddle ends?"]
+  r1-anything-else -->|"“Before we close, can we go back to the two instructions? I'm not sure"| d2-number
+  r1-anything-else -->|"Let the huddle close on time, then send the newer team member a friend"| d2-number
+  d2-number["What do you do?"]
+  d2-number -->|"Correct the number now, tell the call-line lead and the team lead what"| d3-confide
+  d2-number -->|"Correct the number right away, check the rest of the contacts section "| r2-follow-up
+  d2-number -->|"Correct the number, then post a long apology in the team chat saying y"| r2-follow-up
+  d2-number -->|"Add the error to the team's monthly learning review next week, so the "| r2-follow-up
+  r2-follow-up["Second chance: How do you reply?"]
+  r2-follow-up -->|"“That's on me: I copied it from an old contact list. I'll make sure th"| d3-confide
+  r2-follow-up -->|"“It's a small thing, and I'll make sure it's right. Callers can always"| d3-confide
+  d3-confide["What do you say?"]
+  d3-confide -->|"“Thanks for telling me. That's not okay, and you don't have to judge h"| end_node
+  d3-confide -->|"“That's not okay. Supervisors have to act on this kind of thing, so I'"| end_node
+  d3-confide -->|"“That's not okay. I know him a little. I'll find him tomorrow, ask wha"| end_node
+  d3-confide -->|"“I'm sure he doesn't mean anything by it. He jokes with everyone. Mayb"| end_node
+  end_node(["Reflection and action plan"])

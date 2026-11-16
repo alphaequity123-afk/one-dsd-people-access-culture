@@ -1,0 +1,26 @@
+flowchart TD
+  d1-email["What do you say about the visitor's email?"]
+  d1-email -->|"“The address was checked, so the letter is accurate. Let's send her a "| r1-reply
+  d1-email -->|"“The address is right, but her point is which door is the public one. "| d2-comments
+  d1-email -->|"“If she got lost, others probably did too. Let's rewrite the letter fr"| d2-comments
+  d1-email -->|"“Before we change anything, do we know anything about her? Maybe she's"| r1-reply
+  d2-comments["How do you respond to the thread?"]
+  d2-comments -->|"Stay out of the thread so it does not turn into an argument, and messa"| d3-follow-through
+  d2-comments -->|"Reply in the thread: the north-sign and bus-side points are useful, an"| d3-follow-through
+  d2-comments -->|"Reply to keep things moving: “Good points, and it does help to hear th"| r2-correction
+  d2-comments -->|"Message the experienced teammate privately to calm things down: “Go ea"| r2-label
+  r1-reply["Second chance: Do you say anything about the draft reply?"]
+  r1-reply -->|"Post in the chat: “I reread her email. She found the building; it was "| d2-comments
+  r1-reply -->|"Let it go. The experienced teammate has handled this letter for years,"| d2-comments
+  r2-correction["Second chance: What do you say to the newer teammate?"]
+  r2-correction -->|"“I am so sorry. I really was just trying to help the thread move along"| d3-follow-through
+  r2-correction -->|"“Thank you for telling me. I got that wrong: it was about checking you"| d3-follow-through
+  r2-label["Second chance: What do you say to the newer teammate?"]
+  r2-label -->|"“I am so sorry. I was only trying to get him to ease up on you. I hope"| d3-follow-through
+  r2-label -->|"“Thank you for telling me. I got it wrong: I guessed a reason and pass"| d3-follow-through
+  d3-follow-through["What do you suggest for closing the loop?"]
+  d3-follow-through -->|"“The letter is fixed, so mark it closed, and send her a thank-you that"| end_node
+  d3-follow-through -->|"“Tell her what changed and what went to facilities, ask if the new wor"| end_node
+  d3-follow-through -->|"“Let's tell her a new Visitors sign is going up. She circled the build"| end_node
+  d3-follow-through -->|"“She clearly knows what visitors need. Let's thank her and ask her to "| end_node
+  end_node(["Reflection and action plan"])

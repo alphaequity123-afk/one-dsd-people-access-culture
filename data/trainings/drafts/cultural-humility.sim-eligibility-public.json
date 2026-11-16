@@ -1,0 +1,486 @@
+{
+  "intro_by": "C4",
+  "intro": "If you answer a call line or work through applications and notices, each call puts a person’s coverage in your hands for a few minutes. I have learned that the note on the screen and the voice on the line can tell very different stories. In this version, you take a renewal call and decide what to ask, what to assume and what to write for the next worker.",
+  "cast": [
+    {
+      "role": "caller",
+      "label": "the caller",
+      "portrait": "C3"
+    },
+    {
+      "role": "son",
+      "label": "her son",
+      "portrait": "C1"
+    }
+  ],
+  "version": "eligibility-public",
+  "level": "intermediate",
+  "title": "The Renewal Call",
+  "learner_role": "You answer a DHS health care eligibility call line. You explain notices, check what a case shows, tell people what they can do next and write the case note. Some outcomes are yours to explain but not yours to decide; those belong to the person or area responsible for the eligibility decision.",
+  "background": "A caller phones about a letter saying her health care coverage closed because her renewal was not returned. Her adult son is on the line with her. The note from an earlier contact reads: “Client unresponsive. Declined interpreter.” The caller speaks slowly and carefully, with a pause before each answer. The queue shows six people waiting. In the next fifteen minutes, what you ask, what you assume and what you write will shape what happens to the caller, and what the next worker reads about her.",
+  "start": "d1-opening",
+  "decisions": [
+    {
+      "id": "d1-opening",
+      "recovery": false,
+      "setup": "The caller says, “I never understood this letter. My son helps me with these things.” Before you can answer, her son starts explaining the letter for her. The old note is on your screen: unresponsive, declined interpreter. You have not yet heard from the caller how she wants this call to go.",
+      "prompt": "How do you open the conversation?",
+      "choices": [
+        {
+          "id": "guess-language",
+          "text": "Offer an interpreter right away in the language you guess from her accent. The earlier note is probably out of date, and her English seems slow and careful.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "There is a long pause. The caller says, “I don’t speak that language.” Her son laughs, uncomfortable. You apologize and ask which language she uses, but the caller now answers in shorter sentences. The offer was meant to help. It still told her that you had decided something about her from how she sounds.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Reaching for an interpreter is a caring instinct, and many people on call lines do it. The trouble is where the choice came from: an accent cannot tell you a person’s language, needs or preference. The readings are plain on this: do not infer meaning from identity, an accent or appearance."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with simply asking: “Which language would you like to use today? I can bring in an interpreter if that helps.” Same care, but the caller makes the choice."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Think about how this lands for the caller. She has already been told by a letter that she missed something. Now a guess about who she is arrives before any question about what she needs."
+            }
+          ],
+          "next": "r1-regain"
+        },
+        {
+          "id": "ask-how",
+          "text": "Ask the caller which language she wants, whether she wants a free interpreter, and whether her son should help. Check permission before discussing her case with him.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The caller says she wants to try in English, with her son on the line. She gives permission for you to talk about her case with him on this call. You tell her she can ask for an interpreter at any point in the call, at no cost, so hard words never have to fall to her son. Then she adds something the note left out: on the earlier call, the interpreter offered was for a language she does not speak, so she said no. “Unresponsive” and “declined interpreter” now read very differently. Her son goes quiet and lets his mother answer.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You asked before you assumed. The note, the pause and her son’s quick answer all pointed toward a story, and you let the caller tell her own instead. You also kept a free interpreter open to her for the whole call, so a family member does not have to carry the hard words. Build on it: when a note gives a reason, treat it as one possible reading until the person confirms it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the caller’s side, this may be the first time on this case that someone asked how she wants to be helped, rather than deciding it for her. That small question shifted who shapes the call."
+            }
+          ],
+          "next": "d2-the-facts"
+        },
+        {
+          "id": "explain-letter",
+          "text": "Read the note, then explain the renewal and the letter clearly and in full, step by step, so nothing is missed. Then ask whether she has any questions before you go on.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Your explanation is accurate and complete. The caller says “yes” several times. When you finish, she asks, “So what do I send?” Her son says the letter is the problem, not the deadline. Ten minutes are gone and you still do not know which part she could not use.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your explanation was correct, like the right address on a letter. But a correct explanation and a usable one answer different questions. Asking “Which part of the letter was hard to use?” would have found the gap in one minute."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When someone says “yes” over and over during an explanation, what do you usually take it to mean, and how could you check?"
+            },
+            {
+              "style": "feed-forward",
+              "text": "Next time, start with the person’s own words: “You said you never understood this letter. Which part was the hardest?” Then explain only that part first."
+            }
+          ],
+          "next": "r1-regain"
+        },
+        {
+          "id": "talk-to-son",
+          "text": "Her son answers quickly and speaks easily, so direct your questions to him to save time for the six callers waiting. The caller can add anything he misses.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "Her son answers your questions about income. He guesses at her work hours. The caller tries to cut in, but you have already moved to the next question. Finally she says, “He doesn’t know my hours. I work two jobs.” You have not checked whether the caller gave permission for you to discuss her case with her son.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "From where the caller sits, the call is now about her but no longer with her. You controlled who got to speak. That is role influence, even when the goal is speed."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "A long queue pushes everyone to take the fastest voice on the line. That pressure is real. The readings ask you to notice who has room to shape the interaction, because the fastest voice is not always the person whose case it is."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Thank her son, then turn to the caller: “Would you like your son to help, or would you like to answer yourself? Either is fine.” Then check what the case rules need before you discuss details with him."
+            }
+          ],
+          "next": "r1-regain"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-facts",
+      "recovery": false,
+      "setup": "The case shows the renewal can still be processed if the form and proof of income arrive by the date in the notice. The caller says she got the form, but “there was a lot going on at home,” and she did not know which pay stubs to send. Her son starts to mention a family illness, then stops. You need current income information and a plan for the proof.",
+      "prompt": "What do you ask next?",
+      "choices": [
+        {
+          "id": "task-only",
+          "text": "Ask only what the renewal needs: her income and which proof she can get. Say what is fixed and what she can choose, like how to send it.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You explain what is fixed, the proof and the date, and what she can choose: how to send it, whether to have the form sent again, and whether to go through it together now. The caller relaxes. She asks which pay stubs count, which was the real question all along. You walk through it. She chooses to upload the proof with her son’s help and asks you to stay on while she writes down the date. Nobody had to explain what was happening at home.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "Your curiosity had a clear purpose. You asked about the task, not her life, and you kept the real limits visible while giving her real choices inside them. Keep that line: practical help does not depend on sharing a personal history."
+            },
+            {
+              "style": "feed-forward",
+              "text": "One step further: ask her to tell you, in her own words, what she will send and by when. That checks understanding without testing her."
+            }
+          ],
+          "next": "d3-the-note"
+        },
+        {
+          "id": "ask-about-home",
+          "text": "Ask the caller to tell you more about what was going on at home, so you can note the reason and show the full picture.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The caller says, “I’d rather just fix the form.” Her son says his mother does not want to talk about it. The call stalls. The question about pay stubs, the thing she actually needed, has not been answered.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The renewal needed income and proof, not the story behind the delay. A question like “Which pay stubs are you unsure about?” serves her request. A question about home serves your wish to understand."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the caller, sharing a hard time with a stranger may feel like the price of getting her coverage back. Her redirect tells you what she wants addressed now. It is not a refusal of help."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you ask for the reason behind a missed step, who is the question for?"
+            }
+          ],
+          "next": "r2-redirect"
+        },
+        {
+          "id": "promise-reopen",
+          "text": "Tell the caller you will get the case reopened today, so she does not have to worry about the proof while things are hard at home.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The caller thanks you and sounds relieved. Her son asks, “So we don’t need to send anything now?” You realize reopening depends on the form and proof, and that decision is not yours to make on this call. If she hangs up now, she may wait for a reopening that never comes.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to lift someone’s worry is kind, and it is common under pressure. The readings warn that a promise beyond your authority can undermine trust more than an honest limit. Listening does not create authority to approve a request."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “I can’t reopen it myself today. Here is exactly what the renewal needs, and here is what happens once it arrives.” Honest limits protect the relationship."
+            }
+          ],
+          "next": "r2-redirect"
+        },
+        {
+          "id": "list-options",
+          "text": "Explain each way she can send proof, such as uploading or mailing it, and the date it is due. Ask whether she has any questions, and when she says no, move on.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "Your list is clear and complete. The caller says she has no questions. Then, as you start to close, you hear her ask her son quietly which pay stubs to send. He is not sure either. The question she had, which ones count, has not come up.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You offered real choices, which matters. What was missing was a check on her actual question. “No questions” does not show the explanation worked; an open question about the part that was hard would."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Instead of “Any questions?”, try “Which part would you like me to go over again?” It makes asking easier."
+            }
+          ],
+          "next": "r2-redirect"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-note",
+      "recovery": false,
+      "setup": "Before you close the call, you write the case note. The next worker, and anyone reviewing a later closure, will read it. The old note still says “Client unresponsive. Declined interpreter.” The caller has told you two things: the earlier interpreter offer was for a language she does not speak, and the notice did not say which pay stubs to send.",
+      "prompt": "What do you write, and what do you do with what the caller told you?",
+      "choices": [
+        {
+          "id": "her-words-forward",
+          "text": "Write what she asked and how she chose to communicate, correct the interpreter record through your unit’s process, and send the pay stub gap to the person or area responsible for notices.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your note reads: “Caller asked which pay stubs count. Chose English with son on the line; offer a free interpreter at each contact and ask which language. Earlier interpreter offered in a language she does not use. Proof to be uploaded by the notice date.” The notices team adds her point to a list of wording questions; nobody yet knows how many callers hit the same gap. You tell the caller what happens next and how she will hear. She hangs up knowing what to send and when she will hear back.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You carried her meaning forward instead of the old inference. The readings show how a note travels: it shapes the next conversation and can become a reason to offer fewer choices. Your note keeps her choices open."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Picture the next worker who opens this case. They will meet a person who asked a clear question, not an “unresponsive client.” That changes the first thing they say."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep your claim about the notice honest, as you did: one account names a gap worth checking. It does not prove every notice fails every person."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "new-label",
+          "text": "Write a short, helpful note for the next worker: “Caller confused by notice. Son assists. Needs interpreter.” The queue is long, and it covers the main points.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The note is short and looks helpful. Next month, a new worker reads “needs interpreter” and books one in the wrong language again. The caller declines it, and the cycle starts over. The pay stub question never reaches anyone who writes notices.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "“Confused” and “needs interpreter” are new interpretations, not what she said. Compare: “Asked which pay stubs count. Chose English, son on the line.” One records a label; the other records her account."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which word in your last few notes added a reason the person never gave?"
+            },
+            {
+              "style": "feed-forward",
+              "text": "Before saving a note, read it as the next worker would. Ask: will this lead them to ask her, or to assume?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "renewal-explained",
+          "text": "Leave the old note as it is and add “Renewal explained.” The call is over, the queue is long, and the old note is not yours to change.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The record now shows an unresponsive client who had the renewal explained. If the proof arrives late, a reviewer will read that history first. The caller’s question, and the reason she declined the earlier interpreter, are nowhere in the file.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Short notes are a real survival skill on a call line. But the old account still travels. A private change of mind may not repair what the record keeps saying."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To a reviewer months from now, this case reads like a person who would not engage, when in fact she asked a clear question no one had answered."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "accurate-but-stop",
+          "text": "Write an accurate note in plain terms: what she asked, how she chose to communicate and the proof she will send by the date. Leave the notice wording alone; it is not your area.",
+          "measures": {
+            "learning": "medium",
+            "trust": "high",
+            "engagement": "low"
+          },
+          "consequence": "Her case note is fair and clear, and the next worker will start in the right place. But the pay stub gap stays in the notice. The next caller with the same question meets the same letter.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your note did right by the caller. The stronger choice also passes her specific point to the person or area responsible, so her knowledge can affect a decision you do not own."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What route do you have for passing a caller’s exact words about a notice to the people who write it?"
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-regain",
+      "recovery": true,
+      "setup": "Something in the call tells you the start went wrong. The caller has gone quiet, or she has corrected you. You still have time to change how the rest of the call goes.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "name-and-ask",
+          "text": "Name the misstep in one sentence, then ask how she wants to continue: “I assumed instead of asking. How would you like to do the rest of this call?”",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The caller is quiet for a moment, then says she wants to answer herself, in English, with her son on the line. She gives permission for him to stay. You tell her an interpreter costs her nothing and she can ask for one at any point in the call. She mentions that the earlier interpreter was for a language she does not speak. The call starts again on her terms.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You named the particular assumption without a long apology and without asking her to reassure you. That is what the readings mean by repair: acknowledge the specific inference, then let the person’s answer change what you do."
+            },
+            {
+              "style": "another-perspective",
+              "text": "A short, specific repair costs the caller nothing. A long apology would have asked her to comfort you on a call that is about her coverage."
+            }
+          ],
+          "next": "d2-the-facts"
+        },
+        {
+          "id": "slow-down",
+          "text": "Say nothing about the misstep, but slow down, speak more gently and leave longer pauses for the caller to answer for the rest of the call, so she has more room.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The tone softens and the caller answers a little more. But nobody asks how she wants the call to go, so her son keeps stepping in and you are still not sure who is deciding. The reason for the old “declined interpreter” note comes out only in passing, from her son.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A warmer tone helps, but it is politeness laid over the same pattern. The stronger move asks a question that lets her answer change the call, not just how it sounds."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you notice a misstep, what makes it hard to say so out loud on a call?"
+            }
+          ],
+          "next": "d2-the-facts"
+        },
+        {
+          "id": "long-apology",
+          "text": "Apologize at length, explain that you only meant well and that the queue has you rushing, and ask the caller whether she is okay with you now.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The caller says, “It’s fine, it’s fine.” Her son says they just need the coverage back. The apology has taken two minutes and turned the attention to how you feel. The question of how the caller wants the call to go is still unasked.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to explain your good intention is a very human reaction to a misstep. The readings point out that defending intention can ask the other person to manage your feelings. Naming the specific mistake does more with less."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep a repair to one sentence and one question: what you assumed, and how she would like to continue."
+            }
+          ],
+          "next": "d2-the-facts"
+        }
+      ]
+    },
+    {
+      "id": "r2-redirect",
+      "recovery": true,
+      "setup": "The caller has either declined to say more, or the plan for the proof is still not clear to her. The renewal date has not changed. There is still time on the call.",
+      "prompt": "How do you bring the call back to what she needs?",
+      "choices": [
+        {
+          "id": "return-to-task",
+          "text": "Accept what she has chosen to share, and return to the practical question: “Which part of sending the proof would you like me to explain?”",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The caller asks which pay stubs count. You explain, and she picks the upload option with her son’s help. She repeats the date back to you without being asked.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You took her redirect as direction, not resistance. Returning to the practical question kept help available without any cost in disclosure."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What phrase could you keep ready for the moment a caller declines to share something?"
+            }
+          ],
+          "next": "d3-the-note"
+        },
+        {
+          "id": "explain-why",
+          "text": "Explain that knowing why the form was late would help you help her and could go in the note, then ask what was happening at home.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The caller says she would rather not. Her son asks if there is someone else they can talk to. You return to the pay stubs, but the call feels strained.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Making the reason a step toward help turns curiosity into a condition. The stronger choice respects her boundary and still helps."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From her son’s side, his mother wants the form fixed, and the question is about her private life. He is now protecting her from the call."
+            }
+          ],
+          "next": "d3-the-note"
+        },
+        {
+          "id": "send-form-again",
+          "text": "Offer to mail the form again with a list of the proof it needs, and tell her she can call back if anything is still unclear after it arrives.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The form goes out again. The caller thanks you. The list says “pay stubs,” not which ones. The question about which pay stubs count is still unanswered, and the date in the notice is closer than she knows.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Sending the form again is a real action, but the same form already confused her. Ask what part is hard before repeating it."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Before you offer a resend, ask: “Would it help to go through it together now?” Let her choose."
+            }
+          ],
+          "next": "d3-the-note"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Separating what a person said from the reason a note or a first reading added",
+    "Asking how a person wants a call to go instead of guessing from an accent, a name or an old note",
+    "Asking only what the task needs, and keeping help available when someone chooses not to share",
+    "Explaining what is fixed and what the person can choose, without promising what you cannot decide",
+    "Writing a note that carries the person’s own words forward to the next worker",
+    "Passing one caller’s account to the person or area responsible without treating it as proof for everyone"
+  ],
+  "this_week": [
+    "On your next three calls, ask “How would you like to do this call?” before you decide who speaks or in what language.",
+    "Open one older note before a call and mark which words describe what happened and which add a reason.",
+    "When a caller names a part of a notice that was hard to use, write down their exact words and send them to the person or area responsible."
+  ],
+  "sources": [
+    "dc-s31-cultural-humility-in-public-service",
+    "cultural-humility-in-everyday-public-service",
+    "cultural-humility-in-professional-judgment",
+    "dc-i26-cultural-humility-in-depth",
+    "cultural-humility-vs-checklist"
+  ]
+}

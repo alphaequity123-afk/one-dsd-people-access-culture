@@ -1,0 +1,422 @@
+{
+  "intro_by": "C2",
+  "intro": "If you lead an administration, your view lands in the room before anyone else speaks. I have seen a quiet table taken for agreement, and a public line claim more than the evidence could hold. In this version you carry a change item from the leadership table to a hearing, and then to a letter from a Tribal Nation. Notice whose knowledge reaches the decision, and what your words commit the agency to.",
+  "cast": [
+    {"role": "county-partnerships-director", "label": "the county partnerships director", "portrait": "C3"},
+    {"role": "operations-director", "label": "the operations director", "portrait": "C7"},
+    {"role": "communications-lead", "label": "the communications lead", "portrait": "C8"},
+    {"role": "legislator", "label": "the legislator", "portrait": "C5"},
+    {"role": "advocate", "label": "the advocate", "portrait": "C4"},
+    {"role": "tribal-health-director", "label": "the health director", "portrait": "C6"},
+    {"role": "tribal-consultation-lead", "label": "the person responsible for Tribal consultation", "portrait": "C2"},
+    {"role": "budget-analyst", "label": "the budget analyst", "portrait": "C1"}
+  ],
+  "version": "executive",
+  "level": "intermediate",
+  "title": "The change item on the commissioner’s table",
+  "learner_role": "You are an assistant commissioner. You lead an administration and sit on the commissioner’s leadership team. You decide what your administration brings forward, how it is described in public, and how your directors carry it out.",
+  "background": "Your administration is preparing a change item for the next legislative session. It would move annual renewals for a statewide program to an online-first process and shift staff time to people with complex cases. You have read the numbers and you favor it. The equity analysis is under way. Staff held listening sessions with people who use the program, county partners and advocates. In two weeks the leadership team decides what goes forward. After that come a legislative hearing and questions from reporters. Every choice you make here also tells your directors what is welcome to say to you.",
+  "start": "d1-the-quiet-room",
+  "decisions": [
+    {
+      "id": "d1-the-quiet-room",
+      "recovery": false,
+      "setup": "The leadership review opens. You start by saying, “I think online-first is the right call. Thoughts?” Around the table, five directors nod. No one raises a concern. The county partnerships director looks down at her notes and stays quiet. There are twenty minutes left.",
+      "prompt": "Your view is already on the table, and the room is quiet. What do you do with the next twenty minutes?",
+      "choices": [
+        {
+          "id": "take-silence-as-agreement",
+          "text": "Take the quiet as a sign the analysis is sound. Thank the directors, ask staff to finish the equity analysis, and move the item to the commissioner’s list.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The meeting ends early. The item moves to the commissioner’s list with your support. That afternoon, the county partnerships director writes to you privately. County staff have raised an access problem with online-first renewal, she says, and the meeting did not feel like the moment to bring it up. The concern was real. It just never reached the table where the decision was made.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "It is common to read quiet as agreement, especially when a meeting is running well. Silence after a senior leader speaks can mean many things. People may be weighing whether it is safe to disagree, waiting for a clear invitation, or still thinking. Waiting is not proof of agreement."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with naming what is still open and asking what teams have heard. The meeting would have run longer. The concern would have reached the decision instead of your inbox."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When your directors go quiet, what do you usually assume it means? How could you check?"
+            }
+          ],
+          "next": "r1-the-late-concern"
+        },
+        {
+          "id": "name-what-is-open",
+          "text": "Say online-first is your lean, not a decision. Then ask each director what their teams have heard that the numbers might miss.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You say, “I put my view out first. That may have made it harder to disagree. The direction is open until this team decides. What have your teams heard that I have not?” There is a pause. Then the county partnerships director speaks. County staff tell her that many people renew with help from a worker at a library or a county lobby. They do not have reliable internet at home, or they do not know the portal. The operations director adds that the listening session notes mention the same thing more than once. Nobody had wanted to be the one to slow down your item. Now the concern is in the room, with time left to ask what evidence is still needed.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You named your own influence out loud. A senior leader’s view, said first, shapes what people feel free to say. Calling your view a lean, and asking what teams have heard, turned an invitation to speak into a real chance to shape the choice. Build on it by saying what kind of concern could change the plan, and asking for evidence, not only opinions."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To a director, an assistant commissioner’s lean can sound like the answer. The county partnerships director had the access concern all along. Your question gave her a reason to believe it could matter, not just be heard."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "In your own leadership meetings, how often do you share your view before you have heard the room? What do you lose when you do?"
+            }
+          ],
+          "next": "d2-the-public-record"
+        },
+        {
+          "id": "ask-who-disagrees",
+          "text": "Ask the table directly, “Does anyone disagree, or see a risk I have missed?” Wait a full moment so people have time. When no one speaks up, move on.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "You ask, and the room stays still. The operations director says, “No, it makes sense.” The question was sincere. But it asked people to stand against your stated view in front of their peers, with no sign that a concern could change anything. The item moves forward. The county partnerships director says nothing, and later sends you a private note about an access concern from county staff.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "“Does anyone disagree?” asks people to oppose a stated view. “What have your teams heard that the numbers might miss?” asks for knowledge. The second gives people a reason to speak that does not feel like a challenge."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Next time, say what is decided, what is open, and what would change your mind. For example: “I lean toward this. Here is what would change my view. What have you heard?”"
+            }
+          ],
+          "next": "r1-the-late-concern"
+        },
+        {
+          "id": "withdraw-until-endorsed",
+          "text": "Withdraw the item for now. Tell the team you will not bring any proposal forward until every affected community has reviewed it and endorsed it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The directors are surprised. The operations director asks what endorsement would look like and who would give it. No one knows. The item misses the internal deadline. Staff who spent months on the analysis feel the work was dropped, not examined. And the access concern the county partnerships director had in mind is never named, because the meeting ends on the withdrawal instead of on what people have heard.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Not wanting the agency to move ahead of the people affected is a sound instinct. The trouble is that endorsement is not the test of useful participation. Partnership asks how input will be used, not whether everyone signs off."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A stronger move keeps the proposal open and asks what evidence is missing. That lets a real concern change the plan, or not, for stated reasons."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To your directors, a sudden withdrawal can feel like their analysis did not count. They needed to know what you wanted examined."
+            }
+          ],
+          "next": "r1-the-late-concern"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-public-record",
+      "recovery": false,
+      "setup": "The item is going forward. After the listening sessions, staff added phone and in-person help to the plan. They are still working out how people who renew with help will be reached. Next week you testify at a legislative hearing. The communications lead sends a draft opening line: “This proposal was developed in partnership with the communities it serves, and no one will lose access.”",
+      "prompt": "What do you want the public record to say about how this proposal was developed and what it will do?",
+      "choices": [
+        {
+          "id": "say-what-is-known",
+          "text": "Rewrite the line to name who was heard, what changed because of it, what you do not know yet, and when you will report back.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your opening says: “Listening sessions with people who use the program, counties and advocates raised concerns about online-only renewal. After those sessions, staff added phone and in-person help to the plan. The agency does not yet know how well that will work for people without reliable internet. The administration will report on renewals through assisted channels after six months.” A legislator asks how many people that is. You say you do not know yet, and how you will find out. The answer is less smooth than the draft. People in the room who sat in the listening sessions hear their concern named in the record.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You kept three things apart: what was heard, what was done, and what effect is still unknown. That is more accurate than “partnership,” and it can be checked. Build on it by making sure the six-month report goes back to the people who raised the concern."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To someone who attended a listening session, “no one will lose access” is a claim they may know is unproven. Hearing their concern named, with an honest unknown, tells them it was taken seriously."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which claims in your public statements describe effort, and which describe effect? Do you have evidence for the second kind?"
+            }
+          ],
+          "next": "d3-the-tribal-nation-letter"
+        },
+        {
+          "id": "keep-the-draft-line",
+          "text": "Keep the communications lead’s line. It is the message leadership has approved, legislators expect a clear position, and a hearing is not the place to raise doubts about your own proposal.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The hearing goes smoothly. Two weeks later, an advocate who attended a listening session testifies at another hearing. He says he told the agency online-first renewal would shut people out, and now hears it described as partnership. A reporter quotes him. “No one will lose access” is now the agency’s position to defend, without evidence behind it.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Under public pressure, a confident line can feel like the safe choice. The risk is that a claim of partnership, or of no harm, says more than the evidence shows. Honest limits often protect trust better than reassurance."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare “developed in partnership” with “people raised this concern, here is what changed, here is what is still unknown.” The second claims less and holds up better when someone who was in the room speaks."
+            }
+          ],
+          "next": "d3-the-tribal-nation-letter"
+        },
+        {
+          "id": "keep-no-one-loses-access",
+          "text": "Cut the partnership phrase, which overstates what the listening sessions were, but keep “no one will lose access,” since phone and in-person help will remain in the plan.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The opening is shorter. A legislator asks how the agency knows no one will lose access. You point to phone and in-person help. She asks how many people will need it and whether it is funded for that many. You do not have those numbers. The help exists as an arrangement. Whether people can use it is still unknown, and the record now says otherwise.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Dropping the partnership claim was a step toward accuracy. “No one will lose access” still treats an arrangement as proof of an effect. Help that exists is not the same as help people can reach."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Separate the arrangement from the result: “Phone and in-person help will stay. The agency will check whether people who need it can use it, and report back by a set date.”"
+            }
+          ],
+          "next": "d3-the-tribal-nation-letter"
+        },
+        {
+          "id": "back-partnership-with-a-detail",
+          "text": "Keep the partnership phrase, and replace “no one will lose access” with a note that phone and in-person help will remain, so the claim has something concrete behind it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "Your opening says the proposal was developed in partnership, and that phone and in-person help will remain. The hearing goes smoothly. A week later, an advocate who spoke at a listening session writes to the committee. He says he was asked for his view once and never heard what it changed. Calling that partnership, he writes, claims more than happened. Adding a detail about help did not change what the word claimed.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Adding something concrete was a real step. But the detail supports a different claim. “Partnership” describes how the proposal was developed, and partnership asks how input will be used, not only whether it was collected. Saying who was heard and what changed claims only what happened."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To someone who spoke at a listening session, “partnership” is a claim about his part in it. He knows whether anyone told him what his input could change."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you describe how a proposal was developed, would the people who took part use the same word?"
+            }
+          ],
+          "next": "d3-the-tribal-nation-letter"
+        }
+      ]
+    },
+    {
+      "id": "r1-the-late-concern",
+      "recovery": true,
+      "setup": "The county partnerships director’s note is in your inbox. County staff in several regions say many people renew with help from a worker at a library or county lobby, because they lack reliable internet or do not know the portal. She adds, “I did not want to be the one to slow this down.” The item has not yet gone to the commissioner.",
+      "prompt": "The concern reached you after the meeting where it could have shaped the choice. What do you do with it now?",
+      "choices": [
+        {
+          "id": "reopen-and-say-why",
+          "text": "Thank the county partnerships director for the concern. Put the item back on the next leadership agenda, say why, and ask staff to add what people who renew with help have said.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "medium"
+          },
+          "consequence": "At the next meeting you say, “I moved too fast. A concern reached me after the meeting that I should have heard in the room. The item is open again until the access question is examined.” Staff pull the listening session notes. The same concern appears in four sessions. It had been summed up as “some technology questions.” Now it is a named question with evidence behind it, and your directors have seen a late concern change your plan.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You treated a late concern as information, not as a problem with her timing. Saying in front of the team why the item reopened shows directors that speaking up can change things. Next, ask her what made it hard to say in the room."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the county partnerships director, a public reopening without blame answers the question, “Is it safe to raise this?” Others on the team are watching for the same answer."
+            }
+          ],
+          "next": "d2-the-public-record"
+        },
+        {
+          "id": "appendix-after-decision",
+          "text": "Thank the county partnerships director and say the point helps. Have staff add it as an appendix after the item goes to the commissioner, so the timeline holds and it is on record.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "Staff add a short line: “Some participants raised technology access.” The proposal does not change. The county partnerships director reads the line and sees her concern turned into a footnote. She tells her deputy that next time she will not bother.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "An appendix after the decision hears the concern but gives it no room to shape the choice. Putting it on the agenda while the item is open lets it inform the decision, even if the decision stays the same."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When a concern arrives late, what tells you whether it can still change something?"
+            }
+          ],
+          "next": "d2-the-public-record"
+        },
+        {
+          "id": "ask-counties-for-a-plan",
+          "text": "Ask the county partnerships director to have county staff present the concern to the leadership team themselves, with a full alternative plan, so the team hears it from the source.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "County staff are asked to build a plan for a state program they do not run. Two decline. One prepares slides on her own time. The concern gets a hearing, but the people who raised it carried the agency’s work to get there, and they notice.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to hear a concern from its source is reasonable. Asking contributors to produce the solution shifts staff work onto them. Partnership values what they know without making them responsible for the fix."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Ask your own staff to examine the concern. Then invite county staff to review a revision if they wish, and tell them what their review can change."
+            }
+          ],
+          "next": "d2-the-public-record"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-tribal-nation-letter",
+      "recovery": false,
+      "setup": "Three days after the hearing, a health director for a Tribal Nation writes to the commissioner. The letter says the renewal change will affect many of the Nation’s members, and the Nation was not consulted. The operations director points out that a Tribal member attended one listening session. She suggests replying that Tribal input was gathered. The response is yours to handle.",
+      "prompt": "The letter names a gap in how the agency worked with a Tribal Nation. How do you respond?",
+      "choices": [
+        {
+          "id": "name-the-gap-and-route-it",
+          "text": "Name the gap without defending the process. Call the person responsible for Tribal consultation, let them say what the process requires, and draft the reply to the Nation with them.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You do not reply that input was gathered. You call the person responsible for Tribal consultation at DHS that day. They explain that the listening sessions were not consultation with the Nation, and walk you through the required process and timing. You draft the reply with them. It says plainly that the agency held listening sessions but has not consulted with the Nation. It names who will follow up, which parts of the renewal plan can still change before rollout, and when the Nation will hear about a first meeting. The health director replies briefly to confirm. Nothing is resolved yet. The relationship has a real next step instead of a defense.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You named the gap plainly and sent it to the person and process built for it. That keeps Tribal consultation with the people responsible for it. Build on it by asking, at the start of your next change item, where Tribal consultation fits in the timeline."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the health director, “Tribal input was gathered” would have turned one person at an open session into a stand-in for a Nation. An honest account, with a date, gives the Nation something real to respond to."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Before a reply like this, call the person responsible for Tribal consultation. Then try words like: “The agency held listening sessions. That was not consultation with the Nation. Here is who will follow up, what can still change, and when.”"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "count-the-listening-session",
+          "text": "Use the operations director’s suggestion. Reply that a Tribal member took part in the listening sessions, that this input was considered, and that the agency welcomes further comment from the Nation.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The reply goes out. The health director writes back within a day. One person attending an open session does not speak for the Nation, he says, and the agency knows the difference. The commissioner is copied. What began as a gap in consultation is now a question of whether DHS takes its responsibilities to Tribal Nations seriously.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Compare this with naming the gap and calling the person responsible for Tribal consultation. That reply claims less and opens the required process. This one asks one person to stand in for a whole Nation, which no participant should have to do."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Under time pressure, it is tempting to point to the input that does exist. But being invited to an open session is different from consultation with a Nation. Saying so plainly protects trust better than a stretched claim."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "send-a-warm-thank-you",
+          "text": "Reply quickly and warmly. Thank the Nation for raising its concern, say its feedback matters, and promise it will be considered as the change rolls out, so the letter is not left waiting.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The letter is polite. It does not say what can change, who will follow up, or when. The health director replies asking for a meeting, not more thanks. Weeks pass while staff wonder who owns the response. The rollout date gets closer, and the Nation still does not know what is open.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Thanks and a promise to consider are not a next step. A stronger reply says what is decided, what is open, who will follow up, and by when."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When a partner tells you they were left out, what do you owe them in your first reply?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "ask-a-staff-member",
+          "text": "Ask the budget analyst, a Native staff member in your administration, what he thinks the Tribes want, and draft the reply from his view before it goes to the commissioner.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The budget analyst is caught off guard. He works on budget forecasting, not Tribal relations. He says he can share his own view, but he cannot speak for any Nation, let alone all of them. He leaves feeling he was asked because of who he is, not what he does. The letter still has no answer, and the required process has not started.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "To the budget analyst, this request turns his identity into an assignment. No one should be asked to represent an entire community, and a staff member is not a Tribal government."
+            },
+            {
+              "style": "compare-coach",
+              "text": "The stronger path goes to the person responsible for Tribal consultation, who says what the process requires and drafts the reply with you. That respects both the budget analyst and the Nation."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Who in your administration gets asked to explain a community because of who they are? What would it take to stop?"
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Naming your own influence when you share a view before the room has spoken",
+    "Saying what is decided, what is open, and what kind of concern could change the plan",
+    "Treating silence after a senior leader speaks as missing information, not agreement",
+    "Making public claims that keep what was heard, what was done, and what is still unknown apart",
+    "Sending Tribal consultation to the person or area responsible and its required process",
+    "Never asking one person to speak for a whole community or Nation"
+  ],
+  "this_week": [
+    "Before your next leadership meeting, decide whether to share your view first or last. If first, say what would change your mind.",
+    "Read one public statement your administration is about to make. Mark each claim as effort or effect, and check the evidence behind each effect claim.",
+    "Ask one director how your administration measures engagement. Do the measures count meetings, or show whether input changed a decision?",
+    "Find out who handles Tribal consultation for your administration’s work, and where it enters your planning timeline."
+  ],
+  "sources": [
+    "cultural-humility-in-professional-judgment",
+    "dc-i26-cultural-humility-in-depth--notice-who-has-room-to-shape-the-interaction",
+    "dc-i26-cultural-humility-in-depth--build-partnership-without-deciding-for-people",
+    "dc-i26-cultural-humility-in-depth--keep-learning-and-follow-through-connected",
+    "dc-i27-cultural-humility-vs-cultural-competence",
+    "cultural-humility-vs-checklist",
+    "cultural-humility-vs-checklist--ask-then-date",
+    "cultural-humility-in-everyday-public-service",
+    "cultural-humility-engaging-diverse-identities-in-therapy"
+  ]
+}

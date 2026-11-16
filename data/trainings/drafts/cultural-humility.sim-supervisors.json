@@ -1,0 +1,422 @@
+{
+  "intro_by": "C7",
+  "intro": "If you supervise a team, what you write and what you notice decides who gets the next chance. In this version you draft mid-year feedback, run a case review, and hear a request in a one-to-one. Each moment asks you to check your own reading before it becomes part of someone’s record.",
+  "cast": [
+    {"role": "newer-team-member", "label": "the newer team member", "portrait": "C2"},
+    {"role": "longtime-team-member", "label": "the longtime team member", "portrait": "C1"},
+    {"role": "presenting-reviewer", "label": "the presenting reviewer", "portrait": "C4"},
+    {"role": "second-reviewer", "label": "the second reviewer", "portrait": "C5"},
+    {"role": "team-member-asking-for-updates", "label": "the team member who asked for written updates", "portrait": "C3"}
+  ],
+  "version": "supervisors",
+  "level": "intermediate",
+  "title": "Feedback, a case review, and a request in a one-to-one",
+  "learner_role": "You are a Human Services Supervisor with nine staff. You hold one-to-ones, run team meetings and case reviews, give feedback, and assign work. What you write in feedback and what you notice in meetings shapes who gets the next opportunity.",
+  "background": "Your team reviews service plans that county and lead-agency case managers send to DHS. A newer team member joined four months ago from a county job and knows the program well. In meetings she rarely speaks. Afterward she sends careful written comments. A longtime team member said in passing that “people who care speak up in the room.” Mid-year feedback is due Friday. You also run a weekly case review where staff bring hard plans to talk through, and you have one-to-ones on Thursday.",
+  "start": "d1-the-feedback-draft",
+  "decisions": [
+    {
+      "id": "d1-the-feedback-draft",
+      "recovery": false,
+      "setup": "You are drafting the newer team member’s mid-year feedback. Her written comments caught two errors that changed a plan review. In meetings she has said almost nothing. The longtime team member’s comment is in your head. A sentence sits on your screen: “She should show more engagement by contributing in team discussions.” A stretch assignment, leading reviews of a new plan type, opens next month.",
+      "prompt": "What do you write about her participation, and how do you decide?",
+      "choices": [
+        {
+          "id": "check-the-work-and-ask",
+          "text": "Check the work need and her actual contributions first. In your one-to-one, ask her how she prefers to contribute and what she was told, then write what you observed.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "In the one-to-one you say, “Your written comments caught two errors. I want to understand how you like to contribute.” She says that in her county job, raising an unfinished question in a group felt like challenging the lead before understanding the purpose. She would rather think first. No one told her this team expects ideas in the room. You realize the team needs her input before decisions close, and her written comments arrive in time. Your feedback names her catches and adds a clear expectation about timing. She is considered for the stretch assignment on the strength of her work.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You checked the work evidence and asked her before deciding what her quiet meant. That kept a familiar style from becoming a judgment about commitment. Build on it by making the team’s expectations clear to the next new hire, too."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the newer team member, the draft sentence would have said her best work did not count. Being asked how she contributes told her that her way of working is visible to you."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What does engagement look like to you? Where did you learn that, and does the work actually require it?"
+            }
+          ],
+          "next": "d2-the-case-review"
+        },
+        {
+          "id": "keep-the-sentence",
+          "text": "Keep the sentence. Speaking up in meetings is part of the job here, the team decides things out loud, and she will not grow if no one tells her plainly.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "You share the draft with her before Thursday. The longtime team member is named lead on the new plan type. She reads the draft and asks for a few extra minutes in her one-to-one. If the sentence is finalized, the next supervisor will read it first.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Many supervisors learned that speaking up shows commitment. It is a common expectation, and it can hide useful knowledge. Speaking is one route to contribution, not the only evidence of it."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with checking whether her written comments meet the work need. They caught two errors. The question is when the team needs input, not which style is better."
+            },
+            {
+              "style": "another-perspective",
+              "text": "An early judgment can shape assignments and the experience someone gets to build. From her side, this sentence may follow her well past this review."
+            }
+          ],
+          "next": "r1-the-correction"
+        },
+        {
+          "id": "say-nothing-give-it-away",
+          "text": "Leave participation out of the feedback so you do not risk being unfair, and give the stretch assignment to the longtime team member, who already leads discussion well.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The feedback is kind and vague. She does not learn that her written catches mattered, or that the team needs her input before decisions close. The longtime team member gets the assignment. She asks for time in Thursday’s one-to-one. Nothing in writing is unfair, yet the visible style still decided who got the chance to grow.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Avoiding the question keeps the feedback safe but leaves the expectation unclear. Unexplained expectations make a newcomer’s contribution harder to see. Naming what you observed would have been fairer than silence."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Who on your team gets stretch work because they are visible? What would it look like to check the work behind the visibility?"
+            }
+          ],
+          "next": "r1-the-correction"
+        },
+        {
+          "id": "explain-it-by-background",
+          "text": "Write, kindly, that her quietness likely reflects her cultural background, and that the team should be patient with her while she adjusts to a new way of working.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "She reads the draft line and asks to talk on Thursday. She is upset that a guess about her identity could go into her file. The kind intention does not change what the sentence does: it explains her through a label instead of through her work.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Reaching for an explanation that sounds understanding is common. It still assigns a meaning she never gave. Her background does not explain her preference; only she can."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A stronger move asks her directly and writes what you observed. That takes one conversation and keeps her file about her work."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the newer team member, a guess about her background in her file would be worse than no comment. It would tell future readers something about her that may not be true."
+            }
+          ],
+          "next": "r1-the-correction"
+        }
+      ]
+    },
+    {
+      "id": "r1-the-correction",
+      "recovery": true,
+      "setup": "On Thursday, the newer team member says, “I want to be clear. I write after meetings because I want to give a full answer. That is not what the draft says about me. And no one told me how this team expects input.” The feedback has not yet been finalized.",
+      "prompt": "The newer team member has corrected your account. How do you respond?",
+      "choices": [
+        {
+          "id": "name-it-and-fix-the-record",
+          "text": "Name the specific thing you got wrong, and thank her for saying it. Ask how the team can get her input in time, and revise the feedback before it is final.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "medium"
+          },
+          "consequence": "You say, “I put my own reading on your quiet in meetings. That was mine, not what you meant. I will change the feedback.” You do not ask her to tell you it is fine. You agree she will send comments within a day of a meeting, and you will say in meetings when written input is welcome. The revised feedback names her catches, and you tell her what you changed. You also think about the longtime team member’s comment, and decide to tell the whole team how and when input is needed.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You named the specific inference and fixed the record where it would travel. That matters more than a private change of mind. Build on it by explaining the team’s expectations to everyone, so the next new person does not face the same gap."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the newer team member, correcting her supervisor was a risk. A plain acknowledgment, without asking her to reassure you, makes it easier to raise the next thing."
+            }
+          ],
+          "next": "d2-the-case-review"
+        },
+        {
+          "id": "defend-the-intention",
+          "text": "Explain that you meant well. The feedback was written to help her grow, and you want her to know it came from wanting her to succeed on this team, not from criticism.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "She listens. She says she understands you meant well. The draft stays as written. The conversation was about your intention, not her correction. She leaves knowing that what the draft says about her has not changed.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your intention was probably good. Defending it asks her to manage your feelings instead of letting her correction change your account. Naming the specific inference does more."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “I put my own reading on your quiet. That was mine, not what you meant. Here is what I will change.”"
+            }
+          ],
+          "next": "d2-the-case-review"
+        },
+        {
+          "id": "apologize-and-close-it",
+          "text": "Apologize warmly for any hurt the draft caused, tell her you value her work, and say the matter is resolved so she does not have to worry about it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "She thanks you. But the draft still reads as it did, and no one has said how the team wants input. A sincere apology happened. Its effect on her file, once the feedback is final, and on the next meeting, is still unknown.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The apology was sincere, and that counts. Declaring it resolved claims more than you know. The draft still carries the old reading."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When someone corrects you, where does your first account go next: a file, an email, an assignment?"
+            }
+          ],
+          "next": "d2-the-case-review"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-case-review",
+      "recovery": false,
+      "setup": "At the weekly case review, one reviewer presents a plan from a county case manager. The person receiving services declined an in-home support worker. The case manager’s note says, “Family from this community prefers to handle care themselves; declined services.” The presenting reviewer says, “That makes sense. I read that families from that community keep things in the family.” Two others nod. Identity has just come into the work.",
+      "prompt": "The presenting reviewer has used a general statement about a community to explain one person’s choice. How do you respond in the case review?",
+      "choices": [
+        {
+          "id": "separate-said-from-added",
+          "text": "Thank the presenting reviewer for raising it, then ask what the person actually said and what the note added. Suggest the review ask the case manager what the person wants.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You say, “Thanks for raising it. Let me separate two things. What did the person say? What did the note add?” The team looks again. The person declined in-home help. The note added the reason. The presenting reviewer says, “I guess we don’t know why.” The second reviewer points out that declining could mean many things: privacy, timing, who the worker would be, or something else. The review sends one question back to the case manager: what did the person say they want, and whom do they want involved? Afterward, the presenting reviewer says he will use that question in his own reviews.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You noticed a moment where identity came up and used it for learning, not blame. Separating what the person said from what was added is the core move. Build on it by bringing that question to every case review, not only when a community is named."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the presenting reviewer, being corrected in front of peers could have felt like being called biased. Thanking him for raising it let him look again without defending himself."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "In your own reviews, how often does a note explain a choice the person never explained?"
+            }
+          ],
+          "next": "d3-the-one-to-one-request"
+        },
+        {
+          "id": "let-it-pass",
+          "text": "Let it pass. The presenting reviewer is drawing on real knowledge of the community, the case manager knows the family, and the plan otherwise looks complete and ready to approve.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The review approves the plan. The note stays in the record and becomes the explanation later readers see. Next year, another case manager offers fewer services because the record says the family prefers to handle care. No one asked the person what they wanted. The team has learned that a general statement settles an individual case.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Community knowledge can be useful, and the presenting reviewer meant it that way. But a general statement can prepare a question. It cannot answer for one person."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with asking what the person said and what the note added. That question takes a minute and keeps the record from carrying a guess forward."
+            }
+          ],
+          "next": "d3-the-one-to-one-request"
+        },
+        {
+          "id": "call-it-out-and-move-on",
+          "text": "Tell the presenting reviewer plainly, in front of the team, that his comment is a stereotype about a community, so everyone hears that it is not acceptable, and move to the next case.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The presenting reviewer goes red and stops talking. So does everyone else. The plan goes back to the case manager with a note to remove the cultural comment, but no question about what the person wants. The next time identity comes up in a review, nobody mentions it.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You saw the problem quickly. Naming it as a label shut the conversation down. Asking what the person said and what the note added would have taught the same thing and kept people talking."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to stop a stereotype on the spot is a good instinct. Anxiety in a room lowers curiosity, though. People learn more when it feels safe enough to look again."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the team, this said that raising culture in a review is risky. The next moment like this may go unspoken."
+            }
+          ],
+          "next": "d3-the-one-to-one-request"
+        },
+        {
+          "id": "ask-a-colleague-to-confirm",
+          "text": "Ask the second reviewer, who shares a background with the family, whether the presenting reviewer is right, so the team hears from someone with direct knowledge before the plan is approved.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The second reviewer pauses. She says she can speak for herself, not for a community, and families she knows make all kinds of choices. The room is uncomfortable. She was put on the spot because of who she is, and the person in the plan is still unasked.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "To the second reviewer, this turns her identity into a team resource. No one should be asked to represent an entire community, least of all in front of peers."
+            },
+            {
+              "style": "compare-coach",
+              "text": "The person who can answer is the one receiving services. Sending the question back to the case manager gets their answer."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Who on your team gets asked to explain a group? How often did they agree to that role?"
+            }
+          ],
+          "next": "d3-the-one-to-one-request"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-one-to-one-request",
+      "recovery": false,
+      "setup": "In a Thursday one-to-one, a team member says the morning huddle is hard for her. The room is loud, and with her hearing loss she misses parts of the spoken updates. She asks whether she could get the updates in writing. She has not used the word accommodation. The longtime team member runs the huddle and likes it short and spoken.",
+      "prompt": "She has asked for written updates and connected it to her hearing. What do you do?",
+      "choices": [
+        {
+          "id": "forward-and-change-what-you-can",
+          "text": "Treat it as a request tied to her hearing. Forward it today, tell her who decides, do not ask about her diagnosis, and start written huddle notes for everyone.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You say, “Thank you for telling me. I need to send this to the person who decides these requests. I will do it today, and here is who that is.” You do not ask about her hearing. That afternoon you forward the request and tell her who will follow up. You also ask the longtime team member to post huddle notes in the team channel each morning, a team routine you can change now. Two other staff say the notes help them too. The formal request moves on through its own process.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You recognized the request without needing special words, and you kept the formal process apart from what you could change today. Not asking about her diagnosis kept help from depending on disclosure. Build on it by checking with her whether the notes work."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the team member who asked for written updates, medical questions from her supervisor would have made help depend on sharing something private. Being told right away who decides gives her control of what happens next."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which of your team routines could change today, and which need another person to decide?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "ask-for-documentation",
+          "text": "Ask her about her diagnosis and whether she has documentation from a doctor, so you can make a fair decision and treat her request the same way as anyone else’s.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "She goes quiet and says she will think about it. She does not bring the request back. She keeps missing parts of the huddle, and she is now less sure she can raise things with you.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Wanting to be fair is reasonable. The readings are plain on this point: supervisors and managers do not request medical information or documentation from the person seeking an accommodation, and appropriate requests belong to the agency ADA Coordinator. A stronger move forwards the request promptly and tells her who decides."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the team member who asked for written updates, a question about her diagnosis made help feel conditional on disclosure. Practical help should not depend on sharing a personal history."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "put-it-to-the-team",
+          "text": "Bring it to the team meeting. Say someone asked for written updates because of trouble hearing in the huddle, and ask everyone whether they prefer a spoken or a written huddle.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "She did not ask you to share her request. When you mention trouble hearing, people glance at her. The longtime team member argues for keeping it spoken. The team votes to keep the current format. Her request has become a group decision about her, and the formal process has not started.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A team conversation about formats can be useful, but not as the way to decide one person’s request. Her request goes to the decision maker. A vote is not that process."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the team member who asked for written updates, this turned something private into a public debate about her needs."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Next time, try: “I will forward this today to the person who decides, and tell you who that is. Separately, I can send huddle notes to everyone.”"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "fix-it-yourself",
+          "text": "Tell her you will ask the longtime team member to speak louder and slow down in huddles, and see if that helps over the next few weeks before you forward anything.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "You mean well, and the huddle is louder for a week. Then it drifts back. The request was never forwarded, so no one who can decide on it knows it exists. She asked once. She is unlikely to ask again.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Trying a quick fix yourself is a common and caring response. But a request connected to a medical condition needs to reach the decision maker promptly. Your fix and the formal process can both happen."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare this with forwarding the request today and also changing what you control. She gets both the quick help and the formal route."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Checking the work evidence before deciding what a quiet colleague’s style means",
+    "Writing feedback that describes what you observed, not a label",
+    "Naming the specific inference when someone corrects you, and fixing the record",
+    "Separating what a person said from what a note or a general statement added",
+    "Using a case review moment for learning without shaming or asking one person to speak for a group",
+    "Forwarding a request promptly without asking for medical details, while changing what you control"
+  ],
+  "this_week": [
+    "Reread one piece of feedback you have written this year. Mark any word that describes a motive rather than what you saw.",
+    "Tell your team, in one or two sentences, how and when you want input before decisions close, including in writing.",
+    "In your next case review, ask once: “What did the person say, and what did the note add?”",
+    "Find out who decides accommodation requests for your team, so you can name that person right away when someone asks."
+  ],
+  "sources": [
+    "cultural-humility-in-everyday-public-service",
+    "cultural-humility-in-professional-judgment",
+    "cultural-humility-engaging-diverse-identities-in-therapy",
+    "cultural-humility-vs-checklist--when-a-fact-sheet-is-a-trap",
+    "dc-s31-cultural-humility-in-public-service--examine-the-meaning-you-add",
+    "dc-s31-cultural-humility-in-public-service--keep-required-responsibilities-clear",
+    "dc-i26-cultural-humility-in-depth--respond-when-your-interpretation-is-corrected",
+    "dc-i27-cultural-humility-vs-cultural-competence--give-openness-the-capacity-to-matter-at-work"
+  ]
+}

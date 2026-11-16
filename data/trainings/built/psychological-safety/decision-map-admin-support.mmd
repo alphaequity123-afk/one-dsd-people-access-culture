@@ -1,0 +1,25 @@
+flowchart TD
+  d1-the-desk["What do you do first?"]
+  d1-the-desk -->|"Get a phone interpreter on the line and ask the visitor whether to go "| d2-the-huddle
+  d1-the-desk -->|"Book the phone interpreter for the visitor, fix the record yourself, a"| r1-at-the-counter
+  d1-the-desk -->|"Ask your teammate, right there at the desk, why he did not check the i"| r1-at-the-counter
+  d1-the-desk -->|"Tell the visitor there is no interpreter today and rebook him for next"| r1-at-the-counter
+  d2-the-huddle["What do you do?"]
+  d2-the-huddle -->|"Say, “One thing before you go: rescheduling clears the interpreter fie"| d3-the-break-room
+  d2-the-huddle -->|"Let the huddle end and email your supervisor a clear write-up with the"| r2-after-the-huddle
+  d2-the-huddle -->|"Say yesterday’s visitor had no interpreter because an appointment was "| r2-after-the-huddle
+  d2-the-huddle -->|"Say nothing at the huddle. Your supervisor is short three people, the "| r2-after-the-huddle
+  d3-the-break-room["What do you say?"]
+  d3-the-break-room -->|"Say, evenly, that you saw the record: the template clears the field wh"| end_node
+  d3-the-break-room -->|"Lighten it with a joke about how everyone rushes in a short-staffed we"| end_node
+  d3-the-break-room -->|"Tell the coworker, in front of everyone, that talking about a colleagu"| end_node
+  d3-the-break-room -->|"Say nothing in the room, and mention the comment to your supervisor at"| end_node
+  r1-at-the-counter["Second chance: What do you do now?"]
+  r1-at-the-counter -->|"With a phone interpreter on the line, ask the visitor whether to go ah"| d2-the-huddle
+  r1-at-the-counter -->|"Apologize to the visitor for the mix-up, offer him a phone interpreter"| d2-the-huddle
+  r1-at-the-counter -->|"Let your teammate take it from here, since he moved the appointment, a"| d2-the-huddle
+  r2-after-the-huddle["Second chance: What do you do now?"]
+  r2-after-the-huddle -->|"Catch your supervisor before her call: “Thirty seconds. Rescheduling c"| d3-the-break-room
+  r2-after-the-huddle -->|"Tell the two teammates sitting next to you to re-check the interpreter"| d3-the-break-room
+  r2-after-the-huddle -->|"Wait for a calmer day to raise it. Your supervisor has enough on her p"| d3-the-break-room
+  end_node(["Reflection and action plan"])

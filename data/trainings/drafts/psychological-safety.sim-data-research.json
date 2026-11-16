@@ -1,0 +1,476 @@
+{
+  "intro_by": "C4",
+  "intro": "If you build tables, dashboards or evaluations, your work is trusted because people assume someone checked it. I know the feeling of finding my own error after a number has already left my desk. Here, you decide what to do with that error, how to help a team learn from it without blame or excuses, and what to say when someone asks you to put a number on how safe people feel.",
+  "cast": [
+    {
+      "role": "research-manager",
+      "label": "your research manager",
+      "portrait": "C8"
+    },
+    {
+      "role": "peer-analyst",
+      "label": "the peer analyst",
+      "portrait": "C1"
+    },
+    {
+      "role": "director",
+      "label": "the director",
+      "portrait": "C6"
+    }
+  ],
+  "version": "data-research",
+  "level": "intermediate",
+  "title": "The Number in the Briefing",
+  "learner_role": "You are a Management Analyst on a research and evaluation team. You build tables and dashboards that program staff and leaders rely on. You own the accuracy of your own analysis. What a program does with a result, and any formal performance matter, belong to the person or area responsible.",
+  "background": "Last week you sent the director of a program area a table on how long applications took to process, broken out by region and by the language each applicant chose. He quoted one figure in a leadership briefing: the processing-time gap for applicants who chose a language other than English had closed. This morning, rerunning the query for the next quarter, you find a join that dropped every case with a blank language field. With those cases back in, the gap has narrowed but has not closed. The peer analyst reviewed your query before it went out. The code was yours.",
+  "start": "d1-the-error",
+  "decisions": [
+    {
+      "id": "d1-the-error",
+      "recovery": false,
+      "setup": "You show the peer analyst. He looks for a minute and says, “The briefing’s done. Fix it in next quarter’s table and add a footnote. Nobody reads footnotes, and nobody needs to know it was us.” Your research manager is at her desk across the room. The director has another leadership briefing in two weeks.",
+      "prompt": "What do you do with the error?",
+      "choices": [
+        {
+          "id": "tell-manager",
+          "text": "Tell your research manager today: the figure the director quoted, the corrected figure, and how the join dropped blank-language cases. Then ask her how the correction should reach the director.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your manager listens, asks two questions about the join, and says, “Thank you for bringing this today, not in two weeks.” She asks you to write a short note with both figures and what changed, and says she will call the director with you this afternoon. The peer analyst looks uneasy, then says he will help with the note.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You raised your own error while it could still change something, and you brought specifics instead of an apology. Asking how the correction should reach the director left that decision with the person who owns the relationship. Build on it: put the old and new figures side by side in the note, so nobody has to work out what changed."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the director’s side, hearing it now, with a corrected figure in hand, is very different from discovering it in a footnote after repeating the old number."
+            }
+          ],
+          "next": "d2-the-review"
+        },
+        {
+          "id": "fix-and-send",
+          "text": "Correct the query and send the director a revised table yourself today, marked revised in a footnote, so he has the right number before his next briefing.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "You start drafting the revised table. Halfway through the footnote, you notice it says “revised” but not what changed, or that a leadership briefing already used the old figure. The director would have to work out for himself that his briefing was off. You have not sent it yet.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Getting the right number to the director is the heart of it, and you moved fast. The gap is in how it lands. A footnote that says “revised” hides the part he most needs: his briefing used a figure that no longer holds."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When a result has already been used, say so plainly: “The figure you quoted on the language gap was too low because of a join error. Here is the corrected figure.”"
+            }
+          ],
+          "next": "r1-same-day"
+        },
+        {
+          "id": "check-everything-first",
+          "text": "Before telling anyone, rerun every table you have sent out this year to see whether the join affected others too, so you can report the full scope in one clean message.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "By the end of the day you have checked four tables and found nothing new. The director still has the old figure. Your manager stops by to ask how the quarterly rerun is going, and you hear yourself say, “Fine.”",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting the full picture before you speak is a careful analyst’s instinct. Here it also bought time to avoid an uncomfortable conversation. The two jobs are separate: address the present problem, then examine how far it reaches."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you hold an error until it feels complete, whose discomfort is the waiting protecting?"
+            }
+          ],
+          "next": "r1-same-day"
+        },
+        {
+          "id": "go-with-peer",
+          "text": "Go with the peer analyst’s plan. The corrected figure will be in next quarter’s table, the change is smaller than it looks, and naming it now could embarrass the director.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The peer analyst looks relieved. You add the footnote to next quarter’s draft. Then an email arrives: the director wants to reuse his briefing slide, with the old figure, at a meeting with county partners.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "From the director’s seat, protecting him from embarrassment now means he repeats the old figure to more people. The kindness lands on the wrong side of the error."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Going along with a trusted colleague’s plan is a very human move, especially when the plan spares you both. Shame can hide useful information, and quiet fixes can leave the actual problem in place."
+            },
+            {
+              "style": "feed-forward",
+              "text": "If a colleague suggests keeping it quiet, try: “I’d rather tell our manager today. Will you look at the note with me?”"
+            }
+          ],
+          "next": "r1-same-day"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-review",
+      "recovery": false,
+      "setup": "By the end of the week, the error has reached your research manager and the director, and the director has corrected his briefing note. Your manager holds a thirty-minute review with the analysts. She opens, “I want to learn from this, not hang it on anyone.” The peer analyst says, “Honestly, the template’s join is the problem. Nobody’s responsible; the system did it.” Another analyst says the code author should have caught it. People look at you.",
+      "prompt": "What do you contribute to the review?",
+      "choices": [
+        {
+          "id": "both-parts",
+          "text": "Say the template’s join and your own choice to skip a row-count check both played a part. Propose a row-count check before any table leaves the team, and ask who owns it.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The room loosens a little. The peer analyst adds that his review checklist never asked for row counts either. Your manager writes the change on the board, names who will own the check, and sets a look at whether it catches anything after the next two releases. Nobody calls the miss nothing. Nobody calls you careless.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You held both explanations at once: the template made the error easy, and your choice let it through. That is learning with accountability. Then you made it testable, with one specific check and an owner. Build on it by reviewing whether the check is actually used."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Your honesty about your own part made it easier for the peer analyst to name his. People rarely add their share to a story that is still looking for one person to blame."
+            }
+          ],
+          "next": "d3-the-score"
+        },
+        {
+          "id": "all-mine",
+          "text": "Say the error was yours alone and the template is fine. Promise to double-check every table yourself, starting with next quarter’s release, so it cannot happen again.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "Your manager thanks you for owning it, and the review ends early. The template keeps the same join. Your promise has an owner and a start date, but the owner is one person and the check is “everything,” and the next analyst who uses the template inherits the same trap.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Owning your part was right in spirit. But taking all of it erased a condition the team could change. A promise never to make a mistake again changes nothing specific; a changed task is more useful than a vow."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you take all the blame in a review, what part of the process do you leave unexamined?"
+            }
+          ],
+          "next": "r2-ten-minutes"
+        },
+        {
+          "id": "system-did-it",
+          "text": "Agree with the peer analyst that the template caused it, so the review stays blame-free and people feel safe naming errors without anyone being held responsible for them.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The review gets quieter and kinder. Nobody owns a change to the template, because the system did it. Your manager says, half to herself, that she still has to explain to the director how this will not happen again.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "A blame-free review sounds like psychological safety, and the wish behind it is good. The line is clear: a template gap matters, but it does not mean nobody had a responsibility. Removing every role from the story leaves the next task without an owner."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare “the system did it” with “the template drops blank fields, and the review did not check row counts.” The second still protects people from blame, and it gives the team something to fix."
+            }
+          ],
+          "next": "r2-ten-minutes"
+        },
+        {
+          "id": "stay-out",
+          "text": "Let your manager and the peer analyst work it out. You already admitted the error once, and saying more about your own part might sound defensive or turn the review back on you.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The review splits between “the template” and “the code author.” You are the code author, and you say nothing. The discussion ends with a reminder to be careful.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "Your silence left your colleagues to argue about your work without the one person who knew how it happened. To them, it may have looked like you agreed with whichever version won."
+            },
+            {
+              "style": "feed-forward",
+              "text": "In a review of your own error, one plain sentence is enough: “Here is what the template did, and here is what I did. I would suggest this one change.”"
+            }
+          ],
+          "next": "r2-ten-minutes"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-score",
+      "recovery": false,
+      "setup": "A month later, your research manager forwards a request from the director. He wants a speaking-up score for each staff member in the division, built from how often each person talks in team meetings. He also wants a line in the next report saying the division is psychologically safe, since no complaints came in last quarter. Your manager asks, “Can you scope this by Friday?”",
+      "prompt": "How do you respond to the request?",
+      "choices": [
+        {
+          "id": "process-evidence",
+          "text": "Propose tracking whether questions and errors reached a decision and got an answer, report it with its limits, and explain why speaking counts and zero complaints cannot show safety.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You write a one-page note. It proposes following a few contributions from question to answer, says what that can and cannot show, and explains that fewer complaints could mean more safety, less opportunity or more reluctance. It suggests that if the division wants a climate survey, its design and privacy go to the person or area responsible for that work. Your manager takes it to the director. He drops the individual score. The report line becomes a short account of what happened to raised questions, with what remains unknown.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You kept the director’s real goal, knowing whether people can raise problems, and offered evidence that fits it. You also kept people from being ranked by airtime. Build on it: the briefing correction is itself a pathway worth following, from raised error to changed decision."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Think of the analyst who writes careful review notes but rarely speaks in meetings. Under a speaking count, that person looks disengaged. Under your proposal, their contributions count."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When you report process evidence, add one sentence on its limits every time. It keeps the next reader from turning a pathway into a safety rating."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "team-averages",
+          "text": "Build the score by Friday but report only team averages, so nobody is ranked by name, and keep the safety line, since a quarter with no complaints is some evidence.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The averages go into the report. Teams that work mostly in writing and meet less score lowest. The safety line runs. Two analysts tell you privately that their team’s score has come up in their one-to-ones.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Removing names was a real protection. But the measure still counts speaking turns, which rewards one visible style, and the safety line still treats silence as proof. The stronger choice changes what is measured, not just who is named."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What else could explain a quarter with no complaints, besides people feeling safe?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "flat-no",
+          "text": "Tell your manager the request is a bad idea and you will not build it, because psychological safety cannot be measured and the director should know better than to ask.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Your manager says she cannot take “a bad idea” back to the director. The request goes to another analyst, who builds the score as asked. Your concerns are right about the measure and missing from the report.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your instinct about the measure is sound. But a flat refusal gives your manager nothing to carry upward. The stronger choice says no to the ranking and yes to evidence that answers the director’s question."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From your manager’s side, she now has to manage both the director’s request and your refusal, with no alternative to offer him."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "build-as-asked",
+          "text": "Build it as asked. The director owns the report, and raising doubts about a director’s idea right after your own error might not land well.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The score ships. Among the lowest scorers are the two analysts who write the most careful review notes. The report says the division is psychologically safe. Nobody can tell from it whether any question ever changed a decision.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "After your own error, hesitating to question a director is understandable. Notice that this is the same interpersonal risk the score claims to measure, and it kept useful knowledge out of the report."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Questioning a request can be framed as helping it succeed: “Here is a version that would tell you whether questions reach decisions.”"
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-same-day",
+      "recovery": true,
+      "setup": "It is still the same day. The corrected figure exists on your screen and in the peer analyst’s memory. Your research manager does not know, and the director still has the old number.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "walk-over",
+          "text": "Walk over to your research manager and say, “I found an error in the table the director quoted. Here is what changed. How should he hear about it?”",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your manager listens, asks two questions about the join and thanks you for bringing it today. She asks for a short note with both figures and says she will call the director with you this afternoon.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You changed course within the same day, which is when it still counted. A plain sentence and a direct question did more than a polished message could have. Build on it: next time, go to your manager first and finish the analysis second."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What made the walk across the room feel easier now than it did this morning?"
+            }
+          ],
+          "next": "d2-the-review"
+        },
+        {
+          "id": "email-director",
+          "text": "Email the director directly with the corrected table and a plain explanation of the error, and copy your research manager so she sees it at the same moment he does.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The director replies within the hour: thank you, but he needs to know whether to correct the leadership briefing, and an email thread cannot settle that. Your manager walks over and says she would rather have heard first, but she is glad it surfaced today.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You were open and quick, which matters most. The gap is the route: a correction to a leadership briefing raises questions your manager is placed to help answer. A minute with her first would have prepared both of you."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Your manager learned about her team’s error from her own inbox, at the same time as the director. She can support you better when she is not surprised."
+            }
+          ],
+          "next": "d2-the-review"
+        },
+        {
+          "id": "log-the-reviewer",
+          "text": "Go with the peer analyst’s footnote plan, but note in the team’s review log that the peer review missed the join, so the record is clear.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The log entry reads like a charge against the reviewer. The peer analyst sees it within the hour and stops answering your messages. The director still has the old figure. Your research manager reads the log that evening and calls you in first thing the next morning.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A record of what happened can help learning, but this one moved the error onto someone else while the director still had the old number. The present problem comes first; the account of how it happened comes after."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the peer analyst, a log entry naming his miss, written while your own code stays unmentioned, feels like blame. Next time he may hesitate before reviewing anyone’s work."
+            }
+          ],
+          "next": "d2-the-review"
+        }
+      ]
+    },
+    {
+      "id": "r2-ten-minutes",
+      "recovery": true,
+      "setup": "The review has ten minutes left. The template’s join is unchanged, and nothing about how tables are checked has changed. Your manager asks, “Anything else before we close?”",
+      "prompt": "What do you say?",
+      "choices": [
+        {
+          "id": "one-change",
+          "text": "Say one fix is worth leaving with: a row-count check before and after the join. Offer to draft it this week, and ask who will review it.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your manager says yes and names the peer analyst as reviewer. He nods. The fix is small, testable and owned, and the review closes with something to check after the next release.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You used the last ten minutes to turn a hard conversation into one specific change. Offering to draft it kept your own responsibility visible without making it a confession. Build on it by checking, after the next release, whether the row count caught anything."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For your manager, a concrete proposal is a relief. She can close the review knowing what she will tell the director."
+            }
+          ],
+          "next": "d3-the-score"
+        },
+        {
+          "id": "training-instead",
+          "text": "Suggest a refresher training on joins for all analysts next month, so everyone’s skills are current before the next quarterly release.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "Your manager adds it to the list. A refresher next month may help, but the template still drops blank fields tomorrow, and nobody has been asked to check row counts.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Training is a reasonable idea. But it treats the gap as skill alone, when the template and the review checklist also played a part. A specific change to the work catches what a refresher can miss."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Pair any training idea with one change to the work itself: “And until then, a row-count check before release.”"
+            }
+          ],
+          "next": "d3-the-score"
+        },
+        {
+          "id": "close-it",
+          "text": "Say nothing else. The review has been uncomfortable enough, and closing it now lets everyone get back to the quarterly release on time without more back and forth.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The review closes. The template is unchanged. The next table built from it will drop the same cases.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting an uncomfortable meeting to end is natural. Avoiding an error because the discussion feels uncomfortable leaves the problem and its conditions unchanged."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What is one change you could have proposed in a single sentence?"
+            }
+          ],
+          "next": "d3-the-score"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Raising your own error while it can still change a decision, with the old and new figures side by side",
+    "Choosing a route for a correction that leaves the relationship decision with the person who owns it",
+    "Naming both the condition and your own choice in a review, without blame or a blanket excuse",
+    "Turning a lesson into one specific, owned and testable change",
+    "Offering process evidence in place of a speaking count or a no-complaints claim",
+    "Saying plainly what a measure cannot show"
+  ],
+  "this_week": [
+    "Add one row-count or record-count check to a table or dashboard you send out, and note what it would have caught.",
+    "If you find an error in work already used by someone else, tell your manager the same day, with both figures written down.",
+    "Read one report line that claims something about how staff feel, and ask what evidence it rests on and what it cannot show."
+  ],
+  "sources": [
+    "dc-l74-building-psychological-safety-on-teams--learn-from-a-mistake-without-replacing-accountabil",
+    "dc-l74-building-psychological-safety-on-teams--review-speaking-up-practices-without-ranking-emplo",
+    "dc-t13-creating-psychological-safety-as-a-leader--lead-learning-after-a-work-error",
+    "dc-t12-psychological-safety-for-team-members--discuss-a-mistake-and-keep-responsibility-clear",
+    "dc-t12-psychological-safety-for-team-members--follow-through-without-turning-people-into-a-score",
+    "the-fearless-organization-creating-psychological-safety-in-the-workplace-for-lea"
+  ]
+}

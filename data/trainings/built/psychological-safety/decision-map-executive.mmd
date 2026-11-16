@@ -1,0 +1,21 @@
+flowchart TD
+  d1-the-briefing["You are the most senior person in the room. What do you say next?"]
+  d1-the-briefing -->|"Say the question matters to the estimate. Ask which step the county di"| d2-the-county-meeting
+  d1-the-briefing -->|"Thank the program manager warmly, ask her for a short memo by Friday, "| r1-before-the-next-item
+  d1-the-briefing -->|"Agree with the division director that the assumption was settled earli"| r1-before-the-next-item
+  d1-the-briefing -->|"Tell the room the program manager is right, and direct the division di"| d2-the-county-meeting
+  r1-before-the-next-item["Second chance: You can still change what happens to the concern. What do you do?"]
+  r1-before-the-next-item -->|"Say you moved past her question too quickly. Ask which step the county"| d2-the-county-meeting
+  r1-before-the-next-item -->|"After the briefing, find the program manager, tell her you value her c"| d2-the-county-meeting
+  r1-before-the-next-item -->|"Let it ride. The division director owns the estimate, and stepping in "| d2-the-county-meeting
+  d2-the-county-meeting["The county director wants to know whether input can still change anyth"]
+  d2-the-county-meeting -->|"Say plainly that moving intake to counties is decided. The workload es"| d3-the-cover-note
+  d2-the-county-meeting -->|"Tell the county directors that their input will shape the final propos"| d3-the-cover-note
+  d2-the-county-meeting -->|"Promise a listening session the first week of next month, with the pro"| d3-the-cover-note
+  d2-the-county-meeting -->|"Set up an anonymous online form for county staff to send concerns, so "| d3-the-cover-note
+  d3-the-cover-note["What do you send with the proposal?"]
+  d3-the-cover-note -->|"Rewrite the note: which concerns changed the proposal, which were not "| end_node
+  d3-the-cover-note -->|"Keep the division director’s note mostly as written. The legislative s"| end_node
+  d3-the-cover-note -->|"Add a table ranking each division by how many concerns its staff raise"| end_node
+  d3-the-cover-note -->|"Cut the closing lines and send only the proposal. Tell the division di"| end_node
+  end_node(["Reflection and action plan"])

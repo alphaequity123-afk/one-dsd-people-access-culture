@@ -1,0 +1,488 @@
+{
+  "intro_by": "C1",
+  "intro": "If your work is appeals, HR, legal, communications or training, you decide how other people’s accounts get written down. I have seen a process that was fair on paper still leave someone unsure who was deciding their case. In this version, you run a fair hearing by phone with an interpreter, and the same three moments come up in an interview, a public message or a course.",
+  "cast": [
+    {
+      "role": "appellant",
+      "label": "the appellant",
+      "portrait": "C2"
+    },
+    {
+      "role": "sister",
+      "label": "her sister",
+      "portrait": "C5"
+    },
+    {
+      "role": "interpreter",
+      "label": "the interpreter",
+      "portrait": "C1"
+    },
+    {
+      "role": "county-representative",
+      "label": "the county representative",
+      "portrait": "C6"
+    }
+  ],
+  "version": "enterprise-services",
+  "level": "intermediate",
+  "title": "The Hearing Record",
+  "learner_role": "You are a human services judge in the DHS Appeals Division. You run fair hearings, decide what goes in the record, weigh the evidence and write a recommended decision. You stay impartial between the person appealing and the agency. You control the order of the hearing, the questions you ask and how testimony is described in the decision.",
+  "background": "The appellant is appealing a reduction in her in-home support hours after a new assessment. The hearing is by phone. She is using a phone interpreter. Her sister is on the line. A county representative speaks for the county agency that did the assessment. You have ninety minutes scheduled and another hearing after it. What the appellant can follow, how her answers are heard, and how her account appears in your decision will shape whether this hearing is fair in fact, not only on paper. If your work is HR, communications, legal or training, the same three moments come up in an interview, a public message or a course: who understands the process, how someone’s account is written down, and what the final document says about them.",
+  "start": "d1-opening",
+  "decisions": [
+    {
+      "id": "d1-opening",
+      "recovery": false,
+      "setup": "Before you begin, the appellant asks through the interpreter whether her sister can answer questions about her daily routine, “because she sees it every day.” The interpreter mentions a delay on the line and asks the appellant to repeat herself twice. The interpreter comes from the approved vendor. Your standard opening script runs four minutes and uses legal terms.",
+      "prompt": "How do you open the hearing?",
+      "choices": [
+        {
+          "id": "standard-script",
+          "text": "Read the standard opening script in full, so every required point is covered for the record, and tell the appellant that only parties and witnesses may speak during the hearing.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The script is complete and accurate. The appellant answers “yes” when asked if she understands. Her sister is unsure whether she is allowed to speak and stays silent. Twenty minutes into testimony, it becomes clear the appellant thought you worked for the county.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The script covers every required point, the way a correct address covers the building. Whether the appellant can use it is a separate question. Plain words about who you are, what you decide and what roles people can have would have answered it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the appellant’s side, she is on a phone call about her care, hearing legal terms through a delayed interpreter, from a person whose role she does not know. “Yes, I understand” may mean “please go on.”"
+            },
+            {
+              "style": "feed-forward",
+              "text": "After the required opening, try: “In plain words: I don’t work for the county. I listen to both sides and decide what the evidence shows. What questions do you have before we start?”"
+            }
+          ],
+          "next": "r1-who-are-you"
+        },
+        {
+          "id": "check-and-explain",
+          "text": "Check that the appellant can hear the interpreter clearly. In plain words, explain what you decide and the roles people can have. Ask what help she wants from her sister.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The interpreter switches to a better line. You explain, in plain words, that you are independent of the county, what you decide and what you do not, and that her sister could be a witness, someone there for support, or an authorized representative. The appellant says she wants to answer for herself, and wants her sister to testify afterward about what she sees each day. You explain how that works and swear in both. The county representative says he has no objection. The hearing starts ten minutes later than planned, and everyone on the line knows who is who.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You treated the interpreter contract as an arrangement, not proof that interpretation was working, and you checked. Then you asked the appellant what help she wanted instead of deciding it. Both moves used your control of the hearing to widen her real choices."
+            },
+            {
+              "style": "another-perspective",
+              "text": "The county representative benefits too. A record where the appellant clearly understood the process is harder to challenge later."
+            }
+          ],
+          "next": "d2-testimony"
+        },
+        {
+          "id": "sister-answers",
+          "text": "Ask the appellant if she agrees, then let her sister answer the questions about the daily routine. She sees it every day, the appellant asked for it, and it will save time.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The appellant says yes. Her sister answers clearly. When you ask about mornings, the appellant tries to add something through the interpreter, but her sister is already speaking. The county representative asks whether the appellant herself will testify about what she can and cannot do.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Saving time on a full calendar is a real pressure, and her sister’s knowledge is real. But the appellant asked whether her sister could help. She did not say she wanted her sister to speak for her. Asking what kind of help she wanted keeps her in the hearing."
+            },
+            {
+              "style": "compare-coach",
+              "text": "The stronger choice asks the appellant, then explains the roles: her sister can be a witness after the appellant testifies. That keeps both voices in the record."
+            }
+          ],
+          "next": "r1-who-are-you"
+        },
+        {
+          "id": "assume-interpreter",
+          "text": "The interpreter is from the approved vendor and the delay seems minor, so assume the connection is fine, read the opening script and begin testimony to stay on schedule.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "Testimony begins. Twice the interpreter asks the appellant to repeat, and twice her answer comes back shorter than what she seemed to say. You cannot tell what was lost. The record shows interpretation was provided. It cannot show whether it worked.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A contract establishes an arrangement, not the experience of getting support. The readings use this exact case: a checked box for interpreter services does not show interpretation was timely or useful in the moment."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Make a quick check part of every interpreted hearing: “Can you hear the interpreter clearly? Please tell me any time you cannot.”"
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "In your hearings, how would you know if interpretation was not working?"
+            }
+          ],
+          "next": "r1-who-are-you"
+        }
+      ]
+    },
+    {
+      "id": "d2-testimony",
+      "recovery": false,
+      "setup": "You ask the appellant whether she can bathe without help. Through the interpreter, she describes her mornings, the stiffness in her hands, the way her mother used to help her, and then says, “On bad days, no.” The county representative says, “She isn’t answering the question. She’s being evasive.” You are taking notes for your findings.",
+      "prompt": "What do you do?",
+      "choices": [
+        {
+          "id": "plain-follow-up",
+          "text": "Note what she said, not how she said it. Ask a plain follow-up about what you need: how often bad days happen and what help she needs then.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The appellant says bad days come three or four times a week, and on those days she cannot hold the shower handle. That is the detail the assessment did not capture. The county representative asks his own follow-up, and her answer is consistent. Your notes now hold her account and the facts you need, without a word about her being evasive.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You separated what she said from the meaning the county representative added. A long answer, a pause or a story first can carry many meanings. None of them is proof of evasion. Your follow-up was purposeful, so it got the evidence without asking her to change how she speaks. Carry that into your findings: weigh credibility on the evidence, not on the order her answers come in."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the appellant, the morning story may have been the answer: the help she needs is tied to her hands and her history, not to a yes or no. Your question let both reach the record."
+            }
+          ],
+          "next": "d3-decision"
+        },
+        {
+          "id": "yes-no",
+          "text": "Note that her answers were indirect, and switch to short yes or no questions, which are easier to interpret and keep the record clean for review.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The appellant answers “yes” and “no” for the rest of the hearing. The record is tidy. It no longer contains what she knows about her own bad days. Your notes describe her testimony as indirect, and that word will be in front of you when you weigh it.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A clean record and a complete one are different. “Indirect” is an interpretation of how she speaks, not evidence about her needs. The stronger choice asks a plain follow-up and lets her answer in her own way."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you weigh testimony, how much does a familiar way of answering feel like a sign of truthfulness to you?"
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try writing what the person said, then ask yourself whether any word in your notes describes their manner instead of their account."
+            }
+          ],
+          "next": "r2-she-was-answering"
+        },
+        {
+          "id": "cultural-explanation",
+          "text": "Tell the county representative that telling the story first is how people from her background answer questions, so her answer is not evasive and should not count against her.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The county representative objects that you are taking her side. The appellant hears your comment through the interpreter and says nothing. You have defended her by explaining her through a group she never mentioned, and the county representative now has a reason to question your impartiality.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Wanting to protect the appellant from an unfair label is a good instinct. But a sympathetic group explanation is still a prediction about a person from a group. The readings say plainly that a pause or a question can carry different meanings that are not fixed traits or national categories."
+            },
+            {
+              "style": "compare-coach",
+              "text": "The stronger response does not explain her at all. It records what she said and asks a plain follow-up. That protects her account and your impartiality at the same time."
+            }
+          ],
+          "next": "r2-she-was-answering"
+        },
+        {
+          "id": "let-it-pass",
+          "text": "Say nothing to the county representative and move to the next question, so you do not appear to take a side, but keep his point in mind when you weigh her testimony.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The hearing moves on. The appellant’s “bad days” answer stays vague because no one followed up. The county representative’s word, evasive, sits in your notes next to her testimony.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "The appellant heard the county representative call her evasive and heard no response. From her side, that may sound like agreement from the person deciding her case."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Staying quiet did not keep you neutral; it let one reading of her answer stand. A plain follow-up question is neutral and gets the facts."
+            }
+          ],
+          "next": "r2-she-was-answering"
+        }
+      ]
+    },
+    {
+      "id": "d3-decision",
+      "recovery": false,
+      "setup": "The evidence supports part of the reduction, for one task, but not the reduction for bathing. During testimony, the interpreter also flagged that the assessment phrase “household tasks” had been interpreted to the appellant as a word meaning only cleaning, while the assessment used it more broadly. You are writing the recommended decision.",
+      "prompt": "How do you write the decision?",
+      "choices": [
+        {
+          "id": "accurate-and-plain",
+          "text": "Describe her testimony in her terms and how it was weighed, state the result and reasons, including what did not go her way, and name the interpretation issue. Write it plainly.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your decision describes her testimony about her hands and her bad days in her own terms, as fully as the record holds it. It explains why the bathing hours are restored and why the other reduction stands. It notes the interpretation issue and how her answers on that point were weighed. It explains the further review options as your division’s procedure states them. The appellant will not get everything she asked for. She will be able to read why.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You accounted for how her testimony was weighed, including the part that did not change the result and why. The readings ask for that honesty about what changed and what did not. Naming the interpretation issue keeps a gap visible instead of burying it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Think of a reviewing judge, or the county, reading this later. An accurate account of her testimony and a named interpretation issue make the decision easier to understand and to defend."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Ask how your division passes along issues a hearing brings to light, like an assessment term that does not interpret well, so it can reach the person or area responsible without stepping outside your role. Treat it as one hearing’s example, not proof that every assessment has the problem."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "standard-template",
+          "text": "Use the standard decision template and its legal language. It is what reviewing judges expect, it holds up on further review, and the result is correct either way.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The decision is legally complete. It describes the appellant’s testimony as “appellant testified to limitations on some days.” Her sister reads it to her. The appellant asks whether you understood what she said about her hands.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The result may be sound, but a decision is also a message to the person. “Limitations on some days” loses what she told you. The stronger draft keeps her terms and explains the weighing in plain words."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "If the appellant read only the findings paragraph, would she recognize her own testimony?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "rule-for-her",
+          "text": "Rule fully for the appellant on every task. The interpretation problem made the process unfair to her, so she should get the benefit of the doubt on all of the evidence, not only bathing.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The appellant’s hours are fully restored in the recommendation. The county asks for reconsideration, pointing out that the interpretation issue affected only one term, and that the evidence on the other task was clear. The decision is now harder to defend than it needed to be.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "When you see a process fall short for someone, wanting to make it right is natural. Cultural humility leaves your responsibilities intact. It asks you to examine the gap and address it accurately, not to set aside the evidence."
+            },
+            {
+              "style": "compare-coach",
+              "text": "The stronger choice names the interpretation issue, weighs her answers on that point with it in mind, and decides each question on its evidence."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "omit-issue",
+          "text": "Write a clear, plain decision that describes her testimony in her terms, but leave the interpretation issue out, since it touched one term and did not change the result.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The decision is readable and fair on its terms. The problem with how “household tasks” was interpreted is not in it, so no one responsible for the assessment or interpretation ever hears about it. The next appellant meets the same phrase.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The plain writing is a real strength. The stronger choice also names the issue, because a gap left out of the record cannot inform anything later."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Where does something you notice in a hearing go if it does not change your result?"
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-who-are-you",
+      "recovery": true,
+      "setup": "Partway in, the appellant says through the interpreter, “I don’t understand who you are. Are you with the county?” It is not clear she knows what role she or her sister has in the hearing.",
+      "prompt": "What do you do?",
+      "choices": [
+        {
+          "id": "pause-and-explain",
+          "text": "Pause the hearing. Explain your role in plain words, check that the interpreter connection is working, and ask the appellant what help she wants from her sister.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You explain that you are independent of the county. The interpreter moves to a clearer line. The appellant asks for her sister to testify after her, and you explain how. The rest of the hearing runs with everyone clear on their role.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "Her question was a correction to your opening. You let it change the hearing instead of pressing on."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Write your plain-words role explanation once and keep it beside your script."
+            }
+          ],
+          "next": "d2-testimony"
+        },
+        {
+          "id": "repeat-script",
+          "text": "Read the role section of the opening script again, more slowly this time, and ask the interpreter to make sure the appellant has clearly heard every word of it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The appellant says “yes” again. You are not sure the second reading helped more than the first.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Repeating the same words answers the question the same way. Plain words, and a check, would show whether it landed."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What would you say if you could not use any legal terms?"
+            }
+          ],
+          "next": "d2-testimony"
+        },
+        {
+          "id": "explain-later",
+          "text": "Tell her the written decision will explain everyone’s role and the outcome, and continue with testimony so the hearing does not fall further behind.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The appellant goes on testifying, still unsure whether she is talking to the side that cut her hours.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "From the appellant’s side, she is being asked to speak openly to someone she may think is on the other side."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Keeping a hearing moving is part of the job. A one-minute explanation now costs less than a record built on a misunderstanding."
+            }
+          ],
+          "next": "d2-testimony"
+        }
+      ]
+    },
+    {
+      "id": "r2-she-was-answering",
+      "recovery": true,
+      "setup": "Her sister speaks up: “She was answering. Let her finish what she was saying.” The appellant is quiet.",
+      "prompt": "How do you respond?",
+      "choices": [
+        {
+          "id": "acknowledge-and-invite",
+          "text": "Acknowledge the point: “You’re right, I should hear her own words.” Invite the appellant to finish, then ask a plain follow-up about how often bad days happen.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The appellant finishes. Bad days come three or four times a week, and she cannot hold the shower handle on those days. The record now has the detail it was missing.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You took the correction without defending yourself and without asking for reassurance, and the record improved because of it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Her sister took a risk speaking up. Your response told both sisters that a correction is welcome here."
+            }
+          ],
+          "next": "d3-decision"
+        },
+        {
+          "id": "thank-and-proceed",
+          "text": "Thank her sister for the point, note in the record that the appellant may add more later, and proceed with your next question so the ninety minutes are not lost.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The hearing moves on. The appellant’s answer about bad days is still unfinished.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Thanks is polite, but the correction pointed to a gap in the record. Inviting the appellant to finish would close it."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When someone says a person was cut off, go back to the person first."
+            }
+          ],
+          "next": "d3-decision"
+        },
+        {
+          "id": "procedural-reminder",
+          "text": "Remind her sister, politely, that she is not testifying right now and cannot speak until she is called, so the record stays orderly for both sides.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Her sister apologizes. The appellant does not offer more. The record stays as it was.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Order in a hearing matters, and the reminder may be accurate. But the point she raised was about your questioning, and it deserved an answer."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When a correction comes from someone outside the expected role, what helps you hear it?"
+            }
+          ],
+          "next": "d3-decision"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Checking that interpretation works in practice, not only that it was arranged",
+    "Explaining your role and people’s real choices in plain words",
+    "Separating what a person said from a judgment about how they said it",
+    "Avoiding group explanations of a person, even sympathetic ones",
+    "Staying impartial while taking a correction seriously",
+    "Writing a decision that accounts for the person’s testimony, including the parts that did not change the result"
+  ],
+  "this_week": [
+    "Write a plain-words version of your role and keep it beside your opening script.",
+    "In your next interpreted hearing, ask once at the start and once midway whether the interpreter can be heard clearly.",
+    "Read the findings in one recent decision and mark any word that describes a person’s manner instead of their account."
+  ],
+  "sources": [
+    "dc-s31-cultural-humility-in-public-service",
+    "cultural-humility-in-professional-judgment",
+    "cultural-humility-vs-checklist",
+    "dc-i26-cultural-humility-in-depth",
+    "cultural-humility-in-everyday-public-service"
+  ]
+}

@@ -1,0 +1,21 @@
+flowchart TD
+  d1-the-checked-box["The checklist says met. Your call-line supervisor says people cannot u"]
+  d1-the-checked-box -->|"Leave the box checked. The contract covers every language the program "| r1-the-call-notes
+  d1-the-checked-box -->|"Keep the contract details, but mark the line not yet supported. Ask th"| d2-the-budget-call
+  d1-the-checked-box -->|"Drop the checklist from the plan. If a checked box cannot show whether"| r1-the-call-notes
+  d1-the-checked-box -->|"Act on the call-line concern now. Direct the notices supervisor to tra"| r1-the-call-notes
+  d2-the-budget-call["Your supervisors disagree, and the money covers one option. How do you"]
+  d2-the-budget-call -->|"Separate what the law requires from habit. Honor the notices superviso"| d3-no-complaints
+  d2-the-budget-call -->|"Choose the notice rewrite now. The call notes already point clearly to"| d3-no-complaints
+  d2-the-budget-call -->|"Go with the notices supervisor’s view. She leads notices and policy, t"| d3-no-complaints
+  d2-the-budget-call -->|"Split the money evenly between the two options, so neither supervisor "| d3-no-complaints
+  r1-the-call-notes["Second chance: You have the plan in front of you and new information from the call li"]
+  r1-the-call-notes -->|"Reopen the language-access line. Ask the call-line and notices supervi"| d2-the-budget-call
+  r1-the-call-notes -->|"Thank the call-line supervisor for the notes and add a line to the pla"| d2-the-budget-call
+  r1-the-call-notes -->|"Ask the call-line supervisor which caller groups seem most confused, s"| d2-the-budget-call
+  d3-no-complaints["The report says success. A county partner says otherwise. What goes to"]
+  d3-no-complaints -->|"Report what was done and what is still unknown. Ask the county eligibi"| end_node
+  d3-no-complaints -->|"Send the notices supervisor’s report. No complaints after four months "| end_node
+  d3-no-complaints -->|"Add the county email to the report as an exception, so the county conc"| end_node
+  d3-no-complaints -->|"Ask the county eligibility supervisor to survey her workers and the pe"| end_node
+  end_node(["Reflection and action plan"])

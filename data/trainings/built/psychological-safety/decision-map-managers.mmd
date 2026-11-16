@@ -1,0 +1,21 @@
+flowchart TD
+  d1-the-error["Counties are applying an outdated threshold today. How do you lead the"]
+  d1-the-error -->|"Correct the bulletin to counties today through the usual route. Then t"| d2-the-warning
+  d1-the-error -->|"Agree with the team supervisor that nobody is to blame and the system "| d2-the-warning
+  d1-the-error -->|"Tell the division in your update that the policy analyst drafted from "| d2-the-warning
+  d1-the-error -->|"Hold a learning review with the whole team next week before anything c"| d2-the-warning
+  d2-the-warning["He has raised a work warning and a disability-related comment by his s"]
+  d2-the-warning -->|"Thank him, and say you must report the disability comment to human res"| d3-the-fix
+  d2-the-warning -->|"Promise to keep it between the two of you and talk to his supervisor y"| r2-what-happens-now
+  d2-the-warning -->|"Suggest a conversation with him and his supervisor together this week,"| r2-what-happens-now
+  d2-the-warning -->|"Before deciding anything, quietly ask two people on the team whether t"| r2-what-happens-now
+  r2-what-happens-now["Second chance: He has asked what happens next. What do you tell him?"]
+  r2-what-happens-now -->|"Say you spoke too soon. You must report the comment to human resources"| d3-the-fix
+  r2-what-happens-now -->|"Keep your first answer for now, and tell him you will check back with "| d3-the-fix
+  r2-what-happens-now -->|"Ask him whether he wants it reported. If he says no, respect that, sin"| d3-the-fix
+  d3-the-fix["What do you change, and what do you ask for?"]
+  d3-the-fix -->|"Add a line in each bulletin packet for open source questions, make the"| end_node
+  d3-the-fix -->|"Add your own sign-off as a second review on every bulletin and guidanc"| end_node
+  d3-the-fix -->|"Send all staff a reminder on Monday, signed by your division director,"| end_node
+  d3-the-fix -->|"Ask supervisors to track each analyst’s errors in county guidance on a"| end_node
+  end_node(["Reflection and action plan"])

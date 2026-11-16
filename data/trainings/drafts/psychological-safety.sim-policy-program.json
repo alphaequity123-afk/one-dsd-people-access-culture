@@ -1,0 +1,240 @@
+{
+  "intro_by": "C8",
+  "intro": "If you write policy or guidance, the questions that change your work often arrive as small doubts. I have found that how I phrase a doubt decides whether it gets checked or defended. Here you raise a gap in a senior colleague’s draft, co-lead a workgroup where a county question gets brushed off, and report back on what the comments changed.",
+  "cast": [
+    {"role": "lead-author", "label": "the lead author", "portrait": "C4"},
+    {"role": "program-manager", "label": "the program manager", "portrait": "C1"},
+    {"role": "co-facilitator", "label": "your co-facilitator", "portrait": "C3"},
+    {"role": "county-representative", "label": "the county representative", "portrait": "C2"},
+    {"role": "disability-advocate", "label": "the disability advocate", "portrait": "C5"}
+  ],
+  "version": "policy-program",
+  "level": "intermediate",
+  "title": "The Draft Bulletin",
+  "learner_role": "You are a Human Services Program Consultant. You draft and review bulletins and guidance for counties and lead agencies, co-lead stakeholder workgroups, and carry questions to the people who decide policy. You do not approve bulletins yourself.",
+  "background": "Your program is changing how people request a review of their services. A senior consultant is lead author on the bulletin to counties and lead agencies, and the program manager approves it. You co-lead a workgroup of county representatives, lead-agency staff and a disability advocate, with a program specialist as your co-facilitator. On this project’s own plan, the bulletin goes to the program manager for approval in three weeks.",
+  "start": "d1-the-draft",
+  "decisions": [
+    {
+      "id": "d1-the-draft",
+      "recovery": false,
+      "setup": "Reviewing the draft, you notice the paragraph on how to request a review names only the web form. The current program source you are checking against also lists a phone line. You are not sure whether the phone option applies to this request type. The lead author has written guidance for this program for years and is protective of the drafts. Draft comments are due tomorrow.",
+      "prompt": "You have found a possible gap in a senior colleague’s draft. How do you raise it?",
+      "choices": [
+        {
+          "id": "precise-question",
+          "text": "Comment that the paragraph names only the web form, while the current source also lists a phone line. Ask which applies here, and say you may be missing a condition.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "The lead author replies that afternoon. The phone line does apply, but only for people who cannot use the web form; the source puts that in a footnote. The lead author adds a sentence to the paragraph and thanks you for the specific pointer. You did not have to prove why the gap was there, and no one had to defend their care for access.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You named what you saw, why it might matter to a reader, and what you did not know. That gave the lead author something to check instead of something to defend. Build on it by using the same shape when someone raises a doubt about your own draft."},
+            {"style": "another-perspective", "text": "For a senior author who is protective of the drafts, a specific line and a source is easy to receive. A broader charge would have called for a defense of character."},
+            {"style": "reflective-prompt", "text": "When you doubt a senior colleague’s draft, which do you tend to do: soften the question until it disappears, or sharpen it into a charge?"}
+          ],
+          "next": "d2-the-workgroup"
+        },
+        {
+          "id": "probably-nothing",
+          "text": "Add a light comment that says, “Probably nothing, and I may well be wrong, but is there also a phone option?” so the lead author does not feel challenged by a less senior colleague.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "The lead author reads “probably nothing” and resolves the comment without checking. The paragraph stays as it was. Your humility was real; it also told the reader the question could be set aside, and it was.",
+          "feedback": [
+            {"style": "normalize-reframe", "text": "Softening a question to a senior colleague is very common, and care for the relationship matters. But humility does not require pretending the evidence is irrelevant. Say what you saw and what you have not determined."},
+            {"style": "feed-forward", "text": "Next time, try: “This paragraph names only the web form. The current source also lists a phone line. I may be missing a condition. Which applies here?”"}
+          ],
+          "next": "d2-the-workgroup"
+        },
+        {
+          "id": "access-charge",
+          "text": "Raise it at the draft review meeting: say the paragraph hides the phone option from the people who most need it, so the team takes access seriously this time instead of as an afterthought.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "medium"},
+          "consequence": "The lead author spends the next ten minutes explaining that nothing was hidden. Which option applies to this request type gets lost in the defense, though a footnote in the source would have settled it. Others at the review are careful what they say for the rest of the meeting.",
+          "feedback": [
+            {"style": "compare-coach", "text": "The access concern is serious, and raising it was worth doing. “Hides” adds a motive the paragraph cannot show, and the discussion turns to defending character. The specific line and source would have carried the same weight."},
+            {"style": "another-perspective", "text": "For the lead author, being told in front of peers that the draft hides something is hard to hear as a question. The room learned that raising access issues sounds like an accusation."}
+          ],
+          "next": "d2-the-workgroup"
+        },
+        {
+          "id": "fix-it-yourself",
+          "text": "Edit the paragraph in the shared draft today to add the phone line, since that is faster than a comment thread and the lead author can change it back.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The phone line now appears with no condition, though the source limits it to people who cannot use the web form. The lead author notices the edit the next day and is unsure who made it or why. The question of which option applies was never asked; you answered it yourself, without the authority or the footnote.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Initiative is useful. It does not make you the approver of the bulletin, and a silent edit skips the person who knows the conditions. A clear question gets the answer from the person who holds it."},
+            {"style": "another-perspective", "text": "For the lead author, an unexplained change in the draft makes the shared document feel less safe to work in."}
+          ],
+          "next": "d2-the-workgroup"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-workgroup",
+      "recovery": false,
+      "setup": "A week later, the workgroup meets by video. The county representative asks, “On the new request form, the state ID field is marked required. What happens to someone who doesn’t have one? Do they just get stuck?” Before you answer, your co-facilitator says, “That’s covered in the FAQ on the website. You should have read it.” The county representative goes quiet. You know the FAQ mentions ID but does not say what happens without one.",
+      "prompt": "A partner’s question has been met with a rebuke. What do you do?",
+      "choices": [
+        {
+          "id": "receive-and-route",
+          "text": "Say the FAQ mentions ID but not what happens without one. Say you will take it to the person responsible for the form requirements and report back before the bulletin closes.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "You say, “I’ve read the FAQ, and it doesn’t say what happens without an ID. That’s a real gap. I’ll take it to the person responsible for the form requirements and report back at the next meeting, before the bulletin goes for approval.” The county representative adds that two people in her county have no state ID right now. The disability advocate says the same question has come up elsewhere. Your co-facilitator adds the item to the notes. After the meeting, you mention to your co-facilitator, privately, that the reply about the website cut off a useful question.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You answered the question’s substance, admitted what the FAQ does not cover, and gave the question a route and a return. You did not promise the field would change. Build on it by bringing back the answer, whatever it is."},
+            {"style": "another-perspective", "text": "For the county representative, questioning the state in front of peers carries a risk. Hearing the state co-lead say “that’s a real gap” changes what the next question costs."},
+            {"style": "reflective-prompt", "text": "When a partner asks something you think is answered somewhere already, how do you check whether that answer is usable?"}
+          ],
+          "next": "d3-the-report-back"
+        },
+        {
+          "id": "great-question",
+          "text": "Jump in warmly: tell the county representative it is a great question, that you will check who owns the ID field and report back after approval, and move to the next item.",
+          "measures": {"learning": "medium", "trust": "medium", "engagement": "low"},
+          "consequence": "The tone recovers. The county representative says thank you. The point about the website stands uncorrected, and the answer you promised will arrive after the bulletin is approved, when it can no longer change anything.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Warmth repaired the tone, which matters. A report back after approval tells partners what happened but cannot change the bulletin. Bringing the answer back before the bulletin closes makes the thanks real."},
+            {"style": "normalize-reframe", "text": "Smoothing over a tense moment with partners is a common reflex. The tension came from a gap in the answer, and only an answer closes it."}
+          ],
+          "next": "r2-asked-again"
+        },
+        {
+          "id": "ask-the-advocate",
+          "text": "Turn to the disability advocate and ask whether the people she works with usually have a state ID, so the workgroup hears from someone who knows the community before deciding what to do.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "medium"},
+          "consequence": "The disability advocate pauses, then says she can speak about the people she has worked with, not for everyone, and that it varies. The county representative’s question about what happens without an ID is still unanswered. Someone has been asked to stand in for a whole group, and the form requirement has not been examined.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Hearing from people with direct knowledge is useful. Asking one person to speak for a community is not, and it does not answer whether the field must be required. The person responsible for the requirement can."},
+            {"style": "another-perspective", "text": "For the disability advocate, being asked to represent everyone she works with, on the spot, is a burden. She answered carefully because the question asked too much of her."}
+          ],
+          "next": "r2-asked-again"
+        },
+        {
+          "id": "promise-to-drop-it",
+          "text": "Tell the workgroup you will have the ID field dropped from the required list in the final form, so partners see right away that their input changes things.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "medium"},
+          "consequence": "The workgroup is pleased. After the meeting, the program manager tells you the form requirements are not the program’s to change on the spot. The question goes to the person responsible for the requirement, and you will have to tell the partners that your promise was ahead of the facts.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Showing partners that input matters is the right aim. Promising a change you cannot authorize, before anyone checks the requirement, spends trust you will need later."},
+            {"style": "another-perspective", "text": "For the county representative, a promise taken back is worse than an honest “I don’t know yet. Here is who will check.”"}
+          ],
+          "next": "d3-the-report-back"
+        }
+      ]
+    },
+    {
+      "id": "r2-asked-again",
+      "recovery": true,
+      "setup": "A few minutes later, still in the meeting, the county representative unmutes. “Sorry to come back to this, but I’m still not sure what happens to the person without an ID. Who would know, and will we hear before the bulletin goes out?” Your co-facilitator glances at the clock.",
+      "prompt": "The county representative has asked again. What do you say?",
+      "choices": [
+        {
+          "id": "own-it-and-route",
+          "text": "Thank her for asking again. Say the FAQ doesn’t cover it, that you will take it to the person responsible for the form, and bring the answer to the next meeting.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "medium"},
+          "consequence": "You say, “Thank you for asking again. The FAQ doesn’t answer it. I’ll take it to the person responsible for the form requirements and bring the answer to the next meeting.” The county representative says that helps. The disability advocate says she would like to see the answer too. It took a second ask; the next person may not make one.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You treated the second ask as a signal about your first answer, not as an interruption, and you gave the question a person and a date. Build on it by naming the owner and date the first time, so no one has to ask twice."},
+            {"style": "another-perspective", "text": "For the county representative, coming back to a question after a rebuke took effort. Being thanked for it makes it easier for others in the workgroup to do the same."}
+          ],
+          "next": "d3-the-report-back"
+        },
+        {
+          "id": "take-it-offline",
+          "text": "Offer to talk with her after the meeting so the workgroup can stay on its agenda, since one county’s situation may not be what the rest of the group needs to hear about.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "She agrees. After the meeting you talk, promise to find out, and send her question to the person responsible for the form requirements. The rest of the workgroup, including the advocate who has heard the same question elsewhere, never hears the answer. A question about everyone without an ID has become one county’s private issue.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A follow-up conversation can help. This question affects every county using the form, and the workgroup is where its answer belongs."},
+            {"style": "reflective-prompt", "text": "Which questions in your workgroups get moved offline, and who never hears their answers?"}
+          ],
+          "next": "d3-the-report-back"
+        },
+        {
+          "id": "point-to-the-faq",
+          "text": "Share the FAQ link in the chat and suggest she read the section on identification, then send any remaining questions by email so you can look at them properly.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "She says, “Okay,” and mutes. You know the FAQ does not answer her question. Pointing back to it repeats the first rebuke in a politer form. The workgroup has now seen the same question turned away twice. Her email arrives that afternoon, and the program manager forwards it to the person responsible for the form requirements.",
+          "feedback": [
+            {"style": "compare-coach", "text": "The FAQ may answer a different question. Pointing to it again does not show whether she could find or use what she needed; asking about her specific question does."},
+            {"style": "another-perspective", "text": "For the county representative, the link says the problem is her reading, not the form."}
+          ],
+          "next": "d3-the-report-back"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-report-back",
+      "recovery": false,
+      "setup": "The workgroup’s written comments are in, and the program manager has made decisions on them. Two suggestions changed the bulletin’s wording. One, to shorten the response timeline, was not adopted because the timeline is set outside the program. The ID field question is with the person responsible for the form requirements and has no answer yet. Your co-facilitator drafts the update to the workgroup: “Thank you for your 14 comments. All concerns have been addressed.”",
+      "prompt": "What do you send the workgroup?",
+      "choices": [
+        {
+          "id": "say-what-changed",
+          "text": "Rewrite it to name the two wording changes and the comments behind them, why the timeline suggestion was not adopted, and that the ID question is still open.",
+          "measures": {"learning": "high", "trust": "high", "engagement": "high"},
+          "consequence": "The update is longer than a thank-you and much more useful. A lead-agency member writes back that it is the first time she has seen which comments changed a bulletin. The county representative asks to hear when the ID answer arrives, and you add her to the list. The member who asked to shorten the timeline replies that she disagrees with the outcome, and understands it.",
+          "feedback": [
+            {"style": "affirm-extend", "text": "You showed what changed because people spoke up, what did not and why, and what is still open. A declined suggestion with a reason is part of follow-through, not a failure of it. Build on it by sending the ID answer when it comes, even if partners hoped for a different one."},
+            {"style": "another-perspective", "text": "For partners who spent time writing comments, seeing their own suggestion named, adopted or not, is the evidence that the invitation was real."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "short-and-positive",
+          "text": "Keep the update short and positive: thank everyone for their 14 comments, say the bulletin is stronger for them, and save the details of what changed for the bulletin itself.",
+          "measures": {"learning": "low", "trust": "medium", "engagement": "low"},
+          "consequence": "Members feel thanked. None of them can tell whether their own comment mattered. The member whose timeline suggestion was not adopted will find out by reading the bulletin. The ID question drops out of view.",
+          "feedback": [
+            {"style": "compare-coach", "text": "A count of comments is activity, not an account of influence. Partners need to know what happened to their own input, including the parts that were not adopted."},
+            {"style": "normalize-reframe", "text": "Keeping partner updates brief and upbeat is a common habit. Upbeat is fine; vague is the problem."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "send-as-written",
+          "text": "Send your co-facilitator’s draft as written. Every comment was considered by the program manager, the bulletin is close to final, and the ID question will likely be settled before partners notice.",
+          "measures": {"learning": "low", "trust": "low", "engagement": "low"},
+          "consequence": "The county representative replies, “Addressed how? The ID question isn’t answered.” Others in the workgroup read her reply. The update claimed more than the record shows, and the first person to say so is the one who was rebuked at the meeting.",
+          "feedback": [
+            {"style": "compare-coach", "text": "“Considered” and “addressed” are different. One question is still open, and saying otherwise invited exactly the reply you got."},
+            {"style": "another-perspective", "text": "For the workgroup, a claim that all concerns were addressed, followed by a public correction, makes the next update harder to believe."}
+          ],
+          "next": "end"
+        },
+        {
+          "id": "wait-for-everything",
+          "text": "Hold the update until the program manager approves the bulletin and the ID answer arrives, so partners get one complete, final account instead of a partial one.",
+          "measures": {"learning": "medium", "trust": "low", "engagement": "low"},
+          "consequence": "Weeks pass with no word to the workgroup. Decisions already made sit unreported. When the account finally arrives, the bulletin is approved and nothing in it can change. Partners who wondered whether their comments mattered have had a long time to decide they did not.",
+          "feedback": [
+            {"style": "compare-coach", "text": "Wanting a complete account is careful. A mixed account now, with the open item named, is more useful than a complete one after nothing can change."},
+            {"style": "reflective-prompt", "text": "How long do partners usually wait to hear what happened to their input, and what do they conclude in the meantime?"}
+          ],
+          "next": "end"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Raising a gap as an observation, a reader consequence and a question, with honest uncertainty",
+    "Staying firm about a gap without adding a motive or taking over someone else’s decision",
+    "Receiving a partner’s question after a rebuke, and giving it a person and a date",
+    "Not asking one person to speak for a whole community",
+    "Reporting back what changed, what did not and why, and what is still open"
+  ],
+  "this_week": [
+    "The next time you doubt a draft, write your comment in three parts: what you saw, what it could mean for a reader, and what you need checked.",
+    "In your next workgroup, when someone points to a website or FAQ as the answer, check whether it answers the question that was asked.",
+    "Look at your last update to a workgroup or partner group. Does it say what happened to anyone’s actual comment?",
+    "Name who holds each open question from your current project, and when partners will hear back."
+  ],
+  "sources": [
+    "dc-t12-psychological-safety-for-team-members--raise-a-precise-question-within-your-role",
+    "psychological-safety-respect-and-speaking-up",
+    "dc-l74-building-psychological-safety-on-teams--respond-to-a-concern-by-examining-its-content",
+    "dc-l74-building-psychological-safety-on-teams--invite-useful-input-before-the-decision-closes",
+    "dc-t12-psychological-safety-for-team-members--follow-through-without-turning-people-into-a-score",
+    "3-speaking-up-psychological-safety-and-accountability",
+    "gc-respectful-workplace--psychological-safety-as-team-practices"
+  ]
+}

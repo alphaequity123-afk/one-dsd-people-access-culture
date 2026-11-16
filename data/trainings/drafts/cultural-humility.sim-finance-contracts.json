@@ -1,0 +1,489 @@
+{
+  "intro_by": "C8",
+  "intro": "If you manage grants or contracts, the requirements you inherit decide who can even apply. I have watched small organizations that families trust give up before the deadline. In this version, you answer an applicant’s question, guide a review panel and debrief an applicant who was not funded.",
+  "cast": [
+    {
+      "role": "director",
+      "label": "the director",
+      "portrait": "C6"
+    },
+    {
+      "role": "first-reviewer",
+      "label": "the first reviewer",
+      "portrait": "C7"
+    },
+    {
+      "role": "second-reviewer",
+      "label": "the second reviewer",
+      "portrait": "C3"
+    },
+    {
+      "role": "grants-policy",
+      "label": "the person responsible for grants policy",
+      "portrait": "C5"
+    },
+    {
+      "role": "supervisor",
+      "label": "your supervisor",
+      "portrait": "C4"
+    }
+  ],
+  "version": "finance-contracts",
+  "level": "intermediate",
+  "title": "Who Can Apply",
+  "learner_role": "You are the grant manager for a new DHS grant program. You answer applicants’ questions during the solicitation, run the review panel and debrief applicants afterward. Grants policy, legal requirements and the final award decision belong to the person or area responsible; you shape how questions are answered and how the review is carried out.",
+  "background": "The program will fund community organizations to help families find and keep the services they qualify for. The solicitation was built from an older one used for larger statewide contracts. It asks for three years of audited financial statements, a 25-page narrative and upload through the online grants portal only. The question period is open for two more weeks. Several of the organizations the program most hopes to reach have small staffs and have never held a state grant.",
+  "start": "d1-the-question",
+  "decisions": [
+    {
+      "id": "d1-the-question",
+      "recovery": false,
+      "setup": "The director of a community organization with four staff writes in during the question period. His organization has reviewed financial statements, not audited ones. Writing 25 pages will take his staff away from families for weeks, and the portal will not accept the file format his bookkeeper uses. He asks: “Can an organization like ours apply?”",
+      "prompt": "How do you answer?",
+      "choices": [
+        {
+          "id": "same-for-all",
+          "text": "Answer that the requirements apply to every applicant equally, so changing them for one would be unfair, and point him to the pages of the solicitation that explain each one.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "Your answer is accurate to the document. Two days pass with no reply. If nothing changes, almost every proposal will come from organizations that have held state grants before.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Treating every applicant the same feels fair, and consistency matters in public money. The readings point out that equal wording does not give equal access to the knowledge or resources needed to use it. Valuing consistency and checking a requirement’s purpose can go together."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare pointing to the pages with asking which of these requirements are real and which were carried over from an older solicitation. The first defends the document; the second examines it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the director’s side, the answer confirms what he suspected: the grant was not written with organizations like his in mind."
+            }
+          ],
+          "next": "r1-should-not-bother"
+        },
+        {
+          "id": "requirement-or-habit",
+          "text": "Find out which requirements come from grants policy or law and which were copied from the older solicitation. Ask the person or area responsible, and post the answer for everyone.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The person responsible for grants policy confirms that, for this program, the financial review can use statements like the director’s; the audit requirement had been copied from the larger contracts. The page count and portal-only upload were carried over, not required. The program issues an addendum: a shorter narrative, a second way to submit, and a plain explanation of the financial review. Every applicant sees it, not only the director. He writes back that his organization will apply.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You separated the real requirement from the habits that grew around it, then used the route that can actually change them. Publishing the answer to everyone kept the process fair while making it usable. Keep asking that question of every requirement you inherit."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When you send the addendum, say what changed and what did not, and why. People trust a limit they can understand."
+            }
+          ],
+          "next": "d2-the-panel"
+        },
+        {
+          "id": "promise-waiver",
+          "text": "Tell the director the audit requirement looks like a holdover from the larger contracts, so you can waive it for small organizations like his, and he should start writing his proposal now.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The director thanks you and starts writing. An hour later, the person responsible for grants policy tells you a waiver for one applicant would be unfair to others and would have to go through an addendum. You write to the director that your answer was not yours to give.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your instinct, to remove a barrier, was right. The promise came before checking authority. The stronger choice takes the same question through the person or area responsible so the answer holds and reaches every applicant."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try: “That is a fair question. I will find out which of these are required for this grant and post the answer for all applicants by Friday.”"
+            }
+          ],
+          "next": "r1-should-not-bother"
+        },
+        {
+          "id": "suggest-lead-partner",
+          "text": "Suggest the director partner with a larger organization as the lead applicant, since small community groups often struggle to manage state grants and the reporting that comes with them.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The director replies that his organization has managed private grants for ten years and that families come to them because they are not a large agency. He asks whether the program wants organizations like his or not.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "The director asked about the requirements, and the answer was about his organization’s ability. From his side, a general belief about small groups replaced a question about his actual situation."
+            },
+            {
+              "style": "compare-coach",
+              "text": "The stronger choice examines the solicitation before deciding what an applicant can or cannot manage. Ask what he has, not what groups like his usually lack."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What did you assume about the director’s organization before he told you anything about it?"
+            }
+          ],
+          "next": "r1-should-not-bother"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-panel",
+      "recovery": false,
+      "setup": "You facilitate the review panel. Proposal 14 is from the director’s organization. The first reviewer says it “doesn’t read as professional,” and that its plan to reach families through gatherings at a community center and home visits by trusted neighbors is “unproven.” The second reviewer answers, “I know that community. They won’t go to a formal clinic anyway, so this makes sense.” The published criteria cover need, approach, capacity and budget. Nothing in them mentions writing style.",
+      "prompt": "How do you guide the panel?",
+      "choices": [
+        {
+          "id": "back-to-criteria",
+          "text": "Bring the panel back to the published criteria. Ask both reviewers, critical and approving alike, what in the proposal supports their view.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You note that writing style is not a criterion, and that neither “professional” nor a belief about a community is evidence. The first reviewer points to the approach section and admits the plan is described clearly, just not in the language he is used to. The second reviewer finds the proposal’s own data on how families found them last year, which is stronger than her general view. The panel scores the approach on what the applicant wrote. The first reviewer still has questions about capacity, and those go into the notes as questions for the applicant.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You caught both shortcuts, the unfavorable one and the favorable one. A belief about a community, even a sympathetic one, is still a profile standing in for the applicant’s own account. Keep using the proposal as the evidence."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Consider the applicant who wrote Proposal 14. They described their approach in their own words. Your question let the panel read those words instead of a reviewer’s idea of the community."
+            }
+          ],
+          "next": "d3-the-debrief"
+        },
+        {
+          "id": "let-scores-stand",
+          "text": "Let each reviewer score independently, as the panel process expects. Steering the discussion could bias the scores, and the comments will speak for themselves.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The scores come in far apart. The first reviewer scores the approach low with the comment “unprofessional tone.” The second reviewer scores it high with “culturally appropriate for this community.” Neither comment refers to what the proposal says.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Independence in scoring matters, and you can keep it. Facilitating can still mean asking every reviewer to tie a comment to a criterion and to the proposal. That is part of running a fair review."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What does a comment like “unprofessional tone” measure, and which criterion does it belong to?"
+            }
+          ],
+          "next": "r2-the-scores"
+        },
+        {
+          "id": "side-with-second-reviewer",
+          "text": "Agree with the second reviewer. She knows the community well, and her view balances the first reviewer’s concern about the plan, so the score reflects both sides.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The first reviewer goes quiet and scores as he planned. The second reviewer’s statement about the community goes into the notes as the reason for the high score. If the applicant ever reads those notes, they will find a description of their community that they never gave.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "It is common to treat a favorable generalization as the fix for an unfavorable one. The readings treat both the same way: a claim about how a community is turns background into a stereotype. The proposal is the account that counts."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Ask the second reviewer, “What in the proposal shows that?” and the first reviewer, “Which criterion does your concern fall under?” Then both views stand on the same evidence."
+            }
+          ],
+          "next": "r2-the-scores"
+        },
+        {
+          "id": "adjust-later",
+          "text": "Let the discussion go to keep the panel on schedule, then quietly raise Proposal 14’s approach score afterward to balance the first reviewer’s low one.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "As you open the score sheet, the second reviewer asks what you are changing. It is not your role to change a reviewer’s score. If you did, the whole panel’s results for this proposal would have to be checked again. The first reviewer’s comment is still in the file.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You noticed a real problem in the review. The fix stepped outside your authority and made the review harder to defend. The stronger choice addresses the comment in the room, through the panel process."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the other applicants’ side, a score changed by the grant manager is exactly the kind of unfairness the process exists to prevent."
+            }
+          ],
+          "next": "r2-the-scores"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-debrief",
+      "recovery": false,
+      "setup": "Awards are announced. The director’s organization scored well on approach but was not funded; capacity scores were lower. In the debrief call he says, “This process rewards organizations that can pay grant writers. Families trust us. That didn’t count.” You can explain the scores. The next solicitation is being drafted now by another team.",
+      "prompt": "How do you respond, and what happens to his point?",
+      "choices": [
+        {
+          "id": "acknowledge-and-carry",
+          "text": "Acknowledge his point without defending the process. Explain each criterion’s score, take his point to the team drafting the next solicitation, and say when he will hear.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The director is still disappointed, and says so. He also says it helps to hear that the approach scored well and where capacity fell short. You send his point, in his words, to the team drafting the next solicitation. A month later you tell him they are considering a capacity-building option and a shorter first-stage application. Nothing is decided yet, and you say that too.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You treated his correction as information, not an attack, and you were honest about both the scores and the limits of what you can change. Carrying his words forward, then reporting back, is what made his time count."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep the report-back specific: what was heard, who has it, what is being considered and when he will hear again."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "defend-fairness",
+          "text": "Explain that every applicant was held to the same criteria and the same scoring, walk through his scores, and assure him the process was fair to everyone.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The director says he understands the rules were the same. That was his point. The call ends politely. His comment goes nowhere, and the next solicitation keeps the same capacity section.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Same criteria and equal access are different questions, like a correct address and a findable entrance. He was not saying the rules were applied unevenly. He was saying they favor one kind of organization."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Defending a process you worked hard on is a natural reaction. The readings ask you to take the particular correction seriously before defending the intention behind it."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What would you need to hear from applicants to know whether the capacity section measures what it is meant to?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "promise-next-round",
+          "text": "Tell him you agree, and promise that the next round will score community trust, so organizations like his that families rely on will have a fair chance.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The director sounds hopeful. The next solicitation is drafted by another team under its own requirements, and community trust is not added as a criterion. When it is posted, he writes to ask what happened to your promise.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You heard him, which matters. The promise was not yours to make. The stronger choice carries his point to the people drafting the next round and tells him honestly what they will consider."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the director’s side, a broken promise from the state may weigh more than the original disappointment."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "thank-and-note",
+          "text": "Listen closely without arguing, thank him for the feedback, explain his scores, and note “applicant disappointed with outcome” in the file so the record shows the call took place.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The director feels heard on the call. The file now says he was disappointed, not what he said about grant writers and trust. Nobody drafting the next solicitation sees his point.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Listening without a route for the concern leaves the barrier where it was. Compare “disappointed with outcome” with “says the capacity section favors organizations that can pay grant writers.” One describes his feelings; the other carries his knowledge."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When you write up a debrief, record the specific point the applicant made in their words, and where you sent it."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-should-not-bother",
+      "recovery": true,
+      "setup": "The director writes back: “So organizations like ours shouldn’t bother.” The question period still has ten days.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "check-and-date",
+          "text": "Tell him it is a fair question, find out which requirements are fixed for this grant, and post the answer for all applicants by a set date.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You take the question to the person responsible for grants policy. The addendum goes out with a shorter narrative and a second way to submit. The director decides to apply.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You let his frustration point you back to the real question and gave him a date. That turns a closed answer into an open one."
+            },
+            {
+              "style": "another-perspective",
+              "text": "His message was not giving up. It was a last check on whether the program meant what it said about reaching groups like his."
+            }
+          ],
+          "next": "d2-the-panel"
+        },
+        {
+          "id": "forward-quietly",
+          "text": "Forward his email to your supervisor with a note that the requirements may need checking, and wait to hear back before replying, so you do not promise anything you cannot keep.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Your supervisor agrees the requirements should be checked, and an addendum goes out a week later. The director heard nothing in between and nearly gave up. He applies, with less time to prepare.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Raising it was right. A short reply to the director saying what you were checking, and when he would hear, would have kept him in the process."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When you route a question, tell the person who asked: who has it and when they can expect an answer."
+            }
+          ],
+          "next": "d2-the-panel"
+        },
+        {
+          "id": "resend-solicitation",
+          "text": "Reply politely with the solicitation attached again, the date questions close, and a note that the requirements are explained in the attachment for every applicant.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The director replies with one line: they will try, but meeting the audit and the page count means pulling staff from families for weeks. His proposal arrives on the last day, thinner than it could have been.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Resending the document answers a question he did not ask. His question was whether the requirements fit; only a check can answer that."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "Which requirement in your current solicitation have you never checked the source of?"
+            }
+          ],
+          "next": "d2-the-panel"
+        }
+      ]
+    },
+    {
+      "id": "r2-the-scores",
+      "recovery": true,
+      "setup": "The scores for Proposal 14 are far apart, and the comments explain them with tone and with beliefs about a community rather than with the proposal. The panel has not been dismissed.",
+      "prompt": "What do you do before scores are final?",
+      "choices": [
+        {
+          "id": "tie-to-criteria",
+          "text": "Following the panel process, ask the reviewers to return to Proposal 14 and tie each comment to a criterion and to what the proposal says.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The first reviewer rewrites his comment to name a capacity question. The second reviewer replaces her community statement with a line from the proposal’s own data. The scores move closer and the file can be explained to the applicant.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You used the process to correct the review instead of working around it. Every comment now points to evidence the applicant could see."
+            },
+            {
+              "style": "feed-forward",
+              "text": "At the start of the next panel, say once: comments should point to a criterion and a page in the proposal."
+            }
+          ],
+          "next": "d3-the-debrief"
+        },
+        {
+          "id": "flag-supervisor",
+          "text": "Flag the comments to your supervisor in writing, with the criteria they do not match, and let scoring proceed so the panel can finish on time today.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "Your supervisor notes the concern for next time. This round’s scores stand with the comments as written.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Raising the concern helps the next review. The panel was still in session, though, and the comments could have been tied to the criteria now."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What stopped you from raising it with the panel directly?"
+            }
+          ],
+          "next": "d3-the-debrief"
+        },
+        {
+          "id": "average-and-move",
+          "text": "Average the two scores and move on. Far-apart scores happen on every panel, and averaging settles them without favoring either reviewer.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The average puts Proposal 14 just below the funding line. Its file explains the score with “unprofessional tone” and a statement about a community.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "If the applicant asks why they were not funded, those comments are what they will read."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "Spread in scores is normal. Comments that rest on style or on beliefs about a group are a different problem, and averaging does not fix it."
+            }
+          ],
+          "next": "d3-the-debrief"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Separating a real requirement from a habit carried over from an older solicitation",
+    "Answering an applicant’s question through the person or area responsible, and for every applicant",
+    "Bringing a review panel back to the published criteria and to the applicant’s own words",
+    "Treating a favorable belief about a community as a shortcut, the same as an unfavorable one",
+    "Taking an applicant’s correction seriously before defending the process",
+    "Carrying an applicant’s point forward and telling them what happened to it"
+  ],
+  "this_week": [
+    "Pick one requirement in a solicitation or contract you manage and find out where it comes from.",
+    "Before your next review panel, write one sentence asking reviewers to tie each comment to a criterion and a page.",
+    "After your next debrief, send the applicant’s main point, in their words, to whoever drafts the next round."
+  ],
+  "sources": [
+    "cultural-humility-in-professional-judgment",
+    "cultural-humility-in-everyday-public-service",
+    "cultural-humility-vs-checklist",
+    "dc-i26-cultural-humility-in-depth",
+    "dc-s31-cultural-humility-in-public-service"
+  ]
+}

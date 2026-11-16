@@ -1,0 +1,501 @@
+{
+  "intro_by": "C1",
+  "intro": "If you work an eligibility line or a renewal queue, you lean on shared tools all day: desk aids, templates, the way an experienced worker explains things. I have found that the hardest question to ask is the one that suggests a trusted tool might be off. Here, you notice a gap in a desk aid the whole team uses, and you decide how to raise it, how to back up a newer colleague, and what to do about your own cases.",
+  "cast": [
+    {
+      "role": "lead-worker",
+      "label": "the lead worker",
+      "portrait": "C7"
+    },
+    {
+      "role": "newer-worker",
+      "label": "the newer worker",
+      "portrait": "C3"
+    },
+    {
+      "role": "supervisor",
+      "label": "your supervisor",
+      "portrait": "C5"
+    },
+    {
+      "role": "caller",
+      "label": "the caller",
+      "portrait": "C2"
+    }
+  ],
+  "version": "eligibility-public",
+  "level": "intermediate",
+  "title": "The Desk Aid",
+  "learner_role": "You process health care renewals and take calls on an eligibility line. You are not the lead worker or a supervisor. You can ask questions, flag a gap and correct your own work through the team’s process. How a policy applies to a case belongs to the person or area responsible for policy interpretation.",
+  "background": "Your team keeps a one-page desk aid for renewals. The lead worker wrote it two years ago, and most of the team uses it every day. This morning a caller asked why her renewal letter asked for different income proof than a worker described on an earlier call. Checking, you see that the desk aid’s line on income proof reads differently from the current manual page. You may be missing a condition. The morning huddle starts in five minutes. The lead worker runs it, and your supervisor usually joins for the first part.",
+  "start": "d1-the-huddle",
+  "decisions": [
+    {
+      "id": "d1-the-huddle",
+      "recovery": false,
+      "setup": "Twelve people are on the huddle call. The lead worker reviews the queue and asks, “Anything on renewals before we start?” The newer worker, who joined the team last month, is on mute. Your supervisor has joined. You have the desk aid line and the manual page open side by side, and you still are not sure which condition applies.",
+      "prompt": "What do you say?",
+      "choices": [
+        {
+          "id": "name-the-difference",
+          "text": "Say the desk aid’s income-proof line reads differently from the current manual page, that a caller noticed this morning, that you may be missing a condition, and ask who can confirm.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You read the two lines aloud and add, “I may be missing a condition.” The call goes quiet for a second. The newer worker unmutes and says she has been using that line too. Your supervisor writes something down. The lead worker clears his throat to answer.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You named what you saw, why it matters and what you need, and you were honest about what you do not know. That gives the team something to check instead of something to defend. Build on it: keep the caller’s question in view, because it shows the gap is not just a reading preference."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the newer worker, your question did something hers could not yet do on her own. It made it ordinary to say a shared tool might need checking."
+            }
+          ],
+          "next": "d2-the-answer"
+        },
+        {
+          "id": "message-later",
+          "text": "Keep it out of the huddle and message the lead worker afterward. The desk aid is his, and a private note is more respectful than correcting him in front of twelve people.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "You make a note to message him later. The lead worker announces that the team will lean on the desk aid for this week’s renewal push and asks the newer worker to take extra renewals. She says yes, then unmutes again and asks, a little quietly, whether the income-proof line is still current.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Choosing a private route to spare a colleague is a caring instinct, and sometimes it is the right one. Here the tool is shared and in use today, so timing matters: the question needed to reach the team before more letters went out."
+            },
+            {
+              "style": "another-perspective",
+              "text": "The newer worker just asked the question you were holding, with less standing to ask it. Your silence did not protect her from the risk; it left her to carry it alone."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When a shared tool is in use right now, try raising the work question in the room and keeping anything personal for later: “One line in the desk aid may not match the manual. Can someone check it?”"
+            }
+          ],
+          "next": "r1-still-open"
+        },
+        {
+          "id": "call-it-wrong",
+          "text": "Tell the huddle that the desk aid is wrong on income proof and has been sending people the wrong requests, so everyone should stop using it until someone fixes it.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Several people stop typing. The lead worker asks, sharply, which cases you mean. You realize you do not yet know whether the manual condition covers every renewal, or any of the cases you were thinking of. The newer worker, who has been using the line, goes quiet.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your concern was real, but the claim went further than your evidence. Compare “the desk aid is wrong” with “these two lines read differently, and I may be missing a condition.” The second invites a check; the first invites a defense."
+            },
+            {
+              "style": "normalize-reframe",
+              "text": "When something might affect callers, it is natural to sound certain so people will listen. Neither overstating your certainty nor dismissing yourself makes the evidence stronger."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you raise a gap, how often do you say out loud what you have not yet determined?"
+            }
+          ],
+          "next": "r1-still-open"
+        },
+        {
+          "id": "say-nothing",
+          "text": "Stay quiet for now. The lead worker has far more experience, the manual may have a condition you missed, and a mistaken question in front of your supervisor would not look good.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The huddle moves to queue numbers. Your supervisor asks, “Anything else?” Nobody answers. The caller’s question sits in your notes. As the lead worker starts to close, the newer worker unmutes: a caller asked her the same thing yesterday, and she was not sure what to say.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Worrying about looking unprepared in front of a supervisor is one of the most common reasons people hold back an ordinary work question. That cost is real. The question can still be legitimate while you are unsure of the answer."
+            },
+            {
+              "style": "compare-coach",
+              "text": "You did not need to be right to speak. Compare silence with: “I may be missing something, but these two lines read differently. Who can confirm?” That protects you and the callers better than waiting."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From the newer worker’s seat, the huddle looked like a place where nobody had questions about the desk aid. That made her own question feel riskier to ask."
+            }
+          ],
+          "next": "r1-still-open"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-answer",
+      "recovery": false,
+      "setup": "The income-proof line is now in front of the huddle. The lead worker answers, “That line has worked for two years. Everyone else understands it.” Someone laughs. The newer worker mutes again. Your supervisor glances at the clock; the queue is building.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "side-by-side",
+          "text": "Say, “It may well be fine. Can I paste both lines in the chat?” Then ask your supervisor who confirms which condition applies, and what to use this afternoon.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "You paste both lines. The lead worker reads them and says, more slowly, that the manual page may be newer than the desk aid. Your supervisor says she will send the question to the person or area responsible for policy interpretation today, and bring the answer to the next huddle. Until then, the team will check the manual page for income proof. The newer worker unmutes to ask whether she should look back at her own letters. Your supervisor says yes, and to bring them to her.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You moved the conversation from who understands to what the two lines say. You did not argue with the lead worker’s experience, and you did not let “everyone else understands it” end the question. Build on it: asking what to use this afternoon turned a doubt into a real next step, with an owner and a working rule."
+            },
+            {
+              "style": "another-perspective",
+              "text": "The lead worker did not have to admit anything to change his answer. Seeing the lines side by side let him look again without losing face."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Keep a short version ready for the next time a question gets laughed off: “Can we look at the actual line?” It returns attention to the work without taking on the person."
+            }
+          ],
+          "next": "d3-your-cases"
+        },
+        {
+          "id": "message-her",
+          "text": "Leave the line for now and message the newer worker privately: tell her it was a fair question and that she should not let the laugh stop her from asking.",
+          "measures": {
+            "learning": "medium",
+            "trust": "high",
+            "engagement": "low"
+          },
+          "consequence": "She replies with a quick thank-you. On the call, the lead worker moves on to the queue. The line stays as it is. The newer worker feels a little less alone, but she still does not know which line to use on this afternoon’s renewals, and neither do you.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Your message was kind, and it may matter to her. But comfort is not an answer. The stronger move helps the question itself get heard, which is what tells her, and everyone else, that asking works."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you support a colleague privately after a dismissal, what keeps the work question from being raised again in the room?"
+            }
+          ],
+          "next": "r2-before-it-closes"
+        },
+        {
+          "id": "call-out-lead",
+          "text": "Say that this is not the first time questions get laughed off in this huddle, and that the lead worker needs to be more open when people raise problems.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The lead worker says, “I didn’t laugh at anyone.” Two people start talking at once. The conversation is now about his manner and the huddle’s history. The two lines are still not compared, and your supervisor says the team is out of time.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You saw a real pattern, but naming it as a charge turned the huddle toward his character. Compare a return to the work: “Can we look at the two lines?” That changes the response without asking him to accept a verdict."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To the lead worker, this landed as a public judgment about who he is. People defending their character rarely have attention left for a source question."
+            },
+            {
+              "style": "feed-forward",
+              "text": "If a pattern needs naming, try your supervisor afterward, with specifics: what was asked, what the reply was, what was left open."
+            }
+          ],
+          "next": "r2-before-it-closes"
+        },
+        {
+          "id": "great-question",
+          "text": "Thank the lead worker for the context, call it a great question, and ask him to look at the line next week, then move on to the queue.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The tone softens and the laugh is forgotten. Nobody compares the lines. The lead worker agrees to look next week, and the huddle moves to the queue. This afternoon’s renewals will go out using the desk aid line as it stands.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Smoothing a tense moment is a common and generous instinct. A polite thank-you followed by no examination can look welcoming while leaving the issue untouched."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Praise without a check sends a mixed message: asking is welcome, but nothing happens when you do. A look next week comes after this afternoon’s renewals have gone out. The stronger choice keeps the thanks and adds the comparison now."
+            }
+          ],
+          "next": "r2-before-it-closes"
+        }
+      ]
+    },
+    {
+      "id": "d3-your-cases",
+      "recovery": false,
+      "setup": "Later that afternoon you look back at your own work. Last week you used the desk aid line on six renewals, and one of them was the caller from this morning. If the manual page is the one that applies, six people were asked for the wrong income proof. Nobody else knows these six cases exist. Your supervisor has an open slot at two.",
+      "prompt": "What do you do about your own six cases?",
+      "choices": [
+        {
+          "id": "bring-the-list",
+          "text": "Bring your supervisor the six case numbers, what you requested and what the manual page says. Ask what each case now needs and who decides, and offer to make the calls.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your supervisor reads the list and thanks you for bringing it before anyone else found it. She says how to handle the six requests is not hers alone to decide; she will send your six cases, with the two lines, to the person or area responsible for policy interpretation and ask what affected requests need. She asks you to hold the six until the answer comes back. You call the caller from this morning and tell her the request is being checked and when she will hear. Nobody tells you the mistake does not matter. Nobody calls you careless either.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You treated your own mistake the way you treated the desk aid: what happened, what it affects, and who decides the fix. You did not wait for a confession moment or try to make it disappear. Build on it: the offer to make the calls kept your responsibility for the work while leaving the decision where it belongs."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From your supervisor’s side, six case numbers on a page are far easier to act on than a vague worry. It also shows the rest of the team what raising your own error can look like."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What made it easier, or harder, to bring your own six cases than to raise the desk aid line this morning?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "resend-quietly",
+          "text": "Send the six people corrected requests yourself today, using the manual page’s wording. The fix is in your hands, it helps them sooner, and it does not need to become a team issue.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "Six new requests go out that afternoon. When the income-proof line is finally checked, the manual page turns out to apply only to some renewals. Two of your corrected requests now ask for the wrong proof again. Your supervisor learns about the six cases from a caller who received two different letters.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Wanting to fix your own error quickly is a good instinct. The trouble is that the fix depended on the same open question as the desk aid. Bringing the list to your supervisor would have tied your six cases to the answer instead of guessing ahead of it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "To a caller, two different letters in a week can feel like nobody knows what they need. Quiet fixing can multiply that."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Before you correct work that depends on an open question, ask: “Does my fix rely on an answer nobody has given yet?”"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "wait-for-answer",
+          "text": "Hold off on raising your six cases until the desk aid question is settled. If the desk aid turns out to be right, there is nothing to report and no reason to raise an alarm.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "While you wait, nobody is looking at the six cases. Two of the people send exactly what they were asked for. When the income-proof line is finally checked and the manual page applies to their renewals, those two are asked again. The caller from this morning phones a third time.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Waiting until you are sure is one of the most common responses to discovering your own possible mistake. A mistake needs a present response, not only a future lesson."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "If a colleague had found six of your cases before you did, what would you have wanted them to do?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "confess-at-huddle",
+          "text": "Raise it at the next huddle as a lesson for everyone: say you made the same mistake on six cases and apologize, so others feel able to admit theirs too.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "At the next huddle you name the mistake, and two colleagues thank you for being honest. One says she wants to check her own letters. But the six cases sat untouched in the meantime, and the caller from this morning still has the old request. An honest moment in a meeting did not change the letters.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Naming your mistake openly can help the team, and it did. But these are two jobs: address the present task first, then use reflection to change how the work is done. A confession is not a correction."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Try doing both, in order: bring the case list to your supervisor today, then share what you learned at the huddle, once the people affected are taken care of."
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-still-open",
+      "recovery": true,
+      "setup": "The huddle has not ended. The income-proof question is in front of the team, but nothing anyone can check is attached to it: no manual page and no caller’s question. The lead worker has not answered yet. You have about a minute.",
+      "prompt": "What do you add?",
+      "choices": [
+        {
+          "id": "add-specifics",
+          "text": "Unmute and add what you found: the desk aid line, the current manual page and the caller’s question. Say you may be missing a condition, and ask who can confirm.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your specifics give the question something to examine, and saying what you have not determined keeps it the right size. The newer worker says, “That’s what I saw too.” The lead worker clears his throat to answer.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You turned a loose question into an examinable one, and you said plainly what you have not determined. Build on it: the evidence did the persuading, not your tone."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the newer worker, who has been using that line, a question with a page attached turns the doubt into the team’s work rather than anyone’s fault."
+            }
+          ],
+          "next": "d2-the-answer"
+        },
+        {
+          "id": "agree-generally",
+          "text": "Say the line seems worth a second look, but leave the manual page out, so the question does not feel like a pile-on against the person who wrote it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The question now has a softer voice behind it but still nothing to check. The lead worker hears a feeling, not evidence, and starts to answer.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Keeping the tone gentle matters. But a feeling without the page leaves the team with something to weigh rather than a line to compare. The manual page was the most useful thing you had."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When you soften a question to avoid a pile-on, what do you leave out, and who pays for it later?"
+            }
+          ],
+          "next": "d2-the-answer"
+        },
+        {
+          "id": "let-it-ride",
+          "text": "Let the lead worker handle it. The question is out now, and adding your manual page might look like you are building a case against the person who wrote the desk aid.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "You stay muted. The question hangs there without a page attached, and the lead worker starts to answer it as if it were a matter of opinion.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Not wanting to pile on a colleague is a fair concern. Another way to see the choice: you can amplify a dismissal or help the work question be heard, even when you are not the decision-maker."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Offer evidence as help, not a case: “Here’s the page I was looking at, in case it’s useful.”"
+            }
+          ],
+          "next": "d2-the-answer"
+        }
+      ]
+    },
+    {
+      "id": "r2-before-it-closes",
+      "recovery": true,
+      "setup": "The huddle is about to close. The two lines have not been compared, and the newer worker will process renewals this afternoon using one of them. Your supervisor is still on the call.",
+      "prompt": "How do you keep the question from closing with the huddle?",
+      "choices": [
+        {
+          "id": "ask-supervisor",
+          "text": "Ask your supervisor directly: “Can the income-proof line go to whoever confirms policy, and can the team know which line to use this afternoon until the answer comes back?”",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your supervisor says yes: she will send it to the person or area responsible for policy interpretation, and until then the team should check the manual page for income proof. The lead worker says, “Fine. Let’s check.” It is not warm, but the question now has a route, an owner and an answer for this afternoon.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You went to the person who could route the question and asked for two things: a real answer later, and a working rule now. That protects this afternoon’s callers as well as the next huddle. Build on it by following up when the answer comes back."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Your supervisor may not have realized the question was about to vanish. A direct, specific ask makes it easy for someone with authority to act."
+            }
+          ],
+          "next": "d3-your-cases"
+        },
+        {
+          "id": "note-to-lead",
+          "text": "After the huddle, send the lead worker both lines with a short, neutral note, and leave it to him to decide whether the supervisor needs to see it.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The lead worker replies, “Will look when I can.” The afternoon’s renewals go out using the desk aid line. The question now rests with the person whose tool it is, which may be fine, and may not be.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A neutral note with both lines is far better than nothing. The gap is timing and route: the supervisor could have set a working rule for this afternoon, and the note leaves that undone."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When a tool is in use today, copy or tell the person who can set a short-term rule, and say why: “Raising this now because renewals go out this afternoon.”"
+            }
+          ],
+          "next": "d3-your-cases"
+        },
+        {
+          "id": "drop-it",
+          "text": "Let it go for today. The huddle has moved on, the lead worker seemed annoyed, and pushing again in front of your supervisor could make things worse between the two of you.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The huddle ends. A minute later the newer worker messages you: “So which line do I use?” You do not have an answer to give her.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "The newer worker’s message shows where the open question went: to the person with the least standing to settle it."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What would you need from your supervisor, or from the team, to make a second try feel less risky?"
+            }
+          ],
+          "next": "d3-your-cases"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Raising a question about a shared tool with an observation, its effect on callers and a specific request",
+    "Saying what you have not yet determined, without overstating or withdrawing the concern",
+    "Returning a dismissed question to the actual line and source instead of to anyone’s manner",
+    "Supporting a newer colleague by helping her question get heard, not only by comforting her",
+    "Bringing your own mistake forward with specifics and leaving the fix decision with the person responsible",
+    "Separating the present correction from a later lesson for the team"
+  ],
+  "this_week": [
+    "Pick one desk aid or template you use daily and compare one line with its current source. If they differ, raise it with the line, the source and one sentence on why it matters.",
+    "The next time a question gets a reply like “everyone knows that,” ask, “Can we look at the actual line?”",
+    "If you find a mistake in your own work, write the case numbers, what happened and what you need, and take it to your supervisor the same day."
+  ],
+  "sources": [
+    "dc-t12-psychological-safety-for-team-members--recognize-the-risk-in-an-ordinary-question",
+    "dc-t12-psychological-safety-for-team-members--raise-a-precise-question-within-your-role",
+    "dc-t12-psychological-safety-for-team-members--discuss-a-mistake-and-keep-responsibility-clear",
+    "dc-l74-building-psychological-safety-on-teams--respond-to-a-concern-by-examining-its-content",
+    "psychological-safety-respect-and-speaking-up",
+    "the-fearless-organization-creating-psychological-safety-in-the-workplace-for-lea"
+  ]
+}

@@ -1,0 +1,21 @@
+flowchart TD
+  d1-the-visit["He wants to ask, and he is weighing the risk. What do you say?"]
+  d1-the-visit -->|"Tell him plainly you cannot promise his question stays out of the revi"| d2-the-call
+  d1-the-visit -->|"Reassure him that nothing he asks today will go into the report, so he"| d2-the-call
+  d1-the-visit -->|"Tell him procedure questions should go through his manager, who can ra"| d2-the-call
+  d1-the-visit -->|"Answer quickly that the log needs to be complete and accurate, thank h"| d2-the-call
+  d2-the-call["She has corrected your account of what she said. How do you respond?"]
+  d2-the-call -->|"Thank her for stopping you. Ask what she saw that afternoon, read back"| d3-the-message
+  d2-the-call -->|"Add her clarification at the end, but keep your original summary too, "| r2-on-the-line
+  d2-the-call -->|"Reassure her that the summary is only internal working notes and will "| r2-on-the-line
+  d2-the-call -->|"Tell her you will change the summary to whatever she prefers, so she f"| d3-the-message
+  r2-on-the-line["Second chance: She is reconsidering whether to speak at all. What do you do?"]
+  r2-on-the-line -->|"Say you will fix the summary now, while she is on the line. Ask what s"| d3-the-message
+  r2-on-the-line -->|"Reassure her that everything will be fine, that the program will never"| d3-the-message
+  r2-on-the-line -->|"Tell her you understand, that you will review your notes after the cal"| d3-the-message
+  d3-the-message["A newer colleague has a doubt about a senior colleague’s draft and is "]
+  d3-the-message -->|"Tell him it matters before Friday. Offer to go to the lead licensor to"| end_node
+  d3-the-message -->|"Raise it yourself with the lead licensor as your own observation, so h"| end_node
+  d3-the-message -->|"Tell him to let the order go as drafted, since the program will object"| end_node
+  d3-the-message -->|"Tell him you will bring it up at tomorrow’s team meeting and explain t"| end_node
+  end_node(["Reflection and action plan"])

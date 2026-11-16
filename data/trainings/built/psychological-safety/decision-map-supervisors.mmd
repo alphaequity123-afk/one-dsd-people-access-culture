@@ -1,0 +1,21 @@
+flowchart TD
+  d1-the-huddle["You run the huddle. What do you do in the next minute?"]
+  d1-the-huddle -->|"Ask him which two lines he means, then ask the senior team member whic"| d2-the-one-to-one
+  d1-the-huddle -->|"Move the huddle along to stay on time, then talk privately with the se"| r1-never-mind
+  d1-the-huddle -->|"Smile, say he will pick it up with time, and pair him with the senior "| r1-never-mind
+  d1-the-huddle -->|"Tell the senior team member, in front of everyone, that the comment wa"| r1-never-mind
+  r1-never-mind["Second chance: He has withdrawn his question. What do you do with the minutes left?"]
+  r1-never-mind -->|"Say you let his question get brushed past and want to return to it now"| d2-the-one-to-one
+  r1-never-mind -->|"Take him at his word for now and check in with him privately tomorrow "| d2-the-one-to-one
+  r1-never-mind -->|"Tell the team your door is always open and no question is a bad questi"| d2-the-one-to-one
+  d2-the-one-to-one["She has brought you her own mistake. What do you do?"]
+  d2-the-one-to-one -->|"Thank her for bringing it. Ask her to send the case manager a correcti"| d3-the-push-back
+  d2-the-one-to-one -->|"Tell her warmly that mistakes don’t matter here and that you would rat"| d3-the-push-back
+  d2-the-one-to-one -->|"Thank her, then write it up as a performance note so her record is acc"| d3-the-push-back
+  d2-the-one-to-one -->|"Plan to walk the team through her mistake at the next team meeting, st"| d3-the-push-back
+  d3-the-push-back["A team member has disagreed with your plan in front of the team. How d"]
+  d3-the-push-back -->|"Thank him for saying it in the room. Ask what he has seen come out of "| end_node
+  d3-the-push-back -->|"Agree on the spot to keep the full hour, so the team sees that disagre"| end_node
+  d3-the-push-back -->|"Say the team meeting is not the place to question a plan your manager "| end_node
+  d3-the-push-back -->|"Thank him, say his point is noted and you will think about it, then co"| end_node
+  end_node(["Reflection and action plan"])

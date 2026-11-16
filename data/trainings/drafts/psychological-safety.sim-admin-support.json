@@ -1,0 +1,485 @@
+{
+  "intro_by": "C7",
+  "intro": "If you work a front desk, a phone line or a schedule, you are often the first to see where a process breaks, and the last to be asked about it. I have found it easy to fix a problem quietly and move on. Here, you handle a teammate’s mistake with a visitor waiting, raise a template problem in a rushed huddle, and decide what to say when a break-room comment turns a process gap into a label.",
+  "cast": [
+    {
+      "role": "visitor",
+      "label": "the visitor",
+      "portrait": "C1"
+    },
+    {
+      "role": "teammate",
+      "label": "your teammate",
+      "portrait": "C4"
+    },
+    {
+      "role": "supervisor",
+      "label": "your supervisor",
+      "portrait": "C2"
+    },
+    {
+      "role": "coworker",
+      "label": "a coworker",
+      "portrait": "C8"
+    }
+  ],
+  "version": "admin-support",
+  "level": "intermediate",
+  "title": "The Rescheduled Appointment",
+  "learner_role": "You are an Office and Administrative Specialist at a DHS front desk. You greet visitors, schedule appointments, and arrange interpreters and accommodations through the scheduling system. You are not a supervisor. Changes to the shared scheduling template, and anything a policy requires, belong to your supervisor or the person or area responsible.",
+  "background": "A visitor arrives for a ten o’clock appointment. When you booked it two weeks ago, he asked for an interpreter, and you entered the request. Last week your teammate moved the appointment to today. Now there is no interpreter booked. Looking at the record, you see why: when an appointment is rescheduled in the team’s template, the interpreter request field clears. The visitor is waiting in the lobby, holding his appointment letter. This office’s practice when an interpreter is missing is to offer the visitor a phone interpreter now or a new appointment, whichever he prefers.",
+  "start": "d1-the-desk",
+  "decisions": [
+    {
+      "id": "d1-the-desk",
+      "recovery": false,
+      "setup": "Your teammate comes back from break and sees the record on your screen. “Oh no,” he says. “Did I do that?” The visitor is watching from the lobby. He holds up his letter and points to the line that says an interpreter was requested.",
+      "prompt": "What do you do first?",
+      "choices": [
+        {
+          "id": "visitor-then-record",
+          "text": "Get a phone interpreter on the line and ask the visitor whether to go ahead now or rebook. Then show your teammate how the request field cleared when the date moved.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "With a phone interpreter on the line, the visitor chooses to go ahead now, and the appointment starts twenty minutes late. Your teammate studies the record. “So it wasn’t just me?” “The template cleared it,” you say. “Neither of us thought to re-check it, either.” He writes down the case so he can look at his other reschedules.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You took care of the person waiting before the conversation about how it happened, and you let him choose. Then you showed your teammate the record instead of a verdict. Build on it: the template issue you just found affects more than one appointment, so it needs to reach the person who can change it."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For your teammate, “the field cleared” changes the story from “I failed” to “something in the process let us both down.” That makes him more likely to check, and to tell you next time."
+            }
+          ],
+          "next": "d2-the-huddle"
+        },
+        {
+          "id": "fix-it-quietly",
+          "text": "Book the phone interpreter for the visitor, fix the record yourself, and tell your teammate not to worry about it, since everyone misses things and he looks upset enough already.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "You start dialing the phone interpreter. Your teammate relaxes and turns back to his queue. He does not see what the record shows: that moving an appointment can drop a request. The visitor is still standing at the counter, and nobody has asked him how he wants to go ahead.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Reassuring an upset colleague is kind, and fixing it fast is a strength at a front desk. But reassurance without the record leaves the actual problem where it was, and the visitor’s choice was made for him."
+            },
+            {
+              "style": "compare-coach",
+              "text": "Compare “don’t worry about it” with “look, the field cleared when the date moved.” Both are kind. Only one helps him, and the next person, avoid it."
+            }
+          ],
+          "next": "r1-at-the-counter"
+        },
+        {
+          "id": "ask-why-now",
+          "text": "Ask your teammate, right there at the desk, why he did not check the interpreter field when he moved the appointment, so the visitor can see the problem is being taken seriously.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Your teammate goes red and starts explaining the day he moved it. The visitor waits through it. Nobody has asked the visitor what he wants.",
+          "feedback": [
+            {
+              "style": "another-perspective",
+              "text": "From the lobby, the visitor watched two staff members discuss a mistake about his appointment while he waited. From your teammate’s side, a question asked in front of a visitor felt like a public judgment."
+            },
+            {
+              "style": "compare-coach",
+              "text": "The question “why didn’t you check?” assumes the cause. The record could have answered it in seconds: the template cleared the field."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When a mistake surfaces in front of the public, take care of the person first, then look at the record together, privately."
+            }
+          ],
+          "next": "r1-at-the-counter"
+        },
+        {
+          "id": "rebook-him",
+          "text": "Tell the visitor there is no interpreter today and rebook him for next week with the request entered again, so the appointment can be done properly the first time around.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The visitor looks at the letter, then at you. He tells you he came by bus and took the morning off work. Your teammate says nothing, relieved the moment is passing. The visitor has not yet agreed to anything.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Rebooking may be what he wants, but you decided it for him. This office’s own practice offers him a choice. Ask before you arrange."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "When something goes wrong for a visitor, how often is the fix you offer the one that is easiest for the office?"
+            }
+          ],
+          "next": "r1-at-the-counter"
+        }
+      ]
+    },
+    {
+      "id": "d2-the-huddle",
+      "recovery": false,
+      "setup": "Yesterday afternoon you tested the template on two practice records: same result both times. At this morning’s huddle, your supervisor runs through the day fast: three people out, a full lobby expected. At the end she says, “Any questions? No? Good,” and starts to stand. Your teammate is sitting next to you.",
+      "prompt": "What do you do?",
+      "choices": [
+        {
+          "id": "one-thing-first",
+          "text": "Say, “One thing before you go: rescheduling clears the interpreter field. It happened yesterday and on two test records.” Ask who can fix the template, and what to do until then.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your supervisor sits back down and asks how you found it. You show her the test records. She says the template belongs to the person or area responsible for the scheduling system and she will send it there today. Until it is fixed, everyone re-checks the interpreter field after every reschedule. She thanks you in front of the team. Your teammate adds that he would never have known it cleared.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You spoke into a rushed moment with something short, specific and tested, and you asked for both a fix and a rule for today. That is what makes a busy supervisor able to act. Build on it: when the template is fixed, check one reschedule yourself and tell the team."
+            },
+            {
+              "style": "another-perspective",
+              "text": "Your supervisor’s “Any questions? No? Good” was about getting through a short-staffed day, not about shutting people down. A precise question fit inside her day."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What made the test records worth the extra ten minutes yesterday?"
+            }
+          ],
+          "next": "d3-the-break-room"
+        },
+        {
+          "id": "email-instead",
+          "text": "Let the huddle end and email your supervisor a clear write-up with the records attached. She is under real pressure this morning, and an email lets her read it when she can.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "The huddle ends. Your supervisor heads straight into a call. Your teammate whispers, “Shouldn’t we have said something?” Two reschedules are already on today’s list.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Not wanting to add to a stressed supervisor’s morning is considerate. Constant urgency silences people. Here it also delayed a fix the team needed today."
+            },
+            {
+              "style": "compare-coach",
+              "text": "A written account is useful, and you can still send it. The difference is timing: a ten-second mention in the huddle would have set a rule for today’s reschedules."
+            }
+          ],
+          "next": "r2-after-the-huddle"
+        },
+        {
+          "id": "reminder-to-all",
+          "text": "Say yesterday’s visitor had no interpreter because an appointment was moved without checking the request, and remind everyone to check the field whenever they reschedule anything.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "Everyone knows who moved yesterday’s appointment. Your teammate looks down at the table. Nobody mentions the template, because you did not. Your supervisor says, “Good reminder,” and stands up.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "A reminder is a reasonable step, but it framed the problem as a person forgetting, when you had tested the template and found the cause. Compare: “Rescheduling clears the field, on any appointment.”"
+            },
+            {
+              "style": "another-perspective",
+              "text": "From your teammate’s seat, this was his mistake described to the whole team, with the part that would have explained it left out."
+            }
+          ],
+          "next": "r2-after-the-huddle"
+        },
+        {
+          "id": "not-today",
+          "text": "Say nothing at the huddle. Your supervisor is short three people, the template is not yours, and your teammate might feel exposed if the visitor story comes up in front of everyone.",
+          "measures": {
+            "learning": "low",
+            "trust": "medium",
+            "engagement": "low"
+          },
+          "consequence": "Your supervisor stands up and the huddle ends. The template still clears the field, and nobody else on the team knows.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Protecting a teammate is a good reason to be careful. But you could raise the template without the story: it is a process problem, not a person problem."
+            },
+            {
+              "style": "feed-forward",
+              "text": "Lead with the process: “Rescheduling clears the interpreter field. Can we check it after every reschedule until it’s fixed?”"
+            }
+          ],
+          "next": "r2-after-the-huddle"
+        }
+      ]
+    },
+    {
+      "id": "d3-the-break-room",
+      "recovery": false,
+      "setup": "Later that week, in the break room, a coworker says, loud enough to carry, “He’s always rushing. No wonder that interpreter fell through.” Your teammate is at the microwave with his back turned. Two others look at you, since you were at the desk that morning.",
+      "prompt": "What do you say?",
+      "choices": [
+        {
+          "id": "the-record-says",
+          "text": "Say, evenly, that you saw the record: the template clears the field when a date moves, and it would have caught any of you. Later, check in with your teammate.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The coworker says, “Huh. I didn’t know that.” Someone asks what happens with the template now, and the conversation turns to it. Later your teammate says the comment had been sitting with him all week, and asks to see the test records so he can check his other reschedules. You do not repeat what anyone else said.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You answered a personal label with what the record showed, without shaming the coworker or making a speech. Then you checked in privately, which leaves your teammate in charge of what happens next. Build on it: the same plain fact works the next time the story comes up."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the coworker, “the template clears the field” offered a way to change her mind without being called out in front of the room."
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "joke-and-move-on",
+          "text": "Lighten it with a joke about how everyone rushes in a short-staffed week, and change the subject, so your teammate is not embarrassed in front of the whole room.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "People laugh, and the moment passes. Your teammate leaves with his lunch. Nobody heard what actually happened, so “always rushing” is still the story.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Distracting is a real bystander option, and it eased the moment. But the label stood. One more sentence about the template would have corrected the story without confronting anyone."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "After a joke moves a room on, what story do people leave with?"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "call-her-out",
+          "text": "Tell the coworker, in front of everyone, that talking about a colleague behind his back is unprofessional, and that she should keep comments like that to herself from now on.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "medium"
+          },
+          "consequence": "The room goes silent. The coworker says she was only joking and leaves. Your teammate, who heard all of it, now knows exactly what was said about him, and the template still is not part of anyone’s story.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "You were right that the comment was unfair. But a public rebuke made the moment about her conduct, not about what happened. Naming behavior directly works best when it is likely to help rather than escalate."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From your teammate’s side, being defended loudly can be almost as exposing as being criticized."
+            },
+            {
+              "style": "feed-forward",
+              "text": "A fact can do the work of a rebuke: “Actually, the template clears the field when a date moves. It would have caught any of us.”"
+            }
+          ],
+          "next": "end"
+        },
+        {
+          "id": "let-it-pass",
+          "text": "Say nothing in the room, and mention the comment to your supervisor at your one-to-one next week, since correcting a coworker in front of others could make things awkward for everyone there.",
+          "measures": {
+            "learning": "medium",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "Two people nod. By the time you mention it to your supervisor the next week, “he rushes” is already how the visitor story gets told, and your teammate has started double-checking every entry in silence and asking fewer questions.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Staying out of break-room talk is a common way to avoid conflict, and telling your supervisor is a real route. But you held the one fact that changed the story, and a week is long enough for a label to set. A label that sticks can narrow how a colleague is seen, while the real cause goes unfixed."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "If the comment had been about you, what would you have wanted the person who saw the record to say?"
+            }
+          ],
+          "next": "end"
+        }
+      ]
+    },
+    {
+      "id": "r1-at-the-counter",
+      "recovery": true,
+      "setup": "The visitor is still at the counter, and your teammate is still beside you. The visitor has not been asked how he wants to go ahead, and your teammate has not seen what the record shows.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "ask-him",
+          "text": "With a phone interpreter on the line, ask the visitor whether to go ahead now or rebook with one in person. Then show your teammate how the field cleared.",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "The visitor chooses the phone interpreter and goes ahead now. Your teammate looks at the record and says, “So the move cleared it.” He writes down the case so he can check his other reschedules.",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You put the visitor’s choice first and then gave your teammate the facts instead of a verdict. Build on it: ask the person affected before you arrange the fix, every time."
+            },
+            {
+              "style": "another-perspective",
+              "text": "For the visitor, being asked turned a mistake about him into a decision he made himself."
+            }
+          ],
+          "next": "d2-the-huddle"
+        },
+        {
+          "id": "apologize-and-offer",
+          "text": "Apologize to the visitor for the mix-up, offer him a phone interpreter, and tell your teammate you will talk about the record later, once the lobby is quiet.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "The visitor accepts the phone interpreter. The lobby never gets quiet, and the talk with your teammate does not happen today.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "The apology and offer helped the visitor. Offering one option is better than none, but asking which he preferred would have been better still. Showing the record later is fine, if later actually comes."
+            },
+            {
+              "style": "feed-forward",
+              "text": "If you defer a conversation, set a time: “Can we look at this at two?”"
+            }
+          ],
+          "next": "d2-the-huddle"
+        },
+        {
+          "id": "hand-it-over",
+          "text": "Let your teammate take it from here, since he moved the appointment, and go back to the phone queue that has been building up while all of this was happening.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "Your teammate, still flustered, books a phone interpreter without asking the visitor. The record stays as it was, and only you know why the field cleared.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "A building queue pulls everyone back to the phones. But you held the explanation, and handing over the visitor without it left your teammate to guess."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "What would it have cost to spend one more minute at the counter?"
+            }
+          ],
+          "next": "d2-the-huddle"
+        }
+      ]
+    },
+    {
+      "id": "r2-after-the-huddle",
+      "recovery": true,
+      "setup": "The huddle has just ended. The template still clears the field, today’s list already has reschedules on it, and your supervisor is heading for her next call.",
+      "prompt": "What do you do now?",
+      "choices": [
+        {
+          "id": "thirty-seconds",
+          "text": "Catch your supervisor before her call: “Thirty seconds. Rescheduling clears the interpreter field; I tested it twice. Who can fix the template, and what should the team do today?”",
+          "measures": {
+            "learning": "high",
+            "trust": "high",
+            "engagement": "high"
+          },
+          "consequence": "Your supervisor stops, looks, and says she will send it to the person or area responsible for the scheduling system. She asks you to tell the team to re-check the field after every reschedule until it is fixed. She says, “Next time, say it in the huddle. That’s what it’s for.”",
+          "feedback": [
+            {
+              "style": "affirm-extend",
+              "text": "You caught the moment before it was gone, with something short and specific. Build on her answer: she has just told you the huddle is a place for this. Use it next time."
+            },
+            {
+              "style": "another-perspective",
+              "text": "From your supervisor’s side, a thirty-second heads-up is far easier than finding out after a second visitor waits without an interpreter."
+            }
+          ],
+          "next": "d3-the-break-room"
+        },
+        {
+          "id": "tell-neighbors",
+          "text": "Tell the two teammates sitting next to you to re-check the interpreter field on every reschedule today, and plan to raise the template at tomorrow’s huddle instead.",
+          "measures": {
+            "learning": "medium",
+            "trust": "medium",
+            "engagement": "medium"
+          },
+          "consequence": "Your two neighbors re-check their reschedules. The rest of the team does not know. The template issue waits for tomorrow.",
+          "feedback": [
+            {
+              "style": "compare-coach",
+              "text": "Warning the people near you protects some appointments today. But the fix sits with the person who owns the template, and only your supervisor can get it there."
+            },
+            {
+              "style": "feed-forward",
+              "text": "When you find a shared problem, tell the people near you and the person who can fix it."
+            }
+          ],
+          "next": "d3-the-break-room"
+        },
+        {
+          "id": "wait-for-calm",
+          "text": "Wait for a calmer day to raise it. Your supervisor has enough on her plate this morning, and one missed interpreter does not make the template an emergency for anyone.",
+          "measures": {
+            "learning": "low",
+            "trust": "low",
+            "engagement": "low"
+          },
+          "consequence": "The day stays busy, and so does the next. The template keeps clearing the field.",
+          "feedback": [
+            {
+              "style": "normalize-reframe",
+              "text": "Waiting for a good moment is understandable on a short-staffed day. Constant urgency silences people, and there may not be a calmer day."
+            },
+            {
+              "style": "reflective-prompt",
+              "text": "How many reschedules happen on your team in a week, and how many would it take to make this urgent?"
+            }
+          ],
+          "next": "d3-the-break-room"
+        }
+      ]
+    }
+  ],
+  "practiced": [
+    "Taking care of the person affected first, and asking what they want before arranging a fix",
+    "Showing a colleague the record instead of a verdict after a mistake",
+    "Raising a tested process problem briefly in a rushed meeting, with a request for a fix and a rule for today",
+    "Separating a process gap from a person’s error",
+    "Answering a personal label with a plain fact, without shaming anyone",
+    "Checking in privately with a colleague after a comment about him"
+  ],
+  "this_week": [
+    "Pick one step in your scheduling or intake process where information could drop. Test it once, and if it drops, tell your supervisor with the example.",
+    "At your next huddle, if something affects today’s work, say it in one sentence before the meeting ends.",
+    "If you hear a colleague described by a label after a mistake, add one fact about what actually happened."
+  ],
+  "sources": [
+    "gc-respectful-workplace--psychological-safety-as-team-practices",
+    "gc-respectful-workplace--bystander-action-the-five-ds-at-work",
+    "dc-t12-psychological-safety-for-team-members--discuss-a-mistake-and-keep-responsibility-clear",
+    "dc-t12-psychological-safety-for-team-members--raise-a-precise-question-within-your-role",
+    "psychological-safety-and-repair-practices-not-personality",
+    "psychological-safety-respect-and-speaking-up"
+  ]
+}

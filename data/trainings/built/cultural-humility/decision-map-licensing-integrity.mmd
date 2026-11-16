@@ -1,0 +1,21 @@
+flowchart TD
+  d1-the-interpreter-request["The provider asked for an interpreter for the exit interview. None is "]
+  d1-the-interpreter-request -->|"Go by her request, not the small talk. Ask what she needs for the exit"| d2-the-medication-record
+  d1-the-interpreter-request -->|"Proceed in English. She has handled every question easily so far, and "| d2-the-medication-record
+  d1-the-interpreter-request -->|"Ask the provider’s adult daughter, who is visiting and offers to help,"| d2-the-medication-record
+  d1-the-interpreter-request -->|"Ask the provider, kindly, why she wants an interpreter when her Englis"| d2-the-medication-record
+  d2-the-medication-record["Some entries are missing required details. Your draft note describes t"]
+  d2-the-medication-record -->|"Write only what you saw: the pharmacy notebook, one dose without initi"| d3-the-exit-interview
+  d2-the-medication-record -->|"Keep the note as drafted. The entries were not where you expected, the"| r1-the-supervisors-question
+  d2-the-medication-record -->|"Do not cite it. She has kept these entries faithfully for years in the"| r1-the-supervisors-question
+  d2-the-medication-record -->|"Before you write anything, ask the provider about her cultural backgro"| r1-the-supervisors-question
+  r1-the-supervisors-question["Second chance: Your supervisor has asked you to back up a word in your record. What d"]
+  r1-the-supervisors-question -->|"Tell your supervisor what you actually saw. Rewrite the note to descri"| d3-the-exit-interview
+  r1-the-supervisors-question -->|"Tell your supervisor it is a judgment call. You were in the room and h"| d3-the-exit-interview
+  r1-the-supervisors-question -->|"Agree the word is strong. Change “evasive” to “reluctant,” which is ge"| d3-the-exit-interview
+  d3-the-exit-interview["The provider has corrected how you described her. The violation still "]
+  d3-the-exit-interview -->|"Name the specific thing you got wrong: she kept every entry. Keep the "| end_node
+  d3-the-exit-interview -->|"Explain calmly that the order is not personal. You are doing your job,"| end_node
+  d3-the-exit-interview -->|"Withdraw the correction order. Her eleven-year record is strong, the g"| end_node
+  d3-the-exit-interview -->|"Apologize warmly and at length for any offense you caused, tell her ho"| end_node
+  end_node(["Reflection and action plan"])
