@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-advising-decision-makers",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, full job aid and ten source notes. Recorded media are outside this acceptance.",
+  "method": "Read the complete final canonical spec and generated overview/job aid, checked decision authority, reporting, evaluation and records distinctions against primary sources, compared assessment answers with the pre-pass spec reconstructed from exact field history, and verified all serialized lesson readings against the current pack.",
+  "sourcePackSha256": "281f9e3e57bc01058d588503f5abf9507f1e9a78c532d535c87119ca90116552",
+  "specSha256": "cfc694c66b54f156d084852ddc87ee76b69e572cbdca029695c69707e90c7a16",
+  "findings": [
+    "Advice does not waive lawful reporting, review or escalation.",
+    "A comparison baseline may be infeasible as an actual choice.",
+    "An operational-risk question is narrowed so authorized escalation is not treated as inherently wrong.",
+    "Explaining a decision does not guarantee trust or require agreement.",
+    "Private learning notes are distinct from authorized individual records and program evaluation.",
+    "Aggregate groups and quotations may still identify a person.",
+    "Program continuum illustrations do not assess colleagues.",
+    "The verified publisher explanation replaces unsupported detail from an inaccessible framework brief."
+  ],
+  "diagnostics": [
+    {
+      "title": "The adviser's role: advising is not deciding",
+      "teaching": {
+        "words": 372,
+        "sents": 22,
+        "asl": 16.90909090909091,
+        "fk": 12.891642228739006,
+        "fog": 16.441055718475077,
+        "smog": 14.683698258229963,
+        "poly": 24.193548387096776,
+        "long": 37.365591397849464,
+        "short": 4.545454545454546,
+        "ease": 32.752917888563076
+      }
+    },
+    {
+      "title": "Preparing an options brief that shows the tradeoffs",
+      "teaching": {
+        "words": 352,
+        "sents": 24,
+        "asl": 14.666666666666666,
+        "fk": 12.48965909090909,
+        "fog": 16.207575757575757,
+        "smog": 14.253075177516354,
+        "poly": 25.852272727272727,
+        "long": 37.5,
+        "short": 8.333333333333334,
+        "ease": 31.640946969696984
+      }
+    },
+    {
+      "title": "Saying the uncomfortable part across a power difference",
+      "teaching": {
+        "words": 356,
+        "sents": 23,
+        "asl": 15.478260869565217,
+        "fk": 12.786971177332685,
+        "fog": 16.97782120175867,
+        "smog": 14.800330179935766,
+        "poly": 26.96629213483146,
+        "long": 41.29213483146067,
+        "short": 0,
+        "ease": 30.954902296043002
+      }
+    },
+    {
+      "title": "After the decision: explaining it and learning from it",
+      "teaching": {
+        "words": 372,
+        "sents": 23,
+        "asl": 16.17391304347826,
+        "fk": 12.826965871902761,
+        "fog": 15.931930808789156,
+        "smog": 14.303452155134387,
+        "poly": 23.655913978494624,
+        "long": 40.32258064516129,
+        "short": 4.3478260869565215,
+        "ease": 31.907187938288928
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching averages 14.7–16.9 words per sentence, with 0–8.3 percent short sentences. Flesch–Kincaid estimates range from 12.5–12.9 and Fog from 15.9–17.0. Retained necessary professional and policy terms, while using direct sentences for qualifications and instructions.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "threeKnowledgeCheckQuestionsUnchanged": true,
+    "operationalRiskQuestionContextClarified": true,
+    "knowledgeCheckFeedbackQualified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-advising-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/Step-by-Step_Guide_Applying_the_State_of_Minnesota_Equity_Analysis_Tool.pdf",
+    "https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026",
+    "https://www.racialequityalliance.org/viewdocument/racial-equity-toolkit-an-opportuni-2",
+    "https://assets.aecf.org/m/resourcedoc/AECF_EmbracingEquity7Steps-2014.pdf",
+    "https://www.aecf.org/blog/new-leadership-video-get-results-by-understanding-person-role-system",
+    "https://www.idiinventory.com/idc",
+    "https://www.revisor.mn.gov/statutes/cite/181.932",
+    "https://www.revisor.mn.gov/statutes/cite/13.05",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-advising-decision-makers",
+      "readingSha256": "580044c33ca33df1ba8a90a240730618b570c0d2468ccb957e53f6d21dcc641d"
+    },
+    {
+      "slug": "gc-advising-decision-makers--the-adviser-s-role-advising-is-not-deciding",
+      "readingSha256": "7f014c37768222c6025f316d21afbf2b493bdf5cb951654ed78169f7aa63a22c"
+    },
+    {
+      "slug": "gc-advising-decision-makers--preparing-an-options-brief-that-shows-the-tradeoff",
+      "readingSha256": "0325732b9a96baa65c5fabd501dc585323f78a556c384798b39b7445f019e5a9"
+    },
+    {
+      "slug": "gc-advising-decision-makers--saying-the-uncomfortable-part-across-a-power-diffe",
+      "readingSha256": "08feda453824e9fe93ee70fcb7bda4ab3b28995a1bfb00ec26d6e0161693afba"
+    },
+    {
+      "slug": "gc-advising-decision-makers--after-the-decision-explaining-it-and-learning-from",
+      "readingSha256": "e46500c070639050c2ba0a0eafbd6508d2a17929e0c01663a218000a24778b4b"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
