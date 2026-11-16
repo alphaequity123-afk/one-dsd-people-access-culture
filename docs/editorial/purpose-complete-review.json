@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-leading-with-purpose",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and five source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "5c444a71c633d2fa2cc954c3a3925e62eff6cb613f2de2671a0575426c501ac0",
+  "specSha256": "42ad5a29359a6e8bf62aba63704a7cc9d80b9904bd3d3274cc1b4d0ab23d40e4",
+  "findings": [
+    "Purpose reflection does not waive official duties, required equity analysis or learning.",
+    "Removed unsupported promises that statements are never collected, rated or recorded; distinguish exercise notes from authorized workplace records.",
+    "Intercultural examples illustrate ideas rather than assess people or groups from a single routine.",
+    "Formal staffing decisions retain applicable criteria, management responsibilities and required HR consultation.",
+    "Shortened participation requires authority and cannot substitute for required consultation, notice or access arrangements.",
+    "Reporting and safety duties do not depend on finishing a personal values conversation.",
+    "Feedback is invited from willing colleagues without expecting them to represent an entire group.",
+    "Removed an unverifiable Washington comparison and used the directly verified MMB values/purpose behavior."
+  ],
+  "diagnostics": [
+    {
+      "title": "What a leadership purpose is and who it serves",
+      "teaching": {
+        "words": 367,
+        "sents": 20,
+        "asl": 18.35,
+        "fk": 11.211731607629428,
+        "fog": 15.078419618528612,
+        "smog": 13.892738720246978,
+        "poly": 19.346049046321525,
+        "long": 28.065395095367847,
+        "short": 10,
+        "ease": 47.36342847411447
+      }
+    },
+    {
+      "title": "Your default picture of a good leader",
+      "teaching": {
+        "words": 382,
+        "sents": 22,
+        "asl": 17.363636363636363,
+        "fk": 12.032603522132323,
+        "fog": 15.636554021894336,
+        "smog": 14.22525824180931,
+        "poly": 21.727748691099478,
+        "long": 34.29319371727749,
+        "short": 9.090909090909092,
+        "ease": 39.72138029509759
+      }
+    },
+    {
+      "title": "Values under pressure and observable commitments",
+      "teaching": {
+        "words": 389,
+        "sents": 24,
+        "asl": 16.208333333333332,
+        "fk": 10.17546593830334,
+        "fog": 12.85865467009426,
+        "smog": 12.311054993355175,
+        "poly": 15.938303341902314,
+        "long": 29.04884318766067,
+        "short": 8.333333333333334,
+        "ease": 50.978400278491875
+      }
+    },
+    {
+      "title": "Writing, testing and revisiting your purpose",
+      "teaching": {
+        "words": 446,
+        "sents": 25,
+        "asl": 17.84,
+        "fk": 9.59674798206278,
+        "fog": 12.965596412556053,
+        "smog": 12.340626583579944,
+        "poly": 14.573991031390134,
+        "long": 26.00896860986547,
+        "short": 12,
+        "ease": 58.03367802690585
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 9.6–12.0 and Fog 12.9–15.6; average sentences 16.2–18.4 words, short shares 8.3–12 percent. The lower estimates retain concrete explanations rather than adding vocabulary to inflate scores. Full editorial reading confirmed the professional qualifications and practice distinctions.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "secondQuestionContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-purpose-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mmb-stat/enterprise-talent-development/career-development/Enterprise-Leader-Competency-Definition-Guide.pdf",
+    "https://www.deloitte.com/content/dam/insights/articles/2024/six-signature-traits-of-inclusive-leadership/dup-3046-inclusive-leader-vfinal.pdf",
+    "https://business.sdsu.edu/research/_files/_iido/shore-chung.pdf",
+    "https://www.idiinventory.com/resources",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-leading-with-purpose",
+      "readingSha256": "6dffb6dd9ab5327bae807d06da49d630e92c0a21d5e02b73899ba967841c01d1"
+    },
+    {
+      "slug": "gc-leading-with-purpose--what-a-leadership-purpose-is-and-who-it-serves",
+      "readingSha256": "d693f9ee245dcffab6bad00920522b41261d64491b572d6824d432adf7699022"
+    },
+    {
+      "slug": "gc-leading-with-purpose--your-default-picture-of-a-good-leader",
+      "readingSha256": "40c342e51f54c1ba286c07aa93ff56d55a000a958062bd1e478955cb956e97ee"
+    },
+    {
+      "slug": "gc-leading-with-purpose--values-under-pressure-and-observable-commitments",
+      "readingSha256": "c7795989b3aa8ea0e269c6ca40f2652a88a1b4611ef1b8342962a4e11068d639"
+    },
+    {
+      "slug": "gc-leading-with-purpose--writing-testing-and-revisiting-your-purpose",
+      "readingSha256": "14bbcd3003649e9e2c17ba70c5768f3c71a58d0d06776c5a443b47d1e206c531"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
