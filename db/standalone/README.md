@@ -15,3 +15,5 @@ The current generated bootstrap includes forward migration 0067 for bounded ASK 
 Forward migration 0068 admits only the four approved ADSA/CLAS resources and their existing PDF page ranges to operational receipts. Fresh bootstrap includes it; existing private schemas apply 0068_pac_dsd_engagement_pdf_receipts.sql after 0067. This does not change roles, permissions, or privacy exclusions.
 
 Forward migration 0069 admits the registered bounded Jev decision tool to operational receipts. Fresh bootstrap includes it; existing private schemas apply 0069_pac_dsd_jev_audit_receipts.sql after 0068. This does not change roles, permissions, or privacy exclusions.
+
+Forward migration 0070 admits schema-2 voluntary outcome records: the month only (no timestamp), no identity, consent required, and no idempotency receipt. Schema-1 records keep their existing contract. A trigger keeps the stored times of outcome rows to the month. Fresh bootstrap includes it before 0072; existing private schemas apply 0070_pac_dsd_program_outcome_records_v2.sql after 0069 (it does not depend on 0071 or 0072). This does not change roles, permissions, or other privacy exclusions.

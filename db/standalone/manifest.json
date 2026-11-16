@@ -331,11 +331,16 @@
       "name": "0069_pac_jev_audit_receipts.sql",
       "sourceHash": "9a4a0b256de25ebd1c64bc24b19e90d6b73c8be076e5aa54c9e9cf47bda77729",
       "transformedHash": "6f6c83c2c26034328c5f7d60a5be4d095a8ae39712adff9508c872b4f71d7484"
+    },
+    {
+      "name": "0070_pac_program_outcome_records_v2.sql",
+      "sourceHash": "370d17ff444df66843931bcb8cfe60f865be09ae6dee22b77b24d5cf649082b5",
+      "transformedHash": "3880dcdb5784602a9ac0794a8c5159ad60ab5c7f01a35fb7f726711966c0ba91"
     }
   ],
-  "totalBytes": 1486812,
+  "totalBytes": 1496230,
   "existingPacUntouched": true,
-  "bootstrapSha256": "fdc169c51f500f1a7ae94740883eb350766c5e9844d99dd456e4e7c51fb37076",
+  "bootstrapSha256": "72cbc117f74c74c6382fe146872da5ba3e6883cd1082b5a24ecda8427743e308",
   "publicSeedSha256": "cb791218fcf449fc4475cb9d89cb55d864201d8bbd7ea8ff27ddd74371a70078",
   "forwardMigration": {
     "file": "0067_pac_dsd_ask_voice_limits_and_internal_helpers.sql",
@@ -358,6 +363,11 @@
     {
       "file": "0069_pac_dsd_jev_audit_receipts.sql",
       "sha256": "6f6c83c2c26034328c5f7d60a5be4d095a8ae39712adff9508c872b4f71d7484",
+      "appliesOnlyTo": "pac_dsd"
+    },
+    {
+      "file": "0070_pac_dsd_program_outcome_records_v2.sql",
+      "sha256": "3880dcdb5784602a9ac0794a8c5159ad60ab5c7f01a35fb7f726711966c0ba91",
       "appliesOnlyTo": "pac_dsd"
     }
   ]
