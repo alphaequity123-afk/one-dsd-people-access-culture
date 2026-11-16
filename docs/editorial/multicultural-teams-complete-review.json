@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-16",
+  "courseId": "cq-leading-multicultural-teams",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, nine source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise observation, assessment, evidence, privacy and policy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "1666a5013a9768d68028ba85184556ff3fb56326d6788fc1d0ac890d5cbae34f",
+  "specSha256": "45baa802e1f668d64675b44243f48e9d5dd7f3e711d03ec6dc752e4141e0e99e",
+  "findings": [
+    "Cultural expectations are possible explanations rather than diagnoses of individual behavior.",
+    "Replaces coworker cultural profiling with reflection on a fictional case and observed working practices.",
+    "Clear feedback and accessible confirmation do not suspend audit or HR responsibilities.",
+    "Accent alone does not establish proficiency or competence.",
+    "The 1999 psychological-safety study scope and observational limits are explicit.",
+    "Private or unnamed input is not automatically anonymous; participation does not require personal disclosure.",
+    "Team agreements respect agency authority, accommodation and employment requirements.",
+    "Business-team exit advice does not authorize public-service employment action.",
+    "Source-access limits are explicit and open primary accounts support retained framework distinctions."
+  ],
+  "diagnostics": [
+    {
+      "title": "Examining team friction, working norms and assumptions",
+      "teaching": {
+        "words": 410,
+        "sents": 25,
+        "asl": 16.4,
+        "fk": 13.110878048780489,
+        "fog": 16.31609756097561,
+        "smog": 14.554592549557764,
+        "poly": 24.390243902439025,
+        "long": 38.78048780487805,
+        "short": 12,
+        "ease": 30.274365853658566
+      }
+    },
+    {
+      "title": "Communication and feedback across styles",
+      "teaching": {
+        "words": 465,
+        "sents": 28,
+        "asl": 16.607142857142858,
+        "fk": 10.426570660522273,
+        "fog": 13.180491551459296,
+        "smog": 12.540900571622839,
+        "poly": 16.344086021505376,
+        "long": 29.892473118279568,
+        "short": 10.714285714285714,
+        "ease": 49.88842741935488
+      }
+    },
+    {
+      "title": "Hierarchy, voice and decision-making",
+      "teaching": {
+        "words": 418,
+        "sents": 27,
+        "asl": 15.481481481481481,
+        "fk": 11.309500265816059,
+        "fog": 13.943788764841395,
+        "smog": 13.023866798666859,
+        "poly": 19.37799043062201,
+        "long": 33.73205741626794,
+        "short": 25.925925925925927,
+        "ease": 41.553353712564245
+      }
+    },
+    {
+      "title": "Time, trust and team agreements where no single style is the default",
+      "teaching": {
+        "words": 470,
+        "sents": 24,
+        "asl": 19.583333333333332,
+        "fk": 12.007074468085104,
+        "fog": 15.407801418439716,
+        "smog": 14.130154551723667,
+        "poly": 18.93617021276596,
+        "long": 33.829787234042556,
+        "short": 16.666666666666668,
+        "ease": 43.85791666666668
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 10.4–13.1; retain direct instructions and necessary terminology. Lesson 3 has more short sentences than the style target; these clarify participation and evidence limits without padding.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lessons 1 and 2 recommended choices clarify inquiry, authorized deadlines and required audit/HR steps; all indices and other choices remain unchanged.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/cq-leading-multicultural-teams.webp",
+    "sha256": "04026dcf62e7c86f901508a8ddd7cd59c705bab83a45adbe0cd332ad0bbaad1a",
+    "alt": "A woman speaks to four seated colleagues around an office table with notebooks and a microphone.",
+    "method": "Direct local image inspection: one standing woman addressing four seated colleagues around a table with notebooks and a microphone."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-multicultural-teams-guidance-review.json",
+  "sources": [
+    "https://hbr.org/2006/11/managing-multicultural-teams",
+    "https://hbr.org/2014/05/navigating-the-cultural-minefield",
+    "https://knowledge.insead.edu/leadership-organisations/giving-negative-feedback-across-cultures",
+    "https://dash.harvard.edu/entities/publication/13a7b031-0fdd-45ec-a7e0-2b80e2bc679f",
+    "https://www.stat.berkeley.edu/~census/ecofall.txt",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://erinmeyer.com/mapping-out-cultural-differences-on-teams/",
+    "https://erinmeyer.com/wp-content/uploads/2019/08/Team-Culture-Map-Help-Guide-v10.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/17131565/"
+  ],
+  "readings": [
+    {
+      "slug": "cq-leading-multicultural-teams",
+      "readingSha256": "9ed56c1835b92141aa2d6542efb9375c9390a48d2a0f167d0ee6a79abbab3d85"
+    },
+    {
+      "slug": "cq-leading-multicultural-teams--seeing-team-friction-as-culture-and-structure-not",
+      "readingSha256": "a41383c02585fde8d213949c7166eb8c8cd71804941fe8196a2bdf16ced908a8"
+    },
+    {
+      "slug": "cq-leading-multicultural-teams--communication-and-feedback-across-styles",
+      "readingSha256": "ecbc487a06a34483504667ffb174775b02da04a615942650f3e7c77d44ebe290"
+    },
+    {
+      "slug": "cq-leading-multicultural-teams--hierarchy-voice-and-decision-making",
+      "readingSha256": "24592d8eea636e5820963a07a101f9cbb49656b5e4dc62fd6bd9a1e0cf1c3a01"
+    },
+    {
+      "slug": "cq-leading-multicultural-teams--time-trust-and-team-agreements-where-no-single-sty",
+      "readingSha256": "1f01430ee543eca40c1ca17a1e7e7d0fedca8c9bb2e5158dadcefdd1bd2b31b1"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
