@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-knowledge-and-continuity",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and ten source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "ea29a6cc5904e427d0b19d1f8648553c75b102dde551841f1ffdd5abbddf44b6",
+  "specSha256": "3379970fc3d376e187d8707cc3b0350f13b7b0475a1a1b864df4805dce783df4",
+  "findings": [
+    "The function-focused learning exercise does not prohibit authorized individual workforce assessment.",
+    "Access rules, not embarrassment, determine whether a continuity document may be shared.",
+    "Practice uses authorized tasks, relevant tools, accommodations and required supervision.",
+    "Captioning must meet actual access needs rather than merely be switched on.",
+    "Mentoring outside a reporting line is a program recommendation, not a Minnesota-wide mandate.",
+    "A voluntary mentoring agreement does not guarantee secrecy or waive reporting and records duties.",
+    "Voluntary mentoring is distinct from required training and knowledge-sharing responsibilities.",
+    "Generational labels and disability do not establish an individual’s expertise or perspective.",
+    "Continuum examples are illustrative rather than assessments."
+  ],
+  "diagnostics": [
+    {
+      "title": "Continuity is about functions, not favorites",
+      "teaching": {
+        "words": 420,
+        "sents": 26,
+        "asl": 16.153846153846153,
+        "fk": 10.095714285714287,
+        "fog": 12.747252747252748,
+        "smog": 12.230961643895462,
+        "poly": 15.714285714285714,
+        "long": 30.238095238095237,
+        "short": 15.384615384615385,
+        "ease": 51.45313186813189
+      }
+    },
+    {
+      "title": "Making tacit knowledge shareable for everyone",
+      "teaching": {
+        "words": 431,
+        "sents": 27,
+        "asl": 15.962962962962964,
+        "fk": 8.321866460427945,
+        "fog": 10.932748990289594,
+        "smog": 10.825029732296446,
+        "poly": 11.368909512761022,
+        "long": 25.986078886310906,
+        "short": 14.814814814814815,
+        "ease": 63.83073644410072
+      }
+    },
+    {
+      "title": "Reverse mentoring with clear boundaries and support",
+      "teaching": {
+        "words": 439,
+        "sents": 28,
+        "asl": 15.678571428571429,
+        "fk": 10.17339000976245,
+        "fog": 12.831793036121056,
+        "smog": 12.28987398476788,
+        "poly": 16.40091116173121,
+        "long": 32.34624145785877,
+        "short": 14.285714285714286,
+        "ease": 50.04972380410024
+      }
+    },
+    {
+      "title": "Learning both ways across generations and difference",
+      "teaching": {
+        "words": 377,
+        "sents": 23,
+        "asl": 16.391304347826086,
+        "fk": 12.211627263291433,
+        "fog": 15.787290969899665,
+        "smog": 14.239780114587749,
+        "poly": 23.076923076923077,
+        "long": 36.3395225464191,
+        "short": 4.3478260869565215,
+        "ease": 36.706048898627614
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 8.3–12.2 and Fog 10.9–15.8; average sentences 15.7–16.4 words. Short-sentence share is 4.3–15.4 percent. Retained clear instructions without inflating vocabulary to meet a numeric target; source limits and operational qualifications are explicit.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "firstKnowledgeCheckQuestionUnchanged": true,
+    "threeQuestionContextsClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-continuity-guidance-review.json",
+  "sources": [
+    "https://www.opm.gov/policy-data-oversight/human-capital-framework/reference-materials/leadership-knowledge-management/successionplanning.pdf",
+    "https://www.opm.gov/policy-data-oversight/training-and-development/career-development/bestpractices-mentoring.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/31692591/",
+    "https://reference-global.com/pdf/10.2478/ijhrd-2025-0006",
+    "https://www.nationalacademies.org/read/25796/chapter/2",
+    "https://mn.gov/mmb/employee-relations/equal-opportunity/eo-19-15/retention/",
+    "https://www.idiinventory.com/idc",
+    "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-knowledge-and-continuity",
+      "readingSha256": "e50506fb03dd7a4bedb2be454794e664cd38b126adff12e538ecc7c8f9a4c178"
+    },
+    {
+      "slug": "gc-knowledge-and-continuity--continuity-is-about-functions-not-favorites",
+      "readingSha256": "595a6c310bfea863c4e59e4ff9f4707724c76c833a26e4f68224bffbdbc81695"
+    },
+    {
+      "slug": "gc-knowledge-and-continuity--making-tacit-knowledge-shareable-for-everyone",
+      "readingSha256": "25fca485af148790157682a89e66a184c1d7102205285cacfa69f9cc48255def"
+    },
+    {
+      "slug": "gc-knowledge-and-continuity--reverse-mentoring-that-is-safe-credited-and-useful",
+      "readingSha256": "e956db3721aaaebb4e5a3cbf42a6a1f57e3928eb1a2295ba14b5339996d6ee65"
+    },
+    {
+      "slug": "gc-knowledge-and-continuity--learning-both-ways-across-generations-and-differen",
+      "readingSha256": "3beaa789fcc55a7462920fa5fbbfcf0845145a76699bb623e0ccacec2dc361c7"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
