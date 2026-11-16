@@ -24,7 +24,7 @@ Local browser verification confirmed entry from the agency division page into `/
 
 The full release-asset restoration and production build pass, including TypeScript and all 450 generated pages. Deployment, actual owner-edit storage, hosted voice and other live services, phone layout, complete media/download checks and the remaining editorial coverage are not yet signed off. Coordinate release with `one-dhs-pac` PR 28.
 
-The focused follow-up suite passes 31 tests across five files, including exact agency-origin validation and rejection of forged origins. Changed-file lint and the environment contract pass. The complete suite remains a release gate. Local media tests require the `ffmpeg-static` installation script; an install with scripts disabled does not provide the executable.
+The focused follow-up suite passes 31 tests across five files, including exact agency-origin validation and rejection of forged origins. Changed-file lint and the environment contract pass. The complete run covered 199 files and 1,557 tests: 1,552 passed, with five failures in three files. Those three files were corrected and rerun separately: all 33 tests pass. The corrections reconcile stale privacy/passage-count assertions and install the missing local FFmpeg executable; no tests are skipped to obtain this result. Local media tests require the `ffmpeg-static` installation script; an install with scripts disabled does not provide the executable.
 
 ## Recorded production baseline
 
