@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-accommodation-transitions",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and six source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "f9d0a3fb15b5b209587278cc30fbe39e7af76a2d1dbf0141144f02140765a759",
+  "specSha256": "6fd4d3fe787a16310d1f6e18c1949d76cfea0007f8c7c56a0846db4bb9efcf70",
+  "findings": [
+    "Accommodation cliff is a course planning term, not a quantified finding.",
+    "Continue appropriate arrangements while reviewing changed duties; the first scenario explicitly permits the interim steps.",
+    "Transition coordination does not replace accommodation decision authority.",
+    "Sufficient existing information need not be requested again; legitimate documentation questions remain with the ADA coordinator.",
+    "Need-to-know information sharing has limited authorized exceptions and is not an unrestricted consent-based handoff.",
+    "Funding reimbursement is conditional; unit budget alone does not determine undue hardship.",
+    "Selection methods require HR approval and job-related standards; sponsorship does not bypass hiring rules.",
+    "Feedback anonymity cannot be assumed, and program evaluation does not replace formal agency records."
+  ],
+  "diagnostics": [
+    {
+      "title": "The accommodation cliff",
+      "teaching": {
+        "words": 381,
+        "sents": 19,
+        "asl": 20.05263157894737,
+        "fk": 12.609528940461391,
+        "fog": 16.420002762812544,
+        "smog": 14.85140801775648,
+        "poly": 20.99737532808399,
+        "long": 31.496062992125985,
+        "short": 5.2631578947368425,
+        "ease": 40.37449233319521
+      }
+    },
+    {
+      "title": "Carrying accommodations forward",
+      "teaching": {
+        "words": 426,
+        "sents": 24,
+        "asl": 17.75,
+        "fk": 13.021232394366201,
+        "fog": 16.58356807511737,
+        "smog": 14.848354935788365,
+        "poly": 23.708920187793428,
+        "long": 34.74178403755869,
+        "short": 12.5,
+        "ease": 33.32156690140849
+      }
+    },
+    {
+      "title": "Leadership criteria that are job related",
+      "teaching": {
+        "words": 419,
+        "sents": 24,
+        "asl": 17.458333333333332,
+        "fk": 12.509442124105014,
+        "fog": 16.243476531424026,
+        "smog": 14.613946157001841,
+        "poly": 23.15035799522673,
+        "long": 35.08353221957041,
+        "short": 8.333333333333334,
+        "ease": 36.471354912490085
+      }
+    },
+    {
+      "title": "Sponsorship and accessible leadership pathways",
+      "teaching": {
+        "words": 449,
+        "sents": 31,
+        "asl": 14.483870967741936,
+        "fk": 12.607484733098644,
+        "fog": 15.593102952798333,
+        "smog": 13.890293272363493,
+        "poly": 24.498886414253896,
+        "long": 40.089086859688194,
+        "short": 12.903225806451612,
+        "ease": 30.470619297363356
+      }
+    }
+  ],
+  "diagnosticJudgment": "Complete editorial reading and two clarity measures preserve distinctions about approved time, evidence, records and reporting. Numerical measurements are diagnostic, not a substitute for source and assessment review.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioAuthorityAndFeasibilityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-accommodation-guidance-review.json",
+  "sources": [
+    "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+    "https://askjan.org/articles/Out-with-the-Old-and-In-with-the-New-Supervisor.cfm",
+    "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/16B.4805",
+    "https://mn.gov/mmb/careers/diverse-workforce/people-with-disabilities/connect700",
+    "https://askearn.org/publication/professional-development-and-advancement-research-brief"
+  ],
+  "readings": [
+    {
+      "slug": "gc-accommodation-transitions",
+      "readingSha256": "c881cc90578325ef23a6cd5c14f47ff82e7e9aa07c7b5b24270f93a738501c05"
+    },
+    {
+      "slug": "gc-accommodation-transitions--the-accommodation-cliff",
+      "readingSha256": "d2cb0995eadcb149ebc2c0761f7823442f6df3d0a6c12a69444c6cb8fa53101c"
+    },
+    {
+      "slug": "gc-accommodation-transitions--carrying-accommodations-forward",
+      "readingSha256": "69d47b0a3a2d7c57490528cd1ef749ca6072b1ef575969b80cc79a59afad578f"
+    },
+    {
+      "slug": "gc-accommodation-transitions--leadership-criteria-that-are-job-related",
+      "readingSha256": "b941249b876d570ea93260479b853f76a7dfdc0eb99ffd7a53e8088d522ccbd4"
+    },
+    {
+      "slug": "gc-accommodation-transitions--sponsorship-and-accessible-leadership-pathways",
+      "readingSha256": "5f32f5d11001c297625558b7318a2030dd22265d13a72e7f74df0678019ce3a9"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
