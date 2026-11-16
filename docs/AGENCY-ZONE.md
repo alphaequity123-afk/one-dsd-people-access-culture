@@ -22,6 +22,10 @@ Two already accepted full course reviews from the agency application are also pr
 
 Local browser verification confirmed entry from the agency division page into `/one-dsd`, both office images on their full Water module pages, and a return to the One DHS home page. The environment contract check, TypeScript check, routing tests and targeted editorial and Water tests pass. The preview used local source content; production owner overrides were not loaded.
 
-The full release-asset restoration and production build are still being checked. Deployment, actual owner-edit storage, hosted voice and other live services, phone layout, complete media/download checks and the remaining editorial coverage are not yet signed off. Coordinate release with `one-dhs-pac` PR 28.
+The full release-asset restoration and production build pass, including TypeScript and all 450 generated pages. Deployment, actual owner-edit storage, hosted voice and other live services, phone layout, complete media/download checks and the remaining editorial coverage are not yet signed off. Coordinate release with `one-dhs-pac` PR 28.
 
-The focused follow-up suite passes 31 tests across five files, including exact agency-origin validation and rejection of forged origins. The complete suite and production build remain release gates.
+The focused follow-up suite passes 31 tests across five files, including exact agency-origin validation and rejection of forged origins. Changed-file lint and the environment contract pass. The complete suite remains a release gate. Local media tests require the `ffmpeg-static` installation script; an install with scripts disabled does not provide the executable.
+
+## Recorded production baseline
+
+Before integration deployment, the DSD service's successful deployment is `c2f15bc6-7361-4b17-885d-c354ee74700d`, main commit `b3fef0ce69e676549fc76c8847000de2ca33c61b`. The agency baseline is deployment `240801f4-bdba-4c10-8ba4-ede5316dd9c3`, main commit `863d78c0f433226a3c03064de8fe3fd850b2f6a8`. No production origin flags have been changed at this checkpoint. A rollback must restore both code/configuration together; database additions must remain backward-compatible and owner data must not be reset.

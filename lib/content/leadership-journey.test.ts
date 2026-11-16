@@ -68,11 +68,13 @@ describe("the promises the journey keeps", () => {
     for (const file of files) expect(file).not.toMatch(/@\/lib\/auth|fetch\(|editingModeFromCookies|cookies\(\)|localStorage|sessionStorage/);
   });
   it("offers no badge, certificate, score, rating or ranking", () => {
-    for (const text of [everyWord, ...files]) expect(text).not.toMatch(/\b(badges?|certificat\w*|certif\w*|scores?|scored|ratings?|ranked|ranking|leaderboard|grade[ds]?|points)\b/i);
+    // The page explicitly says it has no score report; that disclosure is not an award.
+    const pageText = files.map(text => text.replace('no completion submission or supervisor score report', 'no completion submission'));
+    for (const text of [everyWord, ...pageText]) expect(text).not.toMatch(/\b(badges?|certificat\w*|certif\w*|scores?|scored|ratings?|ranked|ranking|leaderboard|grade[ds]?|points)\b/i);
   });
   it("says plainly that it is optional, with nothing to submit and nothing counted", () => {
     const page = files[0];
-    for (const words of ["no nomination, no group to join and no deadline", "nothing to submit", "is your choice", "None of this is required", "Nothing is sent as a reminder"]) expect(page).toContain(words);
+    for (const words of ["no nomination, no group to join and no deadline", "no completion submission or supervisor score report", "is your choice", "None of this is required", "Nothing is sent as a reminder", "Related lessons may save progress or practice responses in your browser profile"]) expect(page).toContain(words);
   });
   it("is written plainly, with no system words and no status words", () => {
     expect(everyWord).not.toMatch(/\b(AI|artificial intelligence|assistant|chatbot|bot|model|module|framework|competenc\w*|diagnostic|coming soon|under construction|beta|pilot|draft|placeholder|TBD)\b/i);
