@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-sustaining-the-work",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eight source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "6122cdb344c5b4203fa60a6e9e4d1c2fe09152b861627e2639d6ca854f17e078",
+  "specSha256": "dfbc9fe7c219adc543bbf4041841852e1058f17926d5a7ef7cc90c8c509042b6",
+  "findings": [
+    "Work-related strain concepts do not establish a coworker’s diagnosis or a single cause of distress.",
+    "Supportive conversations proceed alongside timely service review, reporting and protection.",
+    "Rotation and recovery changes require qualified coverage, records integrity and appropriate authority.",
+    "Ordinary check-ins do not demand trauma disclosure; formal accommodation, leave or safety processes may require limited information.",
+    "Medical information is protected under applicable rules rather than an absolute promise of secrecy.",
+    "MMB EAP confidentiality includes legally required safety reports beyond only child or vulnerable-adult reports; external referrals may cost money.",
+    "No fixed waiting period is imposed before seeking professional support.",
+    "Immediate danger and crisis support are distinguished; workload adjustments remain subject to coverage and authority."
+  ],
+  "diagnostics": [
+    {
+      "title": "Naming the strain: secondary traumatic stress, vicarious trauma, compassion fatigue and burnout",
+      "teaching": {
+        "words": 382,
+        "sents": 21,
+        "asl": 18.19047619047619,
+        "fk": 12.169730740463727,
+        "fog": 15.339017701321366,
+        "smog": 14.06817628641468,
+        "poly": 20.157068062827225,
+        "long": 36.38743455497382,
+        "short": 14.285714285714286,
+        "ease": 40.21093368237348
+      }
+    },
+    {
+      "title": "Why the response must be organizational",
+      "teaching": {
+        "words": 382,
+        "sents": 24,
+        "asl": 15.916666666666666,
+        "fk": 11.128494764397907,
+        "fog": 13.38237347294939,
+        "smog": 12.67411722104261,
+        "poly": 17.539267015706805,
+        "long": 37.17277486910995,
+        "short": 12.5,
+        "ease": 43.62618019197211
+      }
+    },
+    {
+      "title": "Supervision that sustains people",
+      "teaching": {
+        "words": 412,
+        "sents": 22,
+        "asl": 18.727272727272727,
+        "fk": 12.163150926743164,
+        "fog": 15.840423654015888,
+        "smog": 14.424011203321125,
+        "poly": 20.87378640776699,
+        "long": 33.49514563106796,
+        "short": 13.636363636363637,
+        "ease": 41.214196822594914
+      }
+    },
+    {
+      "title": "Support, recovery and meaning",
+      "teaching": {
+        "words": 413,
+        "sents": 20,
+        "asl": 20.65,
+        "fk": 12.406357142857143,
+        "fog": 15.620774818401935,
+        "smog": 14.265292616868656,
+        "poly": 18.401937046004843,
+        "long": 33.898305084745765,
+        "short": 15,
+        "ease": 42.89510472154967
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 11.1–12.4 and Fog 13.4–15.8; average sentences 15.9–20.7 words and short shares 12.5–15.0 percent. The full reading preserves necessary distinctions about health, work, confidentiality and authorized processes in connected explanations.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "questionsThreeFourContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-sustaining-guidance-review.json",
+  "sources": [
+    "https://www.nctsn.org/trauma-informed-care/secondary-traumatic-stress",
+    "https://ovc.ojp.gov/program/vtt/what-is-vicarious-trauma",
+    "https://www.samhsa.gov/technical-assistance/dtac/ccp/self-care",
+    "https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases",
+    "https://archive.cdc.gov/www_cdc_gov/niosh/learning/publichealthburnoutprevention/module-11/outline.html",
+    "https://mn.gov/mmb/segip/life-and-well-being/help-with-everyday-life/faq.jsp",
+    "https://www.eeoc.gov/laws/guidance/enforcement-guidance-disability-related-inquiries-and-medical-examinations-employees",
+    "https://988lifeline.org?oai_link_source=model_response_hotline"
+  ],
+  "readings": [
+    {
+      "slug": "gc-sustaining-the-work",
+      "readingSha256": "64885a196af65cdc171f41d4d8dd474e6aebb62975d8dd1ed8c556b5229cf26e"
+    },
+    {
+      "slug": "gc-sustaining-the-work--naming-the-strain-secondary-traumatic-stress-vicar",
+      "readingSha256": "4884d33204daa49486ace504958027d2e2c6426f4c439ae3aee3b43234804514"
+    },
+    {
+      "slug": "gc-sustaining-the-work--why-the-response-must-be-organizational",
+      "readingSha256": "918099d7f97b471505914b33d5e0e7795ab0f8ce681ea24f5681bab7d875c6b2"
+    },
+    {
+      "slug": "gc-sustaining-the-work--supervision-that-sustains-people",
+      "readingSha256": "60198a3c6306da3287b261fe8b1d8fdf1b006326df6c08820078bf5900b18c17"
+    },
+    {
+      "slug": "gc-sustaining-the-work--support-recovery-and-meaning",
+      "readingSha256": "8af16accc8e0fd7aa94dcd87dd116ca6a5b081298cd3756b469fadb9e13926e4"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
