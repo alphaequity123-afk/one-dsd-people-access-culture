@@ -9,6 +9,7 @@ import { stageForPath } from "@/lib/program/dsd-logic-model";
 import { SiteSearch } from "@/components/site-search";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";
 import "./dsd-header-tools.css";
+import { agencyZoneEnabled, agencyHref } from "@/lib/program/agency-zone";
 
 const AskClient = dynamic(() => import("@/components/ask-client").then(module => module.AskClient), {
   loading: () => <p role="status">Opening Ask…</p>,
@@ -78,6 +79,7 @@ function Header({ pathname, culturalIntelligenceAvailable = false, ask }: Header
     if (tool) { event.preventDefault(); toggleTool(tool); }
     else if (open) { setOpen(false); menu.current?.focus(); }
   }}>
+    {agencyZoneEnabled ? <nav className="dsd-shell dsd-breadcrumb" aria-label="Agency location"><a href={agencyHref("/")}>One DHS People, Access and Culture</a><span aria-hidden="true"> · </span><a href={agencyHref("/areas/adsa")}>Aging and Disability Services</a><span aria-hidden="true"> · </span><a href={agencyHref("/areas/dsd")}>Disability Services Division</a></nav> : null}
     <div className="dsd-shell dsd-brand-row">
       <Link href="/home" className="dsd-brand" aria-label="One DSD People, Access and Culture home">
         <Image src="/images/dhs-logo.png" width={319} height={68} alt="Minnesota Department of Human Services" priority />

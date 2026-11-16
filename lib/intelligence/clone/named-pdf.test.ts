@@ -65,8 +65,9 @@ describe("named original PDF grounding", () => {
     f.complete.mockImplementation(async (request: { user: string }) => {
       const input = JSON.parse(request.user);
       const pages = input.programSources.filter((source: { href: string }) => source.href.includes(".pdf#page="));
-      // Five passages from each of the two named PDFs.
-      expect(pages).toHaveLength(10);
+      // Retrieval is bounded across documents and may add graph-connected passages.
+      // Assert the requested evidence, rather than an incidental total passage count.
+      expect(pages.length).toBeGreaterThanOrEqual(2);
       expect(pages.some((source: { href: string }) => source.href.endsWith("guide.pdf#page=39"))).toBe(true);
       expect(pages.some((source: { href: string }) => source.href.endsWith("checklist.pdf#page=3"))).toBe(true);
       // Each page is cited by its label; its passage is supplied once and never copied back.

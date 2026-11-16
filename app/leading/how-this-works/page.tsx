@@ -48,7 +48,7 @@ export default function LeadingHowThisWorksPage() {
       <p>{TRAINING_CREDIT_NOTICE}</p>
       <p>The label &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; refers to the agency responsibility associated with the Equity Analysis Toolkit. This local companion course does not assign or certify required agency training. Follow the designated agency process for training and the applicable policy requirements for equity analysis. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
       <h2>Using the learning</h2>
-      <p>Use these courses as guidance for your work, alongside current policy and the people and offices responsible for a decision.</p>
+      <p>Use these courses as guidance for your work, alongside current policy and the person or area responsible for a decision.</p>
       <h2>Tribal and Native American learning</h2>
       <p>This space does not offer Tribal curriculum. One DSD refers Native American and Tribal-specific learning, questions and engagement to ADSA and the responsible Tribal liaison. <Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link>.</p>
     </div>
