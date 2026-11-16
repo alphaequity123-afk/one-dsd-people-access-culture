@@ -15,6 +15,7 @@ import { RESOURCE_THEMES, RESOURCE_LEGACY_THEME_LABELS, resourceLearningLevel } 
 import { SELF_DIRECTED_COURSES, selfDirectedHref, selfDirectedItems } from "@/lib/content/self-directed";
 import { CoreFifteen } from "@/components/core-fifteen";
 import { Hub2More } from "@/components/hub2-choices";
+import { HideWhileSearching, LearnLandingSearch, LearnSearchForm, LearnSearchProvider, LearnSearchResults } from "@/components/learn-hub-search";
 import styles from "./learning-family.module.css";
 import preview from "./learning-preview.module.css";
 import { getLearningJourney } from "@/lib/content/learning-journey";
@@ -69,10 +70,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
         <h1>Learn</h1>
         <p>{introduction.available ? stringValue(introduction.values, "introLede") : "Courses, readings and recordings that build the knowledge behind fair, accessible services and inclusive workplaces."}</p>
       </header>
-      <form className="pilot-topic-search" action="/learn" method="get" role="search">
-        <label htmlFor="pilot-learning-search">Search learning and resources</label>
-        <div><input id="pilot-learning-search" type="search" name="q" /><button type="submit">Search</button></div>
-      </form>
+      <LearnLandingSearch />
       <section className="pilot-topic-feature" aria-labelledby="pilot-core">
         <h2 id="pilot-core">Start with the Core 15</h2>
         <p>The recommended courses to begin with. Follow them in order or pick the one closest to your work.</p>
@@ -146,6 +144,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
   const staffGuide = items.find((c) => c.id === "lm-how-this-program-works");
   const practice = items.filter((c) => c.type === "practice_note");
   return (
+    <LearnSearchProvider choices={{ theme: query.theme, type: query.type, level: query.level }} linkedQuery={query.q.trim()}>
     <EditableSurfaceRegion surface={surface} className={`${styles.page} ${preview.page}`}>
       <header className={`${styles.hero} ${preview.hero}`}>
         <div className={styles.heroInner}>
@@ -156,36 +155,29 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
         </div>
       </header>
       <div className={styles.content}>
-        {!filtered ? <div className="mb-6"><WaterCollectionFeature /></div> : null}
+        {!filtered ? <HideWhileSearching><div className="mb-6"><WaterCollectionFeature /></div></HideWhileSearching> : null}
         <div id="catalog" className={styles.catalog}>
           <h2 className={preview.collectionTitle}>Search the collection</h2>
           <EditableSurfaceRegion surface={hub}>
-            <form key={`${query.q}:${query.theme}:${query.type}:${query.level}`} action="/learn" method="get" role="search" className={styles.search}>
-              <label htmlFor="hub-q">{hubText("searchLabel")}</label>
-              <div className={styles.query}><input id="hub-q" name="q" type="search" defaultValue={query.q ?? ""} /><button type="submit">{hubText("searchButton")}</button></div>
-              <details className={preview.filterOptions} open={Boolean(query.theme || query.type || query.level)}>
-                <summary>Filter by theme, level, or format</summary>
-                <div className={styles.filters}>
-                  <label>Theme<select name="theme" defaultValue={query.theme}><option value="">All themes</option>{legacyThemeTitle ? <option value={query.theme}>{legacyThemeTitle}</option> : null}{RESOURCE_THEMES.map((theme) => <option key={theme.id} value={theme.id}>{theme.title}</option>)}</select></label>
-                  <label>Learning level<select name="level" defaultValue={query.level}><option value="">All levels and practical resources</option><option value="foundation">Foundation</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label>
-                  <label>{hubText("formatLabel")}<select name="type" defaultValue={types.includes(query.type as ContentType) || (query.type === "podcast" && podcastAvailable) ? query.type : ""}><option value="">{hubText("allFormats")}</option>{types.map((type) => <option key={type} value={type}>{CONTENT_TYPE_LABEL[type]}</option>)}{podcastAvailable ? <option value="podcast">Podcast</option> : null}</select></label>
-                </div>
-              </details>
-              {query.q || query.theme || query.type || query.level ? <Link className={preview.clearFilters} href="/learn">{hubText("clearLabel")}</Link> : null}
-            </form>
-            {query.theme === "structural" && featuredReadingLinks.length ? <aside className={styles.readingLinks}><h2>{hubText("readingTitle")}</h2><ul>{featuredReadingLinks.map((link) => <li key={link.href}><SourceLink href={link.href}>{link.label}</SourceLink></li>)}</ul><p>{hubText("readingNote")}</p></aside> : null}
+            {/* Words typed here stay in the page; theme, level and format are links (components/learn-hub-search.tsx). */}
+            <LearnSearchForm copy={{ searchLabel: hubText("searchLabel"), searchButton: hubText("searchButton"), clearLabel: hubText("clearLabel"), formatLabel: hubText("formatLabel"), allFormats: hubText("allFormats") }}
+              initial={{ q: query.q.trim(), theme: query.theme, type: types.includes(query.type as ContentType) || (query.type === "podcast" && podcastAvailable) ? query.type : "", level: query.level }}
+              themes={RESOURCE_THEMES.map((theme) => ({ value: theme.id, label: theme.title }))} legacyTheme={legacyThemeTitle ? { value: query.theme, label: legacyThemeTitle } : undefined}
+              formats={[...types.map((type) => ({ value: type, label: CONTENT_TYPE_LABEL[type] })), ...(podcastAvailable ? [{ value: "podcast", label: "Podcast" }] : [])]} />
+            <HideWhileSearching>{query.theme === "structural" && featuredReadingLinks.length ? <aside className={styles.readingLinks}><h2>{hubText("readingTitle")}</h2><ul>{featuredReadingLinks.map((link) => <li key={link.href}><SourceLink href={link.href}>{link.label}</SourceLink></li>)}</ul><p>{hubText("readingNote")}</p></aside> : null}
             {expanded ? <p role="status" className={styles.resultCount}>{totalFound} {hubText(totalFound === 1 ? "countSingular" : "countLabel")}</p> : null}
-            {!totalFound ? <div><h2>{hubText("emptyTitle")}</h2><p>{hubText("emptyBody")}</p></div> : null}
+            {!totalFound ? <div><h2>{hubText("emptyTitle")}</h2><p>{hubText("emptyBody")}</p></div> : null}</HideWhileSearching>
+            <LearnSearchResults copy={{ countSingular: hubText("countSingular"), countLabel: hubText("countLabel"), emptyTitle: hubText("emptyTitle"), emptyBody: hubText("emptyBody"), coursesTitle: hub.available ? hubText("coursesTitle") : stringValue(copy, "modulesTitle"), resourcesTitle: hubText("resourcesTitle"), resourcesAvailable: hub.available }} />
           </EditableSurfaceRegion>
-          {waterMatch ? <div className="mb-6"><WaterCollectionFeature /></div> : null}
+          <HideWhileSearching>{waterMatch ? <div className="mb-6"><WaterCollectionFeature /></div> : null}</HideWhileSearching>
           <EditableSurfaceRegion surface={catalog}>{null}</EditableSurfaceRegion>
-          {selectedTheme || legacyThemeTitle ? <section id="start-here" className={preview.startHere} aria-labelledby="topic-start-title">
+          <HideWhileSearching>{selectedTheme || legacyThemeTitle ? <section id="start-here" className={preview.startHere} aria-labelledby="topic-start-title">
             <p className={styles.eyebrow}>Explore a topic</p><h2 id="topic-start-title">{selectedTheme?.title ?? legacyThemeTitle}</h2><p>{selectedTheme?.description ?? "Explore learning and practical resources related to this topic."}</p>
             {topicFirst && !selectedTheme ? <div className={preview.topicFirst}><h3>A useful starting point</h3><Link href={itemHref(topicFirst)}>{topicFirst.title}</Link><p>{shortSummary(topicFirst.whyItMatters || topicFirst.summary, 220)}</p></div> : null}
             <p>Choose the learning or tool that fits your question. You can use a practical resource directly and return to the learning when it helps.</p>
           </section> : null}
           {selectedTheme && !query.q && !query.level && !query.type ? <ResourceThemePathway theme={selectedTheme.id} items={items} className={preview.startingPoints} /> : null}
-          {!filtered ? <CoreFifteen /> : null}
+          {!filtered ? <CoreFifteen /> : null}</HideWhileSearching>
           <Hub2More title="More ways to browse">
             <ResourceFormatLinks theme={selectedTheme?.id} current="learning" />
             <p className={preview.collectionLinks}>
@@ -194,7 +186,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
               <Link href="/practice">Open guided practice</Link>
             </p>
           </Hub2More>
-          {!filtered ? <ResourceThemeNav basePath="/learn" className={preview.themeSection} gridClassName={preview.themeGrid} /> : null}
+          <HideWhileSearching>{!filtered ? <ResourceThemeNav basePath="/learn" className={preview.themeSection} gridClassName={preview.themeGrid} /> : null}
           {expanded ? <CatResultStatus page={catalogPage} noun="resource" nouns="resources" /> : null}
           {expanded && learning.some(item => visibleIds.has(item.id)) ? <section className={styles.section} aria-labelledby="modules-title">
             <div className={styles.sectionHeading}><h2 id="modules-title">{hub.available ? hubText("coursesTitle") : stringValue(copy, "modulesTitle")}</h2><span>{learning.length} to explore</span></div>
@@ -204,9 +196,9 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
           {expanded && hub.available && resources.some(item => visibleIds.has(item.id)) ? <section className={styles.section} aria-labelledby="hub-resources-title"><div className={styles.sectionHeading}><h2 id="hub-resources-title">{hubText("resourcesTitle")}</h2><span>{resources.length} resources</span></div><ul className={styles.resourceList}>{resources.filter(item => visibleIds.has(item.id)).map((item) => <li key={item.id} data-hub-resource={item.id}><span className={styles.resourceKind}>{CONTENT_TYPE_LABEL[item.type]}</span><h3><Link href={`/library/${item.id}`}>{item.title}</Link></h3><p>{shortSummary(item.summary)}</p><AuthorityPill authority={item.authority} />{owner ? <> <ResourceRemove contentItemId={item.id} title={item.title} compact /></> : null}</li>)}</ul></section> : null}
           {expanded ? <CatPager page={catalogPage} basePath="/learn" params={{ ...query, browse: "all" }} label="Learning result pages" /> : null}
           {!expanded && hub.available && resources.length ? <p><Link href="/library?browse=all">Looking for a tool, a guide, or further reading? Browse all {resources.length} resources in the library</Link></p> : null}
-          {podcasts.length ? <Hub2More headingId="podcasts-title" title="Podcasts" open={filtered}><p>Listen in the audio library, where every episode comes with chapters and a full transcript.</p><ul className={styles.pathList}>{podcasts.map(({ podcast, surface: podcastSurface }) => <li key={podcast.id}><Link href={`/audio-library#podcast-${podcast.id}`}>{stringValue(podcastSurface.values, "title") || podcast.title}</Link></li>)}</ul></Hub2More> : null}
+          {podcasts.length ? <Hub2More headingId="podcasts-title" title="Podcasts" open={filtered}><p>Listen in the audio library, where every episode comes with chapters and a full transcript.</p><ul className={styles.pathList}>{podcasts.map(({ podcast, surface: podcastSurface }) => <li key={podcast.id}><Link href={`/audio-library#podcast-${podcast.id}`}>{stringValue(podcastSurface.values, "title") || podcast.title}</Link></li>)}</ul></Hub2More> : null}</HideWhileSearching>
         </div>
-        {!filtered ? <Hub2More headingId="series-title" title="Course series">
+        <HideWhileSearching>{!filtered ? <Hub2More headingId="series-title" title="Course series">
           <ul className={styles.pathList}>
             <li><Link href="/learn/collections">Collections</Link><p>All the learning on eight shelves named by subject, each opening with where to start. Leaders, supervisors, managers, and directors can start from <Link href="/leading">the decision in front of them</Link>.</p></li>
             {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Cultural Intelligence collection</Link><p>Connect community context and intercultural learning with decisions in everyday work.</p></li>}
@@ -221,11 +213,12 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
         {!filtered ? <Hub2More headingId="more-learning-title" title="Take it into your work">
           <p><Link href="/practice">Put learning into practice with the {graduationPaths.length} guided practices</Link></p>
           {staffGuide ? <p><Link href={`/library/${staffGuide.id}`}>{staffGuide.title}</Link></p> : null}
-        </Hub2More> : null}
+        </Hub2More> : null}</HideWhileSearching>
         <div className={styles.context}><p><Link href="/learn/sources">Research and sources</Link> · <Link href="/ask">Ask</Link></p><details className={preview.disclosure}><summary>About these learning resources</summary><DhsReferenceLink /><ProgramContextNote /></details></div>
         {catalog.available ? <details className={styles.participation}><summary>{stringValue(catalog.values, "participationDetailsLabel")}</summary><ParticipationNotice surface="learning" /></details> : <ParticipationNotice surface="learning" />}
       </div>
     </EditableSurfaceRegion>
+    </LearnSearchProvider>
   );
 }
 

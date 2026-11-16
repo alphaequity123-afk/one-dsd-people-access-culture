@@ -11,22 +11,24 @@ import { selfDirectedHref } from "@/lib/content/self-directed";
 import { resourceStudyHref } from "@/lib/client/resource-study-links";
 
 type LearningTileProps = {
-  item: ContentItem;
+  item: Pick<ContentItem, "id" | "title" | "summary" | "authority" | "type" | "tags">;
   href?: string;
   presentation?: { imageSrc: string; imageAlt: string; summary: string };
   /** Signed-in consultant: show the small remove control on the tile. */
   owner?: boolean;
   /** Learning discovery can show course level without changing other card uses. */
   showLevel?: boolean;
+  /** Whether the study companion is configured; read from the server setting when not given (search results drawn in the browser pass it). */
+  studyAvailable?: boolean;
 };
 
-export function LearningTile({ item, presentation, href, owner = false, showLevel = false }: LearningTileProps) {
+export function LearningTile({ item, presentation, href, owner = false, showLevel = false, studyAvailable }: LearningTileProps) {
   presentation = selfDirectedPresentation(item.id, item.summary) ?? presentation;
   const level = showLevel ? resourceLearningLevel(item) : null;
   const progression = showLevel ? resourceProgressionLevel(item.id) ?? (level ? ({ foundation: "foundations", intermediate: "applying", advanced: "leading" } as const)[level] : null) : null;
   const titleId = `learning-title-${item.id}`;
   const hasImage = Boolean(presentation?.imageSrc);
-  const studyPath = process.env.GEMINI_API_KEY?.trim() ? selfDirectedHref(item.id) : undefined;
+  const studyPath = (studyAvailable ?? Boolean(process.env.GEMINI_API_KEY?.trim())) ? selfDirectedHref(item.id) : undefined;
   return <article data-learning-id={item.id} style={owner ? { position: "relative" } : undefined}>
     {owner ? <div style={{ position: "absolute", top: 8, right: 8, zIndex: 2 }}><ResourceRemove contentItemId={item.id} title={item.title} compact /></div> : null}
     <Link href={href ?? `/library/${item.id}`} className={`${styles.tile} ${hasImage ? "" : styles.textOnly}`} aria-labelledby={titleId}>

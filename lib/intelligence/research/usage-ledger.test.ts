@@ -16,7 +16,7 @@ import { recordUsage, type ResearchUsageEvent } from './governance';
 
 it('keeps both billed attempts under the existing storage contract', async () => {
   const event: Omit<ResearchUsageEvent, 'id'> = {at: '2026-11-13T13:00:00.000Z', provider: 'perplexity_agent',
-    model:'test',depth:'current_web', query_hash:'a'.repeat(16),domains:[],estimated_usd:0.01,
+    model:'test',depth:'current_web',domains:[],estimated_usd:0.01,
     ok:false,error_code:'research_unresolved_citation',latency_ms:10,trace_id:'12345678-1234-4abc-8abc-123456789abc'};
   await recordUsage(event);
   await recordUsage({...event,provider:'openai_web',ok:true,estimated_usd:0.02});

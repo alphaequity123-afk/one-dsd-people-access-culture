@@ -58,17 +58,12 @@ export async function POST(request: NextRequest) {
 
   const apiKey = process.env.GEMINI_API_KEY?.trim();
   if (!apiKey) return reply({ error: unavailable }, 503);
-  const started = performance.now();
   try {
     if (await paused()) return reply({ error: unavailable }, 503);
     const retryAfter = reserveLearningQuestion(request);
     if (retryAfter) return reply({ error: "The learning assistant has reached its request limit. Please try again later." }, 429, retryAfter);
     const signal = AbortSignal.any([request.signal, AbortSignal.timeout(38_000)]);
     const result = await resourceLearningAnswer({ question: question.trim(), resourcePath, mode: mode as ResourceLearningMode }, apiKey, signal);
-    console.info("resource_learning_result", {
-      mode, scoped: Boolean(resourcePath), grounded: result.grounded,
-      citations: result.sources.length, elapsedMs: Math.round(performance.now() - started),
-    });
     return reply(result);
   } catch (error) {
     if (error instanceof ResourcePublicationChanged) {

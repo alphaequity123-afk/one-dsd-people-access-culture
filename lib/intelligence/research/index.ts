@@ -7,7 +7,7 @@
 import { runTool } from "../tools/runtime";
 import type { ToolContext } from "../types";
 import { errorStatus, providerErrorExcerpt } from "../providers/log";
-import { admitResearch, getResearchPolicy, hashQuery, recordUsage, type Admission } from "./governance";
+import { admitResearch, getResearchPolicy, recordUsage, type Admission } from "./governance";
 import { withResearchSlot } from "./slots";
 import { asksToAvoidWebResearch } from "../research-preference";
 import { asksForScholarlyResearch, CONSENSUS_EVIDENCE_NOTE, consensusQuery, consensusResearchProvider } from "./consensus";
@@ -124,7 +124,6 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
   if (!provider) return { status: "not_admitted", reason: "no_provider_configured", message: "Outside research is not available right now. You can still use the answer from program resources." };
 
   const started = Date.now();
-  const query_hash = await hashQuery(question);
   const toolName = depth === "deep_research" ? "research.deep_search" : "research.current_answer";
   const attempted = new Set<ResearchProviderId>();
   let selected = provider;
@@ -146,7 +145,6 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
         provider: provider.id,
         model: output.model,
         depth,
-        query_hash,
         domains: Array.from(new Set(output.sources.map((s) => s.domain))).slice(0, 20),
         estimated_usd: output.estimated_usd,
         reported_usd: output.usage.reported_usd,
@@ -169,7 +167,6 @@ export async function governedResearch(question: string, depth: ResearchDepth, e
         provider: provider.id,
         model: provider.modelFor(depth),
         depth,
-        query_hash,
         domains: [],
         estimated_usd: 0,
         ...researchFailureUsage(error),
@@ -235,7 +232,6 @@ export async function governedSearch(
   const admission = await admitResearch(question, "current_web", explicit, Boolean(selected), ctx.role);
   if (!admission.ok) return { status: "not_admitted", reason: admission.reason, message: admission.message };
   const started = Date.now();
-  const query_hash = await hashQuery(question);
   try {
     const output = await withResearchSlot(() => runTool(
       ctx,
@@ -248,7 +244,6 @@ export async function governedSearch(
       provider: "perplexity_agent",
       model: "perplexity-search",
       depth: "current_web",
-      query_hash,
       domains: Array.from(new Set(output.sources.map((source) => source.domain))).slice(0, 20),
       estimated_usd: 0.005,
       search_queries: 1,
@@ -270,7 +265,6 @@ export async function governedSearch(
       provider: "perplexity_agent",
       model: "perplexity-search",
       depth: "current_web",
-      query_hash,
       domains: [],
       estimated_usd: 0,
       ok: false,

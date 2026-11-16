@@ -283,9 +283,9 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
             },
             {
               "area": "C",
-              "action": "Monthly practice sessions using real DSD decisions, run by goal leads. First ten reviews completed by the units that own the decisions.",
+              "action": "Monthly practice sessions using real DSD decisions, run by goal leads. The units that own the decisions record their first ten reviews in the decision log.",
               "owner": "Goal 1 lead and unit leads",
-              "evidence": "Reviews completed"
+              "evidence": "Reviews recorded in the decision log"
             },
             {
               "area": "B",
@@ -357,7 +357,7 @@ export const dsdThreeYearPlan: DsdThreeYearPlan = {
               "area": "C",
               "action": "The disability services review tool used on at least one waiver change, guidance document or rate change before it goes public.",
               "owner": "Waiver policy lead",
-              "evidence": "Reviews completed"
+              "evidence": "Reviews recorded in the decision log"
             }
           ]
         },

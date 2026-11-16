@@ -152,18 +152,17 @@ describe("guidance endpoint", () => {
   });
 
   it("counts nothing while One DSD's database cannot hold practice totals", async () => {
-    const counter = vi.spyOn(getStore(), "counter");
+    // The store has no counter at all (owner rule 2026-11-16: not even anonymous totals).
+    expect("counter" in getStore()).toBe(false);
     const request = post({ ...base, learnerMessage: "My name is Pat and I work in Hennepin." });
     request.headers.set("x-forwarded-for", "203.0.113.9");
     expect((await POST(request)).status).toBe(200);
     expect((await POST(post({ ...base, chosenIndex: right, attemptNumber: 2, strategy: "stop" }))).status).toBe(200);
-    expect(counter).not.toHaveBeenCalled();
     expect(PRACTICE_COUNTERS_ENABLED).toBe(false);
     expect(await recordTutorRound({ lessonId: "01", itemId: "01", attemptNumber: 1, correct: true, strategy: "stop" })).toBe(false);
     expect(await readTutorTotals()).toBeNull();
     for (const kind of ["consult_request", "decision", "eval_result", "collaboration_workspace"] as const) expect(await getStore().list(kind)).toEqual([]);
     expect(await getStore().listAudit()).toEqual([]);
-    counter.mockRestore();
   });
 
   it("uses the already registered request limit and refuses once it is spent", async () => {

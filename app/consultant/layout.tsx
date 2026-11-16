@@ -99,7 +99,6 @@ export default async function ConsultantLayout({ children }: { children: React.R
               Resource review
             </Link>
             <ResourceCreationLink className="font-bold text-white" />
-            <Link href="/consultant/ask-records" className="font-bold text-white">ASK response records</Link>
             {offlineConnectorsFile() && isLoopbackHost((await headers()).get("host")) ? <Link href="/consultant/connectors" className="font-bold text-white">Connected services</Link> : null}
             <Link href="/consultant/audit" className="font-bold text-white">
               Activity record

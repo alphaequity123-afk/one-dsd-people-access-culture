@@ -32,7 +32,10 @@
     "lib/consultant-toolkit/cases.ts": "Shared workspace cases a person chooses to save and share (P14; content they choose, encrypted). Needs the private-details reminder and a retention rule.",
     "lib/decision-records/store.ts": "Decision records a team chooses to keep (chosen work, encrypted).",
     "lib/policy-analysis/store.ts": "Policy analysis cases a person chooses to save (chosen work, encrypted).",
-    "lib/sp-clone/request-store.ts": "A request a person chooses to send (staff POST is closed today)."
+    "lib/sp-clone/request-store.ts": "A request a person chooses to send (staff POST is closed today).",
+    "lib/intelligence/memory/owner-audit.ts": "Owner activity record: owner and contributor work only. appendAudit drops every event from a staff request before this file is reached (auditBelongsToOwnerWork); no counters.",
+    "lib/intelligence/memory/store.ts": "Work-object storage (local development files) for owner authoring, contributor and team work, and records a person chooses to save (program outcomes, policy and equity-analysis cases). No counters; audit goes through owner-audit.ts. Open owner decision: the outside-research spending ledger (research_usage records, one per outside-research call, no question content).",
+    "lib/intelligence/memory/postgres-store.ts": "Work-object storage (shared database) for the same chosen and owner records as store.ts, plus atomic program-event appends and the retired consultation compare-and-swap. No counters; audit goes through owner-audit.ts. Same open owner decision on the research spending ledger."
   },
   "storedFunctions": {
     "consume_runtime_rate_limit": "Short-lived rate-limit bucket keyed by an HMAC of the address; operational protection, not learning. Retention not verified by this eval.",
@@ -44,6 +47,10 @@
     "work-area": "area",
     "depth": "reading depth",
     "pac_dsd_owner": "owner session",
-    "one_dsd_context": "product context (One DHS or One DSD view)"
+    "one_dsd_context": "product context (One DHS or One DSD view)",
+    "pac_editing": "owner inline-editing switch (on/off only, set after the owner session is checked)",
+    "pac_program_session": "contributor sign-in session (opaque token)",
+    "pac_leaders": "leaders sign-in session (signed issue and expiry times and a random session id)",
+    "pac_team": "One DSD Team sign-in session (signed issue and expiry times and a random session id)"
   }
 }

@@ -1,14 +1,17 @@
 "use client";
-import { SourceLink } from "@/components/app-link";
-
 
 import { useEffect, useId, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { handOffSearch, postSearch, SEARCH_HANDOFF_KEYS } from "@/components/private-search";
 import "@/components/site-search.css";
 
 type Result = { id: string; title: string; href: string; excerpt: string; area: string; external: boolean };
 
-/** The search box at the top of every page: suggestions as you type, Enter for the full results page. */
+/**
+ * The search box at the top of every page: suggestions as you type, Enter for the full results page.
+ * The words go to the server in a request body and to the results page through this tab's session
+ * storage, never in the page address.
+ */
 export function SiteSearch({ embedded = false }: { embedded?: boolean } = {}) {
   const [q, setQ] = useState("");
   const [fetched, setResults] = useState<Result[]>([]);
@@ -26,8 +29,8 @@ export function SiteSearch({ embedded = false }: { embedded?: boolean } = {}) {
     const controller = new AbortController();
     const timer = setTimeout(async () => {
       try {
-        const response = await fetch(`/api/search?limit=8&q=${encodeURIComponent(query)}`, { signal: controller.signal, cache: "no-store" });
-        if (response.ok) { setResults((await response.json()).results ?? []); setActive(-1); setOpen(true); }
+        const payload = await postSearch<{ results?: Result[] }>("/api/search", { q: query, limit: 8 }, controller.signal);
+        setResults(payload.results ?? []); setActive(-1); setOpen(true);
       } catch { /* a dropped suggestion request leaves the full search available */ }
     }, 180);
     return () => { clearTimeout(timer); controller.abort(); };
@@ -39,18 +42,31 @@ export function SiteSearch({ embedded = false }: { embedded?: boolean } = {}) {
     return () => document.removeEventListener("mousedown", close);
   }, []);
 
+  function visit(href: string) {
+    if (embedded && window.parent !== window) window.parent.location.assign(href);
+    else router.push(href);
+  }
+
   function go(result: Result) {
     setOpen(false);
     if (result.external) window.open(result.href, "_blank", "noreferrer");
-    else if (embedded && window.parent !== window) window.parent.location.assign(result.href);
-    else router.push(result.href);
+    else visit(result.href);
   }
 
-  return <form ref={box} action="/search" target={embedded ? "_top" : undefined} role="search" className="site-search" onSubmit={event => {
-    if (active >= 0 && results[active]) { event.preventDefault(); go(results[active]); }
+  function seeAll() {
+    const text = q.trim();
+    setOpen(false);
+    if (text) handOffSearch(SEARCH_HANDOFF_KEYS.siteSearch, text);
+    visit("/search");
+  }
+
+  return <form ref={box} role="search" className="site-search" onSubmit={event => {
+    event.preventDefault();
+    if (active >= 0 && results[active]) go(results[active]);
+    else seeAll();
   }}>
     <label htmlFor={`${id}-q`} className="sr-only">Search the whole program and State of Minnesota agencies</label>
-    <input id={`${id}-q`} name="q" type="search" value={q} autoComplete="off" placeholder="Search everything…"
+    <input id={`${id}-q`} type="search" value={q} autoComplete="off" placeholder="Search everything…"
       role="combobox" aria-expanded={open && results.length > 0} aria-controls={`${id}-list`} aria-autocomplete="list"
       aria-activedescendant={active >= 0 ? `${id}-r${active}` : undefined}
       onChange={event => setQ(event.target.value)} onFocus={() => results.length && setOpen(true)}
@@ -67,7 +83,7 @@ export function SiteSearch({ embedded = false }: { embedded?: boolean } = {}) {
         <strong>{result.title}</strong>
         {result.excerpt ? <span>{result.excerpt}</span> : null}
       </li>)}
-      <li className="site-search-all"><SourceLink href={`/search?q=${encodeURIComponent(q.trim())}`}>See all results</SourceLink></li>
+      <li className="site-search-all"><a href="/search" onMouseDown={event => event.preventDefault()} onClick={event => { event.preventDefault(); seeAll(); }}>See all results</a></li>
     </ul> : null}
   </form>;
 }

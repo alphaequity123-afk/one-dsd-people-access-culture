@@ -49,11 +49,11 @@ describe("anonymous equity review count endpoint", () => {
   });
 
   it("accepts a valid count and keeps nothing while One DSD's database cannot hold it", async () => {
-    const counter = vi.spyOn(getStore(), "counter");
+    // The store has no counter at all (owner rule 2026-11-16: not even anonymous totals).
+    expect("counter" in getStore()).toBe(false);
     const response = await POST(post({ tool: "structural", goals: [3, 1], decisionType: "policy" }));
     expect(response.status).toBe(204);
     expect(await response.text()).toBe("");
-    expect(counter).not.toHaveBeenCalled();
     expect(PRACTICE_COUNTERS_ENABLED).toBe(false);
     expect(await recordEquityReviewCompletion({ tool: "structural" })).toBe(false);
     expect(await readEquityReviewTotals()).toBeNull();

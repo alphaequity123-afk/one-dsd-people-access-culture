@@ -34,6 +34,7 @@ import { applyDomainValues, domainSurfaceId } from "@/lib/domains/surfaces";
 import { libraryHref, libraryQueryValue, LIBRARY_FILTER_KEYS, matchesLibraryFilters, normalizeLibraryFilters } from "@/lib/content/work-index";
 import { loadPublishedEditableSurfaces } from "@/lib/content/editable-surfaces";
 import { stringValue } from "@/lib/content/staff-surface-registry";
+import { LibraryHideWhileSearching, LibrarySearchForm, LibrarySearchProvider, LibrarySearchResults } from "@/components/library-search";
 
 export const metadata: Metadata = { title: "Library" };
 export const dynamic = "force-dynamic";
@@ -101,6 +102,8 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
   const clearSearchHref = retainBrowse(libraryHref(filters));
   const clearFiltersHref = retainBrowse(libraryHref({ originArea: filters.originArea }, q));
   const fullCatalogHref = `${libraryHref({ originArea: filters.originArea })}${filters.originArea ? "&" : "?"}browse=all`;
+  // The page's fixed choices, as the search form carries them; words typed in the form never join them (components/library-search.tsx).
+  const choices: Record<string, string> = Object.fromEntries([...LIBRARY_FILTER_KEYS.filter(key => !["role", "theme", "level"].includes(key) && filters[key]).map(key => [key, filters[key]!]), ...(["role", "theme", "level"] as const).flatMap(key => filters[key] ? [[key, filters[key]!]] : []), ...(showAll ? [["browse", "all"]] : [])]);
   // Keep the first screen scannable; the full result set remains available below.
   const paging = libraryPage(q ? hits.length : items.length, libraryQueryValue(sp.page));
   const visibleHits = hits.slice(paging.start, paging.end);
@@ -157,25 +160,16 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
   };
 
   return (
+    <LibrarySearchProvider choices={choices} linkedQuery={q} clearHref={clearSearchHref}>
     <EditableSurfaceRegion surface={surface} className={`${styles.page} ${styles.directoryPage}`}>
       <header className={styles.hero}><div className={styles.heroInner}><p className={styles.eyebrow}>{stringValue(copy, "introKicker")}</p><h1>{stringValue(copy, "introTitle")}</h1><p className={styles.lede}>{stringValue(copy, "introLede").replace(/, and its review date\.?$/, ".")}</p><Link className={styles.back} href="/learn">Explore learning and resources</Link></div></header>
       <div className={styles.content}>
         <WorkOriginLinks origin={origin} domainAvailable={Boolean(selectedDomain)} />
         {selectedDomain && !origin.task ? <p><Link href={withWorkOrigin("/areas/" + selectedDomain.id + (selectedTask ? "#task-" + selectedTask.id : ""),origin)}>{selectedTask?.label ?? selectedDomain.title}</Link></p> : null}
-        <form id="find-resource" key={retainBrowse(libraryHref(filters, q))} action="/library" method="get" className={`${styles.search} ${layout.search}`} role="search" aria-label="Find a resource">
-          {LIBRARY_FILTER_KEYS.filter(key=>!["role","theme","level"].includes(key)).map(key => filters[key] ? <input key={key} type="hidden" name={key} value={filters[key]} /> : null)}
-          {showAll ? <input type="hidden" name="browse" value="all" /> : null}
-          <label htmlFor="q" className="block text-lg font-bold">
-            {stringValue(copy, "searchLabel")}
-          </label>
-          <p id="resource-search-help" className={styles.searchHelp}>Search by topic, resource title, or a decision you are working on.</p>
-          <div className={styles.searchBar}>
-            <input id="q" name="q" type="search" defaultValue={q} aria-describedby="resource-search-help" placeholder={stringValue(copy, "searchPlaceholder")} />
-            <button type="submit" className="btn btn--primary">
-              {stringValue(copy, "searchButton")}
-            </button>
-            {q ? <Link className={styles.clearSearch} href={clearSearchHref} aria-label="Clear search">Clear search</Link> : null}
-          </div>
+        <LibrarySearchForm label={stringValue(copy, "searchLabel")} help="Search by topic, resource title, or a decision you are working on." placeholder={stringValue(copy, "searchPlaceholder")}
+          buttonLabel={stringValue(copy, "searchButton")} initialQuery={q} clearSearchHref={clearSearchHref}
+          hidden={<>{LIBRARY_FILTER_KEYS.filter(key=>!["role","theme","level"].includes(key)).map(key => filters[key] ? <input key={key} type="hidden" name={key} value={filters[key]} /> : null)}
+          {showAll ? <input type="hidden" name="browse" value="all" /> : null}</>}>
           <details className={styles.filterDisclosure} open={hasActiveFilters}>
             <summary>Choose a theme, learning level, or role</summary>
             <p className="mt-3 text-sm">Role and work-area choices suggest useful connections to your work. They do not restrict participation. Clear your choices to explore the full library. Learning levels describe courses; choose all levels to include practical tools and references.</p>
@@ -214,7 +208,10 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
             })}
             <Link className={styles.clearFilters} href={clearFiltersHref}>{stringValue(copy, "clearFiltersLabel")}</Link>
           </div> : null}
-        </form>
+        </LibrarySearchForm>
+        <LibrarySearchResults copy={{ resultSingular: stringValue(copy, "resultSingular"), resultPlural: stringValue(copy, "resultPlural"), noResultsTitle: stringValue(copy, "noResultsTitle"), noResultsBody }}
+          hasActiveFilters={hasActiveFilters} withoutFiltersHref={retainBrowse(libraryHref({ originArea: filters.originArea }))} fullCatalogHref={fullCatalogHref} />
+        <LibraryHideWhileSearching>
         {q && destinations.length ? <section className={styles.startingPoints} aria-labelledby="suggested-destinations"><h2 id="suggested-destinations">Go straight to the work</h2><p>These program pages may help alongside the Library results below.</p><ul>{destinations.map(link => <li key={link.href}><Link href={withWorkOrigin(link.href, origin)}>{link.label}</Link><p>{link.reason}</p></li>)}</ul></section> : null}
         {q ? (
           <section className={styles.collection} aria-labelledby="results-title">
@@ -260,6 +257,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
             <p>{guide.summary}</p>
           </li>)}</ul>
         </details> : null}
+        </LibraryHideWhileSearching>
 
 
         <Hub2More headingId="resource-formats" title="More ways to explore">
@@ -270,5 +268,6 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
         <details className="course-more-item"><summary>About these resources</summary><div className={styles.context}><DhsReferenceLink /><ProgramContextNote /></div></details>
       </div>
     </EditableSurfaceRegion>
+    </LibrarySearchProvider>
   );
 }

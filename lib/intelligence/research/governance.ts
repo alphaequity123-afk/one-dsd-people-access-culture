@@ -150,8 +150,6 @@ export type ResearchUsageEvent = {
   provider: ResearchProviderId;
   model: string;
   depth: "current_web" | "deep_research";
-  /** Hash of the query, never the query. */
-  query_hash: string;
   domains: string[];
   estimated_usd: number;
   reported_usd?: number;
@@ -182,22 +180,25 @@ function monthKey(d = new Date()): string {
   return d.toISOString().slice(0, 7);
 }
 
-export async function hashQuery(q: string): Promise<string> {
-  const { createHash } = await import("node:crypto");
-  return createHash("sha256").update(q.trim().toLowerCase()).digest("hex").slice(0, 16);
+/**
+ * A random value for the record's legacy "query_hash" slot. The deployed storage contract still requires
+ * that key, but nothing about the question is kept: no hash, no fingerprint, nothing that could match two
+ * records of the same question (owner rule 2026-11-16).
+ */
+async function unrelatedRecordToken(): Promise<string> {
+  const { randomBytes } = await import("node:crypto");
+  return randomBytes(8).toString("hex");
 }
 
 export async function recordUsage(ev: Omit<ResearchUsageEvent, "id">): Promise<ResearchUsageEvent> {
   assertCanonicalOperationalInstant(ev.at);
   assertOpaqueTraceId(ev.trace_id);
-  if (!/^[a-f0-9]{16}$/.test(ev.query_hash)) {
-    throw new Error("Research usage requires a bounded query hash.");
-  }
+  const token = await unrelatedRecordToken();
   // Keep the existing opaque storage contract while distinguishing two provider
-  // attempts for the same question and trace, even within the same second.
+  // attempts in the same trace, even within the same second.
   const providerMask = { perplexity_agent: 0, openai_web: 1, fixture: 2, consensus: 3 }[ev.provider];
   const suffix = (parseInt(ev.trace_id.slice(-4), 16) ^ providerMask).toString(16).padStart(4, "0");
-  const id = `ru_${ev.at.replace(/[^0-9]/g, "").slice(0, 14)}_${ev.query_hash.slice(0, 6)}_${suffix}`;
+  const id = `ru_${ev.at.replace(/[^0-9]/g, "").slice(0, 14)}_${token.slice(0, 6)}_${suffix}`;
   const full: ResearchUsageEvent = {
     id,
     ...ev,
@@ -210,14 +211,14 @@ export async function recordUsage(ev: Omit<ResearchUsageEvent, "id">): Promise<R
   else delete full.provider_trace_id;
   if (ev.ok) delete full.error_code;
   else full.error_code = "research_execution_failed";
-  await getStore().put("decision", `research_usage:${id}`, full);
+  await getStore().put("decision", `research_usage:${id}`, { ...full, query_hash: token });
   return full;
 }
 
 export async function listUsage(limit = 100): Promise<ResearchUsageEvent[]> {
   const all = await getStore().list<ResearchUsageEvent>("decision");
   return all
-    .filter((d) => typeof d.id === "string" && d.id.startsWith("ru_") && "query_hash" in d)
+    .filter((d) => typeof d.id === "string" && d.id.startsWith("ru_") && typeof d.provider === "string" && typeof d.estimated_usd === "number")
     .sort((a, b) => b.at.localeCompare(a.at))
     .slice(0, limit);
 }

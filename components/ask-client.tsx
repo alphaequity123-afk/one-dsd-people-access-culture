@@ -16,6 +16,7 @@ import type { GraduationPath } from "@/lib/content/paths";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";
 import { newId, readStored, useHydrated, useStored, writeStored } from "@/lib/client/storage";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
+import { SEARCH_HANDOFF_KEYS, takeHandOff } from "@/components/private-search";
 import { useProgramContext } from "@/components/program-context";
 import type { ProductContextId } from "@/lib/product/federation";
 import { activePracticeArtifact, PracticeArtifactSchema, type PracticeArtifact } from "@/lib/content/practice-artifact";
@@ -80,9 +81,11 @@ export function AskClient({
   useEffect(() => {
     if (!hydrated || handoffTaken.current) return;
     handoffTaken.current = true;
-    const handed = readStored<string | null>("session", BROWSER_STORAGE_KEYS.askHomeQuestion, null);
-    if (typeof handed !== "string" || !handed.trim()) return;
-    writeStored("session", BROWSER_STORAGE_KEYS.askHomeQuestion, null);
+    const fromHome = readStored<string | null>("session", BROWSER_STORAGE_KEYS.askHomeQuestion, null);
+    if (typeof fromHome === "string") writeStored("session", BROWSER_STORAGE_KEYS.askHomeQuestion, null);
+    // "Ask this as a question" on the search page hands its words over under the shared pending-question key.
+    const handed = typeof fromHome === "string" && fromHome.trim() ? fromHome : takeHandOff(SEARCH_HANDOFF_KEYS.ask);
+    if (!handed.trim()) return;
     void sendQuestion(handed, "text", true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated]);

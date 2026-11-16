@@ -71,8 +71,8 @@ describe("Google decision provider", () => {
       expect(body).not.toHaveProperty("state");
       expect(options.body).not.toContain("google-test-key");
     }
-    expect(log).toHaveBeenCalledWith("decision_used", expect.objectContaining({ provider: "gemini", stage: "review" }));
-    expect(JSON.stringify(log.mock.calls)).not.toContain(QUESTION);
+    // A successful decision leaves no log line: use would become countable from host logs (owner rule 2026-11-16).
+    expect(log).not.toHaveBeenCalled();
   });
 
   it("does not send a legacy credential when the Google key is absent", async () => {

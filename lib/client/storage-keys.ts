@@ -4,7 +4,7 @@ import { GRADUATION_PATHS } from "@/lib/content/paths";
 export type PrivateBrowserStorageKey = {
   area: "local" | "session";
   key: string;
-  purpose: "ask_history" | "practice_handoff" | "consultation_prefill" | "saved_request_reference" | "path_notes" | "path_progress" | "learning_notes" | "course_notes" | "course_progress" | "equity_analysis_draft" | "practice_plans" | "saved_resources" | "practice_reflection" | "my_path";
+  purpose: "ask_history" | "search_handoff" | "practice_handoff" | "consultation_prefill" | "saved_request_reference" | "path_notes" | "path_progress" | "learning_notes" | "course_notes" | "course_progress" | "equity_analysis_draft" | "practice_plans" | "saved_resources" | "practice_reflection" | "my_path";
 };
 
 export const BROWSER_STORAGE_KEYS = {
@@ -15,6 +15,14 @@ export const BROWSER_STORAGE_KEYS = {
   askPracticeHandoff: "pac_ask_practice_handoff_v1",
   /** A question typed on the landing page, carried to the Ask page and removed as soon as it is asked. */
   askHomeQuestion: "pac_ask_home_question_v1",
+  /** A question handed to Ask from another page (search results), removed as soon as it is asked. Same key as the live One DHS app. */
+  askPendingQuestion: "ask-pending-question",
+  /** Words typed in the search box at the top of every page, carried to the search page and removed once read. */
+  siteSearchHandoff: "site-search-pending",
+  /** Words typed on the short Learn page, carried to the learning catalog and removed once read. */
+  learnSearchHandoff: "learn-search-pending",
+  /** Words typed in the Library search, carried across a change of fixed choices and removed once read. */
+  librarySearchHandoff: "library-search-pending",
   consultationPrefill: "pac_intake_prefill",
   recentConsultationReferences: "pac_requests_session",
   savedConsultationReferences: "pac_requests",
@@ -35,6 +43,10 @@ export const PRIVATE_BROWSER_STORAGE_KEYS: readonly PrivateBrowserStorageKey[] =
   { area: "session", key: BROWSER_STORAGE_KEYS.askSession, purpose: "ask_history" },
   { area: "session", key: BROWSER_STORAGE_KEYS.askPracticeHandoff, purpose: "practice_handoff" },
   { area: "session", key: BROWSER_STORAGE_KEYS.askHomeQuestion, purpose: "ask_history" },
+  { area: "session", key: BROWSER_STORAGE_KEYS.askPendingQuestion, purpose: "ask_history" },
+  { area: "session", key: BROWSER_STORAGE_KEYS.siteSearchHandoff, purpose: "search_handoff" },
+  { area: "session", key: BROWSER_STORAGE_KEYS.learnSearchHandoff, purpose: "search_handoff" },
+  { area: "session", key: BROWSER_STORAGE_KEYS.librarySearchHandoff, purpose: "search_handoff" },
   { area: "session", key: BROWSER_STORAGE_KEYS.consultationPrefill, purpose: "consultation_prefill" },
   { area: "session", key: BROWSER_STORAGE_KEYS.recentConsultationReferences, purpose: "saved_request_reference" },
   { area: "local", key: BROWSER_STORAGE_KEYS.savedConsultationReferences, purpose: "saved_request_reference" },
