@@ -1,5 +1,5 @@
 .page { color: #182c3a; background: var(--pac-white, #ffffff); --learning-blue: #183247; --learning-line: #d9e0e4; }
-.page :is(a, button, input, select, summary):focus-visible { outline: 3px solid #176B65; outline-offset: 4px; }
+.page :is(a, button, input, select, summary):focus-visible { outline: 3px solid #003865; outline-offset: 4px; }
 .hero { background: var(--pac-white, #ffffff); border-bottom: 1px solid var(--pac-border, #adb9c4); }
 .heroInner, .content { width: min(100%, 1320px); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 3.5rem); }
 .heroInner { padding-block: clamp(2.25rem, 5vw, 4rem); }
@@ -154,13 +154,13 @@
 
 /* Topic controls stay distinct from the search panel and the reading cards. */
 .themes { gap: .75rem; margin-block: 1.5rem 2rem; }
-.themes a { min-height: 46px; display: inline-flex; align-items: center; padding: .65rem 1rem; background: #fff; border: 1.5px solid #71877e; color: #183247; font-size: .94rem; font-weight: 650; line-height: 1.5; border-radius: .45rem; }
+.themes a { min-height: 46px; display: inline-flex; align-items: center; padding: .65rem 1rem; background: #fff; border: 1.5px solid #005793; color: #183247; font-size: .94rem; font-weight: 650; line-height: 1.5; border-radius: .45rem; }
 .themes a:hover { background: var(--pac-white, #ffffff); border-color: var(--pac-action, #005ea8); color: #183247; text-decoration: underline; text-underline-offset: .25em; }
 .themes a[aria-current] { background: var(--pac-action, #005ea8); border-color: var(--pac-action, #005ea8); color: #fff; }
 .themes a[aria-current]:hover { background: var(--pac-action-hover, #004578); color: #fff; }
 .themes a:focus-visible { outline: 3px solid #183247; outline-offset: 4px; }
 .search { background: var(--pac-white, #ffffff); padding: clamp(1.25rem,2.5vw,2rem); border: 1px solid #a9b2b7; box-shadow: 0 3px 0 #e4dfd3; }
-.search :is(input,select) { background: #fff; color: #183247; border: 1px solid #71877e; }
+.search :is(input,select) { background: #fff; color: #183247; border: 1px solid #005793; }
 .search label { color: #183247; }
 .resultCount { padding-bottom: 1rem; border-bottom: 1px solid var(--pac-border, #adb9c4); }
 @media (max-width: 500px) { .themes { display: grid; grid-template-columns: minmax(0,1fr); } .themes a { width: 100%; } .query { flex-wrap: wrap; } .query input { flex-basis: 100%; } .query button { width: 100%; } }
@@ -203,11 +203,11 @@
 .heroInner { padding-block: 2.5rem; }
 .hero h1 { font-size: clamp(2rem,3.5vw,3.2rem); max-width: 28ch; }
 .journeyFeature > aside, .search, .readingLinks { border: 1px solid #cbd4dc; border-radius: 6px; }
-.journeyFeature > aside { border-top: 3px solid #176b65; }
+.journeyFeature > aside { border-top: 3px solid #003865; }
 .toolkitFeature { border: 1px solid #cbd4dc; border-top: 3px solid #008eaa; border-radius: 6px; padding: 1.5rem; }
 .themes { gap: .4rem 1rem; }
 .themes a { border: 0; border-bottom: 2px solid #cbd4dc; border-radius: 0; padding: .65rem .25rem; font-size: .9rem; }
-.themes a[aria-current] { color: #183247; background: #fff; border-color: #176b65; font-weight: 700; }
+.themes a[aria-current] { color: #183247; background: #fff; border-color: #003865; font-weight: 700; }
 .themes a:hover { background: #f3f5f7; }
 .heroCover { border-radius: 6px; }
 .sectionHeading { border-bottom-color: #b8c4cd; }

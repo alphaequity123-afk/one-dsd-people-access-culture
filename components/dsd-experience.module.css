@@ -210,7 +210,7 @@
 .page.amplifyPage .entryCards > article { background: #fff; border: 1px solid #cdd7e2; border-top: 2px solid #a9bbce; border-radius: .65rem; }
 .page.amplifyPage .entryCards > article:nth-child(2) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-action, #005ea8); }
 .page.amplifyPage .entryCards > article:nth-child(3) { background: var(--pac-white, #ffffff); border-color: var(--pac-border, #adb9c4); border-top-color: var(--pac-gold, #008eaa); }
-.page.amplifyPage .entryCards a { color: #145b57; }
+.page.amplifyPage .entryCards a { color: #003865; }
 .page.amplifyPage .conversationBand { padding: clamp(1.25rem,3vw,2rem); background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-left: 4px solid var(--pac-action, #005ea8); border-radius: .65rem; }
 .page.amplifyPage .sidebar { background: var(--pac-white, #ffffff); border: 1px solid var(--pac-border, #adb9c4); border-top: 3px solid var(--pac-action, #005ea8); border-radius: .5rem; }
 .page.amplifyPage .sidebar li + li { border-color: var(--pac-border, #adb9c4); }
@@ -251,7 +251,7 @@
 .page .hero::before { left: 0; background: #008eaa; }
 .page .entryCards > article, .page .sidebar { border-radius: 6px; box-shadow: none; }
 .page .entryCards > article { border-top: 3px solid #008eaa; padding: 1.5rem; }
-.page .entryCards > article:nth-child(even) { border-top-color: #176b65; }
+.page .entryCards > article:nth-child(even) { border-top-color: #003865; }
 .sectionNav a { border-radius: 0; padding-inline: .35rem; text-decoration: underline; }
 .sectionNav a[aria-current="page"] { background: #fff; color: #183247; text-decoration-thickness: 3px; }
 .page .leadershipInvitation { border-radius: 0; }

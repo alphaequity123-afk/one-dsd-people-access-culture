@@ -1,8 +1,8 @@
 /* Internal pages inherit the approved home treatment. Content, media and controls
    retain their own structure; these rules never target the welcome or home hero. */
 .internal-page { --page-accent: #008eaa; background: #fff; color: #183247; min-width: 0; padding-bottom: 1.5rem; }
-.internal-page[data-page-purpose="learn"] { --page-accent: #176b65; }
-.internal-page[data-page-purpose="support"] { --page-accent: #176b65; }
+.internal-page[data-page-purpose="learn"] { --page-accent: #003865; }
+.internal-page[data-page-purpose="support"] { --page-accent: #003865; }
 .internal-page[data-page-purpose="consultant"] { --page-accent: #003865; }
 .internal-section-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.65rem; padding-block: .6rem; border-bottom: 1px solid #cbd4dc; }
 .internal-section-nav a { display: inline-flex; align-items: center; min-height: 44px; padding-block: .5rem; color: #183247; font-size: .94rem; font-weight: 600; text-underline-offset: .3em; text-decoration-thickness: 1px; }
@@ -39,7 +39,7 @@ body.dsd-calm main .internal-page :is(h1,h2,h3) { font-weight: 600; }
 .internal-page .notice { border-radius: 4px; line-height: 1.65; }
 .internal-page .community-index-layout { padding-top: 2.5rem; }
 .internal-page .community-editorial h1 { font-size: clamp(2rem,3.5vw,3.2rem); font-weight: 600; }
-.internal-page .community-search { border: 1px solid #b8c4cd; border-top: 3px solid #176b65; border-radius: 6px; padding: 1.25rem; }
+.internal-page .community-search { border: 1px solid #b8c4cd; border-top: 3px solid #003865; border-radius: 6px; padding: 1.25rem; }
 .internal-page .community-directory a { padding-inline: 0; font-size: 1.15rem; font-weight: 600; }
 .internal-page .community-reading-layout { gap: 2.5rem; }
 .internal-page .community-practice { background: #fff; border: 1px solid #b8c4cd; border-left: 3px solid #008eaa; border-radius: 0 6px 6px 0; }

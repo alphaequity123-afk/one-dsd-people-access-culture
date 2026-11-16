@@ -1,6 +1,6 @@
 .page { color: #182c3a; background: var(--pac-white, #ffffff); }
 
-.page :is(a,button,input,summary):focus-visible { outline: 3px solid #176B65; outline-offset: 4px; }
+.page :is(a,button,input,summary):focus-visible { outline: 3px solid #003865; outline-offset: 4px; }
 
 .hero { background: var(--pac-white, #ffffff); border-bottom: 1px solid var(--pac-border, #adb9c4); }
 
@@ -120,9 +120,9 @@
 
 .search { background: var(--pac-white, #ffffff); border-color: #a9b2b7; box-shadow: 0 3px 0 #e4dfd3; }
 
-.search input { background: #fff; border-color: #71877e; color: #183247; }
+.search input { background: #fff; border-color: #005793; color: #183247; }
 
-.filters a { min-height: 44px; padding: .5rem .75rem; background: #fff; color: #183247; border: 1.5px solid #71877e; border-radius: .4rem; font-weight: 600; }
+.filters a { min-height: 44px; padding: .5rem .75rem; background: #fff; color: #183247; border: 1.5px solid #005793; border-radius: .4rem; font-weight: 600; }
 
 .filters a:hover { background: var(--pac-white, #ffffff); border-color: var(--pac-action, #005ea8); text-decoration: underline; }
 
@@ -240,7 +240,7 @@
 
 .directoryPage .filterFields select { min-width: 0; min-height: 44px; border: 1px solid #8196a4; border-radius: .3rem; background: #fff; padding: .5rem; color: #183247; font: inherit; font-weight: 400; }
 
-.directoryPage select:focus-visible { outline: 3px solid #176b65; outline-offset: 4px; }
+.directoryPage select:focus-visible { outline: 3px solid #003865; outline-offset: 4px; }
 
 .directoryPage .filters a { min-height: 44px; display: inline-flex; align-items: center; }
 
@@ -370,10 +370,10 @@
 
 .heroInner { padding-block: 2.5rem; }
 .hero h1 { font-size: clamp(2rem,3.5vw,3.2rem); max-width: 28ch; }
-.search { border-radius: 6px; border-top: 3px solid #176b65; }
+.search { border-radius: 6px; border-top: 3px solid #003865; }
 .filters { gap: 1rem 1.5rem; }
 .filters a { border: 0; border-bottom: 2px solid #cbd4dc; border-radius: 0; padding: .4rem .35rem; font-size: .9rem; }
-.filters a[aria-current] { background: #fff; color: #183247; border-color: #176b65; font-weight: 700; }
+.filters a[aria-current] { background: #fff; color: #183247; border-color: #003865; font-weight: 700; }
 .directory > li { grid-template-columns: minmax(8rem,.65fr) minmax(0,3fr); gap: .5rem 1.5rem; }
 .results li { padding: 1.25rem 0; }
 .why { border-left-color: #008eaa; background: #f5f7f8; }

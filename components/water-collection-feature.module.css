@@ -5,10 +5,10 @@
   flex-wrap: wrap;
   gap: 1.25rem 2.5rem;
   padding: clamp(1.25rem, 3vw, 2.25rem);
-  border: 1px solid var(--collection-border, #b8cfcc);
-  border-inline-start: .35rem solid var(--collection-accent, #176b65);
+  border: 1px solid var(--collection-border, #cdd7e2);
+  border-inline-start: .35rem solid var(--collection-accent, #003865);
   border-radius: .75rem;
-  background: var(--collection-surface, #eef6f4);
+  background: var(--collection-surface, #f4f7f9);
   color: #183247;
 }
 

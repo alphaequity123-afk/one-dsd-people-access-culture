@@ -77,11 +77,11 @@ body.program-design{--radius:8px;--radius-lg:14px;--shadow:0 6px 20px #17395108;
 .program-design .scope-note>a{min-height:36px;display:inline-flex;align-items:center}
 
 /* Navigation contrast preview: one continuous band beneath the white brand row. */
-body.program-design .program-navigation{background:#194f4d;border-top:0}
+body.program-design .program-navigation{background:#003865;border-top:0}
 body.program-design .program-navigation .primary-nav-link{color:#fff;background:transparent}
-body.program-design .program-navigation .primary-nav-link--current{color:#fff;background:#214f4d;border-bottom-color:#e0b85f;font-weight:700}
-body.program-design .program-navigation .primary-nav-link:hover{background:#286663;color:#fff}
-body.program-design .program-navigation .primary-nav-link:focus-visible{background:#286663;color:#fff;outline:2px solid #fff;outline-offset:-5px;box-shadow:none}
+body.program-design .program-navigation .primary-nav-link--current{color:#fff;background:#003865;border-bottom-color:#e0b85f;font-weight:700}
+body.program-design .program-navigation .primary-nav-link:hover{background:#003865;color:#fff}
+body.program-design .program-navigation .primary-nav-link:focus-visible{background:#003865;color:#fff;outline:2px solid #fff;outline-offset:-5px;box-shadow:none}
 @media(max-width:849px){body.program-design .program-navigation .primary-nav-link--current{border-left-color:#e0b85f}}
 
 .program-agency-brand{display:inline-flex;flex-direction:column;gap:.6rem}.program-division-label{display:none}
@@ -93,8 +93,8 @@ body.program-design .program-navigation .primary-nav-link:focus-visible{backgrou
 body.program-design .program-navigation{background:#183247}
 body.program-design .program-navigation .primary-nav-link--current{background:#2b4960;border-bottom-color:#008eaa;font-weight:600}
 body.program-design .program-navigation .primary-nav-link:hover,body.program-design .program-navigation .primary-nav-link:focus-visible{background:#2b4960}
-.program-design main .btn--primary{background:#176B65;border-color:#176B65;color:#fff}
-.program-design main .btn--primary:hover{background:#125953;color:#fff}
+.program-design main .btn--primary{background:#003865;border-color:#003865;color:#fff}
+.program-design main .btn--primary:hover{background:#003865;color:#fff}
 .program-design main :is(.card,.panel,.door){background:#fff;border-color:#c6cfd3}
 .program-design main .door:hover{background:#eef4f8;border-color:#183247}
 .program-design main :is(.page-intro,.card,.panel,.door) :is(p,li){line-height:1.75}
@@ -108,7 +108,7 @@ body.program-design .program-navigation .primary-nav-link:hover,body.program-des
 .program-design main :is(h2,h3) { font-weight: 600; }
 .program-design main .notice { background: #fff; border-color: #c6cfd3; }
 /* Shared approved DHS banner across both programs. */
-body.program-design .program-header{background:#003865;border-top:0;border-bottom:5px solid #78be21;color:#fff}
+body.program-design .program-header{background:#003865;border-top:0;border-bottom:5px solid #005793;color:#fff}
 body.program-design .program-brand-row{padding-top:1.65rem;padding-bottom:1.65rem}
 body.program-design .program-brand-link img{filter:none;mix-blend-mode:normal;background:#fff;padding:.55rem .7rem;box-sizing:content-box;border-radius:0}
 body.program-design .program-division-label{display:block;color:#fff;font-size:.95rem;font-weight:500;letter-spacing:.015em}
