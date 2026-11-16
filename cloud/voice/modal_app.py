@@ -22,7 +22,7 @@ def download_model():
 image = (
     modal.Image.debian_slim(python_version="3.12")
     .apt_install("libsndfile1", "sox")
-    .pip_install("torch==2.11.0", "torchaudio==2.11.0", index_url="https://download.pytorch.org/whl/cu128")
+    .pip_install("torch==2.11.0", "torchaudio==2.11.0", index_url="https://download.pytorch.org/whl/cpu")
     .pip_install("qwen-tts==0.1.1", "transformers==4.57.3", "huggingface-hub==0.36.2", "soundfile==0.14.0", "fastapi==0.115.12")
     .run_function(download_model)
     .add_local_dir(Path(__file__).parent / ".private-voice", REFERENCE_DIR, copy=True)
@@ -32,9 +32,7 @@ image = (
 app = modal.App("one-dsd-approved-voice", image=image)
 
 
-# GPU fallback list per Modal support (Nov 13, 2026): cheapest first; a wider list waits less on capacity.
-# scaledown_window=300 was approved by the owner on Nov 15, 2026; idle time is billed.
-@app.cls(gpu=["L4", "A10", "T4", "L40S"], cpu=2, memory=8192, min_containers=0, max_containers=1, scaledown_window=300, timeout=600)
+@app.cls(cpu=2, memory=8192, min_containers=0, max_containers=1, scaledown_window=15, timeout=600)
 @modal.concurrent(max_inputs=1)
 class ApprovedVoice:
     @modal.enter()
@@ -50,8 +48,7 @@ class ApprovedVoice:
             if profile[kind]["file"] != source.name or hashlib.sha256(source.read_bytes()).hexdigest() != profile[kind]["sha256"]:
                 raise RuntimeError("Approved voice reference checksum mismatch")
         torch.set_num_threads(2)
-        dtype = torch.bfloat16 if torch.cuda.is_bf16_supported(including_emulation=False) else torch.float16
-        self.model = Qwen3TTSModel.from_pretrained(MODEL_DIR, device_map="cuda:0", dtype=dtype, attn_implementation="sdpa", local_files_only=True)
+        self.model = Qwen3TTSModel.from_pretrained(MODEL_DIR, device_map="cpu", dtype=torch.float32, attn_implementation="sdpa", local_files_only=True)
         prompts = {
             kind: self.model.create_voice_clone_prompt(ref_audio=str(Path(REFERENCE_DIR) / (kind + ".wav")), ref_text=profile[kind]["transcript"], x_vector_only_mode=False)[0]
             for kind in ("identity", "style")
