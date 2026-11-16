@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-16",
+  "status": "accepted_complete_reference_review",
+  "scope": "Six complete program-authored facilitation, team-climate and working-plan references, including titles, summaries, explanations, bodies, action labels and destinations. Not an accessibility certification.",
+  "method": "Read complete source objects before and after changes and compare complete imported readings with their source fields. Preserve source quotations and required reporting boundaries.",
+  "findings": [
+    "Protect private client, personnel and case information in learning exercises.",
+    "Offer prepared examples and avoid requiring personal disclosure.",
+    "Small groups and distinctive details can defeat promised anonymity.",
+    "Use authorized information when examining opportunity patterns; patterns do not establish causes.",
+    "Check that communication supports work for participants.",
+    "A half-session practice allocation is a planning suggestion, not agency policy.",
+    "Team-climate work and routine consultation must not delay required reporting.",
+    "Preserve all six perspectives, seven questions and original action destinations."
+  ],
+  "sources": [
+    "https://mn.gov/mmb-stat/policies/1329-sexualharassmentprohibited.pdf",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf"
+  ],
+  "changes": [
+    {
+      "id": "pn-equity-in-practice",
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Diversity and representation: who is present, absent, promoted, heard, and contracted with.",
+      "after": "Diversity and representation: examine who is present, absent, heard and able to access opportunities. Use authorized information and protect privacy; a group-level pattern raises questions but does not establish its cause or justify assumptions about an individual."
+    },
+    {
+      "id": "pn-equity-in-practice",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Inclusion and belonging: whether people can take part, disagree, contribute, and be themselves without penalty.",
+      "after": "Inclusion and belonging: whether people can participate, contribute and raise concerns without retaliation or exclusion. Respectful disagreement can coexist with job responsibilities and fair accountability."
+    },
+    {
+      "id": "lm-workplace-climate",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Credit and chances: who gets stretch assignments, visible work, and development time; whether that pattern tracks race, disability, language, or tenure.",
+      "after": "Credit and opportunities: review how stretch assignments, visible work and development time are allocated against relevant criteria. Use authorized records and protect privacy when examining possible barriers; do not collect sensitive personal information for an informal team exercise or assume a pattern proves discrimination."
+    },
+    {
+      "id": "lm-workplace-climate",
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Access at work: captions on by default, materials in advance, flexible formats for participation, no reliance on informal networks for information.",
+      "after": "Access at work: provide materials in advance and accessible ways to participate. Check whether captions and other communication supports meet participants' needs, and share essential information through agreed channels rather than relying on informal networks."
+    },
+    {
+      "id": "lm-workplace-climate",
+      "path": [
+        "body",
+        5
+      ],
+      "before": "If the situation involves a complaint, investigation, discipline, or accommodation decision about a named person, follow the established Employee Culture, Human Resources, civil-rights, or accommodation process. A team climate plan cannot replace it.",
+      "after": "Use the designated reporting, Human Resources, civil-rights or accommodation process when the situation calls for it. Do not wait until someone is named, a written complaint arrives or a team plan is complete before following a reporting duty. Team-climate work cannot replace required reporting, an investigation or an accommodation decision."
+    },
+    {
+      "id": "ja-climate-action-plan",
+      "path": [
+        "summary"
+      ],
+      "before": "Choose three to five actions team members can see and experience, naming for each an owner, a start date, a revisit date, and a way to tell whether it helps. Omit names tied to complaints, and never score individual employees.",
+      "after": "Choose three to five actions team members can observe, with a responsible person, start date, review date and way to assess each action. Keep complaint details and identifying information out of this shared plan; use it to improve practices, not rank employees."
+    },
+    {
+      "id": "ja-climate-action-plan",
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Practice: describe something a team member could see happening, such as sharing the agenda 48 hours ahead, rotating who opens the meeting, reading written input aloud, or turning captions on.",
+      "after": "Practice: describe an observable change, such as sharing agendas in advance, offering more than one way to contribute or checking that communication supports work. Ask before reading someone's written contribution aloud, particularly when it could identify a sensitive concern."
+    },
+    {
+      "id": "ja-climate-action-plan",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Evidence: describe what the team would notice, without ranking people. This might include a short anonymous check-in or a review of who received assignments.",
+      "after": "Evidence: describe what the team would notice without ranking individuals. Use an approved feedback method and explain who can see responses. Do not promise anonymity when a small group or distinctive details could identify someone. Review assignment patterns through authorized records and keep personal details out of the shared plan."
+    },
+    {
+      "id": "ja-facilitation-session-plan",
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Activity: give participants time to work with their own materials, in pairs or small groups, within a clear amount of time.",
+      "after": "Activity: allow time to practice in pairs, small groups or individually, using public, fictional or appropriately de-identified materials. Explain the task and time available, offer accessible alternatives and keep private client, personnel and case information out of shared exercises."
+    },
+    {
+      "id": "ja-facilitation-session-plan",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Access: arrange captions or real-time captioning, send materials in accessible formats ahead of time, and offer an alternative to activities that require dragging items or working under a time limit. Arrange language interpretation or translated materials when participants need them. Use plain-language slides with built-in headings. Do not rely on icons alone.",
+      "after": "Access: ask about participation needs early and arrange effective communication supports through the appropriate process, including qualified interpretation when needed. Send accessible materials ahead, use meaningful slide titles and reading order, and provide alternatives to dragging or timed tasks. Labels and explanations should carry meaning as well as icons. Check that the chosen supports work for participants."
+    },
+    {
+      "id": "lm-facilitation-application",
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Keep the session connected to practice: limit presentation time so participants can spend at least half the session working with the ideas themselves.",
+      "after": "Keep the session connected to practice. As a planning option, reserve about half the time for participants to apply the ideas, adjusting for the learning goal, access needs and discussion. This is a facilitation suggestion, not an agency requirement."
+    },
+    {
+      "id": "lm-facilitation-application",
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Bring real work: ask participants to bring a notice, a plan, or a meeting they own. Practice on that.",
+      "after": "Use realistic work: invite participants to bring a public document or use a fictional or appropriately de-identified example. Explain what may be shared and offer a prepared example so no one needs to disclose private client, personnel or case information."
+    },
+    {
+      "id": "lm-facilitation-application",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Facilitator role: participants know their own programs. Your role is to offer useful questions, guide the conversation, and keep the group on time.",
+      "after": "Facilitator role: draw on participants' knowledge of their programs, offer useful questions and guide the conversation toward the learning goal. Keep participation respectful and accessible, allow people to pass on personal disclosure and adapt the pace when needed."
+    },
+    {
+      "id": "pn-self-check",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Access: language and disability/communication access considered for this specific work, not in general.",
+      "after": "Access: identify the language and disability-related communication needs relevant to this work, the supports arranged, how their effectiveness will be checked and any unresolved requests requiring follow-up."
+    },
+    {
+      "id": "pn-self-check",
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Open questions: note what you still do not know and where you will take it next: Resources, a partner, the person responsible for the policy, or a consultation.",
+      "after": "Open questions: record what remains uncertain, who can help resolve it and when follow-up is due. Use the appropriate reporting or urgent-response route immediately when required; a learning resource or routine consultation must not delay it."
+    }
+  ],
+  "importedExistingRevisions": [],
+  "diagnostics": [
+    {
+      "id": "pn-equity-in-practice",
+      "body": {
+        "words": 201,
+        "sents": 17,
+        "asl": 11.823529411764707,
+        "fk": 10.449037167105647,
+        "fog": 13.883640620427276,
+        "smog": 12.526319926815653,
+        "poly": 22.885572139303484,
+        "long": 36.81592039800995,
+        "short": 29.41176470588235,
+        "ease": 41.20725197541705
+      }
+    },
+    {
+      "id": "lm-workplace-climate",
+      "body": {
+        "words": 193,
+        "sents": 11,
+        "asl": 17.545454545454547,
+        "fk": 13.691069241639191,
+        "fog": 16.759114460668865,
+        "smog": 14.937675812826573,
+        "poly": 24.352331606217618,
+        "long": 43.523316062176164,
+        "short": 0,
+        "ease": 28.15486104569007
+      }
+    },
+    {
+      "id": "ja-climate-action-plan",
+      "body": {
+        "words": 137,
+        "sents": 11,
+        "asl": 12.454545454545455,
+        "fk": 11.403039150630395,
+        "fog": 13.740942269409423,
+        "smog": 12.563389971838223,
+        "poly": 21.8978102189781,
+        "long": 43.7956204379562,
+        "short": 18.181818181818183,
+        "ease": 35.491446582614515
+      }
+    },
+    {
+      "id": "ja-facilitation-session-plan",
+      "body": {
+        "words": 164,
+        "sents": 9,
+        "asl": 18.22222222222222,
+        "fk": 12.238617886178861,
+        "fog": 14.849864498644985,
+        "smog": 13.731508374201272,
+        "poly": 18.902439024390244,
+        "long": 31.70731707317073,
+        "short": 11.11111111111111,
+        "ease": 39.77359078590786
+      }
+    },
+    {
+      "id": "lm-facilitation-application",
+      "body": {
+        "words": 165,
+        "sents": 11,
+        "asl": 15,
+        "fk": 12.143636363636368,
+        "fog": 15.212121212121213,
+        "smog": 13.747043046817236,
+        "poly": 23.03030303030303,
+        "long": 35.75757575757576,
+        "short": 27.272727272727273,
+        "ease": 34.71545454545458
+      }
+    },
+    {
+      "id": "pn-self-check",
+      "body": null
+    }
+  ],
+  "diagnosticJudgment": "Short instructions and question lists remain concise. Readability is diagnostic, not a reason to add complexity.",
+  "items": [
+    {
+      "id": "pn-equity-in-practice",
+      "sourceRecordSha256": "fb367ecd43f921364ced691503d8c5ae713889eb593110af4f6665bccb134d10",
+      "title": "Equity in Practice: six perspectives and seven questions"
+    },
+    {
+      "id": "lm-workplace-climate",
+      "sourceRecordSha256": "b5ce2b657887059f794222af1d1e3abc4728d2402f59875fb8f30f55345488eb",
+      "title": "Team climate basics: participation, honest conversation, and fair opportunities"
+    },
+    {
+      "id": "ja-climate-action-plan",
+      "sourceRecordSha256": "fe59ae6cb74cd132be52585a758230dd71010357de1acbc95a4640ca3f5255c3",
+      "title": "Team climate action plan template"
+    },
+    {
+      "id": "ja-facilitation-session-plan",
+      "sourceRecordSha256": "80464516ec6396aa20e453f714100092cf9fab0b22fb8dff8153e21ae099c36c",
+      "title": "Session plan: purpose, activity, practical use, and access"
+    },
+    {
+      "id": "lm-facilitation-application",
+      "sourceRecordSha256": "2d45cd62645c3ac20bed136a8450903eda3a5fe058845df22d4203b80a7f22ee",
+      "title": "Facilitation that participants can use in their work"
+    },
+    {
+      "id": "pn-self-check",
+      "sourceRecordSha256": "a717f4f68c2c44bae04053494cb39a07226094c759e61302433296a636cb769b",
+      "title": "A final review for your working plan"
+    }
+  ],
+  "readings": [
+    {
+      "slug": "equity-in-practice-six-perspectives-and-seven-questions",
+      "readingSha256": "491af59f0e6b992dd4d15b65aaf7ec889a3b32d37e9691810769b5ba1fd289be"
+    },
+    {
+      "slug": "team-climate-basics-participation-honest-conversation-and-fair-opportunities",
+      "readingSha256": "c55e9bb29eabd449f30b48d61309a0af2eb46c6251ad7adf2fc65b3d666c5ecf"
+    },
+    {
+      "slug": "team-climate-action-plan-template",
+      "readingSha256": "6f267c490c050418156c25e4348061bd2e071dbb42c22c171d4d05f761d5112f"
+    },
+    {
+      "slug": "session-plan-purpose-activity-practical-use-and-access",
+      "readingSha256": "bea267d424cdfa1e52f8520750d6a5569fce324d577d44f922bd8210794d9286"
+    },
+    {
+      "slug": "facilitation-that-participants-can-use-in-their-work",
+      "readingSha256": "08287f4f6da3693a573539c84c90e70eed30ccde51bd77beb58b9a57feafb5be"
+    },
+    {
+      "slug": "a-final-review-for-your-working-plan",
+      "readingSha256": "ad5ff0b2957fb5ecb07bbbb0440ff035268a9b0543dcd80058956351f8cfc7d3"
+    }
+  ],
+  "publication": "pending deployment and live verification"
+}

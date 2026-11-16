@@ -2352,9 +2352,33 @@
             "publishedSha256": "de389823fab08727658916b7fe57426ce7fd2ea2ce49f72c4646a52d8d5bdadb",
             "basis": "Full published source and static source read; exact six summary variants independently accepted. No fuzzy matching or unreviewed later owner edits."
           }
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Keep the session connected to practice: limit presentation time so participants can spend at least half the session working with the ideas themselves.",
+          "after": "Keep the session connected to practice. As a planning option, reserve about half the time for participants to apply the ideas, adjusting for the learning goal, access needs and discussion. This is a facilitation suggestion, not an agency requirement."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Bring real work: ask participants to bring a notice, a plan, or a meeting they own. Practice on that.",
+          "after": "Use realistic work: invite participants to bring a public document or use a fictional or appropriately de-identified example. Explain what may be shared and offer a prepared example so no one needs to disclose private client, personnel or case information."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Facilitator role: participants know their own programs. Your role is to offer useful questions, guide the conversation, and keep the group on time.",
+          "after": "Facilitator role: draw on participants' knowledge of their programs, offer useful questions and guide the conversation toward the learning goal. Keep participation respectful and accessible, allow people to pass on personal disclosure and adapt the pace when needed."
         }
       ],
-      "reviewNote": "Root independently read full resource, exact changes, share-link behavior and EEOC Job Applicants and ADA Q7/11/14; accepted 2026-11-15 with clearer supporting-information wording. Original source URLs and formal process boundaries preserved.",
+      "reviewNote": "Complete facilitation review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority.",
       "sources": []
     },
     {
@@ -5173,6 +5197,146 @@
         }
       ],
       "reviewNote": "Complete access-reference review on 2026-11-16: qualified assistance, individual preferences, privacy, authority and current source guidance."
+    },
+    {
+      "target": "resource.pn-equity-in-practice",
+      "kind": "resource",
+      "route": "/resources/pn-equity-in-practice",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Diversity and representation: who is present, absent, promoted, heard, and contracted with.",
+          "after": "Diversity and representation: examine who is present, absent, heard and able to access opportunities. Use authorized information and protect privacy; a group-level pattern raises questions but does not establish its cause or justify assumptions about an individual."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Inclusion and belonging: whether people can take part, disagree, contribute, and be themselves without penalty.",
+          "after": "Inclusion and belonging: whether people can participate, contribute and raise concerns without retaliation or exclusion. Respectful disagreement can coexist with job responsibilities and fair accountability."
+        }
+      ],
+      "reviewNote": "Complete facilitation review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
+    },
+    {
+      "target": "resource.lm-workplace-climate",
+      "kind": "resource",
+      "route": "/resources/lm-workplace-climate",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Credit and chances: who gets stretch assignments, visible work, and development time; whether that pattern tracks race, disability, language, or tenure.",
+          "after": "Credit and opportunities: review how stretch assignments, visible work and development time are allocated against relevant criteria. Use authorized records and protect privacy when examining possible barriers; do not collect sensitive personal information for an informal team exercise or assume a pattern proves discrimination."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Access at work: captions on by default, materials in advance, flexible formats for participation, no reliance on informal networks for information.",
+          "after": "Access at work: provide materials in advance and accessible ways to participate. Check whether captions and other communication supports meet participants' needs, and share essential information through agreed channels rather than relying on informal networks."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "If the situation involves a complaint, investigation, discipline, or accommodation decision about a named person, follow the established Employee Culture, Human Resources, civil-rights, or accommodation process. A team climate plan cannot replace it.",
+          "after": "Use the designated reporting, Human Resources, civil-rights or accommodation process when the situation calls for it. Do not wait until someone is named, a written complaint arrives or a team plan is complete before following a reporting duty. Team-climate work cannot replace required reporting, an investigation or an accommodation decision."
+        }
+      ],
+      "reviewNote": "Complete facilitation review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
+    },
+    {
+      "target": "resource.ja-climate-action-plan",
+      "kind": "resource",
+      "route": "/resources/ja-climate-action-plan",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Choose three to five actions team members can see and experience, naming for each an owner, a start date, a revisit date, and a way to tell whether it helps. Omit names tied to complaints, and never score individual employees.",
+          "after": "Choose three to five actions team members can observe, with a responsible person, start date, review date and way to assess each action. Keep complaint details and identifying information out of this shared plan; use it to improve practices, not rank employees."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Practice: describe something a team member could see happening, such as sharing the agenda 48 hours ahead, rotating who opens the meeting, reading written input aloud, or turning captions on.",
+          "after": "Practice: describe an observable change, such as sharing agendas in advance, offering more than one way to contribute or checking that communication supports work. Ask before reading someone's written contribution aloud, particularly when it could identify a sensitive concern."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Evidence: describe what the team would notice, without ranking people. This might include a short anonymous check-in or a review of who received assignments.",
+          "after": "Evidence: describe what the team would notice without ranking individuals. Use an approved feedback method and explain who can see responses. Do not promise anonymity when a small group or distinctive details could identify someone. Review assignment patterns through authorized records and keep personal details out of the shared plan."
+        }
+      ],
+      "reviewNote": "Complete facilitation review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
+    },
+    {
+      "target": "resource.ja-facilitation-session-plan",
+      "kind": "resource",
+      "route": "/resources/ja-facilitation-session-plan",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Activity: give participants time to work with their own materials, in pairs or small groups, within a clear amount of time.",
+          "after": "Activity: allow time to practice in pairs, small groups or individually, using public, fictional or appropriately de-identified materials. Explain the task and time available, offer accessible alternatives and keep private client, personnel and case information out of shared exercises."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Access: arrange captions or real-time captioning, send materials in accessible formats ahead of time, and offer an alternative to activities that require dragging items or working under a time limit. Arrange language interpretation or translated materials when participants need them. Use plain-language slides with built-in headings. Do not rely on icons alone.",
+          "after": "Access: ask about participation needs early and arrange effective communication supports through the appropriate process, including qualified interpretation when needed. Send accessible materials ahead, use meaningful slide titles and reading order, and provide alternatives to dragging or timed tasks. Labels and explanations should carry meaning as well as icons. Check that the chosen supports work for participants."
+        }
+      ],
+      "reviewNote": "Complete facilitation review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
+    },
+    {
+      "target": "resource.pn-self-check",
+      "kind": "resource",
+      "route": "/resources/pn-self-check",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Access: language and disability/communication access considered for this specific work, not in general.",
+          "after": "Access: identify the language and disability-related communication needs relevant to this work, the supports arranged, how their effectiveness will be checked and any unresolved requests requiring follow-up."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Open questions: note what you still do not know and where you will take it next: Resources, a partner, the person responsible for the policy, or a consultation.",
+          "after": "Open questions: record what remains uncertain, who can help resolve it and when follow-up is due. Use the appropriate reporting or urgent-response route immediately when required; a learning resource or routine consultation must not delay it."
+        }
+      ],
+      "reviewNote": "Complete facilitation review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
     }
   ]
 }
