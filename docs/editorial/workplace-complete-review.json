@@ -5,7 +5,7 @@
   "countsAsCompleteCourseReview": true,
   "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, six flashcards, full job aid and seven source notes. Recorded media are outside this acceptance.",
   "method": "Read the complete final canonical spec and generated overview/job aid, checked reporting and bystander qualifications against primary sources, compared assessment answers with the pre-pass spec reconstructed from exact field history, and verified all serialized lesson readings against the current pack.",
-  "sourcePackSha256": "0b1a31e9bc5838d586e82483833d458cca02f87005128bbca0042bda2832ab67",
+  "sourcePackSha256": "1fea0fa6d06879b23f289931531f7233ecbf66e689c4513e56e3b427b73311a7",
   "specSha256": "e2a2292c067716558dd34c36a1e4234a427dc703e9d761c9a9e202b4d7ce5540",
   "findings": [
     "Policy concerns can be raised without first proving unlawful harassment.",
@@ -104,7 +104,7 @@
     },
     {
       "slug": "gc-respectful-workplace--what-harassment-and-a-respectful-workplace-mean",
-      "readingSha256": "cdd7387739d56cbf12fccc0986673e5edce0969d3aa89529dfed3605e730456b"
+      "readingSha256": "8ced6eb22a90dd171c0cb66ca2880be7f8ef608c52ad16931ac21df52440c401"
     },
     {
       "slug": "gc-respectful-workplace--bystander-action-the-five-ds-at-work",
@@ -112,12 +112,13 @@
     },
     {
       "slug": "gc-respectful-workplace--psychological-safety-as-team-practices",
-      "readingSha256": "dd35ad684b578de3a687b38b39e495e43b42d765acefefbf76d2457c3a20da48"
+      "readingSha256": "aaca7c2100386cf300b2a61d7743973330485698d318d239dec6375638340fa2"
     },
     {
       "slug": "gc-respectful-workplace--reporting-routes-route-do-not-investigate",
       "readingSha256": "4b20caa9179210d07adc9f29fe26b7c162b53158710c542e4ed36c45c809e96e"
     }
   ],
-  "liveVerification": "pending final deployment"
+  "liveVerification": "pending final deployment",
+  "publicationCorrection": "Re-exported from the canonical source directory to include final key-point, feedback and bystander-card edits in the agency reading; verified complete lesson serialization again."
 }

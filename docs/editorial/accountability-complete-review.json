@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-accountability-public-service",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, full job aid and seven source notes. Recorded media are outside this acceptance.",
+  "method": "Read the complete final canonical spec and generated overview/job aid, checked reporting and bystander qualifications against primary sources, compared assessment answers with the pre-pass spec reconstructed from exact field history, and verified all serialized lesson readings against the current pack.",
+  "sourcePackSha256": "f2c006f61d6e857d85777bdda38357ccb00006142e55eafbeced5c6373c2e758",
+  "specSha256": "688942de9136dfd6519eedcae3683cdae260c78f9702e7bec376b8e49d6a3045",
+  "findings": [
+    "Answerability does not authorize disclosing private records.",
+    "Management retains responsibilities within authorized formal processes.",
+    "A status update does not fulfill the underlying commitment.",
+    "Silence and a delayed response do not establish motive or experience.",
+    "Program illustrations of the continuum do not assess individuals.",
+    "Full-text research verification removed an unsupported disability-research attribution.",
+    "Shared status lists and authorized personnel records have different purposes."
+  ],
+  "diagnostics": [
+    {
+      "title": "Who you answer to in public service",
+      "teaching": {
+        "words": 412,
+        "sents": 26,
+        "asl": 15.846153846153847,
+        "fk": 10.352135922330099,
+        "fog": 12.843315907393578,
+        "smog": 12.299655913859898,
+        "poly": 16.262135922330096,
+        "long": 28.398058252427184,
+        "short": 26.923076923076923,
+        "ease": 49.06668782673637
+      }
+    },
+    {
+      "title": "Making it easy to be told you are wrong",
+      "teaching": {
+        "words": 432,
+        "sents": 25,
+        "asl": 17.28,
+        "fk": 11.826514814814818,
+        "fog": 14.597185185185186,
+        "smog": 13.538219098175407,
+        "poly": 19.212962962962962,
+        "long": 32.407407407407405,
+        "short": 12,
+        "ease": 41.04996666666668
+      }
+    },
+    {
+      "title": "Owning a mistake without defending it",
+      "teaching": {
+        "words": 429,
+        "sents": 25,
+        "asl": 17.16,
+        "fk": 8.733635431235431,
+        "fog": 11.059804195804197,
+        "smog": 10.793553405168563,
+        "poly": 10.48951048951049,
+        "long": 24.475524475524477,
+        "short": 4,
+        "ease": 63.010606993007016
+      }
+    },
+    {
+      "title": "Following through and knowing what belongs elsewhere",
+      "teaching": {
+        "words": 385,
+        "sents": 21,
+        "asl": 18.333333333333332,
+        "fk": 9.336623376623375,
+        "fog": 11.593073593073592,
+        "smog": 11.111384760643409,
+        "poly": 10.64935064935065,
+        "long": 22.337662337662337,
+        "short": 0,
+        "ease": 60.77731601731604
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching averages 15.8–18.3 words per sentence. Flesch–Kincaid estimates range from 8.7–11.8 and Fog from 11.1–14.6. The first lesson retains short mapping instructions and transition sentences; the error-repair and follow-through lessons use familiar language. Reviewed paragraph flow directly and retained clarity rather than increasing complexity to reach a grade target.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "knowledgeCheckFeedbackQualified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-accountability-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mmb-stat/enterprise-talent-development/career-development/Enterprise-Leader-Competency-Definition-Guide.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/43A.38",
+    "https://www.deloitte.com/content/dam/insights/articles/2024/six-signature-traits-of-inclusive-leadership/dup-3046-inclusive-leader-vfinal.pdf",
+    "https://psnet.ahrq.gov/perspective/annual-perspective-psychological-safety-healthcare-staff",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC13006558/",
+    "https://www.idiinventory.com/idc",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13006558/fullTextXML"
+  ],
+  "readings": [
+    {
+      "slug": "gc-accountability-public-service",
+      "readingSha256": "ccac91521971b2523b629b3c72fe106abe4b25b7154af7f27ef39c8ba71ebbae"
+    },
+    {
+      "slug": "gc-accountability-public-service--who-you-answer-to-in-public-service",
+      "readingSha256": "e663eaa87cfca3e00d4d00f2ebdf6821b5be5394d217f01eb12acbb1c71959a6"
+    },
+    {
+      "slug": "gc-accountability-public-service--making-it-easy-to-be-told-you-are-wrong",
+      "readingSha256": "e6be166f4c9f3e7e51058e704b09117b9f802b0488546b0dfa6df6f9e01fafd7"
+    },
+    {
+      "slug": "gc-accountability-public-service--owning-a-mistake-without-defending-it",
+      "readingSha256": "4024de12fd250600f20ef9ef21bdc051c916b6538ed8a627076183f9b0c62345"
+    },
+    {
+      "slug": "gc-accountability-public-service--following-through-and-knowing-what-belongs-elsewhe",
+      "readingSha256": "0ae8d7b0e14269dcd4718297f6fdec2e79622e3e152f84ab773bfc88225db6f7"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
