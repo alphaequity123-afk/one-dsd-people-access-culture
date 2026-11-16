@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-equity-committee-roles",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eight source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "821506ac5a291c0273a1588c9e5d45ab1f0c800df8c59a6b95f3bb5c24d575ee",
+  "specSha256": "f88a923ae8d5ea56aa007ac300aee9dff2253331062b8e22ae3c1f166821d8e1",
+  "findings": [
+    "Charters record approved authority and work arrangements; they do not grant investigative, compensation or staffing authority.",
+    "Formal reporting and immediate protection duties continue outside committee meetings; the first scenario explicitly establishes prior reporting.",
+    "Committee work needs approved capacity and coverage; postponing or reducing scope can be appropriate when resources are unavailable.",
+    "The minority-tax discussion comes from academic medicine and does not establish a local pattern or individual experience.",
+    "ERG, committee and labor-management functions remain distinct.",
+    "Activity inventories suggest questions for confirmation rather than proving duplication or authorizing takeover.",
+    "Community engagement does not replace formal consultation with affected Tribal governments.",
+    "Outcome measures can worsen and do not establish causation; data use requires authority and appropriate privacy controls.",
+    "Sponsors may also supervise; program reporting suggestions are distinguished from official requirements."
+  ],
+  "diagnostics": [
+    {
+      "title": "Purpose, charter and decision rights",
+      "teaching": {
+        "words": 331,
+        "sents": 21,
+        "asl": 15.761904761904763,
+        "fk": 12.76681053085887,
+        "fog": 15.851589699323839,
+        "smog": 14.20933149577661,
+        "poly": 23.867069486404834,
+        "long": 37.46223564954683,
+        "short": 9.523809523809524,
+        "ease": 31.604642497482388
+      }
+    },
+    {
+      "title": "Membership without extracting unpaid labor",
+      "teaching": {
+        "words": 384,
+        "sents": 26,
+        "asl": 14.76923076923077,
+        "fk": 11.649687500000002,
+        "fog": 15.699358974358976,
+        "smog": 13.991409890343128,
+        "poly": 24.479166666666668,
+        "long": 39.322916666666664,
+        "short": 3.8461538461538463,
+        "ease": 37.845793269230796
+      }
+    },
+    {
+      "title": "Activity inventory and action plans",
+      "teaching": {
+        "words": 364,
+        "sents": 23,
+        "asl": 15.826086956521738,
+        "fk": 13.663492594362161,
+        "fog": 17.649116101290016,
+        "smog": 15.218357556230224,
+        "poly": 28.296703296703296,
+        "long": 40.934065934065934,
+        "short": 0,
+        "ease": 25.290203057811766
+      }
+    },
+    {
+      "title": "Accountability measures and executive sponsors",
+      "teaching": {
+        "words": 367,
+        "sents": 23,
+        "asl": 15.956521739130435,
+        "fk": 12.464651107688663,
+        "fog": 13.57606918611539,
+        "smog": 12.806372837179769,
+        "poly": 17.983651226158038,
+        "long": 42.50681198910082,
+        "short": 0,
+        "ease": 34.11760454922407
+      }
+    }
+  ],
+  "diagnosticJudgment": "The final complete reading retains formal policy and consultation terms while simplifying the surrounding guidance. Flesch–Kincaid 11.6–13.7 and Fog 13.6–17.6 reflect necessary professional vocabulary; sentence averages 14.8–16.0 words and short-sentence shares 0–9.5 percent. The advanced planning lesson preserves its substantive distinctions rather than removing them to meet a score.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioReportingAndCapacityContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-committee-guidance-review.json",
+  "sources": [
+    "https://www.lrl.mn.gov/archive/execorders/23-12.pdf",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://bmcmededuc.biomedcentral.com/articles/10.1186/s12909-015-0290-9",
+    "https://mn.gov/mmb/assets/Enterprise%20ERG%20Guidelines_tcm1059-595436.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-equity-committee-roles",
+      "readingSha256": "64c225f868c81013dc42fe890786e574f14da6350be64560ce6108a5e03848e3"
+    },
+    {
+      "slug": "gc-equity-committee-roles--purpose-charter-and-decision-rights",
+      "readingSha256": "b73c915ab284ffa6b3ad4f03bca376573742c223db1d664355196ac9dd24762e"
+    },
+    {
+      "slug": "gc-equity-committee-roles--membership-without-extracting-unpaid-labor",
+      "readingSha256": "9ec5f7e96ee6f14c5fdd5a8453494d1be0f6fc175b76ddca8c46a7bb967777a4"
+    },
+    {
+      "slug": "gc-equity-committee-roles--activity-inventory-and-action-plans",
+      "readingSha256": "025030b560e5b56d3008e194dd95e4e85ac9cf299f9e06d459117c8d73c364a3"
+    },
+    {
+      "slug": "gc-equity-committee-roles--accountability-measures-and-executive-sponsors",
+      "readingSha256": "53edc7f4ed1a36d3497fc098be2282b1f0b3c89cca58cc0e061b0e1cfcad63e2"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
