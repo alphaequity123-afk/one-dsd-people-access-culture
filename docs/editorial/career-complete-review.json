@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-career-pathways-succession",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and nine source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "1f8f986c01e0574286842d461cea9665867e0702343486e33328ce2730acdb34",
+  "specSha256": "28b1e55e7560590edcf7c1d82686214d6c50db800d5a73c616c93293cb373bb9",
+  "findings": [
+    "Removed unsupported claims about DSD staff reports and generalized advancement experience.",
+    "Classification follows statutory and delegated authority; HR identifies the correct process without replacing management responsibilities.",
+    "Learning-platform job families and class series do not guarantee promotion eligibility.",
+    "Development plans remain part of authorized performance management and do not guarantee assignments or promotion.",
+    "Rotation and sponsorship require interest, support, criteria, accessibility, workload and applicable assignment requirements.",
+    "No single set of criteria or rotation list eliminates bias or guarantees outcomes.",
+    "Not every acting arrangement is work out of class; the applicable procedure and approvals must be checked before commitment.",
+    "Individual concerns can require immediate authorized handling without proof of a wider pattern; private personnel data remains protected."
+  ],
+  "diagnostics": [
+    {
+      "title": "Making pathways visible",
+      "teaching": {
+        "words": 363,
+        "sents": 20,
+        "asl": 18.15,
+        "fk": 13.755717630853997,
+        "fog": 16.956969696969697,
+        "smog": 15.112257680678326,
+        "poly": 24.242424242424242,
+        "long": 36.91460055096419,
+        "short": 5,
+        "ease": 28.768121900826486
+      }
+    },
+    {
+      "title": "Fair development: assignments, conversations and sponsorship",
+      "teaching": {
+        "words": 411,
+        "sents": 22,
+        "asl": 18.681818181818183,
+        "fk": 13.831675514266756,
+        "fog": 17.983676177836767,
+        "smog": 15.786528217884907,
+        "poly": 26.277372262773724,
+        "long": 36.496350364963504,
+        "short": 13.636363636363637,
+        "ease": 29.170764764432647
+      }
+    },
+    {
+      "title": "Succession planning without fit bias",
+      "teaching": {
+        "words": 371,
+        "sents": 22,
+        "asl": 16.863636363636363,
+        "fk": 11.088165890713064,
+        "fog": 14.723891203136487,
+        "smog": 13.606401829973382,
+        "poly": 19.946091644204852,
+        "long": 30.18867924528302,
+        "short": 9.090909090909092,
+        "ease": 45.60196704239158
+      }
+    },
+    {
+      "title": "Acting assignments and knowing when to bring in HR",
+      "teaching": {
+        "words": 362,
+        "sents": 20,
+        "asl": 18.1,
+        "fk": 11.124801104972377,
+        "fog": 14.090828729281771,
+        "smog": 13.187427743715652,
+        "poly": 17.12707182320442,
+        "long": 28.7292817679558,
+        "short": 0,
+        "ease": 47.54140055248621
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 11.1–13.8 and Fog 14.1–18.0. Average sentences are 16.9–18.7 words with short shares 0–13.6 percent. Classification and development terminology raises the first two estimates; those terms are needed for the decisions taught. The fourth lesson was rewritten in plainer language while retaining the limits of AP 17.1 and personnel-data handling.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "fourthQuestionContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-career-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mmb/mad/resources/pd/",
+    "https://mn.gov/mmb/assets/17-1-workoutofclass_tcm1059-124229.pdf",
+    "https://mn.gov/mmb-stat/hr-toolbox/21-eelearningdevelopment.pdf",
+    "https://mn.gov/mmb/employee-relations/equal-opportunity/eo-19-15/retention/",
+    "https://www.opm.gov/agency-services/talent-management-services/strategic-consulting/workforce-and-succession-planning/succession-planning/",
+    "https://journals.sagepub.com/doi/epdf/10.1177/0003122412463213",
+    "https://www.revisor.mn.gov/statutes/cite/43A.07",
+    "https://www.revisor.mn.gov/statutes/cite/13.43",
+    "https://mn.gov/mmb/employee-relations/career-paths-and-families/classification-specifications/spec-s.jsp"
+  ],
+  "readings": [
+    {
+      "slug": "gc-career-pathways-succession",
+      "readingSha256": "062d2cbfeddc2d288ff0939d451e6821164d93548ef5da2060e669a1d5a812b6"
+    },
+    {
+      "slug": "gc-career-pathways-succession--making-pathways-visible",
+      "readingSha256": "ca62bee5d26cd37f4d3203a8cfcda64ef016d2a39617a871e8e913ec240bd645"
+    },
+    {
+      "slug": "gc-career-pathways-succession--fair-development-assignments-conversations-and-spo",
+      "readingSha256": "3afc34543f17ba15e996b230a32918fbdcdc0f2f6253532f2b599399e5255f54"
+    },
+    {
+      "slug": "gc-career-pathways-succession--succession-planning-without-fit-bias",
+      "readingSha256": "c62b3afb8dc538226c795c747f07cf81fb1ac80c416a1cc1dcb726fd56db0401"
+    },
+    {
+      "slug": "gc-career-pathways-succession--acting-assignments-and-knowing-when-to-bring-in-hr",
+      "readingSha256": "e8404484ff41dae842994052b9de1319ce321ca60e58fb857cf25b6dac26b585"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
