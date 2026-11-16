@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-mental-health-psychiatric-disability",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, six flashcards, full job aid, thirteen source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise disability rights, evidence, crisis response, eligibility and privacy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "4466974c8488edc6e38b895a0c2a6ccf32f24afe054acb489cadc6427875eda5",
+  "specSha256": "8e83116bccb3351a6a8f87ac021703f2dbbc2f15106f6cebfd1ce40dc2c35065",
+  "findings": [
+    "Disability protection and service eligibility are distinct; CADI requires choice and all criteria.",
+    "The Supreme Court decision, June 2026 executive interpretation and draft state plan are distinguished.",
+    "Group research does not diagnose an individual; evidence quality and underdiagnosis limits are explicit.",
+    "Removed unsupported comparisons about crisis response speed or safety and preserved emergency duties.",
+    "Specified reporting events do not imply that every crisis call proves poor care.",
+    "Coordination requires valid consent or another applicable legal basis and does not grant unrestricted record access.",
+    "Fictional exercises replace requests to copy or rewrite private case files."
+  ],
+  "diagnostics": [
+    {
+      "title": "Psychiatric disability is disability",
+      "teaching": {
+        "words": 393,
+        "sents": 26,
+        "asl": 15.115384615384615,
+        "fk": 11.08260814249364,
+        "fog": 13.069054609512627,
+        "smog": 12.435523402062767,
+        "poly": 17.557251908396946,
+        "long": 32.06106870229008,
+        "short": 7.6923076923076925,
+        "ease": 42.52799911920141
+      }
+    },
+    {
+      "title": "Recovery, stigma and diagnostic overshadowing",
+      "teaching": {
+        "words": 402,
+        "sents": 21,
+        "asl": 19.142857142857142,
+        "fk": 11.982679459843641,
+        "fog": 14.920824449182659,
+        "smog": 13.780255336394262,
+        "poly": 18.1592039800995,
+        "long": 32.58706467661692,
+        "short": 4.761904761904762,
+        "ease": 43.248283582089584
+      }
+    },
+    {
+      "title": "Crisis resources and crisis planning in Minnesota",
+      "teaching": {
+        "words": 416,
+        "sents": 22,
+        "asl": 18.90909090909091,
+        "fk": 11.980699300699303,
+        "fog": 13.813636363636363,
+        "smog": 12.948620331739964,
+        "poly": 15.625,
+        "long": 30.528846153846153,
+        "short": 0,
+        "ease": 42.84611888111891
+      }
+    },
+    {
+      "title": "Working across mental health and disability services",
+      "teaching": {
+        "words": 365,
+        "sents": 22,
+        "asl": 16.59090909090909,
+        "fk": 13.090317559153174,
+        "fog": 15.403486924034869,
+        "smog": 14.02287970970757,
+        "poly": 21.91780821917808,
+        "long": 35.342465753424655,
+        "short": 18.181818181818183,
+        "ease": 30.761802615193034
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 11.1–13.1; retain necessary legal, clinical and program terms. The eligibility lesson remains somewhat denser because it names the actual programs and requirements; diagnostics do not substitute for review.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lesson 4 recommended choice distinguishes valid consent from another legal basis for proposed information sharing.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/dsd-mental-health-psychiatric-disability.webp",
+    "sha256": "08fcdc45c4f95b0d1a631479c9c516951e88a164e1b19662caff3ecdc047709b",
+    "alt": "Two women shake hands in a room with armchairs, plants and large windows.",
+    "method": "Direct local image inspection: two women shaking hands in a room with armchairs, plants and large windows."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-mental-health-guidance-review.json",
+  "sources": [
+    "https://mn.gov/dhs/mental-health/crisis-response/",
+    "https://mn.gov/olmstead/",
+    "https://www.ada.gov/resources/olmstead-mandate-statement/",
+    "https://www.samhsa.gov/substance-use/recovery/about",
+    "https://doi.org/10.1192/bjo.2026.11036",
+    "https://www.dhs.state.mn.us/id_000855/",
+    "https://www.dhs.state.mn.us/id_058153/",
+    "https://uscode.house.gov/us/usc/t42/s12102/",
+    "https://www.govinfo.gov/content/pkg/USREPORTS-527/pdf/USREPORTS-527-581.pdf",
+    "https://www.justice.gov/olc/opinion/application-rehabilitation-act-and-americans-disabilities-act-state",
+    "https://www.revisor.mn.gov/rules/9544.0110/",
+    "https://www.revisor.mn.gov/statutes/cite/144.293",
+    "https://www.revisor.mn.gov/statutes/cite/13.05"
+  ],
+  "readings": [
+    {
+      "slug": "dsd-mental-health-psychiatric-disability",
+      "readingSha256": "5ffa8182543e35277a9c75230c38347c272198aa8d7c43d93ddabc99af683159"
+    },
+    {
+      "slug": "dsd-mental-health-psychiatric-disability--psychiatric-disability-is-disability",
+      "readingSha256": "1163366c088ed6d3c34bf9106a0b2089951e32a20154ae024d495ce8b1fce9d3"
+    },
+    {
+      "slug": "dsd-mental-health-psychiatric-disability--recovery-stigma-and-diagnostic-overshadowing",
+      "readingSha256": "73e4ec3a7c6c93628b16b5763578978340f162e5d8a84eabd61b77a11e09468a"
+    },
+    {
+      "slug": "dsd-mental-health-psychiatric-disability--crisis-resources-and-crisis-planning-in-minnesota",
+      "readingSha256": "91ae49461fcea657ccd17a5f4f7c2e955a52c025f704d92075e9eee1783a28f7"
+    },
+    {
+      "slug": "dsd-mental-health-psychiatric-disability--working-across-mental-health-and-disability-servic",
+      "readingSha256": "54f299893d4eec3acfabe78f26138bcccdb36c95f6565c71b1f103dd6af56624"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
