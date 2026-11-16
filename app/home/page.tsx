@@ -21,7 +21,7 @@ export default async function HomePage() {
     <section className="home-hero" aria-labelledby="home-title">
       <div className="pilot-wrap home-title">
         <h1 id="home-title">People, Access and Culture</h1>
-        <p>Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.</p>
+        <p>Learning, guidance and tools for equity in the work and workplace of the Minnesota Department of Human Services.</p>
         <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site</Link></p>
       </div>
       <HeroMotion src="/videos/one-dsd-hero.mp4">{heroImage}</HeroMotion>

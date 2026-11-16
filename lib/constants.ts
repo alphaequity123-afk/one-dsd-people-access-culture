@@ -5,14 +5,14 @@
  */
 export const PROGRAM = {
   /** Full program name (Home headline). */
-  fullName: "One DSD People, Access and Culture",
+  fullName: "One DHS People, Access and Culture",
   /** Staff-facing name used in navigation, answers, and support routes. */
-  staffBrand: "One DSD People, Access and Culture",
+  staffBrand: "One DHS People, Access and Culture",
   /** Short descriptor used in copy. */
-  descriptor: "an independently managed resource for Disability Services Division staff",
+  descriptor: "a resource for staff across the Minnesota Department of Human Services",
   /** Ownership and system boundary shown wherever the program identity appears. */
   ownership:
-    "This independently managed Disability Services Division program connects professional equity guidance, learning and practical tools with inherited One DHS resources. It is not connected to DHS information systems, does not hold DHS case or personnel records, and does not replace decisions made by responsible department offices.",
+    "This program connects professional equity guidance, learning and practical tools for staff across the department, with the Disability Services Division as its fullest example. It is not connected to DHS information systems, does not hold DHS case or personnel records, and does not replace decisions made by the person or area responsible.",
   /** Hero line (harvested pattern from One DHS live). */
   heroLede:
     "Practical support for workplace culture and equitable workforce, policy, program, and service decisions.",

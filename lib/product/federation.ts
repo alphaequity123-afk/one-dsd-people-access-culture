@@ -19,8 +19,8 @@ export type ProductContextDefinition = Readonly<{
   inheritsFrom: ProductContextId | null;
 }>;
 
-/** This separately hosted division program always inherits the agency resources in its DSD context. */
-export const DEFAULT_PRODUCT_CONTEXT: ProductContextId = "one_dsd";
+/** The unified agency-wide app opens department-wide; the Disability Services Division is an area within it. */
+export const DEFAULT_PRODUCT_CONTEXT: ProductContextId = "one_dhs";
 
 export const PRODUCT_CONTEXTS = [
   {
@@ -35,7 +35,7 @@ export const PRODUCT_CONTEXTS = [
     id: "one_dsd",
     label: "One DSD — Disability Services Division",
     shortLabel: "One DSD",
-    description: "A standalone Disability Services Division program with division examples, scenarios and services, and inherited agency-wide learning and practical tools.",
+    description: "The Disability Services Division area: the division's own examples, scenarios and services alongside everything department-wide.",
     relationship: "modular_overlay",
     inheritsFrom: "one_dhs",
   },
@@ -62,9 +62,10 @@ export function parseProductContextView(value: unknown): ProductContextId | unde
   return undefined;
 }
 
-export function resolveProductContext(_preference?: unknown): ProductContextId {
-  // Legacy view URLs remain readable, but cannot change this standalone product into One DHS.
-  return DEFAULT_PRODUCT_CONTEXT;
+export function resolveProductContext(preference?: unknown): ProductContextId {
+  // One application for the whole department: a shared link or the remembered choice can open the DSD area
+  // (`?view=dsd`); everything else opens department-wide.
+  return parseProductContextView(preference) ?? DEFAULT_PRODUCT_CONTEXT;
 }
 
 export function getProductContext(context: ProductContextId): ProductContextDefinition {

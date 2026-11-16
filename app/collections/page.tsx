@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Explore collections by theme" };
 export default function ThemeCollectionsPage() {
   return <div className={base.page}><div className={base.content}>
     <header className={base.intro}>
-      <p className={base.eyebrow}>One DSD People, Access and Culture</p>
+      <p className={base.eyebrow}>One DHS People, Access and Culture</p>
       <h1>Explore by theme</h1>
       <p className={base.lede}>Choose a subject to find related learning, practical resources, reading, research and listening together.</p>
       <p>Topics overlap. A resource may appear under more than one theme when it helps with different kinds of work; each link opens the same resource.</p>

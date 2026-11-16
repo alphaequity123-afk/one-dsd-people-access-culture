@@ -263,8 +263,8 @@ export const PageBlockPayloadSchema = z.discriminatedUnion("blockType", [
 export type PageBlockPayload = z.infer<typeof PageBlockPayloadSchema>;
 
 export const STATIC_HOME_COPY: HomePageCopy = HomePageCopySchema.parse({
-  heroKicker: "One DSD People, Access and Culture",
-  headlineLine1: "One DSD People,",
+  heroKicker: "One DHS People, Access and Culture",
+  headlineLine1: "One DHS People,",
   headlineLine2: "Access and Culture",
   headlineLine3: "",
   heroLede: PROGRAM.heroLede,
@@ -294,8 +294,8 @@ export const STATIC_HOME_COPY: HomePageCopy = HomePageCopySchema.parse({
   resourcesDescription: "Search reviewed checklists, job aids, question banks, learning materials, and source notes. Each item shows where it came from, who reviewed it, and its limits.",
   supportLabel: "Support",
   supportHref: "/support",
-  supportAvailableDescription: "Find the responsible DHS person or office. Eligible DSD work can also request direct consultation.",
-  supportPreviewDescription: "Find the responsible DHS person or office, and review how direct consultation works for eligible DSD work.",
+  supportAvailableDescription: "Find the person or area responsible at DHS. Eligible DSD work can also request direct consultation.",
+  supportPreviewDescription: "Find the person or area responsible at DHS, and review how direct consultation works for eligible DSD work.",
   goalsKicker: "Keep moving",
   goalsTitle: "Explore, learn, practice, and see One DSD",
   foundationLabel: "Areas of work: enter through a decision or responsibility",
@@ -315,7 +315,7 @@ export const STATIC_HOME_COPY: HomePageCopy = HomePageCopySchema.parse({
 });
 
 export const STATIC_FOOTER_COPY: FooterCopy = FooterCopySchema.parse({
-  identityKicker: "One DSD People, Access and Culture",
+  identityKicker: "One DHS People, Access and Culture",
   identityText: "A resource for DHS staff, run by the program. It is not connected to DHS information technology, case, or personnel systems. Its guidance supports everyday work and does not replace policy, legal advice, formal processes, or decisions made by the people or areas responsible in DHS. Authority labels show what each item can and cannot establish.",
   helpHeading: "Find your next step",
   askLabel: "Ask a question",

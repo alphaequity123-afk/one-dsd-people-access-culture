@@ -81,7 +81,7 @@ function Header({ pathname, culturalIntelligenceAvailable = false, ask }: Header
   }}>
     {agencyZoneEnabled ? <nav className="dsd-shell dsd-breadcrumb" aria-label="Agency location"><a href={agencyHref("/")}>One DHS People, Access and Culture</a><span aria-hidden="true"> · </span><a href={agencyHref("/areas/adsa")}>Aging and Disability Services</a><span aria-hidden="true"> · </span><a href={agencyHref("/areas/dsd")}>Disability Services Division</a></nav> : null}
     <div className="dsd-shell dsd-brand-row">
-      <Link href="/home" className="dsd-brand" aria-label="One DSD People, Access and Culture home">
+      <Link href="/home" className="dsd-brand" aria-label="One DHS People, Access and Culture home">
         <Image src="/images/dhs-logo.png" width={319} height={68} alt="Minnesota Department of Human Services" priority />
         <span><strong>One DSD</strong><span>People, Access and Culture</span></span>
       </Link>
