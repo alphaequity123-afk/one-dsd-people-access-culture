@@ -40,7 +40,9 @@
     "verify:ci": "npm run verify:environment && npm run verify:sources && npm run typecheck && npm run lint && npm run test && npm run build",
     "build:clas-collection": "node scripts/build-clas-collection.mjs",
     "prebuild": "node scripts/prepare-github-assets.mjs",
-    "verify:language": "node scripts/editorial/check-reviewed-language.cjs"
+    "verify:language": "node scripts/editorial/check-reviewed-language.cjs",
+    "evals": "node scripts/evals/run.ts",
+    "evals:live": "node scripts/evals/run.ts --cadence live"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.123.0",
