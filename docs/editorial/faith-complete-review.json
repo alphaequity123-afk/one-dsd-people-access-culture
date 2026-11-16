@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-faith-in-minnesota",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all five lessons and 20 objectives, five practice cases with 15 choices and feedback, five knowledge checks, reflections and actions, five flashcards, full job aid and twelve source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all five serialized lesson readings.",
+  "sourcePackSha256": "6acc9882f405fc8434be2f2551208233d592b601f90cbbfff43044ac8d0a2c0d",
+  "specSha256": "b8921ffcc4e9614fed5925a006aebf0a80ccdbce9949ad88f5612ee5a54fcf7f",
+  "findings": [
+    "Survey data are dated and do not predict personal observance.",
+    "Voluntary private prayer differs from agency-organized prayer.",
+    "Dietary preparation and certification may matter beyond vegetarian ingredients.",
+    "Religious information needs privacy and relevant documentation.",
+    "Record corrections use authorized procedures.",
+    "Family or clergy involvement requires consent and any applicable authority.",
+    "Ceremony is not a recipe or agency team-building exercise.",
+    "Tribal consultation remains government-to-government."
+  ],
+  "diagnostics": [
+    {
+      "title": "Religion in Minnesota public service and why it matters",
+      "teaching": {
+        "words": 428,
+        "sents": 22,
+        "asl": 19.454545454545453,
+        "fk": 10.88278674596432,
+        "fog": 14.230416312659305,
+        "smog": 13.246248875233395,
+        "poly": 16.121495327102803,
+        "long": 24.766355140186917,
+        "short": 13.636363636363637,
+        "ease": 51.689103653356
+      }
+    },
+    {
+      "title": "Christian traditions: Lutheran, Catholic, Black Church, Evangelical and Pentecostal",
+      "teaching": {
+        "words": 418,
+        "sents": 22,
+        "asl": 19,
+        "fk": 13.556842105263158,
+        "fog": 17.169377990430622,
+        "smog": 15.308715981407026,
+        "poly": 23.923444976076556,
+        "long": 32.535885167464116,
+        "short": 4.545454545454546,
+        "ease": 31.70789473684212
+      }
+    },
+    {
+      "title": "Muslim and Jewish life in Minnesota",
+      "teaching": {
+        "words": 439,
+        "sents": 23,
+        "asl": 19.08695652173913,
+        "fk": 13.948673863523819,
+        "fog": 16.655283747647815,
+        "smog": 14.981290276393054,
+        "poly": 22.55125284738041,
+        "long": 32.34624145785877,
+        "short": 8.695652173913043,
+        "ease": 29.05353867485391
+      }
+    },
+    {
+      "title": "Traditional healing and ceremony, and people who are secular or have left religion",
+      "teaching": {
+        "words": 432,
+        "sents": 26,
+        "asl": 16.615384615384617,
+        "fk": 12.823796296296301,
+        "fog": 16.275783475783477,
+        "smog": 14.554592549557764,
+        "poly": 24.074074074074073,
+        "long": 32.407407407407405,
+        "short": 3.8461538461538463,
+        "ease": 32.716217948718
+      }
+    },
+    {
+      "title": "Practice: calendars, food, accommodation and respectful questions",
+      "teaching": {
+        "words": 533,
+        "sents": 32,
+        "asl": 16.65625,
+        "fk": 12.048526618198874,
+        "fog": 14.692518761726081,
+        "smog": 13.575384162921281,
+        "poly": 20.075046904315197,
+        "long": 31.33208255159475,
+        "short": 34.375,
+        "ease": 38.347292741557226
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch-Kincaid ranges from 10.9 to 13.95. Denominational and statutory names increase the estimates; necessary distinctions remain. The final lesson retains short everyday examples and practical questions rather than adding words solely to change its sentence distribution.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioAccessAndDecisionAuthorityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-faith-guidance-review.json",
+  "sources": [
+    "https://www.pewresearch.org/religious-landscape-study/state/minnesota/",
+    "https://www.eeoc.gov/religious-discrimination",
+    "https://mn.gov/mdhr/employers/reasonable-accommodations/",
+    "https://www.law.cornell.edu/uscode/text/42/1996",
+    "https://mn.gov/dhs/about-us/contact-us/county-and-tribal-nation-offices/",
+    "https://www.minndakjcrc.org/",
+    "https://www.cairmn.com/",
+    "https://www.revisor.mn.gov/statutes/cite/15A.22",
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://www.eeoc.gov/sites/default/files/2024-11/20241031_ReligiousAccommodationFactSheet_A.pdf",
+    "https://www.lcms.org/what-we-believe/beliefs",
+    "https://www.mncatholic.org/about"
+  ],
+  "readings": [
+    {
+      "slug": "gc-faith-in-minnesota",
+      "readingSha256": "f86ee0a2a67fec8fc96cf50d9ff4e2280399295921a5b544f15b27953dcd9f38"
+    },
+    {
+      "slug": "gc-faith-in-minnesota--religion-in-minnesota-public-service-and-why-it-ma",
+      "readingSha256": "0f57906d0b922562263aa52e15072e6b16e8d274c382d5fa90e841bfd12b095a"
+    },
+    {
+      "slug": "gc-faith-in-minnesota--christian-traditions-lutheran-catholic-black-churc",
+      "readingSha256": "aa2ae9598bc0350a3235de477acfb096b3455acb8facaa64eb5b3705accfbba2"
+    },
+    {
+      "slug": "gc-faith-in-minnesota--muslim-and-jewish-life-in-minnesota",
+      "readingSha256": "9f3d1b8049b0eab9efbc4be56dcc27b261eafe2828f893727caf6468c98bf93b"
+    },
+    {
+      "slug": "gc-faith-in-minnesota--traditional-healing-and-ceremony-and-people-who-ar",
+      "readingSha256": "582418a1ef6e2a4783f1f0702cfde8ec2c9dd901a9d5e88febc34eda56c2b327"
+    },
+    {
+      "slug": "gc-faith-in-minnesota--practice-calendars-food-accommodation-and-respectf",
+      "readingSha256": "6db576f7253a5998c98ba02c6d1db08dc11d1da454311f3bad6a4e9b34abc290"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
