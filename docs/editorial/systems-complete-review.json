@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-systems-thinking",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eleven source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "f9dbb319139b9aacc49ab94782aeae46f1a55a85898bd777995401837b2dd1c2",
+  "specSha256": "b673c0163996c992e1baaac8bc2f4c12551c97f74bc91f643803a973eead5a6c",
+  "findings": [
+    "Recurrence prompts investigation rather than proving one structural cause or excusing individual actions.",
+    "Patterns and workshops do not precede required reports or urgent protection.",
+    "Intercultural examples cannot assess a person or team from one statement or routine.",
+    "Journey mapping needs willing participants, authorized data handling and acknowledgment of limited representation.",
+    "Five Whys may identify several interacting causes and does not require exactly five questions.",
+    "Group-based judgments are not evidence about individuals; process analysis and conduct routes can proceed together.",
+    "Small trials require authority, access safeguards and stop conditions; pausing an unsafe trial is not a wrong response.",
+    "An improved average may reflect changed participation and does not prove most people benefited.",
+    "Optional tools do not waive agency equity analysis, accessibility or data duties."
+  ],
+  "diagnostics": [
+    {
+      "title": "Why problems keep coming back",
+      "teaching": {
+        "words": 392,
+        "sents": 26,
+        "asl": 15.076923076923077,
+        "fk": 8.893061224489795,
+        "fog": 11.336891679748824,
+        "smog": 11.20814326018867,
+        "poly": 13.26530612244898,
+        "long": 28.06122448979592,
+        "short": 11.538461538461538,
+        "ease": 58.15743328100473
+      }
+    },
+    {
+      "title": "Mapping a service path from the person's side",
+      "teaching": {
+        "words": 421,
+        "sents": 29,
+        "asl": 14.517241379310345,
+        "fk": 8.037994921779017,
+        "fog": 10.557490375952169,
+        "smog": 10.630303351738835,
+        "poly": 11.876484560570072,
+        "long": 19.477434679334916,
+        "short": 10.344827586206897,
+        "ease": 63.290973871733996
+      }
+    },
+    {
+      "title": "Finding root causes without blaming people",
+      "teaching": {
+        "words": 536,
+        "sents": 32,
+        "asl": 16.75,
+        "fk": 9.611156716417913,
+        "fog": 12.147761194029853,
+        "smog": 11.757521984204296,
+        "poly": 13.619402985074627,
+        "long": 30.41044776119403,
+        "short": 3.125,
+        "ease": 55.98897388059706
+      }
+    },
+    {
+      "title": "Choosing where to act and learning from what happens",
+      "teaching": {
+        "words": 502,
+        "sents": 31,
+        "asl": 16.193548387096776,
+        "fk": 9.224687058218741,
+        "fog": 11.816064773165404,
+        "smog": 11.527595429770201,
+        "poly": 13.346613545816734,
+        "long": 26.49402390438247,
+        "short": 9.67741935483871,
+        "ease": 57.76866790900914
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 8.0–9.6 and Fog 10.6–12.1; average sentences 14.5–16.8 words and short shares 3.1–11.5 percent. These introductory explanations use concrete questions and familiar words. Full review retained substantive professional distinctions about causal evidence, multiple causes, reporting, authority, safety and data limitations rather than inflating vocabulary to reach a score.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "questionsOneThreeFourContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-systems-guidance-review.json",
+  "sources": [
+    "https://www.gov.uk/government/publications/systems-thinking-for-civil-servants/toolkit",
+    "https://digital.gov/guides/research-collaboration/user-needs/journeys",
+    "https://www.cms.gov/medicare/provider-enrollment-and-certification/qapi/downloads/fivewhys.pdf",
+    "https://www.cms.gov/medicare/provider-enrollment-and-certification/qapi/downloads/pdsacycledebedits.pdf",
+    "https://assets.aecf.org/m/resourcedoc/aecf-introductiontotheresultscountpath-2021.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://www.racialequityalliance.org/viewdocument/racial-equity-toolkit-an-opportuni-2",
+    "https://www.nationalequityproject.org/s/NEP-LFE-Framework-2024.pdf",
+    "https://www.idiinventory.com/resources",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.05"
+  ],
+  "readings": [
+    {
+      "slug": "gc-systems-thinking",
+      "readingSha256": "cb79e32ae7d6d2881c33b7dc9e42bceed5cce02d4d7b706b458551eebfa115c2"
+    },
+    {
+      "slug": "gc-systems-thinking--why-problems-keep-coming-back",
+      "readingSha256": "9aa65a607213512b613e2e0f8826a8e5b50d1b449725d37eb93be30cac015b5e"
+    },
+    {
+      "slug": "gc-systems-thinking--mapping-a-service-path-from-the-person-s-side",
+      "readingSha256": "04f48d005393528fec02545412cc540f1a7d4fb49bf9d136e257473c8080fe4d"
+    },
+    {
+      "slug": "gc-systems-thinking--finding-root-causes-without-blaming-people",
+      "readingSha256": "25a3aca0b0c7ea40cfca2601bf8e6e9097527f775d3859434e3c303a1cd9f94d"
+    },
+    {
+      "slug": "gc-systems-thinking--choosing-where-to-act-and-learning-from-what-happe",
+      "readingSha256": "c4f585bab4f669a87b88acd8ae3fb21bb6b73ce17a3e0009928809a2904421e4"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}

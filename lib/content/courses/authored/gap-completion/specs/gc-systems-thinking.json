@@ -1,248 +1,258 @@
 {
-  "id": "gc-systems-thinking",
-  "subtitle": "Practice seeing a service as a system. You will look below recurring events, map the path from the person's side, find where people fall out and which people, test root causes and try small changes with the people affected.",
-  "audience": "For program leads, managers and anyone who wants to understand why a problem keeps coming back. Useful when you guide a program, policy or project, and when you back supervisors who keep fixing the same issue.",
-  "lessons": [
-    {
-      "title": "Why problems keep coming back",
-      "objectives": [
-        "Explain why a problem that keeps returning is usually produced by the system rather than by one person.",
-        "Distinguish events, patterns, structures and assumptions in a recurring problem from your own work.",
-        "Identify an assumption about normal service use that may shape how a process works.",
-        "Describe which parts of a recurring problem you can act on and which belong to another area."
-      ],
-      "teaching": "A problem that keeps coming back is usually telling you something about the system. When the same complaint returns every quarter, the easy move is to find the person nearest to it and fix them: more coaching, another reminder, a firm email. Those fixes can help for a week. Then the problem returns, because the thing producing it never changed. A familiar saying, repeated in the Government Alliance on Race and Equity's Racial Equity Toolkit, holds that a system is perfectly designed to get the results it gets. The Government Office for Science in the United Kingdom makes a similar point. Its toolkit for civil servants warns that a narrow, short-term focus can lead to quick fixes that ultimately fail.\n\nThe iceberg model looks at four levels: events, patterns, structures and assumptions. The Annie E. Casey Foundation uses a version of it in its Results Count guide, adapted from the Waters Foundation. Events are what happened: a missed callback, a late plan. Patterns are what keeps happening over months. Structures shape the pattern, such as rules, schedules, forms, funding, staffing and the order of steps. Assumptions, which the guide calls mental models, sit at the bottom. They are the beliefs people hold about how the work should go and who it is for. Most fixes aim at events. Lasting change usually sits lower down.\n\nAssumptions are where your own cultural defaults live. Ask what you treat as the normal way to use a service, and where you learned it. A team working from a Minimization habit says, \"We treat everyone the same, so the process is fair.\" A team working from an Acceptance habit notices that the same step lands differently on people with different lives, languages and disabilities. A team working from an Adaptation habit changes the step, then checks with the people affected whether it now works. These describe habits of a team and a process. They are not labels for anyone.\n\nSeeing the system does not mean nobody is responsible. People still own their work, and concerns about conduct still go to Human Resources. The point is order: look at the pattern before you judge the person. Then ask the question at the center of this course. Where do people fall out, which people, and what keeps producing that result? You can name a pattern, gather the people who touch it and propose a change. Changing a policy or rule belongs to the responsible program area.",
-      "keyPoint": "When a problem keeps coming back, look below the event. Patterns, structures and assumptions produce results that coaching one person will not change. Look at the pattern before you judge the person.",
-      "example": "Practice case: Teodor manages a unit that answers calls from county workers about a human services program. For the third quarter in a row, callback times have doubled in the first two weeks of the month. Each time, he approved overtime and coached the staff member with the most open calls, and the numbers recovered. A deputy director wants a fix by Friday. A peer suggests a formal performance plan for that staff member. Teodor has not yet looked at what else happens in those weeks.",
-      "question": "What should Teodor do next?",
-      "choices": [
-        "Review a year of callback data with his team, look at what happens before each spike, and give the deputy director a date for findings.",
-        "Approve overtime for the next spike and coach the same staff member again, since that approach has brought the numbers back down each time.",
-        "Ask the deputy director for two more positions, since a spike that returns every month suggests the unit simply does not have enough staff."
-      ],
-      "feedback": [
-        "This is the strongest response. Teodor moves from the event to the pattern, brings in the people who see it every day and gives the deputy director a clear date instead of a guess.",
-        "Overtime and coaching ease the event, and callers need that this month. But the pattern has returned three times, so the cause is still in place, and one staff member keeps carrying the blame.",
-        "More staff may turn out to be part of the answer. Asking now jumps to a structural fix before anyone knows what drives the spike, and the evidence may point somewhere else."
-      ],
-      "recommended": 0,
-      "reflection": "Think of a problem in your own work that has come back more than once. At which level of the iceberg did the last fix aim, and what did it assume?",
-      "action": "Choose one recurring problem in your area. Write one line for each level of the iceberg: the latest event, the pattern over time, two structures that shape it and one assumption behind it. Keep people's names out of it.",
-      "check": {
-        "question": "A problem returns each time a fix wears off. Using the iceberg model, what does that most likely suggest?",
-        "correct": "The fixes have aimed at events while the structures producing the pattern stayed the same.",
-        "wrong": [
-          "The staff closest to the problem have not yet had enough coaching to make the fix hold.",
-          "The latest fix was carried out unevenly, so it needs repeating with closer follow-up."
-        ],
-        "feedback": "A problem that keeps returning suggests the cause lies lower down. Events and the people nearest them are easy to see, but structures and assumptions keep producing the same result until they change."
-      }
-    },
-    {
-      "title": "Mapping a service path from the person's side",
-      "objectives": [
-        "Map a service path from the person's side, beginning before they first contact your area.",
-        "Identify the points where people stop moving forward and which people stop there.",
-        "Distinguish what your data show from what you are guessing about who falls out.",
-        "Plan how to build a map with self-advocates, families and partners who live the path."
-      ],
-      "teaching": "A service looks different from the outside than it does from the inside. Inside, staff see a policy, a form and a queue. The person using the service sees a string of tasks: find the number, wait on hold, gather papers, get to an appointment, wait again. Digital.gov, run by the United States General Services Administration, describes a journey map as a picture of the major interactions that shape a person's experience of a service. Its guide says a map should show each phase, the key moments and decisions, and the pain points and feelings. It should also show harms a person can face, such as financial penalties or anxiety.\n\nStart the map where the person starts, not where your unit starts. In disability services, that may be a family member noticing a need long before any referral. Walk each step as the person lives it. What does the step ask of them in time, travel, documents or energy? Who has to help them? Where do they wait, and does anyone tell them for how long? Mark every point where people stop moving forward. Mark every work-around that staff or families have invented to get past a step.\n\nAsking which people fall out at each step turns a map into an equity tool. For each point where people fall out, ask which people. The State of Minnesota Equity Analysis Toolkit asks how data were broken down by race, gender, disability status and income. It also asks whether there are barriers to access for different groups. Look at your numbers that way where you have them, and say plainly where you do not. A map drawn only from the manual shows the same path for everyone, which is a Minimization habit. A map walked with people who use it shows where one step lands differently.\n\nBuild the map with people who live the path. Self-advocates, family members, lead agency staff and providers each see a part no one else sees. The Government Office for Science toolkit advises engaging as widely across the system as you can. Make taking part accessible, and notice who is not in the room. You can draw a map and share it. Changing eligibility, a waiver rule or a contract belongs to the responsible program area. Questions about using data on people served go to the area responsible for data practices.",
-      "keyPoint": "Draw the path as the person lives it, starting before they reach you. For every point where people fall out, ask which people, and build the map with those who walk it.",
-      "example": "Practice case: Mireille is a program consultant in disability services. She has been asked why many people found eligible for a waiver service never start it, and leadership wants a map in three weeks. Lead agency data show most drop-offs happen between the support plan and the first provider visit, and more often in two rural counties. Her draft map follows the manual step by step. Odell, a self-advocate who co-leads a statewide advisory group, has offered to help walk the path.",
-      "question": "What should Mireille do next?",
-      "choices": [
-        "Finish the map from the manual and the lead agency data, then send it to self-advocates and lead agencies for comment before it goes to leadership.",
-        "Walk the path from support plan to first visit with Odell, two families and lead agency staff, and mark where people stop and which people.",
-        "Ask the two rural lead agencies to call each person who did not start services and record why, so the map rests on real reasons."
-      ],
-      "feedback": [
-        "Asking for comment is better than none, and it is fast. But people asked to react to a finished map tend to correct details, and steps that are missing from the manual stay missing.",
-        "This is the strongest response. Walking the path with people who live it shows the steps the manual leaves out, and marking who stops where keeps the equity question at the center.",
-        "Real reasons matter, and this is quick. But it contacts people about their services without a data practices check, puts new work on two lead agencies and may miss those who most need to be heard."
-      ],
-      "recommended": 1,
-      "reflection": "When you picture someone using a service you work on, whose day are you picturing? What would change in your map if you pictured a different day?",
-      "action": "Pick one service path you know. Write the steps as the person lives them, starting before they ever contact your area. Circle the step where you think people most often stop, then note what evidence you have and what you are guessing.",
-      "check": {
-        "question": "What makes a journey map useful for an equity question rather than just a process chart?",
-        "correct": "It follows the person's steps and marks where people stop moving forward and which people.",
-        "wrong": [
-          "It records each step exactly as the manual and the policy describe it, so it stays accurate.",
-          "It lists every unit and staff role that handles the case, so responsibility for delay is clear."
-        ],
-        "feedback": "A process chart shows the service as designed. A journey map follows the person, including steps the manual leaves out, and it becomes an equity tool when it marks which people fall out at each point."
-      }
-    },
-    {
-      "title": "Finding root causes without blaming people",
-      "objectives": [
-        "Use the Five Whys and its test question to separate a contributing factor from a root cause.",
-        "Identify a reinforcing or balancing loop and a delay that may keep a problem in place.",
-        "Distinguish an explanation about people from a cause in the process, and test both.",
-        "Identify which causes belong with Human Resources, the responsible program area or legal counsel."
-      ],
-      "teaching": "A root cause is the thing that, if it changed, would stop the problem from coming back. The Centers for Medicare and Medicaid Services offers a short Five Whys tool for teams. You write a clear problem statement, ask why it happened and keep asking. Leave the fix out of the statement: a course from the Federal Emergency Management Agency calls defining a problem in terms of its solution the most common error in problem solving. \"We need a new form\" is a fix; \"applications come back missing two attachments\" is a problem. After each answer, the tool asks: if this were fixed, would the problem likely return? If so, you have a contributing factor, not the root cause. In its example, sweeping up spilled nails would miss the leaking roof. The tool advises including people who know the process firsthand, and it cautions that the Five Whys may not always find the root cause, naming the fishbone diagram as another.\n\nFeedback loops and delays can keep a problem in place. The Government Office for Science toolkit describes two kinds of feedback loop. A reinforcing loop amplifies change. For example, long waits lead people to give up, fewer requests look like less need, and resources move elsewhere. A balancing loop resists change and pulls the system back toward where it was. For example, when a backlog grows, staff work overtime, the backlog shrinks, the overtime stops and the backlog grows again. Delays make both harder to see, because the effect of a decision can appear months later in another area. When a fix works and then fades, look for a loop or a delay you have not drawn yet.\n\nAn explanation about people and a cause in the process are different, so test both. When a pattern falls along lines of language, disability, race or place, someone may explain it by the people involved: they do not read carefully, or they are not motivated. Treat that as a hypothesis and test it against the process. Walk the step as the person meets it and ask what it assumes they can see, read, reach or afford. If results depend on which staff member handles a case, look first at the step that leaves room for judgment, such as unclear criteria or a missing checklist, and add structure. The Government Alliance on Race and Equity's toolkit includes a City of Seattle worksheet on the root causes of racial inequities. Its examples include bias in process, barriers to access and engagement that is not racially inclusive. The same questions can help you test other patterns.\n\nAsk why with the right people in the room. Include staff who run the process and people who use it, and keep the discussion on steps rather than individuals. If someone raises a concern about a colleague's conduct, that goes to Human Resources, not into the root-cause discussion. If a cause sits in a rule or statute, name it and take it to the responsible program area, and bring legal questions to counsel.",
-      "keyPoint": "Keep asking why until fixing the answer would stop the problem returning. Treat explanations about people as hypotheses, test them against the process, and send conduct and legal questions where they belong.",
-      "example": "Practice case: Kwabena, who is blind and uses a screen reader, supervises a licensing intake team in disability services. Applications from small new providers are returned as incomplete far more often than those from large ones. A colleague, Saoirse, says small providers just do not read the instructions. In five returned files, Kwabena finds the same two attachments missing. Their list is on a page the online form never links to. He does not know if that explains the pattern or is one cause among several.",
-      "question": "What should Kwabena do next?",
-      "choices": [
-        "Add a bold reminder to read every instruction to the application page, and offer small providers a one-to-one walkthrough by phone.",
-        "Pull three years of returned applications and analyze them fully before raising anything with the team, so the conclusion is solid.",
-        "Run a Five Whys session with intake staff and two small providers, testing each answer, and treat Saoirse's view as a hypothesis."
-      ],
-      "feedback": [
-        "A walkthrough helps the providers who get one, and a reminder is quick. Both assume the problem is careless reading, so the unlinked list stays in place and new providers keep running into it.",
-        "Good evidence matters, but three years of files will take months while providers keep being returned. A short session with people who know the process can find testable causes now and shape what data you need.",
-        "This is the strongest response. Asking why with staff and providers tests each answer against the process, and treating Saoirse's view as a hypothesis examines her idea without shaming her."
-      ],
-      "recommended": 2,
-      "reflection": "When a pattern falls along lines of language, disability or place, what explanation comes to your mind first? What would you need to see to test it against the process?",
-      "action": "Take one recurring problem and write a one-sentence problem statement. Ask why five times, and after each answer ask whether fixing it would stop the problem returning. Note one place where a loop or a delay may be at work.",
-      "check": {
-        "question": "A colleague explains a pattern by saying one group of applicants does not read carefully. What is the most useful way to treat that explanation?",
-        "correct": "As a hypothesis to test against each step of the process before anyone acts on it.",
-        "wrong": [
-          "As a conduct concern to report to Human Resources before the analysis goes any further.",
-          "As the likely root cause, since the colleague handles these files every working day."
-        ],
-        "feedback": "An explanation about people may be partly true, but it often hides a step that works better for some than for others. Testing it against the process finds what you can change and avoids blaming people for a design."
-      }
-    },
-    {
-      "title": "Choosing where to act and learning from what happens",
-      "objectives": [
-        "Plan a small test of change with the people affected, including a prediction and who might be burdened.",
-        "Write an if-then-because statement that names the cause a proposed change is meant to address.",
-        "Compare results across the groups who fell out on your map to find unintended effects.",
-        "Distinguish changes within your own authority from those that belong to the responsible program area."
-      ],
-      "teaching": "A small change in the right place can produce a large effect. The Government Office for Science toolkit looks for those places, where a small effort has outsized impact, and notes that the best ones are often counterintuitive. It suggests writing each idea as an if-then-because statement: if we make this change, then we expect this effect, because of this link in the system. Writing the because makes you say what you believe about the cause. Then the test can show whether you were right.\n\nTest a change on a small scale before you spread it. The Centers for Medicare and Medicaid Services offers a Plan-Do-Study-Act template for teams testing changes. Plan a small test, such as one staff member or one shift, and predict what will happen and why. Do the test and note surprises. Study the results against your prediction, looking for unintended consequences as well as success. Then act: adapt the change and test again, adopt it more widely, or abandon it and try another approach. The template also suggests involving the staff who do the work whenever you can. The National Equity Project's Leading for Equity framework separates simple and complicated problems, where an answer can be worked out, from complex ones, where it cannot be known in advance. For those it suggests safe-to-fail experiments: small tries built so that failing is safe and still teaches you about the challenge.\n\nA change that helps most people can still make the path harder for some. Before a test, write down who might be burdened by it. The State of Minnesota Equity Analysis Toolkit says equity analysis is meant to reduce adverse consequences no one anticipated. The Government Alliance on Race and Equity's toolkit asks who will benefit, who will be burdened and how unintended consequences will be reduced. During the study step, break your results down by the groups who fell out on your map. An average that improves can hide a group that got worse.\n\nClose the loop with the people affected. Tell the self-advocates, families, staff and partners who helped what you tried, what happened and what you will keep, change or stop. That step turns a test into shared learning instead of a quiet decision. Within your own authority, a small test can change how your team does its work. Whether a form meets accessibility requirements is a question for the responsible program area and legal counsel. Spreading a change across programs, changing a rule or shifting resources belongs to the responsible program area and leadership. Your test gives them the evidence to decide.",
-      "keyPoint": "Choose a small change you can explain with a because, test it with the people affected and check results by group. Then tell them what you will keep, change or stop.",
-      "example": "Practice case: Esperanza manages an eligibility processing team in a human services program. Her team tested an online-only renewal form with one county for two months, and average processing time dropped by a third. Her deputy director, Lachlan, wants it statewide next quarter. Looking closer, Esperanza sees that renewals from people over seventy and from people who had asked for large print fell during the test. She cannot yet tell whether they renewed another way or did not renew at all.",
-      "question": "What should Esperanza recommend?",
-      "choices": [
-        "Share the result and the drop with Lachlan, keep paper and phone open, and run one more short cycle to learn what happened.",
-        "Recommend the statewide launch, since processing time clearly improved, and plan to study any problems for older applicants once it is live.",
-        "Recommend ending the online form and returning to the old process for now, since it may have shut some people out of their benefits."
-      ],
-      "feedback": [
-        "This is the strongest response. Esperanza reports what she found, protects the people who may be falling out, including people who asked for large print, and gives Lachlan a short path to a better decision.",
-        "The time savings are real and worth keeping. Launching first and studying later means any group the form shuts out would be shut out statewide, and the evidence would arrive after the harm.",
-        "Stopping protects people who may be harmed, which is a fair instinct. But it gives up a real gain before anyone knows the cause, and an adapted form might serve everyone better."
-      ],
-      "recommended": 0,
-      "reflection": "Think of a change you saw succeed on average. Who was it measured for, and who might it have made things harder for without anyone noticing?",
-      "action": "Choose one recurring problem in your area. Write an if-then-because statement for one small change, name who might be burdened, plan a test with the people affected and set a date to share what you learned with them.",
-      "check": {
-        "question": "A small test improves average processing time, but completions drop for one group. What is the most sound next step?",
-        "correct": "Study that group's drop before spreading the change, then adapt, adopt or abandon it.",
-        "wrong": [
-          "Spread the change, since an improved average shows that most people were helped by it.",
-          "Stop the change and return to the old process, since protecting that group comes first."
-        ],
-        "feedback": "An average can hide a group that got worse. The study step looks for unintended consequences by group, and the choice to adapt, adopt or abandon follows from what that shows."
-      }
-    }
-  ],
-  "cards": [
-    {
-      "front": "Systems iceberg",
-      "back": "A model with four levels: events, patterns over time, structures such as rules, and the mental models or assumptions beneath them. Lasting change usually sits below the event level."
-    },
-    {
-      "front": "Journey map",
-      "back": "A picture of the steps a person takes through a service, drawn from their side, showing key moments, pain points, feelings and the harms they can face."
-    },
-    {
-      "front": "Five Whys",
-      "back": "A root-cause method: ask why a problem happened, then why again, testing each answer by asking whether fixing it would stop the problem coming back. It is one tool and may not always find the root cause."
-    },
-    {
-      "front": "Reinforcing and balancing loops",
-      "back": "Two kinds of feedback in a system. A reinforcing loop amplifies change in either direction. A balancing loop resists change and pulls the system back."
-    },
-    {
-      "front": "Process bias",
-      "back": "A step that looks neutral but works better for some people than others, such as a required list on a page the form never links to. The fix is in the step, not the person."
-    }
-  ],
-  "aid": [
-    {
-      "heading": "When a problem keeps coming back",
-      "items": [
-        "Write what happened as one plain sentence, with no fix and no names in it.",
-        "Look at the pattern over time before choosing a response.",
-        "List the structures that shape it: rules, forms, schedules, staffing and funding.",
-        "Name one assumption about how people are expected to use the service.",
-        "Ask where people fall out, which people and what keeps producing that result."
-      ]
-    },
-    {
-      "heading": "Mapping the path and finding causes",
-      "items": [
-        "Start the map where the person starts, before they reach your area.",
-        "Walk the path with people who live it, and make taking part accessible.",
-        "Mark each point where people stop and which people stop there.",
-        "Ask why until fixing the answer would stop the problem returning.",
-        "Treat explanations about people as hypotheses to test against the process."
-      ]
-    },
-    {
-      "heading": "Before and after a change",
-      "items": [
-        "Write the change as an if-then-because statement.",
-        "Test it small, such as one shift, and predict the result. If the problem is complex, design the test so that failing is safe.",
-        "Check results by group, not only on average.",
-        "Send conduct concerns to Human Resources and legal questions to counsel.",
-        "Tell the people who helped what you will keep, change or stop."
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "title": "Government Office for Science — An introductory systems thinking toolkit for civil servants (2022, updated 2023)",
-      "href": "https://www.gov.uk/government/publications/systems-thinking-for-civil-servants/toolkit",
-      "note": "Adapted from this toolkit under the Open Government Licence v3.0. Supports the warning about quick fixes, reinforcing and balancing loops, wide engagement, small efforts with outsized impact and if-then-because statements. UK guidance."
-    },
-    {
-      "title": "Digital.gov, U.S. General Services Administration — Map your users' and system's journeys",
-      "href": "https://digital.gov/guides/research-collaboration/user-needs/journeys",
-      "note": "Adapted from this federal guide. Supports the description of a journey map and what it shows: phases, key moments and decisions, pain points, feelings and potential harms. Written for digital services."
-    },
-    {
-      "title": "Centers for Medicare and Medicaid Services — Five Whys Tool for Root Cause Analysis (QAPI)",
-      "href": "https://www.cms.gov/medicare/provider-enrollment-and-certification/qapi/downloads/fivewhys.pdf",
-      "note": "Adapted from this federal tool. Supports the Five Whys steps, the recurrence test, the nails and roof example and the tool's stated limits. Written for nursing home quality work; its use is not mandated by CMS."
-    },
-    {
-      "title": "Centers for Medicare and Medicaid Services — PDSA Cycle Template (QAPI)",
-      "href": "https://www.cms.gov/medicare/provider-enrollment-and-certification/qapi/downloads/pdsacycledebedits.pdf",
-      "note": "Adapted from this federal template. Supports planning a small test with a prediction, involving staff who do the work, looking for unintended consequences, and adapt, adopt or abandon. Written for nursing homes."
-    },
-    {
-      "title": "Annie E. Casey Foundation — Introduction to the Results Count Path to Equity (June 2019)",
-      "href": "https://assets.aecf.org/m/resourcedoc/aecf-introductiontotheresultscountpath-2021.pdf",
-      "note": "Supports the iceberg model's four levels, which the guide credits to the Waters Foundation, and asking why repeatedly to find root causes. Copyrighted, so described in our own words. A United States philanthropy's guide."
-    },
-    {
-      "title": "State of Minnesota — Equity Analysis Toolkit: A Quick Guide (June 2024)",
-      "href": "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
-      "note": "Supports the toolkit's purpose of reducing unanticipated adverse consequences and its questions on data broken down by race, gender, disability status and income and on barriers to access for different groups."
-    },
-    {
-      "title": "Government Alliance on Race and Equity — Racial Equity Toolkit: An Opportunity to Operationalize Equity (updated December 2016)",
-      "href": "https://www.racialequityalliance.org/viewdocument/racial-equity-toolkit-an-opportuni-2",
-      "note": "Supports the saying that a system gets the results it is designed to get, the benefit, burden and unintended consequence questions, and a City of Seattle worksheet naming bias in process as a root cause. Copyrighted; 2016."
-    },
-    {
-      "title": "Federal Emergency Management Agency, Emergency Management Institute — IS-241.c Decision Making and Problem Solving",
-      "href": "https://training.fema.gov/is/courseoverview.aspx?code=IS-241.c",
-      "note": "Adapted from this federal course. Supports the warning that the most common error in problem solving is defining a problem in terms of its solution. The wording is from the February 2014 IS-241.B student manual; the current online course may differ. Federal; written for emergency management."
-    },
-    {
-      "title": "National Equity Project — Leading for Equity Framework (2024)",
-      "href": "https://www.nationalequityproject.org/framework/leading-for-equity-framework",
-      "note": "Supports telling simple and complicated problems apart from complex ones and using safe-to-fail experiments when answers cannot be known in advance. Copyrighted, so described in our own words. A practitioner model written for schools, not outcome research."
-    }
-  ]
+ "id": "gc-systems-thinking",
+ "subtitle": "Practice seeing a service as a system. You will look below recurring events, map the path from the person's side, find where people fall out and which people, test root causes and try small changes with the people affected.",
+ "audience": "For program leads, managers and anyone who wants to understand why a problem keeps coming back. Useful when you guide a program, policy or project, and when you back supervisors who keep fixing the same issue.",
+ "lessons": [
+  {
+   "title": "Why problems keep coming back",
+   "objectives": [
+    "Explain why a recurring problem calls for examining system conditions alongside individual actions and other possible causes.",
+    "Distinguish events, patterns, structures and assumptions in a recurring problem from your own work.",
+    "Identify an assumption about normal service use that may shape how a process works.",
+    "Describe which parts of a recurring problem you can act on and which belong to another area."
+   ],
+   "teaching": "A recurring problem is a reason to examine how the work is organized, rather than assuming the person nearest to it caused it. Coaching or a reminder may help, but the response should fit the evidence. A return of the problem can reflect several causes, including changing demand, unclear steps or an action that was not carried out as planned. The Government Office for Science toolkit warns that a narrow, short-term focus can lead to fixes that fail. Treat that warning as a prompt to investigate, not proof that every problem has one structural cause.\n\nThe iceberg model looks at four levels: events, patterns, structures and assumptions. The Annie E. Casey Foundation uses a version of it in its Results Count guide, adapted from the Waters Foundation. Events are what happened: a missed callback, a late plan. Patterns are what keeps happening over months. Structures shape the pattern, such as rules, schedules, forms, funding, staffing and the order of steps. Assumptions, which the guide calls mental models, sit at the bottom. They are the beliefs people hold about how the work should go and who it is for. The model helps you look beyond an event while checking whether the proposed structures and assumptions actually explain it.\n\nAssumptions are where your own cultural defaults live. Ask what you treat as the normal way to use a service, and where you learned it. A team working from a Minimization habit says, \"We treat everyone the same, so the process is fair.\" A team working from an Acceptance habit notices that the same step lands differently on people with different lives, languages and disabilities. A team working from an Adaptation habit changes the step, then checks with the people affected whether it now works. These are simplified course illustrations of intercultural concepts, not assessments of people or teams. One comment or process change does not establish an orientation.\n\nLooking at the system does not remove individual responsibility or suspend action on urgent concerns. Examine patterns and relevant conduct together, using the appropriate management, HR, reporting or safety process. A pattern is not a prerequisite to reporting an individual incident. Ask where people cannot complete a step, who is affected and what evidence might explain the result. You may propose changes within your role; changes to policy, rules or duties still need the proper authority.",
+   "keyPoint": "Use recurring problems to examine events, patterns, structures and assumptions. Test possible causes against evidence while meeting urgent service, reporting and management duties.",
+   "example": "Practice case: Teodor manages a unit that answers calls from county workers about a human services program. For the third quarter in a row, callback times have doubled in the first two weeks of the month. Each time, he approved overtime and coached the staff member with the most open calls, and the numbers recovered. A deputy director wants a fix by Friday. A peer suggests a formal performance plan for that staff member. Teodor has not yet looked at what else happens in those weeks. The exercise concerns the next analytical step; Teodor must also address current service needs and any urgent concern while the review proceeds.",
+   "question": "What should Teodor do next?",
+   "choices": [
+    "Review a year of callback data with his team, look at what happens before each spike, and give the deputy director a date for findings.",
+    "Approve overtime for the next spike and coach the same staff member again, since that approach has brought the numbers back down each time.",
+    "Ask the deputy director for two more positions, since a spike that returns every month suggests the unit simply does not have enough staff."
+   ],
+   "feedback": [
+    "This is the strongest response. Teodor moves from the event to the pattern, brings in the people who see it every day and gives the deputy director a clear date instead of a guess.",
+    "Overtime and coaching ease the event, and callers need that this month. But the pattern has returned three times, so repeating the same response alone leaves the possible causes untested. Immediate support and a wider review can proceed together.",
+    "More staff may turn out to be part of the answer. Asking now jumps to a structural fix before anyone knows what drives the spike, and the evidence may point somewhere else."
+   ],
+   "recommended": 0,
+   "reflection": "Think of a problem in your own work that has come back more than once. At which level of the iceberg did the last fix aim, and what did it assume?",
+   "action": "Choose one recurring problem in your area. Write one line for each level of the iceberg: the latest event, the pattern over time, two structures that shape it and one assumption behind it. Keep people's names out of it.",
+   "check": {
+    "question": "A review finds that repeated short-term fixes addressed individual events but left the same relevant structures unchanged. Which explanation best fits the iceberg model?",
+    "correct": "The fixes have aimed at events while the structures producing the pattern stayed the same.",
+    "wrong": [
+     "The staff closest to the problem have not yet had enough coaching to make the fix hold.",
+     "The latest fix was carried out unevenly, so it needs repeating with closer follow-up."
+    ],
+    "feedback": "In this case, the review supplies evidence that the relevant structures stayed unchanged. Recurrence by itself would not prove that explanation or rule out problems with implementation, individual actions or changing conditions."
+   }
+  },
+  {
+   "title": "Mapping a service path from the person's side",
+   "objectives": [
+    "Map a service path from the person's side, beginning before they first contact your area.",
+    "Identify the points where people stop moving forward and which people stop there.",
+    "Distinguish what your data show from what you are guessing about who falls out.",
+    "Plan how to build a map with self-advocates, families and partners who live the path."
+   ],
+   "teaching": "A service looks different from the outside than it does from the inside. Inside, staff see a policy, a form and a queue. The person using the service sees a string of tasks: find the number, wait on hold, gather papers, get to an appointment, wait again. Digital.gov, run by the United States General Services Administration, describes a journey map as a picture of the major interactions that shape a person's experience of a service. Its guide says a map should show each phase, the key moments and decisions, and the pain points and feelings. It should also show harms a person can face, such as financial penalties or anxiety.\n\nStart the map where the person starts, not where your unit starts. In disability services, that may be a family member noticing a need long before any referral. Walk each step as the person lives it. What does the step ask of them in time, travel, documents or energy? Who has to help them? Where do they wait, and does anyone tell them for how long? Mark every point where people stop moving forward. Mark every work-around that staff or families have invented to get past a step.\n\nAsking which people fall out at each step turns a map into an equity tool. For each point where people fall out, ask which people. The State of Minnesota Equity Analysis Toolkit asks how data were broken down by race, gender, disability status and income. It also asks whether there are barriers to access for different groups. Look at your numbers that way where you have them, and say plainly where you do not. A manual can help show the intended process, but it may miss differences in how people experience it. Compare that account with evidence from people using the service without treating a mapping method as an intercultural assessment.\n\nBuild the map with people who live the path. Self-advocates, family members, lead agency staff and providers each see a part no one else sees. The Government Office for Science toolkit advises engaging as widely across the system as you can. Make taking part accessible, and notice who is not in the room. Before gathering or sharing case details, confirm the lawful purpose, access and disclosure arrangements with the responsible data staff. A group label or omitted name does not guarantee privacy. Changing eligibility, a waiver rule or a contract belongs to the responsible program area. Questions about using data on people served go to the area responsible for data practices.",
+   "keyPoint": "Draw the path as the person lives it, starting before they reach you. For every point where people fall out, ask which people, and build the map with those who walk it.",
+   "example": "Practice case: Mireille is a program consultant in disability services. She has been asked why many people found eligible for a waiver service never start it, and leadership wants a map in three weeks. Lead agency data show most drop-offs happen between the support plan and the first provider visit, and more often in two rural counties. Her draft map follows the manual step by step. Odell, a self-advocate who co-leads a statewide advisory group, has offered to help walk the path. The proposed workshop uses willing participants and an approved process that protects case information. Two families can reveal questions to investigate, but cannot represent every family or explain a county-wide pattern on their own.",
+   "question": "What should Mireille do next?",
+   "choices": [
+    "Finish the map from the manual and the lead agency data, then send it to self-advocates and lead agencies for comment before it goes to leadership.",
+    "Walk the path from support plan to first visit with Odell, two families and lead agency staff, and mark where people stop and which people.",
+    "Ask the two rural lead agencies to call each person who did not start services and record why, so the map rests on real reasons."
+   ],
+   "feedback": [
+    "Asking for comment is better than none, and it is fast. But waiting until the draft is finished may limit early influence. Later review can still identify missing steps if the process remains open to revision.",
+    "This is the strongest response. Walking the path with people who live it shows the steps the manual leaves out, and marking who stops where keeps the equity question at the center.",
+    "Real reasons matter, and this is quick. Direct outreach may be appropriate through authorized service or research processes. This option commits partners to broad new outreach before confirming its purpose, authority, access arrangements and workload."
+   ],
+   "recommended": 1,
+   "reflection": "When you picture someone using a service you work on, whose day are you picturing? What would change in your map if you pictured a different day?",
+   "action": "Pick one service path you know. Write the steps as the person lives them, starting before they ever contact your area. Circle the step where you think people most often stop, then note what evidence you have and what you are guessing.",
+   "check": {
+    "question": "What makes a journey map useful for an equity question rather than just a process chart?",
+    "correct": "It follows the person's steps and marks where people stop moving forward and which people.",
+    "wrong": [
+     "It records each step exactly as the manual and the policy describe it, so it stays accurate.",
+     "It lists every unit and staff role that handles the case, so responsibility for delay is clear."
+    ],
+    "feedback": "A process chart shows the service as designed. A journey map follows the person, including steps the manual leaves out, and it becomes an equity tool when it marks which people fall out at each point."
+   }
+  },
+  {
+   "title": "Finding root causes without blaming people",
+   "objectives": [
+    "Use the Five Whys and its test question to separate a contributing factor from a root cause.",
+    "Identify a reinforcing or balancing loop and a delay that may keep a problem in place.",
+    "Distinguish an explanation about people from a cause in the process, and test both.",
+    "Identify which causes belong with Human Resources, the responsible program area or legal counsel."
+   ],
+   "teaching": "Root-cause analysis looks for underlying conditions that help explain a problem; there may be several interacting causes. The Centers for Medicare and Medicaid Services offers a short Five Whys tool for teams. You write a clear problem statement, ask why it happened and keep asking. Keep a proposed solution separate from the problem statement so the analysis remains open to other explanations. \"We need a new form\" is a fix; \"applications come back missing two attachments\" is a problem. After each answer, the tool asks: if this were fixed, would the problem likely return? If so, you have a contributing factor, not the root cause. In its example, sweeping up spilled nails would miss the leaking roof. The tool advises including people who know the process firsthand, and it cautions that the Five Whys may not always find the root cause, naming the fishbone diagram as another.\n\nFeedback loops and delays can keep a problem in place. The Government Office for Science toolkit describes two kinds of feedback loop. A reinforcing loop amplifies change. For example, long waits lead people to give up, fewer requests are interpreted as less need, resources move elsewhere and reduced capacity lengthens waits further. A balancing loop resists change and pulls the system back toward where it was. For example, when a backlog grows, staff work overtime, the backlog shrinks, the overtime stops and the backlog grows again. Delays make both harder to see, because the effect of a decision can appear months later in another area. These examples are hypotheses about relationships, not findings about your program. Check whether demand, capacity and timing support the proposed loop rather than treating a diagram as proof.\n\nAn explanation about people and a cause in the process are different, so test both. When a pattern falls along lines of language, disability, race or place, someone may explain it by the people involved: they do not read carefully, or they are not motivated. Do not accept a group-based judgment as evidence about individuals. Examine concrete, testable explanations and the service conditions, while addressing any reporting or conduct concern through the appropriate route. Walk the step as the person meets it and ask what it assumes they can see, read, reach or afford. If results depend on which staff member handles a case, examine whether case differences, unclear criteria, missing support or individual actions could explain the variation before choosing a remedy. The Government Alliance on Race and Equity's toolkit includes a City of Seattle worksheet on the root causes of racial inequities. Its examples include bias in process, barriers to access and engagement that is not racially inclusive. The same questions can help you test other patterns.\n\nAsk why with the right people in the room. Include staff who run the process and people who use it, and keep the discussion on steps rather than individuals. Use the appropriate management, HR, discrimination or safety process for conduct concerns. Protect individual case details in a group workshop, but do not let a workshop delay a required report or needed protection. If a cause sits in a rule or statute, name it and take it to the responsible program area, and bring legal questions to counsel.",
+   "keyPoint": "Use repeated questions to identify testable causes and contributing factors. Check the evidence, consider interacting causes and act on urgent concerns while analysis continues.",
+   "example": "Practice case: Kwabena supervises a licensing intake team in disability services. Applications from small new providers are returned as incomplete far more often than those from large ones. A colleague, Saoirse, says small providers just do not read the instructions. In five returned files, Kwabena finds the same two attachments missing. Their list is on a page the online form never links to. He does not know if that explains the pattern or is one cause among several.",
+   "question": "What should Kwabena do next?",
+   "choices": [
+    "Add a bold reminder to read every instruction to the application page, and offer small providers a one-to-one walkthrough by phone.",
+    "Pull three years of returned applications and analyze them fully before raising anything with the team, so the conclusion is solid.",
+    "Run a Five Whys session with intake staff and two small providers, testing each answer, and treat Saoirse's view as a hypothesis."
+   ],
+   "feedback": [
+    "A walkthrough helps the providers who get one, and a reminder is quick. A reminder alone leaves the unlinked list unaddressed. A walkthrough could reveal barriers, but the proposed response does not test why these attachments are repeatedly missing.",
+    "Good evidence matters, but a full historical review could delay a response to the known missing link. A short session with people who know the process can find testable causes now and shape what data you need.",
+    "This is the strongest response. Asking why with staff and providers tests each answer against the process, and treating Saoirse's view as a hypothesis examines her idea without shaming her."
+   ],
+   "recommended": 2,
+   "reflection": "When a pattern falls along lines of language, disability or place, what explanation comes to your mind first? What would you need to see to test it against the process?",
+   "action": "Write a clear problem statement, then use repeated why questions to identify possible causes and the evidence needed to test them. Five is a guide, not a required count or proof that you have found every cause.",
+   "check": {
+    "question": "For the process analysis itself, how should a team examine an unsupported claim that a group does not read carefully, while following any applicable reporting duties?",
+    "correct": "As a hypothesis to test against each step of the process before anyone acts on it.",
+    "wrong": [
+     "As a conduct concern to report to Human Resources before the analysis goes any further.",
+     "As the likely root cause, since the colleague handles these files every working day."
+    ],
+    "feedback": "Do not act on an unsupported group judgment. Test concrete explanations against evidence and service conditions, without assuming that everyone in a group has the same behavior. Any separate conduct concern or reporting duty still needs its appropriate response."
+   }
+  },
+  {
+   "title": "Choosing where to act and learning from what happens",
+   "objectives": [
+    "Plan a small test of change with the people affected, including a prediction and who might be burdened.",
+    "Write an if-then-because statement that names the cause a proposed change is meant to address.",
+    "Compare results across the groups who fell out on your map to find unintended effects.",
+    "Distinguish changes within your own authority from those that belong to the responsible program area."
+   ],
+   "teaching": "A small change in the right place can produce a large effect. The Government Office for Science toolkit looks for those places, where a small effort has outsized impact, and notes that the best ones are often counterintuitive. It suggests writing each idea as an if-then-because statement: if we make this change, then we expect this effect, because of this link in the system. Writing the because makes you say what you believe about the cause. A test can strengthen or weaken that explanation, but a small trial alone may not establish causation or predict results elsewhere.\n\nTest a change on a small scale before you spread it. The Centers for Medicare and Medicaid Services offers a Plan-Do-Study-Act template for teams testing changes. Plan a small test, such as one staff member or one shift, and predict what will happen and why. Do the test and note surprises. Study the results against your prediction, looking for unintended consequences as well as success. Then act: adapt the change and test again, adopt it more widely, or abandon it and try another approach. The template also suggests involving the staff who do the work whenever you can. The National Equity Project's Leading for Equity framework separates simple and complicated problems, where an answer can be worked out, from complex ones, where it cannot be known in advance. For those it suggests safe-to-fail experiments: bounded trials intended to support learning when results are uncertain. Calling a trial safe-to-fail does not establish that it is safe for people who rely on a service. Confirm authority, rights, access, monitoring and stop conditions before starting; pause or stop when necessary to prevent harm.\n\nA change that helps most people can still make the path harder for some. Before a test, write down who might be burdened by it. The State of Minnesota Equity Analysis Toolkit says equity analysis is meant to reduce adverse consequences no one anticipated. The Government Alliance on Race and Equity's toolkit asks who will benefit, who will be burdened and how unintended consequences will be reduced. During the study step, examine relevant group results using lawful data and disclosure safeguards, including small-group risks. Check missing records, denominators and use of other service channels before interpreting a drop. An average that improves can hide a group that got worse.\n\nClose the loop with the people affected. Tell the self-advocates, families, staff and partners who helped what you tried, what happened and what you will keep, change or stop. That step turns a test into shared learning instead of a quiet decision. Within your own authority, a small test can change how your team does its work. Use the responsible accessibility staff and program review process to check a form, with legal counsel for legal questions. An experimental label does not waive access requirements or the DHS Equity Policy. Spreading a change across programs, changing a rule or shifting resources belongs to the responsible program area and leadership. Your test gives them the evidence to decide.",
+   "keyPoint": "Choose a small change you can explain with a because, test it with the people affected and check results by group. Then tell them what you will keep, change or stop.",
+   "example": "Practice case: Esperanza manages an eligibility processing team in a human services program. Her team tested an online-only renewal form with one county for two months, and average processing time dropped by a third. Her deputy director, Lachlan, wants it statewide next quarter. Looking closer, Esperanza sees that renewals from people over seventy and from people who had asked for large print fell during the test. She cannot yet tell whether they renewed another way or did not renew at all. Esperanza must first restore effective paper, phone and accessible routes, address any immediate risk to renewals and seek the required reviews. The question asks about the next learning step only if these protections can be maintained; otherwise the test must pause or stop.",
+   "question": "What should Esperanza recommend?",
+   "choices": [
+    "Share the result and the drop with Lachlan, keep paper and phone open, and run one more short cycle to learn what happened.",
+    "Recommend the statewide launch, since processing time clearly improved, and plan to study any problems for older applicants once it is live.",
+    "Recommend ending the online form and returning to the old process for now, since it may have shut some people out of their benefits."
+   ],
+   "feedback": [
+    "This is the strongest response. Esperanza reports what she found, keeps expansion on hold and seeks evidence alongside effective protections. Paper and phone alone may not meet every access need, so confirm that the available routes actually work.",
+    "The measured average improved, but fewer completed renewals could change who is included in that average. Launching first and studying later means any group the form shuts out would be shut out statewide, and the evidence would arrive after the harm.",
+    "Pausing or stopping is necessary if access or safety cannot be protected. Under the stated conditions, the stronger response investigates the drop before deciding whether to permanently abandon, revise or expand the change; it does not require continuing an unsafe test."
+   ],
+   "recommended": 0,
+   "reflection": "Think of a change you saw succeed on average. Who was it measured for, and who might it have made things harder for without anyone noticing?",
+   "action": "Propose a small change with an if-then-because explanation. Confirm authority and safeguards, identify who may be burdened, set monitoring and stop conditions, and plan how to share findings without exposing private data.",
+   "check": {
+    "question": "After immediate access and safety concerns have been addressed, a small test has a better average but fewer completions for one group. What should inform the longer-term decision before expansion?",
+    "correct": "Study that group's drop before spreading the change, then adapt, adopt or abandon it.",
+    "wrong": [
+     "Spread the change, since an improved average shows that most people were helped by it.",
+     "Stop the change and return to the old process, since protecting that group comes first."
+    ],
+    "feedback": "Study the drop and the limits of the data before deciding whether to adapt, adopt or abandon the change. Keep expansion on hold and pause the test whenever necessary to protect people; an improved average does not establish benefit for most users."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "front": "Systems iceberg",
+   "back": "A model for examining events, patterns, structures and assumptions. It helps frame questions about causes; it does not establish a cause or replace urgent action."
+  },
+  {
+   "front": "Journey map",
+   "back": "A picture of the steps a person takes through a service, drawn from their side, showing key moments, pain points, feelings and the harms they can face."
+  },
+  {
+   "front": "Five Whys",
+   "back": "A tool that uses repeated why questions to explore underlying causes. Check answers against evidence, consider multiple causes and use another method when needed; five questions do not guarantee an explanation."
+  },
+  {
+   "front": "Reinforcing and balancing loops",
+   "back": "Two kinds of feedback in a system. A reinforcing loop amplifies change in either direction. A balancing loop resists change and pulls the system back."
+  },
+  {
+   "front": "Process bias",
+   "back": "A process may create unequal barriers, such as an unlinked required list. Investigate that condition and other plausible causes instead of inferring an individual trait or prescribing a fix without evidence."
+  }
+ ],
+ "aid": [
+  {
+   "heading": "When a problem keeps coming back",
+   "items": [
+    "Write what happened as one plain sentence, with no fix and no names in it.",
+    "Review patterns alongside immediate service, safety and reporting needs.",
+    "List the structures that shape it: rules, forms, schedules, staffing and funding.",
+    "Name one assumption about how people are expected to use the service.",
+    "Ask where people fall out, which people and what keeps producing that result."
+   ]
+  },
+  {
+   "heading": "Mapping the path and finding causes",
+   "items": [
+    "Start the map where the person starts, before they reach your area.",
+    "Walk the path with people who live it, and make taking part accessible.",
+    "Mark each point where people stop and which people stop there.",
+    "Ask repeated why questions, test the evidence and consider interacting causes.",
+    "Examine concrete explanations rather than accepting group judgments; follow separate reporting duties."
+   ]
+  },
+  {
+   "heading": "Before and after a change",
+   "items": [
+    "Write the change as an if-then-because statement.",
+    "Confirm authority, access and safety safeguards before a small trial; set monitoring and stop conditions.",
+    "Compare suitable group results, checking data limits and disclosure risks.",
+    "Use appropriate management, HR, reporting and safety routes without waiting for analysis to finish.",
+    "Tell the people who helped what you will keep, change or stop."
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "Government Office for Science — An introductory systems thinking toolkit for civil servants (2022, updated 2023)",
+   "href": "https://www.gov.uk/government/publications/systems-thinking-for-civil-servants/toolkit",
+   "note": "Adapted from this toolkit under the Open Government Licence v3.0. Supports the warning about quick fixes, reinforcing and balancing loops, wide engagement, small efforts with outsized impact and if-then-because statements. UK guidance."
+  },
+  {
+   "title": "Digital.gov, U.S. General Services Administration — Map your users' and system's journeys",
+   "href": "https://digital.gov/guides/research-collaboration/user-needs/journeys",
+   "note": "Adapted from this federal guide. Supports the description of a journey map and what it shows: phases, key moments and decisions, pain points, feelings and potential harms. Written for digital services."
+  },
+  {
+   "title": "Centers for Medicare and Medicaid Services — Five Whys Tool for Root Cause Analysis (QAPI)",
+   "href": "https://www.cms.gov/medicare/provider-enrollment-and-certification/qapi/downloads/fivewhys.pdf",
+   "note": "Adapted from this federal tool. Supports the Five Whys steps, the recurrence test, the nails and roof example and the tool's stated limits. Written for nursing home quality work; its use is not mandated by CMS."
+  },
+  {
+   "title": "Centers for Medicare and Medicaid Services — PDSA Cycle Template (QAPI)",
+   "href": "https://www.cms.gov/medicare/provider-enrollment-and-certification/qapi/downloads/pdsacycledebedits.pdf",
+   "note": "Adapted from this federal template. Supports planning a small test with a prediction, involving staff who do the work, looking for unintended consequences, and adapt, adopt or abandon. Written for nursing homes."
+  },
+  {
+   "title": "Annie E. Casey Foundation — Introduction to the Results Count Path to Equity (June 2019)",
+   "href": "https://assets.aecf.org/m/resourcedoc/aecf-introductiontotheresultscountpath-2021.pdf",
+   "note": "Supports the iceberg model's four levels, which the guide credits to the Waters Foundation, and asking why repeatedly to find root causes. Copyrighted, so described in our own words. A United States philanthropy's guide."
+  },
+  {
+   "title": "State of Minnesota — Equity Analysis Toolkit: A Quick Guide",
+   "href": "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+   "note": "Supports the toolkit's purpose of reducing unanticipated adverse consequences and its questions on data broken down by race, gender, disability status and income and on barriers to access for different groups."
+  },
+  {
+   "title": "Government Alliance on Race and Equity — Racial Equity Toolkit: An Opportunity to Operationalize Equity (updated December 2016)",
+   "href": "https://www.racialequityalliance.org/viewdocument/racial-equity-toolkit-an-opportuni-2",
+   "note": "Supports questions about benefits, burdens and unintended consequences, and the Seattle worksheet on process barriers. The course paraphrases the 2016 toolkit and does not treat its examples as proof about a particular DHS service."
+  },
+  {
+   "title": "National Equity Project — Leading for Equity Framework (2024)",
+   "href": "https://www.nationalequityproject.org/s/NEP-LFE-Framework-2024.pdf",
+   "note": "Supports telling simple and complicated problems apart from complex ones and using safe-to-fail experiments when answers cannot be known in advance. Copyrighted, so described in our own words. A practitioner model written for schools, not outcome research."
+  },
+  {
+   "title": "IDI — Resources and Intercultural Development Continuum",
+   "href": "https://www.idiinventory.com/resources",
+   "note": "Defines orientations toward cultural difference; the course examples do not assess individuals or teams."
+  },
+  {
+   "title": "DHS — Equity Policy",
+   "href": "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+   "note": "Required agency equity analysis and learning are not waived by an optional improvement exercise."
+  },
+  {
+   "title": "Minnesota Statutes 13.05 — Duties of responsible authority",
+   "href": "https://www.revisor.mn.gov/statutes/cite/13.05",
+   "note": "Data collection, use and disclosure duties apply to mapping and analysis; removing names does not automatically make information public."
+  }
+ ]
 }
