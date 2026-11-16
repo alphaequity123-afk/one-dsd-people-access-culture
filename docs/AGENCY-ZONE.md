@@ -29,3 +29,5 @@ The focused follow-up suite passes 31 tests across five files, including exact a
 ## Recorded production baseline
 
 Before integration deployment, the DSD service's successful deployment is `c2f15bc6-7361-4b17-885d-c354ee74700d`, main commit `b3fef0ce69e676549fc76c8847000de2ca33c61b`. The agency baseline is deployment `240801f4-bdba-4c10-8ba4-ede5316dd9c3`, main commit `863d78c0f433226a3c03064de8fe3fd850b2f6a8`. No production origin flags have been changed at this checkpoint. A rollback must restore both code/configuration together; database additions must remain backward-compatible and owner data must not be reset.
+
+The read-only DSD preservation audit found no page-edits file, an existing mounted media directory, and 67 tracked/67 published resource overlays. Their ordered content identity is `6a325c9e54052475a6b247020b2621e1`. Repeat `scripts/operations/audit-agency-preservation.mjs` within the deployed service after release; the output contains counts and hashes, not publication content or credentials.
